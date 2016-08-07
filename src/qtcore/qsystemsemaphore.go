@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -51,7 +50,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSystemSemaphore)=1
@@ -61,11 +59,15 @@ type QSystemSemaphore struct {
 }
 
 // errorString()
-func (this *QSystemSemaphore) ErrorString(args ...interface{}) (ret interface{}) {
+func (this *QSystemSemaphore) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -95,6 +97,10 @@ func (this *QSystemSemaphore) Acquire(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -119,11 +125,15 @@ func (this *QSystemSemaphore) Acquire(args ...interface{}) (ret interface{}) {
 }
 
 // ~QSystemSemaphore()
-func (this *QSystemSemaphore) Free(args ...interface{}) () {
+func (this *QSystemSemaphore) Freeqsystemsemaphore(args ...interface{}) () {
   // ~QSystemSemaphore()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -131,10 +141,7 @@ func (this *QSystemSemaphore) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QSystemSemaphoreD0Ev
     // invoke: void ~QSystemSemaphore()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QSystemSemaphoreD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QSystemSemaphoreD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "~QSystemSemaphore", args)
   }
@@ -148,6 +155,10 @@ func (this *QSystemSemaphore) Key(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -177,6 +188,10 @@ func (this *QSystemSemaphore) Error(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -199,6 +214,10 @@ func (this *QSystemSemaphore) Release(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

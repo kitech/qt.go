@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -75,7 +74,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDesktopWidget)=1
@@ -84,11 +82,12 @@ type QDesktopWidget struct {
   Qclsinst unsafe.Pointer /* *C.void */;
 //  _screenCountChanged QDesktopWidget_screenCountChanged_signal;
 //  _resized QDesktopWidget_resized_signal;
+//  _primaryScreenChanged QDesktopWidget_primaryScreenChanged_signal;
 //  _workAreaResized QDesktopWidget_workAreaResized_signal;
 }
 
 // screenNumber(const class QWidget *)
-func (this *QDesktopWidget) ScreenNumber(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) Screennumber(args ...interface{}) (ret interface{}) {
   // screenNumber(const class QWidget *)
   // screenNumber(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,6 +96,10 @@ func (this *QDesktopWidget) ScreenNumber(args ...interface{}) (ret interface{}) 
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "const QWidget *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -137,11 +140,15 @@ func (this *QDesktopWidget) ScreenNumber(args ...interface{}) (ret interface{}) 
 }
 
 // screenCount()
-func (this *QDesktopWidget) ScreenCount(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) Screencount(args ...interface{}) (ret interface{}) {
   // screenCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -166,7 +173,7 @@ func (this *QDesktopWidget) ScreenCount(args ...interface{}) (ret interface{}) {
 }
 
 // availableGeometry(int)
-func (this *QDesktopWidget) AvailableGeometry(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) Availablegeometry(args ...interface{}) (ret interface{}) {
   // availableGeometry(int)
   // availableGeometry(const class QWidget *)
   // availableGeometry(const class QPoint &)
@@ -178,6 +185,10 @@ func (this *QDesktopWidget) AvailableGeometry(args ...interface{}) (ret interfac
   vtys[1][0] = reflect.TypeOf(QWidget{}) // "const QWidget *"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -232,7 +243,7 @@ func (this *QDesktopWidget) AvailableGeometry(args ...interface{}) (ret interfac
 }
 
 // screenGeometry(const class QPoint &)
-func (this *QDesktopWidget) ScreenGeometry(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) Screengeometry(args ...interface{}) (ret interface{}) {
   // screenGeometry(const class QPoint &)
   // screenGeometry(int)
   // screenGeometry(const class QWidget *)
@@ -244,6 +255,10 @@ func (this *QDesktopWidget) ScreenGeometry(args ...interface{}) (ret interface{}
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QWidget{}) // "const QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -298,11 +313,15 @@ func (this *QDesktopWidget) ScreenGeometry(args ...interface{}) (ret interface{}
 }
 
 // isVirtualDesktop()
-func (this *QDesktopWidget) IsVirtualDesktop(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) Isvirtualdesktop(args ...interface{}) (ret interface{}) {
   // isVirtualDesktop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -333,6 +352,10 @@ func (this *QDesktopWidget) Screen(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -359,11 +382,15 @@ func (this *QDesktopWidget) Screen(args ...interface{}) (ret interface{}) {
 }
 
 // primaryScreen()
-func (this *QDesktopWidget) PrimaryScreen(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) Primaryscreen(args ...interface{}) (ret interface{}) {
   // primaryScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -388,11 +415,15 @@ func (this *QDesktopWidget) PrimaryScreen(args ...interface{}) (ret interface{})
 }
 
 // numScreens()
-func (this *QDesktopWidget) NumScreens(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) Numscreens(args ...interface{}) (ret interface{}) {
   // numScreens()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -417,14 +448,15 @@ func (this *QDesktopWidget) NumScreens(args ...interface{}) (ret interface{}) {
 }
 
 // QDesktopWidget()
-func GcfreeQDesktopWidget(this *QDesktopWidget) {
-  qtrt.UniverseFree(this)
-}
 func NewQDesktopWidget(args ...interface{}) *QDesktopWidget {
   // QDesktopWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -435,9 +467,7 @@ func NewQDesktopWidget(args ...interface{}) *QDesktopWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QDesktopWidgetC2Ev()
-    this := &QDesktopWidget{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDesktopWidget)
-    return this
+    return &QDesktopWidget{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDesktopWidget", "QDesktopWidget", args)
   }
@@ -446,11 +476,15 @@ func NewQDesktopWidget(args ...interface{}) *QDesktopWidget {
 }
 
 // metaObject()
-func (this *QDesktopWidget) MetaObject(args ...interface{}) () {
+func (this *QDesktopWidget) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -467,11 +501,15 @@ func (this *QDesktopWidget) MetaObject(args ...interface{}) () {
 }
 
 // ~QDesktopWidget()
-func (this *QDesktopWidget) Free(args ...interface{}) () {
+func (this *QDesktopWidget) Freeqdesktopwidget(args ...interface{}) () {
   // ~QDesktopWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -479,10 +517,7 @@ func (this *QDesktopWidget) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QDesktopWidgetD0Ev
     // invoke: void ~QDesktopWidget()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN14QDesktopWidgetD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN14QDesktopWidgetD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDesktopWidget", "~QDesktopWidget", args)
   }

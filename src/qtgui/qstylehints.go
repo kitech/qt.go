@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -48,12 +47,16 @@ extern int32_t C_ZNK11QStyleHints25mousePressAndHoldIntervalEv(void* qthis); // 
 extern int32_t C_ZNK11QStyleHints17startDragVelocityEv(void* qthis); // 4
   // proto:  bool QStyleHints::useRtlExtensions();
 extern bool C_ZNK11QStyleHints16useRtlExtensionsEv(void* qthis); // 4
+  // proto:  bool QStyleHints::singleClickActivation();
+extern bool C_ZNK11QStyleHints21singleClickActivationEv(void* qthis); // 4
   // proto:  void QStyleHints::setKeyboardInputInterval(int keyboardInputInterval);
 extern void C_ZN11QStyleHints24setKeyboardInputIntervalEi(void* qthis, int32_t arg0); // 4
   // proto:  Qt::TabFocusBehavior QStyleHints::tabFocusBehavior();
 extern void C_ZNK11QStyleHints16tabFocusBehaviorEv(void* qthis); // 4
   // proto:  void QStyleHints::setStartDragTime(int startDragTime);
 extern void C_ZN11QStyleHints16setStartDragTimeEi(void* qthis, int32_t arg0); // 4
+  // proto:  bool QStyleHints::showIsMaximized();
+extern bool C_ZNK11QStyleHints15showIsMaximizedEv(void* qthis); // 4
   // proto:  void QStyleHints::setCursorFlashTime(int cursorFlashTime);
 extern void C_ZN11QStyleHints18setCursorFlashTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  qreal QStyleHints::fontSmoothingGamma();
@@ -68,8 +71,8 @@ extern int32_t C_ZNK11QStyleHints21keyboardInputIntervalEv(void* qthis); // 4
 extern bool C_ZNK11QStyleHints16showIsFullScreenEv(void* qthis); // 4
   // proto:  int QStyleHints::startDragTime();
 extern int32_t C_ZNK11QStyleHints13startDragTimeEv(void* qthis); // 4
-  // proto:  bool QStyleHints::singleClickActivation();
-extern bool C_ZNK11QStyleHints21singleClickActivationEv(void* qthis); // 4
+  // proto:  void QStyleHints::setMousePressAndHoldInterval(int mousePressAndHoldInterval);
+extern void C_ZN11QStyleHints28setMousePressAndHoldIntervalEi(void* qthis, int32_t arg0); // 4
   // proto:  QChar QStyleHints::passwordMaskCharacter();
 extern void* C_ZNK11QStyleHints21passwordMaskCharacterEv(void* qthis); // 4
   // proto:  int QStyleHints::mouseDoubleClickInterval();
@@ -85,26 +88,31 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStyleHints)=1
 type QStyleHints struct {
   /*qbase*/ qtcore.QObject;
   Qclsinst unsafe.Pointer /* *C.void */;
-//  _startDragDistanceChanged QStyleHints_startDragDistanceChanged_signal;
-//  _startDragTimeChanged QStyleHints_startDragTimeChanged_signal;
-//  _mouseDoubleClickIntervalChanged QStyleHints_mouseDoubleClickIntervalChanged_signal;
 //  _cursorFlashTimeChanged QStyleHints_cursorFlashTimeChanged_signal;
 //  _keyboardInputIntervalChanged QStyleHints_keyboardInputIntervalChanged_signal;
+//  _tabFocusBehaviorChanged QStyleHints_tabFocusBehaviorChanged_signal;
+//  _startDragDistanceChanged QStyleHints_startDragDistanceChanged_signal;
+//  _startDragTimeChanged QStyleHints_startDragTimeChanged_signal;
+//  _mousePressAndHoldIntervalChanged QStyleHints_mousePressAndHoldIntervalChanged_signal;
+//  _mouseDoubleClickIntervalChanged QStyleHints_mouseDoubleClickIntervalChanged_signal;
 }
 
 // setFocusOnTouchRelease()
-func (this *QStyleHints) SetFocusOnTouchRelease(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Setfocusontouchrelease(args ...interface{}) (ret interface{}) {
   // setFocusOnTouchRelease()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -129,11 +137,15 @@ func (this *QStyleHints) SetFocusOnTouchRelease(args ...interface{}) (ret interf
 }
 
 // startDragDistance()
-func (this *QStyleHints) StartDragDistance(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Startdragdistance(args ...interface{}) (ret interface{}) {
   // startDragDistance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -158,11 +170,15 @@ func (this *QStyleHints) StartDragDistance(args ...interface{}) (ret interface{}
 }
 
 // keyboardAutoRepeatRate()
-func (this *QStyleHints) KeyboardAutoRepeatRate(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Keyboardautorepeatrate(args ...interface{}) (ret interface{}) {
   // keyboardAutoRepeatRate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -187,11 +203,15 @@ func (this *QStyleHints) KeyboardAutoRepeatRate(args ...interface{}) (ret interf
 }
 
 // passwordMaskDelay()
-func (this *QStyleHints) PasswordMaskDelay(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Passwordmaskdelay(args ...interface{}) (ret interface{}) {
   // passwordMaskDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -216,12 +236,16 @@ func (this *QStyleHints) PasswordMaskDelay(args ...interface{}) (ret interface{}
 }
 
 // setMouseDoubleClickInterval(int)
-func (this *QStyleHints) SetMouseDoubleClickInterval(args ...interface{}) () {
+func (this *QStyleHints) Setmousedoubleclickinterval(args ...interface{}) () {
   // setMouseDoubleClickInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -240,11 +264,15 @@ func (this *QStyleHints) SetMouseDoubleClickInterval(args ...interface{}) () {
 }
 
 // cursorFlashTime()
-func (this *QStyleHints) CursorFlashTime(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Cursorflashtime(args ...interface{}) (ret interface{}) {
   // cursorFlashTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -269,11 +297,15 @@ func (this *QStyleHints) CursorFlashTime(args ...interface{}) (ret interface{}) 
 }
 
 // mousePressAndHoldInterval()
-func (this *QStyleHints) MousePressAndHoldInterval(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Mousepressandholdinterval(args ...interface{}) (ret interface{}) {
   // mousePressAndHoldInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -298,11 +330,15 @@ func (this *QStyleHints) MousePressAndHoldInterval(args ...interface{}) (ret int
 }
 
 // startDragVelocity()
-func (this *QStyleHints) StartDragVelocity(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Startdragvelocity(args ...interface{}) (ret interface{}) {
   // startDragVelocity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -327,11 +363,15 @@ func (this *QStyleHints) StartDragVelocity(args ...interface{}) (ret interface{}
 }
 
 // useRtlExtensions()
-func (this *QStyleHints) UseRtlExtensions(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Usertlextensions(args ...interface{}) (ret interface{}) {
   // useRtlExtensions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -355,13 +395,50 @@ func (this *QStyleHints) UseRtlExtensions(args ...interface{}) (ret interface{})
   return
 }
 
+// singleClickActivation()
+func (this *QStyleHints) Singleclickactivation(args ...interface{}) (ret interface{}) {
+  // singleClickActivation()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QStyleHints21singleClickActivationEv
+    // invoke: bool singleClickActivation()
+    var ret0 = C.C_ZNK11QStyleHints21singleClickActivationEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QStyleHints", "singleClickActivation", args)
+  }
+
+  return
+}
+
 // setKeyboardInputInterval(int)
-func (this *QStyleHints) SetKeyboardInputInterval(args ...interface{}) () {
+func (this *QStyleHints) Setkeyboardinputinterval(args ...interface{}) () {
   // setKeyboardInputInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -380,11 +457,15 @@ func (this *QStyleHints) SetKeyboardInputInterval(args ...interface{}) () {
 }
 
 // tabFocusBehavior()
-func (this *QStyleHints) TabFocusBehavior(args ...interface{}) () {
+func (this *QStyleHints) Tabfocusbehavior(args ...interface{}) () {
   // tabFocusBehavior()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -401,12 +482,16 @@ func (this *QStyleHints) TabFocusBehavior(args ...interface{}) () {
 }
 
 // setStartDragTime(int)
-func (this *QStyleHints) SetStartDragTime(args ...interface{}) () {
+func (this *QStyleHints) Setstartdragtime(args ...interface{}) () {
   // setStartDragTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -424,13 +509,50 @@ func (this *QStyleHints) SetStartDragTime(args ...interface{}) () {
   return
 }
 
+// showIsMaximized()
+func (this *QStyleHints) Showismaximized(args ...interface{}) (ret interface{}) {
+  // showIsMaximized()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QStyleHints15showIsMaximizedEv
+    // invoke: bool showIsMaximized()
+    var ret0 = C.C_ZNK11QStyleHints15showIsMaximizedEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QStyleHints", "showIsMaximized", args)
+  }
+
+  return
+}
+
 // setCursorFlashTime(int)
-func (this *QStyleHints) SetCursorFlashTime(args ...interface{}) () {
+func (this *QStyleHints) Setcursorflashtime(args ...interface{}) () {
   // setCursorFlashTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -449,11 +571,15 @@ func (this *QStyleHints) SetCursorFlashTime(args ...interface{}) () {
 }
 
 // fontSmoothingGamma()
-func (this *QStyleHints) FontSmoothingGamma(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Fontsmoothinggamma(args ...interface{}) (ret interface{}) {
   // fontSmoothingGamma()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -478,12 +604,16 @@ func (this *QStyleHints) FontSmoothingGamma(args ...interface{}) (ret interface{
 }
 
 // setStartDragDistance(int)
-func (this *QStyleHints) SetStartDragDistance(args ...interface{}) () {
+func (this *QStyleHints) Setstartdragdistance(args ...interface{}) () {
   // setStartDragDistance(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -502,11 +632,15 @@ func (this *QStyleHints) SetStartDragDistance(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QStyleHints) MetaObject(args ...interface{}) () {
+func (this *QStyleHints) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -523,11 +657,15 @@ func (this *QStyleHints) MetaObject(args ...interface{}) () {
 }
 
 // keyboardInputInterval()
-func (this *QStyleHints) KeyboardInputInterval(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Keyboardinputinterval(args ...interface{}) (ret interface{}) {
   // keyboardInputInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -552,11 +690,15 @@ func (this *QStyleHints) KeyboardInputInterval(args ...interface{}) (ret interfa
 }
 
 // showIsFullScreen()
-func (this *QStyleHints) ShowIsFullScreen(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Showisfullscreen(args ...interface{}) (ret interface{}) {
   // showIsFullScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -581,11 +723,15 @@ func (this *QStyleHints) ShowIsFullScreen(args ...interface{}) (ret interface{})
 }
 
 // startDragTime()
-func (this *QStyleHints) StartDragTime(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Startdragtime(args ...interface{}) (ret interface{}) {
   // startDragTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -609,41 +755,44 @@ func (this *QStyleHints) StartDragTime(args ...interface{}) (ret interface{}) {
   return
 }
 
-// singleClickActivation()
-func (this *QStyleHints) SingleClickActivation(args ...interface{}) (ret interface{}) {
-  // singleClickActivation()
+// setMousePressAndHoldInterval(int)
+func (this *QStyleHints) Setmousepressandholdinterval(args ...interface{}) () {
+  // setMousePressAndHoldInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK11QStyleHints21singleClickActivationEv
-    // invoke: bool singleClickActivation()
-    var ret0 = C.C_ZNK11QStyleHints21singleClickActivationEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
+    // invoke: _ZN11QStyleHints28setMousePressAndHoldIntervalEi
+    // invoke: void setMousePressAndHoldInterval(int)
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg0)}
+    C.C_ZN11QStyleHints28setMousePressAndHoldIntervalEi(this.Qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QStyleHints", "singleClickActivation", args)
+    qtrt.ErrorResolve("QStyleHints", "setMousePressAndHoldInterval", args)
   }
 
   return
 }
 
 // passwordMaskCharacter()
-func (this *QStyleHints) PasswordMaskCharacter(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Passwordmaskcharacter(args ...interface{}) (ret interface{}) {
   // passwordMaskCharacter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -668,11 +817,15 @@ func (this *QStyleHints) PasswordMaskCharacter(args ...interface{}) (ret interfa
 }
 
 // mouseDoubleClickInterval()
-func (this *QStyleHints) MouseDoubleClickInterval(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) Mousedoubleclickinterval(args ...interface{}) (ret interface{}) {
   // mouseDoubleClickInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -61,7 +60,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSplashScreen)=1
@@ -77,6 +75,10 @@ func (this *QSplashScreen) Pixmap(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -106,6 +108,10 @@ func (this *QSplashScreen) Repaint(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -128,6 +134,10 @@ func (this *QSplashScreen) Finish(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -146,11 +156,15 @@ func (this *QSplashScreen) Finish(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QSplashScreen) MetaObject(args ...interface{}) () {
+func (this *QSplashScreen) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -167,12 +181,16 @@ func (this *QSplashScreen) MetaObject(args ...interface{}) () {
 }
 
 // setPixmap(const class QPixmap &)
-func (this *QSplashScreen) SetPixmap(args ...interface{}) () {
+func (this *QSplashScreen) Setpixmap(args ...interface{}) () {
   // setPixmap(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QPixmap{}) // "const QPixmap &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -191,11 +209,15 @@ func (this *QSplashScreen) SetPixmap(args ...interface{}) () {
 }
 
 // clearMessage()
-func (this *QSplashScreen) ClearMessage(args ...interface{}) () {
+func (this *QSplashScreen) Clearmessage(args ...interface{}) () {
   // clearMessage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -217,6 +239,10 @@ func (this *QSplashScreen) Message(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -241,7 +267,7 @@ func (this *QSplashScreen) Message(args ...interface{}) (ret interface{}) {
 }
 
 // showMessage(const class QString &, int, const class QColor &)
-func (this *QSplashScreen) ShowMessage(args ...interface{}) () {
+func (this *QSplashScreen) Showmessage(args ...interface{}) () {
   // showMessage(const class QString &, int, const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -249,6 +275,10 @@ func (this *QSplashScreen) ShowMessage(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(qtgui.QColor{}) // "const QColor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -271,11 +301,15 @@ func (this *QSplashScreen) ShowMessage(args ...interface{}) () {
 }
 
 // ~QSplashScreen()
-func (this *QSplashScreen) Free(args ...interface{}) () {
+func (this *QSplashScreen) Freeqsplashscreen(args ...interface{}) () {
   // ~QSplashScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -283,10 +317,7 @@ func (this *QSplashScreen) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QSplashScreenD0Ev
     // invoke: void ~QSplashScreen()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QSplashScreenD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QSplashScreenD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSplashScreen", "~QSplashScreen", args)
   }

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -79,7 +78,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QLibrary)=1
@@ -94,6 +92,10 @@ func (this *QLibrary) Load(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -118,7 +120,7 @@ func (this *QLibrary) Load(args ...interface{}) (ret interface{}) {
 }
 
 // resolve(const class QString &, const class QString &, const char *)
-func (this *QLibrary) Resolve_s(args ...interface{}) () {
+func (this *QLibrary) Resolve_S(args ...interface{}) () {
   // resolve(const class QString &, const class QString &, const char *)
   // resolve(const char *)
   // resolve(const class QString &, int, const char *)
@@ -138,6 +140,10 @@ func (this *QLibrary) Resolve_s(args ...interface{}) () {
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[3][1] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -192,11 +198,15 @@ func (this *QLibrary) Resolve_s(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QLibrary) MetaObject(args ...interface{}) () {
+func (this *QLibrary) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -213,11 +223,15 @@ func (this *QLibrary) MetaObject(args ...interface{}) () {
 }
 
 // errorString()
-func (this *QLibrary) ErrorString(args ...interface{}) (ret interface{}) {
+func (this *QLibrary) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -247,6 +261,10 @@ func (this *QLibrary) Unload(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -271,7 +289,7 @@ func (this *QLibrary) Unload(args ...interface{}) (ret interface{}) {
 }
 
 // setFileNameAndVersion(const class QString &, const class QString &)
-func (this *QLibrary) SetFileNameAndVersion(args ...interface{}) () {
+func (this *QLibrary) Setfilenameandversion(args ...interface{}) () {
   // setFileNameAndVersion(const class QString &, const class QString &)
   // setFileNameAndVersion(const class QString &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -282,6 +300,10 @@ func (this *QLibrary) SetFileNameAndVersion(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -310,12 +332,16 @@ func (this *QLibrary) SetFileNameAndVersion(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QLibrary) SetFileName(args ...interface{}) () {
+func (this *QLibrary) Setfilename(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -334,11 +360,15 @@ func (this *QLibrary) SetFileName(args ...interface{}) () {
 }
 
 // isLoaded()
-func (this *QLibrary) IsLoaded(args ...interface{}) (ret interface{}) {
+func (this *QLibrary) Isloaded(args ...interface{}) (ret interface{}) {
   // isLoaded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -363,11 +393,15 @@ func (this *QLibrary) IsLoaded(args ...interface{}) (ret interface{}) {
 }
 
 // ~QLibrary()
-func (this *QLibrary) Free(args ...interface{}) () {
+func (this *QLibrary) Freeqlibrary(args ...interface{}) () {
   // ~QLibrary()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -375,10 +409,7 @@ func (this *QLibrary) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QLibraryD0Ev
     // invoke: void ~QLibrary()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN8QLibraryD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN8QLibraryD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLibrary", "~QLibrary", args)
   }
@@ -387,12 +418,16 @@ func (this *QLibrary) Free(args ...interface{}) () {
 }
 
 // isLibrary(const class QString &)
-func (this *QLibrary) IsLibrary_s(args ...interface{}) (ret interface{}) {
+func (this *QLibrary) Islibrary_S(args ...interface{}) (ret interface{}) {
   // isLibrary(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -419,9 +454,6 @@ func (this *QLibrary) IsLibrary_s(args ...interface{}) (ret interface{}) {
 }
 
 // QLibrary(class QObject *)
-func GcfreeQLibrary(this *QLibrary) {
-  qtrt.UniverseFree(this)
-}
 func NewQLibrary(args ...interface{}) *QLibrary {
   // QLibrary(class QObject *)
   // QLibrary(const class QString &, int, class QObject *)
@@ -442,6 +474,10 @@ func NewQLibrary(args ...interface{}) *QLibrary {
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[3][1] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -454,9 +490,7 @@ func NewQLibrary(args ...interface{}) *QLibrary {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QLibraryC2EP7QObject(arg0)
-    this := &QLibrary{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQLibrary)
-    return this
+    return &QLibrary{Qclsinst:qthis}
   case 1:
     // invoke: _ZN8QLibraryC1ERK7QStringiP7QObject
     // invoke: void QLibrary(const class QString &, int, class QObject *)
@@ -469,9 +503,7 @@ func NewQLibrary(args ...interface{}) *QLibrary {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QLibraryC2ERK7QStringiP7QObject(arg0, arg1, arg2)
-    this := &QLibrary{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQLibrary)
-    return this
+    return &QLibrary{Qclsinst:qthis}
   case 2:
     // invoke: _ZN8QLibraryC1ERK7QStringS2_P7QObject
     // invoke: void QLibrary(const class QString &, const class QString &, class QObject *)
@@ -484,9 +516,7 @@ func NewQLibrary(args ...interface{}) *QLibrary {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QLibraryC2ERK7QStringS2_P7QObject(arg0, arg1, arg2)
-    this := &QLibrary{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQLibrary)
-    return this
+    return &QLibrary{Qclsinst:qthis}
   case 3:
     // invoke: _ZN8QLibraryC1ERK7QStringP7QObject
     // invoke: void QLibrary(const class QString &, class QObject *)
@@ -497,9 +527,7 @@ func NewQLibrary(args ...interface{}) *QLibrary {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QLibraryC2ERK7QStringP7QObject(arg0, arg1)
-    this := &QLibrary{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQLibrary)
-    return this
+    return &QLibrary{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QLibrary", "QLibrary", args)
   }
@@ -508,11 +536,15 @@ func NewQLibrary(args ...interface{}) *QLibrary {
 }
 
 // fileName()
-func (this *QLibrary) FileName(args ...interface{}) (ret interface{}) {
+func (this *QLibrary) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -537,11 +569,15 @@ func (this *QLibrary) FileName(args ...interface{}) (ret interface{}) {
 }
 
 // loadHints()
-func (this *QLibrary) LoadHints(args ...interface{}) () {
+func (this *QLibrary) Loadhints(args ...interface{}) () {
   // loadHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

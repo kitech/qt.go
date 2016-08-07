@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -107,7 +106,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMetaType)=80
@@ -117,7 +115,7 @@ type QMetaType struct {
 }
 
 // load(class QDataStream &, int, void *)
-func (this *QMetaType) Load_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Load_S(args ...interface{}) (ret interface{}) {
   // load(class QDataStream &, int, void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -125,6 +123,10 @@ func (this *QMetaType) Load_s(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QDataStream{}) // "QDataStream &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = qtrt.VoidpTy() // "void *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -155,13 +157,17 @@ func (this *QMetaType) Load_s(args ...interface{}) (ret interface{}) {
 }
 
 // registerNormalizedTypedef(const ::QByteArray &, int)
-func (this *QMetaType) RegisterNormalizedTypedef_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Registernormalizedtypedef_S(args ...interface{}) (ret interface{}) {
   // registerNormalizedTypedef(const ::QByteArray &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const ::QByteArray &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -190,7 +196,7 @@ func (this *QMetaType) RegisterNormalizedTypedef_s(args ...interface{}) (ret int
 }
 
 // compare(const void *, const void *, int, int *)
-func (this *QMetaType) Compare_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Compare_S(args ...interface{}) (ret interface{}) {
   // compare(const void *, const void *, int, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -199,6 +205,10 @@ func (this *QMetaType) Compare_s(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.VoidpTy() // "const void *"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = qtrt.Int32Ty(true) // "int *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -231,12 +241,16 @@ func (this *QMetaType) Compare_s(args ...interface{}) (ret interface{}) {
 }
 
 // typeName(int)
-func (this *QMetaType) TypeName_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Typename_S(args ...interface{}) (ret interface{}) {
   // typeName(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -263,15 +277,16 @@ func (this *QMetaType) TypeName_s(args ...interface{}) (ret interface{}) {
 }
 
 // QMetaType(const int)
-func GcfreeQMetaType(this *QMetaType) {
-  qtrt.UniverseFree(this)
-}
 func NewQMetaType(args ...interface{}) *QMetaType {
   // QMetaType(const int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "const int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -284,9 +299,7 @@ func NewQMetaType(args ...interface{}) *QMetaType {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMetaTypeC2Ei(arg0)
-    this := &QMetaType{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMetaType)
-    return this
+    return &QMetaType{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMetaType", "QMetaType", args)
   }
@@ -295,7 +308,7 @@ func NewQMetaType(args ...interface{}) *QMetaType {
 }
 
 // isRegistered(int)
-func (this *QMetaType) IsRegistered_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Isregistered_S(args ...interface{}) (ret interface{}) {
   // isRegistered(int)
   // isRegistered()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -303,6 +316,10 @@ func (this *QMetaType) IsRegistered_s(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -341,12 +358,16 @@ func (this *QMetaType) IsRegistered_s(args ...interface{}) (ret interface{}) {
 }
 
 // unregisterType(int)
-func (this *QMetaType) UnregisterType_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Unregistertype_S(args ...interface{}) (ret interface{}) {
   // unregisterType(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -373,12 +394,16 @@ func (this *QMetaType) UnregisterType_s(args ...interface{}) (ret interface{}) {
 }
 
 // typeFlags(int)
-func (this *QMetaType) TypeFlags_s(args ...interface{}) () {
+func (this *QMetaType) Typeflags_S(args ...interface{}) () {
   // typeFlags(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -397,7 +422,7 @@ func (this *QMetaType) TypeFlags_s(args ...interface{}) () {
 }
 
 // create(int, const void *)
-func (this *QMetaType) Create_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Create_S(args ...interface{}) (ret interface{}) {
   // create(int, const void *)
   // create(const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -407,6 +432,10 @@ func (this *QMetaType) Create_s(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.VoidpTy() // "const void *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.VoidpTy() // "const void *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -449,7 +478,7 @@ func (this *QMetaType) Create_s(args ...interface{}) (ret interface{}) {
 }
 
 // construct(int, void *, const void *)
-func (this *QMetaType) Construct_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Construct_S(args ...interface{}) (ret interface{}) {
   // construct(int, void *, const void *)
   // construct(void *, const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -461,6 +490,10 @@ func (this *QMetaType) Construct_s(args ...interface{}) (ret interface{}) {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.VoidpTy() // "void *"
   vtys[1][1] = qtrt.VoidpTy() // "const void *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -507,12 +540,16 @@ func (this *QMetaType) Construct_s(args ...interface{}) (ret interface{}) {
 }
 
 // hasRegisteredDebugStreamOperator(int)
-func (this *QMetaType) HasRegisteredDebugStreamOperator_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Hasregistereddebugstreamoperator_S(args ...interface{}) (ret interface{}) {
   // hasRegisteredDebugStreamOperator(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -539,7 +576,7 @@ func (this *QMetaType) HasRegisteredDebugStreamOperator_s(args ...interface{}) (
 }
 
 // destroy(int, void *)
-func (this *QMetaType) Destroy_s(args ...interface{}) () {
+func (this *QMetaType) Destroy_S(args ...interface{}) () {
   // destroy(int, void *)
   // destroy(void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -549,6 +586,10 @@ func (this *QMetaType) Destroy_s(args ...interface{}) () {
   vtys[0][1] = qtrt.VoidpTy() // "void *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.VoidpTy() // "void *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -575,7 +616,7 @@ func (this *QMetaType) Destroy_s(args ...interface{}) () {
 }
 
 // save(class QDataStream &, int, const void *)
-func (this *QMetaType) Save_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Save_S(args ...interface{}) (ret interface{}) {
   // save(class QDataStream &, int, const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -583,6 +624,10 @@ func (this *QMetaType) Save_s(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QDataStream{}) // "QDataStream &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = qtrt.VoidpTy() // "const void *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -613,7 +658,7 @@ func (this *QMetaType) Save_s(args ...interface{}) (ret interface{}) {
 }
 
 // type(const char *)
-func (this *QMetaType) Type_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Type_S(args ...interface{}) (ret interface{}) {
   // type(const char *)
   // type(const ::QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -622,6 +667,10 @@ func (this *QMetaType) Type_s(args ...interface{}) (ret interface{}) {
   vtys[0][0] = qtrt.ByteTy(true) // "const char *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QByteArray{}) // "const ::QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -664,11 +713,15 @@ func (this *QMetaType) Type_s(args ...interface{}) (ret interface{}) {
 }
 
 // ~QMetaType()
-func (this *QMetaType) Free(args ...interface{}) () {
+func (this *QMetaType) Freeqmetatype(args ...interface{}) () {
   // ~QMetaType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -676,10 +729,7 @@ func (this *QMetaType) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMetaTypeD0Ev
     // invoke: void ~QMetaType()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QMetaTypeD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QMetaTypeD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMetaType", "~QMetaType", args)
   }
@@ -688,12 +738,16 @@ func (this *QMetaType) Free(args ...interface{}) () {
 }
 
 // hasRegisteredComparators(int)
-func (this *QMetaType) HasRegisteredComparators_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Hasregisteredcomparators_S(args ...interface{}) (ret interface{}) {
   // hasRegisteredComparators(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -720,11 +774,15 @@ func (this *QMetaType) HasRegisteredComparators_s(args ...interface{}) (ret inte
 }
 
 // isValid()
-func (this *QMetaType) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -749,7 +807,7 @@ func (this *QMetaType) IsValid(args ...interface{}) (ret interface{}) {
 }
 
 // equals(const void *, const void *, int, int *)
-func (this *QMetaType) Equals_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Equals_S(args ...interface{}) (ret interface{}) {
   // equals(const void *, const void *, int, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -758,6 +816,10 @@ func (this *QMetaType) Equals_s(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.VoidpTy() // "const void *"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = qtrt.Int32Ty(true) // "int *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -790,7 +852,7 @@ func (this *QMetaType) Equals_s(args ...interface{}) (ret interface{}) {
 }
 
 // convert(const void *, int, void *, int)
-func (this *QMetaType) Convert_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Convert_S(args ...interface{}) (ret interface{}) {
   // convert(const void *, int, void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -799,6 +861,10 @@ func (this *QMetaType) Convert_s(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = qtrt.VoidpTy() // "void *"
   vtys[0][3] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -831,11 +897,15 @@ func (this *QMetaType) Convert_s(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QMetaType) MetaObject(args ...interface{}) () {
+func (this *QMetaType) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -852,7 +922,7 @@ func (this *QMetaType) MetaObject(args ...interface{}) () {
 }
 
 // debugStream(class QDebug &, const void *, int)
-func (this *QMetaType) DebugStream_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Debugstream_S(args ...interface{}) (ret interface{}) {
   // debugStream(class QDebug &, const void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -860,6 +930,10 @@ func (this *QMetaType) DebugStream_s(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QDebug{}) // "QDebug &"
   vtys[0][1] = qtrt.VoidpTy() // "const void *"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -890,12 +964,16 @@ func (this *QMetaType) DebugStream_s(args ...interface{}) (ret interface{}) {
 }
 
 // metaObjectForType(int)
-func (this *QMetaType) MetaObjectForType_s(args ...interface{}) () {
+func (this *QMetaType) Metaobjectfortype_S(args ...interface{}) () {
   // metaObjectForType(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -924,6 +1002,10 @@ func (this *QMetaType) Destruct(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
   vtys[1][1] = qtrt.VoidpTy() // "void *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -950,13 +1032,17 @@ func (this *QMetaType) Destruct(args ...interface{}) () {
 }
 
 // hasRegisteredConverterFunction(int, int)
-func (this *QMetaType) HasRegisteredConverterFunction_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Hasregisteredconverterfunction_S(args ...interface{}) (ret interface{}) {
   // hasRegisteredConverterFunction(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -990,6 +1076,10 @@ func (this *QMetaType) Flags(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1006,13 +1096,17 @@ func (this *QMetaType) Flags(args ...interface{}) () {
 }
 
 // registerTypedef(const char *, int)
-func (this *QMetaType) RegisterTypedef_s(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Registertypedef_S(args ...interface{}) (ret interface{}) {
   // registerTypedef(const char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.ByteTy(true) // "const char *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1043,7 +1137,7 @@ func (this *QMetaType) RegisterTypedef_s(args ...interface{}) (ret interface{}) 
 }
 
 // sizeOf()
-func (this *QMetaType) SizeOf(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Sizeof(args ...interface{}) (ret interface{}) {
   // sizeOf()
   // sizeOf(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1051,6 +1145,10 @@ func (this *QMetaType) SizeOf(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

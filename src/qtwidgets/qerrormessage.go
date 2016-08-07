@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qerrormessage.h
 // dst-file: /src/widgets/qerrormessage.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -55,7 +54,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QErrorMessage)=1
@@ -65,11 +63,15 @@ type QErrorMessage struct {
 }
 
 // metaObject()
-func (this *QErrorMessage) MetaObject(args ...interface{}) () {
+func (this *QErrorMessage) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -86,15 +88,16 @@ func (this *QErrorMessage) MetaObject(args ...interface{}) () {
 }
 
 // QErrorMessage(class QWidget *)
-func GcfreeQErrorMessage(this *QErrorMessage) {
-  qtrt.UniverseFree(this)
-}
 func NewQErrorMessage(args ...interface{}) *QErrorMessage {
   // QErrorMessage(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -107,9 +110,7 @@ func NewQErrorMessage(args ...interface{}) *QErrorMessage {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QErrorMessageC2EP7QWidget(arg0)
-    this := &QErrorMessage{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQErrorMessage)
-    return this
+    return &QErrorMessage{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QErrorMessage", "QErrorMessage", args)
   }
@@ -118,11 +119,15 @@ func NewQErrorMessage(args ...interface{}) *QErrorMessage {
 }
 
 // ~QErrorMessage()
-func (this *QErrorMessage) Free(args ...interface{}) () {
+func (this *QErrorMessage) Freeqerrormessage(args ...interface{}) () {
   // ~QErrorMessage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -130,10 +135,7 @@ func (this *QErrorMessage) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QErrorMessageD0Ev
     // invoke: void ~QErrorMessage()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QErrorMessageD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QErrorMessageD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QErrorMessage", "~QErrorMessage", args)
   }
@@ -142,11 +144,15 @@ func (this *QErrorMessage) Free(args ...interface{}) () {
 }
 
 // qtHandler()
-func (this *QErrorMessage) QtHandler_s(args ...interface{}) (ret interface{}) {
+func (this *QErrorMessage) Qthandler_S(args ...interface{}) (ret interface{}) {
   // qtHandler()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -171,7 +177,7 @@ func (this *QErrorMessage) QtHandler_s(args ...interface{}) (ret interface{}) {
 }
 
 // showMessage(const class QString &, const class QString &)
-func (this *QErrorMessage) ShowMessage(args ...interface{}) () {
+func (this *QErrorMessage) Showmessage(args ...interface{}) () {
   // showMessage(const class QString &, const class QString &)
   // showMessage(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -181,6 +187,10 @@ func (this *QErrorMessage) ShowMessage(args ...interface{}) () {
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

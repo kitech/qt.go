@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qmargins.h
 // dst-file: /src/core/qmargins.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -87,7 +86,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMarginsF)=32
@@ -108,6 +106,10 @@ func (this *QMarginsF) Right(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -137,6 +139,10 @@ func (this *QMarginsF) Bottom(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -161,12 +167,16 @@ func (this *QMarginsF) Bottom(args ...interface{}) (ret interface{}) {
 }
 
 // setBottom(qreal)
-func (this *QMarginsF) SetBottom(args ...interface{}) () {
+func (this *QMarginsF) Setbottom(args ...interface{}) () {
   // setBottom(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -190,6 +200,10 @@ func (this *QMarginsF) Top(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -214,11 +228,15 @@ func (this *QMarginsF) Top(args ...interface{}) (ret interface{}) {
 }
 
 // toMargins()
-func (this *QMarginsF) ToMargins(args ...interface{}) (ret interface{}) {
+func (this *QMarginsF) Tomargins(args ...interface{}) (ret interface{}) {
   // toMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -243,12 +261,16 @@ func (this *QMarginsF) ToMargins(args ...interface{}) (ret interface{}) {
 }
 
 // setRight(qreal)
-func (this *QMarginsF) SetRight(args ...interface{}) () {
+func (this *QMarginsF) Setright(args ...interface{}) () {
   // setRight(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -267,12 +289,16 @@ func (this *QMarginsF) SetRight(args ...interface{}) () {
 }
 
 // setTop(qreal)
-func (this *QMarginsF) SetTop(args ...interface{}) () {
+func (this *QMarginsF) Settop(args ...interface{}) () {
   // setTop(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -291,11 +317,15 @@ func (this *QMarginsF) SetTop(args ...interface{}) () {
 }
 
 // isNull()
-func (this *QMarginsF) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QMarginsF) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -320,12 +350,16 @@ func (this *QMarginsF) IsNull(args ...interface{}) (ret interface{}) {
 }
 
 // setLeft(qreal)
-func (this *QMarginsF) SetLeft(args ...interface{}) () {
+func (this *QMarginsF) Setleft(args ...interface{}) () {
   // setLeft(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -344,9 +378,6 @@ func (this *QMarginsF) SetLeft(args ...interface{}) () {
 }
 
 // QMarginsF()
-func GcfreeQMarginsF(this *QMarginsF) {
-  qtrt.UniverseFree(this)
-}
 func NewQMarginsF(args ...interface{}) *QMarginsF {
   // QMarginsF()
   // QMarginsF(qreal, qreal, qreal, qreal)
@@ -361,6 +392,10 @@ func NewQMarginsF(args ...interface{}) *QMarginsF {
   vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QMargins{}) // "const QMargins &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -371,9 +406,7 @@ func NewQMarginsF(args ...interface{}) *QMarginsF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMarginsFC2Ev()
-    this := &QMarginsF{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMarginsF)
-    return this
+    return &QMarginsF{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QMarginsFC1Edddd
     // invoke: void QMarginsF(qreal, qreal, qreal, qreal)
@@ -388,9 +421,7 @@ func NewQMarginsF(args ...interface{}) *QMarginsF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMarginsFC2Edddd(arg0, arg1, arg2, arg3)
-    this := &QMarginsF{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMarginsF)
-    return this
+    return &QMarginsF{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QMarginsFC1ERK8QMargins
     // invoke: void QMarginsF(const class QMargins &)
@@ -399,9 +430,7 @@ func NewQMarginsF(args ...interface{}) *QMarginsF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMarginsFC2ERK8QMargins(arg0)
-    this := &QMarginsF{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMarginsF)
-    return this
+    return &QMarginsF{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMarginsF", "QMarginsF", args)
   }
@@ -415,6 +444,10 @@ func (this *QMarginsF) Left(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -444,6 +477,10 @@ func (this *QMargins) Right(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -473,6 +510,10 @@ func (this *QMargins) Bottom(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -497,12 +538,16 @@ func (this *QMargins) Bottom(args ...interface{}) (ret interface{}) {
 }
 
 // setBottom(int)
-func (this *QMargins) SetBottom(args ...interface{}) () {
+func (this *QMargins) Setbottom(args ...interface{}) () {
   // setBottom(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -521,12 +566,16 @@ func (this *QMargins) SetBottom(args ...interface{}) () {
 }
 
 // setRight(int)
-func (this *QMargins) SetRight(args ...interface{}) () {
+func (this *QMargins) Setright(args ...interface{}) () {
   // setRight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -545,12 +594,16 @@ func (this *QMargins) SetRight(args ...interface{}) () {
 }
 
 // setTop(int)
-func (this *QMargins) SetTop(args ...interface{}) () {
+func (this *QMargins) Settop(args ...interface{}) () {
   // setTop(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -569,11 +622,15 @@ func (this *QMargins) SetTop(args ...interface{}) () {
 }
 
 // isNull()
-func (this *QMargins) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QMargins) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -598,9 +655,6 @@ func (this *QMargins) IsNull(args ...interface{}) (ret interface{}) {
 }
 
 // QMargins()
-func GcfreeQMargins(this *QMargins) {
-  qtrt.UniverseFree(this)
-}
 func NewQMargins(args ...interface{}) *QMargins {
   // QMargins()
   // QMargins(int, int, int, int)
@@ -612,6 +666,10 @@ func NewQMargins(args ...interface{}) *QMargins {
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
   vtys[1][2] = qtrt.Int32Ty(false) // "int"
   vtys[1][3] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -622,9 +680,7 @@ func NewQMargins(args ...interface{}) *QMargins {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QMarginsC2Ev()
-    this := &QMargins{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMargins)
-    return this
+    return &QMargins{Qclsinst:qthis}
   case 1:
     // invoke: _ZN8QMarginsC1Eiiii
     // invoke: void QMargins(int, int, int, int)
@@ -639,9 +695,7 @@ func NewQMargins(args ...interface{}) *QMargins {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QMarginsC2Eiiii(arg0, arg1, arg2, arg3)
-    this := &QMargins{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMargins)
-    return this
+    return &QMargins{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMargins", "QMargins", args)
   }
@@ -650,12 +704,16 @@ func NewQMargins(args ...interface{}) *QMargins {
 }
 
 // setLeft(int)
-func (this *QMargins) SetLeft(args ...interface{}) () {
+func (this *QMargins) Setleft(args ...interface{}) () {
   // setLeft(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -679,6 +737,10 @@ func (this *QMargins) Top(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -708,6 +770,10 @@ func (this *QMargins) Left(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

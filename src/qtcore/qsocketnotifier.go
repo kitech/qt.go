@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -51,7 +50,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSocketNotifier)=1
@@ -62,12 +60,16 @@ type QSocketNotifier struct {
 }
 
 // setEnabled(_Bool)
-func (this *QSocketNotifier) SetEnabled(args ...interface{}) () {
+func (this *QSocketNotifier) Setenabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -91,6 +93,10 @@ func (this *QSocketNotifier) Socket(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -115,11 +121,15 @@ func (this *QSocketNotifier) Socket(args ...interface{}) (ret interface{}) {
 }
 
 // ~QSocketNotifier()
-func (this *QSocketNotifier) Free(args ...interface{}) () {
+func (this *QSocketNotifier) Freeqsocketnotifier(args ...interface{}) () {
   // ~QSocketNotifier()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -127,10 +137,7 @@ func (this *QSocketNotifier) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSocketNotifierD0Ev
     // invoke: void ~QSocketNotifier()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QSocketNotifierD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QSocketNotifierD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSocketNotifier", "~QSocketNotifier", args)
   }
@@ -139,11 +146,15 @@ func (this *QSocketNotifier) Free(args ...interface{}) () {
 }
 
 // isEnabled()
-func (this *QSocketNotifier) IsEnabled(args ...interface{}) (ret interface{}) {
+func (this *QSocketNotifier) Isenabled(args ...interface{}) (ret interface{}) {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -168,11 +179,15 @@ func (this *QSocketNotifier) IsEnabled(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QSocketNotifier) MetaObject(args ...interface{}) () {
+func (this *QSocketNotifier) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -194,6 +209,10 @@ func (this *QSocketNotifier) Type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

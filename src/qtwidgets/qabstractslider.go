@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -93,7 +92,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractSlider)=1
@@ -109,12 +107,16 @@ type QAbstractSlider struct {
 }
 
 // setTracking(_Bool)
-func (this *QAbstractSlider) SetTracking(args ...interface{}) () {
+func (this *QAbstractSlider) Settracking(args ...interface{}) () {
   // setTracking(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -138,6 +140,10 @@ func (this *QAbstractSlider) Orientation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -154,11 +160,15 @@ func (this *QAbstractSlider) Orientation(args ...interface{}) () {
 }
 
 // invertedControls()
-func (this *QAbstractSlider) InvertedControls(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) Invertedcontrols(args ...interface{}) (ret interface{}) {
   // invertedControls()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -183,11 +193,15 @@ func (this *QAbstractSlider) InvertedControls(args ...interface{}) (ret interfac
 }
 
 // singleStep()
-func (this *QAbstractSlider) SingleStep(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) Singlestep(args ...interface{}) (ret interface{}) {
   // singleStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -217,6 +231,10 @@ func (this *QAbstractSlider) Minimum(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -241,12 +259,16 @@ func (this *QAbstractSlider) Minimum(args ...interface{}) (ret interface{}) {
 }
 
 // setSliderDown(_Bool)
-func (this *QAbstractSlider) SetSliderDown(args ...interface{}) () {
+func (this *QAbstractSlider) Setsliderdown(args ...interface{}) () {
   // setSliderDown(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -265,11 +287,15 @@ func (this *QAbstractSlider) SetSliderDown(args ...interface{}) () {
 }
 
 // ~QAbstractSlider()
-func (this *QAbstractSlider) Free(args ...interface{}) () {
+func (this *QAbstractSlider) Freeqabstractslider(args ...interface{}) () {
   // ~QAbstractSlider()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -277,10 +303,7 @@ func (this *QAbstractSlider) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSliderD0Ev
     // invoke: void ~QAbstractSlider()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QAbstractSliderD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QAbstractSliderD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "~QAbstractSlider", args)
   }
@@ -289,11 +312,15 @@ func (this *QAbstractSlider) Free(args ...interface{}) () {
 }
 
 // pageStep()
-func (this *QAbstractSlider) PageStep(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) Pagestep(args ...interface{}) (ret interface{}) {
   // pageStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -318,12 +345,16 @@ func (this *QAbstractSlider) PageStep(args ...interface{}) (ret interface{}) {
 }
 
 // setInvertedControls(_Bool)
-func (this *QAbstractSlider) SetInvertedControls(args ...interface{}) () {
+func (this *QAbstractSlider) Setinvertedcontrols(args ...interface{}) () {
   // setInvertedControls(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -342,12 +373,16 @@ func (this *QAbstractSlider) SetInvertedControls(args ...interface{}) () {
 }
 
 // setPageStep(int)
-func (this *QAbstractSlider) SetPageStep(args ...interface{}) () {
+func (this *QAbstractSlider) Setpagestep(args ...interface{}) () {
   // setPageStep(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -366,11 +401,15 @@ func (this *QAbstractSlider) SetPageStep(args ...interface{}) () {
 }
 
 // isSliderDown()
-func (this *QAbstractSlider) IsSliderDown(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) Issliderdown(args ...interface{}) (ret interface{}) {
   // isSliderDown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -395,12 +434,16 @@ func (this *QAbstractSlider) IsSliderDown(args ...interface{}) (ret interface{})
 }
 
 // setSingleStep(int)
-func (this *QAbstractSlider) SetSingleStep(args ...interface{}) () {
+func (this *QAbstractSlider) Setsinglestep(args ...interface{}) () {
   // setSingleStep(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -419,11 +462,15 @@ func (this *QAbstractSlider) SetSingleStep(args ...interface{}) () {
 }
 
 // hasTracking()
-func (this *QAbstractSlider) HasTracking(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) Hastracking(args ...interface{}) (ret interface{}) {
   // hasTracking()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -448,12 +495,16 @@ func (this *QAbstractSlider) HasTracking(args ...interface{}) (ret interface{}) 
 }
 
 // setMaximum(int)
-func (this *QAbstractSlider) SetMaximum(args ...interface{}) () {
+func (this *QAbstractSlider) Setmaximum(args ...interface{}) () {
   // setMaximum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -472,12 +523,16 @@ func (this *QAbstractSlider) SetMaximum(args ...interface{}) () {
 }
 
 // setValue(int)
-func (this *QAbstractSlider) SetValue(args ...interface{}) () {
+func (this *QAbstractSlider) Setvalue(args ...interface{}) () {
   // setValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -496,11 +551,15 @@ func (this *QAbstractSlider) SetValue(args ...interface{}) () {
 }
 
 // invertedAppearance()
-func (this *QAbstractSlider) InvertedAppearance(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) Invertedappearance(args ...interface{}) (ret interface{}) {
   // invertedAppearance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -525,11 +584,15 @@ func (this *QAbstractSlider) InvertedAppearance(args ...interface{}) (ret interf
 }
 
 // sliderPosition()
-func (this *QAbstractSlider) SliderPosition(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) Sliderposition(args ...interface{}) (ret interface{}) {
   // sliderPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -554,13 +617,17 @@ func (this *QAbstractSlider) SliderPosition(args ...interface{}) (ret interface{
 }
 
 // setRange(int, int)
-func (this *QAbstractSlider) SetRange(args ...interface{}) () {
+func (this *QAbstractSlider) Setrange(args ...interface{}) () {
   // setRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -581,12 +648,16 @@ func (this *QAbstractSlider) SetRange(args ...interface{}) () {
 }
 
 // setInvertedAppearance(_Bool)
-func (this *QAbstractSlider) SetInvertedAppearance(args ...interface{}) () {
+func (this *QAbstractSlider) Setinvertedappearance(args ...interface{}) () {
   // setInvertedAppearance(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -605,11 +676,15 @@ func (this *QAbstractSlider) SetInvertedAppearance(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QAbstractSlider) MetaObject(args ...interface{}) () {
+func (this *QAbstractSlider) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -626,15 +701,16 @@ func (this *QAbstractSlider) MetaObject(args ...interface{}) () {
 }
 
 // QAbstractSlider(class QWidget *)
-func GcfreeQAbstractSlider(this *QAbstractSlider) {
-  qtrt.UniverseFree(this)
-}
 func NewQAbstractSlider(args ...interface{}) *QAbstractSlider {
   // QAbstractSlider(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -647,9 +723,7 @@ func NewQAbstractSlider(args ...interface{}) *QAbstractSlider {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QAbstractSliderC2EP7QWidget(arg0)
-    this := &QAbstractSlider{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAbstractSlider)
-    return this
+    return &QAbstractSlider{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractSlider", "QAbstractSlider", args)
   }
@@ -663,6 +737,10 @@ func (this *QAbstractSlider) Maximum(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -692,6 +770,10 @@ func (this *QAbstractSlider) Value(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -716,12 +798,16 @@ func (this *QAbstractSlider) Value(args ...interface{}) (ret interface{}) {
 }
 
 // setSliderPosition(int)
-func (this *QAbstractSlider) SetSliderPosition(args ...interface{}) () {
+func (this *QAbstractSlider) Setsliderposition(args ...interface{}) () {
   // setSliderPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -740,12 +826,16 @@ func (this *QAbstractSlider) SetSliderPosition(args ...interface{}) () {
 }
 
 // setMinimum(int)
-func (this *QAbstractSlider) SetMinimum(args ...interface{}) () {
+func (this *QAbstractSlider) Setminimum(args ...interface{}) () {
   // setMinimum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

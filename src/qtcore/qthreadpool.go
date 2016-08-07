@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qthreadpool.h
 // dst-file: /src/core/qthreadpool.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -71,7 +70,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QThreadPool)=1
@@ -81,12 +79,16 @@ type QThreadPool struct {
 }
 
 // setExpiryTimeout(int)
-func (this *QThreadPool) SetExpiryTimeout(args ...interface{}) () {
+func (this *QThreadPool) Setexpirytimeout(args ...interface{}) () {
   // setExpiryTimeout(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -105,11 +107,15 @@ func (this *QThreadPool) SetExpiryTimeout(args ...interface{}) () {
 }
 
 // reserveThread()
-func (this *QThreadPool) ReserveThread(args ...interface{}) () {
+func (this *QThreadPool) Reservethread(args ...interface{}) () {
   // reserveThread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -132,6 +138,10 @@ func (this *QThreadPool) Cancel(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRunnable{}) // "QRunnable *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -150,15 +160,16 @@ func (this *QThreadPool) Cancel(args ...interface{}) () {
 }
 
 // QThreadPool(class QObject *)
-func GcfreeQThreadPool(this *QThreadPool) {
-  qtrt.UniverseFree(this)
-}
 func NewQThreadPool(args ...interface{}) *QThreadPool {
   // QThreadPool(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -171,9 +182,7 @@ func NewQThreadPool(args ...interface{}) *QThreadPool {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QThreadPoolC2EP7QObject(arg0)
-    this := &QThreadPool{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQThreadPool)
-    return this
+    return &QThreadPool{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QThreadPool", "QThreadPool", args)
   }
@@ -182,12 +191,16 @@ func NewQThreadPool(args ...interface{}) *QThreadPool {
 }
 
 // waitForDone(int)
-func (this *QThreadPool) WaitForDone(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) Waitfordone(args ...interface{}) (ret interface{}) {
   // waitForDone(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -221,6 +234,10 @@ func (this *QThreadPool) Start(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRunnable{}) // "QRunnable *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -241,11 +258,15 @@ func (this *QThreadPool) Start(args ...interface{}) () {
 }
 
 // activeThreadCount()
-func (this *QThreadPool) ActiveThreadCount(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) Activethreadcount(args ...interface{}) (ret interface{}) {
   // activeThreadCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -270,12 +291,16 @@ func (this *QThreadPool) ActiveThreadCount(args ...interface{}) (ret interface{}
 }
 
 // setMaxThreadCount(int)
-func (this *QThreadPool) SetMaxThreadCount(args ...interface{}) () {
+func (this *QThreadPool) Setmaxthreadcount(args ...interface{}) () {
   // setMaxThreadCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -294,11 +319,15 @@ func (this *QThreadPool) SetMaxThreadCount(args ...interface{}) () {
 }
 
 // ~QThreadPool()
-func (this *QThreadPool) Free(args ...interface{}) () {
+func (this *QThreadPool) Freeqthreadpool(args ...interface{}) () {
   // ~QThreadPool()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -306,10 +335,7 @@ func (this *QThreadPool) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPoolD0Ev
     // invoke: void ~QThreadPool()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QThreadPoolD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QThreadPoolD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThreadPool", "~QThreadPool", args)
   }
@@ -318,11 +344,15 @@ func (this *QThreadPool) Free(args ...interface{}) () {
 }
 
 // globalInstance()
-func (this *QThreadPool) GlobalInstance_s(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) Globalinstance_S(args ...interface{}) (ret interface{}) {
   // globalInstance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -347,11 +377,15 @@ func (this *QThreadPool) GlobalInstance_s(args ...interface{}) (ret interface{})
 }
 
 // metaObject()
-func (this *QThreadPool) MetaObject(args ...interface{}) () {
+func (this *QThreadPool) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -373,6 +407,10 @@ func (this *QThreadPool) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -389,11 +427,15 @@ func (this *QThreadPool) Clear(args ...interface{}) () {
 }
 
 // releaseThread()
-func (this *QThreadPool) ReleaseThread(args ...interface{}) () {
+func (this *QThreadPool) Releasethread(args ...interface{}) () {
   // releaseThread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -410,12 +452,16 @@ func (this *QThreadPool) ReleaseThread(args ...interface{}) () {
 }
 
 // tryStart(class QRunnable *)
-func (this *QThreadPool) TryStart(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) Trystart(args ...interface{}) (ret interface{}) {
   // tryStart(class QRunnable *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRunnable{}) // "QRunnable *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -442,11 +488,15 @@ func (this *QThreadPool) TryStart(args ...interface{}) (ret interface{}) {
 }
 
 // maxThreadCount()
-func (this *QThreadPool) MaxThreadCount(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) Maxthreadcount(args ...interface{}) (ret interface{}) {
   // maxThreadCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -471,11 +521,15 @@ func (this *QThreadPool) MaxThreadCount(args ...interface{}) (ret interface{}) {
 }
 
 // expiryTimeout()
-func (this *QThreadPool) ExpiryTimeout(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) Expirytimeout(args ...interface{}) (ret interface{}) {
   // expiryTimeout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -83,7 +82,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFutureWatcherBase)=1
@@ -109,11 +107,15 @@ type QFutureWatcherLvoidG struct {
 }
 
 // isStarted()
-func (this *QFutureWatcherBase) IsStarted(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) Isstarted(args ...interface{}) (ret interface{}) {
   // isStarted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -143,6 +145,10 @@ func (this *QFutureWatcherBase) Cancel(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -165,6 +171,10 @@ func (this *QFutureWatcherBase) Event(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -191,11 +201,15 @@ func (this *QFutureWatcherBase) Event(args ...interface{}) (ret interface{}) {
 }
 
 // togglePaused()
-func (this *QFutureWatcherBase) TogglePaused(args ...interface{}) () {
+func (this *QFutureWatcherBase) Togglepaused(args ...interface{}) () {
   // togglePaused()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -212,11 +226,15 @@ func (this *QFutureWatcherBase) TogglePaused(args ...interface{}) () {
 }
 
 // progressMinimum()
-func (this *QFutureWatcherBase) ProgressMinimum(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) Progressminimum(args ...interface{}) (ret interface{}) {
   // progressMinimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -241,11 +259,15 @@ func (this *QFutureWatcherBase) ProgressMinimum(args ...interface{}) (ret interf
 }
 
 // waitForFinished()
-func (this *QFutureWatcherBase) WaitForFinished(args ...interface{}) () {
+func (this *QFutureWatcherBase) Waitforfinished(args ...interface{}) () {
   // waitForFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -267,6 +289,10 @@ func (this *QFutureWatcherBase) Resume(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -283,11 +309,15 @@ func (this *QFutureWatcherBase) Resume(args ...interface{}) () {
 }
 
 // progressMaximum()
-func (this *QFutureWatcherBase) ProgressMaximum(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) Progressmaximum(args ...interface{}) (ret interface{}) {
   // progressMaximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -312,11 +342,15 @@ func (this *QFutureWatcherBase) ProgressMaximum(args ...interface{}) (ret interf
 }
 
 // isFinished()
-func (this *QFutureWatcherBase) IsFinished(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) Isfinished(args ...interface{}) (ret interface{}) {
   // isFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -341,11 +375,15 @@ func (this *QFutureWatcherBase) IsFinished(args ...interface{}) (ret interface{}
 }
 
 // progressText()
-func (this *QFutureWatcherBase) ProgressText(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) Progresstext(args ...interface{}) (ret interface{}) {
   // progressText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -370,12 +408,16 @@ func (this *QFutureWatcherBase) ProgressText(args ...interface{}) (ret interface
 }
 
 // setPendingResultsLimit(int)
-func (this *QFutureWatcherBase) SetPendingResultsLimit(args ...interface{}) () {
+func (this *QFutureWatcherBase) Setpendingresultslimit(args ...interface{}) () {
   // setPendingResultsLimit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -399,6 +441,10 @@ func (this *QFutureWatcherBase) Pause(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -415,11 +461,15 @@ func (this *QFutureWatcherBase) Pause(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QFutureWatcherBase) MetaObject(args ...interface{}) () {
+func (this *QFutureWatcherBase) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -436,15 +486,16 @@ func (this *QFutureWatcherBase) MetaObject(args ...interface{}) () {
 }
 
 // QFutureWatcherBase(class QObject *)
-func GcfreeQFutureWatcherBase(this *QFutureWatcherBase) {
-  qtrt.UniverseFree(this)
-}
 func NewQFutureWatcherBase(args ...interface{}) *QFutureWatcherBase {
   // QFutureWatcherBase(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -457,9 +508,7 @@ func NewQFutureWatcherBase(args ...interface{}) *QFutureWatcherBase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QFutureWatcherBaseC2EP7QObject(arg0)
-    this := &QFutureWatcherBase{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFutureWatcherBase)
-    return this
+    return &QFutureWatcherBase{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "QFutureWatcherBase", args)
   }
@@ -468,11 +517,15 @@ func NewQFutureWatcherBase(args ...interface{}) *QFutureWatcherBase {
 }
 
 // isRunning()
-func (this *QFutureWatcherBase) IsRunning(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) Isrunning(args ...interface{}) (ret interface{}) {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -497,11 +550,15 @@ func (this *QFutureWatcherBase) IsRunning(args ...interface{}) (ret interface{})
 }
 
 // isCanceled()
-func (this *QFutureWatcherBase) IsCanceled(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) Iscanceled(args ...interface{}) (ret interface{}) {
   // isCanceled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -526,11 +583,15 @@ func (this *QFutureWatcherBase) IsCanceled(args ...interface{}) (ret interface{}
 }
 
 // isPaused()
-func (this *QFutureWatcherBase) IsPaused(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) Ispaused(args ...interface{}) (ret interface{}) {
   // isPaused()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -555,11 +616,15 @@ func (this *QFutureWatcherBase) IsPaused(args ...interface{}) (ret interface{}) 
 }
 
 // progressValue()
-func (this *QFutureWatcherBase) ProgressValue(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) Progressvalue(args ...interface{}) (ret interface{}) {
   // progressValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -584,12 +649,16 @@ func (this *QFutureWatcherBase) ProgressValue(args ...interface{}) (ret interfac
 }
 
 // setPaused(_Bool)
-func (this *QFutureWatcherBase) SetPaused(args ...interface{}) () {
+func (this *QFutureWatcherBase) Setpaused(args ...interface{}) () {
   // setPaused(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -608,11 +677,15 @@ func (this *QFutureWatcherBase) SetPaused(args ...interface{}) () {
 }
 
 // ~QFutureWatcher()
-func (this *QFutureWatcherLvoidG) Free(args ...interface{}) () {
+func (this *QFutureWatcherLvoidG) Freeqfuturewatcherlvoidg(args ...interface{}) () {
   // ~QFutureWatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -620,10 +693,7 @@ func (this *QFutureWatcherLvoidG) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QFutureWatcherIvED0Ev
     // invoke: void ~QFutureWatcher()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN14QFutureWatcherIvED2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN14QFutureWatcherIvED2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcher<void>", "~QFutureWatcher", args)
   }
@@ -632,15 +702,16 @@ func (this *QFutureWatcherLvoidG) Free(args ...interface{}) () {
 }
 
 // QFutureWatcher(class QObject *)
-func GcfreeQFutureWatcherLvoidG(this *QFutureWatcherLvoidG) {
-  qtrt.UniverseFree(this)
-}
 func NewQFutureWatcherLvoidG(args ...interface{}) *QFutureWatcherLvoidG {
   // QFutureWatcher(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -653,9 +724,7 @@ func NewQFutureWatcherLvoidG(args ...interface{}) *QFutureWatcherLvoidG {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QFutureWatcherIvEC2EP7QObject(arg0)
-    this := &QFutureWatcherLvoidG{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFutureWatcherLvoidG)
-    return this
+    return &QFutureWatcherLvoidG{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFutureWatcher<void>", "QFutureWatcher", args)
   }
@@ -669,6 +738,10 @@ func (this *QFutureWatcherLvoidG) Future(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

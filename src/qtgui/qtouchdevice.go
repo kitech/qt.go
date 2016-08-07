@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -59,7 +58,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTouchDevice)=8
@@ -74,6 +72,10 @@ func (this *QTouchDevice) Name(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -98,12 +100,16 @@ func (this *QTouchDevice) Name(args ...interface{}) (ret interface{}) {
 }
 
 // setName(const class QString &)
-func (this *QTouchDevice) SetName(args ...interface{}) () {
+func (this *QTouchDevice) Setname(args ...interface{}) () {
   // setName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -122,11 +128,15 @@ func (this *QTouchDevice) SetName(args ...interface{}) () {
 }
 
 // ~QTouchDevice()
-func (this *QTouchDevice) Free(args ...interface{}) () {
+func (this *QTouchDevice) Freeqtouchdevice(args ...interface{}) () {
   // ~QTouchDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -134,10 +144,7 @@ func (this *QTouchDevice) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTouchDeviceD0Ev
     // invoke: void ~QTouchDevice()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QTouchDeviceD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QTouchDeviceD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTouchDevice", "~QTouchDevice", args)
   }
@@ -146,12 +153,16 @@ func (this *QTouchDevice) Free(args ...interface{}) () {
 }
 
 // setMaximumTouchPoints(int)
-func (this *QTouchDevice) SetMaximumTouchPoints(args ...interface{}) () {
+func (this *QTouchDevice) Setmaximumtouchpoints(args ...interface{}) () {
   // setMaximumTouchPoints(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -170,11 +181,15 @@ func (this *QTouchDevice) SetMaximumTouchPoints(args ...interface{}) () {
 }
 
 // maximumTouchPoints()
-func (this *QTouchDevice) MaximumTouchPoints(args ...interface{}) (ret interface{}) {
+func (this *QTouchDevice) Maximumtouchpoints(args ...interface{}) (ret interface{}) {
   // maximumTouchPoints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -199,11 +214,15 @@ func (this *QTouchDevice) MaximumTouchPoints(args ...interface{}) (ret interface
 }
 
 // devices()
-func (this *QTouchDevice) Devices_s(args ...interface{}) () {
+func (this *QTouchDevice) Devices_S(args ...interface{}) () {
   // devices()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -225,6 +244,10 @@ func (this *QTouchDevice) Capabilities(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -241,14 +264,15 @@ func (this *QTouchDevice) Capabilities(args ...interface{}) () {
 }
 
 // QTouchDevice()
-func GcfreeQTouchDevice(this *QTouchDevice) {
-  qtrt.UniverseFree(this)
-}
 func NewQTouchDevice(args ...interface{}) *QTouchDevice {
   // QTouchDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -259,9 +283,7 @@ func NewQTouchDevice(args ...interface{}) *QTouchDevice {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QTouchDeviceC2Ev()
-    this := &QTouchDevice{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTouchDevice)
-    return this
+    return &QTouchDevice{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTouchDevice", "QTouchDevice", args)
   }
@@ -275,6 +297,10 @@ func (this *QTouchDevice) Type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

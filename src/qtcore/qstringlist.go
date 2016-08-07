@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -69,7 +68,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStringList)=1
@@ -85,7 +83,7 @@ type QListSpecialMethodsLQStringG struct {
 }
 
 // indexOf(const class QRegExp &, int)
-func (this *QStringList) IndexOf(args ...interface{}) (ret interface{}) {
+func (this *QStringList) Indexof(args ...interface{}) (ret interface{}) {
   // indexOf(const class QRegExp &, int)
   // indexOf(const class QRegularExpression &, int)
   // indexOf(class QRegExp &, int)
@@ -100,6 +98,10 @@ func (this *QStringList) IndexOf(args ...interface{}) (ret interface{}) {
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QRegExp{}) // "QRegExp &"
   vtys[2][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -160,9 +162,6 @@ func (this *QStringList) IndexOf(args ...interface{}) (ret interface{}) {
 }
 
 // QStringList()
-func GcfreeQStringList(this *QStringList) {
-  qtrt.UniverseFree(this)
-}
 func NewQStringList(args ...interface{}) *QStringList {
   // QStringList()
   // QStringList(const class QString &)
@@ -171,6 +170,10 @@ func NewQStringList(args ...interface{}) *QStringList {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -181,9 +184,7 @@ func NewQStringList(args ...interface{}) *QStringList {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStringListC2Ev()
-    this := &QStringList{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStringList)
-    return this
+    return &QStringList{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QStringListC1ERK7QString
     // invoke: void QStringList(const class QString &)
@@ -192,9 +193,7 @@ func NewQStringList(args ...interface{}) *QStringList {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStringListC2ERK7QString(arg0)
-    this := &QStringList{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStringList)
-    return this
+    return &QStringList{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStringList", "QStringList", args)
   }
@@ -203,7 +202,7 @@ func NewQStringList(args ...interface{}) *QStringList {
 }
 
 // lastIndexOf(const class QRegExp &, int)
-func (this *QStringList) LastIndexOf(args ...interface{}) (ret interface{}) {
+func (this *QStringList) Lastindexof(args ...interface{}) (ret interface{}) {
   // lastIndexOf(const class QRegExp &, int)
   // lastIndexOf(const class QRegularExpression &, int)
   // lastIndexOf(class QRegExp &, int)
@@ -218,6 +217,10 @@ func (this *QStringList) LastIndexOf(args ...interface{}) (ret interface{}) {
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QRegExp{}) // "QRegExp &"
   vtys[2][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -278,7 +281,7 @@ func (this *QStringList) LastIndexOf(args ...interface{}) (ret interface{}) {
 }
 
 // replaceInStrings(const class QRegularExpression &, const class QString &)
-func (this *QListSpecialMethodsLQStringG) ReplaceInStrings(args ...interface{}) () {
+func (this *QListSpecialMethodsLQStringG) Replaceinstrings(args ...interface{}) () {
   // replaceInStrings(const class QRegularExpression &, const class QString &)
   // replaceInStrings(const class QRegExp &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -289,6 +292,10 @@ func (this *QListSpecialMethodsLQStringG) ReplaceInStrings(args ...interface{}) 
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QRegExp{}) // "const QRegExp &"
   vtys[1][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -326,6 +333,10 @@ func (this *QListSpecialMethodsLQStringG) Join(args ...interface{}) (ret interfa
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QChar{}) // "QChar"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -375,6 +386,10 @@ func (this *QListSpecialMethodsLQStringG) Filter(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QRegularExpression{}) // "const QRegularExpression &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QRegExp{}) // "const QRegExp &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -399,11 +414,15 @@ func (this *QListSpecialMethodsLQStringG) Filter(args ...interface{}) () {
 }
 
 // removeDuplicates()
-func (this *QListSpecialMethodsLQStringG) RemoveDuplicates(args ...interface{}) (ret interface{}) {
+func (this *QListSpecialMethodsLQStringG) Removeduplicates(args ...interface{}) (ret interface{}) {
   // removeDuplicates()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

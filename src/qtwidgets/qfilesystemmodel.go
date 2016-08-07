@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -43,6 +42,8 @@ extern void* C_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(void* qthis,
 extern void* C_ZN16QFileSystemModel11setRootPathERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QFileSystemModel::~QFileSystemModel();
 extern void C_ZN16QFileSystemModelD2Ev(void* qthis); // 4
+  // proto:  QModelIndex QFileSystemModel::sibling(int row, int column, const QModelIndex & idx);
+extern void* C_ZNK16QFileSystemModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  void QFileSystemModel::QFileSystemModel(QObject * parent);
 extern void* C_ZN16QFileSystemModelC2EP7QObject(void* arg0); // 3
   // proto:  qint64 QFileSystemModel::size(const QModelIndex & index);
@@ -64,7 +65,7 @@ extern void C_ZNK16QFileSystemModel11nameFiltersEv(void* qthis); // 4
   // proto:  bool QFileSystemModel::rmdir(const QModelIndex & index);
 extern bool C_ZN16QFileSystemModel5rmdirERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QFileInfo QFileSystemModel::fileInfo(const QModelIndex & index);
-extern void* C_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(void* qthis, void* arg0); // 2
+extern void* C_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QFile::Permissions QFileSystemModel::permissions(const QModelIndex & index);
 extern void C_ZNK16QFileSystemModel11permissionsERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QString QFileSystemModel::type(const QModelIndex & index);
@@ -129,7 +130,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFileSystemModel)=1
@@ -142,12 +142,16 @@ type QFileSystemModel struct {
 }
 
 // setNameFilters(const class QStringList &)
-func (this *QFileSystemModel) SetNameFilters(args ...interface{}) () {
+func (this *QFileSystemModel) Setnamefilters(args ...interface{}) () {
   // setNameFilters(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -166,12 +170,16 @@ func (this *QFileSystemModel) SetNameFilters(args ...interface{}) () {
 }
 
 // columnCount(const class QModelIndex &)
-func (this *QFileSystemModel) ColumnCount(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Columncount(args ...interface{}) (ret interface{}) {
   // columnCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -198,12 +206,16 @@ func (this *QFileSystemModel) ColumnCount(args ...interface{}) (ret interface{})
 }
 
 // myComputer(int)
-func (this *QFileSystemModel) MyComputer(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Mycomputer(args ...interface{}) (ret interface{}) {
   // myComputer(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -237,6 +249,10 @@ func (this *QFileSystemModel) Mkdir(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -265,12 +281,16 @@ func (this *QFileSystemModel) Mkdir(args ...interface{}) (ret interface{}) {
 }
 
 // setRootPath(const class QString &)
-func (this *QFileSystemModel) SetRootPath(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Setrootpath(args ...interface{}) (ret interface{}) {
   // setRootPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -297,11 +317,15 @@ func (this *QFileSystemModel) SetRootPath(args ...interface{}) (ret interface{})
 }
 
 // ~QFileSystemModel()
-func (this *QFileSystemModel) Free(args ...interface{}) () {
+func (this *QFileSystemModel) Freeqfilesystemmodel(args ...interface{}) () {
   // ~QFileSystemModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -309,10 +333,7 @@ func (this *QFileSystemModel) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QFileSystemModelD0Ev
     // invoke: void ~QFileSystemModel()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QFileSystemModelD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QFileSystemModelD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "~QFileSystemModel", args)
   }
@@ -320,16 +341,59 @@ func (this *QFileSystemModel) Free(args ...interface{}) () {
   return
 }
 
-// QFileSystemModel(class QObject *)
-func GcfreeQFileSystemModel(this *QFileSystemModel) {
-  qtrt.UniverseFree(this)
+// sibling(int, int, const class QModelIndex &)
+func (this *QFileSystemModel) Sibling(args ...interface{}) (ret interface{}) {
+  // sibling(int, int, const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  vtys[0][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK16QFileSystemModel7siblingEiiRK11QModelIndex
+    // invoke: QModelIndex sibling(int, int, const class QModelIndex &)
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(*qtcore.QModelIndex).Qclsinst
+    if false {fmt.Println(arg2)}
+    var ret0 = C.C_ZNK16QFileSystemModel7siblingEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QFileSystemModel", "sibling", args)
+  }
+
+  return
 }
+
+// QFileSystemModel(class QObject *)
 func NewQFileSystemModel(args ...interface{}) *QFileSystemModel {
   // QFileSystemModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -342,9 +406,7 @@ func NewQFileSystemModel(args ...interface{}) *QFileSystemModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QFileSystemModelC2EP7QObject(arg0)
-    this := &QFileSystemModel{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFileSystemModel)
-    return this
+    return &QFileSystemModel{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFileSystemModel", "QFileSystemModel", args)
   }
@@ -359,6 +421,10 @@ func (this *QFileSystemModel) Size(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -397,6 +463,10 @@ func (this *QFileSystemModel) Index(args ...interface{}) (ret interface{}) {
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
   vtys[1][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -443,11 +513,15 @@ func (this *QFileSystemModel) Index(args ...interface{}) (ret interface{}) {
 }
 
 // resolveSymlinks()
-func (this *QFileSystemModel) ResolveSymlinks(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Resolvesymlinks(args ...interface{}) (ret interface{}) {
   // resolveSymlinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -472,12 +546,16 @@ func (this *QFileSystemModel) ResolveSymlinks(args ...interface{}) (ret interfac
 }
 
 // hasChildren(const class QModelIndex &)
-func (this *QFileSystemModel) HasChildren(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Haschildren(args ...interface{}) (ret interface{}) {
   // hasChildren(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -504,11 +582,15 @@ func (this *QFileSystemModel) HasChildren(args ...interface{}) (ret interface{})
 }
 
 // isReadOnly()
-func (this *QFileSystemModel) IsReadOnly(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Isreadonly(args ...interface{}) (ret interface{}) {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -533,12 +615,16 @@ func (this *QFileSystemModel) IsReadOnly(args ...interface{}) (ret interface{}) 
 }
 
 // isDir(const class QModelIndex &)
-func (this *QFileSystemModel) IsDir(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Isdir(args ...interface{}) (ret interface{}) {
   // isDir(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -565,11 +651,15 @@ func (this *QFileSystemModel) IsDir(args ...interface{}) (ret interface{}) {
 }
 
 // nameFilters()
-func (this *QFileSystemModel) NameFilters(args ...interface{}) () {
+func (this *QFileSystemModel) Namefilters(args ...interface{}) () {
   // nameFilters()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -592,6 +682,10 @@ func (this *QFileSystemModel) Rmdir(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -618,12 +712,16 @@ func (this *QFileSystemModel) Rmdir(args ...interface{}) (ret interface{}) {
 }
 
 // fileInfo(const class QModelIndex &)
-func (this *QFileSystemModel) FileInfo(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Fileinfo(args ...interface{}) (ret interface{}) {
   // fileInfo(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -656,6 +754,10 @@ func (this *QFileSystemModel) Permissions(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -680,6 +782,10 @@ func (this *QFileSystemModel) Type_(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -706,12 +812,16 @@ func (this *QFileSystemModel) Type_(args ...interface{}) (ret interface{}) {
 }
 
 // setNameFilterDisables(_Bool)
-func (this *QFileSystemModel) SetNameFilterDisables(args ...interface{}) () {
+func (this *QFileSystemModel) Setnamefilterdisables(args ...interface{}) () {
   // setNameFilterDisables(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -730,12 +840,16 @@ func (this *QFileSystemModel) SetNameFilterDisables(args ...interface{}) () {
 }
 
 // setIconProvider(class QFileIconProvider *)
-func (this *QFileSystemModel) SetIconProvider(args ...interface{}) () {
+func (this *QFileSystemModel) Seticonprovider(args ...interface{}) () {
   // setIconProvider(class QFileIconProvider *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QFileIconProvider{}) // "QFileIconProvider *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -754,7 +868,7 @@ func (this *QFileSystemModel) SetIconProvider(args ...interface{}) () {
 }
 
 // setData(const class QModelIndex &, const class QVariant &, int)
-func (this *QFileSystemModel) SetData(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Setdata(args ...interface{}) (ret interface{}) {
   // setData(const class QModelIndex &, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -762,6 +876,10 @@ func (this *QFileSystemModel) SetData(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
   vtys[0][1] = reflect.TypeOf(qtcore.QVariant{}) // "const QVariant &"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -792,12 +910,16 @@ func (this *QFileSystemModel) SetData(args ...interface{}) (ret interface{}) {
 }
 
 // canFetchMore(const class QModelIndex &)
-func (this *QFileSystemModel) CanFetchMore(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Canfetchmore(args ...interface{}) (ret interface{}) {
   // canFetchMore(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -830,6 +952,10 @@ func (this *QFileSystemModel) Parent(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -856,12 +982,16 @@ func (this *QFileSystemModel) Parent(args ...interface{}) (ret interface{}) {
 }
 
 // filePath(const class QModelIndex &)
-func (this *QFileSystemModel) FilePath(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Filepath(args ...interface{}) (ret interface{}) {
   // filePath(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -888,12 +1018,16 @@ func (this *QFileSystemModel) FilePath(args ...interface{}) (ret interface{}) {
 }
 
 // fileName(const class QModelIndex &)
-func (this *QFileSystemModel) FileName(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Filename(args ...interface{}) (ret interface{}) {
   // fileName(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -920,12 +1054,16 @@ func (this *QFileSystemModel) FileName(args ...interface{}) (ret interface{}) {
 }
 
 // rowCount(const class QModelIndex &)
-func (this *QFileSystemModel) RowCount(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Rowcount(args ...interface{}) (ret interface{}) {
   // rowCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -952,11 +1090,15 @@ func (this *QFileSystemModel) RowCount(args ...interface{}) (ret interface{}) {
 }
 
 // iconProvider()
-func (this *QFileSystemModel) IconProvider(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Iconprovider(args ...interface{}) (ret interface{}) {
   // iconProvider()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -981,11 +1123,15 @@ func (this *QFileSystemModel) IconProvider(args ...interface{}) (ret interface{}
 }
 
 // nameFilterDisables()
-func (this *QFileSystemModel) NameFilterDisables(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Namefilterdisables(args ...interface{}) (ret interface{}) {
   // nameFilterDisables()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1017,6 +1163,10 @@ func (this *QFileSystemModel) Data(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1045,11 +1195,15 @@ func (this *QFileSystemModel) Data(args ...interface{}) (ret interface{}) {
 }
 
 // mimeTypes()
-func (this *QFileSystemModel) MimeTypes(args ...interface{}) () {
+func (this *QFileSystemModel) Mimetypes(args ...interface{}) () {
   // mimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1066,11 +1220,15 @@ func (this *QFileSystemModel) MimeTypes(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QFileSystemModel) MetaObject(args ...interface{}) () {
+func (this *QFileSystemModel) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1087,12 +1245,16 @@ func (this *QFileSystemModel) MetaObject(args ...interface{}) () {
 }
 
 // setResolveSymlinks(_Bool)
-func (this *QFileSystemModel) SetResolveSymlinks(args ...interface{}) () {
+func (this *QFileSystemModel) Setresolvesymlinks(args ...interface{}) () {
   // setResolveSymlinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1111,11 +1273,15 @@ func (this *QFileSystemModel) SetResolveSymlinks(args ...interface{}) () {
 }
 
 // rootPath()
-func (this *QFileSystemModel) RootPath(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Rootpath(args ...interface{}) (ret interface{}) {
   // rootPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1146,6 +1312,10 @@ func (this *QFileSystemModel) Remove(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1177,6 +1347,10 @@ func (this *QFileSystemModel) Filter(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1193,12 +1367,16 @@ func (this *QFileSystemModel) Filter(args ...interface{}) () {
 }
 
 // setReadOnly(_Bool)
-func (this *QFileSystemModel) SetReadOnly(args ...interface{}) () {
+func (this *QFileSystemModel) Setreadonly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1223,6 +1401,10 @@ func (this *QFileSystemModel) Flags(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1241,11 +1423,15 @@ func (this *QFileSystemModel) Flags(args ...interface{}) () {
 }
 
 // rootDirectory()
-func (this *QFileSystemModel) RootDirectory(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Rootdirectory(args ...interface{}) (ret interface{}) {
   // rootDirectory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1270,12 +1456,16 @@ func (this *QFileSystemModel) RootDirectory(args ...interface{}) (ret interface{
 }
 
 // lastModified(const class QModelIndex &)
-func (this *QFileSystemModel) LastModified(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Lastmodified(args ...interface{}) (ret interface{}) {
   // lastModified(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1302,12 +1492,16 @@ func (this *QFileSystemModel) LastModified(args ...interface{}) (ret interface{}
 }
 
 // fileIcon(const class QModelIndex &)
-func (this *QFileSystemModel) FileIcon(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemModel) Fileicon(args ...interface{}) (ret interface{}) {
   // fileIcon(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1334,12 +1528,16 @@ func (this *QFileSystemModel) FileIcon(args ...interface{}) (ret interface{}) {
 }
 
 // fetchMore(const class QModelIndex &)
-func (this *QFileSystemModel) FetchMore(args ...interface{}) () {
+func (this *QFileSystemModel) Fetchmore(args ...interface{}) () {
   // fetchMore(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1358,11 +1556,15 @@ func (this *QFileSystemModel) FetchMore(args ...interface{}) () {
 }
 
 // supportedDropActions()
-func (this *QFileSystemModel) SupportedDropActions(args ...interface{}) () {
+func (this *QFileSystemModel) Supporteddropactions(args ...interface{}) () {
   // supportedDropActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

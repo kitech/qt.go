@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qeventloop.h
 // dst-file: /src/core/qeventloop.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -63,7 +62,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QEventLoop)=1
@@ -84,6 +82,10 @@ func (this *QEventLoop) Quit(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -100,11 +102,15 @@ func (this *QEventLoop) Quit(args ...interface{}) () {
 }
 
 // isRunning()
-func (this *QEventLoop) IsRunning(args ...interface{}) (ret interface{}) {
+func (this *QEventLoop) Isrunning(args ...interface{}) (ret interface{}) {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -129,15 +135,16 @@ func (this *QEventLoop) IsRunning(args ...interface{}) (ret interface{}) {
 }
 
 // QEventLoop(class QObject *)
-func GcfreeQEventLoop(this *QEventLoop) {
-  qtrt.UniverseFree(this)
-}
 func NewQEventLoop(args ...interface{}) *QEventLoop {
   // QEventLoop(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -150,9 +157,7 @@ func NewQEventLoop(args ...interface{}) *QEventLoop {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QEventLoopC2EP7QObject(arg0)
-    this := &QEventLoop{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQEventLoop)
-    return this
+    return &QEventLoop{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QEventLoop", "QEventLoop", args)
   }
@@ -167,6 +172,10 @@ func (this *QEventLoop) Exit(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -185,11 +194,15 @@ func (this *QEventLoop) Exit(args ...interface{}) () {
 }
 
 // wakeUp()
-func (this *QEventLoop) WakeUp(args ...interface{}) () {
+func (this *QEventLoop) Wakeup(args ...interface{}) () {
   // wakeUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -206,11 +219,15 @@ func (this *QEventLoop) WakeUp(args ...interface{}) () {
 }
 
 // ~QEventLoop()
-func (this *QEventLoop) Free(args ...interface{}) () {
+func (this *QEventLoop) Freeqeventloop(args ...interface{}) () {
   // ~QEventLoop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -218,10 +235,7 @@ func (this *QEventLoop) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QEventLoopD0Ev
     // invoke: void ~QEventLoop()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN10QEventLoopD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN10QEventLoopD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "~QEventLoop", args)
   }
@@ -230,11 +244,15 @@ func (this *QEventLoop) Free(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QEventLoop) MetaObject(args ...interface{}) () {
+func (this *QEventLoop) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -257,6 +275,10 @@ func (this *QEventLoop) Event(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -283,11 +305,15 @@ func (this *QEventLoop) Event(args ...interface{}) (ret interface{}) {
 }
 
 // ~QEventLoopLocker()
-func (this *QEventLoopLocker) Free(args ...interface{}) () {
+func (this *QEventLoopLocker) Freeqeventlooplocker(args ...interface{}) () {
   // ~QEventLoopLocker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -295,10 +321,7 @@ func (this *QEventLoopLocker) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QEventLoopLockerD0Ev
     // invoke: void ~QEventLoopLocker()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QEventLoopLockerD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QEventLoopLockerD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoopLocker", "~QEventLoopLocker", args)
   }
@@ -307,9 +330,6 @@ func (this *QEventLoopLocker) Free(args ...interface{}) () {
 }
 
 // QEventLoopLocker()
-func GcfreeQEventLoopLocker(this *QEventLoopLocker) {
-  qtrt.UniverseFree(this)
-}
 func NewQEventLoopLocker(args ...interface{}) *QEventLoopLocker {
   // QEventLoopLocker()
   // QEventLoopLocker(class QThread *)
@@ -321,6 +341,10 @@ func NewQEventLoopLocker(args ...interface{}) *QEventLoopLocker {
   vtys[1][0] = reflect.TypeOf(QThread{}) // "QThread *"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QEventLoop{}) // "QEventLoop *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -331,9 +355,7 @@ func NewQEventLoopLocker(args ...interface{}) *QEventLoopLocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QEventLoopLockerC2Ev()
-    this := &QEventLoopLocker{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQEventLoopLocker)
-    return this
+    return &QEventLoopLocker{Qclsinst:qthis}
   case 1:
     // invoke: _ZN16QEventLoopLockerC1EP7QThread
     // invoke: void QEventLoopLocker(class QThread *)
@@ -342,9 +364,7 @@ func NewQEventLoopLocker(args ...interface{}) *QEventLoopLocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QEventLoopLockerC2EP7QThread(arg0)
-    this := &QEventLoopLocker{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQEventLoopLocker)
-    return this
+    return &QEventLoopLocker{Qclsinst:qthis}
   case 2:
     // invoke: _ZN16QEventLoopLockerC1EP10QEventLoop
     // invoke: void QEventLoopLocker(class QEventLoop *)
@@ -353,9 +373,7 @@ func NewQEventLoopLocker(args ...interface{}) *QEventLoopLocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QEventLoopLockerC2EP10QEventLoop(arg0)
-    this := &QEventLoopLocker{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQEventLoopLocker)
-    return this
+    return &QEventLoopLocker{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QEventLoopLocker", "QEventLoopLocker", args)
   }

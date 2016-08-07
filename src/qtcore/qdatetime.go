@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qdatetime.h
 // dst-file: /src/core/qdatetime.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -225,7 +224,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTime)=4
@@ -247,13 +245,17 @@ type QDate struct {
 }
 
 // fromString(const class QString &, const class QString &)
-func (this *QTime) FromString_s(args ...interface{}) (ret interface{}) {
+func (this *QTime) Fromstring_S(args ...interface{}) (ret interface{}) {
   // fromString(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -282,9 +284,6 @@ func (this *QTime) FromString_s(args ...interface{}) (ret interface{}) {
 }
 
 // QTime(int, int, int, int)
-func GcfreeQTime(this *QTime) {
-  qtrt.UniverseFree(this)
-}
 func NewQTime(args ...interface{}) *QTime {
   // QTime(int, int, int, int)
   // QTime()
@@ -296,6 +295,10 @@ func NewQTime(args ...interface{}) *QTime {
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -314,18 +317,14 @@ func NewQTime(args ...interface{}) *QTime {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QTimeC2Eiiii(arg0, arg1, arg2, arg3)
-    this := &QTime{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTime)
-    return this
+    return &QTime{Qclsinst:qthis}
   case 1:
     // invoke: _ZN5QTimeC1Ev
     // invoke: void QTime()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QTimeC2Ev()
-    this := &QTime{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTime)
-    return this
+    return &QTime{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTime", "QTime", args)
   }
@@ -339,6 +338,10 @@ func (this *QTime) Msec(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -368,6 +371,10 @@ func (this *QTime) Second(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -392,11 +399,15 @@ func (this *QTime) Second(args ...interface{}) (ret interface{}) {
 }
 
 // msecsSinceStartOfDay()
-func (this *QTime) MsecsSinceStartOfDay(args ...interface{}) (ret interface{}) {
+func (this *QTime) Msecssincestartofday(args ...interface{}) (ret interface{}) {
   // msecsSinceStartOfDay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -421,7 +432,7 @@ func (this *QTime) MsecsSinceStartOfDay(args ...interface{}) (ret interface{}) {
 }
 
 // setHMS(int, int, int, int)
-func (this *QTime) SetHMS(args ...interface{}) (ret interface{}) {
+func (this *QTime) Sethms(args ...interface{}) (ret interface{}) {
   // setHMS(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -430,6 +441,10 @@ func (this *QTime) SetHMS(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -462,12 +477,16 @@ func (this *QTime) SetHMS(args ...interface{}) (ret interface{}) {
 }
 
 // addMSecs(int)
-func (this *QTime) AddMSecs(args ...interface{}) (ret interface{}) {
+func (this *QTime) Addmsecs(args ...interface{}) (ret interface{}) {
   // addMSecs(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -499,6 +518,10 @@ func (this *QTime) Start(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -515,12 +538,16 @@ func (this *QTime) Start(args ...interface{}) () {
 }
 
 // fromMSecsSinceStartOfDay(int)
-func (this *QTime) FromMSecsSinceStartOfDay_s(args ...interface{}) (ret interface{}) {
+func (this *QTime) Frommsecssincestartofday_S(args ...interface{}) (ret interface{}) {
   // fromMSecsSinceStartOfDay(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -552,6 +579,10 @@ func (this *QTime) Minute(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -576,12 +607,16 @@ func (this *QTime) Minute(args ...interface{}) (ret interface{}) {
 }
 
 // toString(const class QString &)
-func (this *QTime) ToString(args ...interface{}) (ret interface{}) {
+func (this *QTime) Tostring(args ...interface{}) (ret interface{}) {
   // toString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -608,7 +643,7 @@ func (this *QTime) ToString(args ...interface{}) (ret interface{}) {
 }
 
 // isValid(int, int, int, int)
-func (this *QTime) IsValid_s(args ...interface{}) (ret interface{}) {
+func (this *QTime) Isvalid_S(args ...interface{}) (ret interface{}) {
   // isValid(int, int, int, int)
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -619,6 +654,10 @@ func (this *QTime) IsValid_s(args ...interface{}) (ret interface{}) {
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -663,12 +702,16 @@ func (this *QTime) IsValid_s(args ...interface{}) (ret interface{}) {
 }
 
 // secsTo(const class QTime &)
-func (this *QTime) SecsTo(args ...interface{}) (ret interface{}) {
+func (this *QTime) Secsto(args ...interface{}) (ret interface{}) {
   // secsTo(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTime{}) // "const QTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -700,6 +743,10 @@ func (this *QTime) Elapsed(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -724,12 +771,16 @@ func (this *QTime) Elapsed(args ...interface{}) (ret interface{}) {
 }
 
 // addSecs(int)
-func (this *QTime) AddSecs(args ...interface{}) (ret interface{}) {
+func (this *QTime) Addsecs(args ...interface{}) (ret interface{}) {
   // addSecs(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -756,12 +807,16 @@ func (this *QTime) AddSecs(args ...interface{}) (ret interface{}) {
 }
 
 // msecsTo(const class QTime &)
-func (this *QTime) MsecsTo(args ...interface{}) (ret interface{}) {
+func (this *QTime) Msecsto(args ...interface{}) (ret interface{}) {
   // msecsTo(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTime{}) // "const QTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -793,6 +848,10 @@ func (this *QTime) Restart(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -822,6 +881,10 @@ func (this *QTime) Hour(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -846,11 +909,15 @@ func (this *QTime) Hour(args ...interface{}) (ret interface{}) {
 }
 
 // currentTime()
-func (this *QTime) CurrentTime_s(args ...interface{}) (ret interface{}) {
+func (this *QTime) Currenttime_S(args ...interface{}) (ret interface{}) {
   // currentTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -875,11 +942,15 @@ func (this *QTime) CurrentTime_s(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QTime) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QTime) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -904,13 +975,17 @@ func (this *QTime) IsNull(args ...interface{}) (ret interface{}) {
 }
 
 // fromString(const class QString &, const class QString &)
-func (this *QDateTime) FromString_s(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Fromstring_S(args ...interface{}) (ret interface{}) {
   // fromString(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -939,12 +1014,16 @@ func (this *QDateTime) FromString_s(args ...interface{}) (ret interface{}) {
 }
 
 // setOffsetFromUtc(int)
-func (this *QDateTime) SetOffsetFromUtc(args ...interface{}) () {
+func (this *QDateTime) Setoffsetfromutc(args ...interface{}) () {
   // setOffsetFromUtc(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -963,11 +1042,15 @@ func (this *QDateTime) SetOffsetFromUtc(args ...interface{}) () {
 }
 
 // toTime_t()
-func (this *QDateTime) ToTime_t(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Totime_T(args ...interface{}) (ret interface{}) {
   // toTime_t()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -992,12 +1075,16 @@ func (this *QDateTime) ToTime_t(args ...interface{}) (ret interface{}) {
 }
 
 // toTimeZone(const class QTimeZone &)
-func (this *QDateTime) ToTimeZone(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Totimezone(args ...interface{}) (ret interface{}) {
   // toTimeZone(const class QTimeZone &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTimeZone{}) // "const QTimeZone &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1024,11 +1111,15 @@ func (this *QDateTime) ToTimeZone(args ...interface{}) (ret interface{}) {
 }
 
 // toUTC()
-func (this *QDateTime) ToUTC(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Toutc(args ...interface{}) (ret interface{}) {
   // toUTC()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1053,12 +1144,16 @@ func (this *QDateTime) ToUTC(args ...interface{}) (ret interface{}) {
 }
 
 // setUtcOffset(int)
-func (this *QDateTime) SetUtcOffset(args ...interface{}) () {
+func (this *QDateTime) Setutcoffset(args ...interface{}) () {
   // setUtcOffset(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1077,12 +1172,16 @@ func (this *QDateTime) SetUtcOffset(args ...interface{}) () {
 }
 
 // setTimeZone(const class QTimeZone &)
-func (this *QDateTime) SetTimeZone(args ...interface{}) () {
+func (this *QDateTime) Settimezone(args ...interface{}) () {
   // setTimeZone(const class QTimeZone &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTimeZone{}) // "const QTimeZone &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1101,9 +1200,6 @@ func (this *QDateTime) SetTimeZone(args ...interface{}) () {
 }
 
 // QDateTime(const class QDateTime &)
-func GcfreeQDateTime(this *QDateTime) {
-  qtrt.UniverseFree(this)
-}
 func NewQDateTime(args ...interface{}) *QDateTime {
   // QDateTime(const class QDateTime &)
   // QDateTime(const class QDate &)
@@ -1120,6 +1216,10 @@ func NewQDateTime(args ...interface{}) *QDateTime {
   vtys[3][0] = reflect.TypeOf(QDate{}) // "const QDate &"
   vtys[3][1] = reflect.TypeOf(QTime{}) // "const QTime &"
   vtys[3][2] = reflect.TypeOf(QTimeZone{}) // "const QTimeZone &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1132,9 +1232,7 @@ func NewQDateTime(args ...interface{}) *QDateTime {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2ERKS_(arg0)
-    this := &QDateTime{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDateTime)
-    return this
+    return &QDateTime{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QDateTimeC1ERK5QDate
     // invoke: void QDateTime(const class QDate &)
@@ -1143,18 +1241,14 @@ func NewQDateTime(args ...interface{}) *QDateTime {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2ERK5QDate(arg0)
-    this := &QDateTime{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDateTime)
-    return this
+    return &QDateTime{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QDateTimeC1Ev
     // invoke: void QDateTime()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2Ev()
-    this := &QDateTime{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDateTime)
-    return this
+    return &QDateTime{Qclsinst:qthis}
   case 3:
     // invoke: _ZN9QDateTimeC1ERK5QDateRK5QTimeRK9QTimeZone
     // invoke: void QDateTime(const class QDate &, const class QTime &, const class QTimeZone &)
@@ -1167,9 +1261,7 @@ func NewQDateTime(args ...interface{}) *QDateTime {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone(arg0, arg1, arg2)
-    this := &QDateTime{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDateTime)
-    return this
+    return &QDateTime{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDateTime", "QDateTime", args)
   }
@@ -1178,11 +1270,15 @@ func NewQDateTime(args ...interface{}) *QDateTime {
 }
 
 // ~QDateTime()
-func (this *QDateTime) Free(args ...interface{}) () {
+func (this *QDateTime) Freeqdatetime(args ...interface{}) () {
   // ~QDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1190,10 +1286,7 @@ func (this *QDateTime) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateTimeD0Ev
     // invoke: void ~QDateTime()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QDateTimeD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QDateTimeD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDateTime", "~QDateTime", args)
   }
@@ -1202,12 +1295,16 @@ func (this *QDateTime) Free(args ...interface{}) () {
 }
 
 // toOffsetFromUtc(int)
-func (this *QDateTime) ToOffsetFromUtc(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Tooffsetfromutc(args ...interface{}) (ret interface{}) {
   // toOffsetFromUtc(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1234,12 +1331,16 @@ func (this *QDateTime) ToOffsetFromUtc(args ...interface{}) (ret interface{}) {
 }
 
 // addMSecs(qint64)
-func (this *QDateTime) AddMSecs(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Addmsecs(args ...interface{}) (ret interface{}) {
   // addMSecs(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1266,12 +1367,16 @@ func (this *QDateTime) AddMSecs(args ...interface{}) (ret interface{}) {
 }
 
 // addMonths(int)
-func (this *QDateTime) AddMonths(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Addmonths(args ...interface{}) (ret interface{}) {
   // addMonths(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1298,11 +1403,15 @@ func (this *QDateTime) AddMonths(args ...interface{}) (ret interface{}) {
 }
 
 // offsetFromUtc()
-func (this *QDateTime) OffsetFromUtc(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Offsetfromutc(args ...interface{}) (ret interface{}) {
   // offsetFromUtc()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1327,12 +1436,16 @@ func (this *QDateTime) OffsetFromUtc(args ...interface{}) (ret interface{}) {
 }
 
 // toString(const class QString &)
-func (this *QDateTime) ToString(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Tostring(args ...interface{}) (ret interface{}) {
   // toString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1365,6 +1478,10 @@ func (this *QDateTime) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QDateTime{}) // "QDateTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1383,12 +1500,16 @@ func (this *QDateTime) Swap(args ...interface{}) () {
 }
 
 // setDate(const class QDate &)
-func (this *QDateTime) SetDate(args ...interface{}) () {
+func (this *QDateTime) Setdate(args ...interface{}) () {
   // setDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QDate{}) // "const QDate &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1407,11 +1528,15 @@ func (this *QDateTime) SetDate(args ...interface{}) () {
 }
 
 // currentDateTime()
-func (this *QDateTime) CurrentDateTime_s(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Currentdatetime_S(args ...interface{}) (ret interface{}) {
   // currentDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1436,11 +1561,15 @@ func (this *QDateTime) CurrentDateTime_s(args ...interface{}) (ret interface{}) 
 }
 
 // currentDateTimeUtc()
-func (this *QDateTime) CurrentDateTimeUtc_s(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Currentdatetimeutc_S(args ...interface{}) (ret interface{}) {
   // currentDateTimeUtc()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1465,11 +1594,15 @@ func (this *QDateTime) CurrentDateTimeUtc_s(args ...interface{}) (ret interface{
 }
 
 // currentMSecsSinceEpoch()
-func (this *QDateTime) CurrentMSecsSinceEpoch_s(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Currentmsecssinceepoch_S(args ...interface{}) (ret interface{}) {
   // currentMSecsSinceEpoch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1494,11 +1627,15 @@ func (this *QDateTime) CurrentMSecsSinceEpoch_s(args ...interface{}) (ret interf
 }
 
 // isValid()
-func (this *QDateTime) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1523,12 +1660,16 @@ func (this *QDateTime) IsValid(args ...interface{}) (ret interface{}) {
 }
 
 // secsTo(const class QDateTime &)
-func (this *QDateTime) SecsTo(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Secsto(args ...interface{}) (ret interface{}) {
   // secsTo(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1555,12 +1696,16 @@ func (this *QDateTime) SecsTo(args ...interface{}) (ret interface{}) {
 }
 
 // setMSecsSinceEpoch(qint64)
-func (this *QDateTime) SetMSecsSinceEpoch(args ...interface{}) () {
+func (this *QDateTime) Setmsecssinceepoch(args ...interface{}) () {
   // setMSecsSinceEpoch(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1579,12 +1724,16 @@ func (this *QDateTime) SetMSecsSinceEpoch(args ...interface{}) () {
 }
 
 // addDays(qint64)
-func (this *QDateTime) AddDays(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Adddays(args ...interface{}) (ret interface{}) {
   // addDays(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1611,12 +1760,16 @@ func (this *QDateTime) AddDays(args ...interface{}) (ret interface{}) {
 }
 
 // setTime_t(uint)
-func (this *QDateTime) SetTime_t(args ...interface{}) () {
+func (this *QDateTime) Settime_T(args ...interface{}) () {
   // setTime_t(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "uint"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1635,12 +1788,16 @@ func (this *QDateTime) SetTime_t(args ...interface{}) () {
 }
 
 // addSecs(qint64)
-func (this *QDateTime) AddSecs(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Addsecs(args ...interface{}) (ret interface{}) {
   // addSecs(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1667,11 +1824,15 @@ func (this *QDateTime) AddSecs(args ...interface{}) (ret interface{}) {
 }
 
 // timeZoneAbbreviation()
-func (this *QDateTime) TimeZoneAbbreviation(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Timezoneabbreviation(args ...interface{}) (ret interface{}) {
   // timeZoneAbbreviation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1696,12 +1857,16 @@ func (this *QDateTime) TimeZoneAbbreviation(args ...interface{}) (ret interface{
 }
 
 // setTime(const class QTime &)
-func (this *QDateTime) SetTime(args ...interface{}) () {
+func (this *QDateTime) Settime(args ...interface{}) () {
   // setTime(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTime{}) // "const QTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1720,11 +1885,15 @@ func (this *QDateTime) SetTime(args ...interface{}) () {
 }
 
 // toMSecsSinceEpoch()
-func (this *QDateTime) ToMSecsSinceEpoch(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Tomsecssinceepoch(args ...interface{}) (ret interface{}) {
   // toMSecsSinceEpoch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1749,12 +1918,16 @@ func (this *QDateTime) ToMSecsSinceEpoch(args ...interface{}) (ret interface{}) 
 }
 
 // msecsTo(const class QDateTime &)
-func (this *QDateTime) MsecsTo(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Msecsto(args ...interface{}) (ret interface{}) {
   // msecsTo(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1786,6 +1959,10 @@ func (this *QDateTime) Date(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1810,12 +1987,16 @@ func (this *QDateTime) Date(args ...interface{}) (ret interface{}) {
 }
 
 // daysTo(const class QDateTime &)
-func (this *QDateTime) DaysTo(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Daysto(args ...interface{}) (ret interface{}) {
   // daysTo(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1842,11 +2023,15 @@ func (this *QDateTime) DaysTo(args ...interface{}) (ret interface{}) {
 }
 
 // toLocalTime()
-func (this *QDateTime) ToLocalTime(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Tolocaltime(args ...interface{}) (ret interface{}) {
   // toLocalTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1871,11 +2056,15 @@ func (this *QDateTime) ToLocalTime(args ...interface{}) (ret interface{}) {
 }
 
 // timeSpec()
-func (this *QDateTime) TimeSpec(args ...interface{}) () {
+func (this *QDateTime) Timespec(args ...interface{}) () {
   // timeSpec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1892,7 +2081,7 @@ func (this *QDateTime) TimeSpec(args ...interface{}) () {
 }
 
 // fromTime_t(uint, const class QTimeZone &)
-func (this *QDateTime) FromTime_t_s(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Fromtime_T_S(args ...interface{}) (ret interface{}) {
   // fromTime_t(uint, const class QTimeZone &)
   // fromTime_t(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1902,6 +2091,10 @@ func (this *QDateTime) FromTime_t_s(args ...interface{}) (ret interface{}) {
   vtys[0][1] = reflect.TypeOf(QTimeZone{}) // "const QTimeZone &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int32Ty(false) // "uint"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1944,7 +2137,7 @@ func (this *QDateTime) FromTime_t_s(args ...interface{}) (ret interface{}) {
 }
 
 // fromMSecsSinceEpoch(qint64)
-func (this *QDateTime) FromMSecsSinceEpoch_s(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Frommsecssinceepoch_S(args ...interface{}) (ret interface{}) {
   // fromMSecsSinceEpoch(qint64)
   // fromMSecsSinceEpoch(qint64, const class QTimeZone &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1954,6 +2147,10 @@ func (this *QDateTime) FromMSecsSinceEpoch_s(args ...interface{}) (ret interface
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int64Ty(false) // "qint64"
   vtys[1][1] = reflect.TypeOf(QTimeZone{}) // "const QTimeZone &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1996,11 +2193,15 @@ func (this *QDateTime) FromMSecsSinceEpoch_s(args ...interface{}) (ret interface
 }
 
 // isNull()
-func (this *QDateTime) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2025,11 +2226,15 @@ func (this *QDateTime) IsNull(args ...interface{}) (ret interface{}) {
 }
 
 // utcOffset()
-func (this *QDateTime) UtcOffset(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Utcoffset(args ...interface{}) (ret interface{}) {
   // utcOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2059,6 +2264,10 @@ func (this *QDateTime) Time(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2083,11 +2292,15 @@ func (this *QDateTime) Time(args ...interface{}) (ret interface{}) {
 }
 
 // timeZone()
-func (this *QDateTime) TimeZone(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Timezone(args ...interface{}) (ret interface{}) {
   // timeZone()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2112,11 +2325,15 @@ func (this *QDateTime) TimeZone(args ...interface{}) (ret interface{}) {
 }
 
 // isDaylightTime()
-func (this *QDateTime) IsDaylightTime(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Isdaylighttime(args ...interface{}) (ret interface{}) {
   // isDaylightTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2141,12 +2358,16 @@ func (this *QDateTime) IsDaylightTime(args ...interface{}) (ret interface{}) {
 }
 
 // addYears(int)
-func (this *QDateTime) AddYears(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) Addyears(args ...interface{}) (ret interface{}) {
   // addYears(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2173,13 +2394,17 @@ func (this *QDateTime) AddYears(args ...interface{}) (ret interface{}) {
 }
 
 // fromString(const class QString &, const class QString &)
-func (this *QDate) FromString_s(args ...interface{}) (ret interface{}) {
+func (this *QDate) Fromstring_S(args ...interface{}) (ret interface{}) {
   // fromString(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2213,6 +2438,10 @@ func (this *QDate) Month(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2242,6 +2471,10 @@ func (this *QDate) Year(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2266,11 +2499,15 @@ func (this *QDate) Year(args ...interface{}) (ret interface{}) {
 }
 
 // daysInMonth()
-func (this *QDate) DaysInMonth(args ...interface{}) (ret interface{}) {
+func (this *QDate) Daysinmonth(args ...interface{}) (ret interface{}) {
   // daysInMonth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2295,12 +2532,16 @@ func (this *QDate) DaysInMonth(args ...interface{}) (ret interface{}) {
 }
 
 // daysTo(const class QDate &)
-func (this *QDate) DaysTo(args ...interface{}) (ret interface{}) {
+func (this *QDate) Daysto(args ...interface{}) (ret interface{}) {
   // daysTo(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QDate{}) // "const QDate &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2327,12 +2568,16 @@ func (this *QDate) DaysTo(args ...interface{}) (ret interface{}) {
 }
 
 // weekNumber(int *)
-func (this *QDate) WeekNumber(args ...interface{}) (ret interface{}) {
+func (this *QDate) Weeknumber(args ...interface{}) (ret interface{}) {
   // weekNumber(int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(true) // "int *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2359,11 +2604,15 @@ func (this *QDate) WeekNumber(args ...interface{}) (ret interface{}) {
 }
 
 // daysInYear()
-func (this *QDate) DaysInYear(args ...interface{}) (ret interface{}) {
+func (this *QDate) Daysinyear(args ...interface{}) (ret interface{}) {
   // daysInYear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2388,12 +2637,16 @@ func (this *QDate) DaysInYear(args ...interface{}) (ret interface{}) {
 }
 
 // addMonths(int)
-func (this *QDate) AddMonths(args ...interface{}) (ret interface{}) {
+func (this *QDate) Addmonths(args ...interface{}) (ret interface{}) {
   // addMonths(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2420,11 +2673,15 @@ func (this *QDate) AddMonths(args ...interface{}) (ret interface{}) {
 }
 
 // toJulianDay()
-func (this *QDate) ToJulianDay(args ...interface{}) (ret interface{}) {
+func (this *QDate) Tojulianday(args ...interface{}) (ret interface{}) {
   // toJulianDay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2449,12 +2706,16 @@ func (this *QDate) ToJulianDay(args ...interface{}) (ret interface{}) {
 }
 
 // toString(const class QString &)
-func (this *QDate) ToString(args ...interface{}) (ret interface{}) {
+func (this *QDate) Tostring(args ...interface{}) (ret interface{}) {
   // toString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2481,12 +2742,16 @@ func (this *QDate) ToString(args ...interface{}) (ret interface{}) {
 }
 
 // fromJulianDay(qint64)
-func (this *QDate) FromJulianDay_s(args ...interface{}) (ret interface{}) {
+func (this *QDate) Fromjulianday_S(args ...interface{}) (ret interface{}) {
   // fromJulianDay(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2513,7 +2778,7 @@ func (this *QDate) FromJulianDay_s(args ...interface{}) (ret interface{}) {
 }
 
 // setDate(int, int, int)
-func (this *QDate) SetDate(args ...interface{}) (ret interface{}) {
+func (this *QDate) Setdate(args ...interface{}) (ret interface{}) {
   // setDate(int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2521,6 +2786,10 @@ func (this *QDate) SetDate(args ...interface{}) (ret interface{}) {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2551,7 +2820,7 @@ func (this *QDate) SetDate(args ...interface{}) (ret interface{}) {
 }
 
 // getDate(int *, int *, int *)
-func (this *QDate) GetDate(args ...interface{}) () {
+func (this *QDate) Getdate(args ...interface{}) () {
   // getDate(int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2559,6 +2828,10 @@ func (this *QDate) GetDate(args ...interface{}) () {
   vtys[0][0] = qtrt.Int32Ty(true) // "int *"
   vtys[0][1] = qtrt.Int32Ty(true) // "int *"
   vtys[0][2] = qtrt.Int32Ty(true) // "int *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2581,11 +2854,15 @@ func (this *QDate) GetDate(args ...interface{}) () {
 }
 
 // dayOfWeek()
-func (this *QDate) DayOfWeek(args ...interface{}) (ret interface{}) {
+func (this *QDate) Dayofweek(args ...interface{}) (ret interface{}) {
   // dayOfWeek()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2610,12 +2887,16 @@ func (this *QDate) DayOfWeek(args ...interface{}) (ret interface{}) {
 }
 
 // isLeapYear(int)
-func (this *QDate) IsLeapYear_s(args ...interface{}) (ret interface{}) {
+func (this *QDate) Isleapyear_S(args ...interface{}) (ret interface{}) {
   // isLeapYear(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2642,9 +2923,6 @@ func (this *QDate) IsLeapYear_s(args ...interface{}) (ret interface{}) {
 }
 
 // QDate()
-func GcfreeQDate(this *QDate) {
-  qtrt.UniverseFree(this)
-}
 func NewQDate(args ...interface{}) *QDate {
   // QDate()
   // QDate(int, int, int)
@@ -2655,6 +2933,10 @@ func NewQDate(args ...interface{}) *QDate {
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
   vtys[1][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2665,9 +2947,7 @@ func NewQDate(args ...interface{}) *QDate {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QDateC2Ev()
-    this := &QDate{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDate)
-    return this
+    return &QDate{Qclsinst:qthis}
   case 1:
     // invoke: _ZN5QDateC1Eiii
     // invoke: void QDate(int, int, int)
@@ -2680,9 +2960,7 @@ func NewQDate(args ...interface{}) *QDate {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QDateC2Eiii(arg0, arg1, arg2)
-    this := &QDate{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDate)
-    return this
+    return &QDate{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDate", "QDate", args)
   }
@@ -2691,7 +2969,7 @@ func NewQDate(args ...interface{}) *QDate {
 }
 
 // isValid()
-func (this *QDate) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QDate) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   // isValid(int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2701,6 +2979,10 @@ func (this *QDate) IsValid(args ...interface{}) (ret interface{}) {
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
   vtys[1][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2743,12 +3025,16 @@ func (this *QDate) IsValid(args ...interface{}) (ret interface{}) {
 }
 
 // addDays(qint64)
-func (this *QDate) AddDays(args ...interface{}) (ret interface{}) {
+func (this *QDate) Adddays(args ...interface{}) (ret interface{}) {
   // addDays(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2780,6 +3066,10 @@ func (this *QDate) Day(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2804,12 +3094,16 @@ func (this *QDate) Day(args ...interface{}) (ret interface{}) {
 }
 
 // addYears(int)
-func (this *QDate) AddYears(args ...interface{}) (ret interface{}) {
+func (this *QDate) Addyears(args ...interface{}) (ret interface{}) {
   // addYears(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2836,11 +3130,15 @@ func (this *QDate) AddYears(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QDate) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QDate) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2865,11 +3163,15 @@ func (this *QDate) IsNull(args ...interface{}) (ret interface{}) {
 }
 
 // dayOfYear()
-func (this *QDate) DayOfYear(args ...interface{}) (ret interface{}) {
+func (this *QDate) Dayofyear(args ...interface{}) (ret interface{}) {
   // dayOfYear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2894,11 +3196,15 @@ func (this *QDate) DayOfYear(args ...interface{}) (ret interface{}) {
 }
 
 // currentDate()
-func (this *QDate) CurrentDate_s(args ...interface{}) (ret interface{}) {
+func (this *QDate) Currentdate_S(args ...interface{}) (ret interface{}) {
   // currentDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

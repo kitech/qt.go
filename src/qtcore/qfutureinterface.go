@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -123,7 +122,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFutureInterfaceBase)=16
@@ -139,11 +137,15 @@ type QFutureInterfaceLvoidG struct {
 }
 
 // waitForResume()
-func (this *QFutureInterfaceBase) WaitForResume(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Waitforresume(args ...interface{}) () {
   // waitForResume()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -160,11 +162,15 @@ func (this *QFutureInterfaceBase) WaitForResume(args ...interface{}) () {
 }
 
 // progressText()
-func (this *QFutureInterfaceBase) ProgressText(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Progresstext(args ...interface{}) (ret interface{}) {
   // progressText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -189,12 +195,16 @@ func (this *QFutureInterfaceBase) ProgressText(args ...interface{}) (ret interfa
 }
 
 // setThrottled(_Bool)
-func (this *QFutureInterfaceBase) SetThrottled(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Setthrottled(args ...interface{}) () {
   // setThrottled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -213,11 +223,15 @@ func (this *QFutureInterfaceBase) SetThrottled(args ...interface{}) () {
 }
 
 // reportCanceled()
-func (this *QFutureInterfaceBase) ReportCanceled(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Reportcanceled(args ...interface{}) () {
   // reportCanceled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -234,12 +248,16 @@ func (this *QFutureInterfaceBase) ReportCanceled(args ...interface{}) () {
 }
 
 // setFilterMode(_Bool)
-func (this *QFutureInterfaceBase) SetFilterMode(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Setfiltermode(args ...interface{}) () {
   // setFilterMode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -258,11 +276,15 @@ func (this *QFutureInterfaceBase) SetFilterMode(args ...interface{}) () {
 }
 
 // progressMaximum()
-func (this *QFutureInterfaceBase) ProgressMaximum(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Progressmaximum(args ...interface{}) (ret interface{}) {
   // progressMaximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -292,6 +314,10 @@ func (this *QFutureInterfaceBase) Cancel(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -308,11 +334,15 @@ func (this *QFutureInterfaceBase) Cancel(args ...interface{}) () {
 }
 
 // reportStarted()
-func (this *QFutureInterfaceBase) ReportStarted(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Reportstarted(args ...interface{}) () {
   // reportStarted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -329,11 +359,15 @@ func (this *QFutureInterfaceBase) ReportStarted(args ...interface{}) () {
 }
 
 // togglePaused()
-func (this *QFutureInterfaceBase) TogglePaused(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Togglepaused(args ...interface{}) () {
   // togglePaused()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -350,11 +384,15 @@ func (this *QFutureInterfaceBase) TogglePaused(args ...interface{}) () {
 }
 
 // isProgressUpdateNeeded()
-func (this *QFutureInterfaceBase) IsProgressUpdateNeeded(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Isprogressupdateneeded(args ...interface{}) (ret interface{}) {
   // isProgressUpdateNeeded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -379,11 +417,15 @@ func (this *QFutureInterfaceBase) IsProgressUpdateNeeded(args ...interface{}) (r
 }
 
 // progressMinimum()
-func (this *QFutureInterfaceBase) ProgressMinimum(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Progressminimum(args ...interface{}) (ret interface{}) {
   // progressMinimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -408,11 +450,15 @@ func (this *QFutureInterfaceBase) ProgressMinimum(args ...interface{}) (ret inte
 }
 
 // waitForFinished()
-func (this *QFutureInterfaceBase) WaitForFinished(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Waitforfinished(args ...interface{}) () {
   // waitForFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -429,15 +475,16 @@ func (this *QFutureInterfaceBase) WaitForFinished(args ...interface{}) () {
 }
 
 // QFutureInterfaceBase(const class QFutureInterfaceBase &)
-func GcfreeQFutureInterfaceBase(this *QFutureInterfaceBase) {
-  qtrt.UniverseFree(this)
-}
 func NewQFutureInterfaceBase(args ...interface{}) *QFutureInterfaceBase {
   // QFutureInterfaceBase(const class QFutureInterfaceBase &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QFutureInterfaceBase{}) // "const QFutureInterfaceBase &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -450,9 +497,7 @@ func NewQFutureInterfaceBase(args ...interface{}) *QFutureInterfaceBase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QFutureInterfaceBaseC2ERKS_(arg0)
-    this := &QFutureInterfaceBase{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFutureInterfaceBase)
-    return this
+    return &QFutureInterfaceBase{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "QFutureInterfaceBase", args)
   }
@@ -461,11 +506,15 @@ func NewQFutureInterfaceBase(args ...interface{}) *QFutureInterfaceBase {
 }
 
 // isStarted()
-func (this *QFutureInterfaceBase) IsStarted(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Isstarted(args ...interface{}) (ret interface{}) {
   // isStarted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -490,11 +539,15 @@ func (this *QFutureInterfaceBase) IsStarted(args ...interface{}) (ret interface{
 }
 
 // exceptionStore()
-func (this *QFutureInterfaceBase) ExceptionStore(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Exceptionstore(args ...interface{}) () {
   // exceptionStore()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -516,6 +569,10 @@ func (this *QFutureInterfaceBase) Mutex(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -540,12 +597,16 @@ func (this *QFutureInterfaceBase) Mutex(args ...interface{}) (ret interface{}) {
 }
 
 // setExpectedResultCount(int)
-func (this *QFutureInterfaceBase) SetExpectedResultCount(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Setexpectedresultcount(args ...interface{}) () {
   // setExpectedResultCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -564,12 +625,16 @@ func (this *QFutureInterfaceBase) SetExpectedResultCount(args ...interface{}) ()
 }
 
 // setRunnable(class QRunnable *)
-func (this *QFutureInterfaceBase) SetRunnable(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Setrunnable(args ...interface{}) () {
   // setRunnable(class QRunnable *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRunnable{}) // "QRunnable *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -588,11 +653,15 @@ func (this *QFutureInterfaceBase) SetRunnable(args ...interface{}) () {
 }
 
 // isThrottled()
-func (this *QFutureInterfaceBase) IsThrottled(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Isthrottled(args ...interface{}) (ret interface{}) {
   // isThrottled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -617,11 +686,15 @@ func (this *QFutureInterfaceBase) IsThrottled(args ...interface{}) (ret interfac
 }
 
 // waitForNextResult()
-func (this *QFutureInterfaceBase) WaitForNextResult(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Waitfornextresult(args ...interface{}) (ret interface{}) {
   // waitForNextResult()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -646,11 +719,15 @@ func (this *QFutureInterfaceBase) WaitForNextResult(args ...interface{}) (ret in
 }
 
 // isFinished()
-func (this *QFutureInterfaceBase) IsFinished(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Isfinished(args ...interface{}) (ret interface{}) {
   // isFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -675,11 +752,15 @@ func (this *QFutureInterfaceBase) IsFinished(args ...interface{}) (ret interface
 }
 
 // reportFinished()
-func (this *QFutureInterfaceBase) ReportFinished(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Reportfinished(args ...interface{}) () {
   // reportFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -696,12 +777,16 @@ func (this *QFutureInterfaceBase) ReportFinished(args ...interface{}) () {
 }
 
 // waitForResult(int)
-func (this *QFutureInterfaceBase) WaitForResult(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Waitforresult(args ...interface{}) () {
   // waitForResult(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -720,11 +805,15 @@ func (this *QFutureInterfaceBase) WaitForResult(args ...interface{}) () {
 }
 
 // expectedResultCount()
-func (this *QFutureInterfaceBase) ExpectedResultCount(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Expectedresultcount(args ...interface{}) (ret interface{}) {
   // expectedResultCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -749,13 +838,17 @@ func (this *QFutureInterfaceBase) ExpectedResultCount(args ...interface{}) (ret 
 }
 
 // setProgressValueAndText(int, const class QString &)
-func (this *QFutureInterfaceBase) SetProgressValueAndText(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Setprogressvalueandtext(args ...interface{}) () {
   // setProgressValueAndText(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -776,11 +869,15 @@ func (this *QFutureInterfaceBase) SetProgressValueAndText(args ...interface{}) (
 }
 
 // resultCount()
-func (this *QFutureInterfaceBase) ResultCount(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Resultcount(args ...interface{}) (ret interface{}) {
   // resultCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -805,12 +902,16 @@ func (this *QFutureInterfaceBase) ResultCount(args ...interface{}) (ret interfac
 }
 
 // setProgressValue(int)
-func (this *QFutureInterfaceBase) SetProgressValue(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Setprogressvalue(args ...interface{}) () {
   // setProgressValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -829,11 +930,15 @@ func (this *QFutureInterfaceBase) SetProgressValue(args ...interface{}) () {
 }
 
 // ~QFutureInterfaceBase()
-func (this *QFutureInterfaceBase) Free(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Freeqfutureinterfacebase(args ...interface{}) () {
   // ~QFutureInterfaceBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -841,10 +946,7 @@ func (this *QFutureInterfaceBase) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBaseD0Ev
     // invoke: void ~QFutureInterfaceBase()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN20QFutureInterfaceBaseD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN20QFutureInterfaceBaseD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "~QFutureInterfaceBase", args)
   }
@@ -853,11 +955,15 @@ func (this *QFutureInterfaceBase) Free(args ...interface{}) () {
 }
 
 // isRunning()
-func (this *QFutureInterfaceBase) IsRunning(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Isrunning(args ...interface{}) (ret interface{}) {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -882,13 +988,17 @@ func (this *QFutureInterfaceBase) IsRunning(args ...interface{}) (ret interface{
 }
 
 // setProgressRange(int, int)
-func (this *QFutureInterfaceBase) SetProgressRange(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Setprogressrange(args ...interface{}) () {
   // setProgressRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -909,11 +1019,15 @@ func (this *QFutureInterfaceBase) SetProgressRange(args ...interface{}) () {
 }
 
 // resultStoreBase()
-func (this *QFutureInterfaceBase) ResultStoreBase(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Resultstorebase(args ...interface{}) () {
   // resultStoreBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -930,11 +1044,15 @@ func (this *QFutureInterfaceBase) ResultStoreBase(args ...interface{}) () {
 }
 
 // isCanceled()
-func (this *QFutureInterfaceBase) IsCanceled(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Iscanceled(args ...interface{}) (ret interface{}) {
   // isCanceled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -959,12 +1077,16 @@ func (this *QFutureInterfaceBase) IsCanceled(args ...interface{}) (ret interface
 }
 
 // isResultReadyAt(int)
-func (this *QFutureInterfaceBase) IsResultReadyAt(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Isresultreadyat(args ...interface{}) (ret interface{}) {
   // isResultReadyAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -991,11 +1113,15 @@ func (this *QFutureInterfaceBase) IsResultReadyAt(args ...interface{}) (ret inte
 }
 
 // isPaused()
-func (this *QFutureInterfaceBase) IsPaused(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Ispaused(args ...interface{}) (ret interface{}) {
   // isPaused()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1020,12 +1146,16 @@ func (this *QFutureInterfaceBase) IsPaused(args ...interface{}) (ret interface{}
 }
 
 // setThreadPool(class QThreadPool *)
-func (this *QFutureInterfaceBase) SetThreadPool(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Setthreadpool(args ...interface{}) () {
   // setThreadPool(class QThreadPool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QThreadPool{}) // "QThreadPool *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1044,12 +1174,16 @@ func (this *QFutureInterfaceBase) SetThreadPool(args ...interface{}) () {
 }
 
 // setPaused(_Bool)
-func (this *QFutureInterfaceBase) SetPaused(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Setpaused(args ...interface{}) () {
   // setPaused(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1068,11 +1202,15 @@ func (this *QFutureInterfaceBase) SetPaused(args ...interface{}) () {
 }
 
 // progressValue()
-func (this *QFutureInterfaceBase) ProgressValue(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) Progressvalue(args ...interface{}) (ret interface{}) {
   // progressValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1097,13 +1235,17 @@ func (this *QFutureInterfaceBase) ProgressValue(args ...interface{}) (ret interf
 }
 
 // reportResultsReady(int, int)
-func (this *QFutureInterfaceBase) ReportResultsReady(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Reportresultsready(args ...interface{}) () {
   // reportResultsReady(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1124,12 +1266,16 @@ func (this *QFutureInterfaceBase) ReportResultsReady(args ...interface{}) () {
 }
 
 // reportFinished(const void *)
-func (this *QFutureInterfaceLvoidG) ReportFinished(args ...interface{}) () {
+func (this *QFutureInterfaceLvoidG) Reportfinished(args ...interface{}) () {
   // reportFinished(const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.VoidpTy() // "const void *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1148,13 +1294,17 @@ func (this *QFutureInterfaceLvoidG) ReportFinished(args ...interface{}) () {
 }
 
 // reportResult(const void *, int)
-func (this *QFutureInterfaceLvoidG) ReportResult(args ...interface{}) () {
+func (this *QFutureInterfaceLvoidG) Reportresult(args ...interface{}) () {
   // reportResult(const void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.VoidpTy() // "const void *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1180,6 +1330,10 @@ func (this *QFutureInterfaceLvoidG) Future(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1196,11 +1350,15 @@ func (this *QFutureInterfaceLvoidG) Future(args ...interface{}) () {
 }
 
 // canceledResult()
-func (this *QFutureInterfaceLvoidG) CanceledResult_s(args ...interface{}) () {
+func (this *QFutureInterfaceLvoidG) Canceledresult_S(args ...interface{}) () {
   // canceledResult()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

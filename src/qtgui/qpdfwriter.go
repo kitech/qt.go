@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qpdfwriter.h
 // dst-file: /src/gui/qpdfwriter.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -65,7 +64,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPdfWriter)=1
@@ -75,11 +73,15 @@ type QPdfWriter struct {
 }
 
 // newPage()
-func (this *QPdfWriter) NewPage(args ...interface{}) (ret interface{}) {
+func (this *QPdfWriter) Newpage(args ...interface{}) (ret interface{}) {
   // newPage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -109,6 +111,10 @@ func (this *QPdfWriter) Creator(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -133,11 +139,15 @@ func (this *QPdfWriter) Creator(args ...interface{}) (ret interface{}) {
 }
 
 // ~QPdfWriter()
-func (this *QPdfWriter) Free(args ...interface{}) () {
+func (this *QPdfWriter) Freeqpdfwriter(args ...interface{}) () {
   // ~QPdfWriter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -145,10 +155,7 @@ func (this *QPdfWriter) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QPdfWriterD0Ev
     // invoke: void ~QPdfWriter()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN10QPdfWriterD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN10QPdfWriterD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPdfWriter", "~QPdfWriter", args)
   }
@@ -157,12 +164,16 @@ func (this *QPdfWriter) Free(args ...interface{}) () {
 }
 
 // setTitle(const class QString &)
-func (this *QPdfWriter) SetTitle(args ...interface{}) () {
+func (this *QPdfWriter) Settitle(args ...interface{}) () {
   // setTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -186,6 +197,10 @@ func (this *QPdfWriter) Title(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -210,9 +225,6 @@ func (this *QPdfWriter) Title(args ...interface{}) (ret interface{}) {
 }
 
 // QPdfWriter(const class QString &)
-func GcfreeQPdfWriter(this *QPdfWriter) {
-  qtrt.UniverseFree(this)
-}
 func NewQPdfWriter(args ...interface{}) *QPdfWriter {
   // QPdfWriter(const class QString &)
   // QPdfWriter(class QIODevice *)
@@ -222,6 +234,10 @@ func NewQPdfWriter(args ...interface{}) *QPdfWriter {
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -234,9 +250,7 @@ func NewQPdfWriter(args ...interface{}) *QPdfWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QPdfWriterC2ERK7QString(arg0)
-    this := &QPdfWriter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPdfWriter)
-    return this
+    return &QPdfWriter{Qclsinst:qthis}
   case 1:
     // invoke: _ZN10QPdfWriterC1EP9QIODevice
     // invoke: void QPdfWriter(class QIODevice *)
@@ -245,9 +259,7 @@ func NewQPdfWriter(args ...interface{}) *QPdfWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QPdfWriterC2EP9QIODevice(arg0)
-    this := &QPdfWriter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPdfWriter)
-    return this
+    return &QPdfWriter{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPdfWriter", "QPdfWriter", args)
   }
@@ -256,12 +268,16 @@ func NewQPdfWriter(args ...interface{}) *QPdfWriter {
 }
 
 // setPageSizeMM(const class QSizeF &)
-func (this *QPdfWriter) SetPageSizeMM(args ...interface{}) () {
+func (this *QPdfWriter) Setpagesizemm(args ...interface{}) () {
   // setPageSizeMM(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QSizeF{}) // "const QSizeF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -280,12 +296,16 @@ func (this *QPdfWriter) SetPageSizeMM(args ...interface{}) () {
 }
 
 // setResolution(int)
-func (this *QPdfWriter) SetResolution(args ...interface{}) () {
+func (this *QPdfWriter) Setresolution(args ...interface{}) () {
   // setResolution(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -304,11 +324,15 @@ func (this *QPdfWriter) SetResolution(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QPdfWriter) MetaObject(args ...interface{}) () {
+func (this *QPdfWriter) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -325,12 +349,16 @@ func (this *QPdfWriter) MetaObject(args ...interface{}) () {
 }
 
 // setCreator(const class QString &)
-func (this *QPdfWriter) SetCreator(args ...interface{}) () {
+func (this *QPdfWriter) Setcreator(args ...interface{}) () {
   // setCreator(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -354,6 +382,10 @@ func (this *QPdfWriter) Resolution(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

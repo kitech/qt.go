@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -55,7 +54,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QKeyEventTransition)=1
@@ -65,11 +63,15 @@ type QKeyEventTransition struct {
 }
 
 // metaObject()
-func (this *QKeyEventTransition) MetaObject(args ...interface{}) () {
+func (this *QKeyEventTransition) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -91,6 +93,10 @@ func (this *QKeyEventTransition) Key(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -115,11 +121,15 @@ func (this *QKeyEventTransition) Key(args ...interface{}) (ret interface{}) {
 }
 
 // modifierMask()
-func (this *QKeyEventTransition) ModifierMask(args ...interface{}) () {
+func (this *QKeyEventTransition) Modifiermask(args ...interface{}) () {
   // modifierMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -136,12 +146,16 @@ func (this *QKeyEventTransition) ModifierMask(args ...interface{}) () {
 }
 
 // setKey(int)
-func (this *QKeyEventTransition) SetKey(args ...interface{}) () {
+func (this *QKeyEventTransition) Setkey(args ...interface{}) () {
   // setKey(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -160,11 +174,15 @@ func (this *QKeyEventTransition) SetKey(args ...interface{}) () {
 }
 
 // ~QKeyEventTransition()
-func (this *QKeyEventTransition) Free(args ...interface{}) () {
+func (this *QKeyEventTransition) Freeqkeyeventtransition(args ...interface{}) () {
   // ~QKeyEventTransition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -172,10 +190,7 @@ func (this *QKeyEventTransition) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QKeyEventTransitionD0Ev
     // invoke: void ~QKeyEventTransition()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QKeyEventTransitionD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QKeyEventTransitionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "~QKeyEventTransition", args)
   }
@@ -184,15 +199,16 @@ func (this *QKeyEventTransition) Free(args ...interface{}) () {
 }
 
 // QKeyEventTransition(class QState *)
-func GcfreeQKeyEventTransition(this *QKeyEventTransition) {
-  qtrt.UniverseFree(this)
-}
 func NewQKeyEventTransition(args ...interface{}) *QKeyEventTransition {
   // QKeyEventTransition(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QState{}) // "QState *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -205,9 +221,7 @@ func NewQKeyEventTransition(args ...interface{}) *QKeyEventTransition {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QKeyEventTransitionC2EP6QState(arg0)
-    this := &QKeyEventTransition{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQKeyEventTransition)
-    return this
+    return &QKeyEventTransition{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "QKeyEventTransition", args)
   }

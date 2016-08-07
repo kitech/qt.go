@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qvalidator.h
 // dst-file: /src/gui/qvalidator.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -129,7 +128,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QRegularExpressionValidator)=1
@@ -172,11 +170,15 @@ type QRegExpValidator struct {
 }
 
 // metaObject()
-func (this *QRegularExpressionValidator) MetaObject(args ...interface{}) () {
+func (this *QRegularExpressionValidator) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -193,11 +195,15 @@ func (this *QRegularExpressionValidator) MetaObject(args ...interface{}) () {
 }
 
 // regularExpression()
-func (this *QRegularExpressionValidator) RegularExpression(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionValidator) Regularexpression(args ...interface{}) (ret interface{}) {
   // regularExpression()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -222,11 +228,15 @@ func (this *QRegularExpressionValidator) RegularExpression(args ...interface{}) 
 }
 
 // ~QRegularExpressionValidator()
-func (this *QRegularExpressionValidator) Free(args ...interface{}) () {
+func (this *QRegularExpressionValidator) Freeqregularexpressionvalidator(args ...interface{}) () {
   // ~QRegularExpressionValidator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -234,10 +244,7 @@ func (this *QRegularExpressionValidator) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN27QRegularExpressionValidatorD0Ev
     // invoke: void ~QRegularExpressionValidator()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN27QRegularExpressionValidatorD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN27QRegularExpressionValidatorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpressionValidator", "~QRegularExpressionValidator", args)
   }
@@ -246,12 +253,16 @@ func (this *QRegularExpressionValidator) Free(args ...interface{}) () {
 }
 
 // setRegularExpression(const class QRegularExpression &)
-func (this *QRegularExpressionValidator) SetRegularExpression(args ...interface{}) () {
+func (this *QRegularExpressionValidator) Setregularexpression(args ...interface{}) () {
   // setRegularExpression(const class QRegularExpression &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRegularExpression{}) // "const QRegularExpression &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -277,6 +288,10 @@ func (this *QRegularExpressionValidator) Validate(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "QString &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -297,9 +312,6 @@ func (this *QRegularExpressionValidator) Validate(args ...interface{}) () {
 }
 
 // QRegularExpressionValidator(class QObject *)
-func GcfreeQRegularExpressionValidator(this *QRegularExpressionValidator) {
-  qtrt.UniverseFree(this)
-}
 func NewQRegularExpressionValidator(args ...interface{}) *QRegularExpressionValidator {
   // QRegularExpressionValidator(class QObject *)
   // QRegularExpressionValidator(const class QRegularExpression &, class QObject *)
@@ -310,6 +322,10 @@ func NewQRegularExpressionValidator(args ...interface{}) *QRegularExpressionVali
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QRegularExpression{}) // "const QRegularExpression &"
   vtys[1][1] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -322,9 +338,7 @@ func NewQRegularExpressionValidator(args ...interface{}) *QRegularExpressionVali
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QRegularExpressionValidatorC2EP7QObject(arg0)
-    this := &QRegularExpressionValidator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegularExpressionValidator)
-    return this
+    return &QRegularExpressionValidator{Qclsinst:qthis}
   case 1:
     // invoke: _ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject
     // invoke: void QRegularExpressionValidator(const class QRegularExpression &, class QObject *)
@@ -335,9 +349,7 @@ func NewQRegularExpressionValidator(args ...interface{}) *QRegularExpressionVali
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QRegularExpressionValidatorC2ERK18QRegularExpressionP7QObject(arg0, arg1)
-    this := &QRegularExpressionValidator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegularExpressionValidator)
-    return this
+    return &QRegularExpressionValidator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegularExpressionValidator", "QRegularExpressionValidator", args)
   }
@@ -346,12 +358,16 @@ func NewQRegularExpressionValidator(args ...interface{}) *QRegularExpressionVali
 }
 
 // setBottom(double)
-func (this *QDoubleValidator) SetBottom(args ...interface{}) () {
+func (this *QDoubleValidator) Setbottom(args ...interface{}) () {
   // setBottom(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -370,12 +386,16 @@ func (this *QDoubleValidator) SetBottom(args ...interface{}) () {
 }
 
 // setTop(double)
-func (this *QDoubleValidator) SetTop(args ...interface{}) () {
+func (this *QDoubleValidator) Settop(args ...interface{}) () {
   // setTop(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -399,6 +419,10 @@ func (this *QDoubleValidator) Bottom(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -423,12 +447,16 @@ func (this *QDoubleValidator) Bottom(args ...interface{}) (ret interface{}) {
 }
 
 // setDecimals(int)
-func (this *QDoubleValidator) SetDecimals(args ...interface{}) () {
+func (this *QDoubleValidator) Setdecimals(args ...interface{}) () {
   // setDecimals(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -447,11 +475,15 @@ func (this *QDoubleValidator) SetDecimals(args ...interface{}) () {
 }
 
 // ~QDoubleValidator()
-func (this *QDoubleValidator) Free(args ...interface{}) () {
+func (this *QDoubleValidator) Freeqdoublevalidator(args ...interface{}) () {
   // ~QDoubleValidator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -459,10 +491,7 @@ func (this *QDoubleValidator) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QDoubleValidatorD0Ev
     // invoke: void ~QDoubleValidator()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QDoubleValidatorD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QDoubleValidatorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDoubleValidator", "~QDoubleValidator", args)
   }
@@ -476,6 +505,10 @@ func (this *QDoubleValidator) Notation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -499,6 +532,10 @@ func (this *QDoubleValidator) Validate(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "QString &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -519,7 +556,7 @@ func (this *QDoubleValidator) Validate(args ...interface{}) () {
 }
 
 // setRange(double, double, int)
-func (this *QDoubleValidator) SetRange(args ...interface{}) () {
+func (this *QDoubleValidator) Setrange(args ...interface{}) () {
   // setRange(double, double, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -527,6 +564,10 @@ func (this *QDoubleValidator) SetRange(args ...interface{}) () {
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
   vtys[0][1] = qtrt.DoubleTy(false) // "double"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -549,11 +590,15 @@ func (this *QDoubleValidator) SetRange(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QDoubleValidator) MetaObject(args ...interface{}) () {
+func (this *QDoubleValidator) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -570,9 +615,6 @@ func (this *QDoubleValidator) MetaObject(args ...interface{}) () {
 }
 
 // QDoubleValidator(class QObject *)
-func GcfreeQDoubleValidator(this *QDoubleValidator) {
-  qtrt.UniverseFree(this)
-}
 func NewQDoubleValidator(args ...interface{}) *QDoubleValidator {
   // QDoubleValidator(class QObject *)
   // QDoubleValidator(double, double, int, class QObject *)
@@ -585,6 +627,10 @@ func NewQDoubleValidator(args ...interface{}) *QDoubleValidator {
   vtys[1][1] = qtrt.DoubleTy(false) // "double"
   vtys[1][2] = qtrt.Int32Ty(false) // "int"
   vtys[1][3] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -597,9 +643,7 @@ func NewQDoubleValidator(args ...interface{}) *QDoubleValidator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QDoubleValidatorC2EP7QObject(arg0)
-    this := &QDoubleValidator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDoubleValidator)
-    return this
+    return &QDoubleValidator{Qclsinst:qthis}
   case 1:
     // invoke: _ZN16QDoubleValidatorC1EddiP7QObject
     // invoke: void QDoubleValidator(double, double, int, class QObject *)
@@ -614,9 +658,7 @@ func NewQDoubleValidator(args ...interface{}) *QDoubleValidator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QDoubleValidatorC2EddiP7QObject(arg0, arg1, arg2, arg3)
-    this := &QDoubleValidator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDoubleValidator)
-    return this
+    return &QDoubleValidator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDoubleValidator", "QDoubleValidator", args)
   }
@@ -630,6 +672,10 @@ func (this *QDoubleValidator) Decimals(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -659,6 +705,10 @@ func (this *QDoubleValidator) Top(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -683,12 +733,16 @@ func (this *QDoubleValidator) Top(args ...interface{}) (ret interface{}) {
 }
 
 // setTop(int)
-func (this *QIntValidator) SetTop(args ...interface{}) () {
+func (this *QIntValidator) Settop(args ...interface{}) () {
   // setTop(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -707,9 +761,6 @@ func (this *QIntValidator) SetTop(args ...interface{}) () {
 }
 
 // QIntValidator(class QObject *)
-func GcfreeQIntValidator(this *QIntValidator) {
-  qtrt.UniverseFree(this)
-}
 func NewQIntValidator(args ...interface{}) *QIntValidator {
   // QIntValidator(class QObject *)
   // QIntValidator(int, int, class QObject *)
@@ -721,6 +772,10 @@ func NewQIntValidator(args ...interface{}) *QIntValidator {
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
   vtys[1][2] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -733,9 +788,7 @@ func NewQIntValidator(args ...interface{}) *QIntValidator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QIntValidatorC2EP7QObject(arg0)
-    this := &QIntValidator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQIntValidator)
-    return this
+    return &QIntValidator{Qclsinst:qthis}
   case 1:
     // invoke: _ZN13QIntValidatorC1EiiP7QObject
     // invoke: void QIntValidator(int, int, class QObject *)
@@ -748,9 +801,7 @@ func NewQIntValidator(args ...interface{}) *QIntValidator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QIntValidatorC2EiiP7QObject(arg0, arg1, arg2)
-    this := &QIntValidator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQIntValidator)
-    return this
+    return &QIntValidator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIntValidator", "QIntValidator", args)
   }
@@ -759,11 +810,15 @@ func NewQIntValidator(args ...interface{}) *QIntValidator {
 }
 
 // metaObject()
-func (this *QIntValidator) MetaObject(args ...interface{}) () {
+func (this *QIntValidator) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -780,11 +835,15 @@ func (this *QIntValidator) MetaObject(args ...interface{}) () {
 }
 
 // ~QIntValidator()
-func (this *QIntValidator) Free(args ...interface{}) () {
+func (this *QIntValidator) Freeqintvalidator(args ...interface{}) () {
   // ~QIntValidator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -792,10 +851,7 @@ func (this *QIntValidator) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QIntValidatorD0Ev
     // invoke: void ~QIntValidator()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QIntValidatorD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QIntValidatorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QIntValidator", "~QIntValidator", args)
   }
@@ -809,6 +865,10 @@ func (this *QIntValidator) Bottom(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -833,12 +893,16 @@ func (this *QIntValidator) Bottom(args ...interface{}) (ret interface{}) {
 }
 
 // setBottom(int)
-func (this *QIntValidator) SetBottom(args ...interface{}) () {
+func (this *QIntValidator) Setbottom(args ...interface{}) () {
   // setBottom(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -862,6 +926,10 @@ func (this *QIntValidator) Top(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -893,6 +961,10 @@ func (this *QIntValidator) Validate(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "QString &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -919,6 +991,10 @@ func (this *QIntValidator) Fixup(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -937,13 +1013,17 @@ func (this *QIntValidator) Fixup(args ...interface{}) () {
 }
 
 // setRange(int, int)
-func (this *QIntValidator) SetRange(args ...interface{}) () {
+func (this *QIntValidator) Setrange(args ...interface{}) () {
   // setRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -964,11 +1044,15 @@ func (this *QIntValidator) SetRange(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QValidator) MetaObject(args ...interface{}) () {
+func (this *QValidator) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -985,12 +1069,16 @@ func (this *QValidator) MetaObject(args ...interface{}) () {
 }
 
 // setLocale(const class QLocale &)
-func (this *QValidator) SetLocale(args ...interface{}) () {
+func (this *QValidator) Setlocale(args ...interface{}) () {
   // setLocale(const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QLocale{}) // "const QLocale &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1014,6 +1102,10 @@ func (this *QValidator) Locale(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1038,11 +1130,15 @@ func (this *QValidator) Locale(args ...interface{}) (ret interface{}) {
 }
 
 // ~QValidator()
-func (this *QValidator) Free(args ...interface{}) () {
+func (this *QValidator) Freeqvalidator(args ...interface{}) () {
   // ~QValidator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1050,10 +1146,7 @@ func (this *QValidator) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QValidatorD0Ev
     // invoke: void ~QValidator()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN10QValidatorD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN10QValidatorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QValidator", "~QValidator", args)
   }
@@ -1062,15 +1155,16 @@ func (this *QValidator) Free(args ...interface{}) () {
 }
 
 // QValidator(class QObject *)
-func GcfreeQValidator(this *QValidator) {
-  qtrt.UniverseFree(this)
-}
 func NewQValidator(args ...interface{}) *QValidator {
   // QValidator(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1083,9 +1177,7 @@ func NewQValidator(args ...interface{}) *QValidator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QValidatorC2EP7QObject(arg0)
-    this := &QValidator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQValidator)
-    return this
+    return &QValidator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QValidator", "QValidator", args)
   }
@@ -1100,6 +1192,10 @@ func (this *QValidator) Fixup(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1118,11 +1214,15 @@ func (this *QValidator) Fixup(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QRegExpValidator) MetaObject(args ...interface{}) () {
+func (this *QRegExpValidator) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1139,9 +1239,6 @@ func (this *QRegExpValidator) MetaObject(args ...interface{}) () {
 }
 
 // QRegExpValidator(const class QRegExp &, class QObject *)
-func GcfreeQRegExpValidator(this *QRegExpValidator) {
-  qtrt.UniverseFree(this)
-}
 func NewQRegExpValidator(args ...interface{}) *QRegExpValidator {
   // QRegExpValidator(const class QRegExp &, class QObject *)
   // QRegExpValidator(class QObject *)
@@ -1152,6 +1249,10 @@ func NewQRegExpValidator(args ...interface{}) *QRegExpValidator {
   vtys[0][1] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1166,9 +1267,7 @@ func NewQRegExpValidator(args ...interface{}) *QRegExpValidator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QRegExpValidatorC2ERK7QRegExpP7QObject(arg0, arg1)
-    this := &QRegExpValidator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegExpValidator)
-    return this
+    return &QRegExpValidator{Qclsinst:qthis}
   case 1:
     // invoke: _ZN16QRegExpValidatorC1EP7QObject
     // invoke: void QRegExpValidator(class QObject *)
@@ -1177,9 +1276,7 @@ func NewQRegExpValidator(args ...interface{}) *QRegExpValidator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QRegExpValidatorC2EP7QObject(arg0)
-    this := &QRegExpValidator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegExpValidator)
-    return this
+    return &QRegExpValidator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegExpValidator", "QRegExpValidator", args)
   }
@@ -1188,12 +1285,16 @@ func NewQRegExpValidator(args ...interface{}) *QRegExpValidator {
 }
 
 // setRegExp(const class QRegExp &)
-func (this *QRegExpValidator) SetRegExp(args ...interface{}) () {
+func (this *QRegExpValidator) Setregexp(args ...interface{}) () {
   // setRegExp(const class QRegExp &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRegExp{}) // "const QRegExp &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1212,11 +1313,15 @@ func (this *QRegExpValidator) SetRegExp(args ...interface{}) () {
 }
 
 // regExp()
-func (this *QRegExpValidator) RegExp(args ...interface{}) (ret interface{}) {
+func (this *QRegExpValidator) Regexp(args ...interface{}) (ret interface{}) {
   // regExp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1248,6 +1353,10 @@ func (this *QRegExpValidator) Validate(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "QString &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1268,11 +1377,15 @@ func (this *QRegExpValidator) Validate(args ...interface{}) () {
 }
 
 // ~QRegExpValidator()
-func (this *QRegExpValidator) Free(args ...interface{}) () {
+func (this *QRegExpValidator) Freeqregexpvalidator(args ...interface{}) () {
   // ~QRegExpValidator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1280,10 +1393,7 @@ func (this *QRegExpValidator) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QRegExpValidatorD0Ev
     // invoke: void ~QRegExpValidator()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QRegExpValidatorD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QRegExpValidatorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegExpValidator", "~QRegExpValidator", args)
   }

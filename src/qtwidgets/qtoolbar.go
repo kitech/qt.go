@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -99,7 +98,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QToolBar)=1
@@ -117,7 +115,7 @@ type QToolBar struct {
 }
 
 // addAction(const class QIcon &, const class QString &, const class QObject *, const char *)
-func (this *QToolBar) AddAction(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Addaction(args ...interface{}) (ret interface{}) {
   // addAction(const class QIcon &, const class QString &, const class QObject *, const char *)
   // addAction(const class QString &, const class QObject *, const char *)
   // addAction(const class QIcon &, const class QString &)
@@ -138,6 +136,10 @@ func (this *QToolBar) AddAction(args ...interface{}) (ret interface{}) {
   vtys[2][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -227,6 +229,10 @@ func (this *QToolBar) Orientation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -243,7 +249,7 @@ func (this *QToolBar) Orientation(args ...interface{}) () {
 }
 
 // actionAt(int, int)
-func (this *QToolBar) ActionAt(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Actionat(args ...interface{}) (ret interface{}) {
   // actionAt(int, int)
   // actionAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -253,6 +259,10 @@ func (this *QToolBar) ActionAt(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -295,11 +305,15 @@ func (this *QToolBar) ActionAt(args ...interface{}) (ret interface{}) {
 }
 
 // isFloating()
-func (this *QToolBar) IsFloating(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Isfloating(args ...interface{}) (ret interface{}) {
   // isFloating()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -324,12 +338,16 @@ func (this *QToolBar) IsFloating(args ...interface{}) (ret interface{}) {
 }
 
 // actionGeometry(class QAction *)
-func (this *QToolBar) ActionGeometry(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Actiongeometry(args ...interface{}) (ret interface{}) {
   // actionGeometry(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -356,11 +374,15 @@ func (this *QToolBar) ActionGeometry(args ...interface{}) (ret interface{}) {
 }
 
 // isFloatable()
-func (this *QToolBar) IsFloatable(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Isfloatable(args ...interface{}) (ret interface{}) {
   // isFloatable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -385,12 +407,16 @@ func (this *QToolBar) IsFloatable(args ...interface{}) (ret interface{}) {
 }
 
 // insertSeparator(class QAction *)
-func (this *QToolBar) InsertSeparator(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Insertseparator(args ...interface{}) (ret interface{}) {
   // insertSeparator(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -417,11 +443,15 @@ func (this *QToolBar) InsertSeparator(args ...interface{}) (ret interface{}) {
 }
 
 // toggleViewAction()
-func (this *QToolBar) ToggleViewAction(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Toggleviewaction(args ...interface{}) (ret interface{}) {
   // toggleViewAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -446,12 +476,16 @@ func (this *QToolBar) ToggleViewAction(args ...interface{}) (ret interface{}) {
 }
 
 // setMovable(_Bool)
-func (this *QToolBar) SetMovable(args ...interface{}) () {
+func (this *QToolBar) Setmovable(args ...interface{}) () {
   // setMovable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -470,11 +504,15 @@ func (this *QToolBar) SetMovable(args ...interface{}) () {
 }
 
 // isMovable()
-func (this *QToolBar) IsMovable(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Ismovable(args ...interface{}) (ret interface{}) {
   // isMovable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -499,9 +537,6 @@ func (this *QToolBar) IsMovable(args ...interface{}) (ret interface{}) {
 }
 
 // QToolBar(class QWidget *)
-func GcfreeQToolBar(this *QToolBar) {
-  qtrt.UniverseFree(this)
-}
 func NewQToolBar(args ...interface{}) *QToolBar {
   // QToolBar(class QWidget *)
   // QToolBar(const class QString &, class QWidget *)
@@ -512,6 +547,10 @@ func NewQToolBar(args ...interface{}) *QToolBar {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -524,9 +563,7 @@ func NewQToolBar(args ...interface{}) *QToolBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QToolBarC2EP7QWidget(arg0)
-    this := &QToolBar{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQToolBar)
-    return this
+    return &QToolBar{Qclsinst:qthis}
   case 1:
     // invoke: _ZN8QToolBarC1ERK7QStringP7QWidget
     // invoke: void QToolBar(const class QString &, class QWidget *)
@@ -537,9 +574,7 @@ func NewQToolBar(args ...interface{}) *QToolBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QToolBarC2ERK7QStringP7QWidget(arg0, arg1)
-    this := &QToolBar{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQToolBar)
-    return this
+    return &QToolBar{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QToolBar", "QToolBar", args)
   }
@@ -548,11 +583,15 @@ func NewQToolBar(args ...interface{}) *QToolBar {
 }
 
 // addSeparator()
-func (this *QToolBar) AddSeparator(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Addseparator(args ...interface{}) (ret interface{}) {
   // addSeparator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -577,11 +616,15 @@ func (this *QToolBar) AddSeparator(args ...interface{}) (ret interface{}) {
 }
 
 // iconSize()
-func (this *QToolBar) IconSize(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Iconsize(args ...interface{}) (ret interface{}) {
   // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -606,13 +649,17 @@ func (this *QToolBar) IconSize(args ...interface{}) (ret interface{}) {
 }
 
 // insertWidget(class QAction *, class QWidget *)
-func (this *QToolBar) InsertWidget(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Insertwidget(args ...interface{}) (ret interface{}) {
   // insertWidget(class QAction *, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
   vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -641,11 +688,15 @@ func (this *QToolBar) InsertWidget(args ...interface{}) (ret interface{}) {
 }
 
 // ~QToolBar()
-func (this *QToolBar) Free(args ...interface{}) () {
+func (this *QToolBar) Freeqtoolbar(args ...interface{}) () {
   // ~QToolBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -653,10 +704,7 @@ func (this *QToolBar) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolBarD0Ev
     // invoke: void ~QToolBar()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN8QToolBarD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN8QToolBarD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QToolBar", "~QToolBar", args)
   }
@@ -665,12 +713,16 @@ func (this *QToolBar) Free(args ...interface{}) () {
 }
 
 // widgetForAction(class QAction *)
-func (this *QToolBar) WidgetForAction(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Widgetforaction(args ...interface{}) (ret interface{}) {
   // widgetForAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -697,12 +749,16 @@ func (this *QToolBar) WidgetForAction(args ...interface{}) (ret interface{}) {
 }
 
 // addWidget(class QWidget *)
-func (this *QToolBar) AddWidget(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) Addwidget(args ...interface{}) (ret interface{}) {
   // addWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -729,11 +785,15 @@ func (this *QToolBar) AddWidget(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QToolBar) MetaObject(args ...interface{}) () {
+func (this *QToolBar) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -750,12 +810,16 @@ func (this *QToolBar) MetaObject(args ...interface{}) () {
 }
 
 // setFloatable(_Bool)
-func (this *QToolBar) SetFloatable(args ...interface{}) () {
+func (this *QToolBar) Setfloatable(args ...interface{}) () {
   // setFloatable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -774,11 +838,15 @@ func (this *QToolBar) SetFloatable(args ...interface{}) () {
 }
 
 // allowedAreas()
-func (this *QToolBar) AllowedAreas(args ...interface{}) () {
+func (this *QToolBar) Allowedareas(args ...interface{}) () {
   // allowedAreas()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -800,6 +868,10 @@ func (this *QToolBar) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -816,12 +888,16 @@ func (this *QToolBar) Clear(args ...interface{}) () {
 }
 
 // setIconSize(const class QSize &)
-func (this *QToolBar) SetIconSize(args ...interface{}) () {
+func (this *QToolBar) Seticonsize(args ...interface{}) () {
   // setIconSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -840,11 +916,15 @@ func (this *QToolBar) SetIconSize(args ...interface{}) () {
 }
 
 // toolButtonStyle()
-func (this *QToolBar) ToolButtonStyle(args ...interface{}) () {
+func (this *QToolBar) Toolbuttonstyle(args ...interface{}) () {
   // toolButtonStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

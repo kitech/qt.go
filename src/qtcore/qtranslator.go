@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -55,7 +54,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTranslator)=1
@@ -86,6 +84,10 @@ func (this *QTranslator) Load(args ...interface{}) (ret interface{}) {
   vtys[2][0] = qtrt.ByteTy(true) // "const uchar *"
   vtys[2][1] = qtrt.Int32Ty(false) // "int"
   vtys[2][2] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -160,11 +162,15 @@ func (this *QTranslator) Load(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QTranslator) MetaObject(args ...interface{}) () {
+func (this *QTranslator) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -181,11 +187,15 @@ func (this *QTranslator) MetaObject(args ...interface{}) () {
 }
 
 // ~QTranslator()
-func (this *QTranslator) Free(args ...interface{}) () {
+func (this *QTranslator) Freeqtranslator(args ...interface{}) () {
   // ~QTranslator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -193,10 +203,7 @@ func (this *QTranslator) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTranslatorD0Ev
     // invoke: void ~QTranslator()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QTranslatorD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QTranslatorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTranslator", "~QTranslator", args)
   }
@@ -205,11 +212,15 @@ func (this *QTranslator) Free(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QTranslator) IsEmpty(args ...interface{}) (ret interface{}) {
+func (this *QTranslator) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -234,15 +245,16 @@ func (this *QTranslator) IsEmpty(args ...interface{}) (ret interface{}) {
 }
 
 // QTranslator(class QObject *)
-func GcfreeQTranslator(this *QTranslator) {
-  qtrt.UniverseFree(this)
-}
 func NewQTranslator(args ...interface{}) *QTranslator {
   // QTranslator(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -255,9 +267,7 @@ func NewQTranslator(args ...interface{}) *QTranslator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTranslatorC2EP7QObject(arg0)
-    this := &QTranslator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTranslator)
-    return this
+    return &QTranslator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTranslator", "QTranslator", args)
   }
@@ -275,6 +285,10 @@ func (this *QTranslator) Translate(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.ByteTy(true) // "const char *"
   vtys[0][2] = qtrt.ByteTy(true) // "const char *"
   vtys[0][3] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

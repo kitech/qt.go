@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -97,7 +96,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QScreen)=1
@@ -116,11 +114,15 @@ type QScreen struct {
 }
 
 // refreshRate()
-func (this *QScreen) RefreshRate(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Refreshrate(args ...interface{}) (ret interface{}) {
   // refreshRate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -145,11 +147,15 @@ func (this *QScreen) RefreshRate(args ...interface{}) (ret interface{}) {
 }
 
 // availableVirtualSize()
-func (this *QScreen) AvailableVirtualSize(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Availablevirtualsize(args ...interface{}) (ret interface{}) {
   // availableVirtualSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -179,6 +185,10 @@ func (this *QScreen) Orientation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -195,7 +205,7 @@ func (this *QScreen) Orientation(args ...interface{}) () {
 }
 
 // grabWindow(WId, int, int, int, int)
-func (this *QScreen) GrabWindow(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Grabwindow(args ...interface{}) (ret interface{}) {
   // grabWindow(WId, int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -205,6 +215,10 @@ func (this *QScreen) GrabWindow(args ...interface{}) (ret interface{}) {
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = qtrt.Int32Ty(false) // "int"
   vtys[0][4] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -239,11 +253,15 @@ func (this *QScreen) GrabWindow(args ...interface{}) (ret interface{}) {
 }
 
 // nativeOrientation()
-func (this *QScreen) NativeOrientation(args ...interface{}) () {
+func (this *QScreen) Nativeorientation(args ...interface{}) () {
   // nativeOrientation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -265,6 +283,10 @@ func (this *QScreen) Size(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -289,11 +311,15 @@ func (this *QScreen) Size(args ...interface{}) (ret interface{}) {
 }
 
 // physicalDotsPerInchY()
-func (this *QScreen) PhysicalDotsPerInchY(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Physicaldotsperinchy(args ...interface{}) (ret interface{}) {
   // physicalDotsPerInchY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -318,11 +344,15 @@ func (this *QScreen) PhysicalDotsPerInchY(args ...interface{}) (ret interface{})
 }
 
 // logicalDotsPerInch()
-func (this *QScreen) LogicalDotsPerInch(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Logicaldotsperinch(args ...interface{}) (ret interface{}) {
   // logicalDotsPerInch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -347,11 +377,15 @@ func (this *QScreen) LogicalDotsPerInch(args ...interface{}) (ret interface{}) {
 }
 
 // virtualSiblings()
-func (this *QScreen) VirtualSiblings(args ...interface{}) () {
+func (this *QScreen) Virtualsiblings(args ...interface{}) () {
   // virtualSiblings()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -368,11 +402,15 @@ func (this *QScreen) VirtualSiblings(args ...interface{}) () {
 }
 
 // availableGeometry()
-func (this *QScreen) AvailableGeometry(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Availablegeometry(args ...interface{}) (ret interface{}) {
   // availableGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -397,11 +435,15 @@ func (this *QScreen) AvailableGeometry(args ...interface{}) (ret interface{}) {
 }
 
 // orientationUpdateMask()
-func (this *QScreen) OrientationUpdateMask(args ...interface{}) () {
+func (this *QScreen) Orientationupdatemask(args ...interface{}) () {
   // orientationUpdateMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -418,11 +460,15 @@ func (this *QScreen) OrientationUpdateMask(args ...interface{}) () {
 }
 
 // primaryOrientation()
-func (this *QScreen) PrimaryOrientation(args ...interface{}) () {
+func (this *QScreen) Primaryorientation(args ...interface{}) () {
   // primaryOrientation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -444,6 +490,10 @@ func (this *QScreen) Handle(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -460,11 +510,15 @@ func (this *QScreen) Handle(args ...interface{}) () {
 }
 
 // availableVirtualGeometry()
-func (this *QScreen) AvailableVirtualGeometry(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Availablevirtualgeometry(args ...interface{}) (ret interface{}) {
   // availableVirtualGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -489,11 +543,15 @@ func (this *QScreen) AvailableVirtualGeometry(args ...interface{}) (ret interfac
 }
 
 // ~QScreen()
-func (this *QScreen) Free(args ...interface{}) () {
+func (this *QScreen) Freeqscreen(args ...interface{}) () {
   // ~QScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -501,10 +559,7 @@ func (this *QScreen) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QScreenD0Ev
     // invoke: void ~QScreen()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN7QScreenD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN7QScreenD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "~QScreen", args)
   }
@@ -513,11 +568,15 @@ func (this *QScreen) Free(args ...interface{}) () {
 }
 
 // availableSize()
-func (this *QScreen) AvailableSize(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Availablesize(args ...interface{}) (ret interface{}) {
   // availableSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -542,11 +601,15 @@ func (this *QScreen) AvailableSize(args ...interface{}) (ret interface{}) {
 }
 
 // virtualGeometry()
-func (this *QScreen) VirtualGeometry(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Virtualgeometry(args ...interface{}) (ret interface{}) {
   // virtualGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -571,11 +634,15 @@ func (this *QScreen) VirtualGeometry(args ...interface{}) (ret interface{}) {
 }
 
 // physicalDotsPerInch()
-func (this *QScreen) PhysicalDotsPerInch(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Physicaldotsperinch(args ...interface{}) (ret interface{}) {
   // physicalDotsPerInch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -600,11 +667,15 @@ func (this *QScreen) PhysicalDotsPerInch(args ...interface{}) (ret interface{}) 
 }
 
 // physicalSize()
-func (this *QScreen) PhysicalSize(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Physicalsize(args ...interface{}) (ret interface{}) {
   // physicalSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -629,11 +700,15 @@ func (this *QScreen) PhysicalSize(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QScreen) MetaObject(args ...interface{}) () {
+func (this *QScreen) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -655,6 +730,10 @@ func (this *QScreen) Name(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -679,11 +758,15 @@ func (this *QScreen) Name(args ...interface{}) (ret interface{}) {
 }
 
 // logicalDotsPerInchY()
-func (this *QScreen) LogicalDotsPerInchY(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Logicaldotsperinchy(args ...interface{}) (ret interface{}) {
   // logicalDotsPerInchY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -708,11 +791,15 @@ func (this *QScreen) LogicalDotsPerInchY(args ...interface{}) (ret interface{}) 
 }
 
 // logicalDotsPerInchX()
-func (this *QScreen) LogicalDotsPerInchX(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Logicaldotsperinchx(args ...interface{}) (ret interface{}) {
   // logicalDotsPerInchX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -737,11 +824,15 @@ func (this *QScreen) LogicalDotsPerInchX(args ...interface{}) (ret interface{}) 
 }
 
 // devicePixelRatio()
-func (this *QScreen) DevicePixelRatio(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Devicepixelratio(args ...interface{}) (ret interface{}) {
   // devicePixelRatio()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -771,6 +862,10 @@ func (this *QScreen) Geometry(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -800,6 +895,10 @@ func (this *QScreen) Depth(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -824,11 +923,15 @@ func (this *QScreen) Depth(args ...interface{}) (ret interface{}) {
 }
 
 // virtualSize()
-func (this *QScreen) VirtualSize(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Virtualsize(args ...interface{}) (ret interface{}) {
   // virtualSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -853,11 +956,15 @@ func (this *QScreen) VirtualSize(args ...interface{}) (ret interface{}) {
 }
 
 // physicalDotsPerInchX()
-func (this *QScreen) PhysicalDotsPerInchX(args ...interface{}) (ret interface{}) {
+func (this *QScreen) Physicaldotsperinchx(args ...interface{}) (ret interface{}) {
   // physicalDotsPerInchX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

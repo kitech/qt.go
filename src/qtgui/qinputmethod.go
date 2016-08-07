@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -44,12 +43,16 @@ extern void* C_ZNK12QInputMethod15cursorRectangleEv(void* qthis); // 4
 extern void* C_ZNK12QInputMethod18inputItemRectangleEv(void* qthis); // 4
   // proto:  bool QInputMethod::isAnimating();
 extern bool C_ZNK12QInputMethod11isAnimatingEv(void* qthis); // 4
+  // proto:  QRectF QInputMethod::anchorRectangle();
+extern void* C_ZNK12QInputMethod15anchorRectangleEv(void* qthis); // 4
   // proto:  Qt::LayoutDirection QInputMethod::inputDirection();
 extern void C_ZNK12QInputMethod14inputDirectionEv(void* qthis); // 4
   // proto:  void QInputMethod::setInputItemTransform(const QTransform & transform);
 extern void C_ZN12QInputMethod21setInputItemTransformERK10QTransform(void* qthis, void* arg0); // 4
   // proto:  QRectF QInputMethod::keyboardRectangle();
 extern void* C_ZNK12QInputMethod17keyboardRectangleEv(void* qthis); // 4
+  // proto:  QRectF QInputMethod::inputItemClipRectangle();
+extern void* C_ZNK12QInputMethod22inputItemClipRectangleEv(void* qthis); // 4
   // proto:  void QInputMethod::reset();
 extern void C_ZN12QInputMethod5resetEv(void* qthis); // 4
   // proto:  const QMetaObject * QInputMethod::metaObject();
@@ -73,7 +76,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QInputMethod)=1
@@ -84,6 +86,8 @@ type QInputMethod struct {
 //  _localeChanged QInputMethod_localeChanged_signal;
 //  _inputDirectionChanged QInputMethod_inputDirectionChanged_signal;
 //  _animatingChanged QInputMethod_animatingChanged_signal;
+//  _anchorRectangleChanged QInputMethod_anchorRectangleChanged_signal;
+//  _inputItemClipRectangleChanged QInputMethod_inputItemClipRectangleChanged_signal;
 //  _keyboardRectangleChanged QInputMethod_keyboardRectangleChanged_signal;
 //  _visibleChanged QInputMethod_visibleChanged_signal;
 }
@@ -94,6 +98,10 @@ func (this *QInputMethod) Show(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -115,6 +123,10 @@ func (this *QInputMethod) Locale(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -139,12 +151,16 @@ func (this *QInputMethod) Locale(args ...interface{}) (ret interface{}) {
 }
 
 // setInputItemRectangle(const class QRectF &)
-func (this *QInputMethod) SetInputItemRectangle(args ...interface{}) () {
+func (this *QInputMethod) Setinputitemrectangle(args ...interface{}) () {
   // setInputItemRectangle(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -168,6 +184,10 @@ func (this *QInputMethod) Hide(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -184,11 +204,15 @@ func (this *QInputMethod) Hide(args ...interface{}) () {
 }
 
 // cursorRectangle()
-func (this *QInputMethod) CursorRectangle(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) Cursorrectangle(args ...interface{}) (ret interface{}) {
   // cursorRectangle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -213,11 +237,15 @@ func (this *QInputMethod) CursorRectangle(args ...interface{}) (ret interface{})
 }
 
 // inputItemRectangle()
-func (this *QInputMethod) InputItemRectangle(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) Inputitemrectangle(args ...interface{}) (ret interface{}) {
   // inputItemRectangle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -242,11 +270,15 @@ func (this *QInputMethod) InputItemRectangle(args ...interface{}) (ret interface
 }
 
 // isAnimating()
-func (this *QInputMethod) IsAnimating(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) Isanimating(args ...interface{}) (ret interface{}) {
   // isAnimating()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -270,12 +302,49 @@ func (this *QInputMethod) IsAnimating(args ...interface{}) (ret interface{}) {
   return
 }
 
+// anchorRectangle()
+func (this *QInputMethod) Anchorrectangle(args ...interface{}) (ret interface{}) {
+  // anchorRectangle()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK12QInputMethod15anchorRectangleEv
+    // invoke: QRectF anchorRectangle()
+    var ret0 = C.C_ZNK12QInputMethod15anchorRectangleEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(qtcore.QRectF{}) // "QRectF"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QInputMethod", "anchorRectangle", args)
+  }
+
+  return
+}
+
 // inputDirection()
-func (this *QInputMethod) InputDirection(args ...interface{}) () {
+func (this *QInputMethod) Inputdirection(args ...interface{}) () {
   // inputDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -292,12 +361,16 @@ func (this *QInputMethod) InputDirection(args ...interface{}) () {
 }
 
 // setInputItemTransform(const class QTransform &)
-func (this *QInputMethod) SetInputItemTransform(args ...interface{}) () {
+func (this *QInputMethod) Setinputitemtransform(args ...interface{}) () {
   // setInputItemTransform(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTransform{}) // "const QTransform &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -316,11 +389,15 @@ func (this *QInputMethod) SetInputItemTransform(args ...interface{}) () {
 }
 
 // keyboardRectangle()
-func (this *QInputMethod) KeyboardRectangle(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) Keyboardrectangle(args ...interface{}) (ret interface{}) {
   // keyboardRectangle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -344,12 +421,49 @@ func (this *QInputMethod) KeyboardRectangle(args ...interface{}) (ret interface{
   return
 }
 
+// inputItemClipRectangle()
+func (this *QInputMethod) Inputitemcliprectangle(args ...interface{}) (ret interface{}) {
+  // inputItemClipRectangle()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK12QInputMethod22inputItemClipRectangleEv
+    // invoke: QRectF inputItemClipRectangle()
+    var ret0 = C.C_ZNK12QInputMethod22inputItemClipRectangleEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(qtcore.QRectF{}) // "QRectF"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QInputMethod", "inputItemClipRectangle", args)
+  }
+
+  return
+}
+
 // reset()
 func (this *QInputMethod) Reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -366,11 +480,15 @@ func (this *QInputMethod) Reset(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QInputMethod) MetaObject(args ...interface{}) () {
+func (this *QInputMethod) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -387,11 +505,15 @@ func (this *QInputMethod) MetaObject(args ...interface{}) () {
 }
 
 // inputItemTransform()
-func (this *QInputMethod) InputItemTransform(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) Inputitemtransform(args ...interface{}) (ret interface{}) {
   // inputItemTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -416,11 +538,15 @@ func (this *QInputMethod) InputItemTransform(args ...interface{}) (ret interface
 }
 
 // isVisible()
-func (this *QInputMethod) IsVisible(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) Isvisible(args ...interface{}) (ret interface{}) {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -450,6 +576,10 @@ func (this *QInputMethod) Commit(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -466,12 +596,16 @@ func (this *QInputMethod) Commit(args ...interface{}) () {
 }
 
 // setVisible(_Bool)
-func (this *QInputMethod) SetVisible(args ...interface{}) () {
+func (this *QInputMethod) Setvisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

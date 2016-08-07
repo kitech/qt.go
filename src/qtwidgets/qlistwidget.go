@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qlistwidget.h
 // dst-file: /src/widgets/qlistwidget.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -163,6 +162,8 @@ extern void C_ZN11QListWidget7addItemERK7QString(void* qthis, void* arg0); // 2
 extern void C_ZNK11QListWidget13selectedItemsEv(void* qthis); // 4
   // proto:  int QListWidget::currentRow();
 extern int32_t C_ZNK11QListWidget10currentRowEv(void* qthis); // 4
+  // proto:  void QListWidget::setSelectionModel(QItemSelectionModel * selectionModel);
+extern void C_ZN11QListWidget17setSelectionModelEP19QItemSelectionModel(void* qthis, void* arg0); // 4
   // proto:  QRect QListWidget::visualItemRect(const QListWidgetItem * item);
 extern void* C_ZNK11QListWidget14visualItemRectEPK15QListWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QListWidget::setCurrentItem(QListWidgetItem * item);
@@ -197,7 +198,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QListWidgetItem)=1
@@ -223,12 +223,16 @@ type QListWidget struct {
 }
 
 // setTextAlignment(int)
-func (this *QListWidgetItem) SetTextAlignment(args ...interface{}) () {
+func (this *QListWidgetItem) Settextalignment(args ...interface{}) () {
   // setTextAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -247,12 +251,16 @@ func (this *QListWidgetItem) SetTextAlignment(args ...interface{}) () {
 }
 
 // setSizeHint(const class QSize &)
-func (this *QListWidgetItem) SetSizeHint(args ...interface{}) () {
+func (this *QListWidgetItem) Setsizehint(args ...interface{}) () {
   // setSizeHint(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -271,12 +279,16 @@ func (this *QListWidgetItem) SetSizeHint(args ...interface{}) () {
 }
 
 // setSelected(_Bool)
-func (this *QListWidgetItem) SetSelected(args ...interface{}) () {
+func (this *QListWidgetItem) Setselected(args ...interface{}) () {
   // setSelected(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -300,6 +312,10 @@ func (this *QListWidgetItem) Text(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -324,9 +340,6 @@ func (this *QListWidgetItem) Text(args ...interface{}) (ret interface{}) {
 }
 
 // QListWidgetItem(const class QListWidgetItem &)
-func GcfreeQListWidgetItem(this *QListWidgetItem) {
-  qtrt.UniverseFree(this)
-}
 func NewQListWidgetItem(args ...interface{}) *QListWidgetItem {
   // QListWidgetItem(const class QListWidgetItem &)
   // QListWidgetItem(const class QIcon &, const class QString &, class QListWidget *, int)
@@ -348,6 +361,10 @@ func NewQListWidgetItem(args ...interface{}) *QListWidgetItem {
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(QListWidget{}) // "QListWidget *"
   vtys[3][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -360,9 +377,7 @@ func NewQListWidgetItem(args ...interface{}) *QListWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QListWidgetItemC2ERKS_(arg0)
-    this := &QListWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQListWidgetItem)
-    return this
+    return &QListWidgetItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN15QListWidgetItemC1ERK5QIconRK7QStringP11QListWidgeti
     // invoke: void QListWidgetItem(const class QIcon &, const class QString &, class QListWidget *, int)
@@ -377,9 +392,7 @@ func NewQListWidgetItem(args ...interface{}) *QListWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti(arg0, arg1, arg2, arg3)
-    this := &QListWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQListWidgetItem)
-    return this
+    return &QListWidgetItem{Qclsinst:qthis}
   case 2:
     // invoke: _ZN15QListWidgetItemC1ERK7QStringP11QListWidgeti
     // invoke: void QListWidgetItem(const class QString &, class QListWidget *, int)
@@ -392,9 +405,7 @@ func NewQListWidgetItem(args ...interface{}) *QListWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti(arg0, arg1, arg2)
-    this := &QListWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQListWidgetItem)
-    return this
+    return &QListWidgetItem{Qclsinst:qthis}
   case 3:
     // invoke: _ZN15QListWidgetItemC1EP11QListWidgeti
     // invoke: void QListWidgetItem(class QListWidget *, int)
@@ -405,9 +416,7 @@ func NewQListWidgetItem(args ...interface{}) *QListWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QListWidgetItemC2EP11QListWidgeti(arg0, arg1)
-    this := &QListWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQListWidgetItem)
-    return this
+    return &QListWidgetItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "QListWidgetItem", args)
   }
@@ -416,12 +425,16 @@ func NewQListWidgetItem(args ...interface{}) *QListWidgetItem {
 }
 
 // setHidden(_Bool)
-func (this *QListWidgetItem) SetHidden(args ...interface{}) () {
+func (this *QListWidgetItem) Sethidden(args ...interface{}) () {
   // setHidden(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -445,6 +458,10 @@ func (this *QListWidgetItem) Font(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -475,6 +492,10 @@ func (this *QListWidgetItem) Write(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDataStream{}) // "QDataStream &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -493,12 +514,16 @@ func (this *QListWidgetItem) Write(args ...interface{}) () {
 }
 
 // setForeground(const class QBrush &)
-func (this *QListWidgetItem) SetForeground(args ...interface{}) () {
+func (this *QListWidgetItem) Setforeground(args ...interface{}) () {
   // setForeground(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -517,12 +542,16 @@ func (this *QListWidgetItem) SetForeground(args ...interface{}) () {
 }
 
 // setBackground(const class QBrush &)
-func (this *QListWidgetItem) SetBackground(args ...interface{}) () {
+func (this *QListWidgetItem) Setbackground(args ...interface{}) () {
   // setBackground(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -541,11 +570,15 @@ func (this *QListWidgetItem) SetBackground(args ...interface{}) () {
 }
 
 // whatsThis()
-func (this *QListWidgetItem) WhatsThis(args ...interface{}) (ret interface{}) {
+func (this *QListWidgetItem) Whatsthis(args ...interface{}) (ret interface{}) {
   // whatsThis()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -570,11 +603,15 @@ func (this *QListWidgetItem) WhatsThis(args ...interface{}) (ret interface{}) {
 }
 
 // isSelected()
-func (this *QListWidgetItem) IsSelected(args ...interface{}) (ret interface{}) {
+func (this *QListWidgetItem) Isselected(args ...interface{}) (ret interface{}) {
   // isSelected()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -599,11 +636,15 @@ func (this *QListWidgetItem) IsSelected(args ...interface{}) (ret interface{}) {
 }
 
 // backgroundColor()
-func (this *QListWidgetItem) BackgroundColor(args ...interface{}) (ret interface{}) {
+func (this *QListWidgetItem) Backgroundcolor(args ...interface{}) (ret interface{}) {
   // backgroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -628,11 +669,15 @@ func (this *QListWidgetItem) BackgroundColor(args ...interface{}) (ret interface
 }
 
 // ~QListWidgetItem()
-func (this *QListWidgetItem) Free(args ...interface{}) () {
+func (this *QListWidgetItem) Freeqlistwidgetitem(args ...interface{}) () {
   // ~QListWidgetItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -640,10 +685,7 @@ func (this *QListWidgetItem) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QListWidgetItemD0Ev
     // invoke: void ~QListWidgetItem()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QListWidgetItemD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QListWidgetItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QListWidgetItem", "~QListWidgetItem", args)
   }
@@ -652,11 +694,15 @@ func (this *QListWidgetItem) Free(args ...interface{}) () {
 }
 
 // textColor()
-func (this *QListWidgetItem) TextColor(args ...interface{}) (ret interface{}) {
+func (this *QListWidgetItem) Textcolor(args ...interface{}) (ret interface{}) {
   // textColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -686,6 +732,10 @@ func (this *QListWidgetItem) Type_(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -710,13 +760,17 @@ func (this *QListWidgetItem) Type_(args ...interface{}) (ret interface{}) {
 }
 
 // setData(int, const class QVariant &)
-func (this *QListWidgetItem) SetData(args ...interface{}) () {
+func (this *QListWidgetItem) Setdata(args ...interface{}) () {
   // setData(int, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QVariant{}) // "const QVariant &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -737,11 +791,15 @@ func (this *QListWidgetItem) SetData(args ...interface{}) () {
 }
 
 // statusTip()
-func (this *QListWidgetItem) StatusTip(args ...interface{}) (ret interface{}) {
+func (this *QListWidgetItem) Statustip(args ...interface{}) (ret interface{}) {
   // statusTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -771,6 +829,10 @@ func (this *QListWidgetItem) Foreground(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -795,11 +857,15 @@ func (this *QListWidgetItem) Foreground(args ...interface{}) (ret interface{}) {
 }
 
 // listWidget()
-func (this *QListWidgetItem) ListWidget(args ...interface{}) (ret interface{}) {
+func (this *QListWidgetItem) Listwidget(args ...interface{}) (ret interface{}) {
   // listWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -830,6 +896,10 @@ func (this *QListWidgetItem) Read(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDataStream{}) // "QDataStream &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -853,6 +923,10 @@ func (this *QListWidgetItem) Clone(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -877,12 +951,16 @@ func (this *QListWidgetItem) Clone(args ...interface{}) (ret interface{}) {
 }
 
 // setBackgroundColor(const class QColor &)
-func (this *QListWidgetItem) SetBackgroundColor(args ...interface{}) () {
+func (this *QListWidgetItem) Setbackgroundcolor(args ...interface{}) () {
   // setBackgroundColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QColor{}) // "const QColor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -901,11 +979,15 @@ func (this *QListWidgetItem) SetBackgroundColor(args ...interface{}) () {
 }
 
 // toolTip()
-func (this *QListWidgetItem) ToolTip(args ...interface{}) (ret interface{}) {
+func (this *QListWidgetItem) Tooltip(args ...interface{}) (ret interface{}) {
   // toolTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -930,12 +1012,16 @@ func (this *QListWidgetItem) ToolTip(args ...interface{}) (ret interface{}) {
 }
 
 // setWhatsThis(const class QString &)
-func (this *QListWidgetItem) SetWhatsThis(args ...interface{}) () {
+func (this *QListWidgetItem) Setwhatsthis(args ...interface{}) () {
   // setWhatsThis(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -959,6 +1045,10 @@ func (this *QListWidgetItem) Background(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -989,6 +1079,10 @@ func (this *QListWidgetItem) Data(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1015,12 +1109,16 @@ func (this *QListWidgetItem) Data(args ...interface{}) (ret interface{}) {
 }
 
 // setTextColor(const class QColor &)
-func (this *QListWidgetItem) SetTextColor(args ...interface{}) () {
+func (this *QListWidgetItem) Settextcolor(args ...interface{}) () {
   // setTextColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QColor{}) // "const QColor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1044,6 +1142,10 @@ func (this *QListWidgetItem) Icon(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1068,12 +1170,16 @@ func (this *QListWidgetItem) Icon(args ...interface{}) (ret interface{}) {
 }
 
 // setToolTip(const class QString &)
-func (this *QListWidgetItem) SetToolTip(args ...interface{}) () {
+func (this *QListWidgetItem) Settooltip(args ...interface{}) () {
   // setToolTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1092,11 +1198,15 @@ func (this *QListWidgetItem) SetToolTip(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QListWidgetItem) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QListWidgetItem) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1121,11 +1231,15 @@ func (this *QListWidgetItem) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // isHidden()
-func (this *QListWidgetItem) IsHidden(args ...interface{}) (ret interface{}) {
+func (this *QListWidgetItem) Ishidden(args ...interface{}) (ret interface{}) {
   // isHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1150,12 +1264,16 @@ func (this *QListWidgetItem) IsHidden(args ...interface{}) (ret interface{}) {
 }
 
 // setText(const class QString &)
-func (this *QListWidgetItem) SetText(args ...interface{}) () {
+func (this *QListWidgetItem) Settext(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1174,12 +1292,16 @@ func (this *QListWidgetItem) SetText(args ...interface{}) () {
 }
 
 // setStatusTip(const class QString &)
-func (this *QListWidgetItem) SetStatusTip(args ...interface{}) () {
+func (this *QListWidgetItem) Setstatustip(args ...interface{}) () {
   // setStatusTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1198,12 +1320,16 @@ func (this *QListWidgetItem) SetStatusTip(args ...interface{}) () {
 }
 
 // setIcon(const class QIcon &)
-func (this *QListWidgetItem) SetIcon(args ...interface{}) () {
+func (this *QListWidgetItem) Seticon(args ...interface{}) () {
   // setIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1227,6 +1353,10 @@ func (this *QListWidgetItem) Flags(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1243,11 +1373,15 @@ func (this *QListWidgetItem) Flags(args ...interface{}) () {
 }
 
 // checkState()
-func (this *QListWidgetItem) CheckState(args ...interface{}) () {
+func (this *QListWidgetItem) Checkstate(args ...interface{}) () {
   // checkState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1264,12 +1398,16 @@ func (this *QListWidgetItem) CheckState(args ...interface{}) () {
 }
 
 // setFont(const class QFont &)
-func (this *QListWidgetItem) SetFont(args ...interface{}) () {
+func (this *QListWidgetItem) Setfont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QFont{}) // "const QFont &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1288,11 +1426,15 @@ func (this *QListWidgetItem) SetFont(args ...interface{}) () {
 }
 
 // textAlignment()
-func (this *QListWidgetItem) TextAlignment(args ...interface{}) (ret interface{}) {
+func (this *QListWidgetItem) Textalignment(args ...interface{}) (ret interface{}) {
   // textAlignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1317,11 +1459,15 @@ func (this *QListWidgetItem) TextAlignment(args ...interface{}) (ret interface{}
 }
 
 // ~QListWidget()
-func (this *QListWidget) Free(args ...interface{}) () {
+func (this *QListWidget) Freeqlistwidget(args ...interface{}) () {
   // ~QListWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1329,10 +1475,7 @@ func (this *QListWidget) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QListWidgetD0Ev
     // invoke: void ~QListWidget()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QListWidgetD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QListWidgetD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QListWidget", "~QListWidget", args)
   }
@@ -1341,12 +1484,16 @@ func (this *QListWidget) Free(args ...interface{}) () {
 }
 
 // removeItemWidget(class QListWidgetItem *)
-func (this *QListWidget) RemoveItemWidget(args ...interface{}) () {
+func (this *QListWidget) Removeitemwidget(args ...interface{}) () {
   // removeItemWidget(class QListWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "QListWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1365,12 +1512,16 @@ func (this *QListWidget) RemoveItemWidget(args ...interface{}) () {
 }
 
 // isItemHidden(const class QListWidgetItem *)
-func (this *QListWidget) IsItemHidden(args ...interface{}) (ret interface{}) {
+func (this *QListWidget) Isitemhidden(args ...interface{}) (ret interface{}) {
   // isItemHidden(const class QListWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "const QListWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1397,12 +1548,16 @@ func (this *QListWidget) IsItemHidden(args ...interface{}) (ret interface{}) {
 }
 
 // dropEvent(class QDropEvent *)
-func (this *QListWidget) DropEvent(args ...interface{}) () {
+func (this *QListWidget) Dropevent(args ...interface{}) () {
   // dropEvent(class QDropEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QDropEvent{}) // "QDropEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1421,13 +1576,17 @@ func (this *QListWidget) DropEvent(args ...interface{}) () {
 }
 
 // setItemSelected(const class QListWidgetItem *, _Bool)
-func (this *QListWidget) SetItemSelected(args ...interface{}) () {
+func (this *QListWidget) Setitemselected(args ...interface{}) () {
   // setItemSelected(const class QListWidgetItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "const QListWidgetItem *"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1448,12 +1607,16 @@ func (this *QListWidget) SetItemSelected(args ...interface{}) () {
 }
 
 // itemWidget(class QListWidgetItem *)
-func (this *QListWidget) ItemWidget(args ...interface{}) (ret interface{}) {
+func (this *QListWidget) Itemwidget(args ...interface{}) (ret interface{}) {
   // itemWidget(class QListWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "QListWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1480,12 +1643,16 @@ func (this *QListWidget) ItemWidget(args ...interface{}) (ret interface{}) {
 }
 
 // openPersistentEditor(class QListWidgetItem *)
-func (this *QListWidget) OpenPersistentEditor(args ...interface{}) () {
+func (this *QListWidget) Openpersistenteditor(args ...interface{}) () {
   // openPersistentEditor(class QListWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "QListWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1510,6 +1677,10 @@ func (this *QListWidget) Row(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "const QListWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1536,11 +1707,15 @@ func (this *QListWidget) Row(args ...interface{}) (ret interface{}) {
 }
 
 // isSortingEnabled()
-func (this *QListWidget) IsSortingEnabled(args ...interface{}) (ret interface{}) {
+func (this *QListWidget) Issortingenabled(args ...interface{}) (ret interface{}) {
   // isSortingEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1565,13 +1740,17 @@ func (this *QListWidget) IsSortingEnabled(args ...interface{}) (ret interface{})
 }
 
 // setItemWidget(class QListWidgetItem *, class QWidget *)
-func (this *QListWidget) SetItemWidget(args ...interface{}) () {
+func (this *QListWidget) Setitemwidget(args ...interface{}) () {
   // setItemWidget(class QListWidgetItem *, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "QListWidgetItem *"
   vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1592,12 +1771,16 @@ func (this *QListWidget) SetItemWidget(args ...interface{}) () {
 }
 
 // editItem(class QListWidgetItem *)
-func (this *QListWidget) EditItem(args ...interface{}) () {
+func (this *QListWidget) Edititem(args ...interface{}) () {
   // editItem(class QListWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "QListWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1616,11 +1799,15 @@ func (this *QListWidget) EditItem(args ...interface{}) () {
 }
 
 // currentItem()
-func (this *QListWidget) CurrentItem(args ...interface{}) (ret interface{}) {
+func (this *QListWidget) Currentitem(args ...interface{}) (ret interface{}) {
   // currentItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1645,12 +1832,16 @@ func (this *QListWidget) CurrentItem(args ...interface{}) (ret interface{}) {
 }
 
 // addItems(const class QStringList &)
-func (this *QListWidget) AddItems(args ...interface{}) () {
+func (this *QListWidget) Additems(args ...interface{}) () {
   // addItems(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1669,12 +1860,16 @@ func (this *QListWidget) AddItems(args ...interface{}) () {
 }
 
 // isItemSelected(const class QListWidgetItem *)
-func (this *QListWidget) IsItemSelected(args ...interface{}) (ret interface{}) {
+func (this *QListWidget) Isitemselected(args ...interface{}) (ret interface{}) {
   // isItemSelected(const class QListWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "const QListWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1701,13 +1896,17 @@ func (this *QListWidget) IsItemSelected(args ...interface{}) (ret interface{}) {
 }
 
 // insertItems(int, const class QStringList &)
-func (this *QListWidget) InsertItems(args ...interface{}) () {
+func (this *QListWidget) Insertitems(args ...interface{}) () {
   // insertItems(int, const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1728,15 +1927,16 @@ func (this *QListWidget) InsertItems(args ...interface{}) () {
 }
 
 // QListWidget(class QWidget *)
-func GcfreeQListWidget(this *QListWidget) {
-  qtrt.UniverseFree(this)
-}
 func NewQListWidget(args ...interface{}) *QListWidget {
   // QListWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1749,9 +1949,7 @@ func NewQListWidget(args ...interface{}) *QListWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QListWidgetC2EP7QWidget(arg0)
-    this := &QListWidget{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQListWidget)
-    return this
+    return &QListWidget{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QListWidget", "QListWidget", args)
   }
@@ -1760,12 +1958,16 @@ func NewQListWidget(args ...interface{}) *QListWidget {
 }
 
 // takeItem(int)
-func (this *QListWidget) TakeItem(args ...interface{}) (ret interface{}) {
+func (this *QListWidget) Takeitem(args ...interface{}) (ret interface{}) {
   // takeItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1792,7 +1994,7 @@ func (this *QListWidget) TakeItem(args ...interface{}) (ret interface{}) {
 }
 
 // insertItem(int, class QListWidgetItem *)
-func (this *QListWidget) InsertItem(args ...interface{}) () {
+func (this *QListWidget) Insertitem(args ...interface{}) () {
   // insertItem(int, class QListWidgetItem *)
   // insertItem(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1803,6 +2005,10 @@ func (this *QListWidget) InsertItem(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
   vtys[1][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1831,12 +2037,16 @@ func (this *QListWidget) InsertItem(args ...interface{}) () {
 }
 
 // setCurrentRow(int)
-func (this *QListWidget) SetCurrentRow(args ...interface{}) () {
+func (this *QListWidget) Setcurrentrow(args ...interface{}) () {
   // setCurrentRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1855,7 +2065,7 @@ func (this *QListWidget) SetCurrentRow(args ...interface{}) () {
 }
 
 // addItem(class QListWidgetItem *)
-func (this *QListWidget) AddItem(args ...interface{}) () {
+func (this *QListWidget) Additem(args ...interface{}) () {
   // addItem(class QListWidgetItem *)
   // addItem(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1864,6 +2074,10 @@ func (this *QListWidget) AddItem(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "QListWidgetItem *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1888,11 +2102,15 @@ func (this *QListWidget) AddItem(args ...interface{}) () {
 }
 
 // selectedItems()
-func (this *QListWidget) SelectedItems(args ...interface{}) () {
+func (this *QListWidget) Selecteditems(args ...interface{}) () {
   // selectedItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1909,11 +2127,15 @@ func (this *QListWidget) SelectedItems(args ...interface{}) () {
 }
 
 // currentRow()
-func (this *QListWidget) CurrentRow(args ...interface{}) (ret interface{}) {
+func (this *QListWidget) Currentrow(args ...interface{}) (ret interface{}) {
   // currentRow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1937,13 +2159,45 @@ func (this *QListWidget) CurrentRow(args ...interface{}) (ret interface{}) {
   return
 }
 
+// setSelectionModel(class QItemSelectionModel *)
+func (this *QListWidget) Setselectionmodel(args ...interface{}) () {
+  // setSelectionModel(class QItemSelectionModel *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(qtcore.QItemSelectionModel{}) // "QItemSelectionModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN11QListWidget17setSelectionModelEP19QItemSelectionModel
+    // invoke: void setSelectionModel(class QItemSelectionModel *)
+    var arg0 = args[0].(*qtcore.QItemSelectionModel).Qclsinst
+    if false {fmt.Println(arg0)}
+    C.C_ZN11QListWidget17setSelectionModelEP19QItemSelectionModel(this.Qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QListWidget", "setSelectionModel", args)
+  }
+
+  return
+}
+
 // visualItemRect(const class QListWidgetItem *)
-func (this *QListWidget) VisualItemRect(args ...interface{}) (ret interface{}) {
+func (this *QListWidget) Visualitemrect(args ...interface{}) (ret interface{}) {
   // visualItemRect(const class QListWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "const QListWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1970,12 +2224,16 @@ func (this *QListWidget) VisualItemRect(args ...interface{}) (ret interface{}) {
 }
 
 // setCurrentItem(class QListWidgetItem *)
-func (this *QListWidget) SetCurrentItem(args ...interface{}) () {
+func (this *QListWidget) Setcurrentitem(args ...interface{}) () {
   // setCurrentItem(class QListWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "QListWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1999,6 +2257,10 @@ func (this *QListWidget) Count(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2023,11 +2285,15 @@ func (this *QListWidget) Count(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QListWidget) MetaObject(args ...interface{}) () {
+func (this *QListWidget) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2044,12 +2310,16 @@ func (this *QListWidget) MetaObject(args ...interface{}) () {
 }
 
 // closePersistentEditor(class QListWidgetItem *)
-func (this *QListWidget) ClosePersistentEditor(args ...interface{}) () {
+func (this *QListWidget) Closepersistenteditor(args ...interface{}) () {
   // closePersistentEditor(class QListWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "QListWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2068,7 +2338,7 @@ func (this *QListWidget) ClosePersistentEditor(args ...interface{}) () {
 }
 
 // itemAt(int, int)
-func (this *QListWidget) ItemAt(args ...interface{}) (ret interface{}) {
+func (this *QListWidget) Itemat(args ...interface{}) (ret interface{}) {
   // itemAt(int, int)
   // itemAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2078,6 +2348,10 @@ func (this *QListWidget) ItemAt(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2125,6 +2399,10 @@ func (this *QListWidget) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2141,12 +2419,16 @@ func (this *QListWidget) Clear(args ...interface{}) () {
 }
 
 // setSortingEnabled(_Bool)
-func (this *QListWidget) SetSortingEnabled(args ...interface{}) () {
+func (this *QListWidget) Setsortingenabled(args ...interface{}) () {
   // setSortingEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2171,6 +2453,10 @@ func (this *QListWidget) Item(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2197,13 +2483,17 @@ func (this *QListWidget) Item(args ...interface{}) (ret interface{}) {
 }
 
 // setItemHidden(const class QListWidgetItem *, _Bool)
-func (this *QListWidget) SetItemHidden(args ...interface{}) () {
+func (this *QListWidget) Setitemhidden(args ...interface{}) () {
   // setItemHidden(const class QListWidgetItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QListWidgetItem{}) // "const QListWidgetItem *"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

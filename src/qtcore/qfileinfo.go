@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qfileinfo.h
 // dst-file: /src/core/qfileinfo.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -145,7 +144,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFileInfo)=1
@@ -155,11 +153,15 @@ type QFileInfo struct {
 }
 
 // absoluteDir()
-func (this *QFileInfo) AbsoluteDir(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Absolutedir(args ...interface{}) (ret interface{}) {
   // absoluteDir()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -189,6 +191,10 @@ func (this *QFileInfo) Suffix(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -213,9 +219,6 @@ func (this *QFileInfo) Suffix(args ...interface{}) (ret interface{}) {
 }
 
 // QFileInfo(const class QFileInfo &)
-func GcfreeQFileInfo(this *QFileInfo) {
-  qtrt.UniverseFree(this)
-}
 func NewQFileInfo(args ...interface{}) *QFileInfo {
   // QFileInfo(const class QFileInfo &)
   // QFileInfo()
@@ -234,6 +237,10 @@ func NewQFileInfo(args ...interface{}) *QFileInfo {
   vtys[4] = make(map[int32]reflect.Type)
   vtys[4][0] = reflect.TypeOf(QDir{}) // "const QDir &"
   vtys[4][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -246,18 +253,14 @@ func NewQFileInfo(args ...interface{}) *QFileInfo {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QFileInfoC2ERKS_(arg0)
-    this := &QFileInfo{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFileInfo)
-    return this
+    return &QFileInfo{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QFileInfoC1Ev
     // invoke: void QFileInfo()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QFileInfoC2Ev()
-    this := &QFileInfo{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFileInfo)
-    return this
+    return &QFileInfo{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QFileInfoC1ERK7QString
     // invoke: void QFileInfo(const class QString &)
@@ -266,9 +269,7 @@ func NewQFileInfo(args ...interface{}) *QFileInfo {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QFileInfoC2ERK7QString(arg0)
-    this := &QFileInfo{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFileInfo)
-    return this
+    return &QFileInfo{Qclsinst:qthis}
   case 3:
     // invoke: _ZN9QFileInfoC1ERK5QFile
     // invoke: void QFileInfo(const class QFile &)
@@ -277,9 +278,7 @@ func NewQFileInfo(args ...interface{}) *QFileInfo {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QFileInfoC2ERK5QFile(arg0)
-    this := &QFileInfo{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFileInfo)
-    return this
+    return &QFileInfo{Qclsinst:qthis}
   case 4:
     // invoke: _ZN9QFileInfoC1ERK4QDirRK7QString
     // invoke: void QFileInfo(const class QDir &, const class QString &)
@@ -290,9 +289,7 @@ func NewQFileInfo(args ...interface{}) *QFileInfo {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QFileInfoC2ERK4QDirRK7QString(arg0, arg1)
-    this := &QFileInfo{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFileInfo)
-    return this
+    return &QFileInfo{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFileInfo", "QFileInfo", args)
   }
@@ -301,11 +298,15 @@ func NewQFileInfo(args ...interface{}) *QFileInfo {
 }
 
 // symLinkTarget()
-func (this *QFileInfo) SymLinkTarget(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Symlinktarget(args ...interface{}) (ret interface{}) {
   // symLinkTarget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -330,11 +331,15 @@ func (this *QFileInfo) SymLinkTarget(args ...interface{}) (ret interface{}) {
 }
 
 // isRelative()
-func (this *QFileInfo) IsRelative(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Isrelative(args ...interface{}) (ret interface{}) {
   // isRelative()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -359,11 +364,15 @@ func (this *QFileInfo) IsRelative(args ...interface{}) (ret interface{}) {
 }
 
 // completeBaseName()
-func (this *QFileInfo) CompleteBaseName(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Completebasename(args ...interface{}) (ret interface{}) {
   // completeBaseName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -388,11 +397,15 @@ func (this *QFileInfo) CompleteBaseName(args ...interface{}) (ret interface{}) {
 }
 
 // canonicalFilePath()
-func (this *QFileInfo) CanonicalFilePath(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Canonicalfilepath(args ...interface{}) (ret interface{}) {
   // canonicalFilePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -417,11 +430,15 @@ func (this *QFileInfo) CanonicalFilePath(args ...interface{}) (ret interface{}) 
 }
 
 // isAbsolute()
-func (this *QFileInfo) IsAbsolute(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Isabsolute(args ...interface{}) (ret interface{}) {
   // isAbsolute()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -451,6 +468,10 @@ func (this *QFileInfo) Owner(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -475,11 +496,15 @@ func (this *QFileInfo) Owner(args ...interface{}) (ret interface{}) {
 }
 
 // isExecutable()
-func (this *QFileInfo) IsExecutable(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Isexecutable(args ...interface{}) (ret interface{}) {
   // isExecutable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -509,6 +534,10 @@ func (this *QFileInfo) Size(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -533,11 +562,15 @@ func (this *QFileInfo) Size(args ...interface{}) (ret interface{}) {
 }
 
 // bundleName()
-func (this *QFileInfo) BundleName(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Bundlename(args ...interface{}) (ret interface{}) {
   // bundleName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -567,6 +600,10 @@ func (this *QFileInfo) Group(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -591,7 +628,7 @@ func (this *QFileInfo) Group(args ...interface{}) (ret interface{}) {
 }
 
 // exists(const class QString &)
-func (this *QFileInfo) Exists_s(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Exists_S(args ...interface{}) (ret interface{}) {
   // exists(const class QString &)
   // exists()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -599,6 +636,10 @@ func (this *QFileInfo) Exists_s(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -637,11 +678,15 @@ func (this *QFileInfo) Exists_s(args ...interface{}) (ret interface{}) {
 }
 
 // isWritable()
-func (this *QFileInfo) IsWritable(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Iswritable(args ...interface{}) (ret interface{}) {
   // isWritable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -666,11 +711,15 @@ func (this *QFileInfo) IsWritable(args ...interface{}) (ret interface{}) {
 }
 
 // filePath()
-func (this *QFileInfo) FilePath(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Filepath(args ...interface{}) (ret interface{}) {
   // filePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -695,11 +744,15 @@ func (this *QFileInfo) FilePath(args ...interface{}) (ret interface{}) {
 }
 
 // absolutePath()
-func (this *QFileInfo) AbsolutePath(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Absolutepath(args ...interface{}) (ret interface{}) {
   // absolutePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -730,6 +783,10 @@ func (this *QFileInfo) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QFileInfo{}) // "QFileInfo &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -748,11 +805,15 @@ func (this *QFileInfo) Swap(args ...interface{}) () {
 }
 
 // canonicalPath()
-func (this *QFileInfo) CanonicalPath(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Canonicalpath(args ...interface{}) (ret interface{}) {
   // canonicalPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -777,11 +838,15 @@ func (this *QFileInfo) CanonicalPath(args ...interface{}) (ret interface{}) {
 }
 
 // isBundle()
-func (this *QFileInfo) IsBundle(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Isbundle(args ...interface{}) (ret interface{}) {
   // isBundle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -806,11 +871,15 @@ func (this *QFileInfo) IsBundle(args ...interface{}) (ret interface{}) {
 }
 
 // isHidden()
-func (this *QFileInfo) IsHidden(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Ishidden(args ...interface{}) (ret interface{}) {
   // isHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -835,11 +904,15 @@ func (this *QFileInfo) IsHidden(args ...interface{}) (ret interface{}) {
 }
 
 // isDir()
-func (this *QFileInfo) IsDir(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Isdir(args ...interface{}) (ret interface{}) {
   // isDir()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -864,11 +937,15 @@ func (this *QFileInfo) IsDir(args ...interface{}) (ret interface{}) {
 }
 
 // lastRead()
-func (this *QFileInfo) LastRead(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Lastread(args ...interface{}) (ret interface{}) {
   // lastRead()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -893,11 +970,15 @@ func (this *QFileInfo) LastRead(args ...interface{}) (ret interface{}) {
 }
 
 // isRoot()
-func (this *QFileInfo) IsRoot(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Isroot(args ...interface{}) (ret interface{}) {
   // isRoot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -922,11 +1003,15 @@ func (this *QFileInfo) IsRoot(args ...interface{}) (ret interface{}) {
 }
 
 // absoluteFilePath()
-func (this *QFileInfo) AbsoluteFilePath(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Absolutefilepath(args ...interface{}) (ret interface{}) {
   // absoluteFilePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -951,11 +1036,15 @@ func (this *QFileInfo) AbsoluteFilePath(args ...interface{}) (ret interface{}) {
 }
 
 // fileName()
-func (this *QFileInfo) FileName(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -980,12 +1069,16 @@ func (this *QFileInfo) FileName(args ...interface{}) (ret interface{}) {
 }
 
 // setCaching(_Bool)
-func (this *QFileInfo) SetCaching(args ...interface{}) () {
+func (this *QFileInfo) Setcaching(args ...interface{}) () {
   // setCaching(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1004,11 +1097,15 @@ func (this *QFileInfo) SetCaching(args ...interface{}) () {
 }
 
 // completeSuffix()
-func (this *QFileInfo) CompleteSuffix(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Completesuffix(args ...interface{}) (ret interface{}) {
   // completeSuffix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1038,6 +1135,10 @@ func (this *QFileInfo) Path(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1062,11 +1163,15 @@ func (this *QFileInfo) Path(args ...interface{}) (ret interface{}) {
 }
 
 // ~QFileInfo()
-func (this *QFileInfo) Free(args ...interface{}) () {
+func (this *QFileInfo) Freeqfileinfo(args ...interface{}) () {
   // ~QFileInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1074,10 +1179,7 @@ func (this *QFileInfo) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QFileInfoD0Ev
     // invoke: void ~QFileInfo()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QFileInfoD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QFileInfoD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileInfo", "~QFileInfo", args)
   }
@@ -1086,11 +1188,15 @@ func (this *QFileInfo) Free(args ...interface{}) () {
 }
 
 // groupId()
-func (this *QFileInfo) GroupId(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Groupid(args ...interface{}) (ret interface{}) {
   // groupId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1120,6 +1226,10 @@ func (this *QFileInfo) Permissions(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1136,11 +1246,15 @@ func (this *QFileInfo) Permissions(args ...interface{}) () {
 }
 
 // isNativePath()
-func (this *QFileInfo) IsNativePath(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Isnativepath(args ...interface{}) (ret interface{}) {
   // isNativePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1170,6 +1284,10 @@ func (this *QFileInfo) Created(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1194,11 +1312,15 @@ func (this *QFileInfo) Created(args ...interface{}) (ret interface{}) {
 }
 
 // isSymLink()
-func (this *QFileInfo) IsSymLink(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Issymlink(args ...interface{}) (ret interface{}) {
   // isSymLink()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1223,11 +1345,15 @@ func (this *QFileInfo) IsSymLink(args ...interface{}) (ret interface{}) {
 }
 
 // lastModified()
-func (this *QFileInfo) LastModified(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Lastmodified(args ...interface{}) (ret interface{}) {
   // lastModified()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1252,11 +1378,15 @@ func (this *QFileInfo) LastModified(args ...interface{}) (ret interface{}) {
 }
 
 // baseName()
-func (this *QFileInfo) BaseName(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Basename(args ...interface{}) (ret interface{}) {
   // baseName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1286,6 +1416,10 @@ func (this *QFileInfo) Refresh(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1302,11 +1436,15 @@ func (this *QFileInfo) Refresh(args ...interface{}) () {
 }
 
 // readLink()
-func (this *QFileInfo) ReadLink(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Readlink(args ...interface{}) (ret interface{}) {
   // readLink()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1331,7 +1469,7 @@ func (this *QFileInfo) ReadLink(args ...interface{}) (ret interface{}) {
 }
 
 // setFile(const class QDir &, const class QString &)
-func (this *QFileInfo) SetFile(args ...interface{}) () {
+func (this *QFileInfo) Setfile(args ...interface{}) () {
   // setFile(const class QDir &, const class QString &)
   // setFile(const class QString &)
   // setFile(const class QFile &)
@@ -1344,6 +1482,10 @@ func (this *QFileInfo) SetFile(args ...interface{}) () {
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QFile{}) // "const QFile &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1376,11 +1518,15 @@ func (this *QFileInfo) SetFile(args ...interface{}) () {
 }
 
 // isReadable()
-func (this *QFileInfo) IsReadable(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Isreadable(args ...interface{}) (ret interface{}) {
   // isReadable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1410,6 +1556,10 @@ func (this *QFileInfo) Caching(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1434,11 +1584,15 @@ func (this *QFileInfo) Caching(args ...interface{}) (ret interface{}) {
 }
 
 // ownerId()
-func (this *QFileInfo) OwnerId(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Ownerid(args ...interface{}) (ret interface{}) {
   // ownerId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1463,11 +1617,15 @@ func (this *QFileInfo) OwnerId(args ...interface{}) (ret interface{}) {
 }
 
 // isFile()
-func (this *QFileInfo) IsFile(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Isfile(args ...interface{}) (ret interface{}) {
   // isFile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1492,11 +1650,15 @@ func (this *QFileInfo) IsFile(args ...interface{}) (ret interface{}) {
 }
 
 // makeAbsolute()
-func (this *QFileInfo) MakeAbsolute(args ...interface{}) (ret interface{}) {
+func (this *QFileInfo) Makeabsolute(args ...interface{}) (ret interface{}) {
   // makeAbsolute()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1526,6 +1688,10 @@ func (this *QFileInfo) Dir(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

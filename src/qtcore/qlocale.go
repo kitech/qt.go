@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qlocale.h
 // dst-file: /src/core/qlocale.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -29,6 +28,8 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
+  // proto:  void QLocale::~QLocale();
+extern void C_ZN7QLocaleD2Ev(void* qthis); // 4
   // proto:  ushort QLocale::toUShort(const QString & s, bool * ok);
 extern int16_t C_ZNK7QLocale8toUShortERK7QStringPb(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QTime QLocale::toTime(const QString & string, const QString & format);
@@ -85,8 +86,8 @@ extern void* C_ZNK7QLocale8toStringEy(void* qthis, int64_t arg0); // 4
 extern void* C_ZNK7QLocale8toStringERK5QDateRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QString QLocale::toString(short i);
 extern void* C_ZNK7QLocale8toStringEs(void* qthis, int16_t arg0); // 2
-  // proto:  void QLocale::~QLocale();
-extern void C_ZN7QLocaleD2Ev(void* qthis); // 4
+  // proto:  void QLocale::swap(QLocale & other);
+extern void C_ZN7QLocale4swapERS_(void* qthis, void* arg0); // 2
   // proto:  QString QLocale::createSeparatedList(const QStringList & strl);
 extern void* C_ZNK7QLocale19createSeparatedListERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  QString QLocale::nativeLanguageName();
@@ -109,14 +110,18 @@ extern void* C_ZNK7QLocale16toCurrencyStringEjRK7QString(void* qthis, int32_t ar
 extern void* C_ZNK7QLocale16toCurrencyStringEsRK7QString(void* qthis, int16_t arg0, void* arg1); // 2
   // proto:  QString QLocale::toCurrencyString(qulonglong , const QString & symbol);
 extern void* C_ZNK7QLocale16toCurrencyStringEyRK7QString(void* qthis, int64_t arg0, void* arg1); // 4
-  // proto:  QString QLocale::toCurrencyString(float , const QString & symbol);
+  // proto:  QString QLocale::toCurrencyString(float i, const QString & symbol);
 extern void* C_ZNK7QLocale16toCurrencyStringEfRK7QString(void* qthis, float arg0, void* arg1); // 2
   // proto:  QString QLocale::toCurrencyString(ushort , const QString & symbol);
 extern void* C_ZNK7QLocale16toCurrencyStringEtRK7QString(void* qthis, int16_t arg0, void* arg1); // 2
   // proto:  QString QLocale::toCurrencyString(qlonglong , const QString & symbol);
 extern void* C_ZNK7QLocale16toCurrencyStringExRK7QString(void* qthis, int64_t arg0, void* arg1); // 4
+  // proto:  QString QLocale::toCurrencyString(double , const QString & symbol, int precision);
+extern void* C_ZNK7QLocale16toCurrencyStringEdRK7QStringi(void* qthis, double arg0, void* arg1, int32_t arg2); // 4
   // proto:  QString QLocale::toCurrencyString(int , const QString & symbol);
 extern void* C_ZNK7QLocale16toCurrencyStringEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
+  // proto:  QString QLocale::toCurrencyString(float i, const QString & symbol, int precision);
+extern void* C_ZNK7QLocale16toCurrencyStringEfRK7QStringi(void* qthis, float arg0, void* arg1, int32_t arg2); // 2
   // proto:  QString QLocale::nativeCountryName();
 extern void* C_ZNK7QLocale17nativeCountryNameEv(void* qthis); // 4
   // proto:  QLocale::Language QLocale::language();
@@ -163,7 +168,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QLocale)=1
@@ -172,14 +176,43 @@ type QLocale struct {
   Qclsinst unsafe.Pointer /* *C.void */;
 }
 
+// ~QLocale()
+func (this *QLocale) Freeqlocale(args ...interface{}) () {
+  // ~QLocale()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QLocaleD0Ev
+    // invoke: void ~QLocale()
+    C.C_ZN7QLocaleD2Ev(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QLocale", "~QLocale", args)
+  }
+
+  return
+}
+
 // toUShort(const class QString &, _Bool *)
-func (this *QLocale) ToUShort(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Toushort(args ...interface{}) (ret interface{}) {
   // toUShort(const class QString &, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = qtrt.BoolTy(true) // "bool *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -208,13 +241,17 @@ func (this *QLocale) ToUShort(args ...interface{}) (ret interface{}) {
 }
 
 // toTime(const class QString &, const class QString &)
-func (this *QLocale) ToTime(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Totime(args ...interface{}) (ret interface{}) {
   // toTime(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -243,11 +280,15 @@ func (this *QLocale) ToTime(args ...interface{}) (ret interface{}) {
 }
 
 // uiLanguages()
-func (this *QLocale) UiLanguages(args ...interface{}) () {
+func (this *QLocale) Uilanguages(args ...interface{}) () {
   // uiLanguages()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -264,13 +305,17 @@ func (this *QLocale) UiLanguages(args ...interface{}) () {
 }
 
 // toUInt(const class QString &, _Bool *)
-func (this *QLocale) ToUInt(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Touint(args ...interface{}) (ret interface{}) {
   // toUInt(const class QString &, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = qtrt.BoolTy(true) // "bool *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -299,13 +344,17 @@ func (this *QLocale) ToUInt(args ...interface{}) (ret interface{}) {
 }
 
 // toFloat(const class QString &, _Bool *)
-func (this *QLocale) ToFloat(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Tofloat(args ...interface{}) (ret interface{}) {
   // toFloat(const class QString &, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = qtrt.BoolTy(true) // "bool *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -334,11 +383,15 @@ func (this *QLocale) ToFloat(args ...interface{}) (ret interface{}) {
 }
 
 // system()
-func (this *QLocale) System_s(args ...interface{}) (ret interface{}) {
+func (this *QLocale) System_S(args ...interface{}) (ret interface{}) {
   // system()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -363,13 +416,17 @@ func (this *QLocale) System_s(args ...interface{}) (ret interface{}) {
 }
 
 // toShort(const class QString &, _Bool *)
-func (this *QLocale) ToShort(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Toshort(args ...interface{}) (ret interface{}) {
   // toShort(const class QString &, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = qtrt.BoolTy(true) // "bool *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -398,11 +455,15 @@ func (this *QLocale) ToShort(args ...interface{}) (ret interface{}) {
 }
 
 // amText()
-func (this *QLocale) AmText(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Amtext(args ...interface{}) (ret interface{}) {
   // amText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -427,12 +488,16 @@ func (this *QLocale) AmText(args ...interface{}) (ret interface{}) {
 }
 
 // setDefault(const class QLocale &)
-func (this *QLocale) SetDefault_s(args ...interface{}) () {
+func (this *QLocale) Setdefault_S(args ...interface{}) () {
   // setDefault(const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QLocale{}) // "const QLocale &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -451,13 +516,17 @@ func (this *QLocale) SetDefault_s(args ...interface{}) () {
 }
 
 // toDate(const class QString &, const class QString &)
-func (this *QLocale) ToDate(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Todate(args ...interface{}) (ret interface{}) {
   // toDate(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -486,12 +555,16 @@ func (this *QLocale) ToDate(args ...interface{}) (ret interface{}) {
 }
 
 // toLower(const class QString &)
-func (this *QLocale) ToLower(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Tolower(args ...interface{}) (ret interface{}) {
   // toLower(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -518,11 +591,15 @@ func (this *QLocale) ToLower(args ...interface{}) (ret interface{}) {
 }
 
 // pmText()
-func (this *QLocale) PmText(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Pmtext(args ...interface{}) (ret interface{}) {
   // pmText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -547,11 +624,15 @@ func (this *QLocale) PmText(args ...interface{}) (ret interface{}) {
 }
 
 // firstDayOfWeek()
-func (this *QLocale) FirstDayOfWeek(args ...interface{}) () {
+func (this *QLocale) Firstdayofweek(args ...interface{}) () {
   // firstDayOfWeek()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -573,6 +654,10 @@ func (this *QLocale) Percent(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -602,6 +687,10 @@ func (this *QLocale) Weekdays(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -618,13 +707,17 @@ func (this *QLocale) Weekdays(args ...interface{}) () {
 }
 
 // toLongLong(const class QString &, _Bool *)
-func (this *QLocale) ToLongLong(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Tolonglong(args ...interface{}) (ret interface{}) {
   // toLongLong(const class QString &, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = qtrt.BoolTy(true) // "bool *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -653,11 +746,15 @@ func (this *QLocale) ToLongLong(args ...interface{}) (ret interface{}) {
 }
 
 // negativeSign()
-func (this *QLocale) NegativeSign(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Negativesign(args ...interface{}) (ret interface{}) {
   // negativeSign()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -682,7 +779,7 @@ func (this *QLocale) NegativeSign(args ...interface{}) (ret interface{}) {
 }
 
 // toString(int)
-func (this *QLocale) ToString(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Tostring(args ...interface{}) (ret interface{}) {
   // toString(int)
   // toString(uint)
   // toString(const class QTime &, const class QString &)
@@ -725,6 +822,10 @@ func (this *QLocale) ToString(args ...interface{}) (ret interface{}) {
   vtys[9][1] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[10] = make(map[int32]reflect.Type)
   vtys[10][0] = qtrt.Int16Ty(false) // "short"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -904,37 +1005,45 @@ func (this *QLocale) ToString(args ...interface{}) (ret interface{}) {
   return
 }
 
-// ~QLocale()
-func (this *QLocale) Free(args ...interface{}) () {
-  // ~QLocale()
+// swap(class QLocale &)
+func (this *QLocale) Swap(args ...interface{}) () {
+  // swap(class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QLocale{}) // "QLocale &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN7QLocaleD0Ev
-    // invoke: void ~QLocale()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN7QLocaleD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    // invoke: _ZN7QLocale4swapERS_
+    // invoke: void swap(class QLocale &)
+    var arg0 = args[0].(*QLocale).Qclsinst
+    if false {fmt.Println(arg0)}
+    C.C_ZN7QLocale4swapERS_(this.Qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QLocale", "~QLocale", args)
+    qtrt.ErrorResolve("QLocale", "swap", args)
   }
 
   return
 }
 
 // createSeparatedList(const class QStringList &)
-func (this *QLocale) CreateSeparatedList(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Createseparatedlist(args ...interface{}) (ret interface{}) {
   // createSeparatedList(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -961,11 +1070,15 @@ func (this *QLocale) CreateSeparatedList(args ...interface{}) (ret interface{}) 
 }
 
 // nativeLanguageName()
-func (this *QLocale) NativeLanguageName(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Nativelanguagename(args ...interface{}) (ret interface{}) {
   // nativeLanguageName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -990,11 +1103,15 @@ func (this *QLocale) NativeLanguageName(args ...interface{}) (ret interface{}) {
 }
 
 // groupSeparator()
-func (this *QLocale) GroupSeparator(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Groupseparator(args ...interface{}) (ret interface{}) {
   // groupSeparator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1019,9 +1136,6 @@ func (this *QLocale) GroupSeparator(args ...interface{}) (ret interface{}) {
 }
 
 // QLocale(const class QLocale &)
-func GcfreeQLocale(this *QLocale) {
-  qtrt.UniverseFree(this)
-}
 func NewQLocale(args ...interface{}) *QLocale {
   // QLocale(const class QLocale &)
   // QLocale(const class QString &)
@@ -1033,6 +1147,10 @@ func NewQLocale(args ...interface{}) *QLocale {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[2] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1045,9 +1163,7 @@ func NewQLocale(args ...interface{}) *QLocale {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QLocaleC2ERKS_(arg0)
-    this := &QLocale{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQLocale)
-    return this
+    return &QLocale{Qclsinst:qthis}
   case 1:
     // invoke: _ZN7QLocaleC1ERK7QString
     // invoke: void QLocale(const class QString &)
@@ -1056,18 +1172,14 @@ func NewQLocale(args ...interface{}) *QLocale {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QLocaleC2ERK7QString(arg0)
-    this := &QLocale{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQLocale)
-    return this
+    return &QLocale{Qclsinst:qthis}
   case 2:
     // invoke: _ZN7QLocaleC1Ev
     // invoke: void QLocale()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QLocaleC2Ev()
-    this := &QLocale{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQLocale)
-    return this
+    return &QLocale{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QLocale", "QLocale", args)
   }
@@ -1076,11 +1188,15 @@ func NewQLocale(args ...interface{}) *QLocale {
 }
 
 // positiveSign()
-func (this *QLocale) PositiveSign(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Positivesign(args ...interface{}) (ret interface{}) {
   // positiveSign()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1105,7 +1221,7 @@ func (this *QLocale) PositiveSign(args ...interface{}) (ret interface{}) {
 }
 
 // toCurrencyString(double, const class QString &)
-func (this *QLocale) ToCurrencyString(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Tocurrencystring(args ...interface{}) (ret interface{}) {
   // toCurrencyString(double, const class QString &)
   // toCurrencyString(uint, const class QString &)
   // toCurrencyString(short, const class QString &)
@@ -1113,7 +1229,9 @@ func (this *QLocale) ToCurrencyString(args ...interface{}) (ret interface{}) {
   // toCurrencyString(float, const class QString &)
   // toCurrencyString(ushort, const class QString &)
   // toCurrencyString(qlonglong, const class QString &)
+  // toCurrencyString(double, const class QString &, int)
   // toCurrencyString(int, const class QString &)
+  // toCurrencyString(float, const class QString &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -1138,8 +1256,20 @@ func (this *QLocale) ToCurrencyString(args ...interface{}) (ret interface{}) {
   vtys[6][0] = qtrt.Int64Ty(false) // "qlonglong"
   vtys[6][1] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[7] = make(map[int32]reflect.Type)
-  vtys[7][0] = qtrt.Int32Ty(false) // "int"
+  vtys[7][0] = qtrt.DoubleTy(false) // "double"
   vtys[7][1] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[7][2] = qtrt.Int32Ty(false) // "int"
+  vtys[8] = make(map[int32]reflect.Type)
+  vtys[8][0] = qtrt.Int32Ty(false) // "int"
+  vtys[8][1] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[9] = make(map[int32]reflect.Type)
+  vtys[9][0] = qtrt.FloatTy(false) // "float"
+  vtys[9][1] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[9][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1257,6 +1387,24 @@ func (this *QLocale) ToCurrencyString(args ...interface{}) (ret interface{}) {
         ret = qtrt.HandyConvert2go(ret0, rety)
     }
   case 7:
+    // invoke: _ZNK7QLocale16toCurrencyStringEdRK7QStringi
+    // invoke: QString toCurrencyString(double, const class QString &, int)
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(*QString).Qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg2)}
+    var ret0 = C.C_ZNK7QLocale16toCurrencyStringEdRK7QStringi(this.Qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  case 8:
     // invoke: _ZNK7QLocale16toCurrencyStringEiRK7QString
     // invoke: QString toCurrencyString(int, const class QString &)
     var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
@@ -1264,6 +1412,24 @@ func (this *QLocale) ToCurrencyString(args ...interface{}) (ret interface{}) {
     var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZNK7QLocale16toCurrencyStringEiRK7QString(this.Qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  case 9:
+    // invoke: _ZNK7QLocale16toCurrencyStringEfRK7QStringi
+    // invoke: QString toCurrencyString(float, const class QString &, int)
+    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(*QString).Qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg2)}
+    var ret0 = C.C_ZNK7QLocale16toCurrencyStringEfRK7QStringi(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
@@ -1280,11 +1446,15 @@ func (this *QLocale) ToCurrencyString(args ...interface{}) (ret interface{}) {
 }
 
 // nativeCountryName()
-func (this *QLocale) NativeCountryName(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Nativecountryname(args ...interface{}) (ret interface{}) {
   // nativeCountryName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1314,6 +1484,10 @@ func (this *QLocale) Language(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1335,6 +1509,10 @@ func (this *QLocale) Bcp47Name(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1359,11 +1537,15 @@ func (this *QLocale) Bcp47Name(args ...interface{}) (ret interface{}) {
 }
 
 // numberOptions()
-func (this *QLocale) NumberOptions(args ...interface{}) () {
+func (this *QLocale) Numberoptions(args ...interface{}) () {
   // numberOptions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1380,13 +1562,17 @@ func (this *QLocale) NumberOptions(args ...interface{}) () {
 }
 
 // toULongLong(const class QString &, _Bool *)
-func (this *QLocale) ToULongLong(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Toulonglong(args ...interface{}) (ret interface{}) {
   // toULongLong(const class QString &, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = qtrt.BoolTy(true) // "bool *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1415,11 +1601,15 @@ func (this *QLocale) ToULongLong(args ...interface{}) (ret interface{}) {
 }
 
 // c()
-func (this *QLocale) C_s(args ...interface{}) (ret interface{}) {
+func (this *QLocale) C_S(args ...interface{}) (ret interface{}) {
   // c()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1449,6 +1639,10 @@ func (this *QLocale) Name(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1478,6 +1672,10 @@ func (this *QLocale) Exponential(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1507,6 +1705,10 @@ func (this *QLocale) Country(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1523,13 +1725,17 @@ func (this *QLocale) Country(args ...interface{}) () {
 }
 
 // toInt(const class QString &, _Bool *)
-func (this *QLocale) ToInt(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Toint(args ...interface{}) (ret interface{}) {
   // toInt(const class QString &, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = qtrt.BoolTy(true) // "bool *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1558,11 +1764,15 @@ func (this *QLocale) ToInt(args ...interface{}) (ret interface{}) {
 }
 
 // textDirection()
-func (this *QLocale) TextDirection(args ...interface{}) () {
+func (this *QLocale) Textdirection(args ...interface{}) () {
   // textDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1584,6 +1794,10 @@ func (this *QLocale) Script(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1600,13 +1814,17 @@ func (this *QLocale) Script(args ...interface{}) () {
 }
 
 // toDouble(const class QString &, _Bool *)
-func (this *QLocale) ToDouble(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Todouble(args ...interface{}) (ret interface{}) {
   // toDouble(const class QString &, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = qtrt.BoolTy(true) // "bool *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1635,13 +1853,17 @@ func (this *QLocale) ToDouble(args ...interface{}) (ret interface{}) {
 }
 
 // toDateTime(const class QString &, const class QString &)
-func (this *QLocale) ToDateTime(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Todatetime(args ...interface{}) (ret interface{}) {
   // toDateTime(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1670,11 +1892,15 @@ func (this *QLocale) ToDateTime(args ...interface{}) (ret interface{}) {
 }
 
 // decimalPoint()
-func (this *QLocale) DecimalPoint(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Decimalpoint(args ...interface{}) (ret interface{}) {
   // decimalPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1699,12 +1925,16 @@ func (this *QLocale) DecimalPoint(args ...interface{}) (ret interface{}) {
 }
 
 // toUpper(const class QString &)
-func (this *QLocale) ToUpper(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Toupper(args ...interface{}) (ret interface{}) {
   // toUpper(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1731,11 +1961,15 @@ func (this *QLocale) ToUpper(args ...interface{}) (ret interface{}) {
 }
 
 // zeroDigit()
-func (this *QLocale) ZeroDigit(args ...interface{}) (ret interface{}) {
+func (this *QLocale) Zerodigit(args ...interface{}) (ret interface{}) {
   // zeroDigit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1760,11 +1994,15 @@ func (this *QLocale) ZeroDigit(args ...interface{}) (ret interface{}) {
 }
 
 // measurementSystem()
-func (this *QLocale) MeasurementSystem(args ...interface{}) () {
+func (this *QLocale) Measurementsystem(args ...interface{}) () {
   // measurementSystem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

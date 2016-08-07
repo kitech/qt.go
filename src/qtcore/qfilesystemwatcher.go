@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -59,7 +58,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFileSystemWatcher)=1
@@ -76,6 +74,10 @@ func (this *QFileSystemWatcher) Files(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -92,11 +94,15 @@ func (this *QFileSystemWatcher) Files(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QFileSystemWatcher) MetaObject(args ...interface{}) () {
+func (this *QFileSystemWatcher) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -113,9 +119,6 @@ func (this *QFileSystemWatcher) MetaObject(args ...interface{}) () {
 }
 
 // QFileSystemWatcher(class QObject *)
-func GcfreeQFileSystemWatcher(this *QFileSystemWatcher) {
-  qtrt.UniverseFree(this)
-}
 func NewQFileSystemWatcher(args ...interface{}) *QFileSystemWatcher {
   // QFileSystemWatcher(class QObject *)
   // QFileSystemWatcher(const class QStringList &, class QObject *)
@@ -126,6 +129,10 @@ func NewQFileSystemWatcher(args ...interface{}) *QFileSystemWatcher {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
   vtys[1][1] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -138,9 +145,7 @@ func NewQFileSystemWatcher(args ...interface{}) *QFileSystemWatcher {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QFileSystemWatcherC2EP7QObject(arg0)
-    this := &QFileSystemWatcher{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFileSystemWatcher)
-    return this
+    return &QFileSystemWatcher{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QFileSystemWatcherC1ERK11QStringListP7QObject
     // invoke: void QFileSystemWatcher(const class QStringList &, class QObject *)
@@ -151,9 +156,7 @@ func NewQFileSystemWatcher(args ...interface{}) *QFileSystemWatcher {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject(arg0, arg1)
-    this := &QFileSystemWatcher{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFileSystemWatcher)
-    return this
+    return &QFileSystemWatcher{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "QFileSystemWatcher", args)
   }
@@ -162,12 +165,16 @@ func NewQFileSystemWatcher(args ...interface{}) *QFileSystemWatcher {
 }
 
 // removePaths(const class QStringList &)
-func (this *QFileSystemWatcher) RemovePaths(args ...interface{}) () {
+func (this *QFileSystemWatcher) Removepaths(args ...interface{}) () {
   // removePaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -191,6 +198,10 @@ func (this *QFileSystemWatcher) Directories(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -207,12 +218,16 @@ func (this *QFileSystemWatcher) Directories(args ...interface{}) () {
 }
 
 // addPath(const class QString &)
-func (this *QFileSystemWatcher) AddPath(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemWatcher) Addpath(args ...interface{}) (ret interface{}) {
   // addPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -239,11 +254,15 @@ func (this *QFileSystemWatcher) AddPath(args ...interface{}) (ret interface{}) {
 }
 
 // ~QFileSystemWatcher()
-func (this *QFileSystemWatcher) Free(args ...interface{}) () {
+func (this *QFileSystemWatcher) Freeqfilesystemwatcher(args ...interface{}) () {
   // ~QFileSystemWatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -251,10 +270,7 @@ func (this *QFileSystemWatcher) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QFileSystemWatcherD0Ev
     // invoke: void ~QFileSystemWatcher()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN18QFileSystemWatcherD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN18QFileSystemWatcherD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "~QFileSystemWatcher", args)
   }
@@ -263,12 +279,16 @@ func (this *QFileSystemWatcher) Free(args ...interface{}) () {
 }
 
 // addPaths(const class QStringList &)
-func (this *QFileSystemWatcher) AddPaths(args ...interface{}) () {
+func (this *QFileSystemWatcher) Addpaths(args ...interface{}) () {
   // addPaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -287,12 +307,16 @@ func (this *QFileSystemWatcher) AddPaths(args ...interface{}) () {
 }
 
 // removePath(const class QString &)
-func (this *QFileSystemWatcher) RemovePath(args ...interface{}) (ret interface{}) {
+func (this *QFileSystemWatcher) Removepath(args ...interface{}) (ret interface{}) {
   // removePath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

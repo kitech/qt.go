@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -73,7 +72,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QProxyStyle)=1
@@ -83,9 +81,6 @@ type QProxyStyle struct {
 }
 
 // QProxyStyle(class QStyle *)
-func GcfreeQProxyStyle(this *QProxyStyle) {
-  qtrt.UniverseFree(this)
-}
 func NewQProxyStyle(args ...interface{}) *QProxyStyle {
   // QProxyStyle(class QStyle *)
   // QProxyStyle(const class QString &)
@@ -95,6 +90,10 @@ func NewQProxyStyle(args ...interface{}) *QProxyStyle {
   vtys[0][0] = reflect.TypeOf(QStyle{}) // "QStyle *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -107,9 +106,7 @@ func NewQProxyStyle(args ...interface{}) *QProxyStyle {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QProxyStyleC2EP6QStyle(arg0)
-    this := &QProxyStyle{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQProxyStyle)
-    return this
+    return &QProxyStyle{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QProxyStyleC1ERK7QString
     // invoke: void QProxyStyle(const class QString &)
@@ -118,9 +115,7 @@ func NewQProxyStyle(args ...interface{}) *QProxyStyle {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QProxyStyleC2ERK7QString(arg0)
-    this := &QProxyStyle{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQProxyStyle)
-    return this
+    return &QProxyStyle{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QProxyStyle", "QProxyStyle", args)
   }
@@ -141,6 +136,10 @@ func (this *QProxyStyle) Polish(args ...interface{}) () {
   vtys[1][0] = reflect.TypeOf(qtgui.QPalette{}) // "QPalette &"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QApplication{}) // "QApplication *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -171,11 +170,15 @@ func (this *QProxyStyle) Polish(args ...interface{}) () {
 }
 
 // baseStyle()
-func (this *QProxyStyle) BaseStyle(args ...interface{}) (ret interface{}) {
+func (this *QProxyStyle) Basestyle(args ...interface{}) (ret interface{}) {
   // baseStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -200,11 +203,15 @@ func (this *QProxyStyle) BaseStyle(args ...interface{}) (ret interface{}) {
 }
 
 // standardPalette()
-func (this *QProxyStyle) StandardPalette(args ...interface{}) (ret interface{}) {
+func (this *QProxyStyle) Standardpalette(args ...interface{}) (ret interface{}) {
   // standardPalette()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -229,12 +236,16 @@ func (this *QProxyStyle) StandardPalette(args ...interface{}) (ret interface{}) 
 }
 
 // setBaseStyle(class QStyle *)
-func (this *QProxyStyle) SetBaseStyle(args ...interface{}) () {
+func (this *QProxyStyle) Setbasestyle(args ...interface{}) () {
   // setBaseStyle(class QStyle *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyle{}) // "QStyle *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -253,7 +264,7 @@ func (this *QProxyStyle) SetBaseStyle(args ...interface{}) () {
 }
 
 // drawItemPixmap(class QPainter *, const class QRect &, int, const class QPixmap &)
-func (this *QProxyStyle) DrawItemPixmap(args ...interface{}) () {
+func (this *QProxyStyle) Drawitempixmap(args ...interface{}) () {
   // drawItemPixmap(class QPainter *, const class QRect &, int, const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -262,6 +273,10 @@ func (this *QProxyStyle) DrawItemPixmap(args ...interface{}) () {
   vtys[0][1] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = reflect.TypeOf(qtgui.QPixmap{}) // "const QPixmap &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -286,11 +301,15 @@ func (this *QProxyStyle) DrawItemPixmap(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QProxyStyle) MetaObject(args ...interface{}) () {
+func (this *QProxyStyle) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -307,11 +326,15 @@ func (this *QProxyStyle) MetaObject(args ...interface{}) () {
 }
 
 // ~QProxyStyle()
-func (this *QProxyStyle) Free(args ...interface{}) () {
+func (this *QProxyStyle) Freeqproxystyle(args ...interface{}) () {
   // ~QProxyStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -319,10 +342,7 @@ func (this *QProxyStyle) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QProxyStyleD0Ev
     // invoke: void ~QProxyStyle()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QProxyStyleD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QProxyStyleD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProxyStyle", "~QProxyStyle", args)
   }
@@ -331,7 +351,7 @@ func (this *QProxyStyle) Free(args ...interface{}) () {
 }
 
 // itemTextRect(const class QFontMetrics &, const class QRect &, int, _Bool, const class QString &)
-func (this *QProxyStyle) ItemTextRect(args ...interface{}) (ret interface{}) {
+func (this *QProxyStyle) Itemtextrect(args ...interface{}) (ret interface{}) {
   // itemTextRect(const class QFontMetrics &, const class QRect &, int, _Bool, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -341,6 +361,10 @@ func (this *QProxyStyle) ItemTextRect(args ...interface{}) (ret interface{}) {
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = qtrt.BoolTy(false) // "bool"
   vtys[0][4] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -375,7 +399,7 @@ func (this *QProxyStyle) ItemTextRect(args ...interface{}) (ret interface{}) {
 }
 
 // itemPixmapRect(const class QRect &, int, const class QPixmap &)
-func (this *QProxyStyle) ItemPixmapRect(args ...interface{}) (ret interface{}) {
+func (this *QProxyStyle) Itempixmaprect(args ...interface{}) (ret interface{}) {
   // itemPixmapRect(const class QRect &, int, const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -383,6 +407,10 @@ func (this *QProxyStyle) ItemPixmapRect(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(qtgui.QPixmap{}) // "const QPixmap &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -422,6 +450,10 @@ func (this *QProxyStyle) Unpolish(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QApplication{}) // "QApplication *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

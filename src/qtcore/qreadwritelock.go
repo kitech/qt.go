@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qreadwritelock.h
 // dst-file: /src/core/qreadwritelock.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -75,7 +74,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QWriteLocker)=4
@@ -84,7 +82,7 @@ type QWriteLocker struct {
   Qclsinst unsafe.Pointer /* *C.void */;
 }
 
-// class sizeof(QReadWriteLock)=8
+// class sizeof(QReadWriteLock)=1
 type QReadWriteLock struct {
   // qbase: None;
   Qclsinst unsafe.Pointer /* *C.void */;
@@ -97,15 +95,16 @@ type QReadLocker struct {
 }
 
 // QWriteLocker(class QReadWriteLock *)
-func GcfreeQWriteLocker(this *QWriteLocker) {
-  qtrt.UniverseFree(this)
-}
 func NewQWriteLocker(args ...interface{}) *QWriteLocker {
   // QWriteLocker(class QReadWriteLock *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QReadWriteLock{}) // "QReadWriteLock *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -118,9 +117,7 @@ func NewQWriteLocker(args ...interface{}) *QWriteLocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QWriteLockerC2EP14QReadWriteLock(arg0)
-    this := &QWriteLocker{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQWriteLocker)
-    return this
+    return &QWriteLocker{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QWriteLocker", "QWriteLocker", args)
   }
@@ -129,11 +126,15 @@ func NewQWriteLocker(args ...interface{}) *QWriteLocker {
 }
 
 // readWriteLock()
-func (this *QWriteLocker) ReadWriteLock(args ...interface{}) (ret interface{}) {
+func (this *QWriteLocker) Readwritelock(args ...interface{}) (ret interface{}) {
   // readWriteLock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -158,11 +159,15 @@ func (this *QWriteLocker) ReadWriteLock(args ...interface{}) (ret interface{}) {
 }
 
 // ~QWriteLocker()
-func (this *QWriteLocker) Free(args ...interface{}) () {
+func (this *QWriteLocker) Freeqwritelocker(args ...interface{}) () {
   // ~QWriteLocker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -170,10 +175,7 @@ func (this *QWriteLocker) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QWriteLockerD0Ev
     // invoke: void ~QWriteLocker()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QWriteLockerD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QWriteLockerD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWriteLocker", "~QWriteLocker", args)
   }
@@ -187,6 +189,10 @@ func (this *QWriteLocker) Unlock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -208,6 +214,10 @@ func (this *QWriteLocker) Relock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -224,7 +234,7 @@ func (this *QWriteLocker) Relock(args ...interface{}) () {
 }
 
 // tryLockForWrite()
-func (this *QReadWriteLock) TryLockForWrite(args ...interface{}) (ret interface{}) {
+func (this *QReadWriteLock) Trylockforwrite(args ...interface{}) (ret interface{}) {
   // tryLockForWrite()
   // tryLockForWrite(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -232,6 +242,10 @@ func (this *QReadWriteLock) TryLockForWrite(args ...interface{}) (ret interface{
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -270,11 +284,15 @@ func (this *QReadWriteLock) TryLockForWrite(args ...interface{}) (ret interface{
 }
 
 // ~QReadWriteLock()
-func (this *QReadWriteLock) Free(args ...interface{}) () {
+func (this *QReadWriteLock) Freeqreadwritelock(args ...interface{}) () {
   // ~QReadWriteLock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -282,10 +300,7 @@ func (this *QReadWriteLock) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QReadWriteLockD0Ev
     // invoke: void ~QReadWriteLock()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN14QReadWriteLockD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN14QReadWriteLockD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QReadWriteLock", "~QReadWriteLock", args)
   }
@@ -294,7 +309,7 @@ func (this *QReadWriteLock) Free(args ...interface{}) () {
 }
 
 // tryLockForRead(int)
-func (this *QReadWriteLock) TryLockForRead(args ...interface{}) (ret interface{}) {
+func (this *QReadWriteLock) Trylockforread(args ...interface{}) (ret interface{}) {
   // tryLockForRead(int)
   // tryLockForRead()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -302,6 +317,10 @@ func (this *QReadWriteLock) TryLockForRead(args ...interface{}) (ret interface{}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -345,6 +364,10 @@ func (this *QReadWriteLock) Unlock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -361,11 +384,15 @@ func (this *QReadWriteLock) Unlock(args ...interface{}) () {
 }
 
 // lockForWrite()
-func (this *QReadWriteLock) LockForWrite(args ...interface{}) () {
+func (this *QReadWriteLock) Lockforwrite(args ...interface{}) () {
   // lockForWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -382,11 +409,15 @@ func (this *QReadWriteLock) LockForWrite(args ...interface{}) () {
 }
 
 // lockForRead()
-func (this *QReadWriteLock) LockForRead(args ...interface{}) () {
+func (this *QReadWriteLock) Lockforread(args ...interface{}) () {
   // lockForRead()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -403,11 +434,15 @@ func (this *QReadWriteLock) LockForRead(args ...interface{}) () {
 }
 
 // readWriteLock()
-func (this *QReadLocker) ReadWriteLock(args ...interface{}) (ret interface{}) {
+func (this *QReadLocker) Readwritelock(args ...interface{}) (ret interface{}) {
   // readWriteLock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -432,11 +467,15 @@ func (this *QReadLocker) ReadWriteLock(args ...interface{}) (ret interface{}) {
 }
 
 // ~QReadLocker()
-func (this *QReadLocker) Free(args ...interface{}) () {
+func (this *QReadLocker) Freeqreadlocker(args ...interface{}) () {
   // ~QReadLocker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -444,10 +483,7 @@ func (this *QReadLocker) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QReadLockerD0Ev
     // invoke: void ~QReadLocker()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QReadLockerD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QReadLockerD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QReadLocker", "~QReadLocker", args)
   }
@@ -461,6 +497,10 @@ func (this *QReadLocker) Unlock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -482,6 +522,10 @@ func (this *QReadLocker) Relock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -498,15 +542,16 @@ func (this *QReadLocker) Relock(args ...interface{}) () {
 }
 
 // QReadLocker(class QReadWriteLock *)
-func GcfreeQReadLocker(this *QReadLocker) {
-  qtrt.UniverseFree(this)
-}
 func NewQReadLocker(args ...interface{}) *QReadLocker {
   // QReadLocker(class QReadWriteLock *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QReadWriteLock{}) // "QReadWriteLock *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -519,9 +564,7 @@ func NewQReadLocker(args ...interface{}) *QReadLocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QReadLockerC2EP14QReadWriteLock(arg0)
-    this := &QReadLocker{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQReadLocker)
-    return this
+    return &QReadLocker{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QReadLocker", "QReadLocker", args)
   }

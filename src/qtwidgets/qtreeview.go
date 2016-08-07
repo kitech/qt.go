@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qtreeview.h
 // dst-file: /src/widgets/qtreeview.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -167,7 +166,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTreeView)=1
@@ -179,12 +177,16 @@ type QTreeView struct {
 }
 
 // keyboardSearch(const class QString &)
-func (this *QTreeView) KeyboardSearch(args ...interface{}) () {
+func (this *QTreeView) Keyboardsearch(args ...interface{}) () {
   // keyboardSearch(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -203,13 +205,17 @@ func (this *QTreeView) KeyboardSearch(args ...interface{}) () {
 }
 
 // setColumnWidth(int, int)
-func (this *QTreeView) SetColumnWidth(args ...interface{}) () {
+func (this *QTreeView) Setcolumnwidth(args ...interface{}) () {
   // setColumnWidth(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -230,15 +236,16 @@ func (this *QTreeView) SetColumnWidth(args ...interface{}) () {
 }
 
 // QTreeView(class QWidget *)
-func GcfreeQTreeView(this *QTreeView) {
-  qtrt.UniverseFree(this)
-}
 func NewQTreeView(args ...interface{}) *QTreeView {
   // QTreeView(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -251,9 +258,7 @@ func NewQTreeView(args ...interface{}) *QTreeView {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTreeViewC2EP7QWidget(arg0)
-    this := &QTreeView{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTreeView)
-    return this
+    return &QTreeView{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTreeView", "QTreeView", args)
   }
@@ -262,12 +267,16 @@ func NewQTreeView(args ...interface{}) *QTreeView {
 }
 
 // setHeaderHidden(_Bool)
-func (this *QTreeView) SetHeaderHidden(args ...interface{}) () {
+func (this *QTreeView) Setheaderhidden(args ...interface{}) () {
   // setHeaderHidden(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -286,11 +295,15 @@ func (this *QTreeView) SetHeaderHidden(args ...interface{}) () {
 }
 
 // expandsOnDoubleClick()
-func (this *QTreeView) ExpandsOnDoubleClick(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Expandsondoubleclick(args ...interface{}) (ret interface{}) {
   // expandsOnDoubleClick()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -315,12 +328,16 @@ func (this *QTreeView) ExpandsOnDoubleClick(args ...interface{}) (ret interface{
 }
 
 // isExpanded(const class QModelIndex &)
-func (this *QTreeView) IsExpanded(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Isexpanded(args ...interface{}) (ret interface{}) {
   // isExpanded(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -347,7 +364,7 @@ func (this *QTreeView) IsExpanded(args ...interface{}) (ret interface{}) {
 }
 
 // setFirstColumnSpanned(int, const class QModelIndex &, _Bool)
-func (this *QTreeView) SetFirstColumnSpanned(args ...interface{}) () {
+func (this *QTreeView) Setfirstcolumnspanned(args ...interface{}) () {
   // setFirstColumnSpanned(int, const class QModelIndex &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -355,6 +372,10 @@ func (this *QTreeView) SetFirstColumnSpanned(args ...interface{}) () {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
   vtys[0][2] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -377,11 +398,15 @@ func (this *QTreeView) SetFirstColumnSpanned(args ...interface{}) () {
 }
 
 // resetIndentation()
-func (this *QTreeView) ResetIndentation(args ...interface{}) () {
+func (this *QTreeView) Resetindentation(args ...interface{}) () {
   // resetIndentation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -398,12 +423,16 @@ func (this *QTreeView) ResetIndentation(args ...interface{}) () {
 }
 
 // indexAbove(const class QModelIndex &)
-func (this *QTreeView) IndexAbove(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Indexabove(args ...interface{}) (ret interface{}) {
   // indexAbove(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -430,11 +459,15 @@ func (this *QTreeView) IndexAbove(args ...interface{}) (ret interface{}) {
 }
 
 // uniformRowHeights()
-func (this *QTreeView) UniformRowHeights(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Uniformrowheights(args ...interface{}) (ret interface{}) {
   // uniformRowHeights()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -459,12 +492,16 @@ func (this *QTreeView) UniformRowHeights(args ...interface{}) (ret interface{}) 
 }
 
 // setRootIsDecorated(_Bool)
-func (this *QTreeView) SetRootIsDecorated(args ...interface{}) () {
+func (this *QTreeView) Setrootisdecorated(args ...interface{}) () {
   // setRootIsDecorated(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -483,12 +520,16 @@ func (this *QTreeView) SetRootIsDecorated(args ...interface{}) () {
 }
 
 // setSelectionModel(class QItemSelectionModel *)
-func (this *QTreeView) SetSelectionModel(args ...interface{}) () {
+func (this *QTreeView) Setselectionmodel(args ...interface{}) () {
   // setSelectionModel(class QItemSelectionModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QItemSelectionModel{}) // "QItemSelectionModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -507,12 +548,16 @@ func (this *QTreeView) SetSelectionModel(args ...interface{}) () {
 }
 
 // setExpandsOnDoubleClick(_Bool)
-func (this *QTreeView) SetExpandsOnDoubleClick(args ...interface{}) () {
+func (this *QTreeView) Setexpandsondoubleclick(args ...interface{}) () {
   // setExpandsOnDoubleClick(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -531,13 +576,17 @@ func (this *QTreeView) SetExpandsOnDoubleClick(args ...interface{}) () {
 }
 
 // isFirstColumnSpanned(int, const class QModelIndex &)
-func (this *QTreeView) IsFirstColumnSpanned(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Isfirstcolumnspanned(args ...interface{}) (ret interface{}) {
   // isFirstColumnSpanned(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -566,11 +615,15 @@ func (this *QTreeView) IsFirstColumnSpanned(args ...interface{}) (ret interface{
 }
 
 // metaObject()
-func (this *QTreeView) MetaObject(args ...interface{}) () {
+func (this *QTreeView) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -592,6 +645,10 @@ func (this *QTreeView) Header(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -616,11 +673,15 @@ func (this *QTreeView) Header(args ...interface{}) (ret interface{}) {
 }
 
 // doItemsLayout()
-func (this *QTreeView) DoItemsLayout(args ...interface{}) () {
+func (this *QTreeView) Doitemslayout(args ...interface{}) () {
   // doItemsLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -637,12 +698,16 @@ func (this *QTreeView) DoItemsLayout(args ...interface{}) () {
 }
 
 // resizeColumnToContents(int)
-func (this *QTreeView) ResizeColumnToContents(args ...interface{}) () {
+func (this *QTreeView) Resizecolumntocontents(args ...interface{}) () {
   // resizeColumnToContents(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -661,12 +726,16 @@ func (this *QTreeView) ResizeColumnToContents(args ...interface{}) () {
 }
 
 // columnAt(int)
-func (this *QTreeView) ColumnAt(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Columnat(args ...interface{}) (ret interface{}) {
   // columnAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -693,12 +762,16 @@ func (this *QTreeView) ColumnAt(args ...interface{}) (ret interface{}) {
 }
 
 // setAllColumnsShowFocus(_Bool)
-func (this *QTreeView) SetAllColumnsShowFocus(args ...interface{}) () {
+func (this *QTreeView) Setallcolumnsshowfocus(args ...interface{}) () {
   // setAllColumnsShowFocus(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -717,12 +790,16 @@ func (this *QTreeView) SetAllColumnsShowFocus(args ...interface{}) () {
 }
 
 // showColumn(int)
-func (this *QTreeView) ShowColumn(args ...interface{}) () {
+func (this *QTreeView) Showcolumn(args ...interface{}) () {
   // showColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -741,13 +818,17 @@ func (this *QTreeView) ShowColumn(args ...interface{}) () {
 }
 
 // setExpanded(const class QModelIndex &, _Bool)
-func (this *QTreeView) SetExpanded(args ...interface{}) () {
+func (this *QTreeView) Setexpanded(args ...interface{}) () {
   // setExpanded(const class QModelIndex &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -768,7 +849,7 @@ func (this *QTreeView) SetExpanded(args ...interface{}) () {
 }
 
 // setRowHidden(int, const class QModelIndex &, _Bool)
-func (this *QTreeView) SetRowHidden(args ...interface{}) () {
+func (this *QTreeView) Setrowhidden(args ...interface{}) () {
   // setRowHidden(int, const class QModelIndex &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -776,6 +857,10 @@ func (this *QTreeView) SetRowHidden(args ...interface{}) () {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
   vtys[0][2] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -798,11 +883,15 @@ func (this *QTreeView) SetRowHidden(args ...interface{}) () {
 }
 
 // itemsExpandable()
-func (this *QTreeView) ItemsExpandable(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Itemsexpandable(args ...interface{}) (ret interface{}) {
   // itemsExpandable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -827,11 +916,15 @@ func (this *QTreeView) ItemsExpandable(args ...interface{}) (ret interface{}) {
 }
 
 // isHeaderHidden()
-func (this *QTreeView) IsHeaderHidden(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Isheaderhidden(args ...interface{}) (ret interface{}) {
   // isHeaderHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -856,12 +949,16 @@ func (this *QTreeView) IsHeaderHidden(args ...interface{}) (ret interface{}) {
 }
 
 // setUniformRowHeights(_Bool)
-func (this *QTreeView) SetUniformRowHeights(args ...interface{}) () {
+func (this *QTreeView) Setuniformrowheights(args ...interface{}) () {
   // setUniformRowHeights(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -880,12 +977,16 @@ func (this *QTreeView) SetUniformRowHeights(args ...interface{}) () {
 }
 
 // sortByColumn(int)
-func (this *QTreeView) SortByColumn(args ...interface{}) () {
+func (this *QTreeView) Sortbycolumn(args ...interface{}) () {
   // sortByColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -909,6 +1010,10 @@ func (this *QTreeView) Indentation(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -933,11 +1038,15 @@ func (this *QTreeView) Indentation(args ...interface{}) (ret interface{}) {
 }
 
 // selectAll()
-func (this *QTreeView) SelectAll(args ...interface{}) () {
+func (this *QTreeView) Selectall(args ...interface{}) () {
   // selectAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -954,12 +1063,16 @@ func (this *QTreeView) SelectAll(args ...interface{}) () {
 }
 
 // setTreePosition(int)
-func (this *QTreeView) SetTreePosition(args ...interface{}) () {
+func (this *QTreeView) Settreeposition(args ...interface{}) () {
   // setTreePosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -978,11 +1091,15 @@ func (this *QTreeView) SetTreePosition(args ...interface{}) () {
 }
 
 // autoExpandDelay()
-func (this *QTreeView) AutoExpandDelay(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Autoexpanddelay(args ...interface{}) (ret interface{}) {
   // autoExpandDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1007,11 +1124,15 @@ func (this *QTreeView) AutoExpandDelay(args ...interface{}) (ret interface{}) {
 }
 
 // allColumnsShowFocus()
-func (this *QTreeView) AllColumnsShowFocus(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Allcolumnsshowfocus(args ...interface{}) (ret interface{}) {
   // allColumnsShowFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1036,11 +1157,15 @@ func (this *QTreeView) AllColumnsShowFocus(args ...interface{}) (ret interface{}
 }
 
 // isAnimated()
-func (this *QTreeView) IsAnimated(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Isanimated(args ...interface{}) (ret interface{}) {
   // isAnimated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1065,13 +1190,17 @@ func (this *QTreeView) IsAnimated(args ...interface{}) (ret interface{}) {
 }
 
 // setColumnHidden(int, _Bool)
-func (this *QTreeView) SetColumnHidden(args ...interface{}) () {
+func (this *QTreeView) Setcolumnhidden(args ...interface{}) () {
   // setColumnHidden(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1092,12 +1221,16 @@ func (this *QTreeView) SetColumnHidden(args ...interface{}) () {
 }
 
 // isColumnHidden(int)
-func (this *QTreeView) IsColumnHidden(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Iscolumnhidden(args ...interface{}) (ret interface{}) {
   // isColumnHidden(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1124,12 +1257,16 @@ func (this *QTreeView) IsColumnHidden(args ...interface{}) (ret interface{}) {
 }
 
 // visualRect(const class QModelIndex &)
-func (this *QTreeView) VisualRect(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Visualrect(args ...interface{}) (ret interface{}) {
   // visualRect(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1156,12 +1293,16 @@ func (this *QTreeView) VisualRect(args ...interface{}) (ret interface{}) {
 }
 
 // indexAt(const class QPoint &)
-func (this *QTreeView) IndexAt(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Indexat(args ...interface{}) (ret interface{}) {
   // indexAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1194,6 +1335,10 @@ func (this *QTreeView) Collapse(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1212,11 +1357,15 @@ func (this *QTreeView) Collapse(args ...interface{}) () {
 }
 
 // isSortingEnabled()
-func (this *QTreeView) IsSortingEnabled(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Issortingenabled(args ...interface{}) (ret interface{}) {
   // isSortingEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1241,12 +1390,16 @@ func (this *QTreeView) IsSortingEnabled(args ...interface{}) (ret interface{}) {
 }
 
 // setRootIndex(const class QModelIndex &)
-func (this *QTreeView) SetRootIndex(args ...interface{}) () {
+func (this *QTreeView) Setrootindex(args ...interface{}) () {
   // setRootIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1270,6 +1423,10 @@ func (this *QTreeView) Reset(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1286,11 +1443,15 @@ func (this *QTreeView) Reset(args ...interface{}) () {
 }
 
 // treePosition()
-func (this *QTreeView) TreePosition(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Treeposition(args ...interface{}) (ret interface{}) {
   // treePosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1315,11 +1476,15 @@ func (this *QTreeView) TreePosition(args ...interface{}) (ret interface{}) {
 }
 
 // rootIsDecorated()
-func (this *QTreeView) RootIsDecorated(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Rootisdecorated(args ...interface{}) (ret interface{}) {
   // rootIsDecorated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1344,12 +1509,16 @@ func (this *QTreeView) RootIsDecorated(args ...interface{}) (ret interface{}) {
 }
 
 // setSortingEnabled(_Bool)
-func (this *QTreeView) SetSortingEnabled(args ...interface{}) () {
+func (this *QTreeView) Setsortingenabled(args ...interface{}) () {
   // setSortingEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1368,12 +1537,16 @@ func (this *QTreeView) SetSortingEnabled(args ...interface{}) () {
 }
 
 // expandToDepth(int)
-func (this *QTreeView) ExpandToDepth(args ...interface{}) () {
+func (this *QTreeView) Expandtodepth(args ...interface{}) () {
   // expandToDepth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1392,12 +1565,16 @@ func (this *QTreeView) ExpandToDepth(args ...interface{}) () {
 }
 
 // setAutoExpandDelay(int)
-func (this *QTreeView) SetAutoExpandDelay(args ...interface{}) () {
+func (this *QTreeView) Setautoexpanddelay(args ...interface{}) () {
   // setAutoExpandDelay(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1416,11 +1593,15 @@ func (this *QTreeView) SetAutoExpandDelay(args ...interface{}) () {
 }
 
 // collapseAll()
-func (this *QTreeView) CollapseAll(args ...interface{}) () {
+func (this *QTreeView) Collapseall(args ...interface{}) () {
   // collapseAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1437,11 +1618,15 @@ func (this *QTreeView) CollapseAll(args ...interface{}) () {
 }
 
 // wordWrap()
-func (this *QTreeView) WordWrap(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Wordwrap(args ...interface{}) (ret interface{}) {
   // wordWrap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1466,12 +1651,16 @@ func (this *QTreeView) WordWrap(args ...interface{}) (ret interface{}) {
 }
 
 // hideColumn(int)
-func (this *QTreeView) HideColumn(args ...interface{}) () {
+func (this *QTreeView) Hidecolumn(args ...interface{}) () {
   // hideColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1490,11 +1679,15 @@ func (this *QTreeView) HideColumn(args ...interface{}) () {
 }
 
 // ~QTreeView()
-func (this *QTreeView) Free(args ...interface{}) () {
+func (this *QTreeView) Freeqtreeview(args ...interface{}) () {
   // ~QTreeView()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1502,10 +1695,7 @@ func (this *QTreeView) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTreeViewD0Ev
     // invoke: void ~QTreeView()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QTreeViewD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QTreeViewD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "~QTreeView", args)
   }
@@ -1514,12 +1704,16 @@ func (this *QTreeView) Free(args ...interface{}) () {
 }
 
 // setWordWrap(_Bool)
-func (this *QTreeView) SetWordWrap(args ...interface{}) () {
+func (this *QTreeView) Setwordwrap(args ...interface{}) () {
   // setWordWrap(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1538,13 +1732,17 @@ func (this *QTreeView) SetWordWrap(args ...interface{}) () {
 }
 
 // isRowHidden(int, const class QModelIndex &)
-func (this *QTreeView) IsRowHidden(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Isrowhidden(args ...interface{}) (ret interface{}) {
   // isRowHidden(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1573,11 +1771,15 @@ func (this *QTreeView) IsRowHidden(args ...interface{}) (ret interface{}) {
 }
 
 // expandAll()
-func (this *QTreeView) ExpandAll(args ...interface{}) () {
+func (this *QTreeView) Expandall(args ...interface{}) () {
   // expandAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1594,12 +1796,16 @@ func (this *QTreeView) ExpandAll(args ...interface{}) () {
 }
 
 // columnViewportPosition(int)
-func (this *QTreeView) ColumnViewportPosition(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Columnviewportposition(args ...interface{}) (ret interface{}) {
   // columnViewportPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1626,12 +1832,16 @@ func (this *QTreeView) ColumnViewportPosition(args ...interface{}) (ret interfac
 }
 
 // setIndentation(int)
-func (this *QTreeView) SetIndentation(args ...interface{}) () {
+func (this *QTreeView) Setindentation(args ...interface{}) () {
   // setIndentation(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1650,12 +1860,16 @@ func (this *QTreeView) SetIndentation(args ...interface{}) () {
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QTreeView) SetModel(args ...interface{}) () {
+func (this *QTreeView) Setmodel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QAbstractItemModel{}) // "QAbstractItemModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1674,12 +1888,16 @@ func (this *QTreeView) SetModel(args ...interface{}) () {
 }
 
 // setAnimated(_Bool)
-func (this *QTreeView) SetAnimated(args ...interface{}) () {
+func (this *QTreeView) Setanimated(args ...interface{}) () {
   // setAnimated(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1698,12 +1916,16 @@ func (this *QTreeView) SetAnimated(args ...interface{}) () {
 }
 
 // indexBelow(const class QModelIndex &)
-func (this *QTreeView) IndexBelow(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Indexbelow(args ...interface{}) (ret interface{}) {
   // indexBelow(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1736,6 +1958,10 @@ func (this *QTreeView) Expand(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1754,12 +1980,16 @@ func (this *QTreeView) Expand(args ...interface{}) () {
 }
 
 // setItemsExpandable(_Bool)
-func (this *QTreeView) SetItemsExpandable(args ...interface{}) () {
+func (this *QTreeView) Setitemsexpandable(args ...interface{}) () {
   // setItemsExpandable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1778,12 +2008,16 @@ func (this *QTreeView) SetItemsExpandable(args ...interface{}) () {
 }
 
 // columnWidth(int)
-func (this *QTreeView) ColumnWidth(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) Columnwidth(args ...interface{}) (ret interface{}) {
   // columnWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1810,12 +2044,16 @@ func (this *QTreeView) ColumnWidth(args ...interface{}) (ret interface{}) {
 }
 
 // setHeader(class QHeaderView *)
-func (this *QTreeView) SetHeader(args ...interface{}) () {
+func (this *QTreeView) Setheader(args ...interface{}) () {
   // setHeader(class QHeaderView *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QHeaderView{}) // "QHeaderView *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

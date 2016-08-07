@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qradiobutton.h
 // dst-file: /src/widgets/qradiobutton.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -55,7 +54,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QRadioButton)=1
@@ -65,11 +63,15 @@ type QRadioButton struct {
 }
 
 // metaObject()
-func (this *QRadioButton) MetaObject(args ...interface{}) () {
+func (this *QRadioButton) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -86,11 +88,15 @@ func (this *QRadioButton) MetaObject(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QRadioButton) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QRadioButton) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -115,11 +121,15 @@ func (this *QRadioButton) MinimumSizeHint(args ...interface{}) (ret interface{})
 }
 
 // sizeHint()
-func (this *QRadioButton) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QRadioButton) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -144,11 +154,15 @@ func (this *QRadioButton) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // ~QRadioButton()
-func (this *QRadioButton) Free(args ...interface{}) () {
+func (this *QRadioButton) Freeqradiobutton(args ...interface{}) () {
   // ~QRadioButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -156,10 +170,7 @@ func (this *QRadioButton) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QRadioButtonD0Ev
     // invoke: void ~QRadioButton()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QRadioButtonD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QRadioButtonD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRadioButton", "~QRadioButton", args)
   }
@@ -168,9 +179,6 @@ func (this *QRadioButton) Free(args ...interface{}) () {
 }
 
 // QRadioButton(class QWidget *)
-func GcfreeQRadioButton(this *QRadioButton) {
-  qtrt.UniverseFree(this)
-}
 func NewQRadioButton(args ...interface{}) *QRadioButton {
   // QRadioButton(class QWidget *)
   // QRadioButton(const class QString &, class QWidget *)
@@ -181,6 +189,10 @@ func NewQRadioButton(args ...interface{}) *QRadioButton {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -193,9 +205,7 @@ func NewQRadioButton(args ...interface{}) *QRadioButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QRadioButtonC2EP7QWidget(arg0)
-    this := &QRadioButton{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRadioButton)
-    return this
+    return &QRadioButton{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QRadioButtonC1ERK7QStringP7QWidget
     // invoke: void QRadioButton(const class QString &, class QWidget *)
@@ -206,9 +216,7 @@ func NewQRadioButton(args ...interface{}) *QRadioButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QRadioButtonC2ERK7QStringP7QWidget(arg0, arg1)
-    this := &QRadioButton{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRadioButton)
-    return this
+    return &QRadioButton{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRadioButton", "QRadioButton", args)
   }

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qscroller.h
 // dst-file: /src/widgets/qscroller.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -87,7 +86,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QScroller)=1
@@ -99,7 +97,7 @@ type QScroller struct {
 }
 
 // scroller(class QObject *)
-func (this *QScroller) Scroller_s(args ...interface{}) (ret interface{}) {
+func (this *QScroller) Scroller_S(args ...interface{}) (ret interface{}) {
   // scroller(class QObject *)
   // scroller(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -108,6 +106,10 @@ func (this *QScroller) Scroller_s(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QObject{}) // "const QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -148,7 +150,7 @@ func (this *QScroller) Scroller_s(args ...interface{}) (ret interface{}) {
 }
 
 // scrollTo(const class QPointF &, int)
-func (this *QScroller) ScrollTo(args ...interface{}) () {
+func (this *QScroller) Scrollto(args ...interface{}) () {
   // scrollTo(const class QPointF &, int)
   // scrollTo(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -158,6 +160,10 @@ func (this *QScroller) ScrollTo(args ...interface{}) () {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -184,11 +190,15 @@ func (this *QScroller) ScrollTo(args ...interface{}) () {
 }
 
 // activeScrollers()
-func (this *QScroller) ActiveScrollers_s(args ...interface{}) () {
+func (this *QScroller) Activescrollers_S(args ...interface{}) () {
   // activeScrollers()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -205,12 +215,16 @@ func (this *QScroller) ActiveScrollers_s(args ...interface{}) () {
 }
 
 // hasScroller(class QObject *)
-func (this *QScroller) HasScroller_s(args ...interface{}) (ret interface{}) {
+func (this *QScroller) Hasscroller_S(args ...interface{}) (ret interface{}) {
   // hasScroller(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -237,13 +251,17 @@ func (this *QScroller) HasScroller_s(args ...interface{}) (ret interface{}) {
 }
 
 // setSnapPositionsY(qreal, qreal)
-func (this *QScroller) SetSnapPositionsY(args ...interface{}) () {
+func (this *QScroller) Setsnappositionsy(args ...interface{}) () {
   // setSnapPositionsY(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -264,13 +282,17 @@ func (this *QScroller) SetSnapPositionsY(args ...interface{}) () {
 }
 
 // setSnapPositionsX(qreal, qreal)
-func (this *QScroller) SetSnapPositionsX(args ...interface{}) () {
+func (this *QScroller) Setsnappositionsx(args ...interface{}) () {
   // setSnapPositionsX(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -291,12 +313,16 @@ func (this *QScroller) SetSnapPositionsX(args ...interface{}) () {
 }
 
 // ungrabGesture(class QObject *)
-func (this *QScroller) UngrabGesture_s(args ...interface{}) () {
+func (this *QScroller) Ungrabgesture_S(args ...interface{}) () {
   // ungrabGesture(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -320,6 +346,10 @@ func (this *QScroller) State(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -336,11 +366,15 @@ func (this *QScroller) State(args ...interface{}) () {
 }
 
 // resendPrepareEvent()
-func (this *QScroller) ResendPrepareEvent(args ...interface{}) () {
+func (this *QScroller) Resendprepareevent(args ...interface{}) () {
   // resendPrepareEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -362,6 +396,10 @@ func (this *QScroller) Stop(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -378,11 +416,15 @@ func (this *QScroller) Stop(args ...interface{}) () {
 }
 
 // scrollerProperties()
-func (this *QScroller) ScrollerProperties(args ...interface{}) (ret interface{}) {
+func (this *QScroller) Scrollerproperties(args ...interface{}) (ret interface{}) {
   // scrollerProperties()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -407,11 +449,15 @@ func (this *QScroller) ScrollerProperties(args ...interface{}) (ret interface{})
 }
 
 // finalPosition()
-func (this *QScroller) FinalPosition(args ...interface{}) (ret interface{}) {
+func (this *QScroller) Finalposition(args ...interface{}) (ret interface{}) {
   // finalPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -436,7 +482,7 @@ func (this *QScroller) FinalPosition(args ...interface{}) (ret interface{}) {
 }
 
 // ensureVisible(const class QRectF &, qreal, qreal, int)
-func (this *QScroller) EnsureVisible(args ...interface{}) () {
+func (this *QScroller) Ensurevisible(args ...interface{}) () {
   // ensureVisible(const class QRectF &, qreal, qreal, int)
   // ensureVisible(const class QRectF &, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -450,6 +496,10 @@ func (this *QScroller) EnsureVisible(args ...interface{}) () {
   vtys[1][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
   vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -484,11 +534,15 @@ func (this *QScroller) EnsureVisible(args ...interface{}) () {
 }
 
 // pixelPerMeter()
-func (this *QScroller) PixelPerMeter(args ...interface{}) (ret interface{}) {
+func (this *QScroller) Pixelpermeter(args ...interface{}) (ret interface{}) {
   // pixelPerMeter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -513,11 +567,15 @@ func (this *QScroller) PixelPerMeter(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QScroller) MetaObject(args ...interface{}) () {
+func (this *QScroller) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -539,6 +597,10 @@ func (this *QScroller) Target(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -563,12 +625,16 @@ func (this *QScroller) Target(args ...interface{}) (ret interface{}) {
 }
 
 // grabbedGesture(class QObject *)
-func (this *QScroller) GrabbedGesture_s(args ...interface{}) () {
+func (this *QScroller) Grabbedgesture_S(args ...interface{}) () {
   // grabbedGesture(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -587,12 +653,16 @@ func (this *QScroller) GrabbedGesture_s(args ...interface{}) () {
 }
 
 // setScrollerProperties(const class QScrollerProperties &)
-func (this *QScroller) SetScrollerProperties(args ...interface{}) () {
+func (this *QScroller) Setscrollerproperties(args ...interface{}) () {
   // setScrollerProperties(const class QScrollerProperties &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QScrollerProperties{}) // "const QScrollerProperties &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -616,6 +686,10 @@ func (this *QScroller) Velocity(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -127,7 +126,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSpinBox)=1
@@ -150,6 +148,10 @@ func (this *QSpinBox) Suffix(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -174,15 +176,16 @@ func (this *QSpinBox) Suffix(args ...interface{}) (ret interface{}) {
 }
 
 // QSpinBox(class QWidget *)
-func GcfreeQSpinBox(this *QSpinBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQSpinBox(args ...interface{}) *QSpinBox {
   // QSpinBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -195,9 +198,7 @@ func NewQSpinBox(args ...interface{}) *QSpinBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QSpinBoxC2EP7QWidget(arg0)
-    this := &QSpinBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSpinBox)
-    return this
+    return &QSpinBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSpinBox", "QSpinBox", args)
   }
@@ -206,11 +207,15 @@ func NewQSpinBox(args ...interface{}) *QSpinBox {
 }
 
 // singleStep()
-func (this *QSpinBox) SingleStep(args ...interface{}) (ret interface{}) {
+func (this *QSpinBox) Singlestep(args ...interface{}) (ret interface{}) {
   // singleStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -240,6 +245,10 @@ func (this *QSpinBox) Prefix(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -269,6 +278,10 @@ func (this *QSpinBox) Minimum(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -293,11 +306,15 @@ func (this *QSpinBox) Minimum(args ...interface{}) (ret interface{}) {
 }
 
 // cleanText()
-func (this *QSpinBox) CleanText(args ...interface{}) (ret interface{}) {
+func (this *QSpinBox) Cleantext(args ...interface{}) (ret interface{}) {
   // cleanText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -322,12 +339,16 @@ func (this *QSpinBox) CleanText(args ...interface{}) (ret interface{}) {
 }
 
 // setSingleStep(int)
-func (this *QSpinBox) SetSingleStep(args ...interface{}) () {
+func (this *QSpinBox) Setsinglestep(args ...interface{}) () {
   // setSingleStep(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -346,12 +367,16 @@ func (this *QSpinBox) SetSingleStep(args ...interface{}) () {
 }
 
 // setDisplayIntegerBase(int)
-func (this *QSpinBox) SetDisplayIntegerBase(args ...interface{}) () {
+func (this *QSpinBox) Setdisplayintegerbase(args ...interface{}) () {
   // setDisplayIntegerBase(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -370,12 +395,16 @@ func (this *QSpinBox) SetDisplayIntegerBase(args ...interface{}) () {
 }
 
 // setMaximum(int)
-func (this *QSpinBox) SetMaximum(args ...interface{}) () {
+func (this *QSpinBox) Setmaximum(args ...interface{}) () {
   // setMaximum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -394,12 +423,16 @@ func (this *QSpinBox) SetMaximum(args ...interface{}) () {
 }
 
 // setValue(int)
-func (this *QSpinBox) SetValue(args ...interface{}) () {
+func (this *QSpinBox) Setvalue(args ...interface{}) () {
   // setValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -418,11 +451,15 @@ func (this *QSpinBox) SetValue(args ...interface{}) () {
 }
 
 // displayIntegerBase()
-func (this *QSpinBox) DisplayIntegerBase(args ...interface{}) (ret interface{}) {
+func (this *QSpinBox) Displayintegerbase(args ...interface{}) (ret interface{}) {
   // displayIntegerBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -447,13 +484,17 @@ func (this *QSpinBox) DisplayIntegerBase(args ...interface{}) (ret interface{}) 
 }
 
 // setRange(int, int)
-func (this *QSpinBox) SetRange(args ...interface{}) () {
+func (this *QSpinBox) Setrange(args ...interface{}) () {
   // setRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -474,11 +515,15 @@ func (this *QSpinBox) SetRange(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QSpinBox) MetaObject(args ...interface{}) () {
+func (this *QSpinBox) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -495,11 +540,15 @@ func (this *QSpinBox) MetaObject(args ...interface{}) () {
 }
 
 // ~QSpinBox()
-func (this *QSpinBox) Free(args ...interface{}) () {
+func (this *QSpinBox) Freeqspinbox(args ...interface{}) () {
   // ~QSpinBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -507,10 +556,7 @@ func (this *QSpinBox) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSpinBoxD0Ev
     // invoke: void ~QSpinBox()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN8QSpinBoxD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN8QSpinBoxD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSpinBox", "~QSpinBox", args)
   }
@@ -519,12 +565,16 @@ func (this *QSpinBox) Free(args ...interface{}) () {
 }
 
 // setSuffix(const class QString &)
-func (this *QSpinBox) SetSuffix(args ...interface{}) () {
+func (this *QSpinBox) Setsuffix(args ...interface{}) () {
   // setSuffix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -548,6 +598,10 @@ func (this *QSpinBox) Maximum(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -577,6 +631,10 @@ func (this *QSpinBox) Value(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -601,12 +659,16 @@ func (this *QSpinBox) Value(args ...interface{}) (ret interface{}) {
 }
 
 // setPrefix(const class QString &)
-func (this *QSpinBox) SetPrefix(args ...interface{}) () {
+func (this *QSpinBox) Setprefix(args ...interface{}) () {
   // setPrefix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -625,12 +687,16 @@ func (this *QSpinBox) SetPrefix(args ...interface{}) () {
 }
 
 // setMinimum(int)
-func (this *QSpinBox) SetMinimum(args ...interface{}) () {
+func (this *QSpinBox) Setminimum(args ...interface{}) () {
   // setMinimum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -654,6 +720,10 @@ func (this *QDoubleSpinBox) Suffix(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -678,11 +748,15 @@ func (this *QDoubleSpinBox) Suffix(args ...interface{}) (ret interface{}) {
 }
 
 // singleStep()
-func (this *QDoubleSpinBox) SingleStep(args ...interface{}) (ret interface{}) {
+func (this *QDoubleSpinBox) Singlestep(args ...interface{}) (ret interface{}) {
   // singleStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -712,6 +786,10 @@ func (this *QDoubleSpinBox) Prefix(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -741,6 +819,10 @@ func (this *QDoubleSpinBox) Minimum(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -765,12 +847,16 @@ func (this *QDoubleSpinBox) Minimum(args ...interface{}) (ret interface{}) {
 }
 
 // textFromValue(double)
-func (this *QDoubleSpinBox) TextFromValue(args ...interface{}) (ret interface{}) {
+func (this *QDoubleSpinBox) Textfromvalue(args ...interface{}) (ret interface{}) {
   // textFromValue(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -803,6 +889,10 @@ func (this *QDoubleSpinBox) Fixup(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -821,15 +911,16 @@ func (this *QDoubleSpinBox) Fixup(args ...interface{}) () {
 }
 
 // QDoubleSpinBox(class QWidget *)
-func GcfreeQDoubleSpinBox(this *QDoubleSpinBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQDoubleSpinBox(args ...interface{}) *QDoubleSpinBox {
   // QDoubleSpinBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -842,9 +933,7 @@ func NewQDoubleSpinBox(args ...interface{}) *QDoubleSpinBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QDoubleSpinBoxC2EP7QWidget(arg0)
-    this := &QDoubleSpinBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDoubleSpinBox)
-    return this
+    return &QDoubleSpinBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "QDoubleSpinBox", args)
   }
@@ -853,12 +942,16 @@ func NewQDoubleSpinBox(args ...interface{}) *QDoubleSpinBox {
 }
 
 // setSingleStep(double)
-func (this *QDoubleSpinBox) SetSingleStep(args ...interface{}) () {
+func (this *QDoubleSpinBox) Setsinglestep(args ...interface{}) () {
   // setSingleStep(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -877,13 +970,17 @@ func (this *QDoubleSpinBox) SetSingleStep(args ...interface{}) () {
 }
 
 // setRange(double, double)
-func (this *QDoubleSpinBox) SetRange(args ...interface{}) () {
+func (this *QDoubleSpinBox) Setrange(args ...interface{}) () {
   // setRange(double, double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
   vtys[0][1] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -904,12 +1001,16 @@ func (this *QDoubleSpinBox) SetRange(args ...interface{}) () {
 }
 
 // setMaximum(double)
-func (this *QDoubleSpinBox) SetMaximum(args ...interface{}) () {
+func (this *QDoubleSpinBox) Setmaximum(args ...interface{}) () {
   // setMaximum(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -928,12 +1029,16 @@ func (this *QDoubleSpinBox) SetMaximum(args ...interface{}) () {
 }
 
 // setValue(double)
-func (this *QDoubleSpinBox) SetValue(args ...interface{}) () {
+func (this *QDoubleSpinBox) Setvalue(args ...interface{}) () {
   // setValue(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -952,12 +1057,16 @@ func (this *QDoubleSpinBox) SetValue(args ...interface{}) () {
 }
 
 // valueFromText(const class QString &)
-func (this *QDoubleSpinBox) ValueFromText(args ...interface{}) (ret interface{}) {
+func (this *QDoubleSpinBox) Valuefromtext(args ...interface{}) (ret interface{}) {
   // valueFromText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -991,6 +1100,10 @@ func (this *QDoubleSpinBox) Validate(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "QString &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1011,11 +1124,15 @@ func (this *QDoubleSpinBox) Validate(args ...interface{}) () {
 }
 
 // cleanText()
-func (this *QDoubleSpinBox) CleanText(args ...interface{}) (ret interface{}) {
+func (this *QDoubleSpinBox) Cleantext(args ...interface{}) (ret interface{}) {
   // cleanText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1040,12 +1157,16 @@ func (this *QDoubleSpinBox) CleanText(args ...interface{}) (ret interface{}) {
 }
 
 // setDecimals(int)
-func (this *QDoubleSpinBox) SetDecimals(args ...interface{}) () {
+func (this *QDoubleSpinBox) Setdecimals(args ...interface{}) () {
   // setDecimals(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1064,11 +1185,15 @@ func (this *QDoubleSpinBox) SetDecimals(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QDoubleSpinBox) MetaObject(args ...interface{}) () {
+func (this *QDoubleSpinBox) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1085,11 +1210,15 @@ func (this *QDoubleSpinBox) MetaObject(args ...interface{}) () {
 }
 
 // ~QDoubleSpinBox()
-func (this *QDoubleSpinBox) Free(args ...interface{}) () {
+func (this *QDoubleSpinBox) Freeqdoublespinbox(args ...interface{}) () {
   // ~QDoubleSpinBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1097,10 +1226,7 @@ func (this *QDoubleSpinBox) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QDoubleSpinBoxD0Ev
     // invoke: void ~QDoubleSpinBox()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN14QDoubleSpinBoxD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN14QDoubleSpinBoxD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "~QDoubleSpinBox", args)
   }
@@ -1109,12 +1235,16 @@ func (this *QDoubleSpinBox) Free(args ...interface{}) () {
 }
 
 // setSuffix(const class QString &)
-func (this *QDoubleSpinBox) SetSuffix(args ...interface{}) () {
+func (this *QDoubleSpinBox) Setsuffix(args ...interface{}) () {
   // setSuffix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1138,6 +1268,10 @@ func (this *QDoubleSpinBox) Maximum(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1167,6 +1301,10 @@ func (this *QDoubleSpinBox) Value(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1196,6 +1334,10 @@ func (this *QDoubleSpinBox) Decimals(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1220,12 +1362,16 @@ func (this *QDoubleSpinBox) Decimals(args ...interface{}) (ret interface{}) {
 }
 
 // setPrefix(const class QString &)
-func (this *QDoubleSpinBox) SetPrefix(args ...interface{}) () {
+func (this *QDoubleSpinBox) Setprefix(args ...interface{}) () {
   // setPrefix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1244,12 +1390,16 @@ func (this *QDoubleSpinBox) SetPrefix(args ...interface{}) () {
 }
 
 // setMinimum(double)
-func (this *QDoubleSpinBox) SetMinimum(args ...interface{}) () {
+func (this *QDoubleSpinBox) Setminimum(args ...interface{}) () {
   // setMinimum(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

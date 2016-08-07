@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qpagesize.h
 // dst-file: /src/gui/qpagesize.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -75,7 +74,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPageSize)=1
@@ -85,11 +83,15 @@ type QPageSize struct {
 }
 
 // windowsId()
-func (this *QPageSize) WindowsId(args ...interface{}) (ret interface{}) {
+func (this *QPageSize) Windowsid(args ...interface{}) (ret interface{}) {
   // windowsId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -114,12 +116,16 @@ func (this *QPageSize) WindowsId(args ...interface{}) (ret interface{}) {
 }
 
 // sizePixels(int)
-func (this *QPageSize) SizePixels(args ...interface{}) (ret interface{}) {
+func (this *QPageSize) Sizepixels(args ...interface{}) (ret interface{}) {
   // sizePixels(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -146,12 +152,16 @@ func (this *QPageSize) SizePixels(args ...interface{}) (ret interface{}) {
 }
 
 // rectPixels(int)
-func (this *QPageSize) RectPixels(args ...interface{}) (ret interface{}) {
+func (this *QPageSize) Rectpixels(args ...interface{}) (ret interface{}) {
   // rectPixels(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -183,6 +193,10 @@ func (this *QPageSize) Name(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -207,11 +221,15 @@ func (this *QPageSize) Name(args ...interface{}) (ret interface{}) {
 }
 
 // definitionUnits()
-func (this *QPageSize) DefinitionUnits(args ...interface{}) () {
+func (this *QPageSize) Definitionunits(args ...interface{}) () {
   // definitionUnits()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -228,11 +246,15 @@ func (this *QPageSize) DefinitionUnits(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QPageSize) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QPageSize) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -257,12 +279,16 @@ func (this *QPageSize) IsValid(args ...interface{}) (ret interface{}) {
 }
 
 // isEquivalentTo(const class QPageSize &)
-func (this *QPageSize) IsEquivalentTo(args ...interface{}) (ret interface{}) {
+func (this *QPageSize) Isequivalentto(args ...interface{}) (ret interface{}) {
   // isEquivalentTo(const class QPageSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPageSize{}) // "const QPageSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -289,11 +315,15 @@ func (this *QPageSize) IsEquivalentTo(args ...interface{}) (ret interface{}) {
 }
 
 // ~QPageSize()
-func (this *QPageSize) Free(args ...interface{}) () {
+func (this *QPageSize) Freeqpagesize(args ...interface{}) () {
   // ~QPageSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -301,10 +331,7 @@ func (this *QPageSize) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QPageSizeD0Ev
     // invoke: void ~QPageSize()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QPageSizeD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QPageSizeD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPageSize", "~QPageSize", args)
   }
@@ -313,11 +340,15 @@ func (this *QPageSize) Free(args ...interface{}) () {
 }
 
 // sizePoints()
-func (this *QPageSize) SizePoints(args ...interface{}) (ret interface{}) {
+func (this *QPageSize) Sizepoints(args ...interface{}) (ret interface{}) {
   // sizePoints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -348,6 +379,10 @@ func (this *QPageSize) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPageSize{}) // "QPageSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -371,6 +406,10 @@ func (this *QPageSize) Key(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -395,11 +434,15 @@ func (this *QPageSize) Key(args ...interface{}) (ret interface{}) {
 }
 
 // rectPoints()
-func (this *QPageSize) RectPoints(args ...interface{}) (ret interface{}) {
+func (this *QPageSize) Rectpoints(args ...interface{}) (ret interface{}) {
   // rectPoints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -424,9 +467,6 @@ func (this *QPageSize) RectPoints(args ...interface{}) (ret interface{}) {
 }
 
 // QPageSize(const class QPageSize &)
-func GcfreeQPageSize(this *QPageSize) {
-  qtrt.UniverseFree(this)
-}
 func NewQPageSize(args ...interface{}) *QPageSize {
   // QPageSize(const class QPageSize &)
   // QPageSize()
@@ -435,6 +475,10 @@ func NewQPageSize(args ...interface{}) *QPageSize {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPageSize{}) // "const QPageSize &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -447,18 +491,14 @@ func NewQPageSize(args ...interface{}) *QPageSize {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPageSizeC2ERKS_(arg0)
-    this := &QPageSize{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPageSize)
-    return this
+    return &QPageSize{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QPageSizeC1Ev
     // invoke: void QPageSize()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPageSizeC2Ev()
-    this := &QPageSize{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPageSize)
-    return this
+    return &QPageSize{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPageSize", "QPageSize", args)
   }
@@ -467,7 +507,7 @@ func NewQPageSize(args ...interface{}) *QPageSize {
 }
 
 // id(int)
-func (this *QPageSize) Id_s(args ...interface{}) () {
+func (this *QPageSize) Id_S(args ...interface{}) () {
   // id(int)
   // id()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -475,6 +515,10 @@ func (this *QPageSize) Id_s(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -497,11 +541,15 @@ func (this *QPageSize) Id_s(args ...interface{}) () {
 }
 
 // definitionSize()
-func (this *QPageSize) DefinitionSize(args ...interface{}) (ret interface{}) {
+func (this *QPageSize) Definitionsize(args ...interface{}) (ret interface{}) {
   // definitionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

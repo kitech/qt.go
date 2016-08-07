@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -43,7 +42,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSharedData)=1
@@ -53,9 +51,6 @@ type QSharedData struct {
 }
 
 // QSharedData()
-func GcfreeQSharedData(this *QSharedData) {
-  qtrt.UniverseFree(this)
-}
 func NewQSharedData(args ...interface{}) *QSharedData {
   // QSharedData()
   // QSharedData(const class QSharedData &)
@@ -64,6 +59,10 @@ func NewQSharedData(args ...interface{}) *QSharedData {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QSharedData{}) // "const QSharedData &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -74,9 +73,7 @@ func NewQSharedData(args ...interface{}) *QSharedData {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QSharedDataC2Ev()
-    this := &QSharedData{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSharedData)
-    return this
+    return &QSharedData{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QSharedDataC1ERKS_
     // invoke: void QSharedData(const class QSharedData &)
@@ -85,9 +82,7 @@ func NewQSharedData(args ...interface{}) *QSharedData {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QSharedDataC2ERKS_(arg0)
-    this := &QSharedData{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSharedData)
-    return this
+    return &QSharedData{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSharedData", "QSharedData", args)
   }

@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qvector4d.h
 // dst-file: /src/gui/qvector4d.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -97,7 +96,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QVector4D)=16
@@ -107,11 +105,15 @@ type QVector4D struct {
 }
 
 // toVector2D()
-func (this *QVector4D) ToVector2D(args ...interface{}) (ret interface{}) {
+func (this *QVector4D) Tovector2D(args ...interface{}) (ret interface{}) {
   // toVector2D()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -136,11 +138,15 @@ func (this *QVector4D) ToVector2D(args ...interface{}) (ret interface{}) {
 }
 
 // toVector3D()
-func (this *QVector4D) ToVector3D(args ...interface{}) (ret interface{}) {
+func (this *QVector4D) Tovector3D(args ...interface{}) (ret interface{}) {
   // toVector3D()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -165,9 +171,6 @@ func (this *QVector4D) ToVector3D(args ...interface{}) (ret interface{}) {
 }
 
 // QVector4D()
-func GcfreeQVector4D(this *QVector4D) {
-  qtrt.UniverseFree(this)
-}
 func NewQVector4D(args ...interface{}) *QVector4D {
   // QVector4D()
   // QVector4D(const class QVector2D &)
@@ -200,6 +203,10 @@ func NewQVector4D(args ...interface{}) *QVector4D {
   vtys[6][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[7] = make(map[int32]reflect.Type)
   vtys[7][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -210,9 +217,7 @@ func NewQVector4D(args ...interface{}) *QVector4D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector4DC2Ev()
-    this := &QVector4D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector4D)
-    return this
+    return &QVector4D{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QVector4DC1ERK9QVector2D
     // invoke: void QVector4D(const class QVector2D &)
@@ -221,9 +226,7 @@ func NewQVector4D(args ...interface{}) *QVector4D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector4DC2ERK9QVector2D(arg0)
-    this := &QVector4D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector4D)
-    return this
+    return &QVector4D{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QVector4DC1Effff
     // invoke: void QVector4D(float, float, float, float)
@@ -238,9 +241,7 @@ func NewQVector4D(args ...interface{}) *QVector4D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector4DC2Effff(arg0, arg1, arg2, arg3)
-    this := &QVector4D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector4D)
-    return this
+    return &QVector4D{Qclsinst:qthis}
   case 3:
     // invoke: _ZN9QVector4DC1ERK7QPointF
     // invoke: void QVector4D(const class QPointF &)
@@ -249,9 +250,7 @@ func NewQVector4D(args ...interface{}) *QVector4D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector4DC2ERK7QPointF(arg0)
-    this := &QVector4D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector4D)
-    return this
+    return &QVector4D{Qclsinst:qthis}
   case 4:
     // invoke: _ZN9QVector4DC1ERK9QVector2Dff
     // invoke: void QVector4D(const class QVector2D &, float, float)
@@ -264,9 +263,7 @@ func NewQVector4D(args ...interface{}) *QVector4D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector4DC2ERK9QVector2Dff(arg0, arg1, arg2)
-    this := &QVector4D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector4D)
-    return this
+    return &QVector4D{Qclsinst:qthis}
   case 5:
     // invoke: _ZN9QVector4DC1ERK9QVector3Df
     // invoke: void QVector4D(const class QVector3D &, float)
@@ -277,9 +274,7 @@ func NewQVector4D(args ...interface{}) *QVector4D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector4DC2ERK9QVector3Df(arg0, arg1)
-    this := &QVector4D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector4D)
-    return this
+    return &QVector4D{Qclsinst:qthis}
   case 6:
     // invoke: _ZN9QVector4DC1ERK9QVector3D
     // invoke: void QVector4D(const class QVector3D &)
@@ -288,9 +283,7 @@ func NewQVector4D(args ...interface{}) *QVector4D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector4DC2ERK9QVector3D(arg0)
-    this := &QVector4D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector4D)
-    return this
+    return &QVector4D{Qclsinst:qthis}
   case 7:
     // invoke: _ZN9QVector4DC1ERK6QPoint
     // invoke: void QVector4D(const class QPoint &)
@@ -299,9 +292,7 @@ func NewQVector4D(args ...interface{}) *QVector4D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector4DC2ERK6QPoint(arg0)
-    this := &QVector4D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector4D)
-    return this
+    return &QVector4D{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QVector4D", "QVector4D", args)
   }
@@ -310,13 +301,17 @@ func NewQVector4D(args ...interface{}) *QVector4D {
 }
 
 // dotProduct(const class QVector4D &, const class QVector4D &)
-func (this *QVector4D) DotProduct_s(args ...interface{}) (ret interface{}) {
+func (this *QVector4D) Dotproduct_S(args ...interface{}) (ret interface{}) {
   // dotProduct(const class QVector4D &, const class QVector4D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QVector4D{}) // "const QVector4D &"
   vtys[0][1] = reflect.TypeOf(QVector4D{}) // "const QVector4D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -350,6 +345,10 @@ func (this *QVector4D) Normalize(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -366,11 +365,15 @@ func (this *QVector4D) Normalize(args ...interface{}) () {
 }
 
 // toPointF()
-func (this *QVector4D) ToPointF(args ...interface{}) (ret interface{}) {
+func (this *QVector4D) Topointf(args ...interface{}) (ret interface{}) {
   // toPointF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -395,11 +398,15 @@ func (this *QVector4D) ToPointF(args ...interface{}) (ret interface{}) {
 }
 
 // lengthSquared()
-func (this *QVector4D) LengthSquared(args ...interface{}) (ret interface{}) {
+func (this *QVector4D) Lengthsquared(args ...interface{}) (ret interface{}) {
   // lengthSquared()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -424,12 +431,16 @@ func (this *QVector4D) LengthSquared(args ...interface{}) (ret interface{}) {
 }
 
 // setW(float)
-func (this *QVector4D) SetW(args ...interface{}) () {
+func (this *QVector4D) Setw(args ...interface{}) () {
   // setW(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -453,6 +464,10 @@ func (this *QVector4D) Normalized(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -477,12 +492,16 @@ func (this *QVector4D) Normalized(args ...interface{}) (ret interface{}) {
 }
 
 // setX(float)
-func (this *QVector4D) SetX(args ...interface{}) () {
+func (this *QVector4D) Setx(args ...interface{}) () {
   // setX(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -501,12 +520,16 @@ func (this *QVector4D) SetX(args ...interface{}) () {
 }
 
 // setY(float)
-func (this *QVector4D) SetY(args ...interface{}) () {
+func (this *QVector4D) Sety(args ...interface{}) () {
   // setY(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -525,12 +548,16 @@ func (this *QVector4D) SetY(args ...interface{}) () {
 }
 
 // setZ(float)
-func (this *QVector4D) SetZ(args ...interface{}) () {
+func (this *QVector4D) Setz(args ...interface{}) () {
   // setZ(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -549,11 +576,15 @@ func (this *QVector4D) SetZ(args ...interface{}) () {
 }
 
 // toPoint()
-func (this *QVector4D) ToPoint(args ...interface{}) (ret interface{}) {
+func (this *QVector4D) Topoint(args ...interface{}) (ret interface{}) {
   // toPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -578,11 +609,15 @@ func (this *QVector4D) ToPoint(args ...interface{}) (ret interface{}) {
 }
 
 // toVector2DAffine()
-func (this *QVector4D) ToVector2DAffine(args ...interface{}) (ret interface{}) {
+func (this *QVector4D) Tovector2Daffine(args ...interface{}) (ret interface{}) {
   // toVector2DAffine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -607,11 +642,15 @@ func (this *QVector4D) ToVector2DAffine(args ...interface{}) (ret interface{}) {
 }
 
 // toVector3DAffine()
-func (this *QVector4D) ToVector3DAffine(args ...interface{}) (ret interface{}) {
+func (this *QVector4D) Tovector3Daffine(args ...interface{}) (ret interface{}) {
   // toVector3DAffine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -636,11 +675,15 @@ func (this *QVector4D) ToVector3DAffine(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QVector4D) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QVector4D) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -670,6 +713,10 @@ func (this *QVector4D) Length(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -699,6 +746,10 @@ func (this *QVector4D) W(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -728,6 +779,10 @@ func (this *QVector4D) Y(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -749,6 +804,10 @@ func (this *QVector4D) X(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -770,6 +829,10 @@ func (this *QVector4D) Z(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

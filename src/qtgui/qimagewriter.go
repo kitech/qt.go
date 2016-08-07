@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qimagewriter.h
 // dst-file: /src/gui/qimagewriter.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -107,7 +106,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QImageWriter)=8
@@ -117,12 +115,16 @@ type QImageWriter struct {
 }
 
 // setCompression(int)
-func (this *QImageWriter) SetCompression(args ...interface{}) () {
+func (this *QImageWriter) Setcompression(args ...interface{}) () {
   // setCompression(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -141,11 +143,15 @@ func (this *QImageWriter) SetCompression(args ...interface{}) () {
 }
 
 // canWrite()
-func (this *QImageWriter) CanWrite(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) Canwrite(args ...interface{}) (ret interface{}) {
   // canWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -170,11 +176,15 @@ func (this *QImageWriter) CanWrite(args ...interface{}) (ret interface{}) {
 }
 
 // supportedMimeTypes()
-func (this *QImageWriter) SupportedMimeTypes_s(args ...interface{}) () {
+func (this *QImageWriter) Supportedmimetypes_S(args ...interface{}) () {
   // supportedMimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -191,11 +201,15 @@ func (this *QImageWriter) SupportedMimeTypes_s(args ...interface{}) () {
 }
 
 // subType()
-func (this *QImageWriter) SubType(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) Subtype(args ...interface{}) (ret interface{}) {
   // subType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -220,12 +234,16 @@ func (this *QImageWriter) SubType(args ...interface{}) (ret interface{}) {
 }
 
 // setOptimizedWrite(_Bool)
-func (this *QImageWriter) SetOptimizedWrite(args ...interface{}) () {
+func (this *QImageWriter) Setoptimizedwrite(args ...interface{}) () {
   // setOptimizedWrite(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -244,9 +262,6 @@ func (this *QImageWriter) SetOptimizedWrite(args ...interface{}) () {
 }
 
 // QImageWriter(const class QString &, const class QByteArray &)
-func GcfreeQImageWriter(this *QImageWriter) {
-  qtrt.UniverseFree(this)
-}
 func NewQImageWriter(args ...interface{}) *QImageWriter {
   // QImageWriter(const class QString &, const class QByteArray &)
   // QImageWriter(class QIODevice *, const class QByteArray &)
@@ -260,6 +275,10 @@ func NewQImageWriter(args ...interface{}) *QImageWriter {
   vtys[1][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
   vtys[1][1] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
   vtys[2] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -274,9 +293,7 @@ func NewQImageWriter(args ...interface{}) *QImageWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QImageWriterC2ERK7QStringRK10QByteArray(arg0, arg1)
-    this := &QImageWriter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQImageWriter)
-    return this
+    return &QImageWriter{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QImageWriterC1EP9QIODeviceRK10QByteArray
     // invoke: void QImageWriter(class QIODevice *, const class QByteArray &)
@@ -287,18 +304,14 @@ func NewQImageWriter(args ...interface{}) *QImageWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QImageWriterC2EP9QIODeviceRK10QByteArray(arg0, arg1)
-    this := &QImageWriter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQImageWriter)
-    return this
+    return &QImageWriter{Qclsinst:qthis}
   case 2:
     // invoke: _ZN12QImageWriterC1Ev
     // invoke: void QImageWriter()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QImageWriterC2Ev()
-    this := &QImageWriter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQImageWriter)
-    return this
+    return &QImageWriter{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QImageWriter", "QImageWriter", args)
   }
@@ -312,6 +325,10 @@ func (this *QImageWriter) Quality(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -336,12 +353,16 @@ func (this *QImageWriter) Quality(args ...interface{}) (ret interface{}) {
 }
 
 // setDescription(const class QString &)
-func (this *QImageWriter) SetDescription(args ...interface{}) () {
+func (this *QImageWriter) Setdescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -365,6 +386,10 @@ func (this *QImageWriter) Compression(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -389,12 +414,16 @@ func (this *QImageWriter) Compression(args ...interface{}) (ret interface{}) {
 }
 
 // setFormat(const class QByteArray &)
-func (this *QImageWriter) SetFormat(args ...interface{}) () {
+func (this *QImageWriter) Setformat(args ...interface{}) () {
   // setFormat(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -419,6 +448,10 @@ func (this *QImageWriter) Write(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QImage{}) // "const QImage &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -445,12 +478,16 @@ func (this *QImageWriter) Write(args ...interface{}) (ret interface{}) {
 }
 
 // setDevice(class QIODevice *)
-func (this *QImageWriter) SetDevice(args ...interface{}) () {
+func (this *QImageWriter) Setdevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -469,12 +506,16 @@ func (this *QImageWriter) SetDevice(args ...interface{}) () {
 }
 
 // setSubType(const class QByteArray &)
-func (this *QImageWriter) SetSubType(args ...interface{}) () {
+func (this *QImageWriter) Setsubtype(args ...interface{}) () {
   // setSubType(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -498,6 +539,10 @@ func (this *QImageWriter) Transformation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -514,11 +559,15 @@ func (this *QImageWriter) Transformation(args ...interface{}) () {
 }
 
 // supportedImageFormats()
-func (this *QImageWriter) SupportedImageFormats_s(args ...interface{}) () {
+func (this *QImageWriter) Supportedimageformats_S(args ...interface{}) () {
   // supportedImageFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -535,12 +584,16 @@ func (this *QImageWriter) SupportedImageFormats_s(args ...interface{}) () {
 }
 
 // setProgressiveScanWrite(_Bool)
-func (this *QImageWriter) SetProgressiveScanWrite(args ...interface{}) () {
+func (this *QImageWriter) Setprogressivescanwrite(args ...interface{}) () {
   // setProgressiveScanWrite(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -564,6 +617,10 @@ func (this *QImageWriter) Description(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -588,11 +645,15 @@ func (this *QImageWriter) Description(args ...interface{}) (ret interface{}) {
 }
 
 // errorString()
-func (this *QImageWriter) ErrorString(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -622,6 +683,10 @@ func (this *QImageWriter) Format(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -651,6 +716,10 @@ func (this *QImageWriter) Error(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -667,11 +736,15 @@ func (this *QImageWriter) Error(args ...interface{}) () {
 }
 
 // fileName()
-func (this *QImageWriter) FileName(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -696,12 +769,16 @@ func (this *QImageWriter) FileName(args ...interface{}) (ret interface{}) {
 }
 
 // setGamma(float)
-func (this *QImageWriter) SetGamma(args ...interface{}) () {
+func (this *QImageWriter) Setgamma(args ...interface{}) () {
   // setGamma(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -725,6 +802,10 @@ func (this *QImageWriter) Device(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -749,11 +830,15 @@ func (this *QImageWriter) Device(args ...interface{}) (ret interface{}) {
 }
 
 // supportedSubTypes()
-func (this *QImageWriter) SupportedSubTypes(args ...interface{}) () {
+func (this *QImageWriter) Supportedsubtypes(args ...interface{}) () {
   // supportedSubTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -770,11 +855,15 @@ func (this *QImageWriter) SupportedSubTypes(args ...interface{}) () {
 }
 
 // optimizedWrite()
-func (this *QImageWriter) OptimizedWrite(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) Optimizedwrite(args ...interface{}) (ret interface{}) {
   // optimizedWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -799,11 +888,15 @@ func (this *QImageWriter) OptimizedWrite(args ...interface{}) (ret interface{}) 
 }
 
 // progressiveScanWrite()
-func (this *QImageWriter) ProgressiveScanWrite(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) Progressivescanwrite(args ...interface{}) (ret interface{}) {
   // progressiveScanWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -828,13 +921,17 @@ func (this *QImageWriter) ProgressiveScanWrite(args ...interface{}) (ret interfa
 }
 
 // setText(const class QString &, const class QString &)
-func (this *QImageWriter) SetText(args ...interface{}) () {
+func (this *QImageWriter) Settext(args ...interface{}) () {
   // setText(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -855,12 +952,16 @@ func (this *QImageWriter) SetText(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QImageWriter) SetFileName(args ...interface{}) () {
+func (this *QImageWriter) Setfilename(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -879,12 +980,16 @@ func (this *QImageWriter) SetFileName(args ...interface{}) () {
 }
 
 // setQuality(int)
-func (this *QImageWriter) SetQuality(args ...interface{}) () {
+func (this *QImageWriter) Setquality(args ...interface{}) () {
   // setQuality(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -903,11 +1008,15 @@ func (this *QImageWriter) SetQuality(args ...interface{}) () {
 }
 
 // ~QImageWriter()
-func (this *QImageWriter) Free(args ...interface{}) () {
+func (this *QImageWriter) Freeqimagewriter(args ...interface{}) () {
   // ~QImageWriter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -915,10 +1024,7 @@ func (this *QImageWriter) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QImageWriterD0Ev
     // invoke: void ~QImageWriter()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QImageWriterD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QImageWriterD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QImageWriter", "~QImageWriter", args)
   }
@@ -932,6 +1038,10 @@ func (this *QImageWriter) Gamma(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

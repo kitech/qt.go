@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -91,7 +90,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPen)=8
@@ -106,6 +104,10 @@ func (this *QPen) Color(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -135,6 +137,10 @@ func (this *QPen) Brush(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -159,12 +165,16 @@ func (this *QPen) Brush(args ...interface{}) (ret interface{}) {
 }
 
 // setWidth(int)
-func (this *QPen) SetWidth(args ...interface{}) () {
+func (this *QPen) Setwidth(args ...interface{}) () {
   // setWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -188,6 +198,10 @@ func (this *QPen) Style(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -204,11 +218,15 @@ func (this *QPen) Style(args ...interface{}) () {
 }
 
 // isCosmetic()
-func (this *QPen) IsCosmetic(args ...interface{}) (ret interface{}) {
+func (this *QPen) Iscosmetic(args ...interface{}) (ret interface{}) {
   // isCosmetic()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -233,11 +251,15 @@ func (this *QPen) IsCosmetic(args ...interface{}) (ret interface{}) {
 }
 
 // ~QPen()
-func (this *QPen) Free(args ...interface{}) () {
+func (this *QPen) Freeqpen(args ...interface{}) () {
   // ~QPen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -245,10 +267,7 @@ func (this *QPen) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPenD0Ev
     // invoke: void ~QPen()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN4QPenD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN4QPenD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "~QPen", args)
   }
@@ -257,11 +276,15 @@ func (this *QPen) Free(args ...interface{}) () {
 }
 
 // joinStyle()
-func (this *QPen) JoinStyle(args ...interface{}) () {
+func (this *QPen) Joinstyle(args ...interface{}) () {
   // joinStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -283,6 +306,10 @@ func (this *QPen) Width(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -313,6 +340,10 @@ func (this *QPen) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPen{}) // "QPen &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -331,11 +362,15 @@ func (this *QPen) Swap(args ...interface{}) () {
 }
 
 // dashOffset()
-func (this *QPen) DashOffset(args ...interface{}) (ret interface{}) {
+func (this *QPen) Dashoffset(args ...interface{}) (ret interface{}) {
   // dashOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -360,11 +395,15 @@ func (this *QPen) DashOffset(args ...interface{}) (ret interface{}) {
 }
 
 // isDetached()
-func (this *QPen) IsDetached(args ...interface{}) (ret interface{}) {
+func (this *QPen) Isdetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -389,11 +428,15 @@ func (this *QPen) IsDetached(args ...interface{}) (ret interface{}) {
 }
 
 // miterLimit()
-func (this *QPen) MiterLimit(args ...interface{}) (ret interface{}) {
+func (this *QPen) Miterlimit(args ...interface{}) (ret interface{}) {
   // miterLimit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -418,11 +461,15 @@ func (this *QPen) MiterLimit(args ...interface{}) (ret interface{}) {
 }
 
 // isSolid()
-func (this *QPen) IsSolid(args ...interface{}) (ret interface{}) {
+func (this *QPen) Issolid(args ...interface{}) (ret interface{}) {
   // isSolid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -447,9 +494,6 @@ func (this *QPen) IsSolid(args ...interface{}) (ret interface{}) {
 }
 
 // QPen(const class QPen &)
-func GcfreeQPen(this *QPen) {
-  qtrt.UniverseFree(this)
-}
 func NewQPen(args ...interface{}) *QPen {
   // QPen(const class QPen &)
   // QPen(const class QColor &)
@@ -461,6 +505,10 @@ func NewQPen(args ...interface{}) *QPen {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QColor{}) // "const QColor &"
   vtys[2] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -473,9 +521,7 @@ func NewQPen(args ...interface{}) *QPen {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QPenC2ERKS_(arg0)
-    this := &QPen{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPen)
-    return this
+    return &QPen{Qclsinst:qthis}
   case 1:
     // invoke: _ZN4QPenC1ERK6QColor
     // invoke: void QPen(const class QColor &)
@@ -484,18 +530,14 @@ func NewQPen(args ...interface{}) *QPen {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QPenC2ERK6QColor(arg0)
-    this := &QPen{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPen)
-    return this
+    return &QPen{Qclsinst:qthis}
   case 2:
     // invoke: _ZN4QPenC1Ev
     // invoke: void QPen()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QPenC2Ev()
-    this := &QPen{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPen)
-    return this
+    return &QPen{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPen", "QPen", args)
   }
@@ -504,11 +546,15 @@ func NewQPen(args ...interface{}) *QPen {
 }
 
 // widthF()
-func (this *QPen) WidthF(args ...interface{}) (ret interface{}) {
+func (this *QPen) Widthf(args ...interface{}) (ret interface{}) {
   // widthF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -533,11 +579,15 @@ func (this *QPen) WidthF(args ...interface{}) (ret interface{}) {
 }
 
 // dashPattern()
-func (this *QPen) DashPattern(args ...interface{}) () {
+func (this *QPen) Dashpattern(args ...interface{}) () {
   // dashPattern()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -554,12 +604,16 @@ func (this *QPen) DashPattern(args ...interface{}) () {
 }
 
 // setColor(const class QColor &)
-func (this *QPen) SetColor(args ...interface{}) () {
+func (this *QPen) Setcolor(args ...interface{}) () {
   // setColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QColor{}) // "const QColor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -578,12 +632,16 @@ func (this *QPen) SetColor(args ...interface{}) () {
 }
 
 // setMiterLimit(qreal)
-func (this *QPen) SetMiterLimit(args ...interface{}) () {
+func (this *QPen) Setmiterlimit(args ...interface{}) () {
   // setMiterLimit(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -602,12 +660,16 @@ func (this *QPen) SetMiterLimit(args ...interface{}) () {
 }
 
 // setCosmetic(_Bool)
-func (this *QPen) SetCosmetic(args ...interface{}) () {
+func (this *QPen) Setcosmetic(args ...interface{}) () {
   // setCosmetic(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -626,12 +688,16 @@ func (this *QPen) SetCosmetic(args ...interface{}) () {
 }
 
 // setWidthF(qreal)
-func (this *QPen) SetWidthF(args ...interface{}) () {
+func (this *QPen) Setwidthf(args ...interface{}) () {
   // setWidthF(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -650,11 +716,15 @@ func (this *QPen) SetWidthF(args ...interface{}) () {
 }
 
 // capStyle()
-func (this *QPen) CapStyle(args ...interface{}) () {
+func (this *QPen) Capstyle(args ...interface{}) () {
   // capStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -671,12 +741,16 @@ func (this *QPen) CapStyle(args ...interface{}) () {
 }
 
 // setBrush(const class QBrush &)
-func (this *QPen) SetBrush(args ...interface{}) () {
+func (this *QPen) Setbrush(args ...interface{}) () {
   // setBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QBrush{}) // "const QBrush &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -695,12 +769,16 @@ func (this *QPen) SetBrush(args ...interface{}) () {
 }
 
 // setDashOffset(qreal)
-func (this *QPen) SetDashOffset(args ...interface{}) () {
+func (this *QPen) Setdashoffset(args ...interface{}) () {
   // setDashOffset(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

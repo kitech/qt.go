@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -55,6 +54,8 @@ extern void C_ZN6QMutexD2Ev(void* qthis); // 4
 extern void C_ZN6QMutex6unlockEv(void* qthis); // 4
   // proto:  bool QMutex::tryLock(int timeout);
 extern bool C_ZN6QMutex7tryLockEi(void* qthis, int32_t arg0); // 4
+  // proto:  bool QMutex::isRecursive();
+extern bool C_ZNK6QMutex11isRecursiveEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -65,7 +66,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMutexLocker)=4
@@ -87,11 +87,15 @@ type QMutex struct {
 }
 
 // ~QMutexLocker()
-func (this *QMutexLocker) Free(args ...interface{}) () {
+func (this *QMutexLocker) Freeqmutexlocker(args ...interface{}) () {
   // ~QMutexLocker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -99,10 +103,7 @@ func (this *QMutexLocker) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMutexLockerD0Ev
     // invoke: void ~QMutexLocker()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QMutexLockerD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QMutexLockerD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMutexLocker", "~QMutexLocker", args)
   }
@@ -116,6 +117,10 @@ func (this *QMutexLocker) Unlock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -132,15 +137,16 @@ func (this *QMutexLocker) Unlock(args ...interface{}) () {
 }
 
 // QMutexLocker(class QBasicMutex *)
-func GcfreeQMutexLocker(this *QMutexLocker) {
-  qtrt.UniverseFree(this)
-}
 func NewQMutexLocker(args ...interface{}) *QMutexLocker {
   // QMutexLocker(class QBasicMutex *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QBasicMutex{}) // "QBasicMutex *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -153,9 +159,7 @@ func NewQMutexLocker(args ...interface{}) *QMutexLocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QMutexLockerC2EP11QBasicMutex(arg0)
-    this := &QMutexLocker{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMutexLocker)
-    return this
+    return &QMutexLocker{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMutexLocker", "QMutexLocker", args)
   }
@@ -169,6 +173,10 @@ func (this *QMutexLocker) Mutex(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -198,6 +206,10 @@ func (this *QMutexLocker) Relock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -219,6 +231,10 @@ func (this *QBasicMutex) Lock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -240,6 +256,10 @@ func (this *QBasicMutex) Unlock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -256,11 +276,15 @@ func (this *QBasicMutex) Unlock(args ...interface{}) () {
 }
 
 // tryLock()
-func (this *QBasicMutex) TryLock(args ...interface{}) (ret interface{}) {
+func (this *QBasicMutex) Trylock(args ...interface{}) (ret interface{}) {
   // tryLock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -285,11 +309,15 @@ func (this *QBasicMutex) TryLock(args ...interface{}) (ret interface{}) {
 }
 
 // isRecursive()
-func (this *QBasicMutex) IsRecursive(args ...interface{}) (ret interface{}) {
+func (this *QBasicMutex) Isrecursive(args ...interface{}) (ret interface{}) {
   // isRecursive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -319,6 +347,10 @@ func (this *QMutex) Lock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -335,11 +367,15 @@ func (this *QMutex) Lock(args ...interface{}) () {
 }
 
 // ~QMutex()
-func (this *QMutex) Free(args ...interface{}) () {
+func (this *QMutex) Freeqmutex(args ...interface{}) () {
   // ~QMutex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -347,10 +383,7 @@ func (this *QMutex) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMutexD0Ev
     // invoke: void ~QMutex()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN6QMutexD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN6QMutexD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMutex", "~QMutex", args)
   }
@@ -364,6 +397,10 @@ func (this *QMutex) Unlock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -380,12 +417,16 @@ func (this *QMutex) Unlock(args ...interface{}) () {
 }
 
 // tryLock(int)
-func (this *QMutex) TryLock(args ...interface{}) (ret interface{}) {
+func (this *QMutex) Trylock(args ...interface{}) (ret interface{}) {
   // tryLock(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -406,6 +447,39 @@ func (this *QMutex) TryLock(args ...interface{}) (ret interface{}) {
     }
   default:
     qtrt.ErrorResolve("QMutex", "tryLock", args)
+  }
+
+  return
+}
+
+// isRecursive()
+func (this *QMutex) Isrecursive(args ...interface{}) (ret interface{}) {
+  // isRecursive()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK6QMutex11isRecursiveEv
+    // invoke: bool isRecursive()
+    var ret0 = C.C_ZNK6QMutex11isRecursiveEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QMutex", "isRecursive", args)
   }
 
   return

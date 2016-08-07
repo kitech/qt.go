@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qgraphicslayoutitem.h
 // dst-file: /src/widgets/qgraphicslayoutitem.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -113,7 +112,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsLayoutItem)=1
@@ -123,12 +121,16 @@ type QGraphicsLayoutItem struct {
 }
 
 // setMaximumWidth(qreal)
-func (this *QGraphicsLayoutItem) SetMaximumWidth(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setmaximumwidth(args ...interface{}) () {
   // setMaximumWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -147,11 +149,15 @@ func (this *QGraphicsLayoutItem) SetMaximumWidth(args ...interface{}) () {
 }
 
 // preferredSize()
-func (this *QGraphicsLayoutItem) PreferredSize(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Preferredsize(args ...interface{}) (ret interface{}) {
   // preferredSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -176,12 +182,16 @@ func (this *QGraphicsLayoutItem) PreferredSize(args ...interface{}) (ret interfa
 }
 
 // setParentLayoutItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsLayoutItem) SetParentLayoutItem(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setparentlayoutitem(args ...interface{}) () {
   // setParentLayoutItem(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsLayoutItem{}) // "QGraphicsLayoutItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -200,11 +210,15 @@ func (this *QGraphicsLayoutItem) SetParentLayoutItem(args ...interface{}) () {
 }
 
 // graphicsItem()
-func (this *QGraphicsLayoutItem) GraphicsItem(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Graphicsitem(args ...interface{}) () {
   // graphicsItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -221,11 +235,15 @@ func (this *QGraphicsLayoutItem) GraphicsItem(args ...interface{}) () {
 }
 
 // minimumHeight()
-func (this *QGraphicsLayoutItem) MinimumHeight(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Minimumheight(args ...interface{}) (ret interface{}) {
   // minimumHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -250,7 +268,7 @@ func (this *QGraphicsLayoutItem) MinimumHeight(args ...interface{}) (ret interfa
 }
 
 // setMaximumSize(const class QSizeF &)
-func (this *QGraphicsLayoutItem) SetMaximumSize(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setmaximumsize(args ...interface{}) () {
   // setMaximumSize(const class QSizeF &)
   // setMaximumSize(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -260,6 +278,10 @@ func (this *QGraphicsLayoutItem) SetMaximumSize(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -286,12 +308,16 @@ func (this *QGraphicsLayoutItem) SetMaximumSize(args ...interface{}) () {
 }
 
 // setGeometry(const class QRectF &)
-func (this *QGraphicsLayoutItem) SetGeometry(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setgeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -310,12 +336,16 @@ func (this *QGraphicsLayoutItem) SetGeometry(args ...interface{}) () {
 }
 
 // setMinimumHeight(qreal)
-func (this *QGraphicsLayoutItem) SetMinimumHeight(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setminimumheight(args ...interface{}) () {
   // setMinimumHeight(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -334,11 +364,15 @@ func (this *QGraphicsLayoutItem) SetMinimumHeight(args ...interface{}) () {
 }
 
 // ~QGraphicsLayoutItem()
-func (this *QGraphicsLayoutItem) Free(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Freeqgraphicslayoutitem(args ...interface{}) () {
   // ~QGraphicsLayoutItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -346,10 +380,7 @@ func (this *QGraphicsLayoutItem) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItemD0Ev
     // invoke: void ~QGraphicsLayoutItem()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QGraphicsLayoutItemD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QGraphicsLayoutItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "~QGraphicsLayoutItem", args)
   }
@@ -358,7 +389,7 @@ func (this *QGraphicsLayoutItem) Free(args ...interface{}) () {
 }
 
 // setPreferredSize(const class QSizeF &)
-func (this *QGraphicsLayoutItem) SetPreferredSize(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setpreferredsize(args ...interface{}) () {
   // setPreferredSize(const class QSizeF &)
   // setPreferredSize(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -368,6 +399,10 @@ func (this *QGraphicsLayoutItem) SetPreferredSize(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -394,9 +429,6 @@ func (this *QGraphicsLayoutItem) SetPreferredSize(args ...interface{}) () {
 }
 
 // QGraphicsLayoutItem(class QGraphicsLayoutItem *, _Bool)
-func GcfreeQGraphicsLayoutItem(this *QGraphicsLayoutItem) {
-  qtrt.UniverseFree(this)
-}
 func NewQGraphicsLayoutItem(args ...interface{}) *QGraphicsLayoutItem {
   // QGraphicsLayoutItem(class QGraphicsLayoutItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -404,6 +436,10 @@ func NewQGraphicsLayoutItem(args ...interface{}) *QGraphicsLayoutItem {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsLayoutItem{}) // "QGraphicsLayoutItem *"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -418,9 +454,7 @@ func NewQGraphicsLayoutItem(args ...interface{}) *QGraphicsLayoutItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QGraphicsLayoutItemC2EPS_b(arg0, arg1)
-    this := &QGraphicsLayoutItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGraphicsLayoutItem)
-    return this
+    return &QGraphicsLayoutItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "QGraphicsLayoutItem", args)
   }
@@ -429,11 +463,15 @@ func NewQGraphicsLayoutItem(args ...interface{}) *QGraphicsLayoutItem {
 }
 
 // parentLayoutItem()
-func (this *QGraphicsLayoutItem) ParentLayoutItem(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Parentlayoutitem(args ...interface{}) () {
   // parentLayoutItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -450,12 +488,16 @@ func (this *QGraphicsLayoutItem) ParentLayoutItem(args ...interface{}) () {
 }
 
 // setPreferredHeight(qreal)
-func (this *QGraphicsLayoutItem) SetPreferredHeight(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setpreferredheight(args ...interface{}) () {
   // setPreferredHeight(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -474,11 +516,15 @@ func (this *QGraphicsLayoutItem) SetPreferredHeight(args ...interface{}) () {
 }
 
 // updateGeometry()
-func (this *QGraphicsLayoutItem) UpdateGeometry(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Updategeometry(args ...interface{}) () {
   // updateGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -495,11 +541,15 @@ func (this *QGraphicsLayoutItem) UpdateGeometry(args ...interface{}) () {
 }
 
 // sizePolicy()
-func (this *QGraphicsLayoutItem) SizePolicy(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Sizepolicy(args ...interface{}) (ret interface{}) {
   // sizePolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -524,11 +574,15 @@ func (this *QGraphicsLayoutItem) SizePolicy(args ...interface{}) (ret interface{
 }
 
 // minimumWidth()
-func (this *QGraphicsLayoutItem) MinimumWidth(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Minimumwidth(args ...interface{}) (ret interface{}) {
   // minimumWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -553,11 +607,15 @@ func (this *QGraphicsLayoutItem) MinimumWidth(args ...interface{}) (ret interfac
 }
 
 // preferredHeight()
-func (this *QGraphicsLayoutItem) PreferredHeight(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Preferredheight(args ...interface{}) (ret interface{}) {
   // preferredHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -582,11 +640,15 @@ func (this *QGraphicsLayoutItem) PreferredHeight(args ...interface{}) (ret inter
 }
 
 // maximumHeight()
-func (this *QGraphicsLayoutItem) MaximumHeight(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Maximumheight(args ...interface{}) (ret interface{}) {
   // maximumHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -611,11 +673,15 @@ func (this *QGraphicsLayoutItem) MaximumHeight(args ...interface{}) (ret interfa
 }
 
 // preferredWidth()
-func (this *QGraphicsLayoutItem) PreferredWidth(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Preferredwidth(args ...interface{}) (ret interface{}) {
   // preferredWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -640,7 +706,7 @@ func (this *QGraphicsLayoutItem) PreferredWidth(args ...interface{}) (ret interf
 }
 
 // setMinimumSize(qreal, qreal)
-func (this *QGraphicsLayoutItem) SetMinimumSize(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setminimumsize(args ...interface{}) () {
   // setMinimumSize(qreal, qreal)
   // setMinimumSize(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -650,6 +716,10 @@ func (this *QGraphicsLayoutItem) SetMinimumSize(args ...interface{}) () {
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QSizeF{}) // "const QSizeF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -676,11 +746,15 @@ func (this *QGraphicsLayoutItem) SetMinimumSize(args ...interface{}) () {
 }
 
 // maximumWidth()
-func (this *QGraphicsLayoutItem) MaximumWidth(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Maximumwidth(args ...interface{}) (ret interface{}) {
   // maximumWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -705,12 +779,16 @@ func (this *QGraphicsLayoutItem) MaximumWidth(args ...interface{}) (ret interfac
 }
 
 // setSizePolicy(const class QSizePolicy &)
-func (this *QGraphicsLayoutItem) SetSizePolicy(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setsizepolicy(args ...interface{}) () {
   // setSizePolicy(const class QSizePolicy &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QSizePolicy{}) // "const QSizePolicy &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -729,12 +807,16 @@ func (this *QGraphicsLayoutItem) SetSizePolicy(args ...interface{}) () {
 }
 
 // setMinimumWidth(qreal)
-func (this *QGraphicsLayoutItem) SetMinimumWidth(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setminimumwidth(args ...interface{}) () {
   // setMinimumWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -758,6 +840,10 @@ func (this *QGraphicsLayoutItem) Geometry(args ...interface{}) (ret interface{})
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -782,7 +868,7 @@ func (this *QGraphicsLayoutItem) Geometry(args ...interface{}) (ret interface{})
 }
 
 // getContentsMargins(qreal *, qreal *, qreal *, qreal *)
-func (this *QGraphicsLayoutItem) GetContentsMargins(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Getcontentsmargins(args ...interface{}) () {
   // getContentsMargins(qreal *, qreal *, qreal *, qreal *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -791,6 +877,10 @@ func (this *QGraphicsLayoutItem) GetContentsMargins(args ...interface{}) () {
   vtys[0][1] = qtrt.DoubleTy(true) // "qreal *"
   vtys[0][2] = qtrt.DoubleTy(true) // "qreal *"
   vtys[0][3] = qtrt.DoubleTy(true) // "qreal *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -815,11 +905,15 @@ func (this *QGraphicsLayoutItem) GetContentsMargins(args ...interface{}) () {
 }
 
 // minimumSize()
-func (this *QGraphicsLayoutItem) MinimumSize(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Minimumsize(args ...interface{}) (ret interface{}) {
   // minimumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -844,11 +938,15 @@ func (this *QGraphicsLayoutItem) MinimumSize(args ...interface{}) (ret interface
 }
 
 // contentsRect()
-func (this *QGraphicsLayoutItem) ContentsRect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Contentsrect(args ...interface{}) (ret interface{}) {
   // contentsRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -873,11 +971,15 @@ func (this *QGraphicsLayoutItem) ContentsRect(args ...interface{}) (ret interfac
 }
 
 // isLayout()
-func (this *QGraphicsLayoutItem) IsLayout(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Islayout(args ...interface{}) (ret interface{}) {
   // isLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -902,12 +1004,16 @@ func (this *QGraphicsLayoutItem) IsLayout(args ...interface{}) (ret interface{})
 }
 
 // setPreferredWidth(qreal)
-func (this *QGraphicsLayoutItem) SetPreferredWidth(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setpreferredwidth(args ...interface{}) () {
   // setPreferredWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -926,12 +1032,16 @@ func (this *QGraphicsLayoutItem) SetPreferredWidth(args ...interface{}) () {
 }
 
 // setMaximumHeight(qreal)
-func (this *QGraphicsLayoutItem) SetMaximumHeight(args ...interface{}) () {
+func (this *QGraphicsLayoutItem) Setmaximumheight(args ...interface{}) () {
   // setMaximumHeight(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -950,11 +1060,15 @@ func (this *QGraphicsLayoutItem) SetMaximumHeight(args ...interface{}) () {
 }
 
 // maximumSize()
-func (this *QGraphicsLayoutItem) MaximumSize(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Maximumsize(args ...interface{}) (ret interface{}) {
   // maximumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -979,11 +1093,15 @@ func (this *QGraphicsLayoutItem) MaximumSize(args ...interface{}) (ret interface
 }
 
 // ownedByLayout()
-func (this *QGraphicsLayoutItem) OwnedByLayout(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayoutItem) Ownedbylayout(args ...interface{}) (ret interface{}) {
   // ownedByLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qtextdocumentwriter.h
 // dst-file: /src/gui/qtextdocumentwriter.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -71,7 +70,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextDocumentWriter)=8
@@ -86,6 +84,10 @@ func (this *QTextDocumentWriter) Format(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -110,12 +112,16 @@ func (this *QTextDocumentWriter) Format(args ...interface{}) (ret interface{}) {
 }
 
 // setFormat(const class QByteArray &)
-func (this *QTextDocumentWriter) SetFormat(args ...interface{}) () {
+func (this *QTextDocumentWriter) Setformat(args ...interface{}) () {
   // setFormat(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -134,12 +140,16 @@ func (this *QTextDocumentWriter) SetFormat(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QTextDocumentWriter) SetFileName(args ...interface{}) () {
+func (this *QTextDocumentWriter) Setfilename(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -158,9 +168,6 @@ func (this *QTextDocumentWriter) SetFileName(args ...interface{}) () {
 }
 
 // QTextDocumentWriter()
-func GcfreeQTextDocumentWriter(this *QTextDocumentWriter) {
-  qtrt.UniverseFree(this)
-}
 func NewQTextDocumentWriter(args ...interface{}) *QTextDocumentWriter {
   // QTextDocumentWriter()
   // QTextDocumentWriter(class QIODevice *, const class QByteArray &)
@@ -174,6 +181,10 @@ func NewQTextDocumentWriter(args ...interface{}) *QTextDocumentWriter {
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[2][1] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -184,9 +195,7 @@ func NewQTextDocumentWriter(args ...interface{}) *QTextDocumentWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QTextDocumentWriterC2Ev()
-    this := &QTextDocumentWriter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextDocumentWriter)
-    return this
+    return &QTextDocumentWriter{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QTextDocumentWriterC1EP9QIODeviceRK10QByteArray
     // invoke: void QTextDocumentWriter(class QIODevice *, const class QByteArray &)
@@ -197,9 +206,7 @@ func NewQTextDocumentWriter(args ...interface{}) *QTextDocumentWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QTextDocumentWriterC2EP9QIODeviceRK10QByteArray(arg0, arg1)
-    this := &QTextDocumentWriter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextDocumentWriter)
-    return this
+    return &QTextDocumentWriter{Qclsinst:qthis}
   case 2:
     // invoke: _ZN19QTextDocumentWriterC1ERK7QStringRK10QByteArray
     // invoke: void QTextDocumentWriter(const class QString &, const class QByteArray &)
@@ -210,9 +217,7 @@ func NewQTextDocumentWriter(args ...interface{}) *QTextDocumentWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray(arg0, arg1)
-    this := &QTextDocumentWriter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextDocumentWriter)
-    return this
+    return &QTextDocumentWriter{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "QTextDocumentWriter", args)
   }
@@ -221,11 +226,15 @@ func NewQTextDocumentWriter(args ...interface{}) *QTextDocumentWriter {
 }
 
 // fileName()
-func (this *QTextDocumentWriter) FileName(args ...interface{}) (ret interface{}) {
+func (this *QTextDocumentWriter) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -259,6 +268,10 @@ func (this *QTextDocumentWriter) Write(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QTextDocumentFragment{}) // "const QTextDocumentFragment &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QTextDocument{}) // "const QTextDocument *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -304,6 +317,10 @@ func (this *QTextDocumentWriter) Codec(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -328,11 +345,15 @@ func (this *QTextDocumentWriter) Codec(args ...interface{}) (ret interface{}) {
 }
 
 // ~QTextDocumentWriter()
-func (this *QTextDocumentWriter) Free(args ...interface{}) () {
+func (this *QTextDocumentWriter) Freeqtextdocumentwriter(args ...interface{}) () {
   // ~QTextDocumentWriter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -340,10 +361,7 @@ func (this *QTextDocumentWriter) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QTextDocumentWriterD0Ev
     // invoke: void ~QTextDocumentWriter()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QTextDocumentWriterD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QTextDocumentWriterD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "~QTextDocumentWriter", args)
   }
@@ -352,12 +370,16 @@ func (this *QTextDocumentWriter) Free(args ...interface{}) () {
 }
 
 // setDevice(class QIODevice *)
-func (this *QTextDocumentWriter) SetDevice(args ...interface{}) () {
+func (this *QTextDocumentWriter) Setdevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -381,6 +403,10 @@ func (this *QTextDocumentWriter) Device(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -405,12 +431,16 @@ func (this *QTextDocumentWriter) Device(args ...interface{}) (ret interface{}) {
 }
 
 // setCodec(class QTextCodec *)
-func (this *QTextDocumentWriter) SetCodec(args ...interface{}) () {
+func (this *QTextDocumentWriter) Setcodec(args ...interface{}) () {
   // setCodec(class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QTextCodec{}) // "QTextCodec *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -429,11 +459,15 @@ func (this *QTextDocumentWriter) SetCodec(args ...interface{}) () {
 }
 
 // supportedDocumentFormats()
-func (this *QTextDocumentWriter) SupportedDocumentFormats_s(args ...interface{}) () {
+func (this *QTextDocumentWriter) Supporteddocumentformats_S(args ...interface{}) () {
   // supportedDocumentFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

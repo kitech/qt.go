@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -39,15 +38,15 @@ extern void C_ZN14QSignalBlocker7reblockEv(void* qthis); // 2
 extern void* C_ZN14QSignalBlockerC2ER7QObject(void* arg0); // 1
   // proto:  void QSignalBlocker::QSignalBlocker(QObject * o);
 extern void* C_ZN14QSignalBlockerC2EP7QObject(void* arg0); // 1
-  // proto:  QMetaObject * QObjectData::dynamicMetaObject();
-extern void C_ZNK11QObjectData17dynamicMetaObjectEv(void* qthis); // 4
   // proto:  void QObjectUserData::~QObjectUserData();
 extern void C_ZN15QObjectUserDataD2Ev(void* qthis); // 4
+  // proto:  QMetaObject * QObjectData::dynamicMetaObject();
+extern void C_ZNK11QObjectData17dynamicMetaObjectEv(void* qthis); // 4
   // proto:  bool QObject::inherits(const char * classname);
 extern bool C_ZNK7QObject8inheritsEPKc(void* qthis, void* arg0); // 2
   // proto:  QList<QByteArray> QObject::dynamicPropertyNames();
 extern void C_ZNK7QObject20dynamicPropertyNamesEv(void* qthis); // 4
-  // proto:  void QObject::installEventFilter(QObject * );
+  // proto:  void QObject::installEventFilter(QObject * filterObj);
 extern void C_ZN7QObject18installEventFilterEPS_(void* qthis, void* arg0); // 4
   // proto:  void QObject::dumpObjectTree();
 extern void C_ZN7QObject14dumpObjectTreeEv(void* qthis); // 4
@@ -57,7 +56,7 @@ extern void C_ZN7QObject11deleteLaterEv(void* qthis); // 4
 extern void C_ZN7QObjectD2Ev(void* qthis); // 4
   // proto:  QObject * QObject::parent();
 extern void* C_ZNK7QObject6parentEv(void* qthis); // 2
-  // proto:  bool QObject::event(QEvent * );
+  // proto:  bool QObject::event(QEvent * event);
 extern bool C_ZN7QObject5eventEP6QEvent(void* qthis, void* arg0); // 4
   // proto:  void QObject::moveToThread(QThread * thread);
 extern void C_ZN7QObject12moveToThreadEP7QThread(void* qthis, void* arg0); // 4
@@ -69,9 +68,9 @@ extern bool C_ZNK7QObject10disconnectEPKcPKS_S1_(void* qthis, void* arg0, void* 
 extern bool C_ZNK7QObject10disconnectEPKS_PKc(void* qthis, void* arg0, void* arg1); // 2
   // proto: static bool QObject::disconnect(const QObject * sender, const QMetaMethod & signal, const QObject * receiver, const QMetaMethod & member);
 extern bool C_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_(void* arg0, void* arg1, void* arg2, void* arg3); // 4
-  // proto:  bool QObject::eventFilter(QObject * , QEvent * );
+  // proto:  bool QObject::eventFilter(QObject * watched, QEvent * event);
 extern bool C_ZN7QObject11eventFilterEPS_P6QEvent(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  void QObject::setParent(QObject * );
+  // proto:  void QObject::setParent(QObject * parent);
 extern void C_ZN7QObject9setParentEPS_(void* qthis, void* arg0); // 4
   // proto:  void QObject::QObject(QObject * parent);
 extern void* C_ZN7QObjectC2EPS_(void* arg0); // 3
@@ -99,7 +98,7 @@ extern void C_ZN7QObject11setUserDataEjP15QObjectUserData(void* qthis, int32_t a
 extern void C_ZNK7QObject10metaObjectEv(void* qthis); // 4
   // proto:  QThread * QObject::thread();
 extern void* C_ZNK7QObject6threadEv(void* qthis); // 4
-  // proto:  void QObject::removeEventFilter(QObject * );
+  // proto:  void QObject::removeEventFilter(QObject * obj);
 extern void C_ZN7QObject17removeEventFilterEPS_(void* qthis, void* arg0); // 4
   // proto:  const QObjectList & QObject::children();
 extern void C_ZNK7QObject8childrenEv(void* qthis); // 2
@@ -119,7 +118,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSignalBlocker)=16
@@ -128,14 +126,14 @@ type QSignalBlocker struct {
   Qclsinst unsafe.Pointer /* *C.void */;
 }
 
-// class sizeof(QObjectData)=1
-type QObjectData struct {
+// class sizeof(QObjectUserData)=8
+type QObjectUserData struct {
   // qbase: None;
   Qclsinst unsafe.Pointer /* *C.void */;
 }
 
-// class sizeof(QObjectUserData)=8
-type QObjectUserData struct {
+// class sizeof(QObjectData)=1
+type QObjectData struct {
   // qbase: None;
   Qclsinst unsafe.Pointer /* *C.void */;
 }
@@ -149,11 +147,15 @@ type QObject struct {
 }
 
 // ~QSignalBlocker()
-func (this *QSignalBlocker) Free(args ...interface{}) () {
+func (this *QSignalBlocker) Freeqsignalblocker(args ...interface{}) () {
   // ~QSignalBlocker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -161,10 +163,7 @@ func (this *QSignalBlocker) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QSignalBlockerD0Ev
     // invoke: void ~QSignalBlocker()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN14QSignalBlockerD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN14QSignalBlockerD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSignalBlocker", "~QSignalBlocker", args)
   }
@@ -178,6 +177,10 @@ func (this *QSignalBlocker) Unblock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -199,6 +202,10 @@ func (this *QSignalBlocker) Reblock(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -215,9 +222,6 @@ func (this *QSignalBlocker) Reblock(args ...interface{}) () {
 }
 
 // QSignalBlocker(class QObject &)
-func GcfreeQSignalBlocker(this *QSignalBlocker) {
-  qtrt.UniverseFree(this)
-}
 func NewQSignalBlocker(args ...interface{}) *QSignalBlocker {
   // QSignalBlocker(class QObject &)
   // QSignalBlocker(class QObject *)
@@ -227,6 +231,10 @@ func NewQSignalBlocker(args ...interface{}) *QSignalBlocker {
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -239,9 +247,7 @@ func NewQSignalBlocker(args ...interface{}) *QSignalBlocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QSignalBlockerC2ER7QObject(arg0)
-    this := &QSignalBlocker{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSignalBlocker)
-    return this
+    return &QSignalBlocker{Qclsinst:qthis}
   case 1:
     // invoke: _ZN14QSignalBlockerC1EP7QObject
     // invoke: void QSignalBlocker(class QObject *)
@@ -250,9 +256,7 @@ func NewQSignalBlocker(args ...interface{}) *QSignalBlocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QSignalBlockerC2EP7QObject(arg0)
-    this := &QSignalBlocker{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSignalBlocker)
-    return this
+    return &QSignalBlocker{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSignalBlocker", "QSignalBlocker", args)
   }
@@ -260,12 +264,41 @@ func NewQSignalBlocker(args ...interface{}) *QSignalBlocker {
   return nil // QSignalBlocker{Qclsinst:qthis}
 }
 
+// ~QObjectUserData()
+func (this *QObjectUserData) Freeqobjectuserdata(args ...interface{}) () {
+  // ~QObjectUserData()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QObjectUserDataD0Ev
+    // invoke: void ~QObjectUserData()
+    C.C_ZN15QObjectUserDataD2Ev(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QObjectUserData", "~QObjectUserData", args)
+  }
+
+  return
+}
+
 // dynamicMetaObject()
-func (this *QObjectData) DynamicMetaObject(args ...interface{}) () {
+func (this *QObjectData) Dynamicmetaobject(args ...interface{}) () {
   // dynamicMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -281,30 +314,6 @@ func (this *QObjectData) DynamicMetaObject(args ...interface{}) () {
   return
 }
 
-// ~QObjectUserData()
-func (this *QObjectUserData) Free(args ...interface{}) () {
-  // ~QObjectUserData()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QObjectUserDataD0Ev
-    // invoke: void ~QObjectUserData()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QObjectUserDataD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
-  default:
-    qtrt.ErrorResolve("QObjectUserData", "~QObjectUserData", args)
-  }
-
-  return
-}
-
 // inherits(const char *)
 func (this *QObject) Inherits(args ...interface{}) (ret interface{}) {
   // inherits(const char *)
@@ -312,6 +321,10 @@ func (this *QObject) Inherits(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -340,11 +353,15 @@ func (this *QObject) Inherits(args ...interface{}) (ret interface{}) {
 }
 
 // dynamicPropertyNames()
-func (this *QObject) DynamicPropertyNames(args ...interface{}) () {
+func (this *QObject) Dynamicpropertynames(args ...interface{}) () {
   // dynamicPropertyNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -361,12 +378,16 @@ func (this *QObject) DynamicPropertyNames(args ...interface{}) () {
 }
 
 // installEventFilter(class QObject *)
-func (this *QObject) InstallEventFilter(args ...interface{}) () {
+func (this *QObject) Installeventfilter(args ...interface{}) () {
   // installEventFilter(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -385,11 +406,15 @@ func (this *QObject) InstallEventFilter(args ...interface{}) () {
 }
 
 // dumpObjectTree()
-func (this *QObject) DumpObjectTree(args ...interface{}) () {
+func (this *QObject) Dumpobjecttree(args ...interface{}) () {
   // dumpObjectTree()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -406,11 +431,15 @@ func (this *QObject) DumpObjectTree(args ...interface{}) () {
 }
 
 // deleteLater()
-func (this *QObject) DeleteLater(args ...interface{}) () {
+func (this *QObject) Deletelater(args ...interface{}) () {
   // deleteLater()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -427,11 +456,15 @@ func (this *QObject) DeleteLater(args ...interface{}) () {
 }
 
 // ~QObject()
-func (this *QObject) Free(args ...interface{}) () {
+func (this *QObject) Freeqobject(args ...interface{}) () {
   // ~QObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -439,10 +472,7 @@ func (this *QObject) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QObjectD0Ev
     // invoke: void ~QObject()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN7QObjectD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN7QObjectD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QObject", "~QObject", args)
   }
@@ -456,6 +486,10 @@ func (this *QObject) Parent(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -486,6 +520,10 @@ func (this *QObject) Event(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -512,12 +550,16 @@ func (this *QObject) Event(args ...interface{}) (ret interface{}) {
 }
 
 // moveToThread(class QThread *)
-func (this *QObject) MoveToThread(args ...interface{}) () {
+func (this *QObject) Movetothread(args ...interface{}) () {
   // moveToThread(class QThread *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QThread{}) // "QThread *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -536,7 +578,7 @@ func (this *QObject) MoveToThread(args ...interface{}) () {
 }
 
 // disconnect(const class QObject *, const char *, const class QObject *, const char *)
-func (this *QObject) Disconnect_s(args ...interface{}) (ret interface{}) {
+func (this *QObject) Disconnect_S(args ...interface{}) (ret interface{}) {
   // disconnect(const class QObject *, const char *, const class QObject *, const char *)
   // disconnect(const char *, const class QObject *, const char *)
   // disconnect(const class QObject *, const char *)
@@ -560,6 +602,10 @@ func (this *QObject) Disconnect_s(args ...interface{}) (ret interface{}) {
   vtys[3][1] = reflect.TypeOf(QMetaMethod{}) // "const QMetaMethod &"
   vtys[3][2] = reflect.TypeOf(QObject{}) // "const QObject *"
   vtys[3][3] = reflect.TypeOf(QMetaMethod{}) // "const QMetaMethod &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -656,13 +702,17 @@ func (this *QObject) Disconnect_s(args ...interface{}) (ret interface{}) {
 }
 
 // eventFilter(class QObject *, class QEvent *)
-func (this *QObject) EventFilter(args ...interface{}) (ret interface{}) {
+func (this *QObject) Eventfilter(args ...interface{}) (ret interface{}) {
   // eventFilter(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
   vtys[0][1] = reflect.TypeOf(QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -691,12 +741,16 @@ func (this *QObject) EventFilter(args ...interface{}) (ret interface{}) {
 }
 
 // setParent(class QObject *)
-func (this *QObject) SetParent(args ...interface{}) () {
+func (this *QObject) Setparent(args ...interface{}) () {
   // setParent(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -715,15 +769,16 @@ func (this *QObject) SetParent(args ...interface{}) () {
 }
 
 // QObject(class QObject *)
-func GcfreeQObject(this *QObject) {
-  qtrt.UniverseFree(this)
-}
 func NewQObject(args ...interface{}) *QObject {
   // QObject(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -736,9 +791,7 @@ func NewQObject(args ...interface{}) *QObject {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QObjectC2EPS_(arg0)
-    this := &QObject{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQObject)
-    return this
+    return &QObject{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QObject", "QObject", args)
   }
@@ -747,11 +800,15 @@ func NewQObject(args ...interface{}) *QObject {
 }
 
 // isWidgetType()
-func (this *QObject) IsWidgetType(args ...interface{}) (ret interface{}) {
+func (this *QObject) Iswidgettype(args ...interface{}) (ret interface{}) {
   // isWidgetType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -776,12 +833,16 @@ func (this *QObject) IsWidgetType(args ...interface{}) (ret interface{}) {
 }
 
 // userData(uint)
-func (this *QObject) UserData(args ...interface{}) (ret interface{}) {
+func (this *QObject) Userdata(args ...interface{}) (ret interface{}) {
   // userData(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "uint"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -808,12 +869,16 @@ func (this *QObject) UserData(args ...interface{}) (ret interface{}) {
 }
 
 // blockSignals(_Bool)
-func (this *QObject) BlockSignals(args ...interface{}) (ret interface{}) {
+func (this *QObject) Blocksignals(args ...interface{}) (ret interface{}) {
   // blockSignals(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -840,11 +905,15 @@ func (this *QObject) BlockSignals(args ...interface{}) (ret interface{}) {
 }
 
 // objectName()
-func (this *QObject) ObjectName(args ...interface{}) (ret interface{}) {
+func (this *QObject) Objectname(args ...interface{}) (ret interface{}) {
   // objectName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -869,11 +938,15 @@ func (this *QObject) ObjectName(args ...interface{}) (ret interface{}) {
 }
 
 // isWindowType()
-func (this *QObject) IsWindowType(args ...interface{}) (ret interface{}) {
+func (this *QObject) Iswindowtype(args ...interface{}) (ret interface{}) {
   // isWindowType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -898,11 +971,15 @@ func (this *QObject) IsWindowType(args ...interface{}) (ret interface{}) {
 }
 
 // signalsBlocked()
-func (this *QObject) SignalsBlocked(args ...interface{}) (ret interface{}) {
+func (this *QObject) Signalsblocked(args ...interface{}) (ret interface{}) {
   // signalsBlocked()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -927,11 +1004,15 @@ func (this *QObject) SignalsBlocked(args ...interface{}) (ret interface{}) {
 }
 
 // registerUserData()
-func (this *QObject) RegisterUserData_s(args ...interface{}) (ret interface{}) {
+func (this *QObject) Registeruserdata_S(args ...interface{}) (ret interface{}) {
   // registerUserData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -956,13 +1037,17 @@ func (this *QObject) RegisterUserData_s(args ...interface{}) (ret interface{}) {
 }
 
 // setProperty(const char *, const class QVariant &)
-func (this *QObject) SetProperty(args ...interface{}) (ret interface{}) {
+func (this *QObject) Setproperty(args ...interface{}) (ret interface{}) {
   // setProperty(const char *, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.ByteTy(true) // "const char *"
   vtys[0][1] = reflect.TypeOf(QVariant{}) // "const QVariant &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -993,12 +1078,16 @@ func (this *QObject) SetProperty(args ...interface{}) (ret interface{}) {
 }
 
 // setObjectName(const class QString &)
-func (this *QObject) SetObjectName(args ...interface{}) () {
+func (this *QObject) Setobjectname(args ...interface{}) () {
   // setObjectName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1017,13 +1106,17 @@ func (this *QObject) SetObjectName(args ...interface{}) () {
 }
 
 // setUserData(uint, class QObjectUserData *)
-func (this *QObject) SetUserData(args ...interface{}) () {
+func (this *QObject) Setuserdata(args ...interface{}) () {
   // setUserData(uint, class QObjectUserData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "uint"
   vtys[0][1] = reflect.TypeOf(QObjectUserData{}) // "QObjectUserData *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1044,11 +1137,15 @@ func (this *QObject) SetUserData(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QObject) MetaObject(args ...interface{}) () {
+func (this *QObject) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1070,6 +1167,10 @@ func (this *QObject) Thread(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1094,12 +1195,16 @@ func (this *QObject) Thread(args ...interface{}) (ret interface{}) {
 }
 
 // removeEventFilter(class QObject *)
-func (this *QObject) RemoveEventFilter(args ...interface{}) () {
+func (this *QObject) Removeeventfilter(args ...interface{}) () {
   // removeEventFilter(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1123,6 +1228,10 @@ func (this *QObject) Children(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1139,12 +1248,16 @@ func (this *QObject) Children(args ...interface{}) () {
 }
 
 // killTimer(int)
-func (this *QObject) KillTimer(args ...interface{}) () {
+func (this *QObject) Killtimer(args ...interface{}) () {
   // killTimer(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1163,11 +1276,15 @@ func (this *QObject) KillTimer(args ...interface{}) () {
 }
 
 // dumpObjectInfo()
-func (this *QObject) DumpObjectInfo(args ...interface{}) () {
+func (this *QObject) Dumpobjectinfo(args ...interface{}) () {
   // dumpObjectInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1190,6 +1307,10 @@ func (this *QObject) Property(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

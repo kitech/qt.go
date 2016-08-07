@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -79,7 +78,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMdiSubWindow)=1
@@ -91,12 +89,16 @@ type QMdiSubWindow struct {
 }
 
 // setKeyboardPageStep(int)
-func (this *QMdiSubWindow) SetKeyboardPageStep(args ...interface{}) () {
+func (this *QMdiSubWindow) Setkeyboardpagestep(args ...interface{}) () {
   // setKeyboardPageStep(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -115,11 +117,15 @@ func (this *QMdiSubWindow) SetKeyboardPageStep(args ...interface{}) () {
 }
 
 // ~QMdiSubWindow()
-func (this *QMdiSubWindow) Free(args ...interface{}) () {
+func (this *QMdiSubWindow) Freeqmdisubwindow(args ...interface{}) () {
   // ~QMdiSubWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -127,10 +133,7 @@ func (this *QMdiSubWindow) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMdiSubWindowD0Ev
     // invoke: void ~QMdiSubWindow()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QMdiSubWindowD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QMdiSubWindowD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "~QMdiSubWindow", args)
   }
@@ -139,12 +142,16 @@ func (this *QMdiSubWindow) Free(args ...interface{}) () {
 }
 
 // setWidget(class QWidget *)
-func (this *QMdiSubWindow) SetWidget(args ...interface{}) () {
+func (this *QMdiSubWindow) Setwidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -163,11 +170,15 @@ func (this *QMdiSubWindow) SetWidget(args ...interface{}) () {
 }
 
 // maximizedButtonsWidget()
-func (this *QMdiSubWindow) MaximizedButtonsWidget(args ...interface{}) (ret interface{}) {
+func (this *QMdiSubWindow) Maximizedbuttonswidget(args ...interface{}) (ret interface{}) {
   // maximizedButtonsWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -192,11 +203,15 @@ func (this *QMdiSubWindow) MaximizedButtonsWidget(args ...interface{}) (ret inte
 }
 
 // mdiArea()
-func (this *QMdiSubWindow) MdiArea(args ...interface{}) (ret interface{}) {
+func (this *QMdiSubWindow) Mdiarea(args ...interface{}) (ret interface{}) {
   // mdiArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -221,12 +236,16 @@ func (this *QMdiSubWindow) MdiArea(args ...interface{}) (ret interface{}) {
 }
 
 // setSystemMenu(class QMenu *)
-func (this *QMdiSubWindow) SetSystemMenu(args ...interface{}) () {
+func (this *QMdiSubWindow) Setsystemmenu(args ...interface{}) () {
   // setSystemMenu(class QMenu *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QMenu{}) // "QMenu *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -245,11 +264,15 @@ func (this *QMdiSubWindow) SetSystemMenu(args ...interface{}) () {
 }
 
 // keyboardPageStep()
-func (this *QMdiSubWindow) KeyboardPageStep(args ...interface{}) (ret interface{}) {
+func (this *QMdiSubWindow) Keyboardpagestep(args ...interface{}) (ret interface{}) {
   // keyboardPageStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -274,12 +297,16 @@ func (this *QMdiSubWindow) KeyboardPageStep(args ...interface{}) (ret interface{
 }
 
 // setKeyboardSingleStep(int)
-func (this *QMdiSubWindow) SetKeyboardSingleStep(args ...interface{}) () {
+func (this *QMdiSubWindow) Setkeyboardsinglestep(args ...interface{}) () {
   // setKeyboardSingleStep(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -298,11 +325,15 @@ func (this *QMdiSubWindow) SetKeyboardSingleStep(args ...interface{}) () {
 }
 
 // showShaded()
-func (this *QMdiSubWindow) ShowShaded(args ...interface{}) () {
+func (this *QMdiSubWindow) Showshaded(args ...interface{}) () {
   // showShaded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -324,6 +355,10 @@ func (this *QMdiSubWindow) Widget(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -348,11 +383,15 @@ func (this *QMdiSubWindow) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // keyboardSingleStep()
-func (this *QMdiSubWindow) KeyboardSingleStep(args ...interface{}) (ret interface{}) {
+func (this *QMdiSubWindow) Keyboardsinglestep(args ...interface{}) (ret interface{}) {
   // keyboardSingleStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -377,11 +416,15 @@ func (this *QMdiSubWindow) KeyboardSingleStep(args ...interface{}) (ret interfac
 }
 
 // systemMenu()
-func (this *QMdiSubWindow) SystemMenu(args ...interface{}) (ret interface{}) {
+func (this *QMdiSubWindow) Systemmenu(args ...interface{}) (ret interface{}) {
   // systemMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -406,11 +449,15 @@ func (this *QMdiSubWindow) SystemMenu(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QMdiSubWindow) MetaObject(args ...interface{}) () {
+func (this *QMdiSubWindow) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -427,11 +474,15 @@ func (this *QMdiSubWindow) MetaObject(args ...interface{}) () {
 }
 
 // isShaded()
-func (this *QMdiSubWindow) IsShaded(args ...interface{}) (ret interface{}) {
+func (this *QMdiSubWindow) Isshaded(args ...interface{}) (ret interface{}) {
   // isShaded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -456,11 +507,15 @@ func (this *QMdiSubWindow) IsShaded(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QMdiSubWindow) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QMdiSubWindow) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -485,11 +540,15 @@ func (this *QMdiSubWindow) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // minimumSizeHint()
-func (this *QMdiSubWindow) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QMdiSubWindow) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -514,11 +573,15 @@ func (this *QMdiSubWindow) MinimumSizeHint(args ...interface{}) (ret interface{}
 }
 
 // showSystemMenu()
-func (this *QMdiSubWindow) ShowSystemMenu(args ...interface{}) () {
+func (this *QMdiSubWindow) Showsystemmenu(args ...interface{}) () {
   // showSystemMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -535,11 +598,15 @@ func (this *QMdiSubWindow) ShowSystemMenu(args ...interface{}) () {
 }
 
 // maximizedSystemMenuIconWidget()
-func (this *QMdiSubWindow) MaximizedSystemMenuIconWidget(args ...interface{}) (ret interface{}) {
+func (this *QMdiSubWindow) Maximizedsystemmenuiconwidget(args ...interface{}) (ret interface{}) {
   // maximizedSystemMenuIconWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

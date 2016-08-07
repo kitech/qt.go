@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qcolordialog.h
 // dst-file: /src/widgets/qcolordialog.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -75,7 +74,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QColorDialog)=1
@@ -87,12 +85,16 @@ type QColorDialog struct {
 }
 
 // setCurrentColor(const class QColor &)
-func (this *QColorDialog) SetCurrentColor(args ...interface{}) () {
+func (this *QColorDialog) Setcurrentcolor(args ...interface{}) () {
   // setCurrentColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QColor{}) // "const QColor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -111,13 +113,17 @@ func (this *QColorDialog) SetCurrentColor(args ...interface{}) () {
 }
 
 // setCustomColor(int, class QColor)
-func (this *QColorDialog) SetCustomColor_s(args ...interface{}) () {
+func (this *QColorDialog) Setcustomcolor_S(args ...interface{}) () {
   // setCustomColor(int, class QColor)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtgui.QColor{}) // "QColor"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -138,7 +144,7 @@ func (this *QColorDialog) SetCustomColor_s(args ...interface{}) () {
 }
 
 // getRgba(QRgb, _Bool *, class QWidget *)
-func (this *QColorDialog) GetRgba_s(args ...interface{}) (ret interface{}) {
+func (this *QColorDialog) Getrgba_S(args ...interface{}) (ret interface{}) {
   // getRgba(QRgb, _Bool *, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -146,6 +152,10 @@ func (this *QColorDialog) GetRgba_s(args ...interface{}) (ret interface{}) {
   vtys[0][0] = qtrt.Int32Ty(false) // "QRgb"
   vtys[0][1] = qtrt.BoolTy(true) // "bool *"
   vtys[0][2] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -183,6 +193,10 @@ func (this *QColorDialog) Open(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[0][1] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -205,12 +219,16 @@ func (this *QColorDialog) Open(args ...interface{}) () {
 }
 
 // standardColor(int)
-func (this *QColorDialog) StandardColor_s(args ...interface{}) (ret interface{}) {
+func (this *QColorDialog) Standardcolor_S(args ...interface{}) (ret interface{}) {
   // standardColor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -237,13 +255,17 @@ func (this *QColorDialog) StandardColor_s(args ...interface{}) (ret interface{})
 }
 
 // setStandardColor(int, class QColor)
-func (this *QColorDialog) SetStandardColor_s(args ...interface{}) () {
+func (this *QColorDialog) Setstandardcolor_S(args ...interface{}) () {
   // setStandardColor(int, class QColor)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtgui.QColor{}) // "QColor"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -264,11 +286,15 @@ func (this *QColorDialog) SetStandardColor_s(args ...interface{}) () {
 }
 
 // ~QColorDialog()
-func (this *QColorDialog) Free(args ...interface{}) () {
+func (this *QColorDialog) Freeqcolordialog(args ...interface{}) () {
   // ~QColorDialog()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -276,10 +302,7 @@ func (this *QColorDialog) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QColorDialogD0Ev
     // invoke: void ~QColorDialog()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QColorDialogD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QColorDialogD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QColorDialog", "~QColorDialog", args)
   }
@@ -288,11 +311,15 @@ func (this *QColorDialog) Free(args ...interface{}) () {
 }
 
 // customCount()
-func (this *QColorDialog) CustomCount_s(args ...interface{}) (ret interface{}) {
+func (this *QColorDialog) Customcount_S(args ...interface{}) (ret interface{}) {
   // customCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -317,11 +344,15 @@ func (this *QColorDialog) CustomCount_s(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QColorDialog) MetaObject(args ...interface{}) () {
+func (this *QColorDialog) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -338,11 +369,15 @@ func (this *QColorDialog) MetaObject(args ...interface{}) () {
 }
 
 // currentColor()
-func (this *QColorDialog) CurrentColor(args ...interface{}) (ret interface{}) {
+func (this *QColorDialog) Currentcolor(args ...interface{}) (ret interface{}) {
   // currentColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -367,11 +402,15 @@ func (this *QColorDialog) CurrentColor(args ...interface{}) (ret interface{}) {
 }
 
 // selectedColor()
-func (this *QColorDialog) SelectedColor(args ...interface{}) (ret interface{}) {
+func (this *QColorDialog) Selectedcolor(args ...interface{}) (ret interface{}) {
   // selectedColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -396,9 +435,6 @@ func (this *QColorDialog) SelectedColor(args ...interface{}) (ret interface{}) {
 }
 
 // QColorDialog(class QWidget *)
-func GcfreeQColorDialog(this *QColorDialog) {
-  qtrt.UniverseFree(this)
-}
 func NewQColorDialog(args ...interface{}) *QColorDialog {
   // QColorDialog(class QWidget *)
   // QColorDialog(const class QColor &, class QWidget *)
@@ -409,6 +445,10 @@ func NewQColorDialog(args ...interface{}) *QColorDialog {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtgui.QColor{}) // "const QColor &"
   vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -421,9 +461,7 @@ func NewQColorDialog(args ...interface{}) *QColorDialog {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QColorDialogC2EP7QWidget(arg0)
-    this := &QColorDialog{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQColorDialog)
-    return this
+    return &QColorDialog{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QColorDialogC1ERK6QColorP7QWidget
     // invoke: void QColorDialog(const class QColor &, class QWidget *)
@@ -434,9 +472,7 @@ func NewQColorDialog(args ...interface{}) *QColorDialog {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QColorDialogC2ERK6QColorP7QWidget(arg0, arg1)
-    this := &QColorDialog{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQColorDialog)
-    return this
+    return &QColorDialog{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QColorDialog", "QColorDialog", args)
   }
@@ -445,12 +481,16 @@ func NewQColorDialog(args ...interface{}) *QColorDialog {
 }
 
 // customColor(int)
-func (this *QColorDialog) CustomColor_s(args ...interface{}) (ret interface{}) {
+func (this *QColorDialog) Customcolor_S(args ...interface{}) (ret interface{}) {
   // customColor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -477,12 +517,16 @@ func (this *QColorDialog) CustomColor_s(args ...interface{}) (ret interface{}) {
 }
 
 // setVisible(_Bool)
-func (this *QColorDialog) SetVisible(args ...interface{}) () {
+func (this *QColorDialog) Setvisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -506,6 +550,10 @@ func (this *QColorDialog) Options(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

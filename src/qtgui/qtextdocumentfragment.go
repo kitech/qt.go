@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qtextdocumentfragment.h
 // dst-file: /src/gui/qtextdocumentfragment.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -63,7 +62,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextDocumentFragment)=8
@@ -73,12 +71,16 @@ type QTextDocumentFragment struct {
 }
 
 // toHtml(const class QByteArray &)
-func (this *QTextDocumentFragment) ToHtml(args ...interface{}) (ret interface{}) {
+func (this *QTextDocumentFragment) Tohtml(args ...interface{}) (ret interface{}) {
   // toHtml(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -105,12 +107,16 @@ func (this *QTextDocumentFragment) ToHtml(args ...interface{}) (ret interface{})
 }
 
 // fromPlainText(const class QString &)
-func (this *QTextDocumentFragment) FromPlainText_s(args ...interface{}) (ret interface{}) {
+func (this *QTextDocumentFragment) Fromplaintext_S(args ...interface{}) (ret interface{}) {
   // fromPlainText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -137,11 +143,15 @@ func (this *QTextDocumentFragment) FromPlainText_s(args ...interface{}) (ret int
 }
 
 // ~QTextDocumentFragment()
-func (this *QTextDocumentFragment) Free(args ...interface{}) () {
+func (this *QTextDocumentFragment) Freeqtextdocumentfragment(args ...interface{}) () {
   // ~QTextDocumentFragment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -149,10 +159,7 @@ func (this *QTextDocumentFragment) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN21QTextDocumentFragmentD0Ev
     // invoke: void ~QTextDocumentFragment()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN21QTextDocumentFragmentD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN21QTextDocumentFragmentD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "~QTextDocumentFragment", args)
   }
@@ -161,11 +168,15 @@ func (this *QTextDocumentFragment) Free(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QTextDocumentFragment) IsEmpty(args ...interface{}) (ret interface{}) {
+func (this *QTextDocumentFragment) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -190,11 +201,15 @@ func (this *QTextDocumentFragment) IsEmpty(args ...interface{}) (ret interface{}
 }
 
 // toPlainText()
-func (this *QTextDocumentFragment) ToPlainText(args ...interface{}) (ret interface{}) {
+func (this *QTextDocumentFragment) Toplaintext(args ...interface{}) (ret interface{}) {
   // toPlainText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -219,9 +234,6 @@ func (this *QTextDocumentFragment) ToPlainText(args ...interface{}) (ret interfa
 }
 
 // QTextDocumentFragment(const class QTextDocument *)
-func GcfreeQTextDocumentFragment(this *QTextDocumentFragment) {
-  qtrt.UniverseFree(this)
-}
 func NewQTextDocumentFragment(args ...interface{}) *QTextDocumentFragment {
   // QTextDocumentFragment(const class QTextDocument *)
   // QTextDocumentFragment()
@@ -236,6 +248,10 @@ func NewQTextDocumentFragment(args ...interface{}) *QTextDocumentFragment {
   vtys[2][0] = reflect.TypeOf(QTextDocumentFragment{}) // "const QTextDocumentFragment &"
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(QTextCursor{}) // "const QTextCursor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -248,18 +264,14 @@ func NewQTextDocumentFragment(args ...interface{}) *QTextDocumentFragment {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QTextDocumentFragmentC2EPK13QTextDocument(arg0)
-    this := &QTextDocumentFragment{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextDocumentFragment)
-    return this
+    return &QTextDocumentFragment{Qclsinst:qthis}
   case 1:
     // invoke: _ZN21QTextDocumentFragmentC1Ev
     // invoke: void QTextDocumentFragment()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QTextDocumentFragmentC2Ev()
-    this := &QTextDocumentFragment{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextDocumentFragment)
-    return this
+    return &QTextDocumentFragment{Qclsinst:qthis}
   case 2:
     // invoke: _ZN21QTextDocumentFragmentC1ERKS_
     // invoke: void QTextDocumentFragment(const class QTextDocumentFragment &)
@@ -268,9 +280,7 @@ func NewQTextDocumentFragment(args ...interface{}) *QTextDocumentFragment {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QTextDocumentFragmentC2ERKS_(arg0)
-    this := &QTextDocumentFragment{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextDocumentFragment)
-    return this
+    return &QTextDocumentFragment{Qclsinst:qthis}
   case 3:
     // invoke: _ZN21QTextDocumentFragmentC1ERK11QTextCursor
     // invoke: void QTextDocumentFragment(const class QTextCursor &)
@@ -279,9 +289,7 @@ func NewQTextDocumentFragment(args ...interface{}) *QTextDocumentFragment {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QTextDocumentFragmentC2ERK11QTextCursor(arg0)
-    this := &QTextDocumentFragment{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextDocumentFragment)
-    return this
+    return &QTextDocumentFragment{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "QTextDocumentFragment", args)
   }
@@ -290,7 +298,7 @@ func NewQTextDocumentFragment(args ...interface{}) *QTextDocumentFragment {
 }
 
 // fromHtml(const class QString &)
-func (this *QTextDocumentFragment) FromHtml_s(args ...interface{}) (ret interface{}) {
+func (this *QTextDocumentFragment) Fromhtml_S(args ...interface{}) (ret interface{}) {
   // fromHtml(const class QString &)
   // fromHtml(const class QString &, const class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -300,6 +308,10 @@ func (this *QTextDocumentFragment) FromHtml_s(args ...interface{}) (ret interfac
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[1][1] = reflect.TypeOf(QTextDocument{}) // "const QTextDocument *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

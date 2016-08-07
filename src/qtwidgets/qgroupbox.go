@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -73,7 +72,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGroupBox)=1
@@ -85,11 +83,15 @@ type QGroupBox struct {
 }
 
 // ~QGroupBox()
-func (this *QGroupBox) Free(args ...interface{}) () {
+func (this *QGroupBox) Freeqgroupbox(args ...interface{}) () {
   // ~QGroupBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -97,10 +99,7 @@ func (this *QGroupBox) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGroupBoxD0Ev
     // invoke: void ~QGroupBox()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QGroupBoxD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QGroupBoxD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "~QGroupBox", args)
   }
@@ -109,12 +108,16 @@ func (this *QGroupBox) Free(args ...interface{}) () {
 }
 
 // setTitle(const class QString &)
-func (this *QGroupBox) SetTitle(args ...interface{}) () {
+func (this *QGroupBox) Settitle(args ...interface{}) () {
   // setTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -133,11 +136,15 @@ func (this *QGroupBox) SetTitle(args ...interface{}) () {
 }
 
 // isCheckable()
-func (this *QGroupBox) IsCheckable(args ...interface{}) (ret interface{}) {
+func (this *QGroupBox) Ischeckable(args ...interface{}) (ret interface{}) {
   // isCheckable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -167,6 +174,10 @@ func (this *QGroupBox) Alignment(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -183,12 +194,16 @@ func (this *QGroupBox) Alignment(args ...interface{}) () {
 }
 
 // setFlat(_Bool)
-func (this *QGroupBox) SetFlat(args ...interface{}) () {
+func (this *QGroupBox) Setflat(args ...interface{}) () {
   // setFlat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -207,9 +222,6 @@ func (this *QGroupBox) SetFlat(args ...interface{}) () {
 }
 
 // QGroupBox(class QWidget *)
-func GcfreeQGroupBox(this *QGroupBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQGroupBox(args ...interface{}) *QGroupBox {
   // QGroupBox(class QWidget *)
   // QGroupBox(const class QString &, class QWidget *)
@@ -220,6 +232,10 @@ func NewQGroupBox(args ...interface{}) *QGroupBox {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -232,9 +248,7 @@ func NewQGroupBox(args ...interface{}) *QGroupBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QGroupBoxC2EP7QWidget(arg0)
-    this := &QGroupBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGroupBox)
-    return this
+    return &QGroupBox{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QGroupBoxC1ERK7QStringP7QWidget
     // invoke: void QGroupBox(const class QString &, class QWidget *)
@@ -245,9 +259,7 @@ func NewQGroupBox(args ...interface{}) *QGroupBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QGroupBoxC2ERK7QStringP7QWidget(arg0, arg1)
-    this := &QGroupBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGroupBox)
-    return this
+    return &QGroupBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGroupBox", "QGroupBox", args)
   }
@@ -261,6 +273,10 @@ func (this *QGroupBox) Title(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -285,11 +301,15 @@ func (this *QGroupBox) Title(args ...interface{}) (ret interface{}) {
 }
 
 // isChecked()
-func (this *QGroupBox) IsChecked(args ...interface{}) (ret interface{}) {
+func (this *QGroupBox) Ischecked(args ...interface{}) (ret interface{}) {
   // isChecked()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -314,12 +334,16 @@ func (this *QGroupBox) IsChecked(args ...interface{}) (ret interface{}) {
 }
 
 // setAlignment(int)
-func (this *QGroupBox) SetAlignment(args ...interface{}) () {
+func (this *QGroupBox) Setalignment(args ...interface{}) () {
   // setAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -338,12 +362,16 @@ func (this *QGroupBox) SetAlignment(args ...interface{}) () {
 }
 
 // setChecked(_Bool)
-func (this *QGroupBox) SetChecked(args ...interface{}) () {
+func (this *QGroupBox) Setchecked(args ...interface{}) () {
   // setChecked(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -362,12 +390,16 @@ func (this *QGroupBox) SetChecked(args ...interface{}) () {
 }
 
 // setCheckable(_Bool)
-func (this *QGroupBox) SetCheckable(args ...interface{}) () {
+func (this *QGroupBox) Setcheckable(args ...interface{}) () {
   // setCheckable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -386,11 +418,15 @@ func (this *QGroupBox) SetCheckable(args ...interface{}) () {
 }
 
 // isFlat()
-func (this *QGroupBox) IsFlat(args ...interface{}) (ret interface{}) {
+func (this *QGroupBox) Isflat(args ...interface{}) (ret interface{}) {
   // isFlat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -415,11 +451,15 @@ func (this *QGroupBox) IsFlat(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QGroupBox) MetaObject(args ...interface{}) () {
+func (this *QGroupBox) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -436,11 +476,15 @@ func (this *QGroupBox) MetaObject(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QGroupBox) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QGroupBox) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

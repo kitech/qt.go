@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qslider.h
 // dst-file: /src/widgets/qslider.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -61,7 +60,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSlider)=1
@@ -77,6 +75,10 @@ func (this *QSlider) Event(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -103,11 +105,15 @@ func (this *QSlider) Event(args ...interface{}) (ret interface{}) {
 }
 
 // ~QSlider()
-func (this *QSlider) Free(args ...interface{}) () {
+func (this *QSlider) Freeqslider(args ...interface{}) () {
   // ~QSlider()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -115,10 +121,7 @@ func (this *QSlider) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QSliderD0Ev
     // invoke: void ~QSlider()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN7QSliderD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN7QSliderD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSlider", "~QSlider", args)
   }
@@ -127,11 +130,15 @@ func (this *QSlider) Free(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QSlider) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QSlider) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -156,11 +163,15 @@ func (this *QSlider) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // tickInterval()
-func (this *QSlider) TickInterval(args ...interface{}) (ret interface{}) {
+func (this *QSlider) Tickinterval(args ...interface{}) (ret interface{}) {
   // tickInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -185,11 +196,15 @@ func (this *QSlider) TickInterval(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QSlider) MetaObject(args ...interface{}) () {
+func (this *QSlider) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -206,11 +221,15 @@ func (this *QSlider) MetaObject(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QSlider) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QSlider) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -235,15 +254,16 @@ func (this *QSlider) MinimumSizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // QSlider(class QWidget *)
-func GcfreeQSlider(this *QSlider) {
-  qtrt.UniverseFree(this)
-}
 func NewQSlider(args ...interface{}) *QSlider {
   // QSlider(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -256,9 +276,7 @@ func NewQSlider(args ...interface{}) *QSlider {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QSliderC2EP7QWidget(arg0)
-    this := &QSlider{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSlider)
-    return this
+    return &QSlider{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSlider", "QSlider", args)
   }
@@ -267,11 +285,15 @@ func NewQSlider(args ...interface{}) *QSlider {
 }
 
 // tickPosition()
-func (this *QSlider) TickPosition(args ...interface{}) () {
+func (this *QSlider) Tickposition(args ...interface{}) () {
   // tickPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -288,12 +310,16 @@ func (this *QSlider) TickPosition(args ...interface{}) () {
 }
 
 // setTickInterval(int)
-func (this *QSlider) SetTickInterval(args ...interface{}) () {
+func (this *QSlider) Settickinterval(args ...interface{}) () {
   // setTickInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

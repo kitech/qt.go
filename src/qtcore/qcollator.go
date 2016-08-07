@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qcollator.h
 // dst-file: /src/core/qcollator.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -75,7 +74,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCollator)=8
@@ -91,12 +89,16 @@ type QCollatorSortKey struct {
 }
 
 // setIgnorePunctuation(_Bool)
-func (this *QCollator) SetIgnorePunctuation(args ...interface{}) () {
+func (this *QCollator) Setignorepunctuation(args ...interface{}) () {
   // setIgnorePunctuation(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -128,6 +130,10 @@ func (this *QCollator) Compare(args ...interface{}) (ret interface{}) {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -176,12 +182,16 @@ func (this *QCollator) Compare(args ...interface{}) (ret interface{}) {
 }
 
 // setLocale(const class QLocale &)
-func (this *QCollator) SetLocale(args ...interface{}) () {
+func (this *QCollator) Setlocale(args ...interface{}) () {
   // setLocale(const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QLocale{}) // "const QLocale &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -205,6 +215,10 @@ func (this *QCollator) Locale(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -229,11 +243,15 @@ func (this *QCollator) Locale(args ...interface{}) (ret interface{}) {
 }
 
 // numericMode()
-func (this *QCollator) NumericMode(args ...interface{}) (ret interface{}) {
+func (this *QCollator) Numericmode(args ...interface{}) (ret interface{}) {
   // numericMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -258,12 +276,16 @@ func (this *QCollator) NumericMode(args ...interface{}) (ret interface{}) {
 }
 
 // setNumericMode(_Bool)
-func (this *QCollator) SetNumericMode(args ...interface{}) () {
+func (this *QCollator) Setnumericmode(args ...interface{}) () {
   // setNumericMode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -282,12 +304,16 @@ func (this *QCollator) SetNumericMode(args ...interface{}) () {
 }
 
 // sortKey(const class QString &)
-func (this *QCollator) SortKey(args ...interface{}) (ret interface{}) {
+func (this *QCollator) Sortkey(args ...interface{}) (ret interface{}) {
   // sortKey(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -314,11 +340,15 @@ func (this *QCollator) SortKey(args ...interface{}) (ret interface{}) {
 }
 
 // ~QCollator()
-func (this *QCollator) Free(args ...interface{}) () {
+func (this *QCollator) Freeqcollator(args ...interface{}) () {
   // ~QCollator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -326,10 +356,7 @@ func (this *QCollator) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QCollatorD0Ev
     // invoke: void ~QCollator()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QCollatorD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QCollatorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCollator", "~QCollator", args)
   }
@@ -338,11 +365,15 @@ func (this *QCollator) Free(args ...interface{}) () {
 }
 
 // ignorePunctuation()
-func (this *QCollator) IgnorePunctuation(args ...interface{}) (ret interface{}) {
+func (this *QCollator) Ignorepunctuation(args ...interface{}) (ret interface{}) {
   // ignorePunctuation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -373,6 +404,10 @@ func (this *QCollator) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QCollator{}) // "QCollator &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -391,9 +426,6 @@ func (this *QCollator) Swap(args ...interface{}) () {
 }
 
 // QCollator(const class QLocale &)
-func GcfreeQCollator(this *QCollator) {
-  qtrt.UniverseFree(this)
-}
 func NewQCollator(args ...interface{}) *QCollator {
   // QCollator(const class QLocale &)
   // QCollator(const class QCollator &)
@@ -403,6 +435,10 @@ func NewQCollator(args ...interface{}) *QCollator {
   vtys[0][0] = reflect.TypeOf(QLocale{}) // "const QLocale &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QCollator{}) // "const QCollator &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -415,9 +451,7 @@ func NewQCollator(args ...interface{}) *QCollator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QCollatorC2ERK7QLocale(arg0)
-    this := &QCollator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCollator)
-    return this
+    return &QCollator{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QCollatorC1ERKS_
     // invoke: void QCollator(const class QCollator &)
@@ -426,9 +460,7 @@ func NewQCollator(args ...interface{}) *QCollator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QCollatorC2ERKS_(arg0)
-    this := &QCollator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCollator)
-    return this
+    return &QCollator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCollator", "QCollator", args)
   }
@@ -437,11 +469,15 @@ func NewQCollator(args ...interface{}) *QCollator {
 }
 
 // caseSensitivity()
-func (this *QCollator) CaseSensitivity(args ...interface{}) () {
+func (this *QCollator) Casesensitivity(args ...interface{}) () {
   // caseSensitivity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -458,15 +494,16 @@ func (this *QCollator) CaseSensitivity(args ...interface{}) () {
 }
 
 // QCollatorSortKey(const class QCollatorSortKey &)
-func GcfreeQCollatorSortKey(this *QCollatorSortKey) {
-  qtrt.UniverseFree(this)
-}
 func NewQCollatorSortKey(args ...interface{}) *QCollatorSortKey {
   // QCollatorSortKey(const class QCollatorSortKey &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QCollatorSortKey{}) // "const QCollatorSortKey &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -479,9 +516,7 @@ func NewQCollatorSortKey(args ...interface{}) *QCollatorSortKey {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QCollatorSortKeyC2ERKS_(arg0)
-    this := &QCollatorSortKey{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCollatorSortKey)
-    return this
+    return &QCollatorSortKey{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCollatorSortKey", "QCollatorSortKey", args)
   }
@@ -496,6 +531,10 @@ func (this *QCollatorSortKey) Compare(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QCollatorSortKey{}) // "const QCollatorSortKey &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -528,6 +567,10 @@ func (this *QCollatorSortKey) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QCollatorSortKey{}) // "QCollatorSortKey &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -546,11 +589,15 @@ func (this *QCollatorSortKey) Swap(args ...interface{}) () {
 }
 
 // ~QCollatorSortKey()
-func (this *QCollatorSortKey) Free(args ...interface{}) () {
+func (this *QCollatorSortKey) Freeqcollatorsortkey(args ...interface{}) () {
   // ~QCollatorSortKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -558,10 +605,7 @@ func (this *QCollatorSortKey) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCollatorSortKeyD0Ev
     // invoke: void ~QCollatorSortKey()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QCollatorSortKeyD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QCollatorSortKeyD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCollatorSortKey", "~QCollatorSortKey", args)
   }

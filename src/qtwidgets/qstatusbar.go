@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -69,7 +68,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStatusBar)=1
@@ -80,11 +78,15 @@ type QStatusBar struct {
 }
 
 // ~QStatusBar()
-func (this *QStatusBar) Free(args ...interface{}) () {
+func (this *QStatusBar) Freeqstatusbar(args ...interface{}) () {
   // ~QStatusBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -92,10 +94,7 @@ func (this *QStatusBar) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QStatusBarD0Ev
     // invoke: void ~QStatusBar()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN10QStatusBarD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN10QStatusBarD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStatusBar", "~QStatusBar", args)
   }
@@ -104,12 +103,16 @@ func (this *QStatusBar) Free(args ...interface{}) () {
 }
 
 // removeWidget(class QWidget *)
-func (this *QStatusBar) RemoveWidget(args ...interface{}) () {
+func (this *QStatusBar) Removewidget(args ...interface{}) () {
   // removeWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -128,15 +131,16 @@ func (this *QStatusBar) RemoveWidget(args ...interface{}) () {
 }
 
 // QStatusBar(class QWidget *)
-func GcfreeQStatusBar(this *QStatusBar) {
-  qtrt.UniverseFree(this)
-}
 func NewQStatusBar(args ...interface{}) *QStatusBar {
   // QStatusBar(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -149,9 +153,7 @@ func NewQStatusBar(args ...interface{}) *QStatusBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QStatusBarC2EP7QWidget(arg0)
-    this := &QStatusBar{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStatusBar)
-    return this
+    return &QStatusBar{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStatusBar", "QStatusBar", args)
   }
@@ -160,11 +162,15 @@ func NewQStatusBar(args ...interface{}) *QStatusBar {
 }
 
 // clearMessage()
-func (this *QStatusBar) ClearMessage(args ...interface{}) () {
+func (this *QStatusBar) Clearmessage(args ...interface{}) () {
   // clearMessage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -181,7 +187,7 @@ func (this *QStatusBar) ClearMessage(args ...interface{}) () {
 }
 
 // insertWidget(int, class QWidget *, int)
-func (this *QStatusBar) InsertWidget(args ...interface{}) (ret interface{}) {
+func (this *QStatusBar) Insertwidget(args ...interface{}) (ret interface{}) {
   // insertWidget(int, class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -189,6 +195,10 @@ func (this *QStatusBar) InsertWidget(args ...interface{}) (ret interface{}) {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -219,13 +229,17 @@ func (this *QStatusBar) InsertWidget(args ...interface{}) (ret interface{}) {
 }
 
 // addPermanentWidget(class QWidget *, int)
-func (this *QStatusBar) AddPermanentWidget(args ...interface{}) () {
+func (this *QStatusBar) Addpermanentwidget(args ...interface{}) () {
   // addPermanentWidget(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -246,11 +260,15 @@ func (this *QStatusBar) AddPermanentWidget(args ...interface{}) () {
 }
 
 // currentMessage()
-func (this *QStatusBar) CurrentMessage(args ...interface{}) (ret interface{}) {
+func (this *QStatusBar) Currentmessage(args ...interface{}) (ret interface{}) {
   // currentMessage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -275,13 +293,17 @@ func (this *QStatusBar) CurrentMessage(args ...interface{}) (ret interface{}) {
 }
 
 // addWidget(class QWidget *, int)
-func (this *QStatusBar) AddWidget(args ...interface{}) () {
+func (this *QStatusBar) Addwidget(args ...interface{}) () {
   // addWidget(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -302,12 +324,16 @@ func (this *QStatusBar) AddWidget(args ...interface{}) () {
 }
 
 // setSizeGripEnabled(_Bool)
-func (this *QStatusBar) SetSizeGripEnabled(args ...interface{}) () {
+func (this *QStatusBar) Setsizegripenabled(args ...interface{}) () {
   // setSizeGripEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -326,7 +352,7 @@ func (this *QStatusBar) SetSizeGripEnabled(args ...interface{}) () {
 }
 
 // insertPermanentWidget(int, class QWidget *, int)
-func (this *QStatusBar) InsertPermanentWidget(args ...interface{}) (ret interface{}) {
+func (this *QStatusBar) Insertpermanentwidget(args ...interface{}) (ret interface{}) {
   // insertPermanentWidget(int, class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -334,6 +360,10 @@ func (this *QStatusBar) InsertPermanentWidget(args ...interface{}) (ret interfac
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -364,11 +394,15 @@ func (this *QStatusBar) InsertPermanentWidget(args ...interface{}) (ret interfac
 }
 
 // metaObject()
-func (this *QStatusBar) MetaObject(args ...interface{}) () {
+func (this *QStatusBar) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -385,11 +419,15 @@ func (this *QStatusBar) MetaObject(args ...interface{}) () {
 }
 
 // isSizeGripEnabled()
-func (this *QStatusBar) IsSizeGripEnabled(args ...interface{}) (ret interface{}) {
+func (this *QStatusBar) Issizegripenabled(args ...interface{}) (ret interface{}) {
   // isSizeGripEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -414,13 +452,17 @@ func (this *QStatusBar) IsSizeGripEnabled(args ...interface{}) (ret interface{})
 }
 
 // showMessage(const class QString &, int)
-func (this *QStatusBar) ShowMessage(args ...interface{}) () {
+func (this *QStatusBar) Showmessage(args ...interface{}) () {
   // showMessage(const class QString &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qgesture.h
 // dst-file: /src/widgets/qgesture.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -189,7 +188,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSwipeGesture)=1
@@ -235,15 +233,16 @@ type QPinchGesture struct {
 }
 
 // QSwipeGesture(class QObject *)
-func GcfreeQSwipeGesture(this *QSwipeGesture) {
-  qtrt.UniverseFree(this)
-}
 func NewQSwipeGesture(args ...interface{}) *QSwipeGesture {
   // QSwipeGesture(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -256,9 +255,7 @@ func NewQSwipeGesture(args ...interface{}) *QSwipeGesture {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QSwipeGestureC2EP7QObject(arg0)
-    this := &QSwipeGesture{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSwipeGesture)
-    return this
+    return &QSwipeGesture{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSwipeGesture", "QSwipeGesture", args)
   }
@@ -267,11 +264,15 @@ func NewQSwipeGesture(args ...interface{}) *QSwipeGesture {
 }
 
 // metaObject()
-func (this *QSwipeGesture) MetaObject(args ...interface{}) () {
+func (this *QSwipeGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -288,11 +289,15 @@ func (this *QSwipeGesture) MetaObject(args ...interface{}) () {
 }
 
 // horizontalDirection()
-func (this *QSwipeGesture) HorizontalDirection(args ...interface{}) () {
+func (this *QSwipeGesture) Horizontaldirection(args ...interface{}) () {
   // horizontalDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -309,11 +314,15 @@ func (this *QSwipeGesture) HorizontalDirection(args ...interface{}) () {
 }
 
 // verticalDirection()
-func (this *QSwipeGesture) VerticalDirection(args ...interface{}) () {
+func (this *QSwipeGesture) Verticaldirection(args ...interface{}) () {
   // verticalDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -330,11 +339,15 @@ func (this *QSwipeGesture) VerticalDirection(args ...interface{}) () {
 }
 
 // swipeAngle()
-func (this *QSwipeGesture) SwipeAngle(args ...interface{}) (ret interface{}) {
+func (this *QSwipeGesture) Swipeangle(args ...interface{}) (ret interface{}) {
   // swipeAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -359,11 +372,15 @@ func (this *QSwipeGesture) SwipeAngle(args ...interface{}) (ret interface{}) {
 }
 
 // ~QSwipeGesture()
-func (this *QSwipeGesture) Free(args ...interface{}) () {
+func (this *QSwipeGesture) Freeqswipegesture(args ...interface{}) () {
   // ~QSwipeGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -371,10 +388,7 @@ func (this *QSwipeGesture) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QSwipeGestureD0Ev
     // invoke: void ~QSwipeGesture()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QSwipeGestureD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QSwipeGestureD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSwipeGesture", "~QSwipeGesture", args)
   }
@@ -383,12 +397,16 @@ func (this *QSwipeGesture) Free(args ...interface{}) () {
 }
 
 // setSwipeAngle(qreal)
-func (this *QSwipeGesture) SetSwipeAngle(args ...interface{}) () {
+func (this *QSwipeGesture) Setswipeangle(args ...interface{}) () {
   // setSwipeAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -407,11 +425,15 @@ func (this *QSwipeGesture) SetSwipeAngle(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QGesture) MetaObject(args ...interface{}) () {
+func (this *QGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -428,11 +450,15 @@ func (this *QGesture) MetaObject(args ...interface{}) () {
 }
 
 // hasHotSpot()
-func (this *QGesture) HasHotSpot(args ...interface{}) (ret interface{}) {
+func (this *QGesture) Hashotspot(args ...interface{}) (ret interface{}) {
   // hasHotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -457,11 +483,15 @@ func (this *QGesture) HasHotSpot(args ...interface{}) (ret interface{}) {
 }
 
 // gestureCancelPolicy()
-func (this *QGesture) GestureCancelPolicy(args ...interface{}) () {
+func (this *QGesture) Gesturecancelpolicy(args ...interface{}) () {
   // gestureCancelPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -483,6 +513,10 @@ func (this *QGesture) State(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -499,12 +533,16 @@ func (this *QGesture) State(args ...interface{}) () {
 }
 
 // setHotSpot(const class QPointF &)
-func (this *QGesture) SetHotSpot(args ...interface{}) () {
+func (this *QGesture) Sethotspot(args ...interface{}) () {
   // setHotSpot(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -523,11 +561,15 @@ func (this *QGesture) SetHotSpot(args ...interface{}) () {
 }
 
 // hotSpot()
-func (this *QGesture) HotSpot(args ...interface{}) (ret interface{}) {
+func (this *QGesture) Hotspot(args ...interface{}) (ret interface{}) {
   // hotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -552,11 +594,15 @@ func (this *QGesture) HotSpot(args ...interface{}) (ret interface{}) {
 }
 
 // ~QGesture()
-func (this *QGesture) Free(args ...interface{}) () {
+func (this *QGesture) Freeqgesture(args ...interface{}) () {
   // ~QGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -564,10 +610,7 @@ func (this *QGesture) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QGestureD0Ev
     // invoke: void ~QGesture()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN8QGestureD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN8QGestureD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGesture", "~QGesture", args)
   }
@@ -576,11 +619,15 @@ func (this *QGesture) Free(args ...interface{}) () {
 }
 
 // gestureType()
-func (this *QGesture) GestureType(args ...interface{}) () {
+func (this *QGesture) Gesturetype(args ...interface{}) () {
   // gestureType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -597,11 +644,15 @@ func (this *QGesture) GestureType(args ...interface{}) () {
 }
 
 // unsetHotSpot()
-func (this *QGesture) UnsetHotSpot(args ...interface{}) () {
+func (this *QGesture) Unsethotspot(args ...interface{}) () {
   // unsetHotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -618,15 +669,16 @@ func (this *QGesture) UnsetHotSpot(args ...interface{}) () {
 }
 
 // QGesture(class QObject *)
-func GcfreeQGesture(this *QGesture) {
-  qtrt.UniverseFree(this)
-}
 func NewQGesture(args ...interface{}) *QGesture {
   // QGesture(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -639,9 +691,7 @@ func NewQGesture(args ...interface{}) *QGesture {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QGestureC2EP7QObject(arg0)
-    this := &QGesture{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGesture)
-    return this
+    return &QGesture{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGesture", "QGesture", args)
   }
@@ -650,11 +700,15 @@ func NewQGesture(args ...interface{}) *QGesture {
 }
 
 // activeGestures()
-func (this *QGestureEvent) ActiveGestures(args ...interface{}) () {
+func (this *QGestureEvent) Activegestures(args ...interface{}) () {
   // activeGestures()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -676,6 +730,10 @@ func (this *QGestureEvent) Gestures(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -697,6 +755,10 @@ func (this *QGestureEvent) Widget(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -721,11 +783,15 @@ func (this *QGestureEvent) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // canceledGestures()
-func (this *QGestureEvent) CanceledGestures(args ...interface{}) () {
+func (this *QGestureEvent) Canceledgestures(args ...interface{}) () {
   // canceledGestures()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -742,12 +808,16 @@ func (this *QGestureEvent) CanceledGestures(args ...interface{}) () {
 }
 
 // setWidget(class QWidget *)
-func (this *QGestureEvent) SetWidget(args ...interface{}) () {
+func (this *QGestureEvent) Setwidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -772,6 +842,10 @@ func (this *QGestureEvent) Accept(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGesture{}) // "QGesture *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -796,6 +870,10 @@ func (this *QGestureEvent) Ignore(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGesture{}) // "QGesture *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -814,12 +892,16 @@ func (this *QGestureEvent) Ignore(args ...interface{}) () {
 }
 
 // isAccepted(class QGesture *)
-func (this *QGestureEvent) IsAccepted(args ...interface{}) (ret interface{}) {
+func (this *QGestureEvent) Isaccepted(args ...interface{}) (ret interface{}) {
   // isAccepted(class QGesture *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGesture{}) // "QGesture *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -846,11 +928,15 @@ func (this *QGestureEvent) IsAccepted(args ...interface{}) (ret interface{}) {
 }
 
 // ~QGestureEvent()
-func (this *QGestureEvent) Free(args ...interface{}) () {
+func (this *QGestureEvent) Freeqgestureevent(args ...interface{}) () {
   // ~QGestureEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -858,10 +944,7 @@ func (this *QGestureEvent) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGestureEventD0Ev
     // invoke: void ~QGestureEvent()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QGestureEventD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QGestureEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGestureEvent", "~QGestureEvent", args)
   }
@@ -870,13 +953,17 @@ func (this *QGestureEvent) Free(args ...interface{}) () {
 }
 
 // setAccepted(class QGesture *, _Bool)
-func (this *QGestureEvent) SetAccepted(args ...interface{}) () {
+func (this *QGestureEvent) Setaccepted(args ...interface{}) () {
   // setAccepted(class QGesture *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGesture{}) // "QGesture *"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -897,12 +984,16 @@ func (this *QGestureEvent) SetAccepted(args ...interface{}) () {
 }
 
 // mapToGraphicsScene(const class QPointF &)
-func (this *QGestureEvent) MapToGraphicsScene(args ...interface{}) (ret interface{}) {
+func (this *QGestureEvent) Maptographicsscene(args ...interface{}) (ret interface{}) {
   // mapToGraphicsScene(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -934,6 +1025,10 @@ func (this *QPanGesture) Acceleration(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -958,12 +1053,16 @@ func (this *QPanGesture) Acceleration(args ...interface{}) (ret interface{}) {
 }
 
 // setAcceleration(qreal)
-func (this *QPanGesture) SetAcceleration(args ...interface{}) () {
+func (this *QPanGesture) Setacceleration(args ...interface{}) () {
   // setAcceleration(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -982,11 +1081,15 @@ func (this *QPanGesture) SetAcceleration(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QPanGesture) MetaObject(args ...interface{}) () {
+func (this *QPanGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1003,15 +1106,16 @@ func (this *QPanGesture) MetaObject(args ...interface{}) () {
 }
 
 // QPanGesture(class QObject *)
-func GcfreeQPanGesture(this *QPanGesture) {
-  qtrt.UniverseFree(this)
-}
 func NewQPanGesture(args ...interface{}) *QPanGesture {
   // QPanGesture(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1024,9 +1128,7 @@ func NewQPanGesture(args ...interface{}) *QPanGesture {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QPanGestureC2EP7QObject(arg0)
-    this := &QPanGesture{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPanGesture)
-    return this
+    return &QPanGesture{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPanGesture", "QPanGesture", args)
   }
@@ -1040,6 +1142,10 @@ func (this *QPanGesture) Offset(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1064,11 +1170,15 @@ func (this *QPanGesture) Offset(args ...interface{}) (ret interface{}) {
 }
 
 // ~QPanGesture()
-func (this *QPanGesture) Free(args ...interface{}) () {
+func (this *QPanGesture) Freeqpangesture(args ...interface{}) () {
   // ~QPanGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1076,10 +1186,7 @@ func (this *QPanGesture) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPanGestureD0Ev
     // invoke: void ~QPanGesture()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QPanGestureD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QPanGestureD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPanGesture", "~QPanGesture", args)
   }
@@ -1093,6 +1200,10 @@ func (this *QPanGesture) Delta(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1117,12 +1228,16 @@ func (this *QPanGesture) Delta(args ...interface{}) (ret interface{}) {
 }
 
 // setOffset(const class QPointF &)
-func (this *QPanGesture) SetOffset(args ...interface{}) () {
+func (this *QPanGesture) Setoffset(args ...interface{}) () {
   // setOffset(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1141,11 +1256,15 @@ func (this *QPanGesture) SetOffset(args ...interface{}) () {
 }
 
 // lastOffset()
-func (this *QPanGesture) LastOffset(args ...interface{}) (ret interface{}) {
+func (this *QPanGesture) Lastoffset(args ...interface{}) (ret interface{}) {
   // lastOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1170,12 +1289,16 @@ func (this *QPanGesture) LastOffset(args ...interface{}) (ret interface{}) {
 }
 
 // setLastOffset(const class QPointF &)
-func (this *QPanGesture) SetLastOffset(args ...interface{}) () {
+func (this *QPanGesture) Setlastoffset(args ...interface{}) () {
   // setLastOffset(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1194,15 +1317,16 @@ func (this *QPanGesture) SetLastOffset(args ...interface{}) () {
 }
 
 // QTapAndHoldGesture(class QObject *)
-func GcfreeQTapAndHoldGesture(this *QTapAndHoldGesture) {
-  qtrt.UniverseFree(this)
-}
 func NewQTapAndHoldGesture(args ...interface{}) *QTapAndHoldGesture {
   // QTapAndHoldGesture(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1215,9 +1339,7 @@ func NewQTapAndHoldGesture(args ...interface{}) *QTapAndHoldGesture {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QTapAndHoldGestureC2EP7QObject(arg0)
-    this := &QTapAndHoldGesture{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTapAndHoldGesture)
-    return this
+    return &QTapAndHoldGesture{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTapAndHoldGesture", "QTapAndHoldGesture", args)
   }
@@ -1226,11 +1348,15 @@ func NewQTapAndHoldGesture(args ...interface{}) *QTapAndHoldGesture {
 }
 
 // metaObject()
-func (this *QTapAndHoldGesture) MetaObject(args ...interface{}) () {
+func (this *QTapAndHoldGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1247,11 +1373,15 @@ func (this *QTapAndHoldGesture) MetaObject(args ...interface{}) () {
 }
 
 // ~QTapAndHoldGesture()
-func (this *QTapAndHoldGesture) Free(args ...interface{}) () {
+func (this *QTapAndHoldGesture) Freeqtapandholdgesture(args ...interface{}) () {
   // ~QTapAndHoldGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1259,10 +1389,7 @@ func (this *QTapAndHoldGesture) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QTapAndHoldGestureD0Ev
     // invoke: void ~QTapAndHoldGesture()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN18QTapAndHoldGestureD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN18QTapAndHoldGestureD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTapAndHoldGesture", "~QTapAndHoldGesture", args)
   }
@@ -1271,11 +1398,15 @@ func (this *QTapAndHoldGesture) Free(args ...interface{}) () {
 }
 
 // timeout()
-func (this *QTapAndHoldGesture) Timeout_s(args ...interface{}) (ret interface{}) {
+func (this *QTapAndHoldGesture) Timeout_S(args ...interface{}) (ret interface{}) {
   // timeout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1305,6 +1436,10 @@ func (this *QTapAndHoldGesture) Position(args ...interface{}) (ret interface{}) 
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1329,12 +1464,16 @@ func (this *QTapAndHoldGesture) Position(args ...interface{}) (ret interface{}) 
 }
 
 // setPosition(const class QPointF &)
-func (this *QTapAndHoldGesture) SetPosition(args ...interface{}) () {
+func (this *QTapAndHoldGesture) Setposition(args ...interface{}) () {
   // setPosition(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1353,12 +1492,16 @@ func (this *QTapAndHoldGesture) SetPosition(args ...interface{}) () {
 }
 
 // setTimeout(int)
-func (this *QTapAndHoldGesture) SetTimeout_s(args ...interface{}) () {
+func (this *QTapAndHoldGesture) Settimeout_S(args ...interface{}) () {
   // setTimeout(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1377,11 +1520,15 @@ func (this *QTapAndHoldGesture) SetTimeout_s(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QTapGesture) MetaObject(args ...interface{}) () {
+func (this *QTapGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1398,15 +1545,16 @@ func (this *QTapGesture) MetaObject(args ...interface{}) () {
 }
 
 // QTapGesture(class QObject *)
-func GcfreeQTapGesture(this *QTapGesture) {
-  qtrt.UniverseFree(this)
-}
 func NewQTapGesture(args ...interface{}) *QTapGesture {
   // QTapGesture(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1419,9 +1567,7 @@ func NewQTapGesture(args ...interface{}) *QTapGesture {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTapGestureC2EP7QObject(arg0)
-    this := &QTapGesture{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTapGesture)
-    return this
+    return &QTapGesture{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTapGesture", "QTapGesture", args)
   }
@@ -1430,11 +1576,15 @@ func NewQTapGesture(args ...interface{}) *QTapGesture {
 }
 
 // ~QTapGesture()
-func (this *QTapGesture) Free(args ...interface{}) () {
+func (this *QTapGesture) Freeqtapgesture(args ...interface{}) () {
   // ~QTapGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1442,10 +1592,7 @@ func (this *QTapGesture) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTapGestureD0Ev
     // invoke: void ~QTapGesture()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QTapGestureD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QTapGestureD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTapGesture", "~QTapGesture", args)
   }
@@ -1459,6 +1606,10 @@ func (this *QTapGesture) Position(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1483,12 +1634,16 @@ func (this *QTapGesture) Position(args ...interface{}) (ret interface{}) {
 }
 
 // setPosition(const class QPointF &)
-func (this *QTapGesture) SetPosition(args ...interface{}) () {
+func (this *QTapGesture) Setposition(args ...interface{}) () {
   // setPosition(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1507,11 +1662,15 @@ func (this *QTapGesture) SetPosition(args ...interface{}) () {
 }
 
 // changeFlags()
-func (this *QPinchGesture) ChangeFlags(args ...interface{}) () {
+func (this *QPinchGesture) Changeflags(args ...interface{}) () {
   // changeFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1528,11 +1687,15 @@ func (this *QPinchGesture) ChangeFlags(args ...interface{}) () {
 }
 
 // startCenterPoint()
-func (this *QPinchGesture) StartCenterPoint(args ...interface{}) (ret interface{}) {
+func (this *QPinchGesture) Startcenterpoint(args ...interface{}) (ret interface{}) {
   // startCenterPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1557,12 +1720,16 @@ func (this *QPinchGesture) StartCenterPoint(args ...interface{}) (ret interface{
 }
 
 // setLastCenterPoint(const class QPointF &)
-func (this *QPinchGesture) SetLastCenterPoint(args ...interface{}) () {
+func (this *QPinchGesture) Setlastcenterpoint(args ...interface{}) () {
   // setLastCenterPoint(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1581,12 +1748,16 @@ func (this *QPinchGesture) SetLastCenterPoint(args ...interface{}) () {
 }
 
 // setStartCenterPoint(const class QPointF &)
-func (this *QPinchGesture) SetStartCenterPoint(args ...interface{}) () {
+func (this *QPinchGesture) Setstartcenterpoint(args ...interface{}) () {
   // setStartCenterPoint(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1605,12 +1776,16 @@ func (this *QPinchGesture) SetStartCenterPoint(args ...interface{}) () {
 }
 
 // setTotalRotationAngle(qreal)
-func (this *QPinchGesture) SetTotalRotationAngle(args ...interface{}) () {
+func (this *QPinchGesture) Settotalrotationangle(args ...interface{}) () {
   // setTotalRotationAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1629,11 +1804,15 @@ func (this *QPinchGesture) SetTotalRotationAngle(args ...interface{}) () {
 }
 
 // lastRotationAngle()
-func (this *QPinchGesture) LastRotationAngle(args ...interface{}) (ret interface{}) {
+func (this *QPinchGesture) Lastrotationangle(args ...interface{}) (ret interface{}) {
   // lastRotationAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1658,11 +1837,15 @@ func (this *QPinchGesture) LastRotationAngle(args ...interface{}) (ret interface
 }
 
 // rotationAngle()
-func (this *QPinchGesture) RotationAngle(args ...interface{}) (ret interface{}) {
+func (this *QPinchGesture) Rotationangle(args ...interface{}) (ret interface{}) {
   // rotationAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1687,11 +1870,15 @@ func (this *QPinchGesture) RotationAngle(args ...interface{}) (ret interface{}) 
 }
 
 // totalChangeFlags()
-func (this *QPinchGesture) TotalChangeFlags(args ...interface{}) () {
+func (this *QPinchGesture) Totalchangeflags(args ...interface{}) () {
   // totalChangeFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1708,12 +1895,16 @@ func (this *QPinchGesture) TotalChangeFlags(args ...interface{}) () {
 }
 
 // setTotalScaleFactor(qreal)
-func (this *QPinchGesture) SetTotalScaleFactor(args ...interface{}) () {
+func (this *QPinchGesture) Settotalscalefactor(args ...interface{}) () {
   // setTotalScaleFactor(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1732,12 +1923,16 @@ func (this *QPinchGesture) SetTotalScaleFactor(args ...interface{}) () {
 }
 
 // setLastScaleFactor(qreal)
-func (this *QPinchGesture) SetLastScaleFactor(args ...interface{}) () {
+func (this *QPinchGesture) Setlastscalefactor(args ...interface{}) () {
   // setLastScaleFactor(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1756,11 +1951,15 @@ func (this *QPinchGesture) SetLastScaleFactor(args ...interface{}) () {
 }
 
 // ~QPinchGesture()
-func (this *QPinchGesture) Free(args ...interface{}) () {
+func (this *QPinchGesture) Freeqpinchgesture(args ...interface{}) () {
   // ~QPinchGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1768,10 +1967,7 @@ func (this *QPinchGesture) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QPinchGestureD0Ev
     // invoke: void ~QPinchGesture()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QPinchGestureD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QPinchGestureD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPinchGesture", "~QPinchGesture", args)
   }
@@ -1780,11 +1976,15 @@ func (this *QPinchGesture) Free(args ...interface{}) () {
 }
 
 // totalRotationAngle()
-func (this *QPinchGesture) TotalRotationAngle(args ...interface{}) (ret interface{}) {
+func (this *QPinchGesture) Totalrotationangle(args ...interface{}) (ret interface{}) {
   // totalRotationAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1809,12 +2009,16 @@ func (this *QPinchGesture) TotalRotationAngle(args ...interface{}) (ret interfac
 }
 
 // setRotationAngle(qreal)
-func (this *QPinchGesture) SetRotationAngle(args ...interface{}) () {
+func (this *QPinchGesture) Setrotationangle(args ...interface{}) () {
   // setRotationAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1833,15 +2037,16 @@ func (this *QPinchGesture) SetRotationAngle(args ...interface{}) () {
 }
 
 // QPinchGesture(class QObject *)
-func GcfreeQPinchGesture(this *QPinchGesture) {
-  qtrt.UniverseFree(this)
-}
 func NewQPinchGesture(args ...interface{}) *QPinchGesture {
   // QPinchGesture(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1854,9 +2059,7 @@ func NewQPinchGesture(args ...interface{}) *QPinchGesture {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QPinchGestureC2EP7QObject(arg0)
-    this := &QPinchGesture{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPinchGesture)
-    return this
+    return &QPinchGesture{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPinchGesture", "QPinchGesture", args)
   }
@@ -1865,11 +2068,15 @@ func NewQPinchGesture(args ...interface{}) *QPinchGesture {
 }
 
 // lastCenterPoint()
-func (this *QPinchGesture) LastCenterPoint(args ...interface{}) (ret interface{}) {
+func (this *QPinchGesture) Lastcenterpoint(args ...interface{}) (ret interface{}) {
   // lastCenterPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1894,11 +2101,15 @@ func (this *QPinchGesture) LastCenterPoint(args ...interface{}) (ret interface{}
 }
 
 // centerPoint()
-func (this *QPinchGesture) CenterPoint(args ...interface{}) (ret interface{}) {
+func (this *QPinchGesture) Centerpoint(args ...interface{}) (ret interface{}) {
   // centerPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1923,11 +2134,15 @@ func (this *QPinchGesture) CenterPoint(args ...interface{}) (ret interface{}) {
 }
 
 // totalScaleFactor()
-func (this *QPinchGesture) TotalScaleFactor(args ...interface{}) (ret interface{}) {
+func (this *QPinchGesture) Totalscalefactor(args ...interface{}) (ret interface{}) {
   // totalScaleFactor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1952,11 +2167,15 @@ func (this *QPinchGesture) TotalScaleFactor(args ...interface{}) (ret interface{
 }
 
 // lastScaleFactor()
-func (this *QPinchGesture) LastScaleFactor(args ...interface{}) (ret interface{}) {
+func (this *QPinchGesture) Lastscalefactor(args ...interface{}) (ret interface{}) {
   // lastScaleFactor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1981,12 +2200,16 @@ func (this *QPinchGesture) LastScaleFactor(args ...interface{}) (ret interface{}
 }
 
 // setCenterPoint(const class QPointF &)
-func (this *QPinchGesture) SetCenterPoint(args ...interface{}) () {
+func (this *QPinchGesture) Setcenterpoint(args ...interface{}) () {
   // setCenterPoint(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2005,11 +2228,15 @@ func (this *QPinchGesture) SetCenterPoint(args ...interface{}) () {
 }
 
 // scaleFactor()
-func (this *QPinchGesture) ScaleFactor(args ...interface{}) (ret interface{}) {
+func (this *QPinchGesture) Scalefactor(args ...interface{}) (ret interface{}) {
   // scaleFactor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2034,11 +2261,15 @@ func (this *QPinchGesture) ScaleFactor(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QPinchGesture) MetaObject(args ...interface{}) () {
+func (this *QPinchGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2055,12 +2286,16 @@ func (this *QPinchGesture) MetaObject(args ...interface{}) () {
 }
 
 // setLastRotationAngle(qreal)
-func (this *QPinchGesture) SetLastRotationAngle(args ...interface{}) () {
+func (this *QPinchGesture) Setlastrotationangle(args ...interface{}) () {
   // setLastRotationAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2079,12 +2314,16 @@ func (this *QPinchGesture) SetLastRotationAngle(args ...interface{}) () {
 }
 
 // setScaleFactor(qreal)
-func (this *QPinchGesture) SetScaleFactor(args ...interface{}) () {
+func (this *QPinchGesture) Setscalefactor(args ...interface{}) () {
   // setScaleFactor(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

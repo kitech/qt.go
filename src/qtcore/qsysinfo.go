@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qsysinfo.h
 // dst-file: /src/core/qsysinfo.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -31,14 +30,16 @@ import "qtrt"
 #include <uchar.h>
   // proto: static QString QSysInfo::kernelVersion();
 extern void* C_ZN8QSysInfo13kernelVersionEv(); // 4
-  // proto: static QString QSysInfo::buildCpuArchitecture();
-extern void* C_ZN8QSysInfo20buildCpuArchitectureEv(); // 4
+  // proto: static QString QSysInfo::machineHostName();
+extern void* C_ZN8QSysInfo15machineHostNameEv(); // 4
   // proto: static QString QSysInfo::prettyProductName();
 extern void* C_ZN8QSysInfo17prettyProductNameEv(); // 4
   // proto: static QString QSysInfo::productVersion();
 extern void* C_ZN8QSysInfo14productVersionEv(); // 4
   // proto: static QString QSysInfo::buildAbi();
 extern void* C_ZN8QSysInfo8buildAbiEv(); // 4
+  // proto: static QString QSysInfo::buildCpuArchitecture();
+extern void* C_ZN8QSysInfo20buildCpuArchitectureEv(); // 4
   // proto: static QString QSysInfo::kernelType();
 extern void* C_ZN8QSysInfo10kernelTypeEv(); // 4
   // proto: static QString QSysInfo::productType();
@@ -59,7 +60,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSysInfo)=1
@@ -69,11 +69,15 @@ type QSysInfo struct {
 }
 
 // kernelVersion()
-func (this *QSysInfo) KernelVersion_s(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) Kernelversion_S(args ...interface{}) (ret interface{}) {
   // kernelVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -97,20 +101,24 @@ func (this *QSysInfo) KernelVersion_s(args ...interface{}) (ret interface{}) {
   return
 }
 
-// buildCpuArchitecture()
-func (this *QSysInfo) BuildCpuArchitecture_s(args ...interface{}) (ret interface{}) {
-  // buildCpuArchitecture()
+// machineHostName()
+func (this *QSysInfo) Machinehostname_S(args ...interface{}) (ret interface{}) {
+  // machineHostName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN8QSysInfo20buildCpuArchitectureEv
-    // invoke: QString buildCpuArchitecture()
-    var ret0 = C.C_ZN8QSysInfo20buildCpuArchitectureEv()
+    // invoke: _ZN8QSysInfo15machineHostNameEv
+    // invoke: QString machineHostName()
+    var ret0 = C.C_ZN8QSysInfo15machineHostNameEv()
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
@@ -120,18 +128,22 @@ func (this *QSysInfo) BuildCpuArchitecture_s(args ...interface{}) (ret interface
         ret = qtrt.HandyConvert2go(ret0, rety)
     }
   default:
-    qtrt.ErrorResolve("QSysInfo", "buildCpuArchitecture", args)
+    qtrt.ErrorResolve("QSysInfo", "machineHostName", args)
   }
 
   return
 }
 
 // prettyProductName()
-func (this *QSysInfo) PrettyProductName_s(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) Prettyproductname_S(args ...interface{}) (ret interface{}) {
   // prettyProductName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -156,11 +168,15 @@ func (this *QSysInfo) PrettyProductName_s(args ...interface{}) (ret interface{})
 }
 
 // productVersion()
-func (this *QSysInfo) ProductVersion_s(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) Productversion_S(args ...interface{}) (ret interface{}) {
   // productVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -185,11 +201,15 @@ func (this *QSysInfo) ProductVersion_s(args ...interface{}) (ret interface{}) {
 }
 
 // buildAbi()
-func (this *QSysInfo) BuildAbi_s(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) Buildabi_S(args ...interface{}) (ret interface{}) {
   // buildAbi()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -213,12 +233,49 @@ func (this *QSysInfo) BuildAbi_s(args ...interface{}) (ret interface{}) {
   return
 }
 
+// buildCpuArchitecture()
+func (this *QSysInfo) Buildcpuarchitecture_S(args ...interface{}) (ret interface{}) {
+  // buildCpuArchitecture()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN8QSysInfo20buildCpuArchitectureEv
+    // invoke: QString buildCpuArchitecture()
+    var ret0 = C.C_ZN8QSysInfo20buildCpuArchitectureEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QSysInfo", "buildCpuArchitecture", args)
+  }
+
+  return
+}
+
 // kernelType()
-func (this *QSysInfo) KernelType_s(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) Kerneltype_S(args ...interface{}) (ret interface{}) {
   // kernelType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -243,11 +300,15 @@ func (this *QSysInfo) KernelType_s(args ...interface{}) (ret interface{}) {
 }
 
 // productType()
-func (this *QSysInfo) ProductType_s(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) Producttype_S(args ...interface{}) (ret interface{}) {
   // productType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -272,11 +333,15 @@ func (this *QSysInfo) ProductType_s(args ...interface{}) (ret interface{}) {
 }
 
 // windowsVersion()
-func (this *QSysInfo) WindowsVersion_s(args ...interface{}) () {
+func (this *QSysInfo) Windowsversion_S(args ...interface{}) () {
   // windowsVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -293,11 +358,15 @@ func (this *QSysInfo) WindowsVersion_s(args ...interface{}) () {
 }
 
 // currentCpuArchitecture()
-func (this *QSysInfo) CurrentCpuArchitecture_s(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) Currentcpuarchitecture_S(args ...interface{}) (ret interface{}) {
   // currentCpuArchitecture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -322,11 +391,15 @@ func (this *QSysInfo) CurrentCpuArchitecture_s(args ...interface{}) (ret interfa
 }
 
 // macVersion()
-func (this *QSysInfo) MacVersion_s(args ...interface{}) () {
+func (this *QSysInfo) Macversion_S(args ...interface{}) () {
   // macVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

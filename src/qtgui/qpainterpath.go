@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qpainterpath.h
 // dst-file: /src/gui/qpainterpath.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -205,7 +204,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPainterPath)=1
@@ -221,7 +219,7 @@ type QPainterPathStroker struct {
 }
 
 // addRect(const class QRectF &)
-func (this *QPainterPath) AddRect(args ...interface{}) () {
+func (this *QPainterPath) Addrect(args ...interface{}) () {
   // addRect(const class QRectF &)
   // addRect(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -233,6 +231,10 @@ func (this *QPainterPath) AddRect(args ...interface{}) () {
   vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -263,11 +265,15 @@ func (this *QPainterPath) AddRect(args ...interface{}) () {
 }
 
 // controlPointRect()
-func (this *QPainterPath) ControlPointRect(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Controlpointrect(args ...interface{}) (ret interface{}) {
   // controlPointRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -292,7 +298,7 @@ func (this *QPainterPath) ControlPointRect(args ...interface{}) (ret interface{}
 }
 
 // moveTo(qreal, qreal)
-func (this *QPainterPath) MoveTo(args ...interface{}) () {
+func (this *QPainterPath) Moveto(args ...interface{}) () {
   // moveTo(qreal, qreal)
   // moveTo(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -302,6 +308,10 @@ func (this *QPainterPath) MoveTo(args ...interface{}) () {
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -328,7 +338,7 @@ func (this *QPainterPath) MoveTo(args ...interface{}) () {
 }
 
 // lineTo(const class QPointF &)
-func (this *QPainterPath) LineTo(args ...interface{}) () {
+func (this *QPainterPath) Lineto(args ...interface{}) () {
   // lineTo(const class QPointF &)
   // lineTo(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -338,6 +348,10 @@ func (this *QPainterPath) LineTo(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -373,6 +387,10 @@ func (this *QPainterPath) Intersects(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QPainterPath{}) // "const QPainterPath &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -413,11 +431,15 @@ func (this *QPainterPath) Intersects(args ...interface{}) (ret interface{}) {
 }
 
 // elementCount()
-func (this *QPainterPath) ElementCount(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Elementcount(args ...interface{}) (ret interface{}) {
   // elementCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -442,11 +464,15 @@ func (this *QPainterPath) ElementCount(args ...interface{}) (ret interface{}) {
 }
 
 // closeSubpath()
-func (this *QPainterPath) CloseSubpath(args ...interface{}) () {
+func (this *QPainterPath) Closesubpath(args ...interface{}) () {
   // closeSubpath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -463,7 +489,7 @@ func (this *QPainterPath) CloseSubpath(args ...interface{}) () {
 }
 
 // toSubpathPolygons(const class QTransform &)
-func (this *QPainterPath) ToSubpathPolygons(args ...interface{}) () {
+func (this *QPainterPath) Tosubpathpolygons(args ...interface{}) () {
   // toSubpathPolygons(const class QTransform &)
   // toSubpathPolygons(const class QMatrix &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -472,6 +498,10 @@ func (this *QPainterPath) ToSubpathPolygons(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QTransform{}) // "const QTransform &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QMatrix{}) // "const QMatrix &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -496,9 +526,6 @@ func (this *QPainterPath) ToSubpathPolygons(args ...interface{}) () {
 }
 
 // QPainterPath(const class QPointF &)
-func GcfreeQPainterPath(this *QPainterPath) {
-  qtrt.UniverseFree(this)
-}
 func NewQPainterPath(args ...interface{}) *QPainterPath {
   // QPainterPath(const class QPointF &)
   // QPainterPath()
@@ -510,6 +537,10 @@ func NewQPainterPath(args ...interface{}) *QPainterPath {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QPainterPath{}) // "const QPainterPath &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -522,18 +553,14 @@ func NewQPainterPath(args ...interface{}) *QPainterPath {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QPainterPathC2ERK7QPointF(arg0)
-    this := &QPainterPath{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPainterPath)
-    return this
+    return &QPainterPath{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QPainterPathC1Ev
     // invoke: void QPainterPath()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QPainterPathC2Ev()
-    this := &QPainterPath{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPainterPath)
-    return this
+    return &QPainterPath{Qclsinst:qthis}
   case 2:
     // invoke: _ZN12QPainterPathC1ERKS_
     // invoke: void QPainterPath(const class QPainterPath &)
@@ -542,9 +569,7 @@ func NewQPainterPath(args ...interface{}) *QPainterPath {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QPainterPathC2ERKS_(arg0)
-    this := &QPainterPath{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPainterPath)
-    return this
+    return &QPainterPath{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPainterPath", "QPainterPath", args)
   }
@@ -553,12 +578,16 @@ func NewQPainterPath(args ...interface{}) *QPainterPath {
 }
 
 // angleAtPercent(qreal)
-func (this *QPainterPath) AngleAtPercent(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Angleatpercent(args ...interface{}) (ret interface{}) {
   // angleAtPercent(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -585,7 +614,7 @@ func (this *QPainterPath) AngleAtPercent(args ...interface{}) (ret interface{}) 
 }
 
 // addEllipse(const class QRectF &)
-func (this *QPainterPath) AddEllipse(args ...interface{}) () {
+func (this *QPainterPath) Addellipse(args ...interface{}) () {
   // addEllipse(const class QRectF &)
   // addEllipse(const class QPointF &, qreal, qreal)
   // addEllipse(qreal, qreal, qreal, qreal)
@@ -602,6 +631,10 @@ func (this *QPainterPath) AddEllipse(args ...interface{}) () {
   vtys[2][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[2][2] = qtrt.DoubleTy(false) // "qreal"
   vtys[2][3] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -642,7 +675,7 @@ func (this *QPainterPath) AddEllipse(args ...interface{}) () {
 }
 
 // quadTo(const class QPointF &, const class QPointF &)
-func (this *QPainterPath) QuadTo(args ...interface{}) () {
+func (this *QPainterPath) Quadto(args ...interface{}) () {
   // quadTo(const class QPointF &, const class QPointF &)
   // quadTo(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -655,6 +688,10 @@ func (this *QPainterPath) QuadTo(args ...interface{}) () {
   vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -687,11 +724,15 @@ func (this *QPainterPath) QuadTo(args ...interface{}) () {
 }
 
 // fillRule()
-func (this *QPainterPath) FillRule(args ...interface{}) () {
+func (this *QPainterPath) Fillrule(args ...interface{}) () {
   // fillRule()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -714,6 +755,10 @@ func (this *QPainterPath) Intersected(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPainterPath{}) // "const QPainterPath &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -750,6 +795,10 @@ func (this *QPainterPath) Translate(args ...interface{}) () {
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -788,6 +837,10 @@ func (this *QPainterPath) Contains(args ...interface{}) (ret interface{}) {
   vtys[1][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -842,7 +895,7 @@ func (this *QPainterPath) Contains(args ...interface{}) (ret interface{}) {
 }
 
 // setElementPositionAt(int, qreal, qreal)
-func (this *QPainterPath) SetElementPositionAt(args ...interface{}) () {
+func (this *QPainterPath) Setelementpositionat(args ...interface{}) () {
   // setElementPositionAt(int, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -850,6 +903,10 @@ func (this *QPainterPath) SetElementPositionAt(args ...interface{}) () {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -872,11 +929,15 @@ func (this *QPainterPath) SetElementPositionAt(args ...interface{}) () {
 }
 
 // ~QPainterPath()
-func (this *QPainterPath) Free(args ...interface{}) () {
+func (this *QPainterPath) Freeqpainterpath(args ...interface{}) () {
   // ~QPainterPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -884,10 +945,7 @@ func (this *QPainterPath) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPainterPathD0Ev
     // invoke: void ~QPainterPath()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QPainterPathD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QPainterPathD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPainterPath", "~QPainterPath", args)
   }
@@ -902,6 +960,10 @@ func (this *QPainterPath) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPainterPath{}) // "QPainterPath &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -920,7 +982,7 @@ func (this *QPainterPath) Swap(args ...interface{}) () {
 }
 
 // toFillPolygons(const class QMatrix &)
-func (this *QPainterPath) ToFillPolygons(args ...interface{}) () {
+func (this *QPainterPath) Tofillpolygons(args ...interface{}) () {
   // toFillPolygons(const class QMatrix &)
   // toFillPolygons(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -929,6 +991,10 @@ func (this *QPainterPath) ToFillPolygons(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QMatrix{}) // "const QMatrix &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QTransform{}) // "const QTransform &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -953,11 +1019,15 @@ func (this *QPainterPath) ToFillPolygons(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QPainterPath) IsEmpty(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -982,12 +1052,16 @@ func (this *QPainterPath) IsEmpty(args ...interface{}) (ret interface{}) {
 }
 
 // addRegion(const class QRegion &)
-func (this *QPainterPath) AddRegion(args ...interface{}) () {
+func (this *QPainterPath) Addregion(args ...interface{}) () {
   // addRegion(const class QRegion &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1006,12 +1080,16 @@ func (this *QPainterPath) AddRegion(args ...interface{}) () {
 }
 
 // addPath(const class QPainterPath &)
-func (this *QPainterPath) AddPath(args ...interface{}) () {
+func (this *QPainterPath) Addpath(args ...interface{}) () {
   // addPath(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPainterPath{}) // "const QPainterPath &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1030,12 +1108,16 @@ func (this *QPainterPath) AddPath(args ...interface{}) () {
 }
 
 // addPolygon(const class QPolygonF &)
-func (this *QPainterPath) AddPolygon(args ...interface{}) () {
+func (this *QPainterPath) Addpolygon(args ...interface{}) () {
   // addPolygon(const class QPolygonF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPolygonF{}) // "const QPolygonF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1054,7 +1136,7 @@ func (this *QPainterPath) AddPolygon(args ...interface{}) () {
 }
 
 // arcTo(const class QRectF &, qreal, qreal)
-func (this *QPainterPath) ArcTo(args ...interface{}) () {
+func (this *QPainterPath) Arcto(args ...interface{}) () {
   // arcTo(const class QRectF &, qreal, qreal)
   // arcTo(qreal, qreal, qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1070,6 +1152,10 @@ func (this *QPainterPath) ArcTo(args ...interface{}) () {
   vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][4] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][5] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1108,12 +1194,16 @@ func (this *QPainterPath) ArcTo(args ...interface{}) () {
 }
 
 // slopeAtPercent(qreal)
-func (this *QPainterPath) SlopeAtPercent(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Slopeatpercent(args ...interface{}) (ret interface{}) {
   // slopeAtPercent(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1140,7 +1230,7 @@ func (this *QPainterPath) SlopeAtPercent(args ...interface{}) (ret interface{}) 
 }
 
 // addText(const class QPointF &, const class QFont &, const class QString &)
-func (this *QPainterPath) AddText(args ...interface{}) () {
+func (this *QPainterPath) Addtext(args ...interface{}) () {
   // addText(const class QPointF &, const class QFont &, const class QString &)
   // addText(qreal, qreal, const class QFont &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1154,6 +1244,10 @@ func (this *QPainterPath) AddText(args ...interface{}) () {
   vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][2] = reflect.TypeOf(QFont{}) // "const QFont &"
   vtys[1][3] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1188,7 +1282,7 @@ func (this *QPainterPath) AddText(args ...interface{}) () {
 }
 
 // addRoundRect(qreal, qreal, qreal, qreal, int, int)
-func (this *QPainterPath) AddRoundRect(args ...interface{}) () {
+func (this *QPainterPath) Addroundrect(args ...interface{}) () {
   // addRoundRect(qreal, qreal, qreal, qreal, int, int)
   // addRoundRect(const class QRectF &, int, int)
   // addRoundRect(qreal, qreal, qreal, qreal, int)
@@ -1215,6 +1309,10 @@ func (this *QPainterPath) AddRoundRect(args ...interface{}) () {
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
   vtys[3][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1275,12 +1373,16 @@ func (this *QPainterPath) AddRoundRect(args ...interface{}) () {
 }
 
 // elementAt(int)
-func (this *QPainterPath) ElementAt(args ...interface{}) () {
+func (this *QPainterPath) Elementat(args ...interface{}) () {
   // elementAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1299,12 +1401,16 @@ func (this *QPainterPath) ElementAt(args ...interface{}) () {
 }
 
 // connectPath(const class QPainterPath &)
-func (this *QPainterPath) ConnectPath(args ...interface{}) () {
+func (this *QPainterPath) Connectpath(args ...interface{}) () {
   // connectPath(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPainterPath{}) // "const QPainterPath &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1323,11 +1429,15 @@ func (this *QPainterPath) ConnectPath(args ...interface{}) () {
 }
 
 // boundingRect()
-func (this *QPainterPath) BoundingRect(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Boundingrect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1352,7 +1462,7 @@ func (this *QPainterPath) BoundingRect(args ...interface{}) (ret interface{}) {
 }
 
 // cubicTo(const class QPointF &, const class QPointF &, const class QPointF &)
-func (this *QPainterPath) CubicTo(args ...interface{}) () {
+func (this *QPainterPath) Cubicto(args ...interface{}) () {
   // cubicTo(const class QPointF &, const class QPointF &, const class QPointF &)
   // cubicTo(qreal, qreal, qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1368,6 +1478,10 @@ func (this *QPainterPath) CubicTo(args ...interface{}) () {
   vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][4] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][5] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1406,11 +1520,15 @@ func (this *QPainterPath) CubicTo(args ...interface{}) () {
 }
 
 // toReversed()
-func (this *QPainterPath) ToReversed(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Toreversed(args ...interface{}) (ret interface{}) {
   // toReversed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1435,12 +1553,16 @@ func (this *QPainterPath) ToReversed(args ...interface{}) (ret interface{}) {
 }
 
 // subtractedInverted(const class QPainterPath &)
-func (this *QPainterPath) SubtractedInverted(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Subtractedinverted(args ...interface{}) (ret interface{}) {
   // subtractedInverted(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPainterPath{}) // "const QPainterPath &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1467,7 +1589,7 @@ func (this *QPainterPath) SubtractedInverted(args ...interface{}) (ret interface
 }
 
 // toFillPolygon(const class QMatrix &)
-func (this *QPainterPath) ToFillPolygon(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Tofillpolygon(args ...interface{}) (ret interface{}) {
   // toFillPolygon(const class QMatrix &)
   // toFillPolygon(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1476,6 +1598,10 @@ func (this *QPainterPath) ToFillPolygon(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QMatrix{}) // "const QMatrix &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QTransform{}) // "const QTransform &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1522,6 +1648,10 @@ func (this *QPainterPath) Subtracted(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPainterPath{}) // "const QPainterPath &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1548,12 +1678,16 @@ func (this *QPainterPath) Subtracted(args ...interface{}) (ret interface{}) {
 }
 
 // pointAtPercent(qreal)
-func (this *QPainterPath) PointAtPercent(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Pointatpercent(args ...interface{}) (ret interface{}) {
   // pointAtPercent(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1586,6 +1720,10 @@ func (this *QPainterPath) United(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPainterPath{}) // "const QPainterPath &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1612,11 +1750,15 @@ func (this *QPainterPath) United(args ...interface{}) (ret interface{}) {
 }
 
 // currentPosition()
-func (this *QPainterPath) CurrentPosition(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Currentposition(args ...interface{}) (ret interface{}) {
   // currentPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1646,6 +1788,10 @@ func (this *QPainterPath) Length(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1680,6 +1826,10 @@ func (this *QPainterPath) Translated(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1727,6 +1877,10 @@ func (this *QPainterPath) Simplified(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1751,7 +1905,7 @@ func (this *QPainterPath) Simplified(args ...interface{}) (ret interface{}) {
 }
 
 // arcMoveTo(const class QRectF &, qreal)
-func (this *QPainterPath) ArcMoveTo(args ...interface{}) () {
+func (this *QPainterPath) Arcmoveto(args ...interface{}) () {
   // arcMoveTo(const class QRectF &, qreal)
   // arcMoveTo(qreal, qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1765,6 +1919,10 @@ func (this *QPainterPath) ArcMoveTo(args ...interface{}) () {
   vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][4] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1799,12 +1957,16 @@ func (this *QPainterPath) ArcMoveTo(args ...interface{}) () {
 }
 
 // percentAtLength(qreal)
-func (this *QPainterPath) PercentAtLength(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) Percentatlength(args ...interface{}) (ret interface{}) {
   // percentAtLength(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1831,12 +1993,16 @@ func (this *QPainterPath) PercentAtLength(args ...interface{}) (ret interface{})
 }
 
 // createStroke(const class QPainterPath &)
-func (this *QPainterPathStroker) CreateStroke(args ...interface{}) (ret interface{}) {
+func (this *QPainterPathStroker) Createstroke(args ...interface{}) (ret interface{}) {
   // createStroke(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPainterPath{}) // "const QPainterPath &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1863,11 +2029,15 @@ func (this *QPainterPathStroker) CreateStroke(args ...interface{}) (ret interfac
 }
 
 // dashPattern()
-func (this *QPainterPathStroker) DashPattern(args ...interface{}) () {
+func (this *QPainterPathStroker) Dashpattern(args ...interface{}) () {
   // dashPattern()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1884,11 +2054,15 @@ func (this *QPainterPathStroker) DashPattern(args ...interface{}) () {
 }
 
 // miterLimit()
-func (this *QPainterPathStroker) MiterLimit(args ...interface{}) (ret interface{}) {
+func (this *QPainterPathStroker) Miterlimit(args ...interface{}) (ret interface{}) {
   // miterLimit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1913,9 +2087,6 @@ func (this *QPainterPathStroker) MiterLimit(args ...interface{}) (ret interface{
 }
 
 // QPainterPathStroker(const class QPen &)
-func GcfreeQPainterPathStroker(this *QPainterPathStroker) {
-  qtrt.UniverseFree(this)
-}
 func NewQPainterPathStroker(args ...interface{}) *QPainterPathStroker {
   // QPainterPathStroker(const class QPen &)
   // QPainterPathStroker()
@@ -1924,6 +2095,10 @@ func NewQPainterPathStroker(args ...interface{}) *QPainterPathStroker {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPen{}) // "const QPen &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1936,18 +2111,14 @@ func NewQPainterPathStroker(args ...interface{}) *QPainterPathStroker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QPainterPathStrokerC2ERK4QPen(arg0)
-    this := &QPainterPathStroker{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPainterPathStroker)
-    return this
+    return &QPainterPathStroker{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QPainterPathStrokerC1Ev
     // invoke: void QPainterPathStroker()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QPainterPathStrokerC2Ev()
-    this := &QPainterPathStroker{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPainterPathStroker)
-    return this
+    return &QPainterPathStroker{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "QPainterPathStroker", args)
   }
@@ -1956,12 +2127,16 @@ func NewQPainterPathStroker(args ...interface{}) *QPainterPathStroker {
 }
 
 // setMiterLimit(qreal)
-func (this *QPainterPathStroker) SetMiterLimit(args ...interface{}) () {
+func (this *QPainterPathStroker) Setmiterlimit(args ...interface{}) () {
   // setMiterLimit(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1980,11 +2155,15 @@ func (this *QPainterPathStroker) SetMiterLimit(args ...interface{}) () {
 }
 
 // dashOffset()
-func (this *QPainterPathStroker) DashOffset(args ...interface{}) (ret interface{}) {
+func (this *QPainterPathStroker) Dashoffset(args ...interface{}) (ret interface{}) {
   // dashOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2009,11 +2188,15 @@ func (this *QPainterPathStroker) DashOffset(args ...interface{}) (ret interface{
 }
 
 // curveThreshold()
-func (this *QPainterPathStroker) CurveThreshold(args ...interface{}) (ret interface{}) {
+func (this *QPainterPathStroker) Curvethreshold(args ...interface{}) (ret interface{}) {
   // curveThreshold()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2038,11 +2221,15 @@ func (this *QPainterPathStroker) CurveThreshold(args ...interface{}) (ret interf
 }
 
 // joinStyle()
-func (this *QPainterPathStroker) JoinStyle(args ...interface{}) () {
+func (this *QPainterPathStroker) Joinstyle(args ...interface{}) () {
   // joinStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2059,12 +2246,16 @@ func (this *QPainterPathStroker) JoinStyle(args ...interface{}) () {
 }
 
 // setDashOffset(qreal)
-func (this *QPainterPathStroker) SetDashOffset(args ...interface{}) () {
+func (this *QPainterPathStroker) Setdashoffset(args ...interface{}) () {
   // setDashOffset(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2088,6 +2279,10 @@ func (this *QPainterPathStroker) Width(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2112,12 +2307,16 @@ func (this *QPainterPathStroker) Width(args ...interface{}) (ret interface{}) {
 }
 
 // setCurveThreshold(qreal)
-func (this *QPainterPathStroker) SetCurveThreshold(args ...interface{}) () {
+func (this *QPainterPathStroker) Setcurvethreshold(args ...interface{}) () {
   // setCurveThreshold(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2136,11 +2335,15 @@ func (this *QPainterPathStroker) SetCurveThreshold(args ...interface{}) () {
 }
 
 // ~QPainterPathStroker()
-func (this *QPainterPathStroker) Free(args ...interface{}) () {
+func (this *QPainterPathStroker) Freeqpainterpathstroker(args ...interface{}) () {
   // ~QPainterPathStroker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2148,10 +2351,7 @@ func (this *QPainterPathStroker) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QPainterPathStrokerD0Ev
     // invoke: void ~QPainterPathStroker()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QPainterPathStrokerD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QPainterPathStrokerD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "~QPainterPathStroker", args)
   }
@@ -2160,11 +2360,15 @@ func (this *QPainterPathStroker) Free(args ...interface{}) () {
 }
 
 // capStyle()
-func (this *QPainterPathStroker) CapStyle(args ...interface{}) () {
+func (this *QPainterPathStroker) Capstyle(args ...interface{}) () {
   // capStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2181,12 +2385,16 @@ func (this *QPainterPathStroker) CapStyle(args ...interface{}) () {
 }
 
 // setWidth(qreal)
-func (this *QPainterPathStroker) SetWidth(args ...interface{}) () {
+func (this *QPainterPathStroker) Setwidth(args ...interface{}) () {
   // setWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

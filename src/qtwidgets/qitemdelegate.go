@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qitemdelegate.h
 // dst-file: /src/widgets/qitemdelegate.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -69,7 +68,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QItemDelegate)=1
@@ -79,11 +77,15 @@ type QItemDelegate struct {
 }
 
 // itemEditorFactory()
-func (this *QItemDelegate) ItemEditorFactory(args ...interface{}) (ret interface{}) {
+func (this *QItemDelegate) Itemeditorfactory(args ...interface{}) (ret interface{}) {
   // itemEditorFactory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -108,7 +110,7 @@ func (this *QItemDelegate) ItemEditorFactory(args ...interface{}) (ret interface
 }
 
 // createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QItemDelegate) CreateEditor(args ...interface{}) (ret interface{}) {
+func (this *QItemDelegate) Createeditor(args ...interface{}) (ret interface{}) {
   // createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -116,6 +118,10 @@ func (this *QItemDelegate) CreateEditor(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[0][1] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
   vtys[0][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -146,7 +152,7 @@ func (this *QItemDelegate) CreateEditor(args ...interface{}) (ret interface{}) {
 }
 
 // updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QItemDelegate) UpdateEditorGeometry(args ...interface{}) () {
+func (this *QItemDelegate) Updateeditorgeometry(args ...interface{}) () {
   // updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -154,6 +160,10 @@ func (this *QItemDelegate) UpdateEditorGeometry(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[0][1] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
   vtys[0][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -184,6 +194,10 @@ func (this *QItemDelegate) Paint(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(qtgui.QPainter{}) // "QPainter *"
   vtys[0][1] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
   vtys[0][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -206,7 +220,7 @@ func (this *QItemDelegate) Paint(args ...interface{}) () {
 }
 
 // setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
-func (this *QItemDelegate) SetModelData(args ...interface{}) () {
+func (this *QItemDelegate) Setmodeldata(args ...interface{}) () {
   // setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -214,6 +228,10 @@ func (this *QItemDelegate) SetModelData(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[0][1] = reflect.TypeOf(qtcore.QAbstractItemModel{}) // "QAbstractItemModel *"
   vtys[0][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -236,11 +254,15 @@ func (this *QItemDelegate) SetModelData(args ...interface{}) () {
 }
 
 // ~QItemDelegate()
-func (this *QItemDelegate) Free(args ...interface{}) () {
+func (this *QItemDelegate) Freeqitemdelegate(args ...interface{}) () {
   // ~QItemDelegate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -248,10 +270,7 @@ func (this *QItemDelegate) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QItemDelegateD0Ev
     // invoke: void ~QItemDelegate()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QItemDelegateD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QItemDelegateD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemDelegate", "~QItemDelegate", args)
   }
@@ -260,11 +279,15 @@ func (this *QItemDelegate) Free(args ...interface{}) () {
 }
 
 // hasClipping()
-func (this *QItemDelegate) HasClipping(args ...interface{}) (ret interface{}) {
+func (this *QItemDelegate) Hasclipping(args ...interface{}) (ret interface{}) {
   // hasClipping()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -289,13 +312,17 @@ func (this *QItemDelegate) HasClipping(args ...interface{}) (ret interface{}) {
 }
 
 // setEditorData(class QWidget *, const class QModelIndex &)
-func (this *QItemDelegate) SetEditorData(args ...interface{}) () {
+func (this *QItemDelegate) Seteditordata(args ...interface{}) () {
   // setEditorData(class QWidget *, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -316,13 +343,17 @@ func (this *QItemDelegate) SetEditorData(args ...interface{}) () {
 }
 
 // sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QItemDelegate) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QItemDelegate) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
   vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -351,12 +382,16 @@ func (this *QItemDelegate) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // setClipping(_Bool)
-func (this *QItemDelegate) SetClipping(args ...interface{}) () {
+func (this *QItemDelegate) Setclipping(args ...interface{}) () {
   // setClipping(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -375,11 +410,15 @@ func (this *QItemDelegate) SetClipping(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QItemDelegate) MetaObject(args ...interface{}) () {
+func (this *QItemDelegate) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -396,12 +435,16 @@ func (this *QItemDelegate) MetaObject(args ...interface{}) () {
 }
 
 // setItemEditorFactory(class QItemEditorFactory *)
-func (this *QItemDelegate) SetItemEditorFactory(args ...interface{}) () {
+func (this *QItemDelegate) Setitemeditorfactory(args ...interface{}) () {
   // setItemEditorFactory(class QItemEditorFactory *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QItemEditorFactory{}) // "QItemEditorFactory *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -420,15 +463,16 @@ func (this *QItemDelegate) SetItemEditorFactory(args ...interface{}) () {
 }
 
 // QItemDelegate(class QObject *)
-func GcfreeQItemDelegate(this *QItemDelegate) {
-  qtrt.UniverseFree(this)
-}
 func NewQItemDelegate(args ...interface{}) *QItemDelegate {
   // QItemDelegate(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -441,9 +485,7 @@ func NewQItemDelegate(args ...interface{}) *QItemDelegate {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QItemDelegateC2EP7QObject(arg0)
-    this := &QItemDelegate{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQItemDelegate)
-    return this
+    return &QItemDelegate{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemDelegate", "QItemDelegate", args)
   }

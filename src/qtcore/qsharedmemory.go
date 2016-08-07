@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qsharedmemory.h
 // dst-file: /src/core/qsharedmemory.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -73,7 +72,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSharedMemory)=1
@@ -88,6 +86,10 @@ func (this *QSharedMemory) Lock(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -117,6 +119,10 @@ func (this *QSharedMemory) Unlock(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -146,6 +152,10 @@ func (this *QSharedMemory) Size(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -170,11 +180,15 @@ func (this *QSharedMemory) Size(args ...interface{}) (ret interface{}) {
 }
 
 // constData()
-func (this *QSharedMemory) ConstData(args ...interface{}) () {
+func (this *QSharedMemory) Constdata(args ...interface{}) () {
   // constData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -191,12 +205,16 @@ func (this *QSharedMemory) ConstData(args ...interface{}) () {
 }
 
 // setKey(const class QString &)
-func (this *QSharedMemory) SetKey(args ...interface{}) () {
+func (this *QSharedMemory) Setkey(args ...interface{}) () {
   // setKey(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -215,11 +233,15 @@ func (this *QSharedMemory) SetKey(args ...interface{}) () {
 }
 
 // isAttached()
-func (this *QSharedMemory) IsAttached(args ...interface{}) (ret interface{}) {
+func (this *QSharedMemory) Isattached(args ...interface{}) (ret interface{}) {
   // isAttached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -244,11 +266,15 @@ func (this *QSharedMemory) IsAttached(args ...interface{}) (ret interface{}) {
 }
 
 // errorString()
-func (this *QSharedMemory) ErrorString(args ...interface{}) (ret interface{}) {
+func (this *QSharedMemory) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -278,6 +304,10 @@ func (this *QSharedMemory) Key(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -302,9 +332,6 @@ func (this *QSharedMemory) Key(args ...interface{}) (ret interface{}) {
 }
 
 // QSharedMemory(const class QString &, class QObject *)
-func GcfreeQSharedMemory(this *QSharedMemory) {
-  qtrt.UniverseFree(this)
-}
 func NewQSharedMemory(args ...interface{}) *QSharedMemory {
   // QSharedMemory(const class QString &, class QObject *)
   // QSharedMemory(class QObject *)
@@ -315,6 +342,10 @@ func NewQSharedMemory(args ...interface{}) *QSharedMemory {
   vtys[0][1] = reflect.TypeOf(QObject{}) // "QObject *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -329,9 +360,7 @@ func NewQSharedMemory(args ...interface{}) *QSharedMemory {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QSharedMemoryC2ERK7QStringP7QObject(arg0, arg1)
-    this := &QSharedMemory{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSharedMemory)
-    return this
+    return &QSharedMemory{Qclsinst:qthis}
   case 1:
     // invoke: _ZN13QSharedMemoryC1EP7QObject
     // invoke: void QSharedMemory(class QObject *)
@@ -340,9 +369,7 @@ func NewQSharedMemory(args ...interface{}) *QSharedMemory {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QSharedMemoryC2EP7QObject(arg0)
-    this := &QSharedMemory{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSharedMemory)
-    return this
+    return &QSharedMemory{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSharedMemory", "QSharedMemory", args)
   }
@@ -356,6 +383,10 @@ func (this *QSharedMemory) Detach(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -385,6 +416,10 @@ func (this *QSharedMemory) Data(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -401,11 +436,15 @@ func (this *QSharedMemory) Data(args ...interface{}) () {
 }
 
 // nativeKey()
-func (this *QSharedMemory) NativeKey(args ...interface{}) (ret interface{}) {
+func (this *QSharedMemory) Nativekey(args ...interface{}) (ret interface{}) {
   // nativeKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -430,11 +469,15 @@ func (this *QSharedMemory) NativeKey(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QSharedMemory) MetaObject(args ...interface{}) () {
+func (this *QSharedMemory) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -456,6 +499,10 @@ func (this *QSharedMemory) Error(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -472,12 +519,16 @@ func (this *QSharedMemory) Error(args ...interface{}) () {
 }
 
 // setNativeKey(const class QString &)
-func (this *QSharedMemory) SetNativeKey(args ...interface{}) () {
+func (this *QSharedMemory) Setnativekey(args ...interface{}) () {
   // setNativeKey(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -496,11 +547,15 @@ func (this *QSharedMemory) SetNativeKey(args ...interface{}) () {
 }
 
 // ~QSharedMemory()
-func (this *QSharedMemory) Free(args ...interface{}) () {
+func (this *QSharedMemory) Freeqsharedmemory(args ...interface{}) () {
   // ~QSharedMemory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -508,10 +563,7 @@ func (this *QSharedMemory) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QSharedMemoryD0Ev
     // invoke: void ~QSharedMemory()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QSharedMemoryD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QSharedMemoryD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "~QSharedMemory", args)
   }

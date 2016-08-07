@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -32,10 +31,14 @@ import "qtcore"
 #include <uchar.h>
   // proto: static QString QIcon::themeName();
 extern void* C_ZN5QIcon9themeNameEv(); // 4
+  // proto:  bool QIcon::isMask();
+extern bool C_ZNK5QIcon6isMaskEv(void* qthis); // 4
   // proto: static void QIcon::setThemeName(const QString & path);
 extern void C_ZN5QIcon12setThemeNameERK7QString(void* arg0); // 4
   // proto:  void QIcon::swap(QIcon & other);
 extern void C_ZN5QIcon4swapERS_(void* qthis, void* arg0); // 2
+  // proto:  void QIcon::setIsMask(bool isMask);
+extern void C_ZN5QIcon9setIsMaskEb(void* qthis, bool arg0); // 4
   // proto:  bool QIcon::isDetached();
 extern bool C_ZNK5QIcon10isDetachedEv(void* qthis); // 4
   // proto:  qint64 QIcon::cacheKey();
@@ -66,6 +69,8 @@ extern bool C_ZN5QIcon12hasThemeIconERK7QString(void* arg0); // 4
 extern bool C_ZNK5QIcon6isNullEv(void* qthis); // 4
   // proto: static QIcon QIcon::fromTheme(const QString & name, const QIcon & fallback);
 extern void* C_ZN5QIcon9fromThemeERK7QStringRKS_(void* arg0, void* arg1); // 4
+  // proto: static QIcon QIcon::fromTheme(const QString & name);
+extern void* C_ZN5QIcon9fromThemeERK7QString(void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -77,7 +82,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QIcon)=8
@@ -87,11 +91,15 @@ type QIcon struct {
 }
 
 // themeName()
-func (this *QIcon) ThemeName_s(args ...interface{}) (ret interface{}) {
+func (this *QIcon) Themename_S(args ...interface{}) (ret interface{}) {
   // themeName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -115,13 +123,50 @@ func (this *QIcon) ThemeName_s(args ...interface{}) (ret interface{}) {
   return
 }
 
+// isMask()
+func (this *QIcon) Ismask(args ...interface{}) (ret interface{}) {
+  // isMask()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK5QIcon6isMaskEv
+    // invoke: bool isMask()
+    var ret0 = C.C_ZNK5QIcon6isMaskEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QIcon", "isMask", args)
+  }
+
+  return
+}
+
 // setThemeName(const class QString &)
-func (this *QIcon) SetThemeName_s(args ...interface{}) () {
+func (this *QIcon) Setthemename_S(args ...interface{}) () {
   // setThemeName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -146,6 +191,10 @@ func (this *QIcon) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QIcon{}) // "QIcon &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -163,12 +212,44 @@ func (this *QIcon) Swap(args ...interface{}) () {
   return
 }
 
+// setIsMask(_Bool)
+func (this *QIcon) Setismask(args ...interface{}) () {
+  // setIsMask(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN5QIcon9setIsMaskEb
+    // invoke: void setIsMask(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C.C_ZN5QIcon9setIsMaskEb(this.Qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QIcon", "setIsMask", args)
+  }
+
+  return
+}
+
 // isDetached()
-func (this *QIcon) IsDetached(args ...interface{}) (ret interface{}) {
+func (this *QIcon) Isdetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -193,11 +274,15 @@ func (this *QIcon) IsDetached(args ...interface{}) (ret interface{}) {
 }
 
 // cacheKey()
-func (this *QIcon) CacheKey(args ...interface{}) (ret interface{}) {
+func (this *QIcon) Cachekey(args ...interface{}) (ret interface{}) {
   // cacheKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -222,12 +307,16 @@ func (this *QIcon) CacheKey(args ...interface{}) (ret interface{}) {
 }
 
 // setThemeSearchPaths(const class QStringList &)
-func (this *QIcon) SetThemeSearchPaths_s(args ...interface{}) () {
+func (this *QIcon) Setthemesearchpaths_S(args ...interface{}) () {
   // setThemeSearchPaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -251,6 +340,10 @@ func (this *QIcon) Detach(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -272,6 +365,10 @@ func (this *QIcon) Name(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -296,11 +393,15 @@ func (this *QIcon) Name(args ...interface{}) (ret interface{}) {
 }
 
 // themeSearchPaths()
-func (this *QIcon) ThemeSearchPaths_s(args ...interface{}) () {
+func (this *QIcon) Themesearchpaths_S(args ...interface{}) () {
   // themeSearchPaths()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -317,11 +418,15 @@ func (this *QIcon) ThemeSearchPaths_s(args ...interface{}) () {
 }
 
 // ~QIcon()
-func (this *QIcon) Free(args ...interface{}) () {
+func (this *QIcon) Freeqicon(args ...interface{}) () {
   // ~QIcon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -329,10 +434,7 @@ func (this *QIcon) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QIconD0Ev
     // invoke: void ~QIcon()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN5QIconD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN5QIconD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QIcon", "~QIcon", args)
   }
@@ -341,9 +443,6 @@ func (this *QIcon) Free(args ...interface{}) () {
 }
 
 // QIcon(const class QString &)
-func GcfreeQIcon(this *QIcon) {
-  qtrt.UniverseFree(this)
-}
 func NewQIcon(args ...interface{}) *QIcon {
   // QIcon(const class QString &)
   // QIcon(const class QPixmap &)
@@ -361,6 +460,10 @@ func NewQIcon(args ...interface{}) *QIcon {
   vtys[3] = make(map[int32]reflect.Type)
   vtys[4] = make(map[int32]reflect.Type)
   vtys[4][0] = reflect.TypeOf(QIconEngine{}) // "QIconEngine *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -373,9 +476,7 @@ func NewQIcon(args ...interface{}) *QIcon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QIconC2ERK7QString(arg0)
-    this := &QIcon{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQIcon)
-    return this
+    return &QIcon{Qclsinst:qthis}
   case 1:
     // invoke: _ZN5QIconC1ERK7QPixmap
     // invoke: void QIcon(const class QPixmap &)
@@ -384,9 +485,7 @@ func NewQIcon(args ...interface{}) *QIcon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QIconC2ERK7QPixmap(arg0)
-    this := &QIcon{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQIcon)
-    return this
+    return &QIcon{Qclsinst:qthis}
   case 2:
     // invoke: _ZN5QIconC1ERKS_
     // invoke: void QIcon(const class QIcon &)
@@ -395,18 +494,14 @@ func NewQIcon(args ...interface{}) *QIcon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QIconC2ERKS_(arg0)
-    this := &QIcon{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQIcon)
-    return this
+    return &QIcon{Qclsinst:qthis}
   case 3:
     // invoke: _ZN5QIconC1Ev
     // invoke: void QIcon()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QIconC2Ev()
-    this := &QIcon{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQIcon)
-    return this
+    return &QIcon{Qclsinst:qthis}
   case 4:
     // invoke: _ZN5QIconC1EP11QIconEngine
     // invoke: void QIcon(class QIconEngine *)
@@ -415,9 +510,7 @@ func NewQIcon(args ...interface{}) *QIcon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QIconC2EP11QIconEngine(arg0)
-    this := &QIcon{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQIcon)
-    return this
+    return &QIcon{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIcon", "QIcon", args)
   }
@@ -426,12 +519,16 @@ func NewQIcon(args ...interface{}) *QIcon {
 }
 
 // hasThemeIcon(const class QString &)
-func (this *QIcon) HasThemeIcon_s(args ...interface{}) (ret interface{}) {
+func (this *QIcon) Hasthemeicon_S(args ...interface{}) (ret interface{}) {
   // hasThemeIcon(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -458,11 +555,15 @@ func (this *QIcon) HasThemeIcon_s(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QIcon) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QIcon) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -487,13 +588,20 @@ func (this *QIcon) IsNull(args ...interface{}) (ret interface{}) {
 }
 
 // fromTheme(const class QString &, const class QIcon &)
-func (this *QIcon) FromTheme_s(args ...interface{}) (ret interface{}) {
+func (this *QIcon) Fromtheme_S(args ...interface{}) (ret interface{}) {
   // fromTheme(const class QString &, const class QIcon &)
+  // fromTheme(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(QIcon{}) // "const QIcon &"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -506,6 +614,20 @@ func (this *QIcon) FromTheme_s(args ...interface{}) (ret interface{}) {
     var arg1 = args[1].(*QIcon).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN5QIcon9fromThemeERK7QStringRKS_(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIcon{}) // "QIcon"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  case 1:
+    // invoke: _ZN5QIcon9fromThemeERK7QString
+    // invoke: QIcon fromTheme(const class QString &)
+    var arg0 = args[0].(*qtcore.QString).Qclsinst
+    if false {fmt.Println(arg0)}
+    var ret0 = C.C_ZN5QIcon9fromThemeERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIcon{}) // "QIcon"

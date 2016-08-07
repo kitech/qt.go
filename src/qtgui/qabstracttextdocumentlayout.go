@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -61,7 +60,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextObjectInterface)=8
@@ -81,13 +79,17 @@ type QAbstractTextDocumentLayout struct {
 }
 
 // unregisterHandler(int, class QObject *)
-func (this *QAbstractTextDocumentLayout) UnregisterHandler(args ...interface{}) () {
+func (this *QAbstractTextDocumentLayout) Unregisterhandler(args ...interface{}) () {
   // unregisterHandler(int, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -108,12 +110,16 @@ func (this *QAbstractTextDocumentLayout) UnregisterHandler(args ...interface{}) 
 }
 
 // setPaintDevice(class QPaintDevice *)
-func (this *QAbstractTextDocumentLayout) SetPaintDevice(args ...interface{}) () {
+func (this *QAbstractTextDocumentLayout) Setpaintdevice(args ...interface{}) () {
   // setPaintDevice(class QPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPaintDevice{}) // "QPaintDevice *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -132,12 +138,16 @@ func (this *QAbstractTextDocumentLayout) SetPaintDevice(args ...interface{}) () 
 }
 
 // anchorAt(const class QPointF &)
-func (this *QAbstractTextDocumentLayout) AnchorAt(args ...interface{}) (ret interface{}) {
+func (this *QAbstractTextDocumentLayout) Anchorat(args ...interface{}) (ret interface{}) {
   // anchorAt(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -164,15 +174,16 @@ func (this *QAbstractTextDocumentLayout) AnchorAt(args ...interface{}) (ret inte
 }
 
 // QAbstractTextDocumentLayout(class QTextDocument *)
-func GcfreeQAbstractTextDocumentLayout(this *QAbstractTextDocumentLayout) {
-  qtrt.UniverseFree(this)
-}
 func NewQAbstractTextDocumentLayout(args ...interface{}) *QAbstractTextDocumentLayout {
   // QAbstractTextDocumentLayout(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTextDocument{}) // "QTextDocument *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -185,9 +196,7 @@ func NewQAbstractTextDocumentLayout(args ...interface{}) *QAbstractTextDocumentL
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(arg0)
-    this := &QAbstractTextDocumentLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAbstractTextDocumentLayout)
-    return this
+    return &QAbstractTextDocumentLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "QAbstractTextDocumentLayout", args)
   }
@@ -196,11 +205,15 @@ func NewQAbstractTextDocumentLayout(args ...interface{}) *QAbstractTextDocumentL
 }
 
 // paintDevice()
-func (this *QAbstractTextDocumentLayout) PaintDevice(args ...interface{}) (ret interface{}) {
+func (this *QAbstractTextDocumentLayout) Paintdevice(args ...interface{}) (ret interface{}) {
   // paintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -230,6 +243,10 @@ func (this *QAbstractTextDocumentLayout) Document(args ...interface{}) (ret inte
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -254,13 +271,17 @@ func (this *QAbstractTextDocumentLayout) Document(args ...interface{}) (ret inte
 }
 
 // registerHandler(int, class QObject *)
-func (this *QAbstractTextDocumentLayout) RegisterHandler(args ...interface{}) () {
+func (this *QAbstractTextDocumentLayout) Registerhandler(args ...interface{}) () {
   // registerHandler(int, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -281,11 +302,15 @@ func (this *QAbstractTextDocumentLayout) RegisterHandler(args ...interface{}) ()
 }
 
 // metaObject()
-func (this *QAbstractTextDocumentLayout) MetaObject(args ...interface{}) () {
+func (this *QAbstractTextDocumentLayout) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -302,11 +327,15 @@ func (this *QAbstractTextDocumentLayout) MetaObject(args ...interface{}) () {
 }
 
 // ~QAbstractTextDocumentLayout()
-func (this *QAbstractTextDocumentLayout) Free(args ...interface{}) () {
+func (this *QAbstractTextDocumentLayout) Freeqabstracttextdocumentlayout(args ...interface{}) () {
   // ~QAbstractTextDocumentLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -314,10 +343,7 @@ func (this *QAbstractTextDocumentLayout) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayoutD0Ev
     // invoke: void ~QAbstractTextDocumentLayout()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN27QAbstractTextDocumentLayoutD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN27QAbstractTextDocumentLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "~QAbstractTextDocumentLayout", args)
   }
@@ -326,12 +352,16 @@ func (this *QAbstractTextDocumentLayout) Free(args ...interface{}) () {
 }
 
 // handlerForObject(int)
-func (this *QAbstractTextDocumentLayout) HandlerForObject(args ...interface{}) (ret interface{}) {
+func (this *QAbstractTextDocumentLayout) Handlerforobject(args ...interface{}) (ret interface{}) {
   // handlerForObject(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

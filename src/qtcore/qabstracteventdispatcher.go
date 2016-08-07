@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -57,7 +56,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractEventDispatcher)=1
@@ -69,12 +67,16 @@ type QAbstractEventDispatcher struct {
 }
 
 // installNativeEventFilter(class QAbstractNativeEventFilter *)
-func (this *QAbstractEventDispatcher) InstallNativeEventFilter(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Installnativeeventfilter(args ...interface{}) () {
   // installNativeEventFilter(class QAbstractNativeEventFilter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractNativeEventFilter{}) // "QAbstractNativeEventFilter *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -93,11 +95,15 @@ func (this *QAbstractEventDispatcher) InstallNativeEventFilter(args ...interface
 }
 
 // ~QAbstractEventDispatcher()
-func (this *QAbstractEventDispatcher) Free(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Freeqabstracteventdispatcher(args ...interface{}) () {
   // ~QAbstractEventDispatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -105,10 +111,7 @@ func (this *QAbstractEventDispatcher) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcherD0Ev
     // invoke: void ~QAbstractEventDispatcher()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN24QAbstractEventDispatcherD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN24QAbstractEventDispatcherD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "~QAbstractEventDispatcher", args)
   }
@@ -117,11 +120,15 @@ func (this *QAbstractEventDispatcher) Free(args ...interface{}) () {
 }
 
 // closingDown()
-func (this *QAbstractEventDispatcher) ClosingDown(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Closingdown(args ...interface{}) () {
   // closingDown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -138,11 +145,15 @@ func (this *QAbstractEventDispatcher) ClosingDown(args ...interface{}) () {
 }
 
 // startingUp()
-func (this *QAbstractEventDispatcher) StartingUp(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Startingup(args ...interface{}) () {
   // startingUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -159,12 +170,16 @@ func (this *QAbstractEventDispatcher) StartingUp(args ...interface{}) () {
 }
 
 // instance(class QThread *)
-func (this *QAbstractEventDispatcher) Instance_s(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Instance_S(args ...interface{}) () {
   // instance(class QThread *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QThread{}) // "QThread *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -183,12 +198,16 @@ func (this *QAbstractEventDispatcher) Instance_s(args ...interface{}) () {
 }
 
 // removeNativeEventFilter(class QAbstractNativeEventFilter *)
-func (this *QAbstractEventDispatcher) RemoveNativeEventFilter(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Removenativeeventfilter(args ...interface{}) () {
   // removeNativeEventFilter(class QAbstractNativeEventFilter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractNativeEventFilter{}) // "QAbstractNativeEventFilter *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -207,7 +226,7 @@ func (this *QAbstractEventDispatcher) RemoveNativeEventFilter(args ...interface{
 }
 
 // filterNativeEvent(const class QByteArray &, void *, long *)
-func (this *QAbstractEventDispatcher) FilterNativeEvent(args ...interface{}) (ret interface{}) {
+func (this *QAbstractEventDispatcher) Filternativeevent(args ...interface{}) (ret interface{}) {
   // filterNativeEvent(const class QByteArray &, void *, long *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -215,6 +234,10 @@ func (this *QAbstractEventDispatcher) FilterNativeEvent(args ...interface{}) (re
   vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
   vtys[0][1] = qtrt.VoidpTy() // "void *"
   vtys[0][2] = qtrt.Int32Ty(true) // "long *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -245,15 +268,16 @@ func (this *QAbstractEventDispatcher) FilterNativeEvent(args ...interface{}) (re
 }
 
 // QAbstractEventDispatcher(class QObject *)
-func GcfreeQAbstractEventDispatcher(this *QAbstractEventDispatcher) {
-  qtrt.UniverseFree(this)
-}
 func NewQAbstractEventDispatcher(args ...interface{}) *QAbstractEventDispatcher {
   // QAbstractEventDispatcher(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -266,9 +290,7 @@ func NewQAbstractEventDispatcher(args ...interface{}) *QAbstractEventDispatcher 
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN24QAbstractEventDispatcherC2EP7QObject(arg0)
-    this := &QAbstractEventDispatcher{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAbstractEventDispatcher)
-    return this
+    return &QAbstractEventDispatcher{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "QAbstractEventDispatcher", args)
   }
@@ -277,11 +299,15 @@ func NewQAbstractEventDispatcher(args ...interface{}) *QAbstractEventDispatcher 
 }
 
 // metaObject()
-func (this *QAbstractEventDispatcher) MetaObject(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

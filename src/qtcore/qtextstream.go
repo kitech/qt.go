@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qtextstream.h
 // dst-file: /src/core/qtextstream.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -121,7 +120,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextStreamManipulator)=40
@@ -137,9 +135,6 @@ type QTextStream struct {
 }
 
 // QTextStreamManipulator(QTSMFI, int)
-func GcfreeQTextStreamManipulator(this *QTextStreamManipulator) {
-  qtrt.UniverseFree(this)
-}
 func NewQTextStreamManipulator(args ...interface{}) *QTextStreamManipulator {
   // QTextStreamManipulator(QTSMFI, int)
   // QTextStreamManipulator(QTSMFC, class QChar)
@@ -151,6 +146,10 @@ func NewQTextStreamManipulator(args ...interface{}) *QTextStreamManipulator {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.VoidpTy() // "QTSMFC"
   vtys[1][1] = reflect.TypeOf(QChar{}) // "QChar"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -165,9 +164,7 @@ func NewQTextStreamManipulator(args ...interface{}) *QTextStreamManipulator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QTextStreamManipulatorC2EM11QTextStreamFviEi(arg0, arg1)
-    this := &QTextStreamManipulator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextStreamManipulator)
-    return this
+    return &QTextStreamManipulator{Qclsinst:qthis}
   case 1:
     // invoke: _ZN22QTextStreamManipulatorC1EM11QTextStreamFv5QCharES1_
     // invoke: void QTextStreamManipulator(QTSMFC, class QChar)
@@ -178,9 +175,7 @@ func NewQTextStreamManipulator(args ...interface{}) *QTextStreamManipulator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QTextStreamManipulatorC2EM11QTextStreamFv5QCharES1_(arg0, arg1)
-    this := &QTextStreamManipulator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextStreamManipulator)
-    return this
+    return &QTextStreamManipulator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextStreamManipulator", "QTextStreamManipulator", args)
   }
@@ -195,6 +190,10 @@ func (this *QTextStreamManipulator) Exec(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTextStream{}) // "QTextStream &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -213,11 +212,15 @@ func (this *QTextStreamManipulator) Exec(args ...interface{}) () {
 }
 
 // autoDetectUnicode()
-func (this *QTextStream) AutoDetectUnicode(args ...interface{}) (ret interface{}) {
+func (this *QTextStream) Autodetectunicode(args ...interface{}) (ret interface{}) {
   // autoDetectUnicode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -247,6 +250,10 @@ func (this *QTextStream) Locale(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -271,11 +278,15 @@ func (this *QTextStream) Locale(args ...interface{}) (ret interface{}) {
 }
 
 // skipWhiteSpace()
-func (this *QTextStream) SkipWhiteSpace(args ...interface{}) () {
+func (this *QTextStream) Skipwhitespace(args ...interface{}) () {
   // skipWhiteSpace()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -297,6 +308,10 @@ func (this *QTextStream) Pos(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -321,12 +336,16 @@ func (this *QTextStream) Pos(args ...interface{}) (ret interface{}) {
 }
 
 // setRealNumberPrecision(int)
-func (this *QTextStream) SetRealNumberPrecision(args ...interface{}) () {
+func (this *QTextStream) Setrealnumberprecision(args ...interface{}) () {
   // setRealNumberPrecision(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -350,6 +369,10 @@ func (this *QTextStream) Flush(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -372,6 +395,10 @@ func (this *QTextStream) Seek(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -398,11 +425,15 @@ func (this *QTextStream) Seek(args ...interface{}) (ret interface{}) {
 }
 
 // fieldAlignment()
-func (this *QTextStream) FieldAlignment(args ...interface{}) () {
+func (this *QTextStream) Fieldalignment(args ...interface{}) () {
   // fieldAlignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -419,11 +450,15 @@ func (this *QTextStream) FieldAlignment(args ...interface{}) () {
 }
 
 // fieldWidth()
-func (this *QTextStream) FieldWidth(args ...interface{}) (ret interface{}) {
+func (this *QTextStream) Fieldwidth(args ...interface{}) (ret interface{}) {
   // fieldWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -448,12 +483,16 @@ func (this *QTextStream) FieldWidth(args ...interface{}) (ret interface{}) {
 }
 
 // setAutoDetectUnicode(_Bool)
-func (this *QTextStream) SetAutoDetectUnicode(args ...interface{}) () {
+func (this *QTextStream) Setautodetectunicode(args ...interface{}) () {
   // setAutoDetectUnicode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -472,11 +511,15 @@ func (this *QTextStream) SetAutoDetectUnicode(args ...interface{}) () {
 }
 
 // numberFlags()
-func (this *QTextStream) NumberFlags(args ...interface{}) () {
+func (this *QTextStream) Numberflags(args ...interface{}) () {
   // numberFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -493,11 +536,15 @@ func (this *QTextStream) NumberFlags(args ...interface{}) () {
 }
 
 // generateByteOrderMark()
-func (this *QTextStream) GenerateByteOrderMark(args ...interface{}) (ret interface{}) {
+func (this *QTextStream) Generatebyteordermark(args ...interface{}) (ret interface{}) {
   // generateByteOrderMark()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -527,6 +574,10 @@ func (this *QTextStream) Codec(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -551,7 +602,7 @@ func (this *QTextStream) Codec(args ...interface{}) (ret interface{}) {
 }
 
 // setCodec(class QTextCodec *)
-func (this *QTextStream) SetCodec(args ...interface{}) () {
+func (this *QTextStream) Setcodec(args ...interface{}) () {
   // setCodec(class QTextCodec *)
   // setCodec(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -560,6 +611,10 @@ func (this *QTextStream) SetCodec(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -586,11 +641,15 @@ func (this *QTextStream) SetCodec(args ...interface{}) () {
 }
 
 // realNumberPrecision()
-func (this *QTextStream) RealNumberPrecision(args ...interface{}) (ret interface{}) {
+func (this *QTextStream) Realnumberprecision(args ...interface{}) (ret interface{}) {
   // realNumberPrecision()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -615,12 +674,16 @@ func (this *QTextStream) RealNumberPrecision(args ...interface{}) (ret interface
 }
 
 // setDevice(class QIODevice *)
-func (this *QTextStream) SetDevice(args ...interface{}) () {
+func (this *QTextStream) Setdevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -639,11 +702,15 @@ func (this *QTextStream) SetDevice(args ...interface{}) () {
 }
 
 // padChar()
-func (this *QTextStream) PadChar(args ...interface{}) (ret interface{}) {
+func (this *QTextStream) Padchar(args ...interface{}) (ret interface{}) {
   // padChar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -668,9 +735,6 @@ func (this *QTextStream) PadChar(args ...interface{}) (ret interface{}) {
 }
 
 // QTextStream(class QIODevice *)
-func GcfreeQTextStream(this *QTextStream) {
-  qtrt.UniverseFree(this)
-}
 func NewQTextStream(args ...interface{}) *QTextStream {
   // QTextStream(class QIODevice *)
   // QTextStream()
@@ -679,6 +743,10 @@ func NewQTextStream(args ...interface{}) *QTextStream {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -691,18 +759,14 @@ func NewQTextStream(args ...interface{}) *QTextStream {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextStreamC2EP9QIODevice(arg0)
-    this := &QTextStream{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextStream)
-    return this
+    return &QTextStream{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QTextStreamC1Ev
     // invoke: void QTextStream()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextStreamC2Ev()
-    this := &QTextStream{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextStream)
-    return this
+    return &QTextStream{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextStream", "QTextStream", args)
   }
@@ -716,6 +780,10 @@ func (this *QTextStream) Status(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -737,6 +805,10 @@ func (this *QTextStream) String(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -761,12 +833,16 @@ func (this *QTextStream) String(args ...interface{}) (ret interface{}) {
 }
 
 // setGenerateByteOrderMark(_Bool)
-func (this *QTextStream) SetGenerateByteOrderMark(args ...interface{}) () {
+func (this *QTextStream) Setgeneratebyteordermark(args ...interface{}) () {
   // setGenerateByteOrderMark(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -791,6 +867,10 @@ func (this *QTextStream) Read(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -817,11 +897,15 @@ func (this *QTextStream) Read(args ...interface{}) (ret interface{}) {
 }
 
 // ~QTextStream()
-func (this *QTextStream) Free(args ...interface{}) () {
+func (this *QTextStream) Freeqtextstream(args ...interface{}) () {
   // ~QTextStream()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -829,10 +913,7 @@ func (this *QTextStream) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextStreamD0Ev
     // invoke: void ~QTextStream()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QTextStreamD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QTextStreamD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "~QTextStream", args)
   }
@@ -841,11 +922,15 @@ func (this *QTextStream) Free(args ...interface{}) () {
 }
 
 // realNumberNotation()
-func (this *QTextStream) RealNumberNotation(args ...interface{}) () {
+func (this *QTextStream) Realnumbernotation(args ...interface{}) () {
   // realNumberNotation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -862,12 +947,16 @@ func (this *QTextStream) RealNumberNotation(args ...interface{}) () {
 }
 
 // setPadChar(class QChar)
-func (this *QTextStream) SetPadChar(args ...interface{}) () {
+func (this *QTextStream) Setpadchar(args ...interface{}) () {
   // setPadChar(class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QChar{}) // "QChar"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -886,12 +975,16 @@ func (this *QTextStream) SetPadChar(args ...interface{}) () {
 }
 
 // setFieldWidth(int)
-func (this *QTextStream) SetFieldWidth(args ...interface{}) () {
+func (this *QTextStream) Setfieldwidth(args ...interface{}) () {
   // setFieldWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -915,6 +1008,10 @@ func (this *QTextStream) Device(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -939,12 +1036,16 @@ func (this *QTextStream) Device(args ...interface{}) (ret interface{}) {
 }
 
 // readLine(qint64)
-func (this *QTextStream) ReadLine(args ...interface{}) (ret interface{}) {
+func (this *QTextStream) Readline(args ...interface{}) (ret interface{}) {
   // readLine(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -976,6 +1077,10 @@ func (this *QTextStream) Reset(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -992,11 +1097,15 @@ func (this *QTextStream) Reset(args ...interface{}) () {
 }
 
 // readAll()
-func (this *QTextStream) ReadAll(args ...interface{}) (ret interface{}) {
+func (this *QTextStream) Readall(args ...interface{}) (ret interface{}) {
   // readAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1021,13 +1130,17 @@ func (this *QTextStream) ReadAll(args ...interface{}) (ret interface{}) {
 }
 
 // readLineInto(class QString *, qint64)
-func (this *QTextStream) ReadLineInto(args ...interface{}) (ret interface{}) {
+func (this *QTextStream) Readlineinto(args ...interface{}) (ret interface{}) {
   // readLineInto(class QString *, qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "QString *"
   vtys[0][1] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1056,12 +1169,16 @@ func (this *QTextStream) ReadLineInto(args ...interface{}) (ret interface{}) {
 }
 
 // setLocale(const class QLocale &)
-func (this *QTextStream) SetLocale(args ...interface{}) () {
+func (this *QTextStream) Setlocale(args ...interface{}) () {
   // setLocale(const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QLocale{}) // "const QLocale &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1080,11 +1197,15 @@ func (this *QTextStream) SetLocale(args ...interface{}) () {
 }
 
 // resetStatus()
-func (this *QTextStream) ResetStatus(args ...interface{}) () {
+func (this *QTextStream) Resetstatus(args ...interface{}) () {
   // resetStatus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1101,11 +1222,15 @@ func (this *QTextStream) ResetStatus(args ...interface{}) () {
 }
 
 // atEnd()
-func (this *QTextStream) AtEnd(args ...interface{}) (ret interface{}) {
+func (this *QTextStream) Atend(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1130,12 +1255,16 @@ func (this *QTextStream) AtEnd(args ...interface{}) (ret interface{}) {
 }
 
 // setIntegerBase(int)
-func (this *QTextStream) SetIntegerBase(args ...interface{}) () {
+func (this *QTextStream) Setintegerbase(args ...interface{}) () {
   // setIntegerBase(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1154,11 +1283,15 @@ func (this *QTextStream) SetIntegerBase(args ...interface{}) () {
 }
 
 // integerBase()
-func (this *QTextStream) IntegerBase(args ...interface{}) (ret interface{}) {
+func (this *QTextStream) Integerbase(args ...interface{}) (ret interface{}) {
   // integerBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

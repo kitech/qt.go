@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -53,7 +52,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMessageAuthenticationCode)=8
@@ -68,6 +66,10 @@ func (this *QMessageAuthenticationCode) Reset(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -84,11 +86,15 @@ func (this *QMessageAuthenticationCode) Reset(args ...interface{}) () {
 }
 
 // ~QMessageAuthenticationCode()
-func (this *QMessageAuthenticationCode) Free(args ...interface{}) () {
+func (this *QMessageAuthenticationCode) Freeqmessageauthenticationcode(args ...interface{}) () {
   // ~QMessageAuthenticationCode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -96,10 +102,7 @@ func (this *QMessageAuthenticationCode) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN26QMessageAuthenticationCodeD0Ev
     // invoke: void ~QMessageAuthenticationCode()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN26QMessageAuthenticationCodeD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN26QMessageAuthenticationCodeD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "~QMessageAuthenticationCode", args)
   }
@@ -108,7 +111,7 @@ func (this *QMessageAuthenticationCode) Free(args ...interface{}) () {
 }
 
 // addData(const class QByteArray &)
-func (this *QMessageAuthenticationCode) AddData(args ...interface{}) () {
+func (this *QMessageAuthenticationCode) Adddata(args ...interface{}) () {
   // addData(const class QByteArray &)
   // addData(const char *, int)
   // addData(class QIODevice *)
@@ -121,6 +124,10 @@ func (this *QMessageAuthenticationCode) AddData(args ...interface{}) () {
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -156,12 +163,16 @@ func (this *QMessageAuthenticationCode) AddData(args ...interface{}) () {
 }
 
 // setKey(const class QByteArray &)
-func (this *QMessageAuthenticationCode) SetKey(args ...interface{}) () {
+func (this *QMessageAuthenticationCode) Setkey(args ...interface{}) () {
   // setKey(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -185,6 +196,10 @@ func (this *QMessageAuthenticationCode) Result(args ...interface{}) (ret interfa
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

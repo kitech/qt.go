@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qsizepolicy.h
 // dst-file: /src/widgets/qsizepolicy.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -75,7 +74,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSizePolicy)=4
@@ -85,14 +83,15 @@ type QSizePolicy struct {
 }
 
 // QSizePolicy()
-func GcfreeQSizePolicy(this *QSizePolicy) {
-  qtrt.UniverseFree(this)
-}
 func NewQSizePolicy(args ...interface{}) *QSizePolicy {
   // QSizePolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -103,9 +102,7 @@ func NewQSizePolicy(args ...interface{}) *QSizePolicy {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QSizePolicyC2Ev()
-    this := &QSizePolicy{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSizePolicy)
-    return this
+    return &QSizePolicy{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSizePolicy", "QSizePolicy", args)
   }
@@ -114,12 +111,16 @@ func NewQSizePolicy(args ...interface{}) *QSizePolicy {
 }
 
 // setHorizontalStretch(int)
-func (this *QSizePolicy) SetHorizontalStretch(args ...interface{}) () {
+func (this *QSizePolicy) Sethorizontalstretch(args ...interface{}) () {
   // setHorizontalStretch(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -138,11 +139,15 @@ func (this *QSizePolicy) SetHorizontalStretch(args ...interface{}) () {
 }
 
 // expandingDirections()
-func (this *QSizePolicy) ExpandingDirections(args ...interface{}) () {
+func (this *QSizePolicy) Expandingdirections(args ...interface{}) () {
   // expandingDirections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -159,12 +164,16 @@ func (this *QSizePolicy) ExpandingDirections(args ...interface{}) () {
 }
 
 // setWidthForHeight(_Bool)
-func (this *QSizePolicy) SetWidthForHeight(args ...interface{}) () {
+func (this *QSizePolicy) Setwidthforheight(args ...interface{}) () {
   // setWidthForHeight(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -183,11 +192,15 @@ func (this *QSizePolicy) SetWidthForHeight(args ...interface{}) () {
 }
 
 // hasWidthForHeight()
-func (this *QSizePolicy) HasWidthForHeight(args ...interface{}) (ret interface{}) {
+func (this *QSizePolicy) Haswidthforheight(args ...interface{}) (ret interface{}) {
   // hasWidthForHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -212,11 +225,15 @@ func (this *QSizePolicy) HasWidthForHeight(args ...interface{}) (ret interface{}
 }
 
 // verticalStretch()
-func (this *QSizePolicy) VerticalStretch(args ...interface{}) (ret interface{}) {
+func (this *QSizePolicy) Verticalstretch(args ...interface{}) (ret interface{}) {
   // verticalStretch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -246,6 +263,10 @@ func (this *QSizePolicy) Transpose(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -262,11 +283,15 @@ func (this *QSizePolicy) Transpose(args ...interface{}) () {
 }
 
 // retainSizeWhenHidden()
-func (this *QSizePolicy) RetainSizeWhenHidden(args ...interface{}) (ret interface{}) {
+func (this *QSizePolicy) Retainsizewhenhidden(args ...interface{}) (ret interface{}) {
   // retainSizeWhenHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -291,12 +316,16 @@ func (this *QSizePolicy) RetainSizeWhenHidden(args ...interface{}) (ret interfac
 }
 
 // setVerticalStretch(int)
-func (this *QSizePolicy) SetVerticalStretch(args ...interface{}) () {
+func (this *QSizePolicy) Setverticalstretch(args ...interface{}) () {
   // setVerticalStretch(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -315,11 +344,15 @@ func (this *QSizePolicy) SetVerticalStretch(args ...interface{}) () {
 }
 
 // verticalPolicy()
-func (this *QSizePolicy) VerticalPolicy(args ...interface{}) () {
+func (this *QSizePolicy) Verticalpolicy(args ...interface{}) () {
   // verticalPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -336,12 +369,16 @@ func (this *QSizePolicy) VerticalPolicy(args ...interface{}) () {
 }
 
 // setHeightForWidth(_Bool)
-func (this *QSizePolicy) SetHeightForWidth(args ...interface{}) () {
+func (this *QSizePolicy) Setheightforwidth(args ...interface{}) () {
   // setHeightForWidth(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -360,11 +397,15 @@ func (this *QSizePolicy) SetHeightForWidth(args ...interface{}) () {
 }
 
 // hasHeightForWidth()
-func (this *QSizePolicy) HasHeightForWidth(args ...interface{}) (ret interface{}) {
+func (this *QSizePolicy) Hasheightforwidth(args ...interface{}) (ret interface{}) {
   // hasHeightForWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -389,11 +430,15 @@ func (this *QSizePolicy) HasHeightForWidth(args ...interface{}) (ret interface{}
 }
 
 // horizontalStretch()
-func (this *QSizePolicy) HorizontalStretch(args ...interface{}) (ret interface{}) {
+func (this *QSizePolicy) Horizontalstretch(args ...interface{}) (ret interface{}) {
   // horizontalStretch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -418,12 +463,16 @@ func (this *QSizePolicy) HorizontalStretch(args ...interface{}) (ret interface{}
 }
 
 // setRetainSizeWhenHidden(_Bool)
-func (this *QSizePolicy) SetRetainSizeWhenHidden(args ...interface{}) () {
+func (this *QSizePolicy) Setretainsizewhenhidden(args ...interface{}) () {
   // setRetainSizeWhenHidden(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -442,11 +491,15 @@ func (this *QSizePolicy) SetRetainSizeWhenHidden(args ...interface{}) () {
 }
 
 // controlType()
-func (this *QSizePolicy) ControlType(args ...interface{}) () {
+func (this *QSizePolicy) Controltype(args ...interface{}) () {
   // controlType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -463,11 +516,15 @@ func (this *QSizePolicy) ControlType(args ...interface{}) () {
 }
 
 // horizontalPolicy()
-func (this *QSizePolicy) HorizontalPolicy(args ...interface{}) () {
+func (this *QSizePolicy) Horizontalpolicy(args ...interface{}) () {
   // horizontalPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

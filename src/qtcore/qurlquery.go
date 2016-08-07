@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -77,7 +76,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QUrlQuery)=1
@@ -87,13 +85,17 @@ type QUrlQuery struct {
 }
 
 // addQueryItem(const class QString &, const class QString &)
-func (this *QUrlQuery) AddQueryItem(args ...interface{}) () {
+func (this *QUrlQuery) Addqueryitem(args ...interface{}) () {
   // addQueryItem(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -114,11 +116,15 @@ func (this *QUrlQuery) AddQueryItem(args ...interface{}) () {
 }
 
 // queryValueDelimiter()
-func (this *QUrlQuery) QueryValueDelimiter(args ...interface{}) (ret interface{}) {
+func (this *QUrlQuery) Queryvaluedelimiter(args ...interface{}) (ret interface{}) {
   // queryValueDelimiter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -143,12 +149,16 @@ func (this *QUrlQuery) QueryValueDelimiter(args ...interface{}) (ret interface{}
 }
 
 // hasQueryItem(const class QString &)
-func (this *QUrlQuery) HasQueryItem(args ...interface{}) (ret interface{}) {
+func (this *QUrlQuery) Hasqueryitem(args ...interface{}) (ret interface{}) {
   // hasQueryItem(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -175,12 +185,16 @@ func (this *QUrlQuery) HasQueryItem(args ...interface{}) (ret interface{}) {
 }
 
 // removeAllQueryItems(const class QString &)
-func (this *QUrlQuery) RemoveAllQueryItems(args ...interface{}) () {
+func (this *QUrlQuery) Removeallqueryitems(args ...interface{}) () {
   // removeAllQueryItems(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -199,11 +213,15 @@ func (this *QUrlQuery) RemoveAllQueryItems(args ...interface{}) () {
 }
 
 // ~QUrlQuery()
-func (this *QUrlQuery) Free(args ...interface{}) () {
+func (this *QUrlQuery) Freequrlquery(args ...interface{}) () {
   // ~QUrlQuery()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -211,10 +229,7 @@ func (this *QUrlQuery) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQueryD0Ev
     // invoke: void ~QUrlQuery()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QUrlQueryD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QUrlQueryD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "~QUrlQuery", args)
   }
@@ -223,11 +238,15 @@ func (this *QUrlQuery) Free(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QUrlQuery) IsEmpty(args ...interface{}) (ret interface{}) {
+func (this *QUrlQuery) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -258,6 +277,10 @@ func (this *QUrlQuery) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QUrlQuery{}) // "QUrlQuery &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -276,11 +299,15 @@ func (this *QUrlQuery) Swap(args ...interface{}) () {
 }
 
 // isDetached()
-func (this *QUrlQuery) IsDetached(args ...interface{}) (ret interface{}) {
+func (this *QUrlQuery) Isdetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -305,11 +332,15 @@ func (this *QUrlQuery) IsDetached(args ...interface{}) (ret interface{}) {
 }
 
 // defaultQueryPairDelimiter()
-func (this *QUrlQuery) DefaultQueryPairDelimiter_s(args ...interface{}) (ret interface{}) {
+func (this *QUrlQuery) Defaultquerypairdelimiter_S(args ...interface{}) (ret interface{}) {
   // defaultQueryPairDelimiter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -334,9 +365,6 @@ func (this *QUrlQuery) DefaultQueryPairDelimiter_s(args ...interface{}) (ret int
 }
 
 // QUrlQuery()
-func GcfreeQUrlQuery(this *QUrlQuery) {
-  qtrt.UniverseFree(this)
-}
 func NewQUrlQuery(args ...interface{}) *QUrlQuery {
   // QUrlQuery()
   // QUrlQuery(const class QString &)
@@ -351,6 +379,10 @@ func NewQUrlQuery(args ...interface{}) *QUrlQuery {
   vtys[2][0] = reflect.TypeOf(QUrl{}) // "const QUrl &"
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(QUrlQuery{}) // "const QUrlQuery &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -361,9 +393,7 @@ func NewQUrlQuery(args ...interface{}) *QUrlQuery {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QUrlQueryC2Ev()
-    this := &QUrlQuery{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQUrlQuery)
-    return this
+    return &QUrlQuery{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QUrlQueryC1ERK7QString
     // invoke: void QUrlQuery(const class QString &)
@@ -372,9 +402,7 @@ func NewQUrlQuery(args ...interface{}) *QUrlQuery {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QUrlQueryC2ERK7QString(arg0)
-    this := &QUrlQuery{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQUrlQuery)
-    return this
+    return &QUrlQuery{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QUrlQueryC1ERK4QUrl
     // invoke: void QUrlQuery(const class QUrl &)
@@ -383,9 +411,7 @@ func NewQUrlQuery(args ...interface{}) *QUrlQuery {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QUrlQueryC2ERK4QUrl(arg0)
-    this := &QUrlQuery{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQUrlQuery)
-    return this
+    return &QUrlQuery{Qclsinst:qthis}
   case 3:
     // invoke: _ZN9QUrlQueryC1ERKS_
     // invoke: void QUrlQuery(const class QUrlQuery &)
@@ -394,9 +420,7 @@ func NewQUrlQuery(args ...interface{}) *QUrlQuery {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QUrlQueryC2ERKS_(arg0)
-    this := &QUrlQuery{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQUrlQuery)
-    return this
+    return &QUrlQuery{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QUrlQuery", "QUrlQuery", args)
   }
@@ -405,13 +429,17 @@ func NewQUrlQuery(args ...interface{}) *QUrlQuery {
 }
 
 // setQueryDelimiters(class QChar, class QChar)
-func (this *QUrlQuery) SetQueryDelimiters(args ...interface{}) () {
+func (this *QUrlQuery) Setquerydelimiters(args ...interface{}) () {
   // setQueryDelimiters(class QChar, class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QChar{}) // "QChar"
   vtys[0][1] = reflect.TypeOf(QChar{}) // "QChar"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -437,6 +465,10 @@ func (this *QUrlQuery) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -453,11 +485,15 @@ func (this *QUrlQuery) Clear(args ...interface{}) () {
 }
 
 // queryPairDelimiter()
-func (this *QUrlQuery) QueryPairDelimiter(args ...interface{}) (ret interface{}) {
+func (this *QUrlQuery) Querypairdelimiter(args ...interface{}) (ret interface{}) {
   // queryPairDelimiter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -482,12 +518,16 @@ func (this *QUrlQuery) QueryPairDelimiter(args ...interface{}) (ret interface{})
 }
 
 // setQuery(const class QString &)
-func (this *QUrlQuery) SetQuery(args ...interface{}) () {
+func (this *QUrlQuery) Setquery(args ...interface{}) () {
   // setQuery(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -506,11 +546,15 @@ func (this *QUrlQuery) SetQuery(args ...interface{}) () {
 }
 
 // defaultQueryValueDelimiter()
-func (this *QUrlQuery) DefaultQueryValueDelimiter_s(args ...interface{}) (ret interface{}) {
+func (this *QUrlQuery) Defaultqueryvaluedelimiter_S(args ...interface{}) (ret interface{}) {
   // defaultQueryValueDelimiter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -535,12 +579,16 @@ func (this *QUrlQuery) DefaultQueryValueDelimiter_s(args ...interface{}) (ret in
 }
 
 // removeQueryItem(const class QString &)
-func (this *QUrlQuery) RemoveQueryItem(args ...interface{}) () {
+func (this *QUrlQuery) Removequeryitem(args ...interface{}) () {
   // removeQueryItem(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

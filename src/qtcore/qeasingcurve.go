@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -69,7 +68,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QEasingCurve)=8
@@ -84,6 +82,10 @@ func (this *QEasingCurve) Overshoot(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -113,6 +115,10 @@ func (this *QEasingCurve) Period(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -137,12 +143,16 @@ func (this *QEasingCurve) Period(args ...interface{}) (ret interface{}) {
 }
 
 // valueForProgress(qreal)
-func (this *QEasingCurve) ValueForProgress(args ...interface{}) (ret interface{}) {
+func (this *QEasingCurve) Valueforprogress(args ...interface{}) (ret interface{}) {
   // valueForProgress(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -169,11 +179,15 @@ func (this *QEasingCurve) ValueForProgress(args ...interface{}) (ret interface{}
 }
 
 // toCubicSpline()
-func (this *QEasingCurve) ToCubicSpline(args ...interface{}) () {
+func (this *QEasingCurve) Tocubicspline(args ...interface{}) () {
   // toCubicSpline()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -190,7 +204,7 @@ func (this *QEasingCurve) ToCubicSpline(args ...interface{}) () {
 }
 
 // addCubicBezierSegment(const class QPointF &, const class QPointF &, const class QPointF &)
-func (this *QEasingCurve) AddCubicBezierSegment(args ...interface{}) () {
+func (this *QEasingCurve) Addcubicbeziersegment(args ...interface{}) () {
   // addCubicBezierSegment(const class QPointF &, const class QPointF &, const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -198,6 +212,10 @@ func (this *QEasingCurve) AddCubicBezierSegment(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
   vtys[0][1] = reflect.TypeOf(QPointF{}) // "const QPointF &"
   vtys[0][2] = reflect.TypeOf(QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -220,15 +238,16 @@ func (this *QEasingCurve) AddCubicBezierSegment(args ...interface{}) () {
 }
 
 // QEasingCurve(const class QEasingCurve &)
-func GcfreeQEasingCurve(this *QEasingCurve) {
-  qtrt.UniverseFree(this)
-}
 func NewQEasingCurve(args ...interface{}) *QEasingCurve {
   // QEasingCurve(const class QEasingCurve &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QEasingCurve{}) // "const QEasingCurve &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -241,9 +260,7 @@ func NewQEasingCurve(args ...interface{}) *QEasingCurve {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QEasingCurveC2ERKS_(arg0)
-    this := &QEasingCurve{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQEasingCurve)
-    return this
+    return &QEasingCurve{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QEasingCurve", "QEasingCurve", args)
   }
@@ -257,6 +274,10 @@ func (this *QEasingCurve) Type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -279,6 +300,10 @@ func (this *QEasingCurve) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QEasingCurve{}) // "QEasingCurve &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -297,7 +322,7 @@ func (this *QEasingCurve) Swap(args ...interface{}) () {
 }
 
 // addTCBSegment(const class QPointF &, qreal, qreal, qreal)
-func (this *QEasingCurve) AddTCBSegment(args ...interface{}) () {
+func (this *QEasingCurve) Addtcbsegment(args ...interface{}) () {
   // addTCBSegment(const class QPointF &, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,6 +331,10 @@ func (this *QEasingCurve) AddTCBSegment(args ...interface{}) () {
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -330,12 +359,16 @@ func (this *QEasingCurve) AddTCBSegment(args ...interface{}) () {
 }
 
 // setAmplitude(qreal)
-func (this *QEasingCurve) SetAmplitude(args ...interface{}) () {
+func (this *QEasingCurve) Setamplitude(args ...interface{}) () {
   // setAmplitude(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -354,11 +387,15 @@ func (this *QEasingCurve) SetAmplitude(args ...interface{}) () {
 }
 
 // ~QEasingCurve()
-func (this *QEasingCurve) Free(args ...interface{}) () {
+func (this *QEasingCurve) Freeqeasingcurve(args ...interface{}) () {
   // ~QEasingCurve()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -366,10 +403,7 @@ func (this *QEasingCurve) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QEasingCurveD0Ev
     // invoke: void ~QEasingCurve()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QEasingCurveD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QEasingCurveD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEasingCurve", "~QEasingCurve", args)
   }
@@ -378,12 +412,16 @@ func (this *QEasingCurve) Free(args ...interface{}) () {
 }
 
 // setPeriod(qreal)
-func (this *QEasingCurve) SetPeriod(args ...interface{}) () {
+func (this *QEasingCurve) Setperiod(args ...interface{}) () {
   // setPeriod(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -402,11 +440,15 @@ func (this *QEasingCurve) SetPeriod(args ...interface{}) () {
 }
 
 // customType()
-func (this *QEasingCurve) CustomType(args ...interface{}) () {
+func (this *QEasingCurve) Customtype(args ...interface{}) () {
   // customType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -423,12 +465,16 @@ func (this *QEasingCurve) CustomType(args ...interface{}) () {
 }
 
 // setOvershoot(qreal)
-func (this *QEasingCurve) SetOvershoot(args ...interface{}) () {
+func (this *QEasingCurve) Setovershoot(args ...interface{}) () {
   // setOvershoot(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -452,6 +498,10 @@ func (this *QEasingCurve) Amplitude(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

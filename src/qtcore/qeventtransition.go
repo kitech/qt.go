@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qeventtransition.h
 // dst-file: /src/core/qeventtransition.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -51,7 +50,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QEventTransition)=1
@@ -61,11 +59,15 @@ type QEventTransition struct {
 }
 
 // metaObject()
-func (this *QEventTransition) MetaObject(args ...interface{}) () {
+func (this *QEventTransition) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -82,12 +84,16 @@ func (this *QEventTransition) MetaObject(args ...interface{}) () {
 }
 
 // setEventSource(class QObject *)
-func (this *QEventTransition) SetEventSource(args ...interface{}) () {
+func (this *QEventTransition) Seteventsource(args ...interface{}) () {
   // setEventSource(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -106,15 +112,16 @@ func (this *QEventTransition) SetEventSource(args ...interface{}) () {
 }
 
 // QEventTransition(class QState *)
-func GcfreeQEventTransition(this *QEventTransition) {
-  qtrt.UniverseFree(this)
-}
 func NewQEventTransition(args ...interface{}) *QEventTransition {
   // QEventTransition(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QState{}) // "QState *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -127,9 +134,7 @@ func NewQEventTransition(args ...interface{}) *QEventTransition {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QEventTransitionC2EP6QState(arg0)
-    this := &QEventTransition{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQEventTransition)
-    return this
+    return &QEventTransition{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QEventTransition", "QEventTransition", args)
   }
@@ -138,11 +143,15 @@ func NewQEventTransition(args ...interface{}) *QEventTransition {
 }
 
 // eventSource()
-func (this *QEventTransition) EventSource(args ...interface{}) (ret interface{}) {
+func (this *QEventTransition) Eventsource(args ...interface{}) (ret interface{}) {
   // eventSource()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -167,11 +176,15 @@ func (this *QEventTransition) EventSource(args ...interface{}) (ret interface{})
 }
 
 // eventType()
-func (this *QEventTransition) EventType(args ...interface{}) () {
+func (this *QEventTransition) Eventtype(args ...interface{}) () {
   // eventType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -188,11 +201,15 @@ func (this *QEventTransition) EventType(args ...interface{}) () {
 }
 
 // ~QEventTransition()
-func (this *QEventTransition) Free(args ...interface{}) () {
+func (this *QEventTransition) Freeqeventtransition(args ...interface{}) () {
   // ~QEventTransition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -200,10 +217,7 @@ func (this *QEventTransition) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QEventTransitionD0Ev
     // invoke: void ~QEventTransition()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QEventTransitionD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QEventTransitionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEventTransition", "~QEventTransition", args)
   }

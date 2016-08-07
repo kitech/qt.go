@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qtabwidget.h
 // dst-file: /src/widgets/qtabwidget.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -135,7 +134,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTabWidget)=1
@@ -149,12 +147,16 @@ type QTabWidget struct {
 }
 
 // tabToolTip(int)
-func (this *QTabWidget) TabToolTip(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Tabtooltip(args ...interface{}) (ret interface{}) {
   // tabToolTip(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -181,11 +183,15 @@ func (this *QTabWidget) TabToolTip(args ...interface{}) (ret interface{}) {
 }
 
 // tabBarAutoHide()
-func (this *QTabWidget) TabBarAutoHide(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Tabbarautohide(args ...interface{}) (ret interface{}) {
   // tabBarAutoHide()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -210,12 +216,16 @@ func (this *QTabWidget) TabBarAutoHide(args ...interface{}) (ret interface{}) {
 }
 
 // isTabEnabled(int)
-func (this *QTabWidget) IsTabEnabled(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Istabenabled(args ...interface{}) (ret interface{}) {
   // isTabEnabled(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -242,12 +252,16 @@ func (this *QTabWidget) IsTabEnabled(args ...interface{}) (ret interface{}) {
 }
 
 // tabWhatsThis(int)
-func (this *QTabWidget) TabWhatsThis(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Tabwhatsthis(args ...interface{}) (ret interface{}) {
   // tabWhatsThis(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -274,12 +288,16 @@ func (this *QTabWidget) TabWhatsThis(args ...interface{}) (ret interface{}) {
 }
 
 // tabIcon(int)
-func (this *QTabWidget) TabIcon(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Tabicon(args ...interface{}) (ret interface{}) {
   // tabIcon(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -306,11 +324,15 @@ func (this *QTabWidget) TabIcon(args ...interface{}) (ret interface{}) {
 }
 
 // minimumSizeHint()
-func (this *QTabWidget) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -335,12 +357,16 @@ func (this *QTabWidget) MinimumSizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // setCurrentIndex(int)
-func (this *QTabWidget) SetCurrentIndex(args ...interface{}) () {
+func (this *QTabWidget) Setcurrentindex(args ...interface{}) () {
   // setCurrentIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -359,11 +385,15 @@ func (this *QTabWidget) SetCurrentIndex(args ...interface{}) () {
 }
 
 // currentWidget()
-func (this *QTabWidget) CurrentWidget(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Currentwidget(args ...interface{}) (ret interface{}) {
   // currentWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -388,12 +418,16 @@ func (this *QTabWidget) CurrentWidget(args ...interface{}) (ret interface{}) {
 }
 
 // setMovable(_Bool)
-func (this *QTabWidget) SetMovable(args ...interface{}) () {
+func (this *QTabWidget) Setmovable(args ...interface{}) () {
   // setMovable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -412,11 +446,15 @@ func (this *QTabWidget) SetMovable(args ...interface{}) () {
 }
 
 // tabsClosable()
-func (this *QTabWidget) TabsClosable(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Tabsclosable(args ...interface{}) (ret interface{}) {
   // tabsClosable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -441,13 +479,17 @@ func (this *QTabWidget) TabsClosable(args ...interface{}) (ret interface{}) {
 }
 
 // setTabIcon(int, const class QIcon &)
-func (this *QTabWidget) SetTabIcon(args ...interface{}) () {
+func (this *QTabWidget) Settabicon(args ...interface{}) () {
   // setTabIcon(int, const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -468,12 +510,16 @@ func (this *QTabWidget) SetTabIcon(args ...interface{}) () {
 }
 
 // setCurrentWidget(class QWidget *)
-func (this *QTabWidget) SetCurrentWidget(args ...interface{}) () {
+func (this *QTabWidget) Setcurrentwidget(args ...interface{}) () {
   // setCurrentWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -492,11 +538,15 @@ func (this *QTabWidget) SetCurrentWidget(args ...interface{}) () {
 }
 
 // ~QTabWidget()
-func (this *QTabWidget) Free(args ...interface{}) () {
+func (this *QTabWidget) Freeqtabwidget(args ...interface{}) () {
   // ~QTabWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -504,10 +554,7 @@ func (this *QTabWidget) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTabWidgetD0Ev
     // invoke: void ~QTabWidget()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN10QTabWidgetD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN10QTabWidgetD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTabWidget", "~QTabWidget", args)
   }
@@ -516,7 +563,7 @@ func (this *QTabWidget) Free(args ...interface{}) () {
 }
 
 // insertTab(int, class QWidget *, const class QString &)
-func (this *QTabWidget) InsertTab(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Inserttab(args ...interface{}) (ret interface{}) {
   // insertTab(int, class QWidget *, const class QString &)
   // insertTab(int, class QWidget *, const class QIcon &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -530,6 +577,10 @@ func (this *QTabWidget) InsertTab(args ...interface{}) (ret interface{}) {
   vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[1][2] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
   vtys[1][3] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -580,11 +631,15 @@ func (this *QTabWidget) InsertTab(args ...interface{}) (ret interface{}) {
 }
 
 // tabShape()
-func (this *QTabWidget) TabShape(args ...interface{}) () {
+func (this *QTabWidget) Tabshape(args ...interface{}) () {
   // tabShape()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -601,12 +656,16 @@ func (this *QTabWidget) TabShape(args ...interface{}) () {
 }
 
 // indexOf(class QWidget *)
-func (this *QTabWidget) IndexOf(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Indexof(args ...interface{}) (ret interface{}) {
   // indexOf(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -633,11 +692,15 @@ func (this *QTabWidget) IndexOf(args ...interface{}) (ret interface{}) {
 }
 
 // tabBar()
-func (this *QTabWidget) TabBar(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Tabbar(args ...interface{}) (ret interface{}) {
   // tabBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -662,13 +725,17 @@ func (this *QTabWidget) TabBar(args ...interface{}) (ret interface{}) {
 }
 
 // setTabToolTip(int, const class QString &)
-func (this *QTabWidget) SetTabToolTip(args ...interface{}) () {
+func (this *QTabWidget) Settabtooltip(args ...interface{}) () {
   // setTabToolTip(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -689,15 +756,16 @@ func (this *QTabWidget) SetTabToolTip(args ...interface{}) () {
 }
 
 // QTabWidget(class QWidget *)
-func GcfreeQTabWidget(this *QTabWidget) {
-  qtrt.UniverseFree(this)
-}
 func NewQTabWidget(args ...interface{}) *QTabWidget {
   // QTabWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -710,9 +778,7 @@ func NewQTabWidget(args ...interface{}) *QTabWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTabWidgetC2EP7QWidget(arg0)
-    this := &QTabWidget{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTabWidget)
-    return this
+    return &QTabWidget{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTabWidget", "QTabWidget", args)
   }
@@ -721,12 +787,16 @@ func NewQTabWidget(args ...interface{}) *QTabWidget {
 }
 
 // setTabBarAutoHide(_Bool)
-func (this *QTabWidget) SetTabBarAutoHide(args ...interface{}) () {
+func (this *QTabWidget) Settabbarautohide(args ...interface{}) () {
   // setTabBarAutoHide(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -745,11 +815,15 @@ func (this *QTabWidget) SetTabBarAutoHide(args ...interface{}) () {
 }
 
 // documentMode()
-func (this *QTabWidget) DocumentMode(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Documentmode(args ...interface{}) (ret interface{}) {
   // documentMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -780,6 +854,10 @@ func (this *QTabWidget) Widget(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -806,12 +884,16 @@ func (this *QTabWidget) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // removeTab(int)
-func (this *QTabWidget) RemoveTab(args ...interface{}) () {
+func (this *QTabWidget) Removetab(args ...interface{}) () {
   // removeTab(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -830,11 +912,15 @@ func (this *QTabWidget) RemoveTab(args ...interface{}) () {
 }
 
 // iconSize()
-func (this *QTabWidget) IconSize(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Iconsize(args ...interface{}) (ret interface{}) {
   // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -859,13 +945,17 @@ func (this *QTabWidget) IconSize(args ...interface{}) (ret interface{}) {
 }
 
 // setTabText(int, const class QString &)
-func (this *QTabWidget) SetTabText(args ...interface{}) () {
+func (this *QTabWidget) Settabtext(args ...interface{}) () {
   // setTabText(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -886,12 +976,16 @@ func (this *QTabWidget) SetTabText(args ...interface{}) () {
 }
 
 // tabText(int)
-func (this *QTabWidget) TabText(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Tabtext(args ...interface{}) (ret interface{}) {
   // tabText(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -918,12 +1012,16 @@ func (this *QTabWidget) TabText(args ...interface{}) (ret interface{}) {
 }
 
 // setTabsClosable(_Bool)
-func (this *QTabWidget) SetTabsClosable(args ...interface{}) () {
+func (this *QTabWidget) Settabsclosable(args ...interface{}) () {
   // setTabsClosable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -942,11 +1040,15 @@ func (this *QTabWidget) SetTabsClosable(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QTabWidget) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -971,11 +1073,15 @@ func (this *QTabWidget) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // tabPosition()
-func (this *QTabWidget) TabPosition(args ...interface{}) () {
+func (this *QTabWidget) Tabposition(args ...interface{}) () {
   // tabPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -992,11 +1098,15 @@ func (this *QTabWidget) TabPosition(args ...interface{}) () {
 }
 
 // usesScrollButtons()
-func (this *QTabWidget) UsesScrollButtons(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Usesscrollbuttons(args ...interface{}) (ret interface{}) {
   // usesScrollButtons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1021,12 +1131,16 @@ func (this *QTabWidget) UsesScrollButtons(args ...interface{}) (ret interface{})
 }
 
 // setDocumentMode(_Bool)
-func (this *QTabWidget) SetDocumentMode(args ...interface{}) () {
+func (this *QTabWidget) Setdocumentmode(args ...interface{}) () {
   // setDocumentMode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1050,6 +1164,10 @@ func (this *QTabWidget) Count(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1074,12 +1192,16 @@ func (this *QTabWidget) Count(args ...interface{}) (ret interface{}) {
 }
 
 // setUsesScrollButtons(_Bool)
-func (this *QTabWidget) SetUsesScrollButtons(args ...interface{}) () {
+func (this *QTabWidget) Setusesscrollbuttons(args ...interface{}) () {
   // setUsesScrollButtons(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1098,11 +1220,15 @@ func (this *QTabWidget) SetUsesScrollButtons(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QTabWidget) MetaObject(args ...interface{}) () {
+func (this *QTabWidget) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1119,11 +1245,15 @@ func (this *QTabWidget) MetaObject(args ...interface{}) () {
 }
 
 // elideMode()
-func (this *QTabWidget) ElideMode(args ...interface{}) () {
+func (this *QTabWidget) Elidemode(args ...interface{}) () {
   // elideMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1140,11 +1270,15 @@ func (this *QTabWidget) ElideMode(args ...interface{}) () {
 }
 
 // hasHeightForWidth()
-func (this *QTabWidget) HasHeightForWidth(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Hasheightforwidth(args ...interface{}) (ret interface{}) {
   // hasHeightForWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1169,13 +1303,17 @@ func (this *QTabWidget) HasHeightForWidth(args ...interface{}) (ret interface{})
 }
 
 // setTabWhatsThis(int, const class QString &)
-func (this *QTabWidget) SetTabWhatsThis(args ...interface{}) () {
+func (this *QTabWidget) Settabwhatsthis(args ...interface{}) () {
   // setTabWhatsThis(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1201,6 +1339,10 @@ func (this *QTabWidget) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1217,12 +1359,16 @@ func (this *QTabWidget) Clear(args ...interface{}) () {
 }
 
 // setIconSize(const class QSize &)
-func (this *QTabWidget) SetIconSize(args ...interface{}) () {
+func (this *QTabWidget) Seticonsize(args ...interface{}) () {
   // setIconSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1241,11 +1387,15 @@ func (this *QTabWidget) SetIconSize(args ...interface{}) () {
 }
 
 // isMovable()
-func (this *QTabWidget) IsMovable(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Ismovable(args ...interface{}) (ret interface{}) {
   // isMovable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1270,12 +1420,16 @@ func (this *QTabWidget) IsMovable(args ...interface{}) (ret interface{}) {
 }
 
 // heightForWidth(int)
-func (this *QTabWidget) HeightForWidth(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Heightforwidth(args ...interface{}) (ret interface{}) {
   // heightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1302,13 +1456,17 @@ func (this *QTabWidget) HeightForWidth(args ...interface{}) (ret interface{}) {
 }
 
 // setTabEnabled(int, _Bool)
-func (this *QTabWidget) SetTabEnabled(args ...interface{}) () {
+func (this *QTabWidget) Settabenabled(args ...interface{}) () {
   // setTabEnabled(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1329,11 +1487,15 @@ func (this *QTabWidget) SetTabEnabled(args ...interface{}) () {
 }
 
 // currentIndex()
-func (this *QTabWidget) CurrentIndex(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Currentindex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1358,7 +1520,7 @@ func (this *QTabWidget) CurrentIndex(args ...interface{}) (ret interface{}) {
 }
 
 // addTab(class QWidget *, const class QIcon &, const class QString &)
-func (this *QTabWidget) AddTab(args ...interface{}) (ret interface{}) {
+func (this *QTabWidget) Addtab(args ...interface{}) (ret interface{}) {
   // addTab(class QWidget *, const class QIcon &, const class QString &)
   // addTab(class QWidget *, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1370,6 +1532,10 @@ func (this *QTabWidget) AddTab(args ...interface{}) (ret interface{}) {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[1][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

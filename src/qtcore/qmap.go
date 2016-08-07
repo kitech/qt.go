@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qmap.h
 // dst-file: /src/core/qmap.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -67,7 +66,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMapDataBase)=1
@@ -83,12 +81,16 @@ type QMapNodeBase struct {
 }
 
 // freeData(struct QMapDataBase *)
-func (this *QMapDataBase) FreeData_s(args ...interface{}) () {
+func (this *QMapDataBase) Freedata_S(args ...interface{}) () {
   // freeData(struct QMapDataBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QMapDataBase{}) // "QMapDataBase *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -107,7 +109,7 @@ func (this *QMapDataBase) FreeData_s(args ...interface{}) () {
 }
 
 // createNode(int, int, struct QMapNodeBase *, _Bool)
-func (this *QMapDataBase) CreateNode(args ...interface{}) (ret interface{}) {
+func (this *QMapDataBase) Createnode(args ...interface{}) (ret interface{}) {
   // createNode(int, int, struct QMapNodeBase *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -116,6 +118,10 @@ func (this *QMapDataBase) CreateNode(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QMapNodeBase{}) // "QMapNodeBase *"
   vtys[0][3] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -148,12 +154,16 @@ func (this *QMapDataBase) CreateNode(args ...interface{}) (ret interface{}) {
 }
 
 // rotateRight(struct QMapNodeBase *)
-func (this *QMapDataBase) RotateRight(args ...interface{}) () {
+func (this *QMapDataBase) Rotateright(args ...interface{}) () {
   // rotateRight(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QMapNodeBase{}) // "QMapNodeBase *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -172,13 +182,17 @@ func (this *QMapDataBase) RotateRight(args ...interface{}) () {
 }
 
 // freeTree(struct QMapNodeBase *, int)
-func (this *QMapDataBase) FreeTree(args ...interface{}) () {
+func (this *QMapDataBase) Freetree(args ...interface{}) () {
   // freeTree(struct QMapNodeBase *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QMapNodeBase{}) // "QMapNodeBase *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -199,11 +213,15 @@ func (this *QMapDataBase) FreeTree(args ...interface{}) () {
 }
 
 // recalcMostLeftNode()
-func (this *QMapDataBase) RecalcMostLeftNode(args ...interface{}) () {
+func (this *QMapDataBase) Recalcmostleftnode(args ...interface{}) () {
   // recalcMostLeftNode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -220,11 +238,15 @@ func (this *QMapDataBase) RecalcMostLeftNode(args ...interface{}) () {
 }
 
 // createData()
-func (this *QMapDataBase) CreateData_s(args ...interface{}) (ret interface{}) {
+func (this *QMapDataBase) Createdata_S(args ...interface{}) (ret interface{}) {
   // createData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -249,12 +271,16 @@ func (this *QMapDataBase) CreateData_s(args ...interface{}) (ret interface{}) {
 }
 
 // rotateLeft(struct QMapNodeBase *)
-func (this *QMapDataBase) RotateLeft(args ...interface{}) () {
+func (this *QMapDataBase) Rotateleft(args ...interface{}) () {
   // rotateLeft(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QMapNodeBase{}) // "QMapNodeBase *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -279,6 +305,10 @@ func (this *QMapDataBase) Rebalance(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QMapNodeBase{}) // "QMapNodeBase *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -297,12 +327,16 @@ func (this *QMapDataBase) Rebalance(args ...interface{}) () {
 }
 
 // freeNodeAndRebalance(struct QMapNodeBase *)
-func (this *QMapDataBase) FreeNodeAndRebalance(args ...interface{}) () {
+func (this *QMapDataBase) Freenodeandrebalance(args ...interface{}) () {
   // freeNodeAndRebalance(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QMapNodeBase{}) // "QMapNodeBase *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -321,11 +355,15 @@ func (this *QMapDataBase) FreeNodeAndRebalance(args ...interface{}) () {
 }
 
 // previousNode()
-func (this *QMapNodeBase) PreviousNode(args ...interface{}) (ret interface{}) {
+func (this *QMapNodeBase) Previousnode(args ...interface{}) (ret interface{}) {
   // previousNode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -355,6 +393,10 @@ func (this *QMapNodeBase) Parent(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -384,6 +426,10 @@ func (this *QMapNodeBase) Color(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -400,12 +446,16 @@ func (this *QMapNodeBase) Color(args ...interface{}) () {
 }
 
 // setParent(struct QMapNodeBase *)
-func (this *QMapNodeBase) SetParent(args ...interface{}) () {
+func (this *QMapNodeBase) Setparent(args ...interface{}) () {
   // setParent(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QMapNodeBase{}) // "QMapNodeBase *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -424,11 +474,15 @@ func (this *QMapNodeBase) SetParent(args ...interface{}) () {
 }
 
 // nextNode()
-func (this *QMapNodeBase) NextNode(args ...interface{}) (ret interface{}) {
+func (this *QMapNodeBase) Nextnode(args ...interface{}) (ret interface{}) {
   // nextNode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qgraphicstransform.h
 // dst-file: /src/widgets/qgraphicstransform.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -93,7 +92,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsRotation)=1
@@ -128,6 +126,10 @@ func (this *QGraphicsRotation) Origin(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -152,11 +154,15 @@ func (this *QGraphicsRotation) Origin(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QGraphicsRotation) MetaObject(args ...interface{}) () {
+func (this *QGraphicsRotation) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -173,12 +179,16 @@ func (this *QGraphicsRotation) MetaObject(args ...interface{}) () {
 }
 
 // applyTo(class QMatrix4x4 *)
-func (this *QGraphicsRotation) ApplyTo(args ...interface{}) () {
+func (this *QGraphicsRotation) Applyto(args ...interface{}) () {
   // applyTo(class QMatrix4x4 *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QMatrix4x4{}) // "QMatrix4x4 *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -197,12 +207,16 @@ func (this *QGraphicsRotation) ApplyTo(args ...interface{}) () {
 }
 
 // setOrigin(const class QVector3D &)
-func (this *QGraphicsRotation) SetOrigin(args ...interface{}) () {
+func (this *QGraphicsRotation) Setorigin(args ...interface{}) () {
   // setOrigin(const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -221,15 +235,16 @@ func (this *QGraphicsRotation) SetOrigin(args ...interface{}) () {
 }
 
 // QGraphicsRotation(class QObject *)
-func GcfreeQGraphicsRotation(this *QGraphicsRotation) {
-  qtrt.UniverseFree(this)
-}
 func NewQGraphicsRotation(args ...interface{}) *QGraphicsRotation {
   // QGraphicsRotation(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -242,9 +257,7 @@ func NewQGraphicsRotation(args ...interface{}) *QGraphicsRotation {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsRotationC2EP7QObject(arg0)
-    this := &QGraphicsRotation{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGraphicsRotation)
-    return this
+    return &QGraphicsRotation{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "QGraphicsRotation", args)
   }
@@ -253,12 +266,16 @@ func NewQGraphicsRotation(args ...interface{}) *QGraphicsRotation {
 }
 
 // setAngle(qreal)
-func (this *QGraphicsRotation) SetAngle(args ...interface{}) () {
+func (this *QGraphicsRotation) Setangle(args ...interface{}) () {
   // setAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -277,11 +294,15 @@ func (this *QGraphicsRotation) SetAngle(args ...interface{}) () {
 }
 
 // ~QGraphicsRotation()
-func (this *QGraphicsRotation) Free(args ...interface{}) () {
+func (this *QGraphicsRotation) Freeqgraphicsrotation(args ...interface{}) () {
   // ~QGraphicsRotation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -289,10 +310,7 @@ func (this *QGraphicsRotation) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsRotationD0Ev
     // invoke: void ~QGraphicsRotation()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN17QGraphicsRotationD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN17QGraphicsRotationD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "~QGraphicsRotation", args)
   }
@@ -306,6 +324,10 @@ func (this *QGraphicsRotation) Angle(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -335,6 +357,10 @@ func (this *QGraphicsRotation) Axis(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -359,12 +385,16 @@ func (this *QGraphicsRotation) Axis(args ...interface{}) (ret interface{}) {
 }
 
 // setAxis(const class QVector3D &)
-func (this *QGraphicsRotation) SetAxis(args ...interface{}) () {
+func (this *QGraphicsRotation) Setaxis(args ...interface{}) () {
   // setAxis(const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -388,6 +418,10 @@ func (this *QGraphicsScale) Origin(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -412,11 +446,15 @@ func (this *QGraphicsScale) Origin(args ...interface{}) (ret interface{}) {
 }
 
 // zScale()
-func (this *QGraphicsScale) ZScale(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScale) Zscale(args ...interface{}) (ret interface{}) {
   // zScale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -441,15 +479,16 @@ func (this *QGraphicsScale) ZScale(args ...interface{}) (ret interface{}) {
 }
 
 // QGraphicsScale(class QObject *)
-func GcfreeQGraphicsScale(this *QGraphicsScale) {
-  qtrt.UniverseFree(this)
-}
 func NewQGraphicsScale(args ...interface{}) *QGraphicsScale {
   // QGraphicsScale(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -462,9 +501,7 @@ func NewQGraphicsScale(args ...interface{}) *QGraphicsScale {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QGraphicsScaleC2EP7QObject(arg0)
-    this := &QGraphicsScale{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGraphicsScale)
-    return this
+    return &QGraphicsScale{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsScale", "QGraphicsScale", args)
   }
@@ -473,11 +510,15 @@ func NewQGraphicsScale(args ...interface{}) *QGraphicsScale {
 }
 
 // yScale()
-func (this *QGraphicsScale) YScale(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScale) Yscale(args ...interface{}) (ret interface{}) {
   // yScale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -502,11 +543,15 @@ func (this *QGraphicsScale) YScale(args ...interface{}) (ret interface{}) {
 }
 
 // ~QGraphicsScale()
-func (this *QGraphicsScale) Free(args ...interface{}) () {
+func (this *QGraphicsScale) Freeqgraphicsscale(args ...interface{}) () {
   // ~QGraphicsScale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -514,10 +559,7 @@ func (this *QGraphicsScale) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QGraphicsScaleD0Ev
     // invoke: void ~QGraphicsScale()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN14QGraphicsScaleD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN14QGraphicsScaleD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsScale", "~QGraphicsScale", args)
   }
@@ -526,12 +568,16 @@ func (this *QGraphicsScale) Free(args ...interface{}) () {
 }
 
 // setZScale(qreal)
-func (this *QGraphicsScale) SetZScale(args ...interface{}) () {
+func (this *QGraphicsScale) Setzscale(args ...interface{}) () {
   // setZScale(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -550,12 +596,16 @@ func (this *QGraphicsScale) SetZScale(args ...interface{}) () {
 }
 
 // setYScale(qreal)
-func (this *QGraphicsScale) SetYScale(args ...interface{}) () {
+func (this *QGraphicsScale) Setyscale(args ...interface{}) () {
   // setYScale(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -574,11 +624,15 @@ func (this *QGraphicsScale) SetYScale(args ...interface{}) () {
 }
 
 // xScale()
-func (this *QGraphicsScale) XScale(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScale) Xscale(args ...interface{}) (ret interface{}) {
   // xScale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -603,11 +657,15 @@ func (this *QGraphicsScale) XScale(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QGraphicsScale) MetaObject(args ...interface{}) () {
+func (this *QGraphicsScale) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -624,12 +682,16 @@ func (this *QGraphicsScale) MetaObject(args ...interface{}) () {
 }
 
 // applyTo(class QMatrix4x4 *)
-func (this *QGraphicsScale) ApplyTo(args ...interface{}) () {
+func (this *QGraphicsScale) Applyto(args ...interface{}) () {
   // applyTo(class QMatrix4x4 *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QMatrix4x4{}) // "QMatrix4x4 *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -648,12 +710,16 @@ func (this *QGraphicsScale) ApplyTo(args ...interface{}) () {
 }
 
 // setOrigin(const class QVector3D &)
-func (this *QGraphicsScale) SetOrigin(args ...interface{}) () {
+func (this *QGraphicsScale) Setorigin(args ...interface{}) () {
   // setOrigin(const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -672,12 +738,16 @@ func (this *QGraphicsScale) SetOrigin(args ...interface{}) () {
 }
 
 // setXScale(qreal)
-func (this *QGraphicsScale) SetXScale(args ...interface{}) () {
+func (this *QGraphicsScale) Setxscale(args ...interface{}) () {
   // setXScale(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -696,11 +766,15 @@ func (this *QGraphicsScale) SetXScale(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QGraphicsTransform) MetaObject(args ...interface{}) () {
+func (this *QGraphicsTransform) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -717,15 +791,16 @@ func (this *QGraphicsTransform) MetaObject(args ...interface{}) () {
 }
 
 // QGraphicsTransform(class QObject *)
-func GcfreeQGraphicsTransform(this *QGraphicsTransform) {
-  qtrt.UniverseFree(this)
-}
 func NewQGraphicsTransform(args ...interface{}) *QGraphicsTransform {
   // QGraphicsTransform(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -738,9 +813,7 @@ func NewQGraphicsTransform(args ...interface{}) *QGraphicsTransform {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QGraphicsTransformC2EP7QObject(arg0)
-    this := &QGraphicsTransform{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGraphicsTransform)
-    return this
+    return &QGraphicsTransform{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsTransform", "QGraphicsTransform", args)
   }
@@ -749,11 +822,15 @@ func NewQGraphicsTransform(args ...interface{}) *QGraphicsTransform {
 }
 
 // ~QGraphicsTransform()
-func (this *QGraphicsTransform) Free(args ...interface{}) () {
+func (this *QGraphicsTransform) Freeqgraphicstransform(args ...interface{}) () {
   // ~QGraphicsTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -761,10 +838,7 @@ func (this *QGraphicsTransform) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QGraphicsTransformD0Ev
     // invoke: void ~QGraphicsTransform()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN18QGraphicsTransformD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN18QGraphicsTransformD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTransform", "~QGraphicsTransform", args)
   }

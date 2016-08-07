@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -51,7 +50,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QWaitCondition)=8
@@ -61,14 +59,15 @@ type QWaitCondition struct {
 }
 
 // QWaitCondition()
-func GcfreeQWaitCondition(this *QWaitCondition) {
-  qtrt.UniverseFree(this)
-}
 func NewQWaitCondition(args ...interface{}) *QWaitCondition {
   // QWaitCondition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -79,9 +78,7 @@ func NewQWaitCondition(args ...interface{}) *QWaitCondition {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QWaitConditionC2Ev()
-    this := &QWaitCondition{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQWaitCondition)
-    return this
+    return &QWaitCondition{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QWaitCondition", "QWaitCondition", args)
   }
@@ -90,11 +87,15 @@ func NewQWaitCondition(args ...interface{}) *QWaitCondition {
 }
 
 // wakeAll()
-func (this *QWaitCondition) WakeAll(args ...interface{}) () {
+func (this *QWaitCondition) Wakeall(args ...interface{}) () {
   // wakeAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -111,11 +112,15 @@ func (this *QWaitCondition) WakeAll(args ...interface{}) () {
 }
 
 // wakeOne()
-func (this *QWaitCondition) WakeOne(args ...interface{}) () {
+func (this *QWaitCondition) Wakeone(args ...interface{}) () {
   // wakeOne()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -132,11 +137,15 @@ func (this *QWaitCondition) WakeOne(args ...interface{}) () {
 }
 
 // ~QWaitCondition()
-func (this *QWaitCondition) Free(args ...interface{}) () {
+func (this *QWaitCondition) Freeqwaitcondition(args ...interface{}) () {
   // ~QWaitCondition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -144,10 +153,7 @@ func (this *QWaitCondition) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QWaitConditionD0Ev
     // invoke: void ~QWaitCondition()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN14QWaitConditionD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN14QWaitConditionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWaitCondition", "~QWaitCondition", args)
   }
@@ -167,6 +173,10 @@ func (this *QWaitCondition) Wait(args ...interface{}) (ret interface{}) {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QMutex{}) // "QMutex *"
   vtys[1][1] = qtrt.Int32Ty(false) // "unsigned long"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

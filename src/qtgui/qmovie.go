@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -107,7 +106,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMovie)=1
@@ -124,12 +122,16 @@ type QMovie struct {
 }
 
 // setScaledSize(const class QSize &)
-func (this *QMovie) SetScaledSize(args ...interface{}) () {
+func (this *QMovie) Setscaledsize(args ...interface{}) () {
   // setScaledSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -148,11 +150,15 @@ func (this *QMovie) SetScaledSize(args ...interface{}) () {
 }
 
 // nextFrameDelay()
-func (this *QMovie) NextFrameDelay(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Nextframedelay(args ...interface{}) (ret interface{}) {
   // nextFrameDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -182,6 +188,10 @@ func (this *QMovie) Speed(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -206,11 +216,15 @@ func (this *QMovie) Speed(args ...interface{}) (ret interface{}) {
 }
 
 // frameCount()
-func (this *QMovie) FrameCount(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Framecount(args ...interface{}) (ret interface{}) {
   // frameCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -235,11 +249,15 @@ func (this *QMovie) FrameCount(args ...interface{}) (ret interface{}) {
 }
 
 // currentFrameNumber()
-func (this *QMovie) CurrentFrameNumber(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Currentframenumber(args ...interface{}) (ret interface{}) {
   // currentFrameNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -264,11 +282,15 @@ func (this *QMovie) CurrentFrameNumber(args ...interface{}) (ret interface{}) {
 }
 
 // loopCount()
-func (this *QMovie) LoopCount(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Loopcount(args ...interface{}) (ret interface{}) {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -293,12 +315,16 @@ func (this *QMovie) LoopCount(args ...interface{}) (ret interface{}) {
 }
 
 // setFormat(const class QByteArray &)
-func (this *QMovie) SetFormat(args ...interface{}) () {
+func (this *QMovie) Setformat(args ...interface{}) () {
   // setFormat(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -322,6 +348,10 @@ func (this *QMovie) Format(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -351,6 +381,10 @@ func (this *QMovie) Start(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -372,6 +406,10 @@ func (this *QMovie) State(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -388,11 +426,15 @@ func (this *QMovie) State(args ...interface{}) () {
 }
 
 // backgroundColor()
-func (this *QMovie) BackgroundColor(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Backgroundcolor(args ...interface{}) (ret interface{}) {
   // backgroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -417,12 +459,16 @@ func (this *QMovie) BackgroundColor(args ...interface{}) (ret interface{}) {
 }
 
 // setDevice(class QIODevice *)
-func (this *QMovie) SetDevice(args ...interface{}) () {
+func (this *QMovie) Setdevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -441,12 +487,16 @@ func (this *QMovie) SetDevice(args ...interface{}) () {
 }
 
 // jumpToFrame(int)
-func (this *QMovie) JumpToFrame(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Jumptoframe(args ...interface{}) (ret interface{}) {
   // jumpToFrame(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -473,11 +523,15 @@ func (this *QMovie) JumpToFrame(args ...interface{}) (ret interface{}) {
 }
 
 // frameRect()
-func (this *QMovie) FrameRect(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Framerect(args ...interface{}) (ret interface{}) {
   // frameRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -502,11 +556,15 @@ func (this *QMovie) FrameRect(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QMovie) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -531,12 +589,16 @@ func (this *QMovie) IsValid(args ...interface{}) (ret interface{}) {
 }
 
 // setBackgroundColor(const class QColor &)
-func (this *QMovie) SetBackgroundColor(args ...interface{}) () {
+func (this *QMovie) Setbackgroundcolor(args ...interface{}) () {
   // setBackgroundColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QColor{}) // "const QColor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -560,6 +622,10 @@ func (this *QMovie) Stop(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -576,11 +642,15 @@ func (this *QMovie) Stop(args ...interface{}) () {
 }
 
 // fileName()
-func (this *QMovie) FileName(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -605,11 +675,15 @@ func (this *QMovie) FileName(args ...interface{}) (ret interface{}) {
 }
 
 // currentImage()
-func (this *QMovie) CurrentImage(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Currentimage(args ...interface{}) (ret interface{}) {
   // currentImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -639,6 +713,10 @@ func (this *QMovie) Device(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -663,11 +741,15 @@ func (this *QMovie) Device(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QMovie) MetaObject(args ...interface{}) () {
+func (this *QMovie) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -684,11 +766,15 @@ func (this *QMovie) MetaObject(args ...interface{}) () {
 }
 
 // currentPixmap()
-func (this *QMovie) CurrentPixmap(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Currentpixmap(args ...interface{}) (ret interface{}) {
   // currentPixmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -713,11 +799,15 @@ func (this *QMovie) CurrentPixmap(args ...interface{}) (ret interface{}) {
 }
 
 // ~QMovie()
-func (this *QMovie) Free(args ...interface{}) () {
+func (this *QMovie) Freeqmovie(args ...interface{}) () {
   // ~QMovie()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -725,10 +815,7 @@ func (this *QMovie) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMovieD0Ev
     // invoke: void ~QMovie()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN6QMovieD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN6QMovieD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "~QMovie", args)
   }
@@ -737,12 +824,16 @@ func (this *QMovie) Free(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QMovie) SetFileName(args ...interface{}) () {
+func (this *QMovie) Setfilename(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -761,12 +852,16 @@ func (this *QMovie) SetFileName(args ...interface{}) () {
 }
 
 // setSpeed(int)
-func (this *QMovie) SetSpeed(args ...interface{}) () {
+func (this *QMovie) Setspeed(args ...interface{}) () {
   // setSpeed(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -785,11 +880,15 @@ func (this *QMovie) SetSpeed(args ...interface{}) () {
 }
 
 // cacheMode()
-func (this *QMovie) CacheMode(args ...interface{}) () {
+func (this *QMovie) Cachemode(args ...interface{}) () {
   // cacheMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -806,11 +905,15 @@ func (this *QMovie) CacheMode(args ...interface{}) () {
 }
 
 // scaledSize()
-func (this *QMovie) ScaledSize(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Scaledsize(args ...interface{}) (ret interface{}) {
   // scaledSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -835,9 +938,6 @@ func (this *QMovie) ScaledSize(args ...interface{}) (ret interface{}) {
 }
 
 // QMovie(class QObject *)
-func GcfreeQMovie(this *QMovie) {
-  qtrt.UniverseFree(this)
-}
 func NewQMovie(args ...interface{}) *QMovie {
   // QMovie(class QObject *)
   // QMovie(class QIODevice *, const class QByteArray &, class QObject *)
@@ -854,6 +954,10 @@ func NewQMovie(args ...interface{}) *QMovie {
   vtys[2][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[2][1] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
   vtys[2][2] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -866,9 +970,7 @@ func NewQMovie(args ...interface{}) *QMovie {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QMovieC2EP7QObject(arg0)
-    this := &QMovie{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMovie)
-    return this
+    return &QMovie{Qclsinst:qthis}
   case 1:
     // invoke: _ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject
     // invoke: void QMovie(class QIODevice *, const class QByteArray &, class QObject *)
@@ -881,9 +983,7 @@ func NewQMovie(args ...interface{}) *QMovie {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject(arg0, arg1, arg2)
-    this := &QMovie{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMovie)
-    return this
+    return &QMovie{Qclsinst:qthis}
   case 2:
     // invoke: _ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject
     // invoke: void QMovie(const class QString &, const class QByteArray &, class QObject *)
@@ -896,9 +996,7 @@ func NewQMovie(args ...interface{}) *QMovie {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject(arg0, arg1, arg2)
-    this := &QMovie{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMovie)
-    return this
+    return &QMovie{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMovie", "QMovie", args)
   }
@@ -907,11 +1005,15 @@ func NewQMovie(args ...interface{}) *QMovie {
 }
 
 // supportedFormats()
-func (this *QMovie) SupportedFormats_s(args ...interface{}) () {
+func (this *QMovie) Supportedformats_S(args ...interface{}) () {
   // supportedFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -928,11 +1030,15 @@ func (this *QMovie) SupportedFormats_s(args ...interface{}) () {
 }
 
 // jumpToNextFrame()
-func (this *QMovie) JumpToNextFrame(args ...interface{}) (ret interface{}) {
+func (this *QMovie) Jumptonextframe(args ...interface{}) (ret interface{}) {
   // jumpToNextFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -957,12 +1063,16 @@ func (this *QMovie) JumpToNextFrame(args ...interface{}) (ret interface{}) {
 }
 
 // setPaused(_Bool)
-func (this *QMovie) SetPaused(args ...interface{}) () {
+func (this *QMovie) Setpaused(args ...interface{}) () {
   // setPaused(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

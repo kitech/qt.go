@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -75,7 +74,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QActionGroup)=1
@@ -87,7 +85,7 @@ type QActionGroup struct {
 }
 
 // addAction(class QAction *)
-func (this *QActionGroup) AddAction(args ...interface{}) (ret interface{}) {
+func (this *QActionGroup) Addaction(args ...interface{}) (ret interface{}) {
   // addAction(class QAction *)
   // addAction(const class QIcon &, const class QString &)
   // addAction(const class QString &)
@@ -100,6 +98,10 @@ func (this *QActionGroup) AddAction(args ...interface{}) (ret interface{}) {
   vtys[1][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -161,6 +163,10 @@ func (this *QActionGroup) Actions(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -177,11 +183,15 @@ func (this *QActionGroup) Actions(args ...interface{}) () {
 }
 
 // checkedAction()
-func (this *QActionGroup) CheckedAction(args ...interface{}) (ret interface{}) {
+func (this *QActionGroup) Checkedaction(args ...interface{}) (ret interface{}) {
   // checkedAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -206,12 +216,16 @@ func (this *QActionGroup) CheckedAction(args ...interface{}) (ret interface{}) {
 }
 
 // setDisabled(_Bool)
-func (this *QActionGroup) SetDisabled(args ...interface{}) () {
+func (this *QActionGroup) Setdisabled(args ...interface{}) () {
   // setDisabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -230,15 +244,16 @@ func (this *QActionGroup) SetDisabled(args ...interface{}) () {
 }
 
 // QActionGroup(class QObject *)
-func GcfreeQActionGroup(this *QActionGroup) {
-  qtrt.UniverseFree(this)
-}
 func NewQActionGroup(args ...interface{}) *QActionGroup {
   // QActionGroup(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -251,9 +266,7 @@ func NewQActionGroup(args ...interface{}) *QActionGroup {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QActionGroupC2EP7QObject(arg0)
-    this := &QActionGroup{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQActionGroup)
-    return this
+    return &QActionGroup{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QActionGroup", "QActionGroup", args)
   }
@@ -262,12 +275,16 @@ func NewQActionGroup(args ...interface{}) *QActionGroup {
 }
 
 // setEnabled(_Bool)
-func (this *QActionGroup) SetEnabled(args ...interface{}) () {
+func (this *QActionGroup) Setenabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -286,12 +303,16 @@ func (this *QActionGroup) SetEnabled(args ...interface{}) () {
 }
 
 // setExclusive(_Bool)
-func (this *QActionGroup) SetExclusive(args ...interface{}) () {
+func (this *QActionGroup) Setexclusive(args ...interface{}) () {
   // setExclusive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -310,12 +331,16 @@ func (this *QActionGroup) SetExclusive(args ...interface{}) () {
 }
 
 // removeAction(class QAction *)
-func (this *QActionGroup) RemoveAction(args ...interface{}) () {
+func (this *QActionGroup) Removeaction(args ...interface{}) () {
   // removeAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -334,11 +359,15 @@ func (this *QActionGroup) RemoveAction(args ...interface{}) () {
 }
 
 // isExclusive()
-func (this *QActionGroup) IsExclusive(args ...interface{}) (ret interface{}) {
+func (this *QActionGroup) Isexclusive(args ...interface{}) (ret interface{}) {
   // isExclusive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -363,11 +392,15 @@ func (this *QActionGroup) IsExclusive(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QActionGroup) MetaObject(args ...interface{}) () {
+func (this *QActionGroup) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -384,11 +417,15 @@ func (this *QActionGroup) MetaObject(args ...interface{}) () {
 }
 
 // ~QActionGroup()
-func (this *QActionGroup) Free(args ...interface{}) () {
+func (this *QActionGroup) Freeqactiongroup(args ...interface{}) () {
   // ~QActionGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -396,10 +433,7 @@ func (this *QActionGroup) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QActionGroupD0Ev
     // invoke: void ~QActionGroup()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QActionGroupD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QActionGroupD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QActionGroup", "~QActionGroup", args)
   }
@@ -408,11 +442,15 @@ func (this *QActionGroup) Free(args ...interface{}) () {
 }
 
 // isVisible()
-func (this *QActionGroup) IsVisible(args ...interface{}) (ret interface{}) {
+func (this *QActionGroup) Isvisible(args ...interface{}) (ret interface{}) {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -437,12 +475,16 @@ func (this *QActionGroup) IsVisible(args ...interface{}) (ret interface{}) {
 }
 
 // setVisible(_Bool)
-func (this *QActionGroup) SetVisible(args ...interface{}) () {
+func (this *QActionGroup) Setvisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -461,11 +503,15 @@ func (this *QActionGroup) SetVisible(args ...interface{}) () {
 }
 
 // isEnabled()
-func (this *QActionGroup) IsEnabled(args ...interface{}) (ret interface{}) {
+func (this *QActionGroup) Isenabled(args ...interface{}) (ret interface{}) {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

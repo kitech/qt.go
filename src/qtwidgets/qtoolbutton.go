@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qtoolbutton.h
 // dst-file: /src/widgets/qtoolbutton.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -73,7 +72,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QToolButton)=1
@@ -84,11 +82,15 @@ type QToolButton struct {
 }
 
 // showMenu()
-func (this *QToolButton) ShowMenu(args ...interface{}) () {
+func (this *QToolButton) Showmenu(args ...interface{}) () {
   // showMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -105,15 +107,16 @@ func (this *QToolButton) ShowMenu(args ...interface{}) () {
 }
 
 // QToolButton(class QWidget *)
-func GcfreeQToolButton(this *QToolButton) {
-  qtrt.UniverseFree(this)
-}
 func NewQToolButton(args ...interface{}) *QToolButton {
   // QToolButton(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -126,9 +129,7 @@ func NewQToolButton(args ...interface{}) *QToolButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QToolButtonC2EP7QWidget(arg0)
-    this := &QToolButton{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQToolButton)
-    return this
+    return &QToolButton{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QToolButton", "QToolButton", args)
   }
@@ -137,12 +138,16 @@ func NewQToolButton(args ...interface{}) *QToolButton {
 }
 
 // setMenu(class QMenu *)
-func (this *QToolButton) SetMenu(args ...interface{}) () {
+func (this *QToolButton) Setmenu(args ...interface{}) () {
   // setMenu(class QMenu *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QMenu{}) // "QMenu *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -161,11 +166,15 @@ func (this *QToolButton) SetMenu(args ...interface{}) () {
 }
 
 // ~QToolButton()
-func (this *QToolButton) Free(args ...interface{}) () {
+func (this *QToolButton) Freeqtoolbutton(args ...interface{}) () {
   // ~QToolButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -173,10 +182,7 @@ func (this *QToolButton) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QToolButtonD0Ev
     // invoke: void ~QToolButton()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QToolButtonD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QToolButtonD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "~QToolButton", args)
   }
@@ -185,12 +191,16 @@ func (this *QToolButton) Free(args ...interface{}) () {
 }
 
 // setAutoRaise(_Bool)
-func (this *QToolButton) SetAutoRaise(args ...interface{}) () {
+func (this *QToolButton) Setautoraise(args ...interface{}) () {
   // setAutoRaise(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -214,6 +224,10 @@ func (this *QToolButton) Menu(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -238,11 +252,15 @@ func (this *QToolButton) Menu(args ...interface{}) (ret interface{}) {
 }
 
 // autoRaise()
-func (this *QToolButton) AutoRaise(args ...interface{}) (ret interface{}) {
+func (this *QToolButton) Autoraise(args ...interface{}) (ret interface{}) {
   // autoRaise()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -267,11 +285,15 @@ func (this *QToolButton) AutoRaise(args ...interface{}) (ret interface{}) {
 }
 
 // defaultAction()
-func (this *QToolButton) DefaultAction(args ...interface{}) (ret interface{}) {
+func (this *QToolButton) Defaultaction(args ...interface{}) (ret interface{}) {
   // defaultAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -296,12 +318,16 @@ func (this *QToolButton) DefaultAction(args ...interface{}) (ret interface{}) {
 }
 
 // setDefaultAction(class QAction *)
-func (this *QToolButton) SetDefaultAction(args ...interface{}) () {
+func (this *QToolButton) Setdefaultaction(args ...interface{}) () {
   // setDefaultAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -320,11 +346,15 @@ func (this *QToolButton) SetDefaultAction(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QToolButton) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QToolButton) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -349,11 +379,15 @@ func (this *QToolButton) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QToolButton) MetaObject(args ...interface{}) () {
+func (this *QToolButton) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -370,11 +404,15 @@ func (this *QToolButton) MetaObject(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QToolButton) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QToolButton) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -399,11 +437,15 @@ func (this *QToolButton) MinimumSizeHint(args ...interface{}) (ret interface{}) 
 }
 
 // arrowType()
-func (this *QToolButton) ArrowType(args ...interface{}) () {
+func (this *QToolButton) Arrowtype(args ...interface{}) () {
   // arrowType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -420,11 +462,15 @@ func (this *QToolButton) ArrowType(args ...interface{}) () {
 }
 
 // toolButtonStyle()
-func (this *QToolButton) ToolButtonStyle(args ...interface{}) () {
+func (this *QToolButton) Toolbuttonstyle(args ...interface{}) () {
   // toolButtonStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -441,11 +487,15 @@ func (this *QToolButton) ToolButtonStyle(args ...interface{}) () {
 }
 
 // popupMode()
-func (this *QToolButton) PopupMode(args ...interface{}) () {
+func (this *QToolButton) Popupmode(args ...interface{}) () {
   // popupMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

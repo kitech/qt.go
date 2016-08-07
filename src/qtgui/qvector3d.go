@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qvector3d.h
 // dst-file: /src/gui/qvector3d.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -105,7 +104,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QVector3D)=12
@@ -115,13 +113,17 @@ type QVector3D struct {
 }
 
 // crossProduct(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) CrossProduct_s(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Crossproduct_S(args ...interface{}) (ret interface{}) {
   // crossProduct(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[0][1] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -150,11 +152,15 @@ func (this *QVector3D) CrossProduct_s(args ...interface{}) (ret interface{}) {
 }
 
 // toVector2D()
-func (this *QVector3D) ToVector2D(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Tovector2D(args ...interface{}) (ret interface{}) {
   // toVector2D()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -179,7 +185,7 @@ func (this *QVector3D) ToVector2D(args ...interface{}) (ret interface{}) {
 }
 
 // distanceToPlane(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) DistanceToPlane(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Distancetoplane(args ...interface{}) (ret interface{}) {
   // distanceToPlane(const class QVector3D &, const class QVector3D &)
   // distanceToPlane(const class QVector3D &, const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -191,6 +197,10 @@ func (this *QVector3D) DistanceToPlane(args ...interface{}) (ret interface{}) {
   vtys[1][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[1][1] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[1][2] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -237,11 +247,15 @@ func (this *QVector3D) DistanceToPlane(args ...interface{}) (ret interface{}) {
 }
 
 // toVector4D()
-func (this *QVector3D) ToVector4D(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Tovector4D(args ...interface{}) (ret interface{}) {
   // toVector4D()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -266,13 +280,17 @@ func (this *QVector3D) ToVector4D(args ...interface{}) (ret interface{}) {
 }
 
 // dotProduct(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) DotProduct_s(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Dotproduct_S(args ...interface{}) (ret interface{}) {
   // dotProduct(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[0][1] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -306,6 +324,10 @@ func (this *QVector3D) Normalize(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -322,11 +344,15 @@ func (this *QVector3D) Normalize(args ...interface{}) () {
 }
 
 // toPointF()
-func (this *QVector3D) ToPointF(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Topointf(args ...interface{}) (ret interface{}) {
   // toPointF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -351,11 +377,15 @@ func (this *QVector3D) ToPointF(args ...interface{}) (ret interface{}) {
 }
 
 // lengthSquared()
-func (this *QVector3D) LengthSquared(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Lengthsquared(args ...interface{}) (ret interface{}) {
   // lengthSquared()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -380,7 +410,7 @@ func (this *QVector3D) LengthSquared(args ...interface{}) (ret interface{}) {
 }
 
 // normal(const class QVector3D &, const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) Normal_s(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Normal_S(args ...interface{}) (ret interface{}) {
   // normal(const class QVector3D &, const class QVector3D &, const class QVector3D &)
   // normal(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -392,6 +422,10 @@ func (this *QVector3D) Normal_s(args ...interface{}) (ret interface{}) {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[1][1] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -438,9 +472,6 @@ func (this *QVector3D) Normal_s(args ...interface{}) (ret interface{}) {
 }
 
 // QVector3D(const class QPointF &)
-func GcfreeQVector3D(this *QVector3D) {
-  qtrt.UniverseFree(this)
-}
 func NewQVector3D(args ...interface{}) *QVector3D {
   // QVector3D(const class QPointF &)
   // QVector3D()
@@ -467,6 +498,10 @@ func NewQVector3D(args ...interface{}) *QVector3D {
   vtys[6] = make(map[int32]reflect.Type)
   vtys[6][0] = reflect.TypeOf(QVector2D{}) // "const QVector2D &"
   vtys[6][1] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -479,18 +514,14 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2ERK7QPointF(arg0)
-    this := &QVector3D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector3D)
-    return this
+    return &QVector3D{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QVector3DC1Ev
     // invoke: void QVector3D()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2Ev()
-    this := &QVector3D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector3D)
-    return this
+    return &QVector3D{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QVector3DC1ERK9QVector2D
     // invoke: void QVector3D(const class QVector2D &)
@@ -499,9 +530,7 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2ERK9QVector2D(arg0)
-    this := &QVector3D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector3D)
-    return this
+    return &QVector3D{Qclsinst:qthis}
   case 3:
     // invoke: _ZN9QVector3DC1ERK6QPoint
     // invoke: void QVector3D(const class QPoint &)
@@ -510,9 +539,7 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2ERK6QPoint(arg0)
-    this := &QVector3D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector3D)
-    return this
+    return &QVector3D{Qclsinst:qthis}
   case 4:
     // invoke: _ZN9QVector3DC1Efff
     // invoke: void QVector3D(float, float, float)
@@ -525,9 +552,7 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2Efff(arg0, arg1, arg2)
-    this := &QVector3D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector3D)
-    return this
+    return &QVector3D{Qclsinst:qthis}
   case 5:
     // invoke: _ZN9QVector3DC1ERK9QVector4D
     // invoke: void QVector3D(const class QVector4D &)
@@ -536,9 +561,7 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2ERK9QVector4D(arg0)
-    this := &QVector3D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector3D)
-    return this
+    return &QVector3D{Qclsinst:qthis}
   case 6:
     // invoke: _ZN9QVector3DC1ERK9QVector2Df
     // invoke: void QVector3D(const class QVector2D &, float)
@@ -549,9 +572,7 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2ERK9QVector2Df(arg0, arg1)
-    this := &QVector3D{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVector3D)
-    return this
+    return &QVector3D{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QVector3D", "QVector3D", args)
   }
@@ -565,6 +586,10 @@ func (this *QVector3D) Normalized(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -594,6 +619,10 @@ func (this *QVector3D) X(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -610,12 +639,16 @@ func (this *QVector3D) X(args ...interface{}) () {
 }
 
 // setX(float)
-func (this *QVector3D) SetX(args ...interface{}) () {
+func (this *QVector3D) Setx(args ...interface{}) () {
   // setX(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -634,12 +667,16 @@ func (this *QVector3D) SetX(args ...interface{}) () {
 }
 
 // setY(float)
-func (this *QVector3D) SetY(args ...interface{}) () {
+func (this *QVector3D) Sety(args ...interface{}) () {
   // setY(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -658,12 +695,16 @@ func (this *QVector3D) SetY(args ...interface{}) () {
 }
 
 // setZ(float)
-func (this *QVector3D) SetZ(args ...interface{}) () {
+func (this *QVector3D) Setz(args ...interface{}) () {
   // setZ(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -682,11 +723,15 @@ func (this *QVector3D) SetZ(args ...interface{}) () {
 }
 
 // toPoint()
-func (this *QVector3D) ToPoint(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Topoint(args ...interface{}) (ret interface{}) {
   // toPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -719,6 +764,10 @@ func (this *QVector3D) Unproject(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QMatrix4x4{}) // "const QMatrix4x4 &"
   vtys[0][1] = reflect.TypeOf(QMatrix4x4{}) // "const QMatrix4x4 &"
   vtys[0][2] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -749,13 +798,17 @@ func (this *QVector3D) Unproject(args ...interface{}) (ret interface{}) {
 }
 
 // distanceToLine(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) DistanceToLine(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Distancetoline(args ...interface{}) (ret interface{}) {
   // distanceToLine(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[0][1] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -792,6 +845,10 @@ func (this *QVector3D) Project(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QMatrix4x4{}) // "const QMatrix4x4 &"
   vtys[0][1] = reflect.TypeOf(QMatrix4x4{}) // "const QMatrix4x4 &"
   vtys[0][2] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -822,11 +879,15 @@ func (this *QVector3D) Project(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QVector3D) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -856,6 +917,10 @@ func (this *QVector3D) Length(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -880,12 +945,16 @@ func (this *QVector3D) Length(args ...interface{}) (ret interface{}) {
 }
 
 // distanceToPoint(const class QVector3D &)
-func (this *QVector3D) DistanceToPoint(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Distancetopoint(args ...interface{}) (ret interface{}) {
   // distanceToPoint(const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -917,6 +986,10 @@ func (this *QVector3D) Y(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -938,6 +1011,10 @@ func (this *QVector3D) Z(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

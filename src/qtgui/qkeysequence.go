@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qkeysequence.h
 // dst-file: /src/gui/qkeysequence.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -61,7 +60,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QKeySequence)=8
@@ -71,12 +69,16 @@ type QKeySequence struct {
 }
 
 // mnemonic(const class QString &)
-func (this *QKeySequence) Mnemonic_s(args ...interface{}) (ret interface{}) {
+func (this *QKeySequence) Mnemonic_S(args ...interface{}) (ret interface{}) {
   // mnemonic(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -103,11 +105,15 @@ func (this *QKeySequence) Mnemonic_s(args ...interface{}) (ret interface{}) {
 }
 
 // ~QKeySequence()
-func (this *QKeySequence) Free(args ...interface{}) () {
+func (this *QKeySequence) Freeqkeysequence(args ...interface{}) () {
   // ~QKeySequence()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -115,10 +121,7 @@ func (this *QKeySequence) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QKeySequenceD0Ev
     // invoke: void ~QKeySequence()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QKeySequenceD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QKeySequenceD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequence", "~QKeySequence", args)
   }
@@ -127,11 +130,15 @@ func (this *QKeySequence) Free(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QKeySequence) IsEmpty(args ...interface{}) (ret interface{}) {
+func (this *QKeySequence) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -162,6 +169,10 @@ func (this *QKeySequence) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QKeySequence{}) // "QKeySequence &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -180,11 +191,15 @@ func (this *QKeySequence) Swap(args ...interface{}) () {
 }
 
 // isDetached()
-func (this *QKeySequence) IsDetached(args ...interface{}) (ret interface{}) {
+func (this *QKeySequence) Isdetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -215,6 +230,10 @@ func (this *QKeySequence) Matches(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QKeySequence{}) // "const QKeySequence &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -233,9 +252,6 @@ func (this *QKeySequence) Matches(args ...interface{}) () {
 }
 
 // QKeySequence()
-func GcfreeQKeySequence(this *QKeySequence) {
-  qtrt.UniverseFree(this)
-}
 func NewQKeySequence(args ...interface{}) *QKeySequence {
   // QKeySequence()
   // QKeySequence(const class QKeySequence &)
@@ -250,6 +266,10 @@ func NewQKeySequence(args ...interface{}) *QKeySequence {
   vtys[2][1] = qtrt.Int32Ty(false) // "int"
   vtys[2][2] = qtrt.Int32Ty(false) // "int"
   vtys[2][3] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -260,9 +280,7 @@ func NewQKeySequence(args ...interface{}) *QKeySequence {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QKeySequenceC2Ev()
-    this := &QKeySequence{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQKeySequence)
-    return this
+    return &QKeySequence{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QKeySequenceC1ERKS_
     // invoke: void QKeySequence(const class QKeySequence &)
@@ -271,9 +289,7 @@ func NewQKeySequence(args ...interface{}) *QKeySequence {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QKeySequenceC2ERKS_(arg0)
-    this := &QKeySequence{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQKeySequence)
-    return this
+    return &QKeySequence{Qclsinst:qthis}
   case 2:
     // invoke: _ZN12QKeySequenceC1Eiiii
     // invoke: void QKeySequence(int, int, int, int)
@@ -288,9 +304,7 @@ func NewQKeySequence(args ...interface{}) *QKeySequence {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QKeySequenceC2Eiiii(arg0, arg1, arg2, arg3)
-    this := &QKeySequence{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQKeySequence)
-    return this
+    return &QKeySequence{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QKeySequence", "QKeySequence", args)
   }
@@ -304,6 +318,10 @@ func (this *QKeySequence) Count(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

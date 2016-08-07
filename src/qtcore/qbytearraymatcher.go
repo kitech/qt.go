@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qbytearraymatcher.h
 // dst-file: /src/core/qbytearraymatcher.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -57,7 +56,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QByteArrayMatcher)=1040
@@ -67,7 +65,7 @@ type QByteArrayMatcher struct {
 }
 
 // indexIn(const char *, int, int)
-func (this *QByteArrayMatcher) IndexIn(args ...interface{}) (ret interface{}) {
+func (this *QByteArrayMatcher) Indexin(args ...interface{}) (ret interface{}) {
   // indexIn(const char *, int, int)
   // indexIn(const class QByteArray &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,6 +77,10 @@ func (this *QByteArrayMatcher) IndexIn(args ...interface{}) (ret interface{}) {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -132,6 +134,10 @@ func (this *QByteArrayMatcher) Pattern(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -156,9 +162,6 @@ func (this *QByteArrayMatcher) Pattern(args ...interface{}) (ret interface{}) {
 }
 
 // QByteArrayMatcher(const class QByteArrayMatcher &)
-func GcfreeQByteArrayMatcher(this *QByteArrayMatcher) {
-  qtrt.UniverseFree(this)
-}
 func NewQByteArrayMatcher(args ...interface{}) *QByteArrayMatcher {
   // QByteArrayMatcher(const class QByteArrayMatcher &)
   // QByteArrayMatcher()
@@ -174,6 +177,10 @@ func NewQByteArrayMatcher(args ...interface{}) *QByteArrayMatcher {
   vtys[2][1] = qtrt.Int32Ty(false) // "int"
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -186,18 +193,14 @@ func NewQByteArrayMatcher(args ...interface{}) *QByteArrayMatcher {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QByteArrayMatcherC2ERKS_(arg0)
-    this := &QByteArrayMatcher{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQByteArrayMatcher)
-    return this
+    return &QByteArrayMatcher{Qclsinst:qthis}
   case 1:
     // invoke: _ZN17QByteArrayMatcherC1Ev
     // invoke: void QByteArrayMatcher()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QByteArrayMatcherC2Ev()
-    this := &QByteArrayMatcher{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQByteArrayMatcher)
-    return this
+    return &QByteArrayMatcher{Qclsinst:qthis}
   case 2:
     // invoke: _ZN17QByteArrayMatcherC1EPKci
     // invoke: void QByteArrayMatcher(const char *, int)
@@ -210,9 +213,7 @@ func NewQByteArrayMatcher(args ...interface{}) *QByteArrayMatcher {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QByteArrayMatcherC2EPKci(arg0, arg1)
-    this := &QByteArrayMatcher{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQByteArrayMatcher)
-    return this
+    return &QByteArrayMatcher{Qclsinst:qthis}
   case 3:
     // invoke: _ZN17QByteArrayMatcherC1ERK10QByteArray
     // invoke: void QByteArrayMatcher(const class QByteArray &)
@@ -221,9 +222,7 @@ func NewQByteArrayMatcher(args ...interface{}) *QByteArrayMatcher {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QByteArrayMatcherC2ERK10QByteArray(arg0)
-    this := &QByteArrayMatcher{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQByteArrayMatcher)
-    return this
+    return &QByteArrayMatcher{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "QByteArrayMatcher", args)
   }
@@ -232,12 +231,16 @@ func NewQByteArrayMatcher(args ...interface{}) *QByteArrayMatcher {
 }
 
 // setPattern(const class QByteArray &)
-func (this *QByteArrayMatcher) SetPattern(args ...interface{}) () {
+func (this *QByteArrayMatcher) Setpattern(args ...interface{}) () {
   // setPattern(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -256,11 +259,15 @@ func (this *QByteArrayMatcher) SetPattern(args ...interface{}) () {
 }
 
 // ~QByteArrayMatcher()
-func (this *QByteArrayMatcher) Free(args ...interface{}) () {
+func (this *QByteArrayMatcher) Freeqbytearraymatcher(args ...interface{}) () {
   // ~QByteArrayMatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -268,10 +275,7 @@ func (this *QByteArrayMatcher) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QByteArrayMatcherD0Ev
     // invoke: void ~QByteArrayMatcher()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN17QByteArrayMatcherD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN17QByteArrayMatcherD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "~QByteArrayMatcher", args)
   }

@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qfontdatabase.h
 // dst-file: /src/gui/qfontdatabase.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -91,7 +90,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFontDatabase)=8
@@ -101,12 +99,16 @@ type QFontDatabase struct {
 }
 
 // addApplicationFontFromData(const class QByteArray &)
-func (this *QFontDatabase) AddApplicationFontFromData_s(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Addapplicationfontfromdata_S(args ...interface{}) (ret interface{}) {
   // addApplicationFontFromData(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -140,6 +142,10 @@ func (this *QFontDatabase) Weight(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -168,13 +174,17 @@ func (this *QFontDatabase) Weight(args ...interface{}) (ret interface{}) {
 }
 
 // isFixedPitch(const class QString &, const class QString &)
-func (this *QFontDatabase) IsFixedPitch(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Isfixedpitch(args ...interface{}) (ret interface{}) {
   // isFixedPitch(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -211,6 +221,10 @@ func (this *QFontDatabase) Font(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -241,13 +255,17 @@ func (this *QFontDatabase) Font(args ...interface{}) (ret interface{}) {
 }
 
 // pointSizes(const class QString &, const class QString &)
-func (this *QFontDatabase) PointSizes(args ...interface{}) () {
+func (this *QFontDatabase) Pointsizes(args ...interface{}) () {
   // pointSizes(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -268,7 +286,7 @@ func (this *QFontDatabase) PointSizes(args ...interface{}) () {
 }
 
 // writingSystems()
-func (this *QFontDatabase) WritingSystems(args ...interface{}) () {
+func (this *QFontDatabase) Writingsystems(args ...interface{}) () {
   // writingSystems()
   // writingSystems(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -276,6 +294,10 @@ func (this *QFontDatabase) WritingSystems(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -298,12 +320,16 @@ func (this *QFontDatabase) WritingSystems(args ...interface{}) () {
 }
 
 // isPrivateFamily(const class QString &)
-func (this *QFontDatabase) IsPrivateFamily(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Isprivatefamily(args ...interface{}) (ret interface{}) {
   // isPrivateFamily(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -330,14 +356,15 @@ func (this *QFontDatabase) IsPrivateFamily(args ...interface{}) (ret interface{}
 }
 
 // QFontDatabase()
-func GcfreeQFontDatabase(this *QFontDatabase) {
-  qtrt.UniverseFree(this)
-}
 func NewQFontDatabase(args ...interface{}) *QFontDatabase {
   // QFontDatabase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -348,9 +375,7 @@ func NewQFontDatabase(args ...interface{}) *QFontDatabase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QFontDatabaseC2Ev()
-    this := &QFontDatabase{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFontDatabase)
-    return this
+    return &QFontDatabase{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFontDatabase", "QFontDatabase", args)
   }
@@ -359,7 +384,7 @@ func NewQFontDatabase(args ...interface{}) *QFontDatabase {
 }
 
 // styleString(const class QFontInfo &)
-func (this *QFontDatabase) StyleString(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Stylestring(args ...interface{}) (ret interface{}) {
   // styleString(const class QFontInfo &)
   // styleString(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -368,6 +393,10 @@ func (this *QFontDatabase) StyleString(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QFontInfo{}) // "const QFontInfo &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QFont{}) // "const QFont &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -415,6 +444,10 @@ func (this *QFontDatabase) Italic(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -449,6 +482,10 @@ func (this *QFontDatabase) Styles(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -467,13 +504,17 @@ func (this *QFontDatabase) Styles(args ...interface{}) () {
 }
 
 // isSmoothlyScalable(const class QString &, const class QString &)
-func (this *QFontDatabase) IsSmoothlyScalable(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Issmoothlyscalable(args ...interface{}) (ret interface{}) {
   // isSmoothlyScalable(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -509,6 +550,10 @@ func (this *QFontDatabase) Bold(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -537,13 +582,17 @@ func (this *QFontDatabase) Bold(args ...interface{}) (ret interface{}) {
 }
 
 // isScalable(const class QString &, const class QString &)
-func (this *QFontDatabase) IsScalable(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Isscalable(args ...interface{}) (ret interface{}) {
   // isScalable(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -572,12 +621,16 @@ func (this *QFontDatabase) IsScalable(args ...interface{}) (ret interface{}) {
 }
 
 // addApplicationFont(const class QString &)
-func (this *QFontDatabase) AddApplicationFont_s(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Addapplicationfont_S(args ...interface{}) (ret interface{}) {
   // addApplicationFont(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -604,13 +657,17 @@ func (this *QFontDatabase) AddApplicationFont_s(args ...interface{}) (ret interf
 }
 
 // isBitmapScalable(const class QString &, const class QString &)
-func (this *QFontDatabase) IsBitmapScalable(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Isbitmapscalable(args ...interface{}) (ret interface{}) {
   // isBitmapScalable(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -639,12 +696,16 @@ func (this *QFontDatabase) IsBitmapScalable(args ...interface{}) (ret interface{
 }
 
 // applicationFontFamilies(int)
-func (this *QFontDatabase) ApplicationFontFamilies_s(args ...interface{}) () {
+func (this *QFontDatabase) Applicationfontfamilies_S(args ...interface{}) () {
   // applicationFontFamilies(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -663,11 +724,15 @@ func (this *QFontDatabase) ApplicationFontFamilies_s(args ...interface{}) () {
 }
 
 // supportsThreadedFontRendering()
-func (this *QFontDatabase) SupportsThreadedFontRendering_s(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Supportsthreadedfontrendering_S(args ...interface{}) (ret interface{}) {
   // supportsThreadedFontRendering()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -692,13 +757,17 @@ func (this *QFontDatabase) SupportsThreadedFontRendering_s(args ...interface{}) 
 }
 
 // smoothSizes(const class QString &, const class QString &)
-func (this *QFontDatabase) SmoothSizes(args ...interface{}) () {
+func (this *QFontDatabase) Smoothsizes(args ...interface{}) () {
   // smoothSizes(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -719,12 +788,16 @@ func (this *QFontDatabase) SmoothSizes(args ...interface{}) () {
 }
 
 // removeApplicationFont(int)
-func (this *QFontDatabase) RemoveApplicationFont_s(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Removeapplicationfont_S(args ...interface{}) (ret interface{}) {
   // removeApplicationFont(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -751,12 +824,16 @@ func (this *QFontDatabase) RemoveApplicationFont_s(args ...interface{}) (ret int
 }
 
 // hasFamily(const class QString &)
-func (this *QFontDatabase) HasFamily(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Hasfamily(args ...interface{}) (ret interface{}) {
   // hasFamily(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -783,11 +860,15 @@ func (this *QFontDatabase) HasFamily(args ...interface{}) (ret interface{}) {
 }
 
 // standardSizes()
-func (this *QFontDatabase) StandardSizes_s(args ...interface{}) () {
+func (this *QFontDatabase) Standardsizes_S(args ...interface{}) () {
   // standardSizes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -804,11 +885,15 @@ func (this *QFontDatabase) StandardSizes_s(args ...interface{}) () {
 }
 
 // removeAllApplicationFonts()
-func (this *QFontDatabase) RemoveAllApplicationFonts_s(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) Removeallapplicationfonts_S(args ...interface{}) (ret interface{}) {
   // removeAllApplicationFonts()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

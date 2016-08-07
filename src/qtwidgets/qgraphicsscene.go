@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qgraphicsscene.h
 // dst-file: /src/widgets/qgraphicsscene.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -173,7 +172,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsScene)=1
@@ -187,7 +185,7 @@ type QGraphicsScene struct {
 }
 
 // addRect(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
-func (this *QGraphicsScene) AddRect(args ...interface{}) () {
+func (this *QGraphicsScene) Addrect(args ...interface{}) () {
   // addRect(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
   // addRect(const class QRectF &, const class QPen &, const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -203,6 +201,10 @@ func (this *QGraphicsScene) AddRect(args ...interface{}) () {
   vtys[1][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
   vtys[1][1] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
   vtys[1][2] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -241,11 +243,15 @@ func (this *QGraphicsScene) AddRect(args ...interface{}) () {
 }
 
 // hasFocus()
-func (this *QGraphicsScene) HasFocus(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Hasfocus(args ...interface{}) (ret interface{}) {
   // hasFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -270,9 +276,6 @@ func (this *QGraphicsScene) HasFocus(args ...interface{}) (ret interface{}) {
 }
 
 // QGraphicsScene(class QObject *)
-func GcfreeQGraphicsScene(this *QGraphicsScene) {
-  qtrt.UniverseFree(this)
-}
 func NewQGraphicsScene(args ...interface{}) *QGraphicsScene {
   // QGraphicsScene(class QObject *)
   // QGraphicsScene(const class QRectF &, class QObject *)
@@ -290,6 +293,10 @@ func NewQGraphicsScene(args ...interface{}) *QGraphicsScene {
   vtys[2][2] = qtrt.DoubleTy(false) // "qreal"
   vtys[2][3] = qtrt.DoubleTy(false) // "qreal"
   vtys[2][4] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -302,9 +309,7 @@ func NewQGraphicsScene(args ...interface{}) *QGraphicsScene {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QGraphicsSceneC2EP7QObject(arg0)
-    this := &QGraphicsScene{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGraphicsScene)
-    return this
+    return &QGraphicsScene{Qclsinst:qthis}
   case 1:
     // invoke: _ZN14QGraphicsSceneC1ERK6QRectFP7QObject
     // invoke: void QGraphicsScene(const class QRectF &, class QObject *)
@@ -315,9 +320,7 @@ func NewQGraphicsScene(args ...interface{}) *QGraphicsScene {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QGraphicsSceneC2ERK6QRectFP7QObject(arg0, arg1)
-    this := &QGraphicsScene{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGraphicsScene)
-    return this
+    return &QGraphicsScene{Qclsinst:qthis}
   case 2:
     // invoke: _ZN14QGraphicsSceneC1EddddP7QObject
     // invoke: void QGraphicsScene(qreal, qreal, qreal, qreal, class QObject *)
@@ -334,9 +337,7 @@ func NewQGraphicsScene(args ...interface{}) *QGraphicsScene {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QGraphicsSceneC2EddddP7QObject(arg0, arg1, arg2, arg3, arg4)
-    this := &QGraphicsScene{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGraphicsScene)
-    return this
+    return &QGraphicsScene{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "QGraphicsScene", args)
   }
@@ -345,12 +346,16 @@ func NewQGraphicsScene(args ...interface{}) *QGraphicsScene {
 }
 
 // setStyle(class QStyle *)
-func (this *QGraphicsScene) SetStyle(args ...interface{}) () {
+func (this *QGraphicsScene) Setstyle(args ...interface{}) () {
   // setStyle(class QStyle *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyle{}) // "QStyle *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -369,11 +374,15 @@ func (this *QGraphicsScene) SetStyle(args ...interface{}) () {
 }
 
 // selectionArea()
-func (this *QGraphicsScene) SelectionArea(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Selectionarea(args ...interface{}) (ret interface{}) {
   // selectionArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -403,6 +412,10 @@ func (this *QGraphicsScene) Font(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -427,7 +440,7 @@ func (this *QGraphicsScene) Font(args ...interface{}) (ret interface{}) {
 }
 
 // addEllipse(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
-func (this *QGraphicsScene) AddEllipse(args ...interface{}) () {
+func (this *QGraphicsScene) Addellipse(args ...interface{}) () {
   // addEllipse(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
   // addEllipse(const class QRectF &, const class QPen &, const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -443,6 +456,10 @@ func (this *QGraphicsScene) AddEllipse(args ...interface{}) () {
   vtys[1][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
   vtys[1][1] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
   vtys[1][2] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -481,7 +498,7 @@ func (this *QGraphicsScene) AddEllipse(args ...interface{}) () {
 }
 
 // addPolygon(const class QPolygonF &, const class QPen &, const class QBrush &)
-func (this *QGraphicsScene) AddPolygon(args ...interface{}) () {
+func (this *QGraphicsScene) Addpolygon(args ...interface{}) () {
   // addPolygon(const class QPolygonF &, const class QPen &, const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -489,6 +506,10 @@ func (this *QGraphicsScene) AddPolygon(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(qtgui.QPolygonF{}) // "const QPolygonF &"
   vtys[0][1] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
   vtys[0][2] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -511,12 +532,16 @@ func (this *QGraphicsScene) AddPolygon(args ...interface{}) () {
 }
 
 // setBspTreeDepth(int)
-func (this *QGraphicsScene) SetBspTreeDepth(args ...interface{}) () {
+func (this *QGraphicsScene) Setbsptreedepth(args ...interface{}) () {
   // setBspTreeDepth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -540,6 +565,10 @@ func (this *QGraphicsScene) Views(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -556,12 +585,16 @@ func (this *QGraphicsScene) Views(args ...interface{}) () {
 }
 
 // setBackgroundBrush(const class QBrush &)
-func (this *QGraphicsScene) SetBackgroundBrush(args ...interface{}) () {
+func (this *QGraphicsScene) Setbackgroundbrush(args ...interface{}) () {
   // setBackgroundBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -580,12 +613,16 @@ func (this *QGraphicsScene) SetBackgroundBrush(args ...interface{}) () {
 }
 
 // removeItem(class QGraphicsItem *)
-func (this *QGraphicsScene) RemoveItem(args ...interface{}) () {
+func (this *QGraphicsScene) Removeitem(args ...interface{}) () {
   // removeItem(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsItem{}) // "QGraphicsItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -604,11 +641,15 @@ func (this *QGraphicsScene) RemoveItem(args ...interface{}) () {
 }
 
 // bspTreeDepth()
-func (this *QGraphicsScene) BspTreeDepth(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Bsptreedepth(args ...interface{}) (ret interface{}) {
   // bspTreeDepth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -633,11 +674,15 @@ func (this *QGraphicsScene) BspTreeDepth(args ...interface{}) (ret interface{}) 
 }
 
 // isSortCacheEnabled()
-func (this *QGraphicsScene) IsSortCacheEnabled(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Issortcacheenabled(args ...interface{}) (ret interface{}) {
   // isSortCacheEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -662,11 +707,15 @@ func (this *QGraphicsScene) IsSortCacheEnabled(args ...interface{}) (ret interfa
 }
 
 // metaObject()
-func (this *QGraphicsScene) MetaObject(args ...interface{}) () {
+func (this *QGraphicsScene) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -683,11 +732,15 @@ func (this *QGraphicsScene) MetaObject(args ...interface{}) () {
 }
 
 // sceneRect()
-func (this *QGraphicsScene) SceneRect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Scenerect(args ...interface{}) (ret interface{}) {
   // sceneRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -712,7 +765,7 @@ func (this *QGraphicsScene) SceneRect(args ...interface{}) (ret interface{}) {
 }
 
 // itemAt(const class QPointF &, const class QTransform &)
-func (this *QGraphicsScene) ItemAt(args ...interface{}) () {
+func (this *QGraphicsScene) Itemat(args ...interface{}) () {
   // itemAt(const class QPointF &, const class QTransform &)
   // itemAt(qreal, qreal, const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -724,6 +777,10 @@ func (this *QGraphicsScene) ItemAt(args ...interface{}) () {
   vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][2] = reflect.TypeOf(qtgui.QTransform{}) // "const QTransform &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -754,11 +811,15 @@ func (this *QGraphicsScene) ItemAt(args ...interface{}) () {
 }
 
 // clearFocus()
-func (this *QGraphicsScene) ClearFocus(args ...interface{}) () {
+func (this *QGraphicsScene) Clearfocus(args ...interface{}) () {
   // clearFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -775,12 +836,16 @@ func (this *QGraphicsScene) ClearFocus(args ...interface{}) () {
 }
 
 // addPixmap(const class QPixmap &)
-func (this *QGraphicsScene) AddPixmap(args ...interface{}) () {
+func (this *QGraphicsScene) Addpixmap(args ...interface{}) () {
   // addPixmap(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QPixmap{}) // "const QPixmap &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -799,11 +864,15 @@ func (this *QGraphicsScene) AddPixmap(args ...interface{}) () {
 }
 
 // stickyFocus()
-func (this *QGraphicsScene) StickyFocus(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Stickyfocus(args ...interface{}) (ret interface{}) {
   // stickyFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -833,6 +902,10 @@ func (this *QGraphicsScene) Palette(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -857,12 +930,16 @@ func (this *QGraphicsScene) Palette(args ...interface{}) (ret interface{}) {
 }
 
 // setMinimumRenderSize(qreal)
-func (this *QGraphicsScene) SetMinimumRenderSize(args ...interface{}) () {
+func (this *QGraphicsScene) Setminimumrendersize(args ...interface{}) () {
   // setMinimumRenderSize(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -881,11 +958,15 @@ func (this *QGraphicsScene) SetMinimumRenderSize(args ...interface{}) () {
 }
 
 // activeWindow()
-func (this *QGraphicsScene) ActiveWindow(args ...interface{}) () {
+func (this *QGraphicsScene) Activewindow(args ...interface{}) () {
   // activeWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -902,11 +983,15 @@ func (this *QGraphicsScene) ActiveWindow(args ...interface{}) () {
 }
 
 // ~QGraphicsScene()
-func (this *QGraphicsScene) Free(args ...interface{}) () {
+func (this *QGraphicsScene) Freeqgraphicsscene(args ...interface{}) () {
   // ~QGraphicsScene()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -914,10 +999,7 @@ func (this *QGraphicsScene) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QGraphicsSceneD0Ev
     // invoke: void ~QGraphicsScene()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN14QGraphicsSceneD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN14QGraphicsSceneD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsScene", "~QGraphicsScene", args)
   }
@@ -926,12 +1008,16 @@ func (this *QGraphicsScene) Free(args ...interface{}) () {
 }
 
 // addItem(class QGraphicsItem *)
-func (this *QGraphicsScene) AddItem(args ...interface{}) () {
+func (this *QGraphicsScene) Additem(args ...interface{}) () {
   // addItem(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsItem{}) // "QGraphicsItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -955,6 +1041,10 @@ func (this *QGraphicsScene) Style(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -979,12 +1069,16 @@ func (this *QGraphicsScene) Style(args ...interface{}) (ret interface{}) {
 }
 
 // setActivePanel(class QGraphicsItem *)
-func (this *QGraphicsScene) SetActivePanel(args ...interface{}) () {
+func (this *QGraphicsScene) Setactivepanel(args ...interface{}) () {
   // setActivePanel(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsItem{}) // "QGraphicsItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1003,11 +1097,15 @@ func (this *QGraphicsScene) SetActivePanel(args ...interface{}) () {
 }
 
 // isActive()
-func (this *QGraphicsScene) IsActive(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Isactive(args ...interface{}) (ret interface{}) {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1037,6 +1135,10 @@ func (this *QGraphicsScene) Advance(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1053,11 +1155,15 @@ func (this *QGraphicsScene) Advance(args ...interface{}) () {
 }
 
 // itemsBoundingRect()
-func (this *QGraphicsScene) ItemsBoundingRect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Itemsboundingrect(args ...interface{}) (ret interface{}) {
   // itemsBoundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1082,7 +1188,7 @@ func (this *QGraphicsScene) ItemsBoundingRect(args ...interface{}) (ret interfac
 }
 
 // setSceneRect(const class QRectF &)
-func (this *QGraphicsScene) SetSceneRect(args ...interface{}) () {
+func (this *QGraphicsScene) Setscenerect(args ...interface{}) () {
   // setSceneRect(const class QRectF &)
   // setSceneRect(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1094,6 +1200,10 @@ func (this *QGraphicsScene) SetSceneRect(args ...interface{}) () {
   vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1124,11 +1234,15 @@ func (this *QGraphicsScene) SetSceneRect(args ...interface{}) () {
 }
 
 // itemIndexMethod()
-func (this *QGraphicsScene) ItemIndexMethod(args ...interface{}) () {
+func (this *QGraphicsScene) Itemindexmethod(args ...interface{}) () {
   // itemIndexMethod()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1145,7 +1259,7 @@ func (this *QGraphicsScene) ItemIndexMethod(args ...interface{}) () {
 }
 
 // addLine(const class QLineF &, const class QPen &)
-func (this *QGraphicsScene) AddLine(args ...interface{}) () {
+func (this *QGraphicsScene) Addline(args ...interface{}) () {
   // addLine(const class QLineF &, const class QPen &)
   // addLine(qreal, qreal, qreal, qreal, const class QPen &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1159,6 +1273,10 @@ func (this *QGraphicsScene) AddLine(args ...interface{}) () {
   vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][4] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1193,11 +1311,15 @@ func (this *QGraphicsScene) AddLine(args ...interface{}) () {
 }
 
 // minimumRenderSize()
-func (this *QGraphicsScene) MinimumRenderSize(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Minimumrendersize(args ...interface{}) (ret interface{}) {
   // minimumRenderSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1222,13 +1344,17 @@ func (this *QGraphicsScene) MinimumRenderSize(args ...interface{}) (ret interfac
 }
 
 // sendEvent(class QGraphicsItem *, class QEvent *)
-func (this *QGraphicsScene) SendEvent(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Sendevent(args ...interface{}) (ret interface{}) {
   // sendEvent(class QGraphicsItem *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsItem{}) // "QGraphicsItem *"
   vtys[0][1] = reflect.TypeOf(qtcore.QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1257,12 +1383,16 @@ func (this *QGraphicsScene) SendEvent(args ...interface{}) (ret interface{}) {
 }
 
 // setPalette(const class QPalette &)
-func (this *QGraphicsScene) SetPalette(args ...interface{}) () {
+func (this *QGraphicsScene) Setpalette(args ...interface{}) () {
   // setPalette(const class QPalette &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QPalette{}) // "const QPalette &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1281,11 +1411,15 @@ func (this *QGraphicsScene) SetPalette(args ...interface{}) () {
 }
 
 // mouseGrabberItem()
-func (this *QGraphicsScene) MouseGrabberItem(args ...interface{}) () {
+func (this *QGraphicsScene) Mousegrabberitem(args ...interface{}) () {
   // mouseGrabberItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1302,13 +1436,17 @@ func (this *QGraphicsScene) MouseGrabberItem(args ...interface{}) () {
 }
 
 // setSelectionArea(const class QPainterPath &, const class QTransform &)
-func (this *QGraphicsScene) SetSelectionArea(args ...interface{}) () {
+func (this *QGraphicsScene) Setselectionarea(args ...interface{}) () {
   // setSelectionArea(const class QPainterPath &, const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QPainterPath{}) // "const QPainterPath &"
   vtys[0][1] = reflect.TypeOf(qtgui.QTransform{}) // "const QTransform &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1334,6 +1472,10 @@ func (this *QGraphicsScene) Width(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1358,11 +1500,15 @@ func (this *QGraphicsScene) Width(args ...interface{}) (ret interface{}) {
 }
 
 // foregroundBrush()
-func (this *QGraphicsScene) ForegroundBrush(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Foregroundbrush(args ...interface{}) (ret interface{}) {
   // foregroundBrush()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1387,12 +1533,16 @@ func (this *QGraphicsScene) ForegroundBrush(args ...interface{}) (ret interface{
 }
 
 // setForegroundBrush(const class QBrush &)
-func (this *QGraphicsScene) SetForegroundBrush(args ...interface{}) () {
+func (this *QGraphicsScene) Setforegroundbrush(args ...interface{}) () {
   // setForegroundBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1411,7 +1561,7 @@ func (this *QGraphicsScene) SetForegroundBrush(args ...interface{}) () {
 }
 
 // addPath(const class QPainterPath &, const class QPen &, const class QBrush &)
-func (this *QGraphicsScene) AddPath(args ...interface{}) () {
+func (this *QGraphicsScene) Addpath(args ...interface{}) () {
   // addPath(const class QPainterPath &, const class QPen &, const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1419,6 +1569,10 @@ func (this *QGraphicsScene) AddPath(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(qtgui.QPainterPath{}) // "const QPainterPath &"
   vtys[0][1] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
   vtys[0][2] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1441,11 +1595,15 @@ func (this *QGraphicsScene) AddPath(args ...interface{}) () {
 }
 
 // selectedItems()
-func (this *QGraphicsScene) SelectedItems(args ...interface{}) () {
+func (this *QGraphicsScene) Selecteditems(args ...interface{}) () {
   // selectedItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1462,12 +1620,16 @@ func (this *QGraphicsScene) SelectedItems(args ...interface{}) () {
 }
 
 // setActiveWindow(class QGraphicsWidget *)
-func (this *QGraphicsScene) SetActiveWindow(args ...interface{}) () {
+func (this *QGraphicsScene) Setactivewindow(args ...interface{}) () {
   // setActiveWindow(class QGraphicsWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsWidget{}) // "QGraphicsWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1486,11 +1648,15 @@ func (this *QGraphicsScene) SetActiveWindow(args ...interface{}) () {
 }
 
 // backgroundBrush()
-func (this *QGraphicsScene) BackgroundBrush(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsScene) Backgroundbrush(args ...interface{}) (ret interface{}) {
   // backgroundBrush()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1515,13 +1681,17 @@ func (this *QGraphicsScene) BackgroundBrush(args ...interface{}) (ret interface{
 }
 
 // addSimpleText(const class QString &, const class QFont &)
-func (this *QGraphicsScene) AddSimpleText(args ...interface{}) () {
+func (this *QGraphicsScene) Addsimpletext(args ...interface{}) () {
   // addSimpleText(const class QString &, const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtgui.QFont{}) // "const QFont &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1542,11 +1712,15 @@ func (this *QGraphicsScene) AddSimpleText(args ...interface{}) () {
 }
 
 // clearSelection()
-func (this *QGraphicsScene) ClearSelection(args ...interface{}) () {
+func (this *QGraphicsScene) Clearselection(args ...interface{}) () {
   // clearSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1563,11 +1737,15 @@ func (this *QGraphicsScene) ClearSelection(args ...interface{}) () {
 }
 
 // activePanel()
-func (this *QGraphicsScene) ActivePanel(args ...interface{}) () {
+func (this *QGraphicsScene) Activepanel(args ...interface{}) () {
   // activePanel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1584,11 +1762,15 @@ func (this *QGraphicsScene) ActivePanel(args ...interface{}) () {
 }
 
 // focusItem()
-func (this *QGraphicsScene) FocusItem(args ...interface{}) () {
+func (this *QGraphicsScene) Focusitem(args ...interface{}) () {
   // focusItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1605,12 +1787,16 @@ func (this *QGraphicsScene) FocusItem(args ...interface{}) () {
 }
 
 // destroyItemGroup(class QGraphicsItemGroup *)
-func (this *QGraphicsScene) DestroyItemGroup(args ...interface{}) () {
+func (this *QGraphicsScene) Destroyitemgroup(args ...interface{}) () {
   // destroyItemGroup(class QGraphicsItemGroup *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsItemGroup{}) // "QGraphicsItemGroup *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1629,13 +1815,17 @@ func (this *QGraphicsScene) DestroyItemGroup(args ...interface{}) () {
 }
 
 // addText(const class QString &, const class QFont &)
-func (this *QGraphicsScene) AddText(args ...interface{}) () {
+func (this *QGraphicsScene) Addtext(args ...interface{}) () {
   // addText(const class QString &, const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtgui.QFont{}) // "const QFont &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1668,6 +1858,10 @@ func (this *QGraphicsScene) Update(args ...interface{}) () {
   vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
   vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1698,12 +1892,16 @@ func (this *QGraphicsScene) Update(args ...interface{}) () {
 }
 
 // setSortCacheEnabled(_Bool)
-func (this *QGraphicsScene) SetSortCacheEnabled(args ...interface{}) () {
+func (this *QGraphicsScene) Setsortcacheenabled(args ...interface{}) () {
   // setSortCacheEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1722,12 +1920,16 @@ func (this *QGraphicsScene) SetSortCacheEnabled(args ...interface{}) () {
 }
 
 // setStickyFocus(_Bool)
-func (this *QGraphicsScene) SetStickyFocus(args ...interface{}) () {
+func (this *QGraphicsScene) Setstickyfocus(args ...interface{}) () {
   // setStickyFocus(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1751,6 +1953,10 @@ func (this *QGraphicsScene) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1772,6 +1978,10 @@ func (this *QGraphicsScene) Height(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1796,12 +2006,16 @@ func (this *QGraphicsScene) Height(args ...interface{}) (ret interface{}) {
 }
 
 // setFont(const class QFont &)
-func (this *QGraphicsScene) SetFont(args ...interface{}) () {
+func (this *QGraphicsScene) Setfont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QFont{}) // "const QFont &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

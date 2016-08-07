@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qtextlayout.h
 // dst-file: /src/gui/qtextlayout.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -98,8 +97,12 @@ extern void* C_ZNK11QTextLayout4fontEv(void* qthis); // 4
 extern void* C_ZNK11QTextLayout10textOptionEv(void* qthis); // 4
   // proto:  QTextLine QTextLayout::lineAt(int i);
 extern void* C_ZNK11QTextLayout6lineAtEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QTextLayout::clearFormats();
+extern void C_ZN11QTextLayout12clearFormatsEv(void* qthis); // 4
   // proto:  void QTextLayout::setRawFont(const QRawFont & rawFont);
 extern void C_ZN11QTextLayout10setRawFontERK8QRawFont(void* qthis, void* arg0); // 4
+  // proto:  void QTextLayout::setPosition(const QPointF & p);
+extern void C_ZN11QTextLayout11setPositionERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QTextLayout::beginLayout();
 extern void C_ZN11QTextLayout11beginLayoutEv(void* qthis); // 4
   // proto:  QList<QGlyphRun> QTextLayout::glyphRuns(int from, int length);
@@ -140,8 +143,6 @@ extern void* C_ZNK11QTextLayout19lineForTextPositionEi(void* qthis, int32_t arg0
 extern int32_t C_ZNK11QTextLayout19preeditAreaPositionEv(void* qthis); // 4
   // proto:  void QTextLayout::setFlags(int flags);
 extern void C_ZN11QTextLayout8setFlagsEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTextLayout::setPosition(const QPointF & p);
-extern void C_ZN11QTextLayout11setPositionERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QTextLayout::drawCursor(QPainter * p, const QPointF & pos, int cursorPosition);
 extern void C_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFi(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
   // proto:  void QTextLayout::drawCursor(QPainter * p, const QPointF & pos, int cursorPosition, int width);
@@ -154,6 +155,8 @@ extern void C_ZN11QTextLayout7setTextERK7QString(void* qthis, void* arg0); // 4
 extern void C_ZNK11QTextLayout15cursorMoveStyleEv(void* qthis); // 4
   // proto:  QString QTextLayout::preeditAreaText();
 extern void* C_ZNK11QTextLayout15preeditAreaTextEv(void* qthis); // 4
+  // proto:  QVector<QTextLayout::FormatRange> QTextLayout::formats();
+extern void C_ZNK11QTextLayout7formatsEv(void* qthis); // 4
   // proto:  QList<QTextLayout::FormatRange> QTextLayout::additionalFormats();
 extern void C_ZNK11QTextLayout17additionalFormatsEv(void* qthis); // 4
   // proto:  QPointF QTextLayout::position();
@@ -197,7 +200,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextLine)=16
@@ -219,11 +221,15 @@ type QTextInlineObject struct {
 }
 
 // horizontalAdvance()
-func (this *QTextLine) HorizontalAdvance(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) Horizontaladvance(args ...interface{}) (ret interface{}) {
   // horizontalAdvance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -253,6 +259,10 @@ func (this *QTextLine) Height(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -277,11 +287,15 @@ func (this *QTextLine) Height(args ...interface{}) (ret interface{}) {
 }
 
 // textStart()
-func (this *QTextLine) TextStart(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) Textstart(args ...interface{}) (ret interface{}) {
   // textStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -306,14 +320,15 @@ func (this *QTextLine) TextStart(args ...interface{}) (ret interface{}) {
 }
 
 // QTextLine()
-func GcfreeQTextLine(this *QTextLine) {
-  qtrt.UniverseFree(this)
-}
 func NewQTextLine(args ...interface{}) *QTextLine {
   // QTextLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -324,9 +339,7 @@ func NewQTextLine(args ...interface{}) *QTextLine {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTextLineC2Ev()
-    this := &QTextLine{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextLine)
-    return this
+    return &QTextLine{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextLine", "QTextLine", args)
   }
@@ -335,12 +348,16 @@ func NewQTextLine(args ...interface{}) *QTextLine {
 }
 
 // setLeadingIncluded(_Bool)
-func (this *QTextLine) SetLeadingIncluded(args ...interface{}) () {
+func (this *QTextLine) Setleadingincluded(args ...interface{}) () {
   // setLeadingIncluded(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -364,6 +381,10 @@ func (this *QTextLine) Ascent(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -393,6 +414,10 @@ func (this *QTextLine) X(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -409,11 +434,15 @@ func (this *QTextLine) X(args ...interface{}) () {
 }
 
 // naturalTextWidth()
-func (this *QTextLine) NaturalTextWidth(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) Naturaltextwidth(args ...interface{}) (ret interface{}) {
   // naturalTextWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -438,7 +467,7 @@ func (this *QTextLine) NaturalTextWidth(args ...interface{}) (ret interface{}) {
 }
 
 // setNumColumns(int)
-func (this *QTextLine) SetNumColumns(args ...interface{}) () {
+func (this *QTextLine) Setnumcolumns(args ...interface{}) () {
   // setNumColumns(int)
   // setNumColumns(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -448,6 +477,10 @@ func (this *QTextLine) SetNumColumns(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
   vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -479,6 +512,10 @@ func (this *QTextLine) Descent(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -508,6 +545,10 @@ func (this *QTextLine) Leading(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -532,11 +573,15 @@ func (this *QTextLine) Leading(args ...interface{}) (ret interface{}) {
 }
 
 // naturalTextRect()
-func (this *QTextLine) NaturalTextRect(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) Naturaltextrect(args ...interface{}) (ret interface{}) {
   // naturalTextRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -566,6 +611,10 @@ func (this *QTextLine) Width(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -590,12 +639,16 @@ func (this *QTextLine) Width(args ...interface{}) (ret interface{}) {
 }
 
 // setLineWidth(qreal)
-func (this *QTextLine) SetLineWidth(args ...interface{}) () {
+func (this *QTextLine) Setlinewidth(args ...interface{}) () {
   // setLineWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -614,11 +667,15 @@ func (this *QTextLine) SetLineWidth(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QTextLine) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -643,11 +700,15 @@ func (this *QTextLine) IsValid(args ...interface{}) (ret interface{}) {
 }
 
 // lineNumber()
-func (this *QTextLine) LineNumber(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) Linenumber(args ...interface{}) (ret interface{}) {
   // lineNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -672,12 +733,16 @@ func (this *QTextLine) LineNumber(args ...interface{}) (ret interface{}) {
 }
 
 // setPosition(const class QPointF &)
-func (this *QTextLine) SetPosition(args ...interface{}) () {
+func (this *QTextLine) Setposition(args ...interface{}) () {
   // setPosition(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -696,13 +761,17 @@ func (this *QTextLine) SetPosition(args ...interface{}) () {
 }
 
 // glyphRuns(int, int)
-func (this *QTextLine) GlyphRuns(args ...interface{}) () {
+func (this *QTextLine) Glyphruns(args ...interface{}) () {
   // glyphRuns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -728,6 +797,10 @@ func (this *QTextLine) Rect(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -752,11 +825,15 @@ func (this *QTextLine) Rect(args ...interface{}) (ret interface{}) {
 }
 
 // leadingIncluded()
-func (this *QTextLine) LeadingIncluded(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) Leadingincluded(args ...interface{}) (ret interface{}) {
   // leadingIncluded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -781,11 +858,15 @@ func (this *QTextLine) LeadingIncluded(args ...interface{}) (ret interface{}) {
 }
 
 // textLength()
-func (this *QTextLine) TextLength(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) Textlength(args ...interface{}) (ret interface{}) {
   // textLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -815,6 +896,10 @@ func (this *QTextLine) Y(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -836,6 +921,10 @@ func (this *QTextLine) Position(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -860,12 +949,16 @@ func (this *QTextLine) Position(args ...interface{}) (ret interface{}) {
 }
 
 // setCacheEnabled(_Bool)
-func (this *QTextLayout) SetCacheEnabled(args ...interface{}) () {
+func (this *QTextLayout) Setcacheenabled(args ...interface{}) () {
   // setCacheEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -884,11 +977,15 @@ func (this *QTextLayout) SetCacheEnabled(args ...interface{}) () {
 }
 
 // boundingRect()
-func (this *QTextLayout) BoundingRect(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Boundingrect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -918,6 +1015,10 @@ func (this *QTextLayout) Text(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -942,11 +1043,15 @@ func (this *QTextLayout) Text(args ...interface{}) (ret interface{}) {
 }
 
 // clearAdditionalFormats()
-func (this *QTextLayout) ClearAdditionalFormats(args ...interface{}) () {
+func (this *QTextLayout) Clearadditionalformats(args ...interface{}) () {
   // clearAdditionalFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -963,11 +1068,15 @@ func (this *QTextLayout) ClearAdditionalFormats(args ...interface{}) () {
 }
 
 // lineCount()
-func (this *QTextLayout) LineCount(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Linecount(args ...interface{}) (ret interface{}) {
   // lineCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -992,11 +1101,15 @@ func (this *QTextLayout) LineCount(args ...interface{}) (ret interface{}) {
 }
 
 // clearLayout()
-func (this *QTextLayout) ClearLayout(args ...interface{}) () {
+func (this *QTextLayout) Clearlayout(args ...interface{}) () {
   // clearLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1013,11 +1126,15 @@ func (this *QTextLayout) ClearLayout(args ...interface{}) () {
 }
 
 // createLine()
-func (this *QTextLayout) CreateLine(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Createline(args ...interface{}) (ret interface{}) {
   // createLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1047,6 +1164,10 @@ func (this *QTextLayout) Font(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1071,11 +1192,15 @@ func (this *QTextLayout) Font(args ...interface{}) (ret interface{}) {
 }
 
 // textOption()
-func (this *QTextLayout) TextOption(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Textoption(args ...interface{}) (ret interface{}) {
   // textOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1100,12 +1225,16 @@ func (this *QTextLayout) TextOption(args ...interface{}) (ret interface{}) {
 }
 
 // lineAt(int)
-func (this *QTextLayout) LineAt(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Lineat(args ...interface{}) (ret interface{}) {
   // lineAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1131,13 +1260,42 @@ func (this *QTextLayout) LineAt(args ...interface{}) (ret interface{}) {
   return
 }
 
+// clearFormats()
+func (this *QTextLayout) Clearformats(args ...interface{}) () {
+  // clearFormats()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN11QTextLayout12clearFormatsEv
+    // invoke: void clearFormats()
+    C.C_ZN11QTextLayout12clearFormatsEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextLayout", "clearFormats", args)
+  }
+
+  return
+}
+
 // setRawFont(const class QRawFont &)
-func (this *QTextLayout) SetRawFont(args ...interface{}) () {
+func (this *QTextLayout) Setrawfont(args ...interface{}) () {
   // setRawFont(const class QRawFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRawFont{}) // "const QRawFont &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1155,12 +1313,44 @@ func (this *QTextLayout) SetRawFont(args ...interface{}) () {
   return
 }
 
+// setPosition(const class QPointF &)
+func (this *QTextLayout) Setposition(args ...interface{}) () {
+  // setPosition(const class QPointF &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN11QTextLayout11setPositionERK7QPointF
+    // invoke: void setPosition(const class QPointF &)
+    var arg0 = args[0].(*qtcore.QPointF).Qclsinst
+    if false {fmt.Println(arg0)}
+    C.C_ZN11QTextLayout11setPositionERK7QPointF(this.Qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QTextLayout", "setPosition", args)
+  }
+
+  return
+}
+
 // beginLayout()
-func (this *QTextLayout) BeginLayout(args ...interface{}) () {
+func (this *QTextLayout) Beginlayout(args ...interface{}) () {
   // beginLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1177,13 +1367,17 @@ func (this *QTextLayout) BeginLayout(args ...interface{}) () {
 }
 
 // glyphRuns(int, int)
-func (this *QTextLayout) GlyphRuns(args ...interface{}) () {
+func (this *QTextLayout) Glyphruns(args ...interface{}) () {
   // glyphRuns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1204,12 +1398,16 @@ func (this *QTextLayout) GlyphRuns(args ...interface{}) () {
 }
 
 // rightCursorPosition(int)
-func (this *QTextLayout) RightCursorPosition(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Rightcursorposition(args ...interface{}) (ret interface{}) {
   // rightCursorPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1236,11 +1434,15 @@ func (this *QTextLayout) RightCursorPosition(args ...interface{}) (ret interface
 }
 
 // ~QTextLayout()
-func (this *QTextLayout) Free(args ...interface{}) () {
+func (this *QTextLayout) Freeqtextlayout(args ...interface{}) () {
   // ~QTextLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1248,10 +1450,7 @@ func (this *QTextLayout) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextLayoutD0Ev
     // invoke: void ~QTextLayout()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QTextLayoutD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QTextLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextLayout", "~QTextLayout", args)
   }
@@ -1260,12 +1459,16 @@ func (this *QTextLayout) Free(args ...interface{}) () {
 }
 
 // setTextOption(const class QTextOption &)
-func (this *QTextLayout) SetTextOption(args ...interface{}) () {
+func (this *QTextLayout) Settextoption(args ...interface{}) () {
   // setTextOption(const class QTextOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTextOption{}) // "const QTextOption &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1284,12 +1487,16 @@ func (this *QTextLayout) SetTextOption(args ...interface{}) () {
 }
 
 // isValidCursorPosition(int)
-func (this *QTextLayout) IsValidCursorPosition(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Isvalidcursorposition(args ...interface{}) (ret interface{}) {
   // isValidCursorPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1316,13 +1523,17 @@ func (this *QTextLayout) IsValidCursorPosition(args ...interface{}) (ret interfa
 }
 
 // setPreeditArea(int, const class QString &)
-func (this *QTextLayout) SetPreeditArea(args ...interface{}) () {
+func (this *QTextLayout) Setpreeditarea(args ...interface{}) () {
   // setPreeditArea(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1348,6 +1559,10 @@ func (this *QTextLayout) Engine(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1364,11 +1579,15 @@ func (this *QTextLayout) Engine(args ...interface{}) () {
 }
 
 // minimumWidth()
-func (this *QTextLayout) MinimumWidth(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Minimumwidth(args ...interface{}) (ret interface{}) {
   // minimumWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1393,9 +1612,6 @@ func (this *QTextLayout) MinimumWidth(args ...interface{}) (ret interface{}) {
 }
 
 // QTextLayout(const class QString &, const class QFont &, class QPaintDevice *)
-func GcfreeQTextLayout(this *QTextLayout) {
-  qtrt.UniverseFree(this)
-}
 func NewQTextLayout(args ...interface{}) *QTextLayout {
   // QTextLayout(const class QString &, const class QFont &, class QPaintDevice *)
   // QTextLayout(const class QTextBlock &)
@@ -1412,6 +1628,10 @@ func NewQTextLayout(args ...interface{}) *QTextLayout {
   vtys[2] = make(map[int32]reflect.Type)
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1428,9 +1648,7 @@ func NewQTextLayout(args ...interface{}) *QTextLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice(arg0, arg1, arg2)
-    this := &QTextLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextLayout)
-    return this
+    return &QTextLayout{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QTextLayoutC1ERK10QTextBlock
     // invoke: void QTextLayout(const class QTextBlock &)
@@ -1439,18 +1657,14 @@ func NewQTextLayout(args ...interface{}) *QTextLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextLayoutC2ERK10QTextBlock(arg0)
-    this := &QTextLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextLayout)
-    return this
+    return &QTextLayout{Qclsinst:qthis}
   case 2:
     // invoke: _ZN11QTextLayoutC1Ev
     // invoke: void QTextLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextLayoutC2Ev()
-    this := &QTextLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextLayout)
-    return this
+    return &QTextLayout{Qclsinst:qthis}
   case 3:
     // invoke: _ZN11QTextLayoutC1ERK7QString
     // invoke: void QTextLayout(const class QString &)
@@ -1459,9 +1673,7 @@ func NewQTextLayout(args ...interface{}) *QTextLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextLayoutC2ERK7QString(arg0)
-    this := &QTextLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextLayout)
-    return this
+    return &QTextLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextLayout", "QTextLayout", args)
   }
@@ -1470,12 +1682,16 @@ func NewQTextLayout(args ...interface{}) *QTextLayout {
 }
 
 // leftCursorPosition(int)
-func (this *QTextLayout) LeftCursorPosition(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Leftcursorposition(args ...interface{}) (ret interface{}) {
   // leftCursorPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1502,11 +1718,15 @@ func (this *QTextLayout) LeftCursorPosition(args ...interface{}) (ret interface{
 }
 
 // endLayout()
-func (this *QTextLayout) EndLayout(args ...interface{}) () {
+func (this *QTextLayout) Endlayout(args ...interface{}) () {
   // endLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1523,11 +1743,15 @@ func (this *QTextLayout) EndLayout(args ...interface{}) () {
 }
 
 // maximumWidth()
-func (this *QTextLayout) MaximumWidth(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Maximumwidth(args ...interface{}) (ret interface{}) {
   // maximumWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1552,12 +1776,16 @@ func (this *QTextLayout) MaximumWidth(args ...interface{}) (ret interface{}) {
 }
 
 // setFont(const class QFont &)
-func (this *QTextLayout) SetFont(args ...interface{}) () {
+func (this *QTextLayout) Setfont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QFont{}) // "const QFont &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1576,12 +1804,16 @@ func (this *QTextLayout) SetFont(args ...interface{}) () {
 }
 
 // lineForTextPosition(int)
-func (this *QTextLayout) LineForTextPosition(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Linefortextposition(args ...interface{}) (ret interface{}) {
   // lineForTextPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1608,11 +1840,15 @@ func (this *QTextLayout) LineForTextPosition(args ...interface{}) (ret interface
 }
 
 // preeditAreaPosition()
-func (this *QTextLayout) PreeditAreaPosition(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Preeditareaposition(args ...interface{}) (ret interface{}) {
   // preeditAreaPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1637,12 +1873,16 @@ func (this *QTextLayout) PreeditAreaPosition(args ...interface{}) (ret interface
 }
 
 // setFlags(int)
-func (this *QTextLayout) SetFlags(args ...interface{}) () {
+func (this *QTextLayout) Setflags(args ...interface{}) () {
   // setFlags(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1660,32 +1900,8 @@ func (this *QTextLayout) SetFlags(args ...interface{}) () {
   return
 }
 
-// setPosition(const class QPointF &)
-func (this *QTextLayout) SetPosition(args ...interface{}) () {
-  // setPosition(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QTextLayout11setPositionERK7QPointF
-    // invoke: void setPosition(const class QPointF &)
-    var arg0 = args[0].(*qtcore.QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QTextLayout11setPositionERK7QPointF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTextLayout", "setPosition", args)
-  }
-
-  return
-}
-
 // drawCursor(class QPainter *, const class QPointF &, int)
-func (this *QTextLayout) DrawCursor(args ...interface{}) () {
+func (this *QTextLayout) Drawcursor(args ...interface{}) () {
   // drawCursor(class QPainter *, const class QPointF &, int)
   // drawCursor(class QPainter *, const class QPointF &, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1699,6 +1915,10 @@ func (this *QTextLayout) DrawCursor(args ...interface{}) () {
   vtys[1][1] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
   vtys[1][2] = qtrt.Int32Ty(false) // "int"
   vtys[1][3] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1733,11 +1953,15 @@ func (this *QTextLayout) DrawCursor(args ...interface{}) () {
 }
 
 // cacheEnabled()
-func (this *QTextLayout) CacheEnabled(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Cacheenabled(args ...interface{}) (ret interface{}) {
   // cacheEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1762,12 +1986,16 @@ func (this *QTextLayout) CacheEnabled(args ...interface{}) (ret interface{}) {
 }
 
 // setText(const class QString &)
-func (this *QTextLayout) SetText(args ...interface{}) () {
+func (this *QTextLayout) Settext(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1786,11 +2014,15 @@ func (this *QTextLayout) SetText(args ...interface{}) () {
 }
 
 // cursorMoveStyle()
-func (this *QTextLayout) CursorMoveStyle(args ...interface{}) () {
+func (this *QTextLayout) Cursormovestyle(args ...interface{}) () {
   // cursorMoveStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1807,11 +2039,15 @@ func (this *QTextLayout) CursorMoveStyle(args ...interface{}) () {
 }
 
 // preeditAreaText()
-func (this *QTextLayout) PreeditAreaText(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) Preeditareatext(args ...interface{}) (ret interface{}) {
   // preeditAreaText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1835,12 +2071,41 @@ func (this *QTextLayout) PreeditAreaText(args ...interface{}) (ret interface{}) 
   return
 }
 
+// formats()
+func (this *QTextLayout) Formats(args ...interface{}) () {
+  // formats()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QTextLayout7formatsEv
+    // invoke: QVector<QTextLayout::FormatRange> formats()
+    C.C_ZNK11QTextLayout7formatsEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextLayout", "formats", args)
+  }
+
+  return
+}
+
 // additionalFormats()
-func (this *QTextLayout) AdditionalFormats(args ...interface{}) () {
+func (this *QTextLayout) Additionalformats(args ...interface{}) () {
   // additionalFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1862,6 +2127,10 @@ func (this *QTextLayout) Position(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1886,11 +2155,15 @@ func (this *QTextLayout) Position(args ...interface{}) (ret interface{}) {
 }
 
 // textPosition()
-func (this *QTextInlineObject) TextPosition(args ...interface{}) (ret interface{}) {
+func (this *QTextInlineObject) Textposition(args ...interface{}) (ret interface{}) {
   // textPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1920,6 +2193,10 @@ func (this *QTextInlineObject) Descent(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1944,12 +2221,16 @@ func (this *QTextInlineObject) Descent(args ...interface{}) (ret interface{}) {
 }
 
 // setWidth(qreal)
-func (this *QTextInlineObject) SetWidth(args ...interface{}) () {
+func (this *QTextInlineObject) Setwidth(args ...interface{}) () {
   // setWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1973,6 +2254,10 @@ func (this *QTextInlineObject) Format(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1997,12 +2282,16 @@ func (this *QTextInlineObject) Format(args ...interface{}) (ret interface{}) {
 }
 
 // setDescent(qreal)
-func (this *QTextInlineObject) SetDescent(args ...interface{}) () {
+func (this *QTextInlineObject) Setdescent(args ...interface{}) () {
   // setDescent(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2021,11 +2310,15 @@ func (this *QTextInlineObject) SetDescent(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QTextInlineObject) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QTextInlineObject) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2050,11 +2343,15 @@ func (this *QTextInlineObject) IsValid(args ...interface{}) (ret interface{}) {
 }
 
 // textDirection()
-func (this *QTextInlineObject) TextDirection(args ...interface{}) () {
+func (this *QTextInlineObject) Textdirection(args ...interface{}) () {
   // textDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2076,6 +2373,10 @@ func (this *QTextInlineObject) Height(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2105,6 +2406,10 @@ func (this *QTextInlineObject) Width(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2129,12 +2434,16 @@ func (this *QTextInlineObject) Width(args ...interface{}) (ret interface{}) {
 }
 
 // setAscent(qreal)
-func (this *QTextInlineObject) SetAscent(args ...interface{}) () {
+func (this *QTextInlineObject) Setascent(args ...interface{}) () {
   // setAscent(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2153,11 +2462,15 @@ func (this *QTextInlineObject) SetAscent(args ...interface{}) () {
 }
 
 // formatIndex()
-func (this *QTextInlineObject) FormatIndex(args ...interface{}) (ret interface{}) {
+func (this *QTextInlineObject) Formatindex(args ...interface{}) (ret interface{}) {
   // formatIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2182,14 +2495,15 @@ func (this *QTextInlineObject) FormatIndex(args ...interface{}) (ret interface{}
 }
 
 // QTextInlineObject()
-func GcfreeQTextInlineObject(this *QTextInlineObject) {
-  qtrt.UniverseFree(this)
-}
 func NewQTextInlineObject(args ...interface{}) *QTextInlineObject {
   // QTextInlineObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2200,9 +2514,7 @@ func NewQTextInlineObject(args ...interface{}) *QTextInlineObject {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QTextInlineObjectC2Ev()
-    this := &QTextInlineObject{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextInlineObject)
-    return this
+    return &QTextInlineObject{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "QTextInlineObject", args)
   }
@@ -2216,6 +2528,10 @@ func (this *QTextInlineObject) Ascent(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2245,6 +2561,10 @@ func (this *QTextInlineObject) Rect(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

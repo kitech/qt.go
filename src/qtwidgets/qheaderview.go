@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qheaderview.h
 // dst-file: /src/widgets/qheaderview.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -167,7 +166,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QHeaderView)=1
@@ -187,11 +185,15 @@ type QHeaderView struct {
 }
 
 // cascadingSectionResizes()
-func (this *QHeaderView) CascadingSectionResizes(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Cascadingsectionresizes(args ...interface{}) (ret interface{}) {
   // cascadingSectionResizes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -216,12 +218,16 @@ func (this *QHeaderView) CascadingSectionResizes(args ...interface{}) (ret inter
 }
 
 // setResizeContentsPrecision(int)
-func (this *QHeaderView) SetResizeContentsPrecision(args ...interface{}) () {
+func (this *QHeaderView) Setresizecontentsprecision(args ...interface{}) () {
   // setResizeContentsPrecision(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -240,11 +246,15 @@ func (this *QHeaderView) SetResizeContentsPrecision(args ...interface{}) () {
 }
 
 // sectionsHidden()
-func (this *QHeaderView) SectionsHidden(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Sectionshidden(args ...interface{}) (ret interface{}) {
   // sectionsHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -269,12 +279,16 @@ func (this *QHeaderView) SectionsHidden(args ...interface{}) (ret interface{}) {
 }
 
 // sectionSizeHint(int)
-func (this *QHeaderView) SectionSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Sectionsizehint(args ...interface{}) (ret interface{}) {
   // sectionSizeHint(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -301,11 +315,15 @@ func (this *QHeaderView) SectionSizeHint(args ...interface{}) (ret interface{}) 
 }
 
 // sortIndicatorOrder()
-func (this *QHeaderView) SortIndicatorOrder(args ...interface{}) () {
+func (this *QHeaderView) Sortindicatororder(args ...interface{}) () {
   // sortIndicatorOrder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -322,11 +340,15 @@ func (this *QHeaderView) SortIndicatorOrder(args ...interface{}) () {
 }
 
 // resetDefaultSectionSize()
-func (this *QHeaderView) ResetDefaultSectionSize(args ...interface{}) () {
+func (this *QHeaderView) Resetdefaultsectionsize(args ...interface{}) () {
   // resetDefaultSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -343,12 +365,16 @@ func (this *QHeaderView) ResetDefaultSectionSize(args ...interface{}) () {
 }
 
 // setOffset(int)
-func (this *QHeaderView) SetOffset(args ...interface{}) () {
+func (this *QHeaderView) Setoffset(args ...interface{}) () {
   // setOffset(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -372,6 +398,10 @@ func (this *QHeaderView) Reset(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -388,12 +418,16 @@ func (this *QHeaderView) Reset(args ...interface{}) () {
 }
 
 // sectionPosition(int)
-func (this *QHeaderView) SectionPosition(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Sectionposition(args ...interface{}) (ret interface{}) {
   // sectionPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -420,12 +454,16 @@ func (this *QHeaderView) SectionPosition(args ...interface{}) (ret interface{}) 
 }
 
 // logicalIndex(int)
-func (this *QHeaderView) LogicalIndex(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Logicalindex(args ...interface{}) (ret interface{}) {
   // logicalIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -452,12 +490,16 @@ func (this *QHeaderView) LogicalIndex(args ...interface{}) (ret interface{}) {
 }
 
 // sectionSize(int)
-func (this *QHeaderView) SectionSize(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Sectionsize(args ...interface{}) (ret interface{}) {
   // sectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -484,11 +526,15 @@ func (this *QHeaderView) SectionSize(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QHeaderView) MetaObject(args ...interface{}) () {
+func (this *QHeaderView) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -505,12 +551,16 @@ func (this *QHeaderView) MetaObject(args ...interface{}) () {
 }
 
 // hideSection(int)
-func (this *QHeaderView) HideSection(args ...interface{}) () {
+func (this *QHeaderView) Hidesection(args ...interface{}) () {
   // hideSection(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -529,12 +579,16 @@ func (this *QHeaderView) HideSection(args ...interface{}) () {
 }
 
 // setMaximumSectionSize(int)
-func (this *QHeaderView) SetMaximumSectionSize(args ...interface{}) () {
+func (this *QHeaderView) Setmaximumsectionsize(args ...interface{}) () {
   // setMaximumSectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -553,12 +607,16 @@ func (this *QHeaderView) SetMaximumSectionSize(args ...interface{}) () {
 }
 
 // sectionResizeMode(int)
-func (this *QHeaderView) SectionResizeMode(args ...interface{}) () {
+func (this *QHeaderView) Sectionresizemode(args ...interface{}) () {
   // sectionResizeMode(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -577,11 +635,15 @@ func (this *QHeaderView) SectionResizeMode(args ...interface{}) () {
 }
 
 // ~QHeaderView()
-func (this *QHeaderView) Free(args ...interface{}) () {
+func (this *QHeaderView) Freeqheaderview(args ...interface{}) () {
   // ~QHeaderView()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -589,10 +651,7 @@ func (this *QHeaderView) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHeaderViewD0Ev
     // invoke: void ~QHeaderView()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QHeaderViewD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QHeaderViewD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "~QHeaderView", args)
   }
@@ -601,12 +660,16 @@ func (this *QHeaderView) Free(args ...interface{}) () {
 }
 
 // restoreState(const class QByteArray &)
-func (this *QHeaderView) RestoreState(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Restorestate(args ...interface{}) (ret interface{}) {
   // restoreState(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -633,12 +696,16 @@ func (this *QHeaderView) RestoreState(args ...interface{}) (ret interface{}) {
 }
 
 // setOffsetToSectionPosition(int)
-func (this *QHeaderView) SetOffsetToSectionPosition(args ...interface{}) () {
+func (this *QHeaderView) Setoffsettosectionposition(args ...interface{}) () {
   // setOffsetToSectionPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -657,11 +724,15 @@ func (this *QHeaderView) SetOffsetToSectionPosition(args ...interface{}) () {
 }
 
 // doItemsLayout()
-func (this *QHeaderView) DoItemsLayout(args ...interface{}) () {
+func (this *QHeaderView) Doitemslayout(args ...interface{}) () {
   // doItemsLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -678,12 +749,16 @@ func (this *QHeaderView) DoItemsLayout(args ...interface{}) () {
 }
 
 // setHighlightSections(_Bool)
-func (this *QHeaderView) SetHighlightSections(args ...interface{}) () {
+func (this *QHeaderView) Sethighlightsections(args ...interface{}) () {
   // setHighlightSections(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -702,11 +777,15 @@ func (this *QHeaderView) SetHighlightSections(args ...interface{}) () {
 }
 
 // resizeContentsPrecision()
-func (this *QHeaderView) ResizeContentsPrecision(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Resizecontentsprecision(args ...interface{}) (ret interface{}) {
   // resizeContentsPrecision()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -731,11 +810,15 @@ func (this *QHeaderView) ResizeContentsPrecision(args ...interface{}) (ret inter
 }
 
 // sectionsClickable()
-func (this *QHeaderView) SectionsClickable(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Sectionsclickable(args ...interface{}) (ret interface{}) {
   // sectionsClickable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -760,7 +843,7 @@ func (this *QHeaderView) SectionsClickable(args ...interface{}) (ret interface{}
 }
 
 // logicalIndexAt(const class QPoint &)
-func (this *QHeaderView) LogicalIndexAt(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Logicalindexat(args ...interface{}) (ret interface{}) {
   // logicalIndexAt(const class QPoint &)
   // logicalIndexAt(int)
   // logicalIndexAt(int, int)
@@ -773,6 +856,10 @@ func (this *QHeaderView) LogicalIndexAt(args ...interface{}) (ret interface{}) {
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = qtrt.Int32Ty(false) // "int"
   vtys[2][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -834,6 +921,10 @@ func (this *QHeaderView) Offset(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -858,12 +949,16 @@ func (this *QHeaderView) Offset(args ...interface{}) (ret interface{}) {
 }
 
 // setMinimumSectionSize(int)
-func (this *QHeaderView) SetMinimumSectionSize(args ...interface{}) () {
+func (this *QHeaderView) Setminimumsectionsize(args ...interface{}) () {
   // setMinimumSectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -882,11 +977,15 @@ func (this *QHeaderView) SetMinimumSectionSize(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QHeaderView) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -911,12 +1010,16 @@ func (this *QHeaderView) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // setVisible(_Bool)
-func (this *QHeaderView) SetVisible(args ...interface{}) () {
+func (this *QHeaderView) Setvisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -935,12 +1038,16 @@ func (this *QHeaderView) SetVisible(args ...interface{}) () {
 }
 
 // setCascadingSectionResizes(_Bool)
-func (this *QHeaderView) SetCascadingSectionResizes(args ...interface{}) () {
+func (this *QHeaderView) Setcascadingsectionresizes(args ...interface{}) () {
   // setCascadingSectionResizes(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -959,11 +1066,15 @@ func (this *QHeaderView) SetCascadingSectionResizes(args ...interface{}) () {
 }
 
 // sectionsMovable()
-func (this *QHeaderView) SectionsMovable(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Sectionsmovable(args ...interface{}) (ret interface{}) {
   // sectionsMovable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -993,6 +1104,10 @@ func (this *QHeaderView) Length(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1017,11 +1132,15 @@ func (this *QHeaderView) Length(args ...interface{}) (ret interface{}) {
 }
 
 // sortIndicatorSection()
-func (this *QHeaderView) SortIndicatorSection(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Sortindicatorsection(args ...interface{}) (ret interface{}) {
   // sortIndicatorSection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1046,13 +1165,17 @@ func (this *QHeaderView) SortIndicatorSection(args ...interface{}) (ret interfac
 }
 
 // resizeSection(int, int)
-func (this *QHeaderView) ResizeSection(args ...interface{}) () {
+func (this *QHeaderView) Resizesection(args ...interface{}) () {
   // resizeSection(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1073,12 +1196,16 @@ func (this *QHeaderView) ResizeSection(args ...interface{}) () {
 }
 
 // setSectionsMovable(_Bool)
-func (this *QHeaderView) SetSectionsMovable(args ...interface{}) () {
+func (this *QHeaderView) Setsectionsmovable(args ...interface{}) () {
   // setSectionsMovable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1097,11 +1224,15 @@ func (this *QHeaderView) SetSectionsMovable(args ...interface{}) () {
 }
 
 // maximumSectionSize()
-func (this *QHeaderView) MaximumSectionSize(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Maximumsectionsize(args ...interface{}) (ret interface{}) {
   // maximumSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1126,13 +1257,17 @@ func (this *QHeaderView) MaximumSectionSize(args ...interface{}) (ret interface{
 }
 
 // moveSection(int, int)
-func (this *QHeaderView) MoveSection(args ...interface{}) () {
+func (this *QHeaderView) Movesection(args ...interface{}) () {
   // moveSection(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1153,12 +1288,16 @@ func (this *QHeaderView) MoveSection(args ...interface{}) () {
 }
 
 // isSectionHidden(int)
-func (this *QHeaderView) IsSectionHidden(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Issectionhidden(args ...interface{}) (ret interface{}) {
   // isSectionHidden(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1185,12 +1324,16 @@ func (this *QHeaderView) IsSectionHidden(args ...interface{}) (ret interface{}) 
 }
 
 // visualIndexAt(int)
-func (this *QHeaderView) VisualIndexAt(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Visualindexat(args ...interface{}) (ret interface{}) {
   // visualIndexAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1217,12 +1360,16 @@ func (this *QHeaderView) VisualIndexAt(args ...interface{}) (ret interface{}) {
 }
 
 // setSortIndicatorShown(_Bool)
-func (this *QHeaderView) SetSortIndicatorShown(args ...interface{}) () {
+func (this *QHeaderView) Setsortindicatorshown(args ...interface{}) () {
   // setSortIndicatorShown(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1241,11 +1388,15 @@ func (this *QHeaderView) SetSortIndicatorShown(args ...interface{}) () {
 }
 
 // defaultAlignment()
-func (this *QHeaderView) DefaultAlignment(args ...interface{}) () {
+func (this *QHeaderView) Defaultalignment(args ...interface{}) () {
   // defaultAlignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1262,11 +1413,15 @@ func (this *QHeaderView) DefaultAlignment(args ...interface{}) () {
 }
 
 // hiddenSectionCount()
-func (this *QHeaderView) HiddenSectionCount(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Hiddensectioncount(args ...interface{}) (ret interface{}) {
   // hiddenSectionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1291,12 +1446,16 @@ func (this *QHeaderView) HiddenSectionCount(args ...interface{}) (ret interface{
 }
 
 // setStretchLastSection(_Bool)
-func (this *QHeaderView) SetStretchLastSection(args ...interface{}) () {
+func (this *QHeaderView) Setstretchlastsection(args ...interface{}) () {
   // setStretchLastSection(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1320,6 +1479,10 @@ func (this *QHeaderView) Count(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1344,11 +1507,15 @@ func (this *QHeaderView) Count(args ...interface{}) (ret interface{}) {
 }
 
 // minimumSectionSize()
-func (this *QHeaderView) MinimumSectionSize(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Minimumsectionsize(args ...interface{}) (ret interface{}) {
   // minimumSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1373,11 +1540,15 @@ func (this *QHeaderView) MinimumSectionSize(args ...interface{}) (ret interface{
 }
 
 // saveState()
-func (this *QHeaderView) SaveState(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Savestate(args ...interface{}) (ret interface{}) {
   // saveState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1407,6 +1578,10 @@ func (this *QHeaderView) Orientation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1423,13 +1598,17 @@ func (this *QHeaderView) Orientation(args ...interface{}) () {
 }
 
 // setSectionHidden(int, _Bool)
-func (this *QHeaderView) SetSectionHidden(args ...interface{}) () {
+func (this *QHeaderView) Setsectionhidden(args ...interface{}) () {
   // setSectionHidden(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1450,11 +1629,15 @@ func (this *QHeaderView) SetSectionHidden(args ...interface{}) () {
 }
 
 // setOffsetToLastSection()
-func (this *QHeaderView) SetOffsetToLastSection(args ...interface{}) () {
+func (this *QHeaderView) Setoffsettolastsection(args ...interface{}) () {
   // setOffsetToLastSection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1471,11 +1654,15 @@ func (this *QHeaderView) SetOffsetToLastSection(args ...interface{}) () {
 }
 
 // stretchLastSection()
-func (this *QHeaderView) StretchLastSection(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Stretchlastsection(args ...interface{}) (ret interface{}) {
   // stretchLastSection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1500,11 +1687,15 @@ func (this *QHeaderView) StretchLastSection(args ...interface{}) (ret interface{
 }
 
 // isSortIndicatorShown()
-func (this *QHeaderView) IsSortIndicatorShown(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Issortindicatorshown(args ...interface{}) (ret interface{}) {
   // isSortIndicatorShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1529,12 +1720,16 @@ func (this *QHeaderView) IsSortIndicatorShown(args ...interface{}) (ret interfac
 }
 
 // showSection(int)
-func (this *QHeaderView) ShowSection(args ...interface{}) () {
+func (this *QHeaderView) Showsection(args ...interface{}) () {
   // showSection(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1553,13 +1748,17 @@ func (this *QHeaderView) ShowSection(args ...interface{}) () {
 }
 
 // swapSections(int, int)
-func (this *QHeaderView) SwapSections(args ...interface{}) () {
+func (this *QHeaderView) Swapsections(args ...interface{}) () {
   // swapSections(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1580,12 +1779,16 @@ func (this *QHeaderView) SwapSections(args ...interface{}) () {
 }
 
 // setSectionsClickable(_Bool)
-func (this *QHeaderView) SetSectionsClickable(args ...interface{}) () {
+func (this *QHeaderView) Setsectionsclickable(args ...interface{}) () {
   // setSectionsClickable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1604,12 +1807,16 @@ func (this *QHeaderView) SetSectionsClickable(args ...interface{}) () {
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QHeaderView) SetModel(args ...interface{}) () {
+func (this *QHeaderView) Setmodel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QAbstractItemModel{}) // "QAbstractItemModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1628,12 +1835,16 @@ func (this *QHeaderView) SetModel(args ...interface{}) () {
 }
 
 // setDefaultSectionSize(int)
-func (this *QHeaderView) SetDefaultSectionSize(args ...interface{}) () {
+func (this *QHeaderView) Setdefaultsectionsize(args ...interface{}) () {
   // setDefaultSectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1652,11 +1863,15 @@ func (this *QHeaderView) SetDefaultSectionSize(args ...interface{}) () {
 }
 
 // sectionsMoved()
-func (this *QHeaderView) SectionsMoved(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Sectionsmoved(args ...interface{}) (ret interface{}) {
   // sectionsMoved()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1681,12 +1896,16 @@ func (this *QHeaderView) SectionsMoved(args ...interface{}) (ret interface{}) {
 }
 
 // sectionViewportPosition(int)
-func (this *QHeaderView) SectionViewportPosition(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Sectionviewportposition(args ...interface{}) (ret interface{}) {
   // sectionViewportPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1713,11 +1932,15 @@ func (this *QHeaderView) SectionViewportPosition(args ...interface{}) (ret inter
 }
 
 // stretchSectionCount()
-func (this *QHeaderView) StretchSectionCount(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Stretchsectioncount(args ...interface{}) (ret interface{}) {
   // stretchSectionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1742,12 +1965,16 @@ func (this *QHeaderView) StretchSectionCount(args ...interface{}) (ret interface
 }
 
 // visualIndex(int)
-func (this *QHeaderView) VisualIndex(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Visualindex(args ...interface{}) (ret interface{}) {
   // visualIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1774,11 +2001,15 @@ func (this *QHeaderView) VisualIndex(args ...interface{}) (ret interface{}) {
 }
 
 // highlightSections()
-func (this *QHeaderView) HighlightSections(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Highlightsections(args ...interface{}) (ret interface{}) {
   // highlightSections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1803,11 +2034,15 @@ func (this *QHeaderView) HighlightSections(args ...interface{}) (ret interface{}
 }
 
 // defaultSectionSize()
-func (this *QHeaderView) DefaultSectionSize(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) Defaultsectionsize(args ...interface{}) (ret interface{}) {
   // defaultSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

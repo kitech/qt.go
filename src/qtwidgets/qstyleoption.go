@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qstyleoption.h
 // dst-file: /src/widgets/qstyleoption.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -159,7 +158,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStyleOptionComboBox)=1
@@ -325,9 +323,6 @@ type QStyleOptionTabWidgetFrame struct {
 }
 
 // QStyleOptionComboBox(const class QStyleOptionComboBox &)
-func GcfreeQStyleOptionComboBox(this *QStyleOptionComboBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionComboBox(args ...interface{}) *QStyleOptionComboBox {
   // QStyleOptionComboBox(const class QStyleOptionComboBox &)
   // QStyleOptionComboBox()
@@ -336,6 +331,10 @@ func NewQStyleOptionComboBox(args ...interface{}) *QStyleOptionComboBox {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyleOptionComboBox{}) // "const QStyleOptionComboBox &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -348,18 +347,14 @@ func NewQStyleOptionComboBox(args ...interface{}) *QStyleOptionComboBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionComboBoxC2ERKS_(arg0)
-    this := &QStyleOptionComboBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionComboBox)
-    return this
+    return &QStyleOptionComboBox{Qclsinst:qthis}
   case 1:
     // invoke: _ZN20QStyleOptionComboBoxC1Ev
     // invoke: void QStyleOptionComboBox()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionComboBoxC2Ev()
-    this := &QStyleOptionComboBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionComboBox)
-    return this
+    return &QStyleOptionComboBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionComboBox", "QStyleOptionComboBox", args)
   }
@@ -368,9 +363,6 @@ func NewQStyleOptionComboBox(args ...interface{}) *QStyleOptionComboBox {
 }
 
 // QStyleOptionMenuItem(const class QStyleOptionMenuItem &)
-func GcfreeQStyleOptionMenuItem(this *QStyleOptionMenuItem) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionMenuItem(args ...interface{}) *QStyleOptionMenuItem {
   // QStyleOptionMenuItem(const class QStyleOptionMenuItem &)
   // QStyleOptionMenuItem()
@@ -379,6 +371,10 @@ func NewQStyleOptionMenuItem(args ...interface{}) *QStyleOptionMenuItem {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyleOptionMenuItem{}) // "const QStyleOptionMenuItem &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -391,18 +387,14 @@ func NewQStyleOptionMenuItem(args ...interface{}) *QStyleOptionMenuItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionMenuItemC2ERKS_(arg0)
-    this := &QStyleOptionMenuItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionMenuItem)
-    return this
+    return &QStyleOptionMenuItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN20QStyleOptionMenuItemC1Ev
     // invoke: void QStyleOptionMenuItem()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionMenuItemC2Ev()
-    this := &QStyleOptionMenuItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionMenuItem)
-    return this
+    return &QStyleOptionMenuItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionMenuItem", "QStyleOptionMenuItem", args)
   }
@@ -411,11 +403,15 @@ func NewQStyleOptionMenuItem(args ...interface{}) *QStyleOptionMenuItem {
 }
 
 // ~QStyleHintReturnVariant()
-func (this *QStyleHintReturnVariant) Free(args ...interface{}) () {
+func (this *QStyleHintReturnVariant) Freeqstylehintreturnvariant(args ...interface{}) () {
   // ~QStyleHintReturnVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -423,10 +419,7 @@ func (this *QStyleHintReturnVariant) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QStyleHintReturnVariantD0Ev
     // invoke: void ~QStyleHintReturnVariant()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN23QStyleHintReturnVariantD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN23QStyleHintReturnVariantD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHintReturnVariant", "~QStyleHintReturnVariant", args)
   }
@@ -435,14 +428,15 @@ func (this *QStyleHintReturnVariant) Free(args ...interface{}) () {
 }
 
 // QStyleHintReturnVariant()
-func GcfreeQStyleHintReturnVariant(this *QStyleHintReturnVariant) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleHintReturnVariant(args ...interface{}) *QStyleHintReturnVariant {
   // QStyleHintReturnVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -453,9 +447,7 @@ func NewQStyleHintReturnVariant(args ...interface{}) *QStyleHintReturnVariant {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QStyleHintReturnVariantC2Ev()
-    this := &QStyleHintReturnVariant{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleHintReturnVariant)
-    return this
+    return &QStyleHintReturnVariant{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleHintReturnVariant", "QStyleHintReturnVariant", args)
   }
@@ -464,9 +456,6 @@ func NewQStyleHintReturnVariant(args ...interface{}) *QStyleHintReturnVariant {
 }
 
 // QStyleOptionTitleBar()
-func GcfreeQStyleOptionTitleBar(this *QStyleOptionTitleBar) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionTitleBar(args ...interface{}) *QStyleOptionTitleBar {
   // QStyleOptionTitleBar()
   // QStyleOptionTitleBar(const class QStyleOptionTitleBar &)
@@ -475,6 +464,10 @@ func NewQStyleOptionTitleBar(args ...interface{}) *QStyleOptionTitleBar {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionTitleBar{}) // "const QStyleOptionTitleBar &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -485,9 +478,7 @@ func NewQStyleOptionTitleBar(args ...interface{}) *QStyleOptionTitleBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionTitleBarC2Ev()
-    this := &QStyleOptionTitleBar{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionTitleBar)
-    return this
+    return &QStyleOptionTitleBar{Qclsinst:qthis}
   case 1:
     // invoke: _ZN20QStyleOptionTitleBarC1ERKS_
     // invoke: void QStyleOptionTitleBar(const class QStyleOptionTitleBar &)
@@ -496,9 +487,7 @@ func NewQStyleOptionTitleBar(args ...interface{}) *QStyleOptionTitleBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionTitleBarC2ERKS_(arg0)
-    this := &QStyleOptionTitleBar{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionTitleBar)
-    return this
+    return &QStyleOptionTitleBar{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionTitleBar", "QStyleOptionTitleBar", args)
   }
@@ -507,12 +496,16 @@ func NewQStyleOptionTitleBar(args ...interface{}) *QStyleOptionTitleBar {
 }
 
 // levelOfDetailFromTransform(const class QTransform &)
-func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform_s(args ...interface{}) (ret interface{}) {
+func (this *QStyleOptionGraphicsItem) Levelofdetailfromtransform_S(args ...interface{}) (ret interface{}) {
   // levelOfDetailFromTransform(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QTransform{}) // "const QTransform &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -539,9 +532,6 @@ func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform_s(args ...inter
 }
 
 // QStyleOptionGraphicsItem()
-func GcfreeQStyleOptionGraphicsItem(this *QStyleOptionGraphicsItem) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionGraphicsItem(args ...interface{}) *QStyleOptionGraphicsItem {
   // QStyleOptionGraphicsItem()
   // QStyleOptionGraphicsItem(const class QStyleOptionGraphicsItem &)
@@ -550,6 +540,10 @@ func NewQStyleOptionGraphicsItem(args ...interface{}) *QStyleOptionGraphicsItem 
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionGraphicsItem{}) // "const QStyleOptionGraphicsItem &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -560,9 +554,7 @@ func NewQStyleOptionGraphicsItem(args ...interface{}) *QStyleOptionGraphicsItem 
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN24QStyleOptionGraphicsItemC2Ev()
-    this := &QStyleOptionGraphicsItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionGraphicsItem)
-    return this
+    return &QStyleOptionGraphicsItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN24QStyleOptionGraphicsItemC1ERKS_
     // invoke: void QStyleOptionGraphicsItem(const class QStyleOptionGraphicsItem &)
@@ -571,9 +563,7 @@ func NewQStyleOptionGraphicsItem(args ...interface{}) *QStyleOptionGraphicsItem 
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN24QStyleOptionGraphicsItemC2ERKS_(arg0)
-    this := &QStyleOptionGraphicsItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionGraphicsItem)
-    return this
+    return &QStyleOptionGraphicsItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionGraphicsItem", "QStyleOptionGraphicsItem", args)
   }
@@ -582,11 +572,15 @@ func NewQStyleOptionGraphicsItem(args ...interface{}) *QStyleOptionGraphicsItem 
 }
 
 // ~QStyleOption()
-func (this *QStyleOption) Free(args ...interface{}) () {
+func (this *QStyleOption) Freeqstyleoption(args ...interface{}) () {
   // ~QStyleOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -594,10 +588,7 @@ func (this *QStyleOption) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStyleOptionD0Ev
     // invoke: void ~QStyleOption()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QStyleOptionD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QStyleOptionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStyleOption", "~QStyleOption", args)
   }
@@ -612,6 +603,10 @@ func (this *QStyleOption) Init(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "const QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -630,9 +625,6 @@ func (this *QStyleOption) Init(args ...interface{}) () {
 }
 
 // QStyleOption(const class QStyleOption &)
-func GcfreeQStyleOption(this *QStyleOption) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOption(args ...interface{}) *QStyleOption {
   // QStyleOption(const class QStyleOption &)
   // QStyleOption(int, int)
@@ -643,6 +635,10 @@ func NewQStyleOption(args ...interface{}) *QStyleOption {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -655,9 +651,7 @@ func NewQStyleOption(args ...interface{}) *QStyleOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStyleOptionC2ERKS_(arg0)
-    this := &QStyleOption{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOption)
-    return this
+    return &QStyleOption{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QStyleOptionC1Eii
     // invoke: void QStyleOption(int, int)
@@ -668,9 +662,7 @@ func NewQStyleOption(args ...interface{}) *QStyleOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStyleOptionC2Eii(arg0, arg1)
-    this := &QStyleOption{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOption)
-    return this
+    return &QStyleOption{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOption", "QStyleOption", args)
   }
@@ -679,12 +671,16 @@ func NewQStyleOption(args ...interface{}) *QStyleOption {
 }
 
 // initFrom(const class QWidget *)
-func (this *QStyleOption) InitFrom(args ...interface{}) () {
+func (this *QStyleOption) Initfrom(args ...interface{}) () {
   // initFrom(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "const QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -703,9 +699,6 @@ func (this *QStyleOption) InitFrom(args ...interface{}) () {
 }
 
 // QStyleOptionDockWidget()
-func GcfreeQStyleOptionDockWidget(this *QStyleOptionDockWidget) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionDockWidget(args ...interface{}) *QStyleOptionDockWidget {
   // QStyleOptionDockWidget()
   // QStyleOptionDockWidget(const class QStyleOptionDockWidget &)
@@ -714,6 +707,10 @@ func NewQStyleOptionDockWidget(args ...interface{}) *QStyleOptionDockWidget {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionDockWidget{}) // "const QStyleOptionDockWidget &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -724,9 +721,7 @@ func NewQStyleOptionDockWidget(args ...interface{}) *QStyleOptionDockWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionDockWidgetC2Ev()
-    this := &QStyleOptionDockWidget{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionDockWidget)
-    return this
+    return &QStyleOptionDockWidget{Qclsinst:qthis}
   case 1:
     // invoke: _ZN22QStyleOptionDockWidgetC1ERKS_
     // invoke: void QStyleOptionDockWidget(const class QStyleOptionDockWidget &)
@@ -735,9 +730,7 @@ func NewQStyleOptionDockWidget(args ...interface{}) *QStyleOptionDockWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionDockWidgetC2ERKS_(arg0)
-    this := &QStyleOptionDockWidget{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionDockWidget)
-    return this
+    return &QStyleOptionDockWidget{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionDockWidget", "QStyleOptionDockWidget", args)
   }
@@ -746,9 +739,6 @@ func NewQStyleOptionDockWidget(args ...interface{}) *QStyleOptionDockWidget {
 }
 
 // QStyleOptionProgressBar(const class QStyleOptionProgressBar &)
-func GcfreeQStyleOptionProgressBar(this *QStyleOptionProgressBar) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionProgressBar(args ...interface{}) *QStyleOptionProgressBar {
   // QStyleOptionProgressBar(const class QStyleOptionProgressBar &)
   // QStyleOptionProgressBar()
@@ -757,6 +747,10 @@ func NewQStyleOptionProgressBar(args ...interface{}) *QStyleOptionProgressBar {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyleOptionProgressBar{}) // "const QStyleOptionProgressBar &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -769,18 +763,14 @@ func NewQStyleOptionProgressBar(args ...interface{}) *QStyleOptionProgressBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QStyleOptionProgressBarC2ERKS_(arg0)
-    this := &QStyleOptionProgressBar{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionProgressBar)
-    return this
+    return &QStyleOptionProgressBar{Qclsinst:qthis}
   case 1:
     // invoke: _ZN23QStyleOptionProgressBarC1Ev
     // invoke: void QStyleOptionProgressBar()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QStyleOptionProgressBarC2Ev()
-    this := &QStyleOptionProgressBar{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionProgressBar)
-    return this
+    return &QStyleOptionProgressBar{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionProgressBar", "QStyleOptionProgressBar", args)
   }
@@ -789,9 +779,6 @@ func NewQStyleOptionProgressBar(args ...interface{}) *QStyleOptionProgressBar {
 }
 
 // QStyleOptionSlider(const class QStyleOptionSlider &)
-func GcfreeQStyleOptionSlider(this *QStyleOptionSlider) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionSlider(args ...interface{}) *QStyleOptionSlider {
   // QStyleOptionSlider(const class QStyleOptionSlider &)
   // QStyleOptionSlider()
@@ -800,6 +787,10 @@ func NewQStyleOptionSlider(args ...interface{}) *QStyleOptionSlider {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyleOptionSlider{}) // "const QStyleOptionSlider &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -812,18 +803,14 @@ func NewQStyleOptionSlider(args ...interface{}) *QStyleOptionSlider {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionSliderC2ERKS_(arg0)
-    this := &QStyleOptionSlider{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionSlider)
-    return this
+    return &QStyleOptionSlider{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QStyleOptionSliderC1Ev
     // invoke: void QStyleOptionSlider()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionSliderC2Ev()
-    this := &QStyleOptionSlider{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionSlider)
-    return this
+    return &QStyleOptionSlider{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionSlider", "QStyleOptionSlider", args)
   }
@@ -832,9 +819,6 @@ func NewQStyleOptionSlider(args ...interface{}) *QStyleOptionSlider {
 }
 
 // QStyleOptionFrame()
-func GcfreeQStyleOptionFrame(this *QStyleOptionFrame) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionFrame(args ...interface{}) *QStyleOptionFrame {
   // QStyleOptionFrame()
   // QStyleOptionFrame(const class QStyleOptionFrame &)
@@ -843,6 +827,10 @@ func NewQStyleOptionFrame(args ...interface{}) *QStyleOptionFrame {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionFrame{}) // "const QStyleOptionFrame &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -853,9 +841,7 @@ func NewQStyleOptionFrame(args ...interface{}) *QStyleOptionFrame {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QStyleOptionFrameC2Ev()
-    this := &QStyleOptionFrame{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionFrame)
-    return this
+    return &QStyleOptionFrame{Qclsinst:qthis}
   case 1:
     // invoke: _ZN17QStyleOptionFrameC1ERKS_
     // invoke: void QStyleOptionFrame(const class QStyleOptionFrame &)
@@ -864,9 +850,7 @@ func NewQStyleOptionFrame(args ...interface{}) *QStyleOptionFrame {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QStyleOptionFrameC2ERKS_(arg0)
-    this := &QStyleOptionFrame{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionFrame)
-    return this
+    return &QStyleOptionFrame{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionFrame", "QStyleOptionFrame", args)
   }
@@ -875,9 +859,6 @@ func NewQStyleOptionFrame(args ...interface{}) *QStyleOptionFrame {
 }
 
 // QStyleOptionComplex(int, int)
-func GcfreeQStyleOptionComplex(this *QStyleOptionComplex) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionComplex(args ...interface{}) *QStyleOptionComplex {
   // QStyleOptionComplex(int, int)
   // QStyleOptionComplex(const class QStyleOptionComplex &)
@@ -888,6 +869,10 @@ func NewQStyleOptionComplex(args ...interface{}) *QStyleOptionComplex {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionComplex{}) // "const QStyleOptionComplex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -902,9 +887,7 @@ func NewQStyleOptionComplex(args ...interface{}) *QStyleOptionComplex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionComplexC2Eii(arg0, arg1)
-    this := &QStyleOptionComplex{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionComplex)
-    return this
+    return &QStyleOptionComplex{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QStyleOptionComplexC1ERKS_
     // invoke: void QStyleOptionComplex(const class QStyleOptionComplex &)
@@ -913,9 +896,7 @@ func NewQStyleOptionComplex(args ...interface{}) *QStyleOptionComplex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionComplexC2ERKS_(arg0)
-    this := &QStyleOptionComplex{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionComplex)
-    return this
+    return &QStyleOptionComplex{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionComplex", "QStyleOptionComplex", args)
   }
@@ -924,9 +905,6 @@ func NewQStyleOptionComplex(args ...interface{}) *QStyleOptionComplex {
 }
 
 // QStyleHintReturn(int, int)
-func GcfreeQStyleHintReturn(this *QStyleHintReturn) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleHintReturn(args ...interface{}) *QStyleHintReturn {
   // QStyleHintReturn(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -934,6 +912,10 @@ func NewQStyleHintReturn(args ...interface{}) *QStyleHintReturn {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -948,9 +930,7 @@ func NewQStyleHintReturn(args ...interface{}) *QStyleHintReturn {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QStyleHintReturnC2Eii(arg0, arg1)
-    this := &QStyleHintReturn{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleHintReturn)
-    return this
+    return &QStyleHintReturn{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleHintReturn", "QStyleHintReturn", args)
   }
@@ -959,11 +939,15 @@ func NewQStyleHintReturn(args ...interface{}) *QStyleHintReturn {
 }
 
 // ~QStyleHintReturn()
-func (this *QStyleHintReturn) Free(args ...interface{}) () {
+func (this *QStyleHintReturn) Freeqstylehintreturn(args ...interface{}) () {
   // ~QStyleHintReturn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -971,10 +955,7 @@ func (this *QStyleHintReturn) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QStyleHintReturnD0Ev
     // invoke: void ~QStyleHintReturn()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QStyleHintReturnD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QStyleHintReturnD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHintReturn", "~QStyleHintReturn", args)
   }
@@ -983,9 +964,6 @@ func (this *QStyleHintReturn) Free(args ...interface{}) () {
 }
 
 // QStyleOptionHeader()
-func GcfreeQStyleOptionHeader(this *QStyleOptionHeader) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionHeader(args ...interface{}) *QStyleOptionHeader {
   // QStyleOptionHeader()
   // QStyleOptionHeader(const class QStyleOptionHeader &)
@@ -994,6 +972,10 @@ func NewQStyleOptionHeader(args ...interface{}) *QStyleOptionHeader {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionHeader{}) // "const QStyleOptionHeader &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1004,9 +986,7 @@ func NewQStyleOptionHeader(args ...interface{}) *QStyleOptionHeader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionHeaderC2Ev()
-    this := &QStyleOptionHeader{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionHeader)
-    return this
+    return &QStyleOptionHeader{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QStyleOptionHeaderC1ERKS_
     // invoke: void QStyleOptionHeader(const class QStyleOptionHeader &)
@@ -1015,9 +995,7 @@ func NewQStyleOptionHeader(args ...interface{}) *QStyleOptionHeader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionHeaderC2ERKS_(arg0)
-    this := &QStyleOptionHeader{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionHeader)
-    return this
+    return &QStyleOptionHeader{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionHeader", "QStyleOptionHeader", args)
   }
@@ -1026,9 +1004,6 @@ func NewQStyleOptionHeader(args ...interface{}) *QStyleOptionHeader {
 }
 
 // QStyleOptionToolBox()
-func GcfreeQStyleOptionToolBox(this *QStyleOptionToolBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionToolBox(args ...interface{}) *QStyleOptionToolBox {
   // QStyleOptionToolBox()
   // QStyleOptionToolBox(const class QStyleOptionToolBox &)
@@ -1037,6 +1012,10 @@ func NewQStyleOptionToolBox(args ...interface{}) *QStyleOptionToolBox {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionToolBox{}) // "const QStyleOptionToolBox &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1047,9 +1026,7 @@ func NewQStyleOptionToolBox(args ...interface{}) *QStyleOptionToolBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionToolBoxC2Ev()
-    this := &QStyleOptionToolBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionToolBox)
-    return this
+    return &QStyleOptionToolBox{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QStyleOptionToolBoxC1ERKS_
     // invoke: void QStyleOptionToolBox(const class QStyleOptionToolBox &)
@@ -1058,9 +1035,7 @@ func NewQStyleOptionToolBox(args ...interface{}) *QStyleOptionToolBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionToolBoxC2ERKS_(arg0)
-    this := &QStyleOptionToolBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionToolBox)
-    return this
+    return &QStyleOptionToolBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionToolBox", "QStyleOptionToolBox", args)
   }
@@ -1069,9 +1044,6 @@ func NewQStyleOptionToolBox(args ...interface{}) *QStyleOptionToolBox {
 }
 
 // QStyleOptionFocusRect()
-func GcfreeQStyleOptionFocusRect(this *QStyleOptionFocusRect) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionFocusRect(args ...interface{}) *QStyleOptionFocusRect {
   // QStyleOptionFocusRect()
   // QStyleOptionFocusRect(const class QStyleOptionFocusRect &)
@@ -1080,6 +1052,10 @@ func NewQStyleOptionFocusRect(args ...interface{}) *QStyleOptionFocusRect {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionFocusRect{}) // "const QStyleOptionFocusRect &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1090,9 +1066,7 @@ func NewQStyleOptionFocusRect(args ...interface{}) *QStyleOptionFocusRect {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QStyleOptionFocusRectC2Ev()
-    this := &QStyleOptionFocusRect{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionFocusRect)
-    return this
+    return &QStyleOptionFocusRect{Qclsinst:qthis}
   case 1:
     // invoke: _ZN21QStyleOptionFocusRectC1ERKS_
     // invoke: void QStyleOptionFocusRect(const class QStyleOptionFocusRect &)
@@ -1101,9 +1075,7 @@ func NewQStyleOptionFocusRect(args ...interface{}) *QStyleOptionFocusRect {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QStyleOptionFocusRectC2ERKS_(arg0)
-    this := &QStyleOptionFocusRect{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionFocusRect)
-    return this
+    return &QStyleOptionFocusRect{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionFocusRect", "QStyleOptionFocusRect", args)
   }
@@ -1112,9 +1084,6 @@ func NewQStyleOptionFocusRect(args ...interface{}) *QStyleOptionFocusRect {
 }
 
 // QStyleOptionGroupBox(const class QStyleOptionGroupBox &)
-func GcfreeQStyleOptionGroupBox(this *QStyleOptionGroupBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionGroupBox(args ...interface{}) *QStyleOptionGroupBox {
   // QStyleOptionGroupBox(const class QStyleOptionGroupBox &)
   // QStyleOptionGroupBox()
@@ -1123,6 +1092,10 @@ func NewQStyleOptionGroupBox(args ...interface{}) *QStyleOptionGroupBox {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyleOptionGroupBox{}) // "const QStyleOptionGroupBox &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1135,18 +1108,14 @@ func NewQStyleOptionGroupBox(args ...interface{}) *QStyleOptionGroupBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionGroupBoxC2ERKS_(arg0)
-    this := &QStyleOptionGroupBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionGroupBox)
-    return this
+    return &QStyleOptionGroupBox{Qclsinst:qthis}
   case 1:
     // invoke: _ZN20QStyleOptionGroupBoxC1Ev
     // invoke: void QStyleOptionGroupBox()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionGroupBoxC2Ev()
-    this := &QStyleOptionGroupBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionGroupBox)
-    return this
+    return &QStyleOptionGroupBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionGroupBox", "QStyleOptionGroupBox", args)
   }
@@ -1155,9 +1124,6 @@ func NewQStyleOptionGroupBox(args ...interface{}) *QStyleOptionGroupBox {
 }
 
 // QStyleOptionTab(const class QStyleOptionTab &)
-func GcfreeQStyleOptionTab(this *QStyleOptionTab) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionTab(args ...interface{}) *QStyleOptionTab {
   // QStyleOptionTab(const class QStyleOptionTab &)
   // QStyleOptionTab()
@@ -1166,6 +1132,10 @@ func NewQStyleOptionTab(args ...interface{}) *QStyleOptionTab {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyleOptionTab{}) // "const QStyleOptionTab &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1178,18 +1148,14 @@ func NewQStyleOptionTab(args ...interface{}) *QStyleOptionTab {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QStyleOptionTabC2ERKS_(arg0)
-    this := &QStyleOptionTab{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionTab)
-    return this
+    return &QStyleOptionTab{Qclsinst:qthis}
   case 1:
     // invoke: _ZN15QStyleOptionTabC1Ev
     // invoke: void QStyleOptionTab()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QStyleOptionTabC2Ev()
-    this := &QStyleOptionTab{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionTab)
-    return this
+    return &QStyleOptionTab{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionTab", "QStyleOptionTab", args)
   }
@@ -1198,9 +1164,6 @@ func NewQStyleOptionTab(args ...interface{}) *QStyleOptionTab {
 }
 
 // QStyleOptionTabBarBase()
-func GcfreeQStyleOptionTabBarBase(this *QStyleOptionTabBarBase) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionTabBarBase(args ...interface{}) *QStyleOptionTabBarBase {
   // QStyleOptionTabBarBase()
   // QStyleOptionTabBarBase(const class QStyleOptionTabBarBase &)
@@ -1209,6 +1172,10 @@ func NewQStyleOptionTabBarBase(args ...interface{}) *QStyleOptionTabBarBase {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionTabBarBase{}) // "const QStyleOptionTabBarBase &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1219,9 +1186,7 @@ func NewQStyleOptionTabBarBase(args ...interface{}) *QStyleOptionTabBarBase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionTabBarBaseC2Ev()
-    this := &QStyleOptionTabBarBase{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionTabBarBase)
-    return this
+    return &QStyleOptionTabBarBase{Qclsinst:qthis}
   case 1:
     // invoke: _ZN22QStyleOptionTabBarBaseC1ERKS_
     // invoke: void QStyleOptionTabBarBase(const class QStyleOptionTabBarBase &)
@@ -1230,9 +1195,7 @@ func NewQStyleOptionTabBarBase(args ...interface{}) *QStyleOptionTabBarBase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionTabBarBaseC2ERKS_(arg0)
-    this := &QStyleOptionTabBarBase{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionTabBarBase)
-    return this
+    return &QStyleOptionTabBarBase{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionTabBarBase", "QStyleOptionTabBarBase", args)
   }
@@ -1241,9 +1204,6 @@ func NewQStyleOptionTabBarBase(args ...interface{}) *QStyleOptionTabBarBase {
 }
 
 // QStyleOptionRubberBand()
-func GcfreeQStyleOptionRubberBand(this *QStyleOptionRubberBand) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionRubberBand(args ...interface{}) *QStyleOptionRubberBand {
   // QStyleOptionRubberBand()
   // QStyleOptionRubberBand(const class QStyleOptionRubberBand &)
@@ -1252,6 +1212,10 @@ func NewQStyleOptionRubberBand(args ...interface{}) *QStyleOptionRubberBand {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionRubberBand{}) // "const QStyleOptionRubberBand &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1262,9 +1226,7 @@ func NewQStyleOptionRubberBand(args ...interface{}) *QStyleOptionRubberBand {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionRubberBandC2Ev()
-    this := &QStyleOptionRubberBand{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionRubberBand)
-    return this
+    return &QStyleOptionRubberBand{Qclsinst:qthis}
   case 1:
     // invoke: _ZN22QStyleOptionRubberBandC1ERKS_
     // invoke: void QStyleOptionRubberBand(const class QStyleOptionRubberBand &)
@@ -1273,9 +1235,7 @@ func NewQStyleOptionRubberBand(args ...interface{}) *QStyleOptionRubberBand {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionRubberBandC2ERKS_(arg0)
-    this := &QStyleOptionRubberBand{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionRubberBand)
-    return this
+    return &QStyleOptionRubberBand{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionRubberBand", "QStyleOptionRubberBand", args)
   }
@@ -1284,9 +1244,6 @@ func NewQStyleOptionRubberBand(args ...interface{}) *QStyleOptionRubberBand {
 }
 
 // QStyleOptionButton()
-func GcfreeQStyleOptionButton(this *QStyleOptionButton) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionButton(args ...interface{}) *QStyleOptionButton {
   // QStyleOptionButton()
   // QStyleOptionButton(const class QStyleOptionButton &)
@@ -1295,6 +1252,10 @@ func NewQStyleOptionButton(args ...interface{}) *QStyleOptionButton {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionButton{}) // "const QStyleOptionButton &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1305,9 +1266,7 @@ func NewQStyleOptionButton(args ...interface{}) *QStyleOptionButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionButtonC2Ev()
-    this := &QStyleOptionButton{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionButton)
-    return this
+    return &QStyleOptionButton{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QStyleOptionButtonC1ERKS_
     // invoke: void QStyleOptionButton(const class QStyleOptionButton &)
@@ -1316,9 +1275,7 @@ func NewQStyleOptionButton(args ...interface{}) *QStyleOptionButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionButtonC2ERKS_(arg0)
-    this := &QStyleOptionButton{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionButton)
-    return this
+    return &QStyleOptionButton{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionButton", "QStyleOptionButton", args)
   }
@@ -1327,14 +1284,15 @@ func NewQStyleOptionButton(args ...interface{}) *QStyleOptionButton {
 }
 
 // QStyleHintReturnMask()
-func GcfreeQStyleHintReturnMask(this *QStyleHintReturnMask) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleHintReturnMask(args ...interface{}) *QStyleHintReturnMask {
   // QStyleHintReturnMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1345,9 +1303,7 @@ func NewQStyleHintReturnMask(args ...interface{}) *QStyleHintReturnMask {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleHintReturnMaskC2Ev()
-    this := &QStyleHintReturnMask{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleHintReturnMask)
-    return this
+    return &QStyleHintReturnMask{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleHintReturnMask", "QStyleHintReturnMask", args)
   }
@@ -1356,11 +1312,15 @@ func NewQStyleHintReturnMask(args ...interface{}) *QStyleHintReturnMask {
 }
 
 // ~QStyleHintReturnMask()
-func (this *QStyleHintReturnMask) Free(args ...interface{}) () {
+func (this *QStyleHintReturnMask) Freeqstylehintreturnmask(args ...interface{}) () {
   // ~QStyleHintReturnMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1368,10 +1328,7 @@ func (this *QStyleHintReturnMask) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QStyleHintReturnMaskD0Ev
     // invoke: void ~QStyleHintReturnMask()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN20QStyleHintReturnMaskD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN20QStyleHintReturnMaskD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHintReturnMask", "~QStyleHintReturnMask", args)
   }
@@ -1380,9 +1337,6 @@ func (this *QStyleHintReturnMask) Free(args ...interface{}) () {
 }
 
 // QStyleOptionToolButton()
-func GcfreeQStyleOptionToolButton(this *QStyleOptionToolButton) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionToolButton(args ...interface{}) *QStyleOptionToolButton {
   // QStyleOptionToolButton()
   // QStyleOptionToolButton(const class QStyleOptionToolButton &)
@@ -1391,6 +1345,10 @@ func NewQStyleOptionToolButton(args ...interface{}) *QStyleOptionToolButton {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionToolButton{}) // "const QStyleOptionToolButton &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1401,9 +1359,7 @@ func NewQStyleOptionToolButton(args ...interface{}) *QStyleOptionToolButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionToolButtonC2Ev()
-    this := &QStyleOptionToolButton{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionToolButton)
-    return this
+    return &QStyleOptionToolButton{Qclsinst:qthis}
   case 1:
     // invoke: _ZN22QStyleOptionToolButtonC1ERKS_
     // invoke: void QStyleOptionToolButton(const class QStyleOptionToolButton &)
@@ -1412,9 +1368,7 @@ func NewQStyleOptionToolButton(args ...interface{}) *QStyleOptionToolButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionToolButtonC2ERKS_(arg0)
-    this := &QStyleOptionToolButton{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionToolButton)
-    return this
+    return &QStyleOptionToolButton{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionToolButton", "QStyleOptionToolButton", args)
   }
@@ -1423,9 +1377,6 @@ func NewQStyleOptionToolButton(args ...interface{}) *QStyleOptionToolButton {
 }
 
 // QStyleOptionSizeGrip()
-func GcfreeQStyleOptionSizeGrip(this *QStyleOptionSizeGrip) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionSizeGrip(args ...interface{}) *QStyleOptionSizeGrip {
   // QStyleOptionSizeGrip()
   // QStyleOptionSizeGrip(const class QStyleOptionSizeGrip &)
@@ -1434,6 +1385,10 @@ func NewQStyleOptionSizeGrip(args ...interface{}) *QStyleOptionSizeGrip {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionSizeGrip{}) // "const QStyleOptionSizeGrip &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1444,9 +1399,7 @@ func NewQStyleOptionSizeGrip(args ...interface{}) *QStyleOptionSizeGrip {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionSizeGripC2Ev()
-    this := &QStyleOptionSizeGrip{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionSizeGrip)
-    return this
+    return &QStyleOptionSizeGrip{Qclsinst:qthis}
   case 1:
     // invoke: _ZN20QStyleOptionSizeGripC1ERKS_
     // invoke: void QStyleOptionSizeGrip(const class QStyleOptionSizeGrip &)
@@ -1455,9 +1408,7 @@ func NewQStyleOptionSizeGrip(args ...interface{}) *QStyleOptionSizeGrip {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionSizeGripC2ERKS_(arg0)
-    this := &QStyleOptionSizeGrip{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionSizeGrip)
-    return this
+    return &QStyleOptionSizeGrip{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionSizeGrip", "QStyleOptionSizeGrip", args)
   }
@@ -1466,9 +1417,6 @@ func NewQStyleOptionSizeGrip(args ...interface{}) *QStyleOptionSizeGrip {
 }
 
 // QStyleOptionViewItem(const class QStyleOptionViewItem &)
-func GcfreeQStyleOptionViewItem(this *QStyleOptionViewItem) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionViewItem(args ...interface{}) *QStyleOptionViewItem {
   // QStyleOptionViewItem(const class QStyleOptionViewItem &)
   // QStyleOptionViewItem()
@@ -1477,6 +1425,10 @@ func NewQStyleOptionViewItem(args ...interface{}) *QStyleOptionViewItem {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1489,18 +1441,14 @@ func NewQStyleOptionViewItem(args ...interface{}) *QStyleOptionViewItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionViewItemC2ERKS_(arg0)
-    this := &QStyleOptionViewItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionViewItem)
-    return this
+    return &QStyleOptionViewItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN20QStyleOptionViewItemC1Ev
     // invoke: void QStyleOptionViewItem()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionViewItemC2Ev()
-    this := &QStyleOptionViewItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionViewItem)
-    return this
+    return &QStyleOptionViewItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionViewItem", "QStyleOptionViewItem", args)
   }
@@ -1509,9 +1457,6 @@ func NewQStyleOptionViewItem(args ...interface{}) *QStyleOptionViewItem {
 }
 
 // QStyleOptionSpinBox()
-func GcfreeQStyleOptionSpinBox(this *QStyleOptionSpinBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionSpinBox(args ...interface{}) *QStyleOptionSpinBox {
   // QStyleOptionSpinBox()
   // QStyleOptionSpinBox(const class QStyleOptionSpinBox &)
@@ -1520,6 +1465,10 @@ func NewQStyleOptionSpinBox(args ...interface{}) *QStyleOptionSpinBox {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QStyleOptionSpinBox{}) // "const QStyleOptionSpinBox &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1530,9 +1479,7 @@ func NewQStyleOptionSpinBox(args ...interface{}) *QStyleOptionSpinBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionSpinBoxC2Ev()
-    this := &QStyleOptionSpinBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionSpinBox)
-    return this
+    return &QStyleOptionSpinBox{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QStyleOptionSpinBoxC1ERKS_
     // invoke: void QStyleOptionSpinBox(const class QStyleOptionSpinBox &)
@@ -1541,9 +1488,7 @@ func NewQStyleOptionSpinBox(args ...interface{}) *QStyleOptionSpinBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionSpinBoxC2ERKS_(arg0)
-    this := &QStyleOptionSpinBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionSpinBox)
-    return this
+    return &QStyleOptionSpinBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionSpinBox", "QStyleOptionSpinBox", args)
   }
@@ -1552,9 +1497,6 @@ func NewQStyleOptionSpinBox(args ...interface{}) *QStyleOptionSpinBox {
 }
 
 // QStyleOptionToolBar(const class QStyleOptionToolBar &)
-func GcfreeQStyleOptionToolBar(this *QStyleOptionToolBar) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionToolBar(args ...interface{}) *QStyleOptionToolBar {
   // QStyleOptionToolBar(const class QStyleOptionToolBar &)
   // QStyleOptionToolBar()
@@ -1563,6 +1505,10 @@ func NewQStyleOptionToolBar(args ...interface{}) *QStyleOptionToolBar {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyleOptionToolBar{}) // "const QStyleOptionToolBar &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1575,18 +1521,14 @@ func NewQStyleOptionToolBar(args ...interface{}) *QStyleOptionToolBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionToolBarC2ERKS_(arg0)
-    this := &QStyleOptionToolBar{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionToolBar)
-    return this
+    return &QStyleOptionToolBar{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QStyleOptionToolBarC1Ev
     // invoke: void QStyleOptionToolBar()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionToolBarC2Ev()
-    this := &QStyleOptionToolBar{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionToolBar)
-    return this
+    return &QStyleOptionToolBar{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionToolBar", "QStyleOptionToolBar", args)
   }
@@ -1595,9 +1537,6 @@ func NewQStyleOptionToolBar(args ...interface{}) *QStyleOptionToolBar {
 }
 
 // QStyleOptionTabWidgetFrame(const class QStyleOptionTabWidgetFrame &)
-func GcfreeQStyleOptionTabWidgetFrame(this *QStyleOptionTabWidgetFrame) {
-  qtrt.UniverseFree(this)
-}
 func NewQStyleOptionTabWidgetFrame(args ...interface{}) *QStyleOptionTabWidgetFrame {
   // QStyleOptionTabWidgetFrame(const class QStyleOptionTabWidgetFrame &)
   // QStyleOptionTabWidgetFrame()
@@ -1606,6 +1545,10 @@ func NewQStyleOptionTabWidgetFrame(args ...interface{}) *QStyleOptionTabWidgetFr
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStyleOptionTabWidgetFrame{}) // "const QStyleOptionTabWidgetFrame &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1618,18 +1561,14 @@ func NewQStyleOptionTabWidgetFrame(args ...interface{}) *QStyleOptionTabWidgetFr
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QStyleOptionTabWidgetFrameC2ERKS_(arg0)
-    this := &QStyleOptionTabWidgetFrame{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionTabWidgetFrame)
-    return this
+    return &QStyleOptionTabWidgetFrame{Qclsinst:qthis}
   case 1:
     // invoke: _ZN26QStyleOptionTabWidgetFrameC1Ev
     // invoke: void QStyleOptionTabWidgetFrame()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QStyleOptionTabWidgetFrameC2Ev()
-    this := &QStyleOptionTabWidgetFrame{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQStyleOptionTabWidgetFrame)
-    return this
+    return &QStyleOptionTabWidgetFrame{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyleOptionTabWidgetFrame", "QStyleOptionTabWidgetFrame", args)
   }

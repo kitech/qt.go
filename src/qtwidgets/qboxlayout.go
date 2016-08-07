@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -31,14 +30,6 @@ import "qtgui"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QHBoxLayout::QHBoxLayout(QWidget * parent);
-extern void* C_ZN11QHBoxLayoutC2EP7QWidget(void* arg0); // 3
-  // proto:  void QHBoxLayout::QHBoxLayout();
-extern void* C_ZN11QHBoxLayoutC2Ev(); // 3
-  // proto:  const QMetaObject * QHBoxLayout::metaObject();
-extern void C_ZNK11QHBoxLayout10metaObjectEv(void* qthis); // 4
-  // proto:  void QHBoxLayout::~QHBoxLayout();
-extern void C_ZN11QHBoxLayoutD2Ev(void* qthis); // 4
   // proto:  void QBoxLayout::invalidate();
 extern void C_ZN10QBoxLayout10invalidateEv(void* qthis); // 4
   // proto:  void QBoxLayout::setStretch(int index, int stretch);
@@ -103,6 +94,14 @@ extern bool C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(void* qthis, void* arg
 extern bool C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QSize QBoxLayout::maximumSize();
 extern void* C_ZNK10QBoxLayout11maximumSizeEv(void* qthis); // 4
+  // proto:  void QHBoxLayout::QHBoxLayout(QWidget * parent);
+extern void* C_ZN11QHBoxLayoutC2EP7QWidget(void* arg0); // 3
+  // proto:  void QHBoxLayout::QHBoxLayout();
+extern void* C_ZN11QHBoxLayoutC2Ev(); // 3
+  // proto:  const QMetaObject * QHBoxLayout::metaObject();
+extern void C_ZNK11QHBoxLayout10metaObjectEv(void* qthis); // 4
+  // proto:  void QHBoxLayout::~QHBoxLayout();
+extern void C_ZN11QHBoxLayoutD2Ev(void* qthis); // 4
   // proto:  void QVBoxLayout::QVBoxLayout();
 extern void* C_ZN11QVBoxLayoutC2Ev(); // 3
   // proto:  void QVBoxLayout::QVBoxLayout(QWidget * parent);
@@ -123,18 +122,17 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
-}
-
-// class sizeof(QHBoxLayout)=1
-type QHBoxLayout struct {
-  /*qbase*/ QBoxLayout;
-  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QBoxLayout)=1
 type QBoxLayout struct {
   /*qbase*/ QLayout;
+  Qclsinst unsafe.Pointer /* *C.void */;
+}
+
+// class sizeof(QHBoxLayout)=1
+type QHBoxLayout struct {
+  /*qbase*/ QBoxLayout;
   Qclsinst unsafe.Pointer /* *C.void */;
 }
 
@@ -144,100 +142,16 @@ type QVBoxLayout struct {
   Qclsinst unsafe.Pointer /* *C.void */;
 }
 
-// QHBoxLayout(class QWidget *)
-func GcfreeQHBoxLayout(this *QHBoxLayout) {
-  qtrt.UniverseFree(this)
-}
-func NewQHBoxLayout(args ...interface{}) *QHBoxLayout {
-  // QHBoxLayout(class QWidget *)
-  // QHBoxLayout()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QHBoxLayoutC1EP7QWidget
-    // invoke: void QHBoxLayout(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QHBoxLayoutC2EP7QWidget(arg0)
-    this := &QHBoxLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQHBoxLayout)
-    return this
-  case 1:
-    // invoke: _ZN11QHBoxLayoutC1Ev
-    // invoke: void QHBoxLayout()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QHBoxLayoutC2Ev()
-    this := &QHBoxLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQHBoxLayout)
-    return this
-  default:
-    qtrt.ErrorResolve("QHBoxLayout", "QHBoxLayout", args)
-  }
-
-  return nil // QHBoxLayout{Qclsinst:qthis}
-}
-
-// metaObject()
-func (this *QHBoxLayout) MetaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QHBoxLayout10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QHBoxLayout10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QHBoxLayout", "metaObject", args)
-  }
-
-  return
-}
-
-// ~QHBoxLayout()
-func (this *QHBoxLayout) Free(args ...interface{}) () {
-  // ~QHBoxLayout()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QHBoxLayoutD0Ev
-    // invoke: void ~QHBoxLayout()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QHBoxLayoutD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
-  default:
-    qtrt.ErrorResolve("QHBoxLayout", "~QHBoxLayout", args)
-  }
-
-  return
-}
-
 // invalidate()
 func (this *QBoxLayout) Invalidate(args ...interface{}) () {
   // invalidate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -254,13 +168,17 @@ func (this *QBoxLayout) Invalidate(args ...interface{}) () {
 }
 
 // setStretch(int, int)
-func (this *QBoxLayout) SetStretch(args ...interface{}) () {
+func (this *QBoxLayout) Setstretch(args ...interface{}) () {
   // setStretch(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -281,7 +199,7 @@ func (this *QBoxLayout) SetStretch(args ...interface{}) () {
 }
 
 // insertLayout(int, class QLayout *, int)
-func (this *QBoxLayout) InsertLayout(args ...interface{}) () {
+func (this *QBoxLayout) Insertlayout(args ...interface{}) () {
   // insertLayout(int, class QLayout *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -289,6 +207,10 @@ func (this *QBoxLayout) InsertLayout(args ...interface{}) () {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QLayout{}) // "QLayout *"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -311,13 +233,17 @@ func (this *QBoxLayout) InsertLayout(args ...interface{}) () {
 }
 
 // insertStretch(int, int)
-func (this *QBoxLayout) InsertStretch(args ...interface{}) () {
+func (this *QBoxLayout) Insertstretch(args ...interface{}) () {
   // insertStretch(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -338,12 +264,16 @@ func (this *QBoxLayout) InsertStretch(args ...interface{}) () {
 }
 
 // addSpacerItem(class QSpacerItem *)
-func (this *QBoxLayout) AddSpacerItem(args ...interface{}) () {
+func (this *QBoxLayout) Addspaceritem(args ...interface{}) () {
   // addSpacerItem(class QSpacerItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QSpacerItem{}) // "QSpacerItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -362,11 +292,15 @@ func (this *QBoxLayout) AddSpacerItem(args ...interface{}) () {
 }
 
 // expandingDirections()
-func (this *QBoxLayout) ExpandingDirections(args ...interface{}) () {
+func (this *QBoxLayout) Expandingdirections(args ...interface{}) () {
   // expandingDirections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -383,13 +317,17 @@ func (this *QBoxLayout) ExpandingDirections(args ...interface{}) () {
 }
 
 // insertSpacing(int, int)
-func (this *QBoxLayout) InsertSpacing(args ...interface{}) () {
+func (this *QBoxLayout) Insertspacing(args ...interface{}) () {
   // insertSpacing(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -416,6 +354,10 @@ func (this *QBoxLayout) Stretch(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -442,12 +384,16 @@ func (this *QBoxLayout) Stretch(args ...interface{}) (ret interface{}) {
 }
 
 // minimumHeightForWidth(int)
-func (this *QBoxLayout) MinimumHeightForWidth(args ...interface{}) (ret interface{}) {
+func (this *QBoxLayout) Minimumheightforwidth(args ...interface{}) (ret interface{}) {
   // minimumHeightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -474,11 +420,15 @@ func (this *QBoxLayout) MinimumHeightForWidth(args ...interface{}) (ret interfac
 }
 
 // metaObject()
-func (this *QBoxLayout) MetaObject(args ...interface{}) () {
+func (this *QBoxLayout) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -495,12 +445,16 @@ func (this *QBoxLayout) MetaObject(args ...interface{}) () {
 }
 
 // addStretch(int)
-func (this *QBoxLayout) AddStretch(args ...interface{}) () {
+func (this *QBoxLayout) Addstretch(args ...interface{}) () {
   // addStretch(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -519,12 +473,16 @@ func (this *QBoxLayout) AddStretch(args ...interface{}) () {
 }
 
 // addStrut(int)
-func (this *QBoxLayout) AddStrut(args ...interface{}) () {
+func (this *QBoxLayout) Addstrut(args ...interface{}) () {
   // addStrut(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -548,6 +506,10 @@ func (this *QBoxLayout) Direction(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -564,12 +526,16 @@ func (this *QBoxLayout) Direction(args ...interface{}) () {
 }
 
 // addItem(class QLayoutItem *)
-func (this *QBoxLayout) AddItem(args ...interface{}) () {
+func (this *QBoxLayout) Additem(args ...interface{}) () {
   // addItem(class QLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -588,12 +554,16 @@ func (this *QBoxLayout) AddItem(args ...interface{}) () {
 }
 
 // takeAt(int)
-func (this *QBoxLayout) TakeAt(args ...interface{}) (ret interface{}) {
+func (this *QBoxLayout) Takeat(args ...interface{}) (ret interface{}) {
   // takeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -620,13 +590,17 @@ func (this *QBoxLayout) TakeAt(args ...interface{}) (ret interface{}) {
 }
 
 // insertItem(int, class QLayoutItem *)
-func (this *QBoxLayout) InsertItem(args ...interface{}) () {
+func (this *QBoxLayout) Insertitem(args ...interface{}) () {
   // insertItem(int, class QLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -647,12 +621,16 @@ func (this *QBoxLayout) InsertItem(args ...interface{}) () {
 }
 
 // setSpacing(int)
-func (this *QBoxLayout) SetSpacing(args ...interface{}) () {
+func (this *QBoxLayout) Setspacing(args ...interface{}) () {
   // setSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -671,12 +649,16 @@ func (this *QBoxLayout) SetSpacing(args ...interface{}) () {
 }
 
 // setGeometry(const class QRect &)
-func (this *QBoxLayout) SetGeometry(args ...interface{}) () {
+func (this *QBoxLayout) Setgeometry(args ...interface{}) () {
   // setGeometry(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -700,6 +682,10 @@ func (this *QBoxLayout) Spacing(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -724,11 +710,15 @@ func (this *QBoxLayout) Spacing(args ...interface{}) (ret interface{}) {
 }
 
 // ~QBoxLayout()
-func (this *QBoxLayout) Free(args ...interface{}) () {
+func (this *QBoxLayout) Freeqboxlayout(args ...interface{}) () {
   // ~QBoxLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -736,10 +726,7 @@ func (this *QBoxLayout) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayoutD0Ev
     // invoke: void ~QBoxLayout()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN10QBoxLayoutD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN10QBoxLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "~QBoxLayout", args)
   }
@@ -753,6 +740,10 @@ func (this *QBoxLayout) Count(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -777,12 +768,16 @@ func (this *QBoxLayout) Count(args ...interface{}) (ret interface{}) {
 }
 
 // addSpacing(int)
-func (this *QBoxLayout) AddSpacing(args ...interface{}) () {
+func (this *QBoxLayout) Addspacing(args ...interface{}) () {
   // addSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -801,11 +796,15 @@ func (this *QBoxLayout) AddSpacing(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QBoxLayout) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QBoxLayout) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -830,11 +829,15 @@ func (this *QBoxLayout) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // hasHeightForWidth()
-func (this *QBoxLayout) HasHeightForWidth(args ...interface{}) (ret interface{}) {
+func (this *QBoxLayout) Hasheightforwidth(args ...interface{}) (ret interface{}) {
   // hasHeightForWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -859,12 +862,16 @@ func (this *QBoxLayout) HasHeightForWidth(args ...interface{}) (ret interface{})
 }
 
 // itemAt(int)
-func (this *QBoxLayout) ItemAt(args ...interface{}) (ret interface{}) {
+func (this *QBoxLayout) Itemat(args ...interface{}) (ret interface{}) {
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -891,11 +898,15 @@ func (this *QBoxLayout) ItemAt(args ...interface{}) (ret interface{}) {
 }
 
 // minimumSize()
-func (this *QBoxLayout) MinimumSize(args ...interface{}) (ret interface{}) {
+func (this *QBoxLayout) Minimumsize(args ...interface{}) (ret interface{}) {
   // minimumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -920,12 +931,16 @@ func (this *QBoxLayout) MinimumSize(args ...interface{}) (ret interface{}) {
 }
 
 // heightForWidth(int)
-func (this *QBoxLayout) HeightForWidth(args ...interface{}) (ret interface{}) {
+func (this *QBoxLayout) Heightforwidth(args ...interface{}) (ret interface{}) {
   // heightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -952,13 +967,17 @@ func (this *QBoxLayout) HeightForWidth(args ...interface{}) (ret interface{}) {
 }
 
 // insertSpacerItem(int, class QSpacerItem *)
-func (this *QBoxLayout) InsertSpacerItem(args ...interface{}) () {
+func (this *QBoxLayout) Insertspaceritem(args ...interface{}) () {
   // insertSpacerItem(int, class QSpacerItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QSpacerItem{}) // "QSpacerItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -979,13 +998,17 @@ func (this *QBoxLayout) InsertSpacerItem(args ...interface{}) () {
 }
 
 // addLayout(class QLayout *, int)
-func (this *QBoxLayout) AddLayout(args ...interface{}) () {
+func (this *QBoxLayout) Addlayout(args ...interface{}) () {
   // addLayout(class QLayout *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QLayout{}) // "QLayout *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1006,7 +1029,7 @@ func (this *QBoxLayout) AddLayout(args ...interface{}) () {
 }
 
 // setStretchFactor(class QLayout *, int)
-func (this *QBoxLayout) SetStretchFactor(args ...interface{}) (ret interface{}) {
+func (this *QBoxLayout) Setstretchfactor(args ...interface{}) (ret interface{}) {
   // setStretchFactor(class QLayout *, int)
   // setStretchFactor(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1017,6 +1040,10 @@ func (this *QBoxLayout) SetStretchFactor(args ...interface{}) (ret interface{}) 
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1061,11 +1088,15 @@ func (this *QBoxLayout) SetStretchFactor(args ...interface{}) (ret interface{}) 
 }
 
 // maximumSize()
-func (this *QBoxLayout) MaximumSize(args ...interface{}) (ret interface{}) {
+func (this *QBoxLayout) Maximumsize(args ...interface{}) (ret interface{}) {
   // maximumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1089,10 +1120,97 @@ func (this *QBoxLayout) MaximumSize(args ...interface{}) (ret interface{}) {
   return
 }
 
-// QVBoxLayout()
-func GcfreeQVBoxLayout(this *QVBoxLayout) {
-  qtrt.UniverseFree(this)
+// QHBoxLayout(class QWidget *)
+func NewQHBoxLayout(args ...interface{}) *QHBoxLayout {
+  // QHBoxLayout(class QWidget *)
+  // QHBoxLayout()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN11QHBoxLayoutC1EP7QWidget
+    // invoke: void QHBoxLayout(class QWidget *)
+    var arg0 = args[0].(*QWidget).Qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN11QHBoxLayoutC2EP7QWidget(arg0)
+    return &QHBoxLayout{Qclsinst:qthis}
+  case 1:
+    // invoke: _ZN11QHBoxLayoutC1Ev
+    // invoke: void QHBoxLayout()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN11QHBoxLayoutC2Ev()
+    return &QHBoxLayout{Qclsinst:qthis}
+  default:
+    qtrt.ErrorResolve("QHBoxLayout", "QHBoxLayout", args)
+  }
+
+  return nil // QHBoxLayout{Qclsinst:qthis}
 }
+
+// metaObject()
+func (this *QHBoxLayout) Metaobject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QHBoxLayout10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C.C_ZNK11QHBoxLayout10metaObjectEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QHBoxLayout", "metaObject", args)
+  }
+
+  return
+}
+
+// ~QHBoxLayout()
+func (this *QHBoxLayout) Freeqhboxlayout(args ...interface{}) () {
+  // ~QHBoxLayout()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN11QHBoxLayoutD0Ev
+    // invoke: void ~QHBoxLayout()
+    C.C_ZN11QHBoxLayoutD2Ev(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QHBoxLayout", "~QHBoxLayout", args)
+  }
+
+  return
+}
+
+// QVBoxLayout()
 func NewQVBoxLayout(args ...interface{}) *QVBoxLayout {
   // QVBoxLayout()
   // QVBoxLayout(class QWidget *)
@@ -1101,6 +1219,10 @@ func NewQVBoxLayout(args ...interface{}) *QVBoxLayout {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1111,9 +1233,7 @@ func NewQVBoxLayout(args ...interface{}) *QVBoxLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QVBoxLayoutC2Ev()
-    this := &QVBoxLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVBoxLayout)
-    return this
+    return &QVBoxLayout{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QVBoxLayoutC1EP7QWidget
     // invoke: void QVBoxLayout(class QWidget *)
@@ -1122,9 +1242,7 @@ func NewQVBoxLayout(args ...interface{}) *QVBoxLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QVBoxLayoutC2EP7QWidget(arg0)
-    this := &QVBoxLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQVBoxLayout)
-    return this
+    return &QVBoxLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QVBoxLayout", "QVBoxLayout", args)
   }
@@ -1133,11 +1251,15 @@ func NewQVBoxLayout(args ...interface{}) *QVBoxLayout {
 }
 
 // ~QVBoxLayout()
-func (this *QVBoxLayout) Free(args ...interface{}) () {
+func (this *QVBoxLayout) Freeqvboxlayout(args ...interface{}) () {
   // ~QVBoxLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1145,10 +1267,7 @@ func (this *QVBoxLayout) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QVBoxLayoutD0Ev
     // invoke: void ~QVBoxLayout()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QVBoxLayoutD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QVBoxLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVBoxLayout", "~QVBoxLayout", args)
   }
@@ -1157,11 +1276,15 @@ func (this *QVBoxLayout) Free(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QVBoxLayout) MetaObject(args ...interface{}) () {
+func (this *QVBoxLayout) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

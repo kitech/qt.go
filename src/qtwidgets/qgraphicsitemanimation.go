@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qgraphicsitemanimation.h
 // dst-file: /src/widgets/qgraphicsitemanimation.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -101,7 +100,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsItemAnimation)=1
@@ -111,12 +109,16 @@ type QGraphicsItemAnimation struct {
 }
 
 // verticalScaleAt(qreal)
-func (this *QGraphicsItemAnimation) VerticalScaleAt(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemAnimation) Verticalscaleat(args ...interface{}) (ret interface{}) {
   // verticalScaleAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -143,12 +145,16 @@ func (this *QGraphicsItemAnimation) VerticalScaleAt(args ...interface{}) (ret in
 }
 
 // horizontalScaleAt(qreal)
-func (this *QGraphicsItemAnimation) HorizontalScaleAt(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemAnimation) Horizontalscaleat(args ...interface{}) (ret interface{}) {
   // horizontalScaleAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -175,7 +181,7 @@ func (this *QGraphicsItemAnimation) HorizontalScaleAt(args ...interface{}) (ret 
 }
 
 // setShearAt(qreal, qreal, qreal)
-func (this *QGraphicsItemAnimation) SetShearAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setshearat(args ...interface{}) () {
   // setShearAt(qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,6 +189,10 @@ func (this *QGraphicsItemAnimation) SetShearAt(args ...interface{}) () {
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -205,11 +215,15 @@ func (this *QGraphicsItemAnimation) SetShearAt(args ...interface{}) () {
 }
 
 // posList()
-func (this *QGraphicsItemAnimation) PosList(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Poslist(args ...interface{}) () {
   // posList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -226,11 +240,15 @@ func (this *QGraphicsItemAnimation) PosList(args ...interface{}) () {
 }
 
 // translationList()
-func (this *QGraphicsItemAnimation) TranslationList(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Translationlist(args ...interface{}) () {
   // translationList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -247,15 +265,16 @@ func (this *QGraphicsItemAnimation) TranslationList(args ...interface{}) () {
 }
 
 // QGraphicsItemAnimation(class QObject *)
-func GcfreeQGraphicsItemAnimation(this *QGraphicsItemAnimation) {
-  qtrt.UniverseFree(this)
-}
 func NewQGraphicsItemAnimation(args ...interface{}) *QGraphicsItemAnimation {
   // QGraphicsItemAnimation(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -268,9 +287,7 @@ func NewQGraphicsItemAnimation(args ...interface{}) *QGraphicsItemAnimation {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QGraphicsItemAnimationC2EP7QObject(arg0)
-    this := &QGraphicsItemAnimation{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGraphicsItemAnimation)
-    return this
+    return &QGraphicsItemAnimation{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "QGraphicsItemAnimation", args)
   }
@@ -279,12 +296,16 @@ func NewQGraphicsItemAnimation(args ...interface{}) *QGraphicsItemAnimation {
 }
 
 // rotationAt(qreal)
-func (this *QGraphicsItemAnimation) RotationAt(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemAnimation) Rotationat(args ...interface{}) (ret interface{}) {
   // rotationAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -311,13 +332,17 @@ func (this *QGraphicsItemAnimation) RotationAt(args ...interface{}) (ret interfa
 }
 
 // setPosAt(qreal, const class QPointF &)
-func (this *QGraphicsItemAnimation) SetPosAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setposat(args ...interface{}) () {
   // setPosAt(qreal, const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][1] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -338,11 +363,15 @@ func (this *QGraphicsItemAnimation) SetPosAt(args ...interface{}) () {
 }
 
 // scaleList()
-func (this *QGraphicsItemAnimation) ScaleList(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Scalelist(args ...interface{}) () {
   // scaleList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -359,11 +388,15 @@ func (this *QGraphicsItemAnimation) ScaleList(args ...interface{}) () {
 }
 
 // timeLine()
-func (this *QGraphicsItemAnimation) TimeLine(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemAnimation) Timeline(args ...interface{}) (ret interface{}) {
   // timeLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -388,12 +421,16 @@ func (this *QGraphicsItemAnimation) TimeLine(args ...interface{}) (ret interface
 }
 
 // yTranslationAt(qreal)
-func (this *QGraphicsItemAnimation) YTranslationAt(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemAnimation) Ytranslationat(args ...interface{}) (ret interface{}) {
   // yTranslationAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -420,12 +457,16 @@ func (this *QGraphicsItemAnimation) YTranslationAt(args ...interface{}) (ret int
 }
 
 // setStep(qreal)
-func (this *QGraphicsItemAnimation) SetStep(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setstep(args ...interface{}) () {
   // setStep(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -444,12 +485,16 @@ func (this *QGraphicsItemAnimation) SetStep(args ...interface{}) () {
 }
 
 // xTranslationAt(qreal)
-func (this *QGraphicsItemAnimation) XTranslationAt(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemAnimation) Xtranslationat(args ...interface{}) (ret interface{}) {
   // xTranslationAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -476,13 +521,17 @@ func (this *QGraphicsItemAnimation) XTranslationAt(args ...interface{}) (ret int
 }
 
 // setRotationAt(qreal, qreal)
-func (this *QGraphicsItemAnimation) SetRotationAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setrotationat(args ...interface{}) () {
   // setRotationAt(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -503,12 +552,16 @@ func (this *QGraphicsItemAnimation) SetRotationAt(args ...interface{}) () {
 }
 
 // setTimeLine(class QTimeLine *)
-func (this *QGraphicsItemAnimation) SetTimeLine(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Settimeline(args ...interface{}) () {
   // setTimeLine(class QTimeLine *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QTimeLine{}) // "QTimeLine *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -527,12 +580,16 @@ func (this *QGraphicsItemAnimation) SetTimeLine(args ...interface{}) () {
 }
 
 // matrixAt(qreal)
-func (this *QGraphicsItemAnimation) MatrixAt(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemAnimation) Matrixat(args ...interface{}) (ret interface{}) {
   // matrixAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -559,12 +616,16 @@ func (this *QGraphicsItemAnimation) MatrixAt(args ...interface{}) (ret interface
 }
 
 // horizontalShearAt(qreal)
-func (this *QGraphicsItemAnimation) HorizontalShearAt(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemAnimation) Horizontalshearat(args ...interface{}) (ret interface{}) {
   // horizontalShearAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -591,11 +652,15 @@ func (this *QGraphicsItemAnimation) HorizontalShearAt(args ...interface{}) (ret 
 }
 
 // shearList()
-func (this *QGraphicsItemAnimation) ShearList(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Shearlist(args ...interface{}) () {
   // shearList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -612,7 +677,7 @@ func (this *QGraphicsItemAnimation) ShearList(args ...interface{}) () {
 }
 
 // setScaleAt(qreal, qreal, qreal)
-func (this *QGraphicsItemAnimation) SetScaleAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setscaleat(args ...interface{}) () {
   // setScaleAt(qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -620,6 +685,10 @@ func (this *QGraphicsItemAnimation) SetScaleAt(args ...interface{}) () {
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -642,11 +711,15 @@ func (this *QGraphicsItemAnimation) SetScaleAt(args ...interface{}) () {
 }
 
 // rotationList()
-func (this *QGraphicsItemAnimation) RotationList(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Rotationlist(args ...interface{}) () {
   // rotationList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -663,7 +736,7 @@ func (this *QGraphicsItemAnimation) RotationList(args ...interface{}) () {
 }
 
 // setTranslationAt(qreal, qreal, qreal)
-func (this *QGraphicsItemAnimation) SetTranslationAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Settranslationat(args ...interface{}) () {
   // setTranslationAt(qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -671,6 +744,10 @@ func (this *QGraphicsItemAnimation) SetTranslationAt(args ...interface{}) () {
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -698,6 +775,10 @@ func (this *QGraphicsItemAnimation) Reset(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -714,11 +795,15 @@ func (this *QGraphicsItemAnimation) Reset(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QGraphicsItemAnimation) MetaObject(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -740,6 +825,10 @@ func (this *QGraphicsItemAnimation) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -756,12 +845,16 @@ func (this *QGraphicsItemAnimation) Clear(args ...interface{}) () {
 }
 
 // setItem(class QGraphicsItem *)
-func (this *QGraphicsItemAnimation) SetItem(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setitem(args ...interface{}) () {
   // setItem(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsItem{}) // "QGraphicsItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -780,11 +873,15 @@ func (this *QGraphicsItemAnimation) SetItem(args ...interface{}) () {
 }
 
 // ~QGraphicsItemAnimation()
-func (this *QGraphicsItemAnimation) Free(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Freeqgraphicsitemanimation(args ...interface{}) () {
   // ~QGraphicsItemAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -792,10 +889,7 @@ func (this *QGraphicsItemAnimation) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimationD0Ev
     // invoke: void ~QGraphicsItemAnimation()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN22QGraphicsItemAnimationD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN22QGraphicsItemAnimationD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "~QGraphicsItemAnimation", args)
   }
@@ -804,12 +898,16 @@ func (this *QGraphicsItemAnimation) Free(args ...interface{}) () {
 }
 
 // posAt(qreal)
-func (this *QGraphicsItemAnimation) PosAt(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemAnimation) Posat(args ...interface{}) (ret interface{}) {
   // posAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -841,6 +939,10 @@ func (this *QGraphicsItemAnimation) Item(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -857,12 +959,16 @@ func (this *QGraphicsItemAnimation) Item(args ...interface{}) () {
 }
 
 // verticalShearAt(qreal)
-func (this *QGraphicsItemAnimation) VerticalShearAt(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemAnimation) Verticalshearat(args ...interface{}) (ret interface{}) {
   // verticalShearAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -57,7 +56,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCommandLinkButton)=1
@@ -67,12 +65,16 @@ type QCommandLinkButton struct {
 }
 
 // setDescription(const class QString &)
-func (this *QCommandLinkButton) SetDescription(args ...interface{}) () {
+func (this *QCommandLinkButton) Setdescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -91,11 +93,15 @@ func (this *QCommandLinkButton) SetDescription(args ...interface{}) () {
 }
 
 // ~QCommandLinkButton()
-func (this *QCommandLinkButton) Free(args ...interface{}) () {
+func (this *QCommandLinkButton) Freeqcommandlinkbutton(args ...interface{}) () {
   // ~QCommandLinkButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -103,10 +109,7 @@ func (this *QCommandLinkButton) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLinkButtonD0Ev
     // invoke: void ~QCommandLinkButton()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN18QCommandLinkButtonD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN18QCommandLinkButtonD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "~QCommandLinkButton", args)
   }
@@ -120,6 +123,10 @@ func (this *QCommandLinkButton) Description(args ...interface{}) (ret interface{
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -144,9 +151,6 @@ func (this *QCommandLinkButton) Description(args ...interface{}) (ret interface{
 }
 
 // QCommandLinkButton(class QWidget *)
-func GcfreeQCommandLinkButton(this *QCommandLinkButton) {
-  qtrt.UniverseFree(this)
-}
 func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
   // QCommandLinkButton(class QWidget *)
   // QCommandLinkButton(const class QString &, const class QString &, class QWidget *)
@@ -162,6 +166,10 @@ func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[2][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -174,9 +182,7 @@ func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLinkButtonC2EP7QWidget(arg0)
-    this := &QCommandLinkButton{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCommandLinkButton)
-    return this
+    return &QCommandLinkButton{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget
     // invoke: void QCommandLinkButton(const class QString &, const class QString &, class QWidget *)
@@ -189,9 +195,7 @@ func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLinkButtonC2ERK7QStringS2_P7QWidget(arg0, arg1, arg2)
-    this := &QCommandLinkButton{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCommandLinkButton)
-    return this
+    return &QCommandLinkButton{Qclsinst:qthis}
   case 2:
     // invoke: _ZN18QCommandLinkButtonC1ERK7QStringP7QWidget
     // invoke: void QCommandLinkButton(const class QString &, class QWidget *)
@@ -202,9 +206,7 @@ func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLinkButtonC2ERK7QStringP7QWidget(arg0, arg1)
-    this := &QCommandLinkButton{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCommandLinkButton)
-    return this
+    return &QCommandLinkButton{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "QCommandLinkButton", args)
   }
@@ -213,11 +215,15 @@ func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
 }
 
 // metaObject()
-func (this *QCommandLinkButton) MetaObject(args ...interface{}) () {
+func (this *QCommandLinkButton) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

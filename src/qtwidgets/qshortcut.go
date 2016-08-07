@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qshortcut.h
 // dst-file: /src/widgets/qshortcut.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -71,7 +70,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QShortcut)=1
@@ -83,11 +81,15 @@ type QShortcut struct {
 }
 
 // ~QShortcut()
-func (this *QShortcut) Free(args ...interface{}) () {
+func (this *QShortcut) Freeqshortcut(args ...interface{}) () {
   // ~QShortcut()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -95,10 +97,7 @@ func (this *QShortcut) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QShortcutD0Ev
     // invoke: void ~QShortcut()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QShortcutD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QShortcutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "~QShortcut", args)
   }
@@ -112,6 +111,10 @@ func (this *QShortcut) Id(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -136,11 +139,15 @@ func (this *QShortcut) Id(args ...interface{}) (ret interface{}) {
 }
 
 // isEnabled()
-func (this *QShortcut) IsEnabled(args ...interface{}) (ret interface{}) {
+func (this *QShortcut) Isenabled(args ...interface{}) (ret interface{}) {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -165,11 +172,15 @@ func (this *QShortcut) IsEnabled(args ...interface{}) (ret interface{}) {
 }
 
 // whatsThis()
-func (this *QShortcut) WhatsThis(args ...interface{}) (ret interface{}) {
+func (this *QShortcut) Whatsthis(args ...interface{}) (ret interface{}) {
   // whatsThis()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -194,12 +205,16 @@ func (this *QShortcut) WhatsThis(args ...interface{}) (ret interface{}) {
 }
 
 // setKey(const class QKeySequence &)
-func (this *QShortcut) SetKey(args ...interface{}) () {
+func (this *QShortcut) Setkey(args ...interface{}) () {
   // setKey(const class QKeySequence &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QKeySequence{}) // "const QKeySequence &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -218,12 +233,16 @@ func (this *QShortcut) SetKey(args ...interface{}) () {
 }
 
 // setEnabled(_Bool)
-func (this *QShortcut) SetEnabled(args ...interface{}) () {
+func (this *QShortcut) Setenabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -242,12 +261,16 @@ func (this *QShortcut) SetEnabled(args ...interface{}) () {
 }
 
 // setAutoRepeat(_Bool)
-func (this *QShortcut) SetAutoRepeat(args ...interface{}) () {
+func (this *QShortcut) Setautorepeat(args ...interface{}) () {
   // setAutoRepeat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -266,15 +289,16 @@ func (this *QShortcut) SetAutoRepeat(args ...interface{}) () {
 }
 
 // QShortcut(class QWidget *)
-func GcfreeQShortcut(this *QShortcut) {
-  qtrt.UniverseFree(this)
-}
 func NewQShortcut(args ...interface{}) *QShortcut {
   // QShortcut(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -287,9 +311,7 @@ func NewQShortcut(args ...interface{}) *QShortcut {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QShortcutC2EP7QWidget(arg0)
-    this := &QShortcut{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQShortcut)
-    return this
+    return &QShortcut{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QShortcut", "QShortcut", args)
   }
@@ -298,12 +320,16 @@ func NewQShortcut(args ...interface{}) *QShortcut {
 }
 
 // setWhatsThis(const class QString &)
-func (this *QShortcut) SetWhatsThis(args ...interface{}) () {
+func (this *QShortcut) Setwhatsthis(args ...interface{}) () {
   // setWhatsThis(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -327,6 +353,10 @@ func (this *QShortcut) Key(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -351,11 +381,15 @@ func (this *QShortcut) Key(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QShortcut) MetaObject(args ...interface{}) () {
+func (this *QShortcut) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -372,11 +406,15 @@ func (this *QShortcut) MetaObject(args ...interface{}) () {
 }
 
 // parentWidget()
-func (this *QShortcut) ParentWidget(args ...interface{}) (ret interface{}) {
+func (this *QShortcut) Parentwidget(args ...interface{}) (ret interface{}) {
   // parentWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -406,6 +444,10 @@ func (this *QShortcut) Context(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -422,11 +464,15 @@ func (this *QShortcut) Context(args ...interface{}) () {
 }
 
 // autoRepeat()
-func (this *QShortcut) AutoRepeat(args ...interface{}) (ret interface{}) {
+func (this *QShortcut) Autorepeat(args ...interface{}) (ret interface{}) {
   // autoRepeat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

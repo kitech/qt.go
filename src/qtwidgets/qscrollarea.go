@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qscrollarea.h
 // dst-file: /src/widgets/qscrollarea.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -69,7 +68,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QScrollArea)=1
@@ -79,7 +77,7 @@ type QScrollArea struct {
 }
 
 // ensureWidgetVisible(class QWidget *, int, int)
-func (this *QScrollArea) EnsureWidgetVisible(args ...interface{}) () {
+func (this *QScrollArea) Ensurewidgetvisible(args ...interface{}) () {
   // ensureWidgetVisible(class QWidget *, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -87,6 +85,10 @@ func (this *QScrollArea) EnsureWidgetVisible(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -109,15 +111,16 @@ func (this *QScrollArea) EnsureWidgetVisible(args ...interface{}) () {
 }
 
 // QScrollArea(class QWidget *)
-func GcfreeQScrollArea(this *QScrollArea) {
-  qtrt.UniverseFree(this)
-}
 func NewQScrollArea(args ...interface{}) *QScrollArea {
   // QScrollArea(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -130,9 +133,7 @@ func NewQScrollArea(args ...interface{}) *QScrollArea {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QScrollAreaC2EP7QWidget(arg0)
-    this := &QScrollArea{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQScrollArea)
-    return this
+    return &QScrollArea{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QScrollArea", "QScrollArea", args)
   }
@@ -141,11 +142,15 @@ func NewQScrollArea(args ...interface{}) *QScrollArea {
 }
 
 // ~QScrollArea()
-func (this *QScrollArea) Free(args ...interface{}) () {
+func (this *QScrollArea) Freeqscrollarea(args ...interface{}) () {
   // ~QScrollArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -153,10 +158,7 @@ func (this *QScrollArea) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QScrollAreaD0Ev
     // invoke: void ~QScrollArea()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QScrollAreaD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QScrollAreaD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "~QScrollArea", args)
   }
@@ -165,12 +167,16 @@ func (this *QScrollArea) Free(args ...interface{}) () {
 }
 
 // setWidget(class QWidget *)
-func (this *QScrollArea) SetWidget(args ...interface{}) () {
+func (this *QScrollArea) Setwidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -189,12 +195,16 @@ func (this *QScrollArea) SetWidget(args ...interface{}) () {
 }
 
 // focusNextPrevChild(_Bool)
-func (this *QScrollArea) FocusNextPrevChild(args ...interface{}) (ret interface{}) {
+func (this *QScrollArea) Focusnextprevchild(args ...interface{}) (ret interface{}) {
   // focusNextPrevChild(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -226,6 +236,10 @@ func (this *QScrollArea) Alignment(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -242,11 +256,15 @@ func (this *QScrollArea) Alignment(args ...interface{}) () {
 }
 
 // widgetResizable()
-func (this *QScrollArea) WidgetResizable(args ...interface{}) (ret interface{}) {
+func (this *QScrollArea) Widgetresizable(args ...interface{}) (ret interface{}) {
   // widgetResizable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -271,12 +289,16 @@ func (this *QScrollArea) WidgetResizable(args ...interface{}) (ret interface{}) 
 }
 
 // setWidgetResizable(_Bool)
-func (this *QScrollArea) SetWidgetResizable(args ...interface{}) () {
+func (this *QScrollArea) Setwidgetresizable(args ...interface{}) () {
   // setWidgetResizable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -300,6 +322,10 @@ func (this *QScrollArea) Widget(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -324,7 +350,7 @@ func (this *QScrollArea) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // ensureVisible(int, int, int, int)
-func (this *QScrollArea) EnsureVisible(args ...interface{}) () {
+func (this *QScrollArea) Ensurevisible(args ...interface{}) () {
   // ensureVisible(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -333,6 +359,10 @@ func (this *QScrollArea) EnsureVisible(args ...interface{}) () {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -357,11 +387,15 @@ func (this *QScrollArea) EnsureVisible(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QScrollArea) MetaObject(args ...interface{}) () {
+func (this *QScrollArea) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -378,11 +412,15 @@ func (this *QScrollArea) MetaObject(args ...interface{}) () {
 }
 
 // takeWidget()
-func (this *QScrollArea) TakeWidget(args ...interface{}) (ret interface{}) {
+func (this *QScrollArea) Takewidget(args ...interface{}) (ret interface{}) {
   // takeWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -407,11 +445,15 @@ func (this *QScrollArea) TakeWidget(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QScrollArea) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QScrollArea) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

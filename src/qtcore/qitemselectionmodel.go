@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -45,42 +44,44 @@ extern void C_ZN14QItemSelection6selectERK11QModelIndexS2_(void* qthis, void* ar
 extern void* C_ZNK19QItemSelectionRange7topLeftEv(void* qthis); // 2
   // proto:  int QItemSelectionRange::right();
 extern int32_t C_ZNK19QItemSelectionRange5rightEv(void* qthis); // 2
-  // proto:  QModelIndex QItemSelectionRange::parent();
-extern void* C_ZNK19QItemSelectionRange6parentEv(void* qthis); // 2
+  // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & index);
+extern void* C_ZN19QItemSelectionRangeC2ERK11QModelIndex(void* arg0); // 1
+  // proto:  void QItemSelectionRange::QItemSelectionRange();
+extern void* C_ZN19QItemSelectionRangeC2Ev(); // 1
+  // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & topL, const QModelIndex & bottomR);
+extern void* C_ZN19QItemSelectionRangeC2ERK11QModelIndexS2_(void* arg0, void* arg1); // 1
+  // proto:  void QItemSelectionRange::QItemSelectionRange(const QItemSelectionRange & other);
+extern void* C_ZN19QItemSelectionRangeC2ERKS_(void* arg0); // 1
+  // proto:  int QItemSelectionRange::height();
+extern int32_t C_ZNK19QItemSelectionRange6heightEv(void* qthis); // 2
+  // proto:  bool QItemSelectionRange::intersects(const QItemSelectionRange & other);
+extern bool C_ZNK19QItemSelectionRange10intersectsERKS_(void* qthis, void* arg0); // 4
+  // proto:  const QPersistentModelIndex & QItemSelectionRange::bottomRight();
+extern void* C_ZNK19QItemSelectionRange11bottomRightEv(void* qthis); // 2
   // proto:  int QItemSelectionRange::bottom();
 extern int32_t C_ZNK19QItemSelectionRange6bottomEv(void* qthis); // 2
-  // proto:  bool QItemSelectionRange::isValid();
-extern bool C_ZNK19QItemSelectionRange7isValidEv(void* qthis); // 2
   // proto:  int QItemSelectionRange::top();
 extern int32_t C_ZNK19QItemSelectionRange3topEv(void* qthis); // 2
   // proto:  bool QItemSelectionRange::contains(const QModelIndex & index);
 extern bool C_ZNK19QItemSelectionRange8containsERK11QModelIndex(void* qthis, void* arg0); // 2
   // proto:  bool QItemSelectionRange::contains(int row, int column, const QModelIndex & parentIndex);
 extern bool C_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 2
-  // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & index);
-extern void* C_ZN19QItemSelectionRangeC2ERK11QModelIndex(void* arg0); // 1
-  // proto:  void QItemSelectionRange::QItemSelectionRange();
-extern void* C_ZN19QItemSelectionRangeC2Ev(); // 1
-  // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & topLeft, const QModelIndex & bottomRight);
-extern void* C_ZN19QItemSelectionRangeC2ERK11QModelIndexS2_(void* arg0, void* arg1); // 1
-  // proto:  void QItemSelectionRange::QItemSelectionRange(const QItemSelectionRange & other);
-extern void* C_ZN19QItemSelectionRangeC2ERKS_(void* arg0); // 1
   // proto:  QModelIndexList QItemSelectionRange::indexes();
 extern void C_ZNK19QItemSelectionRange7indexesEv(void* qthis); // 4
   // proto:  int QItemSelectionRange::width();
 extern int32_t C_ZNK19QItemSelectionRange5widthEv(void* qthis); // 2
-  // proto:  const QPersistentModelIndex & QItemSelectionRange::bottomRight();
-extern void* C_ZNK19QItemSelectionRange11bottomRightEv(void* qthis); // 2
   // proto:  bool QItemSelectionRange::isEmpty();
 extern bool C_ZNK19QItemSelectionRange7isEmptyEv(void* qthis); // 4
-  // proto:  bool QItemSelectionRange::intersects(const QItemSelectionRange & other);
-extern bool C_ZNK19QItemSelectionRange10intersectsERKS_(void* qthis, void* arg0); // 4
-  // proto:  const QAbstractItemModel * QItemSelectionRange::model();
-extern void C_ZNK19QItemSelectionRange5modelEv(void* qthis); // 2
-  // proto:  int QItemSelectionRange::height();
-extern int32_t C_ZNK19QItemSelectionRange6heightEv(void* qthis); // 2
+  // proto:  void QItemSelectionRange::swap(QItemSelectionRange & other);
+extern void C_ZN19QItemSelectionRange4swapERS_(void* qthis, void* arg0); // 2
+  // proto:  QModelIndex QItemSelectionRange::parent();
+extern void* C_ZNK19QItemSelectionRange6parentEv(void* qthis); // 2
+  // proto:  bool QItemSelectionRange::isValid();
+extern bool C_ZNK19QItemSelectionRange7isValidEv(void* qthis); // 2
   // proto:  QItemSelectionRange QItemSelectionRange::intersected(const QItemSelectionRange & other);
 extern void* C_ZNK19QItemSelectionRange11intersectedERKS_(void* qthis, void* arg0); // 4
+  // proto:  const QAbstractItemModel * QItemSelectionRange::model();
+extern void C_ZNK19QItemSelectionRange5modelEv(void* qthis); // 2
   // proto:  int QItemSelectionRange::left();
 extern int32_t C_ZNK19QItemSelectionRange4leftEv(void* qthis); // 2
   // proto:  const QItemSelection QItemSelectionModel::selection();
@@ -135,7 +136,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QItemSelection)=1
@@ -168,6 +168,10 @@ func (this *QItemSelection) Contains(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -199,6 +203,10 @@ func (this *QItemSelection) Indexes(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -215,9 +223,6 @@ func (this *QItemSelection) Indexes(args ...interface{}) () {
 }
 
 // QItemSelection(const class QModelIndex &, const class QModelIndex &)
-func GcfreeQItemSelection(this *QItemSelection) {
-  qtrt.UniverseFree(this)
-}
 func NewQItemSelection(args ...interface{}) *QItemSelection {
   // QItemSelection(const class QModelIndex &, const class QModelIndex &)
   // QItemSelection()
@@ -227,6 +232,10 @@ func NewQItemSelection(args ...interface{}) *QItemSelection {
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
   vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -241,18 +250,14 @@ func NewQItemSelection(args ...interface{}) *QItemSelection {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QItemSelectionC2ERK11QModelIndexS2_(arg0, arg1)
-    this := &QItemSelection{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQItemSelection)
-    return this
+    return &QItemSelection{Qclsinst:qthis}
   case 1:
     // invoke: _ZN14QItemSelectionC1Ev
     // invoke: void QItemSelection()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QItemSelectionC2Ev()
-    this := &QItemSelection{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQItemSelection)
-    return this
+    return &QItemSelection{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemSelection", "QItemSelection", args)
   }
@@ -261,7 +266,7 @@ func NewQItemSelection(args ...interface{}) *QItemSelection {
 }
 
 // split(const class QItemSelectionRange &, const class QItemSelectionRange &, class QItemSelection *)
-func (this *QItemSelection) Split_s(args ...interface{}) () {
+func (this *QItemSelection) Split_S(args ...interface{}) () {
   // split(const class QItemSelectionRange &, const class QItemSelectionRange &, class QItemSelection *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -269,6 +274,10 @@ func (this *QItemSelection) Split_s(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QItemSelectionRange{}) // "const QItemSelectionRange &"
   vtys[0][1] = reflect.TypeOf(QItemSelectionRange{}) // "const QItemSelectionRange &"
   vtys[0][2] = reflect.TypeOf(QItemSelection{}) // "QItemSelection *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -298,6 +307,10 @@ func (this *QItemSelection) Select_(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
   vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -318,11 +331,15 @@ func (this *QItemSelection) Select_(args ...interface{}) () {
 }
 
 // topLeft()
-func (this *QItemSelectionRange) TopLeft(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionRange) Topleft(args ...interface{}) (ret interface{}) {
   // topLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -352,6 +369,10 @@ func (this *QItemSelectionRange) Right(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -375,30 +396,170 @@ func (this *QItemSelectionRange) Right(args ...interface{}) (ret interface{}) {
   return
 }
 
-// parent()
-func (this *QItemSelectionRange) Parent(args ...interface{}) (ret interface{}) {
-  // parent()
+// QItemSelectionRange(const class QModelIndex &)
+func NewQItemSelectionRange(args ...interface{}) *QItemSelectionRange {
+  // QItemSelectionRange(const class QModelIndex &)
+  // QItemSelectionRange()
+  // QItemSelectionRange(const class QModelIndex &, const class QModelIndex &)
+  // QItemSelectionRange(const class QItemSelectionRange &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[2] = make(map[int32]reflect.Type)
+  vtys[2][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  vtys[2][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  vtys[3] = make(map[int32]reflect.Type)
+  vtys[3][0] = reflect.TypeOf(QItemSelectionRange{}) // "const QItemSelectionRange &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK19QItemSelectionRange6parentEv
-    // invoke: QModelIndex parent()
-    var ret0 = C.C_ZNK19QItemSelectionRange6parentEv(this.Qclsinst)
+    // invoke: _ZN19QItemSelectionRangeC1ERK11QModelIndex
+    // invoke: void QItemSelectionRange(const class QModelIndex &)
+    var arg0 = args[0].(*QModelIndex).Qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN19QItemSelectionRangeC2ERK11QModelIndex(arg0)
+    return &QItemSelectionRange{Qclsinst:qthis}
+  case 1:
+    // invoke: _ZN19QItemSelectionRangeC1Ev
+    // invoke: void QItemSelectionRange()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN19QItemSelectionRangeC2Ev()
+    return &QItemSelectionRange{Qclsinst:qthis}
+  case 2:
+    // invoke: _ZN19QItemSelectionRangeC1ERK11QModelIndexS2_
+    // invoke: void QItemSelectionRange(const class QModelIndex &, const class QModelIndex &)
+    var arg0 = args[0].(*QModelIndex).Qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(*QModelIndex).Qclsinst
+    if false {fmt.Println(arg1)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN19QItemSelectionRangeC2ERK11QModelIndexS2_(arg0, arg1)
+    return &QItemSelectionRange{Qclsinst:qthis}
+  case 3:
+    // invoke: _ZN19QItemSelectionRangeC1ERKS_
+    // invoke: void QItemSelectionRange(const class QItemSelectionRange &)
+    var arg0 = args[0].(*QItemSelectionRange).Qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN19QItemSelectionRangeC2ERKS_(arg0)
+    return &QItemSelectionRange{Qclsinst:qthis}
+  default:
+    qtrt.ErrorResolve("QItemSelectionRange", "QItemSelectionRange", args)
+  }
+
+  return nil // QItemSelectionRange{Qclsinst:qthis}
+}
+
+// height()
+func (this *QItemSelectionRange) Height(args ...interface{}) (ret interface{}) {
+  // height()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK19QItemSelectionRange6heightEv
+    // invoke: int height()
+    var ret0 = C.C_ZNK19QItemSelectionRange6heightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
-    var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
+    var rety = qtrt.Int32Ty(false) // "int"
     if reflect.TypeOf(ret0).ConvertibleTo(rety) {
         ret = reflect.ValueOf(ret0).Convert(rety).Interface()
     } else {
         ret = qtrt.HandyConvert2go(ret0, rety)
     }
   default:
-    qtrt.ErrorResolve("QItemSelectionRange", "parent", args)
+    qtrt.ErrorResolve("QItemSelectionRange", "height", args)
+  }
+
+  return
+}
+
+// intersects(const class QItemSelectionRange &)
+func (this *QItemSelectionRange) Intersects(args ...interface{}) (ret interface{}) {
+  // intersects(const class QItemSelectionRange &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QItemSelectionRange{}) // "const QItemSelectionRange &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK19QItemSelectionRange10intersectsERKS_
+    // invoke: bool intersects(const class QItemSelectionRange &)
+    var arg0 = args[0].(*QItemSelectionRange).Qclsinst
+    if false {fmt.Println(arg0)}
+    var ret0 = C.C_ZNK19QItemSelectionRange10intersectsERKS_(this.Qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QItemSelectionRange", "intersects", args)
+  }
+
+  return
+}
+
+// bottomRight()
+func (this *QItemSelectionRange) Bottomright(args ...interface{}) (ret interface{}) {
+  // bottomRight()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK19QItemSelectionRange11bottomRightEv
+    // invoke: const QPersistentModelIndex & bottomRight()
+    var ret0 = C.C_ZNK19QItemSelectionRange11bottomRightEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPersistentModelIndex{}) // "const QPersistentModelIndex &"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QItemSelectionRange", "bottomRight", args)
   }
 
   return
@@ -410,6 +571,10 @@ func (this *QItemSelectionRange) Bottom(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -433,41 +598,16 @@ func (this *QItemSelectionRange) Bottom(args ...interface{}) (ret interface{}) {
   return
 }
 
-// isValid()
-func (this *QItemSelectionRange) IsValid(args ...interface{}) (ret interface{}) {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QItemSelectionRange7isValidEv
-    // invoke: bool isValid()
-    var ret0 = C.C_ZNK19QItemSelectionRange7isValidEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QItemSelectionRange", "isValid", args)
-  }
-
-  return
-}
-
 // top()
 func (this *QItemSelectionRange) Top(args ...interface{}) (ret interface{}) {
   // top()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -503,6 +643,10 @@ func (this *QItemSelectionRange) Contains(args ...interface{}) (ret interface{})
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
   vtys[1][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -546,86 +690,16 @@ func (this *QItemSelectionRange) Contains(args ...interface{}) (ret interface{})
   return
 }
 
-// QItemSelectionRange(const class QModelIndex &)
-func GcfreeQItemSelectionRange(this *QItemSelectionRange) {
-  qtrt.UniverseFree(this)
-}
-func NewQItemSelectionRange(args ...interface{}) *QItemSelectionRange {
-  // QItemSelectionRange(const class QModelIndex &)
-  // QItemSelectionRange()
-  // QItemSelectionRange(const class QModelIndex &, const class QModelIndex &)
-  // QItemSelectionRange(const class QItemSelectionRange &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-  vtys[2][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(QItemSelectionRange{}) // "const QItemSelectionRange &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QItemSelectionRangeC1ERK11QModelIndex
-    // invoke: void QItemSelectionRange(const class QModelIndex &)
-    var arg0 = args[0].(*QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN19QItemSelectionRangeC2ERK11QModelIndex(arg0)
-    this := &QItemSelectionRange{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQItemSelectionRange)
-    return this
-  case 1:
-    // invoke: _ZN19QItemSelectionRangeC1Ev
-    // invoke: void QItemSelectionRange()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN19QItemSelectionRangeC2Ev()
-    this := &QItemSelectionRange{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQItemSelectionRange)
-    return this
-  case 2:
-    // invoke: _ZN19QItemSelectionRangeC1ERK11QModelIndexS2_
-    // invoke: void QItemSelectionRange(const class QModelIndex &, const class QModelIndex &)
-    var arg0 = args[0].(*QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QModelIndex).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN19QItemSelectionRangeC2ERK11QModelIndexS2_(arg0, arg1)
-    this := &QItemSelectionRange{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQItemSelectionRange)
-    return this
-  case 3:
-    // invoke: _ZN19QItemSelectionRangeC1ERKS_
-    // invoke: void QItemSelectionRange(const class QItemSelectionRange &)
-    var arg0 = args[0].(*QItemSelectionRange).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN19QItemSelectionRangeC2ERKS_(arg0)
-    this := &QItemSelectionRange{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQItemSelectionRange)
-    return this
-  default:
-    qtrt.ErrorResolve("QItemSelectionRange", "QItemSelectionRange", args)
-  }
-
-  return nil // QItemSelectionRange{Qclsinst:qthis}
-}
-
 // indexes()
 func (this *QItemSelectionRange) Indexes(args ...interface{}) () {
   // indexes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -647,6 +721,10 @@ func (this *QItemSelectionRange) Width(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -670,41 +748,16 @@ func (this *QItemSelectionRange) Width(args ...interface{}) (ret interface{}) {
   return
 }
 
-// bottomRight()
-func (this *QItemSelectionRange) BottomRight(args ...interface{}) (ret interface{}) {
-  // bottomRight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QItemSelectionRange11bottomRightEv
-    // invoke: const QPersistentModelIndex & bottomRight()
-    var ret0 = C.C_ZNK19QItemSelectionRange11bottomRightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPersistentModelIndex{}) // "const QPersistentModelIndex &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QItemSelectionRange", "bottomRight", args)
-  }
-
-  return
-}
-
 // isEmpty()
-func (this *QItemSelectionRange) IsEmpty(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionRange) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -728,23 +781,85 @@ func (this *QItemSelectionRange) IsEmpty(args ...interface{}) (ret interface{}) 
   return
 }
 
-// intersects(const class QItemSelectionRange &)
-func (this *QItemSelectionRange) Intersects(args ...interface{}) (ret interface{}) {
-  // intersects(const class QItemSelectionRange &)
+// swap(class QItemSelectionRange &)
+func (this *QItemSelectionRange) Swap(args ...interface{}) () {
+  // swap(class QItemSelectionRange &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QItemSelectionRange{}) // "const QItemSelectionRange &"
+  vtys[0][0] = reflect.TypeOf(QItemSelectionRange{}) // "QItemSelectionRange &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK19QItemSelectionRange10intersectsERKS_
-    // invoke: bool intersects(const class QItemSelectionRange &)
+    // invoke: _ZN19QItemSelectionRange4swapERS_
+    // invoke: void swap(class QItemSelectionRange &)
     var arg0 = args[0].(*QItemSelectionRange).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QItemSelectionRange10intersectsERKS_(this.Qclsinst, arg0)
+    C.C_ZN19QItemSelectionRange4swapERS_(this.Qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QItemSelectionRange", "swap", args)
+  }
+
+  return
+}
+
+// parent()
+func (this *QItemSelectionRange) Parent(args ...interface{}) (ret interface{}) {
+  // parent()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK19QItemSelectionRange6parentEv
+    // invoke: QModelIndex parent()
+    var ret0 = C.C_ZNK19QItemSelectionRange6parentEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QItemSelectionRange", "parent", args)
+  }
+
+  return
+}
+
+// isValid()
+func (this *QItemSelectionRange) Isvalid(args ...interface{}) (ret interface{}) {
+  // isValid()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK19QItemSelectionRange7isValidEv
+    // invoke: bool isValid()
+    var ret0 = C.C_ZNK19QItemSelectionRange7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
@@ -754,57 +869,7 @@ func (this *QItemSelectionRange) Intersects(args ...interface{}) (ret interface{
         ret = qtrt.HandyConvert2go(ret0, rety)
     }
   default:
-    qtrt.ErrorResolve("QItemSelectionRange", "intersects", args)
-  }
-
-  return
-}
-
-// model()
-func (this *QItemSelectionRange) Model(args ...interface{}) () {
-  // model()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QItemSelectionRange5modelEv
-    // invoke: const QAbstractItemModel * model()
-    C.C_ZNK19QItemSelectionRange5modelEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QItemSelectionRange", "model", args)
-  }
-
-  return
-}
-
-// height()
-func (this *QItemSelectionRange) Height(args ...interface{}) (ret interface{}) {
-  // height()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QItemSelectionRange6heightEv
-    // invoke: int height()
-    var ret0 = C.C_ZNK19QItemSelectionRange6heightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QItemSelectionRange", "height", args)
+    qtrt.ErrorResolve("QItemSelectionRange", "isValid", args)
   }
 
   return
@@ -817,6 +882,10 @@ func (this *QItemSelectionRange) Intersected(args ...interface{}) (ret interface
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QItemSelectionRange{}) // "const QItemSelectionRange &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -842,12 +911,41 @@ func (this *QItemSelectionRange) Intersected(args ...interface{}) (ret interface
   return
 }
 
+// model()
+func (this *QItemSelectionRange) Model(args ...interface{}) () {
+  // model()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK19QItemSelectionRange5modelEv
+    // invoke: const QAbstractItemModel * model()
+    C.C_ZNK19QItemSelectionRange5modelEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QItemSelectionRange", "model", args)
+  }
+
+  return
+}
+
 // left()
 func (this *QItemSelectionRange) Left(args ...interface{}) (ret interface{}) {
   // left()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -877,6 +975,10 @@ func (this *QItemSelectionModel) Selection(args ...interface{}) (ret interface{}
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -901,13 +1003,17 @@ func (this *QItemSelectionModel) Selection(args ...interface{}) (ret interface{}
 }
 
 // isColumnSelected(int, const class QModelIndex &)
-func (this *QItemSelectionModel) IsColumnSelected(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) Iscolumnselected(args ...interface{}) (ret interface{}) {
   // isColumnSelected(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -936,12 +1042,16 @@ func (this *QItemSelectionModel) IsColumnSelected(args ...interface{}) (ret inte
 }
 
 // selectedColumns(int)
-func (this *QItemSelectionModel) SelectedColumns(args ...interface{}) () {
+func (this *QItemSelectionModel) Selectedcolumns(args ...interface{}) () {
   // selectedColumns(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -960,11 +1070,15 @@ func (this *QItemSelectionModel) SelectedColumns(args ...interface{}) () {
 }
 
 // clearSelection()
-func (this *QItemSelectionModel) ClearSelection(args ...interface{}) () {
+func (this *QItemSelectionModel) Clearselection(args ...interface{}) () {
   // clearSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -981,11 +1095,15 @@ func (this *QItemSelectionModel) ClearSelection(args ...interface{}) () {
 }
 
 // ~QItemSelectionModel()
-func (this *QItemSelectionModel) Free(args ...interface{}) () {
+func (this *QItemSelectionModel) Freeqitemselectionmodel(args ...interface{}) () {
   // ~QItemSelectionModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -993,10 +1111,7 @@ func (this *QItemSelectionModel) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QItemSelectionModelD0Ev
     // invoke: void ~QItemSelectionModel()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QItemSelectionModelD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QItemSelectionModelD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "~QItemSelectionModel", args)
   }
@@ -1005,12 +1120,16 @@ func (this *QItemSelectionModel) Free(args ...interface{}) () {
 }
 
 // isSelected(const class QModelIndex &)
-func (this *QItemSelectionModel) IsSelected(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) Isselected(args ...interface{}) (ret interface{}) {
   // isSelected(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1037,13 +1156,17 @@ func (this *QItemSelectionModel) IsSelected(args ...interface{}) (ret interface{
 }
 
 // rowIntersectsSelection(int, const class QModelIndex &)
-func (this *QItemSelectionModel) RowIntersectsSelection(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) Rowintersectsselection(args ...interface{}) (ret interface{}) {
   // rowIntersectsSelection(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1072,9 +1195,6 @@ func (this *QItemSelectionModel) RowIntersectsSelection(args ...interface{}) (re
 }
 
 // QItemSelectionModel(class QAbstractItemModel *, class QObject *)
-func GcfreeQItemSelectionModel(this *QItemSelectionModel) {
-  qtrt.UniverseFree(this)
-}
 func NewQItemSelectionModel(args ...interface{}) *QItemSelectionModel {
   // QItemSelectionModel(class QAbstractItemModel *, class QObject *)
   // QItemSelectionModel(class QAbstractItemModel *)
@@ -1085,6 +1205,10 @@ func NewQItemSelectionModel(args ...interface{}) *QItemSelectionModel {
   vtys[0][1] = reflect.TypeOf(QObject{}) // "QObject *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QAbstractItemModel{}) // "QAbstractItemModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1099,9 +1223,7 @@ func NewQItemSelectionModel(args ...interface{}) *QItemSelectionModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionModelC2EP18QAbstractItemModelP7QObject(arg0, arg1)
-    this := &QItemSelectionModel{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQItemSelectionModel)
-    return this
+    return &QItemSelectionModel{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QItemSelectionModelC1EP18QAbstractItemModel
     // invoke: void QItemSelectionModel(class QAbstractItemModel *)
@@ -1110,9 +1232,7 @@ func NewQItemSelectionModel(args ...interface{}) *QItemSelectionModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionModelC2EP18QAbstractItemModel(arg0)
-    this := &QItemSelectionModel{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQItemSelectionModel)
-    return this
+    return &QItemSelectionModel{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "QItemSelectionModel", args)
   }
@@ -1121,11 +1241,15 @@ func NewQItemSelectionModel(args ...interface{}) *QItemSelectionModel {
 }
 
 // clearCurrentIndex()
-func (this *QItemSelectionModel) ClearCurrentIndex(args ...interface{}) () {
+func (this *QItemSelectionModel) Clearcurrentindex(args ...interface{}) () {
   // clearCurrentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1142,12 +1266,16 @@ func (this *QItemSelectionModel) ClearCurrentIndex(args ...interface{}) () {
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QItemSelectionModel) SetModel(args ...interface{}) () {
+func (this *QItemSelectionModel) Setmodel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractItemModel{}) // "QAbstractItemModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1166,13 +1294,17 @@ func (this *QItemSelectionModel) SetModel(args ...interface{}) () {
 }
 
 // isRowSelected(int, const class QModelIndex &)
-func (this *QItemSelectionModel) IsRowSelected(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) Isrowselected(args ...interface{}) (ret interface{}) {
   // isRowSelected(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1206,6 +1338,10 @@ func (this *QItemSelectionModel) Reset(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1222,11 +1358,15 @@ func (this *QItemSelectionModel) Reset(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QItemSelectionModel) MetaObject(args ...interface{}) () {
+func (this *QItemSelectionModel) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1248,6 +1388,10 @@ func (this *QItemSelectionModel) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1264,11 +1408,15 @@ func (this *QItemSelectionModel) Clear(args ...interface{}) () {
 }
 
 // selectedIndexes()
-func (this *QItemSelectionModel) SelectedIndexes(args ...interface{}) () {
+func (this *QItemSelectionModel) Selectedindexes(args ...interface{}) () {
   // selectedIndexes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1285,13 +1433,17 @@ func (this *QItemSelectionModel) SelectedIndexes(args ...interface{}) () {
 }
 
 // columnIntersectsSelection(int, const class QModelIndex &)
-func (this *QItemSelectionModel) ColumnIntersectsSelection(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) Columnintersectsselection(args ...interface{}) (ret interface{}) {
   // columnIntersectsSelection(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1320,11 +1472,15 @@ func (this *QItemSelectionModel) ColumnIntersectsSelection(args ...interface{}) 
 }
 
 // currentIndex()
-func (this *QItemSelectionModel) CurrentIndex(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) Currentindex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1349,12 +1505,16 @@ func (this *QItemSelectionModel) CurrentIndex(args ...interface{}) (ret interfac
 }
 
 // selectedRows(int)
-func (this *QItemSelectionModel) SelectedRows(args ...interface{}) () {
+func (this *QItemSelectionModel) Selectedrows(args ...interface{}) () {
   // selectedRows(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1378,6 +1538,10 @@ func (this *QItemSelectionModel) Model(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1394,11 +1558,15 @@ func (this *QItemSelectionModel) Model(args ...interface{}) () {
 }
 
 // hasSelection()
-func (this *QItemSelectionModel) HasSelection(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) Hasselection(args ...interface{}) (ret interface{}) {
   // hasSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

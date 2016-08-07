@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -69,7 +68,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QBackingStore)=1
@@ -79,15 +77,16 @@ type QBackingStore struct {
 }
 
 // QBackingStore(class QWindow *)
-func GcfreeQBackingStore(this *QBackingStore) {
-  qtrt.UniverseFree(this)
-}
 func NewQBackingStore(args ...interface{}) *QBackingStore {
   // QBackingStore(class QWindow *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWindow{}) // "QWindow *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -100,9 +99,7 @@ func NewQBackingStore(args ...interface{}) *QBackingStore {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QBackingStoreC2EP7QWindow(arg0)
-    this := &QBackingStore{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQBackingStore)
-    return this
+    return &QBackingStore{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QBackingStore", "QBackingStore", args)
   }
@@ -116,6 +113,10 @@ func (this *QBackingStore) Handle(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -132,11 +133,15 @@ func (this *QBackingStore) Handle(args ...interface{}) () {
 }
 
 // paintDevice()
-func (this *QBackingStore) PaintDevice(args ...interface{}) (ret interface{}) {
+func (this *QBackingStore) Paintdevice(args ...interface{}) (ret interface{}) {
   // paintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -161,11 +166,15 @@ func (this *QBackingStore) PaintDevice(args ...interface{}) (ret interface{}) {
 }
 
 // staticContents()
-func (this *QBackingStore) StaticContents(args ...interface{}) (ret interface{}) {
+func (this *QBackingStore) Staticcontents(args ...interface{}) (ret interface{}) {
   // staticContents()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -190,12 +199,16 @@ func (this *QBackingStore) StaticContents(args ...interface{}) (ret interface{})
 }
 
 // beginPaint(const class QRegion &)
-func (this *QBackingStore) BeginPaint(args ...interface{}) () {
+func (this *QBackingStore) Beginpaint(args ...interface{}) () {
   // beginPaint(const class QRegion &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -214,11 +227,15 @@ func (this *QBackingStore) BeginPaint(args ...interface{}) () {
 }
 
 // endPaint()
-func (this *QBackingStore) EndPaint(args ...interface{}) () {
+func (this *QBackingStore) Endpaint(args ...interface{}) () {
   // endPaint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -235,11 +252,15 @@ func (this *QBackingStore) EndPaint(args ...interface{}) () {
 }
 
 // hasStaticContents()
-func (this *QBackingStore) HasStaticContents(args ...interface{}) (ret interface{}) {
+func (this *QBackingStore) Hasstaticcontents(args ...interface{}) (ret interface{}) {
   // hasStaticContents()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -269,6 +290,10 @@ func (this *QBackingStore) Window(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -293,12 +318,16 @@ func (this *QBackingStore) Window(args ...interface{}) (ret interface{}) {
 }
 
 // setStaticContents(const class QRegion &)
-func (this *QBackingStore) SetStaticContents(args ...interface{}) () {
+func (this *QBackingStore) Setstaticcontents(args ...interface{}) () {
   // setStaticContents(const class QRegion &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -325,6 +354,10 @@ func (this *QBackingStore) Flush(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
   vtys[0][1] = reflect.TypeOf(QWindow{}) // "QWindow *"
   vtys[0][2] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -352,6 +385,10 @@ func (this *QBackingStore) Size(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -384,6 +421,10 @@ func (this *QBackingStore) Scroll(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -420,6 +461,10 @@ func (this *QBackingStore) Resize(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -438,11 +483,15 @@ func (this *QBackingStore) Resize(args ...interface{}) () {
 }
 
 // ~QBackingStore()
-func (this *QBackingStore) Free(args ...interface{}) () {
+func (this *QBackingStore) Freeqbackingstore(args ...interface{}) () {
   // ~QBackingStore()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -450,10 +499,7 @@ func (this *QBackingStore) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QBackingStoreD0Ev
     // invoke: void ~QBackingStore()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QBackingStoreD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QBackingStoreD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "~QBackingStore", args)
   }

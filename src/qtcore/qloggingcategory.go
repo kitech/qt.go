@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qloggingcategory.h
 // dst-file: /src/core/qloggingcategory.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -63,7 +62,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QLoggingCategory)=24
@@ -73,13 +71,17 @@ type QLoggingCategory struct {
 }
 
 // setEnabled(enum QtMsgType, _Bool)
-func (this *QLoggingCategory) SetEnabled(args ...interface{}) () {
+func (this *QLoggingCategory) Setenabled(args ...interface{}) () {
   // setEnabled(enum QtMsgType, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "QtMsgType"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -100,11 +102,15 @@ func (this *QLoggingCategory) SetEnabled(args ...interface{}) () {
 }
 
 // categoryName()
-func (this *QLoggingCategory) CategoryName(args ...interface{}) (ret interface{}) {
+func (this *QLoggingCategory) Categoryname(args ...interface{}) (ret interface{}) {
   // categoryName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -129,11 +135,15 @@ func (this *QLoggingCategory) CategoryName(args ...interface{}) (ret interface{}
 }
 
 // isCriticalEnabled()
-func (this *QLoggingCategory) IsCriticalEnabled(args ...interface{}) (ret interface{}) {
+func (this *QLoggingCategory) Iscriticalenabled(args ...interface{}) (ret interface{}) {
   // isCriticalEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -158,12 +168,16 @@ func (this *QLoggingCategory) IsCriticalEnabled(args ...interface{}) (ret interf
 }
 
 // isEnabled(enum QtMsgType)
-func (this *QLoggingCategory) IsEnabled(args ...interface{}) (ret interface{}) {
+func (this *QLoggingCategory) Isenabled(args ...interface{}) (ret interface{}) {
   // isEnabled(enum QtMsgType)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "QtMsgType"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -190,9 +204,6 @@ func (this *QLoggingCategory) IsEnabled(args ...interface{}) (ret interface{}) {
 }
 
 // QLoggingCategory(const char *)
-func GcfreeQLoggingCategory(this *QLoggingCategory) {
-  qtrt.UniverseFree(this)
-}
 func NewQLoggingCategory(args ...interface{}) *QLoggingCategory {
   // QLoggingCategory(const char *)
   // QLoggingCategory(const char *, enum QtMsgType)
@@ -203,6 +214,10 @@ func NewQLoggingCategory(args ...interface{}) *QLoggingCategory {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.ByteTy(true) // "const char *"
   vtys[1][1] = qtrt.Int32Ty(false) // "QtMsgType"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -217,9 +232,7 @@ func NewQLoggingCategory(args ...interface{}) *QLoggingCategory {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QLoggingCategoryC2EPKc(arg0)
-    this := &QLoggingCategory{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQLoggingCategory)
-    return this
+    return &QLoggingCategory{Qclsinst:qthis}
   case 1:
     // invoke: _ZN16QLoggingCategoryC1EPKc9QtMsgType
     // invoke: void QLoggingCategory(const char *, enum QtMsgType)
@@ -232,9 +245,7 @@ func NewQLoggingCategory(args ...interface{}) *QLoggingCategory {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QLoggingCategoryC2EPKc9QtMsgType(arg0, arg1)
-    this := &QLoggingCategory{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQLoggingCategory)
-    return this
+    return &QLoggingCategory{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QLoggingCategory", "QLoggingCategory", args)
   }
@@ -243,11 +254,15 @@ func NewQLoggingCategory(args ...interface{}) *QLoggingCategory {
 }
 
 // ~QLoggingCategory()
-func (this *QLoggingCategory) Free(args ...interface{}) () {
+func (this *QLoggingCategory) Freeqloggingcategory(args ...interface{}) () {
   // ~QLoggingCategory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -255,10 +270,7 @@ func (this *QLoggingCategory) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QLoggingCategoryD0Ev
     // invoke: void ~QLoggingCategory()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QLoggingCategoryD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QLoggingCategoryD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "~QLoggingCategory", args)
   }
@@ -267,11 +279,15 @@ func (this *QLoggingCategory) Free(args ...interface{}) () {
 }
 
 // isDebugEnabled()
-func (this *QLoggingCategory) IsDebugEnabled(args ...interface{}) (ret interface{}) {
+func (this *QLoggingCategory) Isdebugenabled(args ...interface{}) (ret interface{}) {
   // isDebugEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -296,11 +312,15 @@ func (this *QLoggingCategory) IsDebugEnabled(args ...interface{}) (ret interface
 }
 
 // isWarningEnabled()
-func (this *QLoggingCategory) IsWarningEnabled(args ...interface{}) (ret interface{}) {
+func (this *QLoggingCategory) Iswarningenabled(args ...interface{}) (ret interface{}) {
   // isWarningEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -325,12 +345,16 @@ func (this *QLoggingCategory) IsWarningEnabled(args ...interface{}) (ret interfa
 }
 
 // setFilterRules(const class QString &)
-func (this *QLoggingCategory) SetFilterRules_s(args ...interface{}) () {
+func (this *QLoggingCategory) Setfilterrules_S(args ...interface{}) () {
   // setFilterRules(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -349,11 +373,15 @@ func (this *QLoggingCategory) SetFilterRules_s(args ...interface{}) () {
 }
 
 // defaultCategory()
-func (this *QLoggingCategory) DefaultCategory_s(args ...interface{}) (ret interface{}) {
+func (this *QLoggingCategory) Defaultcategory_S(args ...interface{}) (ret interface{}) {
   // defaultCategory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -378,11 +406,15 @@ func (this *QLoggingCategory) DefaultCategory_s(args ...interface{}) (ret interf
 }
 
 // isInfoEnabled()
-func (this *QLoggingCategory) IsInfoEnabled(args ...interface{}) (ret interface{}) {
+func (this *QLoggingCategory) Isinfoenabled(args ...interface{}) (ret interface{}) {
   // isInfoEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

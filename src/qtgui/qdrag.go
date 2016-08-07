@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -34,6 +33,8 @@ import "qtcore"
 extern void C_ZN5QDrag11setMimeDataEP9QMimeData(void* qthis, void* arg0); // 4
   // proto:  void QDrag::QDrag(QObject * dragSource);
 extern void* C_ZN5QDragC2EP7QObject(void* arg0); // 3
+  // proto: static void QDrag::cancel();
+extern void C_ZN5QDrag6cancelEv(); // 4
   // proto:  QPixmap QDrag::pixmap();
 extern void* C_ZNK5QDrag6pixmapEv(void* qthis); // 4
   // proto:  void QDrag::~QDrag();
@@ -42,12 +43,12 @@ extern void C_ZN5QDragD2Ev(void* qthis); // 4
 extern void C_ZNK5QDrag13defaultActionEv(void* qthis); // 4
   // proto:  QObject * QDrag::source();
 extern void* C_ZNK5QDrag6sourceEv(void* qthis); // 4
+  // proto:  void QDrag::setPixmap(const QPixmap & );
+extern void C_ZN5QDrag9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
   // proto:  Qt::DropActions QDrag::supportedActions();
 extern void C_ZNK5QDrag16supportedActionsEv(void* qthis); // 4
   // proto:  void QDrag::setHotSpot(const QPoint & hotspot);
 extern void C_ZN5QDrag10setHotSpotERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  void QDrag::setPixmap(const QPixmap & );
-extern void C_ZN5QDrag9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
   // proto:  QPoint QDrag::hotSpot();
 extern void* C_ZNK5QDrag7hotSpotEv(void* qthis); // 4
   // proto:  QMimeData * QDrag::mimeData();
@@ -67,7 +68,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDrag)=1
@@ -79,12 +79,16 @@ type QDrag struct {
 }
 
 // setMimeData(class QMimeData *)
-func (this *QDrag) SetMimeData(args ...interface{}) () {
+func (this *QDrag) Setmimedata(args ...interface{}) () {
   // setMimeData(class QMimeData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QMimeData{}) // "QMimeData *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -103,15 +107,16 @@ func (this *QDrag) SetMimeData(args ...interface{}) () {
 }
 
 // QDrag(class QObject *)
-func GcfreeQDrag(this *QDrag) {
-  qtrt.UniverseFree(this)
-}
 func NewQDrag(args ...interface{}) *QDrag {
   // QDrag(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -124,14 +129,37 @@ func NewQDrag(args ...interface{}) *QDrag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QDragC2EP7QObject(arg0)
-    this := &QDrag{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDrag)
-    return this
+    return &QDrag{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDrag", "QDrag", args)
   }
 
   return nil // QDrag{Qclsinst:qthis}
+}
+
+// cancel()
+func (this *QDrag) Cancel_S(args ...interface{}) () {
+  // cancel()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN5QDrag6cancelEv
+    // invoke: void cancel()
+    C.C_ZN5QDrag6cancelEv()
+  default:
+    qtrt.ErrorResolve("QDrag", "cancel", args)
+  }
+
+  return
 }
 
 // pixmap()
@@ -140,6 +168,10 @@ func (this *QDrag) Pixmap(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -164,11 +196,15 @@ func (this *QDrag) Pixmap(args ...interface{}) (ret interface{}) {
 }
 
 // ~QDrag()
-func (this *QDrag) Free(args ...interface{}) () {
+func (this *QDrag) Freeqdrag(args ...interface{}) () {
   // ~QDrag()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -176,10 +212,7 @@ func (this *QDrag) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QDragD0Ev
     // invoke: void ~QDrag()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN5QDragD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN5QDragD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "~QDrag", args)
   }
@@ -188,11 +221,15 @@ func (this *QDrag) Free(args ...interface{}) () {
 }
 
 // defaultAction()
-func (this *QDrag) DefaultAction(args ...interface{}) () {
+func (this *QDrag) Defaultaction(args ...interface{}) () {
   // defaultAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -214,6 +251,10 @@ func (this *QDrag) Source(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -237,58 +278,17 @@ func (this *QDrag) Source(args ...interface{}) (ret interface{}) {
   return
 }
 
-// supportedActions()
-func (this *QDrag) SupportedActions(args ...interface{}) () {
-  // supportedActions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QDrag16supportedActionsEv
-    // invoke: Qt::DropActions supportedActions()
-    C.C_ZNK5QDrag16supportedActionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDrag", "supportedActions", args)
-  }
-
-  return
-}
-
-// setHotSpot(const class QPoint &)
-func (this *QDrag) SetHotSpot(args ...interface{}) () {
-  // setHotSpot(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QDrag10setHotSpotERK6QPoint
-    // invoke: void setHotSpot(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QDrag10setHotSpotERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDrag", "setHotSpot", args)
-  }
-
-  return
-}
-
 // setPixmap(const class QPixmap &)
-func (this *QDrag) SetPixmap(args ...interface{}) () {
+func (this *QDrag) Setpixmap(args ...interface{}) () {
   // setPixmap(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPixmap{}) // "const QPixmap &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -306,12 +306,69 @@ func (this *QDrag) SetPixmap(args ...interface{}) () {
   return
 }
 
+// supportedActions()
+func (this *QDrag) Supportedactions(args ...interface{}) () {
+  // supportedActions()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK5QDrag16supportedActionsEv
+    // invoke: Qt::DropActions supportedActions()
+    C.C_ZNK5QDrag16supportedActionsEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QDrag", "supportedActions", args)
+  }
+
+  return
+}
+
+// setHotSpot(const class QPoint &)
+func (this *QDrag) Sethotspot(args ...interface{}) () {
+  // setHotSpot(const class QPoint &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN5QDrag10setHotSpotERK6QPoint
+    // invoke: void setHotSpot(const class QPoint &)
+    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
+    if false {fmt.Println(arg0)}
+    C.C_ZN5QDrag10setHotSpotERK6QPoint(this.Qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDrag", "setHotSpot", args)
+  }
+
+  return
+}
+
 // hotSpot()
-func (this *QDrag) HotSpot(args ...interface{}) (ret interface{}) {
+func (this *QDrag) Hotspot(args ...interface{}) (ret interface{}) {
   // hotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -336,11 +393,15 @@ func (this *QDrag) HotSpot(args ...interface{}) (ret interface{}) {
 }
 
 // mimeData()
-func (this *QDrag) MimeData(args ...interface{}) (ret interface{}) {
+func (this *QDrag) Mimedata(args ...interface{}) (ret interface{}) {
   // mimeData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -365,11 +426,15 @@ func (this *QDrag) MimeData(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QDrag) MetaObject(args ...interface{}) () {
+func (this *QDrag) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -391,6 +456,10 @@ func (this *QDrag) Target(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

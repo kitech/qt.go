@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -67,7 +66,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QState)=1
@@ -82,15 +80,16 @@ type QState struct {
 }
 
 // QState(class QState *)
-func GcfreeQState(this *QState) {
-  qtrt.UniverseFree(this)
-}
 func NewQState(args ...interface{}) *QState {
   // QState(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QState{}) // "QState *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -103,9 +102,7 @@ func NewQState(args ...interface{}) *QState {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QStateC2EPS_(arg0)
-    this := &QState{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQState)
-    return this
+    return &QState{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QState", "QState", args)
   }
@@ -119,6 +116,10 @@ func (this *QState) Transitions(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -135,11 +136,15 @@ func (this *QState) Transitions(args ...interface{}) () {
 }
 
 // errorState()
-func (this *QState) ErrorState(args ...interface{}) () {
+func (this *QState) Errorstate(args ...interface{}) () {
   // errorState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -156,12 +161,16 @@ func (this *QState) ErrorState(args ...interface{}) () {
 }
 
 // removeTransition(class QAbstractTransition *)
-func (this *QState) RemoveTransition(args ...interface{}) () {
+func (this *QState) Removetransition(args ...interface{}) () {
   // removeTransition(class QAbstractTransition *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractTransition{}) // "QAbstractTransition *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -180,7 +189,7 @@ func (this *QState) RemoveTransition(args ...interface{}) () {
 }
 
 // addTransition(class QAbstractState *)
-func (this *QState) AddTransition(args ...interface{}) () {
+func (this *QState) Addtransition(args ...interface{}) () {
   // addTransition(class QAbstractState *)
   // addTransition(class QAbstractTransition *)
   // addTransition(const class QObject *, const char *, class QAbstractState *)
@@ -194,6 +203,10 @@ func (this *QState) AddTransition(args ...interface{}) () {
   vtys[2][0] = reflect.TypeOf(QObject{}) // "const QObject *"
   vtys[2][1] = qtrt.ByteTy(true) // "const char *"
   vtys[2][2] = reflect.TypeOf(QAbstractState{}) // "QAbstractState *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -231,12 +244,16 @@ func (this *QState) AddTransition(args ...interface{}) () {
 }
 
 // setErrorState(class QAbstractState *)
-func (this *QState) SetErrorState(args ...interface{}) () {
+func (this *QState) Seterrorstate(args ...interface{}) () {
   // setErrorState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractState{}) // "QAbstractState *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -255,11 +272,15 @@ func (this *QState) SetErrorState(args ...interface{}) () {
 }
 
 // initialState()
-func (this *QState) InitialState(args ...interface{}) () {
+func (this *QState) Initialstate(args ...interface{}) () {
   // initialState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -276,11 +297,15 @@ func (this *QState) InitialState(args ...interface{}) () {
 }
 
 // childMode()
-func (this *QState) ChildMode(args ...interface{}) () {
+func (this *QState) Childmode(args ...interface{}) () {
   // childMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -297,7 +322,7 @@ func (this *QState) ChildMode(args ...interface{}) () {
 }
 
 // assignProperty(class QObject *, const char *, const class QVariant &)
-func (this *QState) AssignProperty(args ...interface{}) () {
+func (this *QState) Assignproperty(args ...interface{}) () {
   // assignProperty(class QObject *, const char *, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -305,6 +330,10 @@ func (this *QState) AssignProperty(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
   vtys[0][1] = qtrt.ByteTy(true) // "const char *"
   vtys[0][2] = reflect.TypeOf(QVariant{}) // "const QVariant &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -329,11 +358,15 @@ func (this *QState) AssignProperty(args ...interface{}) () {
 }
 
 // ~QState()
-func (this *QState) Free(args ...interface{}) () {
+func (this *QState) Freeqstate(args ...interface{}) () {
   // ~QState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -341,10 +374,7 @@ func (this *QState) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QStateD0Ev
     // invoke: void ~QState()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN6QStateD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN6QStateD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QState", "~QState", args)
   }
@@ -353,11 +383,15 @@ func (this *QState) Free(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QState) MetaObject(args ...interface{}) () {
+func (this *QState) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -374,12 +408,16 @@ func (this *QState) MetaObject(args ...interface{}) () {
 }
 
 // setInitialState(class QAbstractState *)
-func (this *QState) SetInitialState(args ...interface{}) () {
+func (this *QState) Setinitialstate(args ...interface{}) () {
   // setInitialState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractState{}) // "QAbstractState *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

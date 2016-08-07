@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qtemporarydir.h
 // dst-file: /src/core/qtemporarydir.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -33,6 +32,8 @@ import "qtrt"
 extern void C_ZN13QTemporaryDirD2Ev(void* qthis); // 4
   // proto:  void QTemporaryDir::setAutoRemove(bool b);
 extern void C_ZN13QTemporaryDir13setAutoRemoveEb(void* qthis, bool arg0); // 4
+  // proto:  QString QTemporaryDir::errorString();
+extern void* C_ZNK13QTemporaryDir11errorStringEv(void* qthis); // 4
   // proto:  void QTemporaryDir::QTemporaryDir();
 extern void* C_ZN13QTemporaryDirC2Ev(); // 3
   // proto:  void QTemporaryDir::QTemporaryDir(const QString & templateName);
@@ -55,7 +56,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTemporaryDir)=1
@@ -65,11 +65,15 @@ type QTemporaryDir struct {
 }
 
 // ~QTemporaryDir()
-func (this *QTemporaryDir) Free(args ...interface{}) () {
+func (this *QTemporaryDir) Freeqtemporarydir(args ...interface{}) () {
   // ~QTemporaryDir()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -77,10 +81,7 @@ func (this *QTemporaryDir) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QTemporaryDirD0Ev
     // invoke: void ~QTemporaryDir()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QTemporaryDirD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QTemporaryDirD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryDir", "~QTemporaryDir", args)
   }
@@ -89,12 +90,16 @@ func (this *QTemporaryDir) Free(args ...interface{}) () {
 }
 
 // setAutoRemove(_Bool)
-func (this *QTemporaryDir) SetAutoRemove(args ...interface{}) () {
+func (this *QTemporaryDir) Setautoremove(args ...interface{}) () {
   // setAutoRemove(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -112,10 +117,40 @@ func (this *QTemporaryDir) SetAutoRemove(args ...interface{}) () {
   return
 }
 
-// QTemporaryDir()
-func GcfreeQTemporaryDir(this *QTemporaryDir) {
-  qtrt.UniverseFree(this)
+// errorString()
+func (this *QTemporaryDir) Errorstring(args ...interface{}) (ret interface{}) {
+  // errorString()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QTemporaryDir11errorStringEv
+    // invoke: QString errorString()
+    var ret0 = C.C_ZNK13QTemporaryDir11errorStringEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QTemporaryDir", "errorString", args)
+  }
+
+  return
 }
+
+// QTemporaryDir()
 func NewQTemporaryDir(args ...interface{}) *QTemporaryDir {
   // QTemporaryDir()
   // QTemporaryDir(const class QString &)
@@ -124,6 +159,10 @@ func NewQTemporaryDir(args ...interface{}) *QTemporaryDir {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -134,9 +173,7 @@ func NewQTemporaryDir(args ...interface{}) *QTemporaryDir {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QTemporaryDirC2Ev()
-    this := &QTemporaryDir{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTemporaryDir)
-    return this
+    return &QTemporaryDir{Qclsinst:qthis}
   case 1:
     // invoke: _ZN13QTemporaryDirC1ERK7QString
     // invoke: void QTemporaryDir(const class QString &)
@@ -145,9 +182,7 @@ func NewQTemporaryDir(args ...interface{}) *QTemporaryDir {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QTemporaryDirC2ERK7QString(arg0)
-    this := &QTemporaryDir{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTemporaryDir)
-    return this
+    return &QTemporaryDir{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTemporaryDir", "QTemporaryDir", args)
   }
@@ -156,11 +191,15 @@ func NewQTemporaryDir(args ...interface{}) *QTemporaryDir {
 }
 
 // isValid()
-func (this *QTemporaryDir) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QTemporaryDir) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -190,6 +229,10 @@ func (this *QTemporaryDir) Remove(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -214,11 +257,15 @@ func (this *QTemporaryDir) Remove(args ...interface{}) (ret interface{}) {
 }
 
 // autoRemove()
-func (this *QTemporaryDir) AutoRemove(args ...interface{}) (ret interface{}) {
+func (this *QTemporaryDir) Autoremove(args ...interface{}) (ret interface{}) {
   // autoRemove()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -248,6 +295,10 @@ func (this *QTemporaryDir) Path(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -123,26 +122,22 @@ extern void C_ZN8QProcess24setStandardOutputProcessEPS_(void* qthis, void* arg0)
 extern void C_ZNK8QProcess10exitStatusEv(void* qthis); // 4
   // proto:  QProcess::ProcessChannelMode QProcess::readChannelMode();
 extern void C_ZNK8QProcess15readChannelModeEv(void* qthis); // 4
-  // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
-extern void* C_ZN19QProcessEnvironmentC2ERKS_(void* arg0); // 3
-  // proto:  void QProcessEnvironment::QProcessEnvironment();
-extern void* C_ZN19QProcessEnvironmentC2Ev(); // 3
   // proto: static QProcessEnvironment QProcessEnvironment::systemEnvironment();
 extern void* C_ZN19QProcessEnvironment17systemEnvironmentEv(); // 4
-  // proto:  void QProcessEnvironment::insert(const QProcessEnvironment & e);
-extern void C_ZN19QProcessEnvironment6insertERKS_(void* qthis, void* arg0); // 4
-  // proto:  void QProcessEnvironment::insert(const QString & name, const QString & value);
-extern void C_ZN19QProcessEnvironment6insertERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QStringList QProcessEnvironment::keys();
-extern void C_ZNK19QProcessEnvironment4keysEv(void* qthis); // 4
+  // proto:  QStringList QProcessEnvironment::toStringList();
+extern void C_ZNK19QProcessEnvironment12toStringListEv(void* qthis); // 4
   // proto:  void QProcessEnvironment::clear();
 extern void C_ZN19QProcessEnvironment5clearEv(void* qthis); // 4
   // proto:  bool QProcessEnvironment::contains(const QString & name);
 extern bool C_ZNK19QProcessEnvironment8containsERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QProcessEnvironment::value(const QString & name, const QString & defaultValue);
 extern void* C_ZNK19QProcessEnvironment5valueERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QStringList QProcessEnvironment::toStringList();
-extern void C_ZNK19QProcessEnvironment12toStringListEv(void* qthis); // 4
+  // proto:  void QProcessEnvironment::QProcessEnvironment();
+extern void* C_ZN19QProcessEnvironmentC2Ev(); // 3
+  // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
+extern void* C_ZN19QProcessEnvironmentC2ERKS_(void* arg0); // 3
+  // proto:  QStringList QProcessEnvironment::keys();
+extern void C_ZNK19QProcessEnvironment4keysEv(void* qthis); // 4
   // proto:  bool QProcessEnvironment::isEmpty();
 extern bool C_ZNK19QProcessEnvironment7isEmptyEv(void* qthis); // 4
   // proto:  void QProcessEnvironment::remove(const QString & name);
@@ -161,7 +156,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QProcess)=1
@@ -172,8 +166,9 @@ type QProcess struct {
 //  _started QProcess_started_signal;
 //  _finished QProcess_finished_signal;
 //  _readyReadStandardError QProcess_readyReadStandardError_signal;
-//  _error QProcess_error_signal;
 //  _readyReadStandardOutput QProcess_readyReadStandardOutput_signal;
+//  _error QProcess_error_signal;
+//  _errorOccurred QProcess_errorOccurred_signal;
 }
 
 // class sizeof(QProcessEnvironment)=1
@@ -183,12 +178,16 @@ type QProcessEnvironment struct {
 }
 
 // setProcessEnvironment(const class QProcessEnvironment &)
-func (this *QProcess) SetProcessEnvironment(args ...interface{}) () {
+func (this *QProcess) Setprocessenvironment(args ...interface{}) () {
   // setProcessEnvironment(const class QProcessEnvironment &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QProcessEnvironment{}) // "const QProcessEnvironment &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -207,11 +206,15 @@ func (this *QProcess) SetProcessEnvironment(args ...interface{}) () {
 }
 
 // processId()
-func (this *QProcess) ProcessId(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Processid(args ...interface{}) (ret interface{}) {
   // processId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -236,11 +239,15 @@ func (this *QProcess) ProcessId(args ...interface{}) (ret interface{}) {
 }
 
 // bytesAvailable()
-func (this *QProcess) BytesAvailable(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Bytesavailable(args ...interface{}) (ret interface{}) {
   // bytesAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -265,11 +272,15 @@ func (this *QProcess) BytesAvailable(args ...interface{}) (ret interface{}) {
 }
 
 // readAllStandardError()
-func (this *QProcess) ReadAllStandardError(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Readallstandarderror(args ...interface{}) (ret interface{}) {
   // readAllStandardError()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -294,11 +305,15 @@ func (this *QProcess) ReadAllStandardError(args ...interface{}) (ret interface{}
 }
 
 // bytesToWrite()
-func (this *QProcess) BytesToWrite(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Bytestowrite(args ...interface{}) (ret interface{}) {
   // bytesToWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -328,6 +343,10 @@ func (this *QProcess) Pid(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -352,12 +371,16 @@ func (this *QProcess) Pid(args ...interface{}) (ret interface{}) {
 }
 
 // setArguments(const class QStringList &)
-func (this *QProcess) SetArguments(args ...interface{}) () {
+func (this *QProcess) Setarguments(args ...interface{}) () {
   // setArguments(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -376,11 +399,15 @@ func (this *QProcess) SetArguments(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QProcess) MetaObject(args ...interface{}) () {
+func (this *QProcess) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -402,6 +429,10 @@ func (this *QProcess) Kill(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -418,12 +449,16 @@ func (this *QProcess) Kill(args ...interface{}) () {
 }
 
 // setEnvironment(const class QStringList &)
-func (this *QProcess) SetEnvironment(args ...interface{}) () {
+func (this *QProcess) Setenvironment(args ...interface{}) () {
   // setEnvironment(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -447,6 +482,10 @@ func (this *QProcess) Close(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -463,11 +502,15 @@ func (this *QProcess) Close(args ...interface{}) () {
 }
 
 // isSequential()
-func (this *QProcess) IsSequential(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Issequential(args ...interface{}) (ret interface{}) {
   // isSequential()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -492,11 +535,15 @@ func (this *QProcess) IsSequential(args ...interface{}) (ret interface{}) {
 }
 
 // closeWriteChannel()
-func (this *QProcess) CloseWriteChannel(args ...interface{}) () {
+func (this *QProcess) Closewritechannel(args ...interface{}) () {
   // closeWriteChannel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -513,11 +560,15 @@ func (this *QProcess) CloseWriteChannel(args ...interface{}) () {
 }
 
 // canReadLine()
-func (this *QProcess) CanReadLine(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Canreadline(args ...interface{}) (ret interface{}) {
   // canReadLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -542,12 +593,16 @@ func (this *QProcess) CanReadLine(args ...interface{}) (ret interface{}) {
 }
 
 // waitForBytesWritten(int)
-func (this *QProcess) WaitForBytesWritten(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Waitforbyteswritten(args ...interface{}) (ret interface{}) {
   // waitForBytesWritten(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -574,11 +629,15 @@ func (this *QProcess) WaitForBytesWritten(args ...interface{}) (ret interface{})
 }
 
 // workingDirectory()
-func (this *QProcess) WorkingDirectory(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Workingdirectory(args ...interface{}) (ret interface{}) {
   // workingDirectory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -603,11 +662,15 @@ func (this *QProcess) WorkingDirectory(args ...interface{}) (ret interface{}) {
 }
 
 // readAllStandardOutput()
-func (this *QProcess) ReadAllStandardOutput(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Readallstandardoutput(args ...interface{}) (ret interface{}) {
   // readAllStandardOutput()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -632,12 +695,16 @@ func (this *QProcess) ReadAllStandardOutput(args ...interface{}) (ret interface{
 }
 
 // waitForFinished(int)
-func (this *QProcess) WaitForFinished(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Waitforfinished(args ...interface{}) (ret interface{}) {
   // waitForFinished(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -664,12 +731,16 @@ func (this *QProcess) WaitForFinished(args ...interface{}) (ret interface{}) {
 }
 
 // setProgram(const class QString &)
-func (this *QProcess) SetProgram(args ...interface{}) () {
+func (this *QProcess) Setprogram(args ...interface{}) () {
   // setProgram(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -693,6 +764,10 @@ func (this *QProcess) Environment(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -714,6 +789,10 @@ func (this *QProcess) State(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -730,11 +809,15 @@ func (this *QProcess) State(args ...interface{}) () {
 }
 
 // ~QProcess()
-func (this *QProcess) Free(args ...interface{}) () {
+func (this *QProcess) Freeqprocess(args ...interface{}) () {
   // ~QProcess()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -742,10 +825,7 @@ func (this *QProcess) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QProcessD0Ev
     // invoke: void ~QProcess()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN8QProcessD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN8QProcessD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "~QProcess", args)
   }
@@ -759,6 +839,10 @@ func (this *QProcess) Arguments(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -780,6 +864,10 @@ func (this *QProcess) Program(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -804,11 +892,15 @@ func (this *QProcess) Program(args ...interface{}) (ret interface{}) {
 }
 
 // systemEnvironment()
-func (this *QProcess) SystemEnvironment_s(args ...interface{}) () {
+func (this *QProcess) Systemenvironment_S(args ...interface{}) () {
   // systemEnvironment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -825,12 +917,16 @@ func (this *QProcess) SystemEnvironment_s(args ...interface{}) () {
 }
 
 // setWorkingDirectory(const class QString &)
-func (this *QProcess) SetWorkingDirectory(args ...interface{}) () {
+func (this *QProcess) Setworkingdirectory(args ...interface{}) () {
   // setWorkingDirectory(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -854,6 +950,10 @@ func (this *QProcess) Terminate(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -870,12 +970,16 @@ func (this *QProcess) Terminate(args ...interface{}) () {
 }
 
 // setStandardInputFile(const class QString &)
-func (this *QProcess) SetStandardInputFile(args ...interface{}) () {
+func (this *QProcess) Setstandardinputfile(args ...interface{}) () {
   // setStandardInputFile(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -894,12 +998,16 @@ func (this *QProcess) SetStandardInputFile(args ...interface{}) () {
 }
 
 // waitForStarted(int)
-func (this *QProcess) WaitForStarted(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Waitforstarted(args ...interface{}) (ret interface{}) {
   // waitForStarted(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -926,7 +1034,7 @@ func (this *QProcess) WaitForStarted(args ...interface{}) (ret interface{}) {
 }
 
 // startDetached(const class QString &, const class QStringList &, const class QString &, qint64 *)
-func (this *QProcess) StartDetached_s(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Startdetached_S(args ...interface{}) (ret interface{}) {
   // startDetached(const class QString &, const class QStringList &, const class QString &, qint64 *)
   // startDetached(const class QString &)
   // startDetached(const class QString &, const class QStringList &)
@@ -942,6 +1050,10 @@ func (this *QProcess) StartDetached_s(args ...interface{}) (ret interface{}) {
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[2][1] = reflect.TypeOf(QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1004,11 +1116,15 @@ func (this *QProcess) StartDetached_s(args ...interface{}) (ret interface{}) {
 }
 
 // readChannel()
-func (this *QProcess) ReadChannel(args ...interface{}) () {
+func (this *QProcess) Readchannel(args ...interface{}) () {
   // readChannel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1025,11 +1141,15 @@ func (this *QProcess) ReadChannel(args ...interface{}) () {
 }
 
 // processChannelMode()
-func (this *QProcess) ProcessChannelMode(args ...interface{}) () {
+func (this *QProcess) Processchannelmode(args ...interface{}) () {
   // processChannelMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1046,11 +1166,15 @@ func (this *QProcess) ProcessChannelMode(args ...interface{}) () {
 }
 
 // exitCode()
-func (this *QProcess) ExitCode(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Exitcode(args ...interface{}) (ret interface{}) {
   // exitCode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1075,15 +1199,16 @@ func (this *QProcess) ExitCode(args ...interface{}) (ret interface{}) {
 }
 
 // QProcess(class QObject *)
-func GcfreeQProcess(this *QProcess) {
-  qtrt.UniverseFree(this)
-}
 func NewQProcess(args ...interface{}) *QProcess {
   // QProcess(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1096,9 +1221,7 @@ func NewQProcess(args ...interface{}) *QProcess {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QProcessC2EP7QObject(arg0)
-    this := &QProcess{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQProcess)
-    return this
+    return &QProcess{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QProcess", "QProcess", args)
   }
@@ -1107,7 +1230,7 @@ func NewQProcess(args ...interface{}) *QProcess {
 }
 
 // execute(const class QString &)
-func (this *QProcess) Execute_s(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Execute_S(args ...interface{}) (ret interface{}) {
   // execute(const class QString &)
   // execute(const class QString &, const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1117,6 +1240,10 @@ func (this *QProcess) Execute_s(args ...interface{}) (ret interface{}) {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1][1] = reflect.TypeOf(QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1159,11 +1286,15 @@ func (this *QProcess) Execute_s(args ...interface{}) (ret interface{}) {
 }
 
 // processEnvironment()
-func (this *QProcess) ProcessEnvironment(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Processenvironment(args ...interface{}) (ret interface{}) {
   // processEnvironment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1188,11 +1319,15 @@ func (this *QProcess) ProcessEnvironment(args ...interface{}) (ret interface{}) 
 }
 
 // nullDevice()
-func (this *QProcess) NullDevice_s(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Nulldevice_S(args ...interface{}) (ret interface{}) {
   // nullDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1217,11 +1352,15 @@ func (this *QProcess) NullDevice_s(args ...interface{}) (ret interface{}) {
 }
 
 // atEnd()
-func (this *QProcess) AtEnd(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Atend(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1246,12 +1385,16 @@ func (this *QProcess) AtEnd(args ...interface{}) (ret interface{}) {
 }
 
 // waitForReadyRead(int)
-func (this *QProcess) WaitForReadyRead(args ...interface{}) (ret interface{}) {
+func (this *QProcess) Waitforreadyread(args ...interface{}) (ret interface{}) {
   // waitForReadyRead(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1283,6 +1426,10 @@ func (this *QProcess) Error(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1299,11 +1446,15 @@ func (this *QProcess) Error(args ...interface{}) () {
 }
 
 // inputChannelMode()
-func (this *QProcess) InputChannelMode(args ...interface{}) () {
+func (this *QProcess) Inputchannelmode(args ...interface{}) () {
   // inputChannelMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1320,12 +1471,16 @@ func (this *QProcess) InputChannelMode(args ...interface{}) () {
 }
 
 // setStandardOutputProcess(class QProcess *)
-func (this *QProcess) SetStandardOutputProcess(args ...interface{}) () {
+func (this *QProcess) Setstandardoutputprocess(args ...interface{}) () {
   // setStandardOutputProcess(class QProcess *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QProcess{}) // "QProcess *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1344,11 +1499,15 @@ func (this *QProcess) SetStandardOutputProcess(args ...interface{}) () {
 }
 
 // exitStatus()
-func (this *QProcess) ExitStatus(args ...interface{}) () {
+func (this *QProcess) Exitstatus(args ...interface{}) () {
   // exitStatus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1365,11 +1524,15 @@ func (this *QProcess) ExitStatus(args ...interface{}) () {
 }
 
 // readChannelMode()
-func (this *QProcess) ReadChannelMode(args ...interface{}) () {
+func (this *QProcess) Readchannelmode(args ...interface{}) () {
   // readChannelMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1385,55 +1548,16 @@ func (this *QProcess) ReadChannelMode(args ...interface{}) () {
   return
 }
 
-// QProcessEnvironment(const class QProcessEnvironment &)
-func GcfreeQProcessEnvironment(this *QProcessEnvironment) {
-  qtrt.UniverseFree(this)
-}
-func NewQProcessEnvironment(args ...interface{}) *QProcessEnvironment {
-  // QProcessEnvironment(const class QProcessEnvironment &)
-  // QProcessEnvironment()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QProcessEnvironment{}) // "const QProcessEnvironment &"
-  vtys[1] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QProcessEnvironmentC1ERKS_
-    // invoke: void QProcessEnvironment(const class QProcessEnvironment &)
-    var arg0 = args[0].(*QProcessEnvironment).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN19QProcessEnvironmentC2ERKS_(arg0)
-    this := &QProcessEnvironment{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQProcessEnvironment)
-    return this
-  case 1:
-    // invoke: _ZN19QProcessEnvironmentC1Ev
-    // invoke: void QProcessEnvironment()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN19QProcessEnvironmentC2Ev()
-    this := &QProcessEnvironment{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQProcessEnvironment)
-    return this
-  default:
-    qtrt.ErrorResolve("QProcessEnvironment", "QProcessEnvironment", args)
-  }
-
-  return nil // QProcessEnvironment{Qclsinst:qthis}
-}
-
 // systemEnvironment()
-func (this *QProcessEnvironment) SystemEnvironment_s(args ...interface{}) (ret interface{}) {
+func (this *QProcessEnvironment) Systemenvironment_S(args ...interface{}) (ret interface{}) {
   // systemEnvironment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1457,58 +1581,26 @@ func (this *QProcessEnvironment) SystemEnvironment_s(args ...interface{}) (ret i
   return
 }
 
-// insert(const class QProcessEnvironment &)
-func (this *QProcessEnvironment) Insert(args ...interface{}) () {
-  // insert(const class QProcessEnvironment &)
-  // insert(const class QString &, const class QString &)
+// toStringList()
+func (this *QProcessEnvironment) Tostringlist(args ...interface{}) () {
+  // toStringList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QProcessEnvironment{}) // "const QProcessEnvironment &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[1][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN19QProcessEnvironment6insertERKS_
-    // invoke: void insert(const class QProcessEnvironment &)
-    var arg0 = args[0].(*QProcessEnvironment).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN19QProcessEnvironment6insertERKS_(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN19QProcessEnvironment6insertERK7QStringS2_
-    // invoke: void insert(const class QString &, const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN19QProcessEnvironment6insertERK7QStringS2_(this.Qclsinst, arg0, arg1)
+    // invoke: _ZNK19QProcessEnvironment12toStringListEv
+    // invoke: QStringList toStringList()
+    C.C_ZNK19QProcessEnvironment12toStringListEv(this.Qclsinst)
   default:
-    qtrt.ErrorResolve("QProcessEnvironment", "insert", args)
-  }
-
-  return
-}
-
-// keys()
-func (this *QProcessEnvironment) Keys(args ...interface{}) () {
-  // keys()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QProcessEnvironment4keysEv
-    // invoke: QStringList keys()
-    C.C_ZNK19QProcessEnvironment4keysEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QProcessEnvironment", "keys", args)
+    qtrt.ErrorResolve("QProcessEnvironment", "toStringList", args)
   }
 
   return
@@ -1520,6 +1612,10 @@ func (this *QProcessEnvironment) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1542,6 +1638,10 @@ func (this *QProcessEnvironment) Contains(args ...interface{}) (ret interface{})
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1575,6 +1675,10 @@ func (this *QProcessEnvironment) Value(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1602,33 +1706,81 @@ func (this *QProcessEnvironment) Value(args ...interface{}) (ret interface{}) {
   return
 }
 
-// toStringList()
-func (this *QProcessEnvironment) ToStringList(args ...interface{}) () {
-  // toStringList()
+// QProcessEnvironment()
+func NewQProcessEnvironment(args ...interface{}) *QProcessEnvironment {
+  // QProcessEnvironment()
+  // QProcessEnvironment(const class QProcessEnvironment &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QProcessEnvironment{}) // "const QProcessEnvironment &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK19QProcessEnvironment12toStringListEv
-    // invoke: QStringList toStringList()
-    C.C_ZNK19QProcessEnvironment12toStringListEv(this.Qclsinst)
+    // invoke: _ZN19QProcessEnvironmentC1Ev
+    // invoke: void QProcessEnvironment()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN19QProcessEnvironmentC2Ev()
+    return &QProcessEnvironment{Qclsinst:qthis}
+  case 1:
+    // invoke: _ZN19QProcessEnvironmentC1ERKS_
+    // invoke: void QProcessEnvironment(const class QProcessEnvironment &)
+    var arg0 = args[0].(*QProcessEnvironment).Qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN19QProcessEnvironmentC2ERKS_(arg0)
+    return &QProcessEnvironment{Qclsinst:qthis}
   default:
-    qtrt.ErrorResolve("QProcessEnvironment", "toStringList", args)
+    qtrt.ErrorResolve("QProcessEnvironment", "QProcessEnvironment", args)
+  }
+
+  return nil // QProcessEnvironment{Qclsinst:qthis}
+}
+
+// keys()
+func (this *QProcessEnvironment) Keys(args ...interface{}) () {
+  // keys()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK19QProcessEnvironment4keysEv
+    // invoke: QStringList keys()
+    C.C_ZNK19QProcessEnvironment4keysEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QProcessEnvironment", "keys", args)
   }
 
   return
 }
 
 // isEmpty()
-func (this *QProcessEnvironment) IsEmpty(args ...interface{}) (ret interface{}) {
+func (this *QProcessEnvironment) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1659,6 +1811,10 @@ func (this *QProcessEnvironment) Remove(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1677,11 +1833,15 @@ func (this *QProcessEnvironment) Remove(args ...interface{}) () {
 }
 
 // ~QProcessEnvironment()
-func (this *QProcessEnvironment) Free(args ...interface{}) () {
+func (this *QProcessEnvironment) Freeqprocessenvironment(args ...interface{}) () {
   // ~QProcessEnvironment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1689,10 +1849,7 @@ func (this *QProcessEnvironment) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QProcessEnvironmentD0Ev
     // invoke: void ~QProcessEnvironment()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QProcessEnvironmentD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QProcessEnvironmentD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "~QProcessEnvironment", args)
   }
@@ -1707,6 +1864,10 @@ func (this *QProcessEnvironment) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QProcessEnvironment{}) // "QProcessEnvironment &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

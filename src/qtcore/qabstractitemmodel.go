@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qabstractitemmodel.h
 // dst-file: /src/core/qabstractitemmodel.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -181,7 +180,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QModelIndex)=24
@@ -238,6 +236,10 @@ func (this *QModelIndex) Parent(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -262,11 +264,15 @@ func (this *QModelIndex) Parent(args ...interface{}) (ret interface{}) {
 }
 
 // internalPointer()
-func (this *QModelIndex) InternalPointer(args ...interface{}) () {
+func (this *QModelIndex) Internalpointer(args ...interface{}) () {
   // internalPointer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -283,11 +289,15 @@ func (this *QModelIndex) InternalPointer(args ...interface{}) () {
 }
 
 // internalId()
-func (this *QModelIndex) InternalId(args ...interface{}) (ret interface{}) {
+func (this *QModelIndex) Internalid(args ...interface{}) (ret interface{}) {
   // internalId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -317,6 +327,10 @@ func (this *QModelIndex) Column(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -341,11 +355,15 @@ func (this *QModelIndex) Column(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QModelIndex) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QModelIndex) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -377,6 +395,10 @@ func (this *QModelIndex) Sibling(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -410,6 +432,10 @@ func (this *QModelIndex) Flags(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -433,6 +459,10 @@ func (this *QModelIndex) Child(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -466,6 +496,10 @@ func (this *QModelIndex) Model(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -487,6 +521,10 @@ func (this *QModelIndex) Row(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -517,6 +555,10 @@ func (this *QModelIndex) Data(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -543,14 +585,15 @@ func (this *QModelIndex) Data(args ...interface{}) (ret interface{}) {
 }
 
 // QModelIndex()
-func GcfreeQModelIndex(this *QModelIndex) {
-  qtrt.UniverseFree(this)
-}
 func NewQModelIndex(args ...interface{}) *QModelIndex {
   // QModelIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -561,9 +604,7 @@ func NewQModelIndex(args ...interface{}) *QModelIndex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QModelIndexC2Ev()
-    this := &QModelIndex{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQModelIndex)
-    return this
+    return &QModelIndex{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QModelIndex", "QModelIndex", args)
   }
@@ -572,11 +613,15 @@ func NewQModelIndex(args ...interface{}) *QModelIndex {
 }
 
 // internalPointer()
-func (this *QPersistentModelIndex) InternalPointer(args ...interface{}) () {
+func (this *QPersistentModelIndex) Internalpointer(args ...interface{}) () {
   // internalPointer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -598,6 +643,10 @@ func (this *QPersistentModelIndex) Parent(args ...interface{}) (ret interface{})
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -627,6 +676,10 @@ func (this *QPersistentModelIndex) Column(args ...interface{}) (ret interface{})
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -651,11 +704,15 @@ func (this *QPersistentModelIndex) Column(args ...interface{}) (ret interface{})
 }
 
 // isValid()
-func (this *QPersistentModelIndex) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QPersistentModelIndex) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -680,11 +737,15 @@ func (this *QPersistentModelIndex) IsValid(args ...interface{}) (ret interface{}
 }
 
 // ~QPersistentModelIndex()
-func (this *QPersistentModelIndex) Free(args ...interface{}) () {
+func (this *QPersistentModelIndex) Freeqpersistentmodelindex(args ...interface{}) () {
   // ~QPersistentModelIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -692,10 +753,7 @@ func (this *QPersistentModelIndex) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN21QPersistentModelIndexD0Ev
     // invoke: void ~QPersistentModelIndex()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN21QPersistentModelIndexD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN21QPersistentModelIndexD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "~QPersistentModelIndex", args)
   }
@@ -704,9 +762,6 @@ func (this *QPersistentModelIndex) Free(args ...interface{}) () {
 }
 
 // QPersistentModelIndex()
-func GcfreeQPersistentModelIndex(this *QPersistentModelIndex) {
-  qtrt.UniverseFree(this)
-}
 func NewQPersistentModelIndex(args ...interface{}) *QPersistentModelIndex {
   // QPersistentModelIndex()
   // QPersistentModelIndex(const class QPersistentModelIndex &)
@@ -718,6 +773,10 @@ func NewQPersistentModelIndex(args ...interface{}) *QPersistentModelIndex {
   vtys[1][0] = reflect.TypeOf(QPersistentModelIndex{}) // "const QPersistentModelIndex &"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -728,9 +787,7 @@ func NewQPersistentModelIndex(args ...interface{}) *QPersistentModelIndex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QPersistentModelIndexC2Ev()
-    this := &QPersistentModelIndex{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPersistentModelIndex)
-    return this
+    return &QPersistentModelIndex{Qclsinst:qthis}
   case 1:
     // invoke: _ZN21QPersistentModelIndexC1ERKS_
     // invoke: void QPersistentModelIndex(const class QPersistentModelIndex &)
@@ -739,9 +796,7 @@ func NewQPersistentModelIndex(args ...interface{}) *QPersistentModelIndex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QPersistentModelIndexC2ERKS_(arg0)
-    this := &QPersistentModelIndex{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPersistentModelIndex)
-    return this
+    return &QPersistentModelIndex{Qclsinst:qthis}
   case 2:
     // invoke: _ZN21QPersistentModelIndexC1ERK11QModelIndex
     // invoke: void QPersistentModelIndex(const class QModelIndex &)
@@ -750,9 +805,7 @@ func NewQPersistentModelIndex(args ...interface{}) *QPersistentModelIndex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QPersistentModelIndexC2ERK11QModelIndex(arg0)
-    this := &QPersistentModelIndex{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPersistentModelIndex)
-    return this
+    return &QPersistentModelIndex{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "QPersistentModelIndex", args)
   }
@@ -761,11 +814,15 @@ func NewQPersistentModelIndex(args ...interface{}) *QPersistentModelIndex {
 }
 
 // internalId()
-func (this *QPersistentModelIndex) InternalId(args ...interface{}) (ret interface{}) {
+func (this *QPersistentModelIndex) Internalid(args ...interface{}) (ret interface{}) {
   // internalId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -797,6 +854,10 @@ func (this *QPersistentModelIndex) Sibling(args ...interface{}) (ret interface{}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -830,6 +891,10 @@ func (this *QPersistentModelIndex) Flags(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -852,6 +917,10 @@ func (this *QPersistentModelIndex) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPersistentModelIndex{}) // "QPersistentModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -877,6 +946,10 @@ func (this *QPersistentModelIndex) Child(args ...interface{}) (ret interface{}) 
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -910,6 +983,10 @@ func (this *QPersistentModelIndex) Model(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -931,6 +1008,10 @@ func (this *QPersistentModelIndex) Row(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -961,6 +1042,10 @@ func (this *QPersistentModelIndex) Data(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -995,6 +1080,10 @@ func (this *QAbstractTableModel) Index(args ...interface{}) (ret interface{}) {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1033,6 +1122,10 @@ func (this *QAbstractTableModel) Sibling(args ...interface{}) (ret interface{}) 
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1063,15 +1156,16 @@ func (this *QAbstractTableModel) Sibling(args ...interface{}) (ret interface{}) 
 }
 
 // QAbstractTableModel(class QObject *)
-func GcfreeQAbstractTableModel(this *QAbstractTableModel) {
-  qtrt.UniverseFree(this)
-}
 func NewQAbstractTableModel(args ...interface{}) *QAbstractTableModel {
   // QAbstractTableModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1084,9 +1178,7 @@ func NewQAbstractTableModel(args ...interface{}) *QAbstractTableModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QAbstractTableModelC2EP7QObject(arg0)
-    this := &QAbstractTableModel{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAbstractTableModel)
-    return this
+    return &QAbstractTableModel{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "QAbstractTableModel", args)
   }
@@ -1101,6 +1193,10 @@ func (this *QAbstractTableModel) Flags(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1119,11 +1215,15 @@ func (this *QAbstractTableModel) Flags(args ...interface{}) () {
 }
 
 // ~QAbstractTableModel()
-func (this *QAbstractTableModel) Free(args ...interface{}) () {
+func (this *QAbstractTableModel) Freeqabstracttablemodel(args ...interface{}) () {
   // ~QAbstractTableModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1131,10 +1231,7 @@ func (this *QAbstractTableModel) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QAbstractTableModelD0Ev
     // invoke: void ~QAbstractTableModel()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QAbstractTableModelD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QAbstractTableModelD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "~QAbstractTableModel", args)
   }
@@ -1143,11 +1240,15 @@ func (this *QAbstractTableModel) Free(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QAbstractTableModel) MetaObject(args ...interface{}) () {
+func (this *QAbstractTableModel) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1164,11 +1265,15 @@ func (this *QAbstractTableModel) MetaObject(args ...interface{}) () {
 }
 
 // supportedDragActions()
-func (this *QAbstractItemModel) SupportedDragActions(args ...interface{}) () {
+func (this *QAbstractItemModel) Supporteddragactions(args ...interface{}) () {
   // supportedDragActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1191,6 +1296,10 @@ func (this *QAbstractItemModel) Buddy(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1217,7 +1326,7 @@ func (this *QAbstractItemModel) Buddy(args ...interface{}) (ret interface{}) {
 }
 
 // moveRow(const class QModelIndex &, int, const class QModelIndex &, int)
-func (this *QAbstractItemModel) MoveRow(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Moverow(args ...interface{}) (ret interface{}) {
   // moveRow(const class QModelIndex &, int, const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1226,6 +1335,10 @@ func (this *QAbstractItemModel) MoveRow(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
   vtys[0][3] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1258,13 +1371,17 @@ func (this *QAbstractItemModel) MoveRow(args ...interface{}) (ret interface{}) {
 }
 
 // removeColumn(int, const class QModelIndex &)
-func (this *QAbstractItemModel) RemoveColumn(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Removecolumn(args ...interface{}) (ret interface{}) {
   // removeColumn(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1293,11 +1410,15 @@ func (this *QAbstractItemModel) RemoveColumn(args ...interface{}) (ret interface
 }
 
 // metaObject()
-func (this *QAbstractItemModel) MetaObject(args ...interface{}) () {
+func (this *QAbstractItemModel) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1314,7 +1435,7 @@ func (this *QAbstractItemModel) MetaObject(args ...interface{}) () {
 }
 
 // insertColumns(int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) InsertColumns(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Insertcolumns(args ...interface{}) (ret interface{}) {
   // insertColumns(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1322,6 +1443,10 @@ func (this *QAbstractItemModel) InsertColumns(args ...interface{}) (ret interfac
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1357,6 +1482,10 @@ func (this *QAbstractItemModel) Revert(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1373,13 +1502,17 @@ func (this *QAbstractItemModel) Revert(args ...interface{}) () {
 }
 
 // insertRow(int, const class QModelIndex &)
-func (this *QAbstractItemModel) InsertRow(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Insertrow(args ...interface{}) (ret interface{}) {
   // insertRow(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1408,12 +1541,16 @@ func (this *QAbstractItemModel) InsertRow(args ...interface{}) (ret interface{})
 }
 
 // fetchMore(const class QModelIndex &)
-func (this *QAbstractItemModel) FetchMore(args ...interface{}) () {
+func (this *QAbstractItemModel) Fetchmore(args ...interface{}) () {
   // fetchMore(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1432,11 +1569,15 @@ func (this *QAbstractItemModel) FetchMore(args ...interface{}) () {
 }
 
 // supportedDropActions()
-func (this *QAbstractItemModel) SupportedDropActions(args ...interface{}) () {
+func (this *QAbstractItemModel) Supporteddropactions(args ...interface{}) () {
   // supportedDropActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1453,7 +1594,7 @@ func (this *QAbstractItemModel) SupportedDropActions(args ...interface{}) () {
 }
 
 // moveColumn(const class QModelIndex &, int, const class QModelIndex &, int)
-func (this *QAbstractItemModel) MoveColumn(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Movecolumn(args ...interface{}) (ret interface{}) {
   // moveColumn(const class QModelIndex &, int, const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1462,6 +1603,10 @@ func (this *QAbstractItemModel) MoveColumn(args ...interface{}) (ret interface{}
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
   vtys[0][3] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1494,12 +1639,16 @@ func (this *QAbstractItemModel) MoveColumn(args ...interface{}) (ret interface{}
 }
 
 // itemData(const class QModelIndex &)
-func (this *QAbstractItemModel) ItemData(args ...interface{}) () {
+func (this *QAbstractItemModel) Itemdata(args ...interface{}) () {
   // itemData(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1518,13 +1667,17 @@ func (this *QAbstractItemModel) ItemData(args ...interface{}) () {
 }
 
 // removeRow(int, const class QModelIndex &)
-func (this *QAbstractItemModel) RemoveRow(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Removerow(args ...interface{}) (ret interface{}) {
   // removeRow(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1553,11 +1706,15 @@ func (this *QAbstractItemModel) RemoveRow(args ...interface{}) (ret interface{})
 }
 
 // mimeTypes()
-func (this *QAbstractItemModel) MimeTypes(args ...interface{}) () {
+func (this *QAbstractItemModel) Mimetypes(args ...interface{}) () {
   // mimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1574,11 +1731,15 @@ func (this *QAbstractItemModel) MimeTypes(args ...interface{}) () {
 }
 
 // ~QAbstractItemModel()
-func (this *QAbstractItemModel) Free(args ...interface{}) () {
+func (this *QAbstractItemModel) Freeqabstractitemmodel(args ...interface{}) () {
   // ~QAbstractItemModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1586,10 +1747,7 @@ func (this *QAbstractItemModel) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QAbstractItemModelD0Ev
     // invoke: void ~QAbstractItemModel()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN18QAbstractItemModelD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN18QAbstractItemModelD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "~QAbstractItemModel", args)
   }
@@ -1598,11 +1756,15 @@ func (this *QAbstractItemModel) Free(args ...interface{}) () {
 }
 
 // roleNames()
-func (this *QAbstractItemModel) RoleNames(args ...interface{}) () {
+func (this *QAbstractItemModel) Rolenames(args ...interface{}) () {
   // roleNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1619,7 +1781,7 @@ func (this *QAbstractItemModel) RoleNames(args ...interface{}) () {
 }
 
 // removeColumns(int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) RemoveColumns(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Removecolumns(args ...interface{}) (ret interface{}) {
   // removeColumns(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1627,6 +1789,10 @@ func (this *QAbstractItemModel) RemoveColumns(args ...interface{}) (ret interfac
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1657,15 +1823,16 @@ func (this *QAbstractItemModel) RemoveColumns(args ...interface{}) (ret interfac
 }
 
 // QAbstractItemModel(class QObject *)
-func GcfreeQAbstractItemModel(this *QAbstractItemModel) {
-  qtrt.UniverseFree(this)
-}
 func NewQAbstractItemModel(args ...interface{}) *QAbstractItemModel {
   // QAbstractItemModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1678,9 +1845,7 @@ func NewQAbstractItemModel(args ...interface{}) *QAbstractItemModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QAbstractItemModelC2EP7QObject(arg0)
-    this := &QAbstractItemModel{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAbstractItemModel)
-    return this
+    return &QAbstractItemModel{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "QAbstractItemModel", args)
   }
@@ -1695,6 +1860,10 @@ func (this *QAbstractItemModel) Span(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1726,6 +1895,10 @@ func (this *QAbstractItemModel) Submit(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1750,7 +1923,7 @@ func (this *QAbstractItemModel) Submit(args ...interface{}) (ret interface{}) {
 }
 
 // removeRows(int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) RemoveRows(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Removerows(args ...interface{}) (ret interface{}) {
   // removeRows(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1758,6 +1931,10 @@ func (this *QAbstractItemModel) RemoveRows(args ...interface{}) (ret interface{}
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1788,12 +1965,16 @@ func (this *QAbstractItemModel) RemoveRows(args ...interface{}) (ret interface{}
 }
 
 // canFetchMore(const class QModelIndex &)
-func (this *QAbstractItemModel) CanFetchMore(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Canfetchmore(args ...interface{}) (ret interface{}) {
   // canFetchMore(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1820,7 +2001,7 @@ func (this *QAbstractItemModel) CanFetchMore(args ...interface{}) (ret interface
 }
 
 // moveColumns(const class QModelIndex &, int, int, const class QModelIndex &, int)
-func (this *QAbstractItemModel) MoveColumns(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Movecolumns(args ...interface{}) (ret interface{}) {
   // moveColumns(const class QModelIndex &, int, int, const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1830,6 +2011,10 @@ func (this *QAbstractItemModel) MoveColumns(args ...interface{}) (ret interface{
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
   vtys[0][4] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1872,6 +2057,10 @@ func (this *QAbstractItemModel) Sibling(args ...interface{}) (ret interface{}) {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1902,7 +2091,7 @@ func (this *QAbstractItemModel) Sibling(args ...interface{}) (ret interface{}) {
 }
 
 // moveRows(const class QModelIndex &, int, int, const class QModelIndex &, int)
-func (this *QAbstractItemModel) MoveRows(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Moverows(args ...interface{}) (ret interface{}) {
   // moveRows(const class QModelIndex &, int, int, const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1912,6 +2101,10 @@ func (this *QAbstractItemModel) MoveRows(args ...interface{}) (ret interface{}) 
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
   vtys[0][4] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1946,13 +2139,17 @@ func (this *QAbstractItemModel) MoveRows(args ...interface{}) (ret interface{}) 
 }
 
 // insertColumn(int, const class QModelIndex &)
-func (this *QAbstractItemModel) InsertColumn(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Insertcolumn(args ...interface{}) (ret interface{}) {
   // insertColumn(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1981,12 +2178,16 @@ func (this *QAbstractItemModel) InsertColumn(args ...interface{}) (ret interface
 }
 
 // hasChildren(const class QModelIndex &)
-func (this *QAbstractItemModel) HasChildren(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Haschildren(args ...interface{}) (ret interface{}) {
   // hasChildren(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2013,7 +2214,7 @@ func (this *QAbstractItemModel) HasChildren(args ...interface{}) (ret interface{
 }
 
 // hasIndex(int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) HasIndex(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Hasindex(args ...interface{}) (ret interface{}) {
   // hasIndex(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2021,6 +2222,10 @@ func (this *QAbstractItemModel) HasIndex(args ...interface{}) (ret interface{}) 
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2051,7 +2256,7 @@ func (this *QAbstractItemModel) HasIndex(args ...interface{}) (ret interface{}) 
 }
 
 // setData(const class QModelIndex &, const class QVariant &, int)
-func (this *QAbstractItemModel) SetData(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Setdata(args ...interface{}) (ret interface{}) {
   // setData(const class QModelIndex &, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2059,6 +2264,10 @@ func (this *QAbstractItemModel) SetData(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
   vtys[0][1] = reflect.TypeOf(QVariant{}) // "const QVariant &"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2089,7 +2298,7 @@ func (this *QAbstractItemModel) SetData(args ...interface{}) (ret interface{}) {
 }
 
 // insertRows(int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) InsertRows(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) Insertrows(args ...interface{}) (ret interface{}) {
   // insertRows(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2097,6 +2306,10 @@ func (this *QAbstractItemModel) InsertRows(args ...interface{}) (ret interface{}
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2133,6 +2346,10 @@ func (this *QAbstractItemModel) Flags(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2159,6 +2376,10 @@ func (this *QAbstractListModel) Index(args ...interface{}) (ret interface{}) {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2189,11 +2410,15 @@ func (this *QAbstractListModel) Index(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QAbstractListModel) MetaObject(args ...interface{}) () {
+func (this *QAbstractListModel) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2210,15 +2435,16 @@ func (this *QAbstractListModel) MetaObject(args ...interface{}) () {
 }
 
 // QAbstractListModel(class QObject *)
-func GcfreeQAbstractListModel(this *QAbstractListModel) {
-  qtrt.UniverseFree(this)
-}
 func NewQAbstractListModel(args ...interface{}) *QAbstractListModel {
   // QAbstractListModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2231,9 +2457,7 @@ func NewQAbstractListModel(args ...interface{}) *QAbstractListModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QAbstractListModelC2EP7QObject(arg0)
-    this := &QAbstractListModel{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAbstractListModel)
-    return this
+    return &QAbstractListModel{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractListModel", "QAbstractListModel", args)
   }
@@ -2250,6 +2474,10 @@ func (this *QAbstractListModel) Sibling(args ...interface{}) (ret interface{}) {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2286,6 +2514,10 @@ func (this *QAbstractListModel) Flags(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2304,11 +2536,15 @@ func (this *QAbstractListModel) Flags(args ...interface{}) () {
 }
 
 // ~QAbstractListModel()
-func (this *QAbstractListModel) Free(args ...interface{}) () {
+func (this *QAbstractListModel) Freeqabstractlistmodel(args ...interface{}) () {
   // ~QAbstractListModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2316,10 +2552,7 @@ func (this *QAbstractListModel) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QAbstractListModelD0Ev
     // invoke: void ~QAbstractListModel()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN18QAbstractListModelD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN18QAbstractListModelD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractListModel", "~QAbstractListModel", args)
   }

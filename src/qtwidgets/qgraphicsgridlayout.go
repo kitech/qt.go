@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qgraphicsgridlayout.h
 // dst-file: /src/widgets/qgraphicsgridlayout.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -125,7 +124,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsGridLayout)=1
@@ -135,11 +133,15 @@ type QGraphicsGridLayout struct {
 }
 
 // columnCount()
-func (this *QGraphicsGridLayout) ColumnCount(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Columncount(args ...interface{}) (ret interface{}) {
   // columnCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -169,6 +171,10 @@ func (this *QGraphicsGridLayout) Invalidate(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -185,12 +191,16 @@ func (this *QGraphicsGridLayout) Invalidate(args ...interface{}) () {
 }
 
 // rowSpacing(int)
-func (this *QGraphicsGridLayout) RowSpacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Rowspacing(args ...interface{}) (ret interface{}) {
   // rowSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -217,13 +227,17 @@ func (this *QGraphicsGridLayout) RowSpacing(args ...interface{}) (ret interface{
 }
 
 // setRowFixedHeight(int, qreal)
-func (this *QGraphicsGridLayout) SetRowFixedHeight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowfixedheight(args ...interface{}) () {
   // setRowFixedHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -244,12 +258,16 @@ func (this *QGraphicsGridLayout) SetRowFixedHeight(args ...interface{}) () {
 }
 
 // columnAlignment(int)
-func (this *QGraphicsGridLayout) ColumnAlignment(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Columnalignment(args ...interface{}) () {
   // columnAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -268,12 +286,16 @@ func (this *QGraphicsGridLayout) ColumnAlignment(args ...interface{}) () {
 }
 
 // removeAt(int)
-func (this *QGraphicsGridLayout) RemoveAt(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Removeat(args ...interface{}) () {
   // removeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -292,13 +314,17 @@ func (this *QGraphicsGridLayout) RemoveAt(args ...interface{}) () {
 }
 
 // setColumnSpacing(int, qreal)
-func (this *QGraphicsGridLayout) SetColumnSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnspacing(args ...interface{}) () {
   // setColumnSpacing(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -319,11 +345,15 @@ func (this *QGraphicsGridLayout) SetColumnSpacing(args ...interface{}) () {
 }
 
 // verticalSpacing()
-func (this *QGraphicsGridLayout) VerticalSpacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Verticalspacing(args ...interface{}) (ret interface{}) {
   // verticalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -348,12 +378,16 @@ func (this *QGraphicsGridLayout) VerticalSpacing(args ...interface{}) (ret inter
 }
 
 // rowMaximumHeight(int)
-func (this *QGraphicsGridLayout) RowMaximumHeight(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Rowmaximumheight(args ...interface{}) (ret interface{}) {
   // rowMaximumHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -380,12 +414,16 @@ func (this *QGraphicsGridLayout) RowMaximumHeight(args ...interface{}) (ret inte
 }
 
 // rowPreferredHeight(int)
-func (this *QGraphicsGridLayout) RowPreferredHeight(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Rowpreferredheight(args ...interface{}) (ret interface{}) {
   // rowPreferredHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -412,12 +450,16 @@ func (this *QGraphicsGridLayout) RowPreferredHeight(args ...interface{}) (ret in
 }
 
 // columnMaximumWidth(int)
-func (this *QGraphicsGridLayout) ColumnMaximumWidth(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Columnmaximumwidth(args ...interface{}) (ret interface{}) {
   // columnMaximumWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -444,15 +486,16 @@ func (this *QGraphicsGridLayout) ColumnMaximumWidth(args ...interface{}) (ret in
 }
 
 // QGraphicsGridLayout(class QGraphicsLayoutItem *)
-func GcfreeQGraphicsGridLayout(this *QGraphicsGridLayout) {
-  qtrt.UniverseFree(this)
-}
 func NewQGraphicsGridLayout(args ...interface{}) *QGraphicsGridLayout {
   // QGraphicsGridLayout(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsLayoutItem{}) // "QGraphicsLayoutItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -465,9 +508,7 @@ func NewQGraphicsGridLayout(args ...interface{}) *QGraphicsGridLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QGraphicsGridLayoutC2EP19QGraphicsLayoutItem(arg0)
-    this := &QGraphicsGridLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGraphicsGridLayout)
-    return this
+    return &QGraphicsGridLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "QGraphicsGridLayout", args)
   }
@@ -476,13 +517,17 @@ func NewQGraphicsGridLayout(args ...interface{}) *QGraphicsGridLayout {
 }
 
 // setRowStretchFactor(int, int)
-func (this *QGraphicsGridLayout) SetRowStretchFactor(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowstretchfactor(args ...interface{}) () {
   // setRowStretchFactor(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -509,6 +554,10 @@ func (this *QGraphicsGridLayout) Alignment(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsLayoutItem{}) // "QGraphicsLayoutItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -527,12 +576,16 @@ func (this *QGraphicsGridLayout) Alignment(args ...interface{}) () {
 }
 
 // rowAlignment(int)
-func (this *QGraphicsGridLayout) RowAlignment(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Rowalignment(args ...interface{}) () {
   // rowAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -551,12 +604,16 @@ func (this *QGraphicsGridLayout) RowAlignment(args ...interface{}) () {
 }
 
 // setSpacing(qreal)
-func (this *QGraphicsGridLayout) SetSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setspacing(args ...interface{}) () {
   // setSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -575,12 +632,16 @@ func (this *QGraphicsGridLayout) SetSpacing(args ...interface{}) () {
 }
 
 // setGeometry(const class QRectF &)
-func (this *QGraphicsGridLayout) SetGeometry(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setgeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -599,13 +660,17 @@ func (this *QGraphicsGridLayout) SetGeometry(args ...interface{}) () {
 }
 
 // setColumnStretchFactor(int, int)
-func (this *QGraphicsGridLayout) SetColumnStretchFactor(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnstretchfactor(args ...interface{}) () {
   // setColumnStretchFactor(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -626,12 +691,16 @@ func (this *QGraphicsGridLayout) SetColumnStretchFactor(args ...interface{}) () 
 }
 
 // setVerticalSpacing(qreal)
-func (this *QGraphicsGridLayout) SetVerticalSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setverticalspacing(args ...interface{}) () {
   // setVerticalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -650,12 +719,16 @@ func (this *QGraphicsGridLayout) SetVerticalSpacing(args ...interface{}) () {
 }
 
 // rowMinimumHeight(int)
-func (this *QGraphicsGridLayout) RowMinimumHeight(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Rowminimumheight(args ...interface{}) (ret interface{}) {
   // rowMinimumHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -682,11 +755,15 @@ func (this *QGraphicsGridLayout) RowMinimumHeight(args ...interface{}) (ret inte
 }
 
 // horizontalSpacing()
-func (this *QGraphicsGridLayout) HorizontalSpacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Horizontalspacing(args ...interface{}) (ret interface{}) {
   // horizontalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -711,12 +788,16 @@ func (this *QGraphicsGridLayout) HorizontalSpacing(args ...interface{}) (ret int
 }
 
 // rowStretchFactor(int)
-func (this *QGraphicsGridLayout) RowStretchFactor(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Rowstretchfactor(args ...interface{}) (ret interface{}) {
   // rowStretchFactor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -743,13 +824,17 @@ func (this *QGraphicsGridLayout) RowStretchFactor(args ...interface{}) (ret inte
 }
 
 // setColumnPreferredWidth(int, qreal)
-func (this *QGraphicsGridLayout) SetColumnPreferredWidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnpreferredwidth(args ...interface{}) () {
   // setColumnPreferredWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -770,12 +855,16 @@ func (this *QGraphicsGridLayout) SetColumnPreferredWidth(args ...interface{}) ()
 }
 
 // columnSpacing(int)
-func (this *QGraphicsGridLayout) ColumnSpacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Columnspacing(args ...interface{}) (ret interface{}) {
   // columnSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -802,13 +891,17 @@ func (this *QGraphicsGridLayout) ColumnSpacing(args ...interface{}) (ret interfa
 }
 
 // setColumnMinimumWidth(int, qreal)
-func (this *QGraphicsGridLayout) SetColumnMinimumWidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnminimumwidth(args ...interface{}) () {
   // setColumnMinimumWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -829,12 +922,16 @@ func (this *QGraphicsGridLayout) SetColumnMinimumWidth(args ...interface{}) () {
 }
 
 // columnStretchFactor(int)
-func (this *QGraphicsGridLayout) ColumnStretchFactor(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Columnstretchfactor(args ...interface{}) (ret interface{}) {
   // columnStretchFactor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -861,13 +958,17 @@ func (this *QGraphicsGridLayout) ColumnStretchFactor(args ...interface{}) (ret i
 }
 
 // setRowSpacing(int, qreal)
-func (this *QGraphicsGridLayout) SetRowSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowspacing(args ...interface{}) () {
   // setRowSpacing(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -888,11 +989,15 @@ func (this *QGraphicsGridLayout) SetRowSpacing(args ...interface{}) () {
 }
 
 // rowCount()
-func (this *QGraphicsGridLayout) RowCount(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Rowcount(args ...interface{}) (ret interface{}) {
   // rowCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -917,12 +1022,16 @@ func (this *QGraphicsGridLayout) RowCount(args ...interface{}) (ret interface{})
 }
 
 // removeItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsGridLayout) RemoveItem(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Removeitem(args ...interface{}) () {
   // removeItem(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsLayoutItem{}) // "QGraphicsLayoutItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -946,6 +1055,10 @@ func (this *QGraphicsGridLayout) Count(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -970,11 +1083,15 @@ func (this *QGraphicsGridLayout) Count(args ...interface{}) (ret interface{}) {
 }
 
 // ~QGraphicsGridLayout()
-func (this *QGraphicsGridLayout) Free(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Freeqgraphicsgridlayout(args ...interface{}) () {
   // ~QGraphicsGridLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -982,10 +1099,7 @@ func (this *QGraphicsGridLayout) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QGraphicsGridLayoutD0Ev
     // invoke: void ~QGraphicsGridLayout()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QGraphicsGridLayoutD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QGraphicsGridLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "~QGraphicsGridLayout", args)
   }
@@ -994,13 +1108,17 @@ func (this *QGraphicsGridLayout) Free(args ...interface{}) () {
 }
 
 // setColumnFixedWidth(int, qreal)
-func (this *QGraphicsGridLayout) SetColumnFixedWidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnfixedwidth(args ...interface{}) () {
   // setColumnFixedWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1021,7 +1139,7 @@ func (this *QGraphicsGridLayout) SetColumnFixedWidth(args ...interface{}) () {
 }
 
 // itemAt(int, int)
-func (this *QGraphicsGridLayout) ItemAt(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Itemat(args ...interface{}) () {
   // itemAt(int, int)
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1031,6 +1149,10 @@ func (this *QGraphicsGridLayout) ItemAt(args ...interface{}) () {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1057,12 +1179,16 @@ func (this *QGraphicsGridLayout) ItemAt(args ...interface{}) () {
 }
 
 // columnMinimumWidth(int)
-func (this *QGraphicsGridLayout) ColumnMinimumWidth(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Columnminimumwidth(args ...interface{}) (ret interface{}) {
   // columnMinimumWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1089,12 +1215,16 @@ func (this *QGraphicsGridLayout) ColumnMinimumWidth(args ...interface{}) (ret in
 }
 
 // setHorizontalSpacing(qreal)
-func (this *QGraphicsGridLayout) SetHorizontalSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Sethorizontalspacing(args ...interface{}) () {
   // setHorizontalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1113,13 +1243,17 @@ func (this *QGraphicsGridLayout) SetHorizontalSpacing(args ...interface{}) () {
 }
 
 // setRowMaximumHeight(int, qreal)
-func (this *QGraphicsGridLayout) SetRowMaximumHeight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowmaximumheight(args ...interface{}) () {
   // setRowMaximumHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1140,12 +1274,16 @@ func (this *QGraphicsGridLayout) SetRowMaximumHeight(args ...interface{}) () {
 }
 
 // columnPreferredWidth(int)
-func (this *QGraphicsGridLayout) ColumnPreferredWidth(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) Columnpreferredwidth(args ...interface{}) (ret interface{}) {
   // columnPreferredWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1172,13 +1310,17 @@ func (this *QGraphicsGridLayout) ColumnPreferredWidth(args ...interface{}) (ret 
 }
 
 // setColumnMaximumWidth(int, qreal)
-func (this *QGraphicsGridLayout) SetColumnMaximumWidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnmaximumwidth(args ...interface{}) () {
   // setColumnMaximumWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1199,13 +1341,17 @@ func (this *QGraphicsGridLayout) SetColumnMaximumWidth(args ...interface{}) () {
 }
 
 // setRowMinimumHeight(int, qreal)
-func (this *QGraphicsGridLayout) SetRowMinimumHeight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowminimumheight(args ...interface{}) () {
   // setRowMinimumHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1226,13 +1372,17 @@ func (this *QGraphicsGridLayout) SetRowMinimumHeight(args ...interface{}) () {
 }
 
 // setRowPreferredHeight(int, qreal)
-func (this *QGraphicsGridLayout) SetRowPreferredHeight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowpreferredheight(args ...interface{}) () {
   // setRowPreferredHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qpropertyanimation.h
 // dst-file: /src/core/qpropertyanimation.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -55,7 +54,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPropertyAnimation)=1
@@ -65,11 +63,15 @@ type QPropertyAnimation struct {
 }
 
 // ~QPropertyAnimation()
-func (this *QPropertyAnimation) Free(args ...interface{}) () {
+func (this *QPropertyAnimation) Freeqpropertyanimation(args ...interface{}) () {
   // ~QPropertyAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -77,10 +79,7 @@ func (this *QPropertyAnimation) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QPropertyAnimationD0Ev
     // invoke: void ~QPropertyAnimation()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN18QPropertyAnimationD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN18QPropertyAnimationD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "~QPropertyAnimation", args)
   }
@@ -89,11 +88,15 @@ func (this *QPropertyAnimation) Free(args ...interface{}) () {
 }
 
 // propertyName()
-func (this *QPropertyAnimation) PropertyName(args ...interface{}) (ret interface{}) {
+func (this *QPropertyAnimation) Propertyname(args ...interface{}) (ret interface{}) {
   // propertyName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -118,9 +121,6 @@ func (this *QPropertyAnimation) PropertyName(args ...interface{}) (ret interface
 }
 
 // QPropertyAnimation(class QObject *)
-func GcfreeQPropertyAnimation(this *QPropertyAnimation) {
-  qtrt.UniverseFree(this)
-}
 func NewQPropertyAnimation(args ...interface{}) *QPropertyAnimation {
   // QPropertyAnimation(class QObject *)
   // QPropertyAnimation(class QObject *, const class QByteArray &, class QObject *)
@@ -132,6 +132,10 @@ func NewQPropertyAnimation(args ...interface{}) *QPropertyAnimation {
   vtys[1][0] = reflect.TypeOf(QObject{}) // "QObject *"
   vtys[1][1] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
   vtys[1][2] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -144,9 +148,7 @@ func NewQPropertyAnimation(args ...interface{}) *QPropertyAnimation {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QPropertyAnimationC2EP7QObject(arg0)
-    this := &QPropertyAnimation{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPropertyAnimation)
-    return this
+    return &QPropertyAnimation{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_
     // invoke: void QPropertyAnimation(class QObject *, const class QByteArray &, class QObject *)
@@ -159,9 +161,7 @@ func NewQPropertyAnimation(args ...interface{}) *QPropertyAnimation {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_(arg0, arg1, arg2)
-    this := &QPropertyAnimation{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPropertyAnimation)
-    return this
+    return &QPropertyAnimation{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "QPropertyAnimation", args)
   }
@@ -170,12 +170,16 @@ func NewQPropertyAnimation(args ...interface{}) *QPropertyAnimation {
 }
 
 // setTargetObject(class QObject *)
-func (this *QPropertyAnimation) SetTargetObject(args ...interface{}) () {
+func (this *QPropertyAnimation) Settargetobject(args ...interface{}) () {
   // setTargetObject(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -194,11 +198,15 @@ func (this *QPropertyAnimation) SetTargetObject(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QPropertyAnimation) MetaObject(args ...interface{}) () {
+func (this *QPropertyAnimation) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -215,12 +223,16 @@ func (this *QPropertyAnimation) MetaObject(args ...interface{}) () {
 }
 
 // setPropertyName(const class QByteArray &)
-func (this *QPropertyAnimation) SetPropertyName(args ...interface{}) () {
+func (this *QPropertyAnimation) Setpropertyname(args ...interface{}) () {
   // setPropertyName(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -239,11 +251,15 @@ func (this *QPropertyAnimation) SetPropertyName(args ...interface{}) () {
 }
 
 // targetObject()
-func (this *QPropertyAnimation) TargetObject(args ...interface{}) (ret interface{}) {
+func (this *QPropertyAnimation) Targetobject(args ...interface{}) (ret interface{}) {
   // targetObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

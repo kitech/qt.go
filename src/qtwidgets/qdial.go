@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qdial.h
 // dst-file: /src/widgets/qdial.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -67,7 +66,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDial)=1
@@ -77,12 +75,16 @@ type QDial struct {
 }
 
 // setNotchTarget(double)
-func (this *QDial) SetNotchTarget(args ...interface{}) () {
+func (this *QDial) Setnotchtarget(args ...interface{}) () {
   // setNotchTarget(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -101,11 +103,15 @@ func (this *QDial) SetNotchTarget(args ...interface{}) () {
 }
 
 // notchesVisible()
-func (this *QDial) NotchesVisible(args ...interface{}) (ret interface{}) {
+func (this *QDial) Notchesvisible(args ...interface{}) (ret interface{}) {
   // notchesVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -130,11 +136,15 @@ func (this *QDial) NotchesVisible(args ...interface{}) (ret interface{}) {
 }
 
 // ~QDial()
-func (this *QDial) Free(args ...interface{}) () {
+func (this *QDial) Freeqdial(args ...interface{}) () {
   // ~QDial()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -142,10 +152,7 @@ func (this *QDial) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QDialD0Ev
     // invoke: void ~QDial()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN5QDialD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN5QDialD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDial", "~QDial", args)
   }
@@ -154,15 +161,16 @@ func (this *QDial) Free(args ...interface{}) () {
 }
 
 // QDial(class QWidget *)
-func GcfreeQDial(this *QDial) {
-  qtrt.UniverseFree(this)
-}
 func NewQDial(args ...interface{}) *QDial {
   // QDial(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -175,9 +183,7 @@ func NewQDial(args ...interface{}) *QDial {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QDialC2EP7QWidget(arg0)
-    this := &QDial{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDial)
-    return this
+    return &QDial{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDial", "QDial", args)
   }
@@ -186,12 +192,16 @@ func NewQDial(args ...interface{}) *QDial {
 }
 
 // setWrapping(_Bool)
-func (this *QDial) SetWrapping(args ...interface{}) () {
+func (this *QDial) Setwrapping(args ...interface{}) () {
   // setWrapping(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -210,12 +220,16 @@ func (this *QDial) SetWrapping(args ...interface{}) () {
 }
 
 // setNotchesVisible(_Bool)
-func (this *QDial) SetNotchesVisible(args ...interface{}) () {
+func (this *QDial) Setnotchesvisible(args ...interface{}) () {
   // setNotchesVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -234,11 +248,15 @@ func (this *QDial) SetNotchesVisible(args ...interface{}) () {
 }
 
 // notchSize()
-func (this *QDial) NotchSize(args ...interface{}) (ret interface{}) {
+func (this *QDial) Notchsize(args ...interface{}) (ret interface{}) {
   // notchSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -268,6 +286,10 @@ func (this *QDial) Wrapping(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -292,11 +314,15 @@ func (this *QDial) Wrapping(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QDial) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QDial) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -321,11 +347,15 @@ func (this *QDial) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // notchTarget()
-func (this *QDial) NotchTarget(args ...interface{}) (ret interface{}) {
+func (this *QDial) Notchtarget(args ...interface{}) (ret interface{}) {
   // notchTarget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -350,11 +380,15 @@ func (this *QDial) NotchTarget(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QDial) MetaObject(args ...interface{}) () {
+func (this *QDial) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -371,11 +405,15 @@ func (this *QDial) MetaObject(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QDial) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QDial) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

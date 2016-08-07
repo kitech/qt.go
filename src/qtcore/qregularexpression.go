@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qregularexpression.h
 // dst-file: /src/core/qregularexpression.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -133,7 +132,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QRegularExpressionMatchIterator)=1
@@ -155,11 +153,15 @@ type QRegularExpressionMatch struct {
 }
 
 // peekNext()
-func (this *QRegularExpressionMatchIterator) PeekNext(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatchIterator) Peeknext(args ...interface{}) (ret interface{}) {
   // peekNext()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -184,11 +186,15 @@ func (this *QRegularExpressionMatchIterator) PeekNext(args ...interface{}) (ret 
 }
 
 // hasNext()
-func (this *QRegularExpressionMatchIterator) HasNext(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatchIterator) Hasnext(args ...interface{}) (ret interface{}) {
   // hasNext()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -213,11 +219,15 @@ func (this *QRegularExpressionMatchIterator) HasNext(args ...interface{}) (ret i
 }
 
 // isValid()
-func (this *QRegularExpressionMatchIterator) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatchIterator) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -242,11 +252,15 @@ func (this *QRegularExpressionMatchIterator) IsValid(args ...interface{}) (ret i
 }
 
 // regularExpression()
-func (this *QRegularExpressionMatchIterator) RegularExpression(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatchIterator) Regularexpression(args ...interface{}) (ret interface{}) {
   // regularExpression()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -276,6 +290,10 @@ func (this *QRegularExpressionMatchIterator) Next(args ...interface{}) (ret inte
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -306,6 +324,10 @@ func (this *QRegularExpressionMatchIterator) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegularExpressionMatchIterator{}) // "QRegularExpressionMatchIterator &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -324,11 +346,15 @@ func (this *QRegularExpressionMatchIterator) Swap(args ...interface{}) () {
 }
 
 // matchType()
-func (this *QRegularExpressionMatchIterator) MatchType(args ...interface{}) () {
+func (this *QRegularExpressionMatchIterator) Matchtype(args ...interface{}) () {
   // matchType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -345,11 +371,15 @@ func (this *QRegularExpressionMatchIterator) MatchType(args ...interface{}) () {
 }
 
 // matchOptions()
-func (this *QRegularExpressionMatchIterator) MatchOptions(args ...interface{}) () {
+func (this *QRegularExpressionMatchIterator) Matchoptions(args ...interface{}) () {
   // matchOptions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -366,11 +396,15 @@ func (this *QRegularExpressionMatchIterator) MatchOptions(args ...interface{}) (
 }
 
 // ~QRegularExpressionMatchIterator()
-func (this *QRegularExpressionMatchIterator) Free(args ...interface{}) () {
+func (this *QRegularExpressionMatchIterator) Freeqregularexpressionmatchiterator(args ...interface{}) () {
   // ~QRegularExpressionMatchIterator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -378,10 +412,7 @@ func (this *QRegularExpressionMatchIterator) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN31QRegularExpressionMatchIteratorD0Ev
     // invoke: void ~QRegularExpressionMatchIterator()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN31QRegularExpressionMatchIteratorD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN31QRegularExpressionMatchIteratorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "~QRegularExpressionMatchIterator", args)
   }
@@ -390,9 +421,6 @@ func (this *QRegularExpressionMatchIterator) Free(args ...interface{}) () {
 }
 
 // QRegularExpressionMatchIterator(const class QRegularExpressionMatchIterator &)
-func GcfreeQRegularExpressionMatchIterator(this *QRegularExpressionMatchIterator) {
-  qtrt.UniverseFree(this)
-}
 func NewQRegularExpressionMatchIterator(args ...interface{}) *QRegularExpressionMatchIterator {
   // QRegularExpressionMatchIterator(const class QRegularExpressionMatchIterator &)
   // QRegularExpressionMatchIterator()
@@ -401,6 +429,10 @@ func NewQRegularExpressionMatchIterator(args ...interface{}) *QRegularExpression
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegularExpressionMatchIterator{}) // "const QRegularExpressionMatchIterator &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -413,18 +445,14 @@ func NewQRegularExpressionMatchIterator(args ...interface{}) *QRegularExpression
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN31QRegularExpressionMatchIteratorC2ERKS_(arg0)
-    this := &QRegularExpressionMatchIterator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegularExpressionMatchIterator)
-    return this
+    return &QRegularExpressionMatchIterator{Qclsinst:qthis}
   case 1:
     // invoke: _ZN31QRegularExpressionMatchIteratorC1Ev
     // invoke: void QRegularExpressionMatchIterator()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN31QRegularExpressionMatchIteratorC2Ev()
-    this := &QRegularExpressionMatchIterator{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegularExpressionMatchIterator)
-    return this
+    return &QRegularExpressionMatchIterator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "QRegularExpressionMatchIterator", args)
   }
@@ -433,11 +461,15 @@ func NewQRegularExpressionMatchIterator(args ...interface{}) *QRegularExpression
 }
 
 // isValid()
-func (this *QRegularExpression) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpression) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -462,11 +494,15 @@ func (this *QRegularExpression) IsValid(args ...interface{}) (ret interface{}) {
 }
 
 // errorString()
-func (this *QRegularExpression) ErrorString(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpression) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -496,6 +532,10 @@ func (this *QRegularExpression) Pattern(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -520,9 +560,6 @@ func (this *QRegularExpression) Pattern(args ...interface{}) (ret interface{}) {
 }
 
 // QRegularExpression(const class QRegularExpression &)
-func GcfreeQRegularExpression(this *QRegularExpression) {
-  qtrt.UniverseFree(this)
-}
 func NewQRegularExpression(args ...interface{}) *QRegularExpression {
   // QRegularExpression(const class QRegularExpression &)
   // QRegularExpression()
@@ -531,6 +568,10 @@ func NewQRegularExpression(args ...interface{}) *QRegularExpression {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegularExpression{}) // "const QRegularExpression &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -543,18 +584,14 @@ func NewQRegularExpression(args ...interface{}) *QRegularExpression {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QRegularExpressionC2ERKS_(arg0)
-    this := &QRegularExpression{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegularExpression)
-    return this
+    return &QRegularExpression{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QRegularExpressionC1Ev
     // invoke: void QRegularExpression()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QRegularExpressionC2Ev()
-    this := &QRegularExpression{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegularExpression)
-    return this
+    return &QRegularExpression{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegularExpression", "QRegularExpression", args)
   }
@@ -563,11 +600,15 @@ func NewQRegularExpression(args ...interface{}) *QRegularExpression {
 }
 
 // ~QRegularExpression()
-func (this *QRegularExpression) Free(args ...interface{}) () {
+func (this *QRegularExpression) Freeqregularexpression(args ...interface{}) () {
   // ~QRegularExpression()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -575,10 +616,7 @@ func (this *QRegularExpression) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QRegularExpressionD0Ev
     // invoke: void ~QRegularExpression()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN18QRegularExpressionD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN18QRegularExpressionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpression", "~QRegularExpression", args)
   }
@@ -587,12 +625,16 @@ func (this *QRegularExpression) Free(args ...interface{}) () {
 }
 
 // setPattern(const class QString &)
-func (this *QRegularExpression) SetPattern(args ...interface{}) () {
+func (this *QRegularExpression) Setpattern(args ...interface{}) () {
   // setPattern(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -611,11 +653,15 @@ func (this *QRegularExpression) SetPattern(args ...interface{}) () {
 }
 
 // patternErrorOffset()
-func (this *QRegularExpression) PatternErrorOffset(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpression) Patternerroroffset(args ...interface{}) (ret interface{}) {
   // patternErrorOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -640,11 +686,15 @@ func (this *QRegularExpression) PatternErrorOffset(args ...interface{}) (ret int
 }
 
 // patternOptions()
-func (this *QRegularExpression) PatternOptions(args ...interface{}) () {
+func (this *QRegularExpression) Patternoptions(args ...interface{}) () {
   // patternOptions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -667,6 +717,10 @@ func (this *QRegularExpression) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegularExpression{}) // "QRegularExpression &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -685,12 +739,16 @@ func (this *QRegularExpression) Swap(args ...interface{}) () {
 }
 
 // escape(const class QString &)
-func (this *QRegularExpression) Escape_s(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpression) Escape_S(args ...interface{}) (ret interface{}) {
   // escape(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -717,11 +775,15 @@ func (this *QRegularExpression) Escape_s(args ...interface{}) (ret interface{}) 
 }
 
 // namedCaptureGroups()
-func (this *QRegularExpression) NamedCaptureGroups(args ...interface{}) () {
+func (this *QRegularExpression) Namedcapturegroups(args ...interface{}) () {
   // namedCaptureGroups()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -743,6 +805,10 @@ func (this *QRegularExpression) Optimize(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -759,11 +825,15 @@ func (this *QRegularExpression) Optimize(args ...interface{}) () {
 }
 
 // captureCount()
-func (this *QRegularExpression) CaptureCount(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpression) Capturecount(args ...interface{}) (ret interface{}) {
   // captureCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -788,11 +858,15 @@ func (this *QRegularExpression) CaptureCount(args ...interface{}) (ret interface
 }
 
 // hasPartialMatch()
-func (this *QRegularExpressionMatch) HasPartialMatch(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatch) Haspartialmatch(args ...interface{}) (ret interface{}) {
   // hasPartialMatch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -817,11 +891,15 @@ func (this *QRegularExpressionMatch) HasPartialMatch(args ...interface{}) (ret i
 }
 
 // regularExpression()
-func (this *QRegularExpressionMatch) RegularExpression(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatch) Regularexpression(args ...interface{}) (ret interface{}) {
   // regularExpression()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -846,9 +924,6 @@ func (this *QRegularExpressionMatch) RegularExpression(args ...interface{}) (ret
 }
 
 // QRegularExpressionMatch(const class QRegularExpressionMatch &)
-func GcfreeQRegularExpressionMatch(this *QRegularExpressionMatch) {
-  qtrt.UniverseFree(this)
-}
 func NewQRegularExpressionMatch(args ...interface{}) *QRegularExpressionMatch {
   // QRegularExpressionMatch(const class QRegularExpressionMatch &)
   // QRegularExpressionMatch()
@@ -857,6 +932,10 @@ func NewQRegularExpressionMatch(args ...interface{}) *QRegularExpressionMatch {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegularExpressionMatch{}) // "const QRegularExpressionMatch &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -869,18 +948,14 @@ func NewQRegularExpressionMatch(args ...interface{}) *QRegularExpressionMatch {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QRegularExpressionMatchC2ERKS_(arg0)
-    this := &QRegularExpressionMatch{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegularExpressionMatch)
-    return this
+    return &QRegularExpressionMatch{Qclsinst:qthis}
   case 1:
     // invoke: _ZN23QRegularExpressionMatchC1Ev
     // invoke: void QRegularExpressionMatch()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QRegularExpressionMatchC2Ev()
-    this := &QRegularExpressionMatch{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegularExpressionMatch)
-    return this
+    return &QRegularExpressionMatch{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "QRegularExpressionMatch", args)
   }
@@ -889,11 +964,15 @@ func NewQRegularExpressionMatch(args ...interface{}) *QRegularExpressionMatch {
 }
 
 // capturedTexts()
-func (this *QRegularExpressionMatch) CapturedTexts(args ...interface{}) () {
+func (this *QRegularExpressionMatch) Capturedtexts(args ...interface{}) () {
   // capturedTexts()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -910,11 +989,15 @@ func (this *QRegularExpressionMatch) CapturedTexts(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QRegularExpressionMatch) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatch) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -939,11 +1022,15 @@ func (this *QRegularExpressionMatch) IsValid(args ...interface{}) (ret interface
 }
 
 // hasMatch()
-func (this *QRegularExpressionMatch) HasMatch(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatch) Hasmatch(args ...interface{}) (ret interface{}) {
   // hasMatch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -968,11 +1055,15 @@ func (this *QRegularExpressionMatch) HasMatch(args ...interface{}) (ret interfac
 }
 
 // ~QRegularExpressionMatch()
-func (this *QRegularExpressionMatch) Free(args ...interface{}) () {
+func (this *QRegularExpressionMatch) Freeqregularexpressionmatch(args ...interface{}) () {
   // ~QRegularExpressionMatch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -980,10 +1071,7 @@ func (this *QRegularExpressionMatch) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QRegularExpressionMatchD0Ev
     // invoke: void ~QRegularExpressionMatch()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN23QRegularExpressionMatchD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN23QRegularExpressionMatchD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "~QRegularExpressionMatch", args)
   }
@@ -992,11 +1080,15 @@ func (this *QRegularExpressionMatch) Free(args ...interface{}) () {
 }
 
 // matchOptions()
-func (this *QRegularExpressionMatch) MatchOptions(args ...interface{}) () {
+func (this *QRegularExpressionMatch) Matchoptions(args ...interface{}) () {
   // matchOptions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1013,7 +1105,7 @@ func (this *QRegularExpressionMatch) MatchOptions(args ...interface{}) () {
 }
 
 // capturedStart(const class QString &)
-func (this *QRegularExpressionMatch) CapturedStart(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatch) Capturedstart(args ...interface{}) (ret interface{}) {
   // capturedStart(const class QString &)
   // capturedStart(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1022,6 +1114,10 @@ func (this *QRegularExpressionMatch) CapturedStart(args ...interface{}) (ret int
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1062,7 +1158,7 @@ func (this *QRegularExpressionMatch) CapturedStart(args ...interface{}) (ret int
 }
 
 // capturedRef(int)
-func (this *QRegularExpressionMatch) CapturedRef(args ...interface{}) () {
+func (this *QRegularExpressionMatch) Capturedref(args ...interface{}) () {
   // capturedRef(int)
   // capturedRef(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1071,6 +1167,10 @@ func (this *QRegularExpressionMatch) CapturedRef(args ...interface{}) () {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1095,11 +1195,15 @@ func (this *QRegularExpressionMatch) CapturedRef(args ...interface{}) () {
 }
 
 // lastCapturedIndex()
-func (this *QRegularExpressionMatch) LastCapturedIndex(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatch) Lastcapturedindex(args ...interface{}) (ret interface{}) {
   // lastCapturedIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1133,6 +1237,10 @@ func (this *QRegularExpressionMatch) Captured(args ...interface{}) (ret interfac
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1173,11 +1281,15 @@ func (this *QRegularExpressionMatch) Captured(args ...interface{}) (ret interfac
 }
 
 // matchType()
-func (this *QRegularExpressionMatch) MatchType(args ...interface{}) () {
+func (this *QRegularExpressionMatch) Matchtype(args ...interface{}) () {
   // matchType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1194,7 +1306,7 @@ func (this *QRegularExpressionMatch) MatchType(args ...interface{}) () {
 }
 
 // capturedLength(int)
-func (this *QRegularExpressionMatch) CapturedLength(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatch) Capturedlength(args ...interface{}) (ret interface{}) {
   // capturedLength(int)
   // capturedLength(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1203,6 +1315,10 @@ func (this *QRegularExpressionMatch) CapturedLength(args ...interface{}) (ret in
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1243,7 +1359,7 @@ func (this *QRegularExpressionMatch) CapturedLength(args ...interface{}) (ret in
 }
 
 // capturedEnd(const class QString &)
-func (this *QRegularExpressionMatch) CapturedEnd(args ...interface{}) (ret interface{}) {
+func (this *QRegularExpressionMatch) Capturedend(args ...interface{}) (ret interface{}) {
   // capturedEnd(const class QString &)
   // capturedEnd(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1252,6 +1368,10 @@ func (this *QRegularExpressionMatch) CapturedEnd(args ...interface{}) (ret inter
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1298,6 +1418,10 @@ func (this *QRegularExpressionMatch) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegularExpressionMatch{}) // "QRegularExpressionMatch &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

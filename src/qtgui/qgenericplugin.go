@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qgenericplugin.h
 // dst-file: /src/gui/qgenericplugin.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -47,7 +46,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGenericPlugin)=1
@@ -57,11 +55,15 @@ type QGenericPlugin struct {
 }
 
 // metaObject()
-func (this *QGenericPlugin) MetaObject(args ...interface{}) () {
+func (this *QGenericPlugin) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -78,15 +80,16 @@ func (this *QGenericPlugin) MetaObject(args ...interface{}) () {
 }
 
 // QGenericPlugin(class QObject *)
-func GcfreeQGenericPlugin(this *QGenericPlugin) {
-  qtrt.UniverseFree(this)
-}
 func NewQGenericPlugin(args ...interface{}) *QGenericPlugin {
   // QGenericPlugin(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -99,9 +102,7 @@ func NewQGenericPlugin(args ...interface{}) *QGenericPlugin {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QGenericPluginC2EP7QObject(arg0)
-    this := &QGenericPlugin{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGenericPlugin)
-    return this
+    return &QGenericPlugin{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGenericPlugin", "QGenericPlugin", args)
   }
@@ -110,11 +111,15 @@ func NewQGenericPlugin(args ...interface{}) *QGenericPlugin {
 }
 
 // ~QGenericPlugin()
-func (this *QGenericPlugin) Free(args ...interface{}) () {
+func (this *QGenericPlugin) Freeqgenericplugin(args ...interface{}) () {
   // ~QGenericPlugin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -122,10 +127,7 @@ func (this *QGenericPlugin) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QGenericPluginD0Ev
     // invoke: void ~QGenericPlugin()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN14QGenericPluginD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN14QGenericPluginD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGenericPlugin", "~QGenericPlugin", args)
   }

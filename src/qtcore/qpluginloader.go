@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qpluginloader.h
 // dst-file: /src/core/qpluginloader.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -69,7 +68,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPluginLoader)=1
@@ -84,6 +82,10 @@ func (this *QPluginLoader) Load(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -108,11 +110,15 @@ func (this *QPluginLoader) Load(args ...interface{}) (ret interface{}) {
 }
 
 // errorString()
-func (this *QPluginLoader) ErrorString(args ...interface{}) (ret interface{}) {
+func (this *QPluginLoader) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -142,6 +148,10 @@ func (this *QPluginLoader) Unload(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -166,9 +176,6 @@ func (this *QPluginLoader) Unload(args ...interface{}) (ret interface{}) {
 }
 
 // QPluginLoader(class QObject *)
-func GcfreeQPluginLoader(this *QPluginLoader) {
-  qtrt.UniverseFree(this)
-}
 func NewQPluginLoader(args ...interface{}) *QPluginLoader {
   // QPluginLoader(class QObject *)
   // QPluginLoader(const class QString &, class QObject *)
@@ -179,6 +186,10 @@ func NewQPluginLoader(args ...interface{}) *QPluginLoader {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1][1] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -191,9 +202,7 @@ func NewQPluginLoader(args ...interface{}) *QPluginLoader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QPluginLoaderC2EP7QObject(arg0)
-    this := &QPluginLoader{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPluginLoader)
-    return this
+    return &QPluginLoader{Qclsinst:qthis}
   case 1:
     // invoke: _ZN13QPluginLoaderC1ERK7QStringP7QObject
     // invoke: void QPluginLoader(const class QString &, class QObject *)
@@ -204,9 +213,7 @@ func NewQPluginLoader(args ...interface{}) *QPluginLoader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QPluginLoaderC2ERK7QStringP7QObject(arg0, arg1)
-    this := &QPluginLoader{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPluginLoader)
-    return this
+    return &QPluginLoader{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPluginLoader", "QPluginLoader", args)
   }
@@ -215,11 +222,15 @@ func NewQPluginLoader(args ...interface{}) *QPluginLoader {
 }
 
 // ~QPluginLoader()
-func (this *QPluginLoader) Free(args ...interface{}) () {
+func (this *QPluginLoader) Freeqpluginloader(args ...interface{}) () {
   // ~QPluginLoader()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -227,10 +238,7 @@ func (this *QPluginLoader) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QPluginLoaderD0Ev
     // invoke: void ~QPluginLoader()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QPluginLoaderD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QPluginLoaderD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "~QPluginLoader", args)
   }
@@ -239,12 +247,16 @@ func (this *QPluginLoader) Free(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QPluginLoader) SetFileName(args ...interface{}) () {
+func (this *QPluginLoader) Setfilename(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -263,11 +275,15 @@ func (this *QPluginLoader) SetFileName(args ...interface{}) () {
 }
 
 // isLoaded()
-func (this *QPluginLoader) IsLoaded(args ...interface{}) (ret interface{}) {
+func (this *QPluginLoader) Isloaded(args ...interface{}) (ret interface{}) {
   // isLoaded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -297,6 +313,10 @@ func (this *QPluginLoader) Instance(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -321,11 +341,15 @@ func (this *QPluginLoader) Instance(args ...interface{}) (ret interface{}) {
 }
 
 // fileName()
-func (this *QPluginLoader) FileName(args ...interface{}) (ret interface{}) {
+func (this *QPluginLoader) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -350,11 +374,15 @@ func (this *QPluginLoader) FileName(args ...interface{}) (ret interface{}) {
 }
 
 // loadHints()
-func (this *QPluginLoader) LoadHints(args ...interface{}) () {
+func (this *QPluginLoader) Loadhints(args ...interface{}) () {
   // loadHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -371,11 +399,15 @@ func (this *QPluginLoader) LoadHints(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QPluginLoader) MetaObject(args ...interface{}) () {
+func (this *QPluginLoader) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -392,11 +424,15 @@ func (this *QPluginLoader) MetaObject(args ...interface{}) () {
 }
 
 // metaData()
-func (this *QPluginLoader) MetaData(args ...interface{}) () {
+func (this *QPluginLoader) Metadata(args ...interface{}) () {
   // metaData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -413,11 +449,15 @@ func (this *QPluginLoader) MetaData(args ...interface{}) () {
 }
 
 // staticInstances()
-func (this *QPluginLoader) StaticInstances_s(args ...interface{}) () {
+func (this *QPluginLoader) Staticinstances_S(args ...interface{}) () {
   // staticInstances()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -434,11 +474,15 @@ func (this *QPluginLoader) StaticInstances_s(args ...interface{}) () {
 }
 
 // staticPlugins()
-func (this *QPluginLoader) StaticPlugins_s(args ...interface{}) () {
+func (this *QPluginLoader) Staticplugins_S(args ...interface{}) () {
   // staticPlugins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

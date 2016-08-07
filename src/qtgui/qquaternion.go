@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qquaternion.h
 // dst-file: /src/gui/qquaternion.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -125,7 +124,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QQuaternion)=16
@@ -135,13 +133,17 @@ type QQuaternion struct {
 }
 
 // rotationTo(const class QVector3D &, const class QVector3D &)
-func (this *QQuaternion) RotationTo_s(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Rotationto_S(args ...interface{}) (ret interface{}) {
   // rotationTo(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[0][1] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -170,13 +172,17 @@ func (this *QQuaternion) RotationTo_s(args ...interface{}) (ret interface{}) {
 }
 
 // fromDirection(const class QVector3D &, const class QVector3D &)
-func (this *QQuaternion) FromDirection_s(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Fromdirection_S(args ...interface{}) (ret interface{}) {
   // fromDirection(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[0][1] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -205,11 +211,15 @@ func (this *QQuaternion) FromDirection_s(args ...interface{}) (ret interface{}) 
 }
 
 // toVector4D()
-func (this *QQuaternion) ToVector4D(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Tovector4D(args ...interface{}) (ret interface{}) {
   // toVector4D()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -234,9 +244,6 @@ func (this *QQuaternion) ToVector4D(args ...interface{}) (ret interface{}) {
 }
 
 // QQuaternion(float, float, float, float)
-func GcfreeQQuaternion(this *QQuaternion) {
-  qtrt.UniverseFree(this)
-}
 func NewQQuaternion(args ...interface{}) *QQuaternion {
   // QQuaternion(float, float, float, float)
   // QQuaternion(const class QVector4D &)
@@ -255,6 +262,10 @@ func NewQQuaternion(args ...interface{}) *QQuaternion {
   vtys[2][0] = qtrt.FloatTy(false) // "float"
   vtys[2][1] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[3] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -273,9 +284,7 @@ func NewQQuaternion(args ...interface{}) *QQuaternion {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QQuaternionC2Effff(arg0, arg1, arg2, arg3)
-    this := &QQuaternion{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQQuaternion)
-    return this
+    return &QQuaternion{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QQuaternionC1ERK9QVector4D
     // invoke: void QQuaternion(const class QVector4D &)
@@ -284,9 +293,7 @@ func NewQQuaternion(args ...interface{}) *QQuaternion {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QQuaternionC2ERK9QVector4D(arg0)
-    this := &QQuaternion{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQQuaternion)
-    return this
+    return &QQuaternion{Qclsinst:qthis}
   case 2:
     // invoke: _ZN11QQuaternionC1EfRK9QVector3D
     // invoke: void QQuaternion(float, const class QVector3D &)
@@ -297,18 +304,14 @@ func NewQQuaternion(args ...interface{}) *QQuaternion {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QQuaternionC2EfRK9QVector3D(arg0, arg1)
-    this := &QQuaternion{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQQuaternion)
-    return this
+    return &QQuaternion{Qclsinst:qthis}
   case 3:
     // invoke: _ZN11QQuaternionC1Ev
     // invoke: void QQuaternion()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QQuaternionC2Ev()
-    this := &QQuaternion{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQQuaternion)
-    return this
+    return &QQuaternion{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QQuaternion", "QQuaternion", args)
   }
@@ -317,12 +320,16 @@ func NewQQuaternion(args ...interface{}) *QQuaternion {
 }
 
 // rotatedVector(const class QVector3D &)
-func (this *QQuaternion) RotatedVector(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Rotatedvector(args ...interface{}) (ret interface{}) {
   // rotatedVector(const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -354,6 +361,10 @@ func (this *QQuaternion) Inverted(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -383,6 +394,10 @@ func (this *QQuaternion) Scalar(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -412,6 +427,10 @@ func (this *QQuaternion) Conjugate(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -436,13 +455,17 @@ func (this *QQuaternion) Conjugate(args ...interface{}) (ret interface{}) {
 }
 
 // dotProduct(const class QQuaternion &, const class QQuaternion &)
-func (this *QQuaternion) DotProduct_s(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Dotproduct_S(args ...interface{}) (ret interface{}) {
   // dotProduct(const class QQuaternion &, const class QQuaternion &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QQuaternion{}) // "const QQuaternion &"
   vtys[0][1] = reflect.TypeOf(QQuaternion{}) // "const QQuaternion &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -471,7 +494,7 @@ func (this *QQuaternion) DotProduct_s(args ...interface{}) (ret interface{}) {
 }
 
 // getAxes(class QVector3D *, class QVector3D *, class QVector3D *)
-func (this *QQuaternion) GetAxes(args ...interface{}) () {
+func (this *QQuaternion) Getaxes(args ...interface{}) () {
   // getAxes(class QVector3D *, class QVector3D *, class QVector3D *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -479,6 +502,10 @@ func (this *QQuaternion) GetAxes(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QVector3D{}) // "QVector3D *"
   vtys[0][1] = reflect.TypeOf(QVector3D{}) // "QVector3D *"
   vtys[0][2] = reflect.TypeOf(QVector3D{}) // "QVector3D *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -506,6 +533,10 @@ func (this *QQuaternion) Normalize(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -522,7 +553,7 @@ func (this *QQuaternion) Normalize(args ...interface{}) () {
 }
 
 // slerp(const class QQuaternion &, const class QQuaternion &, float)
-func (this *QQuaternion) Slerp_s(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Slerp_S(args ...interface{}) (ret interface{}) {
   // slerp(const class QQuaternion &, const class QQuaternion &, float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -530,6 +561,10 @@ func (this *QQuaternion) Slerp_s(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QQuaternion{}) // "const QQuaternion &"
   vtys[0][1] = reflect.TypeOf(QQuaternion{}) // "const QQuaternion &"
   vtys[0][2] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -560,7 +595,7 @@ func (this *QQuaternion) Slerp_s(args ...interface{}) (ret interface{}) {
 }
 
 // setVector(const class QVector3D &)
-func (this *QQuaternion) SetVector(args ...interface{}) () {
+func (this *QQuaternion) Setvector(args ...interface{}) () {
   // setVector(const class QVector3D &)
   // setVector(float, float, float)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -571,6 +606,10 @@ func (this *QQuaternion) SetVector(args ...interface{}) () {
   vtys[1][0] = qtrt.FloatTy(false) // "float"
   vtys[1][1] = qtrt.FloatTy(false) // "float"
   vtys[1][2] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -599,7 +638,7 @@ func (this *QQuaternion) SetVector(args ...interface{}) () {
 }
 
 // fromAxisAndAngle(const class QVector3D &, float)
-func (this *QQuaternion) FromAxisAndAngle_s(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Fromaxisandangle_S(args ...interface{}) (ret interface{}) {
   // fromAxisAndAngle(const class QVector3D &, float)
   // fromAxisAndAngle(float, float, float, float)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -612,6 +651,10 @@ func (this *QQuaternion) FromAxisAndAngle_s(args ...interface{}) (ret interface{
   vtys[1][1] = qtrt.FloatTy(false) // "float"
   vtys[1][2] = qtrt.FloatTy(false) // "float"
   vtys[1][3] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -665,6 +708,10 @@ func (this *QQuaternion) Conjugated(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -689,7 +736,7 @@ func (this *QQuaternion) Conjugated(args ...interface{}) (ret interface{}) {
 }
 
 // getAxisAndAngle(float *, float *, float *, float *)
-func (this *QQuaternion) GetAxisAndAngle(args ...interface{}) () {
+func (this *QQuaternion) Getaxisandangle(args ...interface{}) () {
   // getAxisAndAngle(float *, float *, float *, float *)
   // getAxisAndAngle(class QVector3D *, float *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -702,6 +749,10 @@ func (this *QQuaternion) GetAxisAndAngle(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QVector3D{}) // "QVector3D *"
   vtys[1][1] = qtrt.FloatTy(true) // "float *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -734,7 +785,7 @@ func (this *QQuaternion) GetAxisAndAngle(args ...interface{}) () {
 }
 
 // fromEulerAngles(const class QVector3D &)
-func (this *QQuaternion) FromEulerAngles_s(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Fromeulerangles_S(args ...interface{}) (ret interface{}) {
   // fromEulerAngles(const class QVector3D &)
   // fromEulerAngles(float, float, float)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -745,6 +796,10 @@ func (this *QQuaternion) FromEulerAngles_s(args ...interface{}) (ret interface{}
   vtys[1][0] = qtrt.FloatTy(false) // "float"
   vtys[1][1] = qtrt.FloatTy(false) // "float"
   vtys[1][2] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -789,11 +844,15 @@ func (this *QQuaternion) FromEulerAngles_s(args ...interface{}) (ret interface{}
 }
 
 // lengthSquared()
-func (this *QQuaternion) LengthSquared(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Lengthsquared(args ...interface{}) (ret interface{}) {
   // lengthSquared()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -818,7 +877,7 @@ func (this *QQuaternion) LengthSquared(args ...interface{}) (ret interface{}) {
 }
 
 // nlerp(const class QQuaternion &, const class QQuaternion &, float)
-func (this *QQuaternion) Nlerp_s(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Nlerp_S(args ...interface{}) (ret interface{}) {
   // nlerp(const class QQuaternion &, const class QQuaternion &, float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -826,6 +885,10 @@ func (this *QQuaternion) Nlerp_s(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QQuaternion{}) // "const QQuaternion &"
   vtys[0][1] = reflect.TypeOf(QQuaternion{}) // "const QQuaternion &"
   vtys[0][2] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -861,6 +924,10 @@ func (this *QQuaternion) Normalized(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -890,6 +957,10 @@ func (this *QQuaternion) X(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -906,12 +977,16 @@ func (this *QQuaternion) X(args ...interface{}) () {
 }
 
 // setX(float)
-func (this *QQuaternion) SetX(args ...interface{}) () {
+func (this *QQuaternion) Setx(args ...interface{}) () {
   // setX(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -930,12 +1005,16 @@ func (this *QQuaternion) SetX(args ...interface{}) () {
 }
 
 // setY(float)
-func (this *QQuaternion) SetY(args ...interface{}) () {
+func (this *QQuaternion) Sety(args ...interface{}) () {
   // setY(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -954,12 +1033,16 @@ func (this *QQuaternion) SetY(args ...interface{}) () {
 }
 
 // setZ(float)
-func (this *QQuaternion) SetZ(args ...interface{}) () {
+func (this *QQuaternion) Setz(args ...interface{}) () {
   // setZ(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -978,7 +1061,7 @@ func (this *QQuaternion) SetZ(args ...interface{}) () {
 }
 
 // getEulerAngles(float *, float *, float *)
-func (this *QQuaternion) GetEulerAngles(args ...interface{}) () {
+func (this *QQuaternion) Geteulerangles(args ...interface{}) () {
   // getEulerAngles(float *, float *, float *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -986,6 +1069,10 @@ func (this *QQuaternion) GetEulerAngles(args ...interface{}) () {
   vtys[0][0] = qtrt.FloatTy(true) // "float *"
   vtys[0][1] = qtrt.FloatTy(true) // "float *"
   vtys[0][2] = qtrt.FloatTy(true) // "float *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1008,7 +1095,7 @@ func (this *QQuaternion) GetEulerAngles(args ...interface{}) () {
 }
 
 // fromAxes(const class QVector3D &, const class QVector3D &, const class QVector3D &)
-func (this *QQuaternion) FromAxes_s(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Fromaxes_S(args ...interface{}) (ret interface{}) {
   // fromAxes(const class QVector3D &, const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1016,6 +1103,10 @@ func (this *QQuaternion) FromAxes_s(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[0][1] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
   vtys[0][2] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1046,11 +1137,15 @@ func (this *QQuaternion) FromAxes_s(args ...interface{}) (ret interface{}) {
 }
 
 // toEulerAngles()
-func (this *QQuaternion) ToEulerAngles(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Toeulerangles(args ...interface{}) (ret interface{}) {
   // toEulerAngles()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1075,12 +1170,16 @@ func (this *QQuaternion) ToEulerAngles(args ...interface{}) (ret interface{}) {
 }
 
 // setScalar(float)
-func (this *QQuaternion) SetScalar(args ...interface{}) () {
+func (this *QQuaternion) Setscalar(args ...interface{}) () {
   // setScalar(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1099,11 +1198,15 @@ func (this *QQuaternion) SetScalar(args ...interface{}) () {
 }
 
 // isNull()
-func (this *QQuaternion) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1133,6 +1236,10 @@ func (this *QQuaternion) Length(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1162,6 +1269,10 @@ func (this *QQuaternion) Vector(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1186,11 +1297,15 @@ func (this *QQuaternion) Vector(args ...interface{}) (ret interface{}) {
 }
 
 // isIdentity()
-func (this *QQuaternion) IsIdentity(args ...interface{}) (ret interface{}) {
+func (this *QQuaternion) Isidentity(args ...interface{}) (ret interface{}) {
   // isIdentity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1220,6 +1335,10 @@ func (this *QQuaternion) Y(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1241,6 +1360,10 @@ func (this *QQuaternion) Z(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1265,11 +1388,15 @@ func (this *QQuaternion) Z(args ...interface{}) (ret interface{}) {
 }
 
 // toRotationMatrix()
-func (this *QQuaternion) ToRotationMatrix(args ...interface{}) () {
+func (this *QQuaternion) Torotationmatrix(args ...interface{}) () {
   // toRotationMatrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

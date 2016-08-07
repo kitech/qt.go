@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qsavefile.h
 // dst-file: /src/core/qsavefile.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -61,7 +60,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSaveFile)=1
@@ -71,11 +69,15 @@ type QSaveFile struct {
 }
 
 // metaObject()
-func (this *QSaveFile) MetaObject(args ...interface{}) () {
+func (this *QSaveFile) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -92,12 +94,16 @@ func (this *QSaveFile) MetaObject(args ...interface{}) () {
 }
 
 // setDirectWriteFallback(_Bool)
-func (this *QSaveFile) SetDirectWriteFallback(args ...interface{}) () {
+func (this *QSaveFile) Setdirectwritefallback(args ...interface{}) () {
   // setDirectWriteFallback(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -116,11 +122,15 @@ func (this *QSaveFile) SetDirectWriteFallback(args ...interface{}) () {
 }
 
 // ~QSaveFile()
-func (this *QSaveFile) Free(args ...interface{}) () {
+func (this *QSaveFile) Freeqsavefile(args ...interface{}) () {
   // ~QSaveFile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -128,10 +138,7 @@ func (this *QSaveFile) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSaveFileD0Ev
     // invoke: void ~QSaveFile()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QSaveFileD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QSaveFileD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "~QSaveFile", args)
   }
@@ -140,11 +147,15 @@ func (this *QSaveFile) Free(args ...interface{}) () {
 }
 
 // cancelWriting()
-func (this *QSaveFile) CancelWriting(args ...interface{}) () {
+func (this *QSaveFile) Cancelwriting(args ...interface{}) () {
   // cancelWriting()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -161,12 +172,16 @@ func (this *QSaveFile) CancelWriting(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QSaveFile) SetFileName(args ...interface{}) () {
+func (this *QSaveFile) Setfilename(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -185,11 +200,15 @@ func (this *QSaveFile) SetFileName(args ...interface{}) () {
 }
 
 // fileName()
-func (this *QSaveFile) FileName(args ...interface{}) (ret interface{}) {
+func (this *QSaveFile) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -214,9 +233,6 @@ func (this *QSaveFile) FileName(args ...interface{}) (ret interface{}) {
 }
 
 // QSaveFile(const class QString &)
-func GcfreeQSaveFile(this *QSaveFile) {
-  qtrt.UniverseFree(this)
-}
 func NewQSaveFile(args ...interface{}) *QSaveFile {
   // QSaveFile(const class QString &)
   // QSaveFile(const class QString &, class QObject *)
@@ -230,6 +246,10 @@ func NewQSaveFile(args ...interface{}) *QSaveFile {
   vtys[1][1] = reflect.TypeOf(QObject{}) // "QObject *"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -242,9 +262,7 @@ func NewQSaveFile(args ...interface{}) *QSaveFile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QSaveFileC2ERK7QString(arg0)
-    this := &QSaveFile{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSaveFile)
-    return this
+    return &QSaveFile{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QSaveFileC1ERK7QStringP7QObject
     // invoke: void QSaveFile(const class QString &, class QObject *)
@@ -255,9 +273,7 @@ func NewQSaveFile(args ...interface{}) *QSaveFile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QSaveFileC2ERK7QStringP7QObject(arg0, arg1)
-    this := &QSaveFile{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSaveFile)
-    return this
+    return &QSaveFile{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QSaveFileC1EP7QObject
     // invoke: void QSaveFile(class QObject *)
@@ -266,9 +282,7 @@ func NewQSaveFile(args ...interface{}) *QSaveFile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QSaveFileC2EP7QObject(arg0)
-    this := &QSaveFile{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSaveFile)
-    return this
+    return &QSaveFile{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSaveFile", "QSaveFile", args)
   }
@@ -277,11 +291,15 @@ func NewQSaveFile(args ...interface{}) *QSaveFile {
 }
 
 // directWriteFallback()
-func (this *QSaveFile) DirectWriteFallback(args ...interface{}) (ret interface{}) {
+func (this *QSaveFile) Directwritefallback(args ...interface{}) (ret interface{}) {
   // directWriteFallback()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -311,6 +329,10 @@ func (this *QSaveFile) Commit(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

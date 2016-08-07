@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qimagereader.h
 // dst-file: /src/gui/qimagereader.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -100,6 +99,8 @@ extern bool C_ZN12QImageReader4readEP6QImage(void* qthis, void* arg0); // 4
 extern void C_ZN12QImageReader18setBackgroundColorERK6QColor(void* qthis, void* arg0); // 4
   // proto:  int QImageReader::currentImageNumber();
 extern int32_t C_ZNK12QImageReader18currentImageNumberEv(void* qthis); // 4
+  // proto:  void QImageReader::setGamma(float gamma);
+extern void C_ZN12QImageReader8setGammaEf(void* qthis, float arg0); // 4
   // proto:  QIODevice * QImageReader::device();
 extern void* C_ZNK12QImageReader6deviceEv(void* qthis); // 4
   // proto:  bool QImageReader::supportsAnimation();
@@ -128,6 +129,8 @@ extern void* C_ZN12QImageReader11imageFormatERK7QString(void* arg0); // 4
 extern void C_ZNK12QImageReader11imageFormatEv(void* qthis); // 4
   // proto:  QImageReader::ImageReaderError QImageReader::error();
 extern void C_ZNK12QImageReader5errorEv(void* qthis); // 4
+  // proto:  float QImageReader::gamma();
+extern float C_ZNK12QImageReader5gammaEv(void* qthis); // 4
   // proto:  bool QImageReader::decideFormatFromContent();
 extern bool C_ZNK12QImageReader23decideFormatFromContentEv(void* qthis); // 4
 */
@@ -141,7 +144,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QImageReader)=8
@@ -151,12 +153,16 @@ type QImageReader struct {
 }
 
 // setAutoDetectImageFormat(_Bool)
-func (this *QImageReader) SetAutoDetectImageFormat(args ...interface{}) () {
+func (this *QImageReader) Setautodetectimageformat(args ...interface{}) () {
   // setAutoDetectImageFormat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -181,6 +187,10 @@ func (this *QImageReader) Text(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -207,11 +217,15 @@ func (this *QImageReader) Text(args ...interface{}) (ret interface{}) {
 }
 
 // currentImageRect()
-func (this *QImageReader) CurrentImageRect(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Currentimagerect(args ...interface{}) (ret interface{}) {
   // currentImageRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -236,11 +250,15 @@ func (this *QImageReader) CurrentImageRect(args ...interface{}) (ret interface{}
 }
 
 // supportedMimeTypes()
-func (this *QImageReader) SupportedMimeTypes_s(args ...interface{}) () {
+func (this *QImageReader) Supportedmimetypes_S(args ...interface{}) () {
   // supportedMimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -257,11 +275,15 @@ func (this *QImageReader) SupportedMimeTypes_s(args ...interface{}) () {
 }
 
 // subType()
-func (this *QImageReader) SubType(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Subtype(args ...interface{}) (ret interface{}) {
   // subType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -286,12 +308,16 @@ func (this *QImageReader) SubType(args ...interface{}) (ret interface{}) {
 }
 
 // setDecideFormatFromContent(_Bool)
-func (this *QImageReader) SetDecideFormatFromContent(args ...interface{}) () {
+func (this *QImageReader) Setdecideformatfromcontent(args ...interface{}) () {
   // setDecideFormatFromContent(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -310,12 +336,16 @@ func (this *QImageReader) SetDecideFormatFromContent(args ...interface{}) () {
 }
 
 // setScaledSize(const class QSize &)
-func (this *QImageReader) SetScaledSize(args ...interface{}) () {
+func (this *QImageReader) Setscaledsize(args ...interface{}) () {
   // setScaledSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -334,12 +364,16 @@ func (this *QImageReader) SetScaledSize(args ...interface{}) () {
 }
 
 // setScaledClipRect(const class QRect &)
-func (this *QImageReader) SetScaledClipRect(args ...interface{}) () {
+func (this *QImageReader) Setscaledcliprect(args ...interface{}) () {
   // setScaledClipRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -358,11 +392,15 @@ func (this *QImageReader) SetScaledClipRect(args ...interface{}) () {
 }
 
 // canRead()
-func (this *QImageReader) CanRead(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Canread(args ...interface{}) (ret interface{}) {
   // canRead()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -387,11 +425,15 @@ func (this *QImageReader) CanRead(args ...interface{}) (ret interface{}) {
 }
 
 // fileName()
-func (this *QImageReader) FileName(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -421,6 +463,10 @@ func (this *QImageReader) Quality(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -445,11 +491,15 @@ func (this *QImageReader) Quality(args ...interface{}) (ret interface{}) {
 }
 
 // imageCount()
-func (this *QImageReader) ImageCount(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Imagecount(args ...interface{}) (ret interface{}) {
   // imageCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -479,6 +529,10 @@ func (this *QImageReader) Size(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -503,9 +557,6 @@ func (this *QImageReader) Size(args ...interface{}) (ret interface{}) {
 }
 
 // QImageReader(const class QString &, const class QByteArray &)
-func GcfreeQImageReader(this *QImageReader) {
-  qtrt.UniverseFree(this)
-}
 func NewQImageReader(args ...interface{}) *QImageReader {
   // QImageReader(const class QString &, const class QByteArray &)
   // QImageReader(class QIODevice *, const class QByteArray &)
@@ -519,6 +570,10 @@ func NewQImageReader(args ...interface{}) *QImageReader {
   vtys[1][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
   vtys[1][1] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
   vtys[2] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -533,9 +588,7 @@ func NewQImageReader(args ...interface{}) *QImageReader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QImageReaderC2ERK7QStringRK10QByteArray(arg0, arg1)
-    this := &QImageReader{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQImageReader)
-    return this
+    return &QImageReader{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QImageReaderC1EP9QIODeviceRK10QByteArray
     // invoke: void QImageReader(class QIODevice *, const class QByteArray &)
@@ -546,18 +599,14 @@ func NewQImageReader(args ...interface{}) *QImageReader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QImageReaderC2EP9QIODeviceRK10QByteArray(arg0, arg1)
-    this := &QImageReader{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQImageReader)
-    return this
+    return &QImageReader{Qclsinst:qthis}
   case 2:
     // invoke: _ZN12QImageReaderC1Ev
     // invoke: void QImageReader()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QImageReaderC2Ev()
-    this := &QImageReader{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQImageReader)
-    return this
+    return &QImageReader{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QImageReader", "QImageReader", args)
   }
@@ -566,11 +615,15 @@ func NewQImageReader(args ...interface{}) *QImageReader {
 }
 
 // loopCount()
-func (this *QImageReader) LoopCount(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Loopcount(args ...interface{}) (ret interface{}) {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -595,11 +648,15 @@ func (this *QImageReader) LoopCount(args ...interface{}) (ret interface{}) {
 }
 
 // scaledClipRect()
-func (this *QImageReader) ScaledClipRect(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Scaledcliprect(args ...interface{}) (ret interface{}) {
   // scaledClipRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -624,11 +681,15 @@ func (this *QImageReader) ScaledClipRect(args ...interface{}) (ret interface{}) 
 }
 
 // autoDetectImageFormat()
-func (this *QImageReader) AutoDetectImageFormat(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Autodetectimageformat(args ...interface{}) (ret interface{}) {
   // autoDetectImageFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -653,11 +714,15 @@ func (this *QImageReader) AutoDetectImageFormat(args ...interface{}) (ret interf
 }
 
 // jumpToNextImage()
-func (this *QImageReader) JumpToNextImage(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Jumptonextimage(args ...interface{}) (ret interface{}) {
   // jumpToNextImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -682,11 +747,15 @@ func (this *QImageReader) JumpToNextImage(args ...interface{}) (ret interface{})
 }
 
 // textKeys()
-func (this *QImageReader) TextKeys(args ...interface{}) () {
+func (this *QImageReader) Textkeys(args ...interface{}) () {
   // textKeys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -703,11 +772,15 @@ func (this *QImageReader) TextKeys(args ...interface{}) () {
 }
 
 // backgroundColor()
-func (this *QImageReader) BackgroundColor(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Backgroundcolor(args ...interface{}) (ret interface{}) {
   // backgroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -732,12 +805,16 @@ func (this *QImageReader) BackgroundColor(args ...interface{}) (ret interface{})
 }
 
 // setDevice(class QIODevice *)
-func (this *QImageReader) SetDevice(args ...interface{}) () {
+func (this *QImageReader) Setdevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -761,6 +838,10 @@ func (this *QImageReader) Transformation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -777,11 +858,15 @@ func (this *QImageReader) Transformation(args ...interface{}) () {
 }
 
 // autoTransform()
-func (this *QImageReader) AutoTransform(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Autotransform(args ...interface{}) (ret interface{}) {
   // autoTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -806,12 +891,16 @@ func (this *QImageReader) AutoTransform(args ...interface{}) (ret interface{}) {
 }
 
 // jumpToImage(int)
-func (this *QImageReader) JumpToImage(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Jumptoimage(args ...interface{}) (ret interface{}) {
   // jumpToImage(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -838,11 +927,15 @@ func (this *QImageReader) JumpToImage(args ...interface{}) (ret interface{}) {
 }
 
 // supportedImageFormats()
-func (this *QImageReader) SupportedImageFormats_s(args ...interface{}) () {
+func (this *QImageReader) Supportedimageformats_S(args ...interface{}) () {
   // supportedImageFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -859,12 +952,16 @@ func (this *QImageReader) SupportedImageFormats_s(args ...interface{}) () {
 }
 
 // setAutoTransform(_Bool)
-func (this *QImageReader) SetAutoTransform(args ...interface{}) () {
+func (this *QImageReader) Setautotransform(args ...interface{}) () {
   // setAutoTransform(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -883,11 +980,15 @@ func (this *QImageReader) SetAutoTransform(args ...interface{}) () {
 }
 
 // clipRect()
-func (this *QImageReader) ClipRect(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Cliprect(args ...interface{}) (ret interface{}) {
   // clipRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -912,11 +1013,15 @@ func (this *QImageReader) ClipRect(args ...interface{}) (ret interface{}) {
 }
 
 // errorString()
-func (this *QImageReader) ErrorString(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -946,6 +1051,10 @@ func (this *QImageReader) Format(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -978,6 +1087,10 @@ func (this *QImageReader) Read(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QImage{}) // "QImage *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1016,12 +1129,16 @@ func (this *QImageReader) Read(args ...interface{}) (ret interface{}) {
 }
 
 // setBackgroundColor(const class QColor &)
-func (this *QImageReader) SetBackgroundColor(args ...interface{}) () {
+func (this *QImageReader) Setbackgroundcolor(args ...interface{}) () {
   // setBackgroundColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QColor{}) // "const QColor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1040,11 +1157,15 @@ func (this *QImageReader) SetBackgroundColor(args ...interface{}) () {
 }
 
 // currentImageNumber()
-func (this *QImageReader) CurrentImageNumber(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Currentimagenumber(args ...interface{}) (ret interface{}) {
   // currentImageNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1068,12 +1189,44 @@ func (this *QImageReader) CurrentImageNumber(args ...interface{}) (ret interface
   return
 }
 
+// setGamma(float)
+func (this *QImageReader) Setgamma(args ...interface{}) () {
+  // setGamma(float)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.FloatTy(false) // "float"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN12QImageReader8setGammaEf
+    // invoke: void setGamma(float)
+    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
+    if false {fmt.Println(arg0)}
+    C.C_ZN12QImageReader8setGammaEf(this.Qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QImageReader", "setGamma", args)
+  }
+
+  return
+}
+
 // device()
 func (this *QImageReader) Device(args ...interface{}) (ret interface{}) {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1098,11 +1251,15 @@ func (this *QImageReader) Device(args ...interface{}) (ret interface{}) {
 }
 
 // supportsAnimation()
-func (this *QImageReader) SupportsAnimation(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Supportsanimation(args ...interface{}) (ret interface{}) {
   // supportsAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1127,11 +1284,15 @@ func (this *QImageReader) SupportsAnimation(args ...interface{}) (ret interface{
 }
 
 // supportedSubTypes()
-func (this *QImageReader) SupportedSubTypes(args ...interface{}) () {
+func (this *QImageReader) Supportedsubtypes(args ...interface{}) () {
   // supportedSubTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1148,12 +1309,16 @@ func (this *QImageReader) SupportedSubTypes(args ...interface{}) () {
 }
 
 // setClipRect(const class QRect &)
-func (this *QImageReader) SetClipRect(args ...interface{}) () {
+func (this *QImageReader) Setcliprect(args ...interface{}) () {
   // setClipRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1172,12 +1337,16 @@ func (this *QImageReader) SetClipRect(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QImageReader) SetFileName(args ...interface{}) () {
+func (this *QImageReader) Setfilename(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1196,11 +1365,15 @@ func (this *QImageReader) SetFileName(args ...interface{}) () {
 }
 
 // nextImageDelay()
-func (this *QImageReader) NextImageDelay(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Nextimagedelay(args ...interface{}) (ret interface{}) {
   // nextImageDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1225,11 +1398,15 @@ func (this *QImageReader) NextImageDelay(args ...interface{}) (ret interface{}) 
 }
 
 // ~QImageReader()
-func (this *QImageReader) Free(args ...interface{}) () {
+func (this *QImageReader) Freeqimagereader(args ...interface{}) () {
   // ~QImageReader()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1237,10 +1414,7 @@ func (this *QImageReader) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QImageReaderD0Ev
     // invoke: void ~QImageReader()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QImageReaderD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QImageReaderD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "~QImageReader", args)
   }
@@ -1249,12 +1423,16 @@ func (this *QImageReader) Free(args ...interface{}) () {
 }
 
 // setFormat(const class QByteArray &)
-func (this *QImageReader) SetFormat(args ...interface{}) () {
+func (this *QImageReader) Setformat(args ...interface{}) () {
   // setFormat(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1273,12 +1451,16 @@ func (this *QImageReader) SetFormat(args ...interface{}) () {
 }
 
 // setQuality(int)
-func (this *QImageReader) SetQuality(args ...interface{}) () {
+func (this *QImageReader) Setquality(args ...interface{}) () {
   // setQuality(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1297,11 +1479,15 @@ func (this *QImageReader) SetQuality(args ...interface{}) () {
 }
 
 // scaledSize()
-func (this *QImageReader) ScaledSize(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Scaledsize(args ...interface{}) (ret interface{}) {
   // scaledSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1326,7 +1512,7 @@ func (this *QImageReader) ScaledSize(args ...interface{}) (ret interface{}) {
 }
 
 // imageFormat(class QIODevice *)
-func (this *QImageReader) ImageFormat_s(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Imageformat_S(args ...interface{}) (ret interface{}) {
   // imageFormat(class QIODevice *)
   // imageFormat(const class QString &)
   // imageFormat()
@@ -1337,6 +1523,10 @@ func (this *QImageReader) ImageFormat_s(args ...interface{}) (ret interface{}) {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[2] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1386,6 +1576,10 @@ func (this *QImageReader) Error(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1401,12 +1595,49 @@ func (this *QImageReader) Error(args ...interface{}) () {
   return
 }
 
+// gamma()
+func (this *QImageReader) Gamma(args ...interface{}) (ret interface{}) {
+  // gamma()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK12QImageReader5gammaEv
+    // invoke: float gamma()
+    var ret0 = C.C_ZNK12QImageReader5gammaEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QImageReader", "gamma", args)
+  }
+
+  return
+}
+
 // decideFormatFromContent()
-func (this *QImageReader) DecideFormatFromContent(args ...interface{}) (ret interface{}) {
+func (this *QImageReader) Decideformatfromcontent(args ...interface{}) (ret interface{}) {
   // decideFormatFromContent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

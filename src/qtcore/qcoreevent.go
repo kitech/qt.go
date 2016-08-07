@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -85,7 +84,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDeferredDeleteEvent)=24
@@ -119,14 +117,15 @@ type QEvent struct {
 }
 
 // QDeferredDeleteEvent()
-func GcfreeQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
-  qtrt.UniverseFree(this)
-}
 func NewQDeferredDeleteEvent(args ...interface{}) *QDeferredDeleteEvent {
   // QDeferredDeleteEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -137,9 +136,7 @@ func NewQDeferredDeleteEvent(args ...interface{}) *QDeferredDeleteEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QDeferredDeleteEventC2Ev()
-    this := &QDeferredDeleteEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDeferredDeleteEvent)
-    return this
+    return &QDeferredDeleteEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "QDeferredDeleteEvent", args)
   }
@@ -148,11 +145,15 @@ func NewQDeferredDeleteEvent(args ...interface{}) *QDeferredDeleteEvent {
 }
 
 // ~QDeferredDeleteEvent()
-func (this *QDeferredDeleteEvent) Free(args ...interface{}) () {
+func (this *QDeferredDeleteEvent) Freeqdeferreddeleteevent(args ...interface{}) () {
   // ~QDeferredDeleteEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -160,10 +161,7 @@ func (this *QDeferredDeleteEvent) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QDeferredDeleteEventD0Ev
     // invoke: void ~QDeferredDeleteEvent()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN20QDeferredDeleteEventD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN20QDeferredDeleteEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "~QDeferredDeleteEvent", args)
   }
@@ -172,11 +170,15 @@ func (this *QDeferredDeleteEvent) Free(args ...interface{}) () {
 }
 
 // loopLevel()
-func (this *QDeferredDeleteEvent) LoopLevel(args ...interface{}) (ret interface{}) {
+func (this *QDeferredDeleteEvent) Looplevel(args ...interface{}) (ret interface{}) {
   // loopLevel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -201,15 +203,16 @@ func (this *QDeferredDeleteEvent) LoopLevel(args ...interface{}) (ret interface{
 }
 
 // QDynamicPropertyChangeEvent(const class QByteArray &)
-func GcfreeQDynamicPropertyChangeEvent(this *QDynamicPropertyChangeEvent) {
-  qtrt.UniverseFree(this)
-}
 func NewQDynamicPropertyChangeEvent(args ...interface{}) *QDynamicPropertyChangeEvent {
   // QDynamicPropertyChangeEvent(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -222,9 +225,7 @@ func NewQDynamicPropertyChangeEvent(args ...interface{}) *QDynamicPropertyChange
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray(arg0)
-    this := &QDynamicPropertyChangeEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDynamicPropertyChangeEvent)
-    return this
+    return &QDynamicPropertyChangeEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "QDynamicPropertyChangeEvent", args)
   }
@@ -233,11 +234,15 @@ func NewQDynamicPropertyChangeEvent(args ...interface{}) *QDynamicPropertyChange
 }
 
 // propertyName()
-func (this *QDynamicPropertyChangeEvent) PropertyName(args ...interface{}) (ret interface{}) {
+func (this *QDynamicPropertyChangeEvent) Propertyname(args ...interface{}) (ret interface{}) {
   // propertyName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -262,11 +267,15 @@ func (this *QDynamicPropertyChangeEvent) PropertyName(args ...interface{}) (ret 
 }
 
 // ~QDynamicPropertyChangeEvent()
-func (this *QDynamicPropertyChangeEvent) Free(args ...interface{}) () {
+func (this *QDynamicPropertyChangeEvent) Freeqdynamicpropertychangeevent(args ...interface{}) () {
   // ~QDynamicPropertyChangeEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -274,10 +283,7 @@ func (this *QDynamicPropertyChangeEvent) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN27QDynamicPropertyChangeEventD0Ev
     // invoke: void ~QDynamicPropertyChangeEvent()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN27QDynamicPropertyChangeEventD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN27QDynamicPropertyChangeEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "~QDynamicPropertyChangeEvent", args)
   }
@@ -286,11 +292,15 @@ func (this *QDynamicPropertyChangeEvent) Free(args ...interface{}) () {
 }
 
 // timerId()
-func (this *QTimerEvent) TimerId(args ...interface{}) (ret interface{}) {
+func (this *QTimerEvent) Timerid(args ...interface{}) (ret interface{}) {
   // timerId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -315,11 +325,15 @@ func (this *QTimerEvent) TimerId(args ...interface{}) (ret interface{}) {
 }
 
 // ~QTimerEvent()
-func (this *QTimerEvent) Free(args ...interface{}) () {
+func (this *QTimerEvent) Freeqtimerevent(args ...interface{}) () {
   // ~QTimerEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -327,10 +341,7 @@ func (this *QTimerEvent) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTimerEventD0Ev
     // invoke: void ~QTimerEvent()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QTimerEventD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QTimerEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTimerEvent", "~QTimerEvent", args)
   }
@@ -339,15 +350,16 @@ func (this *QTimerEvent) Free(args ...interface{}) () {
 }
 
 // QTimerEvent(int)
-func GcfreeQTimerEvent(this *QTimerEvent) {
-  qtrt.UniverseFree(this)
-}
 func NewQTimerEvent(args ...interface{}) *QTimerEvent {
   // QTimerEvent(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -360,9 +372,7 @@ func NewQTimerEvent(args ...interface{}) *QTimerEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTimerEventC2Ei(arg0)
-    this := &QTimerEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTimerEvent)
-    return this
+    return &QTimerEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTimerEvent", "QTimerEvent", args)
   }
@@ -376,6 +386,10 @@ func (this *QChildEvent) Added(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -405,6 +419,10 @@ func (this *QChildEvent) Polished(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -429,11 +447,15 @@ func (this *QChildEvent) Polished(args ...interface{}) (ret interface{}) {
 }
 
 // ~QChildEvent()
-func (this *QChildEvent) Free(args ...interface{}) () {
+func (this *QChildEvent) Freeqchildevent(args ...interface{}) () {
   // ~QChildEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -441,10 +463,7 @@ func (this *QChildEvent) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QChildEventD0Ev
     // invoke: void ~QChildEvent()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QChildEventD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QChildEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "~QChildEvent", args)
   }
@@ -458,6 +477,10 @@ func (this *QChildEvent) Child(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -487,6 +510,10 @@ func (this *QChildEvent) Removed(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -511,12 +538,16 @@ func (this *QChildEvent) Removed(args ...interface{}) (ret interface{}) {
 }
 
 // registerEventType(int)
-func (this *QEvent) RegisterEventType_s(args ...interface{}) (ret interface{}) {
+func (this *QEvent) Registereventtype_S(args ...interface{}) (ret interface{}) {
   // registerEventType(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -548,6 +579,10 @@ func (this *QEvent) Spontaneous(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -577,6 +612,10 @@ func (this *QEvent) Accept(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -598,6 +637,10 @@ func (this *QEvent) Ignore(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -614,11 +657,15 @@ func (this *QEvent) Ignore(args ...interface{}) () {
 }
 
 // isAccepted()
-func (this *QEvent) IsAccepted(args ...interface{}) (ret interface{}) {
+func (this *QEvent) Isaccepted(args ...interface{}) (ret interface{}) {
   // isAccepted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -643,12 +690,16 @@ func (this *QEvent) IsAccepted(args ...interface{}) (ret interface{}) {
 }
 
 // setAccepted(_Bool)
-func (this *QEvent) SetAccepted(args ...interface{}) () {
+func (this *QEvent) Setaccepted(args ...interface{}) () {
   // setAccepted(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -672,6 +723,10 @@ func (this *QEvent) Type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -688,15 +743,16 @@ func (this *QEvent) Type_(args ...interface{}) () {
 }
 
 // QEvent(const class QEvent &)
-func GcfreeQEvent(this *QEvent) {
-  qtrt.UniverseFree(this)
-}
 func NewQEvent(args ...interface{}) *QEvent {
   // QEvent(const class QEvent &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QEvent{}) // "const QEvent &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -709,9 +765,7 @@ func NewQEvent(args ...interface{}) *QEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QEventC2ERKS_(arg0)
-    this := &QEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQEvent)
-    return this
+    return &QEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QEvent", "QEvent", args)
   }
@@ -720,11 +774,15 @@ func NewQEvent(args ...interface{}) *QEvent {
 }
 
 // ~QEvent()
-func (this *QEvent) Free(args ...interface{}) () {
+func (this *QEvent) Freeqevent(args ...interface{}) () {
   // ~QEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -732,10 +790,7 @@ func (this *QEvent) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QEventD0Ev
     // invoke: void ~QEvent()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN6QEventD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN6QEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "~QEvent", args)
   }

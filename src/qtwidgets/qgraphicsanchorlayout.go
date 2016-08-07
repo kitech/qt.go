@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qgraphicsanchorlayout.h
 // dst-file: /src/widgets/qgraphicsanchorlayout.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -79,7 +78,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsAnchorLayout)=1
@@ -95,12 +93,16 @@ type QGraphicsAnchor struct {
 }
 
 // setSpacing(qreal)
-func (this *QGraphicsAnchorLayout) SetSpacing(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) Setspacing(args ...interface{}) () {
   // setSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -119,11 +121,15 @@ func (this *QGraphicsAnchorLayout) SetSpacing(args ...interface{}) () {
 }
 
 // ~QGraphicsAnchorLayout()
-func (this *QGraphicsAnchorLayout) Free(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) Freeqgraphicsanchorlayout(args ...interface{}) () {
   // ~QGraphicsAnchorLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -131,10 +137,7 @@ func (this *QGraphicsAnchorLayout) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN21QGraphicsAnchorLayoutD0Ev
     // invoke: void ~QGraphicsAnchorLayout()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN21QGraphicsAnchorLayoutD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN21QGraphicsAnchorLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "~QGraphicsAnchorLayout", args)
   }
@@ -143,12 +146,16 @@ func (this *QGraphicsAnchorLayout) Free(args ...interface{}) () {
 }
 
 // itemAt(int)
-func (this *QGraphicsAnchorLayout) ItemAt(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) Itemat(args ...interface{}) () {
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -167,11 +174,15 @@ func (this *QGraphicsAnchorLayout) ItemAt(args ...interface{}) () {
 }
 
 // horizontalSpacing()
-func (this *QGraphicsAnchorLayout) HorizontalSpacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsAnchorLayout) Horizontalspacing(args ...interface{}) (ret interface{}) {
   // horizontalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -196,12 +207,16 @@ func (this *QGraphicsAnchorLayout) HorizontalSpacing(args ...interface{}) (ret i
 }
 
 // setGeometry(const class QRectF &)
-func (this *QGraphicsAnchorLayout) SetGeometry(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) Setgeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -225,6 +240,10 @@ func (this *QGraphicsAnchorLayout) Invalidate(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -246,6 +265,10 @@ func (this *QGraphicsAnchorLayout) Count(args ...interface{}) (ret interface{}) 
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -270,12 +293,16 @@ func (this *QGraphicsAnchorLayout) Count(args ...interface{}) (ret interface{}) 
 }
 
 // setVerticalSpacing(qreal)
-func (this *QGraphicsAnchorLayout) SetVerticalSpacing(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) Setverticalspacing(args ...interface{}) () {
   // setVerticalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -294,11 +321,15 @@ func (this *QGraphicsAnchorLayout) SetVerticalSpacing(args ...interface{}) () {
 }
 
 // verticalSpacing()
-func (this *QGraphicsAnchorLayout) VerticalSpacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsAnchorLayout) Verticalspacing(args ...interface{}) (ret interface{}) {
   // verticalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -323,12 +354,16 @@ func (this *QGraphicsAnchorLayout) VerticalSpacing(args ...interface{}) (ret int
 }
 
 // removeAt(int)
-func (this *QGraphicsAnchorLayout) RemoveAt(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) Removeat(args ...interface{}) () {
   // removeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -347,15 +382,16 @@ func (this *QGraphicsAnchorLayout) RemoveAt(args ...interface{}) () {
 }
 
 // QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
-func GcfreeQGraphicsAnchorLayout(this *QGraphicsAnchorLayout) {
-  qtrt.UniverseFree(this)
-}
 func NewQGraphicsAnchorLayout(args ...interface{}) *QGraphicsAnchorLayout {
   // QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsLayoutItem{}) // "QGraphicsLayoutItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -368,9 +404,7 @@ func NewQGraphicsAnchorLayout(args ...interface{}) *QGraphicsAnchorLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem(arg0)
-    this := &QGraphicsAnchorLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGraphicsAnchorLayout)
-    return this
+    return &QGraphicsAnchorLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "QGraphicsAnchorLayout", args)
   }
@@ -379,12 +413,16 @@ func NewQGraphicsAnchorLayout(args ...interface{}) *QGraphicsAnchorLayout {
 }
 
 // setHorizontalSpacing(qreal)
-func (this *QGraphicsAnchorLayout) SetHorizontalSpacing(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) Sethorizontalspacing(args ...interface{}) () {
   // setHorizontalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -403,12 +441,16 @@ func (this *QGraphicsAnchorLayout) SetHorizontalSpacing(args ...interface{}) () 
 }
 
 // setSpacing(qreal)
-func (this *QGraphicsAnchor) SetSpacing(args ...interface{}) () {
+func (this *QGraphicsAnchor) Setspacing(args ...interface{}) () {
   // setSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -427,11 +469,15 @@ func (this *QGraphicsAnchor) SetSpacing(args ...interface{}) () {
 }
 
 // sizePolicy()
-func (this *QGraphicsAnchor) SizePolicy(args ...interface{}) () {
+func (this *QGraphicsAnchor) Sizepolicy(args ...interface{}) () {
   // sizePolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -448,11 +494,15 @@ func (this *QGraphicsAnchor) SizePolicy(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QGraphicsAnchor) MetaObject(args ...interface{}) () {
+func (this *QGraphicsAnchor) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -474,6 +524,10 @@ func (this *QGraphicsAnchor) Spacing(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -498,11 +552,15 @@ func (this *QGraphicsAnchor) Spacing(args ...interface{}) (ret interface{}) {
 }
 
 // unsetSpacing()
-func (this *QGraphicsAnchor) UnsetSpacing(args ...interface{}) () {
+func (this *QGraphicsAnchor) Unsetspacing(args ...interface{}) () {
   // unsetSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -519,11 +577,15 @@ func (this *QGraphicsAnchor) UnsetSpacing(args ...interface{}) () {
 }
 
 // ~QGraphicsAnchor()
-func (this *QGraphicsAnchor) Free(args ...interface{}) () {
+func (this *QGraphicsAnchor) Freeqgraphicsanchor(args ...interface{}) () {
   // ~QGraphicsAnchor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -531,10 +593,7 @@ func (this *QGraphicsAnchor) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsAnchorD0Ev
     // invoke: void ~QGraphicsAnchor()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QGraphicsAnchorD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QGraphicsAnchorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsAnchor", "~QGraphicsAnchor", args)
   }

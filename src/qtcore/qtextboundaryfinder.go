@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qtextboundaryfinder.h
 // dst-file: /src/core/qtextboundaryfinder.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -67,7 +66,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextBoundaryFinder)=48
@@ -77,11 +75,15 @@ type QTextBoundaryFinder struct {
 }
 
 // toNextBoundary()
-func (this *QTextBoundaryFinder) ToNextBoundary(args ...interface{}) (ret interface{}) {
+func (this *QTextBoundaryFinder) Tonextboundary(args ...interface{}) (ret interface{}) {
   // toNextBoundary()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -111,6 +113,10 @@ func (this *QTextBoundaryFinder) Position(args ...interface{}) (ret interface{})
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -140,6 +146,10 @@ func (this *QTextBoundaryFinder) String(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -164,11 +174,15 @@ func (this *QTextBoundaryFinder) String(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QTextBoundaryFinder) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QTextBoundaryFinder) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -193,11 +207,15 @@ func (this *QTextBoundaryFinder) IsValid(args ...interface{}) (ret interface{}) 
 }
 
 // boundaryReasons()
-func (this *QTextBoundaryFinder) BoundaryReasons(args ...interface{}) () {
+func (this *QTextBoundaryFinder) Boundaryreasons(args ...interface{}) () {
   // boundaryReasons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -214,11 +232,15 @@ func (this *QTextBoundaryFinder) BoundaryReasons(args ...interface{}) () {
 }
 
 // toEnd()
-func (this *QTextBoundaryFinder) ToEnd(args ...interface{}) () {
+func (this *QTextBoundaryFinder) Toend(args ...interface{}) () {
   // toEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -235,11 +257,15 @@ func (this *QTextBoundaryFinder) ToEnd(args ...interface{}) () {
 }
 
 // ~QTextBoundaryFinder()
-func (this *QTextBoundaryFinder) Free(args ...interface{}) () {
+func (this *QTextBoundaryFinder) Freeqtextboundaryfinder(args ...interface{}) () {
   // ~QTextBoundaryFinder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -247,10 +273,7 @@ func (this *QTextBoundaryFinder) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QTextBoundaryFinderD0Ev
     // invoke: void ~QTextBoundaryFinder()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QTextBoundaryFinderD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QTextBoundaryFinderD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "~QTextBoundaryFinder", args)
   }
@@ -259,11 +282,15 @@ func (this *QTextBoundaryFinder) Free(args ...interface{}) () {
 }
 
 // toPreviousBoundary()
-func (this *QTextBoundaryFinder) ToPreviousBoundary(args ...interface{}) (ret interface{}) {
+func (this *QTextBoundaryFinder) Topreviousboundary(args ...interface{}) (ret interface{}) {
   // toPreviousBoundary()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -288,9 +315,6 @@ func (this *QTextBoundaryFinder) ToPreviousBoundary(args ...interface{}) (ret in
 }
 
 // QTextBoundaryFinder()
-func GcfreeQTextBoundaryFinder(this *QTextBoundaryFinder) {
-  qtrt.UniverseFree(this)
-}
 func NewQTextBoundaryFinder(args ...interface{}) *QTextBoundaryFinder {
   // QTextBoundaryFinder()
   // QTextBoundaryFinder(const class QTextBoundaryFinder &)
@@ -299,6 +323,10 @@ func NewQTextBoundaryFinder(args ...interface{}) *QTextBoundaryFinder {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QTextBoundaryFinder{}) // "const QTextBoundaryFinder &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -309,9 +337,7 @@ func NewQTextBoundaryFinder(args ...interface{}) *QTextBoundaryFinder {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QTextBoundaryFinderC2Ev()
-    this := &QTextBoundaryFinder{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextBoundaryFinder)
-    return this
+    return &QTextBoundaryFinder{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QTextBoundaryFinderC1ERKS_
     // invoke: void QTextBoundaryFinder(const class QTextBoundaryFinder &)
@@ -320,9 +346,7 @@ func NewQTextBoundaryFinder(args ...interface{}) *QTextBoundaryFinder {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QTextBoundaryFinderC2ERKS_(arg0)
-    this := &QTextBoundaryFinder{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextBoundaryFinder)
-    return this
+    return &QTextBoundaryFinder{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "QTextBoundaryFinder", args)
   }
@@ -331,11 +355,15 @@ func NewQTextBoundaryFinder(args ...interface{}) *QTextBoundaryFinder {
 }
 
 // isAtBoundary()
-func (this *QTextBoundaryFinder) IsAtBoundary(args ...interface{}) (ret interface{}) {
+func (this *QTextBoundaryFinder) Isatboundary(args ...interface{}) (ret interface{}) {
   // isAtBoundary()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -360,12 +388,16 @@ func (this *QTextBoundaryFinder) IsAtBoundary(args ...interface{}) (ret interfac
 }
 
 // setPosition(int)
-func (this *QTextBoundaryFinder) SetPosition(args ...interface{}) () {
+func (this *QTextBoundaryFinder) Setposition(args ...interface{}) () {
   // setPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -389,6 +421,10 @@ func (this *QTextBoundaryFinder) Type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -405,11 +441,15 @@ func (this *QTextBoundaryFinder) Type_(args ...interface{}) () {
 }
 
 // toStart()
-func (this *QTextBoundaryFinder) ToStart(args ...interface{}) () {
+func (this *QTextBoundaryFinder) Tostart(args ...interface{}) () {
   // toStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

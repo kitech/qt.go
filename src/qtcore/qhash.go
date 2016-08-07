@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -51,7 +50,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QHashDummyValue)=1
@@ -73,6 +71,10 @@ func (this *QHashData) Rehash(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -91,11 +93,15 @@ func (this *QHashData) Rehash(args ...interface{}) () {
 }
 
 // willGrow()
-func (this *QHashData) WillGrow(args ...interface{}) (ret interface{}) {
+func (this *QHashData) Willgrow(args ...interface{}) (ret interface{}) {
   // willGrow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -120,12 +126,16 @@ func (this *QHashData) WillGrow(args ...interface{}) (ret interface{}) {
 }
 
 // allocateNode(int)
-func (this *QHashData) AllocateNode(args ...interface{}) (ret interface{}) {
+func (this *QHashData) Allocatenode(args ...interface{}) (ret interface{}) {
   // allocateNode(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -152,12 +162,16 @@ func (this *QHashData) AllocateNode(args ...interface{}) (ret interface{}) {
 }
 
 // freeNode(void *)
-func (this *QHashData) FreeNode(args ...interface{}) () {
+func (this *QHashData) Freenode(args ...interface{}) () {
   // freeNode(void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.VoidpTy() // "void *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -176,11 +190,15 @@ func (this *QHashData) FreeNode(args ...interface{}) () {
 }
 
 // firstNode()
-func (this *QHashData) FirstNode(args ...interface{}) () {
+func (this *QHashData) Firstnode(args ...interface{}) () {
   // firstNode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -197,11 +215,15 @@ func (this *QHashData) FirstNode(args ...interface{}) () {
 }
 
 // hasShrunk()
-func (this *QHashData) HasShrunk(args ...interface{}) () {
+func (this *QHashData) Hasshrunk(args ...interface{}) () {
   // hasShrunk()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

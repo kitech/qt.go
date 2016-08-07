@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qtemporaryfile.h
 // dst-file: /src/core/qtemporaryfile.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -71,7 +70,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTemporaryFile)=1
@@ -81,11 +79,15 @@ type QTemporaryFile struct {
 }
 
 // autoRemove()
-func (this *QTemporaryFile) AutoRemove(args ...interface{}) (ret interface{}) {
+func (this *QTemporaryFile) Autoremove(args ...interface{}) (ret interface{}) {
   // autoRemove()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -110,11 +112,15 @@ func (this *QTemporaryFile) AutoRemove(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QTemporaryFile) MetaObject(args ...interface{}) () {
+func (this *QTemporaryFile) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -131,7 +137,7 @@ func (this *QTemporaryFile) MetaObject(args ...interface{}) () {
 }
 
 // createNativeFile(const class QString &)
-func (this *QTemporaryFile) CreateNativeFile_s(args ...interface{}) (ret interface{}) {
+func (this *QTemporaryFile) Createnativefile_S(args ...interface{}) (ret interface{}) {
   // createNativeFile(const class QString &)
   // createNativeFile(class QFile &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -140,6 +146,10 @@ func (this *QTemporaryFile) CreateNativeFile_s(args ...interface{}) (ret interfa
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QFile{}) // "QFile &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -180,11 +190,15 @@ func (this *QTemporaryFile) CreateNativeFile_s(args ...interface{}) (ret interfa
 }
 
 // ~QTemporaryFile()
-func (this *QTemporaryFile) Free(args ...interface{}) () {
+func (this *QTemporaryFile) Freeqtemporaryfile(args ...interface{}) () {
   // ~QTemporaryFile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -192,10 +206,7 @@ func (this *QTemporaryFile) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QTemporaryFileD0Ev
     // invoke: void ~QTemporaryFile()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN14QTemporaryFileD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN14QTemporaryFileD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryFile", "~QTemporaryFile", args)
   }
@@ -204,7 +215,7 @@ func (this *QTemporaryFile) Free(args ...interface{}) () {
 }
 
 // createLocalFile(class QFile &)
-func (this *QTemporaryFile) CreateLocalFile_s(args ...interface{}) (ret interface{}) {
+func (this *QTemporaryFile) Createlocalfile_S(args ...interface{}) (ret interface{}) {
   // createLocalFile(class QFile &)
   // createLocalFile(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -213,6 +224,10 @@ func (this *QTemporaryFile) CreateLocalFile_s(args ...interface{}) (ret interfac
   vtys[0][0] = reflect.TypeOf(QFile{}) // "QFile &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -253,12 +268,16 @@ func (this *QTemporaryFile) CreateLocalFile_s(args ...interface{}) (ret interfac
 }
 
 // setAutoRemove(_Bool)
-func (this *QTemporaryFile) SetAutoRemove(args ...interface{}) () {
+func (this *QTemporaryFile) Setautoremove(args ...interface{}) () {
   // setAutoRemove(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -277,9 +296,6 @@ func (this *QTemporaryFile) SetAutoRemove(args ...interface{}) () {
 }
 
 // QTemporaryFile(class QObject *)
-func GcfreeQTemporaryFile(this *QTemporaryFile) {
-  qtrt.UniverseFree(this)
-}
 func NewQTemporaryFile(args ...interface{}) *QTemporaryFile {
   // QTemporaryFile(class QObject *)
   // QTemporaryFile(const class QString &)
@@ -295,6 +311,10 @@ func NewQTemporaryFile(args ...interface{}) *QTemporaryFile {
   vtys[2][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[2][1] = reflect.TypeOf(QObject{}) // "QObject *"
   vtys[3] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -307,9 +327,7 @@ func NewQTemporaryFile(args ...interface{}) *QTemporaryFile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QTemporaryFileC2EP7QObject(arg0)
-    this := &QTemporaryFile{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTemporaryFile)
-    return this
+    return &QTemporaryFile{Qclsinst:qthis}
   case 1:
     // invoke: _ZN14QTemporaryFileC1ERK7QString
     // invoke: void QTemporaryFile(const class QString &)
@@ -318,9 +336,7 @@ func NewQTemporaryFile(args ...interface{}) *QTemporaryFile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QTemporaryFileC2ERK7QString(arg0)
-    this := &QTemporaryFile{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTemporaryFile)
-    return this
+    return &QTemporaryFile{Qclsinst:qthis}
   case 2:
     // invoke: _ZN14QTemporaryFileC1ERK7QStringP7QObject
     // invoke: void QTemporaryFile(const class QString &, class QObject *)
@@ -331,18 +347,14 @@ func NewQTemporaryFile(args ...interface{}) *QTemporaryFile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QTemporaryFileC2ERK7QStringP7QObject(arg0, arg1)
-    this := &QTemporaryFile{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTemporaryFile)
-    return this
+    return &QTemporaryFile{Qclsinst:qthis}
   case 3:
     // invoke: _ZN14QTemporaryFileC1Ev
     // invoke: void QTemporaryFile()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QTemporaryFileC2Ev()
-    this := &QTemporaryFile{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTemporaryFile)
-    return this
+    return &QTemporaryFile{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTemporaryFile", "QTemporaryFile", args)
   }
@@ -351,11 +363,15 @@ func NewQTemporaryFile(args ...interface{}) *QTemporaryFile {
 }
 
 // fileName()
-func (this *QTemporaryFile) FileName(args ...interface{}) (ret interface{}) {
+func (this *QTemporaryFile) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -385,6 +401,10 @@ func (this *QTemporaryFile) Open(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -409,12 +429,16 @@ func (this *QTemporaryFile) Open(args ...interface{}) (ret interface{}) {
 }
 
 // setFileTemplate(const class QString &)
-func (this *QTemporaryFile) SetFileTemplate(args ...interface{}) () {
+func (this *QTemporaryFile) Setfiletemplate(args ...interface{}) () {
   // setFileTemplate(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -433,11 +457,15 @@ func (this *QTemporaryFile) SetFileTemplate(args ...interface{}) () {
 }
 
 // fileTemplate()
-func (this *QTemporaryFile) FileTemplate(args ...interface{}) (ret interface{}) {
+func (this *QTemporaryFile) Filetemplate(args ...interface{}) (ret interface{}) {
   // fileTemplate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

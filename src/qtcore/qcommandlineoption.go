@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -57,8 +56,12 @@ extern void C_ZN18QCommandLineOption12setValueNameERK7QString(void* qthis, void*
 extern void C_ZNK18QCommandLineOption5namesEv(void* qthis); // 4
   // proto:  QString QCommandLineOption::valueName();
 extern void* C_ZNK18QCommandLineOption9valueNameEv(void* qthis); // 4
+  // proto:  bool QCommandLineOption::isHidden();
+extern bool C_ZNK18QCommandLineOption8isHiddenEv(void* qthis); // 4
   // proto:  void QCommandLineOption::swap(QCommandLineOption & other);
 extern void C_ZN18QCommandLineOption4swapERS_(void* qthis, void* arg0); // 2
+  // proto:  void QCommandLineOption::setHidden(bool hidden);
+extern void C_ZN18QCommandLineOption9setHiddenEb(void* qthis, bool arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -69,7 +72,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCommandLineOption)=1
@@ -79,12 +81,16 @@ type QCommandLineOption struct {
 }
 
 // setDescription(const class QString &)
-func (this *QCommandLineOption) SetDescription(args ...interface{}) () {
+func (this *QCommandLineOption) Setdescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -103,11 +109,15 @@ func (this *QCommandLineOption) SetDescription(args ...interface{}) () {
 }
 
 // defaultValues()
-func (this *QCommandLineOption) DefaultValues(args ...interface{}) () {
+func (this *QCommandLineOption) Defaultvalues(args ...interface{}) () {
   // defaultValues()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -129,6 +139,10 @@ func (this *QCommandLineOption) Description(args ...interface{}) (ret interface{
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -153,9 +167,6 @@ func (this *QCommandLineOption) Description(args ...interface{}) (ret interface{
 }
 
 // QCommandLineOption(const class QStringList &, const class QString &, const class QString &, const class QString &)
-func GcfreeQCommandLineOption(this *QCommandLineOption) {
-  qtrt.UniverseFree(this)
-}
 func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
   // QCommandLineOption(const class QStringList &, const class QString &, const class QString &, const class QString &)
   // QCommandLineOption(const class QStringList &)
@@ -180,6 +191,10 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
   vtys[4][1] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[4][2] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[4][3] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -198,9 +213,7 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_(arg0, arg1, arg2, arg3)
-    this := &QCommandLineOption{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCommandLineOption)
-    return this
+    return &QCommandLineOption{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QCommandLineOptionC1ERK11QStringList
     // invoke: void QCommandLineOption(const class QStringList &)
@@ -209,9 +222,7 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK11QStringList(arg0)
-    this := &QCommandLineOption{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCommandLineOption)
-    return this
+    return &QCommandLineOption{Qclsinst:qthis}
   case 2:
     // invoke: _ZN18QCommandLineOptionC1ERKS_
     // invoke: void QCommandLineOption(const class QCommandLineOption &)
@@ -220,9 +231,7 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERKS_(arg0)
-    this := &QCommandLineOption{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCommandLineOption)
-    return this
+    return &QCommandLineOption{Qclsinst:qthis}
   case 3:
     // invoke: _ZN18QCommandLineOptionC1ERK7QString
     // invoke: void QCommandLineOption(const class QString &)
@@ -231,9 +240,7 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK7QString(arg0)
-    this := &QCommandLineOption{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCommandLineOption)
-    return this
+    return &QCommandLineOption{Qclsinst:qthis}
   case 4:
     // invoke: _ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_
     // invoke: void QCommandLineOption(const class QString &, const class QString &, const class QString &, const class QString &)
@@ -248,9 +255,7 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK7QStringS2_S2_S2_(arg0, arg1, arg2, arg3)
-    this := &QCommandLineOption{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCommandLineOption)
-    return this
+    return &QCommandLineOption{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCommandLineOption", "QCommandLineOption", args)
   }
@@ -259,12 +264,16 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
 }
 
 // setDefaultValue(const class QString &)
-func (this *QCommandLineOption) SetDefaultValue(args ...interface{}) () {
+func (this *QCommandLineOption) Setdefaultvalue(args ...interface{}) () {
   // setDefaultValue(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -283,11 +292,15 @@ func (this *QCommandLineOption) SetDefaultValue(args ...interface{}) () {
 }
 
 // ~QCommandLineOption()
-func (this *QCommandLineOption) Free(args ...interface{}) () {
+func (this *QCommandLineOption) Freeqcommandlineoption(args ...interface{}) () {
   // ~QCommandLineOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -295,10 +308,7 @@ func (this *QCommandLineOption) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineOptionD0Ev
     // invoke: void ~QCommandLineOption()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN18QCommandLineOptionD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN18QCommandLineOptionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "~QCommandLineOption", args)
   }
@@ -307,12 +317,16 @@ func (this *QCommandLineOption) Free(args ...interface{}) () {
 }
 
 // setDefaultValues(const class QStringList &)
-func (this *QCommandLineOption) SetDefaultValues(args ...interface{}) () {
+func (this *QCommandLineOption) Setdefaultvalues(args ...interface{}) () {
   // setDefaultValues(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -331,12 +345,16 @@ func (this *QCommandLineOption) SetDefaultValues(args ...interface{}) () {
 }
 
 // setValueName(const class QString &)
-func (this *QCommandLineOption) SetValueName(args ...interface{}) () {
+func (this *QCommandLineOption) Setvaluename(args ...interface{}) () {
   // setValueName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -360,6 +378,10 @@ func (this *QCommandLineOption) Names(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -376,11 +398,15 @@ func (this *QCommandLineOption) Names(args ...interface{}) () {
 }
 
 // valueName()
-func (this *QCommandLineOption) ValueName(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineOption) Valuename(args ...interface{}) (ret interface{}) {
   // valueName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -404,6 +430,39 @@ func (this *QCommandLineOption) ValueName(args ...interface{}) (ret interface{})
   return
 }
 
+// isHidden()
+func (this *QCommandLineOption) Ishidden(args ...interface{}) (ret interface{}) {
+  // isHidden()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QCommandLineOption8isHiddenEv
+    // invoke: bool isHidden()
+    var ret0 = C.C_ZNK18QCommandLineOption8isHiddenEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QCommandLineOption", "isHidden", args)
+  }
+
+  return
+}
+
 // swap(class QCommandLineOption &)
 func (this *QCommandLineOption) Swap(args ...interface{}) () {
   // swap(class QCommandLineOption &)
@@ -411,6 +470,10 @@ func (this *QCommandLineOption) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QCommandLineOption{}) // "QCommandLineOption &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -423,6 +486,34 @@ func (this *QCommandLineOption) Swap(args ...interface{}) () {
     C.C_ZN18QCommandLineOption4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "swap", args)
+  }
+
+  return
+}
+
+// setHidden(_Bool)
+func (this *QCommandLineOption) Sethidden(args ...interface{}) () {
+  // setHidden(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QCommandLineOption9setHiddenEb
+    // invoke: void setHidden(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C.C_ZN18QCommandLineOption9setHiddenEb(this.Qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QCommandLineOption", "setHidden", args)
   }
 
   return

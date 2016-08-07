@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qcheckbox.h
 // dst-file: /src/widgets/qcheckbox.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -61,7 +60,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCheckBox)=1
@@ -72,11 +70,15 @@ type QCheckBox struct {
 }
 
 // isTristate()
-func (this *QCheckBox) IsTristate(args ...interface{}) (ret interface{}) {
+func (this *QCheckBox) Istristate(args ...interface{}) (ret interface{}) {
   // isTristate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -101,11 +103,15 @@ func (this *QCheckBox) IsTristate(args ...interface{}) (ret interface{}) {
 }
 
 // ~QCheckBox()
-func (this *QCheckBox) Free(args ...interface{}) () {
+func (this *QCheckBox) Freeqcheckbox(args ...interface{}) () {
   // ~QCheckBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -113,10 +119,7 @@ func (this *QCheckBox) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QCheckBoxD0Ev
     // invoke: void ~QCheckBox()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QCheckBoxD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QCheckBoxD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCheckBox", "~QCheckBox", args)
   }
@@ -125,12 +128,16 @@ func (this *QCheckBox) Free(args ...interface{}) () {
 }
 
 // setTristate(_Bool)
-func (this *QCheckBox) SetTristate(args ...interface{}) () {
+func (this *QCheckBox) Settristate(args ...interface{}) () {
   // setTristate(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -149,9 +156,6 @@ func (this *QCheckBox) SetTristate(args ...interface{}) () {
 }
 
 // QCheckBox(const class QString &, class QWidget *)
-func GcfreeQCheckBox(this *QCheckBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQCheckBox(args ...interface{}) *QCheckBox {
   // QCheckBox(const class QString &, class QWidget *)
   // QCheckBox(class QWidget *)
@@ -162,6 +166,10 @@ func NewQCheckBox(args ...interface{}) *QCheckBox {
   vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -176,9 +184,7 @@ func NewQCheckBox(args ...interface{}) *QCheckBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QCheckBoxC2ERK7QStringP7QWidget(arg0, arg1)
-    this := &QCheckBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCheckBox)
-    return this
+    return &QCheckBox{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QCheckBoxC1EP7QWidget
     // invoke: void QCheckBox(class QWidget *)
@@ -187,9 +193,7 @@ func NewQCheckBox(args ...interface{}) *QCheckBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QCheckBoxC2EP7QWidget(arg0)
-    this := &QCheckBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCheckBox)
-    return this
+    return &QCheckBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCheckBox", "QCheckBox", args)
   }
@@ -198,11 +202,15 @@ func NewQCheckBox(args ...interface{}) *QCheckBox {
 }
 
 // sizeHint()
-func (this *QCheckBox) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QCheckBox) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -227,11 +235,15 @@ func (this *QCheckBox) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QCheckBox) MetaObject(args ...interface{}) () {
+func (this *QCheckBox) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -248,11 +260,15 @@ func (this *QCheckBox) MetaObject(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QCheckBox) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QCheckBox) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -277,11 +293,15 @@ func (this *QCheckBox) MinimumSizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // checkState()
-func (this *QCheckBox) CheckState(args ...interface{}) () {
+func (this *QCheckBox) Checkstate(args ...interface{}) () {
   // checkState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

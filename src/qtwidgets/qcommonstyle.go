@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -59,7 +58,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCommonStyle)=1
@@ -81,6 +79,10 @@ func (this *QCommonStyle) Polish(args ...interface{}) () {
   vtys[1][0] = reflect.TypeOf(qtgui.QPalette{}) // "QPalette &"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QApplication{}) // "QApplication *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -111,14 +113,15 @@ func (this *QCommonStyle) Polish(args ...interface{}) () {
 }
 
 // QCommonStyle()
-func GcfreeQCommonStyle(this *QCommonStyle) {
-  qtrt.UniverseFree(this)
-}
 func NewQCommonStyle(args ...interface{}) *QCommonStyle {
   // QCommonStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -129,9 +132,7 @@ func NewQCommonStyle(args ...interface{}) *QCommonStyle {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QCommonStyleC2Ev()
-    this := &QCommonStyle{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCommonStyle)
-    return this
+    return &QCommonStyle{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCommonStyle", "QCommonStyle", args)
   }
@@ -140,11 +141,15 @@ func NewQCommonStyle(args ...interface{}) *QCommonStyle {
 }
 
 // ~QCommonStyle()
-func (this *QCommonStyle) Free(args ...interface{}) () {
+func (this *QCommonStyle) Freeqcommonstyle(args ...interface{}) () {
   // ~QCommonStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -152,10 +157,7 @@ func (this *QCommonStyle) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QCommonStyleD0Ev
     // invoke: void ~QCommonStyle()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QCommonStyleD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QCommonStyleD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCommonStyle", "~QCommonStyle", args)
   }
@@ -164,11 +166,15 @@ func (this *QCommonStyle) Free(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QCommonStyle) MetaObject(args ...interface{}) () {
+func (this *QCommonStyle) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -194,6 +200,10 @@ func (this *QCommonStyle) Unpolish(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QApplication{}) // "QApplication *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

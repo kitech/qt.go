@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -73,7 +72,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSessionManager)=1
@@ -88,6 +86,10 @@ func (this *QSessionManager) Cancel(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -104,11 +106,15 @@ func (this *QSessionManager) Cancel(args ...interface{}) () {
 }
 
 // restartCommand()
-func (this *QSessionManager) RestartCommand(args ...interface{}) () {
+func (this *QSessionManager) Restartcommand(args ...interface{}) () {
   // restartCommand()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -125,7 +131,7 @@ func (this *QSessionManager) RestartCommand(args ...interface{}) () {
 }
 
 // setManagerProperty(const class QString &, const class QStringList &)
-func (this *QSessionManager) SetManagerProperty(args ...interface{}) () {
+func (this *QSessionManager) Setmanagerproperty(args ...interface{}) () {
   // setManagerProperty(const class QString &, const class QStringList &)
   // setManagerProperty(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -136,6 +142,10 @@ func (this *QSessionManager) SetManagerProperty(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[1][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -164,11 +174,15 @@ func (this *QSessionManager) SetManagerProperty(args ...interface{}) () {
 }
 
 // requestPhase2()
-func (this *QSessionManager) RequestPhase2(args ...interface{}) () {
+func (this *QSessionManager) Requestphase2(args ...interface{}) () {
   // requestPhase2()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -185,12 +199,16 @@ func (this *QSessionManager) RequestPhase2(args ...interface{}) () {
 }
 
 // setRestartCommand(const class QStringList &)
-func (this *QSessionManager) SetRestartCommand(args ...interface{}) () {
+func (this *QSessionManager) Setrestartcommand(args ...interface{}) () {
   // setRestartCommand(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -209,11 +227,15 @@ func (this *QSessionManager) SetRestartCommand(args ...interface{}) () {
 }
 
 // discardCommand()
-func (this *QSessionManager) DiscardCommand(args ...interface{}) () {
+func (this *QSessionManager) Discardcommand(args ...interface{}) () {
   // discardCommand()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -230,11 +252,15 @@ func (this *QSessionManager) DiscardCommand(args ...interface{}) () {
 }
 
 // sessionKey()
-func (this *QSessionManager) SessionKey(args ...interface{}) (ret interface{}) {
+func (this *QSessionManager) Sessionkey(args ...interface{}) (ret interface{}) {
   // sessionKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -259,11 +285,15 @@ func (this *QSessionManager) SessionKey(args ...interface{}) (ret interface{}) {
 }
 
 // isPhase2()
-func (this *QSessionManager) IsPhase2(args ...interface{}) (ret interface{}) {
+func (this *QSessionManager) Isphase2(args ...interface{}) (ret interface{}) {
   // isPhase2()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -288,12 +318,16 @@ func (this *QSessionManager) IsPhase2(args ...interface{}) (ret interface{}) {
 }
 
 // setDiscardCommand(const class QStringList &)
-func (this *QSessionManager) SetDiscardCommand(args ...interface{}) () {
+func (this *QSessionManager) Setdiscardcommand(args ...interface{}) () {
   // setDiscardCommand(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -312,11 +346,15 @@ func (this *QSessionManager) SetDiscardCommand(args ...interface{}) () {
 }
 
 // allowsInteraction()
-func (this *QSessionManager) AllowsInteraction(args ...interface{}) (ret interface{}) {
+func (this *QSessionManager) Allowsinteraction(args ...interface{}) (ret interface{}) {
   // allowsInteraction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -341,11 +379,15 @@ func (this *QSessionManager) AllowsInteraction(args ...interface{}) (ret interfa
 }
 
 // restartHint()
-func (this *QSessionManager) RestartHint(args ...interface{}) () {
+func (this *QSessionManager) Restarthint(args ...interface{}) () {
   // restartHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -362,11 +404,15 @@ func (this *QSessionManager) RestartHint(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QSessionManager) MetaObject(args ...interface{}) () {
+func (this *QSessionManager) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -383,11 +429,15 @@ func (this *QSessionManager) MetaObject(args ...interface{}) () {
 }
 
 // allowsErrorInteraction()
-func (this *QSessionManager) AllowsErrorInteraction(args ...interface{}) (ret interface{}) {
+func (this *QSessionManager) Allowserrorinteraction(args ...interface{}) (ret interface{}) {
   // allowsErrorInteraction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -412,11 +462,15 @@ func (this *QSessionManager) AllowsErrorInteraction(args ...interface{}) (ret in
 }
 
 // sessionId()
-func (this *QSessionManager) SessionId(args ...interface{}) (ret interface{}) {
+func (this *QSessionManager) Sessionid(args ...interface{}) (ret interface{}) {
   // sessionId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -446,6 +500,10 @@ func (this *QSessionManager) Release(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

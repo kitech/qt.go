@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -97,7 +96,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDataWidgetMapper)=1
@@ -113,6 +111,10 @@ func (this *QDataWidgetMapper) Orientation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -129,12 +131,16 @@ func (this *QDataWidgetMapper) Orientation(args ...interface{}) () {
 }
 
 // setItemDelegate(class QAbstractItemDelegate *)
-func (this *QDataWidgetMapper) SetItemDelegate(args ...interface{}) () {
+func (this *QDataWidgetMapper) Setitemdelegate(args ...interface{}) () {
   // setItemDelegate(class QAbstractItemDelegate *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractItemDelegate{}) // "QAbstractItemDelegate *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -158,6 +164,10 @@ func (this *QDataWidgetMapper) Revert(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -174,12 +184,16 @@ func (this *QDataWidgetMapper) Revert(args ...interface{}) () {
 }
 
 // mappedSection(class QWidget *)
-func (this *QDataWidgetMapper) MappedSection(args ...interface{}) (ret interface{}) {
+func (this *QDataWidgetMapper) Mappedsection(args ...interface{}) (ret interface{}) {
   // mappedSection(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -206,12 +220,16 @@ func (this *QDataWidgetMapper) MappedSection(args ...interface{}) (ret interface
 }
 
 // setCurrentIndex(int)
-func (this *QDataWidgetMapper) SetCurrentIndex(args ...interface{}) () {
+func (this *QDataWidgetMapper) Setcurrentindex(args ...interface{}) () {
   // setCurrentIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -230,7 +248,7 @@ func (this *QDataWidgetMapper) SetCurrentIndex(args ...interface{}) () {
 }
 
 // addMapping(class QWidget *, int, const class QByteArray &)
-func (this *QDataWidgetMapper) AddMapping(args ...interface{}) () {
+func (this *QDataWidgetMapper) Addmapping(args ...interface{}) () {
   // addMapping(class QWidget *, int, const class QByteArray &)
   // addMapping(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -242,6 +260,10 @@ func (this *QDataWidgetMapper) AddMapping(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -272,11 +294,15 @@ func (this *QDataWidgetMapper) AddMapping(args ...interface{}) () {
 }
 
 // toPrevious()
-func (this *QDataWidgetMapper) ToPrevious(args ...interface{}) () {
+func (this *QDataWidgetMapper) Toprevious(args ...interface{}) () {
   // toPrevious()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -298,6 +324,10 @@ func (this *QDataWidgetMapper) Submit(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -322,11 +352,15 @@ func (this *QDataWidgetMapper) Submit(args ...interface{}) (ret interface{}) {
 }
 
 // rootIndex()
-func (this *QDataWidgetMapper) RootIndex(args ...interface{}) (ret interface{}) {
+func (this *QDataWidgetMapper) Rootindex(args ...interface{}) (ret interface{}) {
   // rootIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -351,12 +385,16 @@ func (this *QDataWidgetMapper) RootIndex(args ...interface{}) (ret interface{}) 
 }
 
 // mappedPropertyName(class QWidget *)
-func (this *QDataWidgetMapper) MappedPropertyName(args ...interface{}) (ret interface{}) {
+func (this *QDataWidgetMapper) Mappedpropertyname(args ...interface{}) (ret interface{}) {
   // mappedPropertyName(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -383,11 +421,15 @@ func (this *QDataWidgetMapper) MappedPropertyName(args ...interface{}) (ret inte
 }
 
 // clearMapping()
-func (this *QDataWidgetMapper) ClearMapping(args ...interface{}) () {
+func (this *QDataWidgetMapper) Clearmapping(args ...interface{}) () {
   // clearMapping()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -404,11 +446,15 @@ func (this *QDataWidgetMapper) ClearMapping(args ...interface{}) () {
 }
 
 // toLast()
-func (this *QDataWidgetMapper) ToLast(args ...interface{}) () {
+func (this *QDataWidgetMapper) Tolast(args ...interface{}) () {
   // toLast()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -425,11 +471,15 @@ func (this *QDataWidgetMapper) ToLast(args ...interface{}) () {
 }
 
 // submitPolicy()
-func (this *QDataWidgetMapper) SubmitPolicy(args ...interface{}) () {
+func (this *QDataWidgetMapper) Submitpolicy(args ...interface{}) () {
   // submitPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -446,15 +496,16 @@ func (this *QDataWidgetMapper) SubmitPolicy(args ...interface{}) () {
 }
 
 // QDataWidgetMapper(class QObject *)
-func GcfreeQDataWidgetMapper(this *QDataWidgetMapper) {
-  qtrt.UniverseFree(this)
-}
 func NewQDataWidgetMapper(args ...interface{}) *QDataWidgetMapper {
   // QDataWidgetMapper(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -467,9 +518,7 @@ func NewQDataWidgetMapper(args ...interface{}) *QDataWidgetMapper {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QDataWidgetMapperC2EP7QObject(arg0)
-    this := &QDataWidgetMapper{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDataWidgetMapper)
-    return this
+    return &QDataWidgetMapper{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "QDataWidgetMapper", args)
   }
@@ -478,12 +527,16 @@ func NewQDataWidgetMapper(args ...interface{}) *QDataWidgetMapper {
 }
 
 // setRootIndex(const class QModelIndex &)
-func (this *QDataWidgetMapper) SetRootIndex(args ...interface{}) () {
+func (this *QDataWidgetMapper) Setrootindex(args ...interface{}) () {
   // setRootIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -502,12 +555,16 @@ func (this *QDataWidgetMapper) SetRootIndex(args ...interface{}) () {
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QDataWidgetMapper) SetModel(args ...interface{}) () {
+func (this *QDataWidgetMapper) Setmodel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QAbstractItemModel{}) // "QAbstractItemModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -526,11 +583,15 @@ func (this *QDataWidgetMapper) SetModel(args ...interface{}) () {
 }
 
 // toFirst()
-func (this *QDataWidgetMapper) ToFirst(args ...interface{}) () {
+func (this *QDataWidgetMapper) Tofirst(args ...interface{}) () {
   // toFirst()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -547,11 +608,15 @@ func (this *QDataWidgetMapper) ToFirst(args ...interface{}) () {
 }
 
 // itemDelegate()
-func (this *QDataWidgetMapper) ItemDelegate(args ...interface{}) () {
+func (this *QDataWidgetMapper) Itemdelegate(args ...interface{}) () {
   // itemDelegate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -568,11 +633,15 @@ func (this *QDataWidgetMapper) ItemDelegate(args ...interface{}) () {
 }
 
 // toNext()
-func (this *QDataWidgetMapper) ToNext(args ...interface{}) () {
+func (this *QDataWidgetMapper) Tonext(args ...interface{}) () {
   // toNext()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -589,11 +658,15 @@ func (this *QDataWidgetMapper) ToNext(args ...interface{}) () {
 }
 
 // ~QDataWidgetMapper()
-func (this *QDataWidgetMapper) Free(args ...interface{}) () {
+func (this *QDataWidgetMapper) Freeqdatawidgetmapper(args ...interface{}) () {
   // ~QDataWidgetMapper()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -601,10 +674,7 @@ func (this *QDataWidgetMapper) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QDataWidgetMapperD0Ev
     // invoke: void ~QDataWidgetMapper()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN17QDataWidgetMapperD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN17QDataWidgetMapperD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "~QDataWidgetMapper", args)
   }
@@ -613,11 +683,15 @@ func (this *QDataWidgetMapper) Free(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QDataWidgetMapper) MetaObject(args ...interface{}) () {
+func (this *QDataWidgetMapper) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -634,12 +708,16 @@ func (this *QDataWidgetMapper) MetaObject(args ...interface{}) () {
 }
 
 // mappedWidgetAt(int)
-func (this *QDataWidgetMapper) MappedWidgetAt(args ...interface{}) (ret interface{}) {
+func (this *QDataWidgetMapper) Mappedwidgetat(args ...interface{}) (ret interface{}) {
   // mappedWidgetAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -666,11 +744,15 @@ func (this *QDataWidgetMapper) MappedWidgetAt(args ...interface{}) (ret interfac
 }
 
 // currentIndex()
-func (this *QDataWidgetMapper) CurrentIndex(args ...interface{}) (ret interface{}) {
+func (this *QDataWidgetMapper) Currentindex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -700,6 +782,10 @@ func (this *QDataWidgetMapper) Model(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -716,12 +802,16 @@ func (this *QDataWidgetMapper) Model(args ...interface{}) () {
 }
 
 // setCurrentModelIndex(const class QModelIndex &)
-func (this *QDataWidgetMapper) SetCurrentModelIndex(args ...interface{}) () {
+func (this *QDataWidgetMapper) Setcurrentmodelindex(args ...interface{}) () {
   // setCurrentModelIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -740,12 +830,16 @@ func (this *QDataWidgetMapper) SetCurrentModelIndex(args ...interface{}) () {
 }
 
 // removeMapping(class QWidget *)
-func (this *QDataWidgetMapper) RemoveMapping(args ...interface{}) () {
+func (this *QDataWidgetMapper) Removemapping(args ...interface{}) () {
   // removeMapping(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

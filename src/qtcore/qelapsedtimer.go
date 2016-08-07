@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -65,7 +64,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QElapsedTimer)=16
@@ -80,6 +78,10 @@ func (this *QElapsedTimer) Invalidate(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -96,11 +98,15 @@ func (this *QElapsedTimer) Invalidate(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QElapsedTimer) IsValid(args ...interface{}) (ret interface{}) {
+func (this *QElapsedTimer) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -125,12 +131,16 @@ func (this *QElapsedTimer) IsValid(args ...interface{}) (ret interface{}) {
 }
 
 // secsTo(const class QElapsedTimer &)
-func (this *QElapsedTimer) SecsTo(args ...interface{}) (ret interface{}) {
+func (this *QElapsedTimer) Secsto(args ...interface{}) (ret interface{}) {
   // secsTo(const class QElapsedTimer &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QElapsedTimer{}) // "const QElapsedTimer &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -157,11 +167,15 @@ func (this *QElapsedTimer) SecsTo(args ...interface{}) (ret interface{}) {
 }
 
 // isMonotonic()
-func (this *QElapsedTimer) IsMonotonic_s(args ...interface{}) (ret interface{}) {
+func (this *QElapsedTimer) Ismonotonic_S(args ...interface{}) (ret interface{}) {
   // isMonotonic()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -186,12 +200,16 @@ func (this *QElapsedTimer) IsMonotonic_s(args ...interface{}) (ret interface{}) 
 }
 
 // hasExpired(qint64)
-func (this *QElapsedTimer) HasExpired(args ...interface{}) (ret interface{}) {
+func (this *QElapsedTimer) Hasexpired(args ...interface{}) (ret interface{}) {
   // hasExpired(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -218,14 +236,15 @@ func (this *QElapsedTimer) HasExpired(args ...interface{}) (ret interface{}) {
 }
 
 // QElapsedTimer()
-func GcfreeQElapsedTimer(this *QElapsedTimer) {
-  qtrt.UniverseFree(this)
-}
 func NewQElapsedTimer(args ...interface{}) *QElapsedTimer {
   // QElapsedTimer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -236,9 +255,7 @@ func NewQElapsedTimer(args ...interface{}) *QElapsedTimer {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QElapsedTimerC2Ev()
-    this := &QElapsedTimer{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQElapsedTimer)
-    return this
+    return &QElapsedTimer{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QElapsedTimer", "QElapsedTimer", args)
   }
@@ -252,6 +269,10 @@ func (this *QElapsedTimer) Elapsed(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -281,6 +302,10 @@ func (this *QElapsedTimer) Start(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -297,12 +322,16 @@ func (this *QElapsedTimer) Start(args ...interface{}) () {
 }
 
 // msecsTo(const class QElapsedTimer &)
-func (this *QElapsedTimer) MsecsTo(args ...interface{}) (ret interface{}) {
+func (this *QElapsedTimer) Msecsto(args ...interface{}) (ret interface{}) {
   // msecsTo(const class QElapsedTimer &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QElapsedTimer{}) // "const QElapsedTimer &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -329,11 +358,15 @@ func (this *QElapsedTimer) MsecsTo(args ...interface{}) (ret interface{}) {
 }
 
 // msecsSinceReference()
-func (this *QElapsedTimer) MsecsSinceReference(args ...interface{}) (ret interface{}) {
+func (this *QElapsedTimer) Msecssincereference(args ...interface{}) (ret interface{}) {
   // msecsSinceReference()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -358,11 +391,15 @@ func (this *QElapsedTimer) MsecsSinceReference(args ...interface{}) (ret interfa
 }
 
 // clockType()
-func (this *QElapsedTimer) ClockType_s(args ...interface{}) () {
+func (this *QElapsedTimer) Clocktype_S(args ...interface{}) () {
   // clockType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -379,11 +416,15 @@ func (this *QElapsedTimer) ClockType_s(args ...interface{}) () {
 }
 
 // nsecsElapsed()
-func (this *QElapsedTimer) NsecsElapsed(args ...interface{}) (ret interface{}) {
+func (this *QElapsedTimer) Nsecselapsed(args ...interface{}) (ret interface{}) {
   // nsecsElapsed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -413,6 +454,10 @@ func (this *QElapsedTimer) Restart(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

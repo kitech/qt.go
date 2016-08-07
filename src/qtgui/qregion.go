@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qregion.h
 // dst-file: /src/gui/qregion.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -91,7 +90,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QRegion)=8
@@ -101,11 +99,15 @@ type QRegion struct {
 }
 
 // boundingRect()
-func (this *QRegion) BoundingRect(args ...interface{}) (ret interface{}) {
+func (this *QRegion) Boundingrect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -130,9 +132,6 @@ func (this *QRegion) BoundingRect(args ...interface{}) (ret interface{}) {
 }
 
 // QRegion(const class QBitmap &)
-func GcfreeQRegion(this *QRegion) {
-  qtrt.UniverseFree(this)
-}
 func NewQRegion(args ...interface{}) *QRegion {
   // QRegion(const class QBitmap &)
   // QRegion(const class QRegion &)
@@ -144,6 +143,10 @@ func NewQRegion(args ...interface{}) *QRegion {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
   vtys[2] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -156,9 +159,7 @@ func NewQRegion(args ...interface{}) *QRegion {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QRegionC2ERK7QBitmap(arg0)
-    this := &QRegion{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegion)
-    return this
+    return &QRegion{Qclsinst:qthis}
   case 1:
     // invoke: _ZN7QRegionC1ERKS_
     // invoke: void QRegion(const class QRegion &)
@@ -167,18 +168,14 @@ func NewQRegion(args ...interface{}) *QRegion {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QRegionC2ERKS_(arg0)
-    this := &QRegion{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegion)
-    return this
+    return &QRegion{Qclsinst:qthis}
   case 2:
     // invoke: _ZN7QRegionC1Ev
     // invoke: void QRegion()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QRegionC2Ev()
-    this := &QRegion{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQRegion)
-    return this
+    return &QRegion{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegion", "QRegion", args)
   }
@@ -193,6 +190,10 @@ func (this *QRegion) Xored(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -228,6 +229,10 @@ func (this *QRegion) Intersects(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -277,6 +282,10 @@ func (this *QRegion) United(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -326,6 +335,10 @@ func (this *QRegion) Intersected(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -375,6 +388,10 @@ func (this *QRegion) Contains(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -415,11 +432,15 @@ func (this *QRegion) Contains(args ...interface{}) (ret interface{}) {
 }
 
 // isEmpty()
-func (this *QRegion) IsEmpty(args ...interface{}) (ret interface{}) {
+func (this *QRegion) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -450,6 +471,10 @@ func (this *QRegion) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegion{}) // "QRegion &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -478,6 +503,10 @@ func (this *QRegion) Translate(args ...interface{}) () {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -504,11 +533,15 @@ func (this *QRegion) Translate(args ...interface{}) () {
 }
 
 // ~QRegion()
-func (this *QRegion) Free(args ...interface{}) () {
+func (this *QRegion) Freeqregion(args ...interface{}) () {
   // ~QRegion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -516,10 +549,7 @@ func (this *QRegion) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QRegionD0Ev
     // invoke: void ~QRegion()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN7QRegionD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN7QRegionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegion", "~QRegion", args)
   }
@@ -528,11 +558,15 @@ func (this *QRegion) Free(args ...interface{}) () {
 }
 
 // rectCount()
-func (this *QRegion) RectCount(args ...interface{}) (ret interface{}) {
+func (this *QRegion) Rectcount(args ...interface{}) (ret interface{}) {
   // rectCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -562,6 +596,10 @@ func (this *QRegion) Rects(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -578,13 +616,17 @@ func (this *QRegion) Rects(args ...interface{}) () {
 }
 
 // setRects(const class QRect *, int)
-func (this *QRegion) SetRects(args ...interface{}) () {
+func (this *QRegion) Setrects(args ...interface{}) () {
   // setRects(const class QRect *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -611,6 +653,10 @@ func (this *QRegion) Subtracted(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -637,11 +683,15 @@ func (this *QRegion) Subtracted(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QRegion) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QRegion) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -676,6 +726,10 @@ func (this *QRegion) Translated(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

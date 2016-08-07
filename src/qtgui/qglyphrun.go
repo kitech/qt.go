@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qglyphrun.h
 // dst-file: /src/gui/qglyphrun.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -85,7 +84,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGlyphRun)=1
@@ -95,11 +93,15 @@ type QGlyphRun struct {
 }
 
 // boundingRect()
-func (this *QGlyphRun) BoundingRect(args ...interface{}) (ret interface{}) {
+func (this *QGlyphRun) Boundingrect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -124,11 +126,15 @@ func (this *QGlyphRun) BoundingRect(args ...interface{}) (ret interface{}) {
 }
 
 // rawFont()
-func (this *QGlyphRun) RawFont(args ...interface{}) (ret interface{}) {
+func (this *QGlyphRun) Rawfont(args ...interface{}) (ret interface{}) {
   // rawFont()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -158,6 +164,10 @@ func (this *QGlyphRun) Underline(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -182,12 +192,16 @@ func (this *QGlyphRun) Underline(args ...interface{}) (ret interface{}) {
 }
 
 // setBoundingRect(const class QRectF &)
-func (this *QGlyphRun) SetBoundingRect(args ...interface{}) () {
+func (this *QGlyphRun) Setboundingrect(args ...interface{}) () {
   // setBoundingRect(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -206,12 +220,16 @@ func (this *QGlyphRun) SetBoundingRect(args ...interface{}) () {
 }
 
 // setRawFont(const class QRawFont &)
-func (this *QGlyphRun) SetRawFont(args ...interface{}) () {
+func (this *QGlyphRun) Setrawfont(args ...interface{}) () {
   // setRawFont(const class QRawFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QRawFont{}) // "const QRawFont &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -230,11 +248,15 @@ func (this *QGlyphRun) SetRawFont(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QGlyphRun) IsEmpty(args ...interface{}) (ret interface{}) {
+func (this *QGlyphRun) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -265,6 +287,10 @@ func (this *QGlyphRun) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGlyphRun{}) // "QGlyphRun &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -283,7 +309,7 @@ func (this *QGlyphRun) Swap(args ...interface{}) () {
 }
 
 // setRawData(const quint32 *, const class QPointF *, int)
-func (this *QGlyphRun) SetRawData(args ...interface{}) () {
+func (this *QGlyphRun) Setrawdata(args ...interface{}) () {
   // setRawData(const quint32 *, const class QPointF *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -291,6 +317,10 @@ func (this *QGlyphRun) SetRawData(args ...interface{}) () {
   vtys[0][0] = qtrt.Int32Ty(true) // "const quint32 *"
   vtys[0][1] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF *"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -313,11 +343,15 @@ func (this *QGlyphRun) SetRawData(args ...interface{}) () {
 }
 
 // isRightToLeft()
-func (this *QGlyphRun) IsRightToLeft(args ...interface{}) (ret interface{}) {
+func (this *QGlyphRun) Isrighttoleft(args ...interface{}) (ret interface{}) {
   // isRightToLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -342,11 +376,15 @@ func (this *QGlyphRun) IsRightToLeft(args ...interface{}) (ret interface{}) {
 }
 
 // strikeOut()
-func (this *QGlyphRun) StrikeOut(args ...interface{}) (ret interface{}) {
+func (this *QGlyphRun) Strikeout(args ...interface{}) (ret interface{}) {
   // strikeOut()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -371,11 +409,15 @@ func (this *QGlyphRun) StrikeOut(args ...interface{}) (ret interface{}) {
 }
 
 // ~QGlyphRun()
-func (this *QGlyphRun) Free(args ...interface{}) () {
+func (this *QGlyphRun) Freeqglyphrun(args ...interface{}) () {
   // ~QGlyphRun()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -383,10 +425,7 @@ func (this *QGlyphRun) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGlyphRunD0Ev
     // invoke: void ~QGlyphRun()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QGlyphRunD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QGlyphRunD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "~QGlyphRun", args)
   }
@@ -395,12 +434,16 @@ func (this *QGlyphRun) Free(args ...interface{}) () {
 }
 
 // setOverline(_Bool)
-func (this *QGlyphRun) SetOverline(args ...interface{}) () {
+func (this *QGlyphRun) Setoverline(args ...interface{}) () {
   // setOverline(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -419,12 +462,16 @@ func (this *QGlyphRun) SetOverline(args ...interface{}) () {
 }
 
 // setRightToLeft(_Bool)
-func (this *QGlyphRun) SetRightToLeft(args ...interface{}) () {
+func (this *QGlyphRun) Setrighttoleft(args ...interface{}) () {
   // setRightToLeft(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -443,12 +490,16 @@ func (this *QGlyphRun) SetRightToLeft(args ...interface{}) () {
 }
 
 // setStrikeOut(_Bool)
-func (this *QGlyphRun) SetStrikeOut(args ...interface{}) () {
+func (this *QGlyphRun) Setstrikeout(args ...interface{}) () {
   // setStrikeOut(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -472,6 +523,10 @@ func (this *QGlyphRun) Positions(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -493,6 +548,10 @@ func (this *QGlyphRun) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -509,9 +568,6 @@ func (this *QGlyphRun) Clear(args ...interface{}) () {
 }
 
 // QGlyphRun(const class QGlyphRun &)
-func GcfreeQGlyphRun(this *QGlyphRun) {
-  qtrt.UniverseFree(this)
-}
 func NewQGlyphRun(args ...interface{}) *QGlyphRun {
   // QGlyphRun(const class QGlyphRun &)
   // QGlyphRun()
@@ -520,6 +576,10 @@ func NewQGlyphRun(args ...interface{}) *QGlyphRun {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGlyphRun{}) // "const QGlyphRun &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -532,18 +592,14 @@ func NewQGlyphRun(args ...interface{}) *QGlyphRun {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QGlyphRunC2ERKS_(arg0)
-    this := &QGlyphRun{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGlyphRun)
-    return this
+    return &QGlyphRun{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QGlyphRunC1Ev
     // invoke: void QGlyphRun()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QGlyphRunC2Ev()
-    this := &QGlyphRun{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGlyphRun)
-    return this
+    return &QGlyphRun{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGlyphRun", "QGlyphRun", args)
   }
@@ -557,6 +613,10 @@ func (this *QGlyphRun) Overline(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -586,6 +646,10 @@ func (this *QGlyphRun) Flags(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -602,12 +666,16 @@ func (this *QGlyphRun) Flags(args ...interface{}) () {
 }
 
 // setUnderline(_Bool)
-func (this *QGlyphRun) SetUnderline(args ...interface{}) () {
+func (this *QGlyphRun) Setunderline(args ...interface{}) () {
   // setUnderline(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -626,11 +694,15 @@ func (this *QGlyphRun) SetUnderline(args ...interface{}) () {
 }
 
 // glyphIndexes()
-func (this *QGlyphRun) GlyphIndexes(args ...interface{}) () {
+func (this *QGlyphRun) Glyphindexes(args ...interface{}) () {
   // glyphIndexes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

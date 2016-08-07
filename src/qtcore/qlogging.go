@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qlogging.h
 // dst-file: /src/core/qlogging.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -89,7 +88,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMessageLogContext)=32
@@ -111,6 +109,10 @@ func (this *QMessageLogContext) Copy(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QMessageLogContext{}) // "const QMessageLogContext &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -129,9 +131,6 @@ func (this *QMessageLogContext) Copy(args ...interface{}) () {
 }
 
 // QMessageLogContext(const char *, int, const char *, const char *)
-func GcfreeQMessageLogContext(this *QMessageLogContext) {
-  qtrt.UniverseFree(this)
-}
 func NewQMessageLogContext(args ...interface{}) *QMessageLogContext {
   // QMessageLogContext(const char *, int, const char *, const char *)
   // QMessageLogContext()
@@ -143,6 +142,10 @@ func NewQMessageLogContext(args ...interface{}) *QMessageLogContext {
   vtys[0][2] = qtrt.ByteTy(true) // "const char *"
   vtys[0][3] = qtrt.ByteTy(true) // "const char *"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -167,18 +170,14 @@ func NewQMessageLogContext(args ...interface{}) *QMessageLogContext {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QMessageLogContextC2EPKciS1_S1_(arg0, arg1, arg2, arg3)
-    this := &QMessageLogContext{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMessageLogContext)
-    return this
+    return &QMessageLogContext{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QMessageLogContextC1Ev
     // invoke: void QMessageLogContext()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QMessageLogContextC2Ev()
-    this := &QMessageLogContext{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMessageLogContext)
-    return this
+    return &QMessageLogContext{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMessageLogContext", "QMessageLogContext", args)
   }
@@ -202,6 +201,10 @@ func (this *QMessageLogger) Info(args ...interface{}) () {
   vtys[2] = make(map[int32]reflect.Type)
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(QLoggingCategory{}) // "const QLoggingCategory &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -259,6 +262,10 @@ func (this *QMessageLogger) Warning(args ...interface{}) (ret interface{}) {
   vtys[2][0] = reflect.TypeOf(QLoggingCategory{}) // "const QLoggingCategory &"
   vtys[2][1] = qtrt.ByteTy(true) // "const char *"
   vtys[3] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -330,6 +337,10 @@ func (this *QMessageLogger) Critical(args ...interface{}) (ret interface{}) {
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(QLoggingCategory{}) // "const QLoggingCategory &"
   vtys[3][1] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -401,6 +412,10 @@ func (this *QMessageLogger) Debug(args ...interface{}) () {
   vtys[2][0] = qtrt.ByteTy(true) // "const char *"
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(QLoggingCategory{}) // "const QLoggingCategory &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -449,6 +464,10 @@ func (this *QMessageLogger) Fatal(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -469,9 +488,6 @@ func (this *QMessageLogger) Fatal(args ...interface{}) () {
 }
 
 // QMessageLogger()
-func GcfreeQMessageLogger(this *QMessageLogger) {
-  qtrt.UniverseFree(this)
-}
 func NewQMessageLogger(args ...interface{}) *QMessageLogger {
   // QMessageLogger()
   // QMessageLogger(const char *, int, const char *)
@@ -488,6 +504,10 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
   vtys[2][1] = qtrt.Int32Ty(false) // "int"
   vtys[2][2] = qtrt.ByteTy(true) // "const char *"
   vtys[2][3] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -498,9 +518,7 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QMessageLoggerC2Ev()
-    this := &QMessageLogger{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMessageLogger)
-    return this
+    return &QMessageLogger{Qclsinst:qthis}
   case 1:
     // invoke: _ZN14QMessageLoggerC1EPKciS1_
     // invoke: void QMessageLogger(const char *, int, const char *)
@@ -517,9 +535,7 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QMessageLoggerC2EPKciS1_(arg0, arg1, arg2)
-    this := &QMessageLogger{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMessageLogger)
-    return this
+    return &QMessageLogger{Qclsinst:qthis}
   case 2:
     // invoke: _ZN14QMessageLoggerC1EPKciS1_S1_
     // invoke: void QMessageLogger(const char *, int, const char *, const char *)
@@ -540,9 +556,7 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QMessageLoggerC2EPKciS1_S1_(arg0, arg1, arg2, arg3)
-    this := &QMessageLogger{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMessageLogger)
-    return this
+    return &QMessageLogger{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMessageLogger", "QMessageLogger", args)
   }
@@ -551,7 +565,7 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
 }
 
 // noDebug(const char *, ...)
-func (this *QMessageLogger) NoDebug(args ...interface{}) () {
+func (this *QMessageLogger) Nodebug(args ...interface{}) () {
   // noDebug(const char *, ...)
   // noDebug()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -559,6 +573,10 @@ func (this *QMessageLogger) NoDebug(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.ByteTy(true) // "const char *"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

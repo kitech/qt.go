@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qpixelformat.h
 // dst-file: /src/gui/qpixelformat.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -87,7 +86,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPixelFormat)=8
@@ -97,11 +95,15 @@ type QPixelFormat struct {
 }
 
 // yuvLayout()
-func (this *QPixelFormat) YuvLayout(args ...interface{}) () {
+func (this *QPixelFormat) Yuvlayout(args ...interface{}) () {
   // yuvLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -118,11 +120,15 @@ func (this *QPixelFormat) YuvLayout(args ...interface{}) () {
 }
 
 // yellowSize()
-func (this *QPixelFormat) YellowSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Yellowsize(args ...interface{}) (ret interface{}) {
   // yellowSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -147,11 +153,15 @@ func (this *QPixelFormat) YellowSize(args ...interface{}) (ret interface{}) {
 }
 
 // alphaPosition()
-func (this *QPixelFormat) AlphaPosition(args ...interface{}) () {
+func (this *QPixelFormat) Alphaposition(args ...interface{}) () {
   // alphaPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -168,11 +178,15 @@ func (this *QPixelFormat) AlphaPosition(args ...interface{}) () {
 }
 
 // cyanSize()
-func (this *QPixelFormat) CyanSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Cyansize(args ...interface{}) (ret interface{}) {
   // cyanSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -197,11 +211,15 @@ func (this *QPixelFormat) CyanSize(args ...interface{}) (ret interface{}) {
 }
 
 // lightnessSize()
-func (this *QPixelFormat) LightnessSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Lightnesssize(args ...interface{}) (ret interface{}) {
   // lightnessSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -226,11 +244,15 @@ func (this *QPixelFormat) LightnessSize(args ...interface{}) (ret interface{}) {
 }
 
 // brightnessSize()
-func (this *QPixelFormat) BrightnessSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Brightnesssize(args ...interface{}) (ret interface{}) {
   // brightnessSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -255,14 +277,15 @@ func (this *QPixelFormat) BrightnessSize(args ...interface{}) (ret interface{}) 
 }
 
 // QPixelFormat()
-func GcfreeQPixelFormat(this *QPixelFormat) {
-  qtrt.UniverseFree(this)
-}
 func NewQPixelFormat(args ...interface{}) *QPixelFormat {
   // QPixelFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -273,9 +296,7 @@ func NewQPixelFormat(args ...interface{}) *QPixelFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QPixelFormatC2Ev()
-    this := &QPixelFormat{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPixelFormat)
-    return this
+    return &QPixelFormat{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPixelFormat", "QPixelFormat", args)
   }
@@ -284,11 +305,15 @@ func NewQPixelFormat(args ...interface{}) *QPixelFormat {
 }
 
 // bitsPerPixel()
-func (this *QPixelFormat) BitsPerPixel(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Bitsperpixel(args ...interface{}) (ret interface{}) {
   // bitsPerPixel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -313,11 +338,15 @@ func (this *QPixelFormat) BitsPerPixel(args ...interface{}) (ret interface{}) {
 }
 
 // blackSize()
-func (this *QPixelFormat) BlackSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Blacksize(args ...interface{}) (ret interface{}) {
   // blackSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -342,11 +371,15 @@ func (this *QPixelFormat) BlackSize(args ...interface{}) (ret interface{}) {
 }
 
 // redSize()
-func (this *QPixelFormat) RedSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Redsize(args ...interface{}) (ret interface{}) {
   // redSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -371,11 +404,15 @@ func (this *QPixelFormat) RedSize(args ...interface{}) (ret interface{}) {
 }
 
 // byteOrder()
-func (this *QPixelFormat) ByteOrder(args ...interface{}) () {
+func (this *QPixelFormat) Byteorder(args ...interface{}) () {
   // byteOrder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -392,11 +429,15 @@ func (this *QPixelFormat) ByteOrder(args ...interface{}) () {
 }
 
 // typeInterpretation()
-func (this *QPixelFormat) TypeInterpretation(args ...interface{}) () {
+func (this *QPixelFormat) Typeinterpretation(args ...interface{}) () {
   // typeInterpretation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -413,11 +454,15 @@ func (this *QPixelFormat) TypeInterpretation(args ...interface{}) () {
 }
 
 // channelCount()
-func (this *QPixelFormat) ChannelCount(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Channelcount(args ...interface{}) (ret interface{}) {
   // channelCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -442,11 +487,15 @@ func (this *QPixelFormat) ChannelCount(args ...interface{}) (ret interface{}) {
 }
 
 // alphaSize()
-func (this *QPixelFormat) AlphaSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Alphasize(args ...interface{}) (ret interface{}) {
   // alphaSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -471,11 +520,15 @@ func (this *QPixelFormat) AlphaSize(args ...interface{}) (ret interface{}) {
 }
 
 // hueSize()
-func (this *QPixelFormat) HueSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Huesize(args ...interface{}) (ret interface{}) {
   // hueSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -500,11 +553,15 @@ func (this *QPixelFormat) HueSize(args ...interface{}) (ret interface{}) {
 }
 
 // saturationSize()
-func (this *QPixelFormat) SaturationSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Saturationsize(args ...interface{}) (ret interface{}) {
   // saturationSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -529,11 +586,15 @@ func (this *QPixelFormat) SaturationSize(args ...interface{}) (ret interface{}) 
 }
 
 // magentaSize()
-func (this *QPixelFormat) MagentaSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Magentasize(args ...interface{}) (ret interface{}) {
   // magentaSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -563,6 +624,10 @@ func (this *QPixelFormat) Premultiplied(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -579,11 +644,15 @@ func (this *QPixelFormat) Premultiplied(args ...interface{}) () {
 }
 
 // subEnum()
-func (this *QPixelFormat) SubEnum(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Subenum(args ...interface{}) (ret interface{}) {
   // subEnum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -608,11 +677,15 @@ func (this *QPixelFormat) SubEnum(args ...interface{}) (ret interface{}) {
 }
 
 // greenSize()
-func (this *QPixelFormat) GreenSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Greensize(args ...interface{}) (ret interface{}) {
   // greenSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -637,11 +710,15 @@ func (this *QPixelFormat) GreenSize(args ...interface{}) (ret interface{}) {
 }
 
 // colorModel()
-func (this *QPixelFormat) ColorModel(args ...interface{}) () {
+func (this *QPixelFormat) Colormodel(args ...interface{}) () {
   // colorModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -658,11 +735,15 @@ func (this *QPixelFormat) ColorModel(args ...interface{}) () {
 }
 
 // alphaUsage()
-func (this *QPixelFormat) AlphaUsage(args ...interface{}) () {
+func (this *QPixelFormat) Alphausage(args ...interface{}) () {
   // alphaUsage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -679,11 +760,15 @@ func (this *QPixelFormat) AlphaUsage(args ...interface{}) () {
 }
 
 // blueSize()
-func (this *QPixelFormat) BlueSize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) Bluesize(args ...interface{}) (ret interface{}) {
   // blueSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

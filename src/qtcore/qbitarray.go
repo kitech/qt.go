@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -83,7 +82,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QBitRef)=16
@@ -104,6 +102,10 @@ func (this *QBitArray) Size(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -128,12 +130,16 @@ func (this *QBitArray) Size(args ...interface{}) (ret interface{}) {
 }
 
 // testBit(int)
-func (this *QBitArray) TestBit(args ...interface{}) (ret interface{}) {
+func (this *QBitArray) Testbit(args ...interface{}) (ret interface{}) {
   // testBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -166,6 +172,10 @@ func (this *QBitArray) At(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -192,12 +202,16 @@ func (this *QBitArray) At(args ...interface{}) (ret interface{}) {
 }
 
 // toggleBit(int)
-func (this *QBitArray) ToggleBit(args ...interface{}) (ret interface{}) {
+func (this *QBitArray) Togglebit(args ...interface{}) (ret interface{}) {
   // toggleBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -236,6 +250,10 @@ func (this *QBitArray) Fill(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.BoolTy(false) // "bool"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -267,12 +285,16 @@ func (this *QBitArray) Fill(args ...interface{}) () {
 }
 
 // clearBit(int)
-func (this *QBitArray) ClearBit(args ...interface{}) () {
+func (this *QBitArray) Clearbit(args ...interface{}) () {
   // clearBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -291,9 +313,6 @@ func (this *QBitArray) ClearBit(args ...interface{}) () {
 }
 
 // QBitArray()
-func GcfreeQBitArray(this *QBitArray) {
-  qtrt.UniverseFree(this)
-}
 func NewQBitArray(args ...interface{}) *QBitArray {
   // QBitArray()
   // QBitArray(int, _Bool)
@@ -306,6 +325,10 @@ func NewQBitArray(args ...interface{}) *QBitArray {
   vtys[1][1] = qtrt.BoolTy(false) // "bool"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QBitArray{}) // "const QBitArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -316,9 +339,7 @@ func NewQBitArray(args ...interface{}) *QBitArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QBitArrayC2Ev()
-    this := &QBitArray{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQBitArray)
-    return this
+    return &QBitArray{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QBitArrayC1Eib
     // invoke: void QBitArray(int, _Bool)
@@ -329,9 +350,7 @@ func NewQBitArray(args ...interface{}) *QBitArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QBitArrayC2Eib(arg0, arg1)
-    this := &QBitArray{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQBitArray)
-    return this
+    return &QBitArray{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QBitArrayC1ERKS_
     // invoke: void QBitArray(const class QBitArray &)
@@ -340,9 +359,7 @@ func NewQBitArray(args ...interface{}) *QBitArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QBitArrayC2ERKS_(arg0)
-    this := &QBitArray{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQBitArray)
-    return this
+    return &QBitArray{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QBitArray", "QBitArray", args)
   }
@@ -357,6 +374,10 @@ func (this *QBitArray) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QBitArray{}) // "QBitArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -375,11 +396,15 @@ func (this *QBitArray) Swap(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QBitArray) IsEmpty(args ...interface{}) (ret interface{}) {
+func (this *QBitArray) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -404,7 +429,7 @@ func (this *QBitArray) IsEmpty(args ...interface{}) (ret interface{}) {
 }
 
 // setBit(int, _Bool)
-func (this *QBitArray) SetBit(args ...interface{}) () {
+func (this *QBitArray) Setbit(args ...interface{}) () {
   // setBit(int, _Bool)
   // setBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -414,6 +439,10 @@ func (this *QBitArray) SetBit(args ...interface{}) () {
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -440,11 +469,15 @@ func (this *QBitArray) SetBit(args ...interface{}) () {
 }
 
 // isDetached()
-func (this *QBitArray) IsDetached(args ...interface{}) (ret interface{}) {
+func (this *QBitArray) Isdetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -475,6 +508,10 @@ func (this *QBitArray) Truncate(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -498,6 +535,10 @@ func (this *QBitArray) Detach(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -520,6 +561,10 @@ func (this *QBitArray) Resize(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -546,6 +591,10 @@ func (this *QBitArray) Count(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -589,6 +638,10 @@ func (this *QBitArray) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -605,11 +658,15 @@ func (this *QBitArray) Clear(args ...interface{}) () {
 }
 
 // isNull()
-func (this *QBitArray) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QBitArray) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

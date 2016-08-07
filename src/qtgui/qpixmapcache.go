@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -30,10 +29,6 @@ import "qtcore"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto: static bool QPixmapCache::insert(const QString & key, const QPixmap & pixmap);
-extern bool C_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(void* arg0, void* arg1); // 4
-  // proto: static QPixmapCache::Key QPixmapCache::insert(const QPixmap & pixmap);
-extern void C_ZN12QPixmapCache6insertERK7QPixmap(void* arg0); // 4
   // proto: static int QPixmapCache::cacheLimit();
 extern int32_t C_ZN12QPixmapCache10cacheLimitEv(); // 4
   // proto: static void QPixmapCache::clear();
@@ -59,7 +54,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPixmapCache)=1
@@ -68,56 +62,16 @@ type QPixmapCache struct {
   Qclsinst unsafe.Pointer /* *C.void */;
 }
 
-// insert(const class QString &, const class QPixmap &)
-func (this *QPixmapCache) Insert_s(args ...interface{}) (ret interface{}) {
-  // insert(const class QString &, const class QPixmap &)
-  // insert(const class QPixmap &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(QPixmap{}) // "const QPixmap &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QPixmap{}) // "const QPixmap &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QPixmapCache6insertERK7QStringRK7QPixmap
-    // invoke: bool insert(const class QString &, const class QPixmap &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QPixmap).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN12QPixmapCache6insertERK7QPixmap
-    // invoke: QPixmapCache::Key insert(const class QPixmap &)
-    var arg0 = args[0].(*QPixmap).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QPixmapCache6insertERK7QPixmap(arg0)
-  default:
-    qtrt.ErrorResolve("QPixmapCache", "insert", args)
-  }
-
-  return
-}
-
 // cacheLimit()
-func (this *QPixmapCache) CacheLimit_s(args ...interface{}) (ret interface{}) {
+func (this *QPixmapCache) Cachelimit_S(args ...interface{}) (ret interface{}) {
   // cacheLimit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -142,11 +96,15 @@ func (this *QPixmapCache) CacheLimit_s(args ...interface{}) (ret interface{}) {
 }
 
 // clear()
-func (this *QPixmapCache) Clear_s(args ...interface{}) () {
+func (this *QPixmapCache) Clear_S(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -163,12 +121,16 @@ func (this *QPixmapCache) Clear_s(args ...interface{}) () {
 }
 
 // remove(const class QString &)
-func (this *QPixmapCache) Remove_s(args ...interface{}) () {
+func (this *QPixmapCache) Remove_S(args ...interface{}) () {
   // remove(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -187,12 +149,16 @@ func (this *QPixmapCache) Remove_s(args ...interface{}) () {
 }
 
 // setCacheLimit(int)
-func (this *QPixmapCache) SetCacheLimit_s(args ...interface{}) () {
+func (this *QPixmapCache) Setcachelimit_S(args ...interface{}) () {
   // setCacheLimit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -211,7 +177,7 @@ func (this *QPixmapCache) SetCacheLimit_s(args ...interface{}) () {
 }
 
 // find(const class QString &)
-func (this *QPixmapCache) Find_s(args ...interface{}) (ret interface{}) {
+func (this *QPixmapCache) Find_S(args ...interface{}) (ret interface{}) {
   // find(const class QString &)
   // find(const class QString &, class QPixmap &)
   // find(const class QString &, class QPixmap *)
@@ -225,6 +191,10 @@ func (this *QPixmapCache) Find_s(args ...interface{}) (ret interface{}) {
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[2][1] = reflect.TypeOf(QPixmap{}) // "QPixmap *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

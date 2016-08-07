@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qpalette.h
 // dst-file: /src/gui/qpalette.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -111,7 +110,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPalette)=16
@@ -121,12 +119,16 @@ type QPalette struct {
 }
 
 // isCopyOf(const class QPalette &)
-func (this *QPalette) IsCopyOf(args ...interface{}) (ret interface{}) {
+func (this *QPalette) Iscopyof(args ...interface{}) (ret interface{}) {
   // isCopyOf(const class QPalette &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPalette{}) // "const QPalette &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -153,11 +155,15 @@ func (this *QPalette) IsCopyOf(args ...interface{}) (ret interface{}) {
 }
 
 // highlightedText()
-func (this *QPalette) HighlightedText(args ...interface{}) (ret interface{}) {
+func (this *QPalette) Highlightedtext(args ...interface{}) (ret interface{}) {
   // highlightedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -187,6 +193,10 @@ func (this *QPalette) Mid(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -211,11 +221,15 @@ func (this *QPalette) Mid(args ...interface{}) (ret interface{}) {
 }
 
 // windowText()
-func (this *QPalette) WindowText(args ...interface{}) (ret interface{}) {
+func (this *QPalette) Windowtext(args ...interface{}) (ret interface{}) {
   // windowText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -240,9 +254,6 @@ func (this *QPalette) WindowText(args ...interface{}) (ret interface{}) {
 }
 
 // QPalette(const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &)
-func GcfreeQPalette(this *QPalette) {
-  qtrt.UniverseFree(this)
-}
 func NewQPalette(args ...interface{}) *QPalette {
   // QPalette(const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &)
   // QPalette(const class QColor &)
@@ -278,6 +289,10 @@ func NewQPalette(args ...interface{}) *QPalette {
   vtys[4][7] = reflect.TypeOf(QBrush{}) // "const QBrush &"
   vtys[4][8] = reflect.TypeOf(QBrush{}) // "const QBrush &"
   vtys[5] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -302,9 +317,7 @@ func NewQPalette(args ...interface{}) *QPalette {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-    this := &QPalette{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPalette)
-    return this
+    return &QPalette{Qclsinst:qthis}
   case 1:
     // invoke: _ZN8QPaletteC1ERK6QColor
     // invoke: void QPalette(const class QColor &)
@@ -313,9 +326,7 @@ func NewQPalette(args ...interface{}) *QPalette {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2ERK6QColor(arg0)
-    this := &QPalette{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPalette)
-    return this
+    return &QPalette{Qclsinst:qthis}
   case 2:
     // invoke: _ZN8QPaletteC1ERKS_
     // invoke: void QPalette(const class QPalette &)
@@ -324,9 +335,7 @@ func NewQPalette(args ...interface{}) *QPalette {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2ERKS_(arg0)
-    this := &QPalette{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPalette)
-    return this
+    return &QPalette{Qclsinst:qthis}
   case 3:
     // invoke: _ZN8QPaletteC1ERK6QColorS2_
     // invoke: void QPalette(const class QColor &, const class QColor &)
@@ -337,9 +346,7 @@ func NewQPalette(args ...interface{}) *QPalette {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2ERK6QColorS2_(arg0, arg1)
-    this := &QPalette{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPalette)
-    return this
+    return &QPalette{Qclsinst:qthis}
   case 4:
     // invoke: _ZN8QPaletteC1ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_
     // invoke: void QPalette(const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &)
@@ -364,18 +371,14 @@ func NewQPalette(args ...interface{}) *QPalette {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-    this := &QPalette{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPalette)
-    return this
+    return &QPalette{Qclsinst:qthis}
   case 5:
     // invoke: _ZN8QPaletteC1Ev
     // invoke: void QPalette()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2Ev()
-    this := &QPalette{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPalette)
-    return this
+    return &QPalette{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPalette", "QPalette", args)
   }
@@ -384,11 +387,15 @@ func NewQPalette(args ...interface{}) *QPalette {
 }
 
 // toolTipText()
-func (this *QPalette) ToolTipText(args ...interface{}) (ret interface{}) {
+func (this *QPalette) Tooltiptext(args ...interface{}) (ret interface{}) {
   // toolTipText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -418,6 +425,10 @@ func (this *QPalette) Midlight(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -447,6 +458,10 @@ func (this *QPalette) Window(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -471,11 +486,15 @@ func (this *QPalette) Window(args ...interface{}) (ret interface{}) {
 }
 
 // brightText()
-func (this *QPalette) BrightText(args ...interface{}) (ret interface{}) {
+func (this *QPalette) Brighttext(args ...interface{}) (ret interface{}) {
   // brightText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -506,6 +525,10 @@ func (this *QPalette) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPalette{}) // "QPalette &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -529,6 +552,10 @@ func (this *QPalette) Text(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -553,11 +580,15 @@ func (this *QPalette) Text(args ...interface{}) (ret interface{}) {
 }
 
 // currentColorGroup()
-func (this *QPalette) CurrentColorGroup(args ...interface{}) () {
+func (this *QPalette) Currentcolorgroup(args ...interface{}) () {
   // currentColorGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -579,6 +610,10 @@ func (this *QPalette) Foreground(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -603,11 +638,15 @@ func (this *QPalette) Foreground(args ...interface{}) (ret interface{}) {
 }
 
 // cacheKey()
-func (this *QPalette) CacheKey(args ...interface{}) (ret interface{}) {
+func (this *QPalette) Cachekey(args ...interface{}) (ret interface{}) {
   // cacheKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -637,6 +676,10 @@ func (this *QPalette) Dark(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -666,6 +709,10 @@ func (this *QPalette) Base(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -695,6 +742,10 @@ func (this *QPalette) Link(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -724,6 +775,10 @@ func (this *QPalette) Background(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -753,6 +808,10 @@ func (this *QPalette) Shadow(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -777,11 +836,15 @@ func (this *QPalette) Shadow(args ...interface{}) (ret interface{}) {
 }
 
 // toolTipBase()
-func (this *QPalette) ToolTipBase(args ...interface{}) (ret interface{}) {
+func (this *QPalette) Tooltipbase(args ...interface{}) (ret interface{}) {
   // toolTipBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -806,11 +869,15 @@ func (this *QPalette) ToolTipBase(args ...interface{}) (ret interface{}) {
 }
 
 // linkVisited()
-func (this *QPalette) LinkVisited(args ...interface{}) (ret interface{}) {
+func (this *QPalette) Linkvisited(args ...interface{}) (ret interface{}) {
   // linkVisited()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -846,6 +913,10 @@ func (this *QPalette) Resolve(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QPalette{}) // "const QPalette &"
   vtys[2] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -881,6 +952,10 @@ func (this *QPalette) Light(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -910,6 +985,10 @@ func (this *QPalette) Button(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -934,11 +1013,15 @@ func (this *QPalette) Button(args ...interface{}) (ret interface{}) {
 }
 
 // buttonText()
-func (this *QPalette) ButtonText(args ...interface{}) (ret interface{}) {
+func (this *QPalette) Buttontext(args ...interface{}) (ret interface{}) {
   // buttonText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -963,11 +1046,15 @@ func (this *QPalette) ButtonText(args ...interface{}) (ret interface{}) {
 }
 
 // ~QPalette()
-func (this *QPalette) Free(args ...interface{}) () {
+func (this *QPalette) Freeqpalette(args ...interface{}) () {
   // ~QPalette()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -975,10 +1062,7 @@ func (this *QPalette) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPaletteD0Ev
     // invoke: void ~QPalette()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN8QPaletteD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN8QPaletteD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "~QPalette", args)
   }
@@ -987,11 +1071,15 @@ func (this *QPalette) Free(args ...interface{}) () {
 }
 
 // alternateBase()
-func (this *QPalette) AlternateBase(args ...interface{}) (ret interface{}) {
+func (this *QPalette) Alternatebase(args ...interface{}) (ret interface{}) {
   // alternateBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1021,6 +1109,10 @@ func (this *QPalette) Highlight(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -67,7 +66,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDialogButtonBox)=1
@@ -86,6 +84,10 @@ func (this *QDialogButtonBox) Orientation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -102,11 +104,15 @@ func (this *QDialogButtonBox) Orientation(args ...interface{}) () {
 }
 
 // centerButtons()
-func (this *QDialogButtonBox) CenterButtons(args ...interface{}) (ret interface{}) {
+func (this *QDialogButtonBox) Centerbuttons(args ...interface{}) (ret interface{}) {
   // centerButtons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -131,12 +137,16 @@ func (this *QDialogButtonBox) CenterButtons(args ...interface{}) (ret interface{
 }
 
 // setCenterButtons(_Bool)
-func (this *QDialogButtonBox) SetCenterButtons(args ...interface{}) () {
+func (this *QDialogButtonBox) Setcenterbuttons(args ...interface{}) () {
   // setCenterButtons(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -155,12 +165,16 @@ func (this *QDialogButtonBox) SetCenterButtons(args ...interface{}) () {
 }
 
 // removeButton(class QAbstractButton *)
-func (this *QDialogButtonBox) RemoveButton(args ...interface{}) () {
+func (this *QDialogButtonBox) Removebutton(args ...interface{}) () {
   // removeButton(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractButton{}) // "QAbstractButton *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -179,15 +193,16 @@ func (this *QDialogButtonBox) RemoveButton(args ...interface{}) () {
 }
 
 // QDialogButtonBox(class QWidget *)
-func GcfreeQDialogButtonBox(this *QDialogButtonBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQDialogButtonBox(args ...interface{}) *QDialogButtonBox {
   // QDialogButtonBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -200,9 +215,7 @@ func NewQDialogButtonBox(args ...interface{}) *QDialogButtonBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QDialogButtonBoxC2EP7QWidget(arg0)
-    this := &QDialogButtonBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDialogButtonBox)
-    return this
+    return &QDialogButtonBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "QDialogButtonBox", args)
   }
@@ -211,12 +224,16 @@ func NewQDialogButtonBox(args ...interface{}) *QDialogButtonBox {
 }
 
 // buttonRole(class QAbstractButton *)
-func (this *QDialogButtonBox) ButtonRole(args ...interface{}) () {
+func (this *QDialogButtonBox) Buttonrole(args ...interface{}) () {
   // buttonRole(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractButton{}) // "QAbstractButton *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -240,6 +257,10 @@ func (this *QDialogButtonBox) Buttons(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -256,11 +277,15 @@ func (this *QDialogButtonBox) Buttons(args ...interface{}) () {
 }
 
 // ~QDialogButtonBox()
-func (this *QDialogButtonBox) Free(args ...interface{}) () {
+func (this *QDialogButtonBox) Freeqdialogbuttonbox(args ...interface{}) () {
   // ~QDialogButtonBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -268,10 +293,7 @@ func (this *QDialogButtonBox) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QDialogButtonBoxD0Ev
     // invoke: void ~QDialogButtonBox()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QDialogButtonBoxD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QDialogButtonBoxD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "~QDialogButtonBox", args)
   }
@@ -280,11 +302,15 @@ func (this *QDialogButtonBox) Free(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QDialogButtonBox) MetaObject(args ...interface{}) () {
+func (this *QDialogButtonBox) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -301,11 +327,15 @@ func (this *QDialogButtonBox) MetaObject(args ...interface{}) () {
 }
 
 // standardButtons()
-func (this *QDialogButtonBox) StandardButtons(args ...interface{}) () {
+func (this *QDialogButtonBox) Standardbuttons(args ...interface{}) () {
   // standardButtons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -327,6 +357,10 @@ func (this *QDialogButtonBox) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -343,12 +377,16 @@ func (this *QDialogButtonBox) Clear(args ...interface{}) () {
 }
 
 // standardButton(class QAbstractButton *)
-func (this *QDialogButtonBox) StandardButton(args ...interface{}) () {
+func (this *QDialogButtonBox) Standardbutton(args ...interface{}) () {
   // standardButton(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractButton{}) // "QAbstractButton *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

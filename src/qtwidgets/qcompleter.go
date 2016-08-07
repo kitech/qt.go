@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -111,7 +110,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCompleter)=1
@@ -123,12 +121,16 @@ type QCompleter struct {
 }
 
 // setCurrentRow(int)
-func (this *QCompleter) SetCurrentRow(args ...interface{}) (ret interface{}) {
+func (this *QCompleter) Setcurrentrow(args ...interface{}) (ret interface{}) {
   // setCurrentRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -155,11 +157,15 @@ func (this *QCompleter) SetCurrentRow(args ...interface{}) (ret interface{}) {
 }
 
 // completionModel()
-func (this *QCompleter) CompletionModel(args ...interface{}) () {
+func (this *QCompleter) Completionmodel(args ...interface{}) () {
   // completionModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -176,11 +182,15 @@ func (this *QCompleter) CompletionModel(args ...interface{}) () {
 }
 
 // completionRole()
-func (this *QCompleter) CompletionRole(args ...interface{}) (ret interface{}) {
+func (this *QCompleter) Completionrole(args ...interface{}) (ret interface{}) {
   // completionRole()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -205,11 +215,15 @@ func (this *QCompleter) CompletionRole(args ...interface{}) (ret interface{}) {
 }
 
 // maxVisibleItems()
-func (this *QCompleter) MaxVisibleItems(args ...interface{}) (ret interface{}) {
+func (this *QCompleter) Maxvisibleitems(args ...interface{}) (ret interface{}) {
   // maxVisibleItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -234,11 +248,15 @@ func (this *QCompleter) MaxVisibleItems(args ...interface{}) (ret interface{}) {
 }
 
 // wrapAround()
-func (this *QCompleter) WrapAround(args ...interface{}) (ret interface{}) {
+func (this *QCompleter) Wraparound(args ...interface{}) (ret interface{}) {
   // wrapAround()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -263,11 +281,15 @@ func (this *QCompleter) WrapAround(args ...interface{}) (ret interface{}) {
 }
 
 // completionPrefix()
-func (this *QCompleter) CompletionPrefix(args ...interface{}) (ret interface{}) {
+func (this *QCompleter) Completionprefix(args ...interface{}) (ret interface{}) {
   // completionPrefix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -292,12 +314,16 @@ func (this *QCompleter) CompletionPrefix(args ...interface{}) (ret interface{}) 
 }
 
 // setCompletionColumn(int)
-func (this *QCompleter) SetCompletionColumn(args ...interface{}) () {
+func (this *QCompleter) Setcompletioncolumn(args ...interface{}) () {
   // setCompletionColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -316,12 +342,16 @@ func (this *QCompleter) SetCompletionColumn(args ...interface{}) () {
 }
 
 // splitPath(const class QString &)
-func (this *QCompleter) SplitPath(args ...interface{}) () {
+func (this *QCompleter) Splitpath(args ...interface{}) () {
   // splitPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -340,12 +370,16 @@ func (this *QCompleter) SplitPath(args ...interface{}) () {
 }
 
 // setWidget(class QWidget *)
-func (this *QCompleter) SetWidget(args ...interface{}) () {
+func (this *QCompleter) Setwidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -364,12 +398,16 @@ func (this *QCompleter) SetWidget(args ...interface{}) () {
 }
 
 // setPopup(class QAbstractItemView *)
-func (this *QCompleter) SetPopup(args ...interface{}) () {
+func (this *QCompleter) Setpopup(args ...interface{}) () {
   // setPopup(class QAbstractItemView *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractItemView{}) // "QAbstractItemView *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -388,12 +426,16 @@ func (this *QCompleter) SetPopup(args ...interface{}) () {
 }
 
 // setWrapAround(_Bool)
-func (this *QCompleter) SetWrapAround(args ...interface{}) () {
+func (this *QCompleter) Setwraparound(args ...interface{}) () {
   // setWrapAround(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -412,12 +454,16 @@ func (this *QCompleter) SetWrapAround(args ...interface{}) () {
 }
 
 // setCompletionPrefix(const class QString &)
-func (this *QCompleter) SetCompletionPrefix(args ...interface{}) () {
+func (this *QCompleter) Setcompletionprefix(args ...interface{}) () {
   // setCompletionPrefix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -436,11 +482,15 @@ func (this *QCompleter) SetCompletionPrefix(args ...interface{}) () {
 }
 
 // ~QCompleter()
-func (this *QCompleter) Free(args ...interface{}) () {
+func (this *QCompleter) Freeqcompleter(args ...interface{}) () {
   // ~QCompleter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -448,10 +498,7 @@ func (this *QCompleter) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleterD0Ev
     // invoke: void ~QCompleter()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN10QCompleterD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN10QCompleterD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "~QCompleter", args)
   }
@@ -460,11 +507,15 @@ func (this *QCompleter) Free(args ...interface{}) () {
 }
 
 // completionMode()
-func (this *QCompleter) CompletionMode(args ...interface{}) () {
+func (this *QCompleter) Completionmode(args ...interface{}) () {
   // completionMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -481,11 +532,15 @@ func (this *QCompleter) CompletionMode(args ...interface{}) () {
 }
 
 // caseSensitivity()
-func (this *QCompleter) CaseSensitivity(args ...interface{}) () {
+func (this *QCompleter) Casesensitivity(args ...interface{}) () {
   // caseSensitivity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -507,6 +562,10 @@ func (this *QCompleter) Widget(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -536,6 +595,10 @@ func (this *QCompleter) Popup(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -558,6 +621,10 @@ func (this *QCompleter) Complete(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -576,11 +643,15 @@ func (this *QCompleter) Complete(args ...interface{}) () {
 }
 
 // completionColumn()
-func (this *QCompleter) CompletionColumn(args ...interface{}) (ret interface{}) {
+func (this *QCompleter) Completioncolumn(args ...interface{}) (ret interface{}) {
   // completionColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -605,12 +676,16 @@ func (this *QCompleter) CompletionColumn(args ...interface{}) (ret interface{}) 
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QCompleter) SetModel(args ...interface{}) () {
+func (this *QCompleter) Setmodel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QAbstractItemModel{}) // "QAbstractItemModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -629,9 +704,6 @@ func (this *QCompleter) SetModel(args ...interface{}) () {
 }
 
 // QCompleter(class QObject *)
-func GcfreeQCompleter(this *QCompleter) {
-  qtrt.UniverseFree(this)
-}
 func NewQCompleter(args ...interface{}) *QCompleter {
   // QCompleter(class QObject *)
   // QCompleter(class QAbstractItemModel *, class QObject *)
@@ -646,6 +718,10 @@ func NewQCompleter(args ...interface{}) *QCompleter {
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
   vtys[2][1] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -658,9 +734,7 @@ func NewQCompleter(args ...interface{}) *QCompleter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QCompleterC2EP7QObject(arg0)
-    this := &QCompleter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCompleter)
-    return this
+    return &QCompleter{Qclsinst:qthis}
   case 1:
     // invoke: _ZN10QCompleterC1EP18QAbstractItemModelP7QObject
     // invoke: void QCompleter(class QAbstractItemModel *, class QObject *)
@@ -671,9 +745,7 @@ func NewQCompleter(args ...interface{}) *QCompleter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QCompleterC2EP18QAbstractItemModelP7QObject(arg0, arg1)
-    this := &QCompleter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCompleter)
-    return this
+    return &QCompleter{Qclsinst:qthis}
   case 2:
     // invoke: _ZN10QCompleterC1ERK11QStringListP7QObject
     // invoke: void QCompleter(const class QStringList &, class QObject *)
@@ -684,9 +756,7 @@ func NewQCompleter(args ...interface{}) *QCompleter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QCompleterC2ERK11QStringListP7QObject(arg0, arg1)
-    this := &QCompleter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCompleter)
-    return this
+    return &QCompleter{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCompleter", "QCompleter", args)
   }
@@ -695,11 +765,15 @@ func NewQCompleter(args ...interface{}) *QCompleter {
 }
 
 // modelSorting()
-func (this *QCompleter) ModelSorting(args ...interface{}) () {
+func (this *QCompleter) Modelsorting(args ...interface{}) () {
   // modelSorting()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -716,11 +790,15 @@ func (this *QCompleter) ModelSorting(args ...interface{}) () {
 }
 
 // currentRow()
-func (this *QCompleter) CurrentRow(args ...interface{}) (ret interface{}) {
+func (this *QCompleter) Currentrow(args ...interface{}) (ret interface{}) {
   // currentRow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -745,11 +823,15 @@ func (this *QCompleter) CurrentRow(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QCompleter) MetaObject(args ...interface{}) () {
+func (this *QCompleter) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -766,11 +848,15 @@ func (this *QCompleter) MetaObject(args ...interface{}) () {
 }
 
 // currentCompletion()
-func (this *QCompleter) CurrentCompletion(args ...interface{}) (ret interface{}) {
+func (this *QCompleter) Currentcompletion(args ...interface{}) (ret interface{}) {
   // currentCompletion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -795,12 +881,16 @@ func (this *QCompleter) CurrentCompletion(args ...interface{}) (ret interface{})
 }
 
 // setMaxVisibleItems(int)
-func (this *QCompleter) SetMaxVisibleItems(args ...interface{}) () {
+func (this *QCompleter) Setmaxvisibleitems(args ...interface{}) () {
   // setMaxVisibleItems(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -819,11 +909,15 @@ func (this *QCompleter) SetMaxVisibleItems(args ...interface{}) () {
 }
 
 // completionCount()
-func (this *QCompleter) CompletionCount(args ...interface{}) (ret interface{}) {
+func (this *QCompleter) Completioncount(args ...interface{}) (ret interface{}) {
   // completionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -848,12 +942,16 @@ func (this *QCompleter) CompletionCount(args ...interface{}) (ret interface{}) {
 }
 
 // setCompletionRole(int)
-func (this *QCompleter) SetCompletionRole(args ...interface{}) () {
+func (this *QCompleter) Setcompletionrole(args ...interface{}) () {
   // setCompletionRole(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -872,11 +970,15 @@ func (this *QCompleter) SetCompletionRole(args ...interface{}) () {
 }
 
 // currentIndex()
-func (this *QCompleter) CurrentIndex(args ...interface{}) (ret interface{}) {
+func (this *QCompleter) Currentindex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -901,12 +1003,16 @@ func (this *QCompleter) CurrentIndex(args ...interface{}) (ret interface{}) {
 }
 
 // pathFromIndex(const class QModelIndex &)
-func (this *QCompleter) PathFromIndex(args ...interface{}) (ret interface{}) {
+func (this *QCompleter) Pathfromindex(args ...interface{}) (ret interface{}) {
   // pathFromIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -933,11 +1039,15 @@ func (this *QCompleter) PathFromIndex(args ...interface{}) (ret interface{}) {
 }
 
 // filterMode()
-func (this *QCompleter) FilterMode(args ...interface{}) () {
+func (this *QCompleter) Filtermode(args ...interface{}) () {
   // filterMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -959,6 +1069,10 @@ func (this *QCompleter) Model(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

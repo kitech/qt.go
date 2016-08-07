@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -107,7 +106,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSplitter)=1
@@ -124,11 +122,15 @@ type QSplitterHandle struct {
 }
 
 // saveState()
-func (this *QSplitter) SaveState(args ...interface{}) (ret interface{}) {
+func (this *QSplitter) Savestate(args ...interface{}) (ret interface{}) {
   // saveState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -158,6 +160,10 @@ func (this *QSplitter) Orientation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -174,12 +180,16 @@ func (this *QSplitter) Orientation(args ...interface{}) () {
 }
 
 // restoreState(const class QByteArray &)
-func (this *QSplitter) RestoreState(args ...interface{}) (ret interface{}) {
+func (this *QSplitter) Restorestate(args ...interface{}) (ret interface{}) {
   // restoreState(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -211,6 +221,10 @@ func (this *QSplitter) Sizes(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -233,6 +247,10 @@ func (this *QSplitter) Widget(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -259,7 +277,7 @@ func (this *QSplitter) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // getRange(int, int *, int *)
-func (this *QSplitter) GetRange(args ...interface{}) () {
+func (this *QSplitter) Getrange(args ...interface{}) () {
   // getRange(int, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -267,6 +285,10 @@ func (this *QSplitter) GetRange(args ...interface{}) () {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(true) // "int *"
   vtys[0][2] = qtrt.Int32Ty(true) // "int *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -289,12 +311,16 @@ func (this *QSplitter) GetRange(args ...interface{}) () {
 }
 
 // setOpaqueResize(_Bool)
-func (this *QSplitter) SetOpaqueResize(args ...interface{}) () {
+func (this *QSplitter) Setopaqueresize(args ...interface{}) () {
   // setOpaqueResize(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -313,12 +339,16 @@ func (this *QSplitter) SetOpaqueResize(args ...interface{}) () {
 }
 
 // setHandleWidth(int)
-func (this *QSplitter) SetHandleWidth(args ...interface{}) () {
+func (this *QSplitter) Sethandlewidth(args ...interface{}) () {
   // setHandleWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -337,11 +367,15 @@ func (this *QSplitter) SetHandleWidth(args ...interface{}) () {
 }
 
 // handleWidth()
-func (this *QSplitter) HandleWidth(args ...interface{}) (ret interface{}) {
+func (this *QSplitter) Handlewidth(args ...interface{}) (ret interface{}) {
   // handleWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -366,13 +400,17 @@ func (this *QSplitter) HandleWidth(args ...interface{}) (ret interface{}) {
 }
 
 // setStretchFactor(int, int)
-func (this *QSplitter) SetStretchFactor(args ...interface{}) () {
+func (this *QSplitter) Setstretchfactor(args ...interface{}) () {
   // setStretchFactor(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -393,11 +431,15 @@ func (this *QSplitter) SetStretchFactor(args ...interface{}) () {
 }
 
 // childrenCollapsible()
-func (this *QSplitter) ChildrenCollapsible(args ...interface{}) (ret interface{}) {
+func (this *QSplitter) Childrencollapsible(args ...interface{}) (ret interface{}) {
   // childrenCollapsible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -422,12 +464,16 @@ func (this *QSplitter) ChildrenCollapsible(args ...interface{}) (ret interface{}
 }
 
 // isCollapsible(int)
-func (this *QSplitter) IsCollapsible(args ...interface{}) (ret interface{}) {
+func (this *QSplitter) Iscollapsible(args ...interface{}) (ret interface{}) {
   // isCollapsible(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -460,6 +506,10 @@ func (this *QSplitter) Handle(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -486,12 +536,16 @@ func (this *QSplitter) Handle(args ...interface{}) (ret interface{}) {
 }
 
 // indexOf(class QWidget *)
-func (this *QSplitter) IndexOf(args ...interface{}) (ret interface{}) {
+func (this *QSplitter) Indexof(args ...interface{}) (ret interface{}) {
   // indexOf(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -518,13 +572,17 @@ func (this *QSplitter) IndexOf(args ...interface{}) (ret interface{}) {
 }
 
 // insertWidget(int, class QWidget *)
-func (this *QSplitter) InsertWidget(args ...interface{}) () {
+func (this *QSplitter) Insertwidget(args ...interface{}) () {
   // insertWidget(int, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -545,15 +603,16 @@ func (this *QSplitter) InsertWidget(args ...interface{}) () {
 }
 
 // QSplitter(class QWidget *)
-func GcfreeQSplitter(this *QSplitter) {
-  qtrt.UniverseFree(this)
-}
 func NewQSplitter(args ...interface{}) *QSplitter {
   // QSplitter(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -566,9 +625,7 @@ func NewQSplitter(args ...interface{}) *QSplitter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QSplitterC2EP7QWidget(arg0)
-    this := &QSplitter{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSplitter)
-    return this
+    return &QSplitter{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSplitter", "QSplitter", args)
   }
@@ -577,12 +634,16 @@ func NewQSplitter(args ...interface{}) *QSplitter {
 }
 
 // addWidget(class QWidget *)
-func (this *QSplitter) AddWidget(args ...interface{}) () {
+func (this *QSplitter) Addwidget(args ...interface{}) () {
   // addWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -601,11 +662,15 @@ func (this *QSplitter) AddWidget(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QSplitter) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QSplitter) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -630,12 +695,16 @@ func (this *QSplitter) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // setChildrenCollapsible(_Bool)
-func (this *QSplitter) SetChildrenCollapsible(args ...interface{}) () {
+func (this *QSplitter) Setchildrencollapsible(args ...interface{}) () {
   // setChildrenCollapsible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -659,6 +728,10 @@ func (this *QSplitter) Count(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -683,11 +756,15 @@ func (this *QSplitter) Count(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QSplitter) MetaObject(args ...interface{}) () {
+func (this *QSplitter) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -704,13 +781,17 @@ func (this *QSplitter) MetaObject(args ...interface{}) () {
 }
 
 // setCollapsible(int, _Bool)
-func (this *QSplitter) SetCollapsible(args ...interface{}) () {
+func (this *QSplitter) Setcollapsible(args ...interface{}) () {
   // setCollapsible(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -731,11 +812,15 @@ func (this *QSplitter) SetCollapsible(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QSplitter) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QSplitter) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -760,11 +845,15 @@ func (this *QSplitter) MinimumSizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // ~QSplitter()
-func (this *QSplitter) Free(args ...interface{}) () {
+func (this *QSplitter) Freeqsplitter(args ...interface{}) () {
   // ~QSplitter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -772,10 +861,7 @@ func (this *QSplitter) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSplitterD0Ev
     // invoke: void ~QSplitter()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QSplitterD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QSplitterD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSplitter", "~QSplitter", args)
   }
@@ -789,6 +875,10 @@ func (this *QSplitter) Refresh(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -805,11 +895,15 @@ func (this *QSplitter) Refresh(args ...interface{}) () {
 }
 
 // opaqueResize()
-func (this *QSplitter) OpaqueResize(args ...interface{}) (ret interface{}) {
+func (this *QSplitter) Opaqueresize(args ...interface{}) (ret interface{}) {
   // opaqueResize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -839,6 +933,10 @@ func (this *QSplitterHandle) Orientation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -855,11 +953,15 @@ func (this *QSplitterHandle) Orientation(args ...interface{}) () {
 }
 
 // ~QSplitterHandle()
-func (this *QSplitterHandle) Free(args ...interface{}) () {
+func (this *QSplitterHandle) Freeqsplitterhandle(args ...interface{}) () {
   // ~QSplitterHandle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -867,10 +969,7 @@ func (this *QSplitterHandle) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSplitterHandleD0Ev
     // invoke: void ~QSplitterHandle()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QSplitterHandleD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QSplitterHandleD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSplitterHandle", "~QSplitterHandle", args)
   }
@@ -879,11 +978,15 @@ func (this *QSplitterHandle) Free(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QSplitterHandle) MetaObject(args ...interface{}) () {
+func (this *QSplitterHandle) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -905,6 +1008,10 @@ func (this *QSplitterHandle) Splitter(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -929,11 +1036,15 @@ func (this *QSplitterHandle) Splitter(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QSplitterHandle) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QSplitterHandle) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -958,11 +1069,15 @@ func (this *QSplitterHandle) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // opaqueResize()
-func (this *QSplitterHandle) OpaqueResize(args ...interface{}) (ret interface{}) {
+func (this *QSplitterHandle) Opaqueresize(args ...interface{}) (ret interface{}) {
   // opaqueResize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

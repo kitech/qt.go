@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qidentityproxymodel.h
 // dst-file: /src/core/qidentityproxymodel.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -73,7 +72,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QIdentityProxyModel)=1
@@ -83,12 +81,16 @@ type QIdentityProxyModel struct {
 }
 
 // columnCount(const class QModelIndex &)
-func (this *QIdentityProxyModel) ColumnCount(args ...interface{}) (ret interface{}) {
+func (this *QIdentityProxyModel) Columncount(args ...interface{}) (ret interface{}) {
   // columnCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -115,12 +117,16 @@ func (this *QIdentityProxyModel) ColumnCount(args ...interface{}) (ret interface
 }
 
 // mapSelectionToSource(const class QItemSelection &)
-func (this *QIdentityProxyModel) MapSelectionToSource(args ...interface{}) (ret interface{}) {
+func (this *QIdentityProxyModel) Mapselectiontosource(args ...interface{}) (ret interface{}) {
   // mapSelectionToSource(const class QItemSelection &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QItemSelection{}) // "const QItemSelection &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -147,12 +153,16 @@ func (this *QIdentityProxyModel) MapSelectionToSource(args ...interface{}) (ret 
 }
 
 // setSourceModel(class QAbstractItemModel *)
-func (this *QIdentityProxyModel) SetSourceModel(args ...interface{}) () {
+func (this *QIdentityProxyModel) Setsourcemodel(args ...interface{}) () {
   // setSourceModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractItemModel{}) // "QAbstractItemModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -179,6 +189,10 @@ func (this *QIdentityProxyModel) Sibling(args ...interface{}) (ret interface{}) 
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -217,6 +231,10 @@ func (this *QIdentityProxyModel) Index(args ...interface{}) (ret interface{}) {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -247,12 +265,16 @@ func (this *QIdentityProxyModel) Index(args ...interface{}) (ret interface{}) {
 }
 
 // mapFromSource(const class QModelIndex &)
-func (this *QIdentityProxyModel) MapFromSource(args ...interface{}) (ret interface{}) {
+func (this *QIdentityProxyModel) Mapfromsource(args ...interface{}) (ret interface{}) {
   // mapFromSource(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -279,7 +301,7 @@ func (this *QIdentityProxyModel) MapFromSource(args ...interface{}) (ret interfa
 }
 
 // removeRows(int, int, const class QModelIndex &)
-func (this *QIdentityProxyModel) RemoveRows(args ...interface{}) (ret interface{}) {
+func (this *QIdentityProxyModel) Removerows(args ...interface{}) (ret interface{}) {
   // removeRows(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -287,6 +309,10 @@ func (this *QIdentityProxyModel) RemoveRows(args ...interface{}) (ret interface{
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -317,11 +343,15 @@ func (this *QIdentityProxyModel) RemoveRows(args ...interface{}) (ret interface{
 }
 
 // ~QIdentityProxyModel()
-func (this *QIdentityProxyModel) Free(args ...interface{}) () {
+func (this *QIdentityProxyModel) Freeqidentityproxymodel(args ...interface{}) () {
   // ~QIdentityProxyModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -329,10 +359,7 @@ func (this *QIdentityProxyModel) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QIdentityProxyModelD0Ev
     // invoke: void ~QIdentityProxyModel()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QIdentityProxyModelD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QIdentityProxyModelD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "~QIdentityProxyModel", args)
   }
@@ -347,6 +374,10 @@ func (this *QIdentityProxyModel) Parent(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -373,12 +404,16 @@ func (this *QIdentityProxyModel) Parent(args ...interface{}) (ret interface{}) {
 }
 
 // mapSelectionFromSource(const class QItemSelection &)
-func (this *QIdentityProxyModel) MapSelectionFromSource(args ...interface{}) (ret interface{}) {
+func (this *QIdentityProxyModel) Mapselectionfromsource(args ...interface{}) (ret interface{}) {
   // mapSelectionFromSource(const class QItemSelection &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QItemSelection{}) // "const QItemSelection &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -405,7 +440,7 @@ func (this *QIdentityProxyModel) MapSelectionFromSource(args ...interface{}) (re
 }
 
 // insertRows(int, int, const class QModelIndex &)
-func (this *QIdentityProxyModel) InsertRows(args ...interface{}) (ret interface{}) {
+func (this *QIdentityProxyModel) Insertrows(args ...interface{}) (ret interface{}) {
   // insertRows(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -413,6 +448,10 @@ func (this *QIdentityProxyModel) InsertRows(args ...interface{}) (ret interface{
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -443,15 +482,16 @@ func (this *QIdentityProxyModel) InsertRows(args ...interface{}) (ret interface{
 }
 
 // QIdentityProxyModel(class QObject *)
-func GcfreeQIdentityProxyModel(this *QIdentityProxyModel) {
-  qtrt.UniverseFree(this)
-}
 func NewQIdentityProxyModel(args ...interface{}) *QIdentityProxyModel {
   // QIdentityProxyModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -464,9 +504,7 @@ func NewQIdentityProxyModel(args ...interface{}) *QIdentityProxyModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QIdentityProxyModelC2EP7QObject(arg0)
-    this := &QIdentityProxyModel{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQIdentityProxyModel)
-    return this
+    return &QIdentityProxyModel{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "QIdentityProxyModel", args)
   }
@@ -475,11 +513,15 @@ func NewQIdentityProxyModel(args ...interface{}) *QIdentityProxyModel {
 }
 
 // metaObject()
-func (this *QIdentityProxyModel) MetaObject(args ...interface{}) () {
+func (this *QIdentityProxyModel) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -496,12 +538,16 @@ func (this *QIdentityProxyModel) MetaObject(args ...interface{}) () {
 }
 
 // rowCount(const class QModelIndex &)
-func (this *QIdentityProxyModel) RowCount(args ...interface{}) (ret interface{}) {
+func (this *QIdentityProxyModel) Rowcount(args ...interface{}) (ret interface{}) {
   // rowCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -528,12 +574,16 @@ func (this *QIdentityProxyModel) RowCount(args ...interface{}) (ret interface{})
 }
 
 // mapToSource(const class QModelIndex &)
-func (this *QIdentityProxyModel) MapToSource(args ...interface{}) (ret interface{}) {
+func (this *QIdentityProxyModel) Maptosource(args ...interface{}) (ret interface{}) {
   // mapToSource(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -560,7 +610,7 @@ func (this *QIdentityProxyModel) MapToSource(args ...interface{}) (ret interface
 }
 
 // insertColumns(int, int, const class QModelIndex &)
-func (this *QIdentityProxyModel) InsertColumns(args ...interface{}) (ret interface{}) {
+func (this *QIdentityProxyModel) Insertcolumns(args ...interface{}) (ret interface{}) {
   // insertColumns(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -568,6 +618,10 @@ func (this *QIdentityProxyModel) InsertColumns(args ...interface{}) (ret interfa
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -598,7 +652,7 @@ func (this *QIdentityProxyModel) InsertColumns(args ...interface{}) (ret interfa
 }
 
 // removeColumns(int, int, const class QModelIndex &)
-func (this *QIdentityProxyModel) RemoveColumns(args ...interface{}) (ret interface{}) {
+func (this *QIdentityProxyModel) Removecolumns(args ...interface{}) (ret interface{}) {
   // removeColumns(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -606,6 +660,10 @@ func (this *QIdentityProxyModel) RemoveColumns(args ...interface{}) (ret interfa
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

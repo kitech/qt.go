@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qtreewidget.h
 // dst-file: /src/widgets/qtreewidget.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -261,7 +260,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTreeWidget)=1
@@ -287,11 +285,15 @@ type QTreeWidgetItem struct {
 }
 
 // sortColumn()
-func (this *QTreeWidget) SortColumn(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Sortcolumn(args ...interface{}) (ret interface{}) {
   // sortColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -316,12 +318,16 @@ func (this *QTreeWidget) SortColumn(args ...interface{}) (ret interface{}) {
 }
 
 // setHeaderLabel(const class QString &)
-func (this *QTreeWidget) SetHeaderLabel(args ...interface{}) () {
+func (this *QTreeWidget) Setheaderlabel(args ...interface{}) () {
   // setHeaderLabel(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -340,13 +346,17 @@ func (this *QTreeWidget) SetHeaderLabel(args ...interface{}) () {
 }
 
 // setFirstItemColumnSpanned(const class QTreeWidgetItem *, _Bool)
-func (this *QTreeWidget) SetFirstItemColumnSpanned(args ...interface{}) () {
+func (this *QTreeWidget) Setfirstitemcolumnspanned(args ...interface{}) () {
   // setFirstItemColumnSpanned(const class QTreeWidgetItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -367,12 +377,16 @@ func (this *QTreeWidget) SetFirstItemColumnSpanned(args ...interface{}) () {
 }
 
 // indexOfTopLevelItem(class QTreeWidgetItem *)
-func (this *QTreeWidget) IndexOfTopLevelItem(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Indexoftoplevelitem(args ...interface{}) (ret interface{}) {
   // indexOfTopLevelItem(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -399,12 +413,16 @@ func (this *QTreeWidget) IndexOfTopLevelItem(args ...interface{}) (ret interface
 }
 
 // setHeaderLabels(const class QStringList &)
-func (this *QTreeWidget) SetHeaderLabels(args ...interface{}) () {
+func (this *QTreeWidget) Setheaderlabels(args ...interface{}) () {
   // setHeaderLabels(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -423,13 +441,17 @@ func (this *QTreeWidget) SetHeaderLabels(args ...interface{}) () {
 }
 
 // setItemExpanded(const class QTreeWidgetItem *, _Bool)
-func (this *QTreeWidget) SetItemExpanded(args ...interface{}) () {
+func (this *QTreeWidget) Setitemexpanded(args ...interface{}) () {
   // setItemExpanded(const class QTreeWidgetItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -450,13 +472,17 @@ func (this *QTreeWidget) SetItemExpanded(args ...interface{}) () {
 }
 
 // setItemSelected(const class QTreeWidgetItem *, _Bool)
-func (this *QTreeWidget) SetItemSelected(args ...interface{}) () {
+func (this *QTreeWidget) Setitemselected(args ...interface{}) () {
   // setItemSelected(const class QTreeWidgetItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -477,15 +503,16 @@ func (this *QTreeWidget) SetItemSelected(args ...interface{}) () {
 }
 
 // QTreeWidget(class QWidget *)
-func GcfreeQTreeWidget(this *QTreeWidget) {
-  qtrt.UniverseFree(this)
-}
 func NewQTreeWidget(args ...interface{}) *QTreeWidget {
   // QTreeWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -498,9 +525,7 @@ func NewQTreeWidget(args ...interface{}) *QTreeWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTreeWidgetC2EP7QWidget(arg0)
-    this := &QTreeWidget{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTreeWidget)
-    return this
+    return &QTreeWidget{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTreeWidget", "QTreeWidget", args)
   }
@@ -509,13 +534,17 @@ func NewQTreeWidget(args ...interface{}) *QTreeWidget {
 }
 
 // itemWidget(class QTreeWidgetItem *, int)
-func (this *QTreeWidget) ItemWidget(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Itemwidget(args ...interface{}) (ret interface{}) {
   // itemWidget(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -544,11 +573,15 @@ func (this *QTreeWidget) ItemWidget(args ...interface{}) (ret interface{}) {
 }
 
 // selectedItems()
-func (this *QTreeWidget) SelectedItems(args ...interface{}) () {
+func (this *QTreeWidget) Selecteditems(args ...interface{}) () {
   // selectedItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -565,13 +598,17 @@ func (this *QTreeWidget) SelectedItems(args ...interface{}) () {
 }
 
 // openPersistentEditor(class QTreeWidgetItem *, int)
-func (this *QTreeWidget) OpenPersistentEditor(args ...interface{}) () {
+func (this *QTreeWidget) Openpersistenteditor(args ...interface{}) () {
   // openPersistentEditor(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -592,12 +629,16 @@ func (this *QTreeWidget) OpenPersistentEditor(args ...interface{}) () {
 }
 
 // visualItemRect(const class QTreeWidgetItem *)
-func (this *QTreeWidget) VisualItemRect(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Visualitemrect(args ...interface{}) (ret interface{}) {
   // visualItemRect(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -624,13 +665,17 @@ func (this *QTreeWidget) VisualItemRect(args ...interface{}) (ret interface{}) {
 }
 
 // removeItemWidget(class QTreeWidgetItem *, int)
-func (this *QTreeWidget) RemoveItemWidget(args ...interface{}) () {
+func (this *QTreeWidget) Removeitemwidget(args ...interface{}) () {
   // removeItemWidget(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -651,12 +696,16 @@ func (this *QTreeWidget) RemoveItemWidget(args ...interface{}) () {
 }
 
 // setColumnCount(int)
-func (this *QTreeWidget) SetColumnCount(args ...interface{}) () {
+func (this *QTreeWidget) Setcolumncount(args ...interface{}) () {
   // setColumnCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -675,12 +724,16 @@ func (this *QTreeWidget) SetColumnCount(args ...interface{}) () {
 }
 
 // expandItem(const class QTreeWidgetItem *)
-func (this *QTreeWidget) ExpandItem(args ...interface{}) () {
+func (this *QTreeWidget) Expanditem(args ...interface{}) () {
   // expandItem(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -699,12 +752,16 @@ func (this *QTreeWidget) ExpandItem(args ...interface{}) () {
 }
 
 // collapseItem(const class QTreeWidgetItem *)
-func (this *QTreeWidget) CollapseItem(args ...interface{}) () {
+func (this *QTreeWidget) Collapseitem(args ...interface{}) () {
   // collapseItem(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -723,7 +780,7 @@ func (this *QTreeWidget) CollapseItem(args ...interface{}) () {
 }
 
 // setItemWidget(class QTreeWidgetItem *, int, class QWidget *)
-func (this *QTreeWidget) SetItemWidget(args ...interface{}) () {
+func (this *QTreeWidget) Setitemwidget(args ...interface{}) () {
   // setItemWidget(class QTreeWidgetItem *, int, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -731,6 +788,10 @@ func (this *QTreeWidget) SetItemWidget(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -753,13 +814,17 @@ func (this *QTreeWidget) SetItemWidget(args ...interface{}) () {
 }
 
 // editItem(class QTreeWidgetItem *, int)
-func (this *QTreeWidget) EditItem(args ...interface{}) () {
+func (this *QTreeWidget) Edititem(args ...interface{}) () {
   // editItem(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -780,12 +845,16 @@ func (this *QTreeWidget) EditItem(args ...interface{}) () {
 }
 
 // setSelectionModel(class QItemSelectionModel *)
-func (this *QTreeWidget) SetSelectionModel(args ...interface{}) () {
+func (this *QTreeWidget) Setselectionmodel(args ...interface{}) () {
   // setSelectionModel(class QItemSelectionModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QItemSelectionModel{}) // "QItemSelectionModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -804,11 +873,15 @@ func (this *QTreeWidget) SetSelectionModel(args ...interface{}) () {
 }
 
 // currentItem()
-func (this *QTreeWidget) CurrentItem(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Currentitem(args ...interface{}) (ret interface{}) {
   // currentItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -833,12 +906,16 @@ func (this *QTreeWidget) CurrentItem(args ...interface{}) (ret interface{}) {
 }
 
 // isItemSelected(const class QTreeWidgetItem *)
-func (this *QTreeWidget) IsItemSelected(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Isitemselected(args ...interface{}) (ret interface{}) {
   // isItemSelected(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -865,12 +942,16 @@ func (this *QTreeWidget) IsItemSelected(args ...interface{}) (ret interface{}) {
 }
 
 // itemBelow(const class QTreeWidgetItem *)
-func (this *QTreeWidget) ItemBelow(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Itembelow(args ...interface{}) (ret interface{}) {
   // itemBelow(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -897,11 +978,15 @@ func (this *QTreeWidget) ItemBelow(args ...interface{}) (ret interface{}) {
 }
 
 // currentColumn()
-func (this *QTreeWidget) CurrentColumn(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Currentcolumn(args ...interface{}) (ret interface{}) {
   // currentColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -926,12 +1011,16 @@ func (this *QTreeWidget) CurrentColumn(args ...interface{}) (ret interface{}) {
 }
 
 // isItemHidden(const class QTreeWidgetItem *)
-func (this *QTreeWidget) IsItemHidden(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Isitemhidden(args ...interface{}) (ret interface{}) {
   // isItemHidden(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -958,11 +1047,15 @@ func (this *QTreeWidget) IsItemHidden(args ...interface{}) (ret interface{}) {
 }
 
 // columnCount()
-func (this *QTreeWidget) ColumnCount(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Columncount(args ...interface{}) (ret interface{}) {
   // columnCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -987,12 +1080,16 @@ func (this *QTreeWidget) ColumnCount(args ...interface{}) (ret interface{}) {
 }
 
 // itemAbove(const class QTreeWidgetItem *)
-func (this *QTreeWidget) ItemAbove(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Itemabove(args ...interface{}) (ret interface{}) {
   // itemAbove(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1019,11 +1116,15 @@ func (this *QTreeWidget) ItemAbove(args ...interface{}) (ret interface{}) {
 }
 
 // invisibleRootItem()
-func (this *QTreeWidget) InvisibleRootItem(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Invisiblerootitem(args ...interface{}) (ret interface{}) {
   // invisibleRootItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1048,12 +1149,16 @@ func (this *QTreeWidget) InvisibleRootItem(args ...interface{}) (ret interface{}
 }
 
 // isFirstItemColumnSpanned(const class QTreeWidgetItem *)
-func (this *QTreeWidget) IsFirstItemColumnSpanned(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Isfirstitemcolumnspanned(args ...interface{}) (ret interface{}) {
   // isFirstItemColumnSpanned(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1080,12 +1185,16 @@ func (this *QTreeWidget) IsFirstItemColumnSpanned(args ...interface{}) (ret inte
 }
 
 // isItemExpanded(const class QTreeWidgetItem *)
-func (this *QTreeWidget) IsItemExpanded(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Isitemexpanded(args ...interface{}) (ret interface{}) {
   // isItemExpanded(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1112,12 +1221,16 @@ func (this *QTreeWidget) IsItemExpanded(args ...interface{}) (ret interface{}) {
 }
 
 // takeTopLevelItem(int)
-func (this *QTreeWidget) TakeTopLevelItem(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Taketoplevelitem(args ...interface{}) (ret interface{}) {
   // takeTopLevelItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1144,12 +1257,16 @@ func (this *QTreeWidget) TakeTopLevelItem(args ...interface{}) (ret interface{})
 }
 
 // topLevelItem(int)
-func (this *QTreeWidget) TopLevelItem(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Toplevelitem(args ...interface{}) (ret interface{}) {
   // topLevelItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1176,11 +1293,15 @@ func (this *QTreeWidget) TopLevelItem(args ...interface{}) (ret interface{}) {
 }
 
 // topLevelItemCount()
-func (this *QTreeWidget) TopLevelItemCount(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Toplevelitemcount(args ...interface{}) (ret interface{}) {
   // topLevelItemCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1205,13 +1326,17 @@ func (this *QTreeWidget) TopLevelItemCount(args ...interface{}) (ret interface{}
 }
 
 // insertTopLevelItem(int, class QTreeWidgetItem *)
-func (this *QTreeWidget) InsertTopLevelItem(args ...interface{}) () {
+func (this *QTreeWidget) Inserttoplevelitem(args ...interface{}) () {
   // insertTopLevelItem(int, class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1232,12 +1357,16 @@ func (this *QTreeWidget) InsertTopLevelItem(args ...interface{}) () {
 }
 
 // addTopLevelItem(class QTreeWidgetItem *)
-func (this *QTreeWidget) AddTopLevelItem(args ...interface{}) () {
+func (this *QTreeWidget) Addtoplevelitem(args ...interface{}) () {
   // addTopLevelItem(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1256,11 +1385,15 @@ func (this *QTreeWidget) AddTopLevelItem(args ...interface{}) () {
 }
 
 // headerItem()
-func (this *QTreeWidget) HeaderItem(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Headeritem(args ...interface{}) (ret interface{}) {
   // headerItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1285,7 +1418,7 @@ func (this *QTreeWidget) HeaderItem(args ...interface{}) (ret interface{}) {
 }
 
 // setCurrentItem(class QTreeWidgetItem *)
-func (this *QTreeWidget) SetCurrentItem(args ...interface{}) () {
+func (this *QTreeWidget) Setcurrentitem(args ...interface{}) () {
   // setCurrentItem(class QTreeWidgetItem *)
   // setCurrentItem(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1295,6 +1428,10 @@ func (this *QTreeWidget) SetCurrentItem(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1321,11 +1458,15 @@ func (this *QTreeWidget) SetCurrentItem(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QTreeWidget) MetaObject(args ...interface{}) () {
+func (this *QTreeWidget) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1342,11 +1483,15 @@ func (this *QTreeWidget) MetaObject(args ...interface{}) () {
 }
 
 // ~QTreeWidget()
-func (this *QTreeWidget) Free(args ...interface{}) () {
+func (this *QTreeWidget) Freeqtreewidget(args ...interface{}) () {
   // ~QTreeWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1354,10 +1499,7 @@ func (this *QTreeWidget) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTreeWidgetD0Ev
     // invoke: void ~QTreeWidget()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QTreeWidgetD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QTreeWidgetD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "~QTreeWidget", args)
   }
@@ -1366,7 +1508,7 @@ func (this *QTreeWidget) Free(args ...interface{}) () {
 }
 
 // itemAt(int, int)
-func (this *QTreeWidget) ItemAt(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidget) Itemat(args ...interface{}) (ret interface{}) {
   // itemAt(int, int)
   // itemAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1376,6 +1518,10 @@ func (this *QTreeWidget) ItemAt(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1423,6 +1569,10 @@ func (this *QTreeWidget) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1439,13 +1589,17 @@ func (this *QTreeWidget) Clear(args ...interface{}) () {
 }
 
 // setItemHidden(const class QTreeWidgetItem *, _Bool)
-func (this *QTreeWidget) SetItemHidden(args ...interface{}) () {
+func (this *QTreeWidget) Setitemhidden(args ...interface{}) () {
   // setItemHidden(const class QTreeWidgetItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "const QTreeWidgetItem *"
   vtys[0][1] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1466,13 +1620,17 @@ func (this *QTreeWidget) SetItemHidden(args ...interface{}) () {
 }
 
 // closePersistentEditor(class QTreeWidgetItem *, int)
-func (this *QTreeWidget) ClosePersistentEditor(args ...interface{}) () {
+func (this *QTreeWidget) Closepersistenteditor(args ...interface{}) () {
   // closePersistentEditor(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1493,12 +1651,16 @@ func (this *QTreeWidget) ClosePersistentEditor(args ...interface{}) () {
 }
 
 // setHeaderItem(class QTreeWidgetItem *)
-func (this *QTreeWidget) SetHeaderItem(args ...interface{}) () {
+func (this *QTreeWidget) Setheaderitem(args ...interface{}) () {
   // setHeaderItem(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1517,13 +1679,17 @@ func (this *QTreeWidget) SetHeaderItem(args ...interface{}) () {
 }
 
 // setTextAlignment(int, int)
-func (this *QTreeWidgetItem) SetTextAlignment(args ...interface{}) () {
+func (this *QTreeWidgetItem) Settextalignment(args ...interface{}) () {
   // setTextAlignment(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1544,11 +1710,15 @@ func (this *QTreeWidgetItem) SetTextAlignment(args ...interface{}) () {
 }
 
 // columnCount()
-func (this *QTreeWidgetItem) ColumnCount(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Columncount(args ...interface{}) (ret interface{}) {
   // columnCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1573,12 +1743,16 @@ func (this *QTreeWidgetItem) ColumnCount(args ...interface{}) (ret interface{}) 
 }
 
 // addChild(class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) AddChild(args ...interface{}) () {
+func (this *QTreeWidgetItem) Addchild(args ...interface{}) () {
   // addChild(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1597,12 +1771,16 @@ func (this *QTreeWidgetItem) AddChild(args ...interface{}) () {
 }
 
 // setSelected(_Bool)
-func (this *QTreeWidgetItem) SetSelected(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setselected(args ...interface{}) () {
   // setSelected(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1627,6 +1805,10 @@ func (this *QTreeWidgetItem) Text(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1653,12 +1835,16 @@ func (this *QTreeWidgetItem) Text(args ...interface{}) (ret interface{}) {
 }
 
 // whatsThis(int)
-func (this *QTreeWidgetItem) WhatsThis(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Whatsthis(args ...interface{}) (ret interface{}) {
   // whatsThis(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1690,6 +1876,10 @@ func (this *QTreeWidgetItem) Type_(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1720,6 +1910,10 @@ func (this *QTreeWidgetItem) Font(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1746,11 +1940,15 @@ func (this *QTreeWidgetItem) Font(args ...interface{}) (ret interface{}) {
 }
 
 // ~QTreeWidgetItem()
-func (this *QTreeWidgetItem) Free(args ...interface{}) () {
+func (this *QTreeWidgetItem) Freeqtreewidgetitem(args ...interface{}) () {
   // ~QTreeWidgetItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1758,10 +1956,7 @@ func (this *QTreeWidgetItem) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTreeWidgetItemD0Ev
     // invoke: void ~QTreeWidgetItem()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QTreeWidgetItemD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QTreeWidgetItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "~QTreeWidgetItem", args)
   }
@@ -1770,13 +1965,17 @@ func (this *QTreeWidgetItem) Free(args ...interface{}) () {
 }
 
 // setForeground(int, const class QBrush &)
-func (this *QTreeWidgetItem) SetForeground(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setforeground(args ...interface{}) () {
   // setForeground(int, const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1797,11 +1996,15 @@ func (this *QTreeWidgetItem) SetForeground(args ...interface{}) () {
 }
 
 // isSelected()
-func (this *QTreeWidgetItem) IsSelected(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Isselected(args ...interface{}) (ret interface{}) {
   // isSelected()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1826,11 +2029,15 @@ func (this *QTreeWidgetItem) IsSelected(args ...interface{}) (ret interface{}) {
 }
 
 // isDisabled()
-func (this *QTreeWidgetItem) IsDisabled(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Isdisabled(args ...interface{}) (ret interface{}) {
   // isDisabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1855,12 +2062,16 @@ func (this *QTreeWidgetItem) IsDisabled(args ...interface{}) (ret interface{}) {
 }
 
 // indexOfChild(class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) IndexOfChild(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Indexofchild(args ...interface{}) (ret interface{}) {
   // indexOfChild(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1887,9 +2098,6 @@ func (this *QTreeWidgetItem) IndexOfChild(args ...interface{}) (ret interface{})
 }
 
 // QTreeWidgetItem(class QTreeWidgetItem *, int)
-func GcfreeQTreeWidgetItem(this *QTreeWidgetItem) {
-  qtrt.UniverseFree(this)
-}
 func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
   // QTreeWidgetItem(class QTreeWidgetItem *, int)
   // QTreeWidgetItem(int)
@@ -1931,6 +2139,10 @@ func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
   vtys[8][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
   vtys[8][1] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
   vtys[8][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1945,9 +2157,7 @@ func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QTreeWidgetItemC2EPS_i(arg0, arg1)
-    this := &QTreeWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTreeWidgetItem)
-    return this
+    return &QTreeWidgetItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN15QTreeWidgetItemC1Ei
     // invoke: void QTreeWidgetItem(int)
@@ -1956,9 +2166,7 @@ func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QTreeWidgetItemC2Ei(arg0)
-    this := &QTreeWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTreeWidgetItem)
-    return this
+    return &QTreeWidgetItem{Qclsinst:qthis}
   case 2:
     // invoke: _ZN15QTreeWidgetItemC1EPS_S0_i
     // invoke: void QTreeWidgetItem(class QTreeWidgetItem *, class QTreeWidgetItem *, int)
@@ -1971,9 +2179,7 @@ func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QTreeWidgetItemC2EPS_S0_i(arg0, arg1, arg2)
-    this := &QTreeWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTreeWidgetItem)
-    return this
+    return &QTreeWidgetItem{Qclsinst:qthis}
   case 3:
     // invoke: _ZN15QTreeWidgetItemC1EP11QTreeWidgeti
     // invoke: void QTreeWidgetItem(class QTreeWidget *, int)
@@ -1984,9 +2190,7 @@ func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QTreeWidgetItemC2EP11QTreeWidgeti(arg0, arg1)
-    this := &QTreeWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTreeWidgetItem)
-    return this
+    return &QTreeWidgetItem{Qclsinst:qthis}
   case 4:
     // invoke: _ZN15QTreeWidgetItemC1EP11QTreeWidgetRK11QStringListi
     // invoke: void QTreeWidgetItem(class QTreeWidget *, const class QStringList &, int)
@@ -1999,9 +2203,7 @@ func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QTreeWidgetItemC2EP11QTreeWidgetRK11QStringListi(arg0, arg1, arg2)
-    this := &QTreeWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTreeWidgetItem)
-    return this
+    return &QTreeWidgetItem{Qclsinst:qthis}
   case 5:
     // invoke: _ZN15QTreeWidgetItemC1EP11QTreeWidgetPS_i
     // invoke: void QTreeWidgetItem(class QTreeWidget *, class QTreeWidgetItem *, int)
@@ -2014,9 +2216,7 @@ func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QTreeWidgetItemC2EP11QTreeWidgetPS_i(arg0, arg1, arg2)
-    this := &QTreeWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTreeWidgetItem)
-    return this
+    return &QTreeWidgetItem{Qclsinst:qthis}
   case 6:
     // invoke: _ZN15QTreeWidgetItemC1ERK11QStringListi
     // invoke: void QTreeWidgetItem(const class QStringList &, int)
@@ -2027,9 +2227,7 @@ func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QTreeWidgetItemC2ERK11QStringListi(arg0, arg1)
-    this := &QTreeWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTreeWidgetItem)
-    return this
+    return &QTreeWidgetItem{Qclsinst:qthis}
   case 7:
     // invoke: _ZN15QTreeWidgetItemC1ERKS_
     // invoke: void QTreeWidgetItem(const class QTreeWidgetItem &)
@@ -2038,9 +2236,7 @@ func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QTreeWidgetItemC2ERKS_(arg0)
-    this := &QTreeWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTreeWidgetItem)
-    return this
+    return &QTreeWidgetItem{Qclsinst:qthis}
   case 8:
     // invoke: _ZN15QTreeWidgetItemC1EPS_RK11QStringListi
     // invoke: void QTreeWidgetItem(class QTreeWidgetItem *, const class QStringList &, int)
@@ -2053,9 +2249,7 @@ func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QTreeWidgetItemC2EPS_RK11QStringListi(arg0, arg1, arg2)
-    this := &QTreeWidgetItem{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTreeWidgetItem)
-    return this
+    return &QTreeWidgetItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "QTreeWidgetItem", args)
   }
@@ -2070,6 +2264,10 @@ func (this *QTreeWidgetItem) Write(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDataStream{}) // "QDataStream &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2088,12 +2286,16 @@ func (this *QTreeWidgetItem) Write(args ...interface{}) () {
 }
 
 // setExpanded(_Bool)
-func (this *QTreeWidgetItem) SetExpanded(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setexpanded(args ...interface{}) () {
   // setExpanded(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2112,13 +2314,17 @@ func (this *QTreeWidgetItem) SetExpanded(args ...interface{}) () {
 }
 
 // insertChild(int, class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) InsertChild(args ...interface{}) () {
+func (this *QTreeWidgetItem) Insertchild(args ...interface{}) () {
   // insertChild(int, class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2139,12 +2345,16 @@ func (this *QTreeWidgetItem) InsertChild(args ...interface{}) () {
 }
 
 // backgroundColor(int)
-func (this *QTreeWidgetItem) BackgroundColor(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Backgroundcolor(args ...interface{}) (ret interface{}) {
   // backgroundColor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2171,13 +2381,17 @@ func (this *QTreeWidgetItem) BackgroundColor(args ...interface{}) (ret interface
 }
 
 // setBackground(int, const class QBrush &)
-func (this *QTreeWidgetItem) SetBackground(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setbackground(args ...interface{}) () {
   // setBackground(int, const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2198,12 +2412,16 @@ func (this *QTreeWidgetItem) SetBackground(args ...interface{}) () {
 }
 
 // textColor(int)
-func (this *QTreeWidgetItem) TextColor(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Textcolor(args ...interface{}) (ret interface{}) {
   // textColor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2230,13 +2448,17 @@ func (this *QTreeWidgetItem) TextColor(args ...interface{}) (ret interface{}) {
 }
 
 // setIcon(int, const class QIcon &)
-func (this *QTreeWidgetItem) SetIcon(args ...interface{}) () {
+func (this *QTreeWidgetItem) Seticon(args ...interface{}) () {
   // setIcon(int, const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2257,11 +2479,15 @@ func (this *QTreeWidgetItem) SetIcon(args ...interface{}) () {
 }
 
 // childCount()
-func (this *QTreeWidgetItem) ChildCount(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Childcount(args ...interface{}) (ret interface{}) {
   // childCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2286,7 +2512,7 @@ func (this *QTreeWidgetItem) ChildCount(args ...interface{}) (ret interface{}) {
 }
 
 // setData(int, int, const class QVariant &)
-func (this *QTreeWidgetItem) SetData(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setdata(args ...interface{}) () {
   // setData(int, int, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2294,6 +2520,10 @@ func (this *QTreeWidgetItem) SetData(args ...interface{}) () {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = reflect.TypeOf(qtcore.QVariant{}) // "const QVariant &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2316,12 +2546,16 @@ func (this *QTreeWidgetItem) SetData(args ...interface{}) () {
 }
 
 // statusTip(int)
-func (this *QTreeWidgetItem) StatusTip(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Statustip(args ...interface{}) (ret interface{}) {
   // statusTip(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2354,6 +2588,10 @@ func (this *QTreeWidgetItem) Foreground(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2380,11 +2618,15 @@ func (this *QTreeWidgetItem) Foreground(args ...interface{}) (ret interface{}) {
 }
 
 // treeWidget()
-func (this *QTreeWidgetItem) TreeWidget(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Treewidget(args ...interface{}) (ret interface{}) {
   // treeWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2414,6 +2656,10 @@ func (this *QTreeWidgetItem) Parent(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2438,11 +2684,15 @@ func (this *QTreeWidgetItem) Parent(args ...interface{}) (ret interface{}) {
 }
 
 // isFirstColumnSpanned()
-func (this *QTreeWidgetItem) IsFirstColumnSpanned(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Isfirstcolumnspanned(args ...interface{}) (ret interface{}) {
   // isFirstColumnSpanned()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2467,12 +2717,16 @@ func (this *QTreeWidgetItem) IsFirstColumnSpanned(args ...interface{}) (ret inte
 }
 
 // setFirstColumnSpanned(_Bool)
-func (this *QTreeWidgetItem) SetFirstColumnSpanned(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setfirstcolumnspanned(args ...interface{}) () {
   // setFirstColumnSpanned(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2496,6 +2750,10 @@ func (this *QTreeWidgetItem) Clone(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2520,13 +2778,17 @@ func (this *QTreeWidgetItem) Clone(args ...interface{}) (ret interface{}) {
 }
 
 // setBackgroundColor(int, const class QColor &)
-func (this *QTreeWidgetItem) SetBackgroundColor(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setbackgroundcolor(args ...interface{}) () {
   // setBackgroundColor(int, const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtgui.QColor{}) // "const QColor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2547,12 +2809,16 @@ func (this *QTreeWidgetItem) SetBackgroundColor(args ...interface{}) () {
 }
 
 // toolTip(int)
-func (this *QTreeWidgetItem) ToolTip(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Tooltip(args ...interface{}) (ret interface{}) {
   // toolTip(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2579,13 +2845,17 @@ func (this *QTreeWidgetItem) ToolTip(args ...interface{}) (ret interface{}) {
 }
 
 // setFont(int, const class QFont &)
-func (this *QTreeWidgetItem) SetFont(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setfont(args ...interface{}) () {
   // setFont(int, const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtgui.QFont{}) // "const QFont &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2606,11 +2876,15 @@ func (this *QTreeWidgetItem) SetFont(args ...interface{}) () {
 }
 
 // childIndicatorPolicy()
-func (this *QTreeWidgetItem) ChildIndicatorPolicy(args ...interface{}) () {
+func (this *QTreeWidgetItem) Childindicatorpolicy(args ...interface{}) () {
   // childIndicatorPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2627,13 +2901,17 @@ func (this *QTreeWidgetItem) ChildIndicatorPolicy(args ...interface{}) () {
 }
 
 // setWhatsThis(int, const class QString &)
-func (this *QTreeWidgetItem) SetWhatsThis(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setwhatsthis(args ...interface{}) () {
   // setWhatsThis(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2660,6 +2938,10 @@ func (this *QTreeWidgetItem) Background(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2692,6 +2974,10 @@ func (this *QTreeWidgetItem) Child(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2725,6 +3011,10 @@ func (this *QTreeWidgetItem) Data(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2753,13 +3043,17 @@ func (this *QTreeWidgetItem) Data(args ...interface{}) (ret interface{}) {
 }
 
 // setTextColor(int, const class QColor &)
-func (this *QTreeWidgetItem) SetTextColor(args ...interface{}) () {
+func (this *QTreeWidgetItem) Settextcolor(args ...interface{}) () {
   // setTextColor(int, const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtgui.QColor{}) // "const QColor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2786,6 +3080,10 @@ func (this *QTreeWidgetItem) Icon(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2812,11 +3110,15 @@ func (this *QTreeWidgetItem) Icon(args ...interface{}) (ret interface{}) {
 }
 
 // isExpanded()
-func (this *QTreeWidgetItem) IsExpanded(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Isexpanded(args ...interface{}) (ret interface{}) {
   // isExpanded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2841,13 +3143,17 @@ func (this *QTreeWidgetItem) IsExpanded(args ...interface{}) (ret interface{}) {
 }
 
 // setSizeHint(int, const class QSize &)
-func (this *QTreeWidgetItem) SetSizeHint(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setsizehint(args ...interface{}) () {
   // setSizeHint(int, const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2868,13 +3174,17 @@ func (this *QTreeWidgetItem) SetSizeHint(args ...interface{}) () {
 }
 
 // setToolTip(int, const class QString &)
-func (this *QTreeWidgetItem) SetToolTip(args ...interface{}) () {
+func (this *QTreeWidgetItem) Settooltip(args ...interface{}) () {
   // setToolTip(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2895,12 +3205,16 @@ func (this *QTreeWidgetItem) SetToolTip(args ...interface{}) () {
 }
 
 // sizeHint(int)
-func (this *QTreeWidgetItem) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2933,6 +3247,10 @@ func (this *QTreeWidgetItem) Read(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDataStream{}) // "QDataStream &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2951,11 +3269,15 @@ func (this *QTreeWidgetItem) Read(args ...interface{}) () {
 }
 
 // isHidden()
-func (this *QTreeWidgetItem) IsHidden(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Ishidden(args ...interface{}) (ret interface{}) {
   // isHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2980,13 +3302,17 @@ func (this *QTreeWidgetItem) IsHidden(args ...interface{}) (ret interface{}) {
 }
 
 // setText(int, const class QString &)
-func (this *QTreeWidgetItem) SetText(args ...interface{}) () {
+func (this *QTreeWidgetItem) Settext(args ...interface{}) () {
   // setText(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -3007,13 +3333,17 @@ func (this *QTreeWidgetItem) SetText(args ...interface{}) () {
 }
 
 // setStatusTip(int, const class QString &)
-func (this *QTreeWidgetItem) SetStatusTip(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setstatustip(args ...interface{}) () {
   // setStatusTip(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -3034,12 +3364,16 @@ func (this *QTreeWidgetItem) SetStatusTip(args ...interface{}) () {
 }
 
 // removeChild(class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) RemoveChild(args ...interface{}) () {
+func (this *QTreeWidgetItem) Removechild(args ...interface{}) () {
   // removeChild(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -3058,12 +3392,16 @@ func (this *QTreeWidgetItem) RemoveChild(args ...interface{}) () {
 }
 
 // setDisabled(_Bool)
-func (this *QTreeWidgetItem) SetDisabled(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setdisabled(args ...interface{}) () {
   // setDisabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -3087,6 +3425,10 @@ func (this *QTreeWidgetItem) Flags(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -3103,12 +3445,16 @@ func (this *QTreeWidgetItem) Flags(args ...interface{}) () {
 }
 
 // checkState(int)
-func (this *QTreeWidgetItem) CheckState(args ...interface{}) () {
+func (this *QTreeWidgetItem) Checkstate(args ...interface{}) () {
   // checkState(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -3127,11 +3473,15 @@ func (this *QTreeWidgetItem) CheckState(args ...interface{}) () {
 }
 
 // takeChildren()
-func (this *QTreeWidgetItem) TakeChildren(args ...interface{}) () {
+func (this *QTreeWidgetItem) Takechildren(args ...interface{}) () {
   // takeChildren()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -3148,12 +3498,16 @@ func (this *QTreeWidgetItem) TakeChildren(args ...interface{}) () {
 }
 
 // takeChild(int)
-func (this *QTreeWidgetItem) TakeChild(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Takechild(args ...interface{}) (ret interface{}) {
   // takeChild(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -3180,12 +3534,16 @@ func (this *QTreeWidgetItem) TakeChild(args ...interface{}) (ret interface{}) {
 }
 
 // textAlignment(int)
-func (this *QTreeWidgetItem) TextAlignment(args ...interface{}) (ret interface{}) {
+func (this *QTreeWidgetItem) Textalignment(args ...interface{}) (ret interface{}) {
   // textAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -3212,12 +3570,16 @@ func (this *QTreeWidgetItem) TextAlignment(args ...interface{}) (ret interface{}
 }
 
 // setHidden(_Bool)
-func (this *QTreeWidgetItem) SetHidden(args ...interface{}) () {
+func (this *QTreeWidgetItem) Sethidden(args ...interface{}) () {
   // setHidden(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

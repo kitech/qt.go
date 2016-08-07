@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -87,7 +86,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QLCDNumber)=1
@@ -98,12 +96,16 @@ type QLCDNumber struct {
 }
 
 // setSmallDecimalPoint(_Bool)
-func (this *QLCDNumber) SetSmallDecimalPoint(args ...interface{}) () {
+func (this *QLCDNumber) Setsmalldecimalpoint(args ...interface{}) () {
   // setSmallDecimalPoint(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -122,11 +124,15 @@ func (this *QLCDNumber) SetSmallDecimalPoint(args ...interface{}) () {
 }
 
 // setDecMode()
-func (this *QLCDNumber) SetDecMode(args ...interface{}) () {
+func (this *QLCDNumber) Setdecmode(args ...interface{}) () {
   // setDecMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -143,11 +149,15 @@ func (this *QLCDNumber) SetDecMode(args ...interface{}) () {
 }
 
 // smallDecimalPoint()
-func (this *QLCDNumber) SmallDecimalPoint(args ...interface{}) (ret interface{}) {
+func (this *QLCDNumber) Smalldecimalpoint(args ...interface{}) (ret interface{}) {
   // smallDecimalPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -172,11 +182,15 @@ func (this *QLCDNumber) SmallDecimalPoint(args ...interface{}) (ret interface{})
 }
 
 // setHexMode()
-func (this *QLCDNumber) SetHexMode(args ...interface{}) () {
+func (this *QLCDNumber) Sethexmode(args ...interface{}) () {
   // setHexMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -193,11 +207,15 @@ func (this *QLCDNumber) SetHexMode(args ...interface{}) () {
 }
 
 // ~QLCDNumber()
-func (this *QLCDNumber) Free(args ...interface{}) () {
+func (this *QLCDNumber) Freeqlcdnumber(args ...interface{}) () {
   // ~QLCDNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -205,10 +223,7 @@ func (this *QLCDNumber) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QLCDNumberD0Ev
     // invoke: void ~QLCDNumber()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN10QLCDNumberD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN10QLCDNumberD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "~QLCDNumber", args)
   }
@@ -217,11 +232,15 @@ func (this *QLCDNumber) Free(args ...interface{}) () {
 }
 
 // segmentStyle()
-func (this *QLCDNumber) SegmentStyle(args ...interface{}) () {
+func (this *QLCDNumber) Segmentstyle(args ...interface{}) () {
   // segmentStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -238,9 +257,6 @@ func (this *QLCDNumber) SegmentStyle(args ...interface{}) () {
 }
 
 // QLCDNumber(uint, class QWidget *)
-func GcfreeQLCDNumber(this *QLCDNumber) {
-  qtrt.UniverseFree(this)
-}
 func NewQLCDNumber(args ...interface{}) *QLCDNumber {
   // QLCDNumber(uint, class QWidget *)
   // QLCDNumber(class QWidget *)
@@ -251,6 +267,10 @@ func NewQLCDNumber(args ...interface{}) *QLCDNumber {
   vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -265,9 +285,7 @@ func NewQLCDNumber(args ...interface{}) *QLCDNumber {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QLCDNumberC2EjP7QWidget(arg0, arg1)
-    this := &QLCDNumber{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQLCDNumber)
-    return this
+    return &QLCDNumber{Qclsinst:qthis}
   case 1:
     // invoke: _ZN10QLCDNumberC1EP7QWidget
     // invoke: void QLCDNumber(class QWidget *)
@@ -276,9 +294,7 @@ func NewQLCDNumber(args ...interface{}) *QLCDNumber {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QLCDNumberC2EP7QWidget(arg0)
-    this := &QLCDNumber{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQLCDNumber)
-    return this
+    return &QLCDNumber{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QLCDNumber", "QLCDNumber", args)
   }
@@ -287,11 +303,15 @@ func NewQLCDNumber(args ...interface{}) *QLCDNumber {
 }
 
 // intValue()
-func (this *QLCDNumber) IntValue(args ...interface{}) (ret interface{}) {
+func (this *QLCDNumber) Intvalue(args ...interface{}) (ret interface{}) {
   // intValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -316,11 +336,15 @@ func (this *QLCDNumber) IntValue(args ...interface{}) (ret interface{}) {
 }
 
 // digitCount()
-func (this *QLCDNumber) DigitCount(args ...interface{}) (ret interface{}) {
+func (this *QLCDNumber) Digitcount(args ...interface{}) (ret interface{}) {
   // digitCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -345,11 +369,15 @@ func (this *QLCDNumber) DigitCount(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QLCDNumber) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QLCDNumber) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -374,11 +402,15 @@ func (this *QLCDNumber) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // setOctMode()
-func (this *QLCDNumber) SetOctMode(args ...interface{}) () {
+func (this *QLCDNumber) Setoctmode(args ...interface{}) () {
   // setOctMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -395,11 +427,15 @@ func (this *QLCDNumber) SetOctMode(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QLCDNumber) MetaObject(args ...interface{}) () {
+func (this *QLCDNumber) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -416,11 +452,15 @@ func (this *QLCDNumber) MetaObject(args ...interface{}) () {
 }
 
 // setBinMode()
-func (this *QLCDNumber) SetBinMode(args ...interface{}) () {
+func (this *QLCDNumber) Setbinmode(args ...interface{}) () {
   // setBinMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -442,6 +482,10 @@ func (this *QLCDNumber) Value(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -466,12 +510,16 @@ func (this *QLCDNumber) Value(args ...interface{}) (ret interface{}) {
 }
 
 // setDigitCount(int)
-func (this *QLCDNumber) SetDigitCount(args ...interface{}) () {
+func (this *QLCDNumber) Setdigitcount(args ...interface{}) () {
   // setDigitCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -495,6 +543,10 @@ func (this *QLCDNumber) Mode(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -511,7 +563,7 @@ func (this *QLCDNumber) Mode(args ...interface{}) () {
 }
 
 // checkOverflow(int)
-func (this *QLCDNumber) CheckOverflow(args ...interface{}) (ret interface{}) {
+func (this *QLCDNumber) Checkoverflow(args ...interface{}) (ret interface{}) {
   // checkOverflow(int)
   // checkOverflow(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -520,6 +572,10 @@ func (this *QLCDNumber) CheckOverflow(args ...interface{}) (ret interface{}) {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -572,6 +628,10 @@ func (this *QLCDNumber) Display(args ...interface{}) () {
   vtys[1][0] = qtrt.DoubleTy(false) // "double"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

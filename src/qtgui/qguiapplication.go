@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -30,6 +29,8 @@ import "qtcore"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
+  // proto: static QString QGuiApplication::desktopFileName();
+extern void* C_ZN15QGuiApplication15desktopFileNameEv(); // 4
   // proto: static QStyleHints * QGuiApplication::styleHints();
 extern void* C_ZN15QGuiApplication10styleHintsEv(); // 4
   // proto: static void QGuiApplication::setOverrideCursor(const QCursor & );
@@ -66,6 +67,8 @@ extern int32_t C_ZN15QGuiApplication4execEv(); // 4
 extern void* C_ZNK15QGuiApplication9sessionIdEv(void* qthis); // 4
   // proto:  QString QGuiApplication::sessionKey();
 extern void* C_ZNK15QGuiApplication10sessionKeyEv(void* qthis); // 4
+  // proto: static bool QGuiApplication::isFallbackSessionManagementEnabled();
+extern bool C_ZN15QGuiApplication34isFallbackSessionManagementEnabledEv(); // 4
   // proto: static QObject * QGuiApplication::focusObject();
 extern void* C_ZN15QGuiApplication11focusObjectEv(); // 4
   // proto: static QFunctionPointer QGuiApplication::platformFunction(const QByteArray & function);
@@ -96,6 +99,8 @@ extern void C_ZN15QGuiApplication10allWindowsEv(); // 4
 extern void C_ZN15QGuiApplicationD2Ev(void* qthis); // 4
   // proto: static void QGuiApplication::setDesktopSettingsAware(bool on);
 extern void C_ZN15QGuiApplication23setDesktopSettingsAwareEb(bool arg0); // 4
+  // proto: static void QGuiApplication::restoreOverrideCursor();
+extern void C_ZN15QGuiApplication21restoreOverrideCursorEv(); // 4
   // proto: static Qt::MouseButtons QGuiApplication::mouseButtons();
 extern void C_ZN15QGuiApplication12mouseButtonsEv(); // 4
   // proto: static QPlatformNativeInterface * QGuiApplication::platformNativeInterface();
@@ -108,6 +113,8 @@ extern double C_ZNK15QGuiApplication16devicePixelRatioEv(void* qthis); // 4
 extern void* C_ZN15QGuiApplication11modalWindowEv(); // 4
   // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
 extern void* C_ZN15QGuiApplicationC2ERiPPci(void* arg0, void* arg1, int32_t arg2); // 3
+  // proto: static void QGuiApplication::setFallbackSessionManagementEnabled(bool );
+extern void C_ZN15QGuiApplication35setFallbackSessionManagementEnabledEb(bool arg0); // 4
   // proto: static bool QGuiApplication::isLeftToRight();
 extern bool C_ZN15QGuiApplication13isLeftToRightEv(); // 2
   // proto: static void QGuiApplication::setWindowIcon(const QIcon & icon);
@@ -122,8 +129,8 @@ extern void C_ZN15QGuiApplication7setFontERK5QFont(void* arg0); // 4
 extern void C_ZN15QGuiApplication15topLevelWindowsEv(); // 4
   // proto:  bool QGuiApplication::isSessionRestored();
 extern bool C_ZNK15QGuiApplication17isSessionRestoredEv(void* qthis); // 4
-  // proto: static void QGuiApplication::restoreOverrideCursor();
-extern void C_ZN15QGuiApplication21restoreOverrideCursorEv(); // 4
+  // proto: static void QGuiApplication::setDesktopFileName(const QString & name);
+extern void C_ZN15QGuiApplication18setDesktopFileNameERK7QString(void* arg0); // 4
   // proto: static QIcon QGuiApplication::windowIcon();
 extern void* C_ZN15QGuiApplication10windowIconEv(); // 4
 */
@@ -137,7 +144,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGuiApplication)=1
@@ -146,6 +152,7 @@ type QGuiApplication struct {
   Qclsinst unsafe.Pointer /* *C.void */;
 //  _saveStateRequest QGuiApplication_saveStateRequest_signal;
 //  _applicationStateChanged QGuiApplication_applicationStateChanged_signal;
+//  _primaryScreenChanged QGuiApplication_primaryScreenChanged_signal;
 //  _screenAdded QGuiApplication_screenAdded_signal;
 //  _screenRemoved QGuiApplication_screenRemoved_signal;
 //  _focusObjectChanged QGuiApplication_focusObjectChanged_signal;
@@ -157,12 +164,49 @@ type QGuiApplication struct {
 //  _commitDataRequest QGuiApplication_commitDataRequest_signal;
 }
 
+// desktopFileName()
+func (this *QGuiApplication) Desktopfilename_S(args ...interface{}) (ret interface{}) {
+  // desktopFileName()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QGuiApplication15desktopFileNameEv
+    // invoke: QString desktopFileName()
+    var ret0 = C.C_ZN15QGuiApplication15desktopFileNameEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QGuiApplication", "desktopFileName", args)
+  }
+
+  return
+}
+
 // styleHints()
-func (this *QGuiApplication) StyleHints_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Stylehints_S(args ...interface{}) (ret interface{}) {
   // styleHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -187,12 +231,16 @@ func (this *QGuiApplication) StyleHints_s(args ...interface{}) (ret interface{})
 }
 
 // setOverrideCursor(const class QCursor &)
-func (this *QGuiApplication) SetOverrideCursor_s(args ...interface{}) () {
+func (this *QGuiApplication) Setoverridecursor_S(args ...interface{}) () {
   // setOverrideCursor(const class QCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QCursor{}) // "const QCursor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -211,11 +259,15 @@ func (this *QGuiApplication) SetOverrideCursor_s(args ...interface{}) () {
 }
 
 // sync()
-func (this *QGuiApplication) Sync_s(args ...interface{}) () {
+func (this *QGuiApplication) Sync_S(args ...interface{}) () {
   // sync()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -232,12 +284,16 @@ func (this *QGuiApplication) Sync_s(args ...interface{}) () {
 }
 
 // setPalette(const class QPalette &)
-func (this *QGuiApplication) SetPalette_s(args ...interface{}) () {
+func (this *QGuiApplication) Setpalette_S(args ...interface{}) () {
   // setPalette(const class QPalette &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPalette{}) // "const QPalette &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -256,11 +312,15 @@ func (this *QGuiApplication) SetPalette_s(args ...interface{}) () {
 }
 
 // screens()
-func (this *QGuiApplication) Screens_s(args ...interface{}) () {
+func (this *QGuiApplication) Screens_S(args ...interface{}) () {
   // screens()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -277,11 +337,15 @@ func (this *QGuiApplication) Screens_s(args ...interface{}) () {
 }
 
 // applicationState()
-func (this *QGuiApplication) ApplicationState_s(args ...interface{}) () {
+func (this *QGuiApplication) Applicationstate_S(args ...interface{}) () {
   // applicationState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -305,6 +369,10 @@ func (this *QGuiApplication) Notify(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[0][1] = reflect.TypeOf(qtcore.QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -333,11 +401,15 @@ func (this *QGuiApplication) Notify(args ...interface{}) (ret interface{}) {
 }
 
 // queryKeyboardModifiers()
-func (this *QGuiApplication) QueryKeyboardModifiers_s(args ...interface{}) () {
+func (this *QGuiApplication) Querykeyboardmodifiers_S(args ...interface{}) () {
   // queryKeyboardModifiers()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -354,11 +426,15 @@ func (this *QGuiApplication) QueryKeyboardModifiers_s(args ...interface{}) () {
 }
 
 // isSavingSession()
-func (this *QGuiApplication) IsSavingSession(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Issavingsession(args ...interface{}) (ret interface{}) {
   // isSavingSession()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -383,12 +459,16 @@ func (this *QGuiApplication) IsSavingSession(args ...interface{}) (ret interface
 }
 
 // changeOverrideCursor(const class QCursor &)
-func (this *QGuiApplication) ChangeOverrideCursor_s(args ...interface{}) () {
+func (this *QGuiApplication) Changeoverridecursor_S(args ...interface{}) () {
   // changeOverrideCursor(const class QCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QCursor{}) // "const QCursor &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -407,11 +487,15 @@ func (this *QGuiApplication) ChangeOverrideCursor_s(args ...interface{}) () {
 }
 
 // font()
-func (this *QGuiApplication) Font_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Font_S(args ...interface{}) (ret interface{}) {
   // font()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -436,11 +520,15 @@ func (this *QGuiApplication) Font_s(args ...interface{}) (ret interface{}) {
 }
 
 // quitOnLastWindowClosed()
-func (this *QGuiApplication) QuitOnLastWindowClosed_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Quitonlastwindowclosed_S(args ...interface{}) (ret interface{}) {
   // quitOnLastWindowClosed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -465,11 +553,15 @@ func (this *QGuiApplication) QuitOnLastWindowClosed_s(args ...interface{}) (ret 
 }
 
 // palette()
-func (this *QGuiApplication) Palette_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Palette_S(args ...interface{}) (ret interface{}) {
   // palette()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -494,12 +586,16 @@ func (this *QGuiApplication) Palette_s(args ...interface{}) (ret interface{}) {
 }
 
 // setApplicationDisplayName(const class QString &)
-func (this *QGuiApplication) SetApplicationDisplayName_s(args ...interface{}) () {
+func (this *QGuiApplication) Setapplicationdisplayname_S(args ...interface{}) () {
   // setApplicationDisplayName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -518,11 +614,15 @@ func (this *QGuiApplication) SetApplicationDisplayName_s(args ...interface{}) ()
 }
 
 // layoutDirection()
-func (this *QGuiApplication) LayoutDirection_s(args ...interface{}) () {
+func (this *QGuiApplication) Layoutdirection_S(args ...interface{}) () {
   // layoutDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -539,11 +639,15 @@ func (this *QGuiApplication) LayoutDirection_s(args ...interface{}) () {
 }
 
 // exec()
-func (this *QGuiApplication) Exec_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Exec_S(args ...interface{}) (ret interface{}) {
   // exec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -568,11 +672,15 @@ func (this *QGuiApplication) Exec_s(args ...interface{}) (ret interface{}) {
 }
 
 // sessionId()
-func (this *QGuiApplication) SessionId(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Sessionid(args ...interface{}) (ret interface{}) {
   // sessionId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -597,11 +705,15 @@ func (this *QGuiApplication) SessionId(args ...interface{}) (ret interface{}) {
 }
 
 // sessionKey()
-func (this *QGuiApplication) SessionKey(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Sessionkey(args ...interface{}) (ret interface{}) {
   // sessionKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -625,12 +737,49 @@ func (this *QGuiApplication) SessionKey(args ...interface{}) (ret interface{}) {
   return
 }
 
+// isFallbackSessionManagementEnabled()
+func (this *QGuiApplication) Isfallbacksessionmanagementenabled_S(args ...interface{}) (ret interface{}) {
+  // isFallbackSessionManagementEnabled()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QGuiApplication34isFallbackSessionManagementEnabledEv
+    // invoke: bool isFallbackSessionManagementEnabled()
+    var ret0 = C.C_ZN15QGuiApplication34isFallbackSessionManagementEnabledEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QGuiApplication", "isFallbackSessionManagementEnabled", args)
+  }
+
+  return
+}
+
 // focusObject()
-func (this *QGuiApplication) FocusObject_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Focusobject_S(args ...interface{}) (ret interface{}) {
   // focusObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -655,12 +804,16 @@ func (this *QGuiApplication) FocusObject_s(args ...interface{}) (ret interface{}
 }
 
 // platformFunction(const class QByteArray &)
-func (this *QGuiApplication) PlatformFunction_s(args ...interface{}) () {
+func (this *QGuiApplication) Platformfunction_S(args ...interface{}) () {
   // platformFunction(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -679,11 +832,15 @@ func (this *QGuiApplication) PlatformFunction_s(args ...interface{}) () {
 }
 
 // keyboardModifiers()
-func (this *QGuiApplication) KeyboardModifiers_s(args ...interface{}) () {
+func (this *QGuiApplication) Keyboardmodifiers_S(args ...interface{}) () {
   // keyboardModifiers()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -700,11 +857,15 @@ func (this *QGuiApplication) KeyboardModifiers_s(args ...interface{}) () {
 }
 
 // platformName()
-func (this *QGuiApplication) PlatformName_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Platformname_S(args ...interface{}) (ret interface{}) {
   // platformName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -729,11 +890,15 @@ func (this *QGuiApplication) PlatformName_s(args ...interface{}) (ret interface{
 }
 
 // focusWindow()
-func (this *QGuiApplication) FocusWindow_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Focuswindow_S(args ...interface{}) (ret interface{}) {
   // focusWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -758,11 +923,15 @@ func (this *QGuiApplication) FocusWindow_s(args ...interface{}) (ret interface{}
 }
 
 // isRightToLeft()
-func (this *QGuiApplication) IsRightToLeft_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Isrighttoleft_S(args ...interface{}) (ret interface{}) {
   // isRightToLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -787,12 +956,16 @@ func (this *QGuiApplication) IsRightToLeft_s(args ...interface{}) (ret interface
 }
 
 // topLevelAt(const class QPoint &)
-func (this *QGuiApplication) TopLevelAt_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Toplevelat_S(args ...interface{}) (ret interface{}) {
   // topLevelAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -819,11 +992,15 @@ func (this *QGuiApplication) TopLevelAt_s(args ...interface{}) (ret interface{})
 }
 
 // applicationDisplayName()
-func (this *QGuiApplication) ApplicationDisplayName_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Applicationdisplayname_S(args ...interface{}) (ret interface{}) {
   // applicationDisplayName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -848,11 +1025,15 @@ func (this *QGuiApplication) ApplicationDisplayName_s(args ...interface{}) (ret 
 }
 
 // inputMethod()
-func (this *QGuiApplication) InputMethod_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Inputmethod_S(args ...interface{}) (ret interface{}) {
   // inputMethod()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -877,11 +1058,15 @@ func (this *QGuiApplication) InputMethod_s(args ...interface{}) (ret interface{}
 }
 
 // clipboard()
-func (this *QGuiApplication) Clipboard_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Clipboard_S(args ...interface{}) (ret interface{}) {
   // clipboard()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -906,11 +1091,15 @@ func (this *QGuiApplication) Clipboard_s(args ...interface{}) (ret interface{}) 
 }
 
 // overrideCursor()
-func (this *QGuiApplication) OverrideCursor_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Overridecursor_S(args ...interface{}) (ret interface{}) {
   // overrideCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -935,11 +1124,15 @@ func (this *QGuiApplication) OverrideCursor_s(args ...interface{}) (ret interfac
 }
 
 // primaryScreen()
-func (this *QGuiApplication) PrimaryScreen_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Primaryscreen_S(args ...interface{}) (ret interface{}) {
   // primaryScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -964,11 +1157,15 @@ func (this *QGuiApplication) PrimaryScreen_s(args ...interface{}) (ret interface
 }
 
 // allWindows()
-func (this *QGuiApplication) AllWindows_s(args ...interface{}) () {
+func (this *QGuiApplication) Allwindows_S(args ...interface{}) () {
   // allWindows()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -985,11 +1182,15 @@ func (this *QGuiApplication) AllWindows_s(args ...interface{}) () {
 }
 
 // ~QGuiApplication()
-func (this *QGuiApplication) Free(args ...interface{}) () {
+func (this *QGuiApplication) Freeqguiapplication(args ...interface{}) () {
   // ~QGuiApplication()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -997,10 +1198,7 @@ func (this *QGuiApplication) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplicationD0Ev
     // invoke: void ~QGuiApplication()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QGuiApplicationD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QGuiApplicationD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "~QGuiApplication", args)
   }
@@ -1009,12 +1207,16 @@ func (this *QGuiApplication) Free(args ...interface{}) () {
 }
 
 // setDesktopSettingsAware(_Bool)
-func (this *QGuiApplication) SetDesktopSettingsAware_s(args ...interface{}) () {
+func (this *QGuiApplication) Setdesktopsettingsaware_S(args ...interface{}) () {
   // setDesktopSettingsAware(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1032,12 +1234,41 @@ func (this *QGuiApplication) SetDesktopSettingsAware_s(args ...interface{}) () {
   return
 }
 
+// restoreOverrideCursor()
+func (this *QGuiApplication) Restoreoverridecursor_S(args ...interface{}) () {
+  // restoreOverrideCursor()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QGuiApplication21restoreOverrideCursorEv
+    // invoke: void restoreOverrideCursor()
+    C.C_ZN15QGuiApplication21restoreOverrideCursorEv()
+  default:
+    qtrt.ErrorResolve("QGuiApplication", "restoreOverrideCursor", args)
+  }
+
+  return
+}
+
 // mouseButtons()
-func (this *QGuiApplication) MouseButtons_s(args ...interface{}) () {
+func (this *QGuiApplication) Mousebuttons_S(args ...interface{}) () {
   // mouseButtons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1054,11 +1285,15 @@ func (this *QGuiApplication) MouseButtons_s(args ...interface{}) () {
 }
 
 // platformNativeInterface()
-func (this *QGuiApplication) PlatformNativeInterface_s(args ...interface{}) () {
+func (this *QGuiApplication) Platformnativeinterface_S(args ...interface{}) () {
   // platformNativeInterface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1075,11 +1310,15 @@ func (this *QGuiApplication) PlatformNativeInterface_s(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QGuiApplication) MetaObject(args ...interface{}) () {
+func (this *QGuiApplication) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1096,11 +1335,15 @@ func (this *QGuiApplication) MetaObject(args ...interface{}) () {
 }
 
 // devicePixelRatio()
-func (this *QGuiApplication) DevicePixelRatio(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Devicepixelratio(args ...interface{}) (ret interface{}) {
   // devicePixelRatio()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1125,11 +1368,15 @@ func (this *QGuiApplication) DevicePixelRatio(args ...interface{}) (ret interfac
 }
 
 // modalWindow()
-func (this *QGuiApplication) ModalWindow_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Modalwindow_S(args ...interface{}) (ret interface{}) {
   // modalWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1154,9 +1401,6 @@ func (this *QGuiApplication) ModalWindow_s(args ...interface{}) (ret interface{}
 }
 
 // QGuiApplication(int &, char **, int)
-func GcfreeQGuiApplication(this *QGuiApplication) {
-  qtrt.UniverseFree(this)
-}
 func NewQGuiApplication(args ...interface{}) *QGuiApplication {
   // QGuiApplication(int &, char **, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1165,6 +1409,10 @@ func NewQGuiApplication(args ...interface{}) *QGuiApplication {
   vtys[0][0] = qtrt.Int32Ty(false) // "int &"
   vtys[0][1] = qtrt.ByteTy(true) // "char **"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1183,9 +1431,7 @@ func NewQGuiApplication(args ...interface{}) *QGuiApplication {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QGuiApplicationC2ERiPPci(arg0, arg1, arg2)
-    this := &QGuiApplication{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGuiApplication)
-    return this
+    return &QGuiApplication{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGuiApplication", "QGuiApplication", args)
   }
@@ -1193,12 +1439,44 @@ func NewQGuiApplication(args ...interface{}) *QGuiApplication {
   return nil // QGuiApplication{Qclsinst:qthis}
 }
 
+// setFallbackSessionManagementEnabled(_Bool)
+func (this *QGuiApplication) Setfallbacksessionmanagementenabled_S(args ...interface{}) () {
+  // setFallbackSessionManagementEnabled(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QGuiApplication35setFallbackSessionManagementEnabledEb
+    // invoke: void setFallbackSessionManagementEnabled(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C.C_ZN15QGuiApplication35setFallbackSessionManagementEnabledEb(arg0)
+  default:
+    qtrt.ErrorResolve("QGuiApplication", "setFallbackSessionManagementEnabled", args)
+  }
+
+  return
+}
+
 // isLeftToRight()
-func (this *QGuiApplication) IsLeftToRight_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Islefttoright_S(args ...interface{}) (ret interface{}) {
   // isLeftToRight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1223,12 +1501,16 @@ func (this *QGuiApplication) IsLeftToRight_s(args ...interface{}) (ret interface
 }
 
 // setWindowIcon(const class QIcon &)
-func (this *QGuiApplication) SetWindowIcon_s(args ...interface{}) () {
+func (this *QGuiApplication) Setwindowicon_S(args ...interface{}) () {
   // setWindowIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QIcon{}) // "const QIcon &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1247,12 +1529,16 @@ func (this *QGuiApplication) SetWindowIcon_s(args ...interface{}) () {
 }
 
 // setQuitOnLastWindowClosed(_Bool)
-func (this *QGuiApplication) SetQuitOnLastWindowClosed_s(args ...interface{}) () {
+func (this *QGuiApplication) Setquitonlastwindowclosed_S(args ...interface{}) () {
   // setQuitOnLastWindowClosed(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1271,11 +1557,15 @@ func (this *QGuiApplication) SetQuitOnLastWindowClosed_s(args ...interface{}) ()
 }
 
 // desktopSettingsAware()
-func (this *QGuiApplication) DesktopSettingsAware_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Desktopsettingsaware_S(args ...interface{}) (ret interface{}) {
   // desktopSettingsAware()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1300,12 +1590,16 @@ func (this *QGuiApplication) DesktopSettingsAware_s(args ...interface{}) (ret in
 }
 
 // setFont(const class QFont &)
-func (this *QGuiApplication) SetFont_s(args ...interface{}) () {
+func (this *QGuiApplication) Setfont_S(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QFont{}) // "const QFont &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1324,11 +1618,15 @@ func (this *QGuiApplication) SetFont_s(args ...interface{}) () {
 }
 
 // topLevelWindows()
-func (this *QGuiApplication) TopLevelWindows_s(args ...interface{}) () {
+func (this *QGuiApplication) Toplevelwindows_S(args ...interface{}) () {
   // topLevelWindows()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1345,11 +1643,15 @@ func (this *QGuiApplication) TopLevelWindows_s(args ...interface{}) () {
 }
 
 // isSessionRestored()
-func (this *QGuiApplication) IsSessionRestored(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Issessionrestored(args ...interface{}) (ret interface{}) {
   // isSessionRestored()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1373,33 +1675,44 @@ func (this *QGuiApplication) IsSessionRestored(args ...interface{}) (ret interfa
   return
 }
 
-// restoreOverrideCursor()
-func (this *QGuiApplication) RestoreOverrideCursor_s(args ...interface{}) () {
-  // restoreOverrideCursor()
+// setDesktopFileName(const class QString &)
+func (this *QGuiApplication) Setdesktopfilename_S(args ...interface{}) () {
+  // setDesktopFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN15QGuiApplication21restoreOverrideCursorEv
-    // invoke: void restoreOverrideCursor()
-    C.C_ZN15QGuiApplication21restoreOverrideCursorEv()
+    // invoke: _ZN15QGuiApplication18setDesktopFileNameERK7QString
+    // invoke: void setDesktopFileName(const class QString &)
+    var arg0 = args[0].(*qtcore.QString).Qclsinst
+    if false {fmt.Println(arg0)}
+    C.C_ZN15QGuiApplication18setDesktopFileNameERK7QString(arg0)
   default:
-    qtrt.ErrorResolve("QGuiApplication", "restoreOverrideCursor", args)
+    qtrt.ErrorResolve("QGuiApplication", "setDesktopFileName", args)
   }
 
   return
 }
 
 // windowIcon()
-func (this *QGuiApplication) WindowIcon_s(args ...interface{}) (ret interface{}) {
+func (this *QGuiApplication) Windowicon_S(args ...interface{}) (ret interface{}) {
   // windowIcon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

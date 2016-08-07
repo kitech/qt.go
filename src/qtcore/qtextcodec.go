@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qtextcodec.h
 // dst-file: /src/core/qtextcodec.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -95,7 +94,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextEncoder)=1
@@ -117,15 +115,16 @@ type QTextDecoder struct {
 }
 
 // QTextEncoder(const class QTextCodec *)
-func GcfreeQTextEncoder(this *QTextEncoder) {
-  qtrt.UniverseFree(this)
-}
 func NewQTextEncoder(args ...interface{}) *QTextEncoder {
   // QTextEncoder(const class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTextCodec{}) // "const QTextCodec *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -138,9 +137,7 @@ func NewQTextEncoder(args ...interface{}) *QTextEncoder {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QTextEncoderC2EPK10QTextCodec(arg0)
-    this := &QTextEncoder{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextEncoder)
-    return this
+    return &QTextEncoder{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextEncoder", "QTextEncoder", args)
   }
@@ -149,11 +146,15 @@ func NewQTextEncoder(args ...interface{}) *QTextEncoder {
 }
 
 // hasFailure()
-func (this *QTextEncoder) HasFailure(args ...interface{}) (ret interface{}) {
+func (this *QTextEncoder) Hasfailure(args ...interface{}) (ret interface{}) {
   // hasFailure()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -178,7 +179,7 @@ func (this *QTextEncoder) HasFailure(args ...interface{}) (ret interface{}) {
 }
 
 // fromUnicode(const class QChar *, int)
-func (this *QTextEncoder) FromUnicode(args ...interface{}) (ret interface{}) {
+func (this *QTextEncoder) Fromunicode(args ...interface{}) (ret interface{}) {
   // fromUnicode(const class QChar *, int)
   // fromUnicode(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -188,6 +189,10 @@ func (this *QTextEncoder) FromUnicode(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -230,11 +235,15 @@ func (this *QTextEncoder) FromUnicode(args ...interface{}) (ret interface{}) {
 }
 
 // ~QTextEncoder()
-func (this *QTextEncoder) Free(args ...interface{}) () {
+func (this *QTextEncoder) Freeqtextencoder(args ...interface{}) () {
   // ~QTextEncoder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -242,10 +251,7 @@ func (this *QTextEncoder) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTextEncoderD0Ev
     // invoke: void ~QTextEncoder()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QTextEncoderD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QTextEncoderD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEncoder", "~QTextEncoder", args)
   }
@@ -254,12 +260,16 @@ func (this *QTextEncoder) Free(args ...interface{}) () {
 }
 
 // setCodecForLocale(class QTextCodec *)
-func (this *QTextCodec) SetCodecForLocale_s(args ...interface{}) () {
+func (this *QTextCodec) Setcodecforlocale_S(args ...interface{}) () {
   // setCodecForLocale(class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -278,7 +288,7 @@ func (this *QTextCodec) SetCodecForLocale_s(args ...interface{}) () {
 }
 
 // codecForName(const class QByteArray &)
-func (this *QTextCodec) CodecForName_s(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) Codecforname_S(args ...interface{}) (ret interface{}) {
   // codecForName(const class QByteArray &)
   // codecForName(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -287,6 +297,10 @@ func (this *QTextCodec) CodecForName_s(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -329,7 +343,7 @@ func (this *QTextCodec) CodecForName_s(args ...interface{}) (ret interface{}) {
 }
 
 // canEncode(class QChar)
-func (this *QTextCodec) CanEncode(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) Canencode(args ...interface{}) (ret interface{}) {
   // canEncode(class QChar)
   // canEncode(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -338,6 +352,10 @@ func (this *QTextCodec) CanEncode(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QChar{}) // "QChar"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -378,11 +396,15 @@ func (this *QTextCodec) CanEncode(args ...interface{}) (ret interface{}) {
 }
 
 // codecForLocale()
-func (this *QTextCodec) CodecForLocale_s(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) Codecforlocale_S(args ...interface{}) (ret interface{}) {
   // codecForLocale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -407,7 +429,7 @@ func (this *QTextCodec) CodecForLocale_s(args ...interface{}) (ret interface{}) 
 }
 
 // codecForHtml(const class QByteArray &)
-func (this *QTextCodec) CodecForHtml_s(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) Codecforhtml_S(args ...interface{}) (ret interface{}) {
   // codecForHtml(const class QByteArray &)
   // codecForHtml(const class QByteArray &, class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -417,6 +439,10 @@ func (this *QTextCodec) CodecForHtml_s(args ...interface{}) (ret interface{}) {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
   vtys[1][1] = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -459,11 +485,15 @@ func (this *QTextCodec) CodecForHtml_s(args ...interface{}) (ret interface{}) {
 }
 
 // availableCodecs()
-func (this *QTextCodec) AvailableCodecs_s(args ...interface{}) () {
+func (this *QTextCodec) Availablecodecs_S(args ...interface{}) () {
   // availableCodecs()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -480,7 +510,7 @@ func (this *QTextCodec) AvailableCodecs_s(args ...interface{}) () {
 }
 
 // codecForUtfText(const class QByteArray &, class QTextCodec *)
-func (this *QTextCodec) CodecForUtfText_s(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) Codecforutftext_S(args ...interface{}) (ret interface{}) {
   // codecForUtfText(const class QByteArray &, class QTextCodec *)
   // codecForUtfText(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -490,6 +520,10 @@ func (this *QTextCodec) CodecForUtfText_s(args ...interface{}) (ret interface{})
   vtys[0][1] = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -532,11 +566,15 @@ func (this *QTextCodec) CodecForUtfText_s(args ...interface{}) (ret interface{})
 }
 
 // availableMibs()
-func (this *QTextCodec) AvailableMibs_s(args ...interface{}) () {
+func (this *QTextCodec) Availablemibs_S(args ...interface{}) () {
   // availableMibs()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -553,12 +591,16 @@ func (this *QTextCodec) AvailableMibs_s(args ...interface{}) () {
 }
 
 // fromUnicode(const class QString &)
-func (this *QTextCodec) FromUnicode(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) Fromunicode(args ...interface{}) (ret interface{}) {
   // fromUnicode(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -590,6 +632,10 @@ func (this *QTextCodec) Aliases(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -606,12 +652,16 @@ func (this *QTextCodec) Aliases(args ...interface{}) () {
 }
 
 // codecForMib(int)
-func (this *QTextCodec) CodecForMib_s(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) Codecformib_S(args ...interface{}) (ret interface{}) {
   // codecForMib(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -638,7 +688,7 @@ func (this *QTextCodec) CodecForMib_s(args ...interface{}) (ret interface{}) {
 }
 
 // toUnicode(const class QByteArray &)
-func (this *QTextCodec) ToUnicode(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) Tounicode(args ...interface{}) (ret interface{}) {
   // toUnicode(const class QByteArray &)
   // toUnicode(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -647,6 +697,10 @@ func (this *QTextCodec) ToUnicode(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -689,15 +743,16 @@ func (this *QTextCodec) ToUnicode(args ...interface{}) (ret interface{}) {
 }
 
 // QTextDecoder(const class QTextCodec *)
-func GcfreeQTextDecoder(this *QTextDecoder) {
-  qtrt.UniverseFree(this)
-}
 func NewQTextDecoder(args ...interface{}) *QTextDecoder {
   // QTextDecoder(const class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QTextCodec{}) // "const QTextCodec *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -710,9 +765,7 @@ func NewQTextDecoder(args ...interface{}) *QTextDecoder {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QTextDecoderC2EPK10QTextCodec(arg0)
-    this := &QTextDecoder{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextDecoder)
-    return this
+    return &QTextDecoder{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextDecoder", "QTextDecoder", args)
   }
@@ -721,11 +774,15 @@ func NewQTextDecoder(args ...interface{}) *QTextDecoder {
 }
 
 // hasFailure()
-func (this *QTextDecoder) HasFailure(args ...interface{}) (ret interface{}) {
+func (this *QTextDecoder) Hasfailure(args ...interface{}) (ret interface{}) {
   // hasFailure()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -750,11 +807,15 @@ func (this *QTextDecoder) HasFailure(args ...interface{}) (ret interface{}) {
 }
 
 // ~QTextDecoder()
-func (this *QTextDecoder) Free(args ...interface{}) () {
+func (this *QTextDecoder) Freeqtextdecoder(args ...interface{}) () {
   // ~QTextDecoder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -762,10 +823,7 @@ func (this *QTextDecoder) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTextDecoderD0Ev
     // invoke: void ~QTextDecoder()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QTextDecoderD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QTextDecoderD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextDecoder", "~QTextDecoder", args)
   }
@@ -774,7 +832,7 @@ func (this *QTextDecoder) Free(args ...interface{}) () {
 }
 
 // toUnicode(const class QByteArray &)
-func (this *QTextDecoder) ToUnicode(args ...interface{}) (ret interface{}) {
+func (this *QTextDecoder) Tounicode(args ...interface{}) (ret interface{}) {
   // toUnicode(const class QByteArray &)
   // toUnicode(const char *, int)
   // toUnicode(class QString *, const char *, int)
@@ -789,6 +847,10 @@ func (this *QTextDecoder) ToUnicode(args ...interface{}) (ret interface{}) {
   vtys[2][0] = reflect.TypeOf(QString{}) // "QString *"
   vtys[2][1] = qtrt.ByteTy(true) // "const char *"
   vtys[2][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

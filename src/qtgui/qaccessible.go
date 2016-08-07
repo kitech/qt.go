@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qaccessible.h
 // dst-file: /src/gui/qaccessible.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -64,6 +63,8 @@ extern int32_t C_ZNK32QAccessibleTableModelChangeEvent11firstColumnEv(void* qthi
 extern void C_ZN32QAccessibleTableModelChangeEvent11setFirstRowEi(void* qthis, int32_t arg0); // 2
   // proto:  int QAccessibleTableModelChangeEvent::firstRow();
 extern int32_t C_ZNK32QAccessibleTableModelChangeEvent8firstRowEv(void* qthis); // 2
+  // proto:  void QAccessibleTableModelChangeEvent::~QAccessibleTableModelChangeEvent();
+extern void C_ZN32QAccessibleTableModelChangeEventD2Ev(void* qthis); // 4
   // proto:  void QAccessibleTableModelChangeEvent::setLastRow(int row);
 extern void C_ZN32QAccessibleTableModelChangeEvent10setLastRowEi(void* qthis, int32_t arg0); // 2
   // proto:  int QAccessibleTableModelChangeEvent::lastRow();
@@ -134,20 +135,26 @@ extern void* C_ZNK20QAccessibleInterface10focusChildEv(void* qthis); // 4
 extern void* C_ZN20QAccessibleInterface14imageInterfaceEv(void* qthis); // 2
   // proto:  QAccessibleTableCellInterface * QAccessibleInterface::tableCellInterface();
 extern void* C_ZN20QAccessibleInterface18tableCellInterfaceEv(void* qthis); // 2
-  // proto:  QString QAccessibleTextUpdateEvent::textInserted();
-extern void* C_ZNK26QAccessibleTextUpdateEvent12textInsertedEv(void* qthis); // 2
-  // proto:  int QAccessibleTextUpdateEvent::changePosition();
-extern int32_t C_ZNK26QAccessibleTextUpdateEvent14changePositionEv(void* qthis); // 2
-  // proto:  QString QAccessibleTextUpdateEvent::textRemoved();
-extern void* C_ZNK26QAccessibleTextUpdateEvent11textRemovedEv(void* qthis); // 2
   // proto:  void QAccessibleTextUpdateEvent::QAccessibleTextUpdateEvent(QAccessibleInterface * iface, int position, const QString & oldText, const QString & text);
 extern void* C_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_(void* arg0, int32_t arg1, void* arg2, void* arg3); // 1
   // proto:  void QAccessibleTextUpdateEvent::QAccessibleTextUpdateEvent(QObject * obj, int position, const QString & oldText, const QString & text);
 extern void* C_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_(void* arg0, int32_t arg1, void* arg2, void* arg3); // 1
+  // proto:  int QAccessibleTextUpdateEvent::changePosition();
+extern int32_t C_ZNK26QAccessibleTextUpdateEvent14changePositionEv(void* qthis); // 2
+  // proto:  QString QAccessibleTextUpdateEvent::textRemoved();
+extern void* C_ZNK26QAccessibleTextUpdateEvent11textRemovedEv(void* qthis); // 2
+  // proto:  void QAccessibleTextUpdateEvent::~QAccessibleTextUpdateEvent();
+extern void C_ZN26QAccessibleTextUpdateEventD2Ev(void* qthis); // 4
+  // proto:  QString QAccessibleTextUpdateEvent::textInserted();
+extern void* C_ZNK26QAccessibleTextUpdateEvent12textInsertedEv(void* qthis); // 2
+  // proto:  void QAccessibleStateChangeEvent::~QAccessibleStateChangeEvent();
+extern void C_ZN27QAccessibleStateChangeEventD2Ev(void* qthis); // 4
   // proto:  QAccessible::State QAccessibleStateChangeEvent::changedStates();
 extern void C_ZNK27QAccessibleStateChangeEvent13changedStatesEv(void* qthis); // 2
   // proto:  QString QAccessibleTextInsertEvent::textInserted();
 extern void* C_ZNK26QAccessibleTextInsertEvent12textInsertedEv(void* qthis); // 2
+  // proto:  void QAccessibleTextInsertEvent::~QAccessibleTextInsertEvent();
+extern void C_ZN26QAccessibleTextInsertEventD2Ev(void* qthis); // 4
   // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QAccessibleInterface * iface, int position, const QString & text);
 extern void* C_ZN26QAccessibleTextInsertEventC2EP20QAccessibleInterfaceiRK7QString(void* arg0, int32_t arg1, void* arg2); // 1
   // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QObject * obj, int position, const QString & text);
@@ -156,28 +163,34 @@ extern void* C_ZN26QAccessibleTextInsertEventC2EP7QObjectiRK7QString(void* arg0,
 extern int32_t C_ZNK26QAccessibleTextInsertEvent14changePositionEv(void* qthis); // 2
   // proto:  QString QAccessibleTextRemoveEvent::textRemoved();
 extern void* C_ZNK26QAccessibleTextRemoveEvent11textRemovedEv(void* qthis); // 2
+  // proto:  int QAccessibleTextRemoveEvent::changePosition();
+extern int32_t C_ZNK26QAccessibleTextRemoveEvent14changePositionEv(void* qthis); // 2
   // proto:  void QAccessibleTextRemoveEvent::QAccessibleTextRemoveEvent(QObject * obj, int position, const QString & text);
 extern void* C_ZN26QAccessibleTextRemoveEventC2EP7QObjectiRK7QString(void* arg0, int32_t arg1, void* arg2); // 1
   // proto:  void QAccessibleTextRemoveEvent::QAccessibleTextRemoveEvent(QAccessibleInterface * iface, int position, const QString & text);
 extern void* C_ZN26QAccessibleTextRemoveEventC2EP20QAccessibleInterfaceiRK7QString(void* arg0, int32_t arg1, void* arg2); // 1
-  // proto:  int QAccessibleTextRemoveEvent::changePosition();
-extern int32_t C_ZNK26QAccessibleTextRemoveEvent14changePositionEv(void* qthis); // 2
-  // proto:  void QAccessibleTextSelectionEvent::QAccessibleTextSelectionEvent(QAccessibleInterface * iface, int start, int end);
-extern void* C_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii(void* arg0, int32_t arg1, int32_t arg2); // 1
-  // proto:  void QAccessibleTextSelectionEvent::QAccessibleTextSelectionEvent(QObject * obj, int start, int end);
-extern void* C_ZN29QAccessibleTextSelectionEventC2EP7QObjectii(void* arg0, int32_t arg1, int32_t arg2); // 1
+  // proto:  void QAccessibleTextRemoveEvent::~QAccessibleTextRemoveEvent();
+extern void C_ZN26QAccessibleTextRemoveEventD2Ev(void* qthis); // 4
   // proto:  int QAccessibleTextSelectionEvent::selectionStart();
 extern int32_t C_ZNK29QAccessibleTextSelectionEvent14selectionStartEv(void* qthis); // 2
+  // proto:  void QAccessibleTextSelectionEvent::~QAccessibleTextSelectionEvent();
+extern void C_ZN29QAccessibleTextSelectionEventD2Ev(void* qthis); // 4
   // proto:  int QAccessibleTextSelectionEvent::selectionEnd();
 extern int32_t C_ZNK29QAccessibleTextSelectionEvent12selectionEndEv(void* qthis); // 2
   // proto:  void QAccessibleTextSelectionEvent::setSelection(int start, int end);
 extern void C_ZN29QAccessibleTextSelectionEvent12setSelectionEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+  // proto:  void QAccessibleTextSelectionEvent::QAccessibleTextSelectionEvent(QAccessibleInterface * iface, int start, int end);
+extern void* C_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii(void* arg0, int32_t arg1, int32_t arg2); // 1
+  // proto:  void QAccessibleTextSelectionEvent::QAccessibleTextSelectionEvent(QObject * obj, int start, int end);
+extern void* C_ZN29QAccessibleTextSelectionEventC2EP7QObjectii(void* arg0, int32_t arg1, int32_t arg2); // 1
   // proto:  int QAccessibleTextCursorEvent::cursorPosition();
 extern int32_t C_ZNK26QAccessibleTextCursorEvent14cursorPositionEv(void* qthis); // 2
   // proto:  void QAccessibleTextCursorEvent::QAccessibleTextCursorEvent(QAccessibleInterface * iface, int cursorPos);
 extern void* C_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei(void* arg0, int32_t arg1); // 1
   // proto:  void QAccessibleTextCursorEvent::QAccessibleTextCursorEvent(QObject * obj, int cursorPos);
 extern void* C_ZN26QAccessibleTextCursorEventC2EP7QObjecti(void* arg0, int32_t arg1); // 1
+  // proto:  void QAccessibleTextCursorEvent::~QAccessibleTextCursorEvent();
+extern void C_ZN26QAccessibleTextCursorEventD2Ev(void* qthis); // 4
   // proto:  void QAccessibleTextCursorEvent::setCursorPosition(int position);
 extern void C_ZN26QAccessibleTextCursorEvent17setCursorPositionEi(void* qthis, int32_t arg0); // 2
   // proto:  void QAccessibleValueChangeEvent::QAccessibleValueChangeEvent(QObject * obj, const QVariant & val);
@@ -186,6 +199,8 @@ extern void* C_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant(void* arg0
 extern void* C_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant(void* arg0, void* arg1); // 1
   // proto:  void QAccessibleValueChangeEvent::setValue(const QVariant & val);
 extern void C_ZN27QAccessibleValueChangeEvent8setValueERK8QVariant(void* qthis, void* arg0); // 2
+  // proto:  void QAccessibleValueChangeEvent::~QAccessibleValueChangeEvent();
+extern void C_ZN27QAccessibleValueChangeEventD2Ev(void* qthis); // 4
   // proto:  QVariant QAccessibleValueChangeEvent::value();
 extern void* C_ZNK27QAccessibleValueChangeEvent5valueEv(void* qthis); // 2
 */
@@ -199,7 +214,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAccessible)=1
@@ -311,12 +325,16 @@ type QAccessibleValueChangeEvent struct {
 }
 
 // accessibleInterface(Id)
-func (this *QAccessible) AccessibleInterface_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessible) Accessibleinterface_S(args ...interface{}) (ret interface{}) {
   // accessibleInterface(Id)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "Id"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -343,12 +361,16 @@ func (this *QAccessible) AccessibleInterface_s(args ...interface{}) (ret interfa
 }
 
 // deleteAccessibleInterface(Id)
-func (this *QAccessible) DeleteAccessibleInterface_s(args ...interface{}) () {
+func (this *QAccessible) Deleteaccessibleinterface_S(args ...interface{}) () {
   // deleteAccessibleInterface(Id)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "Id"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -367,12 +389,16 @@ func (this *QAccessible) DeleteAccessibleInterface_s(args ...interface{}) () {
 }
 
 // setRootObject(class QObject *)
-func (this *QAccessible) SetRootObject_s(args ...interface{}) () {
+func (this *QAccessible) Setrootobject_S(args ...interface{}) () {
   // setRootObject(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -391,12 +417,16 @@ func (this *QAccessible) SetRootObject_s(args ...interface{}) () {
 }
 
 // queryAccessibleInterface(class QObject *)
-func (this *QAccessible) QueryAccessibleInterface_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessible) Queryaccessibleinterface_S(args ...interface{}) (ret interface{}) {
   // queryAccessibleInterface(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -423,12 +453,16 @@ func (this *QAccessible) QueryAccessibleInterface_s(args ...interface{}) (ret in
 }
 
 // uniqueId(class QAccessibleInterface *)
-func (this *QAccessible) UniqueId_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessible) Uniqueid_S(args ...interface{}) (ret interface{}) {
   // uniqueId(class QAccessibleInterface *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -455,12 +489,16 @@ func (this *QAccessible) UniqueId_s(args ...interface{}) (ret interface{}) {
 }
 
 // setActive(_Bool)
-func (this *QAccessible) SetActive_s(args ...interface{}) () {
+func (this *QAccessible) Setactive_S(args ...interface{}) () {
   // setActive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -479,12 +517,16 @@ func (this *QAccessible) SetActive_s(args ...interface{}) () {
 }
 
 // updateAccessibility(class QAccessibleEvent *)
-func (this *QAccessible) UpdateAccessibility_s(args ...interface{}) () {
+func (this *QAccessible) Updateaccessibility_S(args ...interface{}) () {
   // updateAccessibility(class QAccessibleEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAccessibleEvent{}) // "QAccessibleEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -503,11 +545,15 @@ func (this *QAccessible) UpdateAccessibility_s(args ...interface{}) () {
 }
 
 // cleanup()
-func (this *QAccessible) Cleanup_s(args ...interface{}) () {
+func (this *QAccessible) Cleanup_S(args ...interface{}) () {
   // cleanup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -524,11 +570,15 @@ func (this *QAccessible) Cleanup_s(args ...interface{}) () {
 }
 
 // isActive()
-func (this *QAccessible) IsActive_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessible) Isactive_S(args ...interface{}) (ret interface{}) {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -553,12 +603,16 @@ func (this *QAccessible) IsActive_s(args ...interface{}) (ret interface{}) {
 }
 
 // registerAccessibleInterface(class QAccessibleInterface *)
-func (this *QAccessible) RegisterAccessibleInterface_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessible) Registeraccessibleinterface_S(args ...interface{}) (ret interface{}) {
   // registerAccessibleInterface(class QAccessibleInterface *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -585,11 +639,15 @@ func (this *QAccessible) RegisterAccessibleInterface_s(args ...interface{}) (ret
 }
 
 // modelChangeType()
-func (this *QAccessibleTableModelChangeEvent) ModelChangeType(args ...interface{}) () {
+func (this *QAccessibleTableModelChangeEvent) Modelchangetype(args ...interface{}) () {
   // modelChangeType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -606,12 +664,16 @@ func (this *QAccessibleTableModelChangeEvent) ModelChangeType(args ...interface{
 }
 
 // setFirstColumn(int)
-func (this *QAccessibleTableModelChangeEvent) SetFirstColumn(args ...interface{}) () {
+func (this *QAccessibleTableModelChangeEvent) Setfirstcolumn(args ...interface{}) () {
   // setFirstColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -630,12 +692,16 @@ func (this *QAccessibleTableModelChangeEvent) SetFirstColumn(args ...interface{}
 }
 
 // setLastColumn(int)
-func (this *QAccessibleTableModelChangeEvent) SetLastColumn(args ...interface{}) () {
+func (this *QAccessibleTableModelChangeEvent) Setlastcolumn(args ...interface{}) () {
   // setLastColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -654,11 +720,15 @@ func (this *QAccessibleTableModelChangeEvent) SetLastColumn(args ...interface{})
 }
 
 // lastColumn()
-func (this *QAccessibleTableModelChangeEvent) LastColumn(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTableModelChangeEvent) Lastcolumn(args ...interface{}) (ret interface{}) {
   // lastColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -683,11 +753,15 @@ func (this *QAccessibleTableModelChangeEvent) LastColumn(args ...interface{}) (r
 }
 
 // firstColumn()
-func (this *QAccessibleTableModelChangeEvent) FirstColumn(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTableModelChangeEvent) Firstcolumn(args ...interface{}) (ret interface{}) {
   // firstColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -712,12 +786,16 @@ func (this *QAccessibleTableModelChangeEvent) FirstColumn(args ...interface{}) (
 }
 
 // setFirstRow(int)
-func (this *QAccessibleTableModelChangeEvent) SetFirstRow(args ...interface{}) () {
+func (this *QAccessibleTableModelChangeEvent) Setfirstrow(args ...interface{}) () {
   // setFirstRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -736,11 +814,15 @@ func (this *QAccessibleTableModelChangeEvent) SetFirstRow(args ...interface{}) (
 }
 
 // firstRow()
-func (this *QAccessibleTableModelChangeEvent) FirstRow(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTableModelChangeEvent) Firstrow(args ...interface{}) (ret interface{}) {
   // firstRow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -764,13 +846,42 @@ func (this *QAccessibleTableModelChangeEvent) FirstRow(args ...interface{}) (ret
   return
 }
 
+// ~QAccessibleTableModelChangeEvent()
+func (this *QAccessibleTableModelChangeEvent) Freeqaccessibletablemodelchangeevent(args ...interface{}) () {
+  // ~QAccessibleTableModelChangeEvent()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN32QAccessibleTableModelChangeEventD0Ev
+    // invoke: void ~QAccessibleTableModelChangeEvent()
+    C.C_ZN32QAccessibleTableModelChangeEventD2Ev(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "~QAccessibleTableModelChangeEvent", args)
+  }
+
+  return
+}
+
 // setLastRow(int)
-func (this *QAccessibleTableModelChangeEvent) SetLastRow(args ...interface{}) () {
+func (this *QAccessibleTableModelChangeEvent) Setlastrow(args ...interface{}) () {
   // setLastRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -789,11 +900,15 @@ func (this *QAccessibleTableModelChangeEvent) SetLastRow(args ...interface{}) ()
 }
 
 // lastRow()
-func (this *QAccessibleTableModelChangeEvent) LastRow(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTableModelChangeEvent) Lastrow(args ...interface{}) (ret interface{}) {
   // lastRow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -818,11 +933,15 @@ func (this *QAccessibleTableModelChangeEvent) LastRow(args ...interface{}) (ret 
 }
 
 // accessibleInterface()
-func (this *QAccessibleEvent) AccessibleInterface(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleEvent) Accessibleinterface(args ...interface{}) (ret interface{}) {
   // accessibleInterface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -852,6 +971,10 @@ func (this *QAccessibleEvent) Object(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -876,11 +999,15 @@ func (this *QAccessibleEvent) Object(args ...interface{}) (ret interface{}) {
 }
 
 // uniqueId()
-func (this *QAccessibleEvent) UniqueId(args ...interface{}) () {
+func (this *QAccessibleEvent) Uniqueid(args ...interface{}) () {
   // uniqueId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -902,6 +1029,10 @@ func (this *QAccessibleEvent) Child(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -926,12 +1057,16 @@ func (this *QAccessibleEvent) Child(args ...interface{}) (ret interface{}) {
 }
 
 // setChild(int)
-func (this *QAccessibleEvent) SetChild(args ...interface{}) () {
+func (this *QAccessibleEvent) Setchild(args ...interface{}) () {
   // setChild(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -955,6 +1090,10 @@ func (this *QAccessibleEvent) Type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -971,11 +1110,15 @@ func (this *QAccessibleEvent) Type_(args ...interface{}) () {
 }
 
 // ~QAccessibleEvent()
-func (this *QAccessibleEvent) Free(args ...interface{}) () {
+func (this *QAccessibleEvent) Freeqaccessibleevent(args ...interface{}) () {
   // ~QAccessibleEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -983,10 +1126,7 @@ func (this *QAccessibleEvent) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAccessibleEventD0Ev
     // invoke: void ~QAccessibleEvent()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QAccessibleEventD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QAccessibleEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "~QAccessibleEvent", args)
   }
@@ -995,11 +1135,15 @@ func (this *QAccessibleEvent) Free(args ...interface{}) () {
 }
 
 // increaseAction()
-func (this *QAccessibleActionInterface) IncreaseAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Increaseaction_S(args ...interface{}) (ret interface{}) {
   // increaseAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1024,11 +1168,15 @@ func (this *QAccessibleActionInterface) IncreaseAction_s(args ...interface{}) (r
 }
 
 // pressAction()
-func (this *QAccessibleActionInterface) PressAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Pressaction_S(args ...interface{}) (ret interface{}) {
   // pressAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1053,11 +1201,15 @@ func (this *QAccessibleActionInterface) PressAction_s(args ...interface{}) (ret 
 }
 
 // previousPageAction()
-func (this *QAccessibleActionInterface) PreviousPageAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Previouspageaction_S(args ...interface{}) (ret interface{}) {
   // previousPageAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1082,12 +1234,16 @@ func (this *QAccessibleActionInterface) PreviousPageAction_s(args ...interface{}
 }
 
 // localizedActionName(const class QString &)
-func (this *QAccessibleActionInterface) LocalizedActionName(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Localizedactionname(args ...interface{}) (ret interface{}) {
   // localizedActionName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1114,11 +1270,15 @@ func (this *QAccessibleActionInterface) LocalizedActionName(args ...interface{})
 }
 
 // scrollRightAction()
-func (this *QAccessibleActionInterface) ScrollRightAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Scrollrightaction_S(args ...interface{}) (ret interface{}) {
   // scrollRightAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1143,11 +1303,15 @@ func (this *QAccessibleActionInterface) ScrollRightAction_s(args ...interface{})
 }
 
 // decreaseAction()
-func (this *QAccessibleActionInterface) DecreaseAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Decreaseaction_S(args ...interface{}) (ret interface{}) {
   // decreaseAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1172,11 +1336,15 @@ func (this *QAccessibleActionInterface) DecreaseAction_s(args ...interface{}) (r
 }
 
 // showMenuAction()
-func (this *QAccessibleActionInterface) ShowMenuAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Showmenuaction_S(args ...interface{}) (ret interface{}) {
   // showMenuAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1201,11 +1369,15 @@ func (this *QAccessibleActionInterface) ShowMenuAction_s(args ...interface{}) (r
 }
 
 // toggleAction()
-func (this *QAccessibleActionInterface) ToggleAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Toggleaction_S(args ...interface{}) (ret interface{}) {
   // toggleAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1230,11 +1402,15 @@ func (this *QAccessibleActionInterface) ToggleAction_s(args ...interface{}) (ret
 }
 
 // setFocusAction()
-func (this *QAccessibleActionInterface) SetFocusAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Setfocusaction_S(args ...interface{}) (ret interface{}) {
   // setFocusAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1259,11 +1435,15 @@ func (this *QAccessibleActionInterface) SetFocusAction_s(args ...interface{}) (r
 }
 
 // scrollLeftAction()
-func (this *QAccessibleActionInterface) ScrollLeftAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Scrollleftaction_S(args ...interface{}) (ret interface{}) {
   // scrollLeftAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1288,12 +1468,16 @@ func (this *QAccessibleActionInterface) ScrollLeftAction_s(args ...interface{}) 
 }
 
 // localizedActionDescription(const class QString &)
-func (this *QAccessibleActionInterface) LocalizedActionDescription(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Localizedactiondescription(args ...interface{}) (ret interface{}) {
   // localizedActionDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1320,11 +1504,15 @@ func (this *QAccessibleActionInterface) LocalizedActionDescription(args ...inter
 }
 
 // scrollUpAction()
-func (this *QAccessibleActionInterface) ScrollUpAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Scrollupaction_S(args ...interface{}) (ret interface{}) {
   // scrollUpAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1349,11 +1537,15 @@ func (this *QAccessibleActionInterface) ScrollUpAction_s(args ...interface{}) (r
 }
 
 // scrollDownAction()
-func (this *QAccessibleActionInterface) ScrollDownAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Scrolldownaction_S(args ...interface{}) (ret interface{}) {
   // scrollDownAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1378,11 +1570,15 @@ func (this *QAccessibleActionInterface) ScrollDownAction_s(args ...interface{}) 
 }
 
 // nextPageAction()
-func (this *QAccessibleActionInterface) NextPageAction_s(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleActionInterface) Nextpageaction_S(args ...interface{}) (ret interface{}) {
   // nextPageAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1407,11 +1603,15 @@ func (this *QAccessibleActionInterface) NextPageAction_s(args ...interface{}) (r
 }
 
 // tableInterface()
-func (this *QAccessibleInterface) TableInterface(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleInterface) Tableinterface(args ...interface{}) (ret interface{}) {
   // tableInterface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1436,11 +1636,15 @@ func (this *QAccessibleInterface) TableInterface(args ...interface{}) (ret inter
 }
 
 // actionInterface()
-func (this *QAccessibleInterface) ActionInterface(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleInterface) Actioninterface(args ...interface{}) (ret interface{}) {
   // actionInterface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1465,11 +1669,15 @@ func (this *QAccessibleInterface) ActionInterface(args ...interface{}) (ret inte
 }
 
 // textInterface()
-func (this *QAccessibleInterface) TextInterface(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleInterface) Textinterface(args ...interface{}) (ret interface{}) {
   // textInterface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1494,11 +1702,15 @@ func (this *QAccessibleInterface) TextInterface(args ...interface{}) (ret interf
 }
 
 // foregroundColor()
-func (this *QAccessibleInterface) ForegroundColor(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleInterface) Foregroundcolor(args ...interface{}) (ret interface{}) {
   // foregroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1523,11 +1735,15 @@ func (this *QAccessibleInterface) ForegroundColor(args ...interface{}) (ret inte
 }
 
 // editableTextInterface()
-func (this *QAccessibleInterface) EditableTextInterface(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleInterface) Editabletextinterface(args ...interface{}) (ret interface{}) {
   // editableTextInterface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1557,6 +1773,10 @@ func (this *QAccessibleInterface) Window(args ...interface{}) (ret interface{}) 
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1581,13 +1801,17 @@ func (this *QAccessibleInterface) Window(args ...interface{}) (ret interface{}) 
 }
 
 // virtual_hook(int, void *)
-func (this *QAccessibleInterface) Virtual_hook(args ...interface{}) () {
+func (this *QAccessibleInterface) Virtual_Hook(args ...interface{}) () {
   // virtual_hook(int, void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.VoidpTy() // "void *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1608,11 +1832,15 @@ func (this *QAccessibleInterface) Virtual_hook(args ...interface{}) () {
 }
 
 // backgroundColor()
-func (this *QAccessibleInterface) BackgroundColor(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleInterface) Backgroundcolor(args ...interface{}) (ret interface{}) {
   // backgroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1637,11 +1865,15 @@ func (this *QAccessibleInterface) BackgroundColor(args ...interface{}) (ret inte
 }
 
 // valueInterface()
-func (this *QAccessibleInterface) ValueInterface(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleInterface) Valueinterface(args ...interface{}) (ret interface{}) {
   // valueInterface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1666,11 +1898,15 @@ func (this *QAccessibleInterface) ValueInterface(args ...interface{}) (ret inter
 }
 
 // focusChild()
-func (this *QAccessibleInterface) FocusChild(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleInterface) Focuschild(args ...interface{}) (ret interface{}) {
   // focusChild()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1695,11 +1931,15 @@ func (this *QAccessibleInterface) FocusChild(args ...interface{}) (ret interface
 }
 
 // imageInterface()
-func (this *QAccessibleInterface) ImageInterface(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleInterface) Imageinterface(args ...interface{}) (ret interface{}) {
   // imageInterface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1724,11 +1964,15 @@ func (this *QAccessibleInterface) ImageInterface(args ...interface{}) (ret inter
 }
 
 // tableCellInterface()
-func (this *QAccessibleInterface) TableCellInterface(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleInterface) Tablecellinterface(args ...interface{}) (ret interface{}) {
   // tableCellInterface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1752,41 +1996,77 @@ func (this *QAccessibleInterface) TableCellInterface(args ...interface{}) (ret i
   return
 }
 
-// textInserted()
-func (this *QAccessibleTextUpdateEvent) TextInserted(args ...interface{}) (ret interface{}) {
-  // textInserted()
+// QAccessibleTextUpdateEvent(class QAccessibleInterface *, int, const class QString &, const class QString &)
+func NewQAccessibleTextUpdateEvent(args ...interface{}) *QAccessibleTextUpdateEvent {
+  // QAccessibleTextUpdateEvent(class QAccessibleInterface *, int, const class QString &, const class QString &)
+  // QAccessibleTextUpdateEvent(class QObject *, int, const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  vtys[0][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  vtys[0][3] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  vtys[1][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  vtys[1][3] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK26QAccessibleTextUpdateEvent12textInsertedEv
-    // invoke: QString textInserted()
-    var ret0 = C.C_ZNK26QAccessibleTextUpdateEvent12textInsertedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
+    // invoke: _ZN26QAccessibleTextUpdateEventC1EP20QAccessibleInterfaceiRK7QStringS4_
+    // invoke: void QAccessibleTextUpdateEvent(class QAccessibleInterface *, int, const class QString &, const class QString &)
+    var arg0 = args[0].(*QAccessibleInterface).Qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(*qtcore.QString).Qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(*qtcore.QString).Qclsinst
+    if false {fmt.Println(arg3)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_(arg0, arg1, arg2, arg3)
+    return &QAccessibleTextUpdateEvent{Qclsinst:qthis}
+  case 1:
+    // invoke: _ZN26QAccessibleTextUpdateEventC1EP7QObjectiRK7QStringS4_
+    // invoke: void QAccessibleTextUpdateEvent(class QObject *, int, const class QString &, const class QString &)
+    var arg0 = args[0].(*qtcore.QObject).Qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(*qtcore.QString).Qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(*qtcore.QString).Qclsinst
+    if false {fmt.Println(arg3)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_(arg0, arg1, arg2, arg3)
+    return &QAccessibleTextUpdateEvent{Qclsinst:qthis}
   default:
-    qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "textInserted", args)
+    qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "QAccessibleTextUpdateEvent", args)
   }
 
-  return
+  return nil // QAccessibleTextUpdateEvent{Qclsinst:qthis}
 }
 
 // changePosition()
-func (this *QAccessibleTextUpdateEvent) ChangePosition(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTextUpdateEvent) Changeposition(args ...interface{}) (ret interface{}) {
   // changePosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1811,11 +2091,15 @@ func (this *QAccessibleTextUpdateEvent) ChangePosition(args ...interface{}) (ret
 }
 
 // textRemoved()
-func (this *QAccessibleTextUpdateEvent) TextRemoved(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTextUpdateEvent) Textremoved(args ...interface{}) (ret interface{}) {
   // textRemoved()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1839,76 +2123,99 @@ func (this *QAccessibleTextUpdateEvent) TextRemoved(args ...interface{}) (ret in
   return
 }
 
-// QAccessibleTextUpdateEvent(class QAccessibleInterface *, int, const class QString &, const class QString &)
-func GcfreeQAccessibleTextUpdateEvent(this *QAccessibleTextUpdateEvent) {
-  qtrt.UniverseFree(this)
-}
-func NewQAccessibleTextUpdateEvent(args ...interface{}) *QAccessibleTextUpdateEvent {
-  // QAccessibleTextUpdateEvent(class QAccessibleInterface *, int, const class QString &, const class QString &)
-  // QAccessibleTextUpdateEvent(class QObject *, int, const class QString &, const class QString &)
+// ~QAccessibleTextUpdateEvent()
+func (this *QAccessibleTextUpdateEvent) Freeqaccessibletextupdateevent(args ...interface{}) () {
+  // ~QAccessibleTextUpdateEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][3] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][3] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN26QAccessibleTextUpdateEventC1EP20QAccessibleInterfaceiRK7QStringS4_
-    // invoke: void QAccessibleTextUpdateEvent(class QAccessibleInterface *, int, const class QString &, const class QString &)
-    var arg0 = args[0].(*QAccessibleInterface).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg3)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_(arg0, arg1, arg2, arg3)
-    this := &QAccessibleTextUpdateEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleTextUpdateEvent)
-    return this
-  case 1:
-    // invoke: _ZN26QAccessibleTextUpdateEventC1EP7QObjectiRK7QStringS4_
-    // invoke: void QAccessibleTextUpdateEvent(class QObject *, int, const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg3)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_(arg0, arg1, arg2, arg3)
-    this := &QAccessibleTextUpdateEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleTextUpdateEvent)
-    return this
+    // invoke: _ZN26QAccessibleTextUpdateEventD0Ev
+    // invoke: void ~QAccessibleTextUpdateEvent()
+    C.C_ZN26QAccessibleTextUpdateEventD2Ev(this.Qclsinst)
   default:
-    qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "QAccessibleTextUpdateEvent", args)
+    qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "~QAccessibleTextUpdateEvent", args)
   }
 
-  return nil // QAccessibleTextUpdateEvent{Qclsinst:qthis}
+  return
+}
+
+// textInserted()
+func (this *QAccessibleTextUpdateEvent) Textinserted(args ...interface{}) (ret interface{}) {
+  // textInserted()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK26QAccessibleTextUpdateEvent12textInsertedEv
+    // invoke: QString textInserted()
+    var ret0 = C.C_ZNK26QAccessibleTextUpdateEvent12textInsertedEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "textInserted", args)
+  }
+
+  return
+}
+
+// ~QAccessibleStateChangeEvent()
+func (this *QAccessibleStateChangeEvent) Freeqaccessiblestatechangeevent(args ...interface{}) () {
+  // ~QAccessibleStateChangeEvent()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN27QAccessibleStateChangeEventD0Ev
+    // invoke: void ~QAccessibleStateChangeEvent()
+    C.C_ZN27QAccessibleStateChangeEventD2Ev(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleStateChangeEvent", "~QAccessibleStateChangeEvent", args)
+  }
+
+  return
 }
 
 // changedStates()
-func (this *QAccessibleStateChangeEvent) ChangedStates(args ...interface{}) () {
+func (this *QAccessibleStateChangeEvent) Changedstates(args ...interface{}) () {
   // changedStates()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1925,11 +2232,15 @@ func (this *QAccessibleStateChangeEvent) ChangedStates(args ...interface{}) () {
 }
 
 // textInserted()
-func (this *QAccessibleTextInsertEvent) TextInserted(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTextInsertEvent) Textinserted(args ...interface{}) (ret interface{}) {
   // textInserted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1953,10 +2264,32 @@ func (this *QAccessibleTextInsertEvent) TextInserted(args ...interface{}) (ret i
   return
 }
 
-// QAccessibleTextInsertEvent(class QAccessibleInterface *, int, const class QString &)
-func GcfreeQAccessibleTextInsertEvent(this *QAccessibleTextInsertEvent) {
-  qtrt.UniverseFree(this)
+// ~QAccessibleTextInsertEvent()
+func (this *QAccessibleTextInsertEvent) Freeqaccessibletextinsertevent(args ...interface{}) () {
+  // ~QAccessibleTextInsertEvent()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN26QAccessibleTextInsertEventD0Ev
+    // invoke: void ~QAccessibleTextInsertEvent()
+    C.C_ZN26QAccessibleTextInsertEventD2Ev(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleTextInsertEvent", "~QAccessibleTextInsertEvent", args)
+  }
+
+  return
 }
+
+// QAccessibleTextInsertEvent(class QAccessibleInterface *, int, const class QString &)
 func NewQAccessibleTextInsertEvent(args ...interface{}) *QAccessibleTextInsertEvent {
   // QAccessibleTextInsertEvent(class QAccessibleInterface *, int, const class QString &)
   // QAccessibleTextInsertEvent(class QObject *, int, const class QString &)
@@ -1970,6 +2303,10 @@ func NewQAccessibleTextInsertEvent(args ...interface{}) *QAccessibleTextInsertEv
   vtys[1][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
   vtys[1][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1986,9 +2323,7 @@ func NewQAccessibleTextInsertEvent(args ...interface{}) *QAccessibleTextInsertEv
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QAccessibleTextInsertEventC2EP20QAccessibleInterfaceiRK7QString(arg0, arg1, arg2)
-    this := &QAccessibleTextInsertEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleTextInsertEvent)
-    return this
+    return &QAccessibleTextInsertEvent{Qclsinst:qthis}
   case 1:
     // invoke: _ZN26QAccessibleTextInsertEventC1EP7QObjectiRK7QString
     // invoke: void QAccessibleTextInsertEvent(class QObject *, int, const class QString &)
@@ -2001,9 +2336,7 @@ func NewQAccessibleTextInsertEvent(args ...interface{}) *QAccessibleTextInsertEv
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QAccessibleTextInsertEventC2EP7QObjectiRK7QString(arg0, arg1, arg2)
-    this := &QAccessibleTextInsertEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleTextInsertEvent)
-    return this
+    return &QAccessibleTextInsertEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessibleTextInsertEvent", "QAccessibleTextInsertEvent", args)
   }
@@ -2012,11 +2345,15 @@ func NewQAccessibleTextInsertEvent(args ...interface{}) *QAccessibleTextInsertEv
 }
 
 // changePosition()
-func (this *QAccessibleTextInsertEvent) ChangePosition(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTextInsertEvent) Changeposition(args ...interface{}) (ret interface{}) {
   // changePosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2041,11 +2378,15 @@ func (this *QAccessibleTextInsertEvent) ChangePosition(args ...interface{}) (ret
 }
 
 // textRemoved()
-func (this *QAccessibleTextRemoveEvent) TextRemoved(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTextRemoveEvent) Textremoved(args ...interface{}) (ret interface{}) {
   // textRemoved()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2069,70 +2410,16 @@ func (this *QAccessibleTextRemoveEvent) TextRemoved(args ...interface{}) (ret in
   return
 }
 
-// QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
-func GcfreeQAccessibleTextRemoveEvent(this *QAccessibleTextRemoveEvent) {
-  qtrt.UniverseFree(this)
-}
-func NewQAccessibleTextRemoveEvent(args ...interface{}) *QAccessibleTextRemoveEvent {
-  // QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
-  // QAccessibleTextRemoveEvent(class QAccessibleInterface *, int, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN26QAccessibleTextRemoveEventC1EP7QObjectiRK7QString
-    // invoke: void QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN26QAccessibleTextRemoveEventC2EP7QObjectiRK7QString(arg0, arg1, arg2)
-    this := &QAccessibleTextRemoveEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleTextRemoveEvent)
-    return this
-  case 1:
-    // invoke: _ZN26QAccessibleTextRemoveEventC1EP20QAccessibleInterfaceiRK7QString
-    // invoke: void QAccessibleTextRemoveEvent(class QAccessibleInterface *, int, const class QString &)
-    var arg0 = args[0].(*QAccessibleInterface).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN26QAccessibleTextRemoveEventC2EP20QAccessibleInterfaceiRK7QString(arg0, arg1, arg2)
-    this := &QAccessibleTextRemoveEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleTextRemoveEvent)
-    return this
-  default:
-    qtrt.ErrorResolve("QAccessibleTextRemoveEvent", "QAccessibleTextRemoveEvent", args)
-  }
-
-  return nil // QAccessibleTextRemoveEvent{Qclsinst:qthis}
-}
-
 // changePosition()
-func (this *QAccessibleTextRemoveEvent) ChangePosition(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTextRemoveEvent) Changeposition(args ...interface{}) (ret interface{}) {
   // changePosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2156,70 +2443,96 @@ func (this *QAccessibleTextRemoveEvent) ChangePosition(args ...interface{}) (ret
   return
 }
 
-// QAccessibleTextSelectionEvent(class QAccessibleInterface *, int, int)
-func GcfreeQAccessibleTextSelectionEvent(this *QAccessibleTextSelectionEvent) {
-  qtrt.UniverseFree(this)
-}
-func NewQAccessibleTextSelectionEvent(args ...interface{}) *QAccessibleTextSelectionEvent {
-  // QAccessibleTextSelectionEvent(class QAccessibleInterface *, int, int)
-  // QAccessibleTextSelectionEvent(class QObject *, int, int)
+// QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
+func NewQAccessibleTextRemoveEvent(args ...interface{}) *QAccessibleTextRemoveEvent {
+  // QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
+  // QAccessibleTextRemoveEvent(class QAccessibleInterface *, int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
+  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  vtys[0][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  vtys[1][0] = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1][2] = qtrt.Int32Ty(false) // "int"
+  vtys[1][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN29QAccessibleTextSelectionEventC1EP20QAccessibleInterfaceii
-    // invoke: void QAccessibleTextSelectionEvent(class QAccessibleInterface *, int, int)
-    var arg0 = args[0].(*QAccessibleInterface).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii(arg0, arg1, arg2)
-    this := &QAccessibleTextSelectionEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleTextSelectionEvent)
-    return this
-  case 1:
-    // invoke: _ZN29QAccessibleTextSelectionEventC1EP7QObjectii
-    // invoke: void QAccessibleTextSelectionEvent(class QObject *, int, int)
+    // invoke: _ZN26QAccessibleTextRemoveEventC1EP7QObjectiRK7QString
+    // invoke: void QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
     var arg0 = args[0].(*qtcore.QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
+    var arg2 = args[2].(*qtcore.QString).Qclsinst
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN29QAccessibleTextSelectionEventC2EP7QObjectii(arg0, arg1, arg2)
-    this := &QAccessibleTextSelectionEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleTextSelectionEvent)
-    return this
+    qthis = C.C_ZN26QAccessibleTextRemoveEventC2EP7QObjectiRK7QString(arg0, arg1, arg2)
+    return &QAccessibleTextRemoveEvent{Qclsinst:qthis}
+  case 1:
+    // invoke: _ZN26QAccessibleTextRemoveEventC1EP20QAccessibleInterfaceiRK7QString
+    // invoke: void QAccessibleTextRemoveEvent(class QAccessibleInterface *, int, const class QString &)
+    var arg0 = args[0].(*QAccessibleInterface).Qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(*qtcore.QString).Qclsinst
+    if false {fmt.Println(arg2)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN26QAccessibleTextRemoveEventC2EP20QAccessibleInterfaceiRK7QString(arg0, arg1, arg2)
+    return &QAccessibleTextRemoveEvent{Qclsinst:qthis}
   default:
-    qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "QAccessibleTextSelectionEvent", args)
+    qtrt.ErrorResolve("QAccessibleTextRemoveEvent", "QAccessibleTextRemoveEvent", args)
   }
 
-  return nil // QAccessibleTextSelectionEvent{Qclsinst:qthis}
+  return nil // QAccessibleTextRemoveEvent{Qclsinst:qthis}
+}
+
+// ~QAccessibleTextRemoveEvent()
+func (this *QAccessibleTextRemoveEvent) Freeqaccessibletextremoveevent(args ...interface{}) () {
+  // ~QAccessibleTextRemoveEvent()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN26QAccessibleTextRemoveEventD0Ev
+    // invoke: void ~QAccessibleTextRemoveEvent()
+    C.C_ZN26QAccessibleTextRemoveEventD2Ev(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleTextRemoveEvent", "~QAccessibleTextRemoveEvent", args)
+  }
+
+  return
 }
 
 // selectionStart()
-func (this *QAccessibleTextSelectionEvent) SelectionStart(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTextSelectionEvent) Selectionstart(args ...interface{}) (ret interface{}) {
   // selectionStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2243,12 +2556,41 @@ func (this *QAccessibleTextSelectionEvent) SelectionStart(args ...interface{}) (
   return
 }
 
+// ~QAccessibleTextSelectionEvent()
+func (this *QAccessibleTextSelectionEvent) Freeqaccessibletextselectionevent(args ...interface{}) () {
+  // ~QAccessibleTextSelectionEvent()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN29QAccessibleTextSelectionEventD0Ev
+    // invoke: void ~QAccessibleTextSelectionEvent()
+    C.C_ZN29QAccessibleTextSelectionEventD2Ev(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "~QAccessibleTextSelectionEvent", args)
+  }
+
+  return
+}
+
 // selectionEnd()
-func (this *QAccessibleTextSelectionEvent) SelectionEnd(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTextSelectionEvent) Selectionend(args ...interface{}) (ret interface{}) {
   // selectionEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2273,13 +2615,17 @@ func (this *QAccessibleTextSelectionEvent) SelectionEnd(args ...interface{}) (re
 }
 
 // setSelection(int, int)
-func (this *QAccessibleTextSelectionEvent) SetSelection(args ...interface{}) () {
+func (this *QAccessibleTextSelectionEvent) Setselection(args ...interface{}) () {
   // setSelection(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2299,12 +2645,71 @@ func (this *QAccessibleTextSelectionEvent) SetSelection(args ...interface{}) () 
   return
 }
 
+// QAccessibleTextSelectionEvent(class QAccessibleInterface *, int, int)
+func NewQAccessibleTextSelectionEvent(args ...interface{}) *QAccessibleTextSelectionEvent {
+  // QAccessibleTextSelectionEvent(class QAccessibleInterface *, int, int)
+  // QAccessibleTextSelectionEvent(class QObject *, int, int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  vtys[1][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN29QAccessibleTextSelectionEventC1EP20QAccessibleInterfaceii
+    // invoke: void QAccessibleTextSelectionEvent(class QAccessibleInterface *, int, int)
+    var arg0 = args[0].(*QAccessibleInterface).Qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg2)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii(arg0, arg1, arg2)
+    return &QAccessibleTextSelectionEvent{Qclsinst:qthis}
+  case 1:
+    // invoke: _ZN29QAccessibleTextSelectionEventC1EP7QObjectii
+    // invoke: void QAccessibleTextSelectionEvent(class QObject *, int, int)
+    var arg0 = args[0].(*qtcore.QObject).Qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg2)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    qthis = C.C_ZN29QAccessibleTextSelectionEventC2EP7QObjectii(arg0, arg1, arg2)
+    return &QAccessibleTextSelectionEvent{Qclsinst:qthis}
+  default:
+    qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "QAccessibleTextSelectionEvent", args)
+  }
+
+  return nil // QAccessibleTextSelectionEvent{Qclsinst:qthis}
+}
+
 // cursorPosition()
-func (this *QAccessibleTextCursorEvent) CursorPosition(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleTextCursorEvent) Cursorposition(args ...interface{}) (ret interface{}) {
   // cursorPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2329,9 +2734,6 @@ func (this *QAccessibleTextCursorEvent) CursorPosition(args ...interface{}) (ret
 }
 
 // QAccessibleTextCursorEvent(class QAccessibleInterface *, int)
-func GcfreeQAccessibleTextCursorEvent(this *QAccessibleTextCursorEvent) {
-  qtrt.UniverseFree(this)
-}
 func NewQAccessibleTextCursorEvent(args ...interface{}) *QAccessibleTextCursorEvent {
   // QAccessibleTextCursorEvent(class QAccessibleInterface *, int)
   // QAccessibleTextCursorEvent(class QObject *, int)
@@ -2343,6 +2745,10 @@ func NewQAccessibleTextCursorEvent(args ...interface{}) *QAccessibleTextCursorEv
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2357,9 +2763,7 @@ func NewQAccessibleTextCursorEvent(args ...interface{}) *QAccessibleTextCursorEv
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei(arg0, arg1)
-    this := &QAccessibleTextCursorEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleTextCursorEvent)
-    return this
+    return &QAccessibleTextCursorEvent{Qclsinst:qthis}
   case 1:
     // invoke: _ZN26QAccessibleTextCursorEventC1EP7QObjecti
     // invoke: void QAccessibleTextCursorEvent(class QObject *, int)
@@ -2370,9 +2774,7 @@ func NewQAccessibleTextCursorEvent(args ...interface{}) *QAccessibleTextCursorEv
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QAccessibleTextCursorEventC2EP7QObjecti(arg0, arg1)
-    this := &QAccessibleTextCursorEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleTextCursorEvent)
-    return this
+    return &QAccessibleTextCursorEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessibleTextCursorEvent", "QAccessibleTextCursorEvent", args)
   }
@@ -2380,13 +2782,42 @@ func NewQAccessibleTextCursorEvent(args ...interface{}) *QAccessibleTextCursorEv
   return nil // QAccessibleTextCursorEvent{Qclsinst:qthis}
 }
 
+// ~QAccessibleTextCursorEvent()
+func (this *QAccessibleTextCursorEvent) Freeqaccessibletextcursorevent(args ...interface{}) () {
+  // ~QAccessibleTextCursorEvent()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN26QAccessibleTextCursorEventD0Ev
+    // invoke: void ~QAccessibleTextCursorEvent()
+    C.C_ZN26QAccessibleTextCursorEventD2Ev(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleTextCursorEvent", "~QAccessibleTextCursorEvent", args)
+  }
+
+  return
+}
+
 // setCursorPosition(int)
-func (this *QAccessibleTextCursorEvent) SetCursorPosition(args ...interface{}) () {
+func (this *QAccessibleTextCursorEvent) Setcursorposition(args ...interface{}) () {
   // setCursorPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2405,9 +2836,6 @@ func (this *QAccessibleTextCursorEvent) SetCursorPosition(args ...interface{}) (
 }
 
 // QAccessibleValueChangeEvent(class QObject *, const class QVariant &)
-func GcfreeQAccessibleValueChangeEvent(this *QAccessibleValueChangeEvent) {
-  qtrt.UniverseFree(this)
-}
 func NewQAccessibleValueChangeEvent(args ...interface{}) *QAccessibleValueChangeEvent {
   // QAccessibleValueChangeEvent(class QObject *, const class QVariant &)
   // QAccessibleValueChangeEvent(class QAccessibleInterface *, const class QVariant &)
@@ -2419,6 +2847,10 @@ func NewQAccessibleValueChangeEvent(args ...interface{}) *QAccessibleValueChange
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
   vtys[1][1] = reflect.TypeOf(qtcore.QVariant{}) // "const QVariant &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2433,9 +2865,7 @@ func NewQAccessibleValueChangeEvent(args ...interface{}) *QAccessibleValueChange
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant(arg0, arg1)
-    this := &QAccessibleValueChangeEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleValueChangeEvent)
-    return this
+    return &QAccessibleValueChangeEvent{Qclsinst:qthis}
   case 1:
     // invoke: _ZN27QAccessibleValueChangeEventC1EP20QAccessibleInterfaceRK8QVariant
     // invoke: void QAccessibleValueChangeEvent(class QAccessibleInterface *, const class QVariant &)
@@ -2446,9 +2876,7 @@ func NewQAccessibleValueChangeEvent(args ...interface{}) *QAccessibleValueChange
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant(arg0, arg1)
-    this := &QAccessibleValueChangeEvent{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAccessibleValueChangeEvent)
-    return this
+    return &QAccessibleValueChangeEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessibleValueChangeEvent", "QAccessibleValueChangeEvent", args)
   }
@@ -2457,12 +2885,16 @@ func NewQAccessibleValueChangeEvent(args ...interface{}) *QAccessibleValueChange
 }
 
 // setValue(const class QVariant &)
-func (this *QAccessibleValueChangeEvent) SetValue(args ...interface{}) () {
+func (this *QAccessibleValueChangeEvent) Setvalue(args ...interface{}) () {
   // setValue(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QVariant{}) // "const QVariant &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2480,12 +2912,41 @@ func (this *QAccessibleValueChangeEvent) SetValue(args ...interface{}) () {
   return
 }
 
+// ~QAccessibleValueChangeEvent()
+func (this *QAccessibleValueChangeEvent) Freeqaccessiblevaluechangeevent(args ...interface{}) () {
+  // ~QAccessibleValueChangeEvent()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN27QAccessibleValueChangeEventD0Ev
+    // invoke: void ~QAccessibleValueChangeEvent()
+    C.C_ZN27QAccessibleValueChangeEventD2Ev(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleValueChangeEvent", "~QAccessibleValueChangeEvent", args)
+  }
+
+  return
+}
+
 // value()
 func (this *QAccessibleValueChangeEvent) Value(args ...interface{}) (ret interface{}) {
   // value()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

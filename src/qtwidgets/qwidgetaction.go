@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qwidgetaction.h
 // dst-file: /src/widgets/qwidgetaction.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -57,7 +56,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QWidgetAction)=1
@@ -67,12 +65,16 @@ type QWidgetAction struct {
 }
 
 // releaseWidget(class QWidget *)
-func (this *QWidgetAction) ReleaseWidget(args ...interface{}) () {
+func (this *QWidgetAction) Releasewidget(args ...interface{}) () {
   // releaseWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -91,11 +93,15 @@ func (this *QWidgetAction) ReleaseWidget(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QWidgetAction) MetaObject(args ...interface{}) () {
+func (this *QWidgetAction) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -112,15 +118,16 @@ func (this *QWidgetAction) MetaObject(args ...interface{}) () {
 }
 
 // QWidgetAction(class QObject *)
-func GcfreeQWidgetAction(this *QWidgetAction) {
-  qtrt.UniverseFree(this)
-}
 func NewQWidgetAction(args ...interface{}) *QWidgetAction {
   // QWidgetAction(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -133,9 +140,7 @@ func NewQWidgetAction(args ...interface{}) *QWidgetAction {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QWidgetActionC2EP7QObject(arg0)
-    this := &QWidgetAction{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQWidgetAction)
-    return this
+    return &QWidgetAction{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QWidgetAction", "QWidgetAction", args)
   }
@@ -144,11 +149,15 @@ func NewQWidgetAction(args ...interface{}) *QWidgetAction {
 }
 
 // defaultWidget()
-func (this *QWidgetAction) DefaultWidget(args ...interface{}) (ret interface{}) {
+func (this *QWidgetAction) Defaultwidget(args ...interface{}) (ret interface{}) {
   // defaultWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -173,12 +182,16 @@ func (this *QWidgetAction) DefaultWidget(args ...interface{}) (ret interface{}) 
 }
 
 // requestWidget(class QWidget *)
-func (this *QWidgetAction) RequestWidget(args ...interface{}) (ret interface{}) {
+func (this *QWidgetAction) Requestwidget(args ...interface{}) (ret interface{}) {
   // requestWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -205,11 +218,15 @@ func (this *QWidgetAction) RequestWidget(args ...interface{}) (ret interface{}) 
 }
 
 // ~QWidgetAction()
-func (this *QWidgetAction) Free(args ...interface{}) () {
+func (this *QWidgetAction) Freeqwidgetaction(args ...interface{}) () {
   // ~QWidgetAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -217,10 +234,7 @@ func (this *QWidgetAction) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QWidgetActionD0Ev
     // invoke: void ~QWidgetAction()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QWidgetActionD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QWidgetActionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetAction", "~QWidgetAction", args)
   }
@@ -229,12 +243,16 @@ func (this *QWidgetAction) Free(args ...interface{}) () {
 }
 
 // setDefaultWidget(class QWidget *)
-func (this *QWidgetAction) SetDefaultWidget(args ...interface{}) () {
+func (this *QWidgetAction) Setdefaultwidget(args ...interface{}) () {
   // setDefaultWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

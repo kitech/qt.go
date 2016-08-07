@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qcommandlineparser.h
 // dst-file: /src/core/qcommandlineparser.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -57,12 +56,12 @@ extern void C_ZN18QCommandLineParser11showVersionEv(void* qthis); // 4
 extern void* C_ZN18QCommandLineParserC2Ev(); // 3
   // proto:  void QCommandLineParser::setApplicationDescription(const QString & description);
 extern void C_ZN18QCommandLineParser25setApplicationDescriptionERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QCommandLineParser::clearPositionalArguments();
-extern void C_ZN18QCommandLineParser24clearPositionalArgumentsEv(void* qthis); // 4
   // proto:  QCommandLineOption QCommandLineParser::addHelpOption();
 extern void* C_ZN18QCommandLineParser13addHelpOptionEv(void* qthis); // 4
   // proto:  QStringList QCommandLineParser::optionNames();
 extern void C_ZNK18QCommandLineParser11optionNamesEv(void* qthis); // 4
+  // proto:  QStringList QCommandLineParser::positionalArguments();
+extern void C_ZNK18QCommandLineParser19positionalArgumentsEv(void* qthis); // 4
   // proto:  QStringList QCommandLineParser::unknownOptionNames();
 extern void C_ZNK18QCommandLineParser18unknownOptionNamesEv(void* qthis); // 4
   // proto:  QString QCommandLineParser::value(const QString & name);
@@ -77,8 +76,8 @@ extern bool C_ZNK18QCommandLineParser5isSetERK18QCommandLineOption(void* qthis, 
 extern void C_ZNK18QCommandLineParser6valuesERK18QCommandLineOption(void* qthis, void* arg0); // 4
   // proto:  QStringList QCommandLineParser::values(const QString & name);
 extern void C_ZNK18QCommandLineParser6valuesERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QStringList QCommandLineParser::positionalArguments();
-extern void C_ZNK18QCommandLineParser19positionalArgumentsEv(void* qthis); // 4
+  // proto:  void QCommandLineParser::clearPositionalArguments();
+extern void C_ZN18QCommandLineParser24clearPositionalArgumentsEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -89,7 +88,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCommandLineParser)=8
@@ -99,12 +97,16 @@ type QCommandLineParser struct {
 }
 
 // addOption(const class QCommandLineOption &)
-func (this *QCommandLineParser) AddOption(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) Addoption(args ...interface{}) (ret interface{}) {
   // addOption(const class QCommandLineOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QCommandLineOption{}) // "const QCommandLineOption &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -140,6 +142,10 @@ func (this *QCommandLineParser) Process(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QCoreApplication{}) // "const QCoreApplication &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -164,11 +170,15 @@ func (this *QCommandLineParser) Process(args ...interface{}) () {
 }
 
 // errorText()
-func (this *QCommandLineParser) ErrorText(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) Errortext(args ...interface{}) (ret interface{}) {
   // errorText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -193,7 +203,7 @@ func (this *QCommandLineParser) ErrorText(args ...interface{}) (ret interface{})
 }
 
 // addPositionalArgument(const class QString &, const class QString &, const class QString &)
-func (this *QCommandLineParser) AddPositionalArgument(args ...interface{}) () {
+func (this *QCommandLineParser) Addpositionalargument(args ...interface{}) () {
   // addPositionalArgument(const class QString &, const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -201,6 +211,10 @@ func (this *QCommandLineParser) AddPositionalArgument(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[0][2] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -229,6 +243,10 @@ func (this *QCommandLineParser) Parse(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -255,11 +273,15 @@ func (this *QCommandLineParser) Parse(args ...interface{}) (ret interface{}) {
 }
 
 // ~QCommandLineParser()
-func (this *QCommandLineParser) Free(args ...interface{}) () {
+func (this *QCommandLineParser) Freeqcommandlineparser(args ...interface{}) () {
   // ~QCommandLineParser()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -267,10 +289,7 @@ func (this *QCommandLineParser) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineParserD0Ev
     // invoke: void ~QCommandLineParser()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN18QCommandLineParserD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN18QCommandLineParserD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "~QCommandLineParser", args)
   }
@@ -279,12 +298,16 @@ func (this *QCommandLineParser) Free(args ...interface{}) () {
 }
 
 // showHelp(int)
-func (this *QCommandLineParser) ShowHelp(args ...interface{}) () {
+func (this *QCommandLineParser) Showhelp(args ...interface{}) () {
   // showHelp(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -303,11 +326,15 @@ func (this *QCommandLineParser) ShowHelp(args ...interface{}) () {
 }
 
 // applicationDescription()
-func (this *QCommandLineParser) ApplicationDescription(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) Applicationdescription(args ...interface{}) (ret interface{}) {
   // applicationDescription()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -332,11 +359,15 @@ func (this *QCommandLineParser) ApplicationDescription(args ...interface{}) (ret
 }
 
 // addVersionOption()
-func (this *QCommandLineParser) AddVersionOption(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) Addversionoption(args ...interface{}) (ret interface{}) {
   // addVersionOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -361,11 +392,15 @@ func (this *QCommandLineParser) AddVersionOption(args ...interface{}) (ret inter
 }
 
 // helpText()
-func (this *QCommandLineParser) HelpText(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) Helptext(args ...interface{}) (ret interface{}) {
   // helpText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -390,11 +425,15 @@ func (this *QCommandLineParser) HelpText(args ...interface{}) (ret interface{}) 
 }
 
 // showVersion()
-func (this *QCommandLineParser) ShowVersion(args ...interface{}) () {
+func (this *QCommandLineParser) Showversion(args ...interface{}) () {
   // showVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -411,14 +450,15 @@ func (this *QCommandLineParser) ShowVersion(args ...interface{}) () {
 }
 
 // QCommandLineParser()
-func GcfreeQCommandLineParser(this *QCommandLineParser) {
-  qtrt.UniverseFree(this)
-}
 func NewQCommandLineParser(args ...interface{}) *QCommandLineParser {
   // QCommandLineParser()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -429,9 +469,7 @@ func NewQCommandLineParser(args ...interface{}) *QCommandLineParser {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineParserC2Ev()
-    this := &QCommandLineParser{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCommandLineParser)
-    return this
+    return &QCommandLineParser{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCommandLineParser", "QCommandLineParser", args)
   }
@@ -440,12 +478,16 @@ func NewQCommandLineParser(args ...interface{}) *QCommandLineParser {
 }
 
 // setApplicationDescription(const class QString &)
-func (this *QCommandLineParser) SetApplicationDescription(args ...interface{}) () {
+func (this *QCommandLineParser) Setapplicationdescription(args ...interface{}) () {
   // setApplicationDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -463,33 +505,16 @@ func (this *QCommandLineParser) SetApplicationDescription(args ...interface{}) (
   return
 }
 
-// clearPositionalArguments()
-func (this *QCommandLineParser) ClearPositionalArguments(args ...interface{}) () {
-  // clearPositionalArguments()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParser24clearPositionalArgumentsEv
-    // invoke: void clearPositionalArguments()
-    C.C_ZN18QCommandLineParser24clearPositionalArgumentsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "clearPositionalArguments", args)
-  }
-
-  return
-}
-
 // addHelpOption()
-func (this *QCommandLineParser) AddHelpOption(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) Addhelpoption(args ...interface{}) (ret interface{}) {
   // addHelpOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -514,11 +539,15 @@ func (this *QCommandLineParser) AddHelpOption(args ...interface{}) (ret interfac
 }
 
 // optionNames()
-func (this *QCommandLineParser) OptionNames(args ...interface{}) () {
+func (this *QCommandLineParser) Optionnames(args ...interface{}) () {
   // optionNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -534,12 +563,41 @@ func (this *QCommandLineParser) OptionNames(args ...interface{}) () {
   return
 }
 
+// positionalArguments()
+func (this *QCommandLineParser) Positionalarguments(args ...interface{}) () {
+  // positionalArguments()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QCommandLineParser19positionalArgumentsEv
+    // invoke: QStringList positionalArguments()
+    C.C_ZNK18QCommandLineParser19positionalArgumentsEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QCommandLineParser", "positionalArguments", args)
+  }
+
+  return
+}
+
 // unknownOptionNames()
-func (this *QCommandLineParser) UnknownOptionNames(args ...interface{}) () {
+func (this *QCommandLineParser) Unknownoptionnames(args ...interface{}) () {
   // unknownOptionNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -565,6 +623,10 @@ func (this *QCommandLineParser) Value(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QCommandLineOption{}) // "const QCommandLineOption &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -605,7 +667,7 @@ func (this *QCommandLineParser) Value(args ...interface{}) (ret interface{}) {
 }
 
 // isSet(const class QString &)
-func (this *QCommandLineParser) IsSet(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) Isset(args ...interface{}) (ret interface{}) {
   // isSet(const class QString &)
   // isSet(const class QCommandLineOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -614,6 +676,10 @@ func (this *QCommandLineParser) IsSet(args ...interface{}) (ret interface{}) {
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QCommandLineOption{}) // "const QCommandLineOption &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -663,6 +729,10 @@ func (this *QCommandLineParser) Values(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(QCommandLineOption{}) // "const QCommandLineOption &"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -686,22 +756,26 @@ func (this *QCommandLineParser) Values(args ...interface{}) () {
   return
 }
 
-// positionalArguments()
-func (this *QCommandLineParser) PositionalArguments(args ...interface{}) () {
-  // positionalArguments()
+// clearPositionalArguments()
+func (this *QCommandLineParser) Clearpositionalarguments(args ...interface{}) () {
+  // clearPositionalArguments()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK18QCommandLineParser19positionalArgumentsEv
-    // invoke: QStringList positionalArguments()
-    C.C_ZNK18QCommandLineParser19positionalArgumentsEv(this.Qclsinst)
+    // invoke: _ZN18QCommandLineParser24clearPositionalArgumentsEv
+    // invoke: void clearPositionalArguments()
+    C.C_ZN18QCommandLineParser24clearPositionalArgumentsEv(this.Qclsinst)
   default:
-    qtrt.ErrorResolve("QCommandLineParser", "positionalArguments", args)
+    qtrt.ErrorResolve("QCommandLineParser", "clearPositionalArguments", args)
   }
 
   return

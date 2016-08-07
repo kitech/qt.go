@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qanimationgroup.h
 // dst-file: /src/core/qanimationgroup.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -59,7 +58,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAnimationGroup)=1
@@ -69,11 +67,15 @@ type QAnimationGroup struct {
 }
 
 // animationCount()
-func (this *QAnimationGroup) AnimationCount(args ...interface{}) (ret interface{}) {
+func (this *QAnimationGroup) Animationcount(args ...interface{}) (ret interface{}) {
   // animationCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -98,12 +100,16 @@ func (this *QAnimationGroup) AnimationCount(args ...interface{}) (ret interface{
 }
 
 // addAnimation(class QAbstractAnimation *)
-func (this *QAnimationGroup) AddAnimation(args ...interface{}) () {
+func (this *QAnimationGroup) Addanimation(args ...interface{}) () {
   // addAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractAnimation{}) // "QAbstractAnimation *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -122,12 +128,16 @@ func (this *QAnimationGroup) AddAnimation(args ...interface{}) () {
 }
 
 // indexOfAnimation(class QAbstractAnimation *)
-func (this *QAnimationGroup) IndexOfAnimation(args ...interface{}) (ret interface{}) {
+func (this *QAnimationGroup) Indexofanimation(args ...interface{}) (ret interface{}) {
   // indexOfAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractAnimation{}) // "QAbstractAnimation *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -154,11 +164,15 @@ func (this *QAnimationGroup) IndexOfAnimation(args ...interface{}) (ret interfac
 }
 
 // ~QAnimationGroup()
-func (this *QAnimationGroup) Free(args ...interface{}) () {
+func (this *QAnimationGroup) Freeqanimationgroup(args ...interface{}) () {
   // ~QAnimationGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -166,10 +180,7 @@ func (this *QAnimationGroup) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAnimationGroupD0Ev
     // invoke: void ~QAnimationGroup()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QAnimationGroupD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QAnimationGroupD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationGroup", "~QAnimationGroup", args)
   }
@@ -183,6 +194,10 @@ func (this *QAnimationGroup) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -199,12 +214,16 @@ func (this *QAnimationGroup) Clear(args ...interface{}) () {
 }
 
 // animationAt(int)
-func (this *QAnimationGroup) AnimationAt(args ...interface{}) () {
+func (this *QAnimationGroup) Animationat(args ...interface{}) () {
   // animationAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -223,13 +242,17 @@ func (this *QAnimationGroup) AnimationAt(args ...interface{}) () {
 }
 
 // insertAnimation(int, class QAbstractAnimation *)
-func (this *QAnimationGroup) InsertAnimation(args ...interface{}) () {
+func (this *QAnimationGroup) Insertanimation(args ...interface{}) () {
   // insertAnimation(int, class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QAbstractAnimation{}) // "QAbstractAnimation *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -250,11 +273,15 @@ func (this *QAnimationGroup) InsertAnimation(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QAnimationGroup) MetaObject(args ...interface{}) () {
+func (this *QAnimationGroup) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -271,12 +298,16 @@ func (this *QAnimationGroup) MetaObject(args ...interface{}) () {
 }
 
 // removeAnimation(class QAbstractAnimation *)
-func (this *QAnimationGroup) RemoveAnimation(args ...interface{}) () {
+func (this *QAnimationGroup) Removeanimation(args ...interface{}) () {
   // removeAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractAnimation{}) // "QAbstractAnimation *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -295,12 +326,16 @@ func (this *QAnimationGroup) RemoveAnimation(args ...interface{}) () {
 }
 
 // takeAnimation(int)
-func (this *QAnimationGroup) TakeAnimation(args ...interface{}) () {
+func (this *QAnimationGroup) Takeanimation(args ...interface{}) () {
   // takeAnimation(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

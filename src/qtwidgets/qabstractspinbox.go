@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -109,7 +108,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractSpinBox)=1
@@ -120,11 +118,15 @@ type QAbstractSpinBox struct {
 }
 
 // selectAll()
-func (this *QAbstractSpinBox) SelectAll(args ...interface{}) () {
+func (this *QAbstractSpinBox) Selectall(args ...interface{}) () {
   // selectAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -146,6 +148,10 @@ func (this *QAbstractSpinBox) Text(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -170,12 +176,16 @@ func (this *QAbstractSpinBox) Text(args ...interface{}) (ret interface{}) {
 }
 
 // setAccelerated(_Bool)
-func (this *QAbstractSpinBox) SetAccelerated(args ...interface{}) () {
+func (this *QAbstractSpinBox) Setaccelerated(args ...interface{}) () {
   // setAccelerated(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -194,11 +204,15 @@ func (this *QAbstractSpinBox) SetAccelerated(args ...interface{}) () {
 }
 
 // keyboardTracking()
-func (this *QAbstractSpinBox) KeyboardTracking(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) Keyboardtracking(args ...interface{}) (ret interface{}) {
   // keyboardTracking()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -223,11 +237,15 @@ func (this *QAbstractSpinBox) KeyboardTracking(args ...interface{}) (ret interfa
 }
 
 // hasAcceptableInput()
-func (this *QAbstractSpinBox) HasAcceptableInput(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) Hasacceptableinput(args ...interface{}) (ret interface{}) {
   // hasAcceptableInput()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -252,11 +270,15 @@ func (this *QAbstractSpinBox) HasAcceptableInput(args ...interface{}) (ret inter
 }
 
 // buttonSymbols()
-func (this *QAbstractSpinBox) ButtonSymbols(args ...interface{}) () {
+func (this *QAbstractSpinBox) Buttonsymbols(args ...interface{}) () {
   // buttonSymbols()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -273,11 +295,15 @@ func (this *QAbstractSpinBox) ButtonSymbols(args ...interface{}) () {
 }
 
 // hasFrame()
-func (this *QAbstractSpinBox) HasFrame(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) Hasframe(args ...interface{}) (ret interface{}) {
   // hasFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -302,12 +328,16 @@ func (this *QAbstractSpinBox) HasFrame(args ...interface{}) (ret interface{}) {
 }
 
 // setWrapping(_Bool)
-func (this *QAbstractSpinBox) SetWrapping(args ...interface{}) () {
+func (this *QAbstractSpinBox) Setwrapping(args ...interface{}) () {
   // setWrapping(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -332,6 +362,10 @@ func (this *QAbstractSpinBox) Event(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -363,6 +397,10 @@ func (this *QAbstractSpinBox) Alignment(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -385,6 +423,10 @@ func (this *QAbstractSpinBox) Fixup(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -403,12 +445,16 @@ func (this *QAbstractSpinBox) Fixup(args ...interface{}) () {
 }
 
 // setSpecialValueText(const class QString &)
-func (this *QAbstractSpinBox) SetSpecialValueText(args ...interface{}) () {
+func (this *QAbstractSpinBox) Setspecialvaluetext(args ...interface{}) () {
   // setSpecialValueText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -427,11 +473,15 @@ func (this *QAbstractSpinBox) SetSpecialValueText(args ...interface{}) () {
 }
 
 // isReadOnly()
-func (this *QAbstractSpinBox) IsReadOnly(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) Isreadonly(args ...interface{}) (ret interface{}) {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -456,12 +506,16 @@ func (this *QAbstractSpinBox) IsReadOnly(args ...interface{}) (ret interface{}) 
 }
 
 // setGroupSeparatorShown(_Bool)
-func (this *QAbstractSpinBox) SetGroupSeparatorShown(args ...interface{}) () {
+func (this *QAbstractSpinBox) Setgroupseparatorshown(args ...interface{}) () {
   // setGroupSeparatorShown(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -480,11 +534,15 @@ func (this *QAbstractSpinBox) SetGroupSeparatorShown(args ...interface{}) () {
 }
 
 // ~QAbstractSpinBox()
-func (this *QAbstractSpinBox) Free(args ...interface{}) () {
+func (this *QAbstractSpinBox) Freeqabstractspinbox(args ...interface{}) () {
   // ~QAbstractSpinBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -492,10 +550,7 @@ func (this *QAbstractSpinBox) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBoxD0Ev
     // invoke: void ~QAbstractSpinBox()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN16QAbstractSpinBoxD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN16QAbstractSpinBoxD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "~QAbstractSpinBox", args)
   }
@@ -504,11 +559,15 @@ func (this *QAbstractSpinBox) Free(args ...interface{}) () {
 }
 
 // stepUp()
-func (this *QAbstractSpinBox) StepUp(args ...interface{}) () {
+func (this *QAbstractSpinBox) Stepup(args ...interface{}) () {
   // stepUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -525,12 +584,16 @@ func (this *QAbstractSpinBox) StepUp(args ...interface{}) () {
 }
 
 // stepBy(int)
-func (this *QAbstractSpinBox) StepBy(args ...interface{}) () {
+func (this *QAbstractSpinBox) Stepby(args ...interface{}) () {
   // stepBy(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -549,11 +612,15 @@ func (this *QAbstractSpinBox) StepBy(args ...interface{}) () {
 }
 
 // specialValueText()
-func (this *QAbstractSpinBox) SpecialValueText(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) Specialvaluetext(args ...interface{}) (ret interface{}) {
   // specialValueText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -578,11 +645,15 @@ func (this *QAbstractSpinBox) SpecialValueText(args ...interface{}) (ret interfa
 }
 
 // isAccelerated()
-func (this *QAbstractSpinBox) IsAccelerated(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) Isaccelerated(args ...interface{}) (ret interface{}) {
   // isAccelerated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -612,6 +683,10 @@ func (this *QAbstractSpinBox) Wrapping(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -636,11 +711,15 @@ func (this *QAbstractSpinBox) Wrapping(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QAbstractSpinBox) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -665,11 +744,15 @@ func (this *QAbstractSpinBox) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // interpretText()
-func (this *QAbstractSpinBox) InterpretText(args ...interface{}) () {
+func (this *QAbstractSpinBox) Interprettext(args ...interface{}) () {
   // interpretText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -693,6 +776,10 @@ func (this *QAbstractSpinBox) Validate(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "QString &"
   vtys[0][1] = qtrt.Int32Ty(false) // "int &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -713,11 +800,15 @@ func (this *QAbstractSpinBox) Validate(args ...interface{}) () {
 }
 
 // isGroupSeparatorShown()
-func (this *QAbstractSpinBox) IsGroupSeparatorShown(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) Isgroupseparatorshown(args ...interface{}) (ret interface{}) {
   // isGroupSeparatorShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -742,11 +833,15 @@ func (this *QAbstractSpinBox) IsGroupSeparatorShown(args ...interface{}) (ret in
 }
 
 // correctionMode()
-func (this *QAbstractSpinBox) CorrectionMode(args ...interface{}) () {
+func (this *QAbstractSpinBox) Correctionmode(args ...interface{}) () {
   // correctionMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -763,11 +858,15 @@ func (this *QAbstractSpinBox) CorrectionMode(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QAbstractSpinBox) MetaObject(args ...interface{}) () {
+func (this *QAbstractSpinBox) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -784,15 +883,16 @@ func (this *QAbstractSpinBox) MetaObject(args ...interface{}) () {
 }
 
 // QAbstractSpinBox(class QWidget *)
-func GcfreeQAbstractSpinBox(this *QAbstractSpinBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQAbstractSpinBox(args ...interface{}) *QAbstractSpinBox {
   // QAbstractSpinBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -805,9 +905,7 @@ func NewQAbstractSpinBox(args ...interface{}) *QAbstractSpinBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QAbstractSpinBoxC2EP7QWidget(arg0)
-    this := &QAbstractSpinBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAbstractSpinBox)
-    return this
+    return &QAbstractSpinBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "QAbstractSpinBox", args)
   }
@@ -816,11 +914,15 @@ func NewQAbstractSpinBox(args ...interface{}) *QAbstractSpinBox {
 }
 
 // stepDown()
-func (this *QAbstractSpinBox) StepDown(args ...interface{}) () {
+func (this *QAbstractSpinBox) Stepdown(args ...interface{}) () {
   // stepDown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -837,12 +939,16 @@ func (this *QAbstractSpinBox) StepDown(args ...interface{}) () {
 }
 
 // setFrame(_Bool)
-func (this *QAbstractSpinBox) SetFrame(args ...interface{}) () {
+func (this *QAbstractSpinBox) Setframe(args ...interface{}) () {
   // setFrame(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -866,6 +972,10 @@ func (this *QAbstractSpinBox) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -882,11 +992,15 @@ func (this *QAbstractSpinBox) Clear(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QAbstractSpinBox) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -911,12 +1025,16 @@ func (this *QAbstractSpinBox) MinimumSizeHint(args ...interface{}) (ret interfac
 }
 
 // setKeyboardTracking(_Bool)
-func (this *QAbstractSpinBox) SetKeyboardTracking(args ...interface{}) () {
+func (this *QAbstractSpinBox) Setkeyboardtracking(args ...interface{}) () {
   // setKeyboardTracking(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -935,12 +1053,16 @@ func (this *QAbstractSpinBox) SetKeyboardTracking(args ...interface{}) () {
 }
 
 // setReadOnly(_Bool)
-func (this *QAbstractSpinBox) SetReadOnly(args ...interface{}) () {
+func (this *QAbstractSpinBox) Setreadonly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

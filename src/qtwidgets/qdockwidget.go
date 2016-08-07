@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -65,7 +64,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDockWidget)=1
@@ -80,12 +78,16 @@ type QDockWidget struct {
 }
 
 // setWidget(class QWidget *)
-func (this *QDockWidget) SetWidget(args ...interface{}) () {
+func (this *QDockWidget) Setwidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -104,11 +106,15 @@ func (this *QDockWidget) SetWidget(args ...interface{}) () {
 }
 
 // isFloating()
-func (this *QDockWidget) IsFloating(args ...interface{}) (ret interface{}) {
+func (this *QDockWidget) Isfloating(args ...interface{}) (ret interface{}) {
   // isFloating()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -133,11 +139,15 @@ func (this *QDockWidget) IsFloating(args ...interface{}) (ret interface{}) {
 }
 
 // toggleViewAction()
-func (this *QDockWidget) ToggleViewAction(args ...interface{}) (ret interface{}) {
+func (this *QDockWidget) Toggleviewaction(args ...interface{}) (ret interface{}) {
   // toggleViewAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -167,6 +177,10 @@ func (this *QDockWidget) Widget(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -191,12 +205,16 @@ func (this *QDockWidget) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // setTitleBarWidget(class QWidget *)
-func (this *QDockWidget) SetTitleBarWidget(args ...interface{}) () {
+func (this *QDockWidget) Settitlebarwidget(args ...interface{}) () {
   // setTitleBarWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -215,11 +233,15 @@ func (this *QDockWidget) SetTitleBarWidget(args ...interface{}) () {
 }
 
 // ~QDockWidget()
-func (this *QDockWidget) Free(args ...interface{}) () {
+func (this *QDockWidget) Freeqdockwidget(args ...interface{}) () {
   // ~QDockWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -227,10 +249,7 @@ func (this *QDockWidget) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDockWidgetD0Ev
     // invoke: void ~QDockWidget()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN11QDockWidgetD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN11QDockWidgetD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDockWidget", "~QDockWidget", args)
   }
@@ -239,11 +258,15 @@ func (this *QDockWidget) Free(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QDockWidget) MetaObject(args ...interface{}) () {
+func (this *QDockWidget) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -260,11 +283,15 @@ func (this *QDockWidget) MetaObject(args ...interface{}) () {
 }
 
 // allowedAreas()
-func (this *QDockWidget) AllowedAreas(args ...interface{}) () {
+func (this *QDockWidget) Allowedareas(args ...interface{}) () {
   // allowedAreas()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -281,11 +308,15 @@ func (this *QDockWidget) AllowedAreas(args ...interface{}) () {
 }
 
 // titleBarWidget()
-func (this *QDockWidget) TitleBarWidget(args ...interface{}) (ret interface{}) {
+func (this *QDockWidget) Titlebarwidget(args ...interface{}) (ret interface{}) {
   // titleBarWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -310,12 +341,16 @@ func (this *QDockWidget) TitleBarWidget(args ...interface{}) (ret interface{}) {
 }
 
 // setFloating(_Bool)
-func (this *QDockWidget) SetFloating(args ...interface{}) () {
+func (this *QDockWidget) Setfloating(args ...interface{}) () {
   // setFloating(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -339,6 +374,10 @@ func (this *QDockWidget) Features(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

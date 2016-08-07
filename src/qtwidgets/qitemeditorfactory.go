@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -59,7 +58,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QItemEditorCreatorBase)=8
@@ -75,11 +73,15 @@ type QItemEditorFactory struct {
 }
 
 // ~QItemEditorCreatorBase()
-func (this *QItemEditorCreatorBase) Free(args ...interface{}) () {
+func (this *QItemEditorCreatorBase) Freeqitemeditorcreatorbase(args ...interface{}) () {
   // ~QItemEditorCreatorBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -87,10 +89,7 @@ func (this *QItemEditorCreatorBase) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN22QItemEditorCreatorBaseD0Ev
     // invoke: void ~QItemEditorCreatorBase()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN22QItemEditorCreatorBaseD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN22QItemEditorCreatorBaseD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemEditorCreatorBase", "~QItemEditorCreatorBase", args)
   }
@@ -99,12 +98,16 @@ func (this *QItemEditorCreatorBase) Free(args ...interface{}) () {
 }
 
 // setDefaultFactory(class QItemEditorFactory *)
-func (this *QItemEditorFactory) SetDefaultFactory_s(args ...interface{}) () {
+func (this *QItemEditorFactory) Setdefaultfactory_S(args ...interface{}) () {
   // setDefaultFactory(class QItemEditorFactory *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QItemEditorFactory{}) // "QItemEditorFactory *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -123,11 +126,15 @@ func (this *QItemEditorFactory) SetDefaultFactory_s(args ...interface{}) () {
 }
 
 // ~QItemEditorFactory()
-func (this *QItemEditorFactory) Free(args ...interface{}) () {
+func (this *QItemEditorFactory) Freeqitemeditorfactory(args ...interface{}) () {
   // ~QItemEditorFactory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -135,10 +142,7 @@ func (this *QItemEditorFactory) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QItemEditorFactoryD0Ev
     // invoke: void ~QItemEditorFactory()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN18QItemEditorFactoryD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN18QItemEditorFactoryD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "~QItemEditorFactory", args)
   }
@@ -147,13 +151,17 @@ func (this *QItemEditorFactory) Free(args ...interface{}) () {
 }
 
 // createEditor(int, class QWidget *)
-func (this *QItemEditorFactory) CreateEditor(args ...interface{}) (ret interface{}) {
+func (this *QItemEditorFactory) Createeditor(args ...interface{}) (ret interface{}) {
   // createEditor(int, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -182,14 +190,15 @@ func (this *QItemEditorFactory) CreateEditor(args ...interface{}) (ret interface
 }
 
 // QItemEditorFactory()
-func GcfreeQItemEditorFactory(this *QItemEditorFactory) {
-  qtrt.UniverseFree(this)
-}
 func NewQItemEditorFactory(args ...interface{}) *QItemEditorFactory {
   // QItemEditorFactory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -200,9 +209,7 @@ func NewQItemEditorFactory(args ...interface{}) *QItemEditorFactory {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QItemEditorFactoryC2Ev()
-    this := &QItemEditorFactory{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQItemEditorFactory)
-    return this
+    return &QItemEditorFactory{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "QItemEditorFactory", args)
   }
@@ -211,11 +218,15 @@ func NewQItemEditorFactory(args ...interface{}) *QItemEditorFactory {
 }
 
 // defaultFactory()
-func (this *QItemEditorFactory) DefaultFactory_s(args ...interface{}) (ret interface{}) {
+func (this *QItemEditorFactory) Defaultfactory_S(args ...interface{}) (ret interface{}) {
   // defaultFactory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -240,13 +251,17 @@ func (this *QItemEditorFactory) DefaultFactory_s(args ...interface{}) (ret inter
 }
 
 // registerEditor(int, class QItemEditorCreatorBase *)
-func (this *QItemEditorFactory) RegisterEditor(args ...interface{}) () {
+func (this *QItemEditorFactory) Registereditor(args ...interface{}) () {
   // registerEditor(int, class QItemEditorCreatorBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QItemEditorCreatorBase{}) // "QItemEditorCreatorBase *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -267,12 +282,16 @@ func (this *QItemEditorFactory) RegisterEditor(args ...interface{}) () {
 }
 
 // valuePropertyName(int)
-func (this *QItemEditorFactory) ValuePropertyName(args ...interface{}) (ret interface{}) {
+func (this *QItemEditorFactory) Valuepropertyname(args ...interface{}) (ret interface{}) {
   // valuePropertyName(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

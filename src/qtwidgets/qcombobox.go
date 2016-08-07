@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qcombobox.h
 // dst-file: /src/widgets/qcombobox.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -175,7 +174,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QComboBox)=1
@@ -190,11 +188,15 @@ type QComboBox struct {
 }
 
 // hasFrame()
-func (this *QComboBox) HasFrame(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Hasframe(args ...interface{}) (ret interface{}) {
   // hasFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -219,11 +221,15 @@ func (this *QComboBox) HasFrame(args ...interface{}) (ret interface{}) {
 }
 
 // duplicatesEnabled()
-func (this *QComboBox) DuplicatesEnabled(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Duplicatesenabled(args ...interface{}) (ret interface{}) {
   // duplicatesEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -248,12 +254,16 @@ func (this *QComboBox) DuplicatesEnabled(args ...interface{}) (ret interface{}) 
 }
 
 // setView(class QAbstractItemView *)
-func (this *QComboBox) SetView(args ...interface{}) () {
+func (this *QComboBox) Setview(args ...interface{}) () {
   // setView(class QAbstractItemView *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractItemView{}) // "QAbstractItemView *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -272,15 +282,16 @@ func (this *QComboBox) SetView(args ...interface{}) () {
 }
 
 // QComboBox(class QWidget *)
-func GcfreeQComboBox(this *QComboBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQComboBox(args ...interface{}) *QComboBox {
   // QComboBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -293,9 +304,7 @@ func NewQComboBox(args ...interface{}) *QComboBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QComboBoxC2EP7QWidget(arg0)
-    this := &QComboBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQComboBox)
-    return this
+    return &QComboBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QComboBox", "QComboBox", args)
   }
@@ -304,11 +313,15 @@ func NewQComboBox(args ...interface{}) *QComboBox {
 }
 
 // autoCompletionCaseSensitivity()
-func (this *QComboBox) AutoCompletionCaseSensitivity(args ...interface{}) () {
+func (this *QComboBox) Autocompletioncasesensitivity(args ...interface{}) () {
   // autoCompletionCaseSensitivity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -330,6 +343,10 @@ func (this *QComboBox) Count(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -354,12 +371,16 @@ func (this *QComboBox) Count(args ...interface{}) (ret interface{}) {
 }
 
 // itemIcon(int)
-func (this *QComboBox) ItemIcon(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Itemicon(args ...interface{}) (ret interface{}) {
   // itemIcon(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -386,7 +407,7 @@ func (this *QComboBox) ItemIcon(args ...interface{}) (ret interface{}) {
 }
 
 // insertItem(int, const class QString &, const class QVariant &)
-func (this *QComboBox) InsertItem(args ...interface{}) () {
+func (this *QComboBox) Insertitem(args ...interface{}) () {
   // insertItem(int, const class QString &, const class QVariant &)
   // insertItem(int, const class QIcon &, const class QString &, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -400,6 +421,10 @@ func (this *QComboBox) InsertItem(args ...interface{}) () {
   vtys[1][1] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
   vtys[1][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[1][3] = reflect.TypeOf(qtcore.QVariant{}) // "const QVariant &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -434,12 +459,16 @@ func (this *QComboBox) InsertItem(args ...interface{}) () {
 }
 
 // removeItem(int)
-func (this *QComboBox) RemoveItem(args ...interface{}) () {
+func (this *QComboBox) Removeitem(args ...interface{}) () {
   // removeItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -458,11 +487,15 @@ func (this *QComboBox) RemoveItem(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QComboBox) MetaObject(args ...interface{}) () {
+func (this *QComboBox) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -479,7 +512,7 @@ func (this *QComboBox) MetaObject(args ...interface{}) () {
 }
 
 // setItemData(int, const class QVariant &, int)
-func (this *QComboBox) SetItemData(args ...interface{}) () {
+func (this *QComboBox) Setitemdata(args ...interface{}) () {
   // setItemData(int, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -487,6 +520,10 @@ func (this *QComboBox) SetItemData(args ...interface{}) () {
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QVariant{}) // "const QVariant &"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -509,12 +546,16 @@ func (this *QComboBox) SetItemData(args ...interface{}) () {
 }
 
 // setIconSize(const class QSize &)
-func (this *QComboBox) SetIconSize(args ...interface{}) () {
+func (this *QComboBox) Seticonsize(args ...interface{}) () {
   // setIconSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -533,11 +574,15 @@ func (this *QComboBox) SetIconSize(args ...interface{}) () {
 }
 
 // currentIndex()
-func (this *QComboBox) CurrentIndex(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Currentindex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -567,6 +612,10 @@ func (this *QComboBox) View(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -583,11 +632,15 @@ func (this *QComboBox) View(args ...interface{}) () {
 }
 
 // isEditable()
-func (this *QComboBox) IsEditable(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Iseditable(args ...interface{}) (ret interface{}) {
   // isEditable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -612,12 +665,16 @@ func (this *QComboBox) IsEditable(args ...interface{}) (ret interface{}) {
 }
 
 // setEditText(const class QString &)
-func (this *QComboBox) SetEditText(args ...interface{}) () {
+func (this *QComboBox) Setedittext(args ...interface{}) () {
   // setEditText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -636,11 +693,15 @@ func (this *QComboBox) SetEditText(args ...interface{}) () {
 }
 
 // maxVisibleItems()
-func (this *QComboBox) MaxVisibleItems(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Maxvisibleitems(args ...interface{}) (ret interface{}) {
   // maxVisibleItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -665,12 +726,16 @@ func (this *QComboBox) MaxVisibleItems(args ...interface{}) (ret interface{}) {
 }
 
 // setCurrentText(const class QString &)
-func (this *QComboBox) SetCurrentText(args ...interface{}) () {
+func (this *QComboBox) Setcurrenttext(args ...interface{}) () {
   // setCurrentText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -695,6 +760,10 @@ func (this *QComboBox) Event(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -721,12 +790,16 @@ func (this *QComboBox) Event(args ...interface{}) (ret interface{}) {
 }
 
 // setDuplicatesEnabled(_Bool)
-func (this *QComboBox) SetDuplicatesEnabled(args ...interface{}) () {
+func (this *QComboBox) Setduplicatesenabled(args ...interface{}) () {
   // setDuplicatesEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -745,12 +818,16 @@ func (this *QComboBox) SetDuplicatesEnabled(args ...interface{}) () {
 }
 
 // setEditable(_Bool)
-func (this *QComboBox) SetEditable(args ...interface{}) () {
+func (this *QComboBox) Seteditable(args ...interface{}) () {
   // setEditable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -769,13 +846,17 @@ func (this *QComboBox) SetEditable(args ...interface{}) () {
 }
 
 // itemData(int, int)
-func (this *QComboBox) ItemData(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Itemdata(args ...interface{}) (ret interface{}) {
   // itemData(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -804,11 +885,15 @@ func (this *QComboBox) ItemData(args ...interface{}) (ret interface{}) {
 }
 
 // iconSize()
-func (this *QComboBox) IconSize(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Iconsize(args ...interface{}) (ret interface{}) {
   // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -833,7 +918,7 @@ func (this *QComboBox) IconSize(args ...interface{}) (ret interface{}) {
 }
 
 // addItem(const class QIcon &, const class QString &, const class QVariant &)
-func (this *QComboBox) AddItem(args ...interface{}) () {
+func (this *QComboBox) Additem(args ...interface{}) () {
   // addItem(const class QIcon &, const class QString &, const class QVariant &)
   // addItem(const class QString &, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -845,6 +930,10 @@ func (this *QComboBox) AddItem(args ...interface{}) () {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[1][1] = reflect.TypeOf(qtcore.QVariant{}) // "const QVariant &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -875,11 +964,15 @@ func (this *QComboBox) AddItem(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QComboBox) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -904,12 +997,16 @@ func (this *QComboBox) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // setMaxVisibleItems(int)
-func (this *QComboBox) SetMaxVisibleItems(args ...interface{}) () {
+func (this *QComboBox) Setmaxvisibleitems(args ...interface{}) () {
   // setMaxVisibleItems(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -928,11 +1025,15 @@ func (this *QComboBox) SetMaxVisibleItems(args ...interface{}) () {
 }
 
 // currentText()
-func (this *QComboBox) CurrentText(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Currenttext(args ...interface{}) (ret interface{}) {
   // currentText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -957,12 +1058,16 @@ func (this *QComboBox) CurrentText(args ...interface{}) (ret interface{}) {
 }
 
 // setMaxCount(int)
-func (this *QComboBox) SetMaxCount(args ...interface{}) () {
+func (this *QComboBox) Setmaxcount(args ...interface{}) () {
   // setMaxCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -981,11 +1086,15 @@ func (this *QComboBox) SetMaxCount(args ...interface{}) () {
 }
 
 // rootModelIndex()
-func (this *QComboBox) RootModelIndex(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Rootmodelindex(args ...interface{}) (ret interface{}) {
   // rootModelIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1010,11 +1119,15 @@ func (this *QComboBox) RootModelIndex(args ...interface{}) (ret interface{}) {
 }
 
 // modelColumn()
-func (this *QComboBox) ModelColumn(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Modelcolumn(args ...interface{}) (ret interface{}) {
   // modelColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1039,13 +1152,17 @@ func (this *QComboBox) ModelColumn(args ...interface{}) (ret interface{}) {
 }
 
 // setItemText(int, const class QString &)
-func (this *QComboBox) SetItemText(args ...interface{}) () {
+func (this *QComboBox) Setitemtext(args ...interface{}) () {
   // setItemText(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1066,11 +1183,15 @@ func (this *QComboBox) SetItemText(args ...interface{}) () {
 }
 
 // hidePopup()
-func (this *QComboBox) HidePopup(args ...interface{}) () {
+func (this *QComboBox) Hidepopup(args ...interface{}) () {
   // hidePopup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1087,11 +1208,15 @@ func (this *QComboBox) HidePopup(args ...interface{}) () {
 }
 
 // showPopup()
-func (this *QComboBox) ShowPopup(args ...interface{}) () {
+func (this *QComboBox) Showpopup(args ...interface{}) () {
   // showPopup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1108,11 +1233,15 @@ func (this *QComboBox) ShowPopup(args ...interface{}) () {
 }
 
 // minimumContentsLength()
-func (this *QComboBox) MinimumContentsLength(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Minimumcontentslength(args ...interface{}) (ret interface{}) {
   // minimumContentsLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1137,12 +1266,16 @@ func (this *QComboBox) MinimumContentsLength(args ...interface{}) (ret interface
 }
 
 // addItems(const class QStringList &)
-func (this *QComboBox) AddItems(args ...interface{}) () {
+func (this *QComboBox) Additems(args ...interface{}) () {
   // addItems(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1161,12 +1294,16 @@ func (this *QComboBox) AddItems(args ...interface{}) () {
 }
 
 // setCompleter(class QCompleter *)
-func (this *QComboBox) SetCompleter(args ...interface{}) () {
+func (this *QComboBox) Setcompleter(args ...interface{}) () {
   // setCompleter(class QCompleter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QCompleter{}) // "QCompleter *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1185,13 +1322,17 @@ func (this *QComboBox) SetCompleter(args ...interface{}) () {
 }
 
 // insertItems(int, const class QStringList &)
-func (this *QComboBox) InsertItems(args ...interface{}) () {
+func (this *QComboBox) Insertitems(args ...interface{}) () {
   // insertItems(int, const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1212,12 +1353,16 @@ func (this *QComboBox) InsertItems(args ...interface{}) () {
 }
 
 // setRootModelIndex(const class QModelIndex &)
-func (this *QComboBox) SetRootModelIndex(args ...interface{}) () {
+func (this *QComboBox) Setrootmodelindex(args ...interface{}) () {
   // setRootModelIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1236,12 +1381,16 @@ func (this *QComboBox) SetRootModelIndex(args ...interface{}) () {
 }
 
 // setValidator(const class QValidator *)
-func (this *QComboBox) SetValidator(args ...interface{}) () {
+func (this *QComboBox) Setvalidator(args ...interface{}) () {
   // setValidator(const class QValidator *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QValidator{}) // "const QValidator *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1260,11 +1409,15 @@ func (this *QComboBox) SetValidator(args ...interface{}) () {
 }
 
 // maxCount()
-func (this *QComboBox) MaxCount(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Maxcount(args ...interface{}) (ret interface{}) {
   // maxCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1294,6 +1447,10 @@ func (this *QComboBox) Completer(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1318,12 +1475,16 @@ func (this *QComboBox) Completer(args ...interface{}) (ret interface{}) {
 }
 
 // itemText(int)
-func (this *QComboBox) ItemText(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Itemtext(args ...interface{}) (ret interface{}) {
   // itemText(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1350,11 +1511,15 @@ func (this *QComboBox) ItemText(args ...interface{}) (ret interface{}) {
 }
 
 // minimumSizeHint()
-func (this *QComboBox) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1379,12 +1544,16 @@ func (this *QComboBox) MinimumSizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // insertSeparator(int)
-func (this *QComboBox) InsertSeparator(args ...interface{}) () {
+func (this *QComboBox) Insertseparator(args ...interface{}) () {
   // insertSeparator(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1403,11 +1572,15 @@ func (this *QComboBox) InsertSeparator(args ...interface{}) () {
 }
 
 // sizeAdjustPolicy()
-func (this *QComboBox) SizeAdjustPolicy(args ...interface{}) () {
+func (this *QComboBox) Sizeadjustpolicy(args ...interface{}) () {
   // sizeAdjustPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1424,11 +1597,15 @@ func (this *QComboBox) SizeAdjustPolicy(args ...interface{}) () {
 }
 
 // lineEdit()
-func (this *QComboBox) LineEdit(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Lineedit(args ...interface{}) (ret interface{}) {
   // lineEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1453,12 +1630,16 @@ func (this *QComboBox) LineEdit(args ...interface{}) (ret interface{}) {
 }
 
 // currentData(int)
-func (this *QComboBox) CurrentData(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Currentdata(args ...interface{}) (ret interface{}) {
   // currentData(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1485,12 +1666,16 @@ func (this *QComboBox) CurrentData(args ...interface{}) (ret interface{}) {
 }
 
 // setItemDelegate(class QAbstractItemDelegate *)
-func (this *QComboBox) SetItemDelegate(args ...interface{}) () {
+func (this *QComboBox) Setitemdelegate(args ...interface{}) () {
   // setItemDelegate(class QAbstractItemDelegate *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractItemDelegate{}) // "QAbstractItemDelegate *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1509,11 +1694,15 @@ func (this *QComboBox) SetItemDelegate(args ...interface{}) () {
 }
 
 // ~QComboBox()
-func (this *QComboBox) Free(args ...interface{}) () {
+func (this *QComboBox) Freeqcombobox(args ...interface{}) () {
   // ~QComboBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1521,10 +1710,7 @@ func (this *QComboBox) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QComboBoxD0Ev
     // invoke: void ~QComboBox()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QComboBoxD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QComboBoxD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "~QComboBox", args)
   }
@@ -1533,12 +1719,16 @@ func (this *QComboBox) Free(args ...interface{}) () {
 }
 
 // setCurrentIndex(int)
-func (this *QComboBox) SetCurrentIndex(args ...interface{}) () {
+func (this *QComboBox) Setcurrentindex(args ...interface{}) () {
   // setCurrentIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1557,12 +1747,16 @@ func (this *QComboBox) SetCurrentIndex(args ...interface{}) () {
 }
 
 // setLineEdit(class QLineEdit *)
-func (this *QComboBox) SetLineEdit(args ...interface{}) () {
+func (this *QComboBox) Setlineedit(args ...interface{}) () {
   // setLineEdit(class QLineEdit *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QLineEdit{}) // "QLineEdit *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1581,12 +1775,16 @@ func (this *QComboBox) SetLineEdit(args ...interface{}) () {
 }
 
 // setModelColumn(int)
-func (this *QComboBox) SetModelColumn(args ...interface{}) () {
+func (this *QComboBox) Setmodelcolumn(args ...interface{}) () {
   // setModelColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1605,11 +1803,15 @@ func (this *QComboBox) SetModelColumn(args ...interface{}) () {
 }
 
 // autoCompletion()
-func (this *QComboBox) AutoCompletion(args ...interface{}) (ret interface{}) {
+func (this *QComboBox) Autocompletion(args ...interface{}) (ret interface{}) {
   // autoCompletion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1634,12 +1836,16 @@ func (this *QComboBox) AutoCompletion(args ...interface{}) (ret interface{}) {
 }
 
 // setAutoCompletion(_Bool)
-func (this *QComboBox) SetAutoCompletion(args ...interface{}) () {
+func (this *QComboBox) Setautocompletion(args ...interface{}) () {
   // setAutoCompletion(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1658,12 +1864,16 @@ func (this *QComboBox) SetAutoCompletion(args ...interface{}) () {
 }
 
 // setMinimumContentsLength(int)
-func (this *QComboBox) SetMinimumContentsLength(args ...interface{}) () {
+func (this *QComboBox) Setminimumcontentslength(args ...interface{}) () {
   // setMinimumContentsLength(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1682,11 +1892,15 @@ func (this *QComboBox) SetMinimumContentsLength(args ...interface{}) () {
 }
 
 // clearEditText()
-func (this *QComboBox) ClearEditText(args ...interface{}) () {
+func (this *QComboBox) Clearedittext(args ...interface{}) () {
   // clearEditText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1703,12 +1917,16 @@ func (this *QComboBox) ClearEditText(args ...interface{}) () {
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QComboBox) SetModel(args ...interface{}) () {
+func (this *QComboBox) Setmodel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QAbstractItemModel{}) // "QAbstractItemModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1727,11 +1945,15 @@ func (this *QComboBox) SetModel(args ...interface{}) () {
 }
 
 // insertPolicy()
-func (this *QComboBox) InsertPolicy(args ...interface{}) () {
+func (this *QComboBox) Insertpolicy(args ...interface{}) () {
   // insertPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1748,13 +1970,17 @@ func (this *QComboBox) InsertPolicy(args ...interface{}) () {
 }
 
 // setItemIcon(int, const class QIcon &)
-func (this *QComboBox) SetItemIcon(args ...interface{}) () {
+func (this *QComboBox) Setitemicon(args ...interface{}) () {
   // setItemIcon(int, const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1775,11 +2001,15 @@ func (this *QComboBox) SetItemIcon(args ...interface{}) () {
 }
 
 // itemDelegate()
-func (this *QComboBox) ItemDelegate(args ...interface{}) () {
+func (this *QComboBox) Itemdelegate(args ...interface{}) () {
   // itemDelegate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1796,12 +2026,16 @@ func (this *QComboBox) ItemDelegate(args ...interface{}) () {
 }
 
 // setFrame(_Bool)
-func (this *QComboBox) SetFrame(args ...interface{}) () {
+func (this *QComboBox) Setframe(args ...interface{}) () {
   // setFrame(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1825,6 +2059,10 @@ func (this *QComboBox) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1846,6 +2084,10 @@ func (this *QComboBox) Validator(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1875,6 +2117,10 @@ func (this *QComboBox) Model(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -77,7 +76,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSystemTrayIcon)=1
@@ -94,6 +92,10 @@ func (this *QSystemTrayIcon) Show(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -110,9 +112,6 @@ func (this *QSystemTrayIcon) Show(args ...interface{}) () {
 }
 
 // QSystemTrayIcon(const class QIcon &, class QObject *)
-func GcfreeQSystemTrayIcon(this *QSystemTrayIcon) {
-  qtrt.UniverseFree(this)
-}
 func NewQSystemTrayIcon(args ...interface{}) *QSystemTrayIcon {
   // QSystemTrayIcon(const class QIcon &, class QObject *)
   // QSystemTrayIcon(class QObject *)
@@ -123,6 +122,10 @@ func NewQSystemTrayIcon(args ...interface{}) *QSystemTrayIcon {
   vtys[0][1] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -137,9 +140,7 @@ func NewQSystemTrayIcon(args ...interface{}) *QSystemTrayIcon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QSystemTrayIconC2ERK5QIconP7QObject(arg0, arg1)
-    this := &QSystemTrayIcon{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSystemTrayIcon)
-    return this
+    return &QSystemTrayIcon{Qclsinst:qthis}
   case 1:
     // invoke: _ZN15QSystemTrayIconC1EP7QObject
     // invoke: void QSystemTrayIcon(class QObject *)
@@ -148,9 +149,7 @@ func NewQSystemTrayIcon(args ...interface{}) *QSystemTrayIcon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QSystemTrayIconC2EP7QObject(arg0)
-    this := &QSystemTrayIcon{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSystemTrayIcon)
-    return this
+    return &QSystemTrayIcon{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "QSystemTrayIcon", args)
   }
@@ -164,6 +163,10 @@ func (this *QSystemTrayIcon) Hide(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -180,11 +183,15 @@ func (this *QSystemTrayIcon) Hide(args ...interface{}) () {
 }
 
 // isSystemTrayAvailable()
-func (this *QSystemTrayIcon) IsSystemTrayAvailable_s(args ...interface{}) (ret interface{}) {
+func (this *QSystemTrayIcon) Issystemtrayavailable_S(args ...interface{}) (ret interface{}) {
   // isSystemTrayAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -209,11 +216,15 @@ func (this *QSystemTrayIcon) IsSystemTrayAvailable_s(args ...interface{}) (ret i
 }
 
 // contextMenu()
-func (this *QSystemTrayIcon) ContextMenu(args ...interface{}) (ret interface{}) {
+func (this *QSystemTrayIcon) Contextmenu(args ...interface{}) (ret interface{}) {
   // contextMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -238,12 +249,16 @@ func (this *QSystemTrayIcon) ContextMenu(args ...interface{}) (ret interface{}) 
 }
 
 // setIcon(const class QIcon &)
-func (this *QSystemTrayIcon) SetIcon(args ...interface{}) () {
+func (this *QSystemTrayIcon) Seticon(args ...interface{}) () {
   // setIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -262,11 +277,15 @@ func (this *QSystemTrayIcon) SetIcon(args ...interface{}) () {
 }
 
 // toolTip()
-func (this *QSystemTrayIcon) ToolTip(args ...interface{}) (ret interface{}) {
+func (this *QSystemTrayIcon) Tooltip(args ...interface{}) (ret interface{}) {
   // toolTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -296,6 +315,10 @@ func (this *QSystemTrayIcon) Icon(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -320,12 +343,16 @@ func (this *QSystemTrayIcon) Icon(args ...interface{}) (ret interface{}) {
 }
 
 // setContextMenu(class QMenu *)
-func (this *QSystemTrayIcon) SetContextMenu(args ...interface{}) () {
+func (this *QSystemTrayIcon) Setcontextmenu(args ...interface{}) () {
   // setContextMenu(class QMenu *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QMenu{}) // "QMenu *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -344,12 +371,16 @@ func (this *QSystemTrayIcon) SetContextMenu(args ...interface{}) () {
 }
 
 // setToolTip(const class QString &)
-func (this *QSystemTrayIcon) SetToolTip(args ...interface{}) () {
+func (this *QSystemTrayIcon) Settooltip(args ...interface{}) () {
   // setToolTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -368,11 +399,15 @@ func (this *QSystemTrayIcon) SetToolTip(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QSystemTrayIcon) MetaObject(args ...interface{}) () {
+func (this *QSystemTrayIcon) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -394,6 +429,10 @@ func (this *QSystemTrayIcon) Geometry(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -418,11 +457,15 @@ func (this *QSystemTrayIcon) Geometry(args ...interface{}) (ret interface{}) {
 }
 
 // ~QSystemTrayIcon()
-func (this *QSystemTrayIcon) Free(args ...interface{}) () {
+func (this *QSystemTrayIcon) Freeqsystemtrayicon(args ...interface{}) () {
   // ~QSystemTrayIcon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -430,10 +473,7 @@ func (this *QSystemTrayIcon) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSystemTrayIconD0Ev
     // invoke: void ~QSystemTrayIcon()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QSystemTrayIconD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QSystemTrayIconD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "~QSystemTrayIcon", args)
   }
@@ -442,11 +482,15 @@ func (this *QSystemTrayIcon) Free(args ...interface{}) () {
 }
 
 // isVisible()
-func (this *QSystemTrayIcon) IsVisible(args ...interface{}) (ret interface{}) {
+func (this *QSystemTrayIcon) Isvisible(args ...interface{}) (ret interface{}) {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -471,11 +515,15 @@ func (this *QSystemTrayIcon) IsVisible(args ...interface{}) (ret interface{}) {
 }
 
 // supportsMessages()
-func (this *QSystemTrayIcon) SupportsMessages_s(args ...interface{}) (ret interface{}) {
+func (this *QSystemTrayIcon) Supportsmessages_S(args ...interface{}) (ret interface{}) {
   // supportsMessages()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -500,12 +548,16 @@ func (this *QSystemTrayIcon) SupportsMessages_s(args ...interface{}) (ret interf
 }
 
 // setVisible(_Bool)
-func (this *QSystemTrayIcon) SetVisible(args ...interface{}) () {
+func (this *QSystemTrayIcon) Setvisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

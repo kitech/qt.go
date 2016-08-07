@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -121,7 +120,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QUndoStack)=1
@@ -143,13 +141,17 @@ type QUndoCommand struct {
 }
 
 // createUndoAction(class QObject *, const class QString &)
-func (this *QUndoStack) CreateUndoAction(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) Createundoaction(args ...interface{}) (ret interface{}) {
   // createUndoAction(class QObject *, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -178,12 +180,16 @@ func (this *QUndoStack) CreateUndoAction(args ...interface{}) (ret interface{}) 
 }
 
 // setActive(_Bool)
-func (this *QUndoStack) SetActive(args ...interface{}) () {
+func (this *QUndoStack) Setactive(args ...interface{}) () {
   // setActive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -202,12 +208,16 @@ func (this *QUndoStack) SetActive(args ...interface{}) () {
 }
 
 // setIndex(int)
-func (this *QUndoStack) SetIndex(args ...interface{}) () {
+func (this *QUndoStack) Setindex(args ...interface{}) () {
   // setIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -231,6 +241,10 @@ func (this *QUndoStack) Redo(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -247,11 +261,15 @@ func (this *QUndoStack) Redo(args ...interface{}) () {
 }
 
 // canUndo()
-func (this *QUndoStack) CanUndo(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) Canundo(args ...interface{}) (ret interface{}) {
   // canUndo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -276,11 +294,15 @@ func (this *QUndoStack) CanUndo(args ...interface{}) (ret interface{}) {
 }
 
 // isClean()
-func (this *QUndoStack) IsClean(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) Isclean(args ...interface{}) (ret interface{}) {
   // isClean()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -305,11 +327,15 @@ func (this *QUndoStack) IsClean(args ...interface{}) (ret interface{}) {
 }
 
 // cleanIndex()
-func (this *QUndoStack) CleanIndex(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) Cleanindex(args ...interface{}) (ret interface{}) {
   // cleanIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -334,15 +360,16 @@ func (this *QUndoStack) CleanIndex(args ...interface{}) (ret interface{}) {
 }
 
 // QUndoStack(class QObject *)
-func GcfreeQUndoStack(this *QUndoStack) {
-  qtrt.UniverseFree(this)
-}
 func NewQUndoStack(args ...interface{}) *QUndoStack {
   // QUndoStack(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -355,9 +382,7 @@ func NewQUndoStack(args ...interface{}) *QUndoStack {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QUndoStackC2EP7QObject(arg0)
-    this := &QUndoStack{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQUndoStack)
-    return this
+    return &QUndoStack{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QUndoStack", "QUndoStack", args)
   }
@@ -366,11 +391,15 @@ func NewQUndoStack(args ...interface{}) *QUndoStack {
 }
 
 // ~QUndoStack()
-func (this *QUndoStack) Free(args ...interface{}) () {
+func (this *QUndoStack) Freequndostack(args ...interface{}) () {
   // ~QUndoStack()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -378,10 +407,7 @@ func (this *QUndoStack) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStackD0Ev
     // invoke: void ~QUndoStack()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN10QUndoStackD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN10QUndoStackD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoStack", "~QUndoStack", args)
   }
@@ -396,6 +422,10 @@ func (this *QUndoStack) Text(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -422,11 +452,15 @@ func (this *QUndoStack) Text(args ...interface{}) (ret interface{}) {
 }
 
 // redoText()
-func (this *QUndoStack) RedoText(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) Redotext(args ...interface{}) (ret interface{}) {
   // redoText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -456,6 +490,10 @@ func (this *QUndoStack) Count(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -485,6 +523,10 @@ func (this *QUndoStack) Index(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -509,12 +551,16 @@ func (this *QUndoStack) Index(args ...interface{}) (ret interface{}) {
 }
 
 // beginMacro(const class QString &)
-func (this *QUndoStack) BeginMacro(args ...interface{}) () {
+func (this *QUndoStack) Beginmacro(args ...interface{}) () {
   // beginMacro(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -538,6 +584,10 @@ func (this *QUndoStack) Undo(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -554,11 +604,15 @@ func (this *QUndoStack) Undo(args ...interface{}) () {
 }
 
 // undoLimit()
-func (this *QUndoStack) UndoLimit(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) Undolimit(args ...interface{}) (ret interface{}) {
   // undoLimit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -583,11 +637,15 @@ func (this *QUndoStack) UndoLimit(args ...interface{}) (ret interface{}) {
 }
 
 // canRedo()
-func (this *QUndoStack) CanRedo(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) Canredo(args ...interface{}) (ret interface{}) {
   // canRedo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -612,11 +670,15 @@ func (this *QUndoStack) CanRedo(args ...interface{}) (ret interface{}) {
 }
 
 // setClean()
-func (this *QUndoStack) SetClean(args ...interface{}) () {
+func (this *QUndoStack) Setclean(args ...interface{}) () {
   // setClean()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -633,11 +695,15 @@ func (this *QUndoStack) SetClean(args ...interface{}) () {
 }
 
 // isActive()
-func (this *QUndoStack) IsActive(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) Isactive(args ...interface{}) (ret interface{}) {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -662,13 +728,17 @@ func (this *QUndoStack) IsActive(args ...interface{}) (ret interface{}) {
 }
 
 // createRedoAction(class QObject *, const class QString &)
-func (this *QUndoStack) CreateRedoAction(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) Createredoaction(args ...interface{}) (ret interface{}) {
   // createRedoAction(class QObject *, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -697,11 +767,15 @@ func (this *QUndoStack) CreateRedoAction(args ...interface{}) (ret interface{}) 
 }
 
 // metaObject()
-func (this *QUndoStack) MetaObject(args ...interface{}) () {
+func (this *QUndoStack) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -718,11 +792,15 @@ func (this *QUndoStack) MetaObject(args ...interface{}) () {
 }
 
 // undoText()
-func (this *QUndoStack) UndoText(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) Undotext(args ...interface{}) (ret interface{}) {
   // undoText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -752,6 +830,10 @@ func (this *QUndoStack) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -768,12 +850,16 @@ func (this *QUndoStack) Clear(args ...interface{}) () {
 }
 
 // setUndoLimit(int)
-func (this *QUndoStack) SetUndoLimit(args ...interface{}) () {
+func (this *QUndoStack) Setundolimit(args ...interface{}) () {
   // setUndoLimit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -798,6 +884,10 @@ func (this *QUndoStack) Command(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -824,11 +914,15 @@ func (this *QUndoStack) Command(args ...interface{}) (ret interface{}) {
 }
 
 // endMacro()
-func (this *QUndoStack) EndMacro(args ...interface{}) () {
+func (this *QUndoStack) Endmacro(args ...interface{}) () {
   // endMacro()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -851,6 +945,10 @@ func (this *QUndoStack) Push(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QUndoCommand{}) // "QUndoCommand *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -869,11 +967,15 @@ func (this *QUndoStack) Push(args ...interface{}) () {
 }
 
 // actionText()
-func (this *QUndoCommand) ActionText(args ...interface{}) (ret interface{}) {
+func (this *QUndoCommand) Actiontext(args ...interface{}) (ret interface{}) {
   // actionText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -898,12 +1000,16 @@ func (this *QUndoCommand) ActionText(args ...interface{}) (ret interface{}) {
 }
 
 // mergeWith(const class QUndoCommand *)
-func (this *QUndoCommand) MergeWith(args ...interface{}) (ret interface{}) {
+func (this *QUndoCommand) Mergewith(args ...interface{}) (ret interface{}) {
   // mergeWith(const class QUndoCommand *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QUndoCommand{}) // "const QUndoCommand *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -935,6 +1041,10 @@ func (this *QUndoCommand) Text(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -959,12 +1069,16 @@ func (this *QUndoCommand) Text(args ...interface{}) (ret interface{}) {
 }
 
 // setText(const class QString &)
-func (this *QUndoCommand) SetText(args ...interface{}) () {
+func (this *QUndoCommand) Settext(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -988,6 +1102,10 @@ func (this *QUndoCommand) Undo(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1004,11 +1122,15 @@ func (this *QUndoCommand) Undo(args ...interface{}) () {
 }
 
 // childCount()
-func (this *QUndoCommand) ChildCount(args ...interface{}) (ret interface{}) {
+func (this *QUndoCommand) Childcount(args ...interface{}) (ret interface{}) {
   // childCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1033,9 +1155,6 @@ func (this *QUndoCommand) ChildCount(args ...interface{}) (ret interface{}) {
 }
 
 // QUndoCommand(const class QString &, class QUndoCommand *)
-func GcfreeQUndoCommand(this *QUndoCommand) {
-  qtrt.UniverseFree(this)
-}
 func NewQUndoCommand(args ...interface{}) *QUndoCommand {
   // QUndoCommand(const class QString &, class QUndoCommand *)
   // QUndoCommand(class QUndoCommand *)
@@ -1046,6 +1165,10 @@ func NewQUndoCommand(args ...interface{}) *QUndoCommand {
   vtys[0][1] = reflect.TypeOf(QUndoCommand{}) // "QUndoCommand *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QUndoCommand{}) // "QUndoCommand *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1060,9 +1183,7 @@ func NewQUndoCommand(args ...interface{}) *QUndoCommand {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QUndoCommandC2ERK7QStringPS_(arg0, arg1)
-    this := &QUndoCommand{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQUndoCommand)
-    return this
+    return &QUndoCommand{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QUndoCommandC1EPS_
     // invoke: void QUndoCommand(class QUndoCommand *)
@@ -1071,9 +1192,7 @@ func NewQUndoCommand(args ...interface{}) *QUndoCommand {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QUndoCommandC2EPS_(arg0)
-    this := &QUndoCommand{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQUndoCommand)
-    return this
+    return &QUndoCommand{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QUndoCommand", "QUndoCommand", args)
   }
@@ -1082,11 +1201,15 @@ func NewQUndoCommand(args ...interface{}) *QUndoCommand {
 }
 
 // ~QUndoCommand()
-func (this *QUndoCommand) Free(args ...interface{}) () {
+func (this *QUndoCommand) Freequndocommand(args ...interface{}) () {
   // ~QUndoCommand()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1094,10 +1217,7 @@ func (this *QUndoCommand) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QUndoCommandD0Ev
     // invoke: void ~QUndoCommand()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QUndoCommandD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QUndoCommandD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoCommand", "~QUndoCommand", args)
   }
@@ -1112,6 +1232,10 @@ func (this *QUndoCommand) Child(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1143,6 +1267,10 @@ func (this *QUndoCommand) Redo(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1164,6 +1292,10 @@ func (this *QUndoCommand) Id(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

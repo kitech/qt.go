@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qscrollerproperties.h
 // dst-file: /src/widgets/qscrollerproperties.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -53,7 +52,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QScrollerProperties)=1
@@ -63,11 +61,15 @@ type QScrollerProperties struct {
 }
 
 // unsetDefaultScrollerProperties()
-func (this *QScrollerProperties) UnsetDefaultScrollerProperties_s(args ...interface{}) () {
+func (this *QScrollerProperties) Unsetdefaultscrollerproperties_S(args ...interface{}) () {
   // unsetDefaultScrollerProperties()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -84,9 +86,6 @@ func (this *QScrollerProperties) UnsetDefaultScrollerProperties_s(args ...interf
 }
 
 // QScrollerProperties()
-func GcfreeQScrollerProperties(this *QScrollerProperties) {
-  qtrt.UniverseFree(this)
-}
 func NewQScrollerProperties(args ...interface{}) *QScrollerProperties {
   // QScrollerProperties()
   // QScrollerProperties(const class QScrollerProperties &)
@@ -95,6 +94,10 @@ func NewQScrollerProperties(args ...interface{}) *QScrollerProperties {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QScrollerProperties{}) // "const QScrollerProperties &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -105,9 +108,7 @@ func NewQScrollerProperties(args ...interface{}) *QScrollerProperties {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QScrollerPropertiesC2Ev()
-    this := &QScrollerProperties{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQScrollerProperties)
-    return this
+    return &QScrollerProperties{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QScrollerPropertiesC1ERKS_
     // invoke: void QScrollerProperties(const class QScrollerProperties &)
@@ -116,9 +117,7 @@ func NewQScrollerProperties(args ...interface{}) *QScrollerProperties {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QScrollerPropertiesC2ERKS_(arg0)
-    this := &QScrollerProperties{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQScrollerProperties)
-    return this
+    return &QScrollerProperties{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QScrollerProperties", "QScrollerProperties", args)
   }
@@ -127,12 +126,16 @@ func NewQScrollerProperties(args ...interface{}) *QScrollerProperties {
 }
 
 // setDefaultScrollerProperties(const class QScrollerProperties &)
-func (this *QScrollerProperties) SetDefaultScrollerProperties_s(args ...interface{}) () {
+func (this *QScrollerProperties) Setdefaultscrollerproperties_S(args ...interface{}) () {
   // setDefaultScrollerProperties(const class QScrollerProperties &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QScrollerProperties{}) // "const QScrollerProperties &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -151,11 +154,15 @@ func (this *QScrollerProperties) SetDefaultScrollerProperties_s(args ...interfac
 }
 
 // ~QScrollerProperties()
-func (this *QScrollerProperties) Free(args ...interface{}) () {
+func (this *QScrollerProperties) Freeqscrollerproperties(args ...interface{}) () {
   // ~QScrollerProperties()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -163,10 +170,7 @@ func (this *QScrollerProperties) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QScrollerPropertiesD0Ev
     // invoke: void ~QScrollerProperties()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QScrollerPropertiesD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QScrollerPropertiesD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScrollerProperties", "~QScrollerProperties", args)
   }

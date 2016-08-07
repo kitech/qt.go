@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -89,7 +88,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QThread)=1
@@ -101,11 +99,15 @@ type QThread struct {
 }
 
 // eventDispatcher()
-func (this *QThread) EventDispatcher(args ...interface{}) () {
+func (this *QThread) Eventdispatcher(args ...interface{}) () {
   // eventDispatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -122,11 +124,15 @@ func (this *QThread) EventDispatcher(args ...interface{}) () {
 }
 
 // currentThread()
-func (this *QThread) CurrentThread_s(args ...interface{}) (ret interface{}) {
+func (this *QThread) Currentthread_S(args ...interface{}) (ret interface{}) {
   // currentThread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -156,6 +162,10 @@ func (this *QThread) Terminate(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -172,12 +182,16 @@ func (this *QThread) Terminate(args ...interface{}) () {
 }
 
 // sleep(unsigned long)
-func (this *QThread) Sleep_s(args ...interface{}) () {
+func (this *QThread) Sleep_S(args ...interface{}) () {
   // sleep(unsigned long)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "unsigned long"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -196,12 +210,16 @@ func (this *QThread) Sleep_s(args ...interface{}) () {
 }
 
 // msleep(unsigned long)
-func (this *QThread) Msleep_s(args ...interface{}) () {
+func (this *QThread) Msleep_S(args ...interface{}) () {
   // msleep(unsigned long)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "unsigned long"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -220,11 +238,15 @@ func (this *QThread) Msleep_s(args ...interface{}) () {
 }
 
 // stackSize()
-func (this *QThread) StackSize(args ...interface{}) (ret interface{}) {
+func (this *QThread) Stacksize(args ...interface{}) (ret interface{}) {
   // stackSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -255,6 +277,10 @@ func (this *QThread) Event(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -281,12 +307,16 @@ func (this *QThread) Event(args ...interface{}) (ret interface{}) {
 }
 
 // usleep(unsigned long)
-func (this *QThread) Usleep_s(args ...interface{}) () {
+func (this *QThread) Usleep_S(args ...interface{}) () {
   // usleep(unsigned long)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "unsigned long"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -310,6 +340,10 @@ func (this *QThread) Quit(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -326,11 +360,15 @@ func (this *QThread) Quit(args ...interface{}) () {
 }
 
 // loopLevel()
-func (this *QThread) LoopLevel(args ...interface{}) (ret interface{}) {
+func (this *QThread) Looplevel(args ...interface{}) (ret interface{}) {
   // loopLevel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -360,6 +398,10 @@ func (this *QThread) Priority(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -376,11 +418,15 @@ func (this *QThread) Priority(args ...interface{}) () {
 }
 
 // isFinished()
-func (this *QThread) IsFinished(args ...interface{}) (ret interface{}) {
+func (this *QThread) Isfinished(args ...interface{}) (ret interface{}) {
   // isFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -411,6 +457,10 @@ func (this *QThread) Exit(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -429,12 +479,16 @@ func (this *QThread) Exit(args ...interface{}) () {
 }
 
 // setEventDispatcher(class QAbstractEventDispatcher *)
-func (this *QThread) SetEventDispatcher(args ...interface{}) () {
+func (this *QThread) Seteventdispatcher(args ...interface{}) () {
   // setEventDispatcher(class QAbstractEventDispatcher *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractEventDispatcher{}) // "QAbstractEventDispatcher *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -453,12 +507,16 @@ func (this *QThread) SetEventDispatcher(args ...interface{}) () {
 }
 
 // setStackSize(uint)
-func (this *QThread) SetStackSize(args ...interface{}) () {
+func (this *QThread) Setstacksize(args ...interface{}) () {
   // setStackSize(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "uint"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -477,11 +535,15 @@ func (this *QThread) SetStackSize(args ...interface{}) () {
 }
 
 // ~QThread()
-func (this *QThread) Free(args ...interface{}) () {
+func (this *QThread) Freeqthread(args ...interface{}) () {
   // ~QThread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -489,10 +551,7 @@ func (this *QThread) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThreadD0Ev
     // invoke: void ~QThread()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN7QThreadD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN7QThreadD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThread", "~QThread", args)
   }
@@ -501,11 +560,15 @@ func (this *QThread) Free(args ...interface{}) () {
 }
 
 // isRunning()
-func (this *QThread) IsRunning(args ...interface{}) (ret interface{}) {
+func (this *QThread) Isrunning(args ...interface{}) (ret interface{}) {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -530,11 +593,15 @@ func (this *QThread) IsRunning(args ...interface{}) (ret interface{}) {
 }
 
 // isInterruptionRequested()
-func (this *QThread) IsInterruptionRequested(args ...interface{}) (ret interface{}) {
+func (this *QThread) Isinterruptionrequested(args ...interface{}) (ret interface{}) {
   // isInterruptionRequested()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -559,11 +626,15 @@ func (this *QThread) IsInterruptionRequested(args ...interface{}) (ret interface
 }
 
 // requestInterruption()
-func (this *QThread) RequestInterruption(args ...interface{}) () {
+func (this *QThread) Requestinterruption(args ...interface{}) () {
   // requestInterruption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -580,15 +651,16 @@ func (this *QThread) RequestInterruption(args ...interface{}) () {
 }
 
 // QThread(class QObject *)
-func GcfreeQThread(this *QThread) {
-  qtrt.UniverseFree(this)
-}
 func NewQThread(args ...interface{}) *QThread {
   // QThread(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -601,9 +673,7 @@ func NewQThread(args ...interface{}) *QThread {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QThreadC2EP7QObject(arg0)
-    this := &QThread{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQThread)
-    return this
+    return &QThread{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QThread", "QThread", args)
   }
@@ -618,6 +688,10 @@ func (this *QThread) Wait(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "unsigned long"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -644,11 +718,15 @@ func (this *QThread) Wait(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QThread) MetaObject(args ...interface{}) () {
+func (this *QThread) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -665,11 +743,15 @@ func (this *QThread) MetaObject(args ...interface{}) () {
 }
 
 // idealThreadCount()
-func (this *QThread) IdealThreadCount_s(args ...interface{}) (ret interface{}) {
+func (this *QThread) Idealthreadcount_S(args ...interface{}) (ret interface{}) {
   // idealThreadCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -694,11 +776,15 @@ func (this *QThread) IdealThreadCount_s(args ...interface{}) (ret interface{}) {
 }
 
 // currentThreadId()
-func (this *QThread) CurrentThreadId_s(args ...interface{}) () {
+func (this *QThread) Currentthreadid_S(args ...interface{}) () {
   // currentThreadId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -715,11 +801,15 @@ func (this *QThread) CurrentThreadId_s(args ...interface{}) () {
 }
 
 // yieldCurrentThread()
-func (this *QThread) YieldCurrentThread_s(args ...interface{}) () {
+func (this *QThread) Yieldcurrentthread_S(args ...interface{}) () {
   // yieldCurrentThread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -53,6 +52,8 @@ extern bool C_ZNK10QJsonValue6toBoolEb(void* qthis, bool arg0); // 4
 extern void* C_ZNK10QJsonValue9toVariantEv(void* qthis); // 4
   // proto:  QString QJsonValue::toString(const QString & defaultValue);
 extern void* C_ZNK10QJsonValue8toStringERK7QString(void* qthis, void* arg0); // 4
+  // proto:  QString QJsonValue::toString();
+extern void* C_ZNK10QJsonValue8toStringEv(void* qthis); // 4
   // proto:  QJsonValue::Type QJsonValue::type();
 extern void C_ZNK10QJsonValue4typeEv(void* qthis); // 4
   // proto:  bool QJsonValue::isUndefined();
@@ -123,7 +124,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QJsonValueRefPtr)=16
@@ -151,9 +151,6 @@ type QJsonValueRef struct {
 }
 
 // QJsonValue(double)
-func GcfreeQJsonValue(this *QJsonValue) {
-  qtrt.UniverseFree(this)
-}
 func NewQJsonValue(args ...interface{}) *QJsonValue {
   // QJsonValue(double)
   // QJsonValue(_Bool)
@@ -175,6 +172,10 @@ func NewQJsonValue(args ...interface{}) *QJsonValue {
   vtys[4][0] = qtrt.ByteTy(true) // "const char *"
   vtys[5] = make(map[int32]reflect.Type)
   vtys[5][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -187,9 +188,7 @@ func NewQJsonValue(args ...interface{}) *QJsonValue {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2Ed(arg0)
-    this := &QJsonValue{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQJsonValue)
-    return this
+    return &QJsonValue{Qclsinst:qthis}
   case 1:
     // invoke: _ZN10QJsonValueC1Eb
     // invoke: void QJsonValue(_Bool)
@@ -198,9 +197,7 @@ func NewQJsonValue(args ...interface{}) *QJsonValue {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2Eb(arg0)
-    this := &QJsonValue{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQJsonValue)
-    return this
+    return &QJsonValue{Qclsinst:qthis}
   case 2:
     // invoke: _ZN10QJsonValueC1Ei
     // invoke: void QJsonValue(int)
@@ -209,9 +206,7 @@ func NewQJsonValue(args ...interface{}) *QJsonValue {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2Ei(arg0)
-    this := &QJsonValue{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQJsonValue)
-    return this
+    return &QJsonValue{Qclsinst:qthis}
   case 3:
     // invoke: _ZN10QJsonValueC1ERK7QString
     // invoke: void QJsonValue(const class QString &)
@@ -220,9 +215,7 @@ func NewQJsonValue(args ...interface{}) *QJsonValue {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2ERK7QString(arg0)
-    this := &QJsonValue{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQJsonValue)
-    return this
+    return &QJsonValue{Qclsinst:qthis}
   case 4:
     // invoke: _ZN10QJsonValueC1EPKc
     // invoke: void QJsonValue(const char *)
@@ -233,9 +226,7 @@ func NewQJsonValue(args ...interface{}) *QJsonValue {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2EPKc(arg0)
-    this := &QJsonValue{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQJsonValue)
-    return this
+    return &QJsonValue{Qclsinst:qthis}
   case 5:
     // invoke: _ZN10QJsonValueC1Ex
     // invoke: void QJsonValue(qint64)
@@ -244,9 +235,7 @@ func NewQJsonValue(args ...interface{}) *QJsonValue {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2Ex(arg0)
-    this := &QJsonValue{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQJsonValue)
-    return this
+    return &QJsonValue{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QJsonValue", "QJsonValue", args)
   }
@@ -255,12 +244,16 @@ func NewQJsonValue(args ...interface{}) *QJsonValue {
 }
 
 // fromVariant(const class QVariant &)
-func (this *QJsonValue) FromVariant_s(args ...interface{}) () {
+func (this *QJsonValue) Fromvariant_S(args ...interface{}) () {
   // fromVariant(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QVariant{}) // "const QVariant &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -279,11 +272,15 @@ func (this *QJsonValue) FromVariant_s(args ...interface{}) () {
 }
 
 // ~QJsonValue()
-func (this *QJsonValue) Free(args ...interface{}) () {
+func (this *QJsonValue) Freeqjsonvalue(args ...interface{}) () {
   // ~QJsonValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -291,10 +288,7 @@ func (this *QJsonValue) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonValueD0Ev
     // invoke: void ~QJsonValue()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN10QJsonValueD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN10QJsonValueD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "~QJsonValue", args)
   }
@@ -303,11 +297,15 @@ func (this *QJsonValue) Free(args ...interface{}) () {
 }
 
 // toObject()
-func (this *QJsonValue) ToObject(args ...interface{}) () {
+func (this *QJsonValue) Toobject(args ...interface{}) () {
   // toObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -324,12 +322,16 @@ func (this *QJsonValue) ToObject(args ...interface{}) () {
 }
 
 // toBool(_Bool)
-func (this *QJsonValue) ToBool(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Tobool(args ...interface{}) (ret interface{}) {
   // toBool(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -356,11 +358,15 @@ func (this *QJsonValue) ToBool(args ...interface{}) (ret interface{}) {
 }
 
 // toVariant()
-func (this *QJsonValue) ToVariant(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Tovariant(args ...interface{}) (ret interface{}) {
   // toVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -385,12 +391,18 @@ func (this *QJsonValue) ToVariant(args ...interface{}) (ret interface{}) {
 }
 
 // toString(const class QString &)
-func (this *QJsonValue) ToString(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Tostring(args ...interface{}) (ret interface{}) {
   // toString(const class QString &)
+  // toString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -401,6 +413,18 @@ func (this *QJsonValue) ToString(args ...interface{}) (ret interface{}) {
     var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZNK10QJsonValue8toStringERK7QString(this.Qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  case 1:
+    // invoke: _ZNK10QJsonValue8toStringEv
+    // invoke: QString toString()
+    var ret0 = C.C_ZNK10QJsonValue8toStringEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
@@ -422,6 +446,10 @@ func (this *QJsonValue) Type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -438,11 +466,15 @@ func (this *QJsonValue) Type_(args ...interface{}) () {
 }
 
 // isUndefined()
-func (this *QJsonValue) IsUndefined(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Isundefined(args ...interface{}) (ret interface{}) {
   // isUndefined()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -467,11 +499,15 @@ func (this *QJsonValue) IsUndefined(args ...interface{}) (ret interface{}) {
 }
 
 // isArray()
-func (this *QJsonValue) IsArray(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Isarray(args ...interface{}) (ret interface{}) {
   // isArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -496,11 +532,15 @@ func (this *QJsonValue) IsArray(args ...interface{}) (ret interface{}) {
 }
 
 // isBool()
-func (this *QJsonValue) IsBool(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Isbool(args ...interface{}) (ret interface{}) {
   // isBool()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -525,11 +565,15 @@ func (this *QJsonValue) IsBool(args ...interface{}) (ret interface{}) {
 }
 
 // isObject()
-func (this *QJsonValue) IsObject(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Isobject(args ...interface{}) (ret interface{}) {
   // isObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -554,11 +598,15 @@ func (this *QJsonValue) IsObject(args ...interface{}) (ret interface{}) {
 }
 
 // isDouble()
-func (this *QJsonValue) IsDouble(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Isdouble(args ...interface{}) (ret interface{}) {
   // isDouble()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -583,11 +631,15 @@ func (this *QJsonValue) IsDouble(args ...interface{}) (ret interface{}) {
 }
 
 // toArray()
-func (this *QJsonValue) ToArray(args ...interface{}) () {
+func (this *QJsonValue) Toarray(args ...interface{}) () {
   // toArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -604,11 +656,15 @@ func (this *QJsonValue) ToArray(args ...interface{}) () {
 }
 
 // isString()
-func (this *QJsonValue) IsString(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Isstring(args ...interface{}) (ret interface{}) {
   // isString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -633,12 +689,16 @@ func (this *QJsonValue) IsString(args ...interface{}) (ret interface{}) {
 }
 
 // toInt(int)
-func (this *QJsonValue) ToInt(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Toint(args ...interface{}) (ret interface{}) {
   // toInt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -665,11 +725,15 @@ func (this *QJsonValue) ToInt(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QJsonValue) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -694,12 +758,16 @@ func (this *QJsonValue) IsNull(args ...interface{}) (ret interface{}) {
 }
 
 // toDouble(double)
-func (this *QJsonValue) ToDouble(args ...interface{}) (ret interface{}) {
+func (this *QJsonValue) Todouble(args ...interface{}) (ret interface{}) {
   // toDouble(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -726,11 +794,15 @@ func (this *QJsonValue) ToDouble(args ...interface{}) (ret interface{}) {
 }
 
 // isArray()
-func (this *QJsonValueRef) IsArray(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Isarray(args ...interface{}) (ret interface{}) {
   // isArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -755,11 +827,15 @@ func (this *QJsonValueRef) IsArray(args ...interface{}) (ret interface{}) {
 }
 
 // toArray()
-func (this *QJsonValueRef) ToArray(args ...interface{}) () {
+func (this *QJsonValueRef) Toarray(args ...interface{}) () {
   // toArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -776,11 +852,15 @@ func (this *QJsonValueRef) ToArray(args ...interface{}) () {
 }
 
 // isString()
-func (this *QJsonValueRef) IsString(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Isstring(args ...interface{}) (ret interface{}) {
   // isString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -805,11 +885,15 @@ func (this *QJsonValueRef) IsString(args ...interface{}) (ret interface{}) {
 }
 
 // toObject()
-func (this *QJsonValueRef) ToObject(args ...interface{}) () {
+func (this *QJsonValueRef) Toobject(args ...interface{}) () {
   // toObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -826,7 +910,7 @@ func (this *QJsonValueRef) ToObject(args ...interface{}) () {
 }
 
 // toInt(int)
-func (this *QJsonValueRef) ToInt(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Toint(args ...interface{}) (ret interface{}) {
   // toInt(int)
   // toInt()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -834,6 +918,10 @@ func (this *QJsonValueRef) ToInt(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -872,11 +960,15 @@ func (this *QJsonValueRef) ToInt(args ...interface{}) (ret interface{}) {
 }
 
 // isBool()
-func (this *QJsonValueRef) IsBool(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Isbool(args ...interface{}) (ret interface{}) {
   // isBool()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -901,11 +993,15 @@ func (this *QJsonValueRef) IsBool(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QJsonValueRef) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -930,7 +1026,7 @@ func (this *QJsonValueRef) IsNull(args ...interface{}) (ret interface{}) {
 }
 
 // toDouble(double)
-func (this *QJsonValueRef) ToDouble(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Todouble(args ...interface{}) (ret interface{}) {
   // toDouble(double)
   // toDouble()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -938,6 +1034,10 @@ func (this *QJsonValueRef) ToDouble(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -976,7 +1076,7 @@ func (this *QJsonValueRef) ToDouble(args ...interface{}) (ret interface{}) {
 }
 
 // toBool()
-func (this *QJsonValueRef) ToBool(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Tobool(args ...interface{}) (ret interface{}) {
   // toBool()
   // toBool(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -984,6 +1084,10 @@ func (this *QJsonValueRef) ToBool(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1022,11 +1126,15 @@ func (this *QJsonValueRef) ToBool(args ...interface{}) (ret interface{}) {
 }
 
 // toVariant()
-func (this *QJsonValueRef) ToVariant(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Tovariant(args ...interface{}) (ret interface{}) {
   // toVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1051,7 +1159,7 @@ func (this *QJsonValueRef) ToVariant(args ...interface{}) (ret interface{}) {
 }
 
 // toString()
-func (this *QJsonValueRef) ToString(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Tostring(args ...interface{}) (ret interface{}) {
   // toString()
   // toString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1059,6 +1167,10 @@ func (this *QJsonValueRef) ToString(args ...interface{}) (ret interface{}) {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1097,11 +1209,15 @@ func (this *QJsonValueRef) ToString(args ...interface{}) (ret interface{}) {
 }
 
 // isUndefined()
-func (this *QJsonValueRef) IsUndefined(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Isundefined(args ...interface{}) (ret interface{}) {
   // isUndefined()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1131,6 +1247,10 @@ func (this *QJsonValueRef) Type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1147,11 +1267,15 @@ func (this *QJsonValueRef) Type_(args ...interface{}) () {
 }
 
 // isObject()
-func (this *QJsonValueRef) IsObject(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Isobject(args ...interface{}) (ret interface{}) {
   // isObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1176,11 +1300,15 @@ func (this *QJsonValueRef) IsObject(args ...interface{}) (ret interface{}) {
 }
 
 // isDouble()
-func (this *QJsonValueRef) IsDouble(args ...interface{}) (ret interface{}) {
+func (this *QJsonValueRef) Isdouble(args ...interface{}) (ret interface{}) {
   // isDouble()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

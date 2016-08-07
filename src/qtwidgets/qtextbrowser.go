@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -89,7 +88,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextBrowser)=1
@@ -105,11 +103,15 @@ type QTextBrowser struct {
 }
 
 // openLinks()
-func (this *QTextBrowser) OpenLinks(args ...interface{}) (ret interface{}) {
+func (this *QTextBrowser) Openlinks(args ...interface{}) (ret interface{}) {
   // openLinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -134,11 +136,15 @@ func (this *QTextBrowser) OpenLinks(args ...interface{}) (ret interface{}) {
 }
 
 // isBackwardAvailable()
-func (this *QTextBrowser) IsBackwardAvailable(args ...interface{}) (ret interface{}) {
+func (this *QTextBrowser) Isbackwardavailable(args ...interface{}) (ret interface{}) {
   // isBackwardAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -168,6 +174,10 @@ func (this *QTextBrowser) Home(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -184,12 +194,16 @@ func (this *QTextBrowser) Home(args ...interface{}) () {
 }
 
 // setSource(const class QUrl &)
-func (this *QTextBrowser) SetSource(args ...interface{}) () {
+func (this *QTextBrowser) Setsource(args ...interface{}) () {
   // setSource(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QUrl{}) // "const QUrl &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -208,11 +222,15 @@ func (this *QTextBrowser) SetSource(args ...interface{}) () {
 }
 
 // openExternalLinks()
-func (this *QTextBrowser) OpenExternalLinks(args ...interface{}) (ret interface{}) {
+func (this *QTextBrowser) Openexternallinks(args ...interface{}) (ret interface{}) {
   // openExternalLinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -237,11 +255,15 @@ func (this *QTextBrowser) OpenExternalLinks(args ...interface{}) (ret interface{
 }
 
 // searchPaths()
-func (this *QTextBrowser) SearchPaths(args ...interface{}) () {
+func (this *QTextBrowser) Searchpaths(args ...interface{}) () {
   // searchPaths()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -258,12 +280,16 @@ func (this *QTextBrowser) SearchPaths(args ...interface{}) () {
 }
 
 // setOpenLinks(_Bool)
-func (this *QTextBrowser) SetOpenLinks(args ...interface{}) () {
+func (this *QTextBrowser) Setopenlinks(args ...interface{}) () {
   // setOpenLinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -282,12 +308,16 @@ func (this *QTextBrowser) SetOpenLinks(args ...interface{}) () {
 }
 
 // historyUrl(int)
-func (this *QTextBrowser) HistoryUrl(args ...interface{}) (ret interface{}) {
+func (this *QTextBrowser) Historyurl(args ...interface{}) (ret interface{}) {
   // historyUrl(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -314,11 +344,15 @@ func (this *QTextBrowser) HistoryUrl(args ...interface{}) (ret interface{}) {
 }
 
 // isForwardAvailable()
-func (this *QTextBrowser) IsForwardAvailable(args ...interface{}) (ret interface{}) {
+func (this *QTextBrowser) Isforwardavailable(args ...interface{}) (ret interface{}) {
   // isForwardAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -348,6 +382,10 @@ func (this *QTextBrowser) Source(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -377,6 +415,10 @@ func (this *QTextBrowser) Forward(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -393,12 +435,16 @@ func (this *QTextBrowser) Forward(args ...interface{}) () {
 }
 
 // setSearchPaths(const class QStringList &)
-func (this *QTextBrowser) SetSearchPaths(args ...interface{}) () {
+func (this *QTextBrowser) Setsearchpaths(args ...interface{}) () {
   // setSearchPaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -417,15 +463,16 @@ func (this *QTextBrowser) SetSearchPaths(args ...interface{}) () {
 }
 
 // QTextBrowser(class QWidget *)
-func GcfreeQTextBrowser(this *QTextBrowser) {
-  qtrt.UniverseFree(this)
-}
 func NewQTextBrowser(args ...interface{}) *QTextBrowser {
   // QTextBrowser(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -438,9 +485,7 @@ func NewQTextBrowser(args ...interface{}) *QTextBrowser {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QTextBrowserC2EP7QWidget(arg0)
-    this := &QTextBrowser{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTextBrowser)
-    return this
+    return &QTextBrowser{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextBrowser", "QTextBrowser", args)
   }
@@ -449,11 +494,15 @@ func NewQTextBrowser(args ...interface{}) *QTextBrowser {
 }
 
 // forwardHistoryCount()
-func (this *QTextBrowser) ForwardHistoryCount(args ...interface{}) (ret interface{}) {
+func (this *QTextBrowser) Forwardhistorycount(args ...interface{}) (ret interface{}) {
   // forwardHistoryCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -478,13 +527,17 @@ func (this *QTextBrowser) ForwardHistoryCount(args ...interface{}) (ret interfac
 }
 
 // loadResource(int, const class QUrl &)
-func (this *QTextBrowser) LoadResource(args ...interface{}) (ret interface{}) {
+func (this *QTextBrowser) Loadresource(args ...interface{}) (ret interface{}) {
   // loadResource(int, const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(qtcore.QUrl{}) // "const QUrl &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -513,11 +566,15 @@ func (this *QTextBrowser) LoadResource(args ...interface{}) (ret interface{}) {
 }
 
 // ~QTextBrowser()
-func (this *QTextBrowser) Free(args ...interface{}) () {
+func (this *QTextBrowser) Freeqtextbrowser(args ...interface{}) () {
   // ~QTextBrowser()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -525,10 +582,7 @@ func (this *QTextBrowser) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTextBrowserD0Ev
     // invoke: void ~QTextBrowser()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QTextBrowserD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QTextBrowserD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "~QTextBrowser", args)
   }
@@ -537,11 +591,15 @@ func (this *QTextBrowser) Free(args ...interface{}) () {
 }
 
 // backwardHistoryCount()
-func (this *QTextBrowser) BackwardHistoryCount(args ...interface{}) (ret interface{}) {
+func (this *QTextBrowser) Backwardhistorycount(args ...interface{}) (ret interface{}) {
   // backwardHistoryCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -566,12 +624,16 @@ func (this *QTextBrowser) BackwardHistoryCount(args ...interface{}) (ret interfa
 }
 
 // setOpenExternalLinks(_Bool)
-func (this *QTextBrowser) SetOpenExternalLinks(args ...interface{}) () {
+func (this *QTextBrowser) Setopenexternallinks(args ...interface{}) () {
   // setOpenExternalLinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -590,11 +652,15 @@ func (this *QTextBrowser) SetOpenExternalLinks(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QTextBrowser) MetaObject(args ...interface{}) () {
+func (this *QTextBrowser) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -611,12 +677,16 @@ func (this *QTextBrowser) MetaObject(args ...interface{}) () {
 }
 
 // historyTitle(int)
-func (this *QTextBrowser) HistoryTitle(args ...interface{}) (ret interface{}) {
+func (this *QTextBrowser) Historytitle(args ...interface{}) (ret interface{}) {
   // historyTitle(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -648,6 +718,10 @@ func (this *QTextBrowser) Reload(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -664,11 +738,15 @@ func (this *QTextBrowser) Reload(args ...interface{}) () {
 }
 
 // clearHistory()
-func (this *QTextBrowser) ClearHistory(args ...interface{}) () {
+func (this *QTextBrowser) Clearhistory(args ...interface{}) () {
   // clearHistory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -690,6 +768,10 @@ func (this *QTextBrowser) Backward(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

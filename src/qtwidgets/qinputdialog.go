@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qinputdialog.h
 // dst-file: /src/widgets/qinputdialog.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -123,7 +122,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QInputDialog)=1
@@ -139,11 +137,15 @@ type QInputDialog struct {
 }
 
 // inputMode()
-func (this *QInputDialog) InputMode(args ...interface{}) () {
+func (this *QInputDialog) Inputmode(args ...interface{}) () {
   // inputMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -160,12 +162,16 @@ func (this *QInputDialog) InputMode(args ...interface{}) () {
 }
 
 // setDoubleDecimals(int)
-func (this *QInputDialog) SetDoubleDecimals(args ...interface{}) () {
+func (this *QInputDialog) Setdoubledecimals(args ...interface{}) () {
   // setDoubleDecimals(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -184,11 +190,15 @@ func (this *QInputDialog) SetDoubleDecimals(args ...interface{}) () {
 }
 
 // doubleMinimum()
-func (this *QInputDialog) DoubleMinimum(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Doubleminimum(args ...interface{}) (ret interface{}) {
   // doubleMinimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -213,12 +223,16 @@ func (this *QInputDialog) DoubleMinimum(args ...interface{}) (ret interface{}) {
 }
 
 // setIntMinimum(int)
-func (this *QInputDialog) SetIntMinimum(args ...interface{}) () {
+func (this *QInputDialog) Setintminimum(args ...interface{}) () {
   // setIntMinimum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -237,11 +251,15 @@ func (this *QInputDialog) SetIntMinimum(args ...interface{}) () {
 }
 
 // intMinimum()
-func (this *QInputDialog) IntMinimum(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Intminimum(args ...interface{}) (ret interface{}) {
   // intMinimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -266,11 +284,15 @@ func (this *QInputDialog) IntMinimum(args ...interface{}) (ret interface{}) {
 }
 
 // intMaximum()
-func (this *QInputDialog) IntMaximum(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Intmaximum(args ...interface{}) (ret interface{}) {
   // intMaximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -295,11 +317,15 @@ func (this *QInputDialog) IntMaximum(args ...interface{}) (ret interface{}) {
 }
 
 // doubleMaximum()
-func (this *QInputDialog) DoubleMaximum(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Doublemaximum(args ...interface{}) (ret interface{}) {
   // doubleMaximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -324,12 +350,16 @@ func (this *QInputDialog) DoubleMaximum(args ...interface{}) (ret interface{}) {
 }
 
 // setIntStep(int)
-func (this *QInputDialog) SetIntStep(args ...interface{}) () {
+func (this *QInputDialog) Setintstep(args ...interface{}) () {
   // setIntStep(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -354,6 +384,10 @@ func (this *QInputDialog) Done(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -372,12 +406,16 @@ func (this *QInputDialog) Done(args ...interface{}) () {
 }
 
 // setTextValue(const class QString &)
-func (this *QInputDialog) SetTextValue(args ...interface{}) () {
+func (this *QInputDialog) Settextvalue(args ...interface{}) () {
   // setTextValue(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -396,12 +434,16 @@ func (this *QInputDialog) SetTextValue(args ...interface{}) () {
 }
 
 // setComboBoxEditable(_Bool)
-func (this *QInputDialog) SetComboBoxEditable(args ...interface{}) () {
+func (this *QInputDialog) Setcomboboxeditable(args ...interface{}) () {
   // setComboBoxEditable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -427,6 +469,10 @@ func (this *QInputDialog) Open(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[0][1] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -449,13 +495,17 @@ func (this *QInputDialog) Open(args ...interface{}) () {
 }
 
 // setDoubleRange(double, double)
-func (this *QInputDialog) SetDoubleRange(args ...interface{}) () {
+func (this *QInputDialog) Setdoublerange(args ...interface{}) () {
   // setDoubleRange(double, double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
   vtys[0][1] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -476,12 +526,16 @@ func (this *QInputDialog) SetDoubleRange(args ...interface{}) () {
 }
 
 // setLabelText(const class QString &)
-func (this *QInputDialog) SetLabelText(args ...interface{}) () {
+func (this *QInputDialog) Setlabeltext(args ...interface{}) () {
   // setLabelText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -500,11 +554,15 @@ func (this *QInputDialog) SetLabelText(args ...interface{}) () {
 }
 
 // labelText()
-func (this *QInputDialog) LabelText(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Labeltext(args ...interface{}) (ret interface{}) {
   // labelText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -529,12 +587,16 @@ func (this *QInputDialog) LabelText(args ...interface{}) (ret interface{}) {
 }
 
 // setIntMaximum(int)
-func (this *QInputDialog) SetIntMaximum(args ...interface{}) () {
+func (this *QInputDialog) Setintmaximum(args ...interface{}) () {
   // setIntMaximum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -553,12 +615,16 @@ func (this *QInputDialog) SetIntMaximum(args ...interface{}) () {
 }
 
 // setDoubleMaximum(double)
-func (this *QInputDialog) SetDoubleMaximum(args ...interface{}) () {
+func (this *QInputDialog) Setdoublemaximum(args ...interface{}) () {
   // setDoubleMaximum(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -577,11 +643,15 @@ func (this *QInputDialog) SetDoubleMaximum(args ...interface{}) () {
 }
 
 // doubleValue()
-func (this *QInputDialog) DoubleValue(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Doublevalue(args ...interface{}) (ret interface{}) {
   // doubleValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -606,12 +676,16 @@ func (this *QInputDialog) DoubleValue(args ...interface{}) (ret interface{}) {
 }
 
 // setCancelButtonText(const class QString &)
-func (this *QInputDialog) SetCancelButtonText(args ...interface{}) () {
+func (this *QInputDialog) Setcancelbuttontext(args ...interface{}) () {
   // setCancelButtonText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -635,6 +709,10 @@ func (this *QInputDialog) Options(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -651,12 +729,16 @@ func (this *QInputDialog) Options(args ...interface{}) () {
 }
 
 // setDoubleMinimum(double)
-func (this *QInputDialog) SetDoubleMinimum(args ...interface{}) () {
+func (this *QInputDialog) Setdoubleminimum(args ...interface{}) () {
   // setDoubleMinimum(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -675,12 +757,16 @@ func (this *QInputDialog) SetDoubleMinimum(args ...interface{}) () {
 }
 
 // setComboBoxItems(const class QStringList &)
-func (this *QInputDialog) SetComboBoxItems(args ...interface{}) () {
+func (this *QInputDialog) Setcomboboxitems(args ...interface{}) () {
   // setComboBoxItems(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -699,12 +785,16 @@ func (this *QInputDialog) SetComboBoxItems(args ...interface{}) () {
 }
 
 // setDoubleValue(double)
-func (this *QInputDialog) SetDoubleValue(args ...interface{}) () {
+func (this *QInputDialog) Setdoublevalue(args ...interface{}) () {
   // setDoubleValue(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "double"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -723,11 +813,15 @@ func (this *QInputDialog) SetDoubleValue(args ...interface{}) () {
 }
 
 // comboBoxItems()
-func (this *QInputDialog) ComboBoxItems(args ...interface{}) () {
+func (this *QInputDialog) Comboboxitems(args ...interface{}) () {
   // comboBoxItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -744,13 +838,17 @@ func (this *QInputDialog) ComboBoxItems(args ...interface{}) () {
 }
 
 // setIntRange(int, int)
-func (this *QInputDialog) SetIntRange(args ...interface{}) () {
+func (this *QInputDialog) Setintrange(args ...interface{}) () {
   // setIntRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -771,11 +869,15 @@ func (this *QInputDialog) SetIntRange(args ...interface{}) () {
 }
 
 // intValue()
-func (this *QInputDialog) IntValue(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Intvalue(args ...interface{}) (ret interface{}) {
   // intValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -800,11 +902,15 @@ func (this *QInputDialog) IntValue(args ...interface{}) (ret interface{}) {
 }
 
 // cancelButtonText()
-func (this *QInputDialog) CancelButtonText(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Cancelbuttontext(args ...interface{}) (ret interface{}) {
   // cancelButtonText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -829,12 +935,16 @@ func (this *QInputDialog) CancelButtonText(args ...interface{}) (ret interface{}
 }
 
 // setOkButtonText(const class QString &)
-func (this *QInputDialog) SetOkButtonText(args ...interface{}) () {
+func (this *QInputDialog) Setokbuttontext(args ...interface{}) () {
   // setOkButtonText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -853,11 +963,15 @@ func (this *QInputDialog) SetOkButtonText(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QInputDialog) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -882,11 +996,15 @@ func (this *QInputDialog) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // textValue()
-func (this *QInputDialog) TextValue(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Textvalue(args ...interface{}) (ret interface{}) {
   // textValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -911,11 +1029,15 @@ func (this *QInputDialog) TextValue(args ...interface{}) (ret interface{}) {
 }
 
 // ~QInputDialog()
-func (this *QInputDialog) Free(args ...interface{}) () {
+func (this *QInputDialog) Freeqinputdialog(args ...interface{}) () {
   // ~QInputDialog()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -923,10 +1045,7 @@ func (this *QInputDialog) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputDialogD0Ev
     // invoke: void ~QInputDialog()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN12QInputDialogD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN12QInputDialogD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "~QInputDialog", args)
   }
@@ -935,11 +1054,15 @@ func (this *QInputDialog) Free(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QInputDialog) MetaObject(args ...interface{}) () {
+func (this *QInputDialog) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -956,11 +1079,15 @@ func (this *QInputDialog) MetaObject(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QInputDialog) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -985,11 +1112,15 @@ func (this *QInputDialog) MinimumSizeHint(args ...interface{}) (ret interface{})
 }
 
 // textEchoMode()
-func (this *QInputDialog) TextEchoMode(args ...interface{}) () {
+func (this *QInputDialog) Textechomode(args ...interface{}) () {
   // textEchoMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1006,12 +1137,16 @@ func (this *QInputDialog) TextEchoMode(args ...interface{}) () {
 }
 
 // setIntValue(int)
-func (this *QInputDialog) SetIntValue(args ...interface{}) () {
+func (this *QInputDialog) Setintvalue(args ...interface{}) () {
   // setIntValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1030,11 +1165,15 @@ func (this *QInputDialog) SetIntValue(args ...interface{}) () {
 }
 
 // isComboBoxEditable()
-func (this *QInputDialog) IsComboBoxEditable(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Iscomboboxeditable(args ...interface{}) (ret interface{}) {
   // isComboBoxEditable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1059,11 +1198,15 @@ func (this *QInputDialog) IsComboBoxEditable(args ...interface{}) (ret interface
 }
 
 // okButtonText()
-func (this *QInputDialog) OkButtonText(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Okbuttontext(args ...interface{}) (ret interface{}) {
   // okButtonText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1088,11 +1231,15 @@ func (this *QInputDialog) OkButtonText(args ...interface{}) (ret interface{}) {
 }
 
 // doubleDecimals()
-func (this *QInputDialog) DoubleDecimals(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Doubledecimals(args ...interface{}) (ret interface{}) {
   // doubleDecimals()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1117,12 +1264,16 @@ func (this *QInputDialog) DoubleDecimals(args ...interface{}) (ret interface{}) 
 }
 
 // setVisible(_Bool)
-func (this *QInputDialog) SetVisible(args ...interface{}) () {
+func (this *QInputDialog) Setvisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1141,11 +1292,15 @@ func (this *QInputDialog) SetVisible(args ...interface{}) () {
 }
 
 // intStep()
-func (this *QInputDialog) IntStep(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) Intstep(args ...interface{}) (ret interface{}) {
   // intStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

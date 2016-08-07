@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qfontcombobox.h
 // dst-file: /src/widgets/qfontcombobox.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -59,7 +58,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFontComboBox)=1
@@ -70,11 +68,15 @@ type QFontComboBox struct {
 }
 
 // fontFilters()
-func (this *QFontComboBox) FontFilters(args ...interface{}) () {
+func (this *QFontComboBox) Fontfilters(args ...interface{}) () {
   // fontFilters()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -91,12 +93,16 @@ func (this *QFontComboBox) FontFilters(args ...interface{}) () {
 }
 
 // setCurrentFont(const class QFont &)
-func (this *QFontComboBox) SetCurrentFont(args ...interface{}) () {
+func (this *QFontComboBox) Setcurrentfont(args ...interface{}) () {
   // setCurrentFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QFont{}) // "const QFont &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -115,15 +121,16 @@ func (this *QFontComboBox) SetCurrentFont(args ...interface{}) () {
 }
 
 // QFontComboBox(class QWidget *)
-func GcfreeQFontComboBox(this *QFontComboBox) {
-  qtrt.UniverseFree(this)
-}
 func NewQFontComboBox(args ...interface{}) *QFontComboBox {
   // QFontComboBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -136,9 +143,7 @@ func NewQFontComboBox(args ...interface{}) *QFontComboBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QFontComboBoxC2EP7QWidget(arg0)
-    this := &QFontComboBox{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFontComboBox)
-    return this
+    return &QFontComboBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFontComboBox", "QFontComboBox", args)
   }
@@ -147,11 +152,15 @@ func NewQFontComboBox(args ...interface{}) *QFontComboBox {
 }
 
 // sizeHint()
-func (this *QFontComboBox) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QFontComboBox) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -176,11 +185,15 @@ func (this *QFontComboBox) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QFontComboBox) MetaObject(args ...interface{}) () {
+func (this *QFontComboBox) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -197,11 +210,15 @@ func (this *QFontComboBox) MetaObject(args ...interface{}) () {
 }
 
 // currentFont()
-func (this *QFontComboBox) CurrentFont(args ...interface{}) (ret interface{}) {
+func (this *QFontComboBox) Currentfont(args ...interface{}) (ret interface{}) {
   // currentFont()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -226,11 +243,15 @@ func (this *QFontComboBox) CurrentFont(args ...interface{}) (ret interface{}) {
 }
 
 // ~QFontComboBox()
-func (this *QFontComboBox) Free(args ...interface{}) () {
+func (this *QFontComboBox) Freeqfontcombobox(args ...interface{}) () {
   // ~QFontComboBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -238,10 +259,7 @@ func (this *QFontComboBox) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QFontComboBoxD0Ev
     // invoke: void ~QFontComboBox()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QFontComboBoxD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QFontComboBoxD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFontComboBox", "~QFontComboBox", args)
   }
@@ -250,11 +268,15 @@ func (this *QFontComboBox) Free(args ...interface{}) () {
 }
 
 // writingSystem()
-func (this *QFontComboBox) WritingSystem(args ...interface{}) () {
+func (this *QFontComboBox) Writingsystem(args ...interface{}) () {
   // writingSystem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

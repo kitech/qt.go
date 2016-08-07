@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qmimedatabase.h
 // dst-file: /src/core/qmimedatabase.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -61,7 +60,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMimeDatabase)=8
@@ -71,12 +69,16 @@ type QMimeDatabase struct {
 }
 
 // mimeTypeForName(const class QString &)
-func (this *QMimeDatabase) MimeTypeForName(args ...interface{}) (ret interface{}) {
+func (this *QMimeDatabase) Mimetypeforname(args ...interface{}) (ret interface{}) {
   // mimeTypeForName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -103,14 +105,15 @@ func (this *QMimeDatabase) MimeTypeForName(args ...interface{}) (ret interface{}
 }
 
 // QMimeDatabase()
-func GcfreeQMimeDatabase(this *QMimeDatabase) {
-  qtrt.UniverseFree(this)
-}
 func NewQMimeDatabase(args ...interface{}) *QMimeDatabase {
   // QMimeDatabase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -121,9 +124,7 @@ func NewQMimeDatabase(args ...interface{}) *QMimeDatabase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QMimeDatabaseC2Ev()
-    this := &QMimeDatabase{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQMimeDatabase)
-    return this
+    return &QMimeDatabase{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMimeDatabase", "QMimeDatabase", args)
   }
@@ -132,11 +133,15 @@ func NewQMimeDatabase(args ...interface{}) *QMimeDatabase {
 }
 
 // ~QMimeDatabase()
-func (this *QMimeDatabase) Free(args ...interface{}) () {
+func (this *QMimeDatabase) Freeqmimedatabase(args ...interface{}) () {
   // ~QMimeDatabase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -144,10 +149,7 @@ func (this *QMimeDatabase) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMimeDatabaseD0Ev
     // invoke: void ~QMimeDatabase()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QMimeDatabaseD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QMimeDatabaseD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "~QMimeDatabase", args)
   }
@@ -156,11 +158,15 @@ func (this *QMimeDatabase) Free(args ...interface{}) () {
 }
 
 // allMimeTypes()
-func (this *QMimeDatabase) AllMimeTypes(args ...interface{}) () {
+func (this *QMimeDatabase) Allmimetypes(args ...interface{}) () {
   // allMimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -177,7 +183,7 @@ func (this *QMimeDatabase) AllMimeTypes(args ...interface{}) () {
 }
 
 // mimeTypeForData(class QIODevice *)
-func (this *QMimeDatabase) MimeTypeForData(args ...interface{}) (ret interface{}) {
+func (this *QMimeDatabase) Mimetypefordata(args ...interface{}) (ret interface{}) {
   // mimeTypeForData(class QIODevice *)
   // mimeTypeForData(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -186,6 +192,10 @@ func (this *QMimeDatabase) MimeTypeForData(args ...interface{}) (ret interface{}
   vtys[0][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -226,12 +236,16 @@ func (this *QMimeDatabase) MimeTypeForData(args ...interface{}) (ret interface{}
 }
 
 // mimeTypeForUrl(const class QUrl &)
-func (this *QMimeDatabase) MimeTypeForUrl(args ...interface{}) (ret interface{}) {
+func (this *QMimeDatabase) Mimetypeforurl(args ...interface{}) (ret interface{}) {
   // mimeTypeForUrl(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QUrl{}) // "const QUrl &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -258,7 +272,7 @@ func (this *QMimeDatabase) MimeTypeForUrl(args ...interface{}) (ret interface{})
 }
 
 // mimeTypeForFileNameAndData(const class QString &, const class QByteArray &)
-func (this *QMimeDatabase) MimeTypeForFileNameAndData(args ...interface{}) (ret interface{}) {
+func (this *QMimeDatabase) Mimetypeforfilenameanddata(args ...interface{}) (ret interface{}) {
   // mimeTypeForFileNameAndData(const class QString &, const class QByteArray &)
   // mimeTypeForFileNameAndData(const class QString &, class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -269,6 +283,10 @@ func (this *QMimeDatabase) MimeTypeForFileNameAndData(args ...interface{}) (ret 
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1][1] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -313,12 +331,16 @@ func (this *QMimeDatabase) MimeTypeForFileNameAndData(args ...interface{}) (ret 
 }
 
 // mimeTypesForFileName(const class QString &)
-func (this *QMimeDatabase) MimeTypesForFileName(args ...interface{}) () {
+func (this *QMimeDatabase) Mimetypesforfilename(args ...interface{}) () {
   // mimeTypesForFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -337,12 +359,16 @@ func (this *QMimeDatabase) MimeTypesForFileName(args ...interface{}) () {
 }
 
 // suffixForFileName(const class QString &)
-func (this *QMimeDatabase) SuffixForFileName(args ...interface{}) (ret interface{}) {
+func (this *QMimeDatabase) Suffixforfilename(args ...interface{}) (ret interface{}) {
   // suffixForFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qpixmap.h
 // dst-file: /src/gui/qpixmap.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -123,7 +122,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPixmap)=1
@@ -138,6 +136,10 @@ func (this *QPixmap) Height(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -162,7 +164,7 @@ func (this *QPixmap) Height(args ...interface{}) (ret interface{}) {
 }
 
 // grabWidget(class QObject *, int, int, int, int)
-func (this *QPixmap) GrabWidget_s(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Grabwidget_S(args ...interface{}) (ret interface{}) {
   // grabWidget(class QObject *, int, int, int, int)
   // grabWidget(class QObject *, const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -176,6 +178,10 @@ func (this *QPixmap) GrabWidget_s(args ...interface{}) (ret interface{}) {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[1][1] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -226,11 +232,15 @@ func (this *QPixmap) GrabWidget_s(args ...interface{}) (ret interface{}) {
 }
 
 // paintEngine()
-func (this *QPixmap) PaintEngine(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Paintengine(args ...interface{}) (ret interface{}) {
   // paintEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -260,6 +270,10 @@ func (this *QPixmap) Handle(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -276,11 +290,15 @@ func (this *QPixmap) Handle(args ...interface{}) () {
 }
 
 // ~QPixmap()
-func (this *QPixmap) Free(args ...interface{}) () {
+func (this *QPixmap) Freeqpixmap(args ...interface{}) () {
   // ~QPixmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -288,10 +306,7 @@ func (this *QPixmap) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QPixmapD0Ev
     // invoke: void ~QPixmap()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN7QPixmapD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN7QPixmapD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "~QPixmap", args)
   }
@@ -315,6 +330,10 @@ func (this *QPixmap) Fill(args ...interface{}) () {
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QPaintDevice{}) // "const QPaintDevice *"
   vtys[2][1] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -356,6 +375,10 @@ func (this *QPixmap) Rect(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -380,7 +403,7 @@ func (this *QPixmap) Rect(args ...interface{}) (ret interface{}) {
 }
 
 // trueMatrix(const class QMatrix &, int, int)
-func (this *QPixmap) TrueMatrix_s(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Truematrix_S(args ...interface{}) (ret interface{}) {
   // trueMatrix(const class QMatrix &, int, int)
   // trueMatrix(const class QTransform &, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -393,6 +416,10 @@ func (this *QPixmap) TrueMatrix_s(args ...interface{}) (ret interface{}) {
   vtys[1][0] = reflect.TypeOf(QTransform{}) // "const QTransform &"
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
   vtys[1][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -446,6 +473,10 @@ func (this *QPixmap) Detach(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -467,6 +498,10 @@ func (this *QPixmap) Size(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -496,6 +531,10 @@ func (this *QPixmap) Depth(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -525,6 +564,10 @@ func (this *QPixmap) Width(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -555,6 +598,10 @@ func (this *QPixmap) Swap(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QPixmap{}) // "QPixmap &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -573,11 +620,15 @@ func (this *QPixmap) Swap(args ...interface{}) () {
 }
 
 // isDetached()
-func (this *QPixmap) IsDetached(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Isdetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -602,11 +653,15 @@ func (this *QPixmap) IsDetached(args ...interface{}) (ret interface{}) {
 }
 
 // cacheKey()
-func (this *QPixmap) CacheKey(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Cachekey(args ...interface{}) (ret interface{}) {
   // cacheKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -631,12 +686,16 @@ func (this *QPixmap) CacheKey(args ...interface{}) (ret interface{}) {
 }
 
 // setDevicePixelRatio(qreal)
-func (this *QPixmap) SetDevicePixelRatio(args ...interface{}) () {
+func (this *QPixmap) Setdevicepixelratio(args ...interface{}) () {
   // setDevicePixelRatio(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -655,11 +714,15 @@ func (this *QPixmap) SetDevicePixelRatio(args ...interface{}) () {
 }
 
 // hasAlphaChannel()
-func (this *QPixmap) HasAlphaChannel(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Hasalphachannel(args ...interface{}) (ret interface{}) {
   // hasAlphaChannel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -684,11 +747,15 @@ func (this *QPixmap) HasAlphaChannel(args ...interface{}) (ret interface{}) {
 }
 
 // hasAlpha()
-func (this *QPixmap) HasAlpha(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Hasalpha(args ...interface{}) (ret interface{}) {
   // hasAlpha()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -713,12 +780,16 @@ func (this *QPixmap) HasAlpha(args ...interface{}) (ret interface{}) {
 }
 
 // setMask(const class QBitmap &)
-func (this *QPixmap) SetMask(args ...interface{}) () {
+func (this *QPixmap) Setmask(args ...interface{}) () {
   // setMask(const class QBitmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QBitmap{}) // "const QBitmap &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -737,12 +808,16 @@ func (this *QPixmap) SetMask(args ...interface{}) () {
 }
 
 // createHeuristicMask(_Bool)
-func (this *QPixmap) CreateHeuristicMask(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Createheuristicmask(args ...interface{}) (ret interface{}) {
   // createHeuristicMask(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -769,11 +844,15 @@ func (this *QPixmap) CreateHeuristicMask(args ...interface{}) (ret interface{}) 
 }
 
 // defaultDepth()
-func (this *QPixmap) DefaultDepth_s(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Defaultdepth_S(args ...interface{}) (ret interface{}) {
   // defaultDepth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -810,6 +889,10 @@ func (this *QPixmap) Copy(args ...interface{}) (ret interface{}) {
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
   vtys[1][2] = qtrt.Int32Ty(false) // "int"
   vtys[1][3] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -869,6 +952,10 @@ func (this *QPixmap) Save(args ...interface{}) (ret interface{}) {
   vtys[1][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
   vtys[1][1] = qtrt.ByteTy(true) // "const char *"
   vtys[1][2] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -921,11 +1008,15 @@ func (this *QPixmap) Save(args ...interface{}) (ret interface{}) {
 }
 
 // devicePixelRatio()
-func (this *QPixmap) DevicePixelRatio(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Devicepixelratio(args ...interface{}) (ret interface{}) {
   // devicePixelRatio()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -950,11 +1041,15 @@ func (this *QPixmap) DevicePixelRatio(args ...interface{}) (ret interface{}) {
 }
 
 // isQBitmap()
-func (this *QPixmap) IsQBitmap(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Isqbitmap(args ...interface{}) (ret interface{}) {
   // isQBitmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -984,6 +1079,10 @@ func (this *QPixmap) Mask(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1008,11 +1107,15 @@ func (this *QPixmap) Mask(args ...interface{}) (ret interface{}) {
 }
 
 // toImage()
-func (this *QPixmap) ToImage(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Toimage(args ...interface{}) (ret interface{}) {
   // toImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1037,9 +1140,6 @@ func (this *QPixmap) ToImage(args ...interface{}) (ret interface{}) {
 }
 
 // QPixmap()
-func GcfreeQPixmap(this *QPixmap) {
-  qtrt.UniverseFree(this)
-}
 func NewQPixmap(args ...interface{}) *QPixmap {
   // QPixmap()
   // QPixmap(int, int)
@@ -1055,6 +1155,10 @@ func NewQPixmap(args ...interface{}) *QPixmap {
   vtys[2][0] = reflect.TypeOf(QPixmap{}) // "const QPixmap &"
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1065,9 +1169,7 @@ func NewQPixmap(args ...interface{}) *QPixmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPixmapC2Ev()
-    this := &QPixmap{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPixmap)
-    return this
+    return &QPixmap{Qclsinst:qthis}
   case 1:
     // invoke: _ZN7QPixmapC1Eii
     // invoke: void QPixmap(int, int)
@@ -1078,9 +1180,7 @@ func NewQPixmap(args ...interface{}) *QPixmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPixmapC2Eii(arg0, arg1)
-    this := &QPixmap{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPixmap)
-    return this
+    return &QPixmap{Qclsinst:qthis}
   case 2:
     // invoke: _ZN7QPixmapC1ERKS_
     // invoke: void QPixmap(const class QPixmap &)
@@ -1089,9 +1189,7 @@ func NewQPixmap(args ...interface{}) *QPixmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPixmapC2ERKS_(arg0)
-    this := &QPixmap{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPixmap)
-    return this
+    return &QPixmap{Qclsinst:qthis}
   case 3:
     // invoke: _ZN7QPixmapC1ERK5QSize
     // invoke: void QPixmap(const class QSize &)
@@ -1100,9 +1198,7 @@ func NewQPixmap(args ...interface{}) *QPixmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPixmapC2ERK5QSize(arg0)
-    this := &QPixmap{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPixmap)
-    return this
+    return &QPixmap{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPixmap", "QPixmap", args)
   }
@@ -1111,11 +1207,15 @@ func NewQPixmap(args ...interface{}) *QPixmap {
 }
 
 // isNull()
-func (this *QPixmap) IsNull(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1140,11 +1240,15 @@ func (this *QPixmap) IsNull(args ...interface{}) (ret interface{}) {
 }
 
 // devType()
-func (this *QPixmap) DevType(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) Devtype(args ...interface{}) (ret interface{}) {
   // devType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1187,6 +1291,10 @@ func (this *QPixmap) Scroll(args ...interface{}) () {
   vtys[1][1] = qtrt.Int32Ty(false) // "int"
   vtys[1][2] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
   vtys[1][3] = reflect.TypeOf(QRegion{}) // "QRegion *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

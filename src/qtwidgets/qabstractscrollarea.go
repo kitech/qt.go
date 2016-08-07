@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qabstractscrollarea.h
 // dst-file: /src/widgets/qabstractscrollarea.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -79,7 +78,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractScrollArea)=1
@@ -89,11 +87,15 @@ type QAbstractScrollArea struct {
 }
 
 // horizontalScrollBarPolicy()
-func (this *QAbstractScrollArea) HorizontalScrollBarPolicy(args ...interface{}) () {
+func (this *QAbstractScrollArea) Horizontalscrollbarpolicy(args ...interface{}) () {
   // horizontalScrollBarPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -110,11 +112,15 @@ func (this *QAbstractScrollArea) HorizontalScrollBarPolicy(args ...interface{}) 
 }
 
 // maximumViewportSize()
-func (this *QAbstractScrollArea) MaximumViewportSize(args ...interface{}) (ret interface{}) {
+func (this *QAbstractScrollArea) Maximumviewportsize(args ...interface{}) (ret interface{}) {
   // maximumViewportSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -139,11 +145,15 @@ func (this *QAbstractScrollArea) MaximumViewportSize(args ...interface{}) (ret i
 }
 
 // cornerWidget()
-func (this *QAbstractScrollArea) CornerWidget(args ...interface{}) (ret interface{}) {
+func (this *QAbstractScrollArea) Cornerwidget(args ...interface{}) (ret interface{}) {
   // cornerWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -168,12 +178,16 @@ func (this *QAbstractScrollArea) CornerWidget(args ...interface{}) (ret interfac
 }
 
 // setVerticalScrollBar(class QScrollBar *)
-func (this *QAbstractScrollArea) SetVerticalScrollBar(args ...interface{}) () {
+func (this *QAbstractScrollArea) Setverticalscrollbar(args ...interface{}) () {
   // setVerticalScrollBar(class QScrollBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QScrollBar{}) // "QScrollBar *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -192,12 +206,16 @@ func (this *QAbstractScrollArea) SetVerticalScrollBar(args ...interface{}) () {
 }
 
 // setHorizontalScrollBar(class QScrollBar *)
-func (this *QAbstractScrollArea) SetHorizontalScrollBar(args ...interface{}) () {
+func (this *QAbstractScrollArea) Sethorizontalscrollbar(args ...interface{}) () {
   // setHorizontalScrollBar(class QScrollBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QScrollBar{}) // "QScrollBar *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -216,12 +234,16 @@ func (this *QAbstractScrollArea) SetHorizontalScrollBar(args ...interface{}) () 
 }
 
 // setViewport(class QWidget *)
-func (this *QAbstractScrollArea) SetViewport(args ...interface{}) () {
+func (this *QAbstractScrollArea) Setviewport(args ...interface{}) () {
   // setViewport(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -240,12 +262,16 @@ func (this *QAbstractScrollArea) SetViewport(args ...interface{}) () {
 }
 
 // setCornerWidget(class QWidget *)
-func (this *QAbstractScrollArea) SetCornerWidget(args ...interface{}) () {
+func (this *QAbstractScrollArea) Setcornerwidget(args ...interface{}) () {
   // setCornerWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -264,12 +290,16 @@ func (this *QAbstractScrollArea) SetCornerWidget(args ...interface{}) () {
 }
 
 // setupViewport(class QWidget *)
-func (this *QAbstractScrollArea) SetupViewport(args ...interface{}) () {
+func (this *QAbstractScrollArea) Setupviewport(args ...interface{}) () {
   // setupViewport(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -288,15 +318,16 @@ func (this *QAbstractScrollArea) SetupViewport(args ...interface{}) () {
 }
 
 // QAbstractScrollArea(class QWidget *)
-func GcfreeQAbstractScrollArea(this *QAbstractScrollArea) {
-  qtrt.UniverseFree(this)
-}
 func NewQAbstractScrollArea(args ...interface{}) *QAbstractScrollArea {
   // QAbstractScrollArea(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -309,9 +340,7 @@ func NewQAbstractScrollArea(args ...interface{}) *QAbstractScrollArea {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QAbstractScrollAreaC2EP7QWidget(arg0)
-    this := &QAbstractScrollArea{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAbstractScrollArea)
-    return this
+    return &QAbstractScrollArea{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "QAbstractScrollArea", args)
   }
@@ -320,11 +349,15 @@ func NewQAbstractScrollArea(args ...interface{}) *QAbstractScrollArea {
 }
 
 // ~QAbstractScrollArea()
-func (this *QAbstractScrollArea) Free(args ...interface{}) () {
+func (this *QAbstractScrollArea) Freeqabstractscrollarea(args ...interface{}) () {
   // ~QAbstractScrollArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -332,10 +365,7 @@ func (this *QAbstractScrollArea) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QAbstractScrollAreaD0Ev
     // invoke: void ~QAbstractScrollArea()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN19QAbstractScrollAreaD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN19QAbstractScrollAreaD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "~QAbstractScrollArea", args)
   }
@@ -344,11 +374,15 @@ func (this *QAbstractScrollArea) Free(args ...interface{}) () {
 }
 
 // verticalScrollBar()
-func (this *QAbstractScrollArea) VerticalScrollBar(args ...interface{}) (ret interface{}) {
+func (this *QAbstractScrollArea) Verticalscrollbar(args ...interface{}) (ret interface{}) {
   // verticalScrollBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -373,11 +407,15 @@ func (this *QAbstractScrollArea) VerticalScrollBar(args ...interface{}) (ret int
 }
 
 // horizontalScrollBar()
-func (this *QAbstractScrollArea) HorizontalScrollBar(args ...interface{}) (ret interface{}) {
+func (this *QAbstractScrollArea) Horizontalscrollbar(args ...interface{}) (ret interface{}) {
   // horizontalScrollBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -407,6 +445,10 @@ func (this *QAbstractScrollArea) Viewport(args ...interface{}) (ret interface{})
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -431,11 +473,15 @@ func (this *QAbstractScrollArea) Viewport(args ...interface{}) (ret interface{})
 }
 
 // metaObject()
-func (this *QAbstractScrollArea) MetaObject(args ...interface{}) () {
+func (this *QAbstractScrollArea) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -452,11 +498,15 @@ func (this *QAbstractScrollArea) MetaObject(args ...interface{}) () {
 }
 
 // verticalScrollBarPolicy()
-func (this *QAbstractScrollArea) VerticalScrollBarPolicy(args ...interface{}) () {
+func (this *QAbstractScrollArea) Verticalscrollbarpolicy(args ...interface{}) () {
   // verticalScrollBarPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -473,11 +523,15 @@ func (this *QAbstractScrollArea) VerticalScrollBarPolicy(args ...interface{}) ()
 }
 
 // sizeHint()
-func (this *QAbstractScrollArea) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QAbstractScrollArea) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -502,11 +556,15 @@ func (this *QAbstractScrollArea) SizeHint(args ...interface{}) (ret interface{})
 }
 
 // minimumSizeHint()
-func (this *QAbstractScrollArea) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QAbstractScrollArea) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -531,11 +589,15 @@ func (this *QAbstractScrollArea) MinimumSizeHint(args ...interface{}) (ret inter
 }
 
 // sizeAdjustPolicy()
-func (this *QAbstractScrollArea) SizeAdjustPolicy(args ...interface{}) () {
+func (this *QAbstractScrollArea) Sizeadjustpolicy(args ...interface{}) () {
   // sizeAdjustPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

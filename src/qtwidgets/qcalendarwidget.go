@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qcalendarwidget.h
 // dst-file: /src/widgets/qcalendarwidget.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -119,7 +118,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCalendarWidget)=1
@@ -133,11 +131,15 @@ type QCalendarWidget struct {
 }
 
 // horizontalHeaderFormat()
-func (this *QCalendarWidget) HorizontalHeaderFormat(args ...interface{}) () {
+func (this *QCalendarWidget) Horizontalheaderformat(args ...interface{}) () {
   // horizontalHeaderFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -154,12 +156,16 @@ func (this *QCalendarWidget) HorizontalHeaderFormat(args ...interface{}) () {
 }
 
 // setMaximumDate(const class QDate &)
-func (this *QCalendarWidget) SetMaximumDate(args ...interface{}) () {
+func (this *QCalendarWidget) Setmaximumdate(args ...interface{}) () {
   // setMaximumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -178,11 +184,15 @@ func (this *QCalendarWidget) SetMaximumDate(args ...interface{}) () {
 }
 
 // headerTextFormat()
-func (this *QCalendarWidget) HeaderTextFormat(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Headertextformat(args ...interface{}) (ret interface{}) {
   // headerTextFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -207,11 +217,15 @@ func (this *QCalendarWidget) HeaderTextFormat(args ...interface{}) (ret interfac
 }
 
 // showSelectedDate()
-func (this *QCalendarWidget) ShowSelectedDate(args ...interface{}) () {
+func (this *QCalendarWidget) Showselecteddate(args ...interface{}) () {
   // showSelectedDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -228,12 +242,16 @@ func (this *QCalendarWidget) ShowSelectedDate(args ...interface{}) () {
 }
 
 // setGridVisible(_Bool)
-func (this *QCalendarWidget) SetGridVisible(args ...interface{}) () {
+func (this *QCalendarWidget) Setgridvisible(args ...interface{}) () {
   // setGridVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -252,12 +270,16 @@ func (this *QCalendarWidget) SetGridVisible(args ...interface{}) () {
 }
 
 // setDateEditAcceptDelay(int)
-func (this *QCalendarWidget) SetDateEditAcceptDelay(args ...interface{}) () {
+func (this *QCalendarWidget) Setdateeditacceptdelay(args ...interface{}) () {
   // setDateEditAcceptDelay(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -276,13 +298,17 @@ func (this *QCalendarWidget) SetDateEditAcceptDelay(args ...interface{}) () {
 }
 
 // setDateRange(const class QDate &, const class QDate &)
-func (this *QCalendarWidget) SetDateRange(args ...interface{}) () {
+func (this *QCalendarWidget) Setdaterange(args ...interface{}) () {
   // setDateRange(const class QDate &, const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
   vtys[0][1] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -303,11 +329,15 @@ func (this *QCalendarWidget) SetDateRange(args ...interface{}) () {
 }
 
 // isDateEditEnabled()
-func (this *QCalendarWidget) IsDateEditEnabled(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Isdateeditenabled(args ...interface{}) (ret interface{}) {
   // isDateEditEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -332,11 +362,15 @@ func (this *QCalendarWidget) IsDateEditEnabled(args ...interface{}) (ret interfa
 }
 
 // ~QCalendarWidget()
-func (this *QCalendarWidget) Free(args ...interface{}) () {
+func (this *QCalendarWidget) Freeqcalendarwidget(args ...interface{}) () {
   // ~QCalendarWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -344,10 +378,7 @@ func (this *QCalendarWidget) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidgetD0Ev
     // invoke: void ~QCalendarWidget()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QCalendarWidgetD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QCalendarWidgetD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "~QCalendarWidget", args)
   }
@@ -356,7 +387,7 @@ func (this *QCalendarWidget) Free(args ...interface{}) () {
 }
 
 // dateTextFormat(const class QDate &)
-func (this *QCalendarWidget) DateTextFormat(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Datetextformat(args ...interface{}) (ret interface{}) {
   // dateTextFormat(const class QDate &)
   // dateTextFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -364,6 +395,10 @@ func (this *QCalendarWidget) DateTextFormat(args ...interface{}) (ret interface{
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -394,11 +429,15 @@ func (this *QCalendarWidget) DateTextFormat(args ...interface{}) (ret interface{
 }
 
 // isNavigationBarVisible()
-func (this *QCalendarWidget) IsNavigationBarVisible(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Isnavigationbarvisible(args ...interface{}) (ret interface{}) {
   // isNavigationBarVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -423,11 +462,15 @@ func (this *QCalendarWidget) IsNavigationBarVisible(args ...interface{}) (ret in
 }
 
 // firstDayOfWeek()
-func (this *QCalendarWidget) FirstDayOfWeek(args ...interface{}) () {
+func (this *QCalendarWidget) Firstdayofweek(args ...interface{}) () {
   // firstDayOfWeek()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -444,11 +487,15 @@ func (this *QCalendarWidget) FirstDayOfWeek(args ...interface{}) () {
 }
 
 // monthShown()
-func (this *QCalendarWidget) MonthShown(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Monthshown(args ...interface{}) (ret interface{}) {
   // monthShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -473,12 +520,16 @@ func (this *QCalendarWidget) MonthShown(args ...interface{}) (ret interface{}) {
 }
 
 // setNavigationBarVisible(_Bool)
-func (this *QCalendarWidget) SetNavigationBarVisible(args ...interface{}) () {
+func (this *QCalendarWidget) Setnavigationbarvisible(args ...interface{}) () {
   // setNavigationBarVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -497,11 +548,15 @@ func (this *QCalendarWidget) SetNavigationBarVisible(args ...interface{}) () {
 }
 
 // showNextYear()
-func (this *QCalendarWidget) ShowNextYear(args ...interface{}) () {
+func (this *QCalendarWidget) Shownextyear(args ...interface{}) () {
   // showNextYear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -518,12 +573,16 @@ func (this *QCalendarWidget) ShowNextYear(args ...interface{}) () {
 }
 
 // setMinimumDate(const class QDate &)
-func (this *QCalendarWidget) SetMinimumDate(args ...interface{}) () {
+func (this *QCalendarWidget) Setminimumdate(args ...interface{}) () {
   // setMinimumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -542,11 +601,15 @@ func (this *QCalendarWidget) SetMinimumDate(args ...interface{}) () {
 }
 
 // yearShown()
-func (this *QCalendarWidget) YearShown(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Yearshown(args ...interface{}) (ret interface{}) {
   // yearShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -571,12 +634,16 @@ func (this *QCalendarWidget) YearShown(args ...interface{}) (ret interface{}) {
 }
 
 // setHeaderTextFormat(const class QTextCharFormat &)
-func (this *QCalendarWidget) SetHeaderTextFormat(args ...interface{}) () {
+func (this *QCalendarWidget) Setheadertextformat(args ...interface{}) () {
   // setHeaderTextFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtgui.QTextCharFormat{}) // "const QTextCharFormat &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -595,11 +662,15 @@ func (this *QCalendarWidget) SetHeaderTextFormat(args ...interface{}) () {
 }
 
 // verticalHeaderFormat()
-func (this *QCalendarWidget) VerticalHeaderFormat(args ...interface{}) () {
+func (this *QCalendarWidget) Verticalheaderformat(args ...interface{}) () {
   // verticalHeaderFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -616,11 +687,15 @@ func (this *QCalendarWidget) VerticalHeaderFormat(args ...interface{}) () {
 }
 
 // minimumDate()
-func (this *QCalendarWidget) MinimumDate(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Minimumdate(args ...interface{}) (ret interface{}) {
   // minimumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -645,11 +720,15 @@ func (this *QCalendarWidget) MinimumDate(args ...interface{}) (ret interface{}) 
 }
 
 // sizeHint()
-func (this *QCalendarWidget) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -674,12 +753,16 @@ func (this *QCalendarWidget) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // setSelectedDate(const class QDate &)
-func (this *QCalendarWidget) SetSelectedDate(args ...interface{}) () {
+func (this *QCalendarWidget) Setselecteddate(args ...interface{}) () {
   // setSelectedDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -698,11 +781,15 @@ func (this *QCalendarWidget) SetSelectedDate(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QCalendarWidget) MetaObject(args ...interface{}) () {
+func (this *QCalendarWidget) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -719,11 +806,15 @@ func (this *QCalendarWidget) MetaObject(args ...interface{}) () {
 }
 
 // selectionMode()
-func (this *QCalendarWidget) SelectionMode(args ...interface{}) () {
+func (this *QCalendarWidget) Selectionmode(args ...interface{}) () {
   // selectionMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -740,13 +831,17 @@ func (this *QCalendarWidget) SelectionMode(args ...interface{}) () {
 }
 
 // setCurrentPage(int, int)
-func (this *QCalendarWidget) SetCurrentPage(args ...interface{}) () {
+func (this *QCalendarWidget) Setcurrentpage(args ...interface{}) () {
   // setCurrentPage(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -767,13 +862,17 @@ func (this *QCalendarWidget) SetCurrentPage(args ...interface{}) () {
 }
 
 // setDateTextFormat(const class QDate &, const class QTextCharFormat &)
-func (this *QCalendarWidget) SetDateTextFormat(args ...interface{}) () {
+func (this *QCalendarWidget) Setdatetextformat(args ...interface{}) () {
   // setDateTextFormat(const class QDate &, const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
   vtys[0][1] = reflect.TypeOf(qtgui.QTextCharFormat{}) // "const QTextCharFormat &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -794,11 +893,15 @@ func (this *QCalendarWidget) SetDateTextFormat(args ...interface{}) () {
 }
 
 // selectedDate()
-func (this *QCalendarWidget) SelectedDate(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Selecteddate(args ...interface{}) (ret interface{}) {
   // selectedDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -823,11 +926,15 @@ func (this *QCalendarWidget) SelectedDate(args ...interface{}) (ret interface{})
 }
 
 // maximumDate()
-func (this *QCalendarWidget) MaximumDate(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Maximumdate(args ...interface{}) (ret interface{}) {
   // maximumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -852,11 +959,15 @@ func (this *QCalendarWidget) MaximumDate(args ...interface{}) (ret interface{}) 
 }
 
 // minimumSizeHint()
-func (this *QCalendarWidget) MinimumSizeHint(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -881,11 +992,15 @@ func (this *QCalendarWidget) MinimumSizeHint(args ...interface{}) (ret interface
 }
 
 // showPreviousMonth()
-func (this *QCalendarWidget) ShowPreviousMonth(args ...interface{}) () {
+func (this *QCalendarWidget) Showpreviousmonth(args ...interface{}) () {
   // showPreviousMonth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -902,11 +1017,15 @@ func (this *QCalendarWidget) ShowPreviousMonth(args ...interface{}) () {
 }
 
 // dateEditAcceptDelay()
-func (this *QCalendarWidget) DateEditAcceptDelay(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Dateeditacceptdelay(args ...interface{}) (ret interface{}) {
   // dateEditAcceptDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -931,11 +1050,15 @@ func (this *QCalendarWidget) DateEditAcceptDelay(args ...interface{}) (ret inter
 }
 
 // showPreviousYear()
-func (this *QCalendarWidget) ShowPreviousYear(args ...interface{}) () {
+func (this *QCalendarWidget) Showpreviousyear(args ...interface{}) () {
   // showPreviousYear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -952,11 +1075,15 @@ func (this *QCalendarWidget) ShowPreviousYear(args ...interface{}) () {
 }
 
 // isGridVisible()
-func (this *QCalendarWidget) IsGridVisible(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) Isgridvisible(args ...interface{}) (ret interface{}) {
   // isGridVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -981,12 +1108,16 @@ func (this *QCalendarWidget) IsGridVisible(args ...interface{}) (ret interface{}
 }
 
 // setDateEditEnabled(_Bool)
-func (this *QCalendarWidget) SetDateEditEnabled(args ...interface{}) () {
+func (this *QCalendarWidget) Setdateeditenabled(args ...interface{}) () {
   // setDateEditEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1005,15 +1136,16 @@ func (this *QCalendarWidget) SetDateEditEnabled(args ...interface{}) () {
 }
 
 // QCalendarWidget(class QWidget *)
-func GcfreeQCalendarWidget(this *QCalendarWidget) {
-  qtrt.UniverseFree(this)
-}
 func NewQCalendarWidget(args ...interface{}) *QCalendarWidget {
   // QCalendarWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1026,9 +1158,7 @@ func NewQCalendarWidget(args ...interface{}) *QCalendarWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QCalendarWidgetC2EP7QWidget(arg0)
-    this := &QCalendarWidget{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQCalendarWidget)
-    return this
+    return &QCalendarWidget{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCalendarWidget", "QCalendarWidget", args)
   }
@@ -1037,11 +1167,15 @@ func NewQCalendarWidget(args ...interface{}) *QCalendarWidget {
 }
 
 // showNextMonth()
-func (this *QCalendarWidget) ShowNextMonth(args ...interface{}) () {
+func (this *QCalendarWidget) Shownextmonth(args ...interface{}) () {
   // showNextMonth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1058,11 +1192,15 @@ func (this *QCalendarWidget) ShowNextMonth(args ...interface{}) () {
 }
 
 // showToday()
-func (this *QCalendarWidget) ShowToday(args ...interface{}) () {
+func (this *QCalendarWidget) Showtoday(args ...interface{}) () {
   // showToday()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

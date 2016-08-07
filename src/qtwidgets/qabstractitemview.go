@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qabstractitemview.h
 // dst-file: /src/widgets/qabstractitemview.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -39,10 +38,10 @@ extern void C_ZN17QAbstractItemView14setDragEnabledEb(void* qthis, bool arg0); /
 extern bool C_ZNK17QAbstractItemView21dragDropOverwriteModeEv(void* qthis); // 4
   // proto:  void QAbstractItemView::openPersistentEditor(const QModelIndex & index);
 extern void C_ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QAbstractItemView::SelectionMode QAbstractItemView::selectionMode();
-extern void C_ZNK17QAbstractItemView13selectionModeEv(void* qthis); // 4
   // proto:  int QAbstractItemView::autoScrollMargin();
 extern int32_t C_ZNK17QAbstractItemView16autoScrollMarginEv(void* qthis); // 4
+  // proto:  void QAbstractItemView::resetVerticalScrollMode();
+extern void C_ZN17QAbstractItemView23resetVerticalScrollModeEv(void* qthis); // 4
   // proto:  QModelIndex QAbstractItemView::rootIndex();
 extern void* C_ZNK17QAbstractItemView9rootIndexEv(void* qthis); // 4
   // proto:  void QAbstractItemView::setSelectionModel(QItemSelectionModel * selectionModel);
@@ -67,12 +66,16 @@ extern void C_ZN17QAbstractItemView13doItemsLayoutEv(void* qthis); // 4
 extern void C_ZN17QAbstractItemView14scrollToBottomEv(void* qthis); // 4
   // proto:  void QAbstractItemView::setItemDelegateForRow(int row, QAbstractItemDelegate * delegate);
 extern void C_ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate(void* qthis, int32_t arg0, void* arg1); // 4
+  // proto:  QAbstractItemView::SelectionMode QAbstractItemView::selectionMode();
+extern void C_ZNK17QAbstractItemView13selectionModeEv(void* qthis); // 4
   // proto:  void QAbstractItemView::setTabKeyNavigation(bool enable);
 extern void C_ZN17QAbstractItemView19setTabKeyNavigationEb(void* qthis, bool arg0); // 4
   // proto:  QSize QAbstractItemView::iconSize();
 extern void* C_ZNK17QAbstractItemView8iconSizeEv(void* qthis); // 4
   // proto:  void QAbstractItemView::selectAll();
 extern void C_ZN17QAbstractItemView9selectAllEv(void* qthis); // 4
+  // proto:  Qt::TextElideMode QAbstractItemView::textElideMode();
+extern void C_ZNK17QAbstractItemView13textElideModeEv(void* qthis); // 4
   // proto:  void QAbstractItemView::setAutoScrollMargin(int margin);
 extern void C_ZN17QAbstractItemView19setAutoScrollMarginEi(void* qthis, int32_t arg0); // 4
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegateForColumn(int column);
@@ -93,8 +96,8 @@ extern void C_ZN17QAbstractItemView12setRootIndexERK11QModelIndex(void* qthis, v
 extern void C_ZNK17QAbstractItemView12editTriggersEv(void* qthis); // 4
   // proto:  bool QAbstractItemView::showDropIndicator();
 extern bool C_ZNK17QAbstractItemView17showDropIndicatorEv(void* qthis); // 4
-  // proto:  Qt::TextElideMode QAbstractItemView::textElideMode();
-extern void C_ZNK17QAbstractItemView13textElideModeEv(void* qthis); // 4
+  // proto:  void QAbstractItemView::resetHorizontalScrollMode();
+extern void C_ZN17QAbstractItemView25resetHorizontalScrollModeEv(void* qthis); // 4
   // proto:  void QAbstractItemView::reset();
 extern void C_ZN17QAbstractItemView5resetEv(void* qthis); // 4
   // proto:  bool QAbstractItemView::dragEnabled();
@@ -159,7 +162,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractItemView)=1
@@ -176,12 +178,16 @@ type QAbstractItemView struct {
 }
 
 // keyboardSearch(const class QString &)
-func (this *QAbstractItemView) KeyboardSearch(args ...interface{}) () {
+func (this *QAbstractItemView) Keyboardsearch(args ...interface{}) () {
   // keyboardSearch(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -200,12 +206,16 @@ func (this *QAbstractItemView) KeyboardSearch(args ...interface{}) () {
 }
 
 // setDragEnabled(_Bool)
-func (this *QAbstractItemView) SetDragEnabled(args ...interface{}) () {
+func (this *QAbstractItemView) Setdragenabled(args ...interface{}) () {
   // setDragEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -224,11 +234,15 @@ func (this *QAbstractItemView) SetDragEnabled(args ...interface{}) () {
 }
 
 // dragDropOverwriteMode()
-func (this *QAbstractItemView) DragDropOverwriteMode(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Dragdropoverwritemode(args ...interface{}) (ret interface{}) {
   // dragDropOverwriteMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -253,12 +267,16 @@ func (this *QAbstractItemView) DragDropOverwriteMode(args ...interface{}) (ret i
 }
 
 // openPersistentEditor(const class QModelIndex &)
-func (this *QAbstractItemView) OpenPersistentEditor(args ...interface{}) () {
+func (this *QAbstractItemView) Openpersistenteditor(args ...interface{}) () {
   // openPersistentEditor(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -276,33 +294,16 @@ func (this *QAbstractItemView) OpenPersistentEditor(args ...interface{}) () {
   return
 }
 
-// selectionMode()
-func (this *QAbstractItemView) SelectionMode(args ...interface{}) () {
-  // selectionMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAbstractItemView13selectionModeEv
-    // invoke: QAbstractItemView::SelectionMode selectionMode()
-    C.C_ZNK17QAbstractItemView13selectionModeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractItemView", "selectionMode", args)
-  }
-
-  return
-}
-
 // autoScrollMargin()
-func (this *QAbstractItemView) AutoScrollMargin(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Autoscrollmargin(args ...interface{}) (ret interface{}) {
   // autoScrollMargin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -326,12 +327,41 @@ func (this *QAbstractItemView) AutoScrollMargin(args ...interface{}) (ret interf
   return
 }
 
+// resetVerticalScrollMode()
+func (this *QAbstractItemView) Resetverticalscrollmode(args ...interface{}) () {
+  // resetVerticalScrollMode()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN17QAbstractItemView23resetVerticalScrollModeEv
+    // invoke: void resetVerticalScrollMode()
+    C.C_ZN17QAbstractItemView23resetVerticalScrollModeEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractItemView", "resetVerticalScrollMode", args)
+  }
+
+  return
+}
+
 // rootIndex()
-func (this *QAbstractItemView) RootIndex(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Rootindex(args ...interface{}) (ret interface{}) {
   // rootIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -356,12 +386,16 @@ func (this *QAbstractItemView) RootIndex(args ...interface{}) (ret interface{}) 
 }
 
 // setSelectionModel(class QItemSelectionModel *)
-func (this *QAbstractItemView) SetSelectionModel(args ...interface{}) () {
+func (this *QAbstractItemView) Setselectionmodel(args ...interface{}) () {
   // setSelectionModel(class QItemSelectionModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QItemSelectionModel{}) // "QItemSelectionModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -380,11 +414,15 @@ func (this *QAbstractItemView) SetSelectionModel(args ...interface{}) () {
 }
 
 // tabKeyNavigation()
-func (this *QAbstractItemView) TabKeyNavigation(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Tabkeynavigation(args ...interface{}) (ret interface{}) {
   // tabKeyNavigation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -409,11 +447,15 @@ func (this *QAbstractItemView) TabKeyNavigation(args ...interface{}) (ret interf
 }
 
 // metaObject()
-func (this *QAbstractItemView) MetaObject(args ...interface{}) () {
+func (this *QAbstractItemView) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -436,6 +478,10 @@ func (this *QAbstractItemView) Edit(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -454,12 +500,16 @@ func (this *QAbstractItemView) Edit(args ...interface{}) () {
 }
 
 // setIconSize(const class QSize &)
-func (this *QAbstractItemView) SetIconSize(args ...interface{}) () {
+func (this *QAbstractItemView) Seticonsize(args ...interface{}) () {
   // setIconSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -478,11 +528,15 @@ func (this *QAbstractItemView) SetIconSize(args ...interface{}) () {
 }
 
 // currentIndex()
-func (this *QAbstractItemView) CurrentIndex(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Currentindex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -507,12 +561,16 @@ func (this *QAbstractItemView) CurrentIndex(args ...interface{}) (ret interface{
 }
 
 // closePersistentEditor(const class QModelIndex &)
-func (this *QAbstractItemView) ClosePersistentEditor(args ...interface{}) () {
+func (this *QAbstractItemView) Closepersistenteditor(args ...interface{}) () {
   // closePersistentEditor(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -531,11 +589,15 @@ func (this *QAbstractItemView) ClosePersistentEditor(args ...interface{}) () {
 }
 
 // verticalScrollMode()
-func (this *QAbstractItemView) VerticalScrollMode(args ...interface{}) () {
+func (this *QAbstractItemView) Verticalscrollmode(args ...interface{}) () {
   // verticalScrollMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -552,11 +614,15 @@ func (this *QAbstractItemView) VerticalScrollMode(args ...interface{}) () {
 }
 
 // doItemsLayout()
-func (this *QAbstractItemView) DoItemsLayout(args ...interface{}) () {
+func (this *QAbstractItemView) Doitemslayout(args ...interface{}) () {
   // doItemsLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -573,11 +639,15 @@ func (this *QAbstractItemView) DoItemsLayout(args ...interface{}) () {
 }
 
 // scrollToBottom()
-func (this *QAbstractItemView) ScrollToBottom(args ...interface{}) () {
+func (this *QAbstractItemView) Scrolltobottom(args ...interface{}) () {
   // scrollToBottom()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -594,13 +664,17 @@ func (this *QAbstractItemView) ScrollToBottom(args ...interface{}) () {
 }
 
 // setItemDelegateForRow(int, class QAbstractItemDelegate *)
-func (this *QAbstractItemView) SetItemDelegateForRow(args ...interface{}) () {
+func (this *QAbstractItemView) Setitemdelegateforrow(args ...interface{}) () {
   // setItemDelegateForRow(int, class QAbstractItemDelegate *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QAbstractItemDelegate{}) // "QAbstractItemDelegate *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -620,13 +694,42 @@ func (this *QAbstractItemView) SetItemDelegateForRow(args ...interface{}) () {
   return
 }
 
+// selectionMode()
+func (this *QAbstractItemView) Selectionmode(args ...interface{}) () {
+  // selectionMode()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK17QAbstractItemView13selectionModeEv
+    // invoke: QAbstractItemView::SelectionMode selectionMode()
+    C.C_ZNK17QAbstractItemView13selectionModeEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractItemView", "selectionMode", args)
+  }
+
+  return
+}
+
 // setTabKeyNavigation(_Bool)
-func (this *QAbstractItemView) SetTabKeyNavigation(args ...interface{}) () {
+func (this *QAbstractItemView) Settabkeynavigation(args ...interface{}) () {
   // setTabKeyNavigation(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -645,11 +748,15 @@ func (this *QAbstractItemView) SetTabKeyNavigation(args ...interface{}) () {
 }
 
 // iconSize()
-func (this *QAbstractItemView) IconSize(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Iconsize(args ...interface{}) (ret interface{}) {
   // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -674,11 +781,15 @@ func (this *QAbstractItemView) IconSize(args ...interface{}) (ret interface{}) {
 }
 
 // selectAll()
-func (this *QAbstractItemView) SelectAll(args ...interface{}) () {
+func (this *QAbstractItemView) Selectall(args ...interface{}) () {
   // selectAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -694,13 +805,42 @@ func (this *QAbstractItemView) SelectAll(args ...interface{}) () {
   return
 }
 
+// textElideMode()
+func (this *QAbstractItemView) Textelidemode(args ...interface{}) () {
+  // textElideMode()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK17QAbstractItemView13textElideModeEv
+    // invoke: Qt::TextElideMode textElideMode()
+    C.C_ZNK17QAbstractItemView13textElideModeEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractItemView", "textElideMode", args)
+  }
+
+  return
+}
+
 // setAutoScrollMargin(int)
-func (this *QAbstractItemView) SetAutoScrollMargin(args ...interface{}) () {
+func (this *QAbstractItemView) Setautoscrollmargin(args ...interface{}) () {
   // setAutoScrollMargin(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -719,12 +859,16 @@ func (this *QAbstractItemView) SetAutoScrollMargin(args ...interface{}) () {
 }
 
 // itemDelegateForColumn(int)
-func (this *QAbstractItemView) ItemDelegateForColumn(args ...interface{}) () {
+func (this *QAbstractItemView) Itemdelegateforcolumn(args ...interface{}) () {
   // itemDelegateForColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -743,12 +887,16 @@ func (this *QAbstractItemView) ItemDelegateForColumn(args ...interface{}) () {
 }
 
 // setDragDropOverwriteMode(_Bool)
-func (this *QAbstractItemView) SetDragDropOverwriteMode(args ...interface{}) () {
+func (this *QAbstractItemView) Setdragdropoverwritemode(args ...interface{}) () {
   // setDragDropOverwriteMode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -767,11 +915,15 @@ func (this *QAbstractItemView) SetDragDropOverwriteMode(args ...interface{}) () 
 }
 
 // dragDropMode()
-func (this *QAbstractItemView) DragDropMode(args ...interface{}) () {
+func (this *QAbstractItemView) Dragdropmode(args ...interface{}) () {
   // dragDropMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -788,11 +940,15 @@ func (this *QAbstractItemView) DragDropMode(args ...interface{}) () {
 }
 
 // horizontalScrollMode()
-func (this *QAbstractItemView) HorizontalScrollMode(args ...interface{}) () {
+func (this *QAbstractItemView) Horizontalscrollmode(args ...interface{}) () {
   // horizontalScrollMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -809,11 +965,15 @@ func (this *QAbstractItemView) HorizontalScrollMode(args ...interface{}) () {
 }
 
 // hasAutoScroll()
-func (this *QAbstractItemView) HasAutoScroll(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Hasautoscroll(args ...interface{}) (ret interface{}) {
   // hasAutoScroll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -838,12 +998,16 @@ func (this *QAbstractItemView) HasAutoScroll(args ...interface{}) (ret interface
 }
 
 // sizeHintForIndex(const class QModelIndex &)
-func (this *QAbstractItemView) SizeHintForIndex(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Sizehintforindex(args ...interface{}) (ret interface{}) {
   // sizeHintForIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -870,12 +1034,16 @@ func (this *QAbstractItemView) SizeHintForIndex(args ...interface{}) (ret interf
 }
 
 // setRootIndex(const class QModelIndex &)
-func (this *QAbstractItemView) SetRootIndex(args ...interface{}) () {
+func (this *QAbstractItemView) Setrootindex(args ...interface{}) () {
   // setRootIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -894,11 +1062,15 @@ func (this *QAbstractItemView) SetRootIndex(args ...interface{}) () {
 }
 
 // editTriggers()
-func (this *QAbstractItemView) EditTriggers(args ...interface{}) () {
+func (this *QAbstractItemView) Edittriggers(args ...interface{}) () {
   // editTriggers()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -915,11 +1087,15 @@ func (this *QAbstractItemView) EditTriggers(args ...interface{}) () {
 }
 
 // showDropIndicator()
-func (this *QAbstractItemView) ShowDropIndicator(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Showdropindicator(args ...interface{}) (ret interface{}) {
   // showDropIndicator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -943,22 +1119,26 @@ func (this *QAbstractItemView) ShowDropIndicator(args ...interface{}) (ret inter
   return
 }
 
-// textElideMode()
-func (this *QAbstractItemView) TextElideMode(args ...interface{}) () {
-  // textElideMode()
+// resetHorizontalScrollMode()
+func (this *QAbstractItemView) Resethorizontalscrollmode(args ...interface{}) () {
+  // resetHorizontalScrollMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK17QAbstractItemView13textElideModeEv
-    // invoke: Qt::TextElideMode textElideMode()
-    C.C_ZNK17QAbstractItemView13textElideModeEv(this.Qclsinst)
+    // invoke: _ZN17QAbstractItemView25resetHorizontalScrollModeEv
+    // invoke: void resetHorizontalScrollMode()
+    C.C_ZN17QAbstractItemView25resetHorizontalScrollModeEv(this.Qclsinst)
   default:
-    qtrt.ErrorResolve("QAbstractItemView", "textElideMode", args)
+    qtrt.ErrorResolve("QAbstractItemView", "resetHorizontalScrollMode", args)
   }
 
   return
@@ -970,6 +1150,10 @@ func (this *QAbstractItemView) Reset(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -986,11 +1170,15 @@ func (this *QAbstractItemView) Reset(args ...interface{}) () {
 }
 
 // dragEnabled()
-func (this *QAbstractItemView) DragEnabled(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Dragenabled(args ...interface{}) (ret interface{}) {
   // dragEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1015,13 +1203,17 @@ func (this *QAbstractItemView) DragEnabled(args ...interface{}) (ret interface{}
 }
 
 // setIndexWidget(const class QModelIndex &, class QWidget *)
-func (this *QAbstractItemView) SetIndexWidget(args ...interface{}) () {
+func (this *QAbstractItemView) Setindexwidget(args ...interface{}) () {
   // setIndexWidget(const class QModelIndex &, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
   vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1042,11 +1234,15 @@ func (this *QAbstractItemView) SetIndexWidget(args ...interface{}) () {
 }
 
 // scrollToTop()
-func (this *QAbstractItemView) ScrollToTop(args ...interface{}) () {
+func (this *QAbstractItemView) Scrolltotop(args ...interface{}) () {
   // scrollToTop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1063,12 +1259,16 @@ func (this *QAbstractItemView) ScrollToTop(args ...interface{}) () {
 }
 
 // setItemDelegate(class QAbstractItemDelegate *)
-func (this *QAbstractItemView) SetItemDelegate(args ...interface{}) () {
+func (this *QAbstractItemView) Setitemdelegate(args ...interface{}) () {
   // setItemDelegate(class QAbstractItemDelegate *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QAbstractItemDelegate{}) // "QAbstractItemDelegate *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1087,12 +1287,16 @@ func (this *QAbstractItemView) SetItemDelegate(args ...interface{}) () {
 }
 
 // itemDelegateForRow(int)
-func (this *QAbstractItemView) ItemDelegateForRow(args ...interface{}) () {
+func (this *QAbstractItemView) Itemdelegateforrow(args ...interface{}) () {
   // itemDelegateForRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1111,11 +1315,15 @@ func (this *QAbstractItemView) ItemDelegateForRow(args ...interface{}) () {
 }
 
 // defaultDropAction()
-func (this *QAbstractItemView) DefaultDropAction(args ...interface{}) () {
+func (this *QAbstractItemView) Defaultdropaction(args ...interface{}) () {
   // defaultDropAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1132,12 +1340,16 @@ func (this *QAbstractItemView) DefaultDropAction(args ...interface{}) () {
 }
 
 // setCurrentIndex(const class QModelIndex &)
-func (this *QAbstractItemView) SetCurrentIndex(args ...interface{}) () {
+func (this *QAbstractItemView) Setcurrentindex(args ...interface{}) () {
   // setCurrentIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1156,15 +1368,16 @@ func (this *QAbstractItemView) SetCurrentIndex(args ...interface{}) () {
 }
 
 // QAbstractItemView(class QWidget *)
-func GcfreeQAbstractItemView(this *QAbstractItemView) {
-  qtrt.UniverseFree(this)
-}
 func NewQAbstractItemView(args ...interface{}) *QAbstractItemView {
   // QAbstractItemView(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1177,9 +1390,7 @@ func NewQAbstractItemView(args ...interface{}) *QAbstractItemView {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QAbstractItemViewC2EP7QWidget(arg0)
-    this := &QAbstractItemView{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQAbstractItemView)
-    return this
+    return &QAbstractItemView{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractItemView", "QAbstractItemView", args)
   }
@@ -1188,12 +1399,16 @@ func NewQAbstractItemView(args ...interface{}) *QAbstractItemView {
 }
 
 // setDropIndicatorShown(_Bool)
-func (this *QAbstractItemView) SetDropIndicatorShown(args ...interface{}) () {
+func (this *QAbstractItemView) Setdropindicatorshown(args ...interface{}) () {
   // setDropIndicatorShown(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1212,11 +1427,15 @@ func (this *QAbstractItemView) SetDropIndicatorShown(args ...interface{}) () {
 }
 
 // selectionModel()
-func (this *QAbstractItemView) SelectionModel(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Selectionmodel(args ...interface{}) (ret interface{}) {
   // selectionModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1241,12 +1460,16 @@ func (this *QAbstractItemView) SelectionModel(args ...interface{}) (ret interfac
 }
 
 // setAlternatingRowColors(_Bool)
-func (this *QAbstractItemView) SetAlternatingRowColors(args ...interface{}) () {
+func (this *QAbstractItemView) Setalternatingrowcolors(args ...interface{}) () {
   // setAlternatingRowColors(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1265,11 +1488,15 @@ func (this *QAbstractItemView) SetAlternatingRowColors(args ...interface{}) () {
 }
 
 // ~QAbstractItemView()
-func (this *QAbstractItemView) Free(args ...interface{}) () {
+func (this *QAbstractItemView) Freeqabstractitemview(args ...interface{}) () {
   // ~QAbstractItemView()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1277,10 +1504,7 @@ func (this *QAbstractItemView) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QAbstractItemViewD0Ev
     // invoke: void ~QAbstractItemView()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN17QAbstractItemViewD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN17QAbstractItemViewD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "~QAbstractItemView", args)
   }
@@ -1289,12 +1513,16 @@ func (this *QAbstractItemView) Free(args ...interface{}) () {
 }
 
 // sizeHintForColumn(int)
-func (this *QAbstractItemView) SizeHintForColumn(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Sizehintforcolumn(args ...interface{}) (ret interface{}) {
   // sizeHintForColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1321,13 +1549,17 @@ func (this *QAbstractItemView) SizeHintForColumn(args ...interface{}) (ret inter
 }
 
 // setItemDelegateForColumn(int, class QAbstractItemDelegate *)
-func (this *QAbstractItemView) SetItemDelegateForColumn(args ...interface{}) () {
+func (this *QAbstractItemView) Setitemdelegateforcolumn(args ...interface{}) () {
   // setItemDelegateForColumn(int, class QAbstractItemDelegate *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = reflect.TypeOf(QAbstractItemDelegate{}) // "QAbstractItemDelegate *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1348,11 +1580,15 @@ func (this *QAbstractItemView) SetItemDelegateForColumn(args ...interface{}) () 
 }
 
 // clearSelection()
-func (this *QAbstractItemView) ClearSelection(args ...interface{}) () {
+func (this *QAbstractItemView) Clearselection(args ...interface{}) () {
   // clearSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1369,11 +1605,15 @@ func (this *QAbstractItemView) ClearSelection(args ...interface{}) () {
 }
 
 // alternatingRowColors()
-func (this *QAbstractItemView) AlternatingRowColors(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Alternatingrowcolors(args ...interface{}) (ret interface{}) {
   // alternatingRowColors()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1404,6 +1644,10 @@ func (this *QAbstractItemView) Update(args ...interface{}) () {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1422,12 +1666,16 @@ func (this *QAbstractItemView) Update(args ...interface{}) () {
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QAbstractItemView) SetModel(args ...interface{}) () {
+func (this *QAbstractItemView) Setmodel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QAbstractItemModel{}) // "QAbstractItemModel *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1446,12 +1694,16 @@ func (this *QAbstractItemView) SetModel(args ...interface{}) () {
 }
 
 // indexWidget(const class QModelIndex &)
-func (this *QAbstractItemView) IndexWidget(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Indexwidget(args ...interface{}) (ret interface{}) {
   // indexWidget(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1478,7 +1730,7 @@ func (this *QAbstractItemView) IndexWidget(args ...interface{}) (ret interface{}
 }
 
 // itemDelegate()
-func (this *QAbstractItemView) ItemDelegate(args ...interface{}) () {
+func (this *QAbstractItemView) Itemdelegate(args ...interface{}) () {
   // itemDelegate()
   // itemDelegate(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1486,6 +1738,10 @@ func (this *QAbstractItemView) ItemDelegate(args ...interface{}) () {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1508,12 +1764,16 @@ func (this *QAbstractItemView) ItemDelegate(args ...interface{}) () {
 }
 
 // sizeHintForRow(int)
-func (this *QAbstractItemView) SizeHintForRow(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemView) Sizehintforrow(args ...interface{}) (ret interface{}) {
   // sizeHintForRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1540,11 +1800,15 @@ func (this *QAbstractItemView) SizeHintForRow(args ...interface{}) (ret interfac
 }
 
 // selectionBehavior()
-func (this *QAbstractItemView) SelectionBehavior(args ...interface{}) () {
+func (this *QAbstractItemView) Selectionbehavior(args ...interface{}) () {
   // selectionBehavior()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1566,6 +1830,10 @@ func (this *QAbstractItemView) Model(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1582,12 +1850,16 @@ func (this *QAbstractItemView) Model(args ...interface{}) () {
 }
 
 // setAutoScroll(_Bool)
-func (this *QAbstractItemView) SetAutoScroll(args ...interface{}) () {
+func (this *QAbstractItemView) Setautoscroll(args ...interface{}) () {
   // setAutoScroll(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

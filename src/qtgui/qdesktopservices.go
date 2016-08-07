@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -47,7 +46,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDesktopServices)=1
@@ -57,7 +55,7 @@ type QDesktopServices struct {
 }
 
 // setUrlHandler(const class QString &, class QObject *, const char *)
-func (this *QDesktopServices) SetUrlHandler_s(args ...interface{}) () {
+func (this *QDesktopServices) Seturlhandler_S(args ...interface{}) () {
   // setUrlHandler(const class QString &, class QObject *, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -65,6 +63,10 @@ func (this *QDesktopServices) SetUrlHandler_s(args ...interface{}) () {
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
   vtys[0][1] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
   vtys[0][2] = qtrt.ByteTy(true) // "const char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -89,12 +91,16 @@ func (this *QDesktopServices) SetUrlHandler_s(args ...interface{}) () {
 }
 
 // unsetUrlHandler(const class QString &)
-func (this *QDesktopServices) UnsetUrlHandler_s(args ...interface{}) () {
+func (this *QDesktopServices) Unseturlhandler_S(args ...interface{}) () {
   // unsetUrlHandler(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -113,12 +119,16 @@ func (this *QDesktopServices) UnsetUrlHandler_s(args ...interface{}) () {
 }
 
 // openUrl(const class QUrl &)
-func (this *QDesktopServices) OpenUrl_s(args ...interface{}) (ret interface{}) {
+func (this *QDesktopServices) Openurl_S(args ...interface{}) (ret interface{}) {
   // openUrl(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QUrl{}) // "const QUrl &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

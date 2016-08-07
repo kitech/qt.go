@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qsurfaceformat.h
 // dst-file: /src/gui/qsurfaceformat.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -109,7 +108,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSurfaceFormat)=8
@@ -119,9 +117,6 @@ type QSurfaceFormat struct {
 }
 
 // QSurfaceFormat(const class QSurfaceFormat &)
-func GcfreeQSurfaceFormat(this *QSurfaceFormat) {
-  qtrt.UniverseFree(this)
-}
 func NewQSurfaceFormat(args ...interface{}) *QSurfaceFormat {
   // QSurfaceFormat(const class QSurfaceFormat &)
   // QSurfaceFormat()
@@ -130,6 +125,10 @@ func NewQSurfaceFormat(args ...interface{}) *QSurfaceFormat {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QSurfaceFormat{}) // "const QSurfaceFormat &"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -142,18 +141,14 @@ func NewQSurfaceFormat(args ...interface{}) *QSurfaceFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QSurfaceFormatC2ERKS_(arg0)
-    this := &QSurfaceFormat{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSurfaceFormat)
-    return this
+    return &QSurfaceFormat{Qclsinst:qthis}
   case 1:
     // invoke: _ZN14QSurfaceFormatC1Ev
     // invoke: void QSurfaceFormat()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QSurfaceFormatC2Ev()
-    this := &QSurfaceFormat{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSurfaceFormat)
-    return this
+    return &QSurfaceFormat{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "QSurfaceFormat", args)
   }
@@ -162,11 +157,15 @@ func NewQSurfaceFormat(args ...interface{}) *QSurfaceFormat {
 }
 
 // swapInterval()
-func (this *QSurfaceFormat) SwapInterval(args ...interface{}) (ret interface{}) {
+func (this *QSurfaceFormat) Swapinterval(args ...interface{}) (ret interface{}) {
   // swapInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -191,11 +190,15 @@ func (this *QSurfaceFormat) SwapInterval(args ...interface{}) (ret interface{}) 
 }
 
 // depthBufferSize()
-func (this *QSurfaceFormat) DepthBufferSize(args ...interface{}) (ret interface{}) {
+func (this *QSurfaceFormat) Depthbuffersize(args ...interface{}) (ret interface{}) {
   // depthBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -220,11 +223,15 @@ func (this *QSurfaceFormat) DepthBufferSize(args ...interface{}) (ret interface{
 }
 
 // defaultFormat()
-func (this *QSurfaceFormat) DefaultFormat_s(args ...interface{}) (ret interface{}) {
+func (this *QSurfaceFormat) Defaultformat_S(args ...interface{}) (ret interface{}) {
   // defaultFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -249,11 +256,15 @@ func (this *QSurfaceFormat) DefaultFormat_s(args ...interface{}) (ret interface{
 }
 
 // alphaBufferSize()
-func (this *QSurfaceFormat) AlphaBufferSize(args ...interface{}) (ret interface{}) {
+func (this *QSurfaceFormat) Alphabuffersize(args ...interface{}) (ret interface{}) {
   // alphaBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -278,12 +289,16 @@ func (this *QSurfaceFormat) AlphaBufferSize(args ...interface{}) (ret interface{
 }
 
 // setSamples(int)
-func (this *QSurfaceFormat) SetSamples(args ...interface{}) () {
+func (this *QSurfaceFormat) Setsamples(args ...interface{}) () {
   // setSamples(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -302,13 +317,17 @@ func (this *QSurfaceFormat) SetSamples(args ...interface{}) () {
 }
 
 // setVersion(int, int)
-func (this *QSurfaceFormat) SetVersion(args ...interface{}) () {
+func (this *QSurfaceFormat) Setversion(args ...interface{}) () {
   // setVersion(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -329,11 +348,15 @@ func (this *QSurfaceFormat) SetVersion(args ...interface{}) () {
 }
 
 // minorVersion()
-func (this *QSurfaceFormat) MinorVersion(args ...interface{}) (ret interface{}) {
+func (this *QSurfaceFormat) Minorversion(args ...interface{}) (ret interface{}) {
   // minorVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -358,12 +381,16 @@ func (this *QSurfaceFormat) MinorVersion(args ...interface{}) (ret interface{}) 
 }
 
 // setSwapInterval(int)
-func (this *QSurfaceFormat) SetSwapInterval(args ...interface{}) () {
+func (this *QSurfaceFormat) Setswapinterval(args ...interface{}) () {
   // setSwapInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -382,12 +409,16 @@ func (this *QSurfaceFormat) SetSwapInterval(args ...interface{}) () {
 }
 
 // setMinorVersion(int)
-func (this *QSurfaceFormat) SetMinorVersion(args ...interface{}) () {
+func (this *QSurfaceFormat) Setminorversion(args ...interface{}) () {
   // setMinorVersion(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -406,12 +437,16 @@ func (this *QSurfaceFormat) SetMinorVersion(args ...interface{}) () {
 }
 
 // setBlueBufferSize(int)
-func (this *QSurfaceFormat) SetBlueBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setbluebuffersize(args ...interface{}) () {
   // setBlueBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -430,12 +465,16 @@ func (this *QSurfaceFormat) SetBlueBufferSize(args ...interface{}) () {
 }
 
 // setRedBufferSize(int)
-func (this *QSurfaceFormat) SetRedBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setredbuffersize(args ...interface{}) () {
   // setRedBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -454,12 +493,16 @@ func (this *QSurfaceFormat) SetRedBufferSize(args ...interface{}) () {
 }
 
 // setDefaultFormat(const class QSurfaceFormat &)
-func (this *QSurfaceFormat) SetDefaultFormat_s(args ...interface{}) () {
+func (this *QSurfaceFormat) Setdefaultformat_S(args ...interface{}) () {
   // setDefaultFormat(const class QSurfaceFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QSurfaceFormat{}) // "const QSurfaceFormat &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -483,6 +526,10 @@ func (this *QSurfaceFormat) Version(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -504,6 +551,10 @@ func (this *QSurfaceFormat) Samples(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -528,11 +579,15 @@ func (this *QSurfaceFormat) Samples(args ...interface{}) (ret interface{}) {
 }
 
 // swapBehavior()
-func (this *QSurfaceFormat) SwapBehavior(args ...interface{}) () {
+func (this *QSurfaceFormat) Swapbehavior(args ...interface{}) () {
   // swapBehavior()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -554,6 +609,10 @@ func (this *QSurfaceFormat) Profile(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -570,11 +629,15 @@ func (this *QSurfaceFormat) Profile(args ...interface{}) () {
 }
 
 // majorVersion()
-func (this *QSurfaceFormat) MajorVersion(args ...interface{}) (ret interface{}) {
+func (this *QSurfaceFormat) Majorversion(args ...interface{}) (ret interface{}) {
   // majorVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -599,12 +662,16 @@ func (this *QSurfaceFormat) MajorVersion(args ...interface{}) (ret interface{}) 
 }
 
 // setStencilBufferSize(int)
-func (this *QSurfaceFormat) SetStencilBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setstencilbuffersize(args ...interface{}) () {
   // setStencilBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -623,11 +690,15 @@ func (this *QSurfaceFormat) SetStencilBufferSize(args ...interface{}) () {
 }
 
 // hasAlpha()
-func (this *QSurfaceFormat) HasAlpha(args ...interface{}) (ret interface{}) {
+func (this *QSurfaceFormat) Hasalpha(args ...interface{}) (ret interface{}) {
   // hasAlpha()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -657,6 +728,10 @@ func (this *QSurfaceFormat) Stereo(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -681,12 +756,16 @@ func (this *QSurfaceFormat) Stereo(args ...interface{}) (ret interface{}) {
 }
 
 // setStereo(_Bool)
-func (this *QSurfaceFormat) SetStereo(args ...interface{}) () {
+func (this *QSurfaceFormat) Setstereo(args ...interface{}) () {
   // setStereo(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -705,11 +784,15 @@ func (this *QSurfaceFormat) SetStereo(args ...interface{}) () {
 }
 
 // redBufferSize()
-func (this *QSurfaceFormat) RedBufferSize(args ...interface{}) (ret interface{}) {
+func (this *QSurfaceFormat) Redbuffersize(args ...interface{}) (ret interface{}) {
   // redBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -734,11 +817,15 @@ func (this *QSurfaceFormat) RedBufferSize(args ...interface{}) (ret interface{})
 }
 
 // greenBufferSize()
-func (this *QSurfaceFormat) GreenBufferSize(args ...interface{}) (ret interface{}) {
+func (this *QSurfaceFormat) Greenbuffersize(args ...interface{}) (ret interface{}) {
   // greenBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -763,12 +850,16 @@ func (this *QSurfaceFormat) GreenBufferSize(args ...interface{}) (ret interface{
 }
 
 // setMajorVersion(int)
-func (this *QSurfaceFormat) SetMajorVersion(args ...interface{}) () {
+func (this *QSurfaceFormat) Setmajorversion(args ...interface{}) () {
   // setMajorVersion(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -787,11 +878,15 @@ func (this *QSurfaceFormat) SetMajorVersion(args ...interface{}) () {
 }
 
 // ~QSurfaceFormat()
-func (this *QSurfaceFormat) Free(args ...interface{}) () {
+func (this *QSurfaceFormat) Freeqsurfaceformat(args ...interface{}) () {
   // ~QSurfaceFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -799,10 +894,7 @@ func (this *QSurfaceFormat) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QSurfaceFormatD0Ev
     // invoke: void ~QSurfaceFormat()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN14QSurfaceFormatD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN14QSurfaceFormatD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "~QSurfaceFormat", args)
   }
@@ -811,12 +903,16 @@ func (this *QSurfaceFormat) Free(args ...interface{}) () {
 }
 
 // setAlphaBufferSize(int)
-func (this *QSurfaceFormat) SetAlphaBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setalphabuffersize(args ...interface{}) () {
   // setAlphaBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -835,11 +931,15 @@ func (this *QSurfaceFormat) SetAlphaBufferSize(args ...interface{}) () {
 }
 
 // stencilBufferSize()
-func (this *QSurfaceFormat) StencilBufferSize(args ...interface{}) (ret interface{}) {
+func (this *QSurfaceFormat) Stencilbuffersize(args ...interface{}) (ret interface{}) {
   // stencilBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -869,6 +969,10 @@ func (this *QSurfaceFormat) Options(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -885,11 +989,15 @@ func (this *QSurfaceFormat) Options(args ...interface{}) () {
 }
 
 // blueBufferSize()
-func (this *QSurfaceFormat) BlueBufferSize(args ...interface{}) (ret interface{}) {
+func (this *QSurfaceFormat) Bluebuffersize(args ...interface{}) (ret interface{}) {
   // blueBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -914,12 +1022,16 @@ func (this *QSurfaceFormat) BlueBufferSize(args ...interface{}) (ret interface{}
 }
 
 // setDepthBufferSize(int)
-func (this *QSurfaceFormat) SetDepthBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setdepthbuffersize(args ...interface{}) () {
   // setDepthBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -938,12 +1050,16 @@ func (this *QSurfaceFormat) SetDepthBufferSize(args ...interface{}) () {
 }
 
 // setGreenBufferSize(int)
-func (this *QSurfaceFormat) SetGreenBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setgreenbuffersize(args ...interface{}) () {
   // setGreenBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -962,11 +1078,15 @@ func (this *QSurfaceFormat) SetGreenBufferSize(args ...interface{}) () {
 }
 
 // renderableType()
-func (this *QSurfaceFormat) RenderableType(args ...interface{}) () {
+func (this *QSurfaceFormat) Renderabletype(args ...interface{}) () {
   // renderableType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

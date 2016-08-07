@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qpauseanimation.h
 // dst-file: /src/core/qpauseanimation.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -51,7 +50,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPauseAnimation)=1
@@ -61,11 +59,15 @@ type QPauseAnimation struct {
 }
 
 // ~QPauseAnimation()
-func (this *QPauseAnimation) Free(args ...interface{}) () {
+func (this *QPauseAnimation) Freeqpauseanimation(args ...interface{}) () {
   // ~QPauseAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -73,10 +75,7 @@ func (this *QPauseAnimation) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QPauseAnimationD0Ev
     // invoke: void ~QPauseAnimation()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QPauseAnimationD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QPauseAnimationD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPauseAnimation", "~QPauseAnimation", args)
   }
@@ -85,9 +84,6 @@ func (this *QPauseAnimation) Free(args ...interface{}) () {
 }
 
 // QPauseAnimation(int, class QObject *)
-func GcfreeQPauseAnimation(this *QPauseAnimation) {
-  qtrt.UniverseFree(this)
-}
 func NewQPauseAnimation(args ...interface{}) *QPauseAnimation {
   // QPauseAnimation(int, class QObject *)
   // QPauseAnimation(class QObject *)
@@ -98,6 +94,10 @@ func NewQPauseAnimation(args ...interface{}) *QPauseAnimation {
   vtys[0][1] = reflect.TypeOf(QObject{}) // "QObject *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -112,9 +112,7 @@ func NewQPauseAnimation(args ...interface{}) *QPauseAnimation {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QPauseAnimationC2EiP7QObject(arg0, arg1)
-    this := &QPauseAnimation{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPauseAnimation)
-    return this
+    return &QPauseAnimation{Qclsinst:qthis}
   case 1:
     // invoke: _ZN15QPauseAnimationC1EP7QObject
     // invoke: void QPauseAnimation(class QObject *)
@@ -123,9 +121,7 @@ func NewQPauseAnimation(args ...interface{}) *QPauseAnimation {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QPauseAnimationC2EP7QObject(arg0)
-    this := &QPauseAnimation{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQPauseAnimation)
-    return this
+    return &QPauseAnimation{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPauseAnimation", "QPauseAnimation", args)
   }
@@ -139,6 +135,10 @@ func (this *QPauseAnimation) Duration(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -163,11 +163,15 @@ func (this *QPauseAnimation) Duration(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QPauseAnimation) MetaObject(args ...interface{}) () {
+func (this *QPauseAnimation) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -184,12 +188,16 @@ func (this *QPauseAnimation) MetaObject(args ...interface{}) () {
 }
 
 // setDuration(int)
-func (this *QPauseAnimation) SetDuration(args ...interface{}) () {
+func (this *QPauseAnimation) Setduration(args ...interface{}) () {
   // setDuration(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

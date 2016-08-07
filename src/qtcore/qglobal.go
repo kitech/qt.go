@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qglobal.h
 // dst-file: /src/core/qglobal.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -39,7 +38,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QIntegerForSize<4>)=1
@@ -56,6 +54,12 @@ type QIntegerForSizeL8G struct {
 
 // class sizeof(QIntegerForSize<2>)=1
 type QIntegerForSizeL2G struct {
+  // qbase: None;
+  Qclsinst unsafe.Pointer /* *C.void */;
+}
+
+// class sizeof(QIntegerForSize<16>)=1
+type QIntegerForSizeL16G struct {
   // qbase: None;
   Qclsinst unsafe.Pointer /* *C.void */;
 }

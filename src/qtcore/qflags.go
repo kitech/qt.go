@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qflags.h
 // dst-file: /src/core/qflags.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -49,7 +48,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QIncompatibleFlag)=4
@@ -65,15 +63,16 @@ type QFlag struct {
 }
 
 // QIncompatibleFlag(int)
-func GcfreeQIncompatibleFlag(this *QIncompatibleFlag) {
-  qtrt.UniverseFree(this)
-}
 func NewQIncompatibleFlag(args ...interface{}) *QIncompatibleFlag {
   // QIncompatibleFlag(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -86,9 +85,7 @@ func NewQIncompatibleFlag(args ...interface{}) *QIncompatibleFlag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QIncompatibleFlagC2Ei(arg0)
-    this := &QIncompatibleFlag{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQIncompatibleFlag)
-    return this
+    return &QIncompatibleFlag{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIncompatibleFlag", "QIncompatibleFlag", args)
   }
@@ -97,9 +94,6 @@ func NewQIncompatibleFlag(args ...interface{}) *QIncompatibleFlag {
 }
 
 // QFlag(ushort)
-func GcfreeQFlag(this *QFlag) {
-  qtrt.UniverseFree(this)
-}
 func NewQFlag(args ...interface{}) *QFlag {
   // QFlag(ushort)
   // QFlag(int)
@@ -115,6 +109,10 @@ func NewQFlag(args ...interface{}) *QFlag {
   vtys[2][0] = qtrt.Int16Ty(false) // "short"
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = qtrt.Int32Ty(false) // "uint"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -127,9 +125,7 @@ func NewQFlag(args ...interface{}) *QFlag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFlagC2Et(arg0)
-    this := &QFlag{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFlag)
-    return this
+    return &QFlag{Qclsinst:qthis}
   case 1:
     // invoke: _ZN5QFlagC1Ei
     // invoke: void QFlag(int)
@@ -138,9 +134,7 @@ func NewQFlag(args ...interface{}) *QFlag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFlagC2Ei(arg0)
-    this := &QFlag{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFlag)
-    return this
+    return &QFlag{Qclsinst:qthis}
   case 2:
     // invoke: _ZN5QFlagC1Es
     // invoke: void QFlag(short)
@@ -149,9 +143,7 @@ func NewQFlag(args ...interface{}) *QFlag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFlagC2Es(arg0)
-    this := &QFlag{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFlag)
-    return this
+    return &QFlag{Qclsinst:qthis}
   case 3:
     // invoke: _ZN5QFlagC1Ej
     // invoke: void QFlag(uint)
@@ -160,9 +152,7 @@ func NewQFlag(args ...interface{}) *QFlag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFlagC2Ej(arg0)
-    this := &QFlag{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQFlag)
-    return this
+    return &QFlag{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFlag", "QFlag", args)
   }

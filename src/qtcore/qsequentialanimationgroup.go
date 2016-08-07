@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -53,7 +52,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSequentialAnimationGroup)=1
@@ -64,11 +62,15 @@ type QSequentialAnimationGroup struct {
 }
 
 // metaObject()
-func (this *QSequentialAnimationGroup) MetaObject(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -85,13 +87,17 @@ func (this *QSequentialAnimationGroup) MetaObject(args ...interface{}) () {
 }
 
 // insertPause(int, int)
-func (this *QSequentialAnimationGroup) InsertPause(args ...interface{}) (ret interface{}) {
+func (this *QSequentialAnimationGroup) Insertpause(args ...interface{}) (ret interface{}) {
   // insertPause(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -120,12 +126,16 @@ func (this *QSequentialAnimationGroup) InsertPause(args ...interface{}) (ret int
 }
 
 // addPause(int)
-func (this *QSequentialAnimationGroup) AddPause(args ...interface{}) (ret interface{}) {
+func (this *QSequentialAnimationGroup) Addpause(args ...interface{}) (ret interface{}) {
   // addPause(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -152,11 +162,15 @@ func (this *QSequentialAnimationGroup) AddPause(args ...interface{}) (ret interf
 }
 
 // ~QSequentialAnimationGroup()
-func (this *QSequentialAnimationGroup) Free(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) Freeqsequentialanimationgroup(args ...interface{}) () {
   // ~QSequentialAnimationGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -164,10 +178,7 @@ func (this *QSequentialAnimationGroup) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN25QSequentialAnimationGroupD0Ev
     // invoke: void ~QSequentialAnimationGroup()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN25QSequentialAnimationGroupD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN25QSequentialAnimationGroupD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "~QSequentialAnimationGroup", args)
   }
@@ -176,15 +187,16 @@ func (this *QSequentialAnimationGroup) Free(args ...interface{}) () {
 }
 
 // QSequentialAnimationGroup(class QObject *)
-func GcfreeQSequentialAnimationGroup(this *QSequentialAnimationGroup) {
-  qtrt.UniverseFree(this)
-}
 func NewQSequentialAnimationGroup(args ...interface{}) *QSequentialAnimationGroup {
   // QSequentialAnimationGroup(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -197,9 +209,7 @@ func NewQSequentialAnimationGroup(args ...interface{}) *QSequentialAnimationGrou
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN25QSequentialAnimationGroupC2EP7QObject(arg0)
-    this := &QSequentialAnimationGroup{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQSequentialAnimationGroup)
-    return this
+    return &QSequentialAnimationGroup{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "QSequentialAnimationGroup", args)
   }
@@ -213,6 +223,10 @@ func (this *QSequentialAnimationGroup) Duration(args ...interface{}) (ret interf
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -237,11 +251,15 @@ func (this *QSequentialAnimationGroup) Duration(args ...interface{}) (ret interf
 }
 
 // currentAnimation()
-func (this *QSequentialAnimationGroup) CurrentAnimation(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) Currentanimation(args ...interface{}) () {
   // currentAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

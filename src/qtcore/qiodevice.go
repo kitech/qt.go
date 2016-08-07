@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.go
 //
@@ -17,7 +17,6 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -29,14 +28,20 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
+  // proto:  void QIODevice::setCurrentWriteChannel(int channel);
+extern void C_ZN9QIODevice22setCurrentWriteChannelEi(void* qthis, int32_t arg0); // 4
   // proto:  qint64 QIODevice::bytesAvailable();
 extern int64_t C_ZNK9QIODevice14bytesAvailableEv(void* qthis); // 4
-  // proto:  qint64 QIODevice::pos();
-extern int64_t C_ZNK9QIODevice3posEv(void* qthis); // 4
   // proto:  qint64 QIODevice::bytesToWrite();
 extern int64_t C_ZNK9QIODevice12bytesToWriteEv(void* qthis); // 4
+  // proto:  void QIODevice::startTransaction();
+extern void C_ZN9QIODevice16startTransactionEv(void* qthis); // 4
+  // proto:  qint64 QIODevice::pos();
+extern int64_t C_ZNK9QIODevice3posEv(void* qthis); // 4
   // proto:  void QIODevice::close();
 extern void C_ZN9QIODevice5closeEv(void* qthis); // 4
+  // proto:  void QIODevice::setCurrentReadChannel(int channel);
+extern void C_ZN9QIODevice21setCurrentReadChannelEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QIODevice::seek(qint64 pos);
 extern bool C_ZN9QIODevice4seekEx(void* qthis, int64_t arg0); // 4
   // proto:  bool QIODevice::isSequential();
@@ -55,10 +60,10 @@ extern int64_t C_ZN9QIODevice5writeERK10QByteArray(void* qthis, void* arg0); // 
 extern bool C_ZNK9QIODevice11canReadLineEv(void* qthis); // 4
   // proto:  bool QIODevice::waitForBytesWritten(int msecs);
 extern bool C_ZN9QIODevice19waitForBytesWrittenEi(void* qthis, int32_t arg0); // 4
-  // proto:  qint64 QIODevice::read(char * data, qint64 maxlen);
-extern int64_t C_ZN9QIODevice4readEPcx(void* qthis, void* arg0, int64_t arg1); // 4
-  // proto:  QByteArray QIODevice::read(qint64 maxlen);
-extern void* C_ZN9QIODevice4readEx(void* qthis, int64_t arg0); // 4
+  // proto:  int QIODevice::currentWriteChannel();
+extern int32_t C_ZNK9QIODevice19currentWriteChannelEv(void* qthis); // 4
+  // proto:  int QIODevice::writeChannelCount();
+extern int32_t C_ZNK9QIODevice17writeChannelCountEv(void* qthis); // 4
   // proto:  qint64 QIODevice::peek(char * data, qint64 maxlen);
 extern int64_t C_ZN9QIODevice4peekEPcx(void* qthis, void* arg0, int64_t arg1); // 4
   // proto:  QByteArray QIODevice::peek(qint64 maxlen);
@@ -67,16 +72,26 @@ extern void* C_ZN9QIODevice4peekEx(void* qthis, int64_t arg0); // 4
 extern bool C_ZN9QIODevice7putCharEc(void* qthis, unsigned char arg0); // 4
   // proto:  QString QIODevice::errorString();
 extern void* C_ZNK9QIODevice11errorStringEv(void* qthis); // 4
+  // proto:  qint64 QIODevice::read(char * data, qint64 maxlen);
+extern int64_t C_ZN9QIODevice4readEPcx(void* qthis, void* arg0, int64_t arg1); // 4
+  // proto:  QByteArray QIODevice::read(qint64 maxlen);
+extern void* C_ZN9QIODevice4readEx(void* qthis, int64_t arg0); // 4
   // proto:  void QIODevice::~QIODevice();
 extern void C_ZN9QIODeviceD2Ev(void* qthis); // 4
   // proto:  QByteArray QIODevice::readAll();
 extern void* C_ZN9QIODevice7readAllEv(void* qthis); // 4
+  // proto:  void QIODevice::rollbackTransaction();
+extern void C_ZN9QIODevice19rollbackTransactionEv(void* qthis); // 4
   // proto:  void QIODevice::setTextModeEnabled(bool enabled);
 extern void C_ZN9QIODevice18setTextModeEnabledEb(void* qthis, bool arg0); // 4
   // proto:  void QIODevice::QIODevice(QObject * parent);
 extern void* C_ZN9QIODeviceC2EP7QObject(void* arg0); // 3
   // proto:  void QIODevice::QIODevice();
 extern void* C_ZN9QIODeviceC2Ev(); // 3
+  // proto:  int QIODevice::readChannelCount();
+extern int32_t C_ZNK9QIODevice16readChannelCountEv(void* qthis); // 4
+  // proto:  int QIODevice::currentReadChannel();
+extern int32_t C_ZNK9QIODevice18currentReadChannelEv(void* qthis); // 4
   // proto:  bool QIODevice::reset();
 extern bool C_ZN9QIODevice5resetEv(void* qthis); // 4
   // proto:  OpenMode QIODevice::openMode();
@@ -93,10 +108,14 @@ extern bool C_ZNK9QIODevice5atEndEv(void* qthis); // 4
 extern bool C_ZN9QIODevice16waitForReadyReadEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QIODevice::isReadable();
 extern bool C_ZNK9QIODevice10isReadableEv(void* qthis); // 4
+  // proto:  void QIODevice::commitTransaction();
+extern void C_ZN9QIODevice17commitTransactionEv(void* qthis); // 4
   // proto:  QByteArray QIODevice::readLine(qint64 maxlen);
 extern void* C_ZN9QIODevice8readLineEx(void* qthis, int64_t arg0); // 4
   // proto:  qint64 QIODevice::readLine(char * data, qint64 maxlen);
 extern int64_t C_ZN9QIODevice8readLineEPcx(void* qthis, void* arg0, int64_t arg1); // 4
+  // proto:  bool QIODevice::isTransactionStarted();
+extern bool C_ZNK9QIODevice20isTransactionStartedEv(void* qthis); // 4
   // proto:  bool QIODevice::isWritable();
 extern bool C_ZNK9QIODevice10isWritableEv(void* qthis); // 4
   // proto:  bool QIODevice::getChar(char * c);
@@ -111,25 +130,58 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QIODevice)=1
 type QIODevice struct {
   /*qbase*/ QObject;
   Qclsinst unsafe.Pointer /* *C.void */;
-//  _readyRead QIODevice_readyRead_signal;
+//  _channelBytesWritten QIODevice_channelBytesWritten_signal;
 //  _readChannelFinished QIODevice_readChannelFinished_signal;
+//  _channelReadyRead QIODevice_channelReadyRead_signal;
+//  _readyRead QIODevice_readyRead_signal;
 //  _aboutToClose QIODevice_aboutToClose_signal;
 //  _bytesWritten QIODevice_bytesWritten_signal;
 }
 
+// setCurrentWriteChannel(int)
+func (this *QIODevice) Setcurrentwritechannel(args ...interface{}) () {
+  // setCurrentWriteChannel(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QIODevice22setCurrentWriteChannelEi
+    // invoke: void setCurrentWriteChannel(int)
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg0)}
+    C.C_ZN9QIODevice22setCurrentWriteChannelEi(this.Qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QIODevice", "setCurrentWriteChannel", args)
+  }
+
+  return
+}
+
 // bytesAvailable()
-func (this *QIODevice) BytesAvailable(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Bytesavailable(args ...interface{}) (ret interface{}) {
   // bytesAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -153,41 +205,16 @@ func (this *QIODevice) BytesAvailable(args ...interface{}) (ret interface{}) {
   return
 }
 
-// pos()
-func (this *QIODevice) Pos(args ...interface{}) (ret interface{}) {
-  // pos()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QIODevice3posEv
-    // invoke: qint64 pos()
-    var ret0 = C.C_ZNK9QIODevice3posEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int64Ty(false) // "qint64"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QIODevice", "pos", args)
-  }
-
-  return
-}
-
 // bytesToWrite()
-func (this *QIODevice) BytesToWrite(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Bytestowrite(args ...interface{}) (ret interface{}) {
   // bytesToWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -211,12 +238,74 @@ func (this *QIODevice) BytesToWrite(args ...interface{}) (ret interface{}) {
   return
 }
 
+// startTransaction()
+func (this *QIODevice) Starttransaction(args ...interface{}) () {
+  // startTransaction()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QIODevice16startTransactionEv
+    // invoke: void startTransaction()
+    C.C_ZN9QIODevice16startTransactionEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QIODevice", "startTransaction", args)
+  }
+
+  return
+}
+
+// pos()
+func (this *QIODevice) Pos(args ...interface{}) (ret interface{}) {
+  // pos()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QIODevice3posEv
+    // invoke: qint64 pos()
+    var ret0 = C.C_ZNK9QIODevice3posEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int64Ty(false) // "qint64"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QIODevice", "pos", args)
+  }
+
+  return
+}
+
 // close()
 func (this *QIODevice) Close(args ...interface{}) () {
   // close()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -232,6 +321,34 @@ func (this *QIODevice) Close(args ...interface{}) () {
   return
 }
 
+// setCurrentReadChannel(int)
+func (this *QIODevice) Setcurrentreadchannel(args ...interface{}) () {
+  // setCurrentReadChannel(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QIODevice21setCurrentReadChannelEi
+    // invoke: void setCurrentReadChannel(int)
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
+    if false {fmt.Println(arg0)}
+    C.C_ZN9QIODevice21setCurrentReadChannelEi(this.Qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QIODevice", "setCurrentReadChannel", args)
+  }
+
+  return
+}
+
 // seek(qint64)
 func (this *QIODevice) Seek(args ...interface{}) (ret interface{}) {
   // seek(qint64)
@@ -239,6 +356,10 @@ func (this *QIODevice) Seek(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -265,11 +386,15 @@ func (this *QIODevice) Seek(args ...interface{}) (ret interface{}) {
 }
 
 // isSequential()
-func (this *QIODevice) IsSequential(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Issequential(args ...interface{}) (ret interface{}) {
   // isSequential()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -294,12 +419,16 @@ func (this *QIODevice) IsSequential(args ...interface{}) (ret interface{}) {
 }
 
 // ungetChar(char)
-func (this *QIODevice) UngetChar(args ...interface{}) () {
+func (this *QIODevice) Ungetchar(args ...interface{}) () {
   // ungetChar(char)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.ByteTy(false) // "char"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -323,6 +452,10 @@ func (this *QIODevice) Size(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -360,6 +493,10 @@ func (this *QIODevice) Write(args ...interface{}) (ret interface{}) {
   vtys[1][0] = qtrt.ByteTy(true) // "const char *"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -420,11 +557,15 @@ func (this *QIODevice) Write(args ...interface{}) (ret interface{}) {
 }
 
 // canReadLine()
-func (this *QIODevice) CanReadLine(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Canreadline(args ...interface{}) (ret interface{}) {
   // canReadLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -449,12 +590,16 @@ func (this *QIODevice) CanReadLine(args ...interface{}) (ret interface{}) {
 }
 
 // waitForBytesWritten(int)
-func (this *QIODevice) WaitForBytesWritten(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Waitforbyteswritten(args ...interface{}) (ret interface{}) {
   // waitForBytesWritten(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -480,55 +625,67 @@ func (this *QIODevice) WaitForBytesWritten(args ...interface{}) (ret interface{}
   return
 }
 
-// read(char *, qint64)
-func (this *QIODevice) Read(args ...interface{}) (ret interface{}) {
-  // read(char *, qint64)
-  // read(qint64)
+// currentWriteChannel()
+func (this *QIODevice) Currentwritechannel(args ...interface{}) (ret interface{}) {
+  // currentWriteChannel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.ByteTy(true) // "char *"
-  vtys[0][1] = qtrt.Int64Ty(false) // "qint64"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN9QIODevice4readEPcx
-    // invoke: qint64 read(char *, qint64)
-    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
-    var arg0 = argif0.(unsafe.Pointer)
-    if false {fmt.Println(argif0, arg0)}
-    if free0 {defer C.free(arg0)}
-    var arg1 = C.int64_t(qtrt.PrimConv(args[1], qtrt.Int64Ty(false)).(int64))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN9QIODevice4readEPcx(this.Qclsinst, arg0, arg1)
+    // invoke: _ZNK9QIODevice19currentWriteChannelEv
+    // invoke: int currentWriteChannel()
+    var ret0 = C.C_ZNK9QIODevice19currentWriteChannelEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
-    var rety = qtrt.Int64Ty(false) // "qint64"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN9QIODevice4readEx
-    // invoke: QByteArray read(qint64)
-    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QIODevice4readEx(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    var rety = qtrt.Int32Ty(false) // "int"
     if reflect.TypeOf(ret0).ConvertibleTo(rety) {
         ret = reflect.ValueOf(ret0).Convert(rety).Interface()
     } else {
         ret = qtrt.HandyConvert2go(ret0, rety)
     }
   default:
-    qtrt.ErrorResolve("QIODevice", "read", args)
+    qtrt.ErrorResolve("QIODevice", "currentWriteChannel", args)
+  }
+
+  return
+}
+
+// writeChannelCount()
+func (this *QIODevice) Writechannelcount(args ...interface{}) (ret interface{}) {
+  // writeChannelCount()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QIODevice17writeChannelCountEv
+    // invoke: int writeChannelCount()
+    var ret0 = C.C_ZNK9QIODevice17writeChannelCountEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QIODevice", "writeChannelCount", args)
   }
 
   return
@@ -545,6 +702,10 @@ func (this *QIODevice) Peek(args ...interface{}) (ret interface{}) {
   vtys[0][1] = qtrt.Int64Ty(false) // "qint64"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -589,12 +750,16 @@ func (this *QIODevice) Peek(args ...interface{}) (ret interface{}) {
 }
 
 // putChar(char)
-func (this *QIODevice) PutChar(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Putchar(args ...interface{}) (ret interface{}) {
   // putChar(char)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.ByteTy(false) // "char"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -621,11 +786,15 @@ func (this *QIODevice) PutChar(args ...interface{}) (ret interface{}) {
 }
 
 // errorString()
-func (this *QIODevice) ErrorString(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -649,12 +818,74 @@ func (this *QIODevice) ErrorString(args ...interface{}) (ret interface{}) {
   return
 }
 
+// read(char *, qint64)
+func (this *QIODevice) Read(args ...interface{}) (ret interface{}) {
+  // read(char *, qint64)
+  // read(qint64)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.ByteTy(true) // "char *"
+  vtys[0][1] = qtrt.Int64Ty(false) // "qint64"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QIODevice4readEPcx
+    // invoke: qint64 read(char *, qint64)
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
+    var arg1 = C.int64_t(qtrt.PrimConv(args[1], qtrt.Int64Ty(false)).(int64))
+    if false {fmt.Println(arg1)}
+    var ret0 = C.C_ZN9QIODevice4readEPcx(this.Qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int64Ty(false) // "qint64"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  case 1:
+    // invoke: _ZN9QIODevice4readEx
+    // invoke: QByteArray read(qint64)
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
+    if false {fmt.Println(arg0)}
+    var ret0 = C.C_ZN9QIODevice4readEx(this.Qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QIODevice", "read", args)
+  }
+
+  return
+}
+
 // ~QIODevice()
-func (this *QIODevice) Free(args ...interface{}) () {
+func (this *QIODevice) Freeqiodevice(args ...interface{}) () {
   // ~QIODevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -662,10 +893,7 @@ func (this *QIODevice) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QIODeviceD0Ev
     // invoke: void ~QIODevice()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QIODeviceD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QIODeviceD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QIODevice", "~QIODevice", args)
   }
@@ -674,11 +902,15 @@ func (this *QIODevice) Free(args ...interface{}) () {
 }
 
 // readAll()
-func (this *QIODevice) ReadAll(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Readall(args ...interface{}) (ret interface{}) {
   // readAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -702,13 +934,42 @@ func (this *QIODevice) ReadAll(args ...interface{}) (ret interface{}) {
   return
 }
 
+// rollbackTransaction()
+func (this *QIODevice) Rollbacktransaction(args ...interface{}) () {
+  // rollbackTransaction()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QIODevice19rollbackTransactionEv
+    // invoke: void rollbackTransaction()
+    C.C_ZN9QIODevice19rollbackTransactionEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QIODevice", "rollbackTransaction", args)
+  }
+
+  return
+}
+
 // setTextModeEnabled(_Bool)
-func (this *QIODevice) SetTextModeEnabled(args ...interface{}) () {
+func (this *QIODevice) Settextmodeenabled(args ...interface{}) () {
   // setTextModeEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -727,9 +988,6 @@ func (this *QIODevice) SetTextModeEnabled(args ...interface{}) () {
 }
 
 // QIODevice(class QObject *)
-func GcfreeQIODevice(this *QIODevice) {
-  qtrt.UniverseFree(this)
-}
 func NewQIODevice(args ...interface{}) *QIODevice {
   // QIODevice(class QObject *)
   // QIODevice()
@@ -738,6 +996,10 @@ func NewQIODevice(args ...interface{}) *QIODevice {
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
   vtys[1] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -750,23 +1012,85 @@ func NewQIODevice(args ...interface{}) *QIODevice {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QIODeviceC2EP7QObject(arg0)
-    this := &QIODevice{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQIODevice)
-    return this
+    return &QIODevice{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QIODeviceC1Ev
     // invoke: void QIODevice()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QIODeviceC2Ev()
-    this := &QIODevice{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQIODevice)
-    return this
+    return &QIODevice{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIODevice", "QIODevice", args)
   }
 
   return nil // QIODevice{Qclsinst:qthis}
+}
+
+// readChannelCount()
+func (this *QIODevice) Readchannelcount(args ...interface{}) (ret interface{}) {
+  // readChannelCount()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QIODevice16readChannelCountEv
+    // invoke: int readChannelCount()
+    var ret0 = C.C_ZNK9QIODevice16readChannelCountEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QIODevice", "readChannelCount", args)
+  }
+
+  return
+}
+
+// currentReadChannel()
+func (this *QIODevice) Currentreadchannel(args ...interface{}) (ret interface{}) {
+  // currentReadChannel()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QIODevice18currentReadChannelEv
+    // invoke: int currentReadChannel()
+    var ret0 = C.C_ZNK9QIODevice18currentReadChannelEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QIODevice", "currentReadChannel", args)
+  }
+
+  return
 }
 
 // reset()
@@ -775,6 +1099,10 @@ func (this *QIODevice) Reset(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -799,11 +1127,15 @@ func (this *QIODevice) Reset(args ...interface{}) (ret interface{}) {
 }
 
 // openMode()
-func (this *QIODevice) OpenMode(args ...interface{}) () {
+func (this *QIODevice) Openmode(args ...interface{}) () {
   // openMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -820,11 +1152,15 @@ func (this *QIODevice) OpenMode(args ...interface{}) () {
 }
 
 // isTextModeEnabled()
-func (this *QIODevice) IsTextModeEnabled(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Istextmodeenabled(args ...interface{}) (ret interface{}) {
   // isTextModeEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -849,11 +1185,15 @@ func (this *QIODevice) IsTextModeEnabled(args ...interface{}) (ret interface{}) 
 }
 
 // metaObject()
-func (this *QIODevice) MetaObject(args ...interface{}) () {
+func (this *QIODevice) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -870,11 +1210,15 @@ func (this *QIODevice) MetaObject(args ...interface{}) () {
 }
 
 // isOpen()
-func (this *QIODevice) IsOpen(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Isopen(args ...interface{}) (ret interface{}) {
   // isOpen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -899,11 +1243,15 @@ func (this *QIODevice) IsOpen(args ...interface{}) (ret interface{}) {
 }
 
 // atEnd()
-func (this *QIODevice) AtEnd(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Atend(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -928,12 +1276,16 @@ func (this *QIODevice) AtEnd(args ...interface{}) (ret interface{}) {
 }
 
 // waitForReadyRead(int)
-func (this *QIODevice) WaitForReadyRead(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Waitforreadyread(args ...interface{}) (ret interface{}) {
   // waitForReadyRead(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -960,11 +1312,15 @@ func (this *QIODevice) WaitForReadyRead(args ...interface{}) (ret interface{}) {
 }
 
 // isReadable()
-func (this *QIODevice) IsReadable(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Isreadable(args ...interface{}) (ret interface{}) {
   // isReadable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -988,8 +1344,33 @@ func (this *QIODevice) IsReadable(args ...interface{}) (ret interface{}) {
   return
 }
 
+// commitTransaction()
+func (this *QIODevice) Committransaction(args ...interface{}) () {
+  // commitTransaction()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QIODevice17commitTransactionEv
+    // invoke: void commitTransaction()
+    C.C_ZN9QIODevice17commitTransactionEv(this.Qclsinst)
+  default:
+    qtrt.ErrorResolve("QIODevice", "commitTransaction", args)
+  }
+
+  return
+}
+
 // readLine(qint64)
-func (this *QIODevice) ReadLine(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Readline(args ...interface{}) (ret interface{}) {
   // readLine(qint64)
   // readLine(char *, qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -999,6 +1380,10 @@ func (this *QIODevice) ReadLine(args ...interface{}) (ret interface{}) {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = qtrt.ByteTy(true) // "char *"
   vtys[1][1] = qtrt.Int64Ty(false) // "qint64"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1042,12 +1427,49 @@ func (this *QIODevice) ReadLine(args ...interface{}) (ret interface{}) {
   return
 }
 
+// isTransactionStarted()
+func (this *QIODevice) Istransactionstarted(args ...interface{}) (ret interface{}) {
+  // isTransactionStarted()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QIODevice20isTransactionStartedEv
+    // invoke: bool isTransactionStarted()
+    var ret0 = C.C_ZNK9QIODevice20isTransactionStartedEv(this.Qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
+  default:
+    qtrt.ErrorResolve("QIODevice", "isTransactionStarted", args)
+  }
+
+  return
+}
+
 // isWritable()
-func (this *QIODevice) IsWritable(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Iswritable(args ...interface{}) (ret interface{}) {
   // isWritable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1072,12 +1494,16 @@ func (this *QIODevice) IsWritable(args ...interface{}) (ret interface{}) {
 }
 
 // getChar(char *)
-func (this *QIODevice) GetChar(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) Getchar(args ...interface{}) (ret interface{}) {
   // getChar(char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.ByteTy(true) // "char *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -65,7 +64,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsLayout)=1
@@ -75,11 +73,15 @@ type QGraphicsLayout struct {
 }
 
 // updateGeometry()
-func (this *QGraphicsLayout) UpdateGeometry(args ...interface{}) () {
+func (this *QGraphicsLayout) Updategeometry(args ...interface{}) () {
   // updateGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -101,6 +103,10 @@ func (this *QGraphicsLayout) Activate(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -117,11 +123,15 @@ func (this *QGraphicsLayout) Activate(args ...interface{}) () {
 }
 
 // isActivated()
-func (this *QGraphicsLayout) IsActivated(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayout) Isactivated(args ...interface{}) (ret interface{}) {
   // isActivated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -151,6 +161,10 @@ func (this *QGraphicsLayout) Invalidate(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -167,7 +181,7 @@ func (this *QGraphicsLayout) Invalidate(args ...interface{}) () {
 }
 
 // getContentsMargins(qreal *, qreal *, qreal *, qreal *)
-func (this *QGraphicsLayout) GetContentsMargins(args ...interface{}) () {
+func (this *QGraphicsLayout) Getcontentsmargins(args ...interface{}) () {
   // getContentsMargins(qreal *, qreal *, qreal *, qreal *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -176,6 +190,10 @@ func (this *QGraphicsLayout) GetContentsMargins(args ...interface{}) () {
   vtys[0][1] = qtrt.DoubleTy(true) // "qreal *"
   vtys[0][2] = qtrt.DoubleTy(true) // "qreal *"
   vtys[0][3] = qtrt.DoubleTy(true) // "qreal *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -200,7 +218,7 @@ func (this *QGraphicsLayout) GetContentsMargins(args ...interface{}) () {
 }
 
 // setContentsMargins(qreal, qreal, qreal, qreal)
-func (this *QGraphicsLayout) SetContentsMargins(args ...interface{}) () {
+func (this *QGraphicsLayout) Setcontentsmargins(args ...interface{}) () {
   // setContentsMargins(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -209,6 +227,10 @@ func (this *QGraphicsLayout) SetContentsMargins(args ...interface{}) () {
   vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
   vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -233,11 +255,15 @@ func (this *QGraphicsLayout) SetContentsMargins(args ...interface{}) () {
 }
 
 // ~QGraphicsLayout()
-func (this *QGraphicsLayout) Free(args ...interface{}) () {
+func (this *QGraphicsLayout) Freeqgraphicslayout(args ...interface{}) () {
   // ~QGraphicsLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -245,10 +271,7 @@ func (this *QGraphicsLayout) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayoutD0Ev
     // invoke: void ~QGraphicsLayout()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN15QGraphicsLayoutD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN15QGraphicsLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "~QGraphicsLayout", args)
   }
@@ -257,12 +280,16 @@ func (this *QGraphicsLayout) Free(args ...interface{}) () {
 }
 
 // setInstantInvalidatePropagation(_Bool)
-func (this *QGraphicsLayout) SetInstantInvalidatePropagation_s(args ...interface{}) () {
+func (this *QGraphicsLayout) Setinstantinvalidatepropagation_S(args ...interface{}) () {
   // setInstantInvalidatePropagation(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -281,11 +308,15 @@ func (this *QGraphicsLayout) SetInstantInvalidatePropagation_s(args ...interface
 }
 
 // instantInvalidatePropagation()
-func (this *QGraphicsLayout) InstantInvalidatePropagation_s(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayout) Instantinvalidatepropagation_S(args ...interface{}) (ret interface{}) {
   // instantInvalidatePropagation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -310,12 +341,16 @@ func (this *QGraphicsLayout) InstantInvalidatePropagation_s(args ...interface{})
 }
 
 // widgetEvent(class QEvent *)
-func (this *QGraphicsLayout) WidgetEvent(args ...interface{}) () {
+func (this *QGraphicsLayout) Widgetevent(args ...interface{}) () {
   // widgetEvent(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -334,15 +369,16 @@ func (this *QGraphicsLayout) WidgetEvent(args ...interface{}) () {
 }
 
 // QGraphicsLayout(class QGraphicsLayoutItem *)
-func GcfreeQGraphicsLayout(this *QGraphicsLayout) {
-  qtrt.UniverseFree(this)
-}
 func NewQGraphicsLayout(args ...interface{}) *QGraphicsLayout {
   // QGraphicsLayout(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QGraphicsLayoutItem{}) // "QGraphicsLayoutItem *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -355,9 +391,7 @@ func NewQGraphicsLayout(args ...interface{}) *QGraphicsLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(arg0)
-    this := &QGraphicsLayout{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQGraphicsLayout)
-    return this
+    return &QGraphicsLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "QGraphicsLayout", args)
   }

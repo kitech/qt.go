@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.go
 //
@@ -17,7 +17,6 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -53,7 +52,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QClipboard)=1
@@ -67,11 +65,15 @@ type QClipboard struct {
 }
 
 // ownsClipboard()
-func (this *QClipboard) OwnsClipboard(args ...interface{}) (ret interface{}) {
+func (this *QClipboard) Ownsclipboard(args ...interface{}) (ret interface{}) {
   // ownsClipboard()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -96,11 +98,15 @@ func (this *QClipboard) OwnsClipboard(args ...interface{}) (ret interface{}) {
 }
 
 // supportsFindBuffer()
-func (this *QClipboard) SupportsFindBuffer(args ...interface{}) (ret interface{}) {
+func (this *QClipboard) Supportsfindbuffer(args ...interface{}) (ret interface{}) {
   // supportsFindBuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -125,11 +131,15 @@ func (this *QClipboard) SupportsFindBuffer(args ...interface{}) (ret interface{}
 }
 
 // ownsFindBuffer()
-func (this *QClipboard) OwnsFindBuffer(args ...interface{}) (ret interface{}) {
+func (this *QClipboard) Ownsfindbuffer(args ...interface{}) (ret interface{}) {
   // ownsFindBuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -154,11 +164,15 @@ func (this *QClipboard) OwnsFindBuffer(args ...interface{}) (ret interface{}) {
 }
 
 // supportsSelection()
-func (this *QClipboard) SupportsSelection(args ...interface{}) (ret interface{}) {
+func (this *QClipboard) Supportsselection(args ...interface{}) (ret interface{}) {
   // supportsSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -183,11 +197,15 @@ func (this *QClipboard) SupportsSelection(args ...interface{}) (ret interface{})
 }
 
 // metaObject()
-func (this *QClipboard) MetaObject(args ...interface{}) () {
+func (this *QClipboard) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -204,11 +222,15 @@ func (this *QClipboard) MetaObject(args ...interface{}) () {
 }
 
 // ownsSelection()
-func (this *QClipboard) OwnsSelection(args ...interface{}) (ret interface{}) {
+func (this *QClipboard) Ownsselection(args ...interface{}) (ret interface{}) {
   // ownsSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}

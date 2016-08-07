@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 27 18:05:15 2016
+// created: Sun Aug  7 10:49:52 2016
 // src-file: /QtWidgets/qdatetimeedit.h
 // dst-file: /src/widgets/qdatetimeedit.go
 //
@@ -17,7 +17,6 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
-import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -159,7 +158,6 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
-  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTimeEdit)=1
@@ -186,11 +184,15 @@ type QDateTimeEdit struct {
 }
 
 // metaObject()
-func (this *QTimeEdit) MetaObject(args ...interface{}) () {
+func (this *QTimeEdit) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -207,9 +209,6 @@ func (this *QTimeEdit) MetaObject(args ...interface{}) () {
 }
 
 // QTimeEdit(class QWidget *)
-func GcfreeQTimeEdit(this *QTimeEdit) {
-  qtrt.UniverseFree(this)
-}
 func NewQTimeEdit(args ...interface{}) *QTimeEdit {
   // QTimeEdit(class QWidget *)
   // QTimeEdit(const class QTime &, class QWidget *)
@@ -220,6 +219,10 @@ func NewQTimeEdit(args ...interface{}) *QTimeEdit {
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(qtcore.QTime{}) // "const QTime &"
   vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -232,9 +235,7 @@ func NewQTimeEdit(args ...interface{}) *QTimeEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTimeEditC2EP7QWidget(arg0)
-    this := &QTimeEdit{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTimeEdit)
-    return this
+    return &QTimeEdit{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QTimeEditC1ERK5QTimeP7QWidget
     // invoke: void QTimeEdit(const class QTime &, class QWidget *)
@@ -245,9 +246,7 @@ func NewQTimeEdit(args ...interface{}) *QTimeEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTimeEditC2ERK5QTimeP7QWidget(arg0, arg1)
-    this := &QTimeEdit{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQTimeEdit)
-    return this
+    return &QTimeEdit{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTimeEdit", "QTimeEdit", args)
   }
@@ -256,11 +255,15 @@ func NewQTimeEdit(args ...interface{}) *QTimeEdit {
 }
 
 // ~QTimeEdit()
-func (this *QTimeEdit) Free(args ...interface{}) () {
+func (this *QTimeEdit) Freeqtimeedit(args ...interface{}) () {
   // ~QTimeEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -268,10 +271,7 @@ func (this *QTimeEdit) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeEditD0Ev
     // invoke: void ~QTimeEdit()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QTimeEditD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QTimeEditD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTimeEdit", "~QTimeEdit", args)
   }
@@ -280,11 +280,15 @@ func (this *QTimeEdit) Free(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QDateEdit) MetaObject(args ...interface{}) () {
+func (this *QDateEdit) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -301,9 +305,6 @@ func (this *QDateEdit) MetaObject(args ...interface{}) () {
 }
 
 // QDateEdit(const class QDate &, class QWidget *)
-func GcfreeQDateEdit(this *QDateEdit) {
-  qtrt.UniverseFree(this)
-}
 func NewQDateEdit(args ...interface{}) *QDateEdit {
   // QDateEdit(const class QDate &, class QWidget *)
   // QDateEdit(class QWidget *)
@@ -314,6 +315,10 @@ func NewQDateEdit(args ...interface{}) *QDateEdit {
   vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -328,9 +333,7 @@ func NewQDateEdit(args ...interface{}) *QDateEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateEditC2ERK5QDateP7QWidget(arg0, arg1)
-    this := &QDateEdit{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDateEdit)
-    return this
+    return &QDateEdit{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QDateEditC1EP7QWidget
     // invoke: void QDateEdit(class QWidget *)
@@ -339,9 +342,7 @@ func NewQDateEdit(args ...interface{}) *QDateEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateEditC2EP7QWidget(arg0)
-    this := &QDateEdit{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDateEdit)
-    return this
+    return &QDateEdit{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDateEdit", "QDateEdit", args)
   }
@@ -350,11 +351,15 @@ func NewQDateEdit(args ...interface{}) *QDateEdit {
 }
 
 // ~QDateEdit()
-func (this *QDateEdit) Free(args ...interface{}) () {
+func (this *QDateEdit) Freeqdateedit(args ...interface{}) () {
   // ~QDateEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -362,10 +367,7 @@ func (this *QDateEdit) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateEditD0Ev
     // invoke: void ~QDateEdit()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN9QDateEditD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN9QDateEditD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDateEdit", "~QDateEdit", args)
   }
@@ -374,12 +376,16 @@ func (this *QDateEdit) Free(args ...interface{}) () {
 }
 
 // setMaximumDate(const class QDate &)
-func (this *QDateTimeEdit) SetMaximumDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Setmaximumdate(args ...interface{}) () {
   // setMaximumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -398,12 +404,16 @@ func (this *QDateTimeEdit) SetMaximumDate(args ...interface{}) () {
 }
 
 // setCalendarPopup(_Bool)
-func (this *QDateTimeEdit) SetCalendarPopup(args ...interface{}) () {
+func (this *QDateTimeEdit) Setcalendarpopup(args ...interface{}) () {
   // setCalendarPopup(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.BoolTy(false) // "bool"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -422,11 +432,15 @@ func (this *QDateTimeEdit) SetCalendarPopup(args ...interface{}) () {
 }
 
 // displayedSections()
-func (this *QDateTimeEdit) DisplayedSections(args ...interface{}) () {
+func (this *QDateTimeEdit) Displayedsections(args ...interface{}) () {
   // displayedSections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -443,12 +457,16 @@ func (this *QDateTimeEdit) DisplayedSections(args ...interface{}) () {
 }
 
 // setDateTime(const class QDateTime &)
-func (this *QDateTimeEdit) SetDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Setdatetime(args ...interface{}) () {
   // setDateTime(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDateTime{}) // "const QDateTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -467,13 +485,17 @@ func (this *QDateTimeEdit) SetDateTime(args ...interface{}) () {
 }
 
 // setTimeRange(const class QTime &, const class QTime &)
-func (this *QDateTimeEdit) SetTimeRange(args ...interface{}) () {
+func (this *QDateTimeEdit) Settimerange(args ...interface{}) () {
   // setTimeRange(const class QTime &, const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QTime{}) // "const QTime &"
   vtys[0][1] = reflect.TypeOf(qtcore.QTime{}) // "const QTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -494,13 +516,17 @@ func (this *QDateTimeEdit) SetTimeRange(args ...interface{}) () {
 }
 
 // setDateRange(const class QDate &, const class QDate &)
-func (this *QDateTimeEdit) SetDateRange(args ...interface{}) () {
+func (this *QDateTimeEdit) Setdaterange(args ...interface{}) () {
   // setDateRange(const class QDate &, const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
   vtys[0][1] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -521,12 +547,16 @@ func (this *QDateTimeEdit) SetDateRange(args ...interface{}) () {
 }
 
 // setMinimumTime(const class QTime &)
-func (this *QDateTimeEdit) SetMinimumTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Setminimumtime(args ...interface{}) () {
   // setMinimumTime(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QTime{}) // "const QTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -545,11 +575,15 @@ func (this *QDateTimeEdit) SetMinimumTime(args ...interface{}) () {
 }
 
 // displayFormat()
-func (this *QDateTimeEdit) DisplayFormat(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Displayformat(args ...interface{}) (ret interface{}) {
   // displayFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -574,11 +608,15 @@ func (this *QDateTimeEdit) DisplayFormat(args ...interface{}) (ret interface{}) 
 }
 
 // currentSection()
-func (this *QDateTimeEdit) CurrentSection(args ...interface{}) () {
+func (this *QDateTimeEdit) Currentsection(args ...interface{}) () {
   // currentSection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -595,11 +633,15 @@ func (this *QDateTimeEdit) CurrentSection(args ...interface{}) () {
 }
 
 // maximumTime()
-func (this *QDateTimeEdit) MaximumTime(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Maximumtime(args ...interface{}) (ret interface{}) {
   // maximumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -624,11 +666,15 @@ func (this *QDateTimeEdit) MaximumTime(args ...interface{}) (ret interface{}) {
 }
 
 // currentSectionIndex()
-func (this *QDateTimeEdit) CurrentSectionIndex(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Currentsectionindex(args ...interface{}) (ret interface{}) {
   // currentSectionIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -659,6 +705,10 @@ func (this *QDateTimeEdit) Event(args ...interface{}) (ret interface{}) {
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QEvent{}) // "QEvent *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -685,11 +735,15 @@ func (this *QDateTimeEdit) Event(args ...interface{}) (ret interface{}) {
 }
 
 // minimumDate()
-func (this *QDateTimeEdit) MinimumDate(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Minimumdate(args ...interface{}) (ret interface{}) {
   // minimumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -714,13 +768,17 @@ func (this *QDateTimeEdit) MinimumDate(args ...interface{}) (ret interface{}) {
 }
 
 // setDateTimeRange(const class QDateTime &, const class QDateTime &)
-func (this *QDateTimeEdit) SetDateTimeRange(args ...interface{}) () {
+func (this *QDateTimeEdit) Setdatetimerange(args ...interface{}) () {
   // setDateTimeRange(const class QDateTime &, const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDateTime{}) // "const QDateTime &"
   vtys[0][1] = reflect.TypeOf(qtcore.QDateTime{}) // "const QDateTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -741,11 +799,15 @@ func (this *QDateTimeEdit) SetDateTimeRange(args ...interface{}) () {
 }
 
 // clearMinimumDate()
-func (this *QDateTimeEdit) ClearMinimumDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearminimumdate(args ...interface{}) () {
   // clearMinimumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -762,11 +824,15 @@ func (this *QDateTimeEdit) ClearMinimumDate(args ...interface{}) () {
 }
 
 // clearMaximumDate()
-func (this *QDateTimeEdit) ClearMaximumDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearmaximumdate(args ...interface{}) () {
   // clearMaximumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -783,12 +849,16 @@ func (this *QDateTimeEdit) ClearMaximumDate(args ...interface{}) () {
 }
 
 // setDisplayFormat(const class QString &)
-func (this *QDateTimeEdit) SetDisplayFormat(args ...interface{}) () {
+func (this *QDateTimeEdit) Setdisplayformat(args ...interface{}) () {
   // setDisplayFormat(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -807,12 +877,16 @@ func (this *QDateTimeEdit) SetDisplayFormat(args ...interface{}) () {
 }
 
 // setMinimumDateTime(const class QDateTime &)
-func (this *QDateTimeEdit) SetMinimumDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Setminimumdatetime(args ...interface{}) () {
   // setMinimumDateTime(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDateTime{}) // "const QDateTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -831,12 +905,16 @@ func (this *QDateTimeEdit) SetMinimumDateTime(args ...interface{}) () {
 }
 
 // setMaximumTime(const class QTime &)
-func (this *QDateTimeEdit) SetMaximumTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Setmaximumtime(args ...interface{}) () {
   // setMaximumTime(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QTime{}) // "const QTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -855,11 +933,15 @@ func (this *QDateTimeEdit) SetMaximumTime(args ...interface{}) () {
 }
 
 // ~QDateTimeEdit()
-func (this *QDateTimeEdit) Free(args ...interface{}) () {
+func (this *QDateTimeEdit) Freeqdatetimeedit(args ...interface{}) () {
   // ~QDateTimeEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -867,10 +949,7 @@ func (this *QDateTimeEdit) Free(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QDateTimeEditD0Ev
     // invoke: void ~QDateTimeEdit()
-    if this != nil && this.Qclsinst != nil {
-      C.C_ZN13QDateTimeEditD2Ev(this.Qclsinst)
-      this.Qclsinst = nil
-    }
+    C.C_ZN13QDateTimeEditD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "~QDateTimeEdit", args)
   }
@@ -879,12 +958,16 @@ func (this *QDateTimeEdit) Free(args ...interface{}) () {
 }
 
 // setCalendarWidget(class QCalendarWidget *)
-func (this *QDateTimeEdit) SetCalendarWidget(args ...interface{}) () {
+func (this *QDateTimeEdit) Setcalendarwidget(args ...interface{}) () {
   // setCalendarWidget(class QCalendarWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(QCalendarWidget{}) // "QCalendarWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -903,11 +986,15 @@ func (this *QDateTimeEdit) SetCalendarWidget(args ...interface{}) () {
 }
 
 // clearMinimumTime()
-func (this *QDateTimeEdit) ClearMinimumTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearminimumtime(args ...interface{}) () {
   // clearMinimumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -924,12 +1011,16 @@ func (this *QDateTimeEdit) ClearMinimumTime(args ...interface{}) () {
 }
 
 // setDate(const class QDate &)
-func (this *QDateTimeEdit) SetDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Setdate(args ...interface{}) () {
   // setDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -948,11 +1039,15 @@ func (this *QDateTimeEdit) SetDate(args ...interface{}) () {
 }
 
 // calendarPopup()
-func (this *QDateTimeEdit) CalendarPopup(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Calendarpopup(args ...interface{}) (ret interface{}) {
   // calendarPopup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -977,12 +1072,16 @@ func (this *QDateTimeEdit) CalendarPopup(args ...interface{}) (ret interface{}) 
 }
 
 // stepBy(int)
-func (this *QDateTimeEdit) StepBy(args ...interface{}) () {
+func (this *QDateTimeEdit) Stepby(args ...interface{}) () {
   // stepBy(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1001,11 +1100,15 @@ func (this *QDateTimeEdit) StepBy(args ...interface{}) () {
 }
 
 // calendarWidget()
-func (this *QDateTimeEdit) CalendarWidget(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Calendarwidget(args ...interface{}) (ret interface{}) {
   // calendarWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1030,11 +1133,15 @@ func (this *QDateTimeEdit) CalendarWidget(args ...interface{}) (ret interface{})
 }
 
 // clearMinimumDateTime()
-func (this *QDateTimeEdit) ClearMinimumDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearminimumdatetime(args ...interface{}) () {
   // clearMinimumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1051,12 +1158,16 @@ func (this *QDateTimeEdit) ClearMinimumDateTime(args ...interface{}) () {
 }
 
 // setMaximumDateTime(const class QDateTime &)
-func (this *QDateTimeEdit) SetMaximumDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Setmaximumdatetime(args ...interface{}) () {
   // setMaximumDateTime(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDateTime{}) // "const QDateTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1075,12 +1186,16 @@ func (this *QDateTimeEdit) SetMaximumDateTime(args ...interface{}) () {
 }
 
 // setMinimumDate(const class QDate &)
-func (this *QDateTimeEdit) SetMinimumDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Setminimumdate(args ...interface{}) () {
   // setMinimumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QDate{}) // "const QDate &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1099,11 +1214,15 @@ func (this *QDateTimeEdit) SetMinimumDate(args ...interface{}) () {
 }
 
 // sectionCount()
-func (this *QDateTimeEdit) SectionCount(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Sectioncount(args ...interface{}) (ret interface{}) {
   // sectionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1128,12 +1247,16 @@ func (this *QDateTimeEdit) SectionCount(args ...interface{}) (ret interface{}) {
 }
 
 // setTime(const class QTime &)
-func (this *QDateTimeEdit) SetTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Settime(args ...interface{}) () {
   // setTime(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = reflect.TypeOf(qtcore.QTime{}) // "const QTime &"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1152,11 +1275,15 @@ func (this *QDateTimeEdit) SetTime(args ...interface{}) () {
 }
 
 // clearMaximumDateTime()
-func (this *QDateTimeEdit) ClearMaximumDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearmaximumdatetime(args ...interface{}) () {
   // clearMaximumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1178,6 +1305,10 @@ func (this *QDateTimeEdit) Date(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1202,11 +1333,15 @@ func (this *QDateTimeEdit) Date(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QDateTimeEdit) SizeHint(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1231,11 +1366,15 @@ func (this *QDateTimeEdit) SizeHint(args ...interface{}) (ret interface{}) {
 }
 
 // maximumDate()
-func (this *QDateTimeEdit) MaximumDate(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Maximumdate(args ...interface{}) (ret interface{}) {
   // maximumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1260,9 +1399,6 @@ func (this *QDateTimeEdit) MaximumDate(args ...interface{}) (ret interface{}) {
 }
 
 // QDateTimeEdit(const class QTime &, class QWidget *)
-func GcfreeQDateTimeEdit(this *QDateTimeEdit) {
-  qtrt.UniverseFree(this)
-}
 func NewQDateTimeEdit(args ...interface{}) *QDateTimeEdit {
   // QDateTimeEdit(const class QTime &, class QWidget *)
   // QDateTimeEdit(const class QDate &, class QWidget *)
@@ -1281,6 +1417,10 @@ func NewQDateTimeEdit(args ...interface{}) *QDateTimeEdit {
   vtys[2][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1295,9 +1435,7 @@ func NewQDateTimeEdit(args ...interface{}) *QDateTimeEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QDateTimeEditC2ERK5QTimeP7QWidget(arg0, arg1)
-    this := &QDateTimeEdit{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDateTimeEdit)
-    return this
+    return &QDateTimeEdit{Qclsinst:qthis}
   case 1:
     // invoke: _ZN13QDateTimeEditC1ERK5QDateP7QWidget
     // invoke: void QDateTimeEdit(const class QDate &, class QWidget *)
@@ -1308,9 +1446,7 @@ func NewQDateTimeEdit(args ...interface{}) *QDateTimeEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QDateTimeEditC2ERK5QDateP7QWidget(arg0, arg1)
-    this := &QDateTimeEdit{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDateTimeEdit)
-    return this
+    return &QDateTimeEdit{Qclsinst:qthis}
   case 2:
     // invoke: _ZN13QDateTimeEditC1ERK9QDateTimeP7QWidget
     // invoke: void QDateTimeEdit(const class QDateTime &, class QWidget *)
@@ -1321,9 +1457,7 @@ func NewQDateTimeEdit(args ...interface{}) *QDateTimeEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget(arg0, arg1)
-    this := &QDateTimeEdit{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDateTimeEdit)
-    return this
+    return &QDateTimeEdit{Qclsinst:qthis}
   case 3:
     // invoke: _ZN13QDateTimeEditC1EP7QWidget
     // invoke: void QDateTimeEdit(class QWidget *)
@@ -1332,9 +1466,7 @@ func NewQDateTimeEdit(args ...interface{}) *QDateTimeEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QDateTimeEditC2EP7QWidget(arg0)
-    this := &QDateTimeEdit{Qclsinst:qthis}
-    runtime.SetFinalizer(this, GcfreeQDateTimeEdit)
-    return this
+    return &QDateTimeEdit{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "QDateTimeEdit", args)
   }
@@ -1343,11 +1475,15 @@ func NewQDateTimeEdit(args ...interface{}) *QDateTimeEdit {
 }
 
 // metaObject()
-func (this *QDateTimeEdit) MetaObject(args ...interface{}) () {
+func (this *QDateTimeEdit) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1364,11 +1500,15 @@ func (this *QDateTimeEdit) MetaObject(args ...interface{}) () {
 }
 
 // timeSpec()
-func (this *QDateTimeEdit) TimeSpec(args ...interface{}) () {
+func (this *QDateTimeEdit) Timespec(args ...interface{}) () {
   // timeSpec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1385,11 +1525,15 @@ func (this *QDateTimeEdit) TimeSpec(args ...interface{}) () {
 }
 
 // dateTime()
-func (this *QDateTimeEdit) DateTime(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Datetime(args ...interface{}) (ret interface{}) {
   // dateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1419,6 +1563,10 @@ func (this *QDateTimeEdit) Clear(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1435,12 +1583,16 @@ func (this *QDateTimeEdit) Clear(args ...interface{}) () {
 }
 
 // sectionAt(int)
-func (this *QDateTimeEdit) SectionAt(args ...interface{}) () {
+func (this *QDateTimeEdit) Sectionat(args ...interface{}) () {
   // sectionAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1459,11 +1611,15 @@ func (this *QDateTimeEdit) SectionAt(args ...interface{}) () {
 }
 
 // clearMaximumTime()
-func (this *QDateTimeEdit) ClearMaximumTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearmaximumtime(args ...interface{}) () {
   // clearMaximumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1480,11 +1636,15 @@ func (this *QDateTimeEdit) ClearMaximumTime(args ...interface{}) () {
 }
 
 // minimumTime()
-func (this *QDateTimeEdit) MinimumTime(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Minimumtime(args ...interface{}) (ret interface{}) {
   // minimumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1509,11 +1669,15 @@ func (this *QDateTimeEdit) MinimumTime(args ...interface{}) (ret interface{}) {
 }
 
 // maximumDateTime()
-func (this *QDateTimeEdit) MaximumDateTime(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Maximumdatetime(args ...interface{}) (ret interface{}) {
   // maximumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1543,6 +1707,10 @@ func (this *QDateTimeEdit) Time(args ...interface{}) (ret interface{}) {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1567,11 +1735,15 @@ func (this *QDateTimeEdit) Time(args ...interface{}) (ret interface{}) {
 }
 
 // minimumDateTime()
-func (this *QDateTimeEdit) MinimumDateTime(args ...interface{}) (ret interface{}) {
+func (this *QDateTimeEdit) Minimumdatetime(args ...interface{}) (ret interface{}) {
   // minimumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -1596,12 +1768,16 @@ func (this *QDateTimeEdit) MinimumDateTime(args ...interface{}) (ret interface{}
 }
 
 // setCurrentSectionIndex(int)
-func (this *QDateTimeEdit) SetCurrentSectionIndex(args ...interface{}) () {
+func (this *QDateTimeEdit) Setcurrentsectionindex(args ...interface{}) () {
   // setCurrentSectionIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  var dargExists = make(map[int32]map[int32]bool)
+  if false {fmt.Println(dargExists)}
+  var dargValues = make(map[int32]map[int32]interface{})
+  if false {fmt.Println(dargValues)}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
