@@ -29,7 +29,7 @@ static ffi_type* itype2stype(int itype){
   argtypes int[20]
   argvals uint64_t[20]
  */
-void ffi_call_ex(void*fn, int retype, uint64_t *retval, int argc, int* argtys, uint64_t* argvals) {
+void ffi_call_ex(void*fn, int retype, uint64_t *retval, int argc, uint8_t* argtys, uint64_t* argvals) {
     ffi_cif cif;
     ffi_type *ffitys[20];
     void *ffivals[20];

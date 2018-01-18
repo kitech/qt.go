@@ -50,11 +50,11 @@ static void ffi_call_0(void*fn) {
     }
 }
 
-extern void ffi_call_ex(void*fn, int retype, uint64_t *rc, int argc, int* argtys, uint64_t* argvals);
+extern void ffi_call_ex(void*fn, int retype, uint64_t *rc, int argc, uint8_t* argtys, uint64_t* argvals);
 
 static void ffi_call_1(void*fn) {
 
-    int argtys[20];
+    uint8_t argtys[20];
     uint64_t argvals[20];
 
     argtys[0] = FFI_TYPE_POINTER;
@@ -84,6 +84,7 @@ import (
 	"fmt"
 	"gopp"
 	"log"
+	"reflect"
 	"unsafe"
 
 	"github.com/gonuts/ffi"
@@ -145,11 +146,7 @@ func init() {
 
 func deinit() {}
 
-func InvokeQtFunc(symname string, retype Type, types []Type, args ...interface{}) (VRetype, error) {
-	if retype == nil {
-		retype = ffi.C_void
-		retype = ffi.C_uint64
-	}
+func InvokeQtFunc(symname string, retype byte, types []byte, args ...interface{}) (VRetype, error) {
 	for modname, lib := range libs {
 		addr, err := lib.Symbol(symname)
 		gopp.ErrPrint(err)
@@ -165,11 +162,94 @@ func InvokeQtFunc(symname string, retype Type, types []Type, args ...interface{}
 	return nil, fmt.Errorf("Symbol not found: %s", symname)
 }
 
+func InvokeQtFunc5(symname string, retype byte, types []byte, args []uint64) (VRetype, error) {
+	addr := getSymAddr(symname)
+	log.Println("FFI Call:", symname, addr)
+
+	var retval C.uint64_t = 0
+	C.ffi_call_ex(addr, C.int(retype), &retval, C.int(len(types)),
+		(*C.uint8_t)(&types[0]), (*C.uint64_t)(&args[0]))
+
+	return uint64(retval), fmt.Errorf("Symbol not found: %s", symname)
+}
+
+func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, error) {
+	addr := getSymAddr(symname)
+	log.Println("FFI Call:", symname, addr)
+
+	argtys, argvals := convArgs(args...)
+	var retval C.uint64_t = 0
+	C.ffi_call_ex(addr, C.int(retype), &retval, C.int(len(argtys)),
+		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0]))
+
+	return uint64(retval), fmt.Errorf("Symbol not found: %s", symname)
+}
+
+func getSymAddr(symname string) unsafe.Pointer {
+	for _, lib := range libs {
+		addr, err := lib.Symbol(symname)
+		gopp.ErrPrint(err)
+		if err != nil {
+			continue
+		}
+		return addr
+	}
+	return nil
+}
+
+func convArgs(args ...interface{}) (argtys []byte, argvals []uint64) {
+	argtys = make([]byte, 20)
+	argvals = make([]uint64, 20)
+	for i, argx := range args {
+		argty, argval := convArg(argx)
+		argtys[i], argvals[i] = argty, argval
+	}
+	return
+}
+
+func convArg(argx interface{}) (argty byte, argval uint64) {
+
+	av := reflect.ValueOf(argx)
+	aty := av.Type()
+	switch aty.Kind() {
+	case reflect.Uint64:
+		argty = FFI_TYPE_UINT64
+		argval = uint64(av.UnsafeAddr())
+	case reflect.Int:
+		argty = FFI_TYPE_INT
+		argval = uint64(av.UnsafeAddr())
+	case reflect.Ptr:
+		argty = FFI_TYPE_POINTER
+		argval = uint64(av.UnsafeAddr())
+	}
+
+	return
+}
+
 func test() {
 	var ret VRetype
 	var err error
-	ret, err = InvokeQtFunc("_Z5qrandv", nil, nil)
+	ret, err = InvokeQtFunc("_Z5qrandv", 0, nil)
 	log.Println(ret, err)
 	// ret, err = InvokeQtFunc("_Z6qsrandj", nil, nil)
 	// log.Println(ret, err)
 }
+
+const (
+	FFI_TYPE_VOID       = byte(C.FFI_TYPE_VOID)
+	FFI_TYPE_INT        = byte(C.FFI_TYPE_INT)
+	FFI_TYPE_FLOAT      = byte(C.FFI_TYPE_FLOAT)
+	FFI_TYPE_DOUBLE     = byte(C.FFI_TYPE_DOUBLE)
+	FFI_TYPE_LONGDOUBLE = byte(C.FFI_TYPE_LONGDOUBLE)
+	FFI_TYPE_UINT8      = byte(C.FFI_TYPE_UINT8)
+	FFI_TYPE_SINT8      = byte(C.FFI_TYPE_SINT8)
+	FFI_TYPE_UINT16     = byte(C.FFI_TYPE_UINT16)
+	FFI_TYPE_SINT16     = byte(C.FFI_TYPE_SINT16)
+	FFI_TYPE_UINT32     = byte(C.FFI_TYPE_UINT32)
+	FFI_TYPE_SINT32     = byte(C.FFI_TYPE_SINT32)
+	FFI_TYPE_UINT64     = byte(C.FFI_TYPE_UINT64)
+	FFI_TYPE_SINT64     = byte(C.FFI_TYPE_SINT64)
+	FFI_TYPE_STRUCT     = byte(C.FFI_TYPE_STRUCT)
+	FFI_TYPE_POINTER    = byte(C.FFI_TYPE_POINTER)
+	FFI_TYPE_COMPLEX    = byte(C.FFI_TYPE_COMPLEX)
+)
