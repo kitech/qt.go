@@ -162,12 +162,12 @@ func InvokeQtFunc(symname string, retype byte, types []byte, args ...interface{}
 	return nil, fmt.Errorf("Symbol not found: %s", symname)
 }
 
-func InvokeQtFunc5(symname string, retype byte, types []byte, args []uint64) (VRetype, error) {
+func InvokeQtFunc5(symname string, retype byte, argc int, types []byte, args []uint64) (VRetype, error) {
 	addr := getSymAddr(symname)
 	log.Println("FFI Call:", symname, addr)
 
 	var retval C.uint64_t = 0
-	C.ffi_call_ex(addr, C.int(retype), &retval, C.int(len(types)),
+	C.ffi_call_ex(addr, C.int(retype), &retval, C.int(argc),
 		(*C.uint8_t)(&types[0]), (*C.uint64_t)(&args[0]))
 
 	return uint64(retval), fmt.Errorf("Symbol not found: %s", symname)
@@ -211,17 +211,22 @@ func convArg(argx interface{}) (argty byte, argval uint64) {
 
 	av := reflect.ValueOf(argx)
 	aty := av.Type()
+
 	switch aty.Kind() {
 	case reflect.Uint64:
 		argty = FFI_TYPE_UINT64
-		argval = uint64(av.UnsafeAddr())
+		argval = uint64(argx.(uint64))
 	case reflect.Int:
 		argty = FFI_TYPE_INT
-		argval = uint64(av.UnsafeAddr())
+		argval = uint64(argx.(int))
 	case reflect.Ptr:
 		argty = FFI_TYPE_POINTER
-		argval = uint64(av.UnsafeAddr())
+		argval = uint64(av.Pointer())
+	case reflect.UnsafePointer:
+		argty = FFI_TYPE_POINTER
+		argval = uint64(av.Pointer())
 	}
+	log.Println(argty, argval, aty.String(), argx)
 
 	return
 }

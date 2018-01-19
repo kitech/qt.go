@@ -12,22 +12,62 @@ import (
 	"unsafe"
 )
 
-type QWidget struct {
+type QWidget5 struct {
 	o unsafe.Pointer
 }
 
-func NewQWidget() *QWidget {
-	o := &QWidget{}
-	InvokeQtFunc("_ZN7QWidgetC2EPS_6QFlagsIN2Qt10WindowTypeEE", 0, nil)
+func NewQWidget5() *QWidget5 {
+	o := &QWidget5{}
+
+	t := C.calloc(1, 128)
+	o.o = t
+
+	argtys := make([]byte, 20)
+	argvals := make([]uint64, 20)
+
+	argtys[0] = FFI_TYPE_POINTER
+	argvals[0] = uint64(uintptr(t))
+
+	var p *C.char
+	argtys[1] = FFI_TYPE_POINTER
+	argvals[1] = (uint64)(uintptr(unsafe.Pointer(p)))
+
+	var cf C.int = 0
+	argtys[2] = FFI_TYPE_INT
+	argvals[2] = (uint64)(cf)
+	var f int = 0
+
+	// InvokeQtFunc5("_ZN7QWidgetC2EPS_6QFlagsIN2Qt10WindowTypeEE",
+	//	FFI_TYPE_VOID, 3, argtys, argvals)
+
+	InvokeQtFunc6("_ZN7QWidgetC2EPS_6QFlagsIN2Qt10WindowTypeEE",
+		FFI_TYPE_VOID, t, unsafe.Pointer(p), f)
+	// InvokeQtFunc("_ZN7QWidgetC2EPS_6QFlagsIN2Qt10WindowTypeEE", 0, nil)
 	return o
 }
 
-type QApplication struct {
+func (w *QWidget5) Show() {
+
+	argtys := make([]byte, 20)
+	argvals := make([]uint64, 20)
+
+	argtys[0] = FFI_TYPE_POINTER
+	argvals[0] = uint64(uintptr(w.o))
+
+	// InvokeQtFunc5("_ZN7QWidget4showEv", FFI_TYPE_VOID, 1, argtys, argvals)
+	InvokeQtFunc6("_ZN7QWidget4showEv", FFI_TYPE_VOID, w.o)
+}
+
+func (w *QWidget5) SetObjectName() {
+	// _ZN7QObject13setObjectNameERK7QString
+}
+
+type QApplication5 struct {
 	o unsafe.Pointer
 }
 
-func NewQApplication() *QApplication {
-	o := &QApplication{}
+func NewQApplication50() *QApplication5 {
+	o := &QApplication5{}
 	t := C.calloc(1, 128)
 	// args := C.CString("testprog")
 	InvokeQtFunc("_ZN12QApplicationC2ERiPPci", 0,
@@ -39,8 +79,8 @@ func NewQApplication() *QApplication {
 	return o
 }
 
-func NewQApplication5() *QApplication {
-	o := &QApplication{}
+func NewQApplication5() *QApplication5 {
+	o := &QApplication5{}
 
 	argtys := make([]byte, 20)
 	argvals := make([]uint64, 20)
@@ -65,19 +105,30 @@ func NewQApplication5() *QApplication {
 	argvals[3] = uint64(uintptr(unsafe.Pointer(&flag)))
 
 	// InvokeQtFunc5("_ZN12QApplicationC2ERiPPci", FFI_TYPE_VOID, argtys, argvals)
-	InvokeQtFunc5("_ZN12QApplicationC2ERiPPci", FFI_TYPE_VOID, argtys, argvals)
+	InvokeQtFunc5("_ZN12QApplicationC2ERiPPci", FFI_TYPE_VOID, 4, argtys, argvals)
 	o.o = unsafe.Pointer(t)
 	return o
 }
 
-func (app *QApplication) Exec5() {
+func (app *QApplication5) Exec5() {
 	argtys := make([]byte, 20)
 	argvals := make([]uint64, 20)
 
 	argtys[0] = FFI_TYPE_POINTER
 	argvals[0] = uint64(uintptr(app.o))
 
-	InvokeQtFunc6("_ZN12QApplication4execEv", FFI_TYPE_INT)
+	InvokeQtFunc6("_ZN12QApplication4execEv", FFI_TYPE_INT, app.o)
 	// retval, err := InvokeQtFunc5("_ZN12QApplication4execEv", FFI_TYPE_INT, argtys, argvals)
 	// log.Println(err, retval)
+}
+
+////
+type QString5 struct {
+	cptr unsafe.Pointer
+}
+
+func NewQString5() *QString5 {
+	o := &QString5{}
+
+	return o
 }
