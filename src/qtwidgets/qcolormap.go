@@ -1,406 +1,166 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qcolormap.h
+// #include <qcolormap.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qcolormap.h
-// dst-file: /src/widgets/qcolormap.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  const QColor QColormap::colorAt(uint pixel);
-extern void* C_ZNK9QColormap7colorAtEj(void* qthis, int32_t arg0); // 4
-  // proto:  const QVector<QColor> QColormap::colormap();
-extern void C_ZNK9QColormap8colormapEv(void* qthis); // 4
-  // proto:  void QColormap::QColormap(const QColormap & colormap);
-extern void* C_ZN9QColormapC2ERKS_(void* arg0); // 3
-  // proto: static QColormap QColormap::instance(int screen);
-extern void* C_ZN9QColormap8instanceEi(int32_t arg0); // 4
-  // proto:  int QColormap::depth();
-extern int32_t C_ZNK9QColormap5depthEv(void* qthis); // 4
-  // proto: static void QColormap::cleanup();
-extern void C_ZN9QColormap7cleanupEv(); // 4
-  // proto:  void QColormap::~QColormap();
-extern void C_ZN9QColormapD2Ev(void* qthis); // 4
-  // proto:  QColormap::Mode QColormap::mode();
-extern void C_ZNK9QColormap4modeEv(void* qthis); // 4
-  // proto: static void QColormap::initialize();
-extern void C_ZN9QColormap10initializeEv(); // 4
-  // proto:  uint QColormap::pixel(const QColor & color);
-extern int32_t C_ZNK9QColormap5pixelERK6QColor(void* qthis, void* arg0); // 4
-  // proto:  int QColormap::size();
-extern int32_t C_ZNK9QColormap4sizeEv(void* qthis); // 4
+// extern C begin: 20
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QColormap)=8
+//  ext block end
+
+//  body block begin
 type QColormap struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// colorAt(uint)
-func (this *QColormap) Colorat(args ...interface{}) (ret interface{}) {
-  // colorAt(uint)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "uint"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QColormap7colorAtEj
-    // invoke: const QColor colorAt(uint)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QColormap7colorAtEj(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QColor{}) // "const QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColormap", "colorAt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolormap.h:60
+// index:0
+// static
+// void initialize()
+func (this *QColormap) Initialize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QColormap10initializeEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColormap_Initialize() {
+	// 0: (), ()
+	var nilthis *QColormap
+	nilthis.Initialize()
 }
 
-// colormap()
-func (this *QColormap) Colormap(args ...interface{}) () {
-  // colormap()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QColormap8colormapEv
-    // invoke: const QVector<QColor> colormap()
-    C.C_ZNK9QColormap8colormapEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QColormap", "colormap", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolormap.h:61
+// index:0
+// static
+// void cleanup()
+func (this *QColormap) Cleanup() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QColormap7cleanupEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColormap_Cleanup() {
+	// 0: (), ()
+	var nilthis *QColormap
+	nilthis.Cleanup()
 }
 
-// QColormap(const class QColormap &)
-func NewQColormap(args ...interface{}) *QColormap {
-  // QColormap(const class QColormap &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QColormap{}) // "const QColormap &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QColormapC1ERKS_
-    // invoke: void QColormap(const class QColormap &)
-    var arg0 = args[0].(*QColormap).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QColormapC2ERKS_(arg0)
-    return &QColormap{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QColormap", "QColormap", args)
-  }
-
-  return nil // QColormap{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qcolormap.h:63
+// index:0
+// static
+// QColormap instance(int)
+func (this *QColormap) Instance(screen int) {
+	// 0: (int screen), (screen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QColormap8instanceEi", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColormap_Instance(screen int) {
+	// 0: (int screen), (screen)
+	var nilthis *QColormap
+	nilthis.Instance(screen)
 }
 
-// instance(int)
-func (this *QColormap) Instance_S(args ...interface{}) (ret interface{}) {
-  // instance(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QColormap8instanceEi
-    // invoke: QColormap instance(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QColormap8instanceEi(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColormap{}) // "QColormap"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColormap", "instance", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolormap.h:66
+// index:0
+// void ~QColormap()
+func DeleteQColormap(*QColormap) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QColormapD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// depth()
-func (this *QColormap) Depth(args ...interface{}) (ret interface{}) {
-  // depth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QColormap5depthEv
-    // invoke: int depth()
-    var ret0 = C.C_ZNK9QColormap5depthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColormap", "depth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolormap.h:70
+// index:0
+// QColormap::Mode mode()
+func (this *QColormap) Mode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap4modeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// cleanup()
-func (this *QColormap) Cleanup_S(args ...interface{}) () {
-  // cleanup()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QColormap7cleanupEv
-    // invoke: void cleanup()
-    C.C_ZN9QColormap7cleanupEv()
-  default:
-    qtrt.ErrorResolve("QColormap", "cleanup", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolormap.h:72
+// index:0
+// int depth()
+func (this *QColormap) Depth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap5depthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QColormap()
-func (this *QColormap) Freeqcolormap(args ...interface{}) () {
-  // ~QColormap()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QColormapD0Ev
-    // invoke: void ~QColormap()
-    C.C_ZN9QColormapD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QColormap", "~QColormap", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolormap.h:73
+// index:0
+// int size()
+func (this *QColormap) Size() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// mode()
-func (this *QColormap) Mode(args ...interface{}) () {
-  // mode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QColormap4modeEv
-    // invoke: QColormap::Mode mode()
-    C.C_ZNK9QColormap4modeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QColormap", "mode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolormap.h:75
+// index:0
+// uint pixel(const class QColor &)
+func (this *QColormap) Pixel(color unsafe.Pointer) {
+	// 0: (, const QColor & color), (color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap5pixelERK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, color)
+	gopp.ErrPrint(err, rv)
 }
 
-// initialize()
-func (this *QColormap) Initialize_S(args ...interface{}) () {
-  // initialize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QColormap10initializeEv
-    // invoke: void initialize()
-    C.C_ZN9QColormap10initializeEv()
-  default:
-    qtrt.ErrorResolve("QColormap", "initialize", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolormap.h:76
+// index:0
+// const QColor colorAt(uint)
+func (this *QColormap) ColorAt(pixel uint) {
+	// 0: (, uint pixel), (&pixel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap7colorAtEj", ffiqt.FFI_TYPE_VOID, this.cthis, &pixel)
+	gopp.ErrPrint(err, rv)
 }
 
-// pixel(const class QColor &)
-func (this *QColormap) Pixel(args ...interface{}) (ret interface{}) {
-  // pixel(const class QColor &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QColor{}) // "const QColor &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QColormap5pixelERK6QColor
-    // invoke: uint pixel(const class QColor &)
-    var arg0 = args[0].(*qtgui.QColor).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QColormap5pixelERK6QColor(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "uint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColormap", "pixel", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolormap.h:78
+// index:0
+// const QVector<QColor> colormap()
+func (this *QColormap) Colormap() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap8colormapEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// size()
-func (this *QColormap) Size(args ...interface{}) (ret interface{}) {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QColormap4sizeEv
-    // invoke: int size()
-    var ret0 = C.C_ZNK9QColormap4sizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColormap", "size", args)
-  }
-
-  return
-}
-
-// <= body block end
-
+//  body block end

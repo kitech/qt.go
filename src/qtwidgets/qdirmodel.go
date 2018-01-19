@@ -1,1236 +1,416 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qdirmodel.h
+// #include <qdirmodel.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qdirmodel.h
-// dst-file: /src/widgets/qdirmodel.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  int QDirModel::columnCount(const QModelIndex & parent);
-extern int32_t C_ZNK9QDirModel11columnCountERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  void QDirModel::setNameFilters(const QStringList & filters);
-extern void C_ZN9QDirModel14setNameFiltersERK11QStringList(void* qthis, void* arg0); // 4
-  // proto:  void QDirModel::setIconProvider(QFileIconProvider * provider);
-extern void C_ZN9QDirModel15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0); // 4
-  // proto:  void QDirModel::setLazyChildCount(bool enable);
-extern void C_ZN9QDirModel17setLazyChildCountEb(void* qthis, bool arg0); // 4
-  // proto:  bool QDirModel::isDir(const QModelIndex & index);
-extern bool C_ZNK9QDirModel5isDirERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  bool QDirModel::lazyChildCount();
-extern bool C_ZNK9QDirModel14lazyChildCountEv(void* qthis); // 4
-  // proto:  void QDirModel::refresh(const QModelIndex & parent);
-extern void C_ZN9QDirModel7refreshERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  bool QDirModel::resolveSymlinks();
-extern bool C_ZNK9QDirModel15resolveSymlinksEv(void* qthis); // 4
-  // proto:  QModelIndex QDirModel::index(int row, int column, const QModelIndex & parent);
-extern void* C_ZNK9QDirModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
-  // proto:  QModelIndex QDirModel::index(const QString & path, int column);
-extern void* C_ZNK9QDirModel5indexERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 4
-  // proto:  bool QDirModel::hasChildren(const QModelIndex & index);
-extern bool C_ZNK9QDirModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  bool QDirModel::isReadOnly();
-extern bool C_ZNK9QDirModel10isReadOnlyEv(void* qthis); // 4
-  // proto:  QString QDirModel::filePath(const QModelIndex & index);
-extern void* C_ZNK9QDirModel8filePathERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QModelIndex QDirModel::mkdir(const QModelIndex & parent, const QString & name);
-extern void* C_ZN9QDirModel5mkdirERK11QModelIndexRK7QString(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  bool QDirModel::rmdir(const QModelIndex & index);
-extern bool C_ZN9QDirModel5rmdirERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  void QDirModel::setResolveSymlinks(bool enable);
-extern void C_ZN9QDirModel18setResolveSymlinksEb(void* qthis, bool arg0); // 4
-  // proto:  QFileInfo QDirModel::fileInfo(const QModelIndex & index);
-extern void* C_ZNK9QDirModel8fileInfoERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  bool QDirModel::setData(const QModelIndex & index, const QVariant & value, int role);
-extern bool C_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
-  // proto:  QModelIndex QDirModel::parent(const QModelIndex & child);
-extern void* C_ZNK9QDirModel6parentERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QString QDirModel::fileName(const QModelIndex & index);
-extern void* C_ZNK9QDirModel8fileNameERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  int QDirModel::rowCount(const QModelIndex & parent);
-extern int32_t C_ZNK9QDirModel8rowCountERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  void QDirModel::~QDirModel();
-extern void C_ZN9QDirModelD2Ev(void* qthis); // 4
-  // proto:  const QMetaObject * QDirModel::metaObject();
-extern void C_ZNK9QDirModel10metaObjectEv(void* qthis); // 4
-  // proto:  QVariant QDirModel::data(const QModelIndex & index, int role);
-extern void* C_ZNK9QDirModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1); // 4
-  // proto:  QStringList QDirModel::mimeTypes();
-extern void C_ZNK9QDirModel9mimeTypesEv(void* qthis); // 4
-  // proto:  QDir::SortFlags QDirModel::sorting();
-extern void C_ZNK9QDirModel7sortingEv(void* qthis); // 4
-  // proto:  QFileIconProvider * QDirModel::iconProvider();
-extern void* C_ZNK9QDirModel12iconProviderEv(void* qthis); // 4
-  // proto:  QStringList QDirModel::nameFilters();
-extern void C_ZNK9QDirModel11nameFiltersEv(void* qthis); // 4
-  // proto:  void QDirModel::QDirModel(QObject * parent);
-extern void* C_ZN9QDirModelC2EP7QObject(void* arg0); // 3
-  // proto:  bool QDirModel::remove(const QModelIndex & index);
-extern bool C_ZN9QDirModel6removeERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QDir::Filters QDirModel::filter();
-extern void C_ZNK9QDirModel6filterEv(void* qthis); // 4
-  // proto:  void QDirModel::setReadOnly(bool enable);
-extern void C_ZN9QDirModel11setReadOnlyEb(void* qthis, bool arg0); // 4
-  // proto:  Qt::ItemFlags QDirModel::flags(const QModelIndex & index);
-extern void C_ZNK9QDirModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QIcon QDirModel::fileIcon(const QModelIndex & index);
-extern void* C_ZNK9QDirModel8fileIconERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  Qt::DropActions QDirModel::supportedDropActions();
-extern void C_ZNK9QDirModel20supportedDropActionsEv(void* qthis); // 4
+// extern C begin: 6
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QDirModel)=1
+//  ext block end
+
+//  body block begin
 type QDirModel struct {
-  /*qbase*/ qtcore.QAbstractItemModel;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// columnCount(const class QModelIndex &)
-func (this *QDirModel) Columncount(args ...interface{}) (ret interface{}) {
-  // columnCount(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel11columnCountERK11QModelIndex
-    // invoke: int columnCount(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel11columnCountERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "columnCount", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:56
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QDirModel) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setNameFilters(const class QStringList &)
-func (this *QDirModel) Setnamefilters(args ...interface{}) () {
-  // setNameFilters(const class QStringList &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel14setNameFiltersERK11QStringList
-    // invoke: void setNameFilters(const class QStringList &)
-    var arg0 = args[0].(*qtcore.QStringList).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel14setNameFiltersERK11QStringList(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "setNameFilters", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:70
+// index:0
+// void QDirModel(class QObject *)
+func NewQDirModel(parent unsafe.Pointer) *QDirModel {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModelC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QDirModel{cthis}
 }
 
-// setIconProvider(class QFileIconProvider *)
-func (this *QDirModel) Seticonprovider(args ...interface{}) () {
-  // setIconProvider(class QFileIconProvider *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QFileIconProvider{}) // "QFileIconProvider *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel15setIconProviderEP17QFileIconProvider
-    // invoke: void setIconProvider(class QFileIconProvider *)
-    var arg0 = args[0].(*QFileIconProvider).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel15setIconProviderEP17QFileIconProvider(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "setIconProvider", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:71
+// index:0
+// virtual
+// void ~QDirModel()
+func DeleteQDirModel(*QDirModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModelD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// setLazyChildCount(_Bool)
-func (this *QDirModel) Setlazychildcount(args ...interface{}) () {
-  // setLazyChildCount(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel17setLazyChildCountEb
-    // invoke: void setLazyChildCount(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel17setLazyChildCountEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "setLazyChildCount", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:73
+// index:0
+// virtual
+// QModelIndex index(int, int, const class QModelIndex &)
+func (this *QDirModel) Index(row int, column int, parent unsafe.Pointer) {
+	// 0: (, int row, int column, const QModelIndex & parent), (&row, &column, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// isDir(const class QModelIndex &)
-func (this *QDirModel) Isdir(args ...interface{}) (ret interface{}) {
-  // isDir(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel5isDirERK11QModelIndex
-    // invoke: bool isDir(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel5isDirERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "isDir", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:118
+// index:1
+// QModelIndex index(const class QString &, int)
+func (this *QDirModel) Index_1(path unsafe.Pointer, column int) {
+	// 1: (, const QString & path, int column), (path, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5indexERK7QStringi", ffiqt.FFI_TYPE_VOID, this.cthis, path, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// lazyChildCount()
-func (this *QDirModel) Lazychildcount(args ...interface{}) (ret interface{}) {
-  // lazyChildCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel14lazyChildCountEv
-    // invoke: bool lazyChildCount()
-    var ret0 = C.C_ZNK9QDirModel14lazyChildCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "lazyChildCount", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:74
+// index:0
+// virtual
+// QModelIndex parent(const class QModelIndex &)
+func (this *QDirModel) Parent(child unsafe.Pointer) {
+	// 0: (, const QModelIndex & child), (child)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel6parentERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, child)
+	gopp.ErrPrint(err, rv)
 }
 
-// refresh(const class QModelIndex &)
-func (this *QDirModel) Refresh(args ...interface{}) () {
-  // refresh(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel7refreshERK11QModelIndex
-    // invoke: void refresh(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel7refreshERK11QModelIndex(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "refresh", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:76
+// index:0
+// virtual
+// int rowCount(const class QModelIndex &)
+func (this *QDirModel) RowCount(parent unsafe.Pointer) {
+	// 0: (, const QModelIndex & parent), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// resolveSymlinks()
-func (this *QDirModel) Resolvesymlinks(args ...interface{}) (ret interface{}) {
-  // resolveSymlinks()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel15resolveSymlinksEv
-    // invoke: bool resolveSymlinks()
-    var ret0 = C.C_ZNK9QDirModel15resolveSymlinksEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "resolveSymlinks", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:77
+// index:0
+// virtual
+// int columnCount(const class QModelIndex &)
+func (this *QDirModel) ColumnCount(parent unsafe.Pointer) {
+	// 0: (, const QModelIndex & parent), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel11columnCountERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// index(int, int, const class QModelIndex &)
-func (this *QDirModel) Index(args ...interface{}) (ret interface{}) {
-  // index(int, int, const class QModelIndex &)
-  // index(const class QString &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel5indexEiiRK11QModelIndex
-    // invoke: QModelIndex index(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK9QDirModel5indexEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK9QDirModel5indexERK7QStringi
-    // invoke: QModelIndex index(const class QString &, int)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK9QDirModel5indexERK7QStringi(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "index", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:79
+// index:0
+// virtual
+// QVariant data(const class QModelIndex &, int)
+func (this *QDirModel) Data(index unsafe.Pointer, role int) {
+	// 0: (, const QModelIndex & index, int role), (index, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_VOID, this.cthis, index, &role)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasChildren(const class QModelIndex &)
-func (this *QDirModel) Haschildren(args ...interface{}) (ret interface{}) {
-  // hasChildren(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel11hasChildrenERK11QModelIndex
-    // invoke: bool hasChildren(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel11hasChildrenERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "hasChildren", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:80
+// index:0
+// virtual
+// bool setData(const class QModelIndex &, const class QVariant &, int)
+func (this *QDirModel) SetData(index unsafe.Pointer, value unsafe.Pointer, role int) {
+	// 0: (, const QModelIndex & index, const QVariant & value, int role), (index, value, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti", ffiqt.FFI_TYPE_VOID, this.cthis, index, value, &role)
+	gopp.ErrPrint(err, rv)
 }
 
-// isReadOnly()
-func (this *QDirModel) Isreadonly(args ...interface{}) (ret interface{}) {
-  // isReadOnly()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel10isReadOnlyEv
-    // invoke: bool isReadOnly()
-    var ret0 = C.C_ZNK9QDirModel10isReadOnlyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "isReadOnly", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:82
+// index:0
+// virtual
+// QVariant headerData(int, Qt::Orientation, int)
+func (this *QDirModel) HeaderData(section int, orientation int, role int) {
+	// 0: (, int section, Qt::Orientation orientation, int role), (&section, &orientation, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel10headerDataEiN2Qt11OrientationEi", ffiqt.FFI_TYPE_VOID, this.cthis, &section, &orientation, &role)
+	gopp.ErrPrint(err, rv)
 }
 
-// filePath(const class QModelIndex &)
-func (this *QDirModel) Filepath(args ...interface{}) (ret interface{}) {
-  // filePath(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel8filePathERK11QModelIndex
-    // invoke: QString filePath(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel8filePathERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "filePath", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:84
+// index:0
+// virtual
+// bool hasChildren(const class QModelIndex &)
+func (this *QDirModel) HasChildren(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel11hasChildrenERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// mkdir(const class QModelIndex &, const class QString &)
-func (this *QDirModel) Mkdir(args ...interface{}) (ret interface{}) {
-  // mkdir(const class QModelIndex &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel5mkdirERK11QModelIndexRK7QString
-    // invoke: QModelIndex mkdir(const class QModelIndex &, const class QString &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN9QDirModel5mkdirERK11QModelIndexRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "mkdir", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:85
+// index:0
+// virtual
+// Qt::ItemFlags flags(const class QModelIndex &)
+func (this *QDirModel) Flags(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// rmdir(const class QModelIndex &)
-func (this *QDirModel) Rmdir(args ...interface{}) (ret interface{}) {
-  // rmdir(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel5rmdirERK11QModelIndex
-    // invoke: bool rmdir(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QDirModel5rmdirERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "rmdir", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:87
+// index:0
+// virtual
+// void sort(int, Qt::SortOrder)
+func (this *QDirModel) Sort(column int, order int) {
+	// 0: (, int column, Qt::SortOrder order), (&column, &order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel4sortEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_VOID, this.cthis, &column, &order)
+	gopp.ErrPrint(err, rv)
 }
 
-// setResolveSymlinks(_Bool)
-func (this *QDirModel) Setresolvesymlinks(args ...interface{}) () {
-  // setResolveSymlinks(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel18setResolveSymlinksEb
-    // invoke: void setResolveSymlinks(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel18setResolveSymlinksEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "setResolveSymlinks", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:89
+// index:0
+// virtual
+// QStringList mimeTypes()
+func (this *QDirModel) MimeTypes() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel9mimeTypesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// fileInfo(const class QModelIndex &)
-func (this *QDirModel) Fileinfo(args ...interface{}) (ret interface{}) {
-  // fileInfo(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel8fileInfoERK11QModelIndex
-    // invoke: QFileInfo fileInfo(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel8fileInfoERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QFileInfo{}) // "QFileInfo"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "fileInfo", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:91
+// index:0
+// virtual
+// bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
+func (this *QDirModel) DropMimeData(data unsafe.Pointer, action int, row int, column int, parent unsafe.Pointer) {
+	// 0: (, const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent), (data, &action, &row, &column, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, data, &action, &row, &column, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// setData(const class QModelIndex &, const class QVariant &, int)
-func (this *QDirModel) Setdata(args ...interface{}) (ret interface{}) {
-  // setData(const class QModelIndex &, const class QVariant &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QVariant{}) // "const QVariant &"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti
-    // invoke: bool setData(const class QModelIndex &, const class QVariant &, int)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QVariant).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "setData", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:93
+// index:0
+// virtual
+// Qt::DropActions supportedDropActions()
+func (this *QDirModel) SupportedDropActions() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel20supportedDropActionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// parent(const class QModelIndex &)
-func (this *QDirModel) Parent(args ...interface{}) (ret interface{}) {
-  // parent(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel6parentERK11QModelIndex
-    // invoke: QModelIndex parent(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel6parentERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "parent", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:97
+// index:0
+// void setIconProvider(class QFileIconProvider *)
+func (this *QDirModel) SetIconProvider(provider unsafe.Pointer) {
+	// 0: (, QFileIconProvider * provider), (provider)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel15setIconProviderEP17QFileIconProvider", ffiqt.FFI_TYPE_VOID, this.cthis, provider)
+	gopp.ErrPrint(err, rv)
 }
 
-// fileName(const class QModelIndex &)
-func (this *QDirModel) Filename(args ...interface{}) (ret interface{}) {
-  // fileName(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel8fileNameERK11QModelIndex
-    // invoke: QString fileName(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel8fileNameERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "fileName", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:98
+// index:0
+// QFileIconProvider * iconProvider()
+func (this *QDirModel) IconProvider() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel12iconProviderEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// rowCount(const class QModelIndex &)
-func (this *QDirModel) Rowcount(args ...interface{}) (ret interface{}) {
-  // rowCount(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel8rowCountERK11QModelIndex
-    // invoke: int rowCount(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel8rowCountERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "rowCount", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:100
+// index:0
+// void setNameFilters(const class QStringList &)
+func (this *QDirModel) SetNameFilters(filters unsafe.Pointer) {
+	// 0: (, const QStringList & filters), (filters)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel14setNameFiltersERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, filters)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QDirModel()
-func (this *QDirModel) Freeqdirmodel(args ...interface{}) () {
-  // ~QDirModel()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModelD0Ev
-    // invoke: void ~QDirModel()
-    C.C_ZN9QDirModelD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "~QDirModel", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:101
+// index:0
+// QStringList nameFilters()
+func (this *QDirModel) NameFilters() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel11nameFiltersEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QDirModel) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QDirModel10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:104
+// index:0
+// QDir::Filters filter()
+func (this *QDirModel) Filter() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel6filterEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// data(const class QModelIndex &, int)
-func (this *QDirModel) Data(args ...interface{}) (ret interface{}) {
-  // data(const class QModelIndex &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel4dataERK11QModelIndexi
-    // invoke: QVariant data(const class QModelIndex &, int)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK9QDirModel4dataERK11QModelIndexi(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QVariant{}) // "QVariant"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "data", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:107
+// index:0
+// QDir::SortFlags sorting()
+func (this *QDirModel) Sorting() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel7sortingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// mimeTypes()
-func (this *QDirModel) Mimetypes(args ...interface{}) () {
-  // mimeTypes()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel9mimeTypesEv
-    // invoke: QStringList mimeTypes()
-    C.C_ZNK9QDirModel9mimeTypesEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "mimeTypes", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:109
+// index:0
+// void setResolveSymlinks(_Bool)
+func (this *QDirModel) SetResolveSymlinks(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel18setResolveSymlinksEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// sorting()
-func (this *QDirModel) Sorting(args ...interface{}) () {
-  // sorting()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel7sortingEv
-    // invoke: QDir::SortFlags sorting()
-    C.C_ZNK9QDirModel7sortingEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "sorting", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:110
+// index:0
+// bool resolveSymlinks()
+func (this *QDirModel) ResolveSymlinks() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel15resolveSymlinksEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// iconProvider()
-func (this *QDirModel) Iconprovider(args ...interface{}) (ret interface{}) {
-  // iconProvider()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel12iconProviderEv
-    // invoke: QFileIconProvider * iconProvider()
-    var ret0 = C.C_ZNK9QDirModel12iconProviderEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QFileIconProvider{}) // "QFileIconProvider *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "iconProvider", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:112
+// index:0
+// void setReadOnly(_Bool)
+func (this *QDirModel) SetReadOnly(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel11setReadOnlyEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// nameFilters()
-func (this *QDirModel) Namefilters(args ...interface{}) () {
-  // nameFilters()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel11nameFiltersEv
-    // invoke: QStringList nameFilters()
-    C.C_ZNK9QDirModel11nameFiltersEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "nameFilters", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:113
+// index:0
+// bool isReadOnly()
+func (this *QDirModel) IsReadOnly() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel10isReadOnlyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QDirModel(class QObject *)
-func NewQDirModel(args ...interface{}) *QDirModel {
-  // QDirModel(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModelC1EP7QObject
-    // invoke: void QDirModel(class QObject *)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QDirModelC2EP7QObject(arg0)
-    return &QDirModel{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QDirModel", "QDirModel", args)
-  }
-
-  return nil // QDirModel{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qdirmodel.h:115
+// index:0
+// void setLazyChildCount(_Bool)
+func (this *QDirModel) SetLazyChildCount(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel17setLazyChildCountEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// remove(const class QModelIndex &)
-func (this *QDirModel) Remove(args ...interface{}) (ret interface{}) {
-  // remove(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel6removeERK11QModelIndex
-    // invoke: bool remove(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QDirModel6removeERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "remove", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:116
+// index:0
+// bool lazyChildCount()
+func (this *QDirModel) LazyChildCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel14lazyChildCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// filter()
-func (this *QDirModel) Filter(args ...interface{}) () {
-  // filter()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel6filterEv
-    // invoke: QDir::Filters filter()
-    C.C_ZNK9QDirModel6filterEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "filter", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:120
+// index:0
+// bool isDir(const class QModelIndex &)
+func (this *QDirModel) IsDir(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5isDirERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// setReadOnly(_Bool)
-func (this *QDirModel) Setreadonly(args ...interface{}) () {
-  // setReadOnly(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel11setReadOnlyEb
-    // invoke: void setReadOnly(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel11setReadOnlyEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "setReadOnly", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:121
+// index:0
+// QModelIndex mkdir(const class QModelIndex &, const class QString &)
+func (this *QDirModel) Mkdir(parent unsafe.Pointer, name unsafe.Pointer) {
+	// 0: (, const QModelIndex & parent, const QString & name), (parent, name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel5mkdirERK11QModelIndexRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, parent, name)
+	gopp.ErrPrint(err, rv)
 }
 
-// flags(const class QModelIndex &)
-func (this *QDirModel) Flags(args ...interface{}) () {
-  // flags(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel5flagsERK11QModelIndex
-    // invoke: Qt::ItemFlags flags(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK9QDirModel5flagsERK11QModelIndex(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "flags", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:122
+// index:0
+// bool rmdir(const class QModelIndex &)
+func (this *QDirModel) Rmdir(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel5rmdirERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// fileIcon(const class QModelIndex &)
-func (this *QDirModel) Fileicon(args ...interface{}) (ret interface{}) {
-  // fileIcon(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel8fileIconERK11QModelIndex
-    // invoke: QIcon fileIcon(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel8fileIconERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QIcon{}) // "QIcon"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDirModel", "fileIcon", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:123
+// index:0
+// bool remove(const class QModelIndex &)
+func (this *QDirModel) Remove(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel6removeERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// supportedDropActions()
-func (this *QDirModel) Supporteddropactions(args ...interface{}) () {
-  // supportedDropActions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel20supportedDropActionsEv
-    // invoke: Qt::DropActions supportedDropActions()
-    C.C_ZNK9QDirModel20supportedDropActionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "supportedDropActions", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdirmodel.h:125
+// index:0
+// QString filePath(const class QModelIndex &)
+func (this *QDirModel) FilePath(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8filePathERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qdirmodel.h:126
+// index:0
+// QString fileName(const class QModelIndex &)
+func (this *QDirModel) FileName(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileNameERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qdirmodel.h:127
+// index:0
+// QIcon fileIcon(const class QModelIndex &)
+func (this *QDirModel) FileIcon(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileIconERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdirmodel.h:128
+// index:0
+// QFileInfo fileInfo(const class QModelIndex &)
+func (this *QDirModel) FileInfo(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileInfoERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdirmodel.h:133
+// index:0
+// void refresh(const class QModelIndex &)
+func (this *QDirModel) Refresh(parent unsafe.Pointer) {
+	// 0: (, const QModelIndex & parent), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel7refreshERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

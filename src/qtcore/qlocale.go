@@ -1,2022 +1,1068 @@
+//  header block begin
+// /usr/include/qt/QtCore/qlocale.h
+// #include <qlocale.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qlocale.h
-// dst-file: /src/core/qlocale.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QLocale::~QLocale();
-extern void C_ZN7QLocaleD2Ev(void* qthis); // 4
-  // proto:  ushort QLocale::toUShort(const QString & s, bool * ok);
-extern int16_t C_ZNK7QLocale8toUShortERK7QStringPb(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QTime QLocale::toTime(const QString & string, const QString & format);
-extern void* C_ZNK7QLocale6toTimeERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QStringList QLocale::uiLanguages();
-extern void C_ZNK7QLocale11uiLanguagesEv(void* qthis); // 4
-  // proto:  uint QLocale::toUInt(const QString & s, bool * ok);
-extern int32_t C_ZNK7QLocale6toUIntERK7QStringPb(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  float QLocale::toFloat(const QString & s, bool * ok);
-extern float C_ZNK7QLocale7toFloatERK7QStringPb(void* qthis, void* arg0, void* arg1); // 4
-  // proto: static QLocale QLocale::system();
-extern void* C_ZN7QLocale6systemEv(); // 4
-  // proto:  short QLocale::toShort(const QString & s, bool * ok);
-extern int16_t C_ZNK7QLocale7toShortERK7QStringPb(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QString QLocale::amText();
-extern void* C_ZNK7QLocale6amTextEv(void* qthis); // 4
-  // proto: static void QLocale::setDefault(const QLocale & locale);
-extern void C_ZN7QLocale10setDefaultERKS_(void* arg0); // 4
-  // proto:  QDate QLocale::toDate(const QString & string, const QString & format);
-extern void* C_ZNK7QLocale6toDateERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QString QLocale::toLower(const QString & str);
-extern void* C_ZNK7QLocale7toLowerERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QString QLocale::pmText();
-extern void* C_ZNK7QLocale6pmTextEv(void* qthis); // 4
-  // proto:  Qt::DayOfWeek QLocale::firstDayOfWeek();
-extern void C_ZNK7QLocale14firstDayOfWeekEv(void* qthis); // 4
-  // proto:  QChar QLocale::percent();
-extern void* C_ZNK7QLocale7percentEv(void* qthis); // 4
-  // proto:  QList<Qt::DayOfWeek> QLocale::weekdays();
-extern void C_ZNK7QLocale8weekdaysEv(void* qthis); // 4
-  // proto:  qlonglong QLocale::toLongLong(const QString & s, bool * ok);
-extern int64_t C_ZNK7QLocale10toLongLongERK7QStringPb(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QChar QLocale::negativeSign();
-extern void* C_ZNK7QLocale12negativeSignEv(void* qthis); // 4
-  // proto:  QString QLocale::toString(int i);
-extern void* C_ZNK7QLocale8toStringEi(void* qthis, int32_t arg0); // 2
-  // proto:  QString QLocale::toString(uint i);
-extern void* C_ZNK7QLocale8toStringEj(void* qthis, int32_t arg0); // 2
-  // proto:  QString QLocale::toString(const QTime & time, const QString & formatStr);
-extern void* C_ZNK7QLocale8toStringERK5QTimeRK7QString(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QString QLocale::toString(double i, char f, int prec);
-extern void* C_ZNK7QLocale8toStringEdci(void* qthis, double arg0, unsigned char arg1, int32_t arg2); // 4
-  // proto:  QString QLocale::toString(float i, char f, int prec);
-extern void* C_ZNK7QLocale8toStringEfci(void* qthis, float arg0, unsigned char arg1, int32_t arg2); // 2
-  // proto:  QString QLocale::toString(ushort i);
-extern void* C_ZNK7QLocale8toStringEt(void* qthis, int16_t arg0); // 2
-  // proto:  QString QLocale::toString(const QDateTime & dateTime, const QString & format);
-extern void* C_ZNK7QLocale8toStringERK9QDateTimeRK7QString(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QString QLocale::toString(qlonglong i);
-extern void* C_ZNK7QLocale8toStringEx(void* qthis, int64_t arg0); // 4
-  // proto:  QString QLocale::toString(qulonglong i);
-extern void* C_ZNK7QLocale8toStringEy(void* qthis, int64_t arg0); // 4
-  // proto:  QString QLocale::toString(const QDate & date, const QString & formatStr);
-extern void* C_ZNK7QLocale8toStringERK5QDateRK7QString(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QString QLocale::toString(short i);
-extern void* C_ZNK7QLocale8toStringEs(void* qthis, int16_t arg0); // 2
-  // proto:  void QLocale::swap(QLocale & other);
-extern void C_ZN7QLocale4swapERS_(void* qthis, void* arg0); // 2
-  // proto:  QString QLocale::createSeparatedList(const QStringList & strl);
-extern void* C_ZNK7QLocale19createSeparatedListERK11QStringList(void* qthis, void* arg0); // 4
-  // proto:  QString QLocale::nativeLanguageName();
-extern void* C_ZNK7QLocale18nativeLanguageNameEv(void* qthis); // 4
-  // proto:  QChar QLocale::groupSeparator();
-extern void* C_ZNK7QLocale14groupSeparatorEv(void* qthis); // 4
-  // proto:  void QLocale::QLocale(const QLocale & other);
-extern void* C_ZN7QLocaleC2ERKS_(void* arg0); // 3
-  // proto:  void QLocale::QLocale(const QString & name);
-extern void* C_ZN7QLocaleC2ERK7QString(void* arg0); // 3
-  // proto:  void QLocale::QLocale();
-extern void* C_ZN7QLocaleC2Ev(); // 3
-  // proto:  QChar QLocale::positiveSign();
-extern void* C_ZNK7QLocale12positiveSignEv(void* qthis); // 4
-  // proto:  QString QLocale::toCurrencyString(double , const QString & symbol);
-extern void* C_ZNK7QLocale16toCurrencyStringEdRK7QString(void* qthis, double arg0, void* arg1); // 4
-  // proto:  QString QLocale::toCurrencyString(uint , const QString & symbol);
-extern void* C_ZNK7QLocale16toCurrencyStringEjRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
-  // proto:  QString QLocale::toCurrencyString(short , const QString & symbol);
-extern void* C_ZNK7QLocale16toCurrencyStringEsRK7QString(void* qthis, int16_t arg0, void* arg1); // 2
-  // proto:  QString QLocale::toCurrencyString(qulonglong , const QString & symbol);
-extern void* C_ZNK7QLocale16toCurrencyStringEyRK7QString(void* qthis, int64_t arg0, void* arg1); // 4
-  // proto:  QString QLocale::toCurrencyString(float i, const QString & symbol);
-extern void* C_ZNK7QLocale16toCurrencyStringEfRK7QString(void* qthis, float arg0, void* arg1); // 2
-  // proto:  QString QLocale::toCurrencyString(ushort , const QString & symbol);
-extern void* C_ZNK7QLocale16toCurrencyStringEtRK7QString(void* qthis, int16_t arg0, void* arg1); // 2
-  // proto:  QString QLocale::toCurrencyString(qlonglong , const QString & symbol);
-extern void* C_ZNK7QLocale16toCurrencyStringExRK7QString(void* qthis, int64_t arg0, void* arg1); // 4
-  // proto:  QString QLocale::toCurrencyString(double , const QString & symbol, int precision);
-extern void* C_ZNK7QLocale16toCurrencyStringEdRK7QStringi(void* qthis, double arg0, void* arg1, int32_t arg2); // 4
-  // proto:  QString QLocale::toCurrencyString(int , const QString & symbol);
-extern void* C_ZNK7QLocale16toCurrencyStringEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
-  // proto:  QString QLocale::toCurrencyString(float i, const QString & symbol, int precision);
-extern void* C_ZNK7QLocale16toCurrencyStringEfRK7QStringi(void* qthis, float arg0, void* arg1, int32_t arg2); // 2
-  // proto:  QString QLocale::nativeCountryName();
-extern void* C_ZNK7QLocale17nativeCountryNameEv(void* qthis); // 4
-  // proto:  QLocale::Language QLocale::language();
-extern void C_ZNK7QLocale8languageEv(void* qthis); // 4
-  // proto:  QString QLocale::bcp47Name();
-extern void* C_ZNK7QLocale9bcp47NameEv(void* qthis); // 4
-  // proto:  NumberOptions QLocale::numberOptions();
-extern void C_ZNK7QLocale13numberOptionsEv(void* qthis); // 4
-  // proto:  qulonglong QLocale::toULongLong(const QString & s, bool * ok);
-extern int64_t C_ZNK7QLocale11toULongLongERK7QStringPb(void* qthis, void* arg0, void* arg1); // 4
-  // proto: static QLocale QLocale::c();
-extern void* C_ZN7QLocale1cEv(); // 2
-  // proto:  QString QLocale::name();
-extern void* C_ZNK7QLocale4nameEv(void* qthis); // 4
-  // proto:  QChar QLocale::exponential();
-extern void* C_ZNK7QLocale11exponentialEv(void* qthis); // 4
-  // proto:  QLocale::Country QLocale::country();
-extern void C_ZNK7QLocale7countryEv(void* qthis); // 4
-  // proto:  int QLocale::toInt(const QString & s, bool * ok);
-extern int32_t C_ZNK7QLocale5toIntERK7QStringPb(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  Qt::LayoutDirection QLocale::textDirection();
-extern void C_ZNK7QLocale13textDirectionEv(void* qthis); // 4
-  // proto:  QLocale::Script QLocale::script();
-extern void C_ZNK7QLocale6scriptEv(void* qthis); // 4
-  // proto:  double QLocale::toDouble(const QString & s, bool * ok);
-extern double C_ZNK7QLocale8toDoubleERK7QStringPb(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QDateTime QLocale::toDateTime(const QString & string, const QString & format);
-extern void* C_ZNK7QLocale10toDateTimeERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QChar QLocale::decimalPoint();
-extern void* C_ZNK7QLocale12decimalPointEv(void* qthis); // 4
-  // proto:  QString QLocale::toUpper(const QString & str);
-extern void* C_ZNK7QLocale7toUpperERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QChar QLocale::zeroDigit();
-extern void* C_ZNK7QLocale9zeroDigitEv(void* qthis); // 4
-  // proto:  QLocale::MeasurementSystem QLocale::measurementSystem();
-extern void C_ZNK7QLocale17measurementSystemEv(void* qthis); // 4
+// extern C begin: 1
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QLocale)=1
+//  ext block end
+
+//  body block begin
 type QLocale struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// ~QLocale()
-func (this *QLocale) Freeqlocale(args ...interface{}) () {
-  // ~QLocale()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QLocaleD0Ev
-    // invoke: void ~QLocale()
-    C.C_ZN7QLocaleD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLocale", "~QLocale", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:929
+// index:0
+// void QLocale()
+func NewQLocale() *QLocale {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QLocale{cthis}
 }
 
-// toUShort(const class QString &, _Bool *)
-func (this *QLocale) Toushort(args ...interface{}) (ret interface{}) {
-  // toUShort(const class QString &, _Bool *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = qtrt.BoolTy(true) // "bool *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale8toUShortERK7QStringPb
-    // invoke: ushort toUShort(const class QString &, _Bool *)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*bool))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale8toUShortERK7QStringPb(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int16Ty(false) // "ushort"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toUShort", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:930
+// index:1
+// void QLocale(const class QString &)
+func NewQLocale_1(name unsafe.Pointer) *QLocale {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, name)
+	gopp.ErrPrint(err, rv)
+	return &QLocale{cthis}
 }
 
-// toTime(const class QString &, const class QString &)
-func (this *QLocale) Totime(args ...interface{}) (ret interface{}) {
-  // toTime(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale6toTimeERK7QStringS2_
-    // invoke: QTime toTime(const class QString &, const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale6toTimeERK7QStringS2_(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTime{}) // "QTime"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toTime", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:931
+// index:2
+// void QLocale(enum QLocale::Language, enum QLocale::Country)
+func NewQLocale_2(language int, country int) *QLocale {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_7CountryE", ffiqt.FFI_TYPE_VOID, cthis, &language, &country)
+	gopp.ErrPrint(err, rv)
+	return &QLocale{cthis}
 }
 
-// uiLanguages()
-func (this *QLocale) Uilanguages(args ...interface{}) () {
-  // uiLanguages()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale11uiLanguagesEv
-    // invoke: QStringList uiLanguages()
-    C.C_ZNK7QLocale11uiLanguagesEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLocale", "uiLanguages", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:932
+// index:3
+// void QLocale(enum QLocale::Language, enum QLocale::Script, enum QLocale::Country)
+func NewQLocale_3(language int, script int, country int) *QLocale {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_6ScriptENS_7CountryE", ffiqt.FFI_TYPE_VOID, cthis, &language, &script, &country)
+	gopp.ErrPrint(err, rv)
+	return &QLocale{cthis}
 }
 
-// toUInt(const class QString &, _Bool *)
-func (this *QLocale) Touint(args ...interface{}) (ret interface{}) {
-  // toUInt(const class QString &, _Bool *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = qtrt.BoolTy(true) // "bool *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale6toUIntERK7QStringPb
-    // invoke: uint toUInt(const class QString &, _Bool *)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*bool))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale6toUIntERK7QStringPb(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "uint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toUInt", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:938
+// index:0
+// void ~QLocale()
+func DeleteQLocale(*QLocale) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// toFloat(const class QString &, _Bool *)
-func (this *QLocale) Tofloat(args ...interface{}) (ret interface{}) {
-  // toFloat(const class QString &, _Bool *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = qtrt.BoolTy(true) // "bool *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale7toFloatERK7QStringPb
-    // invoke: float toFloat(const class QString &, _Bool *)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*bool))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale7toFloatERK7QStringPb(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.FloatTy(false) // "float"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toFloat", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:940
+// index:0
+// inline
+// void swap(class QLocale &)
+func (this *QLocale) Swap(other unsafe.Pointer) {
+	// 0: (, QLocale & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// system()
-func (this *QLocale) System_S(args ...interface{}) (ret interface{}) {
-  // system()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QLocale6systemEv
-    // invoke: QLocale system()
-    var ret0 = C.C_ZN7QLocale6systemEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QLocale{}) // "QLocale"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "system", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:942
+// index:0
+// QLocale::Language language()
+func (this *QLocale) Language() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8languageEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toShort(const class QString &, _Bool *)
-func (this *QLocale) Toshort(args ...interface{}) (ret interface{}) {
-  // toShort(const class QString &, _Bool *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = qtrt.BoolTy(true) // "bool *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale7toShortERK7QStringPb
-    // invoke: short toShort(const class QString &, _Bool *)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*bool))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale7toShortERK7QStringPb(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int16Ty(false) // "short"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toShort", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:943
+// index:0
+// QLocale::Script script()
+func (this *QLocale) Script() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6scriptEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// amText()
-func (this *QLocale) Amtext(args ...interface{}) (ret interface{}) {
-  // amText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale6amTextEv
-    // invoke: QString amText()
-    var ret0 = C.C_ZNK7QLocale6amTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "amText", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:944
+// index:0
+// QLocale::Country country()
+func (this *QLocale) Country() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7countryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDefault(const class QLocale &)
-func (this *QLocale) Setdefault_S(args ...interface{}) () {
-  // setDefault(const class QLocale &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QLocale{}) // "const QLocale &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QLocale10setDefaultERKS_
-    // invoke: void setDefault(const class QLocale &)
-    var arg0 = args[0].(*QLocale).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QLocale10setDefaultERKS_(arg0)
-  default:
-    qtrt.ErrorResolve("QLocale", "setDefault", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:945
+// index:0
+// QString name()
+func (this *QLocale) Name() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toDate(const class QString &, const class QString &)
-func (this *QLocale) Todate(args ...interface{}) (ret interface{}) {
-  // toDate(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale6toDateERK7QStringS2_
-    // invoke: QDate toDate(const class QString &, const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale6toDateERK7QStringS2_(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QDate{}) // "QDate"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toDate", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:947
+// index:0
+// QString bcp47Name()
+func (this *QLocale) Bcp47Name() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale9bcp47NameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toLower(const class QString &)
-func (this *QLocale) Tolower(args ...interface{}) (ret interface{}) {
-  // toLower(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale7toLowerERK7QString
-    // invoke: QString toLower(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QLocale7toLowerERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toLower", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:948
+// index:0
+// QString nativeLanguageName()
+func (this *QLocale) NativeLanguageName() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale18nativeLanguageNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// pmText()
-func (this *QLocale) Pmtext(args ...interface{}) (ret interface{}) {
-  // pmText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale6pmTextEv
-    // invoke: QString pmText()
-    var ret0 = C.C_ZNK7QLocale6pmTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "pmText", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:949
+// index:0
+// QString nativeCountryName()
+func (this *QLocale) NativeCountryName() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale17nativeCountryNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// firstDayOfWeek()
-func (this *QLocale) Firstdayofweek(args ...interface{}) () {
-  // firstDayOfWeek()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale14firstDayOfWeekEv
-    // invoke: Qt::DayOfWeek firstDayOfWeek()
-    C.C_ZNK7QLocale14firstDayOfWeekEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLocale", "firstDayOfWeek", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:952
+// index:0
+// short toShort(const class QString &, _Bool *)
+func (this *QLocale) ToShort(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 0: (, const QString & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toShortERK7QStringPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// percent()
-func (this *QLocale) Percent(args ...interface{}) (ret interface{}) {
-  // percent()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale7percentEv
-    // invoke: QChar percent()
-    var ret0 = C.C_ZNK7QLocale7percentEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QChar{}) // "QChar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "percent", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:961
+// index:1
+// short toShort(const class QStringRef &, _Bool *)
+func (this *QLocale) ToShort_1(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 1: (, const QStringRef & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toShortERK10QStringRefPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// weekdays()
-func (this *QLocale) Weekdays(args ...interface{}) () {
-  // weekdays()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale8weekdaysEv
-    // invoke: QList<Qt::DayOfWeek> weekdays()
-    C.C_ZNK7QLocale8weekdaysEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLocale", "weekdays", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:971
+// index:2
+// short toShort(class QStringView, _Bool *)
+func (this *QLocale) ToShort_2(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 2: (, QStringView s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toShortE11QStringViewPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// toLongLong(const class QString &, _Bool *)
-func (this *QLocale) Tolonglong(args ...interface{}) (ret interface{}) {
-  // toLongLong(const class QString &, _Bool *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = qtrt.BoolTy(true) // "bool *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale10toLongLongERK7QStringPb
-    // invoke: qlonglong toLongLong(const class QString &, _Bool *)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*bool))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale10toLongLongERK7QStringPb(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int64Ty(false) // "qlonglong"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toLongLong", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:953
+// index:0
+// ushort toUShort(const class QString &, _Bool *)
+func (this *QLocale) ToUShort(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 0: (, const QString & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK7QStringPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// negativeSign()
-func (this *QLocale) Negativesign(args ...interface{}) (ret interface{}) {
-  // negativeSign()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale12negativeSignEv
-    // invoke: QChar negativeSign()
-    var ret0 = C.C_ZNK7QLocale12negativeSignEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QChar{}) // "QChar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "negativeSign", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:962
+// index:1
+// ushort toUShort(const class QStringRef &, _Bool *)
+func (this *QLocale) ToUShort_1(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 1: (, const QStringRef & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK10QStringRefPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// toString(int)
-func (this *QLocale) Tostring(args ...interface{}) (ret interface{}) {
-  // toString(int)
-  // toString(uint)
-  // toString(const class QTime &, const class QString &)
-  // toString(double, char, int)
-  // toString(float, char, int)
-  // toString(ushort)
-  // toString(const class QDateTime &, const class QString &)
-  // toString(qlonglong)
-  // toString(qulonglong)
-  // toString(const class QDate &, const class QString &)
-  // toString(short)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "uint"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QTime{}) // "const QTime &"
-  vtys[2][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = qtrt.DoubleTy(false) // "double"
-  vtys[3][1] = qtrt.ByteTy(false) // "char"
-  vtys[3][2] = qtrt.Int32Ty(false) // "int"
-  vtys[4] = make(map[int32]reflect.Type)
-  vtys[4][0] = qtrt.FloatTy(false) // "float"
-  vtys[4][1] = qtrt.ByteTy(false) // "char"
-  vtys[4][2] = qtrt.Int32Ty(false) // "int"
-  vtys[5] = make(map[int32]reflect.Type)
-  vtys[5][0] = qtrt.Int16Ty(false) // "ushort"
-  vtys[6] = make(map[int32]reflect.Type)
-  vtys[6][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
-  vtys[6][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[7] = make(map[int32]reflect.Type)
-  vtys[7][0] = qtrt.Int64Ty(false) // "qlonglong"
-  vtys[8] = make(map[int32]reflect.Type)
-  vtys[8][0] = qtrt.Int64Ty(false) // "qulonglong"
-  vtys[9] = make(map[int32]reflect.Type)
-  vtys[9][0] = reflect.TypeOf(QDate{}) // "const QDate &"
-  vtys[9][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[10] = make(map[int32]reflect.Type)
-  vtys[10][0] = qtrt.Int16Ty(false) // "short"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale8toStringEi
-    // invoke: QString toString(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QLocale8toStringEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK7QLocale8toStringEj
-    // invoke: QString toString(uint)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QLocale8toStringEj(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZNK7QLocale8toStringERK5QTimeRK7QString
-    // invoke: QString toString(const class QTime &, const class QString &)
-    var arg0 = args[0].(*QTime).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale8toStringERK5QTimeRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 3:
-    // invoke: _ZNK7QLocale8toStringEdci
-    // invoke: QString toString(double, char, int)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.uchar(args[1].(byte))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK7QLocale8toStringEdci(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 4:
-    // invoke: _ZNK7QLocale8toStringEfci
-    // invoke: QString toString(float, char, int)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.uchar(args[1].(byte))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK7QLocale8toStringEfci(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 5:
-    // invoke: _ZNK7QLocale8toStringEt
-    // invoke: QString toString(ushort)
-    var arg0 = C.int16_t(qtrt.PrimConv(args[0], qtrt.Int16Ty(false)).(int16))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QLocale8toStringEt(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 6:
-    // invoke: _ZNK7QLocale8toStringERK9QDateTimeRK7QString
-    // invoke: QString toString(const class QDateTime &, const class QString &)
-    var arg0 = args[0].(*QDateTime).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale8toStringERK9QDateTimeRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 7:
-    // invoke: _ZNK7QLocale8toStringEx
-    // invoke: QString toString(qlonglong)
-    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QLocale8toStringEx(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 8:
-    // invoke: _ZNK7QLocale8toStringEy
-    // invoke: QString toString(qulonglong)
-    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QLocale8toStringEy(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 9:
-    // invoke: _ZNK7QLocale8toStringERK5QDateRK7QString
-    // invoke: QString toString(const class QDate &, const class QString &)
-    var arg0 = args[0].(*QDate).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale8toStringERK5QDateRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 10:
-    // invoke: _ZNK7QLocale8toStringEs
-    // invoke: QString toString(short)
-    var arg0 = C.int16_t(qtrt.PrimConv(args[0], qtrt.Int16Ty(false)).(int16))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QLocale8toStringEs(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toString", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:972
+// index:2
+// ushort toUShort(class QStringView, _Bool *)
+func (this *QLocale) ToUShort_2(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 2: (, QStringView s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toUShortE11QStringViewPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// swap(class QLocale &)
-func (this *QLocale) Swap(args ...interface{}) () {
-  // swap(class QLocale &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QLocale{}) // "QLocale &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QLocale4swapERS_
-    // invoke: void swap(class QLocale &)
-    var arg0 = args[0].(*QLocale).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QLocale4swapERS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLocale", "swap", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:954
+// index:0
+// int toInt(const class QString &, _Bool *)
+func (this *QLocale) ToInt(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 0: (, const QString & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale5toIntERK7QStringPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// createSeparatedList(const class QStringList &)
-func (this *QLocale) Createseparatedlist(args ...interface{}) (ret interface{}) {
-  // createSeparatedList(const class QStringList &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale19createSeparatedListERK11QStringList
-    // invoke: QString createSeparatedList(const class QStringList &)
-    var arg0 = args[0].(*QStringList).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QLocale19createSeparatedListERK11QStringList(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "createSeparatedList", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:963
+// index:1
+// int toInt(const class QStringRef &, _Bool *)
+func (this *QLocale) ToInt_1(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 1: (, const QStringRef & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale5toIntERK10QStringRefPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// nativeLanguageName()
-func (this *QLocale) Nativelanguagename(args ...interface{}) (ret interface{}) {
-  // nativeLanguageName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale18nativeLanguageNameEv
-    // invoke: QString nativeLanguageName()
-    var ret0 = C.C_ZNK7QLocale18nativeLanguageNameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "nativeLanguageName", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:973
+// index:2
+// int toInt(class QStringView, _Bool *)
+func (this *QLocale) ToInt_2(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 2: (, QStringView s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale5toIntE11QStringViewPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// groupSeparator()
-func (this *QLocale) Groupseparator(args ...interface{}) (ret interface{}) {
-  // groupSeparator()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale14groupSeparatorEv
-    // invoke: QChar groupSeparator()
-    var ret0 = C.C_ZNK7QLocale14groupSeparatorEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QChar{}) // "QChar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "groupSeparator", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:955
+// index:0
+// uint toUInt(const class QString &, _Bool *)
+func (this *QLocale) ToUInt(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 0: (, const QString & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK7QStringPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// QLocale(const class QLocale &)
-func NewQLocale(args ...interface{}) *QLocale {
-  // QLocale(const class QLocale &)
-  // QLocale(const class QString &)
-  // QLocale()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QLocale{}) // "const QLocale &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[2] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QLocaleC1ERKS_
-    // invoke: void QLocale(const class QLocale &)
-    var arg0 = args[0].(*QLocale).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN7QLocaleC2ERKS_(arg0)
-    return &QLocale{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN7QLocaleC1ERK7QString
-    // invoke: void QLocale(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN7QLocaleC2ERK7QString(arg0)
-    return &QLocale{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN7QLocaleC1Ev
-    // invoke: void QLocale()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN7QLocaleC2Ev()
-    return &QLocale{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QLocale", "QLocale", args)
-  }
-
-  return nil // QLocale{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qlocale.h:964
+// index:1
+// uint toUInt(const class QStringRef &, _Bool *)
+func (this *QLocale) ToUInt_1(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 1: (, const QStringRef & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK10QStringRefPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// positiveSign()
-func (this *QLocale) Positivesign(args ...interface{}) (ret interface{}) {
-  // positiveSign()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale12positiveSignEv
-    // invoke: QChar positiveSign()
-    var ret0 = C.C_ZNK7QLocale12positiveSignEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QChar{}) // "QChar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "positiveSign", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:974
+// index:2
+// uint toUInt(class QStringView, _Bool *)
+func (this *QLocale) ToUInt_2(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 2: (, QStringView s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toUIntE11QStringViewPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// toCurrencyString(double, const class QString &)
-func (this *QLocale) Tocurrencystring(args ...interface{}) (ret interface{}) {
-  // toCurrencyString(double, const class QString &)
-  // toCurrencyString(uint, const class QString &)
-  // toCurrencyString(short, const class QString &)
-  // toCurrencyString(qulonglong, const class QString &)
-  // toCurrencyString(float, const class QString &)
-  // toCurrencyString(ushort, const class QString &)
-  // toCurrencyString(qlonglong, const class QString &)
-  // toCurrencyString(double, const class QString &, int)
-  // toCurrencyString(int, const class QString &)
-  // toCurrencyString(float, const class QString &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "double"
-  vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "uint"
-  vtys[1][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.Int16Ty(false) // "short"
-  vtys[2][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = qtrt.Int64Ty(false) // "qulonglong"
-  vtys[3][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[4] = make(map[int32]reflect.Type)
-  vtys[4][0] = qtrt.FloatTy(false) // "float"
-  vtys[4][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[5] = make(map[int32]reflect.Type)
-  vtys[5][0] = qtrt.Int16Ty(false) // "ushort"
-  vtys[5][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[6] = make(map[int32]reflect.Type)
-  vtys[6][0] = qtrt.Int64Ty(false) // "qlonglong"
-  vtys[6][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[7] = make(map[int32]reflect.Type)
-  vtys[7][0] = qtrt.DoubleTy(false) // "double"
-  vtys[7][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[7][2] = qtrt.Int32Ty(false) // "int"
-  vtys[8] = make(map[int32]reflect.Type)
-  vtys[8][0] = qtrt.Int32Ty(false) // "int"
-  vtys[8][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[9] = make(map[int32]reflect.Type)
-  vtys[9][0] = qtrt.FloatTy(false) // "float"
-  vtys[9][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[9][2] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale16toCurrencyStringEdRK7QString
-    // invoke: QString toCurrencyString(double, const class QString &)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale16toCurrencyStringEdRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK7QLocale16toCurrencyStringEjRK7QString
-    // invoke: QString toCurrencyString(uint, const class QString &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale16toCurrencyStringEjRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZNK7QLocale16toCurrencyStringEsRK7QString
-    // invoke: QString toCurrencyString(short, const class QString &)
-    var arg0 = C.int16_t(qtrt.PrimConv(args[0], qtrt.Int16Ty(false)).(int16))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale16toCurrencyStringEsRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 3:
-    // invoke: _ZNK7QLocale16toCurrencyStringEyRK7QString
-    // invoke: QString toCurrencyString(qulonglong, const class QString &)
-    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale16toCurrencyStringEyRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 4:
-    // invoke: _ZNK7QLocale16toCurrencyStringEfRK7QString
-    // invoke: QString toCurrencyString(float, const class QString &)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale16toCurrencyStringEfRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 5:
-    // invoke: _ZNK7QLocale16toCurrencyStringEtRK7QString
-    // invoke: QString toCurrencyString(ushort, const class QString &)
-    var arg0 = C.int16_t(qtrt.PrimConv(args[0], qtrt.Int16Ty(false)).(int16))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale16toCurrencyStringEtRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 6:
-    // invoke: _ZNK7QLocale16toCurrencyStringExRK7QString
-    // invoke: QString toCurrencyString(qlonglong, const class QString &)
-    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale16toCurrencyStringExRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 7:
-    // invoke: _ZNK7QLocale16toCurrencyStringEdRK7QStringi
-    // invoke: QString toCurrencyString(double, const class QString &, int)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK7QLocale16toCurrencyStringEdRK7QStringi(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 8:
-    // invoke: _ZNK7QLocale16toCurrencyStringEiRK7QString
-    // invoke: QString toCurrencyString(int, const class QString &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale16toCurrencyStringEiRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 9:
-    // invoke: _ZNK7QLocale16toCurrencyStringEfRK7QStringi
-    // invoke: QString toCurrencyString(float, const class QString &, int)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK7QLocale16toCurrencyStringEfRK7QStringi(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toCurrencyString", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:956
+// index:0
+// qlonglong toLongLong(const class QString &, _Bool *)
+func (this *QLocale) ToLongLong(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 0: (, const QString & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK7QStringPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// nativeCountryName()
-func (this *QLocale) Nativecountryname(args ...interface{}) (ret interface{}) {
-  // nativeCountryName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale17nativeCountryNameEv
-    // invoke: QString nativeCountryName()
-    var ret0 = C.C_ZNK7QLocale17nativeCountryNameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "nativeCountryName", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:965
+// index:1
+// qlonglong toLongLong(const class QStringRef &, _Bool *)
+func (this *QLocale) ToLongLong_1(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 1: (, const QStringRef & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK10QStringRefPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// language()
-func (this *QLocale) Language(args ...interface{}) () {
-  // language()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale8languageEv
-    // invoke: QLocale::Language language()
-    C.C_ZNK7QLocale8languageEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLocale", "language", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:975
+// index:2
+// qlonglong toLongLong(class QStringView, _Bool *)
+func (this *QLocale) ToLongLong_2(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 2: (, QStringView s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toLongLongE11QStringViewPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// bcp47Name()
-func (this *QLocale) Bcp47Name(args ...interface{}) (ret interface{}) {
-  // bcp47Name()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale9bcp47NameEv
-    // invoke: QString bcp47Name()
-    var ret0 = C.C_ZNK7QLocale9bcp47NameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "bcp47Name", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:957
+// index:0
+// qulonglong toULongLong(const class QString &, _Bool *)
+func (this *QLocale) ToULongLong(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 0: (, const QString & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK7QStringPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// numberOptions()
-func (this *QLocale) Numberoptions(args ...interface{}) () {
-  // numberOptions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale13numberOptionsEv
-    // invoke: NumberOptions numberOptions()
-    C.C_ZNK7QLocale13numberOptionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLocale", "numberOptions", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:966
+// index:1
+// qulonglong toULongLong(const class QStringRef &, _Bool *)
+func (this *QLocale) ToULongLong_1(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 1: (, const QStringRef & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK10QStringRefPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// toULongLong(const class QString &, _Bool *)
-func (this *QLocale) Toulonglong(args ...interface{}) (ret interface{}) {
-  // toULongLong(const class QString &, _Bool *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = qtrt.BoolTy(true) // "bool *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale11toULongLongERK7QStringPb
-    // invoke: qulonglong toULongLong(const class QString &, _Bool *)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*bool))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale11toULongLongERK7QStringPb(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int64Ty(false) // "qulonglong"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toULongLong", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:976
+// index:2
+// qulonglong toULongLong(class QStringView, _Bool *)
+func (this *QLocale) ToULongLong_2(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 2: (, QStringView s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11toULongLongE11QStringViewPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// c()
-func (this *QLocale) C_S(args ...interface{}) (ret interface{}) {
-  // c()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QLocale1cEv
-    // invoke: QLocale c()
-    var ret0 = C.C_ZN7QLocale1cEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QLocale{}) // "QLocale"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "c", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:958
+// index:0
+// float toFloat(const class QString &, _Bool *)
+func (this *QLocale) ToFloat(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 0: (, const QString & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toFloatERK7QStringPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// name()
-func (this *QLocale) Name(args ...interface{}) (ret interface{}) {
-  // name()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale4nameEv
-    // invoke: QString name()
-    var ret0 = C.C_ZNK7QLocale4nameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "name", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:967
+// index:1
+// float toFloat(const class QStringRef &, _Bool *)
+func (this *QLocale) ToFloat_1(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 1: (, const QStringRef & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toFloatERK10QStringRefPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// exponential()
-func (this *QLocale) Exponential(args ...interface{}) (ret interface{}) {
-  // exponential()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale11exponentialEv
-    // invoke: QChar exponential()
-    var ret0 = C.C_ZNK7QLocale11exponentialEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QChar{}) // "QChar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "exponential", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:977
+// index:2
+// float toFloat(class QStringView, _Bool *)
+func (this *QLocale) ToFloat_2(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 2: (, QStringView s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toFloatE11QStringViewPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// country()
-func (this *QLocale) Country(args ...interface{}) () {
-  // country()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale7countryEv
-    // invoke: QLocale::Country country()
-    C.C_ZNK7QLocale7countryEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLocale", "country", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:959
+// index:0
+// double toDouble(const class QString &, _Bool *)
+func (this *QLocale) ToDouble(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 0: (, const QString & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toDoubleERK7QStringPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// toInt(const class QString &, _Bool *)
-func (this *QLocale) Toint(args ...interface{}) (ret interface{}) {
-  // toInt(const class QString &, _Bool *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = qtrt.BoolTy(true) // "bool *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale5toIntERK7QStringPb
-    // invoke: int toInt(const class QString &, _Bool *)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*bool))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale5toIntERK7QStringPb(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toInt", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:968
+// index:1
+// double toDouble(const class QStringRef &, _Bool *)
+func (this *QLocale) ToDouble_1(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 1: (, const QStringRef & s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toDoubleERK10QStringRefPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// textDirection()
-func (this *QLocale) Textdirection(args ...interface{}) () {
-  // textDirection()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale13textDirectionEv
-    // invoke: Qt::LayoutDirection textDirection()
-    C.C_ZNK7QLocale13textDirectionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLocale", "textDirection", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:978
+// index:2
+// double toDouble(class QStringView, _Bool *)
+func (this *QLocale) ToDouble_2(s unsafe.Pointer, ok unsafe.Pointer) {
+	// 2: (, QStringView s, bool * ok), (s, ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toDoubleE11QStringViewPb", ffiqt.FFI_TYPE_VOID, this.cthis, s, ok)
+	gopp.ErrPrint(err, rv)
 }
 
-// script()
-func (this *QLocale) Script(args ...interface{}) () {
-  // script()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale6scriptEv
-    // invoke: QLocale::Script script()
-    C.C_ZNK7QLocale6scriptEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLocale", "script", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:980
+// index:0
+// QString toString(qlonglong)
+func (this *QLocale) ToString(i int64) {
+	// 0: (, qlonglong i), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEx", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	gopp.ErrPrint(err, rv)
 }
 
-// toDouble(const class QString &, _Bool *)
-func (this *QLocale) Todouble(args ...interface{}) (ret interface{}) {
-  // toDouble(const class QString &, _Bool *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = qtrt.BoolTy(true) // "bool *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale8toDoubleERK7QStringPb
-    // invoke: double toDouble(const class QString &, _Bool *)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*bool))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale8toDoubleERK7QStringPb(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "double"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toDouble", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:981
+// index:1
+// QString toString(qulonglong)
+func (this *QLocale) ToString_1(i uint64) {
+	// 1: (, qulonglong i), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEy", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	gopp.ErrPrint(err, rv)
 }
 
-// toDateTime(const class QString &, const class QString &)
-func (this *QLocale) Todatetime(args ...interface{}) (ret interface{}) {
-  // toDateTime(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale10toDateTimeERK7QStringS2_
-    // invoke: QDateTime toDateTime(const class QString &, const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QLocale10toDateTimeERK7QStringS2_(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toDateTime", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:982
+// index:2
+// inline
+// QString toString(short)
+func (this *QLocale) ToString_2(i int16) {
+	// 2: (, short i), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEs", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	gopp.ErrPrint(err, rv)
 }
 
-// decimalPoint()
-func (this *QLocale) Decimalpoint(args ...interface{}) (ret interface{}) {
-  // decimalPoint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale12decimalPointEv
-    // invoke: QChar decimalPoint()
-    var ret0 = C.C_ZNK7QLocale12decimalPointEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QChar{}) // "QChar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "decimalPoint", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:983
+// index:3
+// inline
+// QString toString(ushort)
+func (this *QLocale) ToString_3(i uint16) {
+	// 3: (, ushort i), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEt", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	gopp.ErrPrint(err, rv)
 }
 
-// toUpper(const class QString &)
-func (this *QLocale) Toupper(args ...interface{}) (ret interface{}) {
-  // toUpper(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale7toUpperERK7QString
-    // invoke: QString toUpper(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QLocale7toUpperERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "toUpper", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:984
+// index:4
+// inline
+// QString toString(int)
+func (this *QLocale) ToString_4(i int) {
+	// 4: (, int i), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEi", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	gopp.ErrPrint(err, rv)
 }
 
-// zeroDigit()
-func (this *QLocale) Zerodigit(args ...interface{}) (ret interface{}) {
-  // zeroDigit()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale9zeroDigitEv
-    // invoke: QChar zeroDigit()
-    var ret0 = C.C_ZNK7QLocale9zeroDigitEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QChar{}) // "QChar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLocale", "zeroDigit", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:985
+// index:5
+// inline
+// QString toString(uint)
+func (this *QLocale) ToString_5(i uint) {
+	// 5: (, uint i), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEj", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	gopp.ErrPrint(err, rv)
 }
 
-// measurementSystem()
-func (this *QLocale) Measurementsystem(args ...interface{}) () {
-  // measurementSystem()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLocale17measurementSystemEv
-    // invoke: QLocale::MeasurementSystem measurementSystem()
-    C.C_ZNK7QLocale17measurementSystemEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLocale", "measurementSystem", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qlocale.h:986
+// index:6
+// QString toString(double, char, int)
+func (this *QLocale) ToString_6(i float64, f byte, prec int) {
+	// 6: (, double i, char f, int prec), (&i, &f, &prec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEdci", ffiqt.FFI_TYPE_VOID, this.cthis, &i, &f, &prec)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qlocale.h:987
+// index:7
+// inline
+// QString toString(float, char, int)
+func (this *QLocale) ToString_7(i float32, f byte, prec int) {
+	// 7: (, float i, char f, int prec), (&i, &f, &prec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEfci", ffiqt.FFI_TYPE_VOID, this.cthis, &i, &f, &prec)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qlocale.h:990
+// index:8
+// QString toString(const class QDate &, const class QString &)
+func (this *QLocale) ToString_8(date unsafe.Pointer, formatStr unsafe.Pointer) {
+	// 8: (, const QDate & date, const QString & formatStr), (date, formatStr)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, date, formatStr)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:991
+// index:9
+// QString toString(const class QTime &, const class QString &)
+func (this *QLocale) ToString_9(time unsafe.Pointer, formatStr unsafe.Pointer) {
+	// 9: (, const QTime & time, const QString & formatStr), (time, formatStr)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, time, formatStr)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:992
+// index:10
+// QString toString(const class QDateTime &, const class QString &)
+func (this *QLocale) ToString_10(dateTime unsafe.Pointer, format unsafe.Pointer) {
+	// 10: (, const QDateTime & dateTime, const QString & format), (dateTime, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, dateTime, format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:994
+// index:11
+// QString toString(const class QDate &, class QStringView)
+func (this *QLocale) ToString_11(date unsafe.Pointer, formatStr unsafe.Pointer) {
+	// 11: (, const QDate & date, QStringView formatStr), (date, formatStr)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDate11QStringView", ffiqt.FFI_TYPE_VOID, this.cthis, date, formatStr)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:995
+// index:12
+// QString toString(const class QTime &, class QStringView)
+func (this *QLocale) ToString_12(time unsafe.Pointer, formatStr unsafe.Pointer) {
+	// 12: (, const QTime & time, QStringView formatStr), (time, formatStr)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTime11QStringView", ffiqt.FFI_TYPE_VOID, this.cthis, time, formatStr)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:996
+// index:13
+// QString toString(const class QDateTime &, class QStringView)
+func (this *QLocale) ToString_13(dateTime unsafe.Pointer, format unsafe.Pointer) {
+	// 13: (, const QDateTime & dateTime, QStringView format), (dateTime, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTime11QStringView", ffiqt.FFI_TYPE_VOID, this.cthis, dateTime, format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:997
+// index:14
+// QString toString(const class QDate &, enum QLocale::FormatType)
+func (this *QLocale) ToString_14(date unsafe.Pointer, format int) {
+	// 14: (, const QDate & date, QLocale::FormatType format), (date, &format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, date, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:998
+// index:15
+// QString toString(const class QTime &, enum QLocale::FormatType)
+func (this *QLocale) ToString_15(time unsafe.Pointer, format int) {
+	// 15: (, const QTime & time, QLocale::FormatType format), (time, &format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, time, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:999
+// index:16
+// QString toString(const class QDateTime &, enum QLocale::FormatType)
+func (this *QLocale) ToString_16(dateTime unsafe.Pointer, format int) {
+	// 16: (, const QDateTime & dateTime, QLocale::FormatType format), (dateTime, &format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, dateTime, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1001
+// index:0
+// QString dateFormat(enum QLocale::FormatType)
+func (this *QLocale) DateFormat(format int) {
+	// 0: (, QLocale::FormatType format), (&format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10dateFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1002
+// index:0
+// QString timeFormat(enum QLocale::FormatType)
+func (this *QLocale) TimeFormat(format int) {
+	// 0: (, QLocale::FormatType format), (&format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10timeFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1003
+// index:0
+// QString dateTimeFormat(enum QLocale::FormatType)
+func (this *QLocale) DateTimeFormat(format int) {
+	// 0: (, QLocale::FormatType format), (&format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14dateTimeFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1005
+// index:0
+// QDate toDate(const class QString &, enum QLocale::FormatType)
+func (this *QLocale) ToDate(string unsafe.Pointer, arg1 int) {
+	// 0: (, const QString & string, QLocale::FormatType arg1), (string, &arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringNS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, string, &arg1)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1008
+// index:1
+// QDate toDate(const class QString &, const class QString &)
+func (this *QLocale) ToDate_1(string unsafe.Pointer, format unsafe.Pointer) {
+	// 1: (, const QString & string, const QString & format), (string, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, string, format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1006
+// index:0
+// QTime toTime(const class QString &, enum QLocale::FormatType)
+func (this *QLocale) ToTime(string unsafe.Pointer, arg1 int) {
+	// 0: (, const QString & string, QLocale::FormatType arg1), (string, &arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringNS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, string, &arg1)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1009
+// index:1
+// QTime toTime(const class QString &, const class QString &)
+func (this *QLocale) ToTime_1(string unsafe.Pointer, format unsafe.Pointer) {
+	// 1: (, const QString & string, const QString & format), (string, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, string, format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1007
+// index:0
+// QDateTime toDateTime(const class QString &, enum QLocale::FormatType)
+func (this *QLocale) ToDateTime(string unsafe.Pointer, format int) {
+	// 0: (, const QString & string, QLocale::FormatType format), (string, &format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringNS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, string, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1010
+// index:1
+// QDateTime toDateTime(const class QString &, const class QString &)
+func (this *QLocale) ToDateTime_1(string unsafe.Pointer, format unsafe.Pointer) {
+	// 1: (, const QString & string, const QString & format), (string, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, string, format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1015
+// index:0
+// QChar decimalPoint()
+func (this *QLocale) DecimalPoint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale12decimalPointEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1016
+// index:0
+// QChar groupSeparator()
+func (this *QLocale) GroupSeparator() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14groupSeparatorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1017
+// index:0
+// QChar percent()
+func (this *QLocale) Percent() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7percentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1018
+// index:0
+// QChar zeroDigit()
+func (this *QLocale) ZeroDigit() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale9zeroDigitEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1019
+// index:0
+// QChar negativeSign()
+func (this *QLocale) NegativeSign() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale12negativeSignEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1020
+// index:0
+// QChar positiveSign()
+func (this *QLocale) PositiveSign() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale12positiveSignEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1021
+// index:0
+// QChar exponential()
+func (this *QLocale) Exponential() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11exponentialEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1023
+// index:0
+// QString monthName(int, enum QLocale::FormatType)
+func (this *QLocale) MonthName(arg0 int, format int) {
+	// 0: (, int arg0, QLocale::FormatType format), (&arg0, &format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale9monthNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1024
+// index:0
+// QString standaloneMonthName(int, enum QLocale::FormatType)
+func (this *QLocale) StandaloneMonthName(arg0 int, format int) {
+	// 0: (, int arg0, QLocale::FormatType format), (&arg0, &format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale19standaloneMonthNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1025
+// index:0
+// QString dayName(int, enum QLocale::FormatType)
+func (this *QLocale) DayName(arg0 int, format int) {
+	// 0: (, int arg0, QLocale::FormatType format), (&arg0, &format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7dayNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1026
+// index:0
+// QString standaloneDayName(int, enum QLocale::FormatType)
+func (this *QLocale) StandaloneDayName(arg0 int, format int) {
+	// 0: (, int arg0, QLocale::FormatType format), (&arg0, &format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale17standaloneDayNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1028
+// index:0
+// Qt::DayOfWeek firstDayOfWeek()
+func (this *QLocale) FirstDayOfWeek() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14firstDayOfWeekEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1029
+// index:0
+// QList<Qt::DayOfWeek> weekdays()
+func (this *QLocale) Weekdays() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8weekdaysEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1031
+// index:0
+// QString amText()
+func (this *QLocale) AmText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6amTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1032
+// index:0
+// QString pmText()
+func (this *QLocale) PmText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6pmTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1034
+// index:0
+// QLocale::MeasurementSystem measurementSystem()
+func (this *QLocale) MeasurementSystem() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale17measurementSystemEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1036
+// index:0
+// Qt::LayoutDirection textDirection()
+func (this *QLocale) TextDirection() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale13textDirectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1038
+// index:0
+// QString toUpper(const class QString &)
+func (this *QLocale) ToUpper(str unsafe.Pointer) {
+	// 0: (, const QString & str), (str)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toUpperERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, str)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1039
+// index:0
+// QString toLower(const class QString &)
+func (this *QLocale) ToLower(str unsafe.Pointer) {
+	// 0: (, const QString & str), (str)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toLowerERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, str)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1041
+// index:0
+// QString currencySymbol(enum QLocale::CurrencySymbolFormat)
+func (this *QLocale) CurrencySymbol(arg0 int) {
+	// 0: (, QLocale::CurrencySymbolFormat arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14currencySymbolENS_20CurrencySymbolFormatE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1042
+// index:0
+// QString toCurrencyString(qlonglong, const class QString &)
+func (this *QLocale) ToCurrencyString(arg0 int64, symbol unsafe.Pointer) {
+	// 0: (, qlonglong arg0, const QString & symbol), (&arg0, symbol)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringExRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, symbol)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1043
+// index:1
+// QString toCurrencyString(qulonglong, const class QString &)
+func (this *QLocale) ToCurrencyString_1(arg0 uint64, symbol unsafe.Pointer) {
+	// 1: (, qulonglong arg0, const QString & symbol), (&arg0, symbol)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEyRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, symbol)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1044
+// index:2
+// inline
+// QString toCurrencyString(short, const class QString &)
+func (this *QLocale) ToCurrencyString_2(arg0 int16, symbol unsafe.Pointer) {
+	// 2: (, short arg0, const QString & symbol), (&arg0, symbol)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEsRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, symbol)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1045
+// index:3
+// inline
+// QString toCurrencyString(ushort, const class QString &)
+func (this *QLocale) ToCurrencyString_3(arg0 uint16, symbol unsafe.Pointer) {
+	// 3: (, ushort arg0, const QString & symbol), (&arg0, symbol)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEtRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, symbol)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1046
+// index:4
+// inline
+// QString toCurrencyString(int, const class QString &)
+func (this *QLocale) ToCurrencyString_4(arg0 int, symbol unsafe.Pointer) {
+	// 4: (, int arg0, const QString & symbol), (&arg0, symbol)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEiRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, symbol)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1047
+// index:5
+// inline
+// QString toCurrencyString(uint, const class QString &)
+func (this *QLocale) ToCurrencyString_5(arg0 uint, symbol unsafe.Pointer) {
+	// 5: (, uint arg0, const QString & symbol), (&arg0, symbol)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEjRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, symbol)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1053
+// index:6
+// QString toCurrencyString(double, const class QString &)
+func (this *QLocale) ToCurrencyString_6(arg0 float64, symbol unsafe.Pointer) {
+	// 6: (, double arg0, const QString & symbol), (&arg0, symbol)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, symbol)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1054
+// index:7
+// QString toCurrencyString(double, const class QString &, int)
+func (this *QLocale) ToCurrencyString_7(arg0 float64, symbol unsafe.Pointer, precision int) {
+	// 7: (, double arg0, const QString & symbol, int precision), (&arg0, symbol, &precision)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QStringi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, symbol, &precision)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1055
+// index:8
+// inline
+// QString toCurrencyString(float, const class QString &)
+func (this *QLocale) ToCurrencyString_8(i float32, symbol unsafe.Pointer) {
+	// 8: (, float i, const QString & symbol), (&i, symbol)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &i, symbol)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1057
+// index:9
+// inline
+// QString toCurrencyString(float, const class QString &, int)
+func (this *QLocale) ToCurrencyString_9(i float32, symbol unsafe.Pointer, precision int) {
+	// 9: (, float i, const QString & symbol, int precision), (&i, symbol, &precision)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QStringi", ffiqt.FFI_TYPE_VOID, this.cthis, &i, symbol, &precision)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1063
+// index:0
+// QStringList uiLanguages()
+func (this *QLocale) UiLanguages() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11uiLanguagesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1068
+// index:0
+// static
+// QString languageToString(enum QLocale::Language)
+func (this *QLocale) LanguageToString(language int) {
+	// 0: (QLocale::Language language), (language)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale16languageToStringENS_8LanguageE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QLocale_LanguageToString(language int) {
+	// 0: (QLocale::Language language), (language)
+	var nilthis *QLocale
+	nilthis.LanguageToString(language)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1069
+// index:0
+// static
+// QString countryToString(enum QLocale::Country)
+func (this *QLocale) CountryToString(country int) {
+	// 0: (QLocale::Country country), (country)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale15countryToStringENS_7CountryE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QLocale_CountryToString(country int) {
+	// 0: (QLocale::Country country), (country)
+	var nilthis *QLocale
+	nilthis.CountryToString(country)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1070
+// index:0
+// static
+// QString scriptToString(enum QLocale::Script)
+func (this *QLocale) ScriptToString(script int) {
+	// 0: (QLocale::Script script), (script)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale14scriptToStringENS_6ScriptE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QLocale_ScriptToString(script int) {
+	// 0: (QLocale::Script script), (script)
+	var nilthis *QLocale
+	nilthis.ScriptToString(script)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1071
+// index:0
+// static
+// void setDefault(const class QLocale &)
+func (this *QLocale) SetDefault(locale unsafe.Pointer) {
+	// 0: (const QLocale & locale), (locale)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale10setDefaultERKS_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QLocale_SetDefault(locale unsafe.Pointer) {
+	// 0: (const QLocale & locale), (locale)
+	var nilthis *QLocale
+	nilthis.SetDefault(locale)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1073
+// index:0
+// static inline
+// QLocale c()
+func (this *QLocale) C() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale1cEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QLocale_C() {
+	// 0: (), ()
+	var nilthis *QLocale
+	nilthis.C()
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1074
+// index:0
+// static
+// QLocale system()
+func (this *QLocale) System() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale6systemEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QLocale_System() {
+	// 0: (), ()
+	var nilthis *QLocale
+	nilthis.System()
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1076
+// index:0
+// static
+// QList<QLocale> matchingLocales(class QLocale::Language, class QLocale::Script, class QLocale::Country)
+func (this *QLocale) MatchingLocales(language int, script int, country int) {
+	// 0: (QLocale::Language language, QLocale::Script script, QLocale::Country country), (language, script, country)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale15matchingLocalesENS_8LanguageENS_6ScriptENS_7CountryE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QLocale_MatchingLocales(language int, script int, country int) {
+	// 0: (QLocale::Language language, QLocale::Script script, QLocale::Country country), (language, script, country)
+	var nilthis *QLocale
+	nilthis.MatchingLocales(language, script, country)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1077
+// index:0
+// static
+// QList<QLocale::Country> countriesForLanguage(enum QLocale::Language)
+func (this *QLocale) CountriesForLanguage(lang int) {
+	// 0: (QLocale::Language lang), (lang)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale20countriesForLanguageENS_8LanguageE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QLocale_CountriesForLanguage(lang int) {
+	// 0: (QLocale::Language lang), (lang)
+	var nilthis *QLocale
+	nilthis.CountriesForLanguage(lang)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1080
+// index:0
+// QLocale::NumberOptions numberOptions()
+func (this *QLocale) NumberOptions() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale13numberOptionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1083
+// index:0
+// QString quoteString(const class QString &, enum QLocale::QuotationStyle)
+func (this *QLocale) QuoteString(str unsafe.Pointer, style int) {
+	// 0: (, const QString & str, QLocale::QuotationStyle style), (str, &style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11quoteStringERK7QStringNS_14QuotationStyleE", ffiqt.FFI_TYPE_VOID, this.cthis, str, &style)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1084
+// index:1
+// QString quoteString(const class QStringRef &, enum QLocale::QuotationStyle)
+func (this *QLocale) QuoteString_1(str unsafe.Pointer, style int) {
+	// 1: (, const QStringRef & str, QLocale::QuotationStyle style), (str, &style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11quoteStringERK10QStringRefNS_14QuotationStyleE", ffiqt.FFI_TYPE_VOID, this.cthis, str, &style)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1086
+// index:0
+// QString createSeparatedList(const class QStringList &)
+func (this *QLocale) CreateSeparatedList(strl unsafe.Pointer) {
+	// 0: (, const QStringList & strl), (strl)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale19createSeparatedListERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, strl)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

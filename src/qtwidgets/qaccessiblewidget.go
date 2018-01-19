@@ -1,551 +1,239 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h
+// #include <qaccessiblewidget.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qaccessiblewidget.h
-// dst-file: /src/widgets/qaccessiblewidget.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QColor QAccessibleWidget::foregroundColor();
-extern void* C_ZNK17QAccessibleWidget15foregroundColorEv(void* qthis); // 4
-  // proto:  int QAccessibleWidget::indexOfChild(const QAccessibleInterface * child);
-extern int32_t C_ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface(void* qthis, void* arg0); // 4
-  // proto:  QWindow * QAccessibleWidget::window();
-extern void* C_ZNK17QAccessibleWidget6windowEv(void* qthis); // 4
-  // proto:  QAccessible::State QAccessibleWidget::state();
-extern void C_ZNK17QAccessibleWidget5stateEv(void* qthis); // 4
-  // proto:  QAccessible::Role QAccessibleWidget::role();
-extern void C_ZNK17QAccessibleWidget4roleEv(void* qthis); // 4
-  // proto:  QColor QAccessibleWidget::backgroundColor();
-extern void* C_ZNK17QAccessibleWidget15backgroundColorEv(void* qthis); // 4
-  // proto:  int QAccessibleWidget::childCount();
-extern int32_t C_ZNK17QAccessibleWidget10childCountEv(void* qthis); // 4
-  // proto:  QStringList QAccessibleWidget::keyBindingsForAction(const QString & actionName);
-extern void C_ZNK17QAccessibleWidget20keyBindingsForActionERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QAccessibleInterface * QAccessibleWidget::parent();
-extern void* C_ZNK17QAccessibleWidget6parentEv(void* qthis); // 4
-  // proto:  bool QAccessibleWidget::isValid();
-extern bool C_ZNK17QAccessibleWidget7isValidEv(void* qthis); // 4
-  // proto:  QAccessibleInterface * QAccessibleWidget::focusChild();
-extern void* C_ZNK17QAccessibleWidget10focusChildEv(void* qthis); // 4
-  // proto:  QAccessibleInterface * QAccessibleWidget::child(int index);
-extern void* C_ZNK17QAccessibleWidget5childEi(void* qthis, int32_t arg0); // 4
-  // proto:  QRect QAccessibleWidget::rect();
-extern void* C_ZNK17QAccessibleWidget4rectEv(void* qthis); // 4
-  // proto:  void QAccessibleWidget::doAction(const QString & actionName);
-extern void C_ZN17QAccessibleWidget8doActionERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QStringList QAccessibleWidget::actionNames();
-extern void C_ZNK17QAccessibleWidget11actionNamesEv(void* qthis); // 4
+// extern C begin: 2
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QAccessibleWidget)=32
+//  ext block end
+
+//  body block begin
 type QAccessibleWidget struct {
-  /*qbase*/ qtgui.QAccessibleObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// foregroundColor()
-func (this *QAccessibleWidget) Foregroundcolor(args ...interface{}) (ret interface{}) {
-  // foregroundColor()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget15foregroundColorEv
-    // invoke: QColor foregroundColor()
-    var ret0 = C.C_ZNK17QAccessibleWidget15foregroundColorEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "foregroundColor", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:56
+// index:0
+// void QAccessibleWidget(class QWidget *, class QAccessible::Role, const class QString &)
+func NewQAccessibleWidget(o unsafe.Pointer, r int, name unsafe.Pointer) *QAccessibleWidget {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleWidgetC2EP7QWidgetN11QAccessible4RoleERK7QString", ffiqt.FFI_TYPE_VOID, cthis, o, &r, name)
+	gopp.ErrPrint(err, rv)
+	return &QAccessibleWidget{cthis}
 }
 
-// indexOfChild(const class QAccessibleInterface *)
-func (this *QAccessibleWidget) Indexofchild(args ...interface{}) (ret interface{}) {
-  // indexOfChild(const class QAccessibleInterface *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QAccessibleInterface{}) // "const QAccessibleInterface *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface
-    // invoke: int indexOfChild(const class QAccessibleInterface *)
-    var arg0 = args[0].(*qtgui.QAccessibleInterface).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "indexOfChild", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:57
+// index:0
+// virtual
+// bool isValid()
+func (this *QAccessibleWidget) IsValid() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// window()
-func (this *QAccessibleWidget) Window(args ...interface{}) (ret interface{}) {
-  // window()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget6windowEv
-    // invoke: QWindow * window()
-    var ret0 = C.C_ZNK17QAccessibleWidget6windowEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QWindow{}) // "QWindow *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "window", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:59
+// index:0
+// virtual
+// QWindow * window()
+func (this *QAccessibleWidget) Window() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget6windowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// state()
-func (this *QAccessibleWidget) State(args ...interface{}) () {
-  // state()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget5stateEv
-    // invoke: QAccessible::State state()
-    C.C_ZNK17QAccessibleWidget5stateEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "state", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:60
+// index:0
+// virtual
+// int childCount()
+func (this *QAccessibleWidget) ChildCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget10childCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// role()
-func (this *QAccessibleWidget) Role(args ...interface{}) () {
-  // role()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget4roleEv
-    // invoke: QAccessible::Role role()
-    C.C_ZNK17QAccessibleWidget4roleEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "role", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:61
+// index:0
+// virtual
+// int indexOfChild(const class QAccessibleInterface *)
+func (this *QAccessibleWidget) IndexOfChild(child unsafe.Pointer) {
+	// 0: (, const QAccessibleInterface * child), (child)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface", ffiqt.FFI_TYPE_VOID, this.cthis, child)
+	gopp.ErrPrint(err, rv)
 }
 
-// backgroundColor()
-func (this *QAccessibleWidget) Backgroundcolor(args ...interface{}) (ret interface{}) {
-  // backgroundColor()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget15backgroundColorEv
-    // invoke: QColor backgroundColor()
-    var ret0 = C.C_ZNK17QAccessibleWidget15backgroundColorEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "backgroundColor", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:63
+// index:0
+// virtual
+// QAccessibleInterface * focusChild()
+func (this *QAccessibleWidget) FocusChild() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget10focusChildEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// childCount()
-func (this *QAccessibleWidget) Childcount(args ...interface{}) (ret interface{}) {
-  // childCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget10childCountEv
-    // invoke: int childCount()
-    var ret0 = C.C_ZNK17QAccessibleWidget10childCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "childCount", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:65
+// index:0
+// virtual
+// QRect rect()
+func (this *QAccessibleWidget) Rect() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget4rectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// keyBindingsForAction(const class QString &)
-func (this *QAccessibleWidget) Keybindingsforaction(args ...interface{}) () {
-  // keyBindingsForAction(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget20keyBindingsForActionERK7QString
-    // invoke: QStringList keyBindingsForAction(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK17QAccessibleWidget20keyBindingsForActionERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "keyBindingsForAction", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:67
+// index:0
+// virtual
+// QAccessibleInterface * parent()
+func (this *QAccessibleWidget) Parent() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget6parentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// parent()
-func (this *QAccessibleWidget) Parent(args ...interface{}) (ret interface{}) {
-  // parent()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget6parentEv
-    // invoke: QAccessibleInterface * parent()
-    var ret0 = C.C_ZNK17QAccessibleWidget6parentEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QAccessibleInterface{}) // "QAccessibleInterface *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "parent", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:68
+// index:0
+// virtual
+// QAccessibleInterface * child(int)
+func (this *QAccessibleWidget) Child(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget5childEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// isValid()
-func (this *QAccessibleWidget) Isvalid(args ...interface{}) (ret interface{}) {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget7isValidEv
-    // invoke: bool isValid()
-    var ret0 = C.C_ZNK17QAccessibleWidget7isValidEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "isValid", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:70
+// index:0
+// virtual
+// QString text(class QAccessible::Text)
+func (this *QAccessibleWidget) Text(t int) {
+	// 0: (, QAccessible::Text t), (&t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_VOID, this.cthis, &t)
+	gopp.ErrPrint(err, rv)
 }
 
-// focusChild()
-func (this *QAccessibleWidget) Focuschild(args ...interface{}) (ret interface{}) {
-  // focusChild()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget10focusChildEv
-    // invoke: QAccessibleInterface * focusChild()
-    var ret0 = C.C_ZNK17QAccessibleWidget10focusChildEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QAccessibleInterface{}) // "QAccessibleInterface *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "focusChild", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:71
+// index:0
+// virtual
+// QAccessible::Role role()
+func (this *QAccessibleWidget) Role() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget4roleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// child(int)
-func (this *QAccessibleWidget) Child(args ...interface{}) (ret interface{}) {
-  // child(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget5childEi
-    // invoke: QAccessibleInterface * child(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QAccessibleWidget5childEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QAccessibleInterface{}) // "QAccessibleInterface *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "child", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:72
+// index:0
+// virtual
+// QAccessible::State state()
+func (this *QAccessibleWidget) State() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget5stateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// rect()
-func (this *QAccessibleWidget) Rect(args ...interface{}) (ret interface{}) {
-  // rect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget4rectEv
-    // invoke: QRect rect()
-    var ret0 = C.C_ZNK17QAccessibleWidget4rectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "rect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:74
+// index:0
+// virtual
+// QColor foregroundColor()
+func (this *QAccessibleWidget) ForegroundColor() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget15foregroundColorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// doAction(const class QString &)
-func (this *QAccessibleWidget) Doaction(args ...interface{}) () {
-  // doAction(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QAccessibleWidget8doActionERK7QString
-    // invoke: void doAction(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN17QAccessibleWidget8doActionERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "doAction", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:75
+// index:0
+// virtual
+// QColor backgroundColor()
+func (this *QAccessibleWidget) BackgroundColor() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget15backgroundColorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// actionNames()
-func (this *QAccessibleWidget) Actionnames(args ...interface{}) () {
-  // actionNames()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAccessibleWidget11actionNamesEv
-    // invoke: QStringList actionNames()
-    C.C_ZNK17QAccessibleWidget11actionNamesEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QAccessibleWidget", "actionNames", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:77
+// index:0
+// virtual
+// void * interface_cast(class QAccessible::InterfaceType)
+func (this *QAccessibleWidget) Interface_cast(t int) {
+	// 0: (, QAccessible::InterfaceType t), (&t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleWidget14interface_castEN11QAccessible13InterfaceTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &t)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:80
+// index:0
+// virtual
+// QStringList actionNames()
+func (this *QAccessibleWidget) ActionNames() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget11actionNamesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:81
+// index:0
+// virtual
+// void doAction(const class QString &)
+func (this *QAccessibleWidget) DoAction(actionName unsafe.Pointer) {
+	// 0: (, const QString & actionName), (actionName)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleWidget8doActionERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, actionName)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:82
+// index:0
+// virtual
+// QStringList keyBindingsForAction(const class QString &)
+func (this *QAccessibleWidget) KeyBindingsForAction(actionName unsafe.Pointer) {
+	// 0: (, const QString & actionName), (actionName)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget20keyBindingsForActionERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, actionName)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

@@ -1,637 +1,276 @@
+//  header block begin
+// /usr/include/qt/QtCore/qversionnumber.h
+// #include <qversionnumber.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qversionnumber.h
-// dst-file: /src/core/qversionnumber.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  int QVersionNumber::majorVersion();
-extern int32_t C_ZNK14QVersionNumber12majorVersionEv(void* qthis); // 2
-  // proto: static int QVersionNumber::compare(const QVersionNumber & v1, const QVersionNumber & v2);
-extern int32_t C_ZN14QVersionNumber7compareERKS_S1_(void* arg0, void* arg1); // 4
-  // proto: static QVersionNumber QVersionNumber::commonPrefix(const QVersionNumber & v1, const QVersionNumber & v2);
-extern void* C_ZN14QVersionNumber12commonPrefixERKS_S1_(void* arg0, void* arg1); // 4
-  // proto:  int QVersionNumber::segmentCount();
-extern int32_t C_ZNK14QVersionNumber12segmentCountEv(void* qthis); // 2
-  // proto:  int QVersionNumber::minorVersion();
-extern int32_t C_ZNK14QVersionNumber12minorVersionEv(void* qthis); // 2
-  // proto:  void QVersionNumber::QVersionNumber();
-extern void* C_ZN14QVersionNumberC2Ev(); // 1
-  // proto:  void QVersionNumber::QVersionNumber(int maj, int min, int mic);
-extern void* C_ZN14QVersionNumberC2Eiii(int32_t arg0, int32_t arg1, int32_t arg2); // 1
-  // proto:  void QVersionNumber::QVersionNumber(int maj);
-extern void* C_ZN14QVersionNumberC2Ei(int32_t arg0); // 1
-  // proto:  void QVersionNumber::QVersionNumber(int maj, int min);
-extern void* C_ZN14QVersionNumberC2Eii(int32_t arg0, int32_t arg1); // 1
-  // proto: static QVersionNumber QVersionNumber::fromString(const QString & string, int * suffixIndex);
-extern void* C_ZN14QVersionNumber10fromStringERK7QStringPi(void* arg0, void* arg1); // 4
-  // proto:  QVector<int> QVersionNumber::segments();
-extern void C_ZNK14QVersionNumber8segmentsEv(void* qthis); // 4
-  // proto:  bool QVersionNumber::isNormalized();
-extern bool C_ZNK14QVersionNumber12isNormalizedEv(void* qthis); // 2
-  // proto:  int QVersionNumber::microVersion();
-extern int32_t C_ZNK14QVersionNumber12microVersionEv(void* qthis); // 2
-  // proto:  int QVersionNumber::segmentAt(int index);
-extern int32_t C_ZNK14QVersionNumber9segmentAtEi(void* qthis, int32_t arg0); // 2
-  // proto:  bool QVersionNumber::isNull();
-extern bool C_ZNK14QVersionNumber6isNullEv(void* qthis); // 2
-  // proto:  QString QVersionNumber::toString();
-extern void* C_ZNK14QVersionNumber8toStringEv(void* qthis); // 4
-  // proto:  QVersionNumber QVersionNumber::normalized();
-extern void* C_ZNK14QVersionNumber10normalizedEv(void* qthis); // 4
-  // proto:  bool QVersionNumber::isPrefixOf(const QVersionNumber & other);
-extern bool C_ZNK14QVersionNumber10isPrefixOfERKS_(void* qthis, void* arg0); // 4
+// extern C begin: 20
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QVersionNumber)=8
+//  ext block end
+
+//  body block begin
 type QVersionNumber struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// majorVersion()
-func (this *QVersionNumber) Majorversion(args ...interface{}) (ret interface{}) {
-  // majorVersion()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QVersionNumber12majorVersionEv
-    // invoke: int majorVersion()
-    var ret0 = C.C_ZNK14QVersionNumber12majorVersionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "majorVersion", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:221
+// index:0
+// inline
+// void QVersionNumber()
+func NewQVersionNumber() *QVersionNumber {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QVersionNumber{cthis}
 }
 
-// compare(const class QVersionNumber &, const class QVersionNumber &)
-func (this *QVersionNumber) Compare_S(args ...interface{}) (ret interface{}) {
-  // compare(const class QVersionNumber &, const class QVersionNumber &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QVersionNumber{}) // "const QVersionNumber &"
-  vtys[0][1] = reflect.TypeOf(QVersionNumber{}) // "const QVersionNumber &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QVersionNumber7compareERKS_S1_
-    // invoke: int compare(const class QVersionNumber &, const class QVersionNumber &)
-    var arg0 = args[0].(*QVersionNumber).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QVersionNumber).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN14QVersionNumber7compareERKS_S1_(arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "compare", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:242
+// index:1
+// inline
+// void QVersionNumber(int)
+func NewQVersionNumber_1(maj int) *QVersionNumber {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &maj)
+	gopp.ErrPrint(err, rv)
+	return &QVersionNumber{cthis}
 }
 
-// commonPrefix(const class QVersionNumber &, const class QVersionNumber &)
-func (this *QVersionNumber) Commonprefix_S(args ...interface{}) (ret interface{}) {
-  // commonPrefix(const class QVersionNumber &, const class QVersionNumber &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QVersionNumber{}) // "const QVersionNumber &"
-  vtys[0][1] = reflect.TypeOf(QVersionNumber{}) // "const QVersionNumber &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QVersionNumber12commonPrefixERKS_S1_
-    // invoke: QVersionNumber commonPrefix(const class QVersionNumber &, const class QVersionNumber &)
-    var arg0 = args[0].(*QVersionNumber).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QVersionNumber).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN14QVersionNumber12commonPrefixERKS_S1_(arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVersionNumber{}) // "QVersionNumber"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "commonPrefix", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:245
+// index:2
+// inline
+// void QVersionNumber(int, int)
+func NewQVersionNumber_2(maj int, min int) *QVersionNumber {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Eii", ffiqt.FFI_TYPE_VOID, cthis, &maj, &min)
+	gopp.ErrPrint(err, rv)
+	return &QVersionNumber{cthis}
 }
 
-// segmentCount()
-func (this *QVersionNumber) Segmentcount(args ...interface{}) (ret interface{}) {
-  // segmentCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QVersionNumber12segmentCountEv
-    // invoke: int segmentCount()
-    var ret0 = C.C_ZNK14QVersionNumber12segmentCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "segmentCount", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:248
+// index:3
+// inline
+// void QVersionNumber(int, int, int)
+func NewQVersionNumber_3(maj int, min int, mic int) *QVersionNumber {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Eiii", ffiqt.FFI_TYPE_VOID, cthis, &maj, &min, &mic)
+	gopp.ErrPrint(err, rv)
+	return &QVersionNumber{cthis}
 }
 
-// minorVersion()
-func (this *QVersionNumber) Minorversion(args ...interface{}) (ret interface{}) {
-  // minorVersion()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QVersionNumber12minorVersionEv
-    // invoke: int minorVersion()
-    var ret0 = C.C_ZNK14QVersionNumber12minorVersionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "minorVersion", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:251
+// index:0
+// inline
+// bool isNull()
+func (this *QVersionNumber) IsNull() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QVersionNumber()
-func NewQVersionNumber(args ...interface{}) *QVersionNumber {
-  // QVersionNumber()
-  // QVersionNumber(int, int, int)
-  // QVersionNumber(int)
-  // QVersionNumber(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1][2] = qtrt.Int32Ty(false) // "int"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.Int32Ty(false) // "int"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = qtrt.Int32Ty(false) // "int"
-  vtys[3][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QVersionNumberC1Ev
-    // invoke: void QVersionNumber()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN14QVersionNumberC2Ev()
-    return &QVersionNumber{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN14QVersionNumberC1Eiii
-    // invoke: void QVersionNumber(int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN14QVersionNumberC2Eiii(arg0, arg1, arg2)
-    return &QVersionNumber{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN14QVersionNumberC1Ei
-    // invoke: void QVersionNumber(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN14QVersionNumberC2Ei(arg0)
-    return &QVersionNumber{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN14QVersionNumberC1Eii
-    // invoke: void QVersionNumber(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN14QVersionNumberC2Eii(arg0, arg1)
-    return &QVersionNumber{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "QVersionNumber", args)
-  }
-
-  return nil // QVersionNumber{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qversionnumber.h:254
+// index:0
+// inline
+// bool isNormalized()
+func (this *QVersionNumber) IsNormalized() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12isNormalizedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// fromString(const class QString &, int *)
-func (this *QVersionNumber) Fromstring_S(args ...interface{}) (ret interface{}) {
-  // fromString(const class QString &, int *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = qtrt.Int32Ty(true) // "int *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QVersionNumber10fromStringERK7QStringPi
-    // invoke: QVersionNumber fromString(const class QString &, int *)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN14QVersionNumber10fromStringERK7QStringPi(arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVersionNumber{}) // "QVersionNumber"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "fromString", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:257
+// index:0
+// inline
+// int majorVersion()
+func (this *QVersionNumber) MajorVersion() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12majorVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// segments()
-func (this *QVersionNumber) Segments(args ...interface{}) () {
-  // segments()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QVersionNumber8segmentsEv
-    // invoke: QVector<int> segments()
-    C.C_ZNK14QVersionNumber8segmentsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "segments", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:260
+// index:0
+// inline
+// int minorVersion()
+func (this *QVersionNumber) MinorVersion() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12minorVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isNormalized()
-func (this *QVersionNumber) Isnormalized(args ...interface{}) (ret interface{}) {
-  // isNormalized()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QVersionNumber12isNormalizedEv
-    // invoke: bool isNormalized()
-    var ret0 = C.C_ZNK14QVersionNumber12isNormalizedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "isNormalized", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:263
+// index:0
+// inline
+// int microVersion()
+func (this *QVersionNumber) MicroVersion() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12microVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// microVersion()
-func (this *QVersionNumber) Microversion(args ...interface{}) (ret interface{}) {
-  // microVersion()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QVersionNumber12microVersionEv
-    // invoke: int microVersion()
-    var ret0 = C.C_ZNK14QVersionNumber12microVersionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "microVersion", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:266
+// index:0
+// QVersionNumber normalized()
+func (this *QVersionNumber) Normalized() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber10normalizedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// segmentAt(int)
-func (this *QVersionNumber) Segmentat(args ...interface{}) (ret interface{}) {
-  // segmentAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QVersionNumber9segmentAtEi
-    // invoke: int segmentAt(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK14QVersionNumber9segmentAtEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "segmentAt", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:268
+// index:0
+// QVector<int> segments()
+func (this *QVersionNumber) Segments() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber8segmentsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isNull()
-func (this *QVersionNumber) Isnull(args ...interface{}) (ret interface{}) {
-  // isNull()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QVersionNumber6isNullEv
-    // invoke: bool isNull()
-    var ret0 = C.C_ZNK14QVersionNumber6isNullEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "isNull", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:270
+// index:0
+// inline
+// int segmentAt(int)
+func (this *QVersionNumber) SegmentAt(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber9segmentAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// toString()
-func (this *QVersionNumber) Tostring(args ...interface{}) (ret interface{}) {
-  // toString()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QVersionNumber8toStringEv
-    // invoke: QString toString()
-    var ret0 = C.C_ZNK14QVersionNumber8toStringEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "toString", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:273
+// index:0
+// inline
+// int segmentCount()
+func (this *QVersionNumber) SegmentCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12segmentCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// normalized()
-func (this *QVersionNumber) Normalized(args ...interface{}) (ret interface{}) {
-  // normalized()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QVersionNumber10normalizedEv
-    // invoke: QVersionNumber normalized()
-    var ret0 = C.C_ZNK14QVersionNumber10normalizedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVersionNumber{}) // "QVersionNumber"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "normalized", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:276
+// index:0
+// bool isPrefixOf(const class QVersionNumber &)
+func (this *QVersionNumber) IsPrefixOf(other unsafe.Pointer) {
+	// 0: (, const QVersionNumber & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber10isPrefixOfERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// isPrefixOf(const class QVersionNumber &)
-func (this *QVersionNumber) Isprefixof(args ...interface{}) (ret interface{}) {
-  // isPrefixOf(const class QVersionNumber &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QVersionNumber{}) // "const QVersionNumber &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QVersionNumber10isPrefixOfERKS_
-    // invoke: bool isPrefixOf(const class QVersionNumber &)
-    var arg0 = args[0].(*QVersionNumber).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK14QVersionNumber10isPrefixOfERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVersionNumber", "isPrefixOf", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qversionnumber.h:278
+// index:0
+// static
+// int compare(const class QVersionNumber &, const class QVersionNumber &)
+func (this *QVersionNumber) Compare(v1 unsafe.Pointer, v2 unsafe.Pointer) {
+	// 0: (const QVersionNumber & v1, const QVersionNumber & v2), (v1, v2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber7compareERKS_S1_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QVersionNumber_Compare(v1 unsafe.Pointer, v2 unsafe.Pointer) {
+	// 0: (const QVersionNumber & v1, const QVersionNumber & v2), (v1, v2)
+	var nilthis *QVersionNumber
+	nilthis.Compare(v1, v2)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qversionnumber.h:280
+// index:0
+// static
+// QVersionNumber commonPrefix(const class QVersionNumber &, const class QVersionNumber &)
+func (this *QVersionNumber) CommonPrefix(v1 unsafe.Pointer, v2 unsafe.Pointer) {
+	// 0: (const QVersionNumber & v1, const QVersionNumber & v2), (v1, v2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber12commonPrefixERKS_S1_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QVersionNumber_CommonPrefix(v1 unsafe.Pointer, v2 unsafe.Pointer) {
+	// 0: (const QVersionNumber & v1, const QVersionNumber & v2), (v1, v2)
+	var nilthis *QVersionNumber
+	nilthis.CommonPrefix(v1, v2)
+}
 
+// /usr/include/qt/QtCore/qversionnumber.h:282
+// index:0
+// QString toString()
+func (this *QVersionNumber) ToString() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber8toStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qversionnumber.h:284
+// index:0
+// static
+// QVersionNumber fromString(const class QString &, int *)
+func (this *QVersionNumber) FromString(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
+	// 0: (const QString & string, int * suffixIndex), (string, suffixIndex)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringERK7QStringPi", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QVersionNumber_FromString(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
+	// 0: (const QString & string, int * suffixIndex), (string, suffixIndex)
+	var nilthis *QVersionNumber
+	nilthis.FromString(string, suffixIndex)
+}
+
+// /usr/include/qt/QtCore/qversionnumber.h:286
+// index:1
+// static
+// QVersionNumber fromString(class QLatin1String, int *)
+func (this *QVersionNumber) FromString_1(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
+	// 1: (QLatin1String string, int * suffixIndex), (string, suffixIndex)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE13QLatin1StringPi", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QVersionNumber_FromString_1(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
+	// 1: (QLatin1String string, int * suffixIndex), (string, suffixIndex)
+	var nilthis *QVersionNumber
+	nilthis.FromString_1(string, suffixIndex)
+}
+
+// /usr/include/qt/QtCore/qversionnumber.h:287
+// index:2
+// static
+// QVersionNumber fromString(class QStringView, int *)
+func (this *QVersionNumber) FromString_2(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
+	// 2: (QStringView string, int * suffixIndex), (string, suffixIndex)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE11QStringViewPi", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QVersionNumber_FromString_2(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
+	// 2: (QStringView string, int * suffixIndex), (string, suffixIndex)
+	var nilthis *QVersionNumber
+	nilthis.FromString_2(string, suffixIndex)
+}
+
+//  body block end

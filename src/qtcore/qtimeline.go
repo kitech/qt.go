@@ -1,997 +1,342 @@
+//  header block begin
+// /usr/include/qt/QtCore/qtimeline.h
+// #include <qtimeline.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qtimeline.h
-// dst-file: /src/core/qtimeline.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QTimeLine::toggleDirection();
-extern void C_ZN9QTimeLine15toggleDirectionEv(void* qthis); // 4
-  // proto:  void QTimeLine::setCurrentTime(int msec);
-extern void C_ZN9QTimeLine14setCurrentTimeEi(void* qthis, int32_t arg0); // 4
-  // proto:  qreal QTimeLine::valueForTime(int msec);
-extern double C_ZNK9QTimeLine12valueForTimeEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTimeLine::setEasingCurve(const QEasingCurve & curve);
-extern void C_ZN9QTimeLine14setEasingCurveERK12QEasingCurve(void* qthis, void* arg0); // 4
-  // proto:  qreal QTimeLine::currentValue();
-extern double C_ZNK9QTimeLine12currentValueEv(void* qthis); // 4
-  // proto:  void QTimeLine::QTimeLine(int duration, QObject * parent);
-extern void* C_ZN9QTimeLineC2EiP7QObject(int32_t arg0, void* arg1); // 3
-  // proto:  void QTimeLine::setFrameRange(int startFrame, int endFrame);
-extern void C_ZN9QTimeLine13setFrameRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  int QTimeLine::duration();
-extern int32_t C_ZNK9QTimeLine8durationEv(void* qthis); // 4
-  // proto:  int QTimeLine::loopCount();
-extern int32_t C_ZNK9QTimeLine9loopCountEv(void* qthis); // 4
-  // proto:  void QTimeLine::resume();
-extern void C_ZN9QTimeLine6resumeEv(void* qthis); // 4
-  // proto:  void QTimeLine::start();
-extern void C_ZN9QTimeLine5startEv(void* qthis); // 4
-  // proto:  QTimeLine::State QTimeLine::state();
-extern void C_ZNK9QTimeLine5stateEv(void* qthis); // 4
-  // proto:  int QTimeLine::frameForTime(int msec);
-extern int32_t C_ZNK9QTimeLine12frameForTimeEi(void* qthis, int32_t arg0); // 4
-  // proto:  QTimeLine::Direction QTimeLine::direction();
-extern void C_ZNK9QTimeLine9directionEv(void* qthis); // 4
-  // proto:  void QTimeLine::setLoopCount(int count);
-extern void C_ZN9QTimeLine12setLoopCountEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QTimeLine::endFrame();
-extern int32_t C_ZNK9QTimeLine8endFrameEv(void* qthis); // 4
-  // proto:  void QTimeLine::stop();
-extern void C_ZN9QTimeLine4stopEv(void* qthis); // 4
-  // proto:  int QTimeLine::startFrame();
-extern int32_t C_ZNK9QTimeLine10startFrameEv(void* qthis); // 4
-  // proto:  int QTimeLine::updateInterval();
-extern int32_t C_ZNK9QTimeLine14updateIntervalEv(void* qthis); // 4
-  // proto:  int QTimeLine::currentFrame();
-extern int32_t C_ZNK9QTimeLine12currentFrameEv(void* qthis); // 4
-  // proto:  const QMetaObject * QTimeLine::metaObject();
-extern void C_ZNK9QTimeLine10metaObjectEv(void* qthis); // 4
-  // proto:  void QTimeLine::setUpdateInterval(int interval);
-extern void C_ZN9QTimeLine17setUpdateIntervalEi(void* qthis, int32_t arg0); // 4
-  // proto:  QTimeLine::CurveShape QTimeLine::curveShape();
-extern void C_ZNK9QTimeLine10curveShapeEv(void* qthis); // 4
-  // proto:  int QTimeLine::currentTime();
-extern int32_t C_ZNK9QTimeLine11currentTimeEv(void* qthis); // 4
-  // proto:  QEasingCurve QTimeLine::easingCurve();
-extern void* C_ZNK9QTimeLine11easingCurveEv(void* qthis); // 4
-  // proto:  void QTimeLine::setEndFrame(int frame);
-extern void C_ZN9QTimeLine11setEndFrameEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTimeLine::setDuration(int duration);
-extern void C_ZN9QTimeLine11setDurationEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTimeLine::~QTimeLine();
-extern void C_ZN9QTimeLineD2Ev(void* qthis); // 4
-  // proto:  void QTimeLine::setStartFrame(int frame);
-extern void C_ZN9QTimeLine13setStartFrameEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTimeLine::setPaused(bool paused);
-extern void C_ZN9QTimeLine9setPausedEb(void* qthis, bool arg0); // 4
+// extern C begin: 4
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QTimeLine)=1
+//  ext block end
+
+//  body block begin
 type QTimeLine struct {
-  /*qbase*/ QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _valueChanged QTimeLine_valueChanged_signal;
-//  _finished QTimeLine_finished_signal;
-//  _frameChanged QTimeLine_frameChanged_signal;
-//  _stateChanged QTimeLine_stateChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// toggleDirection()
-func (this *QTimeLine) Toggledirection(args ...interface{}) () {
-  // toggleDirection()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine15toggleDirectionEv
-    // invoke: void toggleDirection()
-    C.C_ZN9QTimeLine15toggleDirectionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "toggleDirection", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:52
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QTimeLine) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setCurrentTime(int)
-func (this *QTimeLine) Setcurrenttime(args ...interface{}) () {
-  // setCurrentTime(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine14setCurrentTimeEi
-    // invoke: void setCurrentTime(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTimeLine14setCurrentTimeEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "setCurrentTime", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:79
+// index:0
+// void QTimeLine(int, class QObject *)
+func NewQTimeLine(duration int, parent unsafe.Pointer) *QTimeLine {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &duration, parent)
+	gopp.ErrPrint(err, rv)
+	return &QTimeLine{cthis}
 }
 
-// valueForTime(int)
-func (this *QTimeLine) Valuefortime(args ...interface{}) (ret interface{}) {
-  // valueForTime(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine12valueForTimeEi
-    // invoke: qreal valueForTime(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTimeLine12valueForTimeEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeLine", "valueForTime", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:80
+// index:0
+// virtual
+// void ~QTimeLine()
+func DeleteQTimeLine(*QTimeLine) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// setEasingCurve(const class QEasingCurve &)
-func (this *QTimeLine) Seteasingcurve(args ...interface{}) () {
-  // setEasingCurve(const class QEasingCurve &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QEasingCurve{}) // "const QEasingCurve &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine14setEasingCurveERK12QEasingCurve
-    // invoke: void setEasingCurve(const class QEasingCurve &)
-    var arg0 = args[0].(*QEasingCurve).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTimeLine14setEasingCurveERK12QEasingCurve(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "setEasingCurve", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:82
+// index:0
+// QTimeLine::State state()
+func (this *QTimeLine) State() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine5stateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// currentValue()
-func (this *QTimeLine) Currentvalue(args ...interface{}) (ret interface{}) {
-  // currentValue()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine12currentValueEv
-    // invoke: qreal currentValue()
-    var ret0 = C.C_ZNK9QTimeLine12currentValueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeLine", "currentValue", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:84
+// index:0
+// int loopCount()
+func (this *QTimeLine) LoopCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine9loopCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QTimeLine(int, class QObject *)
-func NewQTimeLine(args ...interface{}) *QTimeLine {
-  // QTimeLine(int, class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLineC1EiP7QObject
-    // invoke: void QTimeLine(int, class QObject *)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QObject).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QTimeLineC2EiP7QObject(arg0, arg1)
-    return &QTimeLine{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QTimeLine", "QTimeLine", args)
-  }
-
-  return nil // QTimeLine{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qtimeline.h:85
+// index:0
+// void setLoopCount(int)
+func (this *QTimeLine) SetLoopCount(count int) {
+	// 0: (, int count), (&count)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine12setLoopCountEi", ffiqt.FFI_TYPE_VOID, this.cthis, &count)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFrameRange(int, int)
-func (this *QTimeLine) Setframerange(args ...interface{}) () {
-  // setFrameRange(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine13setFrameRangeEii
-    // invoke: void setFrameRange(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN9QTimeLine13setFrameRangeEii(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "setFrameRange", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:87
+// index:0
+// QTimeLine::Direction direction()
+func (this *QTimeLine) Direction() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine9directionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// duration()
-func (this *QTimeLine) Duration(args ...interface{}) (ret interface{}) {
-  // duration()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine8durationEv
-    // invoke: int duration()
-    var ret0 = C.C_ZNK9QTimeLine8durationEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeLine", "duration", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:88
+// index:0
+// void setDirection(enum QTimeLine::Direction)
+func (this *QTimeLine) SetDirection(direction int) {
+	// 0: (, QTimeLine::Direction direction), (&direction)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine12setDirectionENS_9DirectionE", ffiqt.FFI_TYPE_VOID, this.cthis, &direction)
+	gopp.ErrPrint(err, rv)
 }
 
-// loopCount()
-func (this *QTimeLine) Loopcount(args ...interface{}) (ret interface{}) {
-  // loopCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine9loopCountEv
-    // invoke: int loopCount()
-    var ret0 = C.C_ZNK9QTimeLine9loopCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeLine", "loopCount", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:90
+// index:0
+// int duration()
+func (this *QTimeLine) Duration() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine8durationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// resume()
-func (this *QTimeLine) Resume(args ...interface{}) () {
-  // resume()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine6resumeEv
-    // invoke: void resume()
-    C.C_ZN9QTimeLine6resumeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "resume", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:91
+// index:0
+// void setDuration(int)
+func (this *QTimeLine) SetDuration(duration int) {
+	// 0: (, int duration), (&duration)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine11setDurationEi", ffiqt.FFI_TYPE_VOID, this.cthis, &duration)
+	gopp.ErrPrint(err, rv)
 }
 
-// start()
-func (this *QTimeLine) Start(args ...interface{}) () {
-  // start()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine5startEv
-    // invoke: void start()
-    C.C_ZN9QTimeLine5startEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "start", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:93
+// index:0
+// int startFrame()
+func (this *QTimeLine) StartFrame() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine10startFrameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// state()
-func (this *QTimeLine) State(args ...interface{}) () {
-  // state()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine5stateEv
-    // invoke: QTimeLine::State state()
-    C.C_ZNK9QTimeLine5stateEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "state", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:94
+// index:0
+// void setStartFrame(int)
+func (this *QTimeLine) SetStartFrame(frame int) {
+	// 0: (, int frame), (&frame)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setStartFrameEi", ffiqt.FFI_TYPE_VOID, this.cthis, &frame)
+	gopp.ErrPrint(err, rv)
 }
 
-// frameForTime(int)
-func (this *QTimeLine) Framefortime(args ...interface{}) (ret interface{}) {
-  // frameForTime(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine12frameForTimeEi
-    // invoke: int frameForTime(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTimeLine12frameForTimeEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeLine", "frameForTime", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:95
+// index:0
+// int endFrame()
+func (this *QTimeLine) EndFrame() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine8endFrameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// direction()
-func (this *QTimeLine) Direction(args ...interface{}) () {
-  // direction()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine9directionEv
-    // invoke: QTimeLine::Direction direction()
-    C.C_ZNK9QTimeLine9directionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "direction", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:96
+// index:0
+// void setEndFrame(int)
+func (this *QTimeLine) SetEndFrame(frame int) {
+	// 0: (, int frame), (&frame)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine11setEndFrameEi", ffiqt.FFI_TYPE_VOID, this.cthis, &frame)
+	gopp.ErrPrint(err, rv)
 }
 
-// setLoopCount(int)
-func (this *QTimeLine) Setloopcount(args ...interface{}) () {
-  // setLoopCount(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine12setLoopCountEi
-    // invoke: void setLoopCount(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTimeLine12setLoopCountEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "setLoopCount", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:97
+// index:0
+// void setFrameRange(int, int)
+func (this *QTimeLine) SetFrameRange(startFrame int, endFrame int) {
+	// 0: (, int startFrame, int endFrame), (&startFrame, &endFrame)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setFrameRangeEii", ffiqt.FFI_TYPE_VOID, this.cthis, &startFrame, &endFrame)
+	gopp.ErrPrint(err, rv)
 }
 
-// endFrame()
-func (this *QTimeLine) Endframe(args ...interface{}) (ret interface{}) {
-  // endFrame()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine8endFrameEv
-    // invoke: int endFrame()
-    var ret0 = C.C_ZNK9QTimeLine8endFrameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeLine", "endFrame", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:99
+// index:0
+// int updateInterval()
+func (this *QTimeLine) UpdateInterval() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine14updateIntervalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// stop()
-func (this *QTimeLine) Stop(args ...interface{}) () {
-  // stop()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine4stopEv
-    // invoke: void stop()
-    C.C_ZN9QTimeLine4stopEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "stop", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:100
+// index:0
+// void setUpdateInterval(int)
+func (this *QTimeLine) SetUpdateInterval(interval int) {
+	// 0: (, int interval), (&interval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine17setUpdateIntervalEi", ffiqt.FFI_TYPE_VOID, this.cthis, &interval)
+	gopp.ErrPrint(err, rv)
 }
 
-// startFrame()
-func (this *QTimeLine) Startframe(args ...interface{}) (ret interface{}) {
-  // startFrame()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine10startFrameEv
-    // invoke: int startFrame()
-    var ret0 = C.C_ZNK9QTimeLine10startFrameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeLine", "startFrame", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:102
+// index:0
+// QTimeLine::CurveShape curveShape()
+func (this *QTimeLine) CurveShape() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine10curveShapeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// updateInterval()
-func (this *QTimeLine) Updateinterval(args ...interface{}) (ret interface{}) {
-  // updateInterval()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine14updateIntervalEv
-    // invoke: int updateInterval()
-    var ret0 = C.C_ZNK9QTimeLine14updateIntervalEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeLine", "updateInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:103
+// index:0
+// void setCurveShape(enum QTimeLine::CurveShape)
+func (this *QTimeLine) SetCurveShape(shape int) {
+	// 0: (, QTimeLine::CurveShape shape), (&shape)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setCurveShapeENS_10CurveShapeE", ffiqt.FFI_TYPE_VOID, this.cthis, &shape)
+	gopp.ErrPrint(err, rv)
 }
 
-// currentFrame()
-func (this *QTimeLine) Currentframe(args ...interface{}) (ret interface{}) {
-  // currentFrame()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine12currentFrameEv
-    // invoke: int currentFrame()
-    var ret0 = C.C_ZNK9QTimeLine12currentFrameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeLine", "currentFrame", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:105
+// index:0
+// QEasingCurve easingCurve()
+func (this *QTimeLine) EasingCurve() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine11easingCurveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QTimeLine) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QTimeLine10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:106
+// index:0
+// void setEasingCurve(const class QEasingCurve &)
+func (this *QTimeLine) SetEasingCurve(curve unsafe.Pointer) {
+	// 0: (, const QEasingCurve & curve), (curve)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine14setEasingCurveERK12QEasingCurve", ffiqt.FFI_TYPE_VOID, this.cthis, curve)
+	gopp.ErrPrint(err, rv)
 }
 
-// setUpdateInterval(int)
-func (this *QTimeLine) Setupdateinterval(args ...interface{}) () {
-  // setUpdateInterval(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine17setUpdateIntervalEi
-    // invoke: void setUpdateInterval(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTimeLine17setUpdateIntervalEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "setUpdateInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:108
+// index:0
+// int currentTime()
+func (this *QTimeLine) CurrentTime() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine11currentTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// curveShape()
-func (this *QTimeLine) Curveshape(args ...interface{}) () {
-  // curveShape()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine10curveShapeEv
-    // invoke: QTimeLine::CurveShape curveShape()
-    C.C_ZNK9QTimeLine10curveShapeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "curveShape", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:109
+// index:0
+// int currentFrame()
+func (this *QTimeLine) CurrentFrame() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12currentFrameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// currentTime()
-func (this *QTimeLine) Currenttime(args ...interface{}) (ret interface{}) {
-  // currentTime()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine11currentTimeEv
-    // invoke: int currentTime()
-    var ret0 = C.C_ZNK9QTimeLine11currentTimeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeLine", "currentTime", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:110
+// index:0
+// qreal currentValue()
+func (this *QTimeLine) CurrentValue() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12currentValueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// easingCurve()
-func (this *QTimeLine) Easingcurve(args ...interface{}) (ret interface{}) {
-  // easingCurve()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeLine11easingCurveEv
-    // invoke: QEasingCurve easingCurve()
-    var ret0 = C.C_ZNK9QTimeLine11easingCurveEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QEasingCurve{}) // "QEasingCurve"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeLine", "easingCurve", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:112
+// index:0
+// int frameForTime(int)
+func (this *QTimeLine) FrameForTime(msec int) {
+	// 0: (, int msec), (&msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12frameForTimeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &msec)
+	gopp.ErrPrint(err, rv)
 }
 
-// setEndFrame(int)
-func (this *QTimeLine) Setendframe(args ...interface{}) () {
-  // setEndFrame(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine11setEndFrameEi
-    // invoke: void setEndFrame(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTimeLine11setEndFrameEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "setEndFrame", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:113
+// index:0
+// virtual
+// qreal valueForTime(int)
+func (this *QTimeLine) ValueForTime(msec int) {
+	// 0: (, int msec), (&msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12valueForTimeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &msec)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDuration(int)
-func (this *QTimeLine) Setduration(args ...interface{}) () {
-  // setDuration(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine11setDurationEi
-    // invoke: void setDuration(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTimeLine11setDurationEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "setDuration", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:116
+// index:0
+// void start()
+func (this *QTimeLine) Start() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine5startEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QTimeLine()
-func (this *QTimeLine) Freeqtimeline(args ...interface{}) () {
-  // ~QTimeLine()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLineD0Ev
-    // invoke: void ~QTimeLine()
-    C.C_ZN9QTimeLineD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "~QTimeLine", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:117
+// index:0
+// void resume()
+func (this *QTimeLine) Resume() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine6resumeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setStartFrame(int)
-func (this *QTimeLine) Setstartframe(args ...interface{}) () {
-  // setStartFrame(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine13setStartFrameEi
-    // invoke: void setStartFrame(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTimeLine13setStartFrameEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "setStartFrame", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:118
+// index:0
+// void stop()
+func (this *QTimeLine) Stop() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine4stopEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setPaused(_Bool)
-func (this *QTimeLine) Setpaused(args ...interface{}) () {
-  // setPaused(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeLine9setPausedEb
-    // invoke: void setPaused(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTimeLine9setPausedEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeLine", "setPaused", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimeline.h:119
+// index:0
+// void setPaused(_Bool)
+func (this *QTimeLine) SetPaused(paused bool) {
+	// 0: (, bool paused), (&paused)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine9setPausedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &paused)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qtimeline.h:120
+// index:0
+// void setCurrentTime(int)
+func (this *QTimeLine) SetCurrentTime(msec int) {
+	// 0: (, int msec), (&msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine14setCurrentTimeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &msec)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qtimeline.h:121
+// index:0
+// void toggleDirection()
+func (this *QTimeLine) ToggleDirection() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine15toggleDirectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

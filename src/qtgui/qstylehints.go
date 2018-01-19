@@ -1,853 +1,407 @@
+//  header block begin
+// /usr/include/qt/QtGui/qstylehints.h
+// #include <qstylehints.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qstylehints.h
-// dst-file: /src/gui/qstylehints.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  bool QStyleHints::setFocusOnTouchRelease();
-extern bool C_ZNK11QStyleHints22setFocusOnTouchReleaseEv(void* qthis); // 4
-  // proto:  int QStyleHints::startDragDistance();
-extern int32_t C_ZNK11QStyleHints17startDragDistanceEv(void* qthis); // 4
-  // proto:  int QStyleHints::keyboardAutoRepeatRate();
-extern int32_t C_ZNK11QStyleHints22keyboardAutoRepeatRateEv(void* qthis); // 4
-  // proto:  int QStyleHints::passwordMaskDelay();
-extern int32_t C_ZNK11QStyleHints17passwordMaskDelayEv(void* qthis); // 4
-  // proto:  void QStyleHints::setMouseDoubleClickInterval(int mouseDoubleClickInterval);
-extern void C_ZN11QStyleHints27setMouseDoubleClickIntervalEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QStyleHints::cursorFlashTime();
-extern int32_t C_ZNK11QStyleHints15cursorFlashTimeEv(void* qthis); // 4
-  // proto:  int QStyleHints::mousePressAndHoldInterval();
-extern int32_t C_ZNK11QStyleHints25mousePressAndHoldIntervalEv(void* qthis); // 4
-  // proto:  int QStyleHints::startDragVelocity();
-extern int32_t C_ZNK11QStyleHints17startDragVelocityEv(void* qthis); // 4
-  // proto:  bool QStyleHints::useRtlExtensions();
-extern bool C_ZNK11QStyleHints16useRtlExtensionsEv(void* qthis); // 4
-  // proto:  bool QStyleHints::singleClickActivation();
-extern bool C_ZNK11QStyleHints21singleClickActivationEv(void* qthis); // 4
-  // proto:  void QStyleHints::setKeyboardInputInterval(int keyboardInputInterval);
-extern void C_ZN11QStyleHints24setKeyboardInputIntervalEi(void* qthis, int32_t arg0); // 4
-  // proto:  Qt::TabFocusBehavior QStyleHints::tabFocusBehavior();
-extern void C_ZNK11QStyleHints16tabFocusBehaviorEv(void* qthis); // 4
-  // proto:  void QStyleHints::setStartDragTime(int startDragTime);
-extern void C_ZN11QStyleHints16setStartDragTimeEi(void* qthis, int32_t arg0); // 4
-  // proto:  bool QStyleHints::showIsMaximized();
-extern bool C_ZNK11QStyleHints15showIsMaximizedEv(void* qthis); // 4
-  // proto:  void QStyleHints::setCursorFlashTime(int cursorFlashTime);
-extern void C_ZN11QStyleHints18setCursorFlashTimeEi(void* qthis, int32_t arg0); // 4
-  // proto:  qreal QStyleHints::fontSmoothingGamma();
-extern double C_ZNK11QStyleHints18fontSmoothingGammaEv(void* qthis); // 4
-  // proto:  void QStyleHints::setStartDragDistance(int startDragDistance);
-extern void C_ZN11QStyleHints20setStartDragDistanceEi(void* qthis, int32_t arg0); // 4
-  // proto:  const QMetaObject * QStyleHints::metaObject();
-extern void C_ZNK11QStyleHints10metaObjectEv(void* qthis); // 4
-  // proto:  int QStyleHints::keyboardInputInterval();
-extern int32_t C_ZNK11QStyleHints21keyboardInputIntervalEv(void* qthis); // 4
-  // proto:  bool QStyleHints::showIsFullScreen();
-extern bool C_ZNK11QStyleHints16showIsFullScreenEv(void* qthis); // 4
-  // proto:  int QStyleHints::startDragTime();
-extern int32_t C_ZNK11QStyleHints13startDragTimeEv(void* qthis); // 4
-  // proto:  void QStyleHints::setMousePressAndHoldInterval(int mousePressAndHoldInterval);
-extern void C_ZN11QStyleHints28setMousePressAndHoldIntervalEi(void* qthis, int32_t arg0); // 4
-  // proto:  QChar QStyleHints::passwordMaskCharacter();
-extern void* C_ZNK11QStyleHints21passwordMaskCharacterEv(void* qthis); // 4
-  // proto:  int QStyleHints::mouseDoubleClickInterval();
-extern int32_t C_ZNK11QStyleHints24mouseDoubleClickIntervalEv(void* qthis); // 4
+// extern C begin: 16
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QStyleHints)=1
+//  ext block end
+
+//  body block begin
 type QStyleHints struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _cursorFlashTimeChanged QStyleHints_cursorFlashTimeChanged_signal;
-//  _keyboardInputIntervalChanged QStyleHints_keyboardInputIntervalChanged_signal;
-//  _tabFocusBehaviorChanged QStyleHints_tabFocusBehaviorChanged_signal;
-//  _startDragDistanceChanged QStyleHints_startDragDistanceChanged_signal;
-//  _startDragTimeChanged QStyleHints_startDragTimeChanged_signal;
-//  _mousePressAndHoldIntervalChanged QStyleHints_mousePressAndHoldIntervalChanged_signal;
-//  _mouseDoubleClickIntervalChanged QStyleHints_mouseDoubleClickIntervalChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// setFocusOnTouchRelease()
-func (this *QStyleHints) Setfocusontouchrelease(args ...interface{}) (ret interface{}) {
-  // setFocusOnTouchRelease()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints22setFocusOnTouchReleaseEv
-    // invoke: bool setFocusOnTouchRelease()
-    var ret0 = C.C_ZNK11QStyleHints22setFocusOnTouchReleaseEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "setFocusOnTouchRelease", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:54
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QStyleHints) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// startDragDistance()
-func (this *QStyleHints) Startdragdistance(args ...interface{}) (ret interface{}) {
-  // startDragDistance()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints17startDragDistanceEv
-    // invoke: int startDragDistance()
-    var ret0 = C.C_ZNK11QStyleHints17startDragDistanceEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "startDragDistance", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:78
+// index:0
+// void setMouseDoubleClickInterval(int)
+func (this *QStyleHints) SetMouseDoubleClickInterval(mouseDoubleClickInterval int) {
+	// 0: (, int mouseDoubleClickInterval), (&mouseDoubleClickInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints27setMouseDoubleClickIntervalEi", ffiqt.FFI_TYPE_VOID, this.cthis, &mouseDoubleClickInterval)
+	gopp.ErrPrint(err, rv)
 }
 
-// keyboardAutoRepeatRate()
-func (this *QStyleHints) Keyboardautorepeatrate(args ...interface{}) (ret interface{}) {
-  // keyboardAutoRepeatRate()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints22keyboardAutoRepeatRateEv
-    // invoke: int keyboardAutoRepeatRate()
-    var ret0 = C.C_ZNK11QStyleHints22keyboardAutoRepeatRateEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "keyboardAutoRepeatRate", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:79
+// index:0
+// int mouseDoubleClickInterval()
+func (this *QStyleHints) MouseDoubleClickInterval() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints24mouseDoubleClickIntervalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// passwordMaskDelay()
-func (this *QStyleHints) Passwordmaskdelay(args ...interface{}) (ret interface{}) {
-  // passwordMaskDelay()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints17passwordMaskDelayEv
-    // invoke: int passwordMaskDelay()
-    var ret0 = C.C_ZNK11QStyleHints17passwordMaskDelayEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "passwordMaskDelay", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:80
+// index:0
+// void setMousePressAndHoldInterval(int)
+func (this *QStyleHints) SetMousePressAndHoldInterval(mousePressAndHoldInterval int) {
+	// 0: (, int mousePressAndHoldInterval), (&mousePressAndHoldInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints28setMousePressAndHoldIntervalEi", ffiqt.FFI_TYPE_VOID, this.cthis, &mousePressAndHoldInterval)
+	gopp.ErrPrint(err, rv)
 }
 
-// setMouseDoubleClickInterval(int)
-func (this *QStyleHints) Setmousedoubleclickinterval(args ...interface{}) () {
-  // setMouseDoubleClickInterval(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStyleHints27setMouseDoubleClickIntervalEi
-    // invoke: void setMouseDoubleClickInterval(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QStyleHints27setMouseDoubleClickIntervalEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStyleHints", "setMouseDoubleClickInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:81
+// index:0
+// int mousePressAndHoldInterval()
+func (this *QStyleHints) MousePressAndHoldInterval() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints25mousePressAndHoldIntervalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// cursorFlashTime()
-func (this *QStyleHints) Cursorflashtime(args ...interface{}) (ret interface{}) {
-  // cursorFlashTime()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints15cursorFlashTimeEv
-    // invoke: int cursorFlashTime()
-    var ret0 = C.C_ZNK11QStyleHints15cursorFlashTimeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "cursorFlashTime", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:82
+// index:0
+// void setStartDragDistance(int)
+func (this *QStyleHints) SetStartDragDistance(startDragDistance int) {
+	// 0: (, int startDragDistance), (&startDragDistance)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints20setStartDragDistanceEi", ffiqt.FFI_TYPE_VOID, this.cthis, &startDragDistance)
+	gopp.ErrPrint(err, rv)
 }
 
-// mousePressAndHoldInterval()
-func (this *QStyleHints) Mousepressandholdinterval(args ...interface{}) (ret interface{}) {
-  // mousePressAndHoldInterval()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints25mousePressAndHoldIntervalEv
-    // invoke: int mousePressAndHoldInterval()
-    var ret0 = C.C_ZNK11QStyleHints25mousePressAndHoldIntervalEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "mousePressAndHoldInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:83
+// index:0
+// int startDragDistance()
+func (this *QStyleHints) StartDragDistance() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17startDragDistanceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// startDragVelocity()
-func (this *QStyleHints) Startdragvelocity(args ...interface{}) (ret interface{}) {
-  // startDragVelocity()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints17startDragVelocityEv
-    // invoke: int startDragVelocity()
-    var ret0 = C.C_ZNK11QStyleHints17startDragVelocityEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "startDragVelocity", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:84
+// index:0
+// void setStartDragTime(int)
+func (this *QStyleHints) SetStartDragTime(startDragTime int) {
+	// 0: (, int startDragTime), (&startDragTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints16setStartDragTimeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &startDragTime)
+	gopp.ErrPrint(err, rv)
 }
 
-// useRtlExtensions()
-func (this *QStyleHints) Usertlextensions(args ...interface{}) (ret interface{}) {
-  // useRtlExtensions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints16useRtlExtensionsEv
-    // invoke: bool useRtlExtensions()
-    var ret0 = C.C_ZNK11QStyleHints16useRtlExtensionsEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "useRtlExtensions", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:85
+// index:0
+// int startDragTime()
+func (this *QStyleHints) StartDragTime() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints13startDragTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// singleClickActivation()
-func (this *QStyleHints) Singleclickactivation(args ...interface{}) (ret interface{}) {
-  // singleClickActivation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints21singleClickActivationEv
-    // invoke: bool singleClickActivation()
-    var ret0 = C.C_ZNK11QStyleHints21singleClickActivationEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "singleClickActivation", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:86
+// index:0
+// int startDragVelocity()
+func (this *QStyleHints) StartDragVelocity() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17startDragVelocityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setKeyboardInputInterval(int)
-func (this *QStyleHints) Setkeyboardinputinterval(args ...interface{}) () {
-  // setKeyboardInputInterval(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStyleHints24setKeyboardInputIntervalEi
-    // invoke: void setKeyboardInputInterval(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QStyleHints24setKeyboardInputIntervalEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStyleHints", "setKeyboardInputInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:87
+// index:0
+// void setKeyboardInputInterval(int)
+func (this *QStyleHints) SetKeyboardInputInterval(keyboardInputInterval int) {
+	// 0: (, int keyboardInputInterval), (&keyboardInputInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints24setKeyboardInputIntervalEi", ffiqt.FFI_TYPE_VOID, this.cthis, &keyboardInputInterval)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabFocusBehavior()
-func (this *QStyleHints) Tabfocusbehavior(args ...interface{}) () {
-  // tabFocusBehavior()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints16tabFocusBehaviorEv
-    // invoke: Qt::TabFocusBehavior tabFocusBehavior()
-    C.C_ZNK11QStyleHints16tabFocusBehaviorEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStyleHints", "tabFocusBehavior", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:88
+// index:0
+// int keyboardInputInterval()
+func (this *QStyleHints) KeyboardInputInterval() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21keyboardInputIntervalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setStartDragTime(int)
-func (this *QStyleHints) Setstartdragtime(args ...interface{}) () {
-  // setStartDragTime(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStyleHints16setStartDragTimeEi
-    // invoke: void setStartDragTime(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QStyleHints16setStartDragTimeEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStyleHints", "setStartDragTime", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:89
+// index:0
+// int keyboardAutoRepeatRate()
+func (this *QStyleHints) KeyboardAutoRepeatRate() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints22keyboardAutoRepeatRateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// showIsMaximized()
-func (this *QStyleHints) Showismaximized(args ...interface{}) (ret interface{}) {
-  // showIsMaximized()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints15showIsMaximizedEv
-    // invoke: bool showIsMaximized()
-    var ret0 = C.C_ZNK11QStyleHints15showIsMaximizedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "showIsMaximized", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:90
+// index:0
+// void setCursorFlashTime(int)
+func (this *QStyleHints) SetCursorFlashTime(cursorFlashTime int) {
+	// 0: (, int cursorFlashTime), (&cursorFlashTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints18setCursorFlashTimeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &cursorFlashTime)
+	gopp.ErrPrint(err, rv)
 }
 
-// setCursorFlashTime(int)
-func (this *QStyleHints) Setcursorflashtime(args ...interface{}) () {
-  // setCursorFlashTime(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStyleHints18setCursorFlashTimeEi
-    // invoke: void setCursorFlashTime(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QStyleHints18setCursorFlashTimeEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStyleHints", "setCursorFlashTime", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:91
+// index:0
+// int cursorFlashTime()
+func (this *QStyleHints) CursorFlashTime() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15cursorFlashTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// fontSmoothingGamma()
-func (this *QStyleHints) Fontsmoothinggamma(args ...interface{}) (ret interface{}) {
-  // fontSmoothingGamma()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints18fontSmoothingGammaEv
-    // invoke: qreal fontSmoothingGamma()
-    var ret0 = C.C_ZNK11QStyleHints18fontSmoothingGammaEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "fontSmoothingGamma", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:92
+// index:0
+// bool showIsFullScreen()
+func (this *QStyleHints) ShowIsFullScreen() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16showIsFullScreenEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setStartDragDistance(int)
-func (this *QStyleHints) Setstartdragdistance(args ...interface{}) () {
-  // setStartDragDistance(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStyleHints20setStartDragDistanceEi
-    // invoke: void setStartDragDistance(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QStyleHints20setStartDragDistanceEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStyleHints", "setStartDragDistance", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:93
+// index:0
+// bool showIsMaximized()
+func (this *QStyleHints) ShowIsMaximized() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15showIsMaximizedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QStyleHints) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QStyleHints10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStyleHints", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:94
+// index:0
+// bool showShortcutsInContextMenus()
+func (this *QStyleHints) ShowShortcutsInContextMenus() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints27showShortcutsInContextMenusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// keyboardInputInterval()
-func (this *QStyleHints) Keyboardinputinterval(args ...interface{}) (ret interface{}) {
-  // keyboardInputInterval()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints21keyboardInputIntervalEv
-    // invoke: int keyboardInputInterval()
-    var ret0 = C.C_ZNK11QStyleHints21keyboardInputIntervalEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "keyboardInputInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:95
+// index:0
+// int passwordMaskDelay()
+func (this *QStyleHints) PasswordMaskDelay() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17passwordMaskDelayEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// showIsFullScreen()
-func (this *QStyleHints) Showisfullscreen(args ...interface{}) (ret interface{}) {
-  // showIsFullScreen()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints16showIsFullScreenEv
-    // invoke: bool showIsFullScreen()
-    var ret0 = C.C_ZNK11QStyleHints16showIsFullScreenEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "showIsFullScreen", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:96
+// index:0
+// QChar passwordMaskCharacter()
+func (this *QStyleHints) PasswordMaskCharacter() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21passwordMaskCharacterEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// startDragTime()
-func (this *QStyleHints) Startdragtime(args ...interface{}) (ret interface{}) {
-  // startDragTime()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints13startDragTimeEv
-    // invoke: int startDragTime()
-    var ret0 = C.C_ZNK11QStyleHints13startDragTimeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "startDragTime", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:97
+// index:0
+// qreal fontSmoothingGamma()
+func (this *QStyleHints) FontSmoothingGamma() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints18fontSmoothingGammaEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setMousePressAndHoldInterval(int)
-func (this *QStyleHints) Setmousepressandholdinterval(args ...interface{}) () {
-  // setMousePressAndHoldInterval(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStyleHints28setMousePressAndHoldIntervalEi
-    // invoke: void setMousePressAndHoldInterval(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QStyleHints28setMousePressAndHoldIntervalEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStyleHints", "setMousePressAndHoldInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:98
+// index:0
+// bool useRtlExtensions()
+func (this *QStyleHints) UseRtlExtensions() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16useRtlExtensionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// passwordMaskCharacter()
-func (this *QStyleHints) Passwordmaskcharacter(args ...interface{}) (ret interface{}) {
-  // passwordMaskCharacter()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints21passwordMaskCharacterEv
-    // invoke: QChar passwordMaskCharacter()
-    var ret0 = C.C_ZNK11QStyleHints21passwordMaskCharacterEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QChar{}) // "QChar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "passwordMaskCharacter", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:99
+// index:0
+// bool setFocusOnTouchRelease()
+func (this *QStyleHints) SetFocusOnTouchRelease() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints22setFocusOnTouchReleaseEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// mouseDoubleClickInterval()
-func (this *QStyleHints) Mousedoubleclickinterval(args ...interface{}) (ret interface{}) {
-  // mouseDoubleClickInterval()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStyleHints24mouseDoubleClickIntervalEv
-    // invoke: int mouseDoubleClickInterval()
-    var ret0 = C.C_ZNK11QStyleHints24mouseDoubleClickIntervalEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyleHints", "mouseDoubleClickInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstylehints.h:100
+// index:0
+// Qt::TabFocusBehavior tabFocusBehavior()
+func (this *QStyleHints) TabFocusBehavior() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16tabFocusBehaviorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qstylehints.h:101
+// index:0
+// void setTabFocusBehavior(Qt::TabFocusBehavior)
+func (this *QStyleHints) SetTabFocusBehavior(tabFocusBehavior int) {
+	// 0: (, Qt::TabFocusBehavior tabFocusBehavior), (&tabFocusBehavior)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints19setTabFocusBehaviorEN2Qt16TabFocusBehaviorE", ffiqt.FFI_TYPE_VOID, this.cthis, &tabFocusBehavior)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qstylehints.h:102
+// index:0
+// bool singleClickActivation()
+func (this *QStyleHints) SingleClickActivation() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21singleClickActivationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:103
+// index:0
+// bool useHoverEffects()
+func (this *QStyleHints) UseHoverEffects() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15useHoverEffectsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:104
+// index:0
+// void setUseHoverEffects(_Bool)
+func (this *QStyleHints) SetUseHoverEffects(useHoverEffects bool) {
+	// 0: (, bool useHoverEffects), (&useHoverEffects)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints18setUseHoverEffectsEb", ffiqt.FFI_TYPE_VOID, this.cthis, &useHoverEffects)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:105
+// index:0
+// int wheelScrollLines()
+func (this *QStyleHints) WheelScrollLines() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16wheelScrollLinesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:106
+// index:0
+// void setWheelScrollLines(int)
+func (this *QStyleHints) SetWheelScrollLines(scrollLines int) {
+	// 0: (, int scrollLines), (&scrollLines)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints19setWheelScrollLinesEi", ffiqt.FFI_TYPE_VOID, this.cthis, &scrollLines)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:109
+// index:0
+// void cursorFlashTimeChanged(int)
+func (this *QStyleHints) CursorFlashTimeChanged(cursorFlashTime int) {
+	// 0: (, int cursorFlashTime), (&cursorFlashTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints22cursorFlashTimeChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &cursorFlashTime)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:110
+// index:0
+// void keyboardInputIntervalChanged(int)
+func (this *QStyleHints) KeyboardInputIntervalChanged(keyboardInputInterval int) {
+	// 0: (, int keyboardInputInterval), (&keyboardInputInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints28keyboardInputIntervalChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &keyboardInputInterval)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:111
+// index:0
+// void mouseDoubleClickIntervalChanged(int)
+func (this *QStyleHints) MouseDoubleClickIntervalChanged(mouseDoubleClickInterval int) {
+	// 0: (, int mouseDoubleClickInterval), (&mouseDoubleClickInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints31mouseDoubleClickIntervalChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &mouseDoubleClickInterval)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:112
+// index:0
+// void mousePressAndHoldIntervalChanged(int)
+func (this *QStyleHints) MousePressAndHoldIntervalChanged(mousePressAndHoldInterval int) {
+	// 0: (, int mousePressAndHoldInterval), (&mousePressAndHoldInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints32mousePressAndHoldIntervalChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &mousePressAndHoldInterval)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:113
+// index:0
+// void startDragDistanceChanged(int)
+func (this *QStyleHints) StartDragDistanceChanged(startDragDistance int) {
+	// 0: (, int startDragDistance), (&startDragDistance)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints24startDragDistanceChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &startDragDistance)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:114
+// index:0
+// void startDragTimeChanged(int)
+func (this *QStyleHints) StartDragTimeChanged(startDragTime int) {
+	// 0: (, int startDragTime), (&startDragTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints20startDragTimeChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &startDragTime)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:115
+// index:0
+// void tabFocusBehaviorChanged(Qt::TabFocusBehavior)
+func (this *QStyleHints) TabFocusBehaviorChanged(tabFocusBehavior int) {
+	// 0: (, Qt::TabFocusBehavior tabFocusBehavior), (&tabFocusBehavior)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints23tabFocusBehaviorChangedEN2Qt16TabFocusBehaviorE", ffiqt.FFI_TYPE_VOID, this.cthis, &tabFocusBehavior)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:116
+// index:0
+// void useHoverEffectsChanged(_Bool)
+func (this *QStyleHints) UseHoverEffectsChanged(useHoverEffects bool) {
+	// 0: (, bool useHoverEffects), (&useHoverEffects)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints22useHoverEffectsChangedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &useHoverEffects)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstylehints.h:117
+// index:0
+// void wheelScrollLinesChanged(int)
+func (this *QStyleHints) WheelScrollLinesChanged(scrollLines int) {
+	// 0: (, int scrollLines), (&scrollLines)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints23wheelScrollLinesChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &scrollLines)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

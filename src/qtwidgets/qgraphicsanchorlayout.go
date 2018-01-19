@@ -1,605 +1,200 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h
+// #include <qgraphicsanchorlayout.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qgraphicsanchorlayout.h
-// dst-file: /src/widgets/qgraphicsanchorlayout.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QGraphicsAnchorLayout::setSpacing(qreal spacing);
-extern void C_ZN21QGraphicsAnchorLayout10setSpacingEd(void* qthis, double arg0); // 4
-  // proto:  void QGraphicsAnchorLayout::~QGraphicsAnchorLayout();
-extern void C_ZN21QGraphicsAnchorLayoutD2Ev(void* qthis); // 4
-  // proto:  QGraphicsLayoutItem * QGraphicsAnchorLayout::itemAt(int index);
-extern void C_ZNK21QGraphicsAnchorLayout6itemAtEi(void* qthis, int32_t arg0); // 4
-  // proto:  qreal QGraphicsAnchorLayout::horizontalSpacing();
-extern double C_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv(void* qthis); // 4
-  // proto:  void QGraphicsAnchorLayout::setGeometry(const QRectF & rect);
-extern void C_ZN21QGraphicsAnchorLayout11setGeometryERK6QRectF(void* qthis, void* arg0); // 4
-  // proto:  void QGraphicsAnchorLayout::invalidate();
-extern void C_ZN21QGraphicsAnchorLayout10invalidateEv(void* qthis); // 4
-  // proto:  int QGraphicsAnchorLayout::count();
-extern int32_t C_ZNK21QGraphicsAnchorLayout5countEv(void* qthis); // 4
-  // proto:  void QGraphicsAnchorLayout::setVerticalSpacing(qreal spacing);
-extern void C_ZN21QGraphicsAnchorLayout18setVerticalSpacingEd(void* qthis, double arg0); // 4
-  // proto:  qreal QGraphicsAnchorLayout::verticalSpacing();
-extern double C_ZNK21QGraphicsAnchorLayout15verticalSpacingEv(void* qthis); // 4
-  // proto:  void QGraphicsAnchorLayout::removeAt(int index);
-extern void C_ZN21QGraphicsAnchorLayout8removeAtEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(QGraphicsLayoutItem * parent);
-extern void* C_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem(void* arg0); // 3
-  // proto:  void QGraphicsAnchorLayout::setHorizontalSpacing(qreal spacing);
-extern void C_ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd(void* qthis, double arg0); // 4
-  // proto:  void QGraphicsAnchor::setSpacing(qreal spacing);
-extern void C_ZN15QGraphicsAnchor10setSpacingEd(void* qthis, double arg0); // 4
-  // proto:  QSizePolicy::Policy QGraphicsAnchor::sizePolicy();
-extern void C_ZNK15QGraphicsAnchor10sizePolicyEv(void* qthis); // 4
-  // proto:  const QMetaObject * QGraphicsAnchor::metaObject();
-extern void C_ZNK15QGraphicsAnchor10metaObjectEv(void* qthis); // 4
-  // proto:  qreal QGraphicsAnchor::spacing();
-extern double C_ZNK15QGraphicsAnchor7spacingEv(void* qthis); // 4
-  // proto:  void QGraphicsAnchor::unsetSpacing();
-extern void C_ZN15QGraphicsAnchor12unsetSpacingEv(void* qthis); // 4
-  // proto:  void QGraphicsAnchor::~QGraphicsAnchor();
-extern void C_ZN15QGraphicsAnchorD2Ev(void* qthis); // 4
+// extern C begin: 7
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QGraphicsAnchorLayout)=1
+//  ext block end
+
+//  body block begin
 type QGraphicsAnchorLayout struct {
-  /*qbase*/ QGraphicsLayout;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// class sizeof(QGraphicsAnchor)=1
-type QGraphicsAnchor struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:79
+// index:0
+// void QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
+func NewQGraphicsAnchorLayout(parent unsafe.Pointer) *QGraphicsAnchorLayout {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QGraphicsAnchorLayout{cthis}
 }
 
-// setSpacing(qreal)
-func (this *QGraphicsAnchorLayout) Setspacing(args ...interface{}) () {
-  // setSpacing(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QGraphicsAnchorLayout10setSpacingEd
-    // invoke: void setSpacing(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN21QGraphicsAnchorLayout10setSpacingEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "setSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:80
+// index:0
+// virtual
+// void ~QGraphicsAnchorLayout()
+func DeleteQGraphicsAnchorLayout(*QGraphicsAnchorLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QGraphicsAnchorLayout()
-func (this *QGraphicsAnchorLayout) Freeqgraphicsanchorlayout(args ...interface{}) () {
-  // ~QGraphicsAnchorLayout()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QGraphicsAnchorLayoutD0Ev
-    // invoke: void ~QGraphicsAnchorLayout()
-    C.C_ZN21QGraphicsAnchorLayoutD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "~QGraphicsAnchorLayout", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:82
+// index:0
+// QGraphicsAnchor * addAnchor(class QGraphicsLayoutItem *, Qt::AnchorPoint, class QGraphicsLayoutItem *, Qt::AnchorPoint)
+func (this *QGraphicsAnchorLayout) AddAnchor(firstItem unsafe.Pointer, firstEdge int, secondItem unsafe.Pointer, secondEdge int) {
+	// 0: (, QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge), (firstItem, &firstEdge, secondItem, &secondEdge)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout9addAnchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_VOID, this.cthis, firstItem, &firstEdge, secondItem, &secondEdge)
+	gopp.ErrPrint(err, rv)
 }
 
-// itemAt(int)
-func (this *QGraphicsAnchorLayout) Itemat(args ...interface{}) () {
-  // itemAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QGraphicsAnchorLayout6itemAtEi
-    // invoke: QGraphicsLayoutItem * itemAt(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZNK21QGraphicsAnchorLayout6itemAtEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "itemAt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:84
+// index:0
+// QGraphicsAnchor * anchor(class QGraphicsLayoutItem *, Qt::AnchorPoint, class QGraphicsLayoutItem *, Qt::AnchorPoint)
+func (this *QGraphicsAnchorLayout) Anchor(firstItem unsafe.Pointer, firstEdge int, secondItem unsafe.Pointer, secondEdge int) {
+	// 0: (, QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge), (firstItem, &firstEdge, secondItem, &secondEdge)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout6anchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_VOID, this.cthis, firstItem, &firstEdge, secondItem, &secondEdge)
+	gopp.ErrPrint(err, rv)
 }
 
-// horizontalSpacing()
-func (this *QGraphicsAnchorLayout) Horizontalspacing(args ...interface{}) (ret interface{}) {
-  // horizontalSpacing()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QGraphicsAnchorLayout17horizontalSpacingEv
-    // invoke: qreal horizontalSpacing()
-    var ret0 = C.C_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "horizontalSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:87
+// index:0
+// void addCornerAnchors(class QGraphicsLayoutItem *, Qt::Corner, class QGraphicsLayoutItem *, Qt::Corner)
+func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem unsafe.Pointer, firstCorner int, secondItem unsafe.Pointer, secondCorner int) {
+	// 0: (, QGraphicsLayoutItem * firstItem, Qt::Corner firstCorner, QGraphicsLayoutItem * secondItem, Qt::Corner secondCorner), (firstItem, &firstCorner, secondItem, &secondCorner)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout16addCornerAnchorsEP19QGraphicsLayoutItemN2Qt6CornerES1_S3_", ffiqt.FFI_TYPE_VOID, this.cthis, firstItem, &firstCorner, secondItem, &secondCorner)
+	gopp.ErrPrint(err, rv)
 }
 
-// setGeometry(const class QRectF &)
-func (this *QGraphicsAnchorLayout) Setgeometry(args ...interface{}) () {
-  // setGeometry(const class QRectF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QGraphicsAnchorLayout11setGeometryERK6QRectF
-    // invoke: void setGeometry(const class QRectF &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN21QGraphicsAnchorLayout11setGeometryERK6QRectF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "setGeometry", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:94
+// index:0
+// void setHorizontalSpacing(qreal)
+func (this *QGraphicsAnchorLayout) SetHorizontalSpacing(spacing float64) {
+	// 0: (, qreal spacing), (&spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &spacing)
+	gopp.ErrPrint(err, rv)
 }
 
-// invalidate()
-func (this *QGraphicsAnchorLayout) Invalidate(args ...interface{}) () {
-  // invalidate()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QGraphicsAnchorLayout10invalidateEv
-    // invoke: void invalidate()
-    C.C_ZN21QGraphicsAnchorLayout10invalidateEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "invalidate", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:95
+// index:0
+// void setVerticalSpacing(qreal)
+func (this *QGraphicsAnchorLayout) SetVerticalSpacing(spacing float64) {
+	// 0: (, qreal spacing), (&spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout18setVerticalSpacingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &spacing)
+	gopp.ErrPrint(err, rv)
 }
 
-// count()
-func (this *QGraphicsAnchorLayout) Count(args ...interface{}) (ret interface{}) {
-  // count()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QGraphicsAnchorLayout5countEv
-    // invoke: int count()
-    var ret0 = C.C_ZNK21QGraphicsAnchorLayout5countEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "count", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:96
+// index:0
+// void setSpacing(qreal)
+func (this *QGraphicsAnchorLayout) SetSpacing(spacing float64) {
+	// 0: (, qreal spacing), (&spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout10setSpacingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &spacing)
+	gopp.ErrPrint(err, rv)
 }
 
-// setVerticalSpacing(qreal)
-func (this *QGraphicsAnchorLayout) Setverticalspacing(args ...interface{}) () {
-  // setVerticalSpacing(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QGraphicsAnchorLayout18setVerticalSpacingEd
-    // invoke: void setVerticalSpacing(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN21QGraphicsAnchorLayout18setVerticalSpacingEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "setVerticalSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:97
+// index:0
+// qreal horizontalSpacing()
+func (this *QGraphicsAnchorLayout) HorizontalSpacing() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// verticalSpacing()
-func (this *QGraphicsAnchorLayout) Verticalspacing(args ...interface{}) (ret interface{}) {
-  // verticalSpacing()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QGraphicsAnchorLayout15verticalSpacingEv
-    // invoke: qreal verticalSpacing()
-    var ret0 = C.C_ZNK21QGraphicsAnchorLayout15verticalSpacingEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "verticalSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:98
+// index:0
+// qreal verticalSpacing()
+func (this *QGraphicsAnchorLayout) VerticalSpacing() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout15verticalSpacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// removeAt(int)
-func (this *QGraphicsAnchorLayout) Removeat(args ...interface{}) () {
-  // removeAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QGraphicsAnchorLayout8removeAtEi
-    // invoke: void removeAt(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN21QGraphicsAnchorLayout8removeAtEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "removeAt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:100
+// index:0
+// virtual
+// void removeAt(int)
+func (this *QGraphicsAnchorLayout) RemoveAt(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout8removeAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
-func NewQGraphicsAnchorLayout(args ...interface{}) *QGraphicsAnchorLayout {
-  // QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QGraphicsLayoutItem{}) // "QGraphicsLayoutItem *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem
-    // invoke: void QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
-    var arg0 = args[0].(*QGraphicsLayoutItem).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem(arg0)
-    return &QGraphicsAnchorLayout{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "QGraphicsAnchorLayout", args)
-  }
-
-  return nil // QGraphicsAnchorLayout{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:101
+// index:0
+// virtual
+// void setGeometry(const class QRectF &)
+func (this *QGraphicsAnchorLayout) SetGeometry(rect unsafe.Pointer) {
+	// 0: (, const QRectF & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout11setGeometryERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
 }
 
-// setHorizontalSpacing(qreal)
-func (this *QGraphicsAnchorLayout) Sethorizontalspacing(args ...interface{}) () {
-  // setHorizontalSpacing(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd
-    // invoke: void setHorizontalSpacing(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchorLayout", "setHorizontalSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:102
+// index:0
+// virtual
+// int count()
+func (this *QGraphicsAnchorLayout) Count() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout5countEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setSpacing(qreal)
-func (this *QGraphicsAnchor) Setspacing(args ...interface{}) () {
-  // setSpacing(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QGraphicsAnchor10setSpacingEd
-    // invoke: void setSpacing(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsAnchor10setSpacingEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchor", "setSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:103
+// index:0
+// virtual
+// QGraphicsLayoutItem * itemAt(int)
+func (this *QGraphicsAnchorLayout) ItemAt(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout6itemAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// sizePolicy()
-func (this *QGraphicsAnchor) Sizepolicy(args ...interface{}) () {
-  // sizePolicy()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QGraphicsAnchor10sizePolicyEv
-    // invoke: QSizePolicy::Policy sizePolicy()
-    C.C_ZNK15QGraphicsAnchor10sizePolicyEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchor", "sizePolicy", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:105
+// index:0
+// virtual
+// void invalidate()
+func (this *QGraphicsAnchorLayout) Invalidate() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout10invalidateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QGraphicsAnchor) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QGraphicsAnchor10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QGraphicsAnchor10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchor", "metaObject", args)
-  }
-
-  return
-}
-
-// spacing()
-func (this *QGraphicsAnchor) Spacing(args ...interface{}) (ret interface{}) {
-  // spacing()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QGraphicsAnchor7spacingEv
-    // invoke: qreal spacing()
-    var ret0 = C.C_ZNK15QGraphicsAnchor7spacingEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchor", "spacing", args)
-  }
-
-  return
-}
-
-// unsetSpacing()
-func (this *QGraphicsAnchor) Unsetspacing(args ...interface{}) () {
-  // unsetSpacing()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QGraphicsAnchor12unsetSpacingEv
-    // invoke: void unsetSpacing()
-    C.C_ZN15QGraphicsAnchor12unsetSpacingEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchor", "unsetSpacing", args)
-  }
-
-  return
-}
-
-// ~QGraphicsAnchor()
-func (this *QGraphicsAnchor) Freeqgraphicsanchor(args ...interface{}) () {
-  // ~QGraphicsAnchor()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QGraphicsAnchorD0Ev
-    // invoke: void ~QGraphicsAnchor()
-    C.C_ZN15QGraphicsAnchorD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsAnchor", "~QGraphicsAnchor", args)
-  }
-
-  return
-}
-
-// <= body block end
-
+//  body block end

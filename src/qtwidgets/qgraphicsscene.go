@@ -1,2037 +1,811 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qgraphicsscene.h
+// #include <qgraphicsscene.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qgraphicsscene.h
-// dst-file: /src/widgets/qgraphicsscene.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QGraphicsRectItem * QGraphicsScene::addRect(qreal x, qreal y, qreal w, qreal h, const QPen & pen, const QBrush & brush);
-extern void C_ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush(void* qthis, double arg0, double arg1, double arg2, double arg3, void* arg4, void* arg5); // 2
-  // proto:  QGraphicsRectItem * QGraphicsScene::addRect(const QRectF & rect, const QPen & pen, const QBrush & brush);
-extern void C_ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  bool QGraphicsScene::hasFocus();
-extern bool C_ZNK14QGraphicsScene8hasFocusEv(void* qthis); // 4
-  // proto:  void QGraphicsScene::QGraphicsScene(QObject * parent);
-extern void* C_ZN14QGraphicsSceneC2EP7QObject(void* arg0); // 3
-  // proto:  void QGraphicsScene::QGraphicsScene(const QRectF & sceneRect, QObject * parent);
-extern void* C_ZN14QGraphicsSceneC2ERK6QRectFP7QObject(void* arg0, void* arg1); // 3
-  // proto:  void QGraphicsScene::QGraphicsScene(qreal x, qreal y, qreal width, qreal height, QObject * parent);
-extern void* C_ZN14QGraphicsSceneC2EddddP7QObject(double arg0, double arg1, double arg2, double arg3, void* arg4); // 3
-  // proto:  void QGraphicsScene::setStyle(QStyle * style);
-extern void C_ZN14QGraphicsScene8setStyleEP6QStyle(void* qthis, void* arg0); // 4
-  // proto:  QPainterPath QGraphicsScene::selectionArea();
-extern void* C_ZNK14QGraphicsScene13selectionAreaEv(void* qthis); // 4
-  // proto:  QFont QGraphicsScene::font();
-extern void* C_ZNK14QGraphicsScene4fontEv(void* qthis); // 4
-  // proto:  QGraphicsEllipseItem * QGraphicsScene::addEllipse(qreal x, qreal y, qreal w, qreal h, const QPen & pen, const QBrush & brush);
-extern void C_ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush(void* qthis, double arg0, double arg1, double arg2, double arg3, void* arg4, void* arg5); // 2
-  // proto:  QGraphicsEllipseItem * QGraphicsScene::addEllipse(const QRectF & rect, const QPen & pen, const QBrush & brush);
-extern void C_ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  QGraphicsPolygonItem * QGraphicsScene::addPolygon(const QPolygonF & polygon, const QPen & pen, const QBrush & brush);
-extern void C_ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  void QGraphicsScene::setBspTreeDepth(int depth);
-extern void C_ZN14QGraphicsScene15setBspTreeDepthEi(void* qthis, int32_t arg0); // 4
-  // proto:  QList<QGraphicsView *> QGraphicsScene::views();
-extern void C_ZNK14QGraphicsScene5viewsEv(void* qthis); // 4
-  // proto:  void QGraphicsScene::setBackgroundBrush(const QBrush & brush);
-extern void C_ZN14QGraphicsScene18setBackgroundBrushERK6QBrush(void* qthis, void* arg0); // 4
-  // proto:  void QGraphicsScene::removeItem(QGraphicsItem * item);
-extern void C_ZN14QGraphicsScene10removeItemEP13QGraphicsItem(void* qthis, void* arg0); // 4
-  // proto:  int QGraphicsScene::bspTreeDepth();
-extern int32_t C_ZNK14QGraphicsScene12bspTreeDepthEv(void* qthis); // 4
-  // proto:  bool QGraphicsScene::isSortCacheEnabled();
-extern bool C_ZNK14QGraphicsScene18isSortCacheEnabledEv(void* qthis); // 4
-  // proto:  const QMetaObject * QGraphicsScene::metaObject();
-extern void C_ZNK14QGraphicsScene10metaObjectEv(void* qthis); // 4
-  // proto:  QRectF QGraphicsScene::sceneRect();
-extern void* C_ZNK14QGraphicsScene9sceneRectEv(void* qthis); // 4
-  // proto:  QGraphicsItem * QGraphicsScene::itemAt(const QPointF & pos, const QTransform & deviceTransform);
-extern void C_ZNK14QGraphicsScene6itemAtERK7QPointFRK10QTransform(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QGraphicsItem * QGraphicsScene::itemAt(qreal x, qreal y, const QTransform & deviceTransform);
-extern void C_ZNK14QGraphicsScene6itemAtEddRK10QTransform(void* qthis, double arg0, double arg1, void* arg2); // 2
-  // proto:  void QGraphicsScene::clearFocus();
-extern void C_ZN14QGraphicsScene10clearFocusEv(void* qthis); // 4
-  // proto:  QGraphicsPixmapItem * QGraphicsScene::addPixmap(const QPixmap & pixmap);
-extern void C_ZN14QGraphicsScene9addPixmapERK7QPixmap(void* qthis, void* arg0); // 4
-  // proto:  bool QGraphicsScene::stickyFocus();
-extern bool C_ZNK14QGraphicsScene11stickyFocusEv(void* qthis); // 4
-  // proto:  QPalette QGraphicsScene::palette();
-extern void* C_ZNK14QGraphicsScene7paletteEv(void* qthis); // 4
-  // proto:  void QGraphicsScene::setMinimumRenderSize(qreal minSize);
-extern void C_ZN14QGraphicsScene20setMinimumRenderSizeEd(void* qthis, double arg0); // 4
-  // proto:  QGraphicsWidget * QGraphicsScene::activeWindow();
-extern void C_ZNK14QGraphicsScene12activeWindowEv(void* qthis); // 4
-  // proto:  void QGraphicsScene::~QGraphicsScene();
-extern void C_ZN14QGraphicsSceneD2Ev(void* qthis); // 4
-  // proto:  void QGraphicsScene::addItem(QGraphicsItem * item);
-extern void C_ZN14QGraphicsScene7addItemEP13QGraphicsItem(void* qthis, void* arg0); // 4
-  // proto:  QStyle * QGraphicsScene::style();
-extern void* C_ZNK14QGraphicsScene5styleEv(void* qthis); // 4
-  // proto:  void QGraphicsScene::setActivePanel(QGraphicsItem * item);
-extern void C_ZN14QGraphicsScene14setActivePanelEP13QGraphicsItem(void* qthis, void* arg0); // 4
-  // proto:  bool QGraphicsScene::isActive();
-extern bool C_ZNK14QGraphicsScene8isActiveEv(void* qthis); // 4
-  // proto:  void QGraphicsScene::advance();
-extern void C_ZN14QGraphicsScene7advanceEv(void* qthis); // 4
-  // proto:  QRectF QGraphicsScene::itemsBoundingRect();
-extern void* C_ZNK14QGraphicsScene17itemsBoundingRectEv(void* qthis); // 4
-  // proto:  void QGraphicsScene::setSceneRect(const QRectF & rect);
-extern void C_ZN14QGraphicsScene12setSceneRectERK6QRectF(void* qthis, void* arg0); // 4
-  // proto:  void QGraphicsScene::setSceneRect(qreal x, qreal y, qreal w, qreal h);
-extern void C_ZN14QGraphicsScene12setSceneRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
-  // proto:  QGraphicsScene::ItemIndexMethod QGraphicsScene::itemIndexMethod();
-extern void C_ZNK14QGraphicsScene15itemIndexMethodEv(void* qthis); // 4
-  // proto:  QGraphicsLineItem * QGraphicsScene::addLine(const QLineF & line, const QPen & pen);
-extern void C_ZN14QGraphicsScene7addLineERK6QLineFRK4QPen(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QGraphicsLineItem * QGraphicsScene::addLine(qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen);
-extern void C_ZN14QGraphicsScene7addLineEddddRK4QPen(void* qthis, double arg0, double arg1, double arg2, double arg3, void* arg4); // 2
-  // proto:  qreal QGraphicsScene::minimumRenderSize();
-extern double C_ZNK14QGraphicsScene17minimumRenderSizeEv(void* qthis); // 4
-  // proto:  bool QGraphicsScene::sendEvent(QGraphicsItem * item, QEvent * event);
-extern bool C_ZN14QGraphicsScene9sendEventEP13QGraphicsItemP6QEvent(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  void QGraphicsScene::setPalette(const QPalette & palette);
-extern void C_ZN14QGraphicsScene10setPaletteERK8QPalette(void* qthis, void* arg0); // 4
-  // proto:  QGraphicsItem * QGraphicsScene::mouseGrabberItem();
-extern void C_ZNK14QGraphicsScene16mouseGrabberItemEv(void* qthis); // 4
-  // proto:  void QGraphicsScene::setSelectionArea(const QPainterPath & path, const QTransform & deviceTransform);
-extern void C_ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathRK10QTransform(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  qreal QGraphicsScene::width();
-extern double C_ZNK14QGraphicsScene5widthEv(void* qthis); // 2
-  // proto:  QBrush QGraphicsScene::foregroundBrush();
-extern void* C_ZNK14QGraphicsScene15foregroundBrushEv(void* qthis); // 4
-  // proto:  void QGraphicsScene::setForegroundBrush(const QBrush & brush);
-extern void C_ZN14QGraphicsScene18setForegroundBrushERK6QBrush(void* qthis, void* arg0); // 4
-  // proto:  QGraphicsPathItem * QGraphicsScene::addPath(const QPainterPath & path, const QPen & pen, const QBrush & brush);
-extern void C_ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  QList<QGraphicsItem *> QGraphicsScene::selectedItems();
-extern void C_ZNK14QGraphicsScene13selectedItemsEv(void* qthis); // 4
-  // proto:  void QGraphicsScene::setActiveWindow(QGraphicsWidget * widget);
-extern void C_ZN14QGraphicsScene15setActiveWindowEP15QGraphicsWidget(void* qthis, void* arg0); // 4
-  // proto:  QBrush QGraphicsScene::backgroundBrush();
-extern void* C_ZNK14QGraphicsScene15backgroundBrushEv(void* qthis); // 4
-  // proto:  QGraphicsSimpleTextItem * QGraphicsScene::addSimpleText(const QString & text, const QFont & font);
-extern void C_ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  void QGraphicsScene::clearSelection();
-extern void C_ZN14QGraphicsScene14clearSelectionEv(void* qthis); // 4
-  // proto:  QGraphicsItem * QGraphicsScene::activePanel();
-extern void C_ZNK14QGraphicsScene11activePanelEv(void* qthis); // 4
-  // proto:  QGraphicsItem * QGraphicsScene::focusItem();
-extern void C_ZNK14QGraphicsScene9focusItemEv(void* qthis); // 4
-  // proto:  void QGraphicsScene::destroyItemGroup(QGraphicsItemGroup * group);
-extern void C_ZN14QGraphicsScene16destroyItemGroupEP18QGraphicsItemGroup(void* qthis, void* arg0); // 4
-  // proto:  QGraphicsTextItem * QGraphicsScene::addText(const QString & text, const QFont & font);
-extern void C_ZN14QGraphicsScene7addTextERK7QStringRK5QFont(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  void QGraphicsScene::update(const QRectF & rect);
-extern void C_ZN14QGraphicsScene6updateERK6QRectF(void* qthis, void* arg0); // 4
-  // proto:  void QGraphicsScene::update(qreal x, qreal y, qreal w, qreal h);
-extern void C_ZN14QGraphicsScene6updateEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
-  // proto:  void QGraphicsScene::setSortCacheEnabled(bool enabled);
-extern void C_ZN14QGraphicsScene19setSortCacheEnabledEb(void* qthis, bool arg0); // 4
-  // proto:  void QGraphicsScene::setStickyFocus(bool enabled);
-extern void C_ZN14QGraphicsScene14setStickyFocusEb(void* qthis, bool arg0); // 4
-  // proto:  void QGraphicsScene::clear();
-extern void C_ZN14QGraphicsScene5clearEv(void* qthis); // 4
-  // proto:  qreal QGraphicsScene::height();
-extern double C_ZNK14QGraphicsScene6heightEv(void* qthis); // 2
-  // proto:  void QGraphicsScene::setFont(const QFont & font);
-extern void C_ZN14QGraphicsScene7setFontERK5QFont(void* qthis, void* arg0); // 4
+// extern C begin: 9
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QGraphicsScene)=1
+//  ext block end
+
+//  body block begin
 type QGraphicsScene struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _changed QGraphicsScene_changed_signal;
-//  _sceneRectChanged QGraphicsScene_sceneRectChanged_signal;
-//  _selectionChanged QGraphicsScene_selectionChanged_signal;
-//  _focusItemChanged QGraphicsScene_focusItemChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// addRect(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
-func (this *QGraphicsScene) Addrect(args ...interface{}) () {
-  // addRect(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
-  // addRect(const class QRectF &, const class QPen &, const class QBrush &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][4] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
-  vtys[0][5] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  vtys[1][1] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
-  vtys[1][2] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush
-    // invoke: QGraphicsRectItem * addRect(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(*qtgui.QPen).Qclsinst
-    if false {fmt.Println(arg4)}
-    var arg5 = args[5].(*qtgui.QBrush).Qclsinst
-    if false {fmt.Println(arg5)}
-    C.C_ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush(this.Qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
-  case 1:
-    // invoke: _ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush
-    // invoke: QGraphicsRectItem * addRect(const class QRectF &, const class QPen &, const class QBrush &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtgui.QPen).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtgui.QBrush).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "addRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:98
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QGraphicsScene) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasFocus()
-func (this *QGraphicsScene) Hasfocus(args ...interface{}) (ret interface{}) {
-  // hasFocus()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene8hasFocusEv
-    // invoke: bool hasFocus()
-    var ret0 = C.C_ZNK14QGraphicsScene8hasFocusEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "hasFocus", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:124
+// index:0
+// void QGraphicsScene(class QObject *)
+func NewQGraphicsScene(parent unsafe.Pointer) *QGraphicsScene {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QGraphicsScene{cthis}
 }
 
-// QGraphicsScene(class QObject *)
-func NewQGraphicsScene(args ...interface{}) *QGraphicsScene {
-  // QGraphicsScene(class QObject *)
-  // QGraphicsScene(const class QRectF &, class QObject *)
-  // QGraphicsScene(qreal, qreal, qreal, qreal, class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  vtys[1][1] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[2][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[2][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[2][3] = qtrt.DoubleTy(false) // "qreal"
-  vtys[2][4] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsSceneC1EP7QObject
-    // invoke: void QGraphicsScene(class QObject *)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN14QGraphicsSceneC2EP7QObject(arg0)
-    return &QGraphicsScene{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN14QGraphicsSceneC1ERK6QRectFP7QObject
-    // invoke: void QGraphicsScene(const class QRectF &, class QObject *)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN14QGraphicsSceneC2ERK6QRectFP7QObject(arg0, arg1)
-    return &QGraphicsScene{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN14QGraphicsSceneC1EddddP7QObject
-    // invoke: void QGraphicsScene(qreal, qreal, qreal, qreal, class QObject *)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg4)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN14QGraphicsSceneC2EddddP7QObject(arg0, arg1, arg2, arg3, arg4)
-    return &QGraphicsScene{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "QGraphicsScene", args)
-  }
-
-  return nil // QGraphicsScene{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:125
+// index:1
+// void QGraphicsScene(const class QRectF &, class QObject *)
+func NewQGraphicsScene_1(sceneRect unsafe.Pointer, parent unsafe.Pointer) *QGraphicsScene {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneC2ERK6QRectFP7QObject", ffiqt.FFI_TYPE_VOID, cthis, sceneRect, parent)
+	gopp.ErrPrint(err, rv)
+	return &QGraphicsScene{cthis}
 }
 
-// setStyle(class QStyle *)
-func (this *QGraphicsScene) Setstyle(args ...interface{}) () {
-  // setStyle(class QStyle *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QStyle{}) // "QStyle *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene8setStyleEP6QStyle
-    // invoke: void setStyle(class QStyle *)
-    var arg0 = args[0].(*QStyle).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene8setStyleEP6QStyle(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setStyle", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:126
+// index:2
+// void QGraphicsScene(qreal, qreal, qreal, qreal, class QObject *)
+func NewQGraphicsScene_2(x float64, y float64, width float64, height float64, parent unsafe.Pointer) *QGraphicsScene {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneC2EddddP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &x, &y, &width, &height, parent)
+	gopp.ErrPrint(err, rv)
+	return &QGraphicsScene{cthis}
 }
 
-// selectionArea()
-func (this *QGraphicsScene) Selectionarea(args ...interface{}) (ret interface{}) {
-  // selectionArea()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene13selectionAreaEv
-    // invoke: QPainterPath selectionArea()
-    var ret0 = C.C_ZNK14QGraphicsScene13selectionAreaEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QPainterPath{}) // "QPainterPath"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "selectionArea", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:127
+// index:0
+// virtual
+// void ~QGraphicsScene()
+func DeleteQGraphicsScene(*QGraphicsScene) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// font()
-func (this *QGraphicsScene) Font(args ...interface{}) (ret interface{}) {
-  // font()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene4fontEv
-    // invoke: QFont font()
-    var ret0 = C.C_ZNK14QGraphicsScene4fontEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QFont{}) // "QFont"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "font", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:129
+// index:0
+// QRectF sceneRect()
+func (this *QGraphicsScene) SceneRect() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene9sceneRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// addEllipse(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
-func (this *QGraphicsScene) Addellipse(args ...interface{}) () {
-  // addEllipse(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
-  // addEllipse(const class QRectF &, const class QPen &, const class QBrush &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][4] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
-  vtys[0][5] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  vtys[1][1] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
-  vtys[1][2] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush
-    // invoke: QGraphicsEllipseItem * addEllipse(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(*qtgui.QPen).Qclsinst
-    if false {fmt.Println(arg4)}
-    var arg5 = args[5].(*qtgui.QBrush).Qclsinst
-    if false {fmt.Println(arg5)}
-    C.C_ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush(this.Qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
-  case 1:
-    // invoke: _ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush
-    // invoke: QGraphicsEllipseItem * addEllipse(const class QRectF &, const class QPen &, const class QBrush &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtgui.QPen).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtgui.QBrush).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "addEllipse", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:130
+// index:0
+// inline
+// qreal width()
+func (this *QGraphicsScene) Width() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5widthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// addPolygon(const class QPolygonF &, const class QPen &, const class QBrush &)
-func (this *QGraphicsScene) Addpolygon(args ...interface{}) () {
-  // addPolygon(const class QPolygonF &, const class QPen &, const class QBrush &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QPolygonF{}) // "const QPolygonF &"
-  vtys[0][1] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
-  vtys[0][2] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush
-    // invoke: QGraphicsPolygonItem * addPolygon(const class QPolygonF &, const class QPen &, const class QBrush &)
-    var arg0 = args[0].(*qtgui.QPolygonF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtgui.QPen).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtgui.QBrush).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "addPolygon", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:131
+// index:0
+// inline
+// qreal height()
+func (this *QGraphicsScene) Height() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene6heightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setBspTreeDepth(int)
-func (this *QGraphicsScene) Setbsptreedepth(args ...interface{}) () {
-  // setBspTreeDepth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene15setBspTreeDepthEi
-    // invoke: void setBspTreeDepth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene15setBspTreeDepthEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setBspTreeDepth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:132
+// index:0
+// void setSceneRect(const class QRectF &)
+func (this *QGraphicsScene) SetSceneRect(rect unsafe.Pointer) {
+	// 0: (, const QRectF & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene12setSceneRectERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
 }
 
-// views()
-func (this *QGraphicsScene) Views(args ...interface{}) () {
-  // views()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene5viewsEv
-    // invoke: QList<QGraphicsView *> views()
-    C.C_ZNK14QGraphicsScene5viewsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "views", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:133
+// index:1
+// inline
+// void setSceneRect(qreal, qreal, qreal, qreal)
+func (this *QGraphicsScene) SetSceneRect_1(x float64, y float64, w float64, h float64) {
+	// 1: (, qreal x, qreal y, qreal w, qreal h), (&x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene12setSceneRectEdddd", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h)
+	gopp.ErrPrint(err, rv)
 }
 
-// setBackgroundBrush(const class QBrush &)
-func (this *QGraphicsScene) Setbackgroundbrush(args ...interface{}) () {
-  // setBackgroundBrush(const class QBrush &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene18setBackgroundBrushERK6QBrush
-    // invoke: void setBackgroundBrush(const class QBrush &)
-    var arg0 = args[0].(*qtgui.QBrush).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene18setBackgroundBrushERK6QBrush(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setBackgroundBrush", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:136
+// index:0
+// void render(class QPainter *, const class QRectF &, const class QRectF &, Qt::AspectRatioMode)
+func (this *QGraphicsScene) Render(painter unsafe.Pointer, target unsafe.Pointer, source unsafe.Pointer, aspectRatioMode int) {
+	// 0: (, QPainter * painter, const QRectF & target, const QRectF & source, Qt::AspectRatioMode aspectRatioMode), (painter, target, source, &aspectRatioMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene6renderEP8QPainterRK6QRectFS4_N2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_VOID, this.cthis, painter, target, source, &aspectRatioMode)
+	gopp.ErrPrint(err, rv)
 }
 
-// removeItem(class QGraphicsItem *)
-func (this *QGraphicsScene) Removeitem(args ...interface{}) () {
-  // removeItem(class QGraphicsItem *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QGraphicsItem{}) // "QGraphicsItem *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene10removeItemEP13QGraphicsItem
-    // invoke: void removeItem(class QGraphicsItem *)
-    var arg0 = args[0].(*QGraphicsItem).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene10removeItemEP13QGraphicsItem(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "removeItem", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:140
+// index:0
+// QGraphicsScene::ItemIndexMethod itemIndexMethod()
+func (this *QGraphicsScene) ItemIndexMethod() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene15itemIndexMethodEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// bspTreeDepth()
-func (this *QGraphicsScene) Bsptreedepth(args ...interface{}) (ret interface{}) {
-  // bspTreeDepth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene12bspTreeDepthEv
-    // invoke: int bspTreeDepth()
-    var ret0 = C.C_ZNK14QGraphicsScene12bspTreeDepthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "bspTreeDepth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:141
+// index:0
+// void setItemIndexMethod(enum QGraphicsScene::ItemIndexMethod)
+func (this *QGraphicsScene) SetItemIndexMethod(method int) {
+	// 0: (, QGraphicsScene::ItemIndexMethod method), (&method)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene18setItemIndexMethodENS_15ItemIndexMethodE", ffiqt.FFI_TYPE_VOID, this.cthis, &method)
+	gopp.ErrPrint(err, rv)
 }
 
-// isSortCacheEnabled()
-func (this *QGraphicsScene) Issortcacheenabled(args ...interface{}) (ret interface{}) {
-  // isSortCacheEnabled()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene18isSortCacheEnabledEv
-    // invoke: bool isSortCacheEnabled()
-    var ret0 = C.C_ZNK14QGraphicsScene18isSortCacheEnabledEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "isSortCacheEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:143
+// index:0
+// bool isSortCacheEnabled()
+func (this *QGraphicsScene) IsSortCacheEnabled() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene18isSortCacheEnabledEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QGraphicsScene) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK14QGraphicsScene10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:144
+// index:0
+// void setSortCacheEnabled(_Bool)
+func (this *QGraphicsScene) SetSortCacheEnabled(enabled bool) {
+	// 0: (, bool enabled), (&enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene19setSortCacheEnabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enabled)
+	gopp.ErrPrint(err, rv)
 }
 
-// sceneRect()
-func (this *QGraphicsScene) Scenerect(args ...interface{}) (ret interface{}) {
-  // sceneRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene9sceneRectEv
-    // invoke: QRectF sceneRect()
-    var ret0 = C.C_ZNK14QGraphicsScene9sceneRectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "sceneRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:146
+// index:0
+// int bspTreeDepth()
+func (this *QGraphicsScene) BspTreeDepth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene12bspTreeDepthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// itemAt(const class QPointF &, const class QTransform &)
-func (this *QGraphicsScene) Itemat(args ...interface{}) () {
-  // itemAt(const class QPointF &, const class QTransform &)
-  // itemAt(qreal, qreal, const class QTransform &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
-  vtys[0][1] = reflect.TypeOf(qtgui.QTransform{}) // "const QTransform &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][2] = reflect.TypeOf(qtgui.QTransform{}) // "const QTransform &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene6itemAtERK7QPointFRK10QTransform
-    // invoke: QGraphicsItem * itemAt(const class QPointF &, const class QTransform &)
-    var arg0 = args[0].(*qtcore.QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtgui.QTransform).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZNK14QGraphicsScene6itemAtERK7QPointFRK10QTransform(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZNK14QGraphicsScene6itemAtEddRK10QTransform
-    // invoke: QGraphicsItem * itemAt(qreal, qreal, const class QTransform &)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtgui.QTransform).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZNK14QGraphicsScene6itemAtEddRK10QTransform(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "itemAt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:147
+// index:0
+// void setBspTreeDepth(int)
+func (this *QGraphicsScene) SetBspTreeDepth(depth int) {
+	// 0: (, int depth), (&depth)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene15setBspTreeDepthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &depth)
+	gopp.ErrPrint(err, rv)
 }
 
-// clearFocus()
-func (this *QGraphicsScene) Clearfocus(args ...interface{}) () {
-  // clearFocus()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene10clearFocusEv
-    // invoke: void clearFocus()
-    C.C_ZN14QGraphicsScene10clearFocusEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "clearFocus", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:149
+// index:0
+// QRectF itemsBoundingRect()
+func (this *QGraphicsScene) ItemsBoundingRect() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene17itemsBoundingRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// addPixmap(const class QPixmap &)
-func (this *QGraphicsScene) Addpixmap(args ...interface{}) () {
-  // addPixmap(const class QPixmap &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QPixmap{}) // "const QPixmap &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene9addPixmapERK7QPixmap
-    // invoke: QGraphicsPixmapItem * addPixmap(const class QPixmap &)
-    var arg0 = args[0].(*qtgui.QPixmap).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene9addPixmapERK7QPixmap(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "addPixmap", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:151
+// index:0
+// QList<QGraphicsItem *> items(Qt::SortOrder)
+func (this *QGraphicsScene) Items(order int) {
+	// 0: (, Qt::SortOrder order), (&order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsEN2Qt9SortOrderE", ffiqt.FFI_TYPE_VOID, this.cthis, &order)
+	gopp.ErrPrint(err, rv)
 }
 
-// stickyFocus()
-func (this *QGraphicsScene) Stickyfocus(args ...interface{}) (ret interface{}) {
-  // stickyFocus()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene11stickyFocusEv
-    // invoke: bool stickyFocus()
-    var ret0 = C.C_ZNK14QGraphicsScene11stickyFocusEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "stickyFocus", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:153
+// index:1
+// QList<QGraphicsItem *> items(const class QPointF &, Qt::ItemSelectionMode, Qt::SortOrder, const class QTransform &)
+func (this *QGraphicsScene) Items_1(pos unsafe.Pointer, mode int, order int, deviceTransform unsafe.Pointer) {
+	// 1: (, const QPointF & pos, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform), (pos, &mode, &order, deviceTransform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK7QPointFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", ffiqt.FFI_TYPE_VOID, this.cthis, pos, &mode, &order, deviceTransform)
+	gopp.ErrPrint(err, rv)
 }
 
-// palette()
-func (this *QGraphicsScene) Palette(args ...interface{}) (ret interface{}) {
-  // palette()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene7paletteEv
-    // invoke: QPalette palette()
-    var ret0 = C.C_ZNK14QGraphicsScene7paletteEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QPalette{}) // "QPalette"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "palette", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:154
+// index:2
+// QList<QGraphicsItem *> items(const class QRectF &, Qt::ItemSelectionMode, Qt::SortOrder, const class QTransform &)
+func (this *QGraphicsScene) Items_2(rect unsafe.Pointer, mode int, order int, deviceTransform unsafe.Pointer) {
+	// 2: (, const QRectF & rect, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform), (rect, &mode, &order, deviceTransform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK6QRectFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", ffiqt.FFI_TYPE_VOID, this.cthis, rect, &mode, &order, deviceTransform)
+	gopp.ErrPrint(err, rv)
 }
 
-// setMinimumRenderSize(qreal)
-func (this *QGraphicsScene) Setminimumrendersize(args ...interface{}) () {
-  // setMinimumRenderSize(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene20setMinimumRenderSizeEd
-    // invoke: void setMinimumRenderSize(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene20setMinimumRenderSizeEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setMinimumRenderSize", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:155
+// index:3
+// QList<QGraphicsItem *> items(const class QPolygonF &, Qt::ItemSelectionMode, Qt::SortOrder, const class QTransform &)
+func (this *QGraphicsScene) Items_3(polygon unsafe.Pointer, mode int, order int, deviceTransform unsafe.Pointer) {
+	// 3: (, const QPolygonF & polygon, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform), (polygon, &mode, &order, deviceTransform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK9QPolygonFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", ffiqt.FFI_TYPE_VOID, this.cthis, polygon, &mode, &order, deviceTransform)
+	gopp.ErrPrint(err, rv)
 }
 
-// activeWindow()
-func (this *QGraphicsScene) Activewindow(args ...interface{}) () {
-  // activeWindow()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene12activeWindowEv
-    // invoke: QGraphicsWidget * activeWindow()
-    C.C_ZNK14QGraphicsScene12activeWindowEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "activeWindow", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:156
+// index:4
+// QList<QGraphicsItem *> items(const class QPainterPath &, Qt::ItemSelectionMode, Qt::SortOrder, const class QTransform &)
+func (this *QGraphicsScene) Items_4(path unsafe.Pointer, mode int, order int, deviceTransform unsafe.Pointer) {
+	// 4: (, const QPainterPath & path, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform), (path, &mode, &order, deviceTransform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK12QPainterPathN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", ffiqt.FFI_TYPE_VOID, this.cthis, path, &mode, &order, deviceTransform)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QGraphicsScene()
-func (this *QGraphicsScene) Freeqgraphicsscene(args ...interface{}) () {
-  // ~QGraphicsScene()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsSceneD0Ev
-    // invoke: void ~QGraphicsScene()
-    C.C_ZN14QGraphicsSceneD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "~QGraphicsScene", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:170
+// index:5
+// inline
+// QList<QGraphicsItem *> items(qreal, qreal, qreal, qreal, Qt::ItemSelectionMode, Qt::SortOrder, const class QTransform &)
+func (this *QGraphicsScene) Items_5(x float64, y float64, w float64, h float64, mode int, order int, deviceTransform unsafe.Pointer) {
+	// 5: (, qreal x, qreal y, qreal w, qreal h, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform), (&x, &y, &w, &h, &mode, &order, deviceTransform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsEddddN2Qt17ItemSelectionModeENS0_9SortOrderERK10QTransform", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h, &mode, &order, deviceTransform)
+	gopp.ErrPrint(err, rv)
 }
 
-// addItem(class QGraphicsItem *)
-func (this *QGraphicsScene) Additem(args ...interface{}) () {
-  // addItem(class QGraphicsItem *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QGraphicsItem{}) // "QGraphicsItem *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene7addItemEP13QGraphicsItem
-    // invoke: void addItem(class QGraphicsItem *)
-    var arg0 = args[0].(*QGraphicsItem).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene7addItemEP13QGraphicsItem(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "addItem", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:158
+// index:0
+// QList<QGraphicsItem *> collidingItems(const class QGraphicsItem *, Qt::ItemSelectionMode)
+func (this *QGraphicsScene) CollidingItems(item unsafe.Pointer, mode int) {
+	// 0: (, const QGraphicsItem * item, Qt::ItemSelectionMode mode), (item, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene14collidingItemsEPK13QGraphicsItemN2Qt17ItemSelectionModeE", ffiqt.FFI_TYPE_VOID, this.cthis, item, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// style()
-func (this *QGraphicsScene) Style(args ...interface{}) (ret interface{}) {
-  // style()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene5styleEv
-    // invoke: QStyle * style()
-    var ret0 = C.C_ZNK14QGraphicsScene5styleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QStyle{}) // "QStyle *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "style", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:165
+// index:0
+// QGraphicsItem * itemAt(const class QPointF &, const class QTransform &)
+func (this *QGraphicsScene) ItemAt(pos unsafe.Pointer, deviceTransform unsafe.Pointer) {
+	// 0: (, const QPointF & pos, const QTransform & deviceTransform), (pos, deviceTransform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene6itemAtERK7QPointFRK10QTransform", ffiqt.FFI_TYPE_VOID, this.cthis, pos, deviceTransform)
+	gopp.ErrPrint(err, rv)
 }
 
-// setActivePanel(class QGraphicsItem *)
-func (this *QGraphicsScene) Setactivepanel(args ...interface{}) () {
-  // setActivePanel(class QGraphicsItem *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QGraphicsItem{}) // "QGraphicsItem *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene14setActivePanelEP13QGraphicsItem
-    // invoke: void setActivePanel(class QGraphicsItem *)
-    var arg0 = args[0].(*QGraphicsItem).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene14setActivePanelEP13QGraphicsItem(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setActivePanel", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:179
+// index:1
+// inline
+// QGraphicsItem * itemAt(qreal, qreal, const class QTransform &)
+func (this *QGraphicsScene) ItemAt_1(x float64, y float64, deviceTransform unsafe.Pointer) {
+	// 1: (, qreal x, qreal y, const QTransform & deviceTransform), (&x, &y, deviceTransform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene6itemAtEddRK10QTransform", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, deviceTransform)
+	gopp.ErrPrint(err, rv)
 }
 
-// isActive()
-func (this *QGraphicsScene) Isactive(args ...interface{}) (ret interface{}) {
-  // isActive()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene8isActiveEv
-    // invoke: bool isActive()
-    var ret0 = C.C_ZNK14QGraphicsScene8isActiveEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "isActive", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:182
+// index:0
+// QList<QGraphicsItem *> selectedItems()
+func (this *QGraphicsScene) SelectedItems() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene13selectedItemsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// advance()
-func (this *QGraphicsScene) Advance(args ...interface{}) () {
-  // advance()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene7advanceEv
-    // invoke: void advance()
-    C.C_ZN14QGraphicsScene7advanceEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "advance", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:183
+// index:0
+// QPainterPath selectionArea()
+func (this *QGraphicsScene) SelectionArea() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene13selectionAreaEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// itemsBoundingRect()
-func (this *QGraphicsScene) Itemsboundingrect(args ...interface{}) (ret interface{}) {
-  // itemsBoundingRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene17itemsBoundingRectEv
-    // invoke: QRectF itemsBoundingRect()
-    var ret0 = C.C_ZNK14QGraphicsScene17itemsBoundingRectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "itemsBoundingRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:184
+// index:0
+// void setSelectionArea(const class QPainterPath &, const class QTransform &)
+func (this *QGraphicsScene) SetSelectionArea(path unsafe.Pointer, deviceTransform unsafe.Pointer) {
+	// 0: (, const QPainterPath & path, const QTransform & deviceTransform), (path, deviceTransform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathRK10QTransform", ffiqt.FFI_TYPE_VOID, this.cthis, path, deviceTransform)
+	gopp.ErrPrint(err, rv)
 }
 
-// setSceneRect(const class QRectF &)
-func (this *QGraphicsScene) Setscenerect(args ...interface{}) () {
-  // setSceneRect(const class QRectF &)
-  // setSceneRect(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene12setSceneRectERK6QRectF
-    // invoke: void setSceneRect(const class QRectF &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene12setSceneRectERK6QRectF(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN14QGraphicsScene12setSceneRectEdddd
-    // invoke: void setSceneRect(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZN14QGraphicsScene12setSceneRectEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setSceneRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:185
+// index:1
+// void setSelectionArea(const class QPainterPath &, Qt::ItemSelectionMode, const class QTransform &)
+func (this *QGraphicsScene) SetSelectionArea_1(path unsafe.Pointer, mode int, deviceTransform unsafe.Pointer) {
+	// 1: (, const QPainterPath & path, Qt::ItemSelectionMode mode, const QTransform & deviceTransform), (path, &mode, deviceTransform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathN2Qt17ItemSelectionModeERK10QTransform", ffiqt.FFI_TYPE_VOID, this.cthis, path, &mode, deviceTransform)
+	gopp.ErrPrint(err, rv)
 }
 
-// itemIndexMethod()
-func (this *QGraphicsScene) Itemindexmethod(args ...interface{}) () {
-  // itemIndexMethod()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene15itemIndexMethodEv
-    // invoke: QGraphicsScene::ItemIndexMethod itemIndexMethod()
-    C.C_ZNK14QGraphicsScene15itemIndexMethodEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "itemIndexMethod", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:186
+// index:2
+// void setSelectionArea(const class QPainterPath &, Qt::ItemSelectionOperation, Qt::ItemSelectionMode, const class QTransform &)
+func (this *QGraphicsScene) SetSelectionArea_2(path unsafe.Pointer, selectionOperation int, mode int, deviceTransform unsafe.Pointer) {
+	// 2: (, const QPainterPath & path, Qt::ItemSelectionOperation selectionOperation, Qt::ItemSelectionMode mode, const QTransform & deviceTransform), (path, &selectionOperation, &mode, deviceTransform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathN2Qt22ItemSelectionOperationENS3_17ItemSelectionModeERK10QTransform", ffiqt.FFI_TYPE_VOID, this.cthis, path, &selectionOperation, &mode, deviceTransform)
+	gopp.ErrPrint(err, rv)
 }
 
-// addLine(const class QLineF &, const class QPen &)
-func (this *QGraphicsScene) Addline(args ...interface{}) () {
-  // addLine(const class QLineF &, const class QPen &)
-  // addLine(qreal, qreal, qreal, qreal, const class QPen &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QLineF{}) // "const QLineF &"
-  vtys[0][1] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][4] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene7addLineERK6QLineFRK4QPen
-    // invoke: QGraphicsLineItem * addLine(const class QLineF &, const class QPen &)
-    var arg0 = args[0].(*qtcore.QLineF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtgui.QPen).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN14QGraphicsScene7addLineERK6QLineFRK4QPen(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZN14QGraphicsScene7addLineEddddRK4QPen
-    // invoke: QGraphicsLineItem * addLine(qreal, qreal, qreal, qreal, const class QPen &)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(*qtgui.QPen).Qclsinst
-    if false {fmt.Println(arg4)}
-    C.C_ZN14QGraphicsScene7addLineEddddRK4QPen(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "addLine", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:190
+// index:0
+// void destroyItemGroup(class QGraphicsItemGroup *)
+func (this *QGraphicsScene) DestroyItemGroup(group unsafe.Pointer) {
+	// 0: (, QGraphicsItemGroup * group), (group)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16destroyItemGroupEP18QGraphicsItemGroup", ffiqt.FFI_TYPE_VOID, this.cthis, group)
+	gopp.ErrPrint(err, rv)
 }
 
-// minimumRenderSize()
-func (this *QGraphicsScene) Minimumrendersize(args ...interface{}) (ret interface{}) {
-  // minimumRenderSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene17minimumRenderSizeEv
-    // invoke: qreal minimumRenderSize()
-    var ret0 = C.C_ZNK14QGraphicsScene17minimumRenderSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "minimumRenderSize", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:192
+// index:0
+// void addItem(class QGraphicsItem *)
+func (this *QGraphicsScene) AddItem(item unsafe.Pointer) {
+	// 0: (, QGraphicsItem * item), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7addItemEP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	gopp.ErrPrint(err, rv)
 }
 
-// sendEvent(class QGraphicsItem *, class QEvent *)
-func (this *QGraphicsScene) Sendevent(args ...interface{}) (ret interface{}) {
-  // sendEvent(class QGraphicsItem *, class QEvent *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QGraphicsItem{}) // "QGraphicsItem *"
-  vtys[0][1] = reflect.TypeOf(qtcore.QEvent{}) // "QEvent *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene9sendEventEP13QGraphicsItemP6QEvent
-    // invoke: bool sendEvent(class QGraphicsItem *, class QEvent *)
-    var arg0 = args[0].(*QGraphicsItem).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QEvent).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN14QGraphicsScene9sendEventEP13QGraphicsItemP6QEvent(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "sendEvent", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:193
+// index:0
+// QGraphicsEllipseItem * addEllipse(const class QRectF &, const class QPen &, const class QBrush &)
+func (this *QGraphicsScene) AddEllipse(rect unsafe.Pointer, pen unsafe.Pointer, brush unsafe.Pointer) {
+	// 0: (, const QRectF & rect, const QPen & pen, const QBrush & brush), (rect, pen, brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, rect, pen, brush)
+	gopp.ErrPrint(err, rv)
 }
 
-// setPalette(const class QPalette &)
-func (this *QGraphicsScene) Setpalette(args ...interface{}) () {
-  // setPalette(const class QPalette &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QPalette{}) // "const QPalette &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene10setPaletteERK8QPalette
-    // invoke: void setPalette(const class QPalette &)
-    var arg0 = args[0].(*qtgui.QPalette).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene10setPaletteERK8QPalette(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setPalette", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:202
+// index:1
+// inline
+// QGraphicsEllipseItem * addEllipse(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
+func (this *QGraphicsScene) AddEllipse_1(x float64, y float64, w float64, h float64, pen unsafe.Pointer, brush unsafe.Pointer) {
+	// 1: (, qreal x, qreal y, qreal w, qreal h, const QPen & pen, const QBrush & brush), (&x, &y, &w, &h, pen, brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h, pen, brush)
+	gopp.ErrPrint(err, rv)
 }
 
-// mouseGrabberItem()
-func (this *QGraphicsScene) Mousegrabberitem(args ...interface{}) () {
-  // mouseGrabberItem()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene16mouseGrabberItemEv
-    // invoke: QGraphicsItem * mouseGrabberItem()
-    C.C_ZNK14QGraphicsScene16mouseGrabberItemEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "mouseGrabberItem", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:194
+// index:0
+// QGraphicsLineItem * addLine(const class QLineF &, const class QPen &)
+func (this *QGraphicsScene) AddLine(line unsafe.Pointer, pen unsafe.Pointer) {
+	// 0: (, const QLineF & line, const QPen & pen), (line, pen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7addLineERK6QLineFRK4QPen", ffiqt.FFI_TYPE_VOID, this.cthis, line, pen)
+	gopp.ErrPrint(err, rv)
 }
 
-// setSelectionArea(const class QPainterPath &, const class QTransform &)
-func (this *QGraphicsScene) Setselectionarea(args ...interface{}) () {
-  // setSelectionArea(const class QPainterPath &, const class QTransform &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QPainterPath{}) // "const QPainterPath &"
-  vtys[0][1] = reflect.TypeOf(qtgui.QTransform{}) // "const QTransform &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathRK10QTransform
-    // invoke: void setSelectionArea(const class QPainterPath &, const class QTransform &)
-    var arg0 = args[0].(*qtgui.QPainterPath).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtgui.QTransform).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathRK10QTransform(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setSelectionArea", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:204
+// index:1
+// inline
+// QGraphicsLineItem * addLine(qreal, qreal, qreal, qreal, const class QPen &)
+func (this *QGraphicsScene) AddLine_1(x1 float64, y1 float64, x2 float64, y2 float64, pen unsafe.Pointer) {
+	// 1: (, qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen), (&x1, &y1, &x2, &y2, pen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7addLineEddddRK4QPen", ffiqt.FFI_TYPE_VOID, this.cthis, &x1, &y1, &x2, &y2, pen)
+	gopp.ErrPrint(err, rv)
 }
 
-// width()
-func (this *QGraphicsScene) Width(args ...interface{}) (ret interface{}) {
-  // width()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene5widthEv
-    // invoke: qreal width()
-    var ret0 = C.C_ZNK14QGraphicsScene5widthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "width", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:195
+// index:0
+// QGraphicsPathItem * addPath(const class QPainterPath &, const class QPen &, const class QBrush &)
+func (this *QGraphicsScene) AddPath(path unsafe.Pointer, pen unsafe.Pointer, brush unsafe.Pointer) {
+	// 0: (, const QPainterPath & path, const QPen & pen, const QBrush & brush), (path, pen, brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, path, pen, brush)
+	gopp.ErrPrint(err, rv)
 }
 
-// foregroundBrush()
-func (this *QGraphicsScene) Foregroundbrush(args ...interface{}) (ret interface{}) {
-  // foregroundBrush()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene15foregroundBrushEv
-    // invoke: QBrush foregroundBrush()
-    var ret0 = C.C_ZNK14QGraphicsScene15foregroundBrushEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QBrush{}) // "QBrush"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "foregroundBrush", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:196
+// index:0
+// QGraphicsPixmapItem * addPixmap(const class QPixmap &)
+func (this *QGraphicsScene) AddPixmap(pixmap unsafe.Pointer) {
+	// 0: (, const QPixmap & pixmap), (pixmap)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene9addPixmapERK7QPixmap", ffiqt.FFI_TYPE_VOID, this.cthis, pixmap)
+	gopp.ErrPrint(err, rv)
 }
 
-// setForegroundBrush(const class QBrush &)
-func (this *QGraphicsScene) Setforegroundbrush(args ...interface{}) () {
-  // setForegroundBrush(const class QBrush &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene18setForegroundBrushERK6QBrush
-    // invoke: void setForegroundBrush(const class QBrush &)
-    var arg0 = args[0].(*qtgui.QBrush).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene18setForegroundBrushERK6QBrush(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setForegroundBrush", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:197
+// index:0
+// QGraphicsPolygonItem * addPolygon(const class QPolygonF &, const class QPen &, const class QBrush &)
+func (this *QGraphicsScene) AddPolygon(polygon unsafe.Pointer, pen unsafe.Pointer, brush unsafe.Pointer) {
+	// 0: (, const QPolygonF & polygon, const QPen & pen, const QBrush & brush), (polygon, pen, brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, polygon, pen, brush)
+	gopp.ErrPrint(err, rv)
 }
 
-// addPath(const class QPainterPath &, const class QPen &, const class QBrush &)
-func (this *QGraphicsScene) Addpath(args ...interface{}) () {
-  // addPath(const class QPainterPath &, const class QPen &, const class QBrush &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QPainterPath{}) // "const QPainterPath &"
-  vtys[0][1] = reflect.TypeOf(qtgui.QPen{}) // "const QPen &"
-  vtys[0][2] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush
-    // invoke: QGraphicsPathItem * addPath(const class QPainterPath &, const class QPen &, const class QBrush &)
-    var arg0 = args[0].(*qtgui.QPainterPath).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtgui.QPen).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtgui.QBrush).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "addPath", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:198
+// index:0
+// QGraphicsRectItem * addRect(const class QRectF &, const class QPen &, const class QBrush &)
+func (this *QGraphicsScene) AddRect(rect unsafe.Pointer, pen unsafe.Pointer, brush unsafe.Pointer) {
+	// 0: (, const QRectF & rect, const QPen & pen, const QBrush & brush), (rect, pen, brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, rect, pen, brush)
+	gopp.ErrPrint(err, rv)
 }
 
-// selectedItems()
-func (this *QGraphicsScene) Selecteditems(args ...interface{}) () {
-  // selectedItems()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene13selectedItemsEv
-    // invoke: QList<QGraphicsItem *> selectedItems()
-    C.C_ZNK14QGraphicsScene13selectedItemsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "selectedItems", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:206
+// index:1
+// inline
+// QGraphicsRectItem * addRect(qreal, qreal, qreal, qreal, const class QPen &, const class QBrush &)
+func (this *QGraphicsScene) AddRect_1(x float64, y float64, w float64, h float64, pen unsafe.Pointer, brush unsafe.Pointer) {
+	// 1: (, qreal x, qreal y, qreal w, qreal h, const QPen & pen, const QBrush & brush), (&x, &y, &w, &h, pen, brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h, pen, brush)
+	gopp.ErrPrint(err, rv)
 }
 
-// setActiveWindow(class QGraphicsWidget *)
-func (this *QGraphicsScene) Setactivewindow(args ...interface{}) () {
-  // setActiveWindow(class QGraphicsWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QGraphicsWidget{}) // "QGraphicsWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene15setActiveWindowEP15QGraphicsWidget
-    // invoke: void setActiveWindow(class QGraphicsWidget *)
-    var arg0 = args[0].(*QGraphicsWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene15setActiveWindowEP15QGraphicsWidget(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setActiveWindow", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:199
+// index:0
+// QGraphicsTextItem * addText(const class QString &, const class QFont &)
+func (this *QGraphicsScene) AddText(text unsafe.Pointer, font unsafe.Pointer) {
+	// 0: (, const QString & text, const QFont & font), (text, font)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7addTextERK7QStringRK5QFont", ffiqt.FFI_TYPE_VOID, this.cthis, text, font)
+	gopp.ErrPrint(err, rv)
 }
 
-// backgroundBrush()
-func (this *QGraphicsScene) Backgroundbrush(args ...interface{}) (ret interface{}) {
-  // backgroundBrush()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene15backgroundBrushEv
-    // invoke: QBrush backgroundBrush()
-    var ret0 = C.C_ZNK14QGraphicsScene15backgroundBrushEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QBrush{}) // "QBrush"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "backgroundBrush", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:200
+// index:0
+// QGraphicsSimpleTextItem * addSimpleText(const class QString &, const class QFont &)
+func (this *QGraphicsScene) AddSimpleText(text unsafe.Pointer, font unsafe.Pointer) {
+	// 0: (, const QString & text, const QFont & font), (text, font)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont", ffiqt.FFI_TYPE_VOID, this.cthis, text, font)
+	gopp.ErrPrint(err, rv)
 }
 
-// addSimpleText(const class QString &, const class QFont &)
-func (this *QGraphicsScene) Addsimpletext(args ...interface{}) () {
-  // addSimpleText(const class QString &, const class QFont &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtgui.QFont{}) // "const QFont &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont
-    // invoke: QGraphicsSimpleTextItem * addSimpleText(const class QString &, const class QFont &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtgui.QFont).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "addSimpleText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:208
+// index:0
+// void removeItem(class QGraphicsItem *)
+func (this *QGraphicsScene) RemoveItem(item unsafe.Pointer) {
+	// 0: (, QGraphicsItem * item), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10removeItemEP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	gopp.ErrPrint(err, rv)
 }
 
-// clearSelection()
-func (this *QGraphicsScene) Clearselection(args ...interface{}) () {
-  // clearSelection()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene14clearSelectionEv
-    // invoke: void clearSelection()
-    C.C_ZN14QGraphicsScene14clearSelectionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "clearSelection", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:210
+// index:0
+// QGraphicsItem * focusItem()
+func (this *QGraphicsScene) FocusItem() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene9focusItemEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// activePanel()
-func (this *QGraphicsScene) Activepanel(args ...interface{}) () {
-  // activePanel()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene11activePanelEv
-    // invoke: QGraphicsItem * activePanel()
-    C.C_ZNK14QGraphicsScene11activePanelEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "activePanel", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:211
+// index:0
+// void setFocusItem(class QGraphicsItem *, Qt::FocusReason)
+func (this *QGraphicsScene) SetFocusItem(item unsafe.Pointer, focusReason int) {
+	// 0: (, QGraphicsItem * item, Qt::FocusReason focusReason), (item, &focusReason)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene12setFocusItemEP13QGraphicsItemN2Qt11FocusReasonE", ffiqt.FFI_TYPE_VOID, this.cthis, item, &focusReason)
+	gopp.ErrPrint(err, rv)
 }
 
-// focusItem()
-func (this *QGraphicsScene) Focusitem(args ...interface{}) () {
-  // focusItem()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene9focusItemEv
-    // invoke: QGraphicsItem * focusItem()
-    C.C_ZNK14QGraphicsScene9focusItemEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "focusItem", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:212
+// index:0
+// bool hasFocus()
+func (this *QGraphicsScene) HasFocus() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene8hasFocusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// destroyItemGroup(class QGraphicsItemGroup *)
-func (this *QGraphicsScene) Destroyitemgroup(args ...interface{}) () {
-  // destroyItemGroup(class QGraphicsItemGroup *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QGraphicsItemGroup{}) // "QGraphicsItemGroup *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene16destroyItemGroupEP18QGraphicsItemGroup
-    // invoke: void destroyItemGroup(class QGraphicsItemGroup *)
-    var arg0 = args[0].(*QGraphicsItemGroup).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene16destroyItemGroupEP18QGraphicsItemGroup(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "destroyItemGroup", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:213
+// index:0
+// void setFocus(Qt::FocusReason)
+func (this *QGraphicsScene) SetFocus(focusReason int) {
+	// 0: (, Qt::FocusReason focusReason), (&focusReason)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene8setFocusEN2Qt11FocusReasonE", ffiqt.FFI_TYPE_VOID, this.cthis, &focusReason)
+	gopp.ErrPrint(err, rv)
 }
 
-// addText(const class QString &, const class QFont &)
-func (this *QGraphicsScene) Addtext(args ...interface{}) () {
-  // addText(const class QString &, const class QFont &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtgui.QFont{}) // "const QFont &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene7addTextERK7QStringRK5QFont
-    // invoke: QGraphicsTextItem * addText(const class QString &, const class QFont &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtgui.QFont).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN14QGraphicsScene7addTextERK7QStringRK5QFont(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "addText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:214
+// index:0
+// void clearFocus()
+func (this *QGraphicsScene) ClearFocus() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10clearFocusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// update(const class QRectF &)
-func (this *QGraphicsScene) Update(args ...interface{}) () {
-  // update(const class QRectF &)
-  // update(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene6updateERK6QRectF
-    // invoke: void update(const class QRectF &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene6updateERK6QRectF(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN14QGraphicsScene6updateEdddd
-    // invoke: void update(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZN14QGraphicsScene6updateEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "update", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:216
+// index:0
+// void setStickyFocus(_Bool)
+func (this *QGraphicsScene) SetStickyFocus(enabled bool) {
+	// 0: (, bool enabled), (&enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene14setStickyFocusEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enabled)
+	gopp.ErrPrint(err, rv)
 }
 
-// setSortCacheEnabled(_Bool)
-func (this *QGraphicsScene) Setsortcacheenabled(args ...interface{}) () {
-  // setSortCacheEnabled(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene19setSortCacheEnabledEb
-    // invoke: void setSortCacheEnabled(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene19setSortCacheEnabledEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setSortCacheEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:217
+// index:0
+// bool stickyFocus()
+func (this *QGraphicsScene) StickyFocus() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene11stickyFocusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setStickyFocus(_Bool)
-func (this *QGraphicsScene) Setstickyfocus(args ...interface{}) () {
-  // setStickyFocus(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene14setStickyFocusEb
-    // invoke: void setStickyFocus(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene14setStickyFocusEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setStickyFocus", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:219
+// index:0
+// QGraphicsItem * mouseGrabberItem()
+func (this *QGraphicsScene) MouseGrabberItem() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene16mouseGrabberItemEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// clear()
-func (this *QGraphicsScene) Clear(args ...interface{}) () {
-  // clear()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene5clearEv
-    // invoke: void clear()
-    C.C_ZN14QGraphicsScene5clearEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "clear", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:221
+// index:0
+// QBrush backgroundBrush()
+func (this *QGraphicsScene) BackgroundBrush() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene15backgroundBrushEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// height()
-func (this *QGraphicsScene) Height(args ...interface{}) (ret interface{}) {
-  // height()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QGraphicsScene6heightEv
-    // invoke: qreal height()
-    var ret0 = C.C_ZNK14QGraphicsScene6heightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "height", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:222
+// index:0
+// void setBackgroundBrush(const class QBrush &)
+func (this *QGraphicsScene) SetBackgroundBrush(brush unsafe.Pointer) {
+	// 0: (, const QBrush & brush), (brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene18setBackgroundBrushERK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, brush)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFont(const class QFont &)
-func (this *QGraphicsScene) Setfont(args ...interface{}) () {
-  // setFont(const class QFont &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QFont{}) // "const QFont &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGraphicsScene7setFontERK5QFont
-    // invoke: void setFont(const class QFont &)
-    var arg0 = args[0].(*qtgui.QFont).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QGraphicsScene7setFontERK5QFont(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsScene", "setFont", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:224
+// index:0
+// QBrush foregroundBrush()
+func (this *QGraphicsScene) ForegroundBrush() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene15foregroundBrushEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:225
+// index:0
+// void setForegroundBrush(const class QBrush &)
+func (this *QGraphicsScene) SetForegroundBrush(brush unsafe.Pointer) {
+	// 0: (, const QBrush & brush), (brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene18setForegroundBrushERK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, brush)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:227
+// index:0
+// virtual
+// QVariant inputMethodQuery(Qt::InputMethodQuery)
+func (this *QGraphicsScene) InputMethodQuery(query int) {
+	// 0: (, Qt::InputMethodQuery query), (&query)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene16inputMethodQueryEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_VOID, this.cthis, &query)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:229
+// index:0
+// QList<QGraphicsView *> views()
+func (this *QGraphicsScene) Views() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5viewsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:231
+// index:0
+// inline
+// void update(qreal, qreal, qreal, qreal)
+func (this *QGraphicsScene) Update(x float64, y float64, w float64, h float64) {
+	// 0: (, qreal x, qreal y, qreal w, qreal h), (&x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene6updateEdddd", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:257
+// index:1
+// void update(const class QRectF &)
+func (this *QGraphicsScene) Update_1(rect unsafe.Pointer) {
+	// 1: (, const QRectF & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene6updateERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:236
+// index:0
+// QStyle * style()
+func (this *QGraphicsScene) Style() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5styleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:237
+// index:0
+// void setStyle(class QStyle *)
+func (this *QGraphicsScene) SetStyle(style unsafe.Pointer) {
+	// 0: (, QStyle * style), (style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene8setStyleEP6QStyle", ffiqt.FFI_TYPE_VOID, this.cthis, style)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:239
+// index:0
+// QFont font()
+func (this *QGraphicsScene) Font() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene4fontEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:240
+// index:0
+// void setFont(const class QFont &)
+func (this *QGraphicsScene) SetFont(font unsafe.Pointer) {
+	// 0: (, const QFont & font), (font)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7setFontERK5QFont", ffiqt.FFI_TYPE_VOID, this.cthis, font)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:242
+// index:0
+// QPalette palette()
+func (this *QGraphicsScene) Palette() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene7paletteEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:243
+// index:0
+// void setPalette(const class QPalette &)
+func (this *QGraphicsScene) SetPalette(palette unsafe.Pointer) {
+	// 0: (, const QPalette & palette), (palette)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10setPaletteERK8QPalette", ffiqt.FFI_TYPE_VOID, this.cthis, palette)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:245
+// index:0
+// bool isActive()
+func (this *QGraphicsScene) IsActive() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene8isActiveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:246
+// index:0
+// QGraphicsItem * activePanel()
+func (this *QGraphicsScene) ActivePanel() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene11activePanelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:247
+// index:0
+// void setActivePanel(class QGraphicsItem *)
+func (this *QGraphicsScene) SetActivePanel(item unsafe.Pointer) {
+	// 0: (, QGraphicsItem * item), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene14setActivePanelEP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:248
+// index:0
+// QGraphicsWidget * activeWindow()
+func (this *QGraphicsScene) ActiveWindow() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene12activeWindowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:249
+// index:0
+// void setActiveWindow(class QGraphicsWidget *)
+func (this *QGraphicsScene) SetActiveWindow(widget unsafe.Pointer) {
+	// 0: (, QGraphicsWidget * widget), (widget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene15setActiveWindowEP15QGraphicsWidget", ffiqt.FFI_TYPE_VOID, this.cthis, widget)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:251
+// index:0
+// bool sendEvent(class QGraphicsItem *, class QEvent *)
+func (this *QGraphicsScene) SendEvent(item unsafe.Pointer, event unsafe.Pointer) {
+	// 0: (, QGraphicsItem * item, QEvent * event), (item, event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene9sendEventEP13QGraphicsItemP6QEvent", ffiqt.FFI_TYPE_VOID, this.cthis, item, event)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:253
+// index:0
+// qreal minimumRenderSize()
+func (this *QGraphicsScene) MinimumRenderSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene17minimumRenderSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:254
+// index:0
+// void setMinimumRenderSize(qreal)
+func (this *QGraphicsScene) SetMinimumRenderSize(minSize float64) {
+	// 0: (, qreal minSize), (&minSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene20setMinimumRenderSizeEd", ffiqt.FFI_TYPE_VOID, this.cthis, &minSize)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:259
+// index:0
+// void advance()
+func (this *QGraphicsScene) Advance() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7advanceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:260
+// index:0
+// void clearSelection()
+func (this *QGraphicsScene) ClearSelection() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene14clearSelectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:261
+// index:0
+// void clear()
+func (this *QGraphicsScene) Clear() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:299
+// index:0
+// void sceneRectChanged(const class QRectF &)
+func (this *QGraphicsScene) SceneRectChanged(rect unsafe.Pointer) {
+	// 0: (, const QRectF & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16sceneRectChangedERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:300
+// index:0
+// void selectionChanged()
+func (this *QGraphicsScene) SelectionChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16selectionChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:301
+// index:0
+// void focusItemChanged(class QGraphicsItem *, class QGraphicsItem *, Qt::FocusReason)
+func (this *QGraphicsScene) FocusItemChanged(newFocus unsafe.Pointer, oldFocus unsafe.Pointer, reason int) {
+	// 0: (, QGraphicsItem * newFocus, QGraphicsItem * oldFocus, Qt::FocusReason reason), (newFocus, oldFocus, &reason)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16focusItemChangedEP13QGraphicsItemS1_N2Qt11FocusReasonE", ffiqt.FFI_TYPE_VOID, this.cthis, newFocus, oldFocus, &reason)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

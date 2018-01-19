@@ -1,665 +1,288 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qlcdnumber.h
+// #include <qlcdnumber.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qlcdnumber.h
-// dst-file: /src/widgets/qlcdnumber.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QLCDNumber::setSmallDecimalPoint(bool );
-extern void C_ZN10QLCDNumber20setSmallDecimalPointEb(void* qthis, bool arg0); // 4
-  // proto:  void QLCDNumber::setDecMode();
-extern void C_ZN10QLCDNumber10setDecModeEv(void* qthis); // 4
-  // proto:  bool QLCDNumber::smallDecimalPoint();
-extern bool C_ZNK10QLCDNumber17smallDecimalPointEv(void* qthis); // 4
-  // proto:  void QLCDNumber::setHexMode();
-extern void C_ZN10QLCDNumber10setHexModeEv(void* qthis); // 4
-  // proto:  void QLCDNumber::~QLCDNumber();
-extern void C_ZN10QLCDNumberD2Ev(void* qthis); // 4
-  // proto:  QLCDNumber::SegmentStyle QLCDNumber::segmentStyle();
-extern void C_ZNK10QLCDNumber12segmentStyleEv(void* qthis); // 4
-  // proto:  void QLCDNumber::QLCDNumber(uint numDigits, QWidget * parent);
-extern void* C_ZN10QLCDNumberC2EjP7QWidget(int32_t arg0, void* arg1); // 3
-  // proto:  void QLCDNumber::QLCDNumber(QWidget * parent);
-extern void* C_ZN10QLCDNumberC2EP7QWidget(void* arg0); // 3
-  // proto:  int QLCDNumber::intValue();
-extern int32_t C_ZNK10QLCDNumber8intValueEv(void* qthis); // 4
-  // proto:  int QLCDNumber::digitCount();
-extern int32_t C_ZNK10QLCDNumber10digitCountEv(void* qthis); // 4
-  // proto:  QSize QLCDNumber::sizeHint();
-extern void* C_ZNK10QLCDNumber8sizeHintEv(void* qthis); // 4
-  // proto:  void QLCDNumber::setOctMode();
-extern void C_ZN10QLCDNumber10setOctModeEv(void* qthis); // 4
-  // proto:  const QMetaObject * QLCDNumber::metaObject();
-extern void C_ZNK10QLCDNumber10metaObjectEv(void* qthis); // 4
-  // proto:  void QLCDNumber::setBinMode();
-extern void C_ZN10QLCDNumber10setBinModeEv(void* qthis); // 4
-  // proto:  double QLCDNumber::value();
-extern double C_ZNK10QLCDNumber5valueEv(void* qthis); // 4
-  // proto:  void QLCDNumber::setDigitCount(int nDigits);
-extern void C_ZN10QLCDNumber13setDigitCountEi(void* qthis, int32_t arg0); // 4
-  // proto:  QLCDNumber::Mode QLCDNumber::mode();
-extern void C_ZNK10QLCDNumber4modeEv(void* qthis); // 4
-  // proto:  bool QLCDNumber::checkOverflow(int num);
-extern bool C_ZNK10QLCDNumber13checkOverflowEi(void* qthis, int32_t arg0); // 4
-  // proto:  bool QLCDNumber::checkOverflow(double num);
-extern bool C_ZNK10QLCDNumber13checkOverflowEd(void* qthis, double arg0); // 4
-  // proto:  void QLCDNumber::display(int num);
-extern void C_ZN10QLCDNumber7displayEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QLCDNumber::display(double num);
-extern void C_ZN10QLCDNumber7displayEd(void* qthis, double arg0); // 4
-  // proto:  void QLCDNumber::display(const QString & str);
-extern void C_ZN10QLCDNumber7displayERK7QString(void* qthis, void* arg0); // 4
+// extern C begin: 38
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QLCDNumber)=1
+//  ext block end
+
+//  body block begin
 type QLCDNumber struct {
-  /*qbase*/ QFrame;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _overflow QLCDNumber_overflow_signal;
+	cthis unsafe.Pointer
 }
 
-// setSmallDecimalPoint(_Bool)
-func (this *QLCDNumber) Setsmalldecimalpoint(args ...interface{}) () {
-  // setSmallDecimalPoint(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber20setSmallDecimalPointEb
-    // invoke: void setSmallDecimalPoint(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QLCDNumber20setSmallDecimalPointEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setSmallDecimalPoint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:53
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QLCDNumber) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDecMode()
-func (this *QLCDNumber) Setdecmode(args ...interface{}) () {
-  // setDecMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber10setDecModeEv
-    // invoke: void setDecMode()
-    C.C_ZN10QLCDNumber10setDecModeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setDecMode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:62
+// index:0
+// void QLCDNumber(class QWidget *)
+func NewQLCDNumber(parent unsafe.Pointer) *QLCDNumber {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumberC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QLCDNumber{cthis}
 }
 
-// smallDecimalPoint()
-func (this *QLCDNumber) Smalldecimalpoint(args ...interface{}) (ret interface{}) {
-  // smallDecimalPoint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber17smallDecimalPointEv
-    // invoke: bool smallDecimalPoint()
-    var ret0 = C.C_ZNK10QLCDNumber17smallDecimalPointEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "smallDecimalPoint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:63
+// index:1
+// void QLCDNumber(uint, class QWidget *)
+func NewQLCDNumber_1(numDigits uint, parent unsafe.Pointer) *QLCDNumber {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumberC2EjP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, &numDigits, parent)
+	gopp.ErrPrint(err, rv)
+	return &QLCDNumber{cthis}
 }
 
-// setHexMode()
-func (this *QLCDNumber) Sethexmode(args ...interface{}) () {
-  // setHexMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber10setHexModeEv
-    // invoke: void setHexMode()
-    C.C_ZN10QLCDNumber10setHexModeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setHexMode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:64
+// index:0
+// virtual
+// void ~QLCDNumber()
+func DeleteQLCDNumber(*QLCDNumber) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumberD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QLCDNumber()
-func (this *QLCDNumber) Freeqlcdnumber(args ...interface{}) () {
-  // ~QLCDNumber()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumberD0Ev
-    // invoke: void ~QLCDNumber()
-    C.C_ZN10QLCDNumberD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "~QLCDNumber", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:75
+// index:0
+// bool smallDecimalPoint()
+func (this *QLCDNumber) SmallDecimalPoint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber17smallDecimalPointEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// segmentStyle()
-func (this *QLCDNumber) Segmentstyle(args ...interface{}) () {
-  // segmentStyle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber12segmentStyleEv
-    // invoke: QLCDNumber::SegmentStyle segmentStyle()
-    C.C_ZNK10QLCDNumber12segmentStyleEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "segmentStyle", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:76
+// index:0
+// int digitCount()
+func (this *QLCDNumber) DigitCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber10digitCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QLCDNumber(uint, class QWidget *)
-func NewQLCDNumber(args ...interface{}) *QLCDNumber {
-  // QLCDNumber(uint, class QWidget *)
-  // QLCDNumber(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "uint"
-  vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumberC1EjP7QWidget
-    // invoke: void QLCDNumber(uint, class QWidget *)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QWidget).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN10QLCDNumberC2EjP7QWidget(arg0, arg1)
-    return &QLCDNumber{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN10QLCDNumberC1EP7QWidget
-    // invoke: void QLCDNumber(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN10QLCDNumberC2EP7QWidget(arg0)
-    return &QLCDNumber{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "QLCDNumber", args)
-  }
-
-  return nil // QLCDNumber{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qlcdnumber.h:77
+// index:0
+// void setDigitCount(int)
+func (this *QLCDNumber) SetDigitCount(nDigits int) {
+	// 0: (, int nDigits), (&nDigits)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber13setDigitCountEi", ffiqt.FFI_TYPE_VOID, this.cthis, &nDigits)
+	gopp.ErrPrint(err, rv)
 }
 
-// intValue()
-func (this *QLCDNumber) Intvalue(args ...interface{}) (ret interface{}) {
-  // intValue()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber8intValueEv
-    // invoke: int intValue()
-    var ret0 = C.C_ZNK10QLCDNumber8intValueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "intValue", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:79
+// index:0
+// bool checkOverflow(double)
+func (this *QLCDNumber) CheckOverflow(num float64) {
+	// 0: (, double num), (&num)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber13checkOverflowEd", ffiqt.FFI_TYPE_VOID, this.cthis, &num)
+	gopp.ErrPrint(err, rv)
 }
 
-// digitCount()
-func (this *QLCDNumber) Digitcount(args ...interface{}) (ret interface{}) {
-  // digitCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber10digitCountEv
-    // invoke: int digitCount()
-    var ret0 = C.C_ZNK10QLCDNumber10digitCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "digitCount", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:80
+// index:1
+// bool checkOverflow(int)
+func (this *QLCDNumber) CheckOverflow_1(num int) {
+	// 1: (, int num), (&num)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber13checkOverflowEi", ffiqt.FFI_TYPE_VOID, this.cthis, &num)
+	gopp.ErrPrint(err, rv)
 }
 
-// sizeHint()
-func (this *QLCDNumber) Sizehint(args ...interface{}) (ret interface{}) {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber8sizeHintEv
-    // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK10QLCDNumber8sizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "sizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:82
+// index:0
+// QLCDNumber::Mode mode()
+func (this *QLCDNumber) Mode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber4modeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setOctMode()
-func (this *QLCDNumber) Setoctmode(args ...interface{}) () {
-  // setOctMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber10setOctModeEv
-    // invoke: void setOctMode()
-    C.C_ZN10QLCDNumber10setOctModeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setOctMode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:83
+// index:0
+// void setMode(enum QLCDNumber::Mode)
+func (this *QLCDNumber) SetMode(arg0 int) {
+	// 0: (, QLCDNumber::Mode arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber7setModeENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QLCDNumber) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QLCDNumber10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:85
+// index:0
+// QLCDNumber::SegmentStyle segmentStyle()
+func (this *QLCDNumber) SegmentStyle() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber12segmentStyleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setBinMode()
-func (this *QLCDNumber) Setbinmode(args ...interface{}) () {
-  // setBinMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber10setBinModeEv
-    // invoke: void setBinMode()
-    C.C_ZN10QLCDNumber10setBinModeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setBinMode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:86
+// index:0
+// void setSegmentStyle(enum QLCDNumber::SegmentStyle)
+func (this *QLCDNumber) SetSegmentStyle(arg0 int) {
+	// 0: (, QLCDNumber::SegmentStyle arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber15setSegmentStyleENS_12SegmentStyleE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// value()
-func (this *QLCDNumber) Value(args ...interface{}) (ret interface{}) {
-  // value()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber5valueEv
-    // invoke: double value()
-    var ret0 = C.C_ZNK10QLCDNumber5valueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "double"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "value", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:88
+// index:0
+// double value()
+func (this *QLCDNumber) Value() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber5valueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDigitCount(int)
-func (this *QLCDNumber) Setdigitcount(args ...interface{}) () {
-  // setDigitCount(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber13setDigitCountEi
-    // invoke: void setDigitCount(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QLCDNumber13setDigitCountEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setDigitCount", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:89
+// index:0
+// int intValue()
+func (this *QLCDNumber) IntValue() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber8intValueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// mode()
-func (this *QLCDNumber) Mode(args ...interface{}) () {
-  // mode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber4modeEv
-    // invoke: QLCDNumber::Mode mode()
-    C.C_ZNK10QLCDNumber4modeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "mode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:91
+// index:0
+// virtual
+// QSize sizeHint()
+func (this *QLCDNumber) SizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// checkOverflow(int)
-func (this *QLCDNumber) Checkoverflow(args ...interface{}) (ret interface{}) {
-  // checkOverflow(int)
-  // checkOverflow(double)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "double"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber13checkOverflowEi
-    // invoke: bool checkOverflow(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QLCDNumber13checkOverflowEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK10QLCDNumber13checkOverflowEd
-    // invoke: bool checkOverflow(double)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QLCDNumber13checkOverflowEd(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "checkOverflow", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:94
+// index:0
+// void display(const class QString &)
+func (this *QLCDNumber) Display(str unsafe.Pointer) {
+	// 0: (, const QString & str), (str)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber7displayERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, str)
+	gopp.ErrPrint(err, rv)
 }
 
-// display(int)
-func (this *QLCDNumber) Display(args ...interface{}) () {
-  // display(int)
-  // display(double)
-  // display(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "double"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber7displayEi
-    // invoke: void display(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QLCDNumber7displayEi(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN10QLCDNumber7displayEd
-    // invoke: void display(double)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QLCDNumber7displayEd(this.Qclsinst, arg0)
-  case 2:
-    // invoke: _ZN10QLCDNumber7displayERK7QString
-    // invoke: void display(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QLCDNumber7displayERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "display", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qlcdnumber.h:95
+// index:1
+// void display(int)
+func (this *QLCDNumber) Display_1(num int) {
+	// 1: (, int num), (&num)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber7displayEi", ffiqt.FFI_TYPE_VOID, this.cthis, &num)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qlcdnumber.h:96
+// index:2
+// void display(double)
+func (this *QLCDNumber) Display_2(num float64) {
+	// 2: (, double num), (&num)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber7displayEd", ffiqt.FFI_TYPE_VOID, this.cthis, &num)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qlcdnumber.h:97
+// index:0
+// void setHexMode()
+func (this *QLCDNumber) SetHexMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber10setHexModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qlcdnumber.h:98
+// index:0
+// void setDecMode()
+func (this *QLCDNumber) SetDecMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber10setDecModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qlcdnumber.h:99
+// index:0
+// void setOctMode()
+func (this *QLCDNumber) SetOctMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber10setOctModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qlcdnumber.h:100
+// index:0
+// void setBinMode()
+func (this *QLCDNumber) SetBinMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber10setBinModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qlcdnumber.h:101
+// index:0
+// void setSmallDecimalPoint(_Bool)
+func (this *QLCDNumber) SetSmallDecimalPoint(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber20setSmallDecimalPointEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qlcdnumber.h:104
+// index:0
+// void overflow()
+func (this *QLCDNumber) Overflow() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber8overflowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

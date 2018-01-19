@@ -1,265 +1,114 @@
+//  header block begin
+// /usr/include/qt/QtCore/qsemaphore.h
+// #include <qsemaphore.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qsemaphore.h
-// dst-file: /src/core/qsemaphore.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  int QSemaphore::available();
-extern int32_t C_ZNK10QSemaphore9availableEv(void* qthis); // 4
-  // proto:  void QSemaphore::~QSemaphore();
-extern void C_ZN10QSemaphoreD2Ev(void* qthis); // 4
-  // proto:  void QSemaphore::acquire(int n);
-extern void C_ZN10QSemaphore7acquireEi(void* qthis, int32_t arg0); // 4
-  // proto:  bool QSemaphore::tryAcquire(int n);
-extern bool C_ZN10QSemaphore10tryAcquireEi(void* qthis, int32_t arg0); // 4
-  // proto:  bool QSemaphore::tryAcquire(int n, int timeout);
-extern bool C_ZN10QSemaphore10tryAcquireEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QSemaphore::release(int n);
-extern void C_ZN10QSemaphore7releaseEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QSemaphore::QSemaphore(int n);
-extern void* C_ZN10QSemaphoreC2Ei(int32_t arg0); // 3
+// extern C begin: 11
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QSemaphore)=8
+//  ext block end
+
+//  body block begin
 type QSemaphore struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// available()
-func (this *QSemaphore) Available(args ...interface{}) (ret interface{}) {
-  // available()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QSemaphore9availableEv
-    // invoke: int available()
-    var ret0 = C.C_ZNK10QSemaphore9availableEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSemaphore", "available", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qsemaphore.h:55
+// index:0
+// void QSemaphore(int)
+func NewQSemaphore(n int) *QSemaphore {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphoreC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &n)
+	gopp.ErrPrint(err, rv)
+	return &QSemaphore{cthis}
 }
 
-// ~QSemaphore()
-func (this *QSemaphore) Freeqsemaphore(args ...interface{}) () {
-  // ~QSemaphore()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QSemaphoreD0Ev
-    // invoke: void ~QSemaphore()
-    C.C_ZN10QSemaphoreD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSemaphore", "~QSemaphore", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qsemaphore.h:56
+// index:0
+// void ~QSemaphore()
+func DeleteQSemaphore(*QSemaphore) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphoreD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// acquire(int)
-func (this *QSemaphore) Acquire(args ...interface{}) () {
-  // acquire(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QSemaphore7acquireEi
-    // invoke: void acquire(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QSemaphore7acquireEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSemaphore", "acquire", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qsemaphore.h:58
+// index:0
+// void acquire(int)
+func (this *QSemaphore) Acquire(n int) {
+	// 0: (, int n), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore7acquireEi", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	gopp.ErrPrint(err, rv)
 }
 
-// tryAcquire(int)
-func (this *QSemaphore) Tryacquire(args ...interface{}) (ret interface{}) {
-  // tryAcquire(int)
-  // tryAcquire(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QSemaphore10tryAcquireEi
-    // invoke: bool tryAcquire(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN10QSemaphore10tryAcquireEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN10QSemaphore10tryAcquireEii
-    // invoke: bool tryAcquire(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QSemaphore10tryAcquireEii(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSemaphore", "tryAcquire", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qsemaphore.h:59
+// index:0
+// bool tryAcquire(int)
+func (this *QSemaphore) TryAcquire(n int) {
+	// 0: (, int n), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	gopp.ErrPrint(err, rv)
 }
 
-// release(int)
-func (this *QSemaphore) Release(args ...interface{}) () {
-  // release(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QSemaphore7releaseEi
-    // invoke: void release(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QSemaphore7releaseEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSemaphore", "release", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qsemaphore.h:60
+// index:1
+// bool tryAcquire(int, int)
+func (this *QSemaphore) TryAcquire_1(n int, timeout int) {
+	// 1: (, int n, int timeout), (&n, &timeout)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEii", ffiqt.FFI_TYPE_VOID, this.cthis, &n, &timeout)
+	gopp.ErrPrint(err, rv)
 }
 
-// QSemaphore(int)
-func NewQSemaphore(args ...interface{}) *QSemaphore {
-  // QSemaphore(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QSemaphoreC1Ei
-    // invoke: void QSemaphore(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN10QSemaphoreC2Ei(arg0)
-    return &QSemaphore{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QSemaphore", "QSemaphore", args)
-  }
-
-  return nil // QSemaphore{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qsemaphore.h:62
+// index:0
+// void release(int)
+func (this *QSemaphore) Release(n int) {
+	// 0: (, int n), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore7releaseEi", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qsemaphore.h:64
+// index:0
+// int available()
+func (this *QSemaphore) Available() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSemaphore9availableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+//  body block end

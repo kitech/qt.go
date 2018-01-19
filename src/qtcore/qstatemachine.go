@@ -1,734 +1,289 @@
+//  header block begin
+// /usr/include/qt/QtCore/qstatemachine.h
+// #include <qstatemachine.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qstatemachine.h
-// dst-file: /src/core/qstatemachine.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
-extern void C_ZNK13QStateMachine17defaultAnimationsEv(void* qthis); // 4
-  // proto:  QState::RestorePolicy QStateMachine::globalRestorePolicy();
-extern void C_ZNK13QStateMachine19globalRestorePolicyEv(void* qthis); // 4
-  // proto:  void QStateMachine::addDefaultAnimation(QAbstractAnimation * animation);
-extern void C_ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
-  // proto:  void QStateMachine::clearError();
-extern void C_ZN13QStateMachine10clearErrorEv(void* qthis); // 4
-  // proto:  bool QStateMachine::isAnimated();
-extern bool C_ZNK13QStateMachine10isAnimatedEv(void* qthis); // 4
-  // proto:  void QStateMachine::addState(QAbstractState * state);
-extern void C_ZN13QStateMachine8addStateEP14QAbstractState(void* qthis, void* arg0); // 4
-  // proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
-extern bool C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  void QStateMachine::start();
-extern void C_ZN13QStateMachine5startEv(void* qthis); // 4
-  // proto:  bool QStateMachine::cancelDelayedEvent(int id);
-extern bool C_ZN13QStateMachine18cancelDelayedEventEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QStateMachine::setRunning(bool running);
-extern void C_ZN13QStateMachine10setRunningEb(void* qthis, bool arg0); // 4
-  // proto:  void QStateMachine::removeState(QAbstractState * state);
-extern void C_ZN13QStateMachine11removeStateEP14QAbstractState(void* qthis, void* arg0); // 4
-  // proto:  QString QStateMachine::errorString();
-extern void* C_ZNK13QStateMachine11errorStringEv(void* qthis); // 4
-  // proto:  void QStateMachine::stop();
-extern void C_ZN13QStateMachine4stopEv(void* qthis); // 4
-  // proto:  void QStateMachine::setAnimated(bool enabled);
-extern void C_ZN13QStateMachine11setAnimatedEb(void* qthis, bool arg0); // 4
-  // proto:  const QMetaObject * QStateMachine::metaObject();
-extern void C_ZNK13QStateMachine10metaObjectEv(void* qthis); // 4
-  // proto:  QSet<QAbstractState *> QStateMachine::configuration();
-extern void C_ZNK13QStateMachine13configurationEv(void* qthis); // 4
-  // proto:  bool QStateMachine::isRunning();
-extern bool C_ZNK13QStateMachine9isRunningEv(void* qthis); // 4
-  // proto:  void QStateMachine::~QStateMachine();
-extern void C_ZN13QStateMachineD2Ev(void* qthis); // 4
-  // proto:  void QStateMachine::QStateMachine(QObject * parent);
-extern void* C_ZN13QStateMachineC2EP7QObject(void* arg0); // 3
-  // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
-extern int32_t C_ZN13QStateMachine16postDelayedEventEP6QEventi(void* qthis, void* arg0, int32_t arg1); // 4
-  // proto:  QStateMachine::Error QStateMachine::error();
-extern void C_ZNK13QStateMachine5errorEv(void* qthis); // 4
-  // proto:  void QStateMachine::removeDefaultAnimation(QAbstractAnimation * animation);
-extern void C_ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
+// extern C begin: 16
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QStateMachine)=1
+//  ext block end
+
+//  body block begin
 type QStateMachine struct {
-  /*qbase*/ QState;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _started QStateMachine_started_signal;
-//  _runningChanged QStateMachine_runningChanged_signal;
-//  _stopped QStateMachine_stopped_signal;
+	cthis unsafe.Pointer
 }
 
-// defaultAnimations()
-func (this *QStateMachine) Defaultanimations(args ...interface{}) () {
-  // defaultAnimations()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QStateMachine17defaultAnimationsEv
-    // invoke: QList<QAbstractAnimation *> defaultAnimations()
-    C.C_ZNK13QStateMachine17defaultAnimationsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "defaultAnimations", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:59
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QStateMachine) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStateMachine10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// globalRestorePolicy()
-func (this *QStateMachine) Globalrestorepolicy(args ...interface{}) () {
-  // globalRestorePolicy()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QStateMachine19globalRestorePolicyEv
-    // invoke: QState::RestorePolicy globalRestorePolicy()
-    C.C_ZNK13QStateMachine19globalRestorePolicyEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "globalRestorePolicy", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:112
+// index:0
+// void QStateMachine(class QObject *)
+func NewQStateMachine(parent unsafe.Pointer) *QStateMachine {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachineC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QStateMachine{cthis}
 }
 
-// addDefaultAnimation(class QAbstractAnimation *)
-func (this *QStateMachine) Adddefaultanimation(args ...interface{}) () {
-  // addDefaultAnimation(class QAbstractAnimation *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAbstractAnimation{}) // "QAbstractAnimation *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation
-    // invoke: void addDefaultAnimation(class QAbstractAnimation *)
-    var arg0 = args[0].(*QAbstractAnimation).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "addDefaultAnimation", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:113
+// index:1
+// void QStateMachine(class QState::ChildMode, class QObject *)
+func NewQStateMachine_1(childMode int, parent unsafe.Pointer) *QStateMachine {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachineC2EN6QState9ChildModeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &childMode, parent)
+	gopp.ErrPrint(err, rv)
+	return &QStateMachine{cthis}
 }
 
-// clearError()
-func (this *QStateMachine) Clearerror(args ...interface{}) () {
-  // clearError()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine10clearErrorEv
-    // invoke: void clearError()
-    C.C_ZN13QStateMachine10clearErrorEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "clearError", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:114
+// index:0
+// virtual
+// void ~QStateMachine()
+func DeleteQStateMachine(*QStateMachine) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachineD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// isAnimated()
-func (this *QStateMachine) Isanimated(args ...interface{}) (ret interface{}) {
-  // isAnimated()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QStateMachine10isAnimatedEv
-    // invoke: bool isAnimated()
-    var ret0 = C.C_ZNK13QStateMachine10isAnimatedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStateMachine", "isAnimated", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:116
+// index:0
+// void addState(class QAbstractState *)
+func (this *QStateMachine) AddState(state unsafe.Pointer) {
+	// 0: (, QAbstractState * state), (state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine8addStateEP14QAbstractState", ffiqt.FFI_TYPE_VOID, this.cthis, state)
+	gopp.ErrPrint(err, rv)
 }
 
-// addState(class QAbstractState *)
-func (this *QStateMachine) Addstate(args ...interface{}) () {
-  // addState(class QAbstractState *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAbstractState{}) // "QAbstractState *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine8addStateEP14QAbstractState
-    // invoke: void addState(class QAbstractState *)
-    var arg0 = args[0].(*QAbstractState).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QStateMachine8addStateEP14QAbstractState(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "addState", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:117
+// index:0
+// void removeState(class QAbstractState *)
+func (this *QStateMachine) RemoveState(state unsafe.Pointer) {
+	// 0: (, QAbstractState * state), (state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine11removeStateEP14QAbstractState", ffiqt.FFI_TYPE_VOID, this.cthis, state)
+	gopp.ErrPrint(err, rv)
 }
 
-// eventFilter(class QObject *, class QEvent *)
-func (this *QStateMachine) Eventfilter(args ...interface{}) (ret interface{}) {
-  // eventFilter(class QObject *, class QEvent *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
-  vtys[0][1] = reflect.TypeOf(QEvent{}) // "QEvent *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine11eventFilterEP7QObjectP6QEvent
-    // invoke: bool eventFilter(class QObject *, class QEvent *)
-    var arg0 = args[0].(*QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QEvent).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStateMachine", "eventFilter", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:119
+// index:0
+// QStateMachine::Error error()
+func (this *QStateMachine) Error() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStateMachine5errorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// start()
-func (this *QStateMachine) Start(args ...interface{}) () {
-  // start()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine5startEv
-    // invoke: void start()
-    C.C_ZN13QStateMachine5startEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "start", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:120
+// index:0
+// QString errorString()
+func (this *QStateMachine) ErrorString() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStateMachine11errorStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// cancelDelayedEvent(int)
-func (this *QStateMachine) Canceldelayedevent(args ...interface{}) (ret interface{}) {
-  // cancelDelayedEvent(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine18cancelDelayedEventEi
-    // invoke: bool cancelDelayedEvent(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN13QStateMachine18cancelDelayedEventEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStateMachine", "cancelDelayedEvent", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:121
+// index:0
+// void clearError()
+func (this *QStateMachine) ClearError() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine10clearErrorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRunning(_Bool)
-func (this *QStateMachine) Setrunning(args ...interface{}) () {
-  // setRunning(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine10setRunningEb
-    // invoke: void setRunning(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QStateMachine10setRunningEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "setRunning", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:123
+// index:0
+// bool isRunning()
+func (this *QStateMachine) IsRunning() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStateMachine9isRunningEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// removeState(class QAbstractState *)
-func (this *QStateMachine) Removestate(args ...interface{}) () {
-  // removeState(class QAbstractState *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAbstractState{}) // "QAbstractState *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine11removeStateEP14QAbstractState
-    // invoke: void removeState(class QAbstractState *)
-    var arg0 = args[0].(*QAbstractState).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QStateMachine11removeStateEP14QAbstractState(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "removeState", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:126
+// index:0
+// bool isAnimated()
+func (this *QStateMachine) IsAnimated() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStateMachine10isAnimatedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// errorString()
-func (this *QStateMachine) Errorstring(args ...interface{}) (ret interface{}) {
-  // errorString()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QStateMachine11errorStringEv
-    // invoke: QString errorString()
-    var ret0 = C.C_ZNK13QStateMachine11errorStringEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStateMachine", "errorString", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:127
+// index:0
+// void setAnimated(_Bool)
+func (this *QStateMachine) SetAnimated(enabled bool) {
+	// 0: (, bool enabled), (&enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine11setAnimatedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enabled)
+	gopp.ErrPrint(err, rv)
 }
 
-// stop()
-func (this *QStateMachine) Stop(args ...interface{}) () {
-  // stop()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine4stopEv
-    // invoke: void stop()
-    C.C_ZN13QStateMachine4stopEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "stop", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:129
+// index:0
+// void addDefaultAnimation(class QAbstractAnimation *)
+func (this *QStateMachine) AddDefaultAnimation(animation unsafe.Pointer) {
+	// 0: (, QAbstractAnimation * animation), (animation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation", ffiqt.FFI_TYPE_VOID, this.cthis, animation)
+	gopp.ErrPrint(err, rv)
 }
 
-// setAnimated(_Bool)
-func (this *QStateMachine) Setanimated(args ...interface{}) () {
-  // setAnimated(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine11setAnimatedEb
-    // invoke: void setAnimated(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QStateMachine11setAnimatedEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "setAnimated", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:130
+// index:0
+// QList<QAbstractAnimation *> defaultAnimations()
+func (this *QStateMachine) DefaultAnimations() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStateMachine17defaultAnimationsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QStateMachine) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QStateMachine10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK13QStateMachine10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:131
+// index:0
+// void removeDefaultAnimation(class QAbstractAnimation *)
+func (this *QStateMachine) RemoveDefaultAnimation(animation unsafe.Pointer) {
+	// 0: (, QAbstractAnimation * animation), (animation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation", ffiqt.FFI_TYPE_VOID, this.cthis, animation)
+	gopp.ErrPrint(err, rv)
 }
 
-// configuration()
-func (this *QStateMachine) Configuration(args ...interface{}) () {
-  // configuration()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QStateMachine13configurationEv
-    // invoke: QSet<QAbstractState *> configuration()
-    C.C_ZNK13QStateMachine13configurationEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "configuration", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:134
+// index:0
+// QState::RestorePolicy globalRestorePolicy()
+func (this *QStateMachine) GlobalRestorePolicy() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStateMachine19globalRestorePolicyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isRunning()
-func (this *QStateMachine) Isrunning(args ...interface{}) (ret interface{}) {
-  // isRunning()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QStateMachine9isRunningEv
-    // invoke: bool isRunning()
-    var ret0 = C.C_ZNK13QStateMachine9isRunningEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStateMachine", "isRunning", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:135
+// index:0
+// void setGlobalRestorePolicy(class QState::RestorePolicy)
+func (this *QStateMachine) SetGlobalRestorePolicy(restorePolicy int) {
+	// 0: (, QState::RestorePolicy restorePolicy), (&restorePolicy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine22setGlobalRestorePolicyEN6QState13RestorePolicyE", ffiqt.FFI_TYPE_VOID, this.cthis, &restorePolicy)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QStateMachine()
-func (this *QStateMachine) Freeqstatemachine(args ...interface{}) () {
-  // ~QStateMachine()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachineD0Ev
-    // invoke: void ~QStateMachine()
-    C.C_ZN13QStateMachineD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "~QStateMachine", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:137
+// index:0
+// void postEvent(class QEvent *, enum QStateMachine::EventPriority)
+func (this *QStateMachine) PostEvent(event unsafe.Pointer, priority int) {
+	// 0: (, QEvent * event, QStateMachine::EventPriority priority), (event, &priority)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine9postEventEP6QEventNS_13EventPriorityE", ffiqt.FFI_TYPE_VOID, this.cthis, event, &priority)
+	gopp.ErrPrint(err, rv)
 }
 
-// QStateMachine(class QObject *)
-func NewQStateMachine(args ...interface{}) *QStateMachine {
-  // QStateMachine(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachineC1EP7QObject
-    // invoke: void QStateMachine(class QObject *)
-    var arg0 = args[0].(*QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN13QStateMachineC2EP7QObject(arg0)
-    return &QStateMachine{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QStateMachine", "QStateMachine", args)
-  }
-
-  return nil // QStateMachine{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qstatemachine.h:138
+// index:0
+// int postDelayedEvent(class QEvent *, int)
+func (this *QStateMachine) PostDelayedEvent(event unsafe.Pointer, delay int) {
+	// 0: (, QEvent * event, int delay), (event, &delay)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine16postDelayedEventEP6QEventi", ffiqt.FFI_TYPE_VOID, this.cthis, event, &delay)
+	gopp.ErrPrint(err, rv)
 }
 
-// postDelayedEvent(class QEvent *, int)
-func (this *QStateMachine) Postdelayedevent(args ...interface{}) (ret interface{}) {
-  // postDelayedEvent(class QEvent *, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QEvent{}) // "QEvent *"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine16postDelayedEventEP6QEventi
-    // invoke: int postDelayedEvent(class QEvent *, int)
-    var arg0 = args[0].(*QEvent).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN13QStateMachine16postDelayedEventEP6QEventi(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStateMachine", "postDelayedEvent", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:139
+// index:0
+// bool cancelDelayedEvent(int)
+func (this *QStateMachine) CancelDelayedEvent(id int) {
+	// 0: (, int id), (&id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine18cancelDelayedEventEi", ffiqt.FFI_TYPE_VOID, this.cthis, &id)
+	gopp.ErrPrint(err, rv)
 }
 
-// error()
-func (this *QStateMachine) Error(args ...interface{}) () {
-  // error()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QStateMachine5errorEv
-    // invoke: QStateMachine::Error error()
-    C.C_ZNK13QStateMachine5errorEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "error", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:141
+// index:0
+// QSet<QAbstractState *> configuration()
+func (this *QStateMachine) Configuration() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStateMachine13configurationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// removeDefaultAnimation(class QAbstractAnimation *)
-func (this *QStateMachine) Removedefaultanimation(args ...interface{}) () {
-  // removeDefaultAnimation(class QAbstractAnimation *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAbstractAnimation{}) // "QAbstractAnimation *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation
-    // invoke: void removeDefaultAnimation(class QAbstractAnimation *)
-    var arg0 = args[0].(*QAbstractAnimation).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStateMachine", "removeDefaultAnimation", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstatemachine.h:144
+// index:0
+// virtual
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QStateMachine) EventFilter(watched unsafe.Pointer, event unsafe.Pointer) {
+	// 0: (, QObject * watched, QEvent * event), (watched, event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent", ffiqt.FFI_TYPE_VOID, this.cthis, watched, event)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qstatemachine.h:148
+// index:0
+// void start()
+func (this *QStateMachine) Start() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine5startEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qstatemachine.h:149
+// index:0
+// void stop()
+func (this *QStateMachine) Stop() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine4stopEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:150
+// index:0
+// void setRunning(_Bool)
+func (this *QStateMachine) SetRunning(running bool) {
+	// 0: (, bool running), (&running)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine10setRunningEb", ffiqt.FFI_TYPE_VOID, this.cthis, &running)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:155
+// index:0
+// void runningChanged(_Bool)
+func (this *QStateMachine) RunningChanged(running bool) {
+	// 0: (, bool running), (&running)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine14runningChangedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &running)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

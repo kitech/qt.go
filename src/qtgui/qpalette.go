@@ -1,1140 +1,515 @@
+//  header block begin
+// /usr/include/qt/QtGui/qpalette.h
+// #include <qpalette.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qpalette.h
-// dst-file: /src/gui/qpalette.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  bool QPalette::isCopyOf(const QPalette & p);
-extern bool C_ZNK8QPalette8isCopyOfERKS_(void* qthis, void* arg0); // 4
-  // proto:  const QBrush & QPalette::highlightedText();
-extern void* C_ZNK8QPalette15highlightedTextEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::mid();
-extern void* C_ZNK8QPalette3midEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::windowText();
-extern void* C_ZNK8QPalette10windowTextEv(void* qthis); // 2
-  // proto:  void QPalette::QPalette(const QColor & windowText, const QColor & window, const QColor & light, const QColor & dark, const QColor & mid, const QColor & text, const QColor & base);
-extern void* C_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, void* arg6); // 3
-  // proto:  void QPalette::QPalette(const QColor & button);
-extern void* C_ZN8QPaletteC2ERK6QColor(void* arg0); // 3
-  // proto:  void QPalette::QPalette(const QPalette & palette);
-extern void* C_ZN8QPaletteC2ERKS_(void* arg0); // 3
-  // proto:  void QPalette::QPalette(const QColor & button, const QColor & window);
-extern void* C_ZN8QPaletteC2ERK6QColorS2_(void* arg0, void* arg1); // 3
-  // proto:  void QPalette::QPalette(const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window);
-extern void* C_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, void* arg6, void* arg7, void* arg8); // 3
-  // proto:  void QPalette::QPalette();
-extern void* C_ZN8QPaletteC2Ev(); // 3
-  // proto:  const QBrush & QPalette::toolTipText();
-extern void* C_ZNK8QPalette11toolTipTextEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::midlight();
-extern void* C_ZNK8QPalette8midlightEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::window();
-extern void* C_ZNK8QPalette6windowEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::brightText();
-extern void* C_ZNK8QPalette10brightTextEv(void* qthis); // 2
-  // proto:  void QPalette::swap(QPalette & other);
-extern void C_ZN8QPalette4swapERS_(void* qthis, void* arg0); // 2
-  // proto:  const QBrush & QPalette::text();
-extern void* C_ZNK8QPalette4textEv(void* qthis); // 2
-  // proto:  QPalette::ColorGroup QPalette::currentColorGroup();
-extern void C_ZNK8QPalette17currentColorGroupEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::foreground();
-extern void* C_ZNK8QPalette10foregroundEv(void* qthis); // 2
-  // proto:  qint64 QPalette::cacheKey();
-extern int64_t C_ZNK8QPalette8cacheKeyEv(void* qthis); // 4
-  // proto:  const QBrush & QPalette::dark();
-extern void* C_ZNK8QPalette4darkEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::base();
-extern void* C_ZNK8QPalette4baseEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::link();
-extern void* C_ZNK8QPalette4linkEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::background();
-extern void* C_ZNK8QPalette10backgroundEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::shadow();
-extern void* C_ZNK8QPalette6shadowEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::toolTipBase();
-extern void* C_ZNK8QPalette11toolTipBaseEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::linkVisited();
-extern void* C_ZNK8QPalette11linkVisitedEv(void* qthis); // 2
-  // proto:  void QPalette::resolve(uint mask);
-extern void C_ZN8QPalette7resolveEj(void* qthis, int32_t arg0); // 2
-  // proto:  QPalette QPalette::resolve(const QPalette & );
-extern void* C_ZNK8QPalette7resolveERKS_(void* qthis, void* arg0); // 4
-  // proto:  uint QPalette::resolve();
-extern int32_t C_ZNK8QPalette7resolveEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::light();
-extern void* C_ZNK8QPalette5lightEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::button();
-extern void* C_ZNK8QPalette6buttonEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::buttonText();
-extern void* C_ZNK8QPalette10buttonTextEv(void* qthis); // 2
-  // proto:  void QPalette::~QPalette();
-extern void C_ZN8QPaletteD2Ev(void* qthis); // 4
-  // proto:  const QBrush & QPalette::alternateBase();
-extern void* C_ZNK8QPalette13alternateBaseEv(void* qthis); // 2
-  // proto:  const QBrush & QPalette::highlight();
-extern void* C_ZNK8QPalette9highlightEv(void* qthis); // 2
+// extern C begin: 89
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QPalette)=16
+//  ext block end
+
+//  body block begin
 type QPalette struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// isCopyOf(const class QPalette &)
-func (this *QPalette) Iscopyof(args ...interface{}) (ret interface{}) {
-  // isCopyOf(const class QPalette &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPalette{}) // "const QPalette &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette8isCopyOfERKS_
-    // invoke: bool isCopyOf(const class QPalette &)
-    var arg0 = args[0].(*QPalette).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QPalette8isCopyOfERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "isCopyOf", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:58
+// index:0
+// void QPalette()
+func NewQPalette() *QPalette {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QPalette{cthis}
 }
 
-// highlightedText()
-func (this *QPalette) Highlightedtext(args ...interface{}) (ret interface{}) {
-  // highlightedText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette15highlightedTextEv
-    // invoke: const QBrush & highlightedText()
-    var ret0 = C.C_ZNK8QPalette15highlightedTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "highlightedText", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:59
+// index:1
+// void QPalette(const class QColor &)
+func NewQPalette_1(button unsafe.Pointer) *QPalette {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColor", ffiqt.FFI_TYPE_VOID, cthis, button)
+	gopp.ErrPrint(err, rv)
+	return &QPalette{cthis}
 }
 
-// mid()
-func (this *QPalette) Mid(args ...interface{}) (ret interface{}) {
-  // mid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette3midEv
-    // invoke: const QBrush & mid()
-    var ret0 = C.C_ZNK8QPalette3midEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "mid", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:60
+// index:2
+// void QPalette(Qt::GlobalColor)
+func NewQPalette_2(button int) *QPalette {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2EN2Qt11GlobalColorE", ffiqt.FFI_TYPE_VOID, cthis, &button)
+	gopp.ErrPrint(err, rv)
+	return &QPalette{cthis}
 }
 
-// windowText()
-func (this *QPalette) Windowtext(args ...interface{}) (ret interface{}) {
-  // windowText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette10windowTextEv
-    // invoke: const QBrush & windowText()
-    var ret0 = C.C_ZNK8QPalette10windowTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "windowText", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:61
+// index:3
+// void QPalette(const class QColor &, const class QColor &)
+func NewQPalette_3(button unsafe.Pointer, window unsafe.Pointer) *QPalette {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColorS2_", ffiqt.FFI_TYPE_VOID, cthis, button, window)
+	gopp.ErrPrint(err, rv)
+	return &QPalette{cthis}
 }
 
-// QPalette(const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &)
-func NewQPalette(args ...interface{}) *QPalette {
-  // QPalette(const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &)
-  // QPalette(const class QColor &)
-  // QPalette(const class QPalette &)
-  // QPalette(const class QColor &, const class QColor &)
-  // QPalette(const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &)
-  // QPalette()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[0][1] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[0][2] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[0][3] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[0][4] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[0][5] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[0][6] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QPalette{}) // "const QPalette &"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[3][1] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[4] = make(map[int32]reflect.Type)
-  vtys[4][0] = reflect.TypeOf(QBrush{}) // "const QBrush &"
-  vtys[4][1] = reflect.TypeOf(QBrush{}) // "const QBrush &"
-  vtys[4][2] = reflect.TypeOf(QBrush{}) // "const QBrush &"
-  vtys[4][3] = reflect.TypeOf(QBrush{}) // "const QBrush &"
-  vtys[4][4] = reflect.TypeOf(QBrush{}) // "const QBrush &"
-  vtys[4][5] = reflect.TypeOf(QBrush{}) // "const QBrush &"
-  vtys[4][6] = reflect.TypeOf(QBrush{}) // "const QBrush &"
-  vtys[4][7] = reflect.TypeOf(QBrush{}) // "const QBrush &"
-  vtys[4][8] = reflect.TypeOf(QBrush{}) // "const QBrush &"
-  vtys[5] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QPaletteC1ERK6QColorS2_S2_S2_S2_S2_S2_
-    // invoke: void QPalette(const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &)
-    var arg0 = args[0].(*QColor).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QColor).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*QColor).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(*QColor).Qclsinst
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(*QColor).Qclsinst
-    if false {fmt.Println(arg4)}
-    var arg5 = args[5].(*QColor).Qclsinst
-    if false {fmt.Println(arg5)}
-    var arg6 = args[6].(*QColor).Qclsinst
-    if false {fmt.Println(arg6)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-    return &QPalette{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN8QPaletteC1ERK6QColor
-    // invoke: void QPalette(const class QColor &)
-    var arg0 = args[0].(*QColor).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN8QPaletteC2ERK6QColor(arg0)
-    return &QPalette{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN8QPaletteC1ERKS_
-    // invoke: void QPalette(const class QPalette &)
-    var arg0 = args[0].(*QPalette).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN8QPaletteC2ERKS_(arg0)
-    return &QPalette{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN8QPaletteC1ERK6QColorS2_
-    // invoke: void QPalette(const class QColor &, const class QColor &)
-    var arg0 = args[0].(*QColor).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QColor).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN8QPaletteC2ERK6QColorS2_(arg0, arg1)
-    return &QPalette{Qclsinst:qthis}
-  case 4:
-    // invoke: _ZN8QPaletteC1ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_
-    // invoke: void QPalette(const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &)
-    var arg0 = args[0].(*QBrush).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QBrush).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*QBrush).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(*QBrush).Qclsinst
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(*QBrush).Qclsinst
-    if false {fmt.Println(arg4)}
-    var arg5 = args[5].(*QBrush).Qclsinst
-    if false {fmt.Println(arg5)}
-    var arg6 = args[6].(*QBrush).Qclsinst
-    if false {fmt.Println(arg6)}
-    var arg7 = args[7].(*QBrush).Qclsinst
-    if false {fmt.Println(arg7)}
-    var arg8 = args[8].(*QBrush).Qclsinst
-    if false {fmt.Println(arg8)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-    return &QPalette{Qclsinst:qthis}
-  case 5:
-    // invoke: _ZN8QPaletteC1Ev
-    // invoke: void QPalette()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN8QPaletteC2Ev()
-    return &QPalette{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QPalette", "QPalette", args)
-  }
-
-  return nil // QPalette{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qpalette.h:62
+// index:4
+// void QPalette(const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &)
+func NewQPalette_4(windowText unsafe.Pointer, button unsafe.Pointer, light unsafe.Pointer, dark unsafe.Pointer, mid unsafe.Pointer, text unsafe.Pointer, bright_text unsafe.Pointer, base unsafe.Pointer, window unsafe.Pointer) *QPalette {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_", ffiqt.FFI_TYPE_VOID, cthis, windowText, button, light, dark, mid, text, bright_text, base, window)
+	gopp.ErrPrint(err, rv)
+	return &QPalette{cthis}
 }
 
-// toolTipText()
-func (this *QPalette) Tooltiptext(args ...interface{}) (ret interface{}) {
-  // toolTipText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette11toolTipTextEv
-    // invoke: const QBrush & toolTipText()
-    var ret0 = C.C_ZNK8QPalette11toolTipTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "toolTipText", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:65
+// index:5
+// void QPalette(const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &)
+func NewQPalette_5(windowText unsafe.Pointer, window unsafe.Pointer, light unsafe.Pointer, dark unsafe.Pointer, mid unsafe.Pointer, text unsafe.Pointer, base unsafe.Pointer) *QPalette {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_", ffiqt.FFI_TYPE_VOID, cthis, windowText, window, light, dark, mid, text, base)
+	gopp.ErrPrint(err, rv)
+	return &QPalette{cthis}
 }
 
-// midlight()
-func (this *QPalette) Midlight(args ...interface{}) (ret interface{}) {
-  // midlight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette8midlightEv
-    // invoke: const QBrush & midlight()
-    var ret0 = C.C_ZNK8QPalette8midlightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "midlight", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:68
+// index:0
+// void ~QPalette()
+func DeleteQPalette(*QPalette) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// window()
-func (this *QPalette) Window(args ...interface{}) (ret interface{}) {
-  // window()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette6windowEv
-    // invoke: const QBrush & window()
-    var ret0 = C.C_ZNK8QPalette6windowEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "window", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:81
+// index:0
+// inline
+// void swap(class QPalette &)
+func (this *QPalette) Swap(other unsafe.Pointer) {
+	// 0: (, QPalette & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// brightText()
-func (this *QPalette) Brighttext(args ...interface{}) (ret interface{}) {
-  // brightText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette10brightTextEv
-    // invoke: const QBrush & brightText()
-    var ret0 = C.C_ZNK8QPalette10brightTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "brightText", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:104
+// index:0
+// inline
+// QPalette::ColorGroup currentColorGroup()
+func (this *QPalette) CurrentColorGroup() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette17currentColorGroupEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// swap(class QPalette &)
-func (this *QPalette) Swap(args ...interface{}) () {
-  // swap(class QPalette &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPalette{}) // "QPalette &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QPalette4swapERS_
-    // invoke: void swap(class QPalette &)
-    var arg0 = args[0].(*QPalette).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN8QPalette4swapERS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QPalette", "swap", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:105
+// index:0
+// inline
+// void setCurrentColorGroup(enum QPalette::ColorGroup)
+func (this *QPalette) SetCurrentColorGroup(cg int) {
+	// 0: (, QPalette::ColorGroup cg), (&cg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette20setCurrentColorGroupENS_10ColorGroupE", ffiqt.FFI_TYPE_VOID, this.cthis, &cg)
+	gopp.ErrPrint(err, rv)
 }
 
-// text()
-func (this *QPalette) Text(args ...interface{}) (ret interface{}) {
-  // text()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette4textEv
-    // invoke: const QBrush & text()
-    var ret0 = C.C_ZNK8QPalette4textEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "text", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:107
+// index:0
+// inline
+// const QColor & color(enum QPalette::ColorGroup, enum QPalette::ColorRole)
+func (this *QPalette) Color(cg int, cr int) {
+	// 0: (, QPalette::ColorGroup cg, QPalette::ColorRole cr), (&cg, &cr)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5colorENS_10ColorGroupENS_9ColorRoleE", ffiqt.FFI_TYPE_VOID, this.cthis, &cg, &cr)
+	gopp.ErrPrint(err, rv)
 }
 
-// currentColorGroup()
-func (this *QPalette) Currentcolorgroup(args ...interface{}) () {
-  // currentColorGroup()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette17currentColorGroupEv
-    // invoke: QPalette::ColorGroup currentColorGroup()
-    C.C_ZNK8QPalette17currentColorGroupEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPalette", "currentColorGroup", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:121
+// index:1
+// inline
+// const QColor & color(enum QPalette::ColorRole)
+func (this *QPalette) Color_1(cr int) {
+	// 1: (, QPalette::ColorRole cr), (&cr)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5colorENS_9ColorRoleE", ffiqt.FFI_TYPE_VOID, this.cthis, &cr)
+	gopp.ErrPrint(err, rv)
 }
 
-// foreground()
-func (this *QPalette) Foreground(args ...interface{}) (ret interface{}) {
-  // foreground()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette10foregroundEv
-    // invoke: const QBrush & foreground()
-    var ret0 = C.C_ZNK8QPalette10foregroundEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "foreground", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:109
+// index:0
+// const QBrush & brush(enum QPalette::ColorGroup, enum QPalette::ColorRole)
+func (this *QPalette) Brush(cg int, cr int) {
+	// 0: (, QPalette::ColorGroup cg, QPalette::ColorRole cr), (&cg, &cr)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5brushENS_10ColorGroupENS_9ColorRoleE", ffiqt.FFI_TYPE_VOID, this.cthis, &cg, &cr)
+	gopp.ErrPrint(err, rv)
 }
 
-// cacheKey()
-func (this *QPalette) Cachekey(args ...interface{}) (ret interface{}) {
-  // cacheKey()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette8cacheKeyEv
-    // invoke: qint64 cacheKey()
-    var ret0 = C.C_ZNK8QPalette8cacheKeyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int64Ty(false) // "qint64"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "cacheKey", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:122
+// index:1
+// inline
+// const QBrush & brush(enum QPalette::ColorRole)
+func (this *QPalette) Brush_1(cr int) {
+	// 1: (, QPalette::ColorRole cr), (&cr)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5brushENS_9ColorRoleE", ffiqt.FFI_TYPE_VOID, this.cthis, &cr)
+	gopp.ErrPrint(err, rv)
 }
 
-// dark()
-func (this *QPalette) Dark(args ...interface{}) (ret interface{}) {
-  // dark()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette4darkEv
-    // invoke: const QBrush & dark()
-    var ret0 = C.C_ZNK8QPalette4darkEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "dark", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:110
+// index:0
+// inline
+// void setColor(enum QPalette::ColorGroup, enum QPalette::ColorRole, const class QColor &)
+func (this *QPalette) SetColor(cg int, cr int, color unsafe.Pointer) {
+	// 0: (, QPalette::ColorGroup cg, QPalette::ColorRole cr, const QColor & color), (&cg, &cr, color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setColorENS_10ColorGroupENS_9ColorRoleERK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, &cg, &cr, color)
+	gopp.ErrPrint(err, rv)
 }
 
-// base()
-func (this *QPalette) Base(args ...interface{}) (ret interface{}) {
-  // base()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette4baseEv
-    // invoke: const QBrush & base()
-    var ret0 = C.C_ZNK8QPalette4baseEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "base", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:111
+// index:1
+// inline
+// void setColor(enum QPalette::ColorRole, const class QColor &)
+func (this *QPalette) SetColor_1(cr int, color unsafe.Pointer) {
+	// 1: (, QPalette::ColorRole cr, const QColor & color), (&cr, color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setColorENS_9ColorRoleERK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, &cr, color)
+	gopp.ErrPrint(err, rv)
 }
 
-// link()
-func (this *QPalette) Link(args ...interface{}) (ret interface{}) {
-  // link()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette4linkEv
-    // invoke: const QBrush & link()
-    var ret0 = C.C_ZNK8QPalette4linkEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "link", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:112
+// index:0
+// inline
+// void setBrush(enum QPalette::ColorRole, const class QBrush &)
+func (this *QPalette) SetBrush(cr int, brush unsafe.Pointer) {
+	// 0: (, QPalette::ColorRole cr, const QBrush & brush), (&cr, brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setBrushENS_9ColorRoleERK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, &cr, brush)
+	gopp.ErrPrint(err, rv)
 }
 
-// background()
-func (this *QPalette) Background(args ...interface{}) (ret interface{}) {
-  // background()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette10backgroundEv
-    // invoke: const QBrush & background()
-    var ret0 = C.C_ZNK8QPalette10backgroundEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "background", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:114
+// index:1
+// void setBrush(enum QPalette::ColorGroup, enum QPalette::ColorRole, const class QBrush &)
+func (this *QPalette) SetBrush_1(cg int, cr int, brush unsafe.Pointer) {
+	// 1: (, QPalette::ColorGroup cg, QPalette::ColorRole cr, const QBrush & brush), (&cg, &cr, brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setBrushENS_10ColorGroupENS_9ColorRoleERK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, &cg, &cr, brush)
+	gopp.ErrPrint(err, rv)
 }
 
-// shadow()
-func (this *QPalette) Shadow(args ...interface{}) (ret interface{}) {
-  // shadow()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette6shadowEv
-    // invoke: const QBrush & shadow()
-    var ret0 = C.C_ZNK8QPalette6shadowEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "shadow", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:113
+// index:0
+// bool isBrushSet(enum QPalette::ColorGroup, enum QPalette::ColorRole)
+func (this *QPalette) IsBrushSet(cg int, cr int) {
+	// 0: (, QPalette::ColorGroup cg, QPalette::ColorRole cr), (&cg, &cr)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10isBrushSetENS_10ColorGroupENS_9ColorRoleE", ffiqt.FFI_TYPE_VOID, this.cthis, &cg, &cr)
+	gopp.ErrPrint(err, rv)
 }
 
-// toolTipBase()
-func (this *QPalette) Tooltipbase(args ...interface{}) (ret interface{}) {
-  // toolTipBase()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette11toolTipBaseEv
-    // invoke: const QBrush & toolTipBase()
-    var ret0 = C.C_ZNK8QPalette11toolTipBaseEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "toolTipBase", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:115
+// index:0
+// void setColorGroup(enum QPalette::ColorGroup, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &)
+func (this *QPalette) SetColorGroup(cr int, windowText unsafe.Pointer, button unsafe.Pointer, light unsafe.Pointer, dark unsafe.Pointer, mid unsafe.Pointer, text unsafe.Pointer, bright_text unsafe.Pointer, base unsafe.Pointer, window unsafe.Pointer) {
+	// 0: (, QPalette::ColorGroup cr, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window), (&cr, windowText, button, light, dark, mid, text, bright_text, base, window)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette13setColorGroupENS_10ColorGroupERK6QBrushS3_S3_S3_S3_S3_S3_S3_S3_", ffiqt.FFI_TYPE_VOID, this.cthis, &cr, windowText, button, light, dark, mid, text, bright_text, base, window)
+	gopp.ErrPrint(err, rv)
 }
 
-// linkVisited()
-func (this *QPalette) Linkvisited(args ...interface{}) (ret interface{}) {
-  // linkVisited()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette11linkVisitedEv
-    // invoke: const QBrush & linkVisited()
-    var ret0 = C.C_ZNK8QPalette11linkVisitedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "linkVisited", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:119
+// index:0
+// bool isEqual(enum QPalette::ColorGroup, enum QPalette::ColorGroup)
+func (this *QPalette) IsEqual(cr1 int, cr2 int) {
+	// 0: (, QPalette::ColorGroup cr1, QPalette::ColorGroup cr2), (&cr1, &cr2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette7isEqualENS_10ColorGroupES0_", ffiqt.FFI_TYPE_VOID, this.cthis, &cr1, &cr2)
+	gopp.ErrPrint(err, rv)
 }
 
-// resolve(uint)
-func (this *QPalette) Resolve(args ...interface{}) () {
-  // resolve(uint)
-  // resolve(const class QPalette &)
-  // resolve()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "uint"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QPalette{}) // "const QPalette &"
-  vtys[2] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QPalette7resolveEj
-    // invoke: void resolve(uint)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN8QPalette7resolveEj(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZNK8QPalette7resolveERKS_
-    // invoke: QPalette resolve(const class QPalette &)
-    var arg0 = args[0].(*QPalette).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QPalette7resolveERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-  case 2:
-    // invoke: _ZNK8QPalette7resolveEv
-    // invoke: uint resolve()
-    var ret0 = C.C_ZNK8QPalette7resolveEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-  default:
-    qtrt.ErrorResolve("QPalette", "resolve", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:123
+// index:0
+// inline
+// const QBrush & foreground()
+func (this *QPalette) Foreground() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10foregroundEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// light()
-func (this *QPalette) Light(args ...interface{}) (ret interface{}) {
-  // light()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette5lightEv
-    // invoke: const QBrush & light()
-    var ret0 = C.C_ZNK8QPalette5lightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "light", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:124
+// index:0
+// inline
+// const QBrush & windowText()
+func (this *QPalette) WindowText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10windowTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// button()
-func (this *QPalette) Button(args ...interface{}) (ret interface{}) {
-  // button()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette6buttonEv
-    // invoke: const QBrush & button()
-    var ret0 = C.C_ZNK8QPalette6buttonEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "button", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:125
+// index:0
+// inline
+// const QBrush & button()
+func (this *QPalette) Button() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette6buttonEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// buttonText()
-func (this *QPalette) Buttontext(args ...interface{}) (ret interface{}) {
-  // buttonText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette10buttonTextEv
-    // invoke: const QBrush & buttonText()
-    var ret0 = C.C_ZNK8QPalette10buttonTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "buttonText", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:126
+// index:0
+// inline
+// const QBrush & light()
+func (this *QPalette) Light() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5lightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QPalette()
-func (this *QPalette) Freeqpalette(args ...interface{}) () {
-  // ~QPalette()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QPaletteD0Ev
-    // invoke: void ~QPalette()
-    C.C_ZN8QPaletteD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPalette", "~QPalette", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:127
+// index:0
+// inline
+// const QBrush & dark()
+func (this *QPalette) Dark() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette4darkEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// alternateBase()
-func (this *QPalette) Alternatebase(args ...interface{}) (ret interface{}) {
-  // alternateBase()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette13alternateBaseEv
-    // invoke: const QBrush & alternateBase()
-    var ret0 = C.C_ZNK8QPalette13alternateBaseEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "alternateBase", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:128
+// index:0
+// inline
+// const QBrush & mid()
+func (this *QPalette) Mid() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette3midEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// highlight()
-func (this *QPalette) Highlight(args ...interface{}) (ret interface{}) {
-  // highlight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QPalette9highlightEv
-    // invoke: const QBrush & highlight()
-    var ret0 = C.C_ZNK8QPalette9highlightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPalette", "highlight", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpalette.h:129
+// index:0
+// inline
+// const QBrush & text()
+func (this *QPalette) Text() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette4textEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qpalette.h:130
+// index:0
+// inline
+// const QBrush & base()
+func (this *QPalette) Base() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette4baseEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qpalette.h:131
+// index:0
+// inline
+// const QBrush & alternateBase()
+func (this *QPalette) AlternateBase() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette13alternateBaseEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:132
+// index:0
+// inline
+// const QBrush & toolTipBase()
+func (this *QPalette) ToolTipBase() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette11toolTipBaseEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:133
+// index:0
+// inline
+// const QBrush & toolTipText()
+func (this *QPalette) ToolTipText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette11toolTipTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:134
+// index:0
+// inline
+// const QBrush & background()
+func (this *QPalette) Background() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10backgroundEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:135
+// index:0
+// inline
+// const QBrush & window()
+func (this *QPalette) Window() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette6windowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:136
+// index:0
+// inline
+// const QBrush & midlight()
+func (this *QPalette) Midlight() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette8midlightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:137
+// index:0
+// inline
+// const QBrush & brightText()
+func (this *QPalette) BrightText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10brightTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:138
+// index:0
+// inline
+// const QBrush & buttonText()
+func (this *QPalette) ButtonText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10buttonTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:139
+// index:0
+// inline
+// const QBrush & shadow()
+func (this *QPalette) Shadow() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette6shadowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:140
+// index:0
+// inline
+// const QBrush & highlight()
+func (this *QPalette) Highlight() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette9highlightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:141
+// index:0
+// inline
+// const QBrush & highlightedText()
+func (this *QPalette) HighlightedText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette15highlightedTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:142
+// index:0
+// inline
+// const QBrush & link()
+func (this *QPalette) Link() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette4linkEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:143
+// index:0
+// inline
+// const QBrush & linkVisited()
+func (this *QPalette) LinkVisited() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette11linkVisitedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:147
+// index:0
+// bool isCopyOf(const class QPalette &)
+func (this *QPalette) IsCopyOf(p unsafe.Pointer) {
+	// 0: (, const QPalette & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette8isCopyOfERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:152
+// index:0
+// qint64 cacheKey()
+func (this *QPalette) CacheKey() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette8cacheKeyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:154
+// index:0
+// QPalette resolve(const class QPalette &)
+func (this *QPalette) Resolve(arg0 unsafe.Pointer) {
+	// 0: (, const QPalette & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette7resolveERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:155
+// index:1
+// inline
+// uint resolve()
+func (this *QPalette) Resolve_1() {
+	// 1: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette7resolveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpalette.h:156
+// index:2
+// inline
+// void resolve(uint)
+func (this *QPalette) Resolve_2(mask uint) {
+	// 2: (, uint mask), (&mask)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette7resolveEj", ffiqt.FFI_TYPE_VOID, this.cthis, &mask)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

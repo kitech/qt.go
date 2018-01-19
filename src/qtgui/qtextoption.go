@@ -1,415 +1,211 @@
+//  header block begin
+// /usr/include/qt/QtGui/qtextoption.h
+// #include <qtextoption.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qtextoption.h
-// dst-file: /src/gui/qtextoption.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QTextOption::~QTextOption();
-extern void C_ZN11QTextOptionD2Ev(void* qthis); // 4
-  // proto:  void QTextOption::setUseDesignMetrics(bool b);
-extern void C_ZN11QTextOption19setUseDesignMetricsEb(void* qthis, bool arg0); // 2
-  // proto:  bool QTextOption::useDesignMetrics();
-extern bool C_ZNK11QTextOption16useDesignMetricsEv(void* qthis); // 2
-  // proto:  void QTextOption::setTabStop(qreal tabStop);
-extern void C_ZN11QTextOption10setTabStopEd(void* qthis, double arg0); // 2
-  // proto:  QList<QTextOption::Tab> QTextOption::tabs();
-extern void C_ZNK11QTextOption4tabsEv(void* qthis); // 4
-  // proto:  qreal QTextOption::tabStop();
-extern double C_ZNK11QTextOption7tabStopEv(void* qthis); // 2
-  // proto:  QList<qreal> QTextOption::tabArray();
-extern void C_ZNK11QTextOption8tabArrayEv(void* qthis); // 4
-  // proto:  Flags QTextOption::flags();
-extern void C_ZNK11QTextOption5flagsEv(void* qthis); // 2
-  // proto:  void QTextOption::QTextOption(const QTextOption & o);
-extern void* C_ZN11QTextOptionC2ERKS_(void* arg0); // 3
-  // proto:  void QTextOption::QTextOption();
-extern void* C_ZN11QTextOptionC2Ev(); // 3
-  // proto:  QTextOption::WrapMode QTextOption::wrapMode();
-extern void C_ZNK11QTextOption8wrapModeEv(void* qthis); // 2
-  // proto:  Qt::Alignment QTextOption::alignment();
-extern void C_ZNK11QTextOption9alignmentEv(void* qthis); // 2
-  // proto:  Qt::LayoutDirection QTextOption::textDirection();
-extern void C_ZNK11QTextOption13textDirectionEv(void* qthis); // 2
+// extern C begin: 29
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QTextOption)=32
+//  ext block end
+
+//  body block begin
 type QTextOption struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// ~QTextOption()
-func (this *QTextOption) Freeqtextoption(args ...interface{}) () {
-  // ~QTextOption()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QTextOptionD0Ev
-    // invoke: void ~QTextOption()
-    C.C_ZN11QTextOptionD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextOption", "~QTextOption", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextoption.h:85
+// index:0
+// void QTextOption()
+func NewQTextOption() *QTextOption {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOptionC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QTextOption{cthis}
 }
 
-// setUseDesignMetrics(_Bool)
-func (this *QTextOption) Setusedesignmetrics(args ...interface{}) () {
-  // setUseDesignMetrics(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QTextOption19setUseDesignMetricsEb
-    // invoke: void setUseDesignMetrics(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QTextOption19setUseDesignMetricsEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTextOption", "setUseDesignMetrics", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextoption.h:87
+// index:0
+// void ~QTextOption()
+func DeleteQTextOption(*QTextOption) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOptionD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// useDesignMetrics()
-func (this *QTextOption) Usedesignmetrics(args ...interface{}) (ret interface{}) {
-  // useDesignMetrics()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QTextOption16useDesignMetricsEv
-    // invoke: bool useDesignMetrics()
-    var ret0 = C.C_ZNK11QTextOption16useDesignMetricsEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextOption", "useDesignMetrics", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextoption.h:93
+// index:0
+// inline
+// Qt::Alignment alignment()
+func (this *QTextOption) Alignment() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption9alignmentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTabStop(qreal)
-func (this *QTextOption) Settabstop(args ...interface{}) () {
-  // setTabStop(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QTextOption10setTabStopEd
-    // invoke: void setTabStop(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QTextOption10setTabStopEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTextOption", "setTabStop", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextoption.h:95
+// index:0
+// inline
+// void setTextDirection(Qt::LayoutDirection)
+func (this *QTextOption) SetTextDirection(aDirection int) {
+	// 0: (, Qt::LayoutDirection aDirection), (&aDirection)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption16setTextDirectionEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_VOID, this.cthis, &aDirection)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabs()
-func (this *QTextOption) Tabs(args ...interface{}) () {
-  // tabs()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QTextOption4tabsEv
-    // invoke: QList<QTextOption::Tab> tabs()
-    C.C_ZNK11QTextOption4tabsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextOption", "tabs", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextoption.h:96
+// index:0
+// inline
+// Qt::LayoutDirection textDirection()
+func (this *QTextOption) TextDirection() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption13textDirectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabStop()
-func (this *QTextOption) Tabstop(args ...interface{}) (ret interface{}) {
-  // tabStop()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QTextOption7tabStopEv
-    // invoke: qreal tabStop()
-    var ret0 = C.C_ZNK11QTextOption7tabStopEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextOption", "tabStop", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextoption.h:105
+// index:0
+// inline
+// void setWrapMode(enum QTextOption::WrapMode)
+func (this *QTextOption) SetWrapMode(wrap int) {
+	// 0: (, QTextOption::WrapMode wrap), (&wrap)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption11setWrapModeENS_8WrapModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &wrap)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabArray()
-func (this *QTextOption) Tabarray(args ...interface{}) () {
-  // tabArray()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QTextOption8tabArrayEv
-    // invoke: QList<qreal> tabArray()
-    C.C_ZNK11QTextOption8tabArrayEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextOption", "tabArray", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextoption.h:106
+// index:0
+// inline
+// QTextOption::WrapMode wrapMode()
+func (this *QTextOption) WrapMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption8wrapModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// flags()
-func (this *QTextOption) Flags(args ...interface{}) () {
-  // flags()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QTextOption5flagsEv
-    // invoke: Flags flags()
-    C.C_ZNK11QTextOption5flagsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextOption", "flags", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextoption.h:118
+// index:0
+// inline
+// QTextOption::Flags flags()
+func (this *QTextOption) Flags() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption5flagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QTextOption(const class QTextOption &)
-func NewQTextOption(args ...interface{}) *QTextOption {
-  // QTextOption(const class QTextOption &)
-  // QTextOption()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTextOption{}) // "const QTextOption &"
-  vtys[1] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QTextOptionC1ERKS_
-    // invoke: void QTextOption(const class QTextOption &)
-    var arg0 = args[0].(*QTextOption).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QTextOptionC2ERKS_(arg0)
-    return &QTextOption{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN11QTextOptionC1Ev
-    // invoke: void QTextOption()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QTextOptionC2Ev()
-    return &QTextOption{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QTextOption", "QTextOption", args)
-  }
-
-  return nil // QTextOption{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qtextoption.h:121
+// index:0
+// inline
+// void setTabStop(qreal)
+func (this *QTextOption) SetTabStop(tabStop float64) {
+	// 0: (, qreal tabStop), (&tabStop)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption10setTabStopEd", ffiqt.FFI_TYPE_VOID, this.cthis, &tabStop)
+	gopp.ErrPrint(err, rv)
 }
 
-// wrapMode()
-func (this *QTextOption) Wrapmode(args ...interface{}) () {
-  // wrapMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QTextOption8wrapModeEv
-    // invoke: QTextOption::WrapMode wrapMode()
-    C.C_ZNK11QTextOption8wrapModeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextOption", "wrapMode", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextoption.h:122
+// index:0
+// inline
+// qreal tabStop()
+func (this *QTextOption) TabStop() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption7tabStopEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// alignment()
-func (this *QTextOption) Alignment(args ...interface{}) () {
-  // alignment()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QTextOption9alignmentEv
-    // invoke: Qt::Alignment alignment()
-    C.C_ZNK11QTextOption9alignmentEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextOption", "alignment", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextoption.h:125
+// index:0
+// inline
+// void setTabStopDistance(qreal)
+func (this *QTextOption) SetTabStopDistance(tabStopDistance float64) {
+	// 0: (, qreal tabStopDistance), (&tabStopDistance)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption18setTabStopDistanceEd", ffiqt.FFI_TYPE_VOID, this.cthis, &tabStopDistance)
+	gopp.ErrPrint(err, rv)
 }
 
-// textDirection()
-func (this *QTextOption) Textdirection(args ...interface{}) () {
-  // textDirection()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QTextOption13textDirectionEv
-    // invoke: Qt::LayoutDirection textDirection()
-    C.C_ZNK11QTextOption13textDirectionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextOption", "textDirection", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextoption.h:126
+// index:0
+// inline
+// qreal tabStopDistance()
+func (this *QTextOption) TabStopDistance() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption15tabStopDistanceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qtextoption.h:129
+// index:0
+// QList<qreal> tabArray()
+func (this *QTextOption) TabArray() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption8tabArrayEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qtextoption.h:132
+// index:0
+// QList<QTextOption::Tab> tabs()
+func (this *QTextOption) Tabs() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption4tabsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qtextoption.h:134
+// index:0
+// inline
+// void setUseDesignMetrics(_Bool)
+func (this *QTextOption) SetUseDesignMetrics(b bool) {
+	// 0: (, bool b), (&b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption19setUseDesignMetricsEb", ffiqt.FFI_TYPE_VOID, this.cthis, &b)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qtextoption.h:135
+// index:0
+// inline
+// bool useDesignMetrics()
+func (this *QTextOption) UseDesignMetrics() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption16useDesignMetricsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

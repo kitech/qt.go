@@ -1,785 +1,294 @@
+//  header block begin
+// /usr/include/qt/QtCore/qcommandlineparser.h
+// #include <qcommandlineparser.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qcommandlineparser.h
-// dst-file: /src/core/qcommandlineparser.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  bool QCommandLineParser::addOption(const QCommandLineOption & commandLineOption);
-extern bool C_ZN18QCommandLineParser9addOptionERK18QCommandLineOption(void* qthis, void* arg0); // 4
-  // proto:  void QCommandLineParser::process(const QStringList & arguments);
-extern void C_ZN18QCommandLineParser7processERK11QStringList(void* qthis, void* arg0); // 4
-  // proto:  void QCommandLineParser::process(const QCoreApplication & app);
-extern void C_ZN18QCommandLineParser7processERK16QCoreApplication(void* qthis, void* arg0); // 4
-  // proto:  QString QCommandLineParser::errorText();
-extern void* C_ZNK18QCommandLineParser9errorTextEv(void* qthis); // 4
-  // proto:  void QCommandLineParser::addPositionalArgument(const QString & name, const QString & description, const QString & syntax);
-extern void C_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  bool QCommandLineParser::parse(const QStringList & arguments);
-extern bool C_ZN18QCommandLineParser5parseERK11QStringList(void* qthis, void* arg0); // 4
-  // proto:  void QCommandLineParser::~QCommandLineParser();
-extern void C_ZN18QCommandLineParserD2Ev(void* qthis); // 4
-  // proto:  void QCommandLineParser::showHelp(int exitCode);
-extern void C_ZN18QCommandLineParser8showHelpEi(void* qthis, int32_t arg0); // 4
-  // proto:  QString QCommandLineParser::applicationDescription();
-extern void* C_ZNK18QCommandLineParser22applicationDescriptionEv(void* qthis); // 4
-  // proto:  QCommandLineOption QCommandLineParser::addVersionOption();
-extern void* C_ZN18QCommandLineParser16addVersionOptionEv(void* qthis); // 4
-  // proto:  QString QCommandLineParser::helpText();
-extern void* C_ZNK18QCommandLineParser8helpTextEv(void* qthis); // 4
-  // proto:  void QCommandLineParser::showVersion();
-extern void C_ZN18QCommandLineParser11showVersionEv(void* qthis); // 4
-  // proto:  void QCommandLineParser::QCommandLineParser();
-extern void* C_ZN18QCommandLineParserC2Ev(); // 3
-  // proto:  void QCommandLineParser::setApplicationDescription(const QString & description);
-extern void C_ZN18QCommandLineParser25setApplicationDescriptionERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QCommandLineOption QCommandLineParser::addHelpOption();
-extern void* C_ZN18QCommandLineParser13addHelpOptionEv(void* qthis); // 4
-  // proto:  QStringList QCommandLineParser::optionNames();
-extern void C_ZNK18QCommandLineParser11optionNamesEv(void* qthis); // 4
-  // proto:  QStringList QCommandLineParser::positionalArguments();
-extern void C_ZNK18QCommandLineParser19positionalArgumentsEv(void* qthis); // 4
-  // proto:  QStringList QCommandLineParser::unknownOptionNames();
-extern void C_ZNK18QCommandLineParser18unknownOptionNamesEv(void* qthis); // 4
-  // proto:  QString QCommandLineParser::value(const QString & name);
-extern void* C_ZNK18QCommandLineParser5valueERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QString QCommandLineParser::value(const QCommandLineOption & option);
-extern void* C_ZNK18QCommandLineParser5valueERK18QCommandLineOption(void* qthis, void* arg0); // 4
-  // proto:  bool QCommandLineParser::isSet(const QString & name);
-extern bool C_ZNK18QCommandLineParser5isSetERK7QString(void* qthis, void* arg0); // 4
-  // proto:  bool QCommandLineParser::isSet(const QCommandLineOption & option);
-extern bool C_ZNK18QCommandLineParser5isSetERK18QCommandLineOption(void* qthis, void* arg0); // 4
-  // proto:  QStringList QCommandLineParser::values(const QCommandLineOption & option);
-extern void C_ZNK18QCommandLineParser6valuesERK18QCommandLineOption(void* qthis, void* arg0); // 4
-  // proto:  QStringList QCommandLineParser::values(const QString & name);
-extern void C_ZNK18QCommandLineParser6valuesERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QCommandLineParser::clearPositionalArguments();
-extern void C_ZN18QCommandLineParser24clearPositionalArgumentsEv(void* qthis); // 4
+// extern C begin: 49
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QCommandLineParser)=8
+//  ext block end
+
+//  body block begin
 type QCommandLineParser struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// addOption(const class QCommandLineOption &)
-func (this *QCommandLineParser) Addoption(args ...interface{}) (ret interface{}) {
-  // addOption(const class QCommandLineOption &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QCommandLineOption{}) // "const QCommandLineOption &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParser9addOptionERK18QCommandLineOption
-    // invoke: bool addOption(const class QCommandLineOption &)
-    var arg0 = args[0].(*QCommandLineOption).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN18QCommandLineParser9addOptionERK18QCommandLineOption(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "addOption", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:59
+// index:0
+// void QCommandLineParser()
+func NewQCommandLineParser() *QCommandLineParser {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParserC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QCommandLineParser{cthis}
 }
 
-// process(const class QStringList &)
-func (this *QCommandLineParser) Process(args ...interface{}) () {
-  // process(const class QStringList &)
-  // process(const class QCoreApplication &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QCoreApplication{}) // "const QCoreApplication &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParser7processERK11QStringList
-    // invoke: void process(const class QStringList &)
-    var arg0 = args[0].(*QStringList).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN18QCommandLineParser7processERK11QStringList(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN18QCommandLineParser7processERK16QCoreApplication
-    // invoke: void process(const class QCoreApplication &)
-    var arg0 = args[0].(*QCoreApplication).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN18QCommandLineParser7processERK16QCoreApplication(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "process", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:60
+// index:0
+// void ~QCommandLineParser()
+func DeleteQCommandLineParser(*QCommandLineParser) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParserD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// errorText()
-func (this *QCommandLineParser) Errortext(args ...interface{}) (ret interface{}) {
-  // errorText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QCommandLineParser9errorTextEv
-    // invoke: QString errorText()
-    var ret0 = C.C_ZNK18QCommandLineParser9errorTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "errorText", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:66
+// index:0
+// void setSingleDashWordOptionMode(enum QCommandLineParser::SingleDashWordOptionMode)
+func (this *QCommandLineParser) SetSingleDashWordOptionMode(parsingMode int) {
+	// 0: (, QCommandLineParser::SingleDashWordOptionMode parsingMode), (&parsingMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser27setSingleDashWordOptionModeENS_24SingleDashWordOptionModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &parsingMode)
+	gopp.ErrPrint(err, rv)
 }
 
-// addPositionalArgument(const class QString &, const class QString &, const class QString &)
-func (this *QCommandLineParser) Addpositionalargument(args ...interface{}) () {
-  // addPositionalArgument(const class QString &, const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][2] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_
-    // invoke: void addPositionalArgument(const class QString &, const class QString &, const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "addPositionalArgument", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:72
+// index:0
+// void setOptionsAfterPositionalArgumentsMode(enum QCommandLineParser::OptionsAfterPositionalArgumentsMode)
+func (this *QCommandLineParser) SetOptionsAfterPositionalArgumentsMode(mode int) {
+	// 0: (, QCommandLineParser::OptionsAfterPositionalArgumentsMode mode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser38setOptionsAfterPositionalArgumentsModeENS_35OptionsAfterPositionalArgumentsModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// parse(const class QStringList &)
-func (this *QCommandLineParser) Parse(args ...interface{}) (ret interface{}) {
-  // parse(const class QStringList &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParser5parseERK11QStringList
-    // invoke: bool parse(const class QStringList &)
-    var arg0 = args[0].(*QStringList).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN18QCommandLineParser5parseERK11QStringList(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "parse", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:74
+// index:0
+// bool addOption(const class QCommandLineOption &)
+func (this *QCommandLineParser) AddOption(commandLineOption unsafe.Pointer) {
+	// 0: (, const QCommandLineOption & commandLineOption), (commandLineOption)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser9addOptionERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.cthis, commandLineOption)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QCommandLineParser()
-func (this *QCommandLineParser) Freeqcommandlineparser(args ...interface{}) () {
-  // ~QCommandLineParser()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParserD0Ev
-    // invoke: void ~QCommandLineParser()
-    C.C_ZN18QCommandLineParserD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "~QCommandLineParser", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:77
+// index:0
+// QCommandLineOption addVersionOption()
+func (this *QCommandLineParser) AddVersionOption() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser16addVersionOptionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// showHelp(int)
-func (this *QCommandLineParser) Showhelp(args ...interface{}) () {
-  // showHelp(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParser8showHelpEi
-    // invoke: void showHelp(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN18QCommandLineParser8showHelpEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "showHelp", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:78
+// index:0
+// QCommandLineOption addHelpOption()
+func (this *QCommandLineParser) AddHelpOption() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser13addHelpOptionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// applicationDescription()
-func (this *QCommandLineParser) Applicationdescription(args ...interface{}) (ret interface{}) {
-  // applicationDescription()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QCommandLineParser22applicationDescriptionEv
-    // invoke: QString applicationDescription()
-    var ret0 = C.C_ZNK18QCommandLineParser22applicationDescriptionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "applicationDescription", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:79
+// index:0
+// void setApplicationDescription(const class QString &)
+func (this *QCommandLineParser) SetApplicationDescription(description unsafe.Pointer) {
+	// 0: (, const QString & description), (description)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser25setApplicationDescriptionERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, description)
+	gopp.ErrPrint(err, rv)
 }
 
-// addVersionOption()
-func (this *QCommandLineParser) Addversionoption(args ...interface{}) (ret interface{}) {
-  // addVersionOption()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParser16addVersionOptionEv
-    // invoke: QCommandLineOption addVersionOption()
-    var ret0 = C.C_ZN18QCommandLineParser16addVersionOptionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QCommandLineOption{}) // "QCommandLineOption"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "addVersionOption", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:80
+// index:0
+// QString applicationDescription()
+func (this *QCommandLineParser) ApplicationDescription() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser22applicationDescriptionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// helpText()
-func (this *QCommandLineParser) Helptext(args ...interface{}) (ret interface{}) {
-  // helpText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QCommandLineParser8helpTextEv
-    // invoke: QString helpText()
-    var ret0 = C.C_ZNK18QCommandLineParser8helpTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "helpText", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:81
+// index:0
+// void addPositionalArgument(const class QString &, const class QString &, const class QString &)
+func (this *QCommandLineParser) AddPositionalArgument(name unsafe.Pointer, description unsafe.Pointer, syntax unsafe.Pointer) {
+	// 0: (, const QString & name, const QString & description, const QString & syntax), (name, description, syntax)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_", ffiqt.FFI_TYPE_VOID, this.cthis, name, description, syntax)
+	gopp.ErrPrint(err, rv)
 }
 
-// showVersion()
-func (this *QCommandLineParser) Showversion(args ...interface{}) () {
-  // showVersion()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParser11showVersionEv
-    // invoke: void showVersion()
-    C.C_ZN18QCommandLineParser11showVersionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "showVersion", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:82
+// index:0
+// void clearPositionalArguments()
+func (this *QCommandLineParser) ClearPositionalArguments() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser24clearPositionalArgumentsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QCommandLineParser()
-func NewQCommandLineParser(args ...interface{}) *QCommandLineParser {
-  // QCommandLineParser()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParserC1Ev
-    // invoke: void QCommandLineParser()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN18QCommandLineParserC2Ev()
-    return &QCommandLineParser{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "QCommandLineParser", args)
-  }
-
-  return nil // QCommandLineParser{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qcommandlineparser.h:84
+// index:0
+// void process(const class QStringList &)
+func (this *QCommandLineParser) Process(arguments unsafe.Pointer) {
+	// 0: (, const QStringList & arguments), (arguments)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser7processERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, arguments)
+	gopp.ErrPrint(err, rv)
 }
 
-// setApplicationDescription(const class QString &)
-func (this *QCommandLineParser) Setapplicationdescription(args ...interface{}) () {
-  // setApplicationDescription(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParser25setApplicationDescriptionERK7QString
-    // invoke: void setApplicationDescription(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN18QCommandLineParser25setApplicationDescriptionERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "setApplicationDescription", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:85
+// index:1
+// void process(const class QCoreApplication &)
+func (this *QCommandLineParser) Process_1(app unsafe.Pointer) {
+	// 1: (, const QCoreApplication & app), (app)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser7processERK16QCoreApplication", ffiqt.FFI_TYPE_VOID, this.cthis, app)
+	gopp.ErrPrint(err, rv)
 }
 
-// addHelpOption()
-func (this *QCommandLineParser) Addhelpoption(args ...interface{}) (ret interface{}) {
-  // addHelpOption()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParser13addHelpOptionEv
-    // invoke: QCommandLineOption addHelpOption()
-    var ret0 = C.C_ZN18QCommandLineParser13addHelpOptionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QCommandLineOption{}) // "QCommandLineOption"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "addHelpOption", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:87
+// index:0
+// bool parse(const class QStringList &)
+func (this *QCommandLineParser) Parse(arguments unsafe.Pointer) {
+	// 0: (, const QStringList & arguments), (arguments)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser5parseERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, arguments)
+	gopp.ErrPrint(err, rv)
 }
 
-// optionNames()
-func (this *QCommandLineParser) Optionnames(args ...interface{}) () {
-  // optionNames()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QCommandLineParser11optionNamesEv
-    // invoke: QStringList optionNames()
-    C.C_ZNK18QCommandLineParser11optionNamesEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "optionNames", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:88
+// index:0
+// QString errorText()
+func (this *QCommandLineParser) ErrorText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser9errorTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// positionalArguments()
-func (this *QCommandLineParser) Positionalarguments(args ...interface{}) () {
-  // positionalArguments()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QCommandLineParser19positionalArgumentsEv
-    // invoke: QStringList positionalArguments()
-    C.C_ZNK18QCommandLineParser19positionalArgumentsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "positionalArguments", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:90
+// index:0
+// bool isSet(const class QString &)
+func (this *QCommandLineParser) IsSet(name unsafe.Pointer) {
+	// 0: (, const QString & name), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, name)
+	gopp.ErrPrint(err, rv)
 }
 
-// unknownOptionNames()
-func (this *QCommandLineParser) Unknownoptionnames(args ...interface{}) () {
-  // unknownOptionNames()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QCommandLineParser18unknownOptionNamesEv
-    // invoke: QStringList unknownOptionNames()
-    C.C_ZNK18QCommandLineParser18unknownOptionNamesEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "unknownOptionNames", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:94
+// index:1
+// bool isSet(const class QCommandLineOption &)
+func (this *QCommandLineParser) IsSet_1(option unsafe.Pointer) {
+	// 1: (, const QCommandLineOption & option), (option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.cthis, option)
+	gopp.ErrPrint(err, rv)
 }
 
-// value(const class QString &)
-func (this *QCommandLineParser) Value(args ...interface{}) (ret interface{}) {
-  // value(const class QString &)
-  // value(const class QCommandLineOption &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QCommandLineOption{}) // "const QCommandLineOption &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QCommandLineParser5valueERK7QString
-    // invoke: QString value(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK18QCommandLineParser5valueERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK18QCommandLineParser5valueERK18QCommandLineOption
-    // invoke: QString value(const class QCommandLineOption &)
-    var arg0 = args[0].(*QCommandLineOption).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK18QCommandLineParser5valueERK18QCommandLineOption(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "value", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:91
+// index:0
+// QString value(const class QString &)
+func (this *QCommandLineParser) Value(name unsafe.Pointer) {
+	// 0: (, const QString & name), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, name)
+	gopp.ErrPrint(err, rv)
 }
 
-// isSet(const class QString &)
-func (this *QCommandLineParser) Isset(args ...interface{}) (ret interface{}) {
-  // isSet(const class QString &)
-  // isSet(const class QCommandLineOption &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QCommandLineOption{}) // "const QCommandLineOption &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QCommandLineParser5isSetERK7QString
-    // invoke: bool isSet(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK18QCommandLineParser5isSetERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK18QCommandLineParser5isSetERK18QCommandLineOption
-    // invoke: bool isSet(const class QCommandLineOption &)
-    var arg0 = args[0].(*QCommandLineOption).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK18QCommandLineParser5isSetERK18QCommandLineOption(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "isSet", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:95
+// index:1
+// QString value(const class QCommandLineOption &)
+func (this *QCommandLineParser) Value_1(option unsafe.Pointer) {
+	// 1: (, const QCommandLineOption & option), (option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.cthis, option)
+	gopp.ErrPrint(err, rv)
 }
 
-// values(const class QCommandLineOption &)
-func (this *QCommandLineParser) Values(args ...interface{}) () {
-  // values(const class QCommandLineOption &)
-  // values(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QCommandLineOption{}) // "const QCommandLineOption &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QCommandLineParser6valuesERK18QCommandLineOption
-    // invoke: QStringList values(const class QCommandLineOption &)
-    var arg0 = args[0].(*QCommandLineOption).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK18QCommandLineParser6valuesERK18QCommandLineOption(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZNK18QCommandLineParser6valuesERK7QString
-    // invoke: QStringList values(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK18QCommandLineParser6valuesERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "values", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:92
+// index:0
+// QStringList values(const class QString &)
+func (this *QCommandLineParser) Values(name unsafe.Pointer) {
+	// 0: (, const QString & name), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser6valuesERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, name)
+	gopp.ErrPrint(err, rv)
 }
 
-// clearPositionalArguments()
-func (this *QCommandLineParser) Clearpositionalarguments(args ...interface{}) () {
-  // clearPositionalArguments()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QCommandLineParser24clearPositionalArgumentsEv
-    // invoke: void clearPositionalArguments()
-    C.C_ZN18QCommandLineParser24clearPositionalArgumentsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QCommandLineParser", "clearPositionalArguments", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qcommandlineparser.h:96
+// index:1
+// QStringList values(const class QCommandLineOption &)
+func (this *QCommandLineParser) Values_1(option unsafe.Pointer) {
+	// 1: (, const QCommandLineOption & option), (option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser6valuesERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.cthis, option)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qcommandlineparser.h:98
+// index:0
+// QStringList positionalArguments()
+func (this *QCommandLineParser) PositionalArguments() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser19positionalArgumentsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qcommandlineparser.h:99
+// index:0
+// QStringList optionNames()
+func (this *QCommandLineParser) OptionNames() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser11optionNamesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qcommandlineparser.h:100
+// index:0
+// QStringList unknownOptionNames()
+func (this *QCommandLineParser) UnknownOptionNames() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser18unknownOptionNamesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qcommandlineparser.h:102
+// index:0
+// void showVersion()
+func (this *QCommandLineParser) ShowVersion() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser11showVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qcommandlineparser.h:103
+// index:0
+// void showHelp(int)
+func (this *QCommandLineParser) ShowHelp(exitCode int) {
+	// 0: (, int exitCode), (&exitCode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser8showHelpEi", ffiqt.FFI_TYPE_VOID, this.cthis, &exitCode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qcommandlineparser.h:104
+// index:0
+// QString helpText()
+func (this *QCommandLineParser) HelpText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser8helpTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

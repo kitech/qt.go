@@ -1,0 +1,95 @@
+//  header block begin
+// /usr/include/qt/QtCore/qflags.h
+// #include <qflags.h>
+// #include <QtCore>
+package qtcore
+
+//  header block end
+
+//  ext block begin
+
+/*
+#include <stdlib.h>
+// extern C begin: 12
+*/
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+}
+
+//  ext block end
+
+//  body block begin
+type QFlag struct {
+	cthis unsafe.Pointer
+}
+
+// /usr/include/qt/QtCore/qflags.h:57
+// index:0
+// inline
+// void QFlag(int)
+func NewQFlag(ai int) *QFlag {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &ai)
+	gopp.ErrPrint(err, rv)
+	return &QFlag{cthis}
+}
+
+// /usr/include/qt/QtCore/qflags.h:68
+// index:1
+// inline
+// void QFlag(uint)
+func NewQFlag_1(ai uint) *QFlag {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ej", ffiqt.FFI_TYPE_VOID, cthis, &ai)
+	gopp.ErrPrint(err, rv)
+	return &QFlag{cthis}
+}
+
+// /usr/include/qt/QtCore/qflags.h:69
+// index:2
+// inline
+// void QFlag(short)
+func NewQFlag_2(ai int16) *QFlag {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Es", ffiqt.FFI_TYPE_VOID, cthis, &ai)
+	gopp.ErrPrint(err, rv)
+	return &QFlag{cthis}
+}
+
+// /usr/include/qt/QtCore/qflags.h:70
+// index:3
+// inline
+// void QFlag(ushort)
+func NewQFlag_3(ai uint16) *QFlag {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Et", ffiqt.FFI_TYPE_VOID, cthis, &ai)
+	gopp.ErrPrint(err, rv)
+	return &QFlag{cthis}
+}
+
+//  body block end

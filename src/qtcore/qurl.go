@@ -1,1050 +1,482 @@
+//  header block begin
+// /usr/include/qt/QtCore/qurl.h
+// #include <qurl.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qurl.h
-// dst-file: /src/core/qurl.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  bool QUrl::isDetached();
-extern bool C_ZNK4QUrl10isDetachedEv(void* qthis); // 4
-  // proto:  void QUrl::~QUrl();
-extern void C_ZN4QUrlD2Ev(void* qthis); // 4
-  // proto:  bool QUrl::isRelative();
-extern bool C_ZNK4QUrl10isRelativeEv(void* qthis); // 4
-  // proto:  bool QUrl::hasFragment();
-extern bool C_ZNK4QUrl11hasFragmentEv(void* qthis); // 4
-  // proto:  void QUrl::setScheme(const QString & scheme);
-extern void C_ZN4QUrl9setSchemeERK7QString(void* qthis, void* arg0); // 4
-  // proto: static QUrl QUrl::fromUserInput(const QString & userInput);
-extern void* C_ZN4QUrl13fromUserInputERK7QString(void* arg0); // 4
-  // proto: static QUrl QUrl::fromLocalFile(const QString & localfile);
-extern void* C_ZN4QUrl13fromLocalFileERK7QString(void* arg0); // 4
-  // proto:  int QUrl::port(int defaultPort);
-extern int32_t C_ZNK4QUrl4portEi(void* qthis, int32_t arg0); // 4
-  // proto: static QByteArray QUrl::toAce(const QString & );
-extern void* C_ZN4QUrl5toAceERK7QString(void* arg0); // 4
-  // proto: static QString QUrl::fromAce(const QByteArray & );
-extern void* C_ZN4QUrl7fromAceERK10QByteArray(void* arg0); // 4
-  // proto:  void QUrl::detach();
-extern void C_ZN4QUrl6detachEv(void* qthis); // 4
-  // proto:  void QUrl::QUrl();
-extern void* C_ZN4QUrlC2Ev(); // 3
-  // proto:  void QUrl::QUrl(const QUrl & copy);
-extern void* C_ZN4QUrlC2ERKS_(void* arg0); // 3
-  // proto:  bool QUrl::isEmpty();
-extern bool C_ZNK4QUrl7isEmptyEv(void* qthis); // 4
-  // proto:  void QUrl::swap(QUrl & other);
-extern void C_ZN4QUrl4swapERS_(void* qthis, void* arg0); // 2
-  // proto: static QString QUrl::fromPercentEncoding(const QByteArray & );
-extern void* C_ZN4QUrl19fromPercentEncodingERK10QByteArray(void* arg0); // 4
-  // proto:  bool QUrl::isParentOf(const QUrl & url);
-extern bool C_ZNK4QUrl10isParentOfERKS_(void* qthis, void* arg0); // 4
-  // proto: static QStringList QUrl::idnWhitelist();
-extern void C_ZN4QUrl12idnWhitelistEv(); // 4
-  // proto:  QUrl QUrl::resolved(const QUrl & relative);
-extern void* C_ZNK4QUrl8resolvedERKS_(void* qthis, void* arg0); // 4
-  // proto:  QString QUrl::errorString();
-extern void* C_ZNK4QUrl11errorStringEv(void* qthis); // 4
-  // proto:  bool QUrl::isValid();
-extern bool C_ZNK4QUrl7isValidEv(void* qthis); // 4
-  // proto:  bool QUrl::hasQuery();
-extern bool C_ZNK4QUrl8hasQueryEv(void* qthis); // 4
-  // proto: static void QUrl::setIdnWhitelist(const QStringList & );
-extern void C_ZN4QUrl15setIdnWhitelistERK11QStringList(void* arg0); // 4
-  // proto:  QString QUrl::scheme();
-extern void* C_ZNK4QUrl6schemeEv(void* qthis); // 4
-  // proto:  void QUrl::setQuery(const QUrlQuery & query);
-extern void C_ZN4QUrl8setQueryERK9QUrlQuery(void* qthis, void* arg0); // 4
-  // proto:  bool QUrl::isLocalFile();
-extern bool C_ZNK4QUrl11isLocalFileEv(void* qthis); // 4
-  // proto: static QByteArray QUrl::toPercentEncoding(const QString & , const QByteArray & exclude, const QByteArray & include);
-extern void* C_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_(void* arg0, void* arg1, void* arg2); // 4
-  // proto:  void QUrl::clear();
-extern void C_ZN4QUrl5clearEv(void* qthis); // 4
-  // proto:  void QUrl::setPort(int port);
-extern void C_ZN4QUrl7setPortEi(void* qthis, int32_t arg0); // 4
-  // proto:  QString QUrl::toLocalFile();
-extern void* C_ZNK4QUrl11toLocalFileEv(void* qthis); // 4
+// extern C begin: 8
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QUrl)=8
+//  ext block end
+
+//  body block begin
 type QUrl struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// isDetached()
-func (this *QUrl) Isdetached(args ...interface{}) (ret interface{}) {
-  // isDetached()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl10isDetachedEv
-    // invoke: bool isDetached()
-    var ret0 = C.C_ZNK4QUrl10isDetachedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "isDetached", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:176
+// index:0
+// void QUrl()
+func NewQUrl() *QUrl {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrlC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QUrl{cthis}
 }
 
-// ~QUrl()
-func (this *QUrl) Freequrl(args ...interface{}) () {
-  // ~QUrl()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrlD0Ev
-    // invoke: void ~QUrl()
-    C.C_ZN4QUrlD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QUrl", "~QUrl", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:182
+// index:1
+// void QUrl(const class QString &, enum QUrl::ParsingMode)
+func NewQUrl_1(url unsafe.Pointer, mode int) *QUrl {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrlC2ERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID, cthis, url, &mode)
+	gopp.ErrPrint(err, rv)
+	return &QUrl{cthis}
 }
 
-// isRelative()
-func (this *QUrl) Isrelative(args ...interface{}) (ret interface{}) {
-  // isRelative()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl10isRelativeEv
-    // invoke: bool isRelative()
-    var ret0 = C.C_ZNK4QUrl10isRelativeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "isRelative", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:191
+// index:0
+// void ~QUrl()
+func DeleteQUrl(*QUrl) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrlD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasFragment()
-func (this *QUrl) Hasfragment(args ...interface{}) (ret interface{}) {
-  // hasFragment()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl11hasFragmentEv
-    // invoke: bool hasFragment()
-    var ret0 = C.C_ZNK4QUrl11hasFragmentEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "hasFragment", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:193
+// index:0
+// inline
+// void swap(class QUrl &)
+func (this *QUrl) Swap(other unsafe.Pointer) {
+	// 0: (, QUrl & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// setScheme(const class QString &)
-func (this *QUrl) Setscheme(args ...interface{}) () {
-  // setScheme(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl9setSchemeERK7QString
-    // invoke: void setScheme(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN4QUrl9setSchemeERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QUrl", "setScheme", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:195
+// index:0
+// void setUrl(const class QString &, enum QUrl::ParsingMode)
+func (this *QUrl) SetUrl(url unsafe.Pointer, mode int) {
+	// 0: (, const QString & url, QUrl::ParsingMode mode), (url, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl6setUrlERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID, this.cthis, url, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// fromUserInput(const class QString &)
-func (this *QUrl) Fromuserinput_S(args ...interface{}) (ret interface{}) {
-  // fromUserInput(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl13fromUserInputERK7QString
-    // invoke: QUrl fromUserInput(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN4QUrl13fromUserInputERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QUrl{}) // "QUrl"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "fromUserInput", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:202
+// index:0
+// static
+// QUrl fromEncoded(const class QByteArray &, enum QUrl::ParsingMode)
+func (this *QUrl) FromEncoded(url unsafe.Pointer, mode int) {
+	// 0: (const QByteArray & url, QUrl::ParsingMode mode), (url, mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl11fromEncodedERK10QByteArrayNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QUrl_FromEncoded(url unsafe.Pointer, mode int) {
+	// 0: (const QByteArray & url, QUrl::ParsingMode mode), (url, mode)
+	var nilthis *QUrl
+	nilthis.FromEncoded(url, mode)
 }
 
-// fromLocalFile(const class QString &)
-func (this *QUrl) Fromlocalfile_S(args ...interface{}) (ret interface{}) {
-  // fromLocalFile(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl13fromLocalFileERK7QString
-    // invoke: QUrl fromLocalFile(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN4QUrl13fromLocalFileERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QUrl{}) // "QUrl"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "fromLocalFile", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:210
+// index:0
+// static
+// QUrl fromUserInput(const class QString &)
+func (this *QUrl) FromUserInput(userInput unsafe.Pointer) {
+	// 0: (const QString & userInput), (userInput)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl13fromUserInputERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QUrl_FromUserInput(userInput unsafe.Pointer) {
+	// 0: (const QString & userInput), (userInput)
+	var nilthis *QUrl
+	nilthis.FromUserInput(userInput)
 }
 
-// port(int)
-func (this *QUrl) Port(args ...interface{}) (ret interface{}) {
-  // port(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl4portEi
-    // invoke: int port(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK4QUrl4portEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "port", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:215
+// index:0
+// bool isValid()
+func (this *QUrl) IsValid() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toAce(const class QString &)
-func (this *QUrl) Toace_S(args ...interface{}) (ret interface{}) {
-  // toAce(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl5toAceERK7QString
-    // invoke: QByteArray toAce(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN4QUrl5toAceERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "toAce", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:216
+// index:0
+// QString errorString()
+func (this *QUrl) ErrorString() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl11errorStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// fromAce(const class QByteArray &)
-func (this *QUrl) Fromace_S(args ...interface{}) (ret interface{}) {
-  // fromAce(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl7fromAceERK10QByteArray
-    // invoke: QString fromAce(const class QByteArray &)
-    var arg0 = args[0].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN4QUrl7fromAceERK10QByteArray(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "fromAce", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:218
+// index:0
+// bool isEmpty()
+func (this *QUrl) IsEmpty() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// detach()
-func (this *QUrl) Detach(args ...interface{}) () {
-  // detach()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl6detachEv
-    // invoke: void detach()
-    C.C_ZN4QUrl6detachEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QUrl", "detach", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:219
+// index:0
+// void clear()
+func (this *QUrl) Clear() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QUrl()
-func NewQUrl(args ...interface{}) *QUrl {
-  // QUrl()
-  // QUrl(const class QUrl &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QUrl{}) // "const QUrl &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrlC1Ev
-    // invoke: void QUrl()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN4QUrlC2Ev()
-    return &QUrl{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN4QUrlC1ERKS_
-    // invoke: void QUrl(const class QUrl &)
-    var arg0 = args[0].(*QUrl).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN4QUrlC2ERKS_(arg0)
-    return &QUrl{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QUrl", "QUrl", args)
-  }
-
-  return nil // QUrl{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qurl.h:221
+// index:0
+// void setScheme(const class QString &)
+func (this *QUrl) SetScheme(scheme unsafe.Pointer) {
+	// 0: (, const QString & scheme), (scheme)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl9setSchemeERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, scheme)
+	gopp.ErrPrint(err, rv)
 }
 
-// isEmpty()
-func (this *QUrl) Isempty(args ...interface{}) (ret interface{}) {
-  // isEmpty()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl7isEmptyEv
-    // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK4QUrl7isEmptyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "isEmpty", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:222
+// index:0
+// QString scheme()
+func (this *QUrl) Scheme() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl6schemeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// swap(class QUrl &)
-func (this *QUrl) Swap(args ...interface{}) () {
-  // swap(class QUrl &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QUrl{}) // "QUrl &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl4swapERS_
-    // invoke: void swap(class QUrl &)
-    var arg0 = args[0].(*QUrl).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN4QUrl4swapERS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QUrl", "swap", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:224
+// index:0
+// void setAuthority(const class QString &, enum QUrl::ParsingMode)
+func (this *QUrl) SetAuthority(authority unsafe.Pointer, mode int) {
+	// 0: (, const QString & authority, QUrl::ParsingMode mode), (authority, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl12setAuthorityERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID, this.cthis, authority, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// fromPercentEncoding(const class QByteArray &)
-func (this *QUrl) Frompercentencoding_S(args ...interface{}) (ret interface{}) {
-  // fromPercentEncoding(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl19fromPercentEncodingERK10QByteArray
-    // invoke: QString fromPercentEncoding(const class QByteArray &)
-    var arg0 = args[0].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN4QUrl19fromPercentEncodingERK10QByteArray(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "fromPercentEncoding", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:227
+// index:0
+// void setUserInfo(const class QString &, enum QUrl::ParsingMode)
+func (this *QUrl) SetUserInfo(userInfo unsafe.Pointer, mode int) {
+	// 0: (, const QString & userInfo, QUrl::ParsingMode mode), (userInfo, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl11setUserInfoERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID, this.cthis, userInfo, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// isParentOf(const class QUrl &)
-func (this *QUrl) Isparentof(args ...interface{}) (ret interface{}) {
-  // isParentOf(const class QUrl &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QUrl{}) // "const QUrl &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl10isParentOfERKS_
-    // invoke: bool isParentOf(const class QUrl &)
-    var arg0 = args[0].(*QUrl).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK4QUrl10isParentOfERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "isParentOf", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:230
+// index:0
+// void setUserName(const class QString &, enum QUrl::ParsingMode)
+func (this *QUrl) SetUserName(userName unsafe.Pointer, mode int) {
+	// 0: (, const QString & userName, QUrl::ParsingMode mode), (userName, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl11setUserNameERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID, this.cthis, userName, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// idnWhitelist()
-func (this *QUrl) Idnwhitelist_S(args ...interface{}) () {
-  // idnWhitelist()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl12idnWhitelistEv
-    // invoke: QStringList idnWhitelist()
-    C.C_ZN4QUrl12idnWhitelistEv()
-  default:
-    qtrt.ErrorResolve("QUrl", "idnWhitelist", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:233
+// index:0
+// void setPassword(const class QString &, enum QUrl::ParsingMode)
+func (this *QUrl) SetPassword(password unsafe.Pointer, mode int) {
+	// 0: (, const QString & password, QUrl::ParsingMode mode), (password, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl11setPasswordERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID, this.cthis, password, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// resolved(const class QUrl &)
-func (this *QUrl) Resolved(args ...interface{}) (ret interface{}) {
-  // resolved(const class QUrl &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QUrl{}) // "const QUrl &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl8resolvedERKS_
-    // invoke: QUrl resolved(const class QUrl &)
-    var arg0 = args[0].(*QUrl).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK4QUrl8resolvedERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QUrl{}) // "QUrl"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "resolved", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:236
+// index:0
+// void setHost(const class QString &, enum QUrl::ParsingMode)
+func (this *QUrl) SetHost(host unsafe.Pointer, mode int) {
+	// 0: (, const QString & host, QUrl::ParsingMode mode), (host, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl7setHostERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID, this.cthis, host, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// errorString()
-func (this *QUrl) Errorstring(args ...interface{}) (ret interface{}) {
-  // errorString()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl11errorStringEv
-    // invoke: QString errorString()
-    var ret0 = C.C_ZNK4QUrl11errorStringEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "errorString", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:242
+// index:0
+// void setPort(int)
+func (this *QUrl) SetPort(port int) {
+	// 0: (, int port), (&port)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl7setPortEi", ffiqt.FFI_TYPE_VOID, this.cthis, &port)
+	gopp.ErrPrint(err, rv)
 }
 
-// isValid()
-func (this *QUrl) Isvalid(args ...interface{}) (ret interface{}) {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl7isValidEv
-    // invoke: bool isValid()
-    var ret0 = C.C_ZNK4QUrl7isValidEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "isValid", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:243
+// index:0
+// int port(int)
+func (this *QUrl) Port(defaultPort int) {
+	// 0: (, int defaultPort), (&defaultPort)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl4portEi", ffiqt.FFI_TYPE_VOID, this.cthis, &defaultPort)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasQuery()
-func (this *QUrl) Hasquery(args ...interface{}) (ret interface{}) {
-  // hasQuery()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl8hasQueryEv
-    // invoke: bool hasQuery()
-    var ret0 = C.C_ZNK4QUrl8hasQueryEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "hasQuery", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:245
+// index:0
+// void setPath(const class QString &, enum QUrl::ParsingMode)
+func (this *QUrl) SetPath(path unsafe.Pointer, mode int) {
+	// 0: (, const QString & path, QUrl::ParsingMode mode), (path, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl7setPathERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID, this.cthis, path, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// setIdnWhitelist(const class QStringList &)
-func (this *QUrl) Setidnwhitelist_S(args ...interface{}) () {
-  // setIdnWhitelist(const class QStringList &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl15setIdnWhitelistERK11QStringList
-    // invoke: void setIdnWhitelist(const class QStringList &)
-    var arg0 = args[0].(*QStringList).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN4QUrl15setIdnWhitelistERK11QStringList(arg0)
-  default:
-    qtrt.ErrorResolve("QUrl", "setIdnWhitelist", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:249
+// index:0
+// bool hasQuery()
+func (this *QUrl) HasQuery() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl8hasQueryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// scheme()
-func (this *QUrl) Scheme(args ...interface{}) (ret interface{}) {
-  // scheme()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl6schemeEv
-    // invoke: QString scheme()
-    var ret0 = C.C_ZNK4QUrl6schemeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "scheme", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:250
+// index:0
+// void setQuery(const class QString &, enum QUrl::ParsingMode)
+func (this *QUrl) SetQuery(query unsafe.Pointer, mode int) {
+	// 0: (, const QString & query, QUrl::ParsingMode mode), (query, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl8setQueryERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID, this.cthis, query, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// setQuery(const class QUrlQuery &)
-func (this *QUrl) Setquery(args ...interface{}) () {
-  // setQuery(const class QUrlQuery &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QUrlQuery{}) // "const QUrlQuery &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl8setQueryERK9QUrlQuery
-    // invoke: void setQuery(const class QUrlQuery &)
-    var arg0 = args[0].(*QUrlQuery).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN4QUrl8setQueryERK9QUrlQuery(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QUrl", "setQuery", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:251
+// index:1
+// void setQuery(const class QUrlQuery &)
+func (this *QUrl) SetQuery_1(query unsafe.Pointer) {
+	// 1: (, const QUrlQuery & query), (query)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl8setQueryERK9QUrlQuery", ffiqt.FFI_TYPE_VOID, this.cthis, query)
+	gopp.ErrPrint(err, rv)
 }
 
-// isLocalFile()
-func (this *QUrl) Islocalfile(args ...interface{}) (ret interface{}) {
-  // isLocalFile()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl11isLocalFileEv
-    // invoke: bool isLocalFile()
-    var ret0 = C.C_ZNK4QUrl11isLocalFileEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "isLocalFile", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:254
+// index:0
+// bool hasFragment()
+func (this *QUrl) HasFragment() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl11hasFragmentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toPercentEncoding(const class QString &, const class QByteArray &, const class QByteArray &)
-func (this *QUrl) Topercentencoding_S(args ...interface{}) (ret interface{}) {
-  // toPercentEncoding(const class QString &, const class QByteArray &, const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  vtys[0][2] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_
-    // invoke: QByteArray toPercentEncoding(const class QString &, const class QByteArray &, const class QByteArray &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_(arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "toPercentEncoding", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:256
+// index:0
+// void setFragment(const class QString &, enum QUrl::ParsingMode)
+func (this *QUrl) SetFragment(fragment unsafe.Pointer, mode int) {
+	// 0: (, const QString & fragment, QUrl::ParsingMode mode), (fragment, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl11setFragmentERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID, this.cthis, fragment, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// clear()
-func (this *QUrl) Clear(args ...interface{}) () {
-  // clear()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl5clearEv
-    // invoke: void clear()
-    C.C_ZN4QUrl5clearEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QUrl", "clear", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:258
+// index:0
+// QUrl resolved(const class QUrl &)
+func (this *QUrl) Resolved(relative unsafe.Pointer) {
+	// 0: (, const QUrl & relative), (relative)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl8resolvedERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, relative)
+	gopp.ErrPrint(err, rv)
 }
 
-// setPort(int)
-func (this *QUrl) Setport(args ...interface{}) () {
-  // setPort(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN4QUrl7setPortEi
-    // invoke: void setPort(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN4QUrl7setPortEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QUrl", "setPort", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:260
+// index:0
+// bool isRelative()
+func (this *QUrl) IsRelative() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl10isRelativeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toLocalFile()
-func (this *QUrl) Tolocalfile(args ...interface{}) (ret interface{}) {
-  // toLocalFile()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK4QUrl11toLocalFileEv
-    // invoke: QString toLocalFile()
-    var ret0 = C.C_ZNK4QUrl11toLocalFileEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUrl", "toLocalFile", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qurl.h:261
+// index:0
+// bool isParentOf(const class QUrl &)
+func (this *QUrl) IsParentOf(url unsafe.Pointer) {
+	// 0: (, const QUrl & url), (url)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl10isParentOfERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, url)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qurl.h:263
+// index:0
+// bool isLocalFile()
+func (this *QUrl) IsLocalFile() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl11isLocalFileEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qurl.h:264
+// index:0
+// static
+// QUrl fromLocalFile(const class QString &)
+func (this *QUrl) FromLocalFile(localfile unsafe.Pointer) {
+	// 0: (const QString & localfile), (localfile)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl13fromLocalFileERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QUrl_FromLocalFile(localfile unsafe.Pointer) {
+	// 0: (const QString & localfile), (localfile)
+	var nilthis *QUrl
+	nilthis.FromLocalFile(localfile)
+}
+
+// /usr/include/qt/QtCore/qurl.h:265
+// index:0
+// QString toLocalFile()
+func (this *QUrl) ToLocalFile() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl11toLocalFileEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qurl.h:267
+// index:0
+// void detach()
+func (this *QUrl) Detach() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl6detachEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qurl.h:268
+// index:0
+// bool isDetached()
+func (this *QUrl) IsDetached() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl10isDetachedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qurl.h:276
+// index:0
+// static
+// QString fromPercentEncoding(const class QByteArray &)
+func (this *QUrl) FromPercentEncoding(arg0 unsafe.Pointer) {
+	// 0: (const QByteArray & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl19fromPercentEncodingERK10QByteArray", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QUrl_FromPercentEncoding(arg0 unsafe.Pointer) {
+	// 0: (const QByteArray & arg0), (arg0)
+	var nilthis *QUrl
+	nilthis.FromPercentEncoding(arg0)
+}
+
+// /usr/include/qt/QtCore/qurl.h:277
+// index:0
+// static
+// QByteArray toPercentEncoding(const class QString &, const class QByteArray &, const class QByteArray &)
+func (this *QUrl) ToPercentEncoding(arg0 unsafe.Pointer, exclude unsafe.Pointer, include unsafe.Pointer) {
+	// 0: (const QString & arg0, const QByteArray & exclude, const QByteArray & include), (arg0, exclude, include)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QUrl_ToPercentEncoding(arg0 unsafe.Pointer, exclude unsafe.Pointer, include unsafe.Pointer) {
+	// 0: (const QString & arg0, const QByteArray & exclude, const QByteArray & include), (arg0, exclude, include)
+	var nilthis *QUrl
+	nilthis.ToPercentEncoding(arg0, exclude, include)
+}
+
+// /usr/include/qt/QtCore/qurl.h:357
+// index:0
+// static
+// QString fromAce(const class QByteArray &)
+func (this *QUrl) FromAce(arg0 unsafe.Pointer) {
+	// 0: (const QByteArray & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl7fromAceERK10QByteArray", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QUrl_FromAce(arg0 unsafe.Pointer) {
+	// 0: (const QByteArray & arg0), (arg0)
+	var nilthis *QUrl
+	nilthis.FromAce(arg0)
+}
+
+// /usr/include/qt/QtCore/qurl.h:358
+// index:0
+// static
+// QByteArray toAce(const class QString &)
+func (this *QUrl) ToAce(arg0 unsafe.Pointer) {
+	// 0: (const QString & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl5toAceERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QUrl_ToAce(arg0 unsafe.Pointer) {
+	// 0: (const QString & arg0), (arg0)
+	var nilthis *QUrl
+	nilthis.ToAce(arg0)
+}
+
+// /usr/include/qt/QtCore/qurl.h:359
+// index:0
+// static
+// QStringList idnWhitelist()
+func (this *QUrl) IdnWhitelist() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl12idnWhitelistEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QUrl_IdnWhitelist() {
+	// 0: (), ()
+	var nilthis *QUrl
+	nilthis.IdnWhitelist()
+}
+
+// /usr/include/qt/QtCore/qurl.h:361
+// index:0
+// static
+// QList<QUrl> fromStringList(const class QStringList &, enum QUrl::ParsingMode)
+func (this *QUrl) FromStringList(uris unsafe.Pointer, mode int) {
+	// 0: (const QStringList & uris, QUrl::ParsingMode mode), (uris, mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl14fromStringListERK11QStringListNS_11ParsingModeE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QUrl_FromStringList(uris unsafe.Pointer, mode int) {
+	// 0: (const QStringList & uris, QUrl::ParsingMode mode), (uris, mode)
+	var nilthis *QUrl
+	nilthis.FromStringList(uris, mode)
+}
+
+// /usr/include/qt/QtCore/qurl.h:363
+// index:0
+// static
+// void setIdnWhitelist(const class QStringList &)
+func (this *QUrl) SetIdnWhitelist(arg0 unsafe.Pointer) {
+	// 0: (const QStringList & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl15setIdnWhitelistERK11QStringList", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QUrl_SetIdnWhitelist(arg0 unsafe.Pointer) {
+	// 0: (const QStringList & arg0), (arg0)
+	var nilthis *QUrl
+	nilthis.SetIdnWhitelist(arg0)
+}
+
+//  body block end

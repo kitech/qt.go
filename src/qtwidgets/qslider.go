@@ -1,341 +1,164 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qslider.h
+// #include <qslider.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qslider.h
-// dst-file: /src/widgets/qslider.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  bool QSlider::event(QEvent * event);
-extern bool C_ZN7QSlider5eventEP6QEvent(void* qthis, void* arg0); // 4
-  // proto:  void QSlider::~QSlider();
-extern void C_ZN7QSliderD2Ev(void* qthis); // 4
-  // proto:  QSize QSlider::sizeHint();
-extern void* C_ZNK7QSlider8sizeHintEv(void* qthis); // 4
-  // proto:  int QSlider::tickInterval();
-extern int32_t C_ZNK7QSlider12tickIntervalEv(void* qthis); // 4
-  // proto:  const QMetaObject * QSlider::metaObject();
-extern void C_ZNK7QSlider10metaObjectEv(void* qthis); // 4
-  // proto:  QSize QSlider::minimumSizeHint();
-extern void* C_ZNK7QSlider15minimumSizeHintEv(void* qthis); // 4
-  // proto:  void QSlider::QSlider(QWidget * parent);
-extern void* C_ZN7QSliderC2EP7QWidget(void* arg0); // 3
-  // proto:  QSlider::TickPosition QSlider::tickPosition();
-extern void C_ZNK7QSlider12tickPositionEv(void* qthis); // 4
-  // proto:  void QSlider::setTickInterval(int ti);
-extern void C_ZN7QSlider15setTickIntervalEi(void* qthis, int32_t arg0); // 4
+// extern C begin: 240
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QSlider)=1
+//  ext block end
+
+//  body block begin
 type QSlider struct {
-  /*qbase*/ QAbstractSlider;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// event(class QEvent *)
-func (this *QSlider) Event(args ...interface{}) (ret interface{}) {
-  // event(class QEvent *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QEvent{}) // "QEvent *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QSlider5eventEP6QEvent
-    // invoke: bool event(class QEvent *)
-    var arg0 = args[0].(*qtcore.QEvent).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN7QSlider5eventEP6QEvent(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSlider", "event", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qslider.h:55
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QSlider) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QSlider()
-func (this *QSlider) Freeqslider(args ...interface{}) () {
-  // ~QSlider()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QSliderD0Ev
-    // invoke: void ~QSlider()
-    C.C_ZN7QSliderD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSlider", "~QSlider", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qslider.h:71
+// index:0
+// void QSlider(class QWidget *)
+func NewQSlider(parent unsafe.Pointer) *QSlider {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSliderC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QSlider{cthis}
 }
 
-// sizeHint()
-func (this *QSlider) Sizehint(args ...interface{}) (ret interface{}) {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QSlider8sizeHintEv
-    // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK7QSlider8sizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSlider", "sizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qslider.h:72
+// index:1
+// void QSlider(Qt::Orientation, class QWidget *)
+func NewQSlider_1(orientation int, parent unsafe.Pointer) *QSlider {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSliderC2EN2Qt11OrientationEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, &orientation, parent)
+	gopp.ErrPrint(err, rv)
+	return &QSlider{cthis}
 }
 
-// tickInterval()
-func (this *QSlider) Tickinterval(args ...interface{}) (ret interface{}) {
-  // tickInterval()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QSlider12tickIntervalEv
-    // invoke: int tickInterval()
-    var ret0 = C.C_ZNK7QSlider12tickIntervalEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSlider", "tickInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qslider.h:74
+// index:0
+// virtual
+// void ~QSlider()
+func DeleteQSlider(*QSlider) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSliderD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QSlider) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QSlider10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK7QSlider10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSlider", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qslider.h:76
+// index:0
+// virtual
+// QSize sizeHint()
+func (this *QSlider) SizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// minimumSizeHint()
-func (this *QSlider) Minimumsizehint(args ...interface{}) (ret interface{}) {
-  // minimumSizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QSlider15minimumSizeHintEv
-    // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK7QSlider15minimumSizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSlider", "minimumSizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qslider.h:77
+// index:0
+// virtual
+// QSize minimumSizeHint()
+func (this *QSlider) MinimumSizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider15minimumSizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QSlider(class QWidget *)
-func NewQSlider(args ...interface{}) *QSlider {
-  // QSlider(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QSliderC1EP7QWidget
-    // invoke: void QSlider(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN7QSliderC2EP7QWidget(arg0)
-    return &QSlider{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QSlider", "QSlider", args)
-  }
-
-  return nil // QSlider{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qslider.h:79
+// index:0
+// void setTickPosition(enum QSlider::TickPosition)
+func (this *QSlider) SetTickPosition(position int) {
+	// 0: (, QSlider::TickPosition position), (&position)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider15setTickPositionENS_12TickPositionE", ffiqt.FFI_TYPE_VOID, this.cthis, &position)
+	gopp.ErrPrint(err, rv)
 }
 
-// tickPosition()
-func (this *QSlider) Tickposition(args ...interface{}) () {
-  // tickPosition()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QSlider12tickPositionEv
-    // invoke: QSlider::TickPosition tickPosition()
-    C.C_ZNK7QSlider12tickPositionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSlider", "tickPosition", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qslider.h:80
+// index:0
+// QSlider::TickPosition tickPosition()
+func (this *QSlider) TickPosition() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider12tickPositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTickInterval(int)
-func (this *QSlider) Settickinterval(args ...interface{}) () {
-  // setTickInterval(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QSlider15setTickIntervalEi
-    // invoke: void setTickInterval(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QSlider15setTickIntervalEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSlider", "setTickInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qslider.h:82
+// index:0
+// void setTickInterval(int)
+func (this *QSlider) SetTickInterval(ti int) {
+	// 0: (, int ti), (&ti)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider15setTickIntervalEi", ffiqt.FFI_TYPE_VOID, this.cthis, &ti)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qslider.h:83
+// index:0
+// int tickInterval()
+func (this *QSlider) TickInterval() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider12tickIntervalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qslider.h:85
+// index:0
+// virtual
+// bool event(class QEvent *)
+func (this *QSlider) Event(event unsafe.Pointer) {
+	// 0: (, QEvent * event), (event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.cthis, event)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

@@ -1,469 +1,190 @@
+//  header block begin
+// /usr/include/qt/QtCore/qtextboundaryfinder.h
+// #include <qtextboundaryfinder.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qtextboundaryfinder.h
-// dst-file: /src/core/qtextboundaryfinder.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  int QTextBoundaryFinder::toNextBoundary();
-extern int32_t C_ZN19QTextBoundaryFinder14toNextBoundaryEv(void* qthis); // 4
-  // proto:  int QTextBoundaryFinder::position();
-extern int32_t C_ZNK19QTextBoundaryFinder8positionEv(void* qthis); // 4
-  // proto:  QString QTextBoundaryFinder::string();
-extern void* C_ZNK19QTextBoundaryFinder6stringEv(void* qthis); // 4
-  // proto:  bool QTextBoundaryFinder::isValid();
-extern bool C_ZNK19QTextBoundaryFinder7isValidEv(void* qthis); // 2
-  // proto:  BoundaryReasons QTextBoundaryFinder::boundaryReasons();
-extern void C_ZNK19QTextBoundaryFinder15boundaryReasonsEv(void* qthis); // 4
-  // proto:  void QTextBoundaryFinder::toEnd();
-extern void C_ZN19QTextBoundaryFinder5toEndEv(void* qthis); // 4
-  // proto:  void QTextBoundaryFinder::~QTextBoundaryFinder();
-extern void C_ZN19QTextBoundaryFinderD2Ev(void* qthis); // 4
-  // proto:  int QTextBoundaryFinder::toPreviousBoundary();
-extern int32_t C_ZN19QTextBoundaryFinder18toPreviousBoundaryEv(void* qthis); // 4
-  // proto:  void QTextBoundaryFinder::QTextBoundaryFinder();
-extern void* C_ZN19QTextBoundaryFinderC2Ev(); // 3
-  // proto:  void QTextBoundaryFinder::QTextBoundaryFinder(const QTextBoundaryFinder & other);
-extern void* C_ZN19QTextBoundaryFinderC2ERKS_(void* arg0); // 3
-  // proto:  bool QTextBoundaryFinder::isAtBoundary();
-extern bool C_ZNK19QTextBoundaryFinder12isAtBoundaryEv(void* qthis); // 4
-  // proto:  void QTextBoundaryFinder::setPosition(int position);
-extern void C_ZN19QTextBoundaryFinder11setPositionEi(void* qthis, int32_t arg0); // 4
-  // proto:  QTextBoundaryFinder::BoundaryType QTextBoundaryFinder::type();
-extern void C_ZNK19QTextBoundaryFinder4typeEv(void* qthis); // 2
-  // proto:  void QTextBoundaryFinder::toStart();
-extern void C_ZN19QTextBoundaryFinder7toStartEv(void* qthis); // 4
+// extern C begin: 17
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QTextBoundaryFinder)=48
+//  ext block end
+
+//  body block begin
 type QTextBoundaryFinder struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// toNextBoundary()
-func (this *QTextBoundaryFinder) Tonextboundary(args ...interface{}) (ret interface{}) {
-  // toNextBoundary()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QTextBoundaryFinder14toNextBoundaryEv
-    // invoke: int toNextBoundary()
-    var ret0 = C.C_ZN19QTextBoundaryFinder14toNextBoundaryEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "toNextBoundary", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:54
+// index:0
+// void QTextBoundaryFinder()
+func NewQTextBoundaryFinder() *QTextBoundaryFinder {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QTextBoundaryFinder{cthis}
 }
 
-// position()
-func (this *QTextBoundaryFinder) Position(args ...interface{}) (ret interface{}) {
-  // position()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QTextBoundaryFinder8positionEv
-    // invoke: int position()
-    var ret0 = C.C_ZNK19QTextBoundaryFinder8positionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "position", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:76
+// index:1
+// void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const class QString &)
+func NewQTextBoundaryFinder_1(type_ int, string unsafe.Pointer) *QTextBoundaryFinder {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeERK7QString", ffiqt.FFI_TYPE_VOID, cthis, &type_, string)
+	gopp.ErrPrint(err, rv)
+	return &QTextBoundaryFinder{cthis}
 }
 
-// string()
-func (this *QTextBoundaryFinder) String(args ...interface{}) (ret interface{}) {
-  // string()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QTextBoundaryFinder6stringEv
-    // invoke: QString string()
-    var ret0 = C.C_ZNK19QTextBoundaryFinder6stringEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "string", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:77
+// index:2
+// void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const class QChar *, int, unsigned char *, int)
+func NewQTextBoundaryFinder_2(type_ int, chars unsafe.Pointer, length int, buffer unsafe.Pointer, bufferSize int) *QTextBoundaryFinder {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", ffiqt.FFI_TYPE_VOID, cthis, &type_, chars, &length, buffer, &bufferSize)
+	gopp.ErrPrint(err, rv)
+	return &QTextBoundaryFinder{cthis}
 }
 
-// isValid()
-func (this *QTextBoundaryFinder) Isvalid(args ...interface{}) (ret interface{}) {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QTextBoundaryFinder7isValidEv
-    // invoke: bool isValid()
-    var ret0 = C.C_ZNK19QTextBoundaryFinder7isValidEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "isValid", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:57
+// index:0
+// void ~QTextBoundaryFinder()
+func DeleteQTextBoundaryFinder(*QTextBoundaryFinder) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinderD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// boundaryReasons()
-func (this *QTextBoundaryFinder) Boundaryreasons(args ...interface{}) () {
-  // boundaryReasons()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QTextBoundaryFinder15boundaryReasonsEv
-    // invoke: BoundaryReasons boundaryReasons()
-    C.C_ZNK19QTextBoundaryFinder15boundaryReasonsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "boundaryReasons", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:79
+// index:0
+// inline
+// bool isValid()
+func (this *QTextBoundaryFinder) IsValid() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toEnd()
-func (this *QTextBoundaryFinder) Toend(args ...interface{}) () {
-  // toEnd()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QTextBoundaryFinder5toEndEv
-    // invoke: void toEnd()
-    C.C_ZN19QTextBoundaryFinder5toEndEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "toEnd", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:81
+// index:0
+// inline
+// QTextBoundaryFinder::BoundaryType type()
+func (this *QTextBoundaryFinder) Type() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QTextBoundaryFinder()
-func (this *QTextBoundaryFinder) Freeqtextboundaryfinder(args ...interface{}) () {
-  // ~QTextBoundaryFinder()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QTextBoundaryFinderD0Ev
-    // invoke: void ~QTextBoundaryFinder()
-    C.C_ZN19QTextBoundaryFinderD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "~QTextBoundaryFinder", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:82
+// index:0
+// QString string()
+func (this *QTextBoundaryFinder) String() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder6stringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toPreviousBoundary()
-func (this *QTextBoundaryFinder) Topreviousboundary(args ...interface{}) (ret interface{}) {
-  // toPreviousBoundary()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QTextBoundaryFinder18toPreviousBoundaryEv
-    // invoke: int toPreviousBoundary()
-    var ret0 = C.C_ZN19QTextBoundaryFinder18toPreviousBoundaryEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "toPreviousBoundary", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:84
+// index:0
+// void toStart()
+func (this *QTextBoundaryFinder) ToStart() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinder7toStartEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QTextBoundaryFinder()
-func NewQTextBoundaryFinder(args ...interface{}) *QTextBoundaryFinder {
-  // QTextBoundaryFinder()
-  // QTextBoundaryFinder(const class QTextBoundaryFinder &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QTextBoundaryFinder{}) // "const QTextBoundaryFinder &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QTextBoundaryFinderC1Ev
-    // invoke: void QTextBoundaryFinder()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN19QTextBoundaryFinderC2Ev()
-    return &QTextBoundaryFinder{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN19QTextBoundaryFinderC1ERKS_
-    // invoke: void QTextBoundaryFinder(const class QTextBoundaryFinder &)
-    var arg0 = args[0].(*QTextBoundaryFinder).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN19QTextBoundaryFinderC2ERKS_(arg0)
-    return &QTextBoundaryFinder{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "QTextBoundaryFinder", args)
-  }
-
-  return nil // QTextBoundaryFinder{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:85
+// index:0
+// void toEnd()
+func (this *QTextBoundaryFinder) ToEnd() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinder5toEndEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isAtBoundary()
-func (this *QTextBoundaryFinder) Isatboundary(args ...interface{}) (ret interface{}) {
-  // isAtBoundary()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QTextBoundaryFinder12isAtBoundaryEv
-    // invoke: bool isAtBoundary()
-    var ret0 = C.C_ZNK19QTextBoundaryFinder12isAtBoundaryEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "isAtBoundary", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:86
+// index:0
+// int position()
+func (this *QTextBoundaryFinder) Position() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder8positionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setPosition(int)
-func (this *QTextBoundaryFinder) Setposition(args ...interface{}) () {
-  // setPosition(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QTextBoundaryFinder11setPositionEi
-    // invoke: void setPosition(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN19QTextBoundaryFinder11setPositionEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "setPosition", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:87
+// index:0
+// void setPosition(int)
+func (this *QTextBoundaryFinder) SetPosition(position int) {
+	// 0: (, int position), (&position)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinder11setPositionEi", ffiqt.FFI_TYPE_VOID, this.cthis, &position)
+	gopp.ErrPrint(err, rv)
 }
 
-// type()
-func (this *QTextBoundaryFinder) Type_(args ...interface{}) () {
-  // type()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QTextBoundaryFinder4typeEv
-    // invoke: QTextBoundaryFinder::BoundaryType type()
-    C.C_ZNK19QTextBoundaryFinder4typeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "type", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:89
+// index:0
+// int toNextBoundary()
+func (this *QTextBoundaryFinder) ToNextBoundary() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinder14toNextBoundaryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toStart()
-func (this *QTextBoundaryFinder) Tostart(args ...interface{}) () {
-  // toStart()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QTextBoundaryFinder7toStartEv
-    // invoke: void toStart()
-    C.C_ZN19QTextBoundaryFinder7toStartEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBoundaryFinder", "toStart", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:90
+// index:0
+// int toPreviousBoundary()
+func (this *QTextBoundaryFinder) ToPreviousBoundary() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinder18toPreviousBoundaryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:92
+// index:0
+// bool isAtBoundary()
+func (this *QTextBoundaryFinder) IsAtBoundary() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder12isAtBoundaryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:93
+// index:0
+// QTextBoundaryFinder::BoundaryReasons boundaryReasons()
+func (this *QTextBoundaryFinder) BoundaryReasons() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder15boundaryReasonsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

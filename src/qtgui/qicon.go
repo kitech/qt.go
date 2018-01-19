@@ -1,647 +1,364 @@
+//  header block begin
+// /usr/include/qt/QtGui/qicon.h
+// #include <qicon.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qicon.h
-// dst-file: /src/gui/qicon.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto: static QString QIcon::themeName();
-extern void* C_ZN5QIcon9themeNameEv(); // 4
-  // proto:  bool QIcon::isMask();
-extern bool C_ZNK5QIcon6isMaskEv(void* qthis); // 4
-  // proto: static void QIcon::setThemeName(const QString & path);
-extern void C_ZN5QIcon12setThemeNameERK7QString(void* arg0); // 4
-  // proto:  void QIcon::swap(QIcon & other);
-extern void C_ZN5QIcon4swapERS_(void* qthis, void* arg0); // 2
-  // proto:  void QIcon::setIsMask(bool isMask);
-extern void C_ZN5QIcon9setIsMaskEb(void* qthis, bool arg0); // 4
-  // proto:  bool QIcon::isDetached();
-extern bool C_ZNK5QIcon10isDetachedEv(void* qthis); // 4
-  // proto:  qint64 QIcon::cacheKey();
-extern int64_t C_ZNK5QIcon8cacheKeyEv(void* qthis); // 4
-  // proto: static void QIcon::setThemeSearchPaths(const QStringList & searchpath);
-extern void C_ZN5QIcon19setThemeSearchPathsERK11QStringList(void* arg0); // 4
-  // proto:  void QIcon::detach();
-extern void C_ZN5QIcon6detachEv(void* qthis); // 4
-  // proto:  QString QIcon::name();
-extern void* C_ZNK5QIcon4nameEv(void* qthis); // 4
-  // proto: static QStringList QIcon::themeSearchPaths();
-extern void C_ZN5QIcon16themeSearchPathsEv(); // 4
-  // proto:  void QIcon::~QIcon();
-extern void C_ZN5QIconD2Ev(void* qthis); // 4
-  // proto:  void QIcon::QIcon(const QString & fileName);
-extern void* C_ZN5QIconC2ERK7QString(void* arg0); // 3
-  // proto:  void QIcon::QIcon(const QPixmap & pixmap);
-extern void* C_ZN5QIconC2ERK7QPixmap(void* arg0); // 3
-  // proto:  void QIcon::QIcon(const QIcon & other);
-extern void* C_ZN5QIconC2ERKS_(void* arg0); // 3
-  // proto:  void QIcon::QIcon();
-extern void* C_ZN5QIconC2Ev(); // 3
-  // proto:  void QIcon::QIcon(QIconEngine * engine);
-extern void* C_ZN5QIconC2EP11QIconEngine(void* arg0); // 3
-  // proto: static bool QIcon::hasThemeIcon(const QString & name);
-extern bool C_ZN5QIcon12hasThemeIconERK7QString(void* arg0); // 4
-  // proto:  bool QIcon::isNull();
-extern bool C_ZNK5QIcon6isNullEv(void* qthis); // 4
-  // proto: static QIcon QIcon::fromTheme(const QString & name, const QIcon & fallback);
-extern void* C_ZN5QIcon9fromThemeERK7QStringRKS_(void* arg0, void* arg1); // 4
-  // proto: static QIcon QIcon::fromTheme(const QString & name);
-extern void* C_ZN5QIcon9fromThemeERK7QString(void* arg0); // 4
+// extern C begin: 40
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QIcon)=8
+//  ext block end
+
+//  body block begin
 type QIcon struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// themeName()
-func (this *QIcon) Themename_S(args ...interface{}) (ret interface{}) {
-  // themeName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QIcon9themeNameEv
-    // invoke: QString themeName()
-    var ret0 = C.C_ZN5QIcon9themeNameEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QIcon", "themeName", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:60
+// index:0
+// void QIcon()
+func NewQIcon() *QIcon {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QIcon{cthis}
 }
 
-// isMask()
-func (this *QIcon) Ismask(args ...interface{}) (ret interface{}) {
-  // isMask()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QIcon6isMaskEv
-    // invoke: bool isMask()
-    var ret0 = C.C_ZNK5QIcon6isMaskEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QIcon", "isMask", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:61
+// index:1
+// void QIcon(const class QPixmap &)
+func NewQIcon_1(pixmap unsafe.Pointer) *QIcon {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2ERK7QPixmap", ffiqt.FFI_TYPE_VOID, cthis, pixmap)
+	gopp.ErrPrint(err, rv)
+	return &QIcon{cthis}
 }
 
-// setThemeName(const class QString &)
-func (this *QIcon) Setthemename_S(args ...interface{}) () {
-  // setThemeName(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QIcon12setThemeNameERK7QString
-    // invoke: void setThemeName(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QIcon12setThemeNameERK7QString(arg0)
-  default:
-    qtrt.ErrorResolve("QIcon", "setThemeName", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:68
+// index:2
+// void QIcon(const class QString &)
+func NewQIcon_2(fileName unsafe.Pointer) *QIcon {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, fileName)
+	gopp.ErrPrint(err, rv)
+	return &QIcon{cthis}
 }
 
-// swap(class QIcon &)
-func (this *QIcon) Swap(args ...interface{}) () {
-  // swap(class QIcon &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QIcon{}) // "QIcon &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QIcon4swapERS_
-    // invoke: void swap(class QIcon &)
-    var arg0 = args[0].(*QIcon).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QIcon4swapERS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QIcon", "swap", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:69
+// index:3
+// void QIcon(class QIconEngine *)
+func NewQIcon_3(engine unsafe.Pointer) *QIcon {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2EP11QIconEngine", ffiqt.FFI_TYPE_VOID, cthis, engine)
+	gopp.ErrPrint(err, rv)
+	return &QIcon{cthis}
 }
 
-// setIsMask(_Bool)
-func (this *QIcon) Setismask(args ...interface{}) () {
-  // setIsMask(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QIcon9setIsMaskEb
-    // invoke: void setIsMask(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QIcon9setIsMaskEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QIcon", "setIsMask", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:70
+// index:0
+// void ~QIcon()
+func DeleteQIcon(*QIcon) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// isDetached()
-func (this *QIcon) Isdetached(args ...interface{}) (ret interface{}) {
-  // isDetached()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QIcon10isDetachedEv
-    // invoke: bool isDetached()
-    var ret0 = C.C_ZNK5QIcon10isDetachedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QIcon", "isDetached", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:76
+// index:0
+// inline
+// void swap(class QIcon &)
+func (this *QIcon) Swap(other unsafe.Pointer) {
+	// 0: (, QIcon & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// cacheKey()
-func (this *QIcon) Cachekey(args ...interface{}) (ret interface{}) {
-  // cacheKey()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QIcon8cacheKeyEv
-    // invoke: qint64 cacheKey()
-    var ret0 = C.C_ZNK5QIcon8cacheKeyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int64Ty(false) // "qint64"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QIcon", "cacheKey", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:81
+// index:0
+// QPixmap pixmap(const class QSize &, enum QIcon::Mode, enum QIcon::State)
+func (this *QIcon) Pixmap(size unsafe.Pointer, mode int, state int) {
+	// 0: (, const QSize & size, QIcon::Mode mode, QIcon::State state), (size, &mode, &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapERK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_VOID, this.cthis, size, &mode, &state)
+	gopp.ErrPrint(err, rv)
 }
 
-// setThemeSearchPaths(const class QStringList &)
-func (this *QIcon) Setthemesearchpaths_S(args ...interface{}) () {
-  // setThemeSearchPaths(const class QStringList &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QIcon19setThemeSearchPathsERK11QStringList
-    // invoke: void setThemeSearchPaths(const class QStringList &)
-    var arg0 = args[0].(*qtcore.QStringList).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QIcon19setThemeSearchPathsERK11QStringList(arg0)
-  default:
-    qtrt.ErrorResolve("QIcon", "setThemeSearchPaths", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:82
+// index:1
+// inline
+// QPixmap pixmap(int, int, enum QIcon::Mode, enum QIcon::State)
+func (this *QIcon) Pixmap_1(w int, h int, mode int, state int) {
+	// 1: (, int w, int h, QIcon::Mode mode, QIcon::State state), (&w, &h, &mode, &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiiNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_VOID, this.cthis, &w, &h, &mode, &state)
+	gopp.ErrPrint(err, rv)
 }
 
-// detach()
-func (this *QIcon) Detach(args ...interface{}) () {
-  // detach()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QIcon6detachEv
-    // invoke: void detach()
-    C.C_ZN5QIcon6detachEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QIcon", "detach", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:84
+// index:2
+// inline
+// QPixmap pixmap(int, enum QIcon::Mode, enum QIcon::State)
+func (this *QIcon) Pixmap_2(extent int, mode int, state int) {
+	// 2: (, int extent, QIcon::Mode mode, QIcon::State state), (&extent, &mode, &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_VOID, this.cthis, &extent, &mode, &state)
+	gopp.ErrPrint(err, rv)
 }
 
-// name()
-func (this *QIcon) Name(args ...interface{}) (ret interface{}) {
-  // name()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QIcon4nameEv
-    // invoke: QString name()
-    var ret0 = C.C_ZNK5QIcon4nameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QIcon", "name", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:86
+// index:3
+// QPixmap pixmap(class QWindow *, const class QSize &, enum QIcon::Mode, enum QIcon::State)
+func (this *QIcon) Pixmap_3(window unsafe.Pointer, size unsafe.Pointer, mode int, state int) {
+	// 3: (, QWindow * window, const QSize & size, QIcon::Mode mode, QIcon::State state), (window, size, &mode, &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEP7QWindowRK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_VOID, this.cthis, window, size, &mode, &state)
+	gopp.ErrPrint(err, rv)
 }
 
-// themeSearchPaths()
-func (this *QIcon) Themesearchpaths_S(args ...interface{}) () {
-  // themeSearchPaths()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QIcon16themeSearchPathsEv
-    // invoke: QStringList themeSearchPaths()
-    C.C_ZN5QIcon16themeSearchPathsEv()
-  default:
-    qtrt.ErrorResolve("QIcon", "themeSearchPaths", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:88
+// index:0
+// QSize actualSize(const class QSize &, enum QIcon::Mode, enum QIcon::State)
+func (this *QIcon) ActualSize(size unsafe.Pointer, mode int, state int) {
+	// 0: (, const QSize & size, QIcon::Mode mode, QIcon::State state), (size, &mode, &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon10actualSizeERK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_VOID, this.cthis, size, &mode, &state)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QIcon()
-func (this *QIcon) Freeqicon(args ...interface{}) () {
-  // ~QIcon()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QIconD0Ev
-    // invoke: void ~QIcon()
-    C.C_ZN5QIconD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QIcon", "~QIcon", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:89
+// index:1
+// QSize actualSize(class QWindow *, const class QSize &, enum QIcon::Mode, enum QIcon::State)
+func (this *QIcon) ActualSize_1(window unsafe.Pointer, size unsafe.Pointer, mode int, state int) {
+	// 1: (, QWindow * window, const QSize & size, QIcon::Mode mode, QIcon::State state), (window, size, &mode, &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon10actualSizeEP7QWindowRK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_VOID, this.cthis, window, size, &mode, &state)
+	gopp.ErrPrint(err, rv)
 }
 
-// QIcon(const class QString &)
-func NewQIcon(args ...interface{}) *QIcon {
-  // QIcon(const class QString &)
-  // QIcon(const class QPixmap &)
-  // QIcon(const class QIcon &)
-  // QIcon()
-  // QIcon(class QIconEngine *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QPixmap{}) // "const QPixmap &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QIcon{}) // "const QIcon &"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[4] = make(map[int32]reflect.Type)
-  vtys[4][0] = reflect.TypeOf(QIconEngine{}) // "QIconEngine *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QIconC1ERK7QString
-    // invoke: void QIcon(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QIconC2ERK7QString(arg0)
-    return &QIcon{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN5QIconC1ERK7QPixmap
-    // invoke: void QIcon(const class QPixmap &)
-    var arg0 = args[0].(*QPixmap).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QIconC2ERK7QPixmap(arg0)
-    return &QIcon{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN5QIconC1ERKS_
-    // invoke: void QIcon(const class QIcon &)
-    var arg0 = args[0].(*QIcon).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QIconC2ERKS_(arg0)
-    return &QIcon{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN5QIconC1Ev
-    // invoke: void QIcon()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QIconC2Ev()
-    return &QIcon{Qclsinst:qthis}
-  case 4:
-    // invoke: _ZN5QIconC1EP11QIconEngine
-    // invoke: void QIcon(class QIconEngine *)
-    var arg0 = args[0].(*QIconEngine).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QIconC2EP11QIconEngine(arg0)
-    return &QIcon{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QIcon", "QIcon", args)
-  }
-
-  return nil // QIcon{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qicon.h:91
+// index:0
+// QString name()
+func (this *QIcon) Name() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasThemeIcon(const class QString &)
-func (this *QIcon) Hasthemeicon_S(args ...interface{}) (ret interface{}) {
-  // hasThemeIcon(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QIcon12hasThemeIconERK7QString
-    // invoke: bool hasThemeIcon(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN5QIcon12hasThemeIconERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QIcon", "hasThemeIcon", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:97
+// index:0
+// bool isNull()
+func (this *QIcon) IsNull() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isNull()
-func (this *QIcon) Isnull(args ...interface{}) (ret interface{}) {
-  // isNull()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QIcon6isNullEv
-    // invoke: bool isNull()
-    var ret0 = C.C_ZNK5QIcon6isNullEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QIcon", "isNull", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:98
+// index:0
+// bool isDetached()
+func (this *QIcon) IsDetached() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon10isDetachedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// fromTheme(const class QString &, const class QIcon &)
-func (this *QIcon) Fromtheme_S(args ...interface{}) (ret interface{}) {
-  // fromTheme(const class QString &, const class QIcon &)
-  // fromTheme(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(QIcon{}) // "const QIcon &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QIcon9fromThemeERK7QStringRKS_
-    // invoke: QIcon fromTheme(const class QString &, const class QIcon &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QIcon).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN5QIcon9fromThemeERK7QStringRKS_(arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN5QIcon9fromThemeERK7QString
-    // invoke: QIcon fromTheme(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN5QIcon9fromThemeERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QIcon", "fromTheme", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qicon.h:99
+// index:0
+// void detach()
+func (this *QIcon) Detach() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon6detachEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qicon.h:104
+// index:0
+// qint64 cacheKey()
+func (this *QIcon) CacheKey() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon8cacheKeyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qicon.h:106
+// index:0
+// void addPixmap(const class QPixmap &, enum QIcon::Mode, enum QIcon::State)
+func (this *QIcon) AddPixmap(pixmap unsafe.Pointer, mode int, state int) {
+	// 0: (, const QPixmap & pixmap, QIcon::Mode mode, QIcon::State state), (pixmap, &mode, &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9addPixmapERK7QPixmapNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_VOID, this.cthis, pixmap, &mode, &state)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qicon.h:107
+// index:0
+// void addFile(const class QString &, const class QSize &, enum QIcon::Mode, enum QIcon::State)
+func (this *QIcon) AddFile(fileName unsafe.Pointer, size unsafe.Pointer, mode int, state int) {
+	// 0: (, const QString & fileName, const QSize & size, QIcon::Mode mode, QIcon::State state), (fileName, size, &mode, &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon7addFileERK7QStringRK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_VOID, this.cthis, fileName, size, &mode, &state)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qicon.h:109
+// index:0
+// QList<QSize> availableSizes(enum QIcon::Mode, enum QIcon::State)
+func (this *QIcon) AvailableSizes(mode int, state int) {
+	// 0: (, QIcon::Mode mode, QIcon::State state), (&mode, &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon14availableSizesENS_4ModeENS_5StateE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode, &state)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qicon.h:111
+// index:0
+// void setIsMask(_Bool)
+func (this *QIcon) SetIsMask(isMask bool) {
+	// 0: (, bool isMask), (&isMask)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9setIsMaskEb", ffiqt.FFI_TYPE_VOID, this.cthis, &isMask)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qicon.h:112
+// index:0
+// bool isMask()
+func (this *QIcon) IsMask() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6isMaskEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qicon.h:114
+// index:0
+// static
+// QIcon fromTheme(const class QString &)
+func (this *QIcon) FromTheme(name unsafe.Pointer) {
+	// 0: (const QString & name), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9fromThemeERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QIcon_FromTheme(name unsafe.Pointer) {
+	// 0: (const QString & name), (name)
+	var nilthis *QIcon
+	nilthis.FromTheme(name)
+}
+
+// /usr/include/qt/QtGui/qicon.h:115
+// index:1
+// static
+// QIcon fromTheme(const class QString &, const class QIcon &)
+func (this *QIcon) FromTheme_1(name unsafe.Pointer, fallback unsafe.Pointer) {
+	// 1: (const QString & name, const QIcon & fallback), (name, fallback)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9fromThemeERK7QStringRKS_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QIcon_FromTheme_1(name unsafe.Pointer, fallback unsafe.Pointer) {
+	// 1: (const QString & name, const QIcon & fallback), (name, fallback)
+	var nilthis *QIcon
+	nilthis.FromTheme_1(name, fallback)
+}
+
+// /usr/include/qt/QtGui/qicon.h:116
+// index:0
+// static
+// bool hasThemeIcon(const class QString &)
+func (this *QIcon) HasThemeIcon(name unsafe.Pointer) {
+	// 0: (const QString & name), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon12hasThemeIconERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QIcon_HasThemeIcon(name unsafe.Pointer) {
+	// 0: (const QString & name), (name)
+	var nilthis *QIcon
+	nilthis.HasThemeIcon(name)
+}
+
+// /usr/include/qt/QtGui/qicon.h:118
+// index:0
+// static
+// QStringList themeSearchPaths()
+func (this *QIcon) ThemeSearchPaths() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon16themeSearchPathsEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QIcon_ThemeSearchPaths() {
+	// 0: (), ()
+	var nilthis *QIcon
+	nilthis.ThemeSearchPaths()
+}
+
+// /usr/include/qt/QtGui/qicon.h:119
+// index:0
+// static
+// void setThemeSearchPaths(const class QStringList &)
+func (this *QIcon) SetThemeSearchPaths(searchpath unsafe.Pointer) {
+	// 0: (const QStringList & searchpath), (searchpath)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon19setThemeSearchPathsERK11QStringList", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QIcon_SetThemeSearchPaths(searchpath unsafe.Pointer) {
+	// 0: (const QStringList & searchpath), (searchpath)
+	var nilthis *QIcon
+	nilthis.SetThemeSearchPaths(searchpath)
+}
+
+// /usr/include/qt/QtGui/qicon.h:121
+// index:0
+// static
+// QString themeName()
+func (this *QIcon) ThemeName() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9themeNameEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QIcon_ThemeName() {
+	// 0: (), ()
+	var nilthis *QIcon
+	nilthis.ThemeName()
+}
+
+// /usr/include/qt/QtGui/qicon.h:122
+// index:0
+// static
+// void setThemeName(const class QString &)
+func (this *QIcon) SetThemeName(path unsafe.Pointer) {
+	// 0: (const QString & path), (path)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon12setThemeNameERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QIcon_SetThemeName(path unsafe.Pointer) {
+	// 0: (const QString & path), (path)
+	var nilthis *QIcon
+	nilthis.SetThemeName(path)
+}
+
+//  body block end

@@ -1,1480 +1,553 @@
+//  header block begin
+// /usr/include/qt/QtGui/qmatrix4x4.h
+// #include <qmatrix4x4.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qmatrix4x4.h
-// dst-file: /src/gui/qmatrix4x4.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QVector4D QMatrix4x4::row(int index);
-extern void* C_ZNK10QMatrix4x43rowEi(void* qthis, int32_t arg0); // 2
-  // proto:  QVector3D QMatrix4x4::mapVector(const QVector3D & vector);
-extern void* C_ZNK10QMatrix4x49mapVectorERK9QVector3D(void* qthis, void* arg0); // 2
-  // proto:  QRectF QMatrix4x4::mapRect(const QRectF & rect);
-extern void* C_ZNK10QMatrix4x47mapRectERK6QRectF(void* qthis, void* arg0); // 4
-  // proto:  QRect QMatrix4x4::mapRect(const QRect & rect);
-extern void* C_ZNK10QMatrix4x47mapRectERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  QMatrix4x4 QMatrix4x4::inverted(bool * invertible);
-extern void* C_ZNK10QMatrix4x48invertedEPb(void* qthis, void* arg0); // 4
-  // proto:  void QMatrix4x4::lookAt(const QVector3D & eye, const QVector3D & center, const QVector3D & up);
-extern void C_ZN10QMatrix4x46lookAtERK9QVector3DS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  void QMatrix4x4::perspective(float verticalAngle, float aspectRatio, float nearPlane, float farPlane);
-extern void C_ZN10QMatrix4x411perspectiveEffff(void* qthis, float arg0, float arg1, float arg2, float arg3); // 4
-  // proto:  void QMatrix4x4::fill(float value);
-extern void C_ZN10QMatrix4x44fillEf(void* qthis, float arg0); // 2
-  // proto:  void QMatrix4x4::flipCoordinates();
-extern void C_ZN10QMatrix4x415flipCoordinatesEv(void* qthis); // 4
-  // proto:  void QMatrix4x4::scale(float x, float y);
-extern void C_ZN10QMatrix4x45scaleEff(void* qthis, float arg0, float arg1); // 4
-  // proto:  void QMatrix4x4::scale(float factor);
-extern void C_ZN10QMatrix4x45scaleEf(void* qthis, float arg0); // 4
-  // proto:  void QMatrix4x4::scale(const QVector3D & vector);
-extern void C_ZN10QMatrix4x45scaleERK9QVector3D(void* qthis, void* arg0); // 4
-  // proto:  void QMatrix4x4::scale(float x, float y, float z);
-extern void C_ZN10QMatrix4x45scaleEfff(void* qthis, float arg0, float arg1, float arg2); // 4
-  // proto:  const float * QMatrix4x4::constData();
-extern void* C_ZNK10QMatrix4x49constDataEv(void* qthis); // 2
-  // proto:  void QMatrix4x4::copyDataTo(float * values);
-extern void C_ZNK10QMatrix4x410copyDataToEPf(void* qthis, void* arg0); // 4
-  // proto:  bool QMatrix4x4::isIdentity();
-extern bool C_ZNK10QMatrix4x410isIdentityEv(void* qthis); // 2
-  // proto:  void QMatrix4x4::translate(const QVector3D & vector);
-extern void C_ZN10QMatrix4x49translateERK9QVector3D(void* qthis, void* arg0); // 4
-  // proto:  void QMatrix4x4::translate(float x, float y, float z);
-extern void C_ZN10QMatrix4x49translateEfff(void* qthis, float arg0, float arg1, float arg2); // 4
-  // proto:  void QMatrix4x4::translate(float x, float y);
-extern void C_ZN10QMatrix4x49translateEff(void* qthis, float arg0, float arg1); // 4
-  // proto:  void QMatrix4x4::setToIdentity();
-extern void C_ZN10QMatrix4x413setToIdentityEv(void* qthis); // 2
-  // proto:  QPoint QMatrix4x4::map(const QPoint & point);
-extern void* C_ZNK10QMatrix4x43mapERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  QPointF QMatrix4x4::map(const QPointF & point);
-extern void* C_ZNK10QMatrix4x43mapERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  QVector4D QMatrix4x4::map(const QVector4D & point);
-extern void* C_ZNK10QMatrix4x43mapERK9QVector4D(void* qthis, void* arg0); // 2
-  // proto:  QVector3D QMatrix4x4::map(const QVector3D & point);
-extern void* C_ZNK10QMatrix4x43mapERK9QVector3D(void* qthis, void* arg0); // 2
-  // proto:  double QMatrix4x4::determinant();
-extern double C_ZNK10QMatrix4x411determinantEv(void* qthis); // 4
-  // proto:  void QMatrix4x4::frustum(float left, float right, float bottom, float top, float nearPlane, float farPlane);
-extern void C_ZN10QMatrix4x47frustumEffffff(void* qthis, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5); // 4
-  // proto:  void QMatrix4x4::setColumn(int index, const QVector4D & value);
-extern void C_ZN10QMatrix4x49setColumnEiRK9QVector4D(void* qthis, int32_t arg0, void* arg1); // 2
-  // proto:  QMatrix3x3 QMatrix4x4::normalMatrix();
-extern void C_ZNK10QMatrix4x412normalMatrixEv(void* qthis); // 4
-  // proto:  QTransform QMatrix4x4::toTransform(float distanceToPlane);
-extern void* C_ZNK10QMatrix4x411toTransformEf(void* qthis, float arg0); // 4
-  // proto:  QTransform QMatrix4x4::toTransform();
-extern void* C_ZNK10QMatrix4x411toTransformEv(void* qthis); // 4
-  // proto:  QMatrix QMatrix4x4::toAffine();
-extern void* C_ZNK10QMatrix4x48toAffineEv(void* qthis); // 4
-  // proto:  float * QMatrix4x4::data();
-extern void* C_ZN10QMatrix4x44dataEv(void* qthis); // 2
-  // proto:  void QMatrix4x4::optimize();
-extern void C_ZN10QMatrix4x48optimizeEv(void* qthis); // 4
-  // proto:  void QMatrix4x4::viewport(float left, float bottom, float width, float height, float nearPlane, float farPlane);
-extern void C_ZN10QMatrix4x48viewportEffffff(void* qthis, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5); // 4
-  // proto:  void QMatrix4x4::viewport(const QRectF & rect);
-extern void C_ZN10QMatrix4x48viewportERK6QRectF(void* qthis, void* arg0); // 2
-  // proto:  QMatrix4x4 QMatrix4x4::transposed();
-extern void* C_ZNK10QMatrix4x410transposedEv(void* qthis); // 4
-  // proto:  void QMatrix4x4::rotate(float angle, const QVector3D & vector);
-extern void C_ZN10QMatrix4x46rotateEfRK9QVector3D(void* qthis, float arg0, void* arg1); // 4
-  // proto:  void QMatrix4x4::rotate(const QQuaternion & quaternion);
-extern void C_ZN10QMatrix4x46rotateERK11QQuaternion(void* qthis, void* arg0); // 4
-  // proto:  void QMatrix4x4::rotate(float angle, float x, float y, float z);
-extern void C_ZN10QMatrix4x46rotateEffff(void* qthis, float arg0, float arg1, float arg2, float arg3); // 4
-  // proto:  QVector4D QMatrix4x4::column(int index);
-extern void* C_ZNK10QMatrix4x46columnEi(void* qthis, int32_t arg0); // 2
-  // proto:  void QMatrix4x4::ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane);
-extern void C_ZN10QMatrix4x45orthoEffffff(void* qthis, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5); // 4
-  // proto:  void QMatrix4x4::ortho(const QRect & rect);
-extern void C_ZN10QMatrix4x45orthoERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  void QMatrix4x4::ortho(const QRectF & rect);
-extern void C_ZN10QMatrix4x45orthoERK6QRectF(void* qthis, void* arg0); // 4
-  // proto:  void QMatrix4x4::QMatrix4x4(const QTransform & transform);
-extern void* C_ZN10QMatrix4x4C2ERK10QTransform(void* arg0); // 3
-  // proto:  void QMatrix4x4::QMatrix4x4(const float * values, int cols, int rows);
-extern void* C_ZN10QMatrix4x4C2EPKfii(void* arg0, int32_t arg1, int32_t arg2); // 3
-  // proto:  void QMatrix4x4::QMatrix4x4(const float * values);
-extern void* C_ZN10QMatrix4x4C2EPKf(void* arg0); // 3
-  // proto:  void QMatrix4x4::QMatrix4x4(const QMatrix & matrix);
-extern void* C_ZN10QMatrix4x4C2ERK7QMatrix(void* arg0); // 3
-  // proto:  void QMatrix4x4::QMatrix4x4();
-extern void* C_ZN10QMatrix4x4C2Ev(); // 1
-  // proto:  void QMatrix4x4::QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44);
-extern void* C_ZN10QMatrix4x4C2Effffffffffffffff(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, float arg7, float arg8, float arg9, float arg10, float arg11, float arg12, float arg13, float arg14, float arg15); // 1
-  // proto:  void QMatrix4x4::setRow(int index, const QVector4D & value);
-extern void C_ZN10QMatrix4x46setRowEiRK9QVector4D(void* qthis, int32_t arg0, void* arg1); // 2
-  // proto:  bool QMatrix4x4::isAffine();
-extern bool C_ZNK10QMatrix4x48isAffineEv(void* qthis); // 2
+// extern C begin: 43
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QMatrix4x4)=68
+//  ext block end
+
+//  body block begin
 type QMatrix4x4 struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// row(int)
-func (this *QMatrix4x4) Row(args ...interface{}) (ret interface{}) {
-  // row(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x43rowEi
-    // invoke: QVector4D row(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QMatrix4x43rowEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVector4D{}) // "QVector4D"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "row", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:62
+// index:0
+// inline
+// void QMatrix4x4()
+func NewQMatrix4x4() *QMatrix4x4 {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x4C2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QMatrix4x4{cthis}
 }
 
-// mapVector(const class QVector3D &)
-func (this *QMatrix4x4) Mapvector(args ...interface{}) (ret interface{}) {
-  // mapVector(const class QVector3D &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x49mapVectorERK9QVector3D
-    // invoke: QVector3D mapVector(const class QVector3D &)
-    var arg0 = args[0].(*QVector3D).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QMatrix4x49mapVectorERK9QVector3D(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "mapVector", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:63
+// index:1
+// inline
+// void QMatrix4x4(Qt::Initialization)
+func NewQMatrix4x4_1(arg0 int) *QMatrix4x4 {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x4C2EN2Qt14InitializationE", ffiqt.FFI_TYPE_VOID, cthis, &arg0)
+	gopp.ErrPrint(err, rv)
+	return &QMatrix4x4{cthis}
 }
 
-// mapRect(const class QRectF &)
-func (this *QMatrix4x4) Maprect(args ...interface{}) (ret interface{}) {
-  // mapRect(const class QRectF &)
-  // mapRect(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x47mapRectERK6QRectF
-    // invoke: QRectF mapRect(const class QRectF &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QMatrix4x47mapRectERK6QRectF(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK10QMatrix4x47mapRectERK5QRect
-    // invoke: QRect mapRect(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QMatrix4x47mapRectERK5QRect(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "mapRect", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:64
+// index:2
+// void QMatrix4x4(const float *)
+func NewQMatrix4x4_2(values unsafe.Pointer) *QMatrix4x4 {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x4C2EPKf", ffiqt.FFI_TYPE_VOID, cthis, values)
+	gopp.ErrPrint(err, rv)
+	return &QMatrix4x4{cthis}
 }
 
-// inverted(_Bool *)
-func (this *QMatrix4x4) Inverted(args ...interface{}) (ret interface{}) {
-  // inverted(_Bool *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(true) // "bool *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x48invertedEPb
-    // invoke: QMatrix4x4 inverted(_Bool *)
-    var arg0 = (unsafe.Pointer)(args[0].(*bool))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QMatrix4x48invertedEPb(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QMatrix4x4{}) // "QMatrix4x4"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "inverted", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:65
+// index:3
+// inline
+// void QMatrix4x4(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)
+func NewQMatrix4x4_3(m11 float32, m12 float32, m13 float32, m14 float32, m21 float32, m22 float32, m23 float32, m24 float32, m31 float32, m32 float32, m33 float32, m34 float32, m41 float32, m42 float32, m43 float32, m44 float32) *QMatrix4x4 {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x4C2Effffffffffffffff", ffiqt.FFI_TYPE_VOID, cthis, &m11, &m12, &m13, &m14, &m21, &m22, &m23, &m24, &m31, &m32, &m33, &m34, &m41, &m42, &m43, &m44)
+	gopp.ErrPrint(err, rv)
+	return &QMatrix4x4{cthis}
 }
 
-// lookAt(const class QVector3D &, const class QVector3D &, const class QVector3D &)
-func (this *QMatrix4x4) Lookat(args ...interface{}) () {
-  // lookAt(const class QVector3D &, const class QVector3D &, const class QVector3D &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
-  vtys[0][1] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
-  vtys[0][2] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x46lookAtERK9QVector3DS2_S2_
-    // invoke: void lookAt(const class QVector3D &, const class QVector3D &, const class QVector3D &)
-    var arg0 = args[0].(*QVector3D).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QVector3D).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*QVector3D).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZN10QMatrix4x46lookAtERK9QVector3DS2_S2_(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "lookAt", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:73
+// index:4
+// void QMatrix4x4(const float *, int, int)
+func NewQMatrix4x4_4(values unsafe.Pointer, cols int, rows int) *QMatrix4x4 {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x4C2EPKfii", ffiqt.FFI_TYPE_VOID, cthis, values, &cols, &rows)
+	gopp.ErrPrint(err, rv)
+	return &QMatrix4x4{cthis}
 }
 
-// perspective(float, float, float, float)
-func (this *QMatrix4x4) Perspective(args ...interface{}) () {
-  // perspective(float, float, float, float)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.FloatTy(false) // "float"
-  vtys[0][1] = qtrt.FloatTy(false) // "float"
-  vtys[0][2] = qtrt.FloatTy(false) // "float"
-  vtys[0][3] = qtrt.FloatTy(false) // "float"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x411perspectiveEffff
-    // invoke: void perspective(float, float, float, float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.float(qtrt.PrimConv(args[1], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.float(qtrt.PrimConv(args[2], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.float(qtrt.PrimConv(args[3], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg3)}
-    C.C_ZN10QMatrix4x411perspectiveEffff(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "perspective", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:74
+// index:5
+// void QMatrix4x4(const class QTransform &)
+func NewQMatrix4x4_5(transform unsafe.Pointer) *QMatrix4x4 {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x4C2ERK10QTransform", ffiqt.FFI_TYPE_VOID, cthis, transform)
+	gopp.ErrPrint(err, rv)
+	return &QMatrix4x4{cthis}
 }
 
-// fill(float)
-func (this *QMatrix4x4) Fill(args ...interface{}) () {
-  // fill(float)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.FloatTy(false) // "float"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x44fillEf
-    // invoke: void fill(float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QMatrix4x44fillEf(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "fill", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:75
+// index:6
+// void QMatrix4x4(const class QMatrix &)
+func NewQMatrix4x4_6(matrix unsafe.Pointer) *QMatrix4x4 {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x4C2ERK7QMatrix", ffiqt.FFI_TYPE_VOID, cthis, matrix)
+	gopp.ErrPrint(err, rv)
+	return &QMatrix4x4{cthis}
 }
 
-// flipCoordinates()
-func (this *QMatrix4x4) Flipcoordinates(args ...interface{}) () {
-  // flipCoordinates()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x415flipCoordinatesEv
-    // invoke: void flipCoordinates()
-    C.C_ZN10QMatrix4x415flipCoordinatesEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "flipCoordinates", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:81
+// index:0
+// inline
+// QVector4D column(int)
+func (this *QMatrix4x4) Column(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x46columnEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// scale(float, float)
-func (this *QMatrix4x4) Scale(args ...interface{}) () {
-  // scale(float, float)
-  // scale(float)
-  // scale(const class QVector3D &)
-  // scale(float, float, float)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.FloatTy(false) // "float"
-  vtys[0][1] = qtrt.FloatTy(false) // "float"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.FloatTy(false) // "float"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = qtrt.FloatTy(false) // "float"
-  vtys[3][1] = qtrt.FloatTy(false) // "float"
-  vtys[3][2] = qtrt.FloatTy(false) // "float"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x45scaleEff
-    // invoke: void scale(float, float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.float(qtrt.PrimConv(args[1], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN10QMatrix4x45scaleEff(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZN10QMatrix4x45scaleEf
-    // invoke: void scale(float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QMatrix4x45scaleEf(this.Qclsinst, arg0)
-  case 2:
-    // invoke: _ZN10QMatrix4x45scaleERK9QVector3D
-    // invoke: void scale(const class QVector3D &)
-    var arg0 = args[0].(*QVector3D).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QMatrix4x45scaleERK9QVector3D(this.Qclsinst, arg0)
-  case 3:
-    // invoke: _ZN10QMatrix4x45scaleEfff
-    // invoke: void scale(float, float, float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.float(qtrt.PrimConv(args[1], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.float(qtrt.PrimConv(args[2], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg2)}
-    C.C_ZN10QMatrix4x45scaleEfff(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "scale", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:82
+// index:0
+// inline
+// void setColumn(int, const class QVector4D &)
+func (this *QMatrix4x4) SetColumn(index int, value unsafe.Pointer) {
+	// 0: (, int index, const QVector4D & value), (&index, value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x49setColumnEiRK9QVector4D", ffiqt.FFI_TYPE_VOID, this.cthis, &index, value)
+	gopp.ErrPrint(err, rv)
 }
 
-// constData()
-func (this *QMatrix4x4) Constdata(args ...interface{}) (ret interface{}) {
-  // constData()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x49constDataEv
-    // invoke: const float * constData()
-    var ret0 = C.C_ZNK10QMatrix4x49constDataEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.FloatTy(true) // "const float *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "constData", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:84
+// index:0
+// inline
+// QVector4D row(int)
+func (this *QMatrix4x4) Row(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43rowEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// copyDataTo(float *)
-func (this *QMatrix4x4) Copydatato(args ...interface{}) () {
-  // copyDataTo(float *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.FloatTy(true) // "float *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x410copyDataToEPf
-    // invoke: void copyDataTo(float *)
-    var arg0 = (unsafe.Pointer)(args[0].(*float32))
-    if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x410copyDataToEPf(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "copyDataTo", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:85
+// index:0
+// inline
+// void setRow(int, const class QVector4D &)
+func (this *QMatrix4x4) SetRow(index int, value unsafe.Pointer) {
+	// 0: (, int index, const QVector4D & value), (&index, value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x46setRowEiRK9QVector4D", ffiqt.FFI_TYPE_VOID, this.cthis, &index, value)
+	gopp.ErrPrint(err, rv)
 }
 
-// isIdentity()
-func (this *QMatrix4x4) Isidentity(args ...interface{}) (ret interface{}) {
-  // isIdentity()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x410isIdentityEv
-    // invoke: bool isIdentity()
-    var ret0 = C.C_ZNK10QMatrix4x410isIdentityEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "isIdentity", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:88
+// index:0
+// inline
+// bool isAffine()
+func (this *QMatrix4x4) IsAffine() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x48isAffineEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// translate(const class QVector3D &)
-func (this *QMatrix4x4) Translate(args ...interface{}) () {
-  // translate(const class QVector3D &)
-  // translate(float, float, float)
-  // translate(float, float)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.FloatTy(false) // "float"
-  vtys[1][1] = qtrt.FloatTy(false) // "float"
-  vtys[1][2] = qtrt.FloatTy(false) // "float"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.FloatTy(false) // "float"
-  vtys[2][1] = qtrt.FloatTy(false) // "float"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x49translateERK9QVector3D
-    // invoke: void translate(const class QVector3D &)
-    var arg0 = args[0].(*QVector3D).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QMatrix4x49translateERK9QVector3D(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN10QMatrix4x49translateEfff
-    // invoke: void translate(float, float, float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.float(qtrt.PrimConv(args[1], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.float(qtrt.PrimConv(args[2], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg2)}
-    C.C_ZN10QMatrix4x49translateEfff(this.Qclsinst, arg0, arg1, arg2)
-  case 2:
-    // invoke: _ZN10QMatrix4x49translateEff
-    // invoke: void translate(float, float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.float(qtrt.PrimConv(args[1], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN10QMatrix4x49translateEff(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "translate", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:90
+// index:0
+// inline
+// bool isIdentity()
+func (this *QMatrix4x4) IsIdentity() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x410isIdentityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setToIdentity()
-func (this *QMatrix4x4) Settoidentity(args ...interface{}) () {
-  // setToIdentity()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x413setToIdentityEv
-    // invoke: void setToIdentity()
-    C.C_ZN10QMatrix4x413setToIdentityEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "setToIdentity", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:91
+// index:0
+// inline
+// void setToIdentity()
+func (this *QMatrix4x4) SetToIdentity() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x413setToIdentityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// map(const class QPoint &)
-func (this *QMatrix4x4) Map_(args ...interface{}) (ret interface{}) {
-  // map(const class QPoint &)
-  // map(const class QPointF &)
-  // map(const class QVector4D &)
-  // map(const class QVector3D &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QVector4D{}) // "const QVector4D &"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x43mapERK6QPoint
-    // invoke: QPoint map(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QMatrix4x43mapERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK10QMatrix4x43mapERK7QPointF
-    // invoke: QPointF map(const class QPointF &)
-    var arg0 = args[0].(*qtcore.QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QMatrix4x43mapERK7QPointF(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPointF{}) // "QPointF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZNK10QMatrix4x43mapERK9QVector4D
-    // invoke: QVector4D map(const class QVector4D &)
-    var arg0 = args[0].(*QVector4D).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QMatrix4x43mapERK9QVector4D(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVector4D{}) // "QVector4D"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 3:
-    // invoke: _ZNK10QMatrix4x43mapERK9QVector3D
-    // invoke: QVector3D map(const class QVector3D &)
-    var arg0 = args[0].(*QVector3D).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QMatrix4x43mapERK9QVector3D(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "map", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:93
+// index:0
+// inline
+// void fill(float)
+func (this *QMatrix4x4) Fill(value float32) {
+	// 0: (, float value), (&value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x44fillEf", ffiqt.FFI_TYPE_VOID, this.cthis, &value)
+	gopp.ErrPrint(err, rv)
 }
 
-// determinant()
-func (this *QMatrix4x4) Determinant(args ...interface{}) (ret interface{}) {
-  // determinant()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x411determinantEv
-    // invoke: double determinant()
-    var ret0 = C.C_ZNK10QMatrix4x411determinantEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "double"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "determinant", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:95
+// index:0
+// double determinant()
+func (this *QMatrix4x4) Determinant() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x411determinantEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// frustum(float, float, float, float, float, float)
-func (this *QMatrix4x4) Frustum(args ...interface{}) () {
-  // frustum(float, float, float, float, float, float)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.FloatTy(false) // "float"
-  vtys[0][1] = qtrt.FloatTy(false) // "float"
-  vtys[0][2] = qtrt.FloatTy(false) // "float"
-  vtys[0][3] = qtrt.FloatTy(false) // "float"
-  vtys[0][4] = qtrt.FloatTy(false) // "float"
-  vtys[0][5] = qtrt.FloatTy(false) // "float"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x47frustumEffffff
-    // invoke: void frustum(float, float, float, float, float, float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.float(qtrt.PrimConv(args[1], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.float(qtrt.PrimConv(args[2], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.float(qtrt.PrimConv(args[3], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.float(qtrt.PrimConv(args[4], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg4)}
-    var arg5 = C.float(qtrt.PrimConv(args[5], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg5)}
-    C.C_ZN10QMatrix4x47frustumEffffff(this.Qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "frustum", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:96
+// index:0
+// QMatrix4x4 inverted(_Bool *)
+func (this *QMatrix4x4) Inverted(invertible unsafe.Pointer) {
+	// 0: (, bool * invertible), (invertible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x48invertedEPb", ffiqt.FFI_TYPE_VOID, this.cthis, invertible)
+	gopp.ErrPrint(err, rv)
 }
 
-// setColumn(int, const class QVector4D &)
-func (this *QMatrix4x4) Setcolumn(args ...interface{}) () {
-  // setColumn(int, const class QVector4D &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(QVector4D{}) // "const QVector4D &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x49setColumnEiRK9QVector4D
-    // invoke: void setColumn(int, const class QVector4D &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QVector4D).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN10QMatrix4x49setColumnEiRK9QVector4D(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "setColumn", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:97
+// index:0
+// QMatrix4x4 transposed()
+func (this *QMatrix4x4) Transposed() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x410transposedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// normalMatrix()
-func (this *QMatrix4x4) Normalmatrix(args ...interface{}) () {
-  // normalMatrix()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x412normalMatrixEv
-    // invoke: QMatrix3x3 normalMatrix()
-    C.C_ZNK10QMatrix4x412normalMatrixEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "normalMatrix", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:98
+// index:0
+// QMatrix3x3 normalMatrix()
+func (this *QMatrix4x4) NormalMatrix() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x412normalMatrixEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toTransform(float)
-func (this *QMatrix4x4) Totransform(args ...interface{}) (ret interface{}) {
-  // toTransform(float)
-  // toTransform()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.FloatTy(false) // "float"
-  vtys[1] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x411toTransformEf
-    // invoke: QTransform toTransform(float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QMatrix4x411toTransformEf(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK10QMatrix4x411toTransformEv
-    // invoke: QTransform toTransform()
-    var ret0 = C.C_ZNK10QMatrix4x411toTransformEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "toTransform", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:131
+// index:0
+// void scale(const class QVector3D &)
+func (this *QMatrix4x4) Scale(vector unsafe.Pointer) {
+	// 0: (, const QVector3D & vector), (vector)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x45scaleERK9QVector3D", ffiqt.FFI_TYPE_VOID, this.cthis, vector)
+	gopp.ErrPrint(err, rv)
 }
 
-// toAffine()
-func (this *QMatrix4x4) Toaffine(args ...interface{}) (ret interface{}) {
-  // toAffine()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x48toAffineEv
-    // invoke: QMatrix toAffine()
-    var ret0 = C.C_ZNK10QMatrix4x48toAffineEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QMatrix{}) // "QMatrix"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "toAffine", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:135
+// index:1
+// void scale(float, float)
+func (this *QMatrix4x4) Scale_1(x float32, y float32) {
+	// 1: (, float x, float y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x45scaleEff", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
 }
 
-// data()
-func (this *QMatrix4x4) Data(args ...interface{}) (ret interface{}) {
-  // data()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x44dataEv
-    // invoke: float * data()
-    var ret0 = C.C_ZN10QMatrix4x44dataEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.FloatTy(true) // "float *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "data", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:136
+// index:2
+// void scale(float, float, float)
+func (this *QMatrix4x4) Scale_2(x float32, y float32, z float32) {
+	// 2: (, float x, float y, float z), (&x, &y, &z)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x45scaleEfff", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &z)
+	gopp.ErrPrint(err, rv)
 }
 
-// optimize()
-func (this *QMatrix4x4) Optimize(args ...interface{}) () {
-  // optimize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x48optimizeEv
-    // invoke: void optimize()
-    C.C_ZN10QMatrix4x48optimizeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "optimize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:137
+// index:3
+// void scale(float)
+func (this *QMatrix4x4) Scale_3(factor float32) {
+	// 3: (, float factor), (&factor)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x45scaleEf", ffiqt.FFI_TYPE_VOID, this.cthis, &factor)
+	gopp.ErrPrint(err, rv)
 }
 
-// viewport(float, float, float, float, float, float)
-func (this *QMatrix4x4) Viewport(args ...interface{}) () {
-  // viewport(float, float, float, float, float, float)
-  // viewport(const class QRectF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.FloatTy(false) // "float"
-  vtys[0][1] = qtrt.FloatTy(false) // "float"
-  vtys[0][2] = qtrt.FloatTy(false) // "float"
-  vtys[0][3] = qtrt.FloatTy(false) // "float"
-  vtys[0][4] = qtrt.FloatTy(false) // "float"
-  vtys[0][5] = qtrt.FloatTy(false) // "float"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x48viewportEffffff
-    // invoke: void viewport(float, float, float, float, float, float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.float(qtrt.PrimConv(args[1], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.float(qtrt.PrimConv(args[2], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.float(qtrt.PrimConv(args[3], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.float(qtrt.PrimConv(args[4], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg4)}
-    var arg5 = C.float(qtrt.PrimConv(args[5], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg5)}
-    C.C_ZN10QMatrix4x48viewportEffffff(this.Qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
-  case 1:
-    // invoke: _ZN10QMatrix4x48viewportERK6QRectF
-    // invoke: void viewport(const class QRectF &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QMatrix4x48viewportERK6QRectF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "viewport", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:132
+// index:0
+// void translate(const class QVector3D &)
+func (this *QMatrix4x4) Translate(vector unsafe.Pointer) {
+	// 0: (, const QVector3D & vector), (vector)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x49translateERK9QVector3D", ffiqt.FFI_TYPE_VOID, this.cthis, vector)
+	gopp.ErrPrint(err, rv)
 }
 
-// transposed()
-func (this *QMatrix4x4) Transposed(args ...interface{}) (ret interface{}) {
-  // transposed()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x410transposedEv
-    // invoke: QMatrix4x4 transposed()
-    var ret0 = C.C_ZNK10QMatrix4x410transposedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QMatrix4x4{}) // "QMatrix4x4"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "transposed", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:138
+// index:1
+// void translate(float, float)
+func (this *QMatrix4x4) Translate_1(x float32, y float32) {
+	// 1: (, float x, float y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x49translateEff", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
 }
 
-// rotate(float, const class QVector3D &)
-func (this *QMatrix4x4) Rotate(args ...interface{}) () {
-  // rotate(float, const class QVector3D &)
-  // rotate(const class QQuaternion &)
-  // rotate(float, float, float, float)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.FloatTy(false) // "float"
-  vtys[0][1] = reflect.TypeOf(QVector3D{}) // "const QVector3D &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QQuaternion{}) // "const QQuaternion &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.FloatTy(false) // "float"
-  vtys[2][1] = qtrt.FloatTy(false) // "float"
-  vtys[2][2] = qtrt.FloatTy(false) // "float"
-  vtys[2][3] = qtrt.FloatTy(false) // "float"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x46rotateEfRK9QVector3D
-    // invoke: void rotate(float, const class QVector3D &)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QVector3D).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN10QMatrix4x46rotateEfRK9QVector3D(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZN10QMatrix4x46rotateERK11QQuaternion
-    // invoke: void rotate(const class QQuaternion &)
-    var arg0 = args[0].(*QQuaternion).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QMatrix4x46rotateERK11QQuaternion(this.Qclsinst, arg0)
-  case 2:
-    // invoke: _ZN10QMatrix4x46rotateEffff
-    // invoke: void rotate(float, float, float, float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.float(qtrt.PrimConv(args[1], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.float(qtrt.PrimConv(args[2], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.float(qtrt.PrimConv(args[3], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg3)}
-    C.C_ZN10QMatrix4x46rotateEffff(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "rotate", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:139
+// index:2
+// void translate(float, float, float)
+func (this *QMatrix4x4) Translate_2(x float32, y float32, z float32) {
+	// 2: (, float x, float y, float z), (&x, &y, &z)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x49translateEfff", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &z)
+	gopp.ErrPrint(err, rv)
 }
 
-// column(int)
-func (this *QMatrix4x4) Column(args ...interface{}) (ret interface{}) {
-  // column(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x46columnEi
-    // invoke: QVector4D column(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QMatrix4x46columnEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVector4D{}) // "QVector4D"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "column", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:133
+// index:0
+// void rotate(float, const class QVector3D &)
+func (this *QMatrix4x4) Rotate(angle float32, vector unsafe.Pointer) {
+	// 0: (, float angle, const QVector3D & vector), (&angle, vector)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x46rotateEfRK9QVector3D", ffiqt.FFI_TYPE_VOID, this.cthis, &angle, vector)
+	gopp.ErrPrint(err, rv)
 }
 
-// ortho(float, float, float, float, float, float)
-func (this *QMatrix4x4) Ortho(args ...interface{}) () {
-  // ortho(float, float, float, float, float, float)
-  // ortho(const class QRect &)
-  // ortho(const class QRectF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.FloatTy(false) // "float"
-  vtys[0][1] = qtrt.FloatTy(false) // "float"
-  vtys[0][2] = qtrt.FloatTy(false) // "float"
-  vtys[0][3] = qtrt.FloatTy(false) // "float"
-  vtys[0][4] = qtrt.FloatTy(false) // "float"
-  vtys[0][5] = qtrt.FloatTy(false) // "float"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x45orthoEffffff
-    // invoke: void ortho(float, float, float, float, float, float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.float(qtrt.PrimConv(args[1], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.float(qtrt.PrimConv(args[2], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.float(qtrt.PrimConv(args[3], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.float(qtrt.PrimConv(args[4], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg4)}
-    var arg5 = C.float(qtrt.PrimConv(args[5], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg5)}
-    C.C_ZN10QMatrix4x45orthoEffffff(this.Qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
-  case 1:
-    // invoke: _ZN10QMatrix4x45orthoERK5QRect
-    // invoke: void ortho(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QMatrix4x45orthoERK5QRect(this.Qclsinst, arg0)
-  case 2:
-    // invoke: _ZN10QMatrix4x45orthoERK6QRectF
-    // invoke: void ortho(const class QRectF &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QMatrix4x45orthoERK6QRectF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "ortho", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:140
+// index:1
+// void rotate(float, float, float, float)
+func (this *QMatrix4x4) Rotate_1(angle float32, x float32, y float32, z float32) {
+	// 1: (, float angle, float x, float y, float z), (&angle, &x, &y, &z)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x46rotateEffff", ffiqt.FFI_TYPE_VOID, this.cthis, &angle, &x, &y, &z)
+	gopp.ErrPrint(err, rv)
 }
 
-// QMatrix4x4(const class QTransform &)
-func NewQMatrix4x4(args ...interface{}) *QMatrix4x4 {
-  // QMatrix4x4(const class QTransform &)
-  // QMatrix4x4(const float *, int, int)
-  // QMatrix4x4(const float *)
-  // QMatrix4x4(const class QMatrix &)
-  // QMatrix4x4()
-  // QMatrix4x4(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTransform{}) // "const QTransform &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.FloatTy(true) // "const float *"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1][2] = qtrt.Int32Ty(false) // "int"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.FloatTy(true) // "const float *"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(QMatrix{}) // "const QMatrix &"
-  vtys[4] = make(map[int32]reflect.Type)
-  vtys[5] = make(map[int32]reflect.Type)
-  vtys[5][0] = qtrt.FloatTy(false) // "float"
-  vtys[5][1] = qtrt.FloatTy(false) // "float"
-  vtys[5][2] = qtrt.FloatTy(false) // "float"
-  vtys[5][3] = qtrt.FloatTy(false) // "float"
-  vtys[5][4] = qtrt.FloatTy(false) // "float"
-  vtys[5][5] = qtrt.FloatTy(false) // "float"
-  vtys[5][6] = qtrt.FloatTy(false) // "float"
-  vtys[5][7] = qtrt.FloatTy(false) // "float"
-  vtys[5][8] = qtrt.FloatTy(false) // "float"
-  vtys[5][9] = qtrt.FloatTy(false) // "float"
-  vtys[5][10] = qtrt.FloatTy(false) // "float"
-  vtys[5][11] = qtrt.FloatTy(false) // "float"
-  vtys[5][12] = qtrt.FloatTy(false) // "float"
-  vtys[5][13] = qtrt.FloatTy(false) // "float"
-  vtys[5][14] = qtrt.FloatTy(false) // "float"
-  vtys[5][15] = qtrt.FloatTy(false) // "float"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x4C1ERK10QTransform
-    // invoke: void QMatrix4x4(const class QTransform &)
-    var arg0 = args[0].(*QTransform).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN10QMatrix4x4C2ERK10QTransform(arg0)
-    return &QMatrix4x4{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN10QMatrix4x4C1EPKfii
-    // invoke: void QMatrix4x4(const float *, int, int)
-    var arg0 = (unsafe.Pointer)(args[0].(*float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN10QMatrix4x4C2EPKfii(arg0, arg1, arg2)
-    return &QMatrix4x4{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN10QMatrix4x4C1EPKf
-    // invoke: void QMatrix4x4(const float *)
-    var arg0 = (unsafe.Pointer)(args[0].(*float32))
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN10QMatrix4x4C2EPKf(arg0)
-    return &QMatrix4x4{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN10QMatrix4x4C1ERK7QMatrix
-    // invoke: void QMatrix4x4(const class QMatrix &)
-    var arg0 = args[0].(*QMatrix).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN10QMatrix4x4C2ERK7QMatrix(arg0)
-    return &QMatrix4x4{Qclsinst:qthis}
-  case 4:
-    // invoke: _ZN10QMatrix4x4C1Ev
-    // invoke: void QMatrix4x4()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN10QMatrix4x4C2Ev()
-    return &QMatrix4x4{Qclsinst:qthis}
-  case 5:
-    // invoke: _ZN10QMatrix4x4C1Effffffffffffffff
-    // invoke: void QMatrix4x4(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.float(qtrt.PrimConv(args[1], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.float(qtrt.PrimConv(args[2], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.float(qtrt.PrimConv(args[3], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.float(qtrt.PrimConv(args[4], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg4)}
-    var arg5 = C.float(qtrt.PrimConv(args[5], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg5)}
-    var arg6 = C.float(qtrt.PrimConv(args[6], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg6)}
-    var arg7 = C.float(qtrt.PrimConv(args[7], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg7)}
-    var arg8 = C.float(qtrt.PrimConv(args[8], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg8)}
-    var arg9 = C.float(qtrt.PrimConv(args[9], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg9)}
-    var arg10 = C.float(qtrt.PrimConv(args[10], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg10)}
-    var arg11 = C.float(qtrt.PrimConv(args[11], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg11)}
-    var arg12 = C.float(qtrt.PrimConv(args[12], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg12)}
-    var arg13 = C.float(qtrt.PrimConv(args[13], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg13)}
-    var arg14 = C.float(qtrt.PrimConv(args[14], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg14)}
-    var arg15 = C.float(qtrt.PrimConv(args[15], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg15)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN10QMatrix4x4C2Effffffffffffffff(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15)
-    return &QMatrix4x4{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "QMatrix4x4", args)
-  }
-
-  return nil // QMatrix4x4{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qmatrix4x4.h:142
+// index:2
+// void rotate(const class QQuaternion &)
+func (this *QMatrix4x4) Rotate_2(quaternion unsafe.Pointer) {
+	// 2: (, const QQuaternion & quaternion), (quaternion)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x46rotateERK11QQuaternion", ffiqt.FFI_TYPE_VOID, this.cthis, quaternion)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRow(int, const class QVector4D &)
-func (this *QMatrix4x4) Setrow(args ...interface{}) () {
-  // setRow(int, const class QVector4D &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(QVector4D{}) // "const QVector4D &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QMatrix4x46setRowEiRK9QVector4D
-    // invoke: void setRow(int, const class QVector4D &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QVector4D).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN10QMatrix4x46setRowEiRK9QVector4D(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "setRow", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:145
+// index:0
+// void ortho(const class QRect &)
+func (this *QMatrix4x4) Ortho(rect unsafe.Pointer) {
+	// 0: (, const QRect & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x45orthoERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
 }
 
-// isAffine()
-func (this *QMatrix4x4) Isaffine(args ...interface{}) (ret interface{}) {
-  // isAffine()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QMatrix4x48isAffineEv
-    // invoke: bool isAffine()
-    var ret0 = C.C_ZNK10QMatrix4x48isAffineEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMatrix4x4", "isAffine", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qmatrix4x4.h:146
+// index:1
+// void ortho(const class QRectF &)
+func (this *QMatrix4x4) Ortho_1(rect unsafe.Pointer) {
+	// 1: (, const QRectF & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x45orthoERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qmatrix4x4.h:147
+// index:2
+// void ortho(float, float, float, float, float, float)
+func (this *QMatrix4x4) Ortho_2(left float32, right float32, bottom float32, top float32, nearPlane float32, farPlane float32) {
+	// 2: (, float left, float right, float bottom, float top, float nearPlane, float farPlane), (&left, &right, &bottom, &top, &nearPlane, &farPlane)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x45orthoEffffff", ffiqt.FFI_TYPE_VOID, this.cthis, &left, &right, &bottom, &top, &nearPlane, &farPlane)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qmatrix4x4.h:148
+// index:0
+// void frustum(float, float, float, float, float, float)
+func (this *QMatrix4x4) Frustum(left float32, right float32, bottom float32, top float32, nearPlane float32, farPlane float32) {
+	// 0: (, float left, float right, float bottom, float top, float nearPlane, float farPlane), (&left, &right, &bottom, &top, &nearPlane, &farPlane)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x47frustumEffffff", ffiqt.FFI_TYPE_VOID, this.cthis, &left, &right, &bottom, &top, &nearPlane, &farPlane)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:149
+// index:0
+// void perspective(float, float, float, float)
+func (this *QMatrix4x4) Perspective(verticalAngle float32, aspectRatio float32, nearPlane float32, farPlane float32) {
+	// 0: (, float verticalAngle, float aspectRatio, float nearPlane, float farPlane), (&verticalAngle, &aspectRatio, &nearPlane, &farPlane)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x411perspectiveEffff", ffiqt.FFI_TYPE_VOID, this.cthis, &verticalAngle, &aspectRatio, &nearPlane, &farPlane)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:151
+// index:0
+// void lookAt(const class QVector3D &, const class QVector3D &, const class QVector3D &)
+func (this *QMatrix4x4) LookAt(eye unsafe.Pointer, center unsafe.Pointer, up unsafe.Pointer) {
+	// 0: (, const QVector3D & eye, const QVector3D & center, const QVector3D & up), (eye, center, up)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x46lookAtERK9QVector3DS2_S2_", ffiqt.FFI_TYPE_VOID, this.cthis, eye, center, up)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:153
+// index:0
+// void viewport(const class QRectF &)
+func (this *QMatrix4x4) Viewport(rect unsafe.Pointer) {
+	// 0: (, const QRectF & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x48viewportERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:154
+// index:1
+// void viewport(float, float, float, float, float, float)
+func (this *QMatrix4x4) Viewport_1(left float32, bottom float32, width float32, height float32, nearPlane float32, farPlane float32) {
+	// 1: (, float left, float bottom, float width, float height, float nearPlane, float farPlane), (&left, &bottom, &width, &height, &nearPlane, &farPlane)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x48viewportEffffff", ffiqt.FFI_TYPE_VOID, this.cthis, &left, &bottom, &width, &height, &nearPlane, &farPlane)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:155
+// index:0
+// void flipCoordinates()
+func (this *QMatrix4x4) FlipCoordinates() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x415flipCoordinatesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:157
+// index:0
+// void copyDataTo(float *)
+func (this *QMatrix4x4) CopyDataTo(values unsafe.Pointer) {
+	// 0: (, float * values), (values)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x410copyDataToEPf", ffiqt.FFI_TYPE_VOID, this.cthis, values)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:159
+// index:0
+// QMatrix toAffine()
+func (this *QMatrix4x4) ToAffine() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x48toAffineEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:160
+// index:0
+// QTransform toTransform()
+func (this *QMatrix4x4) ToTransform() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x411toTransformEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:161
+// index:1
+// QTransform toTransform(float)
+func (this *QMatrix4x4) ToTransform_1(distanceToPlane float32) {
+	// 1: (, float distanceToPlane), (&distanceToPlane)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x411toTransformEf", ffiqt.FFI_TYPE_VOID, this.cthis, &distanceToPlane)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:163
+// index:0
+// QPoint map(const class QPoint &)
+func (this *QMatrix4x4) Map(point unsafe.Pointer) {
+	// 0: (, const QPoint & point), (point)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, point)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:164
+// index:1
+// QPointF map(const class QPointF &)
+func (this *QMatrix4x4) Map_1(point unsafe.Pointer) {
+	// 1: (, const QPointF & point), (point)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, point)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:166
+// index:2
+// QVector3D map(const class QVector3D &)
+func (this *QMatrix4x4) Map_2(point unsafe.Pointer) {
+	// 2: (, const QVector3D & point), (point)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK9QVector3D", ffiqt.FFI_TYPE_VOID, this.cthis, point)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:170
+// index:3
+// QVector4D map(const class QVector4D &)
+func (this *QMatrix4x4) Map_3(point unsafe.Pointer) {
+	// 3: (, const QVector4D & point), (point)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK9QVector4D", ffiqt.FFI_TYPE_VOID, this.cthis, point)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:167
+// index:0
+// QVector3D mapVector(const class QVector3D &)
+func (this *QMatrix4x4) MapVector(vector unsafe.Pointer) {
+	// 0: (, const QVector3D & vector), (vector)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x49mapVectorERK9QVector3D", ffiqt.FFI_TYPE_VOID, this.cthis, vector)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:172
+// index:0
+// QRect mapRect(const class QRect &)
+func (this *QMatrix4x4) MapRect(rect unsafe.Pointer) {
+	// 0: (, const QRect & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x47mapRectERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:173
+// index:1
+// QRectF mapRect(const class QRectF &)
+func (this *QMatrix4x4) MapRect_1(rect unsafe.Pointer) {
+	// 1: (, const QRectF & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x47mapRectERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:178
+// index:0
+// inline
+// float * data()
+func (this *QMatrix4x4) Data() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x44dataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:179
+// index:1
+// inline
+// const float * data()
+func (this *QMatrix4x4) Data_1() {
+	// 1: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x44dataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:180
+// index:0
+// inline
+// const float * constData()
+func (this *QMatrix4x4) ConstData() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x49constDataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:182
+// index:0
+// void optimize()
+func (this *QMatrix4x4) Optimize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x48optimizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

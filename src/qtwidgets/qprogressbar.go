@@ -1,805 +1,307 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qprogressbar.h
+// #include <qprogressbar.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qprogressbar.h
-// dst-file: /src/widgets/qprogressbar.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  Qt::Orientation QProgressBar::orientation();
-extern void C_ZNK12QProgressBar11orientationEv(void* qthis); // 4
-  // proto:  QString QProgressBar::text();
-extern void* C_ZNK12QProgressBar4textEv(void* qthis); // 4
-  // proto:  bool QProgressBar::isTextVisible();
-extern bool C_ZNK12QProgressBar13isTextVisibleEv(void* qthis); // 4
-  // proto:  void QProgressBar::QProgressBar(QWidget * parent);
-extern void* C_ZN12QProgressBarC2EP7QWidget(void* arg0); // 3
-  // proto:  int QProgressBar::minimum();
-extern int32_t C_ZNK12QProgressBar7minimumEv(void* qthis); // 4
-  // proto:  Qt::Alignment QProgressBar::alignment();
-extern void C_ZNK12QProgressBar9alignmentEv(void* qthis); // 4
-  // proto:  QProgressBar::Direction QProgressBar::textDirection();
-extern void C_ZNK12QProgressBar13textDirectionEv(void* qthis); // 4
-  // proto:  void QProgressBar::resetFormat();
-extern void C_ZN12QProgressBar11resetFormatEv(void* qthis); // 4
-  // proto:  void QProgressBar::~QProgressBar();
-extern void C_ZN12QProgressBarD2Ev(void* qthis); // 4
-  // proto:  void QProgressBar::setFormat(const QString & format);
-extern void C_ZN12QProgressBar9setFormatERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QProgressBar::setMaximum(int maximum);
-extern void C_ZN12QProgressBar10setMaximumEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QProgressBar::setValue(int value);
-extern void C_ZN12QProgressBar8setValueEi(void* qthis, int32_t arg0); // 4
-  // proto:  QString QProgressBar::format();
-extern void* C_ZNK12QProgressBar6formatEv(void* qthis); // 4
-  // proto:  QSize QProgressBar::sizeHint();
-extern void* C_ZNK12QProgressBar8sizeHintEv(void* qthis); // 4
-  // proto:  void QProgressBar::setRange(int minimum, int maximum);
-extern void C_ZN12QProgressBar8setRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QProgressBar::reset();
-extern void C_ZN12QProgressBar5resetEv(void* qthis); // 4
-  // proto:  void QProgressBar::setInvertedAppearance(bool invert);
-extern void C_ZN12QProgressBar21setInvertedAppearanceEb(void* qthis, bool arg0); // 4
-  // proto:  const QMetaObject * QProgressBar::metaObject();
-extern void C_ZNK12QProgressBar10metaObjectEv(void* qthis); // 4
-  // proto:  void QProgressBar::setTextVisible(bool visible);
-extern void C_ZN12QProgressBar14setTextVisibleEb(void* qthis, bool arg0); // 4
-  // proto:  QSize QProgressBar::minimumSizeHint();
-extern void* C_ZNK12QProgressBar15minimumSizeHintEv(void* qthis); // 4
-  // proto:  int QProgressBar::maximum();
-extern int32_t C_ZNK12QProgressBar7maximumEv(void* qthis); // 4
-  // proto:  int QProgressBar::value();
-extern int32_t C_ZNK12QProgressBar5valueEv(void* qthis); // 4
-  // proto:  bool QProgressBar::invertedAppearance();
-extern bool C_ZNK12QProgressBar18invertedAppearanceEv(void* qthis); // 4
-  // proto:  void QProgressBar::setMinimum(int minimum);
-extern void C_ZN12QProgressBar10setMinimumEi(void* qthis, int32_t arg0); // 4
+// extern C begin: 13
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QProgressBar)=1
+//  ext block end
+
+//  body block begin
 type QProgressBar struct {
-  /*qbase*/ QWidget;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _valueChanged QProgressBar_valueChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// orientation()
-func (this *QProgressBar) Orientation(args ...interface{}) () {
-  // orientation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar11orientationEv
-    // invoke: Qt::Orientation orientation()
-    C.C_ZNK12QProgressBar11orientationEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "orientation", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:55
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QProgressBar) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// text()
-func (this *QProgressBar) Text(args ...interface{}) (ret interface{}) {
-  // text()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar4textEv
-    // invoke: QString text()
-    var ret0 = C.C_ZNK12QProgressBar4textEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QProgressBar", "text", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:71
+// index:0
+// void QProgressBar(class QWidget *)
+func NewQProgressBar(parent unsafe.Pointer) *QProgressBar {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBarC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QProgressBar{cthis}
 }
 
-// isTextVisible()
-func (this *QProgressBar) Istextvisible(args ...interface{}) (ret interface{}) {
-  // isTextVisible()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar13isTextVisibleEv
-    // invoke: bool isTextVisible()
-    var ret0 = C.C_ZNK12QProgressBar13isTextVisibleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QProgressBar", "isTextVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:72
+// index:0
+// virtual
+// void ~QProgressBar()
+func DeleteQProgressBar(*QProgressBar) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBarD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// QProgressBar(class QWidget *)
-func NewQProgressBar(args ...interface{}) *QProgressBar {
-  // QProgressBar(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QProgressBarC1EP7QWidget
-    // invoke: void QProgressBar(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN12QProgressBarC2EP7QWidget(arg0)
-    return &QProgressBar{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QProgressBar", "QProgressBar", args)
-  }
-
-  return nil // QProgressBar{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qprogressbar.h:74
+// index:0
+// int minimum()
+func (this *QProgressBar) Minimum() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar7minimumEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// minimum()
-func (this *QProgressBar) Minimum(args ...interface{}) (ret interface{}) {
-  // minimum()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar7minimumEv
-    // invoke: int minimum()
-    var ret0 = C.C_ZNK12QProgressBar7minimumEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QProgressBar", "minimum", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:75
+// index:0
+// int maximum()
+func (this *QProgressBar) Maximum() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar7maximumEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// alignment()
-func (this *QProgressBar) Alignment(args ...interface{}) () {
-  // alignment()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar9alignmentEv
-    // invoke: Qt::Alignment alignment()
-    C.C_ZNK12QProgressBar9alignmentEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "alignment", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:77
+// index:0
+// int value()
+func (this *QProgressBar) Value() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar5valueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// textDirection()
-func (this *QProgressBar) Textdirection(args ...interface{}) () {
-  // textDirection()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar13textDirectionEv
-    // invoke: QProgressBar::Direction textDirection()
-    C.C_ZNK12QProgressBar13textDirectionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "textDirection", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:79
+// index:0
+// virtual
+// QString text()
+func (this *QProgressBar) Text() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar4textEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// resetFormat()
-func (this *QProgressBar) Resetformat(args ...interface{}) () {
-  // resetFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QProgressBar11resetFormatEv
-    // invoke: void resetFormat()
-    C.C_ZN12QProgressBar11resetFormatEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "resetFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:80
+// index:0
+// void setTextVisible(_Bool)
+func (this *QProgressBar) SetTextVisible(visible bool) {
+	// 0: (, bool visible), (&visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar14setTextVisibleEb", ffiqt.FFI_TYPE_VOID, this.cthis, &visible)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QProgressBar()
-func (this *QProgressBar) Freeqprogressbar(args ...interface{}) () {
-  // ~QProgressBar()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QProgressBarD0Ev
-    // invoke: void ~QProgressBar()
-    C.C_ZN12QProgressBarD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "~QProgressBar", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:81
+// index:0
+// bool isTextVisible()
+func (this *QProgressBar) IsTextVisible() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar13isTextVisibleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFormat(const class QString &)
-func (this *QProgressBar) Setformat(args ...interface{}) () {
-  // setFormat(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QProgressBar9setFormatERK7QString
-    // invoke: void setFormat(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar9setFormatERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "setFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:83
+// index:0
+// Qt::Alignment alignment()
+func (this *QProgressBar) Alignment() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar9alignmentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setMaximum(int)
-func (this *QProgressBar) Setmaximum(args ...interface{}) () {
-  // setMaximum(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QProgressBar10setMaximumEi
-    // invoke: void setMaximum(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar10setMaximumEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "setMaximum", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:86
+// index:0
+// virtual
+// QSize sizeHint()
+func (this *QProgressBar) SizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setValue(int)
-func (this *QProgressBar) Setvalue(args ...interface{}) () {
-  // setValue(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QProgressBar8setValueEi
-    // invoke: void setValue(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar8setValueEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "setValue", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:87
+// index:0
+// virtual
+// QSize minimumSizeHint()
+func (this *QProgressBar) MinimumSizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar15minimumSizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// format()
-func (this *QProgressBar) Format(args ...interface{}) (ret interface{}) {
-  // format()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar6formatEv
-    // invoke: QString format()
-    var ret0 = C.C_ZNK12QProgressBar6formatEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QProgressBar", "format", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:89
+// index:0
+// Qt::Orientation orientation()
+func (this *QProgressBar) Orientation() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar11orientationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// sizeHint()
-func (this *QProgressBar) Sizehint(args ...interface{}) (ret interface{}) {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar8sizeHintEv
-    // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK12QProgressBar8sizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QProgressBar", "sizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:91
+// index:0
+// void setInvertedAppearance(_Bool)
+func (this *QProgressBar) SetInvertedAppearance(invert bool) {
+	// 0: (, bool invert), (&invert)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar21setInvertedAppearanceEb", ffiqt.FFI_TYPE_VOID, this.cthis, &invert)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRange(int, int)
-func (this *QProgressBar) Setrange(args ...interface{}) () {
-  // setRange(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QProgressBar8setRangeEii
-    // invoke: void setRange(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN12QProgressBar8setRangeEii(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "setRange", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:92
+// index:0
+// bool invertedAppearance()
+func (this *QProgressBar) InvertedAppearance() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar18invertedAppearanceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// reset()
-func (this *QProgressBar) Reset(args ...interface{}) () {
-  // reset()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QProgressBar5resetEv
-    // invoke: void reset()
-    C.C_ZN12QProgressBar5resetEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "reset", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:93
+// index:0
+// void setTextDirection(class QProgressBar::Direction)
+func (this *QProgressBar) SetTextDirection(textDirection int) {
+	// 0: (, QProgressBar::Direction textDirection), (&textDirection)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar16setTextDirectionENS_9DirectionE", ffiqt.FFI_TYPE_VOID, this.cthis, &textDirection)
+	gopp.ErrPrint(err, rv)
 }
 
-// setInvertedAppearance(_Bool)
-func (this *QProgressBar) Setinvertedappearance(args ...interface{}) () {
-  // setInvertedAppearance(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QProgressBar21setInvertedAppearanceEb
-    // invoke: void setInvertedAppearance(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar21setInvertedAppearanceEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "setInvertedAppearance", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:94
+// index:0
+// QProgressBar::Direction textDirection()
+func (this *QProgressBar) TextDirection() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar13textDirectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QProgressBar) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK12QProgressBar10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:96
+// index:0
+// void setFormat(const class QString &)
+func (this *QProgressBar) SetFormat(format unsafe.Pointer) {
+	// 0: (, const QString & format), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar9setFormatERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, format)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTextVisible(_Bool)
-func (this *QProgressBar) Settextvisible(args ...interface{}) () {
-  // setTextVisible(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QProgressBar14setTextVisibleEb
-    // invoke: void setTextVisible(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar14setTextVisibleEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "setTextVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:97
+// index:0
+// void resetFormat()
+func (this *QProgressBar) ResetFormat() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar11resetFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// minimumSizeHint()
-func (this *QProgressBar) Minimumsizehint(args ...interface{}) (ret interface{}) {
-  // minimumSizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar15minimumSizeHintEv
-    // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK12QProgressBar15minimumSizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QProgressBar", "minimumSizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:98
+// index:0
+// QString format()
+func (this *QProgressBar) Format() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar6formatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// maximum()
-func (this *QProgressBar) Maximum(args ...interface{}) (ret interface{}) {
-  // maximum()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar7maximumEv
-    // invoke: int maximum()
-    var ret0 = C.C_ZNK12QProgressBar7maximumEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QProgressBar", "maximum", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:101
+// index:0
+// void reset()
+func (this *QProgressBar) Reset() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar5resetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// value()
-func (this *QProgressBar) Value(args ...interface{}) (ret interface{}) {
-  // value()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar5valueEv
-    // invoke: int value()
-    var ret0 = C.C_ZNK12QProgressBar5valueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QProgressBar", "value", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:102
+// index:0
+// void setRange(int, int)
+func (this *QProgressBar) SetRange(minimum int, maximum int) {
+	// 0: (, int minimum, int maximum), (&minimum, &maximum)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar8setRangeEii", ffiqt.FFI_TYPE_VOID, this.cthis, &minimum, &maximum)
+	gopp.ErrPrint(err, rv)
 }
 
-// invertedAppearance()
-func (this *QProgressBar) Invertedappearance(args ...interface{}) (ret interface{}) {
-  // invertedAppearance()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QProgressBar18invertedAppearanceEv
-    // invoke: bool invertedAppearance()
-    var ret0 = C.C_ZNK12QProgressBar18invertedAppearanceEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QProgressBar", "invertedAppearance", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:103
+// index:0
+// void setMinimum(int)
+func (this *QProgressBar) SetMinimum(minimum int) {
+	// 0: (, int minimum), (&minimum)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar10setMinimumEi", ffiqt.FFI_TYPE_VOID, this.cthis, &minimum)
+	gopp.ErrPrint(err, rv)
 }
 
-// setMinimum(int)
-func (this *QProgressBar) Setminimum(args ...interface{}) () {
-  // setMinimum(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QProgressBar10setMinimumEi
-    // invoke: void setMinimum(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar10setMinimumEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QProgressBar", "setMinimum", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qprogressbar.h:104
+// index:0
+// void setMaximum(int)
+func (this *QProgressBar) SetMaximum(maximum int) {
+	// 0: (, int maximum), (&maximum)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar10setMaximumEi", ffiqt.FFI_TYPE_VOID, this.cthis, &maximum)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qprogressbar.h:105
+// index:0
+// void setValue(int)
+func (this *QProgressBar) SetValue(value int) {
+	// 0: (, int value), (&value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar8setValueEi", ffiqt.FFI_TYPE_VOID, this.cthis, &value)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qprogressbar.h:106
+// index:0
+// void setOrientation(Qt::Orientation)
+func (this *QProgressBar) SetOrientation(arg0 int) {
+	// 0: (, Qt::Orientation arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qprogressbar.h:109
+// index:0
+// void valueChanged(int)
+func (this *QProgressBar) ValueChanged(value int) {
+	// 0: (, int value), (&value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar12valueChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &value)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

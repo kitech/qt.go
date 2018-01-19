@@ -1,500 +1,225 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qshortcut.h
+// #include <qshortcut.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qshortcut.h
-// dst-file: /src/widgets/qshortcut.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QShortcut::~QShortcut();
-extern void C_ZN9QShortcutD2Ev(void* qthis); // 4
-  // proto:  int QShortcut::id();
-extern int32_t C_ZNK9QShortcut2idEv(void* qthis); // 4
-  // proto:  bool QShortcut::isEnabled();
-extern bool C_ZNK9QShortcut9isEnabledEv(void* qthis); // 4
-  // proto:  QString QShortcut::whatsThis();
-extern void* C_ZNK9QShortcut9whatsThisEv(void* qthis); // 4
-  // proto:  void QShortcut::setKey(const QKeySequence & key);
-extern void C_ZN9QShortcut6setKeyERK12QKeySequence(void* qthis, void* arg0); // 4
-  // proto:  void QShortcut::setEnabled(bool enable);
-extern void C_ZN9QShortcut10setEnabledEb(void* qthis, bool arg0); // 4
-  // proto:  void QShortcut::setAutoRepeat(bool on);
-extern void C_ZN9QShortcut13setAutoRepeatEb(void* qthis, bool arg0); // 4
-  // proto:  void QShortcut::QShortcut(QWidget * parent);
-extern void* C_ZN9QShortcutC2EP7QWidget(void* arg0); // 3
-  // proto:  void QShortcut::setWhatsThis(const QString & text);
-extern void C_ZN9QShortcut12setWhatsThisERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QKeySequence QShortcut::key();
-extern void* C_ZNK9QShortcut3keyEv(void* qthis); // 4
-  // proto:  const QMetaObject * QShortcut::metaObject();
-extern void C_ZNK9QShortcut10metaObjectEv(void* qthis); // 4
-  // proto:  QWidget * QShortcut::parentWidget();
-extern void* C_ZNK9QShortcut12parentWidgetEv(void* qthis); // 2
-  // proto:  Qt::ShortcutContext QShortcut::context();
-extern void C_ZNK9QShortcut7contextEv(void* qthis); // 4
-  // proto:  bool QShortcut::autoRepeat();
-extern bool C_ZNK9QShortcut10autoRepeatEv(void* qthis); // 4
+// extern C begin: 26
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QShortcut)=1
+//  ext block end
+
+//  body block begin
 type QShortcut struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _activated QShortcut_activated_signal;
-//  _activatedAmbiguously QShortcut_activatedAmbiguously_signal;
+	cthis unsafe.Pointer
 }
 
-// ~QShortcut()
-func (this *QShortcut) Freeqshortcut(args ...interface{}) () {
-  // ~QShortcut()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QShortcutD0Ev
-    // invoke: void ~QShortcut()
-    C.C_ZN9QShortcutD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QShortcut", "~QShortcut", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:55
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QShortcut) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// id()
-func (this *QShortcut) Id(args ...interface{}) (ret interface{}) {
-  // id()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QShortcut2idEv
-    // invoke: int id()
-    var ret0 = C.C_ZNK9QShortcut2idEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QShortcut", "id", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:63
+// index:0
+// void QShortcut(class QWidget *)
+func NewQShortcut(parent unsafe.Pointer) *QShortcut {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcutC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QShortcut{cthis}
 }
 
-// isEnabled()
-func (this *QShortcut) Isenabled(args ...interface{}) (ret interface{}) {
-  // isEnabled()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QShortcut9isEnabledEv
-    // invoke: bool isEnabled()
-    var ret0 = C.C_ZNK9QShortcut9isEnabledEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QShortcut", "isEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:64
+// index:1
+// void QShortcut(const class QKeySequence &, class QWidget *, const char *, const char *, Qt::ShortcutContext)
+func NewQShortcut_1(key unsafe.Pointer, parent unsafe.Pointer, member unsafe.Pointer, ambiguousMember unsafe.Pointer, context int) *QShortcut {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcutC2ERK12QKeySequenceP7QWidgetPKcS6_N2Qt15ShortcutContextE", ffiqt.FFI_TYPE_VOID, cthis, key, parent, member, ambiguousMember, &context)
+	gopp.ErrPrint(err, rv)
+	return &QShortcut{cthis}
 }
 
-// whatsThis()
-func (this *QShortcut) Whatsthis(args ...interface{}) (ret interface{}) {
-  // whatsThis()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QShortcut9whatsThisEv
-    // invoke: QString whatsThis()
-    var ret0 = C.C_ZNK9QShortcut9whatsThisEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QShortcut", "whatsThis", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:67
+// index:0
+// virtual
+// void ~QShortcut()
+func DeleteQShortcut(*QShortcut) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcutD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// setKey(const class QKeySequence &)
-func (this *QShortcut) Setkey(args ...interface{}) () {
-  // setKey(const class QKeySequence &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QKeySequence{}) // "const QKeySequence &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QShortcut6setKeyERK12QKeySequence
-    // invoke: void setKey(const class QKeySequence &)
-    var arg0 = args[0].(*qtgui.QKeySequence).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QShortcut6setKeyERK12QKeySequence(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QShortcut", "setKey", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:69
+// index:0
+// void setKey(const class QKeySequence &)
+func (this *QShortcut) SetKey(key unsafe.Pointer) {
+	// 0: (, const QKeySequence & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut6setKeyERK12QKeySequence", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
 }
 
-// setEnabled(_Bool)
-func (this *QShortcut) Setenabled(args ...interface{}) () {
-  // setEnabled(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QShortcut10setEnabledEb
-    // invoke: void setEnabled(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QShortcut10setEnabledEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QShortcut", "setEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:70
+// index:0
+// QKeySequence key()
+func (this *QShortcut) Key() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut3keyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setAutoRepeat(_Bool)
-func (this *QShortcut) Setautorepeat(args ...interface{}) () {
-  // setAutoRepeat(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QShortcut13setAutoRepeatEb
-    // invoke: void setAutoRepeat(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QShortcut13setAutoRepeatEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QShortcut", "setAutoRepeat", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:72
+// index:0
+// void setEnabled(_Bool)
+func (this *QShortcut) SetEnabled(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut10setEnabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// QShortcut(class QWidget *)
-func NewQShortcut(args ...interface{}) *QShortcut {
-  // QShortcut(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QShortcutC1EP7QWidget
-    // invoke: void QShortcut(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QShortcutC2EP7QWidget(arg0)
-    return &QShortcut{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QShortcut", "QShortcut", args)
-  }
-
-  return nil // QShortcut{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qshortcut.h:73
+// index:0
+// bool isEnabled()
+func (this *QShortcut) IsEnabled() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut9isEnabledEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setWhatsThis(const class QString &)
-func (this *QShortcut) Setwhatsthis(args ...interface{}) () {
-  // setWhatsThis(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QShortcut12setWhatsThisERK7QString
-    // invoke: void setWhatsThis(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QShortcut12setWhatsThisERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QShortcut", "setWhatsThis", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:75
+// index:0
+// void setContext(Qt::ShortcutContext)
+func (this *QShortcut) SetContext(context int) {
+	// 0: (, Qt::ShortcutContext context), (&context)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut10setContextEN2Qt15ShortcutContextE", ffiqt.FFI_TYPE_VOID, this.cthis, &context)
+	gopp.ErrPrint(err, rv)
 }
 
-// key()
-func (this *QShortcut) Key(args ...interface{}) (ret interface{}) {
-  // key()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QShortcut3keyEv
-    // invoke: QKeySequence key()
-    var ret0 = C.C_ZNK9QShortcut3keyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QKeySequence{}) // "QKeySequence"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QShortcut", "key", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:76
+// index:0
+// Qt::ShortcutContext context()
+func (this *QShortcut) Context() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut7contextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QShortcut) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QShortcut10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QShortcut10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QShortcut", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:78
+// index:0
+// void setWhatsThis(const class QString &)
+func (this *QShortcut) SetWhatsThis(text unsafe.Pointer) {
+	// 0: (, const QString & text), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut12setWhatsThisERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	gopp.ErrPrint(err, rv)
 }
 
-// parentWidget()
-func (this *QShortcut) Parentwidget(args ...interface{}) (ret interface{}) {
-  // parentWidget()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QShortcut12parentWidgetEv
-    // invoke: QWidget * parentWidget()
-    var ret0 = C.C_ZNK9QShortcut12parentWidgetEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QShortcut", "parentWidget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:79
+// index:0
+// QString whatsThis()
+func (this *QShortcut) WhatsThis() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut9whatsThisEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// context()
-func (this *QShortcut) Context(args ...interface{}) () {
-  // context()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QShortcut7contextEv
-    // invoke: Qt::ShortcutContext context()
-    C.C_ZNK9QShortcut7contextEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QShortcut", "context", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:81
+// index:0
+// void setAutoRepeat(_Bool)
+func (this *QShortcut) SetAutoRepeat(on bool) {
+	// 0: (, bool on), (&on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut13setAutoRepeatEb", ffiqt.FFI_TYPE_VOID, this.cthis, &on)
+	gopp.ErrPrint(err, rv)
 }
 
-// autoRepeat()
-func (this *QShortcut) Autorepeat(args ...interface{}) (ret interface{}) {
-  // autoRepeat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QShortcut10autoRepeatEv
-    // invoke: bool autoRepeat()
-    var ret0 = C.C_ZNK9QShortcut10autoRepeatEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QShortcut", "autoRepeat", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qshortcut.h:82
+// index:0
+// bool autoRepeat()
+func (this *QShortcut) AutoRepeat() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut10autoRepeatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qshortcut.h:84
+// index:0
+// int id()
+func (this *QShortcut) Id() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut2idEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qshortcut.h:86
+// index:0
+// inline
+// QWidget * parentWidget()
+func (this *QShortcut) ParentWidget() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut12parentWidgetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qshortcut.h:90
+// index:0
+// void activated()
+func (this *QShortcut) Activated() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut9activatedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qshortcut.h:91
+// index:0
+// void activatedAmbiguously()
+func (this *QShortcut) ActivatedAmbiguously() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut20activatedAmbiguouslyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

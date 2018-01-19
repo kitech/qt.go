@@ -1,1719 +1,568 @@
+//  header block begin
+// /usr/include/qt/QtCore/qfileinfo.h
+// #include <qfileinfo.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qfileinfo.h
-// dst-file: /src/core/qfileinfo.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QDir QFileInfo::absoluteDir();
-extern void* C_ZNK9QFileInfo11absoluteDirEv(void* qthis); // 4
-  // proto:  QString QFileInfo::suffix();
-extern void* C_ZNK9QFileInfo6suffixEv(void* qthis); // 4
-  // proto:  void QFileInfo::QFileInfo(const QFileInfo & fileinfo);
-extern void* C_ZN9QFileInfoC2ERKS_(void* arg0); // 3
-  // proto:  void QFileInfo::QFileInfo();
-extern void* C_ZN9QFileInfoC2Ev(); // 3
-  // proto:  void QFileInfo::QFileInfo(const QString & file);
-extern void* C_ZN9QFileInfoC2ERK7QString(void* arg0); // 3
-  // proto:  void QFileInfo::QFileInfo(const QFile & file);
-extern void* C_ZN9QFileInfoC2ERK5QFile(void* arg0); // 3
-  // proto:  void QFileInfo::QFileInfo(const QDir & dir, const QString & file);
-extern void* C_ZN9QFileInfoC2ERK4QDirRK7QString(void* arg0, void* arg1); // 3
-  // proto:  QString QFileInfo::symLinkTarget();
-extern void* C_ZNK9QFileInfo13symLinkTargetEv(void* qthis); // 2
-  // proto:  bool QFileInfo::isRelative();
-extern bool C_ZNK9QFileInfo10isRelativeEv(void* qthis); // 4
-  // proto:  QString QFileInfo::completeBaseName();
-extern void* C_ZNK9QFileInfo16completeBaseNameEv(void* qthis); // 4
-  // proto:  QString QFileInfo::canonicalFilePath();
-extern void* C_ZNK9QFileInfo17canonicalFilePathEv(void* qthis); // 4
-  // proto:  bool QFileInfo::isAbsolute();
-extern bool C_ZNK9QFileInfo10isAbsoluteEv(void* qthis); // 2
-  // proto:  QString QFileInfo::owner();
-extern void* C_ZNK9QFileInfo5ownerEv(void* qthis); // 4
-  // proto:  bool QFileInfo::isExecutable();
-extern bool C_ZNK9QFileInfo12isExecutableEv(void* qthis); // 4
-  // proto:  qint64 QFileInfo::size();
-extern int64_t C_ZNK9QFileInfo4sizeEv(void* qthis); // 4
-  // proto:  QString QFileInfo::bundleName();
-extern void* C_ZNK9QFileInfo10bundleNameEv(void* qthis); // 4
-  // proto:  QString QFileInfo::group();
-extern void* C_ZNK9QFileInfo5groupEv(void* qthis); // 4
-  // proto: static bool QFileInfo::exists(const QString & file);
-extern bool C_ZN9QFileInfo6existsERK7QString(void* arg0); // 4
-  // proto:  bool QFileInfo::exists();
-extern bool C_ZNK9QFileInfo6existsEv(void* qthis); // 4
-  // proto:  bool QFileInfo::isWritable();
-extern bool C_ZNK9QFileInfo10isWritableEv(void* qthis); // 4
-  // proto:  QString QFileInfo::filePath();
-extern void* C_ZNK9QFileInfo8filePathEv(void* qthis); // 4
-  // proto:  QString QFileInfo::absolutePath();
-extern void* C_ZNK9QFileInfo12absolutePathEv(void* qthis); // 4
-  // proto:  void QFileInfo::swap(QFileInfo & other);
-extern void C_ZN9QFileInfo4swapERS_(void* qthis, void* arg0); // 2
-  // proto:  QString QFileInfo::canonicalPath();
-extern void* C_ZNK9QFileInfo13canonicalPathEv(void* qthis); // 4
-  // proto:  bool QFileInfo::isBundle();
-extern bool C_ZNK9QFileInfo8isBundleEv(void* qthis); // 4
-  // proto:  bool QFileInfo::isHidden();
-extern bool C_ZNK9QFileInfo8isHiddenEv(void* qthis); // 4
-  // proto:  bool QFileInfo::isDir();
-extern bool C_ZNK9QFileInfo5isDirEv(void* qthis); // 4
-  // proto:  QDateTime QFileInfo::lastRead();
-extern void* C_ZNK9QFileInfo8lastReadEv(void* qthis); // 4
-  // proto:  bool QFileInfo::isRoot();
-extern bool C_ZNK9QFileInfo6isRootEv(void* qthis); // 4
-  // proto:  QString QFileInfo::absoluteFilePath();
-extern void* C_ZNK9QFileInfo16absoluteFilePathEv(void* qthis); // 4
-  // proto:  QString QFileInfo::fileName();
-extern void* C_ZNK9QFileInfo8fileNameEv(void* qthis); // 4
-  // proto:  void QFileInfo::setCaching(bool on);
-extern void C_ZN9QFileInfo10setCachingEb(void* qthis, bool arg0); // 4
-  // proto:  QString QFileInfo::completeSuffix();
-extern void* C_ZNK9QFileInfo14completeSuffixEv(void* qthis); // 4
-  // proto:  QString QFileInfo::path();
-extern void* C_ZNK9QFileInfo4pathEv(void* qthis); // 4
-  // proto:  void QFileInfo::~QFileInfo();
-extern void C_ZN9QFileInfoD2Ev(void* qthis); // 4
-  // proto:  uint QFileInfo::groupId();
-extern int32_t C_ZNK9QFileInfo7groupIdEv(void* qthis); // 4
-  // proto:  QFile::Permissions QFileInfo::permissions();
-extern void C_ZNK9QFileInfo11permissionsEv(void* qthis); // 4
-  // proto:  bool QFileInfo::isNativePath();
-extern bool C_ZNK9QFileInfo12isNativePathEv(void* qthis); // 4
-  // proto:  QDateTime QFileInfo::created();
-extern void* C_ZNK9QFileInfo7createdEv(void* qthis); // 4
-  // proto:  bool QFileInfo::isSymLink();
-extern bool C_ZNK9QFileInfo9isSymLinkEv(void* qthis); // 4
-  // proto:  QDateTime QFileInfo::lastModified();
-extern void* C_ZNK9QFileInfo12lastModifiedEv(void* qthis); // 4
-  // proto:  QString QFileInfo::baseName();
-extern void* C_ZNK9QFileInfo8baseNameEv(void* qthis); // 4
-  // proto:  void QFileInfo::refresh();
-extern void C_ZN9QFileInfo7refreshEv(void* qthis); // 4
-  // proto:  QString QFileInfo::readLink();
-extern void* C_ZNK9QFileInfo8readLinkEv(void* qthis); // 4
-  // proto:  void QFileInfo::setFile(const QDir & dir, const QString & file);
-extern void C_ZN9QFileInfo7setFileERK4QDirRK7QString(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  void QFileInfo::setFile(const QString & file);
-extern void C_ZN9QFileInfo7setFileERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QFileInfo::setFile(const QFile & file);
-extern void C_ZN9QFileInfo7setFileERK5QFile(void* qthis, void* arg0); // 4
-  // proto:  bool QFileInfo::isReadable();
-extern bool C_ZNK9QFileInfo10isReadableEv(void* qthis); // 4
-  // proto:  bool QFileInfo::caching();
-extern bool C_ZNK9QFileInfo7cachingEv(void* qthis); // 4
-  // proto:  uint QFileInfo::ownerId();
-extern int32_t C_ZNK9QFileInfo7ownerIdEv(void* qthis); // 4
-  // proto:  bool QFileInfo::isFile();
-extern bool C_ZNK9QFileInfo6isFileEv(void* qthis); // 4
-  // proto:  bool QFileInfo::makeAbsolute();
-extern bool C_ZN9QFileInfo12makeAbsoluteEv(void* qthis); // 4
-  // proto:  QDir QFileInfo::dir();
-extern void* C_ZNK9QFileInfo3dirEv(void* qthis); // 4
+// extern C begin: 30
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QFileInfo)=1
+//  ext block end
+
+//  body block begin
 type QFileInfo struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// absoluteDir()
-func (this *QFileInfo) Absolutedir(args ...interface{}) (ret interface{}) {
-  // absoluteDir()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo11absoluteDirEv
-    // invoke: QDir absoluteDir()
-    var ret0 = C.C_ZNK9QFileInfo11absoluteDirEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QDir{}) // "QDir"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "absoluteDir", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:60
+// index:0
+// void QFileInfo(class QFileInfoPrivate *)
+func NewQFileInfo(d unsafe.Pointer) *QFileInfo {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfoC2EP16QFileInfoPrivate", ffiqt.FFI_TYPE_VOID, cthis, d)
+	gopp.ErrPrint(err, rv)
+	return &QFileInfo{cthis}
 }
 
-// suffix()
-func (this *QFileInfo) Suffix(args ...interface{}) (ret interface{}) {
-  // suffix()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo6suffixEv
-    // invoke: QString suffix()
-    var ret0 = C.C_ZNK9QFileInfo6suffixEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "suffix", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:62
+// index:1
+// void QFileInfo()
+func NewQFileInfo_1() *QFileInfo {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfoC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QFileInfo{cthis}
 }
 
-// QFileInfo(const class QFileInfo &)
-func NewQFileInfo(args ...interface{}) *QFileInfo {
-  // QFileInfo(const class QFileInfo &)
-  // QFileInfo()
-  // QFileInfo(const class QString &)
-  // QFileInfo(const class QFile &)
-  // QFileInfo(const class QDir &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QFileInfo{}) // "const QFileInfo &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(QFile{}) // "const QFile &"
-  vtys[4] = make(map[int32]reflect.Type)
-  vtys[4][0] = reflect.TypeOf(QDir{}) // "const QDir &"
-  vtys[4][1] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QFileInfoC1ERKS_
-    // invoke: void QFileInfo(const class QFileInfo &)
-    var arg0 = args[0].(*QFileInfo).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QFileInfoC2ERKS_(arg0)
-    return &QFileInfo{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN9QFileInfoC1Ev
-    // invoke: void QFileInfo()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QFileInfoC2Ev()
-    return &QFileInfo{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN9QFileInfoC1ERK7QString
-    // invoke: void QFileInfo(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QFileInfoC2ERK7QString(arg0)
-    return &QFileInfo{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN9QFileInfoC1ERK5QFile
-    // invoke: void QFileInfo(const class QFile &)
-    var arg0 = args[0].(*QFile).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QFileInfoC2ERK5QFile(arg0)
-    return &QFileInfo{Qclsinst:qthis}
-  case 4:
-    // invoke: _ZN9QFileInfoC1ERK4QDirRK7QString
-    // invoke: void QFileInfo(const class QDir &, const class QString &)
-    var arg0 = args[0].(*QDir).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QFileInfoC2ERK4QDirRK7QString(arg0, arg1)
-    return &QFileInfo{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QFileInfo", "QFileInfo", args)
-  }
-
-  return nil // QFileInfo{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qfileinfo.h:63
+// index:2
+// void QFileInfo(const class QString &)
+func NewQFileInfo_2(file unsafe.Pointer) *QFileInfo {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfoC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, file)
+	gopp.ErrPrint(err, rv)
+	return &QFileInfo{cthis}
 }
 
-// symLinkTarget()
-func (this *QFileInfo) Symlinktarget(args ...interface{}) (ret interface{}) {
-  // symLinkTarget()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo13symLinkTargetEv
-    // invoke: QString symLinkTarget()
-    var ret0 = C.C_ZNK9QFileInfo13symLinkTargetEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "symLinkTarget", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:64
+// index:3
+// void QFileInfo(const class QFile &)
+func NewQFileInfo_3(file unsafe.Pointer) *QFileInfo {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfoC2ERK5QFile", ffiqt.FFI_TYPE_VOID, cthis, file)
+	gopp.ErrPrint(err, rv)
+	return &QFileInfo{cthis}
 }
 
-// isRelative()
-func (this *QFileInfo) Isrelative(args ...interface{}) (ret interface{}) {
-  // isRelative()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo10isRelativeEv
-    // invoke: bool isRelative()
-    var ret0 = C.C_ZNK9QFileInfo10isRelativeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isRelative", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:65
+// index:4
+// void QFileInfo(const class QDir &, const class QString &)
+func NewQFileInfo_4(dir unsafe.Pointer, file unsafe.Pointer) *QFileInfo {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfoC2ERK4QDirRK7QString", ffiqt.FFI_TYPE_VOID, cthis, dir, file)
+	gopp.ErrPrint(err, rv)
+	return &QFileInfo{cthis}
 }
 
-// completeBaseName()
-func (this *QFileInfo) Completebasename(args ...interface{}) (ret interface{}) {
-  // completeBaseName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo16completeBaseNameEv
-    // invoke: QString completeBaseName()
-    var ret0 = C.C_ZNK9QFileInfo16completeBaseNameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "completeBaseName", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:67
+// index:0
+// void ~QFileInfo()
+func DeleteQFileInfo(*QFileInfo) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfoD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// canonicalFilePath()
-func (this *QFileInfo) Canonicalfilepath(args ...interface{}) (ret interface{}) {
-  // canonicalFilePath()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo17canonicalFilePathEv
-    // invoke: QString canonicalFilePath()
-    var ret0 = C.C_ZNK9QFileInfo17canonicalFilePathEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "canonicalFilePath", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:74
+// index:0
+// inline
+// void swap(class QFileInfo &)
+func (this *QFileInfo) Swap(other unsafe.Pointer) {
+	// 0: (, QFileInfo & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// isAbsolute()
-func (this *QFileInfo) Isabsolute(args ...interface{}) (ret interface{}) {
-  // isAbsolute()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo10isAbsoluteEv
-    // invoke: bool isAbsolute()
-    var ret0 = C.C_ZNK9QFileInfo10isAbsoluteEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isAbsolute", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:80
+// index:0
+// void setFile(const class QString &)
+func (this *QFileInfo) SetFile(file unsafe.Pointer) {
+	// 0: (, const QString & file), (file)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo7setFileERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, file)
+	gopp.ErrPrint(err, rv)
 }
 
-// owner()
-func (this *QFileInfo) Owner(args ...interface{}) (ret interface{}) {
-  // owner()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo5ownerEv
-    // invoke: QString owner()
-    var ret0 = C.C_ZNK9QFileInfo5ownerEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "owner", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:81
+// index:1
+// void setFile(const class QFile &)
+func (this *QFileInfo) SetFile_1(file unsafe.Pointer) {
+	// 1: (, const QFile & file), (file)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo7setFileERK5QFile", ffiqt.FFI_TYPE_VOID, this.cthis, file)
+	gopp.ErrPrint(err, rv)
 }
 
-// isExecutable()
-func (this *QFileInfo) Isexecutable(args ...interface{}) (ret interface{}) {
-  // isExecutable()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo12isExecutableEv
-    // invoke: bool isExecutable()
-    var ret0 = C.C_ZNK9QFileInfo12isExecutableEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isExecutable", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:82
+// index:2
+// void setFile(const class QDir &, const class QString &)
+func (this *QFileInfo) SetFile_2(dir unsafe.Pointer, file unsafe.Pointer) {
+	// 2: (, const QDir & dir, const QString & file), (dir, file)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo7setFileERK4QDirRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, dir, file)
+	gopp.ErrPrint(err, rv)
 }
 
-// size()
-func (this *QFileInfo) Size(args ...interface{}) (ret interface{}) {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo4sizeEv
-    // invoke: qint64 size()
-    var ret0 = C.C_ZNK9QFileInfo4sizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int64Ty(false) // "qint64"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "size", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:83
+// index:0
+// bool exists()
+func (this *QFileInfo) Exists() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo6existsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// bundleName()
-func (this *QFileInfo) Bundlename(args ...interface{}) (ret interface{}) {
-  // bundleName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo10bundleNameEv
-    // invoke: QString bundleName()
-    var ret0 = C.C_ZNK9QFileInfo10bundleNameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "bundleName", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:84
+// index:1
+// static
+// bool exists(const class QString &)
+func (this *QFileInfo) Exists_1(file unsafe.Pointer) {
+	// 1: (const QString & file), (file)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo6existsERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFileInfo_Exists_1(file unsafe.Pointer) {
+	// 1: (const QString & file), (file)
+	var nilthis *QFileInfo
+	nilthis.Exists_1(file)
 }
 
-// group()
-func (this *QFileInfo) Group(args ...interface{}) (ret interface{}) {
-  // group()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo5groupEv
-    // invoke: QString group()
-    var ret0 = C.C_ZNK9QFileInfo5groupEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "group", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:85
+// index:0
+// void refresh()
+func (this *QFileInfo) Refresh() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo7refreshEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// exists(const class QString &)
-func (this *QFileInfo) Exists_S(args ...interface{}) (ret interface{}) {
-  // exists(const class QString &)
-  // exists()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QFileInfo6existsERK7QString
-    // invoke: bool exists(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QFileInfo6existsERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK9QFileInfo6existsEv
-    // invoke: bool exists()
-    var ret0 = C.C_ZNK9QFileInfo6existsEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "exists", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:87
+// index:0
+// QString filePath()
+func (this *QFileInfo) FilePath() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo8filePathEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isWritable()
-func (this *QFileInfo) Iswritable(args ...interface{}) (ret interface{}) {
-  // isWritable()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo10isWritableEv
-    // invoke: bool isWritable()
-    var ret0 = C.C_ZNK9QFileInfo10isWritableEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isWritable", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:88
+// index:0
+// QString absoluteFilePath()
+func (this *QFileInfo) AbsoluteFilePath() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo16absoluteFilePathEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// filePath()
-func (this *QFileInfo) Filepath(args ...interface{}) (ret interface{}) {
-  // filePath()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo8filePathEv
-    // invoke: QString filePath()
-    var ret0 = C.C_ZNK9QFileInfo8filePathEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "filePath", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:89
+// index:0
+// QString canonicalFilePath()
+func (this *QFileInfo) CanonicalFilePath() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo17canonicalFilePathEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// absolutePath()
-func (this *QFileInfo) Absolutepath(args ...interface{}) (ret interface{}) {
-  // absolutePath()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo12absolutePathEv
-    // invoke: QString absolutePath()
-    var ret0 = C.C_ZNK9QFileInfo12absolutePathEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "absolutePath", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:90
+// index:0
+// QString fileName()
+func (this *QFileInfo) FileName() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo8fileNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// swap(class QFileInfo &)
-func (this *QFileInfo) Swap(args ...interface{}) () {
-  // swap(class QFileInfo &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QFileInfo{}) // "QFileInfo &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QFileInfo4swapERS_
-    // invoke: void swap(class QFileInfo &)
-    var arg0 = args[0].(*QFileInfo).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QFileInfo4swapERS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileInfo", "swap", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:91
+// index:0
+// QString baseName()
+func (this *QFileInfo) BaseName() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo8baseNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// canonicalPath()
-func (this *QFileInfo) Canonicalpath(args ...interface{}) (ret interface{}) {
-  // canonicalPath()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo13canonicalPathEv
-    // invoke: QString canonicalPath()
-    var ret0 = C.C_ZNK9QFileInfo13canonicalPathEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "canonicalPath", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:92
+// index:0
+// QString completeBaseName()
+func (this *QFileInfo) CompleteBaseName() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo16completeBaseNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isBundle()
-func (this *QFileInfo) Isbundle(args ...interface{}) (ret interface{}) {
-  // isBundle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo8isBundleEv
-    // invoke: bool isBundle()
-    var ret0 = C.C_ZNK9QFileInfo8isBundleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isBundle", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:93
+// index:0
+// QString suffix()
+func (this *QFileInfo) Suffix() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo6suffixEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isHidden()
-func (this *QFileInfo) Ishidden(args ...interface{}) (ret interface{}) {
-  // isHidden()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo8isHiddenEv
-    // invoke: bool isHidden()
-    var ret0 = C.C_ZNK9QFileInfo8isHiddenEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isHidden", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:94
+// index:0
+// QString bundleName()
+func (this *QFileInfo) BundleName() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo10bundleNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isDir()
-func (this *QFileInfo) Isdir(args ...interface{}) (ret interface{}) {
-  // isDir()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo5isDirEv
-    // invoke: bool isDir()
-    var ret0 = C.C_ZNK9QFileInfo5isDirEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isDir", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:95
+// index:0
+// QString completeSuffix()
+func (this *QFileInfo) CompleteSuffix() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo14completeSuffixEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// lastRead()
-func (this *QFileInfo) Lastread(args ...interface{}) (ret interface{}) {
-  // lastRead()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo8lastReadEv
-    // invoke: QDateTime lastRead()
-    var ret0 = C.C_ZNK9QFileInfo8lastReadEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "lastRead", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:97
+// index:0
+// QString path()
+func (this *QFileInfo) Path() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo4pathEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isRoot()
-func (this *QFileInfo) Isroot(args ...interface{}) (ret interface{}) {
-  // isRoot()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo6isRootEv
-    // invoke: bool isRoot()
-    var ret0 = C.C_ZNK9QFileInfo6isRootEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isRoot", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:98
+// index:0
+// QString absolutePath()
+func (this *QFileInfo) AbsolutePath() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo12absolutePathEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// absoluteFilePath()
-func (this *QFileInfo) Absolutefilepath(args ...interface{}) (ret interface{}) {
-  // absoluteFilePath()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo16absoluteFilePathEv
-    // invoke: QString absoluteFilePath()
-    var ret0 = C.C_ZNK9QFileInfo16absoluteFilePathEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "absoluteFilePath", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:99
+// index:0
+// QString canonicalPath()
+func (this *QFileInfo) CanonicalPath() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo13canonicalPathEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// fileName()
-func (this *QFileInfo) Filename(args ...interface{}) (ret interface{}) {
-  // fileName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo8fileNameEv
-    // invoke: QString fileName()
-    var ret0 = C.C_ZNK9QFileInfo8fileNameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "fileName", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:100
+// index:0
+// QDir dir()
+func (this *QFileInfo) Dir() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo3dirEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setCaching(_Bool)
-func (this *QFileInfo) Setcaching(args ...interface{}) () {
-  // setCaching(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QFileInfo10setCachingEb
-    // invoke: void setCaching(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QFileInfo10setCachingEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileInfo", "setCaching", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:101
+// index:0
+// QDir absoluteDir()
+func (this *QFileInfo) AbsoluteDir() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo11absoluteDirEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// completeSuffix()
-func (this *QFileInfo) Completesuffix(args ...interface{}) (ret interface{}) {
-  // completeSuffix()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo14completeSuffixEv
-    // invoke: QString completeSuffix()
-    var ret0 = C.C_ZNK9QFileInfo14completeSuffixEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "completeSuffix", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:103
+// index:0
+// bool isReadable()
+func (this *QFileInfo) IsReadable() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo10isReadableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// path()
-func (this *QFileInfo) Path(args ...interface{}) (ret interface{}) {
-  // path()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo4pathEv
-    // invoke: QString path()
-    var ret0 = C.C_ZNK9QFileInfo4pathEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "path", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:104
+// index:0
+// bool isWritable()
+func (this *QFileInfo) IsWritable() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo10isWritableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QFileInfo()
-func (this *QFileInfo) Freeqfileinfo(args ...interface{}) () {
-  // ~QFileInfo()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QFileInfoD0Ev
-    // invoke: void ~QFileInfo()
-    C.C_ZN9QFileInfoD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileInfo", "~QFileInfo", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:105
+// index:0
+// bool isExecutable()
+func (this *QFileInfo) IsExecutable() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo12isExecutableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// groupId()
-func (this *QFileInfo) Groupid(args ...interface{}) (ret interface{}) {
-  // groupId()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo7groupIdEv
-    // invoke: uint groupId()
-    var ret0 = C.C_ZNK9QFileInfo7groupIdEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "uint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "groupId", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:106
+// index:0
+// bool isHidden()
+func (this *QFileInfo) IsHidden() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo8isHiddenEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// permissions()
-func (this *QFileInfo) Permissions(args ...interface{}) () {
-  // permissions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo11permissionsEv
-    // invoke: QFile::Permissions permissions()
-    C.C_ZNK9QFileInfo11permissionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileInfo", "permissions", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:107
+// index:0
+// bool isNativePath()
+func (this *QFileInfo) IsNativePath() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo12isNativePathEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isNativePath()
-func (this *QFileInfo) Isnativepath(args ...interface{}) (ret interface{}) {
-  // isNativePath()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo12isNativePathEv
-    // invoke: bool isNativePath()
-    var ret0 = C.C_ZNK9QFileInfo12isNativePathEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isNativePath", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:109
+// index:0
+// bool isRelative()
+func (this *QFileInfo) IsRelative() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo10isRelativeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// created()
-func (this *QFileInfo) Created(args ...interface{}) (ret interface{}) {
-  // created()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo7createdEv
-    // invoke: QDateTime created()
-    var ret0 = C.C_ZNK9QFileInfo7createdEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "created", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:110
+// index:0
+// inline
+// bool isAbsolute()
+func (this *QFileInfo) IsAbsolute() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo10isAbsoluteEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isSymLink()
-func (this *QFileInfo) Issymlink(args ...interface{}) (ret interface{}) {
-  // isSymLink()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo9isSymLinkEv
-    // invoke: bool isSymLink()
-    var ret0 = C.C_ZNK9QFileInfo9isSymLinkEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isSymLink", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:111
+// index:0
+// bool makeAbsolute()
+func (this *QFileInfo) MakeAbsolute() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo12makeAbsoluteEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// lastModified()
-func (this *QFileInfo) Lastmodified(args ...interface{}) (ret interface{}) {
-  // lastModified()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo12lastModifiedEv
-    // invoke: QDateTime lastModified()
-    var ret0 = C.C_ZNK9QFileInfo12lastModifiedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "lastModified", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:113
+// index:0
+// bool isFile()
+func (this *QFileInfo) IsFile() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo6isFileEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// baseName()
-func (this *QFileInfo) Basename(args ...interface{}) (ret interface{}) {
-  // baseName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo8baseNameEv
-    // invoke: QString baseName()
-    var ret0 = C.C_ZNK9QFileInfo8baseNameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "baseName", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:114
+// index:0
+// bool isDir()
+func (this *QFileInfo) IsDir() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo5isDirEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// refresh()
-func (this *QFileInfo) Refresh(args ...interface{}) () {
-  // refresh()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QFileInfo7refreshEv
-    // invoke: void refresh()
-    C.C_ZN9QFileInfo7refreshEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileInfo", "refresh", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:115
+// index:0
+// bool isSymLink()
+func (this *QFileInfo) IsSymLink() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo9isSymLinkEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// readLink()
-func (this *QFileInfo) Readlink(args ...interface{}) (ret interface{}) {
-  // readLink()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo8readLinkEv
-    // invoke: QString readLink()
-    var ret0 = C.C_ZNK9QFileInfo8readLinkEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "readLink", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:116
+// index:0
+// bool isRoot()
+func (this *QFileInfo) IsRoot() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo6isRootEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFile(const class QDir &, const class QString &)
-func (this *QFileInfo) Setfile(args ...interface{}) () {
-  // setFile(const class QDir &, const class QString &)
-  // setFile(const class QString &)
-  // setFile(const class QFile &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QDir{}) // "const QDir &"
-  vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QFile{}) // "const QFile &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QFileInfo7setFileERK4QDirRK7QString
-    // invoke: void setFile(const class QDir &, const class QString &)
-    var arg0 = args[0].(*QDir).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN9QFileInfo7setFileERK4QDirRK7QString(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZN9QFileInfo7setFileERK7QString
-    // invoke: void setFile(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QFileInfo7setFileERK7QString(this.Qclsinst, arg0)
-  case 2:
-    // invoke: _ZN9QFileInfo7setFileERK5QFile
-    // invoke: void setFile(const class QFile &)
-    var arg0 = args[0].(*QFile).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QFileInfo7setFileERK5QFile(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileInfo", "setFile", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:117
+// index:0
+// bool isBundle()
+func (this *QFileInfo) IsBundle() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo8isBundleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isReadable()
-func (this *QFileInfo) Isreadable(args ...interface{}) (ret interface{}) {
-  // isReadable()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo10isReadableEv
-    // invoke: bool isReadable()
-    var ret0 = C.C_ZNK9QFileInfo10isReadableEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isReadable", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:119
+// index:0
+// QString readLink()
+func (this *QFileInfo) ReadLink() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo8readLinkEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// caching()
-func (this *QFileInfo) Caching(args ...interface{}) (ret interface{}) {
-  // caching()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo7cachingEv
-    // invoke: bool caching()
-    var ret0 = C.C_ZNK9QFileInfo7cachingEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "caching", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:120
+// index:0
+// inline
+// QString symLinkTarget()
+func (this *QFileInfo) SymLinkTarget() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo13symLinkTargetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ownerId()
-func (this *QFileInfo) Ownerid(args ...interface{}) (ret interface{}) {
-  // ownerId()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo7ownerIdEv
-    // invoke: uint ownerId()
-    var ret0 = C.C_ZNK9QFileInfo7ownerIdEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "uint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "ownerId", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:122
+// index:0
+// QString owner()
+func (this *QFileInfo) Owner() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo5ownerEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isFile()
-func (this *QFileInfo) Isfile(args ...interface{}) (ret interface{}) {
-  // isFile()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo6isFileEv
-    // invoke: bool isFile()
-    var ret0 = C.C_ZNK9QFileInfo6isFileEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "isFile", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:123
+// index:0
+// uint ownerId()
+func (this *QFileInfo) OwnerId() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo7ownerIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// makeAbsolute()
-func (this *QFileInfo) Makeabsolute(args ...interface{}) (ret interface{}) {
-  // makeAbsolute()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QFileInfo12makeAbsoluteEv
-    // invoke: bool makeAbsolute()
-    var ret0 = C.C_ZN9QFileInfo12makeAbsoluteEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "makeAbsolute", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:124
+// index:0
+// QString group()
+func (this *QFileInfo) Group() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo5groupEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// dir()
-func (this *QFileInfo) Dir(args ...interface{}) (ret interface{}) {
-  // dir()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFileInfo3dirEv
-    // invoke: QDir dir()
-    var ret0 = C.C_ZNK9QFileInfo3dirEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QDir{}) // "QDir"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileInfo", "dir", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileinfo.h:125
+// index:0
+// uint groupId()
+func (this *QFileInfo) GroupId() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo7groupIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qfileinfo.h:128
+// index:0
+// QFile::Permissions permissions()
+func (this *QFileInfo) Permissions() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo11permissionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qfileinfo.h:130
+// index:0
+// qint64 size()
+func (this *QFileInfo) Size() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:135
+// index:0
+// QDateTime created()
+func (this *QFileInfo) Created() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo7createdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:137
+// index:0
+// QDateTime birthTime()
+func (this *QFileInfo) BirthTime() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo9birthTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:138
+// index:0
+// QDateTime metadataChangeTime()
+func (this *QFileInfo) MetadataChangeTime() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo18metadataChangeTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:139
+// index:0
+// QDateTime lastModified()
+func (this *QFileInfo) LastModified() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo12lastModifiedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:140
+// index:0
+// QDateTime lastRead()
+func (this *QFileInfo) LastRead() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo8lastReadEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:141
+// index:0
+// QDateTime fileTime(class QFile::FileTime)
+func (this *QFileInfo) FileTime(time int) {
+	// 0: (, QFile::FileTime time), (&time)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo8fileTimeEN11QFileDevice8FileTimeE", ffiqt.FFI_TYPE_VOID, this.cthis, &time)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:143
+// index:0
+// bool caching()
+func (this *QFileInfo) Caching() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo7cachingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:144
+// index:0
+// void setCaching(_Bool)
+func (this *QFileInfo) SetCaching(on bool) {
+	// 0: (, bool on), (&on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo10setCachingEb", ffiqt.FFI_TYPE_VOID, this.cthis, &on)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

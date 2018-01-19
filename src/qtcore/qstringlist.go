@@ -1,450 +1,153 @@
+//  header block begin
+// /usr/include/qt/QtCore/qstringlist.h
+// #include <qstringlist.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qstringlist.h
-// dst-file: /src/core/qstringlist.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  int QStringList::indexOf(const QRegExp & rx, int from);
-extern int32_t C_ZNK11QStringList7indexOfERK7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
-  // proto:  int QStringList::indexOf(const QRegularExpression & re, int from);
-extern int32_t C_ZNK11QStringList7indexOfERK18QRegularExpressioni(void* qthis, void* arg0, int32_t arg1); // 2
-  // proto:  int QStringList::indexOf(QRegExp & rx, int from);
-extern int32_t C_ZNK11QStringList7indexOfER7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
-  // proto:  void QStringList::QStringList();
-extern void* C_ZN11QStringListC2Ev(); // 1
-  // proto:  void QStringList::QStringList(const QString & i);
-extern void* C_ZN11QStringListC2ERK7QString(void* arg0); // 1
-  // proto:  int QStringList::lastIndexOf(const QRegExp & rx, int from);
-extern int32_t C_ZNK11QStringList11lastIndexOfERK7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
-  // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
-extern int32_t C_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(void* qthis, void* arg0, int32_t arg1); // 2
-  // proto:  int QStringList::lastIndexOf(QRegExp & rx, int from);
-extern int32_t C_ZNK11QStringList11lastIndexOfER7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
-  // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegularExpression & re, const QString & after);
-extern void C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(void* qthis, void* arg0, void* arg1); // 2
-  // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegExp & rx, const QString & after);
-extern void C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(void* qthis, void* arg0, void* arg1); // 2
-  // proto:  QString QListSpecialMethods<QString>::join(const QString & sep);
-extern void* C_ZNK19QListSpecialMethodsI7QStringE4joinERKS0_(void* qthis, void* arg0); // 2
-  // proto:  QString QListSpecialMethods<QString>::join(QChar sep);
-extern void* C_ZNK19QListSpecialMethodsI7QStringE4joinE5QChar(void* qthis, void* arg0); // 2
-  // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegularExpression & re);
-extern void C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(void* qthis, void* arg0); // 2
-  // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegExp & rx);
-extern void C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(void* qthis, void* arg0); // 2
-  // proto:  int QListSpecialMethods<QString>::removeDuplicates();
-extern int32_t C_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(void* qthis); // 2
+// extern C begin: 10
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QStringList)=1
+//  ext block end
+
+//  body block begin
 type QStringList struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// class sizeof(QListSpecialMethods<QString>)=1
-type QListSpecialMethodsLQStringG struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+// /usr/include/qt/QtCore/qstringlist.h:105
+// index:0
+// inline
+// void QStringList()
+func NewQStringList() *QStringList {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringListC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QStringList{cthis}
 }
 
-// indexOf(const class QRegExp &, int)
-func (this *QStringList) Indexof(args ...interface{}) (ret interface{}) {
-  // indexOf(const class QRegExp &, int)
-  // indexOf(const class QRegularExpression &, int)
-  // indexOf(class QRegExp &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegExp{}) // "const QRegExp &"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QRegularExpression{}) // "const QRegularExpression &"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QRegExp{}) // "QRegExp &"
-  vtys[2][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStringList7indexOfERK7QRegExpi
-    // invoke: int indexOf(const class QRegExp &, int)
-    var arg0 = args[0].(*QRegExp).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList7indexOfERK7QRegExpi(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK11QStringList7indexOfERK18QRegularExpressioni
-    // invoke: int indexOf(const class QRegularExpression &, int)
-    var arg0 = args[0].(*QRegularExpression).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList7indexOfERK18QRegularExpressioni(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZNK11QStringList7indexOfER7QRegExpi
-    // invoke: int indexOf(class QRegExp &, int)
-    var arg0 = args[0].(*QRegExp).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList7indexOfER7QRegExpi(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStringList", "indexOf", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstringlist.h:106
+// index:1
+// inline
+// void QStringList(const class QString &)
+func NewQStringList_1(i unsafe.Pointer) *QStringList {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringListC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, i)
+	gopp.ErrPrint(err, rv)
+	return &QStringList{cthis}
 }
 
-// QStringList()
-func NewQStringList(args ...interface{}) *QStringList {
-  // QStringList()
-  // QStringList(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStringListC1Ev
-    // invoke: void QStringList()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QStringListC2Ev()
-    return &QStringList{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN11QStringListC1ERK7QString
-    // invoke: void QStringList(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QStringListC2ERK7QString(arg0)
-    return &QStringList{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QStringList", "QStringList", args)
-  }
-
-  return nil // QStringList{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qstringlist.h:122
+// index:0
+// inline
+// bool contains(const class QString &, Qt::CaseSensitivity)
+func (this *QStringList) Contains(str unsafe.Pointer, cs int) {
+	// 0: (, const QString & str, Qt::CaseSensitivity cs), (str, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList8containsERK7QStringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.cthis, str, &cs)
+	gopp.ErrPrint(err, rv)
 }
 
-// lastIndexOf(const class QRegExp &, int)
-func (this *QStringList) Lastindexof(args ...interface{}) (ret interface{}) {
-  // lastIndexOf(const class QRegExp &, int)
-  // lastIndexOf(const class QRegularExpression &, int)
-  // lastIndexOf(class QRegExp &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegExp{}) // "const QRegExp &"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QRegularExpression{}) // "const QRegularExpression &"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QRegExp{}) // "QRegExp &"
-  vtys[2][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStringList11lastIndexOfERK7QRegExpi
-    // invoke: int lastIndexOf(const class QRegExp &, int)
-    var arg0 = args[0].(*QRegExp).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList11lastIndexOfERK7QRegExpi(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK11QStringList11lastIndexOfERK18QRegularExpressioni
-    // invoke: int lastIndexOf(const class QRegularExpression &, int)
-    var arg0 = args[0].(*QRegularExpression).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZNK11QStringList11lastIndexOfER7QRegExpi
-    // invoke: int lastIndexOf(class QRegExp &, int)
-    var arg0 = args[0].(*QRegExp).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList11lastIndexOfER7QRegExpi(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStringList", "lastIndexOf", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstringlist.h:123
+// index:1
+// inline
+// bool contains(class QLatin1String, Qt::CaseSensitivity)
+func (this *QStringList) Contains_1(str unsafe.Pointer, cs int) {
+	// 1: (, QLatin1String str, Qt::CaseSensitivity cs), (str, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList8containsE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.cthis, str, &cs)
+	gopp.ErrPrint(err, rv)
 }
 
-// replaceInStrings(const class QRegularExpression &, const class QString &)
-func (this *QListSpecialMethodsLQStringG) Replaceinstrings(args ...interface{}) () {
-  // replaceInStrings(const class QRegularExpression &, const class QString &)
-  // replaceInStrings(const class QRegExp &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegularExpression{}) // "const QRegularExpression &"
-  vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QRegExp{}) // "const QRegExp &"
-  vtys[1][1] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_
-    // invoke: QStringList & replaceInStrings(const class QRegularExpression &, const class QString &)
-    var arg0 = args[0].(*QRegularExpression).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_
-    // invoke: QStringList & replaceInStrings(const class QRegExp &, const class QString &)
-    var arg0 = args[0].(*QRegExp).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QListSpecialMethods<QString>", "replaceInStrings", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstringlist.h:135
+// index:0
+// inline
+// int indexOf(const class QRegExp &, int)
+func (this *QStringList) IndexOf(rx unsafe.Pointer, from int) {
+	// 0: (, const QRegExp & rx, int from), (rx, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK7QRegExpi", ffiqt.FFI_TYPE_VOID, this.cthis, rx, &from)
+	gopp.ErrPrint(err, rv)
 }
 
-// join(const class QString &)
-func (this *QListSpecialMethodsLQStringG) Join(args ...interface{}) (ret interface{}) {
-  // join(const class QString &)
-  // join(class QChar)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QChar{}) // "QChar"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QListSpecialMethodsI7QStringE4joinERKS0_
-    // invoke: QString join(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QListSpecialMethodsI7QStringE4joinERKS0_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK19QListSpecialMethodsI7QStringE4joinE5QChar
-    // invoke: QString join(class QChar)
-    var arg0 = args[0].(*QChar).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QListSpecialMethodsI7QStringE4joinE5QChar(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QListSpecialMethods<QString>", "join", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstringlist.h:137
+// index:1
+// inline
+// int indexOf(class QRegExp &, int)
+func (this *QStringList) IndexOf_1(rx unsafe.Pointer, from int) {
+	// 1: (, QRegExp & rx, int from), (rx, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList7indexOfER7QRegExpi", ffiqt.FFI_TYPE_VOID, this.cthis, rx, &from)
+	gopp.ErrPrint(err, rv)
 }
 
-// filter(const class QRegularExpression &)
-func (this *QListSpecialMethodsLQStringG) Filter(args ...interface{}) () {
-  // filter(const class QRegularExpression &)
-  // filter(const class QRegExp &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegularExpression{}) // "const QRegularExpression &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QRegExp{}) // "const QRegExp &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression
-    // invoke: QStringList filter(const class QRegularExpression &)
-    var arg0 = args[0].(*QRegularExpression).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp
-    // invoke: QStringList filter(const class QRegExp &)
-    var arg0 = args[0].(*QRegExp).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QListSpecialMethods<QString>", "filter", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstringlist.h:143
+// index:2
+// inline
+// int indexOf(const class QRegularExpression &, int)
+func (this *QStringList) IndexOf_2(re unsafe.Pointer, from int) {
+	// 2: (, const QRegularExpression & re, int from), (re, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK18QRegularExpressioni", ffiqt.FFI_TYPE_VOID, this.cthis, re, &from)
+	gopp.ErrPrint(err, rv)
 }
 
-// removeDuplicates()
-func (this *QListSpecialMethodsLQStringG) Removeduplicates(args ...interface{}) (ret interface{}) {
-  // removeDuplicates()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv
-    // invoke: int removeDuplicates()
-    var ret0 = C.C_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QListSpecialMethods<QString>", "removeDuplicates", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstringlist.h:136
+// index:0
+// inline
+// int lastIndexOf(const class QRegExp &, int)
+func (this *QStringList) LastIndexOf(rx unsafe.Pointer, from int) {
+	// 0: (, const QRegExp & rx, int from), (rx, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK7QRegExpi", ffiqt.FFI_TYPE_VOID, this.cthis, rx, &from)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qstringlist.h:138
+// index:1
+// inline
+// int lastIndexOf(class QRegExp &, int)
+func (this *QStringList) LastIndexOf_1(rx unsafe.Pointer, from int) {
+	// 1: (, QRegExp & rx, int from), (rx, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfER7QRegExpi", ffiqt.FFI_TYPE_VOID, this.cthis, rx, &from)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qstringlist.h:144
+// index:2
+// inline
+// int lastIndexOf(const class QRegularExpression &, int)
+func (this *QStringList) LastIndexOf_2(re unsafe.Pointer, from int) {
+	// 2: (, const QRegularExpression & re, int from), (re, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni", ffiqt.FFI_TYPE_VOID, this.cthis, re, &from)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

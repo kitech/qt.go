@@ -1,2075 +1,665 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qtreeview.h
+// #include <qtreeview.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qtreeview.h
-// dst-file: /src/widgets/qtreeview.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QTreeView::keyboardSearch(const QString & search);
-extern void C_ZN9QTreeView14keyboardSearchERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QTreeView::setColumnWidth(int column, int width);
-extern void C_ZN9QTreeView14setColumnWidthEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QTreeView::QTreeView(QWidget * parent);
-extern void* C_ZN9QTreeViewC2EP7QWidget(void* arg0); // 3
-  // proto:  void QTreeView::setHeaderHidden(bool hide);
-extern void C_ZN9QTreeView15setHeaderHiddenEb(void* qthis, bool arg0); // 4
-  // proto:  bool QTreeView::expandsOnDoubleClick();
-extern bool C_ZNK9QTreeView20expandsOnDoubleClickEv(void* qthis); // 4
-  // proto:  bool QTreeView::isExpanded(const QModelIndex & index);
-extern bool C_ZNK9QTreeView10isExpandedERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  void QTreeView::setFirstColumnSpanned(int row, const QModelIndex & parent, bool span);
-extern void C_ZN9QTreeView21setFirstColumnSpannedEiRK11QModelIndexb(void* qthis, int32_t arg0, void* arg1, bool arg2); // 4
-  // proto:  void QTreeView::resetIndentation();
-extern void C_ZN9QTreeView16resetIndentationEv(void* qthis); // 4
-  // proto:  QModelIndex QTreeView::indexAbove(const QModelIndex & index);
-extern void* C_ZNK9QTreeView10indexAboveERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  bool QTreeView::uniformRowHeights();
-extern bool C_ZNK9QTreeView17uniformRowHeightsEv(void* qthis); // 4
-  // proto:  void QTreeView::setRootIsDecorated(bool show);
-extern void C_ZN9QTreeView18setRootIsDecoratedEb(void* qthis, bool arg0); // 4
-  // proto:  void QTreeView::setSelectionModel(QItemSelectionModel * selectionModel);
-extern void C_ZN9QTreeView17setSelectionModelEP19QItemSelectionModel(void* qthis, void* arg0); // 4
-  // proto:  void QTreeView::setExpandsOnDoubleClick(bool enable);
-extern void C_ZN9QTreeView23setExpandsOnDoubleClickEb(void* qthis, bool arg0); // 4
-  // proto:  bool QTreeView::isFirstColumnSpanned(int row, const QModelIndex & parent);
-extern bool C_ZNK9QTreeView20isFirstColumnSpannedEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1); // 4
-  // proto:  const QMetaObject * QTreeView::metaObject();
-extern void C_ZNK9QTreeView10metaObjectEv(void* qthis); // 4
-  // proto:  QHeaderView * QTreeView::header();
-extern void* C_ZNK9QTreeView6headerEv(void* qthis); // 4
-  // proto:  void QTreeView::doItemsLayout();
-extern void C_ZN9QTreeView13doItemsLayoutEv(void* qthis); // 4
-  // proto:  void QTreeView::resizeColumnToContents(int column);
-extern void C_ZN9QTreeView22resizeColumnToContentsEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QTreeView::columnAt(int x);
-extern int32_t C_ZNK9QTreeView8columnAtEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTreeView::setAllColumnsShowFocus(bool enable);
-extern void C_ZN9QTreeView22setAllColumnsShowFocusEb(void* qthis, bool arg0); // 4
-  // proto:  void QTreeView::showColumn(int column);
-extern void C_ZN9QTreeView10showColumnEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTreeView::setExpanded(const QModelIndex & index, bool expand);
-extern void C_ZN9QTreeView11setExpandedERK11QModelIndexb(void* qthis, void* arg0, bool arg1); // 4
-  // proto:  void QTreeView::setRowHidden(int row, const QModelIndex & parent, bool hide);
-extern void C_ZN9QTreeView12setRowHiddenEiRK11QModelIndexb(void* qthis, int32_t arg0, void* arg1, bool arg2); // 4
-  // proto:  bool QTreeView::itemsExpandable();
-extern bool C_ZNK9QTreeView15itemsExpandableEv(void* qthis); // 4
-  // proto:  bool QTreeView::isHeaderHidden();
-extern bool C_ZNK9QTreeView14isHeaderHiddenEv(void* qthis); // 4
-  // proto:  void QTreeView::setUniformRowHeights(bool uniform);
-extern void C_ZN9QTreeView20setUniformRowHeightsEb(void* qthis, bool arg0); // 4
-  // proto:  void QTreeView::sortByColumn(int column);
-extern void C_ZN9QTreeView12sortByColumnEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QTreeView::indentation();
-extern int32_t C_ZNK9QTreeView11indentationEv(void* qthis); // 4
-  // proto:  void QTreeView::selectAll();
-extern void C_ZN9QTreeView9selectAllEv(void* qthis); // 4
-  // proto:  void QTreeView::setTreePosition(int logicalIndex);
-extern void C_ZN9QTreeView15setTreePositionEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QTreeView::autoExpandDelay();
-extern int32_t C_ZNK9QTreeView15autoExpandDelayEv(void* qthis); // 4
-  // proto:  bool QTreeView::allColumnsShowFocus();
-extern bool C_ZNK9QTreeView19allColumnsShowFocusEv(void* qthis); // 4
-  // proto:  bool QTreeView::isAnimated();
-extern bool C_ZNK9QTreeView10isAnimatedEv(void* qthis); // 4
-  // proto:  void QTreeView::setColumnHidden(int column, bool hide);
-extern void C_ZN9QTreeView15setColumnHiddenEib(void* qthis, int32_t arg0, bool arg1); // 4
-  // proto:  bool QTreeView::isColumnHidden(int column);
-extern bool C_ZNK9QTreeView14isColumnHiddenEi(void* qthis, int32_t arg0); // 4
-  // proto:  QRect QTreeView::visualRect(const QModelIndex & index);
-extern void* C_ZNK9QTreeView10visualRectERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QModelIndex QTreeView::indexAt(const QPoint & p);
-extern void* C_ZNK9QTreeView7indexAtERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  void QTreeView::collapse(const QModelIndex & index);
-extern void C_ZN9QTreeView8collapseERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  bool QTreeView::isSortingEnabled();
-extern bool C_ZNK9QTreeView16isSortingEnabledEv(void* qthis); // 4
-  // proto:  void QTreeView::setRootIndex(const QModelIndex & index);
-extern void C_ZN9QTreeView12setRootIndexERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  void QTreeView::reset();
-extern void C_ZN9QTreeView5resetEv(void* qthis); // 4
-  // proto:  int QTreeView::treePosition();
-extern int32_t C_ZNK9QTreeView12treePositionEv(void* qthis); // 4
-  // proto:  bool QTreeView::rootIsDecorated();
-extern bool C_ZNK9QTreeView15rootIsDecoratedEv(void* qthis); // 4
-  // proto:  void QTreeView::setSortingEnabled(bool enable);
-extern void C_ZN9QTreeView17setSortingEnabledEb(void* qthis, bool arg0); // 4
-  // proto:  void QTreeView::expandToDepth(int depth);
-extern void C_ZN9QTreeView13expandToDepthEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTreeView::setAutoExpandDelay(int delay);
-extern void C_ZN9QTreeView18setAutoExpandDelayEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTreeView::collapseAll();
-extern void C_ZN9QTreeView11collapseAllEv(void* qthis); // 4
-  // proto:  bool QTreeView::wordWrap();
-extern bool C_ZNK9QTreeView8wordWrapEv(void* qthis); // 4
-  // proto:  void QTreeView::hideColumn(int column);
-extern void C_ZN9QTreeView10hideColumnEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTreeView::~QTreeView();
-extern void C_ZN9QTreeViewD2Ev(void* qthis); // 4
-  // proto:  void QTreeView::setWordWrap(bool on);
-extern void C_ZN9QTreeView11setWordWrapEb(void* qthis, bool arg0); // 4
-  // proto:  bool QTreeView::isRowHidden(int row, const QModelIndex & parent);
-extern bool C_ZNK9QTreeView11isRowHiddenEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1); // 4
-  // proto:  void QTreeView::expandAll();
-extern void C_ZN9QTreeView9expandAllEv(void* qthis); // 4
-  // proto:  int QTreeView::columnViewportPosition(int column);
-extern int32_t C_ZNK9QTreeView22columnViewportPositionEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTreeView::setIndentation(int i);
-extern void C_ZN9QTreeView14setIndentationEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTreeView::setModel(QAbstractItemModel * model);
-extern void C_ZN9QTreeView8setModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
-  // proto:  void QTreeView::setAnimated(bool enable);
-extern void C_ZN9QTreeView11setAnimatedEb(void* qthis, bool arg0); // 4
-  // proto:  QModelIndex QTreeView::indexBelow(const QModelIndex & index);
-extern void* C_ZNK9QTreeView10indexBelowERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  void QTreeView::expand(const QModelIndex & index);
-extern void C_ZN9QTreeView6expandERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  void QTreeView::setItemsExpandable(bool enable);
-extern void C_ZN9QTreeView18setItemsExpandableEb(void* qthis, bool arg0); // 4
-  // proto:  int QTreeView::columnWidth(int column);
-extern int32_t C_ZNK9QTreeView11columnWidthEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTreeView::setHeader(QHeaderView * header);
-extern void C_ZN9QTreeView9setHeaderEP11QHeaderView(void* qthis, void* arg0); // 4
+// extern C begin: 10
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QTreeView)=1
+//  ext block end
+
+//  body block begin
 type QTreeView struct {
-  /*qbase*/ QAbstractItemView;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _collapsed QTreeView_collapsed_signal;
-//  _expanded QTreeView_expanded_signal;
+	cthis unsafe.Pointer
 }
 
-// keyboardSearch(const class QString &)
-func (this *QTreeView) Keyboardsearch(args ...interface{}) () {
-  // keyboardSearch(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView14keyboardSearchERK7QString
-    // invoke: void keyboardSearch(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView14keyboardSearchERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "keyboardSearch", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:57
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QTreeView) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setColumnWidth(int, int)
-func (this *QTreeView) Setcolumnwidth(args ...interface{}) () {
-  // setColumnWidth(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView14setColumnWidthEii
-    // invoke: void setColumnWidth(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN9QTreeView14setColumnWidthEii(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setColumnWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:71
+// index:0
+// void QTreeView(class QWidget *)
+func NewQTreeView(parent unsafe.Pointer) *QTreeView {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeViewC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QTreeView{cthis}
 }
 
-// QTreeView(class QWidget *)
-func NewQTreeView(args ...interface{}) *QTreeView {
-  // QTreeView(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeViewC1EP7QWidget
-    // invoke: void QTreeView(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QTreeViewC2EP7QWidget(arg0)
-    return &QTreeView{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QTreeView", "QTreeView", args)
-  }
-
-  return nil // QTreeView{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qtreeview.h:72
+// index:0
+// virtual
+// void ~QTreeView()
+func DeleteQTreeView(*QTreeView) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeViewD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// setHeaderHidden(_Bool)
-func (this *QTreeView) Setheaderhidden(args ...interface{}) () {
-  // setHeaderHidden(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView15setHeaderHiddenEb
-    // invoke: void setHeaderHidden(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView15setHeaderHiddenEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setHeaderHidden", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:74
+// index:0
+// virtual
+// void setModel(class QAbstractItemModel *)
+func (this *QTreeView) SetModel(model unsafe.Pointer) {
+	// 0: (, QAbstractItemModel * model), (model)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_VOID, this.cthis, model)
+	gopp.ErrPrint(err, rv)
 }
 
-// expandsOnDoubleClick()
-func (this *QTreeView) Expandsondoubleclick(args ...interface{}) (ret interface{}) {
-  // expandsOnDoubleClick()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView20expandsOnDoubleClickEv
-    // invoke: bool expandsOnDoubleClick()
-    var ret0 = C.C_ZNK9QTreeView20expandsOnDoubleClickEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "expandsOnDoubleClick", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:75
+// index:0
+// virtual
+// void setRootIndex(const class QModelIndex &)
+func (this *QTreeView) SetRootIndex(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView12setRootIndexERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// isExpanded(const class QModelIndex &)
-func (this *QTreeView) Isexpanded(args ...interface{}) (ret interface{}) {
-  // isExpanded(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView10isExpandedERK11QModelIndex
-    // invoke: bool isExpanded(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTreeView10isExpandedERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "isExpanded", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:76
+// index:0
+// virtual
+// void setSelectionModel(class QItemSelectionModel *)
+func (this *QTreeView) SetSelectionModel(selectionModel unsafe.Pointer) {
+	// 0: (, QItemSelectionModel * selectionModel), (selectionModel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView17setSelectionModelEP19QItemSelectionModel", ffiqt.FFI_TYPE_VOID, this.cthis, selectionModel)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFirstColumnSpanned(int, const class QModelIndex &, _Bool)
-func (this *QTreeView) Setfirstcolumnspanned(args ...interface{}) () {
-  // setFirstColumnSpanned(int, const class QModelIndex &, _Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  vtys[0][2] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView21setFirstColumnSpannedEiRK11QModelIndexb
-    // invoke: void setFirstColumnSpanned(int, const class QModelIndex &, _Bool)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = C.bool(args[2].(bool))
-    if false {fmt.Println(arg2)}
-    C.C_ZN9QTreeView21setFirstColumnSpannedEiRK11QModelIndexb(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setFirstColumnSpanned", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:78
+// index:0
+// QHeaderView * header()
+func (this *QTreeView) Header() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView6headerEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// resetIndentation()
-func (this *QTreeView) Resetindentation(args ...interface{}) () {
-  // resetIndentation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView16resetIndentationEv
-    // invoke: void resetIndentation()
-    C.C_ZN9QTreeView16resetIndentationEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTreeView", "resetIndentation", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:79
+// index:0
+// void setHeader(class QHeaderView *)
+func (this *QTreeView) SetHeader(header unsafe.Pointer) {
+	// 0: (, QHeaderView * header), (header)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView9setHeaderEP11QHeaderView", ffiqt.FFI_TYPE_VOID, this.cthis, header)
+	gopp.ErrPrint(err, rv)
 }
 
-// indexAbove(const class QModelIndex &)
-func (this *QTreeView) Indexabove(args ...interface{}) (ret interface{}) {
-  // indexAbove(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView10indexAboveERK11QModelIndex
-    // invoke: QModelIndex indexAbove(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTreeView10indexAboveERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "indexAbove", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:81
+// index:0
+// int autoExpandDelay()
+func (this *QTreeView) AutoExpandDelay() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView15autoExpandDelayEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// uniformRowHeights()
-func (this *QTreeView) Uniformrowheights(args ...interface{}) (ret interface{}) {
-  // uniformRowHeights()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView17uniformRowHeightsEv
-    // invoke: bool uniformRowHeights()
-    var ret0 = C.C_ZNK9QTreeView17uniformRowHeightsEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "uniformRowHeights", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:82
+// index:0
+// void setAutoExpandDelay(int)
+func (this *QTreeView) SetAutoExpandDelay(delay int) {
+	// 0: (, int delay), (&delay)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView18setAutoExpandDelayEi", ffiqt.FFI_TYPE_VOID, this.cthis, &delay)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRootIsDecorated(_Bool)
-func (this *QTreeView) Setrootisdecorated(args ...interface{}) () {
-  // setRootIsDecorated(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView18setRootIsDecoratedEb
-    // invoke: void setRootIsDecorated(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView18setRootIsDecoratedEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setRootIsDecorated", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:84
+// index:0
+// int indentation()
+func (this *QTreeView) Indentation() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView11indentationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setSelectionModel(class QItemSelectionModel *)
-func (this *QTreeView) Setselectionmodel(args ...interface{}) () {
-  // setSelectionModel(class QItemSelectionModel *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QItemSelectionModel{}) // "QItemSelectionModel *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView17setSelectionModelEP19QItemSelectionModel
-    // invoke: void setSelectionModel(class QItemSelectionModel *)
-    var arg0 = args[0].(*qtcore.QItemSelectionModel).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView17setSelectionModelEP19QItemSelectionModel(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setSelectionModel", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:85
+// index:0
+// void setIndentation(int)
+func (this *QTreeView) SetIndentation(i int) {
+	// 0: (, int i), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView14setIndentationEi", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	gopp.ErrPrint(err, rv)
 }
 
-// setExpandsOnDoubleClick(_Bool)
-func (this *QTreeView) Setexpandsondoubleclick(args ...interface{}) () {
-  // setExpandsOnDoubleClick(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView23setExpandsOnDoubleClickEb
-    // invoke: void setExpandsOnDoubleClick(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView23setExpandsOnDoubleClickEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setExpandsOnDoubleClick", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:86
+// index:0
+// void resetIndentation()
+func (this *QTreeView) ResetIndentation() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView16resetIndentationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isFirstColumnSpanned(int, const class QModelIndex &)
-func (this *QTreeView) Isfirstcolumnspanned(args ...interface{}) (ret interface{}) {
-  // isFirstColumnSpanned(int, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView20isFirstColumnSpannedEiRK11QModelIndex
-    // invoke: bool isFirstColumnSpanned(int, const class QModelIndex &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK9QTreeView20isFirstColumnSpannedEiRK11QModelIndex(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "isFirstColumnSpanned", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:88
+// index:0
+// bool rootIsDecorated()
+func (this *QTreeView) RootIsDecorated() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView15rootIsDecoratedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QTreeView) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QTreeView10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTreeView", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:89
+// index:0
+// void setRootIsDecorated(_Bool)
+func (this *QTreeView) SetRootIsDecorated(show bool) {
+	// 0: (, bool show), (&show)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView18setRootIsDecoratedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &show)
+	gopp.ErrPrint(err, rv)
 }
 
-// header()
-func (this *QTreeView) Header(args ...interface{}) (ret interface{}) {
-  // header()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView6headerEv
-    // invoke: QHeaderView * header()
-    var ret0 = C.C_ZNK9QTreeView6headerEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QHeaderView{}) // "QHeaderView *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "header", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:91
+// index:0
+// bool uniformRowHeights()
+func (this *QTreeView) UniformRowHeights() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView17uniformRowHeightsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// doItemsLayout()
-func (this *QTreeView) Doitemslayout(args ...interface{}) () {
-  // doItemsLayout()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView13doItemsLayoutEv
-    // invoke: void doItemsLayout()
-    C.C_ZN9QTreeView13doItemsLayoutEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTreeView", "doItemsLayout", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:92
+// index:0
+// void setUniformRowHeights(_Bool)
+func (this *QTreeView) SetUniformRowHeights(uniform bool) {
+	// 0: (, bool uniform), (&uniform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView20setUniformRowHeightsEb", ffiqt.FFI_TYPE_VOID, this.cthis, &uniform)
+	gopp.ErrPrint(err, rv)
 }
 
-// resizeColumnToContents(int)
-func (this *QTreeView) Resizecolumntocontents(args ...interface{}) () {
-  // resizeColumnToContents(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView22resizeColumnToContentsEi
-    // invoke: void resizeColumnToContents(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView22resizeColumnToContentsEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "resizeColumnToContents", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:94
+// index:0
+// bool itemsExpandable()
+func (this *QTreeView) ItemsExpandable() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView15itemsExpandableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// columnAt(int)
-func (this *QTreeView) Columnat(args ...interface{}) (ret interface{}) {
-  // columnAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView8columnAtEi
-    // invoke: int columnAt(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTreeView8columnAtEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "columnAt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:95
+// index:0
+// void setItemsExpandable(_Bool)
+func (this *QTreeView) SetItemsExpandable(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView18setItemsExpandableEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// setAllColumnsShowFocus(_Bool)
-func (this *QTreeView) Setallcolumnsshowfocus(args ...interface{}) () {
-  // setAllColumnsShowFocus(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView22setAllColumnsShowFocusEb
-    // invoke: void setAllColumnsShowFocus(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView22setAllColumnsShowFocusEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setAllColumnsShowFocus", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:97
+// index:0
+// bool expandsOnDoubleClick()
+func (this *QTreeView) ExpandsOnDoubleClick() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView20expandsOnDoubleClickEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// showColumn(int)
-func (this *QTreeView) Showcolumn(args ...interface{}) () {
-  // showColumn(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView10showColumnEi
-    // invoke: void showColumn(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView10showColumnEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "showColumn", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:98
+// index:0
+// void setExpandsOnDoubleClick(_Bool)
+func (this *QTreeView) SetExpandsOnDoubleClick(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView23setExpandsOnDoubleClickEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// setExpanded(const class QModelIndex &, _Bool)
-func (this *QTreeView) Setexpanded(args ...interface{}) () {
-  // setExpanded(const class QModelIndex &, _Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  vtys[0][1] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView11setExpandedERK11QModelIndexb
-    // invoke: void setExpanded(const class QModelIndex &, _Bool)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.bool(args[1].(bool))
-    if false {fmt.Println(arg1)}
-    C.C_ZN9QTreeView11setExpandedERK11QModelIndexb(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setExpanded", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:100
+// index:0
+// int columnViewportPosition(int)
+func (this *QTreeView) ColumnViewportPosition(column int) {
+	// 0: (, int column), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView22columnViewportPositionEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRowHidden(int, const class QModelIndex &, _Bool)
-func (this *QTreeView) Setrowhidden(args ...interface{}) () {
-  // setRowHidden(int, const class QModelIndex &, _Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  vtys[0][2] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView12setRowHiddenEiRK11QModelIndexb
-    // invoke: void setRowHidden(int, const class QModelIndex &, _Bool)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = C.bool(args[2].(bool))
-    if false {fmt.Println(arg2)}
-    C.C_ZN9QTreeView12setRowHiddenEiRK11QModelIndexb(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setRowHidden", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:101
+// index:0
+// int columnWidth(int)
+func (this *QTreeView) ColumnWidth(column int) {
+	// 0: (, int column), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView11columnWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// itemsExpandable()
-func (this *QTreeView) Itemsexpandable(args ...interface{}) (ret interface{}) {
-  // itemsExpandable()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView15itemsExpandableEv
-    // invoke: bool itemsExpandable()
-    var ret0 = C.C_ZNK9QTreeView15itemsExpandableEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "itemsExpandable", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:102
+// index:0
+// void setColumnWidth(int, int)
+func (this *QTreeView) SetColumnWidth(column int, width int) {
+	// 0: (, int column, int width), (&column, &width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView14setColumnWidthEii", ffiqt.FFI_TYPE_VOID, this.cthis, &column, &width)
+	gopp.ErrPrint(err, rv)
 }
 
-// isHeaderHidden()
-func (this *QTreeView) Isheaderhidden(args ...interface{}) (ret interface{}) {
-  // isHeaderHidden()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView14isHeaderHiddenEv
-    // invoke: bool isHeaderHidden()
-    var ret0 = C.C_ZNK9QTreeView14isHeaderHiddenEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "isHeaderHidden", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:103
+// index:0
+// int columnAt(int)
+func (this *QTreeView) ColumnAt(x int) {
+	// 0: (, int x), (&x)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView8columnAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &x)
+	gopp.ErrPrint(err, rv)
 }
 
-// setUniformRowHeights(_Bool)
-func (this *QTreeView) Setuniformrowheights(args ...interface{}) () {
-  // setUniformRowHeights(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView20setUniformRowHeightsEb
-    // invoke: void setUniformRowHeights(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView20setUniformRowHeightsEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setUniformRowHeights", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:105
+// index:0
+// bool isColumnHidden(int)
+func (this *QTreeView) IsColumnHidden(column int) {
+	// 0: (, int column), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView14isColumnHiddenEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// sortByColumn(int)
-func (this *QTreeView) Sortbycolumn(args ...interface{}) () {
-  // sortByColumn(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView12sortByColumnEi
-    // invoke: void sortByColumn(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView12sortByColumnEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "sortByColumn", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:106
+// index:0
+// void setColumnHidden(int, _Bool)
+func (this *QTreeView) SetColumnHidden(column int, hide bool) {
+	// 0: (, int column, bool hide), (&column, &hide)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView15setColumnHiddenEib", ffiqt.FFI_TYPE_VOID, this.cthis, &column, &hide)
+	gopp.ErrPrint(err, rv)
 }
 
-// indentation()
-func (this *QTreeView) Indentation(args ...interface{}) (ret interface{}) {
-  // indentation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView11indentationEv
-    // invoke: int indentation()
-    var ret0 = C.C_ZNK9QTreeView11indentationEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "indentation", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:108
+// index:0
+// bool isHeaderHidden()
+func (this *QTreeView) IsHeaderHidden() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView14isHeaderHiddenEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// selectAll()
-func (this *QTreeView) Selectall(args ...interface{}) () {
-  // selectAll()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView9selectAllEv
-    // invoke: void selectAll()
-    C.C_ZN9QTreeView9selectAllEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTreeView", "selectAll", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:109
+// index:0
+// void setHeaderHidden(_Bool)
+func (this *QTreeView) SetHeaderHidden(hide bool) {
+	// 0: (, bool hide), (&hide)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView15setHeaderHiddenEb", ffiqt.FFI_TYPE_VOID, this.cthis, &hide)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTreePosition(int)
-func (this *QTreeView) Settreeposition(args ...interface{}) () {
-  // setTreePosition(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView15setTreePositionEi
-    // invoke: void setTreePosition(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView15setTreePositionEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setTreePosition", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:111
+// index:0
+// bool isRowHidden(int, const class QModelIndex &)
+func (this *QTreeView) IsRowHidden(row int, parent unsafe.Pointer) {
+	// 0: (, int row, const QModelIndex & parent), (&row, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView11isRowHiddenEiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, &row, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// autoExpandDelay()
-func (this *QTreeView) Autoexpanddelay(args ...interface{}) (ret interface{}) {
-  // autoExpandDelay()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView15autoExpandDelayEv
-    // invoke: int autoExpandDelay()
-    var ret0 = C.C_ZNK9QTreeView15autoExpandDelayEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "autoExpandDelay", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:112
+// index:0
+// void setRowHidden(int, const class QModelIndex &, _Bool)
+func (this *QTreeView) SetRowHidden(row int, parent unsafe.Pointer, hide bool) {
+	// 0: (, int row, const QModelIndex & parent, bool hide), (&row, parent, &hide)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView12setRowHiddenEiRK11QModelIndexb", ffiqt.FFI_TYPE_VOID, this.cthis, &row, parent, &hide)
+	gopp.ErrPrint(err, rv)
 }
 
-// allColumnsShowFocus()
-func (this *QTreeView) Allcolumnsshowfocus(args ...interface{}) (ret interface{}) {
-  // allColumnsShowFocus()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView19allColumnsShowFocusEv
-    // invoke: bool allColumnsShowFocus()
-    var ret0 = C.C_ZNK9QTreeView19allColumnsShowFocusEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "allColumnsShowFocus", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:114
+// index:0
+// bool isFirstColumnSpanned(int, const class QModelIndex &)
+func (this *QTreeView) IsFirstColumnSpanned(row int, parent unsafe.Pointer) {
+	// 0: (, int row, const QModelIndex & parent), (&row, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView20isFirstColumnSpannedEiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, &row, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// isAnimated()
-func (this *QTreeView) Isanimated(args ...interface{}) (ret interface{}) {
-  // isAnimated()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView10isAnimatedEv
-    // invoke: bool isAnimated()
-    var ret0 = C.C_ZNK9QTreeView10isAnimatedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "isAnimated", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:115
+// index:0
+// void setFirstColumnSpanned(int, const class QModelIndex &, _Bool)
+func (this *QTreeView) SetFirstColumnSpanned(row int, parent unsafe.Pointer, span bool) {
+	// 0: (, int row, const QModelIndex & parent, bool span), (&row, parent, &span)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView21setFirstColumnSpannedEiRK11QModelIndexb", ffiqt.FFI_TYPE_VOID, this.cthis, &row, parent, &span)
+	gopp.ErrPrint(err, rv)
 }
 
-// setColumnHidden(int, _Bool)
-func (this *QTreeView) Setcolumnhidden(args ...interface{}) () {
-  // setColumnHidden(int, _Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView15setColumnHiddenEib
-    // invoke: void setColumnHidden(int, _Bool)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.bool(args[1].(bool))
-    if false {fmt.Println(arg1)}
-    C.C_ZN9QTreeView15setColumnHiddenEib(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setColumnHidden", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:117
+// index:0
+// bool isExpanded(const class QModelIndex &)
+func (this *QTreeView) IsExpanded(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView10isExpandedERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// isColumnHidden(int)
-func (this *QTreeView) Iscolumnhidden(args ...interface{}) (ret interface{}) {
-  // isColumnHidden(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView14isColumnHiddenEi
-    // invoke: bool isColumnHidden(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTreeView14isColumnHiddenEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "isColumnHidden", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:118
+// index:0
+// void setExpanded(const class QModelIndex &, _Bool)
+func (this *QTreeView) SetExpanded(index unsafe.Pointer, expand bool) {
+	// 0: (, const QModelIndex & index, bool expand), (index, &expand)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView11setExpandedERK11QModelIndexb", ffiqt.FFI_TYPE_VOID, this.cthis, index, &expand)
+	gopp.ErrPrint(err, rv)
 }
 
-// visualRect(const class QModelIndex &)
-func (this *QTreeView) Visualrect(args ...interface{}) (ret interface{}) {
-  // visualRect(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView10visualRectERK11QModelIndex
-    // invoke: QRect visualRect(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTreeView10visualRectERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "visualRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:120
+// index:0
+// void setSortingEnabled(_Bool)
+func (this *QTreeView) SetSortingEnabled(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView17setSortingEnabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// indexAt(const class QPoint &)
-func (this *QTreeView) Indexat(args ...interface{}) (ret interface{}) {
-  // indexAt(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView7indexAtERK6QPoint
-    // invoke: QModelIndex indexAt(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTreeView7indexAtERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "indexAt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:121
+// index:0
+// bool isSortingEnabled()
+func (this *QTreeView) IsSortingEnabled() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView16isSortingEnabledEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// collapse(const class QModelIndex &)
-func (this *QTreeView) Collapse(args ...interface{}) () {
-  // collapse(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView8collapseERK11QModelIndex
-    // invoke: void collapse(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView8collapseERK11QModelIndex(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "collapse", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:123
+// index:0
+// void setAnimated(_Bool)
+func (this *QTreeView) SetAnimated(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView11setAnimatedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// isSortingEnabled()
-func (this *QTreeView) Issortingenabled(args ...interface{}) (ret interface{}) {
-  // isSortingEnabled()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView16isSortingEnabledEv
-    // invoke: bool isSortingEnabled()
-    var ret0 = C.C_ZNK9QTreeView16isSortingEnabledEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "isSortingEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:124
+// index:0
+// bool isAnimated()
+func (this *QTreeView) IsAnimated() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView10isAnimatedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRootIndex(const class QModelIndex &)
-func (this *QTreeView) Setrootindex(args ...interface{}) () {
-  // setRootIndex(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView12setRootIndexERK11QModelIndex
-    // invoke: void setRootIndex(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView12setRootIndexERK11QModelIndex(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setRootIndex", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:126
+// index:0
+// void setAllColumnsShowFocus(_Bool)
+func (this *QTreeView) SetAllColumnsShowFocus(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView22setAllColumnsShowFocusEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// reset()
-func (this *QTreeView) Reset(args ...interface{}) () {
-  // reset()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView5resetEv
-    // invoke: void reset()
-    C.C_ZN9QTreeView5resetEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTreeView", "reset", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:127
+// index:0
+// bool allColumnsShowFocus()
+func (this *QTreeView) AllColumnsShowFocus() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView19allColumnsShowFocusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// treePosition()
-func (this *QTreeView) Treeposition(args ...interface{}) (ret interface{}) {
-  // treePosition()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView12treePositionEv
-    // invoke: int treePosition()
-    var ret0 = C.C_ZNK9QTreeView12treePositionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "treePosition", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:129
+// index:0
+// void setWordWrap(_Bool)
+func (this *QTreeView) SetWordWrap(on bool) {
+	// 0: (, bool on), (&on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView11setWordWrapEb", ffiqt.FFI_TYPE_VOID, this.cthis, &on)
+	gopp.ErrPrint(err, rv)
 }
 
-// rootIsDecorated()
-func (this *QTreeView) Rootisdecorated(args ...interface{}) (ret interface{}) {
-  // rootIsDecorated()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView15rootIsDecoratedEv
-    // invoke: bool rootIsDecorated()
-    var ret0 = C.C_ZNK9QTreeView15rootIsDecoratedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "rootIsDecorated", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:130
+// index:0
+// bool wordWrap()
+func (this *QTreeView) WordWrap() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView8wordWrapEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setSortingEnabled(_Bool)
-func (this *QTreeView) Setsortingenabled(args ...interface{}) () {
-  // setSortingEnabled(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView17setSortingEnabledEb
-    // invoke: void setSortingEnabled(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView17setSortingEnabledEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setSortingEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:132
+// index:0
+// void setTreePosition(int)
+func (this *QTreeView) SetTreePosition(logicalIndex int) {
+	// 0: (, int logicalIndex), (&logicalIndex)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView15setTreePositionEi", ffiqt.FFI_TYPE_VOID, this.cthis, &logicalIndex)
+	gopp.ErrPrint(err, rv)
 }
 
-// expandToDepth(int)
-func (this *QTreeView) Expandtodepth(args ...interface{}) () {
-  // expandToDepth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView13expandToDepthEi
-    // invoke: void expandToDepth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView13expandToDepthEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "expandToDepth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:133
+// index:0
+// int treePosition()
+func (this *QTreeView) TreePosition() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView12treePositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setAutoExpandDelay(int)
-func (this *QTreeView) Setautoexpanddelay(args ...interface{}) () {
-  // setAutoExpandDelay(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView18setAutoExpandDelayEi
-    // invoke: void setAutoExpandDelay(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView18setAutoExpandDelayEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setAutoExpandDelay", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:135
+// index:0
+// virtual
+// void keyboardSearch(const class QString &)
+func (this *QTreeView) KeyboardSearch(search unsafe.Pointer) {
+	// 0: (, const QString & search), (search)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView14keyboardSearchERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, search)
+	gopp.ErrPrint(err, rv)
 }
 
-// collapseAll()
-func (this *QTreeView) Collapseall(args ...interface{}) () {
-  // collapseAll()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView11collapseAllEv
-    // invoke: void collapseAll()
-    C.C_ZN9QTreeView11collapseAllEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTreeView", "collapseAll", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:137
+// index:0
+// virtual
+// QRect visualRect(const class QModelIndex &)
+func (this *QTreeView) VisualRect(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView10visualRectERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// wordWrap()
-func (this *QTreeView) Wordwrap(args ...interface{}) (ret interface{}) {
-  // wordWrap()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView8wordWrapEv
-    // invoke: bool wordWrap()
-    var ret0 = C.C_ZNK9QTreeView8wordWrapEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "wordWrap", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:138
+// index:0
+// virtual
+// void scrollTo(const class QModelIndex &, enum QAbstractItemView::ScrollHint)
+func (this *QTreeView) ScrollTo(index unsafe.Pointer, hint int) {
+	// 0: (, const QModelIndex & index, QAbstractItemView::ScrollHint hint), (index, &hint)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", ffiqt.FFI_TYPE_VOID, this.cthis, index, &hint)
+	gopp.ErrPrint(err, rv)
 }
 
-// hideColumn(int)
-func (this *QTreeView) Hidecolumn(args ...interface{}) () {
-  // hideColumn(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView10hideColumnEi
-    // invoke: void hideColumn(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView10hideColumnEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "hideColumn", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:139
+// index:0
+// virtual
+// QModelIndex indexAt(const class QPoint &)
+func (this *QTreeView) IndexAt(p unsafe.Pointer) {
+	// 0: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView7indexAtERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QTreeView()
-func (this *QTreeView) Freeqtreeview(args ...interface{}) () {
-  // ~QTreeView()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeViewD0Ev
-    // invoke: void ~QTreeView()
-    C.C_ZN9QTreeViewD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTreeView", "~QTreeView", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:140
+// index:0
+// QModelIndex indexAbove(const class QModelIndex &)
+func (this *QTreeView) IndexAbove(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView10indexAboveERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// setWordWrap(_Bool)
-func (this *QTreeView) Setwordwrap(args ...interface{}) () {
-  // setWordWrap(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView11setWordWrapEb
-    // invoke: void setWordWrap(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView11setWordWrapEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setWordWrap", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:141
+// index:0
+// QModelIndex indexBelow(const class QModelIndex &)
+func (this *QTreeView) IndexBelow(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView10indexBelowERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// isRowHidden(int, const class QModelIndex &)
-func (this *QTreeView) Isrowhidden(args ...interface{}) (ret interface{}) {
-  // isRowHidden(int, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView11isRowHiddenEiRK11QModelIndex
-    // invoke: bool isRowHidden(int, const class QModelIndex &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK9QTreeView11isRowHiddenEiRK11QModelIndex(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "isRowHidden", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:143
+// index:0
+// virtual
+// void doItemsLayout()
+func (this *QTreeView) DoItemsLayout() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView13doItemsLayoutEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// expandAll()
-func (this *QTreeView) Expandall(args ...interface{}) () {
-  // expandAll()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView9expandAllEv
-    // invoke: void expandAll()
-    C.C_ZN9QTreeView9expandAllEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTreeView", "expandAll", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:144
+// index:0
+// virtual
+// void reset()
+func (this *QTreeView) Reset() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView5resetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// columnViewportPosition(int)
-func (this *QTreeView) Columnviewportposition(args ...interface{}) (ret interface{}) {
-  // columnViewportPosition(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView22columnViewportPositionEi
-    // invoke: int columnViewportPosition(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTreeView22columnViewportPositionEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "columnViewportPosition", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:146
+// index:0
+// void sortByColumn(int, Qt::SortOrder)
+func (this *QTreeView) SortByColumn(column int, order int) {
+	// 0: (, int column, Qt::SortOrder order), (&column, &order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView12sortByColumnEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_VOID, this.cthis, &column, &order)
+	gopp.ErrPrint(err, rv)
 }
 
-// setIndentation(int)
-func (this *QTreeView) Setindentation(args ...interface{}) () {
-  // setIndentation(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView14setIndentationEi
-    // invoke: void setIndentation(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView14setIndentationEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setIndentation", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:161
+// index:1
+// void sortByColumn(int)
+func (this *QTreeView) SortByColumn_1(column int) {
+	// 1: (, int column), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView12sortByColumnEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// setModel(class QAbstractItemModel *)
-func (this *QTreeView) Setmodel(args ...interface{}) () {
-  // setModel(class QAbstractItemModel *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QAbstractItemModel{}) // "QAbstractItemModel *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView8setModelEP18QAbstractItemModel
-    // invoke: void setModel(class QAbstractItemModel *)
-    var arg0 = args[0].(*qtcore.QAbstractItemModel).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView8setModelEP18QAbstractItemModel(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setModel", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:149
+// index:0
+// virtual
+// void selectAll()
+func (this *QTreeView) SelectAll() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView9selectAllEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setAnimated(_Bool)
-func (this *QTreeView) Setanimated(args ...interface{}) () {
-  // setAnimated(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView11setAnimatedEb
-    // invoke: void setAnimated(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView11setAnimatedEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setAnimated", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:152
+// index:0
+// void expanded(const class QModelIndex &)
+func (this *QTreeView) Expanded(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView8expandedERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// indexBelow(const class QModelIndex &)
-func (this *QTreeView) Indexbelow(args ...interface{}) (ret interface{}) {
-  // indexBelow(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView10indexBelowERK11QModelIndex
-    // invoke: QModelIndex indexBelow(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTreeView10indexBelowERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "indexBelow", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:153
+// index:0
+// void collapsed(const class QModelIndex &)
+func (this *QTreeView) Collapsed(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView9collapsedERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// expand(const class QModelIndex &)
-func (this *QTreeView) Expand(args ...interface{}) () {
-  // expand(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView6expandERK11QModelIndex
-    // invoke: void expand(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView6expandERK11QModelIndex(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "expand", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:156
+// index:0
+// void hideColumn(int)
+func (this *QTreeView) HideColumn(column int) {
+	// 0: (, int column), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView10hideColumnEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// setItemsExpandable(_Bool)
-func (this *QTreeView) Setitemsexpandable(args ...interface{}) () {
-  // setItemsExpandable(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView18setItemsExpandableEb
-    // invoke: void setItemsExpandable(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView18setItemsExpandableEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setItemsExpandable", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:157
+// index:0
+// void showColumn(int)
+func (this *QTreeView) ShowColumn(column int) {
+	// 0: (, int column), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView10showColumnEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// columnWidth(int)
-func (this *QTreeView) Columnwidth(args ...interface{}) (ret interface{}) {
-  // columnWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTreeView11columnWidthEi
-    // invoke: int columnWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTreeView11columnWidthEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTreeView", "columnWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:158
+// index:0
+// void expand(const class QModelIndex &)
+func (this *QTreeView) Expand(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView6expandERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// setHeader(class QHeaderView *)
-func (this *QTreeView) Setheader(args ...interface{}) () {
-  // setHeader(class QHeaderView *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QHeaderView{}) // "QHeaderView *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTreeView9setHeaderEP11QHeaderView
-    // invoke: void setHeader(class QHeaderView *)
-    var arg0 = args[0].(*QHeaderView).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTreeView9setHeaderEP11QHeaderView(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTreeView", "setHeader", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtreeview.h:159
+// index:0
+// void collapse(const class QModelIndex &)
+func (this *QTreeView) Collapse(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView8collapseERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qtreeview.h:160
+// index:0
+// void resizeColumnToContents(int)
+func (this *QTreeView) ResizeColumnToContents(column int) {
+	// 0: (, int column), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView22resizeColumnToContentsEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qtreeview.h:162
+// index:0
+// void expandAll()
+func (this *QTreeView) ExpandAll() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView9expandAllEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtreeview.h:163
+// index:0
+// void collapseAll()
+func (this *QTreeView) CollapseAll() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView11collapseAllEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtreeview.h:164
+// index:0
+// void expandToDepth(int)
+func (this *QTreeView) ExpandToDepth(depth int) {
+	// 0: (, int depth), (&depth)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView13expandToDepthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &depth)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

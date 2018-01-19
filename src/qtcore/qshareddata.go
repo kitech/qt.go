@@ -1,94 +1,62 @@
+//  header block begin
+// /usr/include/qt/QtCore/qshareddata.h
+// #include <qshareddata.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qshareddata.h
-// dst-file: /src/core/qshareddata.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QSharedData::QSharedData();
-extern void* C_ZN11QSharedDataC2Ev(); // 1
-  // proto:  void QSharedData::QSharedData(const QSharedData & );
-extern void* C_ZN11QSharedDataC2ERKS_(void* arg0); // 1
+// extern C begin: 0
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QSharedData)=1
+//  ext block end
+
+//  body block begin
 type QSharedData struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// QSharedData()
-func NewQSharedData(args ...interface{}) *QSharedData {
-  // QSharedData()
-  // QSharedData(const class QSharedData &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QSharedData{}) // "const QSharedData &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QSharedDataC1Ev
-    // invoke: void QSharedData()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QSharedDataC2Ev()
-    return &QSharedData{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN11QSharedDataC1ERKS_
-    // invoke: void QSharedData(const class QSharedData &)
-    var arg0 = args[0].(*QSharedData).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QSharedDataC2ERKS_(arg0)
-    return &QSharedData{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QSharedData", "QSharedData", args)
-  }
-
-  return nil // QSharedData{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qshareddata.h:60
+// index:0
+// inline
+// void QSharedData()
+func NewQSharedData() *QSharedData {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSharedDataC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QSharedData{cthis}
 }
 
-// <= body block end
-
+//  body block end

@@ -1,233 +1,125 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qkeyeventtransition.h
+// #include <qkeyeventtransition.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qkeyeventtransition.h
-// dst-file: /src/widgets/qkeyeventtransition.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  const QMetaObject * QKeyEventTransition::metaObject();
-extern void C_ZNK19QKeyEventTransition10metaObjectEv(void* qthis); // 4
-  // proto:  int QKeyEventTransition::key();
-extern int32_t C_ZNK19QKeyEventTransition3keyEv(void* qthis); // 4
-  // proto:  Qt::KeyboardModifiers QKeyEventTransition::modifierMask();
-extern void C_ZNK19QKeyEventTransition12modifierMaskEv(void* qthis); // 4
-  // proto:  void QKeyEventTransition::setKey(int key);
-extern void C_ZN19QKeyEventTransition6setKeyEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QKeyEventTransition::~QKeyEventTransition();
-extern void C_ZN19QKeyEventTransitionD2Ev(void* qthis); // 4
-  // proto:  void QKeyEventTransition::QKeyEventTransition(QState * sourceState);
-extern void* C_ZN19QKeyEventTransitionC2EP6QState(void* arg0); // 3
+// extern C begin: 7
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QKeyEventTransition)=1
+//  ext block end
+
+//  body block begin
 type QKeyEventTransition struct {
-  /*qbase*/ qtcore.QEventTransition;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// metaObject()
-func (this *QKeyEventTransition) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QKeyEventTransition10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK19QKeyEventTransition10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QKeyEventTransition", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qkeyeventtransition.h:53
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QKeyEventTransition) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QKeyEventTransition10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// key()
-func (this *QKeyEventTransition) Key(args ...interface{}) (ret interface{}) {
-  // key()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QKeyEventTransition3keyEv
-    // invoke: int key()
-    var ret0 = C.C_ZNK19QKeyEventTransition3keyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QKeyEventTransition", "key", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qkeyeventtransition.h:57
+// index:0
+// void QKeyEventTransition(class QState *)
+func NewQKeyEventTransition(sourceState unsafe.Pointer) *QKeyEventTransition {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP6QState", ffiqt.FFI_TYPE_VOID, cthis, sourceState)
+	gopp.ErrPrint(err, rv)
+	return &QKeyEventTransition{cthis}
 }
 
-// modifierMask()
-func (this *QKeyEventTransition) Modifiermask(args ...interface{}) () {
-  // modifierMask()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QKeyEventTransition12modifierMaskEv
-    // invoke: Qt::KeyboardModifiers modifierMask()
-    C.C_ZNK19QKeyEventTransition12modifierMaskEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QKeyEventTransition", "modifierMask", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qkeyeventtransition.h:58
+// index:1
+// void QKeyEventTransition(class QObject *, class QEvent::Type, int, class QState *)
+func NewQKeyEventTransition_1(object unsafe.Pointer, type_ int, key int, sourceState unsafe.Pointer) *QKeyEventTransition {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP7QObjectN6QEvent4TypeEiP6QState", ffiqt.FFI_TYPE_VOID, cthis, object, &type_, &key, sourceState)
+	gopp.ErrPrint(err, rv)
+	return &QKeyEventTransition{cthis}
 }
 
-// setKey(int)
-func (this *QKeyEventTransition) Setkey(args ...interface{}) () {
-  // setKey(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QKeyEventTransition6setKeyEi
-    // invoke: void setKey(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN19QKeyEventTransition6setKeyEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QKeyEventTransition", "setKey", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qkeyeventtransition.h:60
+// index:0
+// virtual
+// void ~QKeyEventTransition()
+func DeleteQKeyEventTransition(*QKeyEventTransition) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QKeyEventTransition()
-func (this *QKeyEventTransition) Freeqkeyeventtransition(args ...interface{}) () {
-  // ~QKeyEventTransition()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QKeyEventTransitionD0Ev
-    // invoke: void ~QKeyEventTransition()
-    C.C_ZN19QKeyEventTransitionD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QKeyEventTransition", "~QKeyEventTransition", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qkeyeventtransition.h:62
+// index:0
+// int key()
+func (this *QKeyEventTransition) Key() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QKeyEventTransition3keyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QKeyEventTransition(class QState *)
-func NewQKeyEventTransition(args ...interface{}) *QKeyEventTransition {
-  // QKeyEventTransition(class QState *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QState{}) // "QState *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QKeyEventTransitionC1EP6QState
-    // invoke: void QKeyEventTransition(class QState *)
-    var arg0 = args[0].(*qtcore.QState).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN19QKeyEventTransitionC2EP6QState(arg0)
-    return &QKeyEventTransition{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QKeyEventTransition", "QKeyEventTransition", args)
-  }
-
-  return nil // QKeyEventTransition{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qkeyeventtransition.h:63
+// index:0
+// void setKey(int)
+func (this *QKeyEventTransition) SetKey(key int) {
+	// 0: (, int key), (&key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransition6setKeyEi", ffiqt.FFI_TYPE_VOID, this.cthis, &key)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qkeyeventtransition.h:65
+// index:0
+// Qt::KeyboardModifiers modifierMask()
+func (this *QKeyEventTransition) ModifierMask() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QKeyEventTransition12modifierMaskEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+//  body block end

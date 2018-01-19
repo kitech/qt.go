@@ -1,1293 +1,426 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qgridlayout.h
+// #include <qgridlayout.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qgridlayout.h
-// dst-file: /src/widgets/qgridlayout.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  int QGridLayout::columnCount();
-extern int32_t C_ZNK11QGridLayout11columnCountEv(void* qthis); // 4
-  // proto:  void QGridLayout::invalidate();
-extern void C_ZN11QGridLayout10invalidateEv(void* qthis); // 4
-  // proto:  void QGridLayout::~QGridLayout();
-extern void C_ZN11QGridLayoutD2Ev(void* qthis); // 4
-  // proto:  QSize QGridLayout::minimumSize();
-extern void* C_ZNK11QGridLayout11minimumSizeEv(void* qthis); // 4
-  // proto:  int QGridLayout::columnStretch(int column);
-extern int32_t C_ZNK11QGridLayout13columnStretchEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QGridLayout::verticalSpacing();
-extern int32_t C_ZNK11QGridLayout15verticalSpacingEv(void* qthis); // 4
-  // proto:  QLayoutItem * QGridLayout::itemAtPosition(int row, int column);
-extern void* C_ZNK11QGridLayout14itemAtPositionEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QGridLayout::setRowMinimumHeight(int row, int minSize);
-extern void C_ZN11QGridLayout19setRowMinimumHeightEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QGridLayout::setVerticalSpacing(int spacing);
-extern void C_ZN11QGridLayout18setVerticalSpacingEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QGridLayout::getItemPosition(int idx, int * row, int * column, int * rowSpan, int * columnSpan);
-extern void C_ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_(void* qthis, int32_t arg0, void* arg1, void* arg2, void* arg3, void* arg4); // 4
-  // proto:  int QGridLayout::rowStretch(int row);
-extern int32_t C_ZNK11QGridLayout10rowStretchEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QGridLayout::setColumnStretch(int column, int stretch);
-extern void C_ZN11QGridLayout16setColumnStretchEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QGridLayout::QGridLayout(QWidget * parent);
-extern void* C_ZN11QGridLayoutC2EP7QWidget(void* arg0); // 3
-  // proto:  void QGridLayout::QGridLayout();
-extern void* C_ZN11QGridLayoutC2Ev(); // 3
-  // proto:  int QGridLayout::rowMinimumHeight(int row);
-extern int32_t C_ZNK11QGridLayout16rowMinimumHeightEi(void* qthis, int32_t arg0); // 4
-  // proto:  QLayoutItem * QGridLayout::takeAt(int index);
-extern void* C_ZN11QGridLayout6takeAtEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QGridLayout::setRowStretch(int row, int stretch);
-extern void C_ZN11QGridLayout13setRowStretchEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  int QGridLayout::minimumHeightForWidth(int );
-extern int32_t C_ZNK11QGridLayout21minimumHeightForWidthEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QGridLayout::setSpacing(int spacing);
-extern void C_ZN11QGridLayout10setSpacingEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QGridLayout::horizontalSpacing();
-extern int32_t C_ZNK11QGridLayout17horizontalSpacingEv(void* qthis); // 4
-  // proto:  void QGridLayout::setGeometry(const QRect & );
-extern void C_ZN11QGridLayout11setGeometryERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  int QGridLayout::spacing();
-extern int32_t C_ZNK11QGridLayout7spacingEv(void* qthis); // 4
-  // proto:  int QGridLayout::rowCount();
-extern int32_t C_ZNK11QGridLayout8rowCountEv(void* qthis); // 4
-  // proto:  QRect QGridLayout::cellRect(int row, int column);
-extern void* C_ZNK11QGridLayout8cellRectEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QGridLayout::addWidget(QWidget * w);
-extern void C_ZN11QGridLayout9addWidgetEP7QWidget(void* qthis, void* arg0); // 2
-  // proto:  const QMetaObject * QGridLayout::metaObject();
-extern void C_ZNK11QGridLayout10metaObjectEv(void* qthis); // 4
-  // proto:  int QGridLayout::count();
-extern int32_t C_ZNK11QGridLayout5countEv(void* qthis); // 4
-  // proto:  QSize QGridLayout::sizeHint();
-extern void* C_ZNK11QGridLayout8sizeHintEv(void* qthis); // 4
-  // proto:  bool QGridLayout::hasHeightForWidth();
-extern bool C_ZNK11QGridLayout17hasHeightForWidthEv(void* qthis); // 4
-  // proto:  QLayoutItem * QGridLayout::itemAt(int index);
-extern void* C_ZNK11QGridLayout6itemAtEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QGridLayout::columnMinimumWidth(int column);
-extern int32_t C_ZNK11QGridLayout18columnMinimumWidthEi(void* qthis, int32_t arg0); // 4
-  // proto:  Qt::Corner QGridLayout::originCorner();
-extern void C_ZNK11QGridLayout12originCornerEv(void* qthis); // 4
-  // proto:  void QGridLayout::setColumnMinimumWidth(int column, int minSize);
-extern void C_ZN11QGridLayout21setColumnMinimumWidthEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QGridLayout::setHorizontalSpacing(int spacing);
-extern void C_ZN11QGridLayout20setHorizontalSpacingEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QGridLayout::heightForWidth(int );
-extern int32_t C_ZNK11QGridLayout14heightForWidthEi(void* qthis, int32_t arg0); // 4
-  // proto:  Qt::Orientations QGridLayout::expandingDirections();
-extern void C_ZNK11QGridLayout19expandingDirectionsEv(void* qthis); // 4
-  // proto:  QSize QGridLayout::maximumSize();
-extern void* C_ZNK11QGridLayout11maximumSizeEv(void* qthis); // 4
+// extern C begin: 6
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QGridLayout)=1
+//  ext block end
+
+//  body block begin
 type QGridLayout struct {
-  /*qbase*/ QLayout;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// columnCount()
-func (this *QGridLayout) Columncount(args ...interface{}) (ret interface{}) {
-  // columnCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout11columnCountEv
-    // invoke: int columnCount()
-    var ret0 = C.C_ZNK11QGridLayout11columnCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "columnCount", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:58
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QGridLayout) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// invalidate()
-func (this *QGridLayout) Invalidate(args ...interface{}) () {
-  // invalidate()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayout10invalidateEv
-    // invoke: void invalidate()
-    C.C_ZN11QGridLayout10invalidateEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "invalidate", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:64
+// index:0
+// void QGridLayout(class QWidget *)
+func NewQGridLayout(parent unsafe.Pointer) *QGridLayout {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayoutC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QGridLayout{cthis}
 }
 
-// ~QGridLayout()
-func (this *QGridLayout) Freeqgridlayout(args ...interface{}) () {
-  // ~QGridLayout()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayoutD0Ev
-    // invoke: void ~QGridLayout()
-    C.C_ZN11QGridLayoutD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "~QGridLayout", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:65
+// index:1
+// void QGridLayout()
+func NewQGridLayout_1() *QGridLayout {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayoutC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QGridLayout{cthis}
 }
 
-// minimumSize()
-func (this *QGridLayout) Minimumsize(args ...interface{}) (ret interface{}) {
-  // minimumSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout11minimumSizeEv
-    // invoke: QSize minimumSize()
-    var ret0 = C.C_ZNK11QGridLayout11minimumSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "minimumSize", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:67
+// index:0
+// virtual
+// void ~QGridLayout()
+func DeleteQGridLayout(*QGridLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// columnStretch(int)
-func (this *QGridLayout) Columnstretch(args ...interface{}) (ret interface{}) {
-  // columnStretch(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout13columnStretchEi
-    // invoke: int columnStretch(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QGridLayout13columnStretchEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "columnStretch", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:69
+// index:0
+// virtual
+// QSize sizeHint()
+func (this *QGridLayout) SizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// verticalSpacing()
-func (this *QGridLayout) Verticalspacing(args ...interface{}) (ret interface{}) {
-  // verticalSpacing()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout15verticalSpacingEv
-    // invoke: int verticalSpacing()
-    var ret0 = C.C_ZNK11QGridLayout15verticalSpacingEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "verticalSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:70
+// index:0
+// virtual
+// QSize minimumSize()
+func (this *QGridLayout) MinimumSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout11minimumSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// itemAtPosition(int, int)
-func (this *QGridLayout) Itematposition(args ...interface{}) (ret interface{}) {
-  // itemAtPosition(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout14itemAtPositionEii
-    // invoke: QLayoutItem * itemAtPosition(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QGridLayout14itemAtPositionEii(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "itemAtPosition", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:71
+// index:0
+// virtual
+// QSize maximumSize()
+func (this *QGridLayout) MaximumSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout11maximumSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRowMinimumHeight(int, int)
-func (this *QGridLayout) Setrowminimumheight(args ...interface{}) () {
-  // setRowMinimumHeight(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayout19setRowMinimumHeightEii
-    // invoke: void setRowMinimumHeight(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN11QGridLayout19setRowMinimumHeightEii(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "setRowMinimumHeight", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:73
+// index:0
+// void setHorizontalSpacing(int)
+func (this *QGridLayout) SetHorizontalSpacing(spacing int) {
+	// 0: (, int spacing), (&spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout20setHorizontalSpacingEi", ffiqt.FFI_TYPE_VOID, this.cthis, &spacing)
+	gopp.ErrPrint(err, rv)
 }
 
-// setVerticalSpacing(int)
-func (this *QGridLayout) Setverticalspacing(args ...interface{}) () {
-  // setVerticalSpacing(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayout18setVerticalSpacingEi
-    // invoke: void setVerticalSpacing(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QGridLayout18setVerticalSpacingEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "setVerticalSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:74
+// index:0
+// int horizontalSpacing()
+func (this *QGridLayout) HorizontalSpacing() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout17horizontalSpacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// getItemPosition(int, int *, int *, int *, int *)
-func (this *QGridLayout) Getitemposition(args ...interface{}) () {
-  // getItemPosition(int, int *, int *, int *, int *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][2] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][3] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][4] = qtrt.Int32Ty(true) // "int *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_
-    // invoke: void getItemPosition(int, int *, int *, int *, int *)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = (unsafe.Pointer)(args[4].(*int32))
-    if false {fmt.Println(arg4)}
-    C.C_ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "getItemPosition", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:75
+// index:0
+// void setVerticalSpacing(int)
+func (this *QGridLayout) SetVerticalSpacing(spacing int) {
+	// 0: (, int spacing), (&spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout18setVerticalSpacingEi", ffiqt.FFI_TYPE_VOID, this.cthis, &spacing)
+	gopp.ErrPrint(err, rv)
 }
 
-// rowStretch(int)
-func (this *QGridLayout) Rowstretch(args ...interface{}) (ret interface{}) {
-  // rowStretch(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout10rowStretchEi
-    // invoke: int rowStretch(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QGridLayout10rowStretchEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "rowStretch", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:76
+// index:0
+// int verticalSpacing()
+func (this *QGridLayout) VerticalSpacing() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout15verticalSpacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setColumnStretch(int, int)
-func (this *QGridLayout) Setcolumnstretch(args ...interface{}) () {
-  // setColumnStretch(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayout16setColumnStretchEii
-    // invoke: void setColumnStretch(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN11QGridLayout16setColumnStretchEii(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "setColumnStretch", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:77
+// index:0
+// void setSpacing(int)
+func (this *QGridLayout) SetSpacing(spacing int) {
+	// 0: (, int spacing), (&spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout10setSpacingEi", ffiqt.FFI_TYPE_VOID, this.cthis, &spacing)
+	gopp.ErrPrint(err, rv)
 }
 
-// QGridLayout(class QWidget *)
-func NewQGridLayout(args ...interface{}) *QGridLayout {
-  // QGridLayout(class QWidget *)
-  // QGridLayout()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayoutC1EP7QWidget
-    // invoke: void QGridLayout(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QGridLayoutC2EP7QWidget(arg0)
-    return &QGridLayout{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN11QGridLayoutC1Ev
-    // invoke: void QGridLayout()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QGridLayoutC2Ev()
-    return &QGridLayout{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QGridLayout", "QGridLayout", args)
-  }
-
-  return nil // QGridLayout{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qgridlayout.h:78
+// index:0
+// int spacing()
+func (this *QGridLayout) Spacing() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout7spacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// rowMinimumHeight(int)
-func (this *QGridLayout) Rowminimumheight(args ...interface{}) (ret interface{}) {
-  // rowMinimumHeight(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout16rowMinimumHeightEi
-    // invoke: int rowMinimumHeight(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QGridLayout16rowMinimumHeightEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "rowMinimumHeight", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:80
+// index:0
+// void setRowStretch(int, int)
+func (this *QGridLayout) SetRowStretch(row int, stretch int) {
+	// 0: (, int row, int stretch), (&row, &stretch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout13setRowStretchEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &stretch)
+	gopp.ErrPrint(err, rv)
 }
 
-// takeAt(int)
-func (this *QGridLayout) Takeat(args ...interface{}) (ret interface{}) {
-  // takeAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayout6takeAtEi
-    // invoke: QLayoutItem * takeAt(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QGridLayout6takeAtEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "takeAt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:81
+// index:0
+// void setColumnStretch(int, int)
+func (this *QGridLayout) SetColumnStretch(column int, stretch int) {
+	// 0: (, int column, int stretch), (&column, &stretch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout16setColumnStretchEii", ffiqt.FFI_TYPE_VOID, this.cthis, &column, &stretch)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRowStretch(int, int)
-func (this *QGridLayout) Setrowstretch(args ...interface{}) () {
-  // setRowStretch(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayout13setRowStretchEii
-    // invoke: void setRowStretch(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN11QGridLayout13setRowStretchEii(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "setRowStretch", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:82
+// index:0
+// int rowStretch(int)
+func (this *QGridLayout) RowStretch(row int) {
+	// 0: (, int row), (&row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout10rowStretchEi", ffiqt.FFI_TYPE_VOID, this.cthis, &row)
+	gopp.ErrPrint(err, rv)
 }
 
-// minimumHeightForWidth(int)
-func (this *QGridLayout) Minimumheightforwidth(args ...interface{}) (ret interface{}) {
-  // minimumHeightForWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout21minimumHeightForWidthEi
-    // invoke: int minimumHeightForWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QGridLayout21minimumHeightForWidthEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "minimumHeightForWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:83
+// index:0
+// int columnStretch(int)
+func (this *QGridLayout) ColumnStretch(column int) {
+	// 0: (, int column), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout13columnStretchEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// setSpacing(int)
-func (this *QGridLayout) Setspacing(args ...interface{}) () {
-  // setSpacing(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayout10setSpacingEi
-    // invoke: void setSpacing(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QGridLayout10setSpacingEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "setSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:85
+// index:0
+// void setRowMinimumHeight(int, int)
+func (this *QGridLayout) SetRowMinimumHeight(row int, minSize int) {
+	// 0: (, int row, int minSize), (&row, &minSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout19setRowMinimumHeightEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &minSize)
+	gopp.ErrPrint(err, rv)
 }
 
-// horizontalSpacing()
-func (this *QGridLayout) Horizontalspacing(args ...interface{}) (ret interface{}) {
-  // horizontalSpacing()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout17horizontalSpacingEv
-    // invoke: int horizontalSpacing()
-    var ret0 = C.C_ZNK11QGridLayout17horizontalSpacingEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "horizontalSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:86
+// index:0
+// void setColumnMinimumWidth(int, int)
+func (this *QGridLayout) SetColumnMinimumWidth(column int, minSize int) {
+	// 0: (, int column, int minSize), (&column, &minSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout21setColumnMinimumWidthEii", ffiqt.FFI_TYPE_VOID, this.cthis, &column, &minSize)
+	gopp.ErrPrint(err, rv)
 }
 
-// setGeometry(const class QRect &)
-func (this *QGridLayout) Setgeometry(args ...interface{}) () {
-  // setGeometry(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayout11setGeometryERK5QRect
-    // invoke: void setGeometry(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QGridLayout11setGeometryERK5QRect(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "setGeometry", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:87
+// index:0
+// int rowMinimumHeight(int)
+func (this *QGridLayout) RowMinimumHeight(row int) {
+	// 0: (, int row), (&row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout16rowMinimumHeightEi", ffiqt.FFI_TYPE_VOID, this.cthis, &row)
+	gopp.ErrPrint(err, rv)
 }
 
-// spacing()
-func (this *QGridLayout) Spacing(args ...interface{}) (ret interface{}) {
-  // spacing()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout7spacingEv
-    // invoke: int spacing()
-    var ret0 = C.C_ZNK11QGridLayout7spacingEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "spacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:88
+// index:0
+// int columnMinimumWidth(int)
+func (this *QGridLayout) ColumnMinimumWidth(column int) {
+	// 0: (, int column), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout18columnMinimumWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// rowCount()
-func (this *QGridLayout) Rowcount(args ...interface{}) (ret interface{}) {
-  // rowCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout8rowCountEv
-    // invoke: int rowCount()
-    var ret0 = C.C_ZNK11QGridLayout8rowCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "rowCount", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:90
+// index:0
+// int columnCount()
+func (this *QGridLayout) ColumnCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout11columnCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// cellRect(int, int)
-func (this *QGridLayout) Cellrect(args ...interface{}) (ret interface{}) {
-  // cellRect(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout8cellRectEii
-    // invoke: QRect cellRect(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QGridLayout8cellRectEii(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "cellRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:91
+// index:0
+// int rowCount()
+func (this *QGridLayout) RowCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout8rowCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// addWidget(class QWidget *)
-func (this *QGridLayout) Addwidget(args ...interface{}) () {
-  // addWidget(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayout9addWidgetEP7QWidget
-    // invoke: void addWidget(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QGridLayout9addWidgetEP7QWidget(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "addWidget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:93
+// index:0
+// QRect cellRect(int, int)
+func (this *QGridLayout) CellRect(row int, column int) {
+	// 0: (, int row, int column), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout8cellRectEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QGridLayout) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QGridLayout10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:95
+// index:0
+// virtual
+// bool hasHeightForWidth()
+func (this *QGridLayout) HasHeightForWidth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout17hasHeightForWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// count()
-func (this *QGridLayout) Count(args ...interface{}) (ret interface{}) {
-  // count()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout5countEv
-    // invoke: int count()
-    var ret0 = C.C_ZNK11QGridLayout5countEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "count", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:96
+// index:0
+// virtual
+// int heightForWidth(int)
+func (this *QGridLayout) HeightForWidth(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout14heightForWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// sizeHint()
-func (this *QGridLayout) Sizehint(args ...interface{}) (ret interface{}) {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout8sizeHintEv
-    // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK11QGridLayout8sizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "sizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:97
+// index:0
+// virtual
+// int minimumHeightForWidth(int)
+func (this *QGridLayout) MinimumHeightForWidth(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout21minimumHeightForWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasHeightForWidth()
-func (this *QGridLayout) Hasheightforwidth(args ...interface{}) (ret interface{}) {
-  // hasHeightForWidth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout17hasHeightForWidthEv
-    // invoke: bool hasHeightForWidth()
-    var ret0 = C.C_ZNK11QGridLayout17hasHeightForWidthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "hasHeightForWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:99
+// index:0
+// virtual
+// Qt::Orientations expandingDirections()
+func (this *QGridLayout) ExpandingDirections() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout19expandingDirectionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// itemAt(int)
-func (this *QGridLayout) Itemat(args ...interface{}) (ret interface{}) {
-  // itemAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout6itemAtEi
-    // invoke: QLayoutItem * itemAt(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QGridLayout6itemAtEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "itemAt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:100
+// index:0
+// virtual
+// void invalidate()
+func (this *QGridLayout) Invalidate() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout10invalidateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// columnMinimumWidth(int)
-func (this *QGridLayout) Columnminimumwidth(args ...interface{}) (ret interface{}) {
-  // columnMinimumWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout18columnMinimumWidthEi
-    // invoke: int columnMinimumWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QGridLayout18columnMinimumWidthEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "columnMinimumWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:102
+// index:0
+// inline
+// void addWidget(class QWidget *)
+func (this *QGridLayout) AddWidget(w unsafe.Pointer) {
+	// 0: (, QWidget * w), (w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout9addWidgetEP7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, w)
+	gopp.ErrPrint(err, rv)
 }
 
-// originCorner()
-func (this *QGridLayout) Origincorner(args ...interface{}) () {
-  // originCorner()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout12originCornerEv
-    // invoke: Qt::Corner originCorner()
-    C.C_ZNK11QGridLayout12originCornerEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "originCorner", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:108
+// index:0
+// void setOriginCorner(Qt::Corner)
+func (this *QGridLayout) SetOriginCorner(arg0 int) {
+	// 0: (, Qt::Corner arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout15setOriginCornerEN2Qt6CornerE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setColumnMinimumWidth(int, int)
-func (this *QGridLayout) Setcolumnminimumwidth(args ...interface{}) () {
-  // setColumnMinimumWidth(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayout21setColumnMinimumWidthEii
-    // invoke: void setColumnMinimumWidth(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN11QGridLayout21setColumnMinimumWidthEii(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "setColumnMinimumWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:109
+// index:0
+// Qt::Corner originCorner()
+func (this *QGridLayout) OriginCorner() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout12originCornerEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setHorizontalSpacing(int)
-func (this *QGridLayout) Sethorizontalspacing(args ...interface{}) () {
-  // setHorizontalSpacing(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QGridLayout20setHorizontalSpacingEi
-    // invoke: void setHorizontalSpacing(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QGridLayout20setHorizontalSpacingEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "setHorizontalSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:111
+// index:0
+// virtual
+// QLayoutItem * itemAt(int)
+func (this *QGridLayout) ItemAt(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout6itemAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// heightForWidth(int)
-func (this *QGridLayout) Heightforwidth(args ...interface{}) (ret interface{}) {
-  // heightForWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout14heightForWidthEi
-    // invoke: int heightForWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QGridLayout14heightForWidthEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "heightForWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:112
+// index:0
+// QLayoutItem * itemAtPosition(int, int)
+func (this *QGridLayout) ItemAtPosition(row int, column int) {
+	// 0: (, int row, int column), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout14itemAtPositionEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// expandingDirections()
-func (this *QGridLayout) Expandingdirections(args ...interface{}) () {
-  // expandingDirections()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout19expandingDirectionsEv
-    // invoke: Qt::Orientations expandingDirections()
-    C.C_ZNK11QGridLayout19expandingDirectionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGridLayout", "expandingDirections", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:113
+// index:0
+// virtual
+// QLayoutItem * takeAt(int)
+func (this *QGridLayout) TakeAt(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout6takeAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// maximumSize()
-func (this *QGridLayout) Maximumsize(args ...interface{}) (ret interface{}) {
-  // maximumSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QGridLayout11maximumSizeEv
-    // invoke: QSize maximumSize()
-    var ret0 = C.C_ZNK11QGridLayout11maximumSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGridLayout", "maximumSize", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgridlayout.h:114
+// index:0
+// virtual
+// int count()
+func (this *QGridLayout) Count() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout5countEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qgridlayout.h:115
+// index:0
+// virtual
+// void setGeometry(const class QRect &)
+func (this *QGridLayout) SetGeometry(arg0 unsafe.Pointer) {
+	// 0: (, const QRect & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout11setGeometryERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qgridlayout.h:119
+// index:0
+// void setDefaultPositioning(int, Qt::Orientation)
+func (this *QGridLayout) SetDefaultPositioning(n int, orient int) {
+	// 0: (, int n, Qt::Orientation orient), (&n, &orient)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout21setDefaultPositioningEiN2Qt11OrientationE", ffiqt.FFI_TYPE_VOID, this.cthis, &n, &orient)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgridlayout.h:120
+// index:0
+// void getItemPosition(int, int *, int *, int *, int *)
+func (this *QGridLayout) GetItemPosition(idx int, row unsafe.Pointer, column unsafe.Pointer, rowSpan unsafe.Pointer, columnSpan unsafe.Pointer) {
+	// 0: (, int idx, int * row, int * column, int * rowSpan, int * columnSpan), (&idx, row, column, rowSpan, columnSpan)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_", ffiqt.FFI_TYPE_VOID, this.cthis, &idx, row, column, rowSpan, columnSpan)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

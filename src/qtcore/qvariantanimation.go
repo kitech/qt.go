@@ -1,531 +1,198 @@
+//  header block begin
+// /usr/include/qt/QtCore/qvariantanimation.h
+// #include <qvariantanimation.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qvariantanimation.h
-// dst-file: /src/core/qvariantanimation.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QVariant QVariantAnimation::keyValueAt(qreal step);
-extern void* C_ZNK17QVariantAnimation10keyValueAtEd(void* qthis, double arg0); // 4
-  // proto:  QVariant QVariantAnimation::currentValue();
-extern void* C_ZNK17QVariantAnimation12currentValueEv(void* qthis); // 4
-  // proto:  void QVariantAnimation::setEasingCurve(const QEasingCurve & easing);
-extern void C_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(void* qthis, void* arg0); // 4
-  // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
-extern void* C_ZN17QVariantAnimationC2EP7QObject(void* arg0); // 3
-  // proto:  int QVariantAnimation::duration();
-extern int32_t C_ZNK17QVariantAnimation8durationEv(void* qthis); // 4
-  // proto:  void QVariantAnimation::setStartValue(const QVariant & value);
-extern void C_ZN17QVariantAnimation13setStartValueERK8QVariant(void* qthis, void* arg0); // 4
-  // proto:  KeyValues QVariantAnimation::keyValues();
-extern void C_ZNK17QVariantAnimation9keyValuesEv(void* qthis); // 4
-  // proto:  void QVariantAnimation::~QVariantAnimation();
-extern void C_ZN17QVariantAnimationD2Ev(void* qthis); // 4
-  // proto:  QVariant QVariantAnimation::endValue();
-extern void* C_ZNK17QVariantAnimation8endValueEv(void* qthis); // 4
-  // proto:  const QMetaObject * QVariantAnimation::metaObject();
-extern void C_ZNK17QVariantAnimation10metaObjectEv(void* qthis); // 4
-  // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
-extern void C_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(void* qthis, double arg0, void* arg1); // 4
-  // proto:  QEasingCurve QVariantAnimation::easingCurve();
-extern void* C_ZNK17QVariantAnimation11easingCurveEv(void* qthis); // 4
-  // proto:  void QVariantAnimation::setEndValue(const QVariant & value);
-extern void C_ZN17QVariantAnimation11setEndValueERK8QVariant(void* qthis, void* arg0); // 4
-  // proto:  void QVariantAnimation::setDuration(int msecs);
-extern void C_ZN17QVariantAnimation11setDurationEi(void* qthis, int32_t arg0); // 4
-  // proto:  QVariant QVariantAnimation::startValue();
-extern void* C_ZNK17QVariantAnimation10startValueEv(void* qthis); // 4
+// extern C begin: 57
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QVariantAnimation)=1
+//  ext block end
+
+//  body block begin
 type QVariantAnimation struct {
-  /*qbase*/ QAbstractAnimation;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _valueChanged QVariantAnimation_valueChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// keyValueAt(qreal)
-func (this *QVariantAnimation) Keyvalueat(args ...interface{}) (ret interface{}) {
-  // keyValueAt(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QVariantAnimation10keyValueAtEd
-    // invoke: QVariant keyValueAt(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QVariantAnimation10keyValueAtEd(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "keyValueAt", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:57
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QVariantAnimation) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// currentValue()
-func (this *QVariantAnimation) Currentvalue(args ...interface{}) (ret interface{}) {
-  // currentValue()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QVariantAnimation12currentValueEv
-    // invoke: QVariant currentValue()
-    var ret0 = C.C_ZNK17QVariantAnimation12currentValueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "currentValue", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:68
+// index:0
+// void QVariantAnimation(class QObject *)
+func NewQVariantAnimation(parent unsafe.Pointer) *QVariantAnimation {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QVariantAnimation{cthis}
 }
 
-// setEasingCurve(const class QEasingCurve &)
-func (this *QVariantAnimation) Seteasingcurve(args ...interface{}) () {
-  // setEasingCurve(const class QEasingCurve &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QEasingCurve{}) // "const QEasingCurve &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve
-    // invoke: void setEasingCurve(const class QEasingCurve &)
-    var arg0 = args[0].(*QEasingCurve).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "setEasingCurve", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:69
+// index:0
+// virtual
+// void ~QVariantAnimation()
+func DeleteQVariantAnimation(*QVariantAnimation) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimationD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// QVariantAnimation(class QObject *)
-func NewQVariantAnimation(args ...interface{}) *QVariantAnimation {
-  // QVariantAnimation(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QVariantAnimationC1EP7QObject
-    // invoke: void QVariantAnimation(class QObject *)
-    var arg0 = args[0].(*QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN17QVariantAnimationC2EP7QObject(arg0)
-    return &QVariantAnimation{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "QVariantAnimation", args)
-  }
-
-  return nil // QVariantAnimation{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qvariantanimation.h:71
+// index:0
+// QVariant startValue()
+func (this *QVariantAnimation) StartValue() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation10startValueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// duration()
-func (this *QVariantAnimation) Duration(args ...interface{}) (ret interface{}) {
-  // duration()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QVariantAnimation8durationEv
-    // invoke: int duration()
-    var ret0 = C.C_ZNK17QVariantAnimation8durationEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "duration", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:72
+// index:0
+// void setStartValue(const class QVariant &)
+func (this *QVariantAnimation) SetStartValue(value unsafe.Pointer) {
+	// 0: (, const QVariant & value), (value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation13setStartValueERK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, value)
+	gopp.ErrPrint(err, rv)
 }
 
-// setStartValue(const class QVariant &)
-func (this *QVariantAnimation) Setstartvalue(args ...interface{}) () {
-  // setStartValue(const class QVariant &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QVariant{}) // "const QVariant &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QVariantAnimation13setStartValueERK8QVariant
-    // invoke: void setStartValue(const class QVariant &)
-    var arg0 = args[0].(*QVariant).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN17QVariantAnimation13setStartValueERK8QVariant(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "setStartValue", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:74
+// index:0
+// QVariant endValue()
+func (this *QVariantAnimation) EndValue() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation8endValueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// keyValues()
-func (this *QVariantAnimation) Keyvalues(args ...interface{}) () {
-  // keyValues()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QVariantAnimation9keyValuesEv
-    // invoke: KeyValues keyValues()
-    C.C_ZNK17QVariantAnimation9keyValuesEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "keyValues", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:75
+// index:0
+// void setEndValue(const class QVariant &)
+func (this *QVariantAnimation) SetEndValue(value unsafe.Pointer) {
+	// 0: (, const QVariant & value), (value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation11setEndValueERK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, value)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QVariantAnimation()
-func (this *QVariantAnimation) Freeqvariantanimation(args ...interface{}) () {
-  // ~QVariantAnimation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QVariantAnimationD0Ev
-    // invoke: void ~QVariantAnimation()
-    C.C_ZN17QVariantAnimationD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "~QVariantAnimation", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:77
+// index:0
+// QVariant keyValueAt(qreal)
+func (this *QVariantAnimation) KeyValueAt(step float64) {
+	// 0: (, qreal step), (&step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation10keyValueAtEd", ffiqt.FFI_TYPE_VOID, this.cthis, &step)
+	gopp.ErrPrint(err, rv)
 }
 
-// endValue()
-func (this *QVariantAnimation) Endvalue(args ...interface{}) (ret interface{}) {
-  // endValue()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QVariantAnimation8endValueEv
-    // invoke: QVariant endValue()
-    var ret0 = C.C_ZNK17QVariantAnimation8endValueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "endValue", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:78
+// index:0
+// void setKeyValueAt(qreal, const class QVariant &)
+func (this *QVariantAnimation) SetKeyValueAt(step float64, value unsafe.Pointer) {
+	// 0: (, qreal step, const QVariant & value), (&step, value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, &step, value)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QVariantAnimation) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QVariantAnimation10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK17QVariantAnimation10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:80
+// index:0
+// QVariantAnimation::KeyValues keyValues()
+func (this *QVariantAnimation) KeyValues() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation9keyValuesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setKeyValueAt(qreal, const class QVariant &)
-func (this *QVariantAnimation) Setkeyvalueat(args ...interface{}) () {
-  // setKeyValueAt(qreal, const class QVariant &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = reflect.TypeOf(QVariant{}) // "const QVariant &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant
-    // invoke: void setKeyValueAt(qreal, const class QVariant &)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QVariant).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "setKeyValueAt", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:83
+// index:0
+// QVariant currentValue()
+func (this *QVariantAnimation) CurrentValue() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation12currentValueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// easingCurve()
-func (this *QVariantAnimation) Easingcurve(args ...interface{}) (ret interface{}) {
-  // easingCurve()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QVariantAnimation11easingCurveEv
-    // invoke: QEasingCurve easingCurve()
-    var ret0 = C.C_ZNK17QVariantAnimation11easingCurveEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QEasingCurve{}) // "QEasingCurve"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "easingCurve", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:85
+// index:0
+// virtual
+// int duration()
+func (this *QVariantAnimation) Duration() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation8durationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setEndValue(const class QVariant &)
-func (this *QVariantAnimation) Setendvalue(args ...interface{}) () {
-  // setEndValue(const class QVariant &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QVariant{}) // "const QVariant &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QVariantAnimation11setEndValueERK8QVariant
-    // invoke: void setEndValue(const class QVariant &)
-    var arg0 = args[0].(*QVariant).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN17QVariantAnimation11setEndValueERK8QVariant(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "setEndValue", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:86
+// index:0
+// void setDuration(int)
+func (this *QVariantAnimation) SetDuration(msecs int) {
+	// 0: (, int msecs), (&msecs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation11setDurationEi", ffiqt.FFI_TYPE_VOID, this.cthis, &msecs)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDuration(int)
-func (this *QVariantAnimation) Setduration(args ...interface{}) () {
-  // setDuration(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QVariantAnimation11setDurationEi
-    // invoke: void setDuration(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN17QVariantAnimation11setDurationEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "setDuration", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:88
+// index:0
+// QEasingCurve easingCurve()
+func (this *QVariantAnimation) EasingCurve() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation11easingCurveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// startValue()
-func (this *QVariantAnimation) Startvalue(args ...interface{}) (ret interface{}) {
-  // startValue()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QVariantAnimation10startValueEv
-    // invoke: QVariant startValue()
-    var ret0 = C.C_ZNK17QVariantAnimation10startValueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QVariantAnimation", "startValue", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qvariantanimation.h:89
+// index:0
+// void setEasingCurve(const class QEasingCurve &)
+func (this *QVariantAnimation) SetEasingCurve(easing unsafe.Pointer) {
+	// 0: (, const QEasingCurve & easing), (easing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve", ffiqt.FFI_TYPE_VOID, this.cthis, easing)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qvariantanimation.h:94
+// index:0
+// void valueChanged(const class QVariant &)
+func (this *QVariantAnimation) ValueChanged(value unsafe.Pointer) {
+	// 0: (, const QVariant & value), (value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation12valueChangedERK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, value)
+	gopp.ErrPrint(err, rv)
+}
 
+//  body block end

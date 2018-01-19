@@ -1,864 +1,326 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qmenubar.h
+// #include <qmenubar.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qmenubar.h
-// dst-file: /src/widgets/qmenubar.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QAction * QMenuBar::addAction(const QString & text);
-extern void* C_ZN8QMenuBar9addActionERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QAction * QMenuBar::addAction(const QString & text, const QObject * receiver, const char * member);
-extern void* C_ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  bool QMenuBar::isDefaultUp();
-extern bool C_ZNK8QMenuBar11isDefaultUpEv(void* qthis); // 4
-  // proto:  QMenu * QMenuBar::addMenu(const QIcon & icon, const QString & title);
-extern void* C_ZN8QMenuBar7addMenuERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QMenu * QMenuBar::addMenu(const QString & title);
-extern void* C_ZN8QMenuBar7addMenuERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QAction * QMenuBar::addMenu(QMenu * menu);
-extern void* C_ZN8QMenuBar7addMenuEP5QMenu(void* qthis, void* arg0); // 4
-  // proto:  QPlatformMenuBar * QMenuBar::platformMenuBar();
-extern void C_ZN8QMenuBar15platformMenuBarEv(void* qthis); // 4
-  // proto:  QAction * QMenuBar::actionAt(const QPoint & );
-extern void* C_ZNK8QMenuBar8actionAtERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  QRect QMenuBar::actionGeometry(QAction * );
-extern void* C_ZNK8QMenuBar14actionGeometryEP7QAction(void* qthis, void* arg0); // 4
-  // proto:  QAction * QMenuBar::activeAction();
-extern void* C_ZNK8QMenuBar12activeActionEv(void* qthis); // 4
-  // proto:  QAction * QMenuBar::addSeparator();
-extern void* C_ZN8QMenuBar12addSeparatorEv(void* qthis); // 4
-  // proto:  void QMenuBar::setActiveAction(QAction * action);
-extern void C_ZN8QMenuBar15setActiveActionEP7QAction(void* qthis, void* arg0); // 4
-  // proto:  bool QMenuBar::isNativeMenuBar();
-extern bool C_ZNK8QMenuBar15isNativeMenuBarEv(void* qthis); // 4
-  // proto:  void QMenuBar::setNativeMenuBar(bool nativeMenuBar);
-extern void C_ZN8QMenuBar16setNativeMenuBarEb(void* qthis, bool arg0); // 4
-  // proto:  const QMetaObject * QMenuBar::metaObject();
-extern void C_ZNK8QMenuBar10metaObjectEv(void* qthis); // 4
-  // proto:  void QMenuBar::QMenuBar(QWidget * parent);
-extern void* C_ZN8QMenuBarC2EP7QWidget(void* arg0); // 3
-  // proto:  QSize QMenuBar::sizeHint();
-extern void* C_ZNK8QMenuBar8sizeHintEv(void* qthis); // 4
-  // proto:  QSize QMenuBar::minimumSizeHint();
-extern void* C_ZNK8QMenuBar15minimumSizeHintEv(void* qthis); // 4
-  // proto:  void QMenuBar::clear();
-extern void C_ZN8QMenuBar5clearEv(void* qthis); // 4
-  // proto:  QAction * QMenuBar::insertSeparator(QAction * before);
-extern void* C_ZN8QMenuBar15insertSeparatorEP7QAction(void* qthis, void* arg0); // 4
-  // proto:  int QMenuBar::heightForWidth(int );
-extern int32_t C_ZNK8QMenuBar14heightForWidthEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QMenuBar::setDefaultUp(bool );
-extern void C_ZN8QMenuBar12setDefaultUpEb(void* qthis, bool arg0); // 4
-  // proto:  void QMenuBar::~QMenuBar();
-extern void C_ZN8QMenuBarD2Ev(void* qthis); // 4
-  // proto:  void QMenuBar::setVisible(bool visible);
-extern void C_ZN8QMenuBar10setVisibleEb(void* qthis, bool arg0); // 4
-  // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
-extern void* C_ZN8QMenuBar10insertMenuEP7QActionP5QMenu(void* qthis, void* arg0, void* arg1); // 4
+// extern C begin: 52
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QMenuBar)=1
+//  ext block end
+
+//  body block begin
 type QMenuBar struct {
-  /*qbase*/ QWidget;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _hovered QMenuBar_hovered_signal;
-//  _triggered QMenuBar_triggered_signal;
+	cthis unsafe.Pointer
 }
 
-// addAction(const class QString &)
-func (this *QMenuBar) Addaction(args ...interface{}) (ret interface{}) {
-  // addAction(const class QString &)
-  // addAction(const class QString &, const class QObject *, const char *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][1] = reflect.TypeOf(qtcore.QObject{}) // "const QObject *"
-  vtys[1][2] = qtrt.ByteTy(true) // "const char *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBar9addActionERK7QString
-    // invoke: QAction * addAction(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QMenuBar9addActionERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc
-    // invoke: QAction * addAction(const class QString &, const class QObject *, const char *)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg1)}
-    argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[1][2])
-    var arg2 = argif2.(unsafe.Pointer)
-    if false {fmt.Println(argif2, arg2)}
-    if free2 {defer C.free(arg2)}
-    var ret0 = C.C_ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "addAction", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:57
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QMenuBar) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isDefaultUp()
-func (this *QMenuBar) Isdefaultup(args ...interface{}) (ret interface{}) {
-  // isDefaultUp()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QMenuBar11isDefaultUpEv
-    // invoke: bool isDefaultUp()
-    var ret0 = C.C_ZNK8QMenuBar11isDefaultUpEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "isDefaultUp", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:63
+// index:0
+// void QMenuBar(class QWidget *)
+func NewQMenuBar(parent unsafe.Pointer) *QMenuBar {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBarC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QMenuBar{cthis}
 }
 
-// addMenu(const class QIcon &, const class QString &)
-func (this *QMenuBar) Addmenu(args ...interface{}) (ret interface{}) {
-  // addMenu(const class QIcon &, const class QString &)
-  // addMenu(const class QString &)
-  // addMenu(class QMenu *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QMenu{}) // "QMenu *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBar7addMenuERK5QIconRK7QString
-    // invoke: QMenu * addMenu(const class QIcon &, const class QString &)
-    var arg0 = args[0].(*qtgui.QIcon).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN8QMenuBar7addMenuERK5QIconRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN8QMenuBar7addMenuERK7QString
-    // invoke: QMenu * addMenu(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QMenuBar7addMenuERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZN8QMenuBar7addMenuEP5QMenu
-    // invoke: QAction * addMenu(class QMenu *)
-    var arg0 = args[0].(*QMenu).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QMenuBar7addMenuEP5QMenu(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "addMenu", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:64
+// index:0
+// virtual
+// void ~QMenuBar()
+func DeleteQMenuBar(*QMenuBar) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBarD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// platformMenuBar()
-func (this *QMenuBar) Platformmenubar(args ...interface{}) () {
-  // platformMenuBar()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBar15platformMenuBarEv
-    // invoke: QPlatformMenuBar * platformMenuBar()
-    C.C_ZN8QMenuBar15platformMenuBarEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMenuBar", "platformMenuBar", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:67
+// index:0
+// QAction * addAction(const class QString &)
+func (this *QMenuBar) AddAction(text unsafe.Pointer) {
+	// 0: (, const QString & text), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar9addActionERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	gopp.ErrPrint(err, rv)
 }
 
-// actionAt(const class QPoint &)
-func (this *QMenuBar) Actionat(args ...interface{}) (ret interface{}) {
-  // actionAt(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QMenuBar8actionAtERK6QPoint
-    // invoke: QAction * actionAt(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QMenuBar8actionAtERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "actionAt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:68
+// index:1
+// QAction * addAction(const class QString &, const class QObject *, const char *)
+func (this *QMenuBar) AddAction_1(text unsafe.Pointer, receiver unsafe.Pointer, member unsafe.Pointer) {
+	// 1: (, const QString & text, const QObject * receiver, const char * member), (text, receiver, member)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc", ffiqt.FFI_TYPE_VOID, this.cthis, text, receiver, member)
+	gopp.ErrPrint(err, rv)
 }
 
-// actionGeometry(class QAction *)
-func (this *QMenuBar) Actiongeometry(args ...interface{}) (ret interface{}) {
-  // actionGeometry(class QAction *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QMenuBar14actionGeometryEP7QAction
-    // invoke: QRect actionGeometry(class QAction *)
-    var arg0 = args[0].(*QAction).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QMenuBar14actionGeometryEP7QAction(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "actionGeometry", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:70
+// index:0
+// QAction * addMenu(class QMenu *)
+func (this *QMenuBar) AddMenu(menu unsafe.Pointer) {
+	// 0: (, QMenu * menu), (menu)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar7addMenuEP5QMenu", ffiqt.FFI_TYPE_VOID, this.cthis, menu)
+	gopp.ErrPrint(err, rv)
 }
 
-// activeAction()
-func (this *QMenuBar) Activeaction(args ...interface{}) (ret interface{}) {
-  // activeAction()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QMenuBar12activeActionEv
-    // invoke: QAction * activeAction()
-    var ret0 = C.C_ZNK8QMenuBar12activeActionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "activeAction", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:71
+// index:1
+// QMenu * addMenu(const class QString &)
+func (this *QMenuBar) AddMenu_1(title unsafe.Pointer) {
+	// 1: (, const QString & title), (title)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar7addMenuERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, title)
+	gopp.ErrPrint(err, rv)
 }
 
-// addSeparator()
-func (this *QMenuBar) Addseparator(args ...interface{}) (ret interface{}) {
-  // addSeparator()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBar12addSeparatorEv
-    // invoke: QAction * addSeparator()
-    var ret0 = C.C_ZN8QMenuBar12addSeparatorEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "addSeparator", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:72
+// index:2
+// QMenu * addMenu(const class QIcon &, const class QString &)
+func (this *QMenuBar) AddMenu_2(icon unsafe.Pointer, title unsafe.Pointer) {
+	// 2: (, const QIcon & icon, const QString & title), (icon, title)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar7addMenuERK5QIconRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, icon, title)
+	gopp.ErrPrint(err, rv)
 }
 
-// setActiveAction(class QAction *)
-func (this *QMenuBar) Setactiveaction(args ...interface{}) () {
-  // setActiveAction(class QAction *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBar15setActiveActionEP7QAction
-    // invoke: void setActiveAction(class QAction *)
-    var arg0 = args[0].(*QAction).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN8QMenuBar15setActiveActionEP7QAction(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMenuBar", "setActiveAction", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:75
+// index:0
+// QAction * addSeparator()
+func (this *QMenuBar) AddSeparator() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar12addSeparatorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isNativeMenuBar()
-func (this *QMenuBar) Isnativemenubar(args ...interface{}) (ret interface{}) {
-  // isNativeMenuBar()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QMenuBar15isNativeMenuBarEv
-    // invoke: bool isNativeMenuBar()
-    var ret0 = C.C_ZNK8QMenuBar15isNativeMenuBarEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "isNativeMenuBar", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:76
+// index:0
+// QAction * insertSeparator(class QAction *)
+func (this *QMenuBar) InsertSeparator(before unsafe.Pointer) {
+	// 0: (, QAction * before), (before)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar15insertSeparatorEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, before)
+	gopp.ErrPrint(err, rv)
 }
 
-// setNativeMenuBar(_Bool)
-func (this *QMenuBar) Setnativemenubar(args ...interface{}) () {
-  // setNativeMenuBar(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBar16setNativeMenuBarEb
-    // invoke: void setNativeMenuBar(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN8QMenuBar16setNativeMenuBarEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMenuBar", "setNativeMenuBar", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:78
+// index:0
+// QAction * insertMenu(class QAction *, class QMenu *)
+func (this *QMenuBar) InsertMenu(before unsafe.Pointer, menu unsafe.Pointer) {
+	// 0: (, QAction * before, QMenu * menu), (before, menu)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar10insertMenuEP7QActionP5QMenu", ffiqt.FFI_TYPE_VOID, this.cthis, before, menu)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QMenuBar) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QMenuBar10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK8QMenuBar10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMenuBar", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:80
+// index:0
+// void clear()
+func (this *QMenuBar) Clear() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QMenuBar(class QWidget *)
-func NewQMenuBar(args ...interface{}) *QMenuBar {
-  // QMenuBar(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBarC1EP7QWidget
-    // invoke: void QMenuBar(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN8QMenuBarC2EP7QWidget(arg0)
-    return &QMenuBar{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QMenuBar", "QMenuBar", args)
-  }
-
-  return nil // QMenuBar{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qmenubar.h:82
+// index:0
+// QAction * activeAction()
+func (this *QMenuBar) ActiveAction() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar12activeActionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// sizeHint()
-func (this *QMenuBar) Sizehint(args ...interface{}) (ret interface{}) {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QMenuBar8sizeHintEv
-    // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK8QMenuBar8sizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "sizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:83
+// index:0
+// void setActiveAction(class QAction *)
+func (this *QMenuBar) SetActiveAction(action unsafe.Pointer) {
+	// 0: (, QAction * action), (action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar15setActiveActionEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, action)
+	gopp.ErrPrint(err, rv)
 }
 
-// minimumSizeHint()
-func (this *QMenuBar) Minimumsizehint(args ...interface{}) (ret interface{}) {
-  // minimumSizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QMenuBar15minimumSizeHintEv
-    // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK8QMenuBar15minimumSizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "minimumSizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:85
+// index:0
+// void setDefaultUp(_Bool)
+func (this *QMenuBar) SetDefaultUp(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar12setDefaultUpEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// clear()
-func (this *QMenuBar) Clear(args ...interface{}) () {
-  // clear()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBar5clearEv
-    // invoke: void clear()
-    C.C_ZN8QMenuBar5clearEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMenuBar", "clear", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:86
+// index:0
+// bool isDefaultUp()
+func (this *QMenuBar) IsDefaultUp() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar11isDefaultUpEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// insertSeparator(class QAction *)
-func (this *QMenuBar) Insertseparator(args ...interface{}) (ret interface{}) {
-  // insertSeparator(class QAction *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBar15insertSeparatorEP7QAction
-    // invoke: QAction * insertSeparator(class QAction *)
-    var arg0 = args[0].(*QAction).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QMenuBar15insertSeparatorEP7QAction(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "insertSeparator", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:88
+// index:0
+// virtual
+// QSize sizeHint()
+func (this *QMenuBar) SizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// heightForWidth(int)
-func (this *QMenuBar) Heightforwidth(args ...interface{}) (ret interface{}) {
-  // heightForWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QMenuBar14heightForWidthEi
-    // invoke: int heightForWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QMenuBar14heightForWidthEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "heightForWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:89
+// index:0
+// virtual
+// QSize minimumSizeHint()
+func (this *QMenuBar) MinimumSizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar15minimumSizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDefaultUp(_Bool)
-func (this *QMenuBar) Setdefaultup(args ...interface{}) () {
-  // setDefaultUp(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBar12setDefaultUpEb
-    // invoke: void setDefaultUp(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN8QMenuBar12setDefaultUpEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMenuBar", "setDefaultUp", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:90
+// index:0
+// virtual
+// int heightForWidth(int)
+func (this *QMenuBar) HeightForWidth(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar14heightForWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QMenuBar()
-func (this *QMenuBar) Freeqmenubar(args ...interface{}) () {
-  // ~QMenuBar()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBarD0Ev
-    // invoke: void ~QMenuBar()
-    C.C_ZN8QMenuBarD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMenuBar", "~QMenuBar", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:92
+// index:0
+// QRect actionGeometry(class QAction *)
+func (this *QMenuBar) ActionGeometry(arg0 unsafe.Pointer) {
+	// 0: (, QAction * arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar14actionGeometryEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setVisible(_Bool)
-func (this *QMenuBar) Setvisible(args ...interface{}) () {
-  // setVisible(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBar10setVisibleEb
-    // invoke: void setVisible(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN8QMenuBar10setVisibleEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMenuBar", "setVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:93
+// index:0
+// QAction * actionAt(const class QPoint &)
+func (this *QMenuBar) ActionAt(arg0 unsafe.Pointer) {
+	// 0: (, const QPoint & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar8actionAtERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// insertMenu(class QAction *, class QMenu *)
-func (this *QMenuBar) Insertmenu(args ...interface{}) (ret interface{}) {
-  // insertMenu(class QAction *, class QMenu *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
-  vtys[0][1] = reflect.TypeOf(QMenu{}) // "QMenu *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QMenuBar10insertMenuEP7QActionP5QMenu
-    // invoke: QAction * insertMenu(class QAction *, class QMenu *)
-    var arg0 = args[0].(*QAction).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QMenu).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN8QMenuBar10insertMenuEP7QActionP5QMenu(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMenuBar", "insertMenu", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmenubar.h:95
+// index:0
+// void setCornerWidget(class QWidget *, Qt::Corner)
+func (this *QMenuBar) SetCornerWidget(w unsafe.Pointer, corner int) {
+	// 0: (, QWidget * w, Qt::Corner corner), (w, &corner)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar15setCornerWidgetEP7QWidgetN2Qt6CornerE", ffiqt.FFI_TYPE_VOID, this.cthis, w, &corner)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qmenubar.h:96
+// index:0
+// QWidget * cornerWidget(Qt::Corner)
+func (this *QMenuBar) CornerWidget(corner int) {
+	// 0: (, Qt::Corner corner), (&corner)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar12cornerWidgetEN2Qt6CornerE", ffiqt.FFI_TYPE_VOID, this.cthis, &corner)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qmenubar.h:102
+// index:0
+// bool isNativeMenuBar()
+func (this *QMenuBar) IsNativeMenuBar() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar15isNativeMenuBarEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:103
+// index:0
+// void setNativeMenuBar(_Bool)
+func (this *QMenuBar) SetNativeMenuBar(nativeMenuBar bool) {
+	// 0: (, bool nativeMenuBar), (&nativeMenuBar)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar16setNativeMenuBarEb", ffiqt.FFI_TYPE_VOID, this.cthis, &nativeMenuBar)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:104
+// index:0
+// QPlatformMenuBar * platformMenuBar()
+func (this *QMenuBar) PlatformMenuBar() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar15platformMenuBarEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:106
+// index:0
+// virtual
+// void setVisible(_Bool)
+func (this *QMenuBar) SetVisible(visible bool) {
+	// 0: (, bool visible), (&visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar10setVisibleEb", ffiqt.FFI_TYPE_VOID, this.cthis, &visible)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:109
+// index:0
+// void triggered(class QAction *)
+func (this *QMenuBar) Triggered(action unsafe.Pointer) {
+	// 0: (, QAction * action), (action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar9triggeredEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, action)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:110
+// index:0
+// void hovered(class QAction *)
+func (this *QMenuBar) Hovered(action unsafe.Pointer) {
+	// 0: (, QAction * action), (action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar7hoveredEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, action)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

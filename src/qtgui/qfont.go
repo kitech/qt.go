@@ -1,2104 +1,766 @@
+//  header block begin
+// /usr/include/qt/QtGui/qfont.h
+// #include <qfont.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qfont.h
-// dst-file: /src/gui/qfont.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  bool QFont::isCopyOf(const QFont & );
-extern bool C_ZNK5QFont8isCopyOfERKS_(void* qthis, void* arg0); // 4
-  // proto:  qreal QFont::wordSpacing();
-extern double C_ZNK5QFont11wordSpacingEv(void* qthis); // 4
-  // proto:  QFont::SpacingType QFont::letterSpacingType();
-extern void C_ZNK5QFont17letterSpacingTypeEv(void* qthis); // 4
-  // proto:  QString QFont::lastResortFamily();
-extern void* C_ZNK5QFont16lastResortFamilyEv(void* qthis); // 4
-  // proto:  void QFont::setStretch(int );
-extern void C_ZN5QFont10setStretchEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QFont::weight();
-extern int32_t C_ZNK5QFont6weightEv(void* qthis); // 4
-  // proto:  QFont::StyleStrategy QFont::styleStrategy();
-extern void C_ZNK5QFont13styleStrategyEv(void* qthis); // 4
-  // proto:  bool QFont::fromString(const QString & );
-extern bool C_ZN5QFont10fromStringERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QFont::setPointSizeF(qreal );
-extern void C_ZN5QFont13setPointSizeFEd(void* qthis, double arg0); // 4
-  // proto: static void QFont::insertSubstitutions(const QString & , const QStringList & );
-extern void C_ZN5QFont19insertSubstitutionsERK7QStringRK11QStringList(void* arg0, void* arg1); // 4
-  // proto:  bool QFont::rawMode();
-extern bool C_ZNK5QFont7rawModeEv(void* qthis); // 4
-  // proto:  void QFont::setItalic(bool b);
-extern void C_ZN5QFont9setItalicEb(void* qthis, bool arg0); // 2
-  // proto:  QString QFont::toString();
-extern void* C_ZNK5QFont8toStringEv(void* qthis); // 4
-  // proto:  bool QFont::underline();
-extern bool C_ZNK5QFont9underlineEv(void* qthis); // 4
-  // proto:  void QFont::setStyleName(const QString & );
-extern void C_ZN5QFont12setStyleNameERK7QString(void* qthis, void* arg0); // 4
-  // proto: static void QFont::removeSubstitutions(const QString & );
-extern void C_ZN5QFont19removeSubstitutionsERK7QString(void* arg0); // 4
-  // proto:  void QFont::setPointSize(int );
-extern void C_ZN5QFont12setPointSizeEi(void* qthis, int32_t arg0); // 4
-  // proto:  QFont::Style QFont::style();
-extern void C_ZNK5QFont5styleEv(void* qthis); // 4
-  // proto:  QString QFont::family();
-extern void* C_ZNK5QFont6familyEv(void* qthis); // 4
-  // proto:  void QFont::setBold(bool );
-extern void C_ZN5QFont7setBoldEb(void* qthis, bool arg0); // 2
-  // proto:  QString QFont::key();
-extern void* C_ZNK5QFont3keyEv(void* qthis); // 4
-  // proto:  int QFont::stretch();
-extern int32_t C_ZNK5QFont7stretchEv(void* qthis); // 4
-  // proto:  qreal QFont::pointSizeF();
-extern double C_ZNK5QFont10pointSizeFEv(void* qthis); // 4
-  // proto:  int QFont::pointSize();
-extern int32_t C_ZNK5QFont9pointSizeEv(void* qthis); // 4
-  // proto:  bool QFont::fixedPitch();
-extern bool C_ZNK5QFont10fixedPitchEv(void* qthis); // 4
-  // proto: static QStringList QFont::substitutions();
-extern void C_ZN5QFont13substitutionsEv(); // 4
-  // proto: static void QFont::cacheStatistics();
-extern void C_ZN5QFont15cacheStatisticsEv(); // 4
-  // proto:  void QFont::~QFont();
-extern void C_ZN5QFontD2Ev(void* qthis); // 4
-  // proto:  bool QFont::kerning();
-extern bool C_ZNK5QFont7kerningEv(void* qthis); // 4
-  // proto: static QStringList QFont::substitutes(const QString & );
-extern void C_ZN5QFont11substitutesERK7QString(void* arg0); // 4
-  // proto:  void QFont::setRawMode(bool );
-extern void C_ZN5QFont10setRawModeEb(void* qthis, bool arg0); // 4
-  // proto:  bool QFont::italic();
-extern bool C_ZNK5QFont6italicEv(void* qthis); // 2
-  // proto:  int QFont::pixelSize();
-extern int32_t C_ZNK5QFont9pixelSizeEv(void* qthis); // 4
-  // proto:  void QFont::swap(QFont & other);
-extern void C_ZN5QFont4swapERS_(void* qthis, void* arg0); // 2
-  // proto:  QString QFont::rawName();
-extern void* C_ZNK5QFont7rawNameEv(void* qthis); // 4
-  // proto: static void QFont::insertSubstitution(const QString & , const QString & );
-extern void C_ZN5QFont18insertSubstitutionERK7QStringS2_(void* arg0, void* arg1); // 4
-  // proto:  bool QFont::strikeOut();
-extern bool C_ZNK5QFont9strikeOutEv(void* qthis); // 4
-  // proto:  bool QFont::bold();
-extern bool C_ZNK5QFont4boldEv(void* qthis); // 2
-  // proto:  QFont::Capitalization QFont::capitalization();
-extern void C_ZNK5QFont14capitalizationEv(void* qthis); // 4
-  // proto:  QFont::StyleHint QFont::styleHint();
-extern void C_ZNK5QFont9styleHintEv(void* qthis); // 4
-  // proto:  void QFont::setKerning(bool );
-extern void C_ZN5QFont10setKerningEb(void* qthis, bool arg0); // 4
-  // proto:  void QFont::QFont(const QFont & );
-extern void* C_ZN5QFontC2ERKS_(void* arg0); // 3
-  // proto:  void QFont::QFont();
-extern void* C_ZN5QFontC2Ev(); // 3
-  // proto:  void QFont::QFont(const QString & family, int pointSize, int weight, bool italic);
-extern void* C_ZN5QFontC2ERK7QStringiib(void* arg0, int32_t arg1, int32_t arg2, bool arg3); // 3
-  // proto:  void QFont::QFont(const QFont & , QPaintDevice * pd);
-extern void* C_ZN5QFontC2ERKS_P12QPaintDevice(void* arg0, void* arg1); // 3
-  // proto: static QString QFont::substitute(const QString & );
-extern void* C_ZN5QFont10substituteERK7QString(void* arg0); // 4
-  // proto:  QFont::HintingPreference QFont::hintingPreference();
-extern void C_ZNK5QFont17hintingPreferenceEv(void* qthis); // 4
-  // proto:  void QFont::setRawName(const QString & );
-extern void C_ZN5QFont10setRawNameERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QFont::setOverline(bool );
-extern void C_ZN5QFont11setOverlineEb(void* qthis, bool arg0); // 4
-  // proto:  void QFont::setFixedPitch(bool );
-extern void C_ZN5QFont13setFixedPitchEb(void* qthis, bool arg0); // 4
-  // proto:  qreal QFont::letterSpacing();
-extern double C_ZNK5QFont13letterSpacingEv(void* qthis); // 4
-  // proto: static void QFont::initialize();
-extern void C_ZN5QFont10initializeEv(); // 4
-  // proto:  void QFont::setPixelSize(int );
-extern void C_ZN5QFont12setPixelSizeEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QFont::resolve(uint mask);
-extern void C_ZN5QFont7resolveEj(void* qthis, int32_t arg0); // 2
-  // proto:  uint QFont::resolve();
-extern int32_t C_ZNK5QFont7resolveEv(void* qthis); // 2
-  // proto:  QFont QFont::resolve(const QFont & );
-extern void* C_ZNK5QFont7resolveERKS_(void* qthis, void* arg0); // 4
-  // proto:  bool QFont::exactMatch();
-extern bool C_ZNK5QFont10exactMatchEv(void* qthis); // 4
-  // proto:  void QFont::setWordSpacing(qreal spacing);
-extern void C_ZN5QFont14setWordSpacingEd(void* qthis, double arg0); // 4
-  // proto:  void QFont::setStrikeOut(bool );
-extern void C_ZN5QFont12setStrikeOutEb(void* qthis, bool arg0); // 4
-  // proto:  void QFont::setWeight(int );
-extern void C_ZN5QFont9setWeightEi(void* qthis, int32_t arg0); // 4
-  // proto:  QString QFont::lastResortFont();
-extern void* C_ZNK5QFont14lastResortFontEv(void* qthis); // 4
-  // proto:  bool QFont::overline();
-extern bool C_ZNK5QFont8overlineEv(void* qthis); // 4
-  // proto:  QString QFont::defaultFamily();
-extern void* C_ZNK5QFont13defaultFamilyEv(void* qthis); // 4
-  // proto:  void QFont::setFamily(const QString & );
-extern void C_ZN5QFont9setFamilyERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QFont::setUnderline(bool );
-extern void C_ZN5QFont12setUnderlineEb(void* qthis, bool arg0); // 4
-  // proto:  QString QFont::styleName();
-extern void* C_ZNK5QFont9styleNameEv(void* qthis); // 4
-  // proto: static void QFont::cleanup();
-extern void C_ZN5QFont7cleanupEv(); // 4
+// extern C begin: 2
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QFont)=1
+//  ext block end
+
+//  body block begin
 type QFont struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// isCopyOf(const class QFont &)
-func (this *QFont) Iscopyof(args ...interface{}) (ret interface{}) {
-  // isCopyOf(const class QFont &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QFont{}) // "const QFont &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont8isCopyOfERKS_
-    // invoke: bool isCopyOf(const class QFont &)
-    var arg0 = args[0].(*QFont).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QFont8isCopyOfERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "isCopyOf", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:170
+// index:0
+// void QFont()
+func NewQFont() *QFont {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFontC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QFont{cthis}
 }
 
-// wordSpacing()
-func (this *QFont) Wordspacing(args ...interface{}) (ret interface{}) {
-  // wordSpacing()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont11wordSpacingEv
-    // invoke: qreal wordSpacing()
-    var ret0 = C.C_ZNK5QFont11wordSpacingEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "wordSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:171
+// index:1
+// void QFont(const class QString &, int, int, _Bool)
+func NewQFont_1(family unsafe.Pointer, pointSize int, weight int, italic bool) *QFont {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFontC2ERK7QStringiib", ffiqt.FFI_TYPE_VOID, cthis, family, &pointSize, &weight, &italic)
+	gopp.ErrPrint(err, rv)
+	return &QFont{cthis}
 }
 
-// letterSpacingType()
-func (this *QFont) Letterspacingtype(args ...interface{}) () {
-  // letterSpacingType()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont17letterSpacingTypeEv
-    // invoke: QFont::SpacingType letterSpacingType()
-    C.C_ZNK5QFont17letterSpacingTypeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFont", "letterSpacingType", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:172
+// index:2
+// void QFont(const class QFont &, class QPaintDevice *)
+func NewQFont_2(arg0 unsafe.Pointer, pd unsafe.Pointer) *QFont {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFontC2ERKS_P12QPaintDevice", ffiqt.FFI_TYPE_VOID, cthis, arg0, pd)
+	gopp.ErrPrint(err, rv)
+	return &QFont{cthis}
 }
 
-// lastResortFamily()
-func (this *QFont) Lastresortfamily(args ...interface{}) (ret interface{}) {
-  // lastResortFamily()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont16lastResortFamilyEv
-    // invoke: QString lastResortFamily()
-    var ret0 = C.C_ZNK5QFont16lastResortFamilyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "lastResortFamily", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:174
+// index:0
+// void ~QFont()
+func DeleteQFont(*QFont) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFontD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// setStretch(int)
-func (this *QFont) Setstretch(args ...interface{}) () {
-  // setStretch(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont10setStretchEi
-    // invoke: void setStretch(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont10setStretchEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setStretch", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:176
+// index:0
+// inline
+// void swap(class QFont &)
+func (this *QFont) Swap(other unsafe.Pointer) {
+	// 0: (, QFont & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// weight()
-func (this *QFont) Weight(args ...interface{}) (ret interface{}) {
-  // weight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont6weightEv
-    // invoke: int weight()
-    var ret0 = C.C_ZNK5QFont6weightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "weight", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:179
+// index:0
+// QString family()
+func (this *QFont) Family() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont6familyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// styleStrategy()
-func (this *QFont) Stylestrategy(args ...interface{}) () {
-  // styleStrategy()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont13styleStrategyEv
-    // invoke: QFont::StyleStrategy styleStrategy()
-    C.C_ZNK5QFont13styleStrategyEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFont", "styleStrategy", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:180
+// index:0
+// void setFamily(const class QString &)
+func (this *QFont) SetFamily(arg0 unsafe.Pointer) {
+	// 0: (, const QString & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont9setFamilyERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// fromString(const class QString &)
-func (this *QFont) Fromstring(args ...interface{}) (ret interface{}) {
-  // fromString(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont10fromStringERK7QString
-    // invoke: bool fromString(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN5QFont10fromStringERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "fromString", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:182
+// index:0
+// QString styleName()
+func (this *QFont) StyleName() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9styleNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setPointSizeF(qreal)
-func (this *QFont) Setpointsizef(args ...interface{}) () {
-  // setPointSizeF(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont13setPointSizeFEd
-    // invoke: void setPointSizeF(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont13setPointSizeFEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setPointSizeF", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:183
+// index:0
+// void setStyleName(const class QString &)
+func (this *QFont) SetStyleName(arg0 unsafe.Pointer) {
+	// 0: (, const QString & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont12setStyleNameERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// insertSubstitutions(const class QString &, const class QStringList &)
-func (this *QFont) Insertsubstitutions_S(args ...interface{}) () {
-  // insertSubstitutions(const class QString &, const class QStringList &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont19insertSubstitutionsERK7QStringRK11QStringList
-    // invoke: void insertSubstitutions(const class QString &, const class QStringList &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QStringList).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN5QFont19insertSubstitutionsERK7QStringRK11QStringList(arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QFont", "insertSubstitutions", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:185
+// index:0
+// int pointSize()
+func (this *QFont) PointSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9pointSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// rawMode()
-func (this *QFont) Rawmode(args ...interface{}) (ret interface{}) {
-  // rawMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont7rawModeEv
-    // invoke: bool rawMode()
-    var ret0 = C.C_ZNK5QFont7rawModeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "rawMode", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:186
+// index:0
+// void setPointSize(int)
+func (this *QFont) SetPointSize(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont12setPointSizeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setItalic(_Bool)
-func (this *QFont) Setitalic(args ...interface{}) () {
-  // setItalic(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont9setItalicEb
-    // invoke: void setItalic(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont9setItalicEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setItalic", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:187
+// index:0
+// qreal pointSizeF()
+func (this *QFont) PointSizeF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont10pointSizeFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toString()
-func (this *QFont) Tostring(args ...interface{}) (ret interface{}) {
-  // toString()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont8toStringEv
-    // invoke: QString toString()
-    var ret0 = C.C_ZNK5QFont8toStringEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "toString", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:188
+// index:0
+// void setPointSizeF(qreal)
+func (this *QFont) SetPointSizeF(arg0 float64) {
+	// 0: (, qreal arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont13setPointSizeFEd", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// underline()
-func (this *QFont) Underline(args ...interface{}) (ret interface{}) {
-  // underline()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont9underlineEv
-    // invoke: bool underline()
-    var ret0 = C.C_ZNK5QFont9underlineEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "underline", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:190
+// index:0
+// int pixelSize()
+func (this *QFont) PixelSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9pixelSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setStyleName(const class QString &)
-func (this *QFont) Setstylename(args ...interface{}) () {
-  // setStyleName(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont12setStyleNameERK7QString
-    // invoke: void setStyleName(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont12setStyleNameERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setStyleName", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:191
+// index:0
+// void setPixelSize(int)
+func (this *QFont) SetPixelSize(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont12setPixelSizeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// removeSubstitutions(const class QString &)
-func (this *QFont) Removesubstitutions_S(args ...interface{}) () {
-  // removeSubstitutions(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont19removeSubstitutionsERK7QString
-    // invoke: void removeSubstitutions(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont19removeSubstitutionsERK7QString(arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "removeSubstitutions", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:193
+// index:0
+// int weight()
+func (this *QFont) Weight() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont6weightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setPointSize(int)
-func (this *QFont) Setpointsize(args ...interface{}) () {
-  // setPointSize(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont12setPointSizeEi
-    // invoke: void setPointSize(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont12setPointSizeEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setPointSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:194
+// index:0
+// void setWeight(int)
+func (this *QFont) SetWeight(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont9setWeightEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// style()
-func (this *QFont) Style(args ...interface{}) () {
-  // style()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont5styleEv
-    // invoke: QFont::Style style()
-    C.C_ZNK5QFont5styleEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFont", "style", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:196
+// index:0
+// inline
+// bool bold()
+func (this *QFont) Bold() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont4boldEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// family()
-func (this *QFont) Family(args ...interface{}) (ret interface{}) {
-  // family()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont6familyEv
-    // invoke: QString family()
-    var ret0 = C.C_ZNK5QFont6familyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "family", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:197
+// index:0
+// inline
+// void setBold(_Bool)
+func (this *QFont) SetBold(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont7setBoldEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setBold(_Bool)
-func (this *QFont) Setbold(args ...interface{}) () {
-  // setBold(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont7setBoldEb
-    // invoke: void setBold(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont7setBoldEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setBold", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:199
+// index:0
+// void setStyle(enum QFont::Style)
+func (this *QFont) SetStyle(style int) {
+	// 0: (, QFont::Style style), (&style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont8setStyleENS_5StyleE", ffiqt.FFI_TYPE_VOID, this.cthis, &style)
+	gopp.ErrPrint(err, rv)
 }
 
-// key()
-func (this *QFont) Key(args ...interface{}) (ret interface{}) {
-  // key()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont3keyEv
-    // invoke: QString key()
-    var ret0 = C.C_ZNK5QFont3keyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "key", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:200
+// index:0
+// QFont::Style style()
+func (this *QFont) Style() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont5styleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// stretch()
-func (this *QFont) Stretch(args ...interface{}) (ret interface{}) {
-  // stretch()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont7stretchEv
-    // invoke: int stretch()
-    var ret0 = C.C_ZNK5QFont7stretchEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "stretch", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:202
+// index:0
+// inline
+// bool italic()
+func (this *QFont) Italic() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont6italicEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// pointSizeF()
-func (this *QFont) Pointsizef(args ...interface{}) (ret interface{}) {
-  // pointSizeF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont10pointSizeFEv
-    // invoke: qreal pointSizeF()
-    var ret0 = C.C_ZNK5QFont10pointSizeFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "pointSizeF", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:203
+// index:0
+// inline
+// void setItalic(_Bool)
+func (this *QFont) SetItalic(b bool) {
+	// 0: (, bool b), (&b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont9setItalicEb", ffiqt.FFI_TYPE_VOID, this.cthis, &b)
+	gopp.ErrPrint(err, rv)
 }
 
-// pointSize()
-func (this *QFont) Pointsize(args ...interface{}) (ret interface{}) {
-  // pointSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont9pointSizeEv
-    // invoke: int pointSize()
-    var ret0 = C.C_ZNK5QFont9pointSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "pointSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:205
+// index:0
+// bool underline()
+func (this *QFont) Underline() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9underlineEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// fixedPitch()
-func (this *QFont) Fixedpitch(args ...interface{}) (ret interface{}) {
-  // fixedPitch()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont10fixedPitchEv
-    // invoke: bool fixedPitch()
-    var ret0 = C.C_ZNK5QFont10fixedPitchEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "fixedPitch", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:206
+// index:0
+// void setUnderline(_Bool)
+func (this *QFont) SetUnderline(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont12setUnderlineEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// substitutions()
-func (this *QFont) Substitutions_S(args ...interface{}) () {
-  // substitutions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont13substitutionsEv
-    // invoke: QStringList substitutions()
-    C.C_ZN5QFont13substitutionsEv()
-  default:
-    qtrt.ErrorResolve("QFont", "substitutions", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:208
+// index:0
+// bool overline()
+func (this *QFont) Overline() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont8overlineEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// cacheStatistics()
-func (this *QFont) Cachestatistics_S(args ...interface{}) () {
-  // cacheStatistics()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont15cacheStatisticsEv
-    // invoke: void cacheStatistics()
-    C.C_ZN5QFont15cacheStatisticsEv()
-  default:
-    qtrt.ErrorResolve("QFont", "cacheStatistics", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:209
+// index:0
+// void setOverline(_Bool)
+func (this *QFont) SetOverline(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont11setOverlineEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QFont()
-func (this *QFont) Freeqfont(args ...interface{}) () {
-  // ~QFont()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFontD0Ev
-    // invoke: void ~QFont()
-    C.C_ZN5QFontD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFont", "~QFont", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:211
+// index:0
+// bool strikeOut()
+func (this *QFont) StrikeOut() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9strikeOutEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// kerning()
-func (this *QFont) Kerning(args ...interface{}) (ret interface{}) {
-  // kerning()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont7kerningEv
-    // invoke: bool kerning()
-    var ret0 = C.C_ZNK5QFont7kerningEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "kerning", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:212
+// index:0
+// void setStrikeOut(_Bool)
+func (this *QFont) SetStrikeOut(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont12setStrikeOutEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// substitutes(const class QString &)
-func (this *QFont) Substitutes_S(args ...interface{}) () {
-  // substitutes(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont11substitutesERK7QString
-    // invoke: QStringList substitutes(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont11substitutesERK7QString(arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "substitutes", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:214
+// index:0
+// bool fixedPitch()
+func (this *QFont) FixedPitch() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont10fixedPitchEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRawMode(_Bool)
-func (this *QFont) Setrawmode(args ...interface{}) () {
-  // setRawMode(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont10setRawModeEb
-    // invoke: void setRawMode(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont10setRawModeEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setRawMode", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:215
+// index:0
+// void setFixedPitch(_Bool)
+func (this *QFont) SetFixedPitch(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont13setFixedPitchEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// italic()
-func (this *QFont) Italic(args ...interface{}) (ret interface{}) {
-  // italic()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont6italicEv
-    // invoke: bool italic()
-    var ret0 = C.C_ZNK5QFont6italicEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "italic", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:217
+// index:0
+// bool kerning()
+func (this *QFont) Kerning() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7kerningEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// pixelSize()
-func (this *QFont) Pixelsize(args ...interface{}) (ret interface{}) {
-  // pixelSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont9pixelSizeEv
-    // invoke: int pixelSize()
-    var ret0 = C.C_ZNK5QFont9pixelSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "pixelSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:218
+// index:0
+// void setKerning(_Bool)
+func (this *QFont) SetKerning(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont10setKerningEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// swap(class QFont &)
-func (this *QFont) Swap(args ...interface{}) () {
-  // swap(class QFont &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QFont{}) // "QFont &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont4swapERS_
-    // invoke: void swap(class QFont &)
-    var arg0 = args[0].(*QFont).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont4swapERS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "swap", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:220
+// index:0
+// QFont::StyleHint styleHint()
+func (this *QFont) StyleHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9styleHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// rawName()
-func (this *QFont) Rawname(args ...interface{}) (ret interface{}) {
-  // rawName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont7rawNameEv
-    // invoke: QString rawName()
-    var ret0 = C.C_ZNK5QFont7rawNameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "rawName", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:221
+// index:0
+// QFont::StyleStrategy styleStrategy()
+func (this *QFont) StyleStrategy() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont13styleStrategyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// insertSubstitution(const class QString &, const class QString &)
-func (this *QFont) Insertsubstitution_S(args ...interface{}) () {
-  // insertSubstitution(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont18insertSubstitutionERK7QStringS2_
-    // invoke: void insertSubstitution(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN5QFont18insertSubstitutionERK7QStringS2_(arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QFont", "insertSubstitution", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:222
+// index:0
+// void setStyleHint(enum QFont::StyleHint, enum QFont::StyleStrategy)
+func (this *QFont) SetStyleHint(arg0 int, arg1 int) {
+	// 0: (, QFont::StyleHint arg0, QFont::StyleStrategy arg1), (&arg0, &arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont12setStyleHintENS_9StyleHintENS_13StyleStrategyE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, &arg1)
+	gopp.ErrPrint(err, rv)
 }
 
-// strikeOut()
-func (this *QFont) Strikeout(args ...interface{}) (ret interface{}) {
-  // strikeOut()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont9strikeOutEv
-    // invoke: bool strikeOut()
-    var ret0 = C.C_ZNK5QFont9strikeOutEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "strikeOut", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:223
+// index:0
+// void setStyleStrategy(enum QFont::StyleStrategy)
+func (this *QFont) SetStyleStrategy(s int) {
+	// 0: (, QFont::StyleStrategy s), (&s)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont16setStyleStrategyENS_13StyleStrategyE", ffiqt.FFI_TYPE_VOID, this.cthis, &s)
+	gopp.ErrPrint(err, rv)
 }
 
-// bold()
-func (this *QFont) Bold(args ...interface{}) (ret interface{}) {
-  // bold()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont4boldEv
-    // invoke: bool bold()
-    var ret0 = C.C_ZNK5QFont4boldEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "bold", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:225
+// index:0
+// int stretch()
+func (this *QFont) Stretch() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7stretchEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// capitalization()
-func (this *QFont) Capitalization(args ...interface{}) () {
-  // capitalization()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont14capitalizationEv
-    // invoke: QFont::Capitalization capitalization()
-    C.C_ZNK5QFont14capitalizationEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFont", "capitalization", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:226
+// index:0
+// void setStretch(int)
+func (this *QFont) SetStretch(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont10setStretchEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// styleHint()
-func (this *QFont) Stylehint(args ...interface{}) () {
-  // styleHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont9styleHintEv
-    // invoke: QFont::StyleHint styleHint()
-    C.C_ZNK5QFont9styleHintEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFont", "styleHint", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:228
+// index:0
+// qreal letterSpacing()
+func (this *QFont) LetterSpacing() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont13letterSpacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setKerning(_Bool)
-func (this *QFont) Setkerning(args ...interface{}) () {
-  // setKerning(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont10setKerningEb
-    // invoke: void setKerning(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont10setKerningEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setKerning", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:229
+// index:0
+// QFont::SpacingType letterSpacingType()
+func (this *QFont) LetterSpacingType() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont17letterSpacingTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QFont(const class QFont &)
-func NewQFont(args ...interface{}) *QFont {
-  // QFont(const class QFont &)
-  // QFont()
-  // QFont(const class QString &, int, int, _Bool)
-  // QFont(const class QFont &, class QPaintDevice *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QFont{}) // "const QFont &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[2][1] = qtrt.Int32Ty(false) // "int"
-  vtys[2][2] = qtrt.Int32Ty(false) // "int"
-  vtys[2][3] = qtrt.BoolTy(false) // "bool"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(QFont{}) // "const QFont &"
-  vtys[3][1] = reflect.TypeOf(QPaintDevice{}) // "QPaintDevice *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFontC1ERKS_
-    // invoke: void QFont(const class QFont &)
-    var arg0 = args[0].(*QFont).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QFontC2ERKS_(arg0)
-    return &QFont{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN5QFontC1Ev
-    // invoke: void QFont()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QFontC2Ev()
-    return &QFont{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN5QFontC1ERK7QStringiib
-    // invoke: void QFont(const class QString &, int, int, _Bool)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.bool(args[3].(bool))
-    if false {fmt.Println(arg3)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QFontC2ERK7QStringiib(arg0, arg1, arg2, arg3)
-    return &QFont{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN5QFontC1ERKS_P12QPaintDevice
-    // invoke: void QFont(const class QFont &, class QPaintDevice *)
-    var arg0 = args[0].(*QFont).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QPaintDevice).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QFontC2ERKS_P12QPaintDevice(arg0, arg1)
-    return &QFont{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QFont", "QFont", args)
-  }
-
-  return nil // QFont{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qfont.h:230
+// index:0
+// void setLetterSpacing(enum QFont::SpacingType, qreal)
+func (this *QFont) SetLetterSpacing(type_ int, spacing float64) {
+	// 0: (, QFont::SpacingType type, qreal spacing), (&type_, &spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont16setLetterSpacingENS_11SpacingTypeEd", ffiqt.FFI_TYPE_VOID, this.cthis, &type_, &spacing)
+	gopp.ErrPrint(err, rv)
 }
 
-// substitute(const class QString &)
-func (this *QFont) Substitute_S(args ...interface{}) (ret interface{}) {
-  // substitute(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont10substituteERK7QString
-    // invoke: QString substitute(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN5QFont10substituteERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "substitute", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:232
+// index:0
+// qreal wordSpacing()
+func (this *QFont) WordSpacing() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont11wordSpacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// hintingPreference()
-func (this *QFont) Hintingpreference(args ...interface{}) () {
-  // hintingPreference()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont17hintingPreferenceEv
-    // invoke: QFont::HintingPreference hintingPreference()
-    C.C_ZNK5QFont17hintingPreferenceEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFont", "hintingPreference", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:233
+// index:0
+// void setWordSpacing(qreal)
+func (this *QFont) SetWordSpacing(spacing float64) {
+	// 0: (, qreal spacing), (&spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont14setWordSpacingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &spacing)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRawName(const class QString &)
-func (this *QFont) Setrawname(args ...interface{}) () {
-  // setRawName(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont10setRawNameERK7QString
-    // invoke: void setRawName(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont10setRawNameERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setRawName", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:235
+// index:0
+// void setCapitalization(enum QFont::Capitalization)
+func (this *QFont) SetCapitalization(arg0 int) {
+	// 0: (, QFont::Capitalization arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont17setCapitalizationENS_14CapitalizationE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setOverline(_Bool)
-func (this *QFont) Setoverline(args ...interface{}) () {
-  // setOverline(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont11setOverlineEb
-    // invoke: void setOverline(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont11setOverlineEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setOverline", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:236
+// index:0
+// QFont::Capitalization capitalization()
+func (this *QFont) Capitalization() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont14capitalizationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFixedPitch(_Bool)
-func (this *QFont) Setfixedpitch(args ...interface{}) () {
-  // setFixedPitch(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont13setFixedPitchEb
-    // invoke: void setFixedPitch(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont13setFixedPitchEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setFixedPitch", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:238
+// index:0
+// void setHintingPreference(enum QFont::HintingPreference)
+func (this *QFont) SetHintingPreference(hintingPreference int) {
+	// 0: (, QFont::HintingPreference hintingPreference), (&hintingPreference)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont20setHintingPreferenceENS_17HintingPreferenceE", ffiqt.FFI_TYPE_VOID, this.cthis, &hintingPreference)
+	gopp.ErrPrint(err, rv)
 }
 
-// letterSpacing()
-func (this *QFont) Letterspacing(args ...interface{}) (ret interface{}) {
-  // letterSpacing()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont13letterSpacingEv
-    // invoke: qreal letterSpacing()
-    var ret0 = C.C_ZNK5QFont13letterSpacingEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "letterSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:239
+// index:0
+// QFont::HintingPreference hintingPreference()
+func (this *QFont) HintingPreference() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont17hintingPreferenceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// initialize()
-func (this *QFont) Initialize_S(args ...interface{}) () {
-  // initialize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont10initializeEv
-    // invoke: void initialize()
-    C.C_ZN5QFont10initializeEv()
-  default:
-    qtrt.ErrorResolve("QFont", "initialize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:242
+// index:0
+// bool rawMode()
+func (this *QFont) RawMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7rawModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setPixelSize(int)
-func (this *QFont) Setpixelsize(args ...interface{}) () {
-  // setPixelSize(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont12setPixelSizeEi
-    // invoke: void setPixelSize(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont12setPixelSizeEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setPixelSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:243
+// index:0
+// void setRawMode(_Bool)
+func (this *QFont) SetRawMode(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont10setRawModeEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// resolve(uint)
-func (this *QFont) Resolve(args ...interface{}) () {
-  // resolve(uint)
-  // resolve()
-  // resolve(const class QFont &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "uint"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QFont{}) // "const QFont &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont7resolveEj
-    // invoke: void resolve(uint)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont7resolveEj(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZNK5QFont7resolveEv
-    // invoke: uint resolve()
-    var ret0 = C.C_ZNK5QFont7resolveEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-  case 2:
-    // invoke: _ZNK5QFont7resolveERKS_
-    // invoke: QFont resolve(const class QFont &)
-    var arg0 = args[0].(*QFont).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QFont7resolveERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-  default:
-    qtrt.ErrorResolve("QFont", "resolve", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:247
+// index:0
+// bool exactMatch()
+func (this *QFont) ExactMatch() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont10exactMatchEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// exactMatch()
-func (this *QFont) Exactmatch(args ...interface{}) (ret interface{}) {
-  // exactMatch()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont10exactMatchEv
-    // invoke: bool exactMatch()
-    var ret0 = C.C_ZNK5QFont10exactMatchEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "exactMatch", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:254
+// index:0
+// bool isCopyOf(const class QFont &)
+func (this *QFont) IsCopyOf(arg0 unsafe.Pointer) {
+	// 0: (, const QFont & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont8isCopyOfERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setWordSpacing(qreal)
-func (this *QFont) Setwordspacing(args ...interface{}) () {
-  // setWordSpacing(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont14setWordSpacingEd
-    // invoke: void setWordSpacing(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont14setWordSpacingEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setWordSpacing", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:262
+// index:0
+// void setRawName(const class QString &)
+func (this *QFont) SetRawName(arg0 unsafe.Pointer) {
+	// 0: (, const QString & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont10setRawNameERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setStrikeOut(_Bool)
-func (this *QFont) Setstrikeout(args ...interface{}) () {
-  // setStrikeOut(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont12setStrikeOutEb
-    // invoke: void setStrikeOut(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont12setStrikeOutEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setStrikeOut", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:263
+// index:0
+// QString rawName()
+func (this *QFont) RawName() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7rawNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setWeight(int)
-func (this *QFont) Setweight(args ...interface{}) () {
-  // setWeight(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont9setWeightEi
-    // invoke: void setWeight(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont9setWeightEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setWeight", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:266
+// index:0
+// QString key()
+func (this *QFont) Key() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont3keyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// lastResortFont()
-func (this *QFont) Lastresortfont(args ...interface{}) (ret interface{}) {
-  // lastResortFont()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont14lastResortFontEv
-    // invoke: QString lastResortFont()
-    var ret0 = C.C_ZNK5QFont14lastResortFontEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "lastResortFont", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:268
+// index:0
+// QString toString()
+func (this *QFont) ToString() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont8toStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// overline()
-func (this *QFont) Overline(args ...interface{}) (ret interface{}) {
-  // overline()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont8overlineEv
-    // invoke: bool overline()
-    var ret0 = C.C_ZNK5QFont8overlineEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "overline", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:269
+// index:0
+// bool fromString(const class QString &)
+func (this *QFont) FromString(arg0 unsafe.Pointer) {
+	// 0: (, const QString & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont10fromStringERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// defaultFamily()
-func (this *QFont) Defaultfamily(args ...interface{}) (ret interface{}) {
-  // defaultFamily()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont13defaultFamilyEv
-    // invoke: QString defaultFamily()
-    var ret0 = C.C_ZNK5QFont13defaultFamilyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "defaultFamily", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:271
+// index:0
+// static
+// QString substitute(const class QString &)
+func (this *QFont) Substitute(arg0 unsafe.Pointer) {
+	// 0: (const QString & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont10substituteERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFont_Substitute(arg0 unsafe.Pointer) {
+	// 0: (const QString & arg0), (arg0)
+	var nilthis *QFont
+	nilthis.Substitute(arg0)
 }
 
-// setFamily(const class QString &)
-func (this *QFont) Setfamily(args ...interface{}) () {
-  // setFamily(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont9setFamilyERK7QString
-    // invoke: void setFamily(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont9setFamilyERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setFamily", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:272
+// index:0
+// static
+// QStringList substitutes(const class QString &)
+func (this *QFont) Substitutes(arg0 unsafe.Pointer) {
+	// 0: (const QString & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont11substitutesERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFont_Substitutes(arg0 unsafe.Pointer) {
+	// 0: (const QString & arg0), (arg0)
+	var nilthis *QFont
+	nilthis.Substitutes(arg0)
 }
 
-// setUnderline(_Bool)
-func (this *QFont) Setunderline(args ...interface{}) () {
-  // setUnderline(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont12setUnderlineEb
-    // invoke: void setUnderline(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QFont12setUnderlineEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFont", "setUnderline", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:273
+// index:0
+// static
+// QStringList substitutions()
+func (this *QFont) Substitutions() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont13substitutionsEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFont_Substitutions() {
+	// 0: (), ()
+	var nilthis *QFont
+	nilthis.Substitutions()
 }
 
-// styleName()
-func (this *QFont) Stylename(args ...interface{}) (ret interface{}) {
-  // styleName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QFont9styleNameEv
-    // invoke: QString styleName()
-    var ret0 = C.C_ZNK5QFont9styleNameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFont", "styleName", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:274
+// index:0
+// static
+// void insertSubstitution(const class QString &, const class QString &)
+func (this *QFont) InsertSubstitution(arg0 unsafe.Pointer, arg1 unsafe.Pointer) {
+	// 0: (const QString & arg0, const QString & arg1), (arg0, arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont18insertSubstitutionERK7QStringS2_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFont_InsertSubstitution(arg0 unsafe.Pointer, arg1 unsafe.Pointer) {
+	// 0: (const QString & arg0, const QString & arg1), (arg0, arg1)
+	var nilthis *QFont
+	nilthis.InsertSubstitution(arg0, arg1)
 }
 
-// cleanup()
-func (this *QFont) Cleanup_S(args ...interface{}) () {
-  // cleanup()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QFont7cleanupEv
-    // invoke: void cleanup()
-    C.C_ZN5QFont7cleanupEv()
-  default:
-    qtrt.ErrorResolve("QFont", "cleanup", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfont.h:275
+// index:0
+// static
+// void insertSubstitutions(const class QString &, const class QStringList &)
+func (this *QFont) InsertSubstitutions(arg0 unsafe.Pointer, arg1 unsafe.Pointer) {
+	// 0: (const QString & arg0, const QStringList & arg1), (arg0, arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont19insertSubstitutionsERK7QStringRK11QStringList", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFont_InsertSubstitutions(arg0 unsafe.Pointer, arg1 unsafe.Pointer) {
+	// 0: (const QString & arg0, const QStringList & arg1), (arg0, arg1)
+	var nilthis *QFont
+	nilthis.InsertSubstitutions(arg0, arg1)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qfont.h:276
+// index:0
+// static
+// void removeSubstitutions(const class QString &)
+func (this *QFont) RemoveSubstitutions(arg0 unsafe.Pointer) {
+	// 0: (const QString & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont19removeSubstitutionsERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFont_RemoveSubstitutions(arg0 unsafe.Pointer) {
+	// 0: (const QString & arg0), (arg0)
+	var nilthis *QFont
+	nilthis.RemoveSubstitutions(arg0)
+}
 
+// /usr/include/qt/QtGui/qfont.h:280
+// index:0
+// static
+// void initialize()
+func (this *QFont) Initialize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont10initializeEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFont_Initialize() {
+	// 0: (), ()
+	var nilthis *QFont
+	nilthis.Initialize()
+}
+
+// /usr/include/qt/QtGui/qfont.h:281
+// index:0
+// static
+// void cleanup()
+func (this *QFont) Cleanup() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont7cleanupEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFont_Cleanup() {
+	// 0: (), ()
+	var nilthis *QFont
+	nilthis.Cleanup()
+}
+
+// /usr/include/qt/QtGui/qfont.h:282
+// index:0
+// static
+// void cacheStatistics()
+func (this *QFont) CacheStatistics() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont15cacheStatisticsEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFont_CacheStatistics() {
+	// 0: (), ()
+	var nilthis *QFont
+	nilthis.CacheStatistics()
+}
+
+// /usr/include/qt/QtGui/qfont.h:284
+// index:0
+// QString defaultFamily()
+func (this *QFont) DefaultFamily() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont13defaultFamilyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qfont.h:285
+// index:0
+// QString lastResortFamily()
+func (this *QFont) LastResortFamily() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont16lastResortFamilyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qfont.h:286
+// index:0
+// QString lastResortFont()
+func (this *QFont) LastResortFont() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont14lastResortFontEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qfont.h:288
+// index:0
+// QFont resolve(const class QFont &)
+func (this *QFont) Resolve(arg0 unsafe.Pointer) {
+	// 0: (, const QFont & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7resolveERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qfont.h:289
+// index:1
+// inline
+// uint resolve()
+func (this *QFont) Resolve_1() {
+	// 1: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7resolveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qfont.h:290
+// index:2
+// inline
+// void resolve(uint)
+func (this *QFont) Resolve_2(mask uint) {
+	// 2: (, uint mask), (&mask)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont7resolveEj", ffiqt.FFI_TYPE_VOID, this.cthis, &mask)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

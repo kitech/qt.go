@@ -1,1106 +1,427 @@
+//  header block begin
+// /usr/include/qt/QtGui/qsurfaceformat.h
+// #include <qsurfaceformat.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qsurfaceformat.h
-// dst-file: /src/gui/qsurfaceformat.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QSurfaceFormat::QSurfaceFormat(const QSurfaceFormat & other);
-extern void* C_ZN14QSurfaceFormatC2ERKS_(void* arg0); // 3
-  // proto:  void QSurfaceFormat::QSurfaceFormat();
-extern void* C_ZN14QSurfaceFormatC2Ev(); // 3
-  // proto:  int QSurfaceFormat::swapInterval();
-extern int32_t C_ZNK14QSurfaceFormat12swapIntervalEv(void* qthis); // 4
-  // proto:  int QSurfaceFormat::depthBufferSize();
-extern int32_t C_ZNK14QSurfaceFormat15depthBufferSizeEv(void* qthis); // 4
-  // proto: static QSurfaceFormat QSurfaceFormat::defaultFormat();
-extern void* C_ZN14QSurfaceFormat13defaultFormatEv(); // 4
-  // proto:  int QSurfaceFormat::alphaBufferSize();
-extern int32_t C_ZNK14QSurfaceFormat15alphaBufferSizeEv(void* qthis); // 4
-  // proto:  void QSurfaceFormat::setSamples(int numSamples);
-extern void C_ZN14QSurfaceFormat10setSamplesEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QSurfaceFormat::setVersion(int major, int minor);
-extern void C_ZN14QSurfaceFormat10setVersionEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  int QSurfaceFormat::minorVersion();
-extern int32_t C_ZNK14QSurfaceFormat12minorVersionEv(void* qthis); // 4
-  // proto:  void QSurfaceFormat::setSwapInterval(int interval);
-extern void C_ZN14QSurfaceFormat15setSwapIntervalEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QSurfaceFormat::setMinorVersion(int minorVersion);
-extern void C_ZN14QSurfaceFormat15setMinorVersionEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QSurfaceFormat::setBlueBufferSize(int size);
-extern void C_ZN14QSurfaceFormat17setBlueBufferSizeEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QSurfaceFormat::setRedBufferSize(int size);
-extern void C_ZN14QSurfaceFormat16setRedBufferSizeEi(void* qthis, int32_t arg0); // 4
-  // proto: static void QSurfaceFormat::setDefaultFormat(const QSurfaceFormat & format);
-extern void C_ZN14QSurfaceFormat16setDefaultFormatERKS_(void* arg0); // 4
-  // proto:  QPair<int, int> QSurfaceFormat::version();
-extern void C_ZNK14QSurfaceFormat7versionEv(void* qthis); // 4
-  // proto:  int QSurfaceFormat::samples();
-extern int32_t C_ZNK14QSurfaceFormat7samplesEv(void* qthis); // 4
-  // proto:  QSurfaceFormat::SwapBehavior QSurfaceFormat::swapBehavior();
-extern void C_ZNK14QSurfaceFormat12swapBehaviorEv(void* qthis); // 4
-  // proto:  QSurfaceFormat::OpenGLContextProfile QSurfaceFormat::profile();
-extern void C_ZNK14QSurfaceFormat7profileEv(void* qthis); // 4
-  // proto:  int QSurfaceFormat::majorVersion();
-extern int32_t C_ZNK14QSurfaceFormat12majorVersionEv(void* qthis); // 4
-  // proto:  void QSurfaceFormat::setStencilBufferSize(int size);
-extern void C_ZN14QSurfaceFormat20setStencilBufferSizeEi(void* qthis, int32_t arg0); // 4
-  // proto:  bool QSurfaceFormat::hasAlpha();
-extern bool C_ZNK14QSurfaceFormat8hasAlphaEv(void* qthis); // 4
-  // proto:  bool QSurfaceFormat::stereo();
-extern bool C_ZNK14QSurfaceFormat6stereoEv(void* qthis); // 2
-  // proto:  void QSurfaceFormat::setStereo(bool enable);
-extern void C_ZN14QSurfaceFormat9setStereoEb(void* qthis, bool arg0); // 4
-  // proto:  int QSurfaceFormat::redBufferSize();
-extern int32_t C_ZNK14QSurfaceFormat13redBufferSizeEv(void* qthis); // 4
-  // proto:  int QSurfaceFormat::greenBufferSize();
-extern int32_t C_ZNK14QSurfaceFormat15greenBufferSizeEv(void* qthis); // 4
-  // proto:  void QSurfaceFormat::setMajorVersion(int majorVersion);
-extern void C_ZN14QSurfaceFormat15setMajorVersionEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QSurfaceFormat::~QSurfaceFormat();
-extern void C_ZN14QSurfaceFormatD2Ev(void* qthis); // 4
-  // proto:  void QSurfaceFormat::setAlphaBufferSize(int size);
-extern void C_ZN14QSurfaceFormat18setAlphaBufferSizeEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QSurfaceFormat::stencilBufferSize();
-extern int32_t C_ZNK14QSurfaceFormat17stencilBufferSizeEv(void* qthis); // 4
-  // proto:  QSurfaceFormat::FormatOptions QSurfaceFormat::options();
-extern void C_ZNK14QSurfaceFormat7optionsEv(void* qthis); // 4
-  // proto:  int QSurfaceFormat::blueBufferSize();
-extern int32_t C_ZNK14QSurfaceFormat14blueBufferSizeEv(void* qthis); // 4
-  // proto:  void QSurfaceFormat::setDepthBufferSize(int size);
-extern void C_ZN14QSurfaceFormat18setDepthBufferSizeEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QSurfaceFormat::setGreenBufferSize(int size);
-extern void C_ZN14QSurfaceFormat18setGreenBufferSizeEi(void* qthis, int32_t arg0); // 4
-  // proto:  QSurfaceFormat::RenderableType QSurfaceFormat::renderableType();
-extern void C_ZNK14QSurfaceFormat14renderableTypeEv(void* qthis); // 4
+// extern C begin: 10
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QSurfaceFormat)=8
+//  ext block end
+
+//  body block begin
 type QSurfaceFormat struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// QSurfaceFormat(const class QSurfaceFormat &)
-func NewQSurfaceFormat(args ...interface{}) *QSurfaceFormat {
-  // QSurfaceFormat(const class QSurfaceFormat &)
-  // QSurfaceFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QSurfaceFormat{}) // "const QSurfaceFormat &"
-  vtys[1] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormatC1ERKS_
-    // invoke: void QSurfaceFormat(const class QSurfaceFormat &)
-    var arg0 = args[0].(*QSurfaceFormat).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN14QSurfaceFormatC2ERKS_(arg0)
-    return &QSurfaceFormat{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN14QSurfaceFormatC1Ev
-    // invoke: void QSurfaceFormat()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN14QSurfaceFormatC2Ev()
-    return &QSurfaceFormat{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "QSurfaceFormat", args)
-  }
-
-  return nil // QSurfaceFormat{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qsurfaceformat.h:94
+// index:0
+// void QSurfaceFormat()
+func NewQSurfaceFormat() *QSurfaceFormat {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormatC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QSurfaceFormat{cthis}
 }
 
-// swapInterval()
-func (this *QSurfaceFormat) Swapinterval(args ...interface{}) (ret interface{}) {
-  // swapInterval()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat12swapIntervalEv
-    // invoke: int swapInterval()
-    var ret0 = C.C_ZNK14QSurfaceFormat12swapIntervalEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "swapInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:98
+// index:0
+// void ~QSurfaceFormat()
+func DeleteQSurfaceFormat(*QSurfaceFormat) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormatD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// depthBufferSize()
-func (this *QSurfaceFormat) Depthbuffersize(args ...interface{}) (ret interface{}) {
-  // depthBufferSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat15depthBufferSizeEv
-    // invoke: int depthBufferSize()
-    var ret0 = C.C_ZNK14QSurfaceFormat15depthBufferSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "depthBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:100
+// index:0
+// void setDepthBufferSize(int)
+func (this *QSurfaceFormat) SetDepthBufferSize(size int) {
+	// 0: (, int size), (&size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat18setDepthBufferSizeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &size)
+	gopp.ErrPrint(err, rv)
 }
 
-// defaultFormat()
-func (this *QSurfaceFormat) Defaultformat_S(args ...interface{}) (ret interface{}) {
-  // defaultFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat13defaultFormatEv
-    // invoke: QSurfaceFormat defaultFormat()
-    var ret0 = C.C_ZN14QSurfaceFormat13defaultFormatEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QSurfaceFormat{}) // "QSurfaceFormat"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "defaultFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:101
+// index:0
+// int depthBufferSize()
+func (this *QSurfaceFormat) DepthBufferSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat15depthBufferSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// alphaBufferSize()
-func (this *QSurfaceFormat) Alphabuffersize(args ...interface{}) (ret interface{}) {
-  // alphaBufferSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat15alphaBufferSizeEv
-    // invoke: int alphaBufferSize()
-    var ret0 = C.C_ZNK14QSurfaceFormat15alphaBufferSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "alphaBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:103
+// index:0
+// void setStencilBufferSize(int)
+func (this *QSurfaceFormat) SetStencilBufferSize(size int) {
+	// 0: (, int size), (&size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat20setStencilBufferSizeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &size)
+	gopp.ErrPrint(err, rv)
 }
 
-// setSamples(int)
-func (this *QSurfaceFormat) Setsamples(args ...interface{}) () {
-  // setSamples(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat10setSamplesEi
-    // invoke: void setSamples(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat10setSamplesEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setSamples", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:104
+// index:0
+// int stencilBufferSize()
+func (this *QSurfaceFormat) StencilBufferSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat17stencilBufferSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setVersion(int, int)
-func (this *QSurfaceFormat) Setversion(args ...interface{}) () {
-  // setVersion(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat10setVersionEii
-    // invoke: void setVersion(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN14QSurfaceFormat10setVersionEii(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setVersion", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:106
+// index:0
+// void setRedBufferSize(int)
+func (this *QSurfaceFormat) SetRedBufferSize(size int) {
+	// 0: (, int size), (&size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat16setRedBufferSizeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &size)
+	gopp.ErrPrint(err, rv)
 }
 
-// minorVersion()
-func (this *QSurfaceFormat) Minorversion(args ...interface{}) (ret interface{}) {
-  // minorVersion()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat12minorVersionEv
-    // invoke: int minorVersion()
-    var ret0 = C.C_ZNK14QSurfaceFormat12minorVersionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "minorVersion", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:107
+// index:0
+// int redBufferSize()
+func (this *QSurfaceFormat) RedBufferSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat13redBufferSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setSwapInterval(int)
-func (this *QSurfaceFormat) Setswapinterval(args ...interface{}) () {
-  // setSwapInterval(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat15setSwapIntervalEi
-    // invoke: void setSwapInterval(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat15setSwapIntervalEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setSwapInterval", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:108
+// index:0
+// void setGreenBufferSize(int)
+func (this *QSurfaceFormat) SetGreenBufferSize(size int) {
+	// 0: (, int size), (&size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat18setGreenBufferSizeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &size)
+	gopp.ErrPrint(err, rv)
 }
 
-// setMinorVersion(int)
-func (this *QSurfaceFormat) Setminorversion(args ...interface{}) () {
-  // setMinorVersion(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat15setMinorVersionEi
-    // invoke: void setMinorVersion(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat15setMinorVersionEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setMinorVersion", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:109
+// index:0
+// int greenBufferSize()
+func (this *QSurfaceFormat) GreenBufferSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat15greenBufferSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setBlueBufferSize(int)
-func (this *QSurfaceFormat) Setbluebuffersize(args ...interface{}) () {
-  // setBlueBufferSize(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat17setBlueBufferSizeEi
-    // invoke: void setBlueBufferSize(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat17setBlueBufferSizeEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setBlueBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:110
+// index:0
+// void setBlueBufferSize(int)
+func (this *QSurfaceFormat) SetBlueBufferSize(size int) {
+	// 0: (, int size), (&size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat17setBlueBufferSizeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &size)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRedBufferSize(int)
-func (this *QSurfaceFormat) Setredbuffersize(args ...interface{}) () {
-  // setRedBufferSize(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat16setRedBufferSizeEi
-    // invoke: void setRedBufferSize(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat16setRedBufferSizeEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setRedBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:111
+// index:0
+// int blueBufferSize()
+func (this *QSurfaceFormat) BlueBufferSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat14blueBufferSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDefaultFormat(const class QSurfaceFormat &)
-func (this *QSurfaceFormat) Setdefaultformat_S(args ...interface{}) () {
-  // setDefaultFormat(const class QSurfaceFormat &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QSurfaceFormat{}) // "const QSurfaceFormat &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat16setDefaultFormatERKS_
-    // invoke: void setDefaultFormat(const class QSurfaceFormat &)
-    var arg0 = args[0].(*QSurfaceFormat).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat16setDefaultFormatERKS_(arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setDefaultFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:112
+// index:0
+// void setAlphaBufferSize(int)
+func (this *QSurfaceFormat) SetAlphaBufferSize(size int) {
+	// 0: (, int size), (&size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat18setAlphaBufferSizeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &size)
+	gopp.ErrPrint(err, rv)
 }
 
-// version()
-func (this *QSurfaceFormat) Version(args ...interface{}) () {
-  // version()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat7versionEv
-    // invoke: QPair<int, int> version()
-    C.C_ZNK14QSurfaceFormat7versionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "version", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:113
+// index:0
+// int alphaBufferSize()
+func (this *QSurfaceFormat) AlphaBufferSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat15alphaBufferSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// samples()
-func (this *QSurfaceFormat) Samples(args ...interface{}) (ret interface{}) {
-  // samples()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat7samplesEv
-    // invoke: int samples()
-    var ret0 = C.C_ZNK14QSurfaceFormat7samplesEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "samples", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:115
+// index:0
+// void setSamples(int)
+func (this *QSurfaceFormat) SetSamples(numSamples int) {
+	// 0: (, int numSamples), (&numSamples)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat10setSamplesEi", ffiqt.FFI_TYPE_VOID, this.cthis, &numSamples)
+	gopp.ErrPrint(err, rv)
 }
 
-// swapBehavior()
-func (this *QSurfaceFormat) Swapbehavior(args ...interface{}) () {
-  // swapBehavior()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat12swapBehaviorEv
-    // invoke: QSurfaceFormat::SwapBehavior swapBehavior()
-    C.C_ZNK14QSurfaceFormat12swapBehaviorEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "swapBehavior", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:116
+// index:0
+// int samples()
+func (this *QSurfaceFormat) Samples() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat7samplesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// profile()
-func (this *QSurfaceFormat) Profile(args ...interface{}) () {
-  // profile()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat7profileEv
-    // invoke: QSurfaceFormat::OpenGLContextProfile profile()
-    C.C_ZNK14QSurfaceFormat7profileEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "profile", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:118
+// index:0
+// void setSwapBehavior(enum QSurfaceFormat::SwapBehavior)
+func (this *QSurfaceFormat) SetSwapBehavior(behavior int) {
+	// 0: (, QSurfaceFormat::SwapBehavior behavior), (&behavior)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat15setSwapBehaviorENS_12SwapBehaviorE", ffiqt.FFI_TYPE_VOID, this.cthis, &behavior)
+	gopp.ErrPrint(err, rv)
 }
 
-// majorVersion()
-func (this *QSurfaceFormat) Majorversion(args ...interface{}) (ret interface{}) {
-  // majorVersion()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat12majorVersionEv
-    // invoke: int majorVersion()
-    var ret0 = C.C_ZNK14QSurfaceFormat12majorVersionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "majorVersion", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:119
+// index:0
+// QSurfaceFormat::SwapBehavior swapBehavior()
+func (this *QSurfaceFormat) SwapBehavior() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat12swapBehaviorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setStencilBufferSize(int)
-func (this *QSurfaceFormat) Setstencilbuffersize(args ...interface{}) () {
-  // setStencilBufferSize(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat20setStencilBufferSizeEi
-    // invoke: void setStencilBufferSize(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat20setStencilBufferSizeEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setStencilBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:121
+// index:0
+// bool hasAlpha()
+func (this *QSurfaceFormat) HasAlpha() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat8hasAlphaEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasAlpha()
-func (this *QSurfaceFormat) Hasalpha(args ...interface{}) (ret interface{}) {
-  // hasAlpha()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat8hasAlphaEv
-    // invoke: bool hasAlpha()
-    var ret0 = C.C_ZNK14QSurfaceFormat8hasAlphaEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "hasAlpha", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:123
+// index:0
+// void setProfile(enum QSurfaceFormat::OpenGLContextProfile)
+func (this *QSurfaceFormat) SetProfile(profile int) {
+	// 0: (, QSurfaceFormat::OpenGLContextProfile profile), (&profile)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat10setProfileENS_20OpenGLContextProfileE", ffiqt.FFI_TYPE_VOID, this.cthis, &profile)
+	gopp.ErrPrint(err, rv)
 }
 
-// stereo()
-func (this *QSurfaceFormat) Stereo(args ...interface{}) (ret interface{}) {
-  // stereo()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat6stereoEv
-    // invoke: bool stereo()
-    var ret0 = C.C_ZNK14QSurfaceFormat6stereoEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "stereo", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:124
+// index:0
+// QSurfaceFormat::OpenGLContextProfile profile()
+func (this *QSurfaceFormat) Profile() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat7profileEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setStereo(_Bool)
-func (this *QSurfaceFormat) Setstereo(args ...interface{}) () {
-  // setStereo(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat9setStereoEb
-    // invoke: void setStereo(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat9setStereoEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setStereo", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:126
+// index:0
+// void setRenderableType(enum QSurfaceFormat::RenderableType)
+func (this *QSurfaceFormat) SetRenderableType(type_ int) {
+	// 0: (, QSurfaceFormat::RenderableType type), (&type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat17setRenderableTypeENS_14RenderableTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &type_)
+	gopp.ErrPrint(err, rv)
 }
 
-// redBufferSize()
-func (this *QSurfaceFormat) Redbuffersize(args ...interface{}) (ret interface{}) {
-  // redBufferSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat13redBufferSizeEv
-    // invoke: int redBufferSize()
-    var ret0 = C.C_ZNK14QSurfaceFormat13redBufferSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "redBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:127
+// index:0
+// QSurfaceFormat::RenderableType renderableType()
+func (this *QSurfaceFormat) RenderableType() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat14renderableTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// greenBufferSize()
-func (this *QSurfaceFormat) Greenbuffersize(args ...interface{}) (ret interface{}) {
-  // greenBufferSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat15greenBufferSizeEv
-    // invoke: int greenBufferSize()
-    var ret0 = C.C_ZNK14QSurfaceFormat15greenBufferSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "greenBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:129
+// index:0
+// void setMajorVersion(int)
+func (this *QSurfaceFormat) SetMajorVersion(majorVersion int) {
+	// 0: (, int majorVersion), (&majorVersion)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat15setMajorVersionEi", ffiqt.FFI_TYPE_VOID, this.cthis, &majorVersion)
+	gopp.ErrPrint(err, rv)
 }
 
-// setMajorVersion(int)
-func (this *QSurfaceFormat) Setmajorversion(args ...interface{}) () {
-  // setMajorVersion(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat15setMajorVersionEi
-    // invoke: void setMajorVersion(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat15setMajorVersionEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setMajorVersion", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:130
+// index:0
+// int majorVersion()
+func (this *QSurfaceFormat) MajorVersion() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat12majorVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QSurfaceFormat()
-func (this *QSurfaceFormat) Freeqsurfaceformat(args ...interface{}) () {
-  // ~QSurfaceFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormatD0Ev
-    // invoke: void ~QSurfaceFormat()
-    C.C_ZN14QSurfaceFormatD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "~QSurfaceFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:132
+// index:0
+// void setMinorVersion(int)
+func (this *QSurfaceFormat) SetMinorVersion(minorVersion int) {
+	// 0: (, int minorVersion), (&minorVersion)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat15setMinorVersionEi", ffiqt.FFI_TYPE_VOID, this.cthis, &minorVersion)
+	gopp.ErrPrint(err, rv)
 }
 
-// setAlphaBufferSize(int)
-func (this *QSurfaceFormat) Setalphabuffersize(args ...interface{}) () {
-  // setAlphaBufferSize(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat18setAlphaBufferSizeEi
-    // invoke: void setAlphaBufferSize(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat18setAlphaBufferSizeEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setAlphaBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:133
+// index:0
+// int minorVersion()
+func (this *QSurfaceFormat) MinorVersion() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat12minorVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// stencilBufferSize()
-func (this *QSurfaceFormat) Stencilbuffersize(args ...interface{}) (ret interface{}) {
-  // stencilBufferSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat17stencilBufferSizeEv
-    // invoke: int stencilBufferSize()
-    var ret0 = C.C_ZNK14QSurfaceFormat17stencilBufferSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "stencilBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:135
+// index:0
+// QPair<int, int> version()
+func (this *QSurfaceFormat) Version() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat7versionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// options()
-func (this *QSurfaceFormat) Options(args ...interface{}) () {
-  // options()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat7optionsEv
-    // invoke: QSurfaceFormat::FormatOptions options()
-    C.C_ZNK14QSurfaceFormat7optionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "options", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:136
+// index:0
+// void setVersion(int, int)
+func (this *QSurfaceFormat) SetVersion(major int, minor int) {
+	// 0: (, int major, int minor), (&major, &minor)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat10setVersionEii", ffiqt.FFI_TYPE_VOID, this.cthis, &major, &minor)
+	gopp.ErrPrint(err, rv)
 }
 
-// blueBufferSize()
-func (this *QSurfaceFormat) Bluebuffersize(args ...interface{}) (ret interface{}) {
-  // blueBufferSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat14blueBufferSizeEv
-    // invoke: int blueBufferSize()
-    var ret0 = C.C_ZNK14QSurfaceFormat14blueBufferSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "blueBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:138
+// index:0
+// bool stereo()
+func (this *QSurfaceFormat) Stereo() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat6stereoEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDepthBufferSize(int)
-func (this *QSurfaceFormat) Setdepthbuffersize(args ...interface{}) () {
-  // setDepthBufferSize(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat18setDepthBufferSizeEi
-    // invoke: void setDepthBufferSize(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat18setDepthBufferSizeEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setDepthBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:139
+// index:0
+// void setStereo(_Bool)
+func (this *QSurfaceFormat) SetStereo(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat9setStereoEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// setGreenBufferSize(int)
-func (this *QSurfaceFormat) Setgreenbuffersize(args ...interface{}) () {
-  // setGreenBufferSize(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QSurfaceFormat18setGreenBufferSizeEi
-    // invoke: void setGreenBufferSize(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QSurfaceFormat18setGreenBufferSizeEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "setGreenBufferSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:147
+// index:0
+// void setOption(enum QSurfaceFormat::FormatOption, _Bool)
+func (this *QSurfaceFormat) SetOption(option int, on bool) {
+	// 0: (, QSurfaceFormat::FormatOption option, bool on), (&option, &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionENS_12FormatOptionEb", ffiqt.FFI_TYPE_VOID, this.cthis, &option, &on)
+	gopp.ErrPrint(err, rv)
 }
 
-// renderableType()
-func (this *QSurfaceFormat) Renderabletype(args ...interface{}) () {
-  // renderableType()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QSurfaceFormat14renderableTypeEv
-    // invoke: QSurfaceFormat::RenderableType renderableType()
-    C.C_ZNK14QSurfaceFormat14renderableTypeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSurfaceFormat", "renderableType", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qsurfaceformat.h:148
+// index:0
+// bool testOption(enum QSurfaceFormat::FormatOption)
+func (this *QSurfaceFormat) TestOption(option int) {
+	// 0: (, QSurfaceFormat::FormatOption option), (&option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat10testOptionENS_12FormatOptionE", ffiqt.FFI_TYPE_VOID, this.cthis, &option)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qsurfaceformat.h:149
+// index:0
+// QSurfaceFormat::FormatOptions options()
+func (this *QSurfaceFormat) Options() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat7optionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qsurfaceformat.h:151
+// index:0
+// int swapInterval()
+func (this *QSurfaceFormat) SwapInterval() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat12swapIntervalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qsurfaceformat.h:152
+// index:0
+// void setSwapInterval(int)
+func (this *QSurfaceFormat) SetSwapInterval(interval int) {
+	// 0: (, int interval), (&interval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat15setSwapIntervalEi", ffiqt.FFI_TYPE_VOID, this.cthis, &interval)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qsurfaceformat.h:154
+// index:0
+// QSurfaceFormat::ColorSpace colorSpace()
+func (this *QSurfaceFormat) ColorSpace() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat10colorSpaceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qsurfaceformat.h:155
+// index:0
+// void setColorSpace(enum QSurfaceFormat::ColorSpace)
+func (this *QSurfaceFormat) SetColorSpace(colorSpace int) {
+	// 0: (, QSurfaceFormat::ColorSpace colorSpace), (&colorSpace)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat13setColorSpaceENS_10ColorSpaceE", ffiqt.FFI_TYPE_VOID, this.cthis, &colorSpace)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qsurfaceformat.h:157
+// index:0
+// static
+// void setDefaultFormat(const class QSurfaceFormat &)
+func (this *QSurfaceFormat) SetDefaultFormat(format unsafe.Pointer) {
+	// 0: (const QSurfaceFormat & format), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat16setDefaultFormatERKS_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QSurfaceFormat_SetDefaultFormat(format unsafe.Pointer) {
+	// 0: (const QSurfaceFormat & format), (format)
+	var nilthis *QSurfaceFormat
+	nilthis.SetDefaultFormat(format)
+}
+
+// /usr/include/qt/QtGui/qsurfaceformat.h:158
+// index:0
+// static
+// QSurfaceFormat defaultFormat()
+func (this *QSurfaceFormat) DefaultFormat() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat13defaultFormatEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QSurfaceFormat_DefaultFormat() {
+	// 0: (), ()
+	var nilthis *QSurfaceFormat
+	nilthis.DefaultFormat()
+}
+
+//  body block end

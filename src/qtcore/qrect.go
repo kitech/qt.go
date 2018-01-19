@@ -1,4281 +1,711 @@
+//  header block begin
+// /usr/include/qt/QtCore/qrect.h
+// #include <qrect.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qrect.h
-// dst-file: /src/core/qrect.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QRect QRect::marginsRemoved(const QMargins & margins);
-extern void* C_ZNK5QRect14marginsRemovedERK8QMargins(void* qthis, void* arg0); // 2
-  // proto:  void QRect::moveTo(int x, int t);
-extern void C_ZN5QRect6moveToEii(void* qthis, int32_t arg0, int32_t arg1); // 2
-  // proto:  void QRect::moveTo(const QPoint & p);
-extern void C_ZN5QRect6moveToERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  int QRect::right();
-extern int32_t C_ZNK5QRect5rightEv(void* qthis); // 2
-  // proto:  bool QRect::intersects(const QRect & r);
-extern bool C_ZNK5QRect10intersectsERKS_(void* qthis, void* arg0); // 4
-  // proto:  QPoint QRect::topLeft();
-extern void* C_ZNK5QRect7topLeftEv(void* qthis); // 2
-  // proto:  void QRect::setBottom(int pos);
-extern void C_ZN5QRect9setBottomEi(void* qthis, int32_t arg0); // 2
-  // proto:  void QRect::setTopLeft(const QPoint & p);
-extern void C_ZN5QRect10setTopLeftERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  QRect QRect::adjusted(int x1, int y1, int x2, int y2);
-extern void* C_ZNK5QRect8adjustedEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
-  // proto:  int QRect::height();
-extern int32_t C_ZNK5QRect6heightEv(void* qthis); // 2
-  // proto:  void QRect::setBottomLeft(const QPoint & p);
-extern void C_ZN5QRect13setBottomLeftERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  void QRect::moveRight(int pos);
-extern void C_ZN5QRect9moveRightEi(void* qthis, int32_t arg0); // 2
-  // proto:  void QRect::moveBottomLeft(const QPoint & p);
-extern void C_ZN5QRect14moveBottomLeftERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  void QRect::setWidth(int w);
-extern void C_ZN5QRect8setWidthEi(void* qthis, int32_t arg0); // 2
-  // proto:  QRect QRect::marginsAdded(const QMargins & margins);
-extern void* C_ZNK5QRect12marginsAddedERK8QMargins(void* qthis, void* arg0); // 2
-  // proto:  QSize QRect::size();
-extern void* C_ZNK5QRect4sizeEv(void* qthis); // 2
-  // proto:  void QRect::moveBottom(int pos);
-extern void C_ZN5QRect10moveBottomEi(void* qthis, int32_t arg0); // 2
-  // proto:  QRect QRect::united(const QRect & other);
-extern void* C_ZNK5QRect6unitedERKS_(void* qthis, void* arg0); // 2
-  // proto:  QPoint QRect::bottomRight();
-extern void* C_ZNK5QRect11bottomRightEv(void* qthis); // 2
-  // proto:  QRect QRect::intersected(const QRect & other);
-extern void* C_ZNK5QRect11intersectedERKS_(void* qthis, void* arg0); // 2
-  // proto:  void QRect::getRect(int * x, int * y, int * w, int * h);
-extern void C_ZNK5QRect7getRectEPiS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 2
-  // proto:  int QRect::top();
-extern int32_t C_ZNK5QRect3topEv(void* qthis); // 2
-  // proto:  bool QRect::contains(int x, int y, bool proper);
-extern bool C_ZNK5QRect8containsEiib(void* qthis, int32_t arg0, int32_t arg1, bool arg2); // 2
-  // proto:  bool QRect::contains(const QPoint & p, bool proper);
-extern bool C_ZNK5QRect8containsERK6QPointb(void* qthis, void* arg0, bool arg1); // 4
-  // proto:  bool QRect::contains(const QRect & r, bool proper);
-extern bool C_ZNK5QRect8containsERKS_b(void* qthis, void* arg0, bool arg1); // 4
-  // proto:  bool QRect::contains(int x, int y);
-extern bool C_ZNK5QRect8containsEii(void* qthis, int32_t arg0, int32_t arg1); // 2
-  // proto:  void QRect::setTop(int pos);
-extern void C_ZN5QRect6setTopEi(void* qthis, int32_t arg0); // 2
-  // proto:  QPoint QRect::topRight();
-extern void* C_ZNK5QRect8topRightEv(void* qthis); // 2
-  // proto:  void QRect::moveCenter(const QPoint & p);
-extern void C_ZN5QRect10moveCenterERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  int QRect::width();
-extern int32_t C_ZNK5QRect5widthEv(void* qthis); // 2
-  // proto:  bool QRect::isEmpty();
-extern bool C_ZNK5QRect7isEmptyEv(void* qthis); // 2
-  // proto:  void QRect::setX(int x);
-extern void C_ZN5QRect4setXEi(void* qthis, int32_t arg0); // 2
-  // proto:  void QRect::setRect(int x, int y, int w, int h);
-extern void C_ZN5QRect7setRectEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
-  // proto:  void QRect::setBottomRight(const QPoint & p);
-extern void C_ZN5QRect14setBottomRightERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  bool QRect::isValid();
-extern bool C_ZNK5QRect7isValidEv(void* qthis); // 2
-  // proto:  void QRect::moveLeft(int pos);
-extern void C_ZN5QRect8moveLeftEi(void* qthis, int32_t arg0); // 2
-  // proto:  void QRect::setTopRight(const QPoint & p);
-extern void C_ZN5QRect11setTopRightERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  void QRect::moveTop(int pos);
-extern void C_ZN5QRect7moveTopEi(void* qthis, int32_t arg0); // 2
-  // proto:  QRect QRect::translated(const QPoint & p);
-extern void* C_ZNK5QRect10translatedERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  QRect QRect::translated(int dx, int dy);
-extern void* C_ZNK5QRect10translatedEii(void* qthis, int32_t arg0, int32_t arg1); // 2
-  // proto:  QRect QRect::normalized();
-extern void* C_ZNK5QRect10normalizedEv(void* qthis); // 4
-  // proto:  void QRect::setCoords(int x1, int y1, int x2, int y2);
-extern void C_ZN5QRect9setCoordsEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
-  // proto:  void QRect::setLeft(int pos);
-extern void C_ZN5QRect7setLeftEi(void* qthis, int32_t arg0); // 2
-  // proto:  void QRect::setY(int y);
-extern void C_ZN5QRect4setYEi(void* qthis, int32_t arg0); // 2
-  // proto:  void QRect::setHeight(int h);
-extern void C_ZN5QRect9setHeightEi(void* qthis, int32_t arg0); // 2
-  // proto:  QRect QRect::transposed();
-extern void* C_ZNK5QRect10transposedEv(void* qthis); // 2
-  // proto:  void QRect::QRect(const QPoint & topleft, const QSize & size);
-extern void* C_ZN5QRectC2ERK6QPointRK5QSize(void* arg0, void* arg1); // 1
-  // proto:  void QRect::QRect();
-extern void* C_ZN5QRectC2Ev(); // 1
-  // proto:  void QRect::QRect(int left, int top, int width, int height);
-extern void* C_ZN5QRectC2Eiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
-  // proto:  void QRect::QRect(const QPoint & topleft, const QPoint & bottomright);
-extern void* C_ZN5QRectC2ERK6QPointS2_(void* arg0, void* arg1); // 1
-  // proto:  void QRect::translate(const QPoint & p);
-extern void C_ZN5QRect9translateERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  void QRect::translate(int dx, int dy);
-extern void C_ZN5QRect9translateEii(void* qthis, int32_t arg0, int32_t arg1); // 2
-  // proto:  QPoint QRect::bottomLeft();
-extern void* C_ZNK5QRect10bottomLeftEv(void* qthis); // 2
-  // proto:  QPoint QRect::center();
-extern void* C_ZNK5QRect6centerEv(void* qthis); // 2
-  // proto:  void QRect::moveTopRight(const QPoint & p);
-extern void C_ZN5QRect12moveTopRightERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  void QRect::moveTopLeft(const QPoint & p);
-extern void C_ZN5QRect11moveTopLeftERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  int QRect::bottom();
-extern int32_t C_ZNK5QRect6bottomEv(void* qthis); // 2
-  // proto:  void QRect::getCoords(int * x1, int * y1, int * x2, int * y2);
-extern void C_ZNK5QRect9getCoordsEPiS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 2
-  // proto:  void QRect::setRight(int pos);
-extern void C_ZN5QRect8setRightEi(void* qthis, int32_t arg0); // 2
-  // proto:  bool QRect::isNull();
-extern bool C_ZNK5QRect6isNullEv(void* qthis); // 2
-  // proto:  void QRect::adjust(int x1, int y1, int x2, int y2);
-extern void C_ZN5QRect6adjustEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
-  // proto:  int QRect::y();
-extern void C_ZNK5QRect1yEv(void* qthis); // 2
-  // proto:  int QRect::x();
-extern void C_ZNK5QRect1xEv(void* qthis); // 2
-  // proto:  void QRect::moveBottomRight(const QPoint & p);
-extern void C_ZN5QRect15moveBottomRightERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  void QRect::setSize(const QSize & s);
-extern void C_ZN5QRect7setSizeERK5QSize(void* qthis, void* arg0); // 2
-  // proto:  int QRect::left();
-extern int32_t C_ZNK5QRect4leftEv(void* qthis); // 2
-  // proto:  QRectF QRectF::marginsRemoved(const QMarginsF & margins);
-extern void* C_ZNK6QRectF14marginsRemovedERK9QMarginsF(void* qthis, void* arg0); // 2
-  // proto:  void QRectF::moveTo(const QPointF & p);
-extern void C_ZN6QRectF6moveToERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  void QRectF::moveTo(qreal x, qreal y);
-extern void C_ZN6QRectF6moveToEdd(void* qthis, double arg0, double arg1); // 2
-  // proto:  void QRectF::setBottomLeft(const QPointF & p);
-extern void C_ZN6QRectF13setBottomLeftERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  bool QRectF::intersects(const QRectF & r);
-extern bool C_ZNK6QRectF10intersectsERKS_(void* qthis, void* arg0); // 4
-  // proto:  QPointF QRectF::topLeft();
-extern void* C_ZNK6QRectF7topLeftEv(void* qthis); // 2
-  // proto:  void QRectF::setBottom(qreal pos);
-extern void C_ZN6QRectF9setBottomEd(void* qthis, double arg0); // 2
-  // proto:  void QRectF::setTopLeft(const QPointF & p);
-extern void C_ZN6QRectF10setTopLeftERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  QRectF QRectF::adjusted(qreal x1, qreal y1, qreal x2, qreal y2);
-extern void* C_ZNK6QRectF8adjustedEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
-  // proto:  qreal QRectF::height();
-extern double C_ZNK6QRectF6heightEv(void* qthis); // 2
-  // proto:  qreal QRectF::right();
-extern double C_ZNK6QRectF5rightEv(void* qthis); // 2
-  // proto:  void QRectF::setLeft(qreal pos);
-extern void C_ZN6QRectF7setLeftEd(void* qthis, double arg0); // 2
-  // proto:  void QRectF::moveRight(qreal pos);
-extern void C_ZN6QRectF9moveRightEd(void* qthis, double arg0); // 2
-  // proto:  void QRectF::moveBottomLeft(const QPointF & p);
-extern void C_ZN6QRectF14moveBottomLeftERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  void QRectF::setWidth(qreal w);
-extern void C_ZN6QRectF8setWidthEd(void* qthis, double arg0); // 2
-  // proto:  QRectF QRectF::marginsAdded(const QMarginsF & margins);
-extern void* C_ZNK6QRectF12marginsAddedERK9QMarginsF(void* qthis, void* arg0); // 2
-  // proto:  void QRectF::moveTop(qreal pos);
-extern void C_ZN6QRectF7moveTopEd(void* qthis, double arg0); // 2
-  // proto:  QPointF QRectF::bottomRight();
-extern void* C_ZNK6QRectF11bottomRightEv(void* qthis); // 2
-  // proto:  qreal QRectF::bottom();
-extern double C_ZNK6QRectF6bottomEv(void* qthis); // 2
-  // proto:  void QRectF::getRect(qreal * x, qreal * y, qreal * w, qreal * h);
-extern void C_ZNK6QRectF7getRectEPdS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 2
-  // proto:  qreal QRectF::top();
-extern double C_ZNK6QRectF3topEv(void* qthis); // 2
-  // proto:  bool QRectF::contains(qreal x, qreal y);
-extern bool C_ZNK6QRectF8containsEdd(void* qthis, double arg0, double arg1); // 2
-  // proto:  bool QRectF::contains(const QRectF & r);
-extern bool C_ZNK6QRectF8containsERKS_(void* qthis, void* arg0); // 4
-  // proto:  bool QRectF::contains(const QPointF & p);
-extern bool C_ZNK6QRectF8containsERK7QPointF(void* qthis, void* arg0); // 4
-  // proto:  QRect QRectF::toRect();
-extern void* C_ZNK6QRectF6toRectEv(void* qthis); // 2
-  // proto:  QPointF QRectF::topRight();
-extern void* C_ZNK6QRectF8topRightEv(void* qthis); // 2
-  // proto:  void QRectF::moveCenter(const QPointF & p);
-extern void C_ZN6QRectF10moveCenterERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  qreal QRectF::width();
-extern double C_ZNK6QRectF5widthEv(void* qthis); // 2
-  // proto:  bool QRectF::isEmpty();
-extern bool C_ZNK6QRectF7isEmptyEv(void* qthis); // 2
-  // proto:  void QRectF::QRectF(const QPointF & topleft, const QPointF & bottomRight);
-extern void* C_ZN6QRectFC2ERK7QPointFS2_(void* arg0, void* arg1); // 1
-  // proto:  void QRectF::QRectF(qreal left, qreal top, qreal width, qreal height);
-extern void* C_ZN6QRectFC2Edddd(double arg0, double arg1, double arg2, double arg3); // 1
-  // proto:  void QRectF::QRectF();
-extern void* C_ZN6QRectFC2Ev(); // 1
-  // proto:  void QRectF::QRectF(const QPointF & topleft, const QSizeF & size);
-extern void* C_ZN6QRectFC2ERK7QPointFRK6QSizeF(void* arg0, void* arg1); // 1
-  // proto:  void QRectF::QRectF(const QRect & rect);
-extern void* C_ZN6QRectFC2ERK5QRect(void* arg0); // 1
-  // proto:  QSizeF QRectF::size();
-extern void* C_ZNK6QRectF4sizeEv(void* qthis); // 2
-  // proto:  void QRectF::setX(qreal pos);
-extern void C_ZN6QRectF4setXEd(void* qthis, double arg0); // 2
-  // proto:  void QRectF::setRect(qreal x, qreal y, qreal w, qreal h);
-extern void C_ZN6QRectF7setRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
-  // proto:  void QRectF::moveLeft(qreal pos);
-extern void C_ZN6QRectF8moveLeftEd(void* qthis, double arg0); // 2
-  // proto:  void QRectF::setBottomRight(const QPointF & p);
-extern void C_ZN6QRectF14setBottomRightERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  bool QRectF::isValid();
-extern bool C_ZNK6QRectF7isValidEv(void* qthis); // 2
-  // proto:  void QRectF::getCoords(qreal * x1, qreal * y1, qreal * x2, qreal * y2);
-extern void C_ZNK6QRectF9getCoordsEPdS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 2
-  // proto:  void QRectF::setTopRight(const QPointF & p);
-extern void C_ZN6QRectF11setTopRightERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  QRectF QRectF::translated(qreal dx, qreal dy);
-extern void* C_ZNK6QRectF10translatedEdd(void* qthis, double arg0, double arg1); // 2
-  // proto:  QRectF QRectF::translated(const QPointF & p);
-extern void* C_ZNK6QRectF10translatedERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  QRectF QRectF::normalized();
-extern void* C_ZNK6QRectF10normalizedEv(void* qthis); // 4
-  // proto:  void QRectF::setTop(qreal pos);
-extern void C_ZN6QRectF6setTopEd(void* qthis, double arg0); // 2
-  // proto:  void QRectF::moveBottom(qreal pos);
-extern void C_ZN6QRectF10moveBottomEd(void* qthis, double arg0); // 2
-  // proto:  void QRectF::setY(qreal pos);
-extern void C_ZN6QRectF4setYEd(void* qthis, double arg0); // 2
-  // proto:  void QRectF::setCoords(qreal x1, qreal y1, qreal x2, qreal y2);
-extern void C_ZN6QRectF9setCoordsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
-  // proto:  void QRectF::setHeight(qreal h);
-extern void C_ZN6QRectF9setHeightEd(void* qthis, double arg0); // 2
-  // proto:  QRectF QRectF::transposed();
-extern void* C_ZNK6QRectF10transposedEv(void* qthis); // 2
-  // proto:  void QRectF::translate(const QPointF & p);
-extern void C_ZN6QRectF9translateERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  void QRectF::translate(qreal dx, qreal dy);
-extern void C_ZN6QRectF9translateEdd(void* qthis, double arg0, double arg1); // 2
-  // proto:  QPointF QRectF::bottomLeft();
-extern void* C_ZNK6QRectF10bottomLeftEv(void* qthis); // 2
-  // proto:  QPointF QRectF::center();
-extern void* C_ZNK6QRectF6centerEv(void* qthis); // 2
-  // proto:  void QRectF::moveTopRight(const QPointF & p);
-extern void C_ZN6QRectF12moveTopRightERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  void QRectF::moveTopLeft(const QPointF & p);
-extern void C_ZN6QRectF11moveTopLeftERK7QPointF(void* qthis, void* arg0); // 2
-  // proto:  QRect QRectF::toAlignedRect();
-extern void* C_ZNK6QRectF13toAlignedRectEv(void* qthis); // 4
-  // proto:  QRectF QRectF::intersected(const QRectF & other);
-extern void* C_ZNK6QRectF11intersectedERKS_(void* qthis, void* arg0); // 2
-  // proto:  QRectF QRectF::united(const QRectF & other);
-extern void* C_ZNK6QRectF6unitedERKS_(void* qthis, void* arg0); // 2
-  // proto:  void QRectF::setRight(qreal pos);
-extern void C_ZN6QRectF8setRightEd(void* qthis, double arg0); // 2
-  // proto:  bool QRectF::isNull();
-extern bool C_ZNK6QRectF6isNullEv(void* qthis); // 2
-  // proto:  void QRectF::adjust(qreal x1, qreal y1, qreal x2, qreal y2);
-extern void C_ZN6QRectF6adjustEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
-  // proto:  qreal QRectF::y();
-extern void C_ZNK6QRectF1yEv(void* qthis); // 2
-  // proto:  qreal QRectF::x();
-extern void C_ZNK6QRectF1xEv(void* qthis); // 2
-  // proto:  qreal QRectF::left();
-extern double C_ZNK6QRectF4leftEv(void* qthis); // 2
-  // proto:  void QRectF::setSize(const QSizeF & s);
-extern void C_ZN6QRectF7setSizeERK6QSizeF(void* qthis, void* arg0); // 2
-  // proto:  void QRectF::moveBottomRight(const QPointF & p);
-extern void C_ZN6QRectF15moveBottomRightERK7QPointF(void* qthis, void* arg0); // 2
+// extern C begin: 21
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QRect)=16
+//  ext block end
+
+//  body block begin
 type QRect struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
-}
-
-// class sizeof(QRectF)=32
-type QRectF struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
-}
-
-// marginsRemoved(const class QMargins &)
-func (this *QRect) Marginsremoved(args ...interface{}) (ret interface{}) {
-  // marginsRemoved(const class QMargins &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QMargins{}) // "const QMargins &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect14marginsRemovedERK8QMargins
-    // invoke: QRect marginsRemoved(const class QMargins &)
-    var arg0 = args[0].(*QMargins).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QRect14marginsRemovedERK8QMargins(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "marginsRemoved", args)
-  }
-
-  return
-}
-
-// moveTo(int, int)
-func (this *QRect) Moveto(args ...interface{}) () {
-  // moveTo(int, int)
-  // moveTo(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect6moveToEii
-    // invoke: void moveTo(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN5QRect6moveToEii(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZN5QRect6moveToERK6QPoint
-    // invoke: void moveTo(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect6moveToERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "moveTo", args)
-  }
-
-  return
-}
-
-// right()
-func (this *QRect) Right(args ...interface{}) (ret interface{}) {
-  // right()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect5rightEv
-    // invoke: int right()
-    var ret0 = C.C_ZNK5QRect5rightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "right", args)
-  }
-
-  return
-}
-
-// intersects(const class QRect &)
-func (this *QRect) Intersects(args ...interface{}) (ret interface{}) {
-  // intersects(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect10intersectsERKS_
-    // invoke: bool intersects(const class QRect &)
-    var arg0 = args[0].(*QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QRect10intersectsERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "intersects", args)
-  }
-
-  return
-}
-
-// topLeft()
-func (this *QRect) Topleft(args ...interface{}) (ret interface{}) {
-  // topLeft()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect7topLeftEv
-    // invoke: QPoint topLeft()
-    var ret0 = C.C_ZNK5QRect7topLeftEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "topLeft", args)
-  }
-
-  return
-}
-
-// setBottom(int)
-func (this *QRect) Setbottom(args ...interface{}) () {
-  // setBottom(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect9setBottomEi
-    // invoke: void setBottom(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect9setBottomEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setBottom", args)
-  }
-
-  return
-}
-
-// setTopLeft(const class QPoint &)
-func (this *QRect) Settopleft(args ...interface{}) () {
-  // setTopLeft(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect10setTopLeftERK6QPoint
-    // invoke: void setTopLeft(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect10setTopLeftERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setTopLeft", args)
-  }
-
-  return
-}
-
-// adjusted(int, int, int, int)
-func (this *QRect) Adjusted(args ...interface{}) (ret interface{}) {
-  // adjusted(int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect8adjustedEiiii
-    // invoke: QRect adjusted(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK5QRect8adjustedEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "adjusted", args)
-  }
-
-  return
-}
-
-// height()
-func (this *QRect) Height(args ...interface{}) (ret interface{}) {
-  // height()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect6heightEv
-    // invoke: int height()
-    var ret0 = C.C_ZNK5QRect6heightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "height", args)
-  }
-
-  return
-}
-
-// setBottomLeft(const class QPoint &)
-func (this *QRect) Setbottomleft(args ...interface{}) () {
-  // setBottomLeft(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect13setBottomLeftERK6QPoint
-    // invoke: void setBottomLeft(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect13setBottomLeftERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setBottomLeft", args)
-  }
-
-  return
-}
-
-// moveRight(int)
-func (this *QRect) Moveright(args ...interface{}) () {
-  // moveRight(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect9moveRightEi
-    // invoke: void moveRight(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect9moveRightEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "moveRight", args)
-  }
-
-  return
-}
-
-// moveBottomLeft(const class QPoint &)
-func (this *QRect) Movebottomleft(args ...interface{}) () {
-  // moveBottomLeft(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect14moveBottomLeftERK6QPoint
-    // invoke: void moveBottomLeft(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect14moveBottomLeftERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "moveBottomLeft", args)
-  }
-
-  return
-}
-
-// setWidth(int)
-func (this *QRect) Setwidth(args ...interface{}) () {
-  // setWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect8setWidthEi
-    // invoke: void setWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect8setWidthEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setWidth", args)
-  }
-
-  return
-}
-
-// marginsAdded(const class QMargins &)
-func (this *QRect) Marginsadded(args ...interface{}) (ret interface{}) {
-  // marginsAdded(const class QMargins &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QMargins{}) // "const QMargins &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect12marginsAddedERK8QMargins
-    // invoke: QRect marginsAdded(const class QMargins &)
-    var arg0 = args[0].(*QMargins).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QRect12marginsAddedERK8QMargins(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "marginsAdded", args)
-  }
-
-  return
-}
-
-// size()
-func (this *QRect) Size(args ...interface{}) (ret interface{}) {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect4sizeEv
-    // invoke: QSize size()
-    var ret0 = C.C_ZNK5QRect4sizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "size", args)
-  }
-
-  return
-}
-
-// moveBottom(int)
-func (this *QRect) Movebottom(args ...interface{}) () {
-  // moveBottom(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect10moveBottomEi
-    // invoke: void moveBottom(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect10moveBottomEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "moveBottom", args)
-  }
-
-  return
-}
-
-// united(const class QRect &)
-func (this *QRect) United(args ...interface{}) (ret interface{}) {
-  // united(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect6unitedERKS_
-    // invoke: QRect united(const class QRect &)
-    var arg0 = args[0].(*QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QRect6unitedERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "united", args)
-  }
-
-  return
-}
-
-// bottomRight()
-func (this *QRect) Bottomright(args ...interface{}) (ret interface{}) {
-  // bottomRight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect11bottomRightEv
-    // invoke: QPoint bottomRight()
-    var ret0 = C.C_ZNK5QRect11bottomRightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "bottomRight", args)
-  }
-
-  return
-}
-
-// intersected(const class QRect &)
-func (this *QRect) Intersected(args ...interface{}) (ret interface{}) {
-  // intersected(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect11intersectedERKS_
-    // invoke: QRect intersected(const class QRect &)
-    var arg0 = args[0].(*QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QRect11intersectedERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "intersected", args)
-  }
-
-  return
-}
-
-// getRect(int *, int *, int *, int *)
-func (this *QRect) Getrect(args ...interface{}) () {
-  // getRect(int *, int *, int *, int *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][1] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][2] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][3] = qtrt.Int32Ty(true) // "int *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect7getRectEPiS0_S0_S0_
-    // invoke: void getRect(int *, int *, int *, int *)
-    var arg0 = (unsafe.Pointer)(args[0].(*int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZNK5QRect7getRectEPiS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QRect", "getRect", args)
-  }
-
-  return
-}
-
-// top()
-func (this *QRect) Top(args ...interface{}) (ret interface{}) {
-  // top()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect3topEv
-    // invoke: int top()
-    var ret0 = C.C_ZNK5QRect3topEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "top", args)
-  }
-
-  return
-}
-
-// contains(int, int, _Bool)
-func (this *QRect) Contains(args ...interface{}) (ret interface{}) {
-  // contains(int, int, _Bool)
-  // contains(const class QPoint &, _Bool)
-  // contains(const class QRect &, _Bool)
-  // contains(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.BoolTy(false) // "bool"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  vtys[1][1] = qtrt.BoolTy(false) // "bool"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QRect{}) // "const QRect &"
-  vtys[2][1] = qtrt.BoolTy(false) // "bool"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = qtrt.Int32Ty(false) // "int"
-  vtys[3][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect8containsEiib
-    // invoke: bool contains(int, int, _Bool)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.bool(args[2].(bool))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK5QRect8containsEiib(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK5QRect8containsERK6QPointb
-    // invoke: bool contains(const class QPoint &, _Bool)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.bool(args[1].(bool))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK5QRect8containsERK6QPointb(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZNK5QRect8containsERKS_b
-    // invoke: bool contains(const class QRect &, _Bool)
-    var arg0 = args[0].(*QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.bool(args[1].(bool))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK5QRect8containsERKS_b(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 3:
-    // invoke: _ZNK5QRect8containsEii
-    // invoke: bool contains(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK5QRect8containsEii(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "contains", args)
-  }
-
-  return
-}
-
-// setTop(int)
-func (this *QRect) Settop(args ...interface{}) () {
-  // setTop(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect6setTopEi
-    // invoke: void setTop(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect6setTopEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setTop", args)
-  }
-
-  return
-}
-
-// topRight()
-func (this *QRect) Topright(args ...interface{}) (ret interface{}) {
-  // topRight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect8topRightEv
-    // invoke: QPoint topRight()
-    var ret0 = C.C_ZNK5QRect8topRightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "topRight", args)
-  }
-
-  return
-}
-
-// moveCenter(const class QPoint &)
-func (this *QRect) Movecenter(args ...interface{}) () {
-  // moveCenter(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect10moveCenterERK6QPoint
-    // invoke: void moveCenter(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect10moveCenterERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "moveCenter", args)
-  }
-
-  return
-}
-
-// width()
-func (this *QRect) Width(args ...interface{}) (ret interface{}) {
-  // width()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect5widthEv
-    // invoke: int width()
-    var ret0 = C.C_ZNK5QRect5widthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "width", args)
-  }
-
-  return
-}
-
-// isEmpty()
-func (this *QRect) Isempty(args ...interface{}) (ret interface{}) {
-  // isEmpty()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect7isEmptyEv
-    // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK5QRect7isEmptyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "isEmpty", args)
-  }
-
-  return
-}
-
-// setX(int)
-func (this *QRect) Setx(args ...interface{}) () {
-  // setX(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect4setXEi
-    // invoke: void setX(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect4setXEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setX", args)
-  }
-
-  return
-}
-
-// setRect(int, int, int, int)
-func (this *QRect) Setrect(args ...interface{}) () {
-  // setRect(int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect7setRectEiiii
-    // invoke: void setRect(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZN5QRect7setRectEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QRect", "setRect", args)
-  }
-
-  return
-}
-
-// setBottomRight(const class QPoint &)
-func (this *QRect) Setbottomright(args ...interface{}) () {
-  // setBottomRight(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect14setBottomRightERK6QPoint
-    // invoke: void setBottomRight(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect14setBottomRightERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setBottomRight", args)
-  }
-
-  return
-}
-
-// isValid()
-func (this *QRect) Isvalid(args ...interface{}) (ret interface{}) {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect7isValidEv
-    // invoke: bool isValid()
-    var ret0 = C.C_ZNK5QRect7isValidEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "isValid", args)
-  }
-
-  return
-}
-
-// moveLeft(int)
-func (this *QRect) Moveleft(args ...interface{}) () {
-  // moveLeft(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect8moveLeftEi
-    // invoke: void moveLeft(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect8moveLeftEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "moveLeft", args)
-  }
-
-  return
-}
-
-// setTopRight(const class QPoint &)
-func (this *QRect) Settopright(args ...interface{}) () {
-  // setTopRight(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect11setTopRightERK6QPoint
-    // invoke: void setTopRight(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect11setTopRightERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setTopRight", args)
-  }
-
-  return
-}
-
-// moveTop(int)
-func (this *QRect) Movetop(args ...interface{}) () {
-  // moveTop(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect7moveTopEi
-    // invoke: void moveTop(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect7moveTopEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "moveTop", args)
-  }
-
-  return
-}
-
-// translated(const class QPoint &)
-func (this *QRect) Translated(args ...interface{}) (ret interface{}) {
-  // translated(const class QPoint &)
-  // translated(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect10translatedERK6QPoint
-    // invoke: QRect translated(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QRect10translatedERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK5QRect10translatedEii
-    // invoke: QRect translated(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK5QRect10translatedEii(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "translated", args)
-  }
-
-  return
-}
-
-// normalized()
-func (this *QRect) Normalized(args ...interface{}) (ret interface{}) {
-  // normalized()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect10normalizedEv
-    // invoke: QRect normalized()
-    var ret0 = C.C_ZNK5QRect10normalizedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "normalized", args)
-  }
-
-  return
-}
-
-// setCoords(int, int, int, int)
-func (this *QRect) Setcoords(args ...interface{}) () {
-  // setCoords(int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect9setCoordsEiiii
-    // invoke: void setCoords(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZN5QRect9setCoordsEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QRect", "setCoords", args)
-  }
-
-  return
-}
-
-// setLeft(int)
-func (this *QRect) Setleft(args ...interface{}) () {
-  // setLeft(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect7setLeftEi
-    // invoke: void setLeft(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect7setLeftEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setLeft", args)
-  }
-
-  return
-}
-
-// setY(int)
-func (this *QRect) Sety(args ...interface{}) () {
-  // setY(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect4setYEi
-    // invoke: void setY(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect4setYEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setY", args)
-  }
-
-  return
-}
-
-// setHeight(int)
-func (this *QRect) Setheight(args ...interface{}) () {
-  // setHeight(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect9setHeightEi
-    // invoke: void setHeight(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect9setHeightEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setHeight", args)
-  }
-
-  return
-}
-
-// transposed()
-func (this *QRect) Transposed(args ...interface{}) (ret interface{}) {
-  // transposed()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect10transposedEv
-    // invoke: QRect transposed()
-    var ret0 = C.C_ZNK5QRect10transposedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "transposed", args)
-  }
-
-  return
-}
-
-// QRect(const class QPoint &, const class QSize &)
-func NewQRect(args ...interface{}) *QRect {
-  // QRect(const class QPoint &, const class QSize &)
-  // QRect()
-  // QRect(int, int, int, int)
-  // QRect(const class QPoint &, const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  vtys[0][1] = reflect.TypeOf(QSize{}) // "const QSize &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.Int32Ty(false) // "int"
-  vtys[2][1] = qtrt.Int32Ty(false) // "int"
-  vtys[2][2] = qtrt.Int32Ty(false) // "int"
-  vtys[2][3] = qtrt.Int32Ty(false) // "int"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  vtys[3][1] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRectC1ERK6QPointRK5QSize
-    // invoke: void QRect(const class QPoint &, const class QSize &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QSize).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QRectC2ERK6QPointRK5QSize(arg0, arg1)
-    return &QRect{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN5QRectC1Ev
-    // invoke: void QRect()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QRectC2Ev()
-    return &QRect{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN5QRectC1Eiiii
-    // invoke: void QRect(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QRectC2Eiiii(arg0, arg1, arg2, arg3)
-    return &QRect{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN5QRectC1ERK6QPointS2_
-    // invoke: void QRect(const class QPoint &, const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QPoint).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QRectC2ERK6QPointS2_(arg0, arg1)
-    return &QRect{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QRect", "QRect", args)
-  }
-
-  return nil // QRect{Qclsinst:qthis}
-}
-
-// translate(const class QPoint &)
-func (this *QRect) Translate(args ...interface{}) () {
-  // translate(const class QPoint &)
-  // translate(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect9translateERK6QPoint
-    // invoke: void translate(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect9translateERK6QPoint(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN5QRect9translateEii
-    // invoke: void translate(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN5QRect9translateEii(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QRect", "translate", args)
-  }
-
-  return
-}
-
-// bottomLeft()
-func (this *QRect) Bottomleft(args ...interface{}) (ret interface{}) {
-  // bottomLeft()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect10bottomLeftEv
-    // invoke: QPoint bottomLeft()
-    var ret0 = C.C_ZNK5QRect10bottomLeftEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "bottomLeft", args)
-  }
-
-  return
-}
-
-// center()
-func (this *QRect) Center(args ...interface{}) (ret interface{}) {
-  // center()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect6centerEv
-    // invoke: QPoint center()
-    var ret0 = C.C_ZNK5QRect6centerEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "center", args)
-  }
-
-  return
-}
-
-// moveTopRight(const class QPoint &)
-func (this *QRect) Movetopright(args ...interface{}) () {
-  // moveTopRight(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect12moveTopRightERK6QPoint
-    // invoke: void moveTopRight(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect12moveTopRightERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "moveTopRight", args)
-  }
-
-  return
-}
-
-// moveTopLeft(const class QPoint &)
-func (this *QRect) Movetopleft(args ...interface{}) () {
-  // moveTopLeft(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect11moveTopLeftERK6QPoint
-    // invoke: void moveTopLeft(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect11moveTopLeftERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "moveTopLeft", args)
-  }
-
-  return
-}
-
-// bottom()
-func (this *QRect) Bottom(args ...interface{}) (ret interface{}) {
-  // bottom()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect6bottomEv
-    // invoke: int bottom()
-    var ret0 = C.C_ZNK5QRect6bottomEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "bottom", args)
-  }
-
-  return
-}
-
-// getCoords(int *, int *, int *, int *)
-func (this *QRect) Getcoords(args ...interface{}) () {
-  // getCoords(int *, int *, int *, int *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][1] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][2] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][3] = qtrt.Int32Ty(true) // "int *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect9getCoordsEPiS0_S0_S0_
-    // invoke: void getCoords(int *, int *, int *, int *)
-    var arg0 = (unsafe.Pointer)(args[0].(*int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZNK5QRect9getCoordsEPiS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QRect", "getCoords", args)
-  }
-
-  return
-}
-
-// setRight(int)
-func (this *QRect) Setright(args ...interface{}) () {
-  // setRight(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect8setRightEi
-    // invoke: void setRight(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect8setRightEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setRight", args)
-  }
-
-  return
-}
-
-// isNull()
-func (this *QRect) Isnull(args ...interface{}) (ret interface{}) {
-  // isNull()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect6isNullEv
-    // invoke: bool isNull()
-    var ret0 = C.C_ZNK5QRect6isNullEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "isNull", args)
-  }
-
-  return
-}
-
-// adjust(int, int, int, int)
-func (this *QRect) Adjust(args ...interface{}) () {
-  // adjust(int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect6adjustEiiii
-    // invoke: void adjust(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZN5QRect6adjustEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QRect", "adjust", args)
-  }
-
-  return
-}
-
-// y()
-func (this *QRect) Y(args ...interface{}) () {
-  // y()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect1yEv
-    // invoke: int y()
-    C.C_ZNK5QRect1yEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QRect", "y", args)
-  }
-
-  return
-}
-
-// x()
-func (this *QRect) X(args ...interface{}) () {
-  // x()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect1xEv
-    // invoke: int x()
-    C.C_ZNK5QRect1xEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QRect", "x", args)
-  }
-
-  return
-}
-
-// moveBottomRight(const class QPoint &)
-func (this *QRect) Movebottomright(args ...interface{}) () {
-  // moveBottomRight(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect15moveBottomRightERK6QPoint
-    // invoke: void moveBottomRight(const class QPoint &)
-    var arg0 = args[0].(*QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect15moveBottomRightERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "moveBottomRight", args)
-  }
-
-  return
-}
-
-// setSize(const class QSize &)
-func (this *QRect) Setsize(args ...interface{}) () {
-  // setSize(const class QSize &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QSize{}) // "const QSize &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QRect7setSizeERK5QSize
-    // invoke: void setSize(const class QSize &)
-    var arg0 = args[0].(*QSize).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QRect7setSizeERK5QSize(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRect", "setSize", args)
-  }
-
-  return
-}
-
-// left()
-func (this *QRect) Left(args ...interface{}) (ret interface{}) {
-  // left()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QRect4leftEv
-    // invoke: int left()
-    var ret0 = C.C_ZNK5QRect4leftEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRect", "left", args)
-  }
-
-  return
-}
-
-// marginsRemoved(const class QMarginsF &)
-func (this *QRectF) Marginsremoved(args ...interface{}) (ret interface{}) {
-  // marginsRemoved(const class QMarginsF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QMarginsF{}) // "const QMarginsF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF14marginsRemovedERK9QMarginsF
-    // invoke: QRectF marginsRemoved(const class QMarginsF &)
-    var arg0 = args[0].(*QMarginsF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QRectF14marginsRemovedERK9QMarginsF(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "marginsRemoved", args)
-  }
-
-  return
-}
-
-// moveTo(const class QPointF &)
-func (this *QRectF) Moveto(args ...interface{}) () {
-  // moveTo(const class QPointF &)
-  // moveTo(qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF6moveToERK7QPointF
-    // invoke: void moveTo(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF6moveToERK7QPointF(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN6QRectF6moveToEdd
-    // invoke: void moveTo(qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    C.C_ZN6QRectF6moveToEdd(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QRectF", "moveTo", args)
-  }
-
-  return
-}
-
-// setBottomLeft(const class QPointF &)
-func (this *QRectF) Setbottomleft(args ...interface{}) () {
-  // setBottomLeft(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF13setBottomLeftERK7QPointF
-    // invoke: void setBottomLeft(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF13setBottomLeftERK7QPointF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setBottomLeft", args)
-  }
-
-  return
-}
-
-// intersects(const class QRectF &)
-func (this *QRectF) Intersects(args ...interface{}) (ret interface{}) {
-  // intersects(const class QRectF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRectF{}) // "const QRectF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF10intersectsERKS_
-    // invoke: bool intersects(const class QRectF &)
-    var arg0 = args[0].(*QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QRectF10intersectsERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "intersects", args)
-  }
-
-  return
-}
-
-// topLeft()
-func (this *QRectF) Topleft(args ...interface{}) (ret interface{}) {
-  // topLeft()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF7topLeftEv
-    // invoke: QPointF topLeft()
-    var ret0 = C.C_ZNK6QRectF7topLeftEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "topLeft", args)
-  }
-
-  return
-}
-
-// setBottom(qreal)
-func (this *QRectF) Setbottom(args ...interface{}) () {
-  // setBottom(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF9setBottomEd
-    // invoke: void setBottom(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF9setBottomEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setBottom", args)
-  }
-
-  return
-}
-
-// setTopLeft(const class QPointF &)
-func (this *QRectF) Settopleft(args ...interface{}) () {
-  // setTopLeft(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF10setTopLeftERK7QPointF
-    // invoke: void setTopLeft(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF10setTopLeftERK7QPointF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setTopLeft", args)
-  }
-
-  return
-}
-
-// adjusted(qreal, qreal, qreal, qreal)
-func (this *QRectF) Adjusted(args ...interface{}) (ret interface{}) {
-  // adjusted(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF8adjustedEdddd
-    // invoke: QRectF adjusted(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK6QRectF8adjustedEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "adjusted", args)
-  }
-
-  return
-}
-
-// height()
-func (this *QRectF) Height(args ...interface{}) (ret interface{}) {
-  // height()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF6heightEv
-    // invoke: qreal height()
-    var ret0 = C.C_ZNK6QRectF6heightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "height", args)
-  }
-
-  return
-}
-
-// right()
-func (this *QRectF) Right(args ...interface{}) (ret interface{}) {
-  // right()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF5rightEv
-    // invoke: qreal right()
-    var ret0 = C.C_ZNK6QRectF5rightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "right", args)
-  }
-
-  return
-}
-
-// setLeft(qreal)
-func (this *QRectF) Setleft(args ...interface{}) () {
-  // setLeft(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF7setLeftEd
-    // invoke: void setLeft(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF7setLeftEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setLeft", args)
-  }
-
-  return
-}
-
-// moveRight(qreal)
-func (this *QRectF) Moveright(args ...interface{}) () {
-  // moveRight(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF9moveRightEd
-    // invoke: void moveRight(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF9moveRightEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "moveRight", args)
-  }
-
-  return
-}
-
-// moveBottomLeft(const class QPointF &)
-func (this *QRectF) Movebottomleft(args ...interface{}) () {
-  // moveBottomLeft(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF14moveBottomLeftERK7QPointF
-    // invoke: void moveBottomLeft(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF14moveBottomLeftERK7QPointF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "moveBottomLeft", args)
-  }
-
-  return
-}
-
-// setWidth(qreal)
-func (this *QRectF) Setwidth(args ...interface{}) () {
-  // setWidth(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF8setWidthEd
-    // invoke: void setWidth(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF8setWidthEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setWidth", args)
-  }
-
-  return
-}
-
-// marginsAdded(const class QMarginsF &)
-func (this *QRectF) Marginsadded(args ...interface{}) (ret interface{}) {
-  // marginsAdded(const class QMarginsF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QMarginsF{}) // "const QMarginsF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF12marginsAddedERK9QMarginsF
-    // invoke: QRectF marginsAdded(const class QMarginsF &)
-    var arg0 = args[0].(*QMarginsF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QRectF12marginsAddedERK9QMarginsF(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "marginsAdded", args)
-  }
-
-  return
-}
-
-// moveTop(qreal)
-func (this *QRectF) Movetop(args ...interface{}) () {
-  // moveTop(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF7moveTopEd
-    // invoke: void moveTop(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF7moveTopEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "moveTop", args)
-  }
-
-  return
-}
-
-// bottomRight()
-func (this *QRectF) Bottomright(args ...interface{}) (ret interface{}) {
-  // bottomRight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF11bottomRightEv
-    // invoke: QPointF bottomRight()
-    var ret0 = C.C_ZNK6QRectF11bottomRightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "bottomRight", args)
-  }
-
-  return
-}
-
-// bottom()
-func (this *QRectF) Bottom(args ...interface{}) (ret interface{}) {
-  // bottom()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF6bottomEv
-    // invoke: qreal bottom()
-    var ret0 = C.C_ZNK6QRectF6bottomEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "bottom", args)
-  }
-
-  return
-}
-
-// getRect(qreal *, qreal *, qreal *, qreal *)
-func (this *QRectF) Getrect(args ...interface{}) () {
-  // getRect(qreal *, qreal *, qreal *, qreal *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][1] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][2] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][3] = qtrt.DoubleTy(true) // "qreal *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF7getRectEPdS0_S0_S0_
-    // invoke: void getRect(qreal *, qreal *, qreal *, qreal *)
-    var arg0 = (unsafe.Pointer)(args[0].(*float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZNK6QRectF7getRectEPdS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QRectF", "getRect", args)
-  }
-
-  return
-}
-
-// top()
-func (this *QRectF) Top(args ...interface{}) (ret interface{}) {
-  // top()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF3topEv
-    // invoke: qreal top()
-    var ret0 = C.C_ZNK6QRectF3topEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "top", args)
-  }
-
-  return
-}
-
-// contains(qreal, qreal)
-func (this *QRectF) Contains(args ...interface{}) (ret interface{}) {
-  // contains(qreal, qreal)
-  // contains(const class QRectF &)
-  // contains(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QRectF{}) // "const QRectF &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF8containsEdd
-    // invoke: bool contains(qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK6QRectF8containsEdd(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK6QRectF8containsERKS_
-    // invoke: bool contains(const class QRectF &)
-    var arg0 = args[0].(*QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QRectF8containsERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZNK6QRectF8containsERK7QPointF
-    // invoke: bool contains(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QRectF8containsERK7QPointF(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "contains", args)
-  }
-
-  return
-}
-
-// toRect()
-func (this *QRectF) Torect(args ...interface{}) (ret interface{}) {
-  // toRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF6toRectEv
-    // invoke: QRect toRect()
-    var ret0 = C.C_ZNK6QRectF6toRectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "toRect", args)
-  }
-
-  return
-}
-
-// topRight()
-func (this *QRectF) Topright(args ...interface{}) (ret interface{}) {
-  // topRight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF8topRightEv
-    // invoke: QPointF topRight()
-    var ret0 = C.C_ZNK6QRectF8topRightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "topRight", args)
-  }
-
-  return
-}
-
-// moveCenter(const class QPointF &)
-func (this *QRectF) Movecenter(args ...interface{}) () {
-  // moveCenter(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF10moveCenterERK7QPointF
-    // invoke: void moveCenter(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF10moveCenterERK7QPointF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "moveCenter", args)
-  }
-
-  return
-}
-
-// width()
-func (this *QRectF) Width(args ...interface{}) (ret interface{}) {
-  // width()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF5widthEv
-    // invoke: qreal width()
-    var ret0 = C.C_ZNK6QRectF5widthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "width", args)
-  }
-
-  return
-}
-
-// isEmpty()
-func (this *QRectF) Isempty(args ...interface{}) (ret interface{}) {
-  // isEmpty()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF7isEmptyEv
-    // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK6QRectF7isEmptyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "isEmpty", args)
-  }
-
-  return
-}
-
-// QRectF(const class QPointF &, const class QPointF &)
-func NewQRectF(args ...interface{}) *QRectF {
-  // QRectF(const class QPointF &, const class QPointF &)
-  // QRectF(qreal, qreal, qreal, qreal)
-  // QRectF()
-  // QRectF(const class QPointF &, const class QSizeF &)
-  // QRectF(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  vtys[0][1] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  vtys[3][1] = reflect.TypeOf(QSizeF{}) // "const QSizeF &"
-  vtys[4] = make(map[int32]reflect.Type)
-  vtys[4][0] = reflect.TypeOf(QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectFC1ERK7QPointFS2_
-    // invoke: void QRectF(const class QPointF &, const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QPointF).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QRectFC2ERK7QPointFS2_(arg0, arg1)
-    return &QRectF{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN6QRectFC1Edddd
-    // invoke: void QRectF(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QRectFC2Edddd(arg0, arg1, arg2, arg3)
-    return &QRectF{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN6QRectFC1Ev
-    // invoke: void QRectF()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QRectFC2Ev()
-    return &QRectF{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN6QRectFC1ERK7QPointFRK6QSizeF
-    // invoke: void QRectF(const class QPointF &, const class QSizeF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QSizeF).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QRectFC2ERK7QPointFRK6QSizeF(arg0, arg1)
-    return &QRectF{Qclsinst:qthis}
-  case 4:
-    // invoke: _ZN6QRectFC1ERK5QRect
-    // invoke: void QRectF(const class QRect &)
-    var arg0 = args[0].(*QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QRectFC2ERK5QRect(arg0)
-    return &QRectF{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QRectF", "QRectF", args)
-  }
-
-  return nil // QRectF{Qclsinst:qthis}
-}
-
-// size()
-func (this *QRectF) Size(args ...interface{}) (ret interface{}) {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF4sizeEv
-    // invoke: QSizeF size()
-    var ret0 = C.C_ZNK6QRectF4sizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "size", args)
-  }
-
-  return
-}
-
-// setX(qreal)
-func (this *QRectF) Setx(args ...interface{}) () {
-  // setX(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF4setXEd
-    // invoke: void setX(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF4setXEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setX", args)
-  }
-
-  return
-}
-
-// setRect(qreal, qreal, qreal, qreal)
-func (this *QRectF) Setrect(args ...interface{}) () {
-  // setRect(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF7setRectEdddd
-    // invoke: void setRect(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZN6QRectF7setRectEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QRectF", "setRect", args)
-  }
-
-  return
-}
-
-// moveLeft(qreal)
-func (this *QRectF) Moveleft(args ...interface{}) () {
-  // moveLeft(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF8moveLeftEd
-    // invoke: void moveLeft(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF8moveLeftEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "moveLeft", args)
-  }
-
-  return
-}
-
-// setBottomRight(const class QPointF &)
-func (this *QRectF) Setbottomright(args ...interface{}) () {
-  // setBottomRight(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF14setBottomRightERK7QPointF
-    // invoke: void setBottomRight(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF14setBottomRightERK7QPointF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setBottomRight", args)
-  }
-
-  return
-}
-
-// isValid()
-func (this *QRectF) Isvalid(args ...interface{}) (ret interface{}) {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF7isValidEv
-    // invoke: bool isValid()
-    var ret0 = C.C_ZNK6QRectF7isValidEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "isValid", args)
-  }
-
-  return
-}
-
-// getCoords(qreal *, qreal *, qreal *, qreal *)
-func (this *QRectF) Getcoords(args ...interface{}) () {
-  // getCoords(qreal *, qreal *, qreal *, qreal *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][1] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][2] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][3] = qtrt.DoubleTy(true) // "qreal *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF9getCoordsEPdS0_S0_S0_
-    // invoke: void getCoords(qreal *, qreal *, qreal *, qreal *)
-    var arg0 = (unsafe.Pointer)(args[0].(*float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZNK6QRectF9getCoordsEPdS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QRectF", "getCoords", args)
-  }
-
-  return
-}
-
-// setTopRight(const class QPointF &)
-func (this *QRectF) Settopright(args ...interface{}) () {
-  // setTopRight(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF11setTopRightERK7QPointF
-    // invoke: void setTopRight(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF11setTopRightERK7QPointF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setTopRight", args)
-  }
-
-  return
-}
-
-// translated(qreal, qreal)
-func (this *QRectF) Translated(args ...interface{}) (ret interface{}) {
-  // translated(qreal, qreal)
-  // translated(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF10translatedEdd
-    // invoke: QRectF translated(qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK6QRectF10translatedEdd(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK6QRectF10translatedERK7QPointF
-    // invoke: QRectF translated(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QRectF10translatedERK7QPointF(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "translated", args)
-  }
-
-  return
-}
-
-// normalized()
-func (this *QRectF) Normalized(args ...interface{}) (ret interface{}) {
-  // normalized()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF10normalizedEv
-    // invoke: QRectF normalized()
-    var ret0 = C.C_ZNK6QRectF10normalizedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "normalized", args)
-  }
-
-  return
-}
-
-// setTop(qreal)
-func (this *QRectF) Settop(args ...interface{}) () {
-  // setTop(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF6setTopEd
-    // invoke: void setTop(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF6setTopEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setTop", args)
-  }
-
-  return
-}
-
-// moveBottom(qreal)
-func (this *QRectF) Movebottom(args ...interface{}) () {
-  // moveBottom(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF10moveBottomEd
-    // invoke: void moveBottom(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF10moveBottomEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "moveBottom", args)
-  }
-
-  return
-}
-
-// setY(qreal)
-func (this *QRectF) Sety(args ...interface{}) () {
-  // setY(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF4setYEd
-    // invoke: void setY(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF4setYEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setY", args)
-  }
-
-  return
-}
-
-// setCoords(qreal, qreal, qreal, qreal)
-func (this *QRectF) Setcoords(args ...interface{}) () {
-  // setCoords(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF9setCoordsEdddd
-    // invoke: void setCoords(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZN6QRectF9setCoordsEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QRectF", "setCoords", args)
-  }
-
-  return
-}
-
-// setHeight(qreal)
-func (this *QRectF) Setheight(args ...interface{}) () {
-  // setHeight(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF9setHeightEd
-    // invoke: void setHeight(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF9setHeightEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setHeight", args)
-  }
-
-  return
-}
-
-// transposed()
-func (this *QRectF) Transposed(args ...interface{}) (ret interface{}) {
-  // transposed()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF10transposedEv
-    // invoke: QRectF transposed()
-    var ret0 = C.C_ZNK6QRectF10transposedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "transposed", args)
-  }
-
-  return
-}
-
-// translate(const class QPointF &)
-func (this *QRectF) Translate(args ...interface{}) () {
-  // translate(const class QPointF &)
-  // translate(qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF9translateERK7QPointF
-    // invoke: void translate(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF9translateERK7QPointF(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN6QRectF9translateEdd
-    // invoke: void translate(qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    C.C_ZN6QRectF9translateEdd(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QRectF", "translate", args)
-  }
-
-  return
-}
-
-// bottomLeft()
-func (this *QRectF) Bottomleft(args ...interface{}) (ret interface{}) {
-  // bottomLeft()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF10bottomLeftEv
-    // invoke: QPointF bottomLeft()
-    var ret0 = C.C_ZNK6QRectF10bottomLeftEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "bottomLeft", args)
-  }
-
-  return
-}
-
-// center()
-func (this *QRectF) Center(args ...interface{}) (ret interface{}) {
-  // center()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF6centerEv
-    // invoke: QPointF center()
-    var ret0 = C.C_ZNK6QRectF6centerEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "center", args)
-  }
-
-  return
-}
-
-// moveTopRight(const class QPointF &)
-func (this *QRectF) Movetopright(args ...interface{}) () {
-  // moveTopRight(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF12moveTopRightERK7QPointF
-    // invoke: void moveTopRight(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF12moveTopRightERK7QPointF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "moveTopRight", args)
-  }
-
-  return
-}
-
-// moveTopLeft(const class QPointF &)
-func (this *QRectF) Movetopleft(args ...interface{}) () {
-  // moveTopLeft(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF11moveTopLeftERK7QPointF
-    // invoke: void moveTopLeft(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF11moveTopLeftERK7QPointF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "moveTopLeft", args)
-  }
-
-  return
-}
-
-// toAlignedRect()
-func (this *QRectF) Toalignedrect(args ...interface{}) (ret interface{}) {
-  // toAlignedRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF13toAlignedRectEv
-    // invoke: QRect toAlignedRect()
-    var ret0 = C.C_ZNK6QRectF13toAlignedRectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "toAlignedRect", args)
-  }
-
-  return
-}
-
-// intersected(const class QRectF &)
-func (this *QRectF) Intersected(args ...interface{}) (ret interface{}) {
-  // intersected(const class QRectF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRectF{}) // "const QRectF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF11intersectedERKS_
-    // invoke: QRectF intersected(const class QRectF &)
-    var arg0 = args[0].(*QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QRectF11intersectedERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "intersected", args)
-  }
-
-  return
-}
-
-// united(const class QRectF &)
-func (this *QRectF) United(args ...interface{}) (ret interface{}) {
-  // united(const class QRectF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRectF{}) // "const QRectF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF6unitedERKS_
-    // invoke: QRectF united(const class QRectF &)
-    var arg0 = args[0].(*QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QRectF6unitedERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "united", args)
-  }
-
-  return
-}
-
-// setRight(qreal)
-func (this *QRectF) Setright(args ...interface{}) () {
-  // setRight(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF8setRightEd
-    // invoke: void setRight(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF8setRightEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setRight", args)
-  }
-
-  return
-}
-
-// isNull()
-func (this *QRectF) Isnull(args ...interface{}) (ret interface{}) {
-  // isNull()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF6isNullEv
-    // invoke: bool isNull()
-    var ret0 = C.C_ZNK6QRectF6isNullEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "isNull", args)
-  }
-
-  return
-}
-
-// adjust(qreal, qreal, qreal, qreal)
-func (this *QRectF) Adjust(args ...interface{}) () {
-  // adjust(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF6adjustEdddd
-    // invoke: void adjust(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZN6QRectF6adjustEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QRectF", "adjust", args)
-  }
-
-  return
-}
-
-// y()
-func (this *QRectF) Y(args ...interface{}) () {
-  // y()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF1yEv
-    // invoke: qreal y()
-    C.C_ZNK6QRectF1yEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QRectF", "y", args)
-  }
-
-  return
-}
-
-// x()
-func (this *QRectF) X(args ...interface{}) () {
-  // x()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF1xEv
-    // invoke: qreal x()
-    C.C_ZNK6QRectF1xEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QRectF", "x", args)
-  }
-
-  return
-}
-
-// left()
-func (this *QRectF) Left(args ...interface{}) (ret interface{}) {
-  // left()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QRectF4leftEv
-    // invoke: qreal left()
-    var ret0 = C.C_ZNK6QRectF4leftEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRectF", "left", args)
-  }
-
-  return
-}
-
-// setSize(const class QSizeF &)
-func (this *QRectF) Setsize(args ...interface{}) () {
-  // setSize(const class QSizeF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QSizeF{}) // "const QSizeF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF7setSizeERK6QSizeF
-    // invoke: void setSize(const class QSizeF &)
-    var arg0 = args[0].(*QSizeF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF7setSizeERK6QSizeF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "setSize", args)
-  }
-
-  return
-}
-
-// moveBottomRight(const class QPointF &)
-func (this *QRectF) Movebottomright(args ...interface{}) () {
-  // moveBottomRight(const class QPointF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QRectF15moveBottomRightERK7QPointF
-    // invoke: void moveBottomRight(const class QPointF &)
-    var arg0 = args[0].(*QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QRectF15moveBottomRightERK7QPointF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRectF", "moveBottomRight", args)
-  }
-
-  return
-}
-
-// <= body block end
-
+	cthis unsafe.Pointer
+}
+
+// /usr/include/qt/QtCore/qrect.h:60
+// index:0
+// inline
+// void QRect()
+func NewQRect() *QRect {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRectC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QRect{cthis}
+}
+
+// /usr/include/qt/QtCore/qrect.h:61
+// index:1
+// inline
+// void QRect(const class QPoint &, const class QPoint &)
+func NewQRect_1(topleft unsafe.Pointer, bottomright unsafe.Pointer) *QRect {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRectC2ERK6QPointS2_", ffiqt.FFI_TYPE_VOID, cthis, topleft, bottomright)
+	gopp.ErrPrint(err, rv)
+	return &QRect{cthis}
+}
+
+// /usr/include/qt/QtCore/qrect.h:62
+// index:2
+// inline
+// void QRect(const class QPoint &, const class QSize &)
+func NewQRect_2(topleft unsafe.Pointer, size unsafe.Pointer) *QRect {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRectC2ERK6QPointRK5QSize", ffiqt.FFI_TYPE_VOID, cthis, topleft, size)
+	gopp.ErrPrint(err, rv)
+	return &QRect{cthis}
+}
+
+// /usr/include/qt/QtCore/qrect.h:63
+// index:3
+// inline
+// void QRect(int, int, int, int)
+func NewQRect_3(left int, top int, width int, height int) *QRect {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRectC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, &left, &top, &width, &height)
+	gopp.ErrPrint(err, rv)
+	return &QRect{cthis}
+}
+
+// /usr/include/qt/QtCore/qrect.h:65
+// index:0
+// inline
+// bool isNull()
+func (this *QRect) IsNull() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:66
+// index:0
+// inline
+// bool isEmpty()
+func (this *QRect) IsEmpty() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:67
+// index:0
+// inline
+// bool isValid()
+func (this *QRect) IsValid() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:69
+// index:0
+// inline
+// int left()
+func (this *QRect) Left() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect4leftEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:70
+// index:0
+// inline
+// int top()
+func (this *QRect) Top() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect3topEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:71
+// index:0
+// inline
+// int right()
+func (this *QRect) Right() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect5rightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:72
+// index:0
+// inline
+// int bottom()
+func (this *QRect) Bottom() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect6bottomEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:73
+// index:0
+// QRect normalized()
+func (this *QRect) Normalized() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10normalizedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:75
+// index:0
+// inline
+// int x()
+func (this *QRect) X() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect1xEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:76
+// index:0
+// inline
+// int y()
+func (this *QRect) Y() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect1yEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:77
+// index:0
+// inline
+// void setLeft(int)
+func (this *QRect) SetLeft(pos int) {
+	// 0: (, int pos), (&pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect7setLeftEi", ffiqt.FFI_TYPE_VOID, this.cthis, &pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:78
+// index:0
+// inline
+// void setTop(int)
+func (this *QRect) SetTop(pos int) {
+	// 0: (, int pos), (&pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect6setTopEi", ffiqt.FFI_TYPE_VOID, this.cthis, &pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:79
+// index:0
+// inline
+// void setRight(int)
+func (this *QRect) SetRight(pos int) {
+	// 0: (, int pos), (&pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect8setRightEi", ffiqt.FFI_TYPE_VOID, this.cthis, &pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:80
+// index:0
+// inline
+// void setBottom(int)
+func (this *QRect) SetBottom(pos int) {
+	// 0: (, int pos), (&pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect9setBottomEi", ffiqt.FFI_TYPE_VOID, this.cthis, &pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:81
+// index:0
+// inline
+// void setX(int)
+func (this *QRect) SetX(x int) {
+	// 0: (, int x), (&x)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect4setXEi", ffiqt.FFI_TYPE_VOID, this.cthis, &x)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:82
+// index:0
+// inline
+// void setY(int)
+func (this *QRect) SetY(y int) {
+	// 0: (, int y), (&y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect4setYEi", ffiqt.FFI_TYPE_VOID, this.cthis, &y)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:84
+// index:0
+// inline
+// void setTopLeft(const class QPoint &)
+func (this *QRect) SetTopLeft(p unsafe.Pointer) {
+	// 0: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect10setTopLeftERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:85
+// index:0
+// inline
+// void setBottomRight(const class QPoint &)
+func (this *QRect) SetBottomRight(p unsafe.Pointer) {
+	// 0: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect14setBottomRightERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:86
+// index:0
+// inline
+// void setTopRight(const class QPoint &)
+func (this *QRect) SetTopRight(p unsafe.Pointer) {
+	// 0: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect11setTopRightERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:87
+// index:0
+// inline
+// void setBottomLeft(const class QPoint &)
+func (this *QRect) SetBottomLeft(p unsafe.Pointer) {
+	// 0: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect13setBottomLeftERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:89
+// index:0
+// inline
+// QPoint topLeft()
+func (this *QRect) TopLeft() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect7topLeftEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:90
+// index:0
+// inline
+// QPoint bottomRight()
+func (this *QRect) BottomRight() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect11bottomRightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:91
+// index:0
+// inline
+// QPoint topRight()
+func (this *QRect) TopRight() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8topRightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:92
+// index:0
+// inline
+// QPoint bottomLeft()
+func (this *QRect) BottomLeft() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10bottomLeftEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:93
+// index:0
+// inline
+// QPoint center()
+func (this *QRect) Center() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect6centerEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:95
+// index:0
+// inline
+// void moveLeft(int)
+func (this *QRect) MoveLeft(pos int) {
+	// 0: (, int pos), (&pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect8moveLeftEi", ffiqt.FFI_TYPE_VOID, this.cthis, &pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:96
+// index:0
+// inline
+// void moveTop(int)
+func (this *QRect) MoveTop(pos int) {
+	// 0: (, int pos), (&pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect7moveTopEi", ffiqt.FFI_TYPE_VOID, this.cthis, &pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:97
+// index:0
+// inline
+// void moveRight(int)
+func (this *QRect) MoveRight(pos int) {
+	// 0: (, int pos), (&pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect9moveRightEi", ffiqt.FFI_TYPE_VOID, this.cthis, &pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:98
+// index:0
+// inline
+// void moveBottom(int)
+func (this *QRect) MoveBottom(pos int) {
+	// 0: (, int pos), (&pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect10moveBottomEi", ffiqt.FFI_TYPE_VOID, this.cthis, &pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:99
+// index:0
+// inline
+// void moveTopLeft(const class QPoint &)
+func (this *QRect) MoveTopLeft(p unsafe.Pointer) {
+	// 0: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect11moveTopLeftERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:100
+// index:0
+// inline
+// void moveBottomRight(const class QPoint &)
+func (this *QRect) MoveBottomRight(p unsafe.Pointer) {
+	// 0: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect15moveBottomRightERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:101
+// index:0
+// inline
+// void moveTopRight(const class QPoint &)
+func (this *QRect) MoveTopRight(p unsafe.Pointer) {
+	// 0: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect12moveTopRightERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:102
+// index:0
+// inline
+// void moveBottomLeft(const class QPoint &)
+func (this *QRect) MoveBottomLeft(p unsafe.Pointer) {
+	// 0: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect14moveBottomLeftERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:103
+// index:0
+// inline
+// void moveCenter(const class QPoint &)
+func (this *QRect) MoveCenter(p unsafe.Pointer) {
+	// 0: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect10moveCenterERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:105
+// index:0
+// inline
+// void translate(int, int)
+func (this *QRect) Translate(dx int, dy int) {
+	// 0: (, int dx, int dy), (&dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect9translateEii", ffiqt.FFI_TYPE_VOID, this.cthis, &dx, &dy)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:106
+// index:1
+// inline
+// void translate(const class QPoint &)
+func (this *QRect) Translate_1(p unsafe.Pointer) {
+	// 1: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect9translateERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:107
+// index:0
+// inline
+// QRect translated(int, int)
+func (this *QRect) Translated(dx int, dy int) {
+	// 0: (, int dx, int dy), (&dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10translatedEii", ffiqt.FFI_TYPE_VOID, this.cthis, &dx, &dy)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:108
+// index:1
+// inline
+// QRect translated(const class QPoint &)
+func (this *QRect) Translated_1(p unsafe.Pointer) {
+	// 1: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10translatedERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:109
+// index:0
+// inline
+// QRect transposed()
+func (this *QRect) Transposed() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10transposedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:111
+// index:0
+// inline
+// void moveTo(int, int)
+func (this *QRect) MoveTo(x int, t int) {
+	// 0: (, int x, int t), (&x, &t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect6moveToEii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &t)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:112
+// index:1
+// inline
+// void moveTo(const class QPoint &)
+func (this *QRect) MoveTo_1(p unsafe.Pointer) {
+	// 1: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect6moveToERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:114
+// index:0
+// inline
+// void setRect(int, int, int, int)
+func (this *QRect) SetRect(x int, y int, w int, h int) {
+	// 0: (, int x, int y, int w, int h), (&x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect7setRectEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:115
+// index:0
+// inline
+// void getRect(int *, int *, int *, int *)
+func (this *QRect) GetRect(x unsafe.Pointer, y unsafe.Pointer, w unsafe.Pointer, h unsafe.Pointer) {
+	// 0: (, int * x, int * y, int * w, int * h), (x, y, w, h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect7getRectEPiS0_S0_S0_", ffiqt.FFI_TYPE_VOID, this.cthis, x, y, w, h)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:117
+// index:0
+// inline
+// void setCoords(int, int, int, int)
+func (this *QRect) SetCoords(x1 int, y1 int, x2 int, y2 int) {
+	// 0: (, int x1, int y1, int x2, int y2), (&x1, &y1, &x2, &y2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect9setCoordsEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &x1, &y1, &x2, &y2)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:118
+// index:0
+// inline
+// void getCoords(int *, int *, int *, int *)
+func (this *QRect) GetCoords(x1 unsafe.Pointer, y1 unsafe.Pointer, x2 unsafe.Pointer, y2 unsafe.Pointer) {
+	// 0: (, int * x1, int * y1, int * x2, int * y2), (x1, y1, x2, y2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect9getCoordsEPiS0_S0_S0_", ffiqt.FFI_TYPE_VOID, this.cthis, x1, y1, x2, y2)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:120
+// index:0
+// inline
+// void adjust(int, int, int, int)
+func (this *QRect) Adjust(x1 int, y1 int, x2 int, y2 int) {
+	// 0: (, int x1, int y1, int x2, int y2), (&x1, &y1, &x2, &y2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect6adjustEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &x1, &y1, &x2, &y2)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:121
+// index:0
+// inline
+// QRect adjusted(int, int, int, int)
+func (this *QRect) Adjusted(x1 int, y1 int, x2 int, y2 int) {
+	// 0: (, int x1, int y1, int x2, int y2), (&x1, &y1, &x2, &y2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8adjustedEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &x1, &y1, &x2, &y2)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:123
+// index:0
+// inline
+// QSize size()
+func (this *QRect) Size() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:124
+// index:0
+// inline
+// int width()
+func (this *QRect) Width() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect5widthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:125
+// index:0
+// inline
+// int height()
+func (this *QRect) Height() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect6heightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:126
+// index:0
+// inline
+// void setWidth(int)
+func (this *QRect) SetWidth(w int) {
+	// 0: (, int w), (&w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect8setWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &w)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:127
+// index:0
+// inline
+// void setHeight(int)
+func (this *QRect) SetHeight(h int) {
+	// 0: (, int h), (&h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect9setHeightEi", ffiqt.FFI_TYPE_VOID, this.cthis, &h)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:128
+// index:0
+// inline
+// void setSize(const class QSize &)
+func (this *QRect) SetSize(s unsafe.Pointer) {
+	// 0: (, const QSize & s), (s)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QRect7setSizeERK5QSize", ffiqt.FFI_TYPE_VOID, this.cthis, s)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:135
+// index:0
+// bool contains(const class QRect &, _Bool)
+func (this *QRect) Contains(r unsafe.Pointer, proper bool) {
+	// 0: (, const QRect & r, bool proper), (r, &proper)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8containsERKS_b", ffiqt.FFI_TYPE_VOID, this.cthis, r, &proper)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:136
+// index:1
+// bool contains(const class QPoint &, _Bool)
+func (this *QRect) Contains_1(p unsafe.Pointer, proper bool) {
+	// 1: (, const QPoint & p, bool proper), (p, &proper)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8containsERK6QPointb", ffiqt.FFI_TYPE_VOID, this.cthis, p, &proper)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:137
+// index:2
+// inline
+// bool contains(int, int)
+func (this *QRect) Contains_2(x int, y int) {
+	// 2: (, int x, int y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8containsEii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:138
+// index:3
+// inline
+// bool contains(int, int, _Bool)
+func (this *QRect) Contains_3(x int, y int, proper bool) {
+	// 3: (, int x, int y, bool proper), (&x, &y, &proper)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8containsEiib", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &proper)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:139
+// index:0
+// inline
+// QRect united(const class QRect &)
+func (this *QRect) United(other unsafe.Pointer) {
+	// 0: (, const QRect & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect6unitedERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:140
+// index:0
+// inline
+// QRect intersected(const class QRect &)
+func (this *QRect) Intersected(other unsafe.Pointer) {
+	// 0: (, const QRect & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect11intersectedERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:141
+// index:0
+// bool intersects(const class QRect &)
+func (this *QRect) Intersects(r unsafe.Pointer) {
+	// 0: (, const QRect & r), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10intersectsERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:143
+// index:0
+// inline
+// QRect marginsAdded(const class QMargins &)
+func (this *QRect) MarginsAdded(margins unsafe.Pointer) {
+	// 0: (, const QMargins & margins), (margins)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect12marginsAddedERK8QMargins", ffiqt.FFI_TYPE_VOID, this.cthis, margins)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qrect.h:144
+// index:0
+// inline
+// QRect marginsRemoved(const class QMargins &)
+func (this *QRect) MarginsRemoved(margins unsafe.Pointer) {
+	// 0: (, const QMargins & margins), (margins)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect14marginsRemovedERK8QMargins", ffiqt.FFI_TYPE_VOID, this.cthis, margins)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

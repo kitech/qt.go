@@ -1,397 +1,197 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qdockwidget.h
+// #include <qdockwidget.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qdockwidget.h
-// dst-file: /src/widgets/qdockwidget.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QDockWidget::setWidget(QWidget * widget);
-extern void C_ZN11QDockWidget9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
-  // proto:  bool QDockWidget::isFloating();
-extern bool C_ZNK11QDockWidget10isFloatingEv(void* qthis); // 2
-  // proto:  QAction * QDockWidget::toggleViewAction();
-extern void* C_ZNK11QDockWidget16toggleViewActionEv(void* qthis); // 4
-  // proto:  QWidget * QDockWidget::widget();
-extern void* C_ZNK11QDockWidget6widgetEv(void* qthis); // 4
-  // proto:  void QDockWidget::setTitleBarWidget(QWidget * widget);
-extern void C_ZN11QDockWidget17setTitleBarWidgetEP7QWidget(void* qthis, void* arg0); // 4
-  // proto:  void QDockWidget::~QDockWidget();
-extern void C_ZN11QDockWidgetD2Ev(void* qthis); // 4
-  // proto:  const QMetaObject * QDockWidget::metaObject();
-extern void C_ZNK11QDockWidget10metaObjectEv(void* qthis); // 4
-  // proto:  Qt::DockWidgetAreas QDockWidget::allowedAreas();
-extern void C_ZNK11QDockWidget12allowedAreasEv(void* qthis); // 4
-  // proto:  QWidget * QDockWidget::titleBarWidget();
-extern void* C_ZNK11QDockWidget14titleBarWidgetEv(void* qthis); // 4
-  // proto:  void QDockWidget::setFloating(bool floating);
-extern void C_ZN11QDockWidget11setFloatingEb(void* qthis, bool arg0); // 4
-  // proto:  DockWidgetFeatures QDockWidget::features();
-extern void C_ZNK11QDockWidget8featuresEv(void* qthis); // 4
+// extern C begin: 38
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QDockWidget)=1
+//  ext block end
+
+//  body block begin
 type QDockWidget struct {
-  /*qbase*/ QWidget;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _featuresChanged QDockWidget_featuresChanged_signal;
-//  _visibilityChanged QDockWidget_visibilityChanged_signal;
-//  _topLevelChanged QDockWidget_topLevelChanged_signal;
-//  _allowedAreasChanged QDockWidget_allowedAreasChanged_signal;
-//  _dockLocationChanged QDockWidget_dockLocationChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// setWidget(class QWidget *)
-func (this *QDockWidget) Setwidget(args ...interface{}) () {
-  // setWidget(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDockWidget9setWidgetEP7QWidget
-    // invoke: void setWidget(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QDockWidget9setWidgetEP7QWidget(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDockWidget", "setWidget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdockwidget.h:57
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QDockWidget) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isFloating()
-func (this *QDockWidget) Isfloating(args ...interface{}) (ret interface{}) {
-  // isFloating()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDockWidget10isFloatingEv
-    // invoke: bool isFloating()
-    var ret0 = C.C_ZNK11QDockWidget10isFloatingEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDockWidget", "isFloating", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdockwidget.h:69
+// index:0
+// virtual
+// void ~QDockWidget()
+func DeleteQDockWidget(*QDockWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// toggleViewAction()
-func (this *QDockWidget) Toggleviewaction(args ...interface{}) (ret interface{}) {
-  // toggleViewAction()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDockWidget16toggleViewActionEv
-    // invoke: QAction * toggleViewAction()
-    var ret0 = C.C_ZNK11QDockWidget16toggleViewActionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDockWidget", "toggleViewAction", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdockwidget.h:71
+// index:0
+// QWidget * widget()
+func (this *QDockWidget) Widget() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget6widgetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// widget()
-func (this *QDockWidget) Widget(args ...interface{}) (ret interface{}) {
-  // widget()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDockWidget6widgetEv
-    // invoke: QWidget * widget()
-    var ret0 = C.C_ZNK11QDockWidget6widgetEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDockWidget", "widget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdockwidget.h:72
+// index:0
+// void setWidget(class QWidget *)
+func (this *QDockWidget) SetWidget(widget unsafe.Pointer) {
+	// 0: (, QWidget * widget), (widget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget9setWidgetEP7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, widget)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTitleBarWidget(class QWidget *)
-func (this *QDockWidget) Settitlebarwidget(args ...interface{}) () {
-  // setTitleBarWidget(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDockWidget17setTitleBarWidgetEP7QWidget
-    // invoke: void setTitleBarWidget(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QDockWidget17setTitleBarWidgetEP7QWidget(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDockWidget", "setTitleBarWidget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdockwidget.h:90
+// index:0
+// QDockWidget::DockWidgetFeatures features()
+func (this *QDockWidget) Features() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget8featuresEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QDockWidget()
-func (this *QDockWidget) Freeqdockwidget(args ...interface{}) () {
-  // ~QDockWidget()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDockWidgetD0Ev
-    // invoke: void ~QDockWidget()
-    C.C_ZN11QDockWidgetD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDockWidget", "~QDockWidget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdockwidget.h:92
+// index:0
+// void setFloating(_Bool)
+func (this *QDockWidget) SetFloating(floating bool) {
+	// 0: (, bool floating), (&floating)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget11setFloatingEb", ffiqt.FFI_TYPE_VOID, this.cthis, &floating)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QDockWidget) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDockWidget10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QDockWidget10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDockWidget", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdockwidget.h:93
+// index:0
+// inline
+// bool isFloating()
+func (this *QDockWidget) IsFloating() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget10isFloatingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// allowedAreas()
-func (this *QDockWidget) Allowedareas(args ...interface{}) () {
-  // allowedAreas()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDockWidget12allowedAreasEv
-    // invoke: Qt::DockWidgetAreas allowedAreas()
-    C.C_ZNK11QDockWidget12allowedAreasEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDockWidget", "allowedAreas", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdockwidget.h:96
+// index:0
+// Qt::DockWidgetAreas allowedAreas()
+func (this *QDockWidget) AllowedAreas() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget12allowedAreasEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// titleBarWidget()
-func (this *QDockWidget) Titlebarwidget(args ...interface{}) (ret interface{}) {
-  // titleBarWidget()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDockWidget14titleBarWidgetEv
-    // invoke: QWidget * titleBarWidget()
-    var ret0 = C.C_ZNK11QDockWidget14titleBarWidgetEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDockWidget", "titleBarWidget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdockwidget.h:98
+// index:0
+// void setTitleBarWidget(class QWidget *)
+func (this *QDockWidget) SetTitleBarWidget(widget unsafe.Pointer) {
+	// 0: (, QWidget * widget), (widget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget17setTitleBarWidgetEP7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, widget)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFloating(_Bool)
-func (this *QDockWidget) Setfloating(args ...interface{}) () {
-  // setFloating(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDockWidget11setFloatingEb
-    // invoke: void setFloating(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QDockWidget11setFloatingEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDockWidget", "setFloating", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdockwidget.h:99
+// index:0
+// QWidget * titleBarWidget()
+func (this *QDockWidget) TitleBarWidget() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget14titleBarWidgetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// features()
-func (this *QDockWidget) Features(args ...interface{}) () {
-  // features()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDockWidget8featuresEv
-    // invoke: DockWidgetFeatures features()
-    C.C_ZNK11QDockWidget8featuresEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDockWidget", "features", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qdockwidget.h:101
+// index:0
+// inline
+// bool isAreaAllowed(Qt::DockWidgetArea)
+func (this *QDockWidget) IsAreaAllowed(area int) {
+	// 0: (, Qt::DockWidgetArea area), (&area)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget13isAreaAllowedEN2Qt14DockWidgetAreaE", ffiqt.FFI_TYPE_VOID, this.cthis, &area)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qdockwidget.h:105
+// index:0
+// QAction * toggleViewAction()
+func (this *QDockWidget) ToggleViewAction() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget16toggleViewActionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qdockwidget.h:110
+// index:0
+// void topLevelChanged(_Bool)
+func (this *QDockWidget) TopLevelChanged(topLevel bool) {
+	// 0: (, bool topLevel), (&topLevel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget15topLevelChangedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &topLevel)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdockwidget.h:112
+// index:0
+// void visibilityChanged(_Bool)
+func (this *QDockWidget) VisibilityChanged(visible bool) {
+	// 0: (, bool visible), (&visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget17visibilityChangedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &visible)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdockwidget.h:113
+// index:0
+// void dockLocationChanged(Qt::DockWidgetArea)
+func (this *QDockWidget) DockLocationChanged(area int) {
+	// 0: (, Qt::DockWidgetArea area), (&area)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget19dockLocationChangedEN2Qt14DockWidgetAreaE", ffiqt.FFI_TYPE_VOID, this.cthis, &area)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

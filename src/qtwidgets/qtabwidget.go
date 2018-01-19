@@ -1,1585 +1,560 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qtabwidget.h
+// #include <qtabwidget.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qtabwidget.h
-// dst-file: /src/widgets/qtabwidget.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QString QTabWidget::tabToolTip(int index);
-extern void* C_ZNK10QTabWidget10tabToolTipEi(void* qthis, int32_t arg0); // 4
-  // proto:  bool QTabWidget::tabBarAutoHide();
-extern bool C_ZNK10QTabWidget14tabBarAutoHideEv(void* qthis); // 4
-  // proto:  bool QTabWidget::isTabEnabled(int index);
-extern bool C_ZNK10QTabWidget12isTabEnabledEi(void* qthis, int32_t arg0); // 4
-  // proto:  QString QTabWidget::tabWhatsThis(int index);
-extern void* C_ZNK10QTabWidget12tabWhatsThisEi(void* qthis, int32_t arg0); // 4
-  // proto:  QIcon QTabWidget::tabIcon(int index);
-extern void* C_ZNK10QTabWidget7tabIconEi(void* qthis, int32_t arg0); // 4
-  // proto:  QSize QTabWidget::minimumSizeHint();
-extern void* C_ZNK10QTabWidget15minimumSizeHintEv(void* qthis); // 4
-  // proto:  void QTabWidget::setCurrentIndex(int index);
-extern void C_ZN10QTabWidget15setCurrentIndexEi(void* qthis, int32_t arg0); // 4
-  // proto:  QWidget * QTabWidget::currentWidget();
-extern void* C_ZNK10QTabWidget13currentWidgetEv(void* qthis); // 4
-  // proto:  void QTabWidget::setMovable(bool movable);
-extern void C_ZN10QTabWidget10setMovableEb(void* qthis, bool arg0); // 4
-  // proto:  bool QTabWidget::tabsClosable();
-extern bool C_ZNK10QTabWidget12tabsClosableEv(void* qthis); // 4
-  // proto:  void QTabWidget::setTabIcon(int index, const QIcon & icon);
-extern void C_ZN10QTabWidget10setTabIconEiRK5QIcon(void* qthis, int32_t arg0, void* arg1); // 4
-  // proto:  void QTabWidget::setCurrentWidget(QWidget * widget);
-extern void C_ZN10QTabWidget16setCurrentWidgetEP7QWidget(void* qthis, void* arg0); // 4
-  // proto:  void QTabWidget::~QTabWidget();
-extern void C_ZN10QTabWidgetD2Ev(void* qthis); // 4
-  // proto:  int QTabWidget::insertTab(int index, QWidget * widget, const QString & );
-extern int32_t C_ZN10QTabWidget9insertTabEiP7QWidgetRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2); // 4
-  // proto:  int QTabWidget::insertTab(int index, QWidget * widget, const QIcon & icon, const QString & label);
-extern int32_t C_ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2, void* arg3); // 4
-  // proto:  QTabWidget::TabShape QTabWidget::tabShape();
-extern void C_ZNK10QTabWidget8tabShapeEv(void* qthis); // 4
-  // proto:  int QTabWidget::indexOf(QWidget * widget);
-extern int32_t C_ZNK10QTabWidget7indexOfEP7QWidget(void* qthis, void* arg0); // 4
-  // proto:  QTabBar * QTabWidget::tabBar();
-extern void* C_ZNK10QTabWidget6tabBarEv(void* qthis); // 4
-  // proto:  void QTabWidget::setTabToolTip(int index, const QString & tip);
-extern void C_ZN10QTabWidget13setTabToolTipEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
-  // proto:  void QTabWidget::QTabWidget(QWidget * parent);
-extern void* C_ZN10QTabWidgetC2EP7QWidget(void* arg0); // 3
-  // proto:  void QTabWidget::setTabBarAutoHide(bool enabled);
-extern void C_ZN10QTabWidget17setTabBarAutoHideEb(void* qthis, bool arg0); // 4
-  // proto:  bool QTabWidget::documentMode();
-extern bool C_ZNK10QTabWidget12documentModeEv(void* qthis); // 4
-  // proto:  QWidget * QTabWidget::widget(int index);
-extern void* C_ZNK10QTabWidget6widgetEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTabWidget::removeTab(int index);
-extern void C_ZN10QTabWidget9removeTabEi(void* qthis, int32_t arg0); // 4
-  // proto:  QSize QTabWidget::iconSize();
-extern void* C_ZNK10QTabWidget8iconSizeEv(void* qthis); // 4
-  // proto:  void QTabWidget::setTabText(int index, const QString & );
-extern void C_ZN10QTabWidget10setTabTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
-  // proto:  QString QTabWidget::tabText(int index);
-extern void* C_ZNK10QTabWidget7tabTextEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTabWidget::setTabsClosable(bool closeable);
-extern void C_ZN10QTabWidget15setTabsClosableEb(void* qthis, bool arg0); // 4
-  // proto:  QSize QTabWidget::sizeHint();
-extern void* C_ZNK10QTabWidget8sizeHintEv(void* qthis); // 4
-  // proto:  QTabWidget::TabPosition QTabWidget::tabPosition();
-extern void C_ZNK10QTabWidget11tabPositionEv(void* qthis); // 4
-  // proto:  bool QTabWidget::usesScrollButtons();
-extern bool C_ZNK10QTabWidget17usesScrollButtonsEv(void* qthis); // 4
-  // proto:  void QTabWidget::setDocumentMode(bool set);
-extern void C_ZN10QTabWidget15setDocumentModeEb(void* qthis, bool arg0); // 4
-  // proto:  int QTabWidget::count();
-extern int32_t C_ZNK10QTabWidget5countEv(void* qthis); // 4
-  // proto:  void QTabWidget::setUsesScrollButtons(bool useButtons);
-extern void C_ZN10QTabWidget20setUsesScrollButtonsEb(void* qthis, bool arg0); // 4
-  // proto:  const QMetaObject * QTabWidget::metaObject();
-extern void C_ZNK10QTabWidget10metaObjectEv(void* qthis); // 4
-  // proto:  Qt::TextElideMode QTabWidget::elideMode();
-extern void C_ZNK10QTabWidget9elideModeEv(void* qthis); // 4
-  // proto:  bool QTabWidget::hasHeightForWidth();
-extern bool C_ZNK10QTabWidget17hasHeightForWidthEv(void* qthis); // 4
-  // proto:  void QTabWidget::setTabWhatsThis(int index, const QString & text);
-extern void C_ZN10QTabWidget15setTabWhatsThisEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
-  // proto:  void QTabWidget::clear();
-extern void C_ZN10QTabWidget5clearEv(void* qthis); // 4
-  // proto:  void QTabWidget::setIconSize(const QSize & size);
-extern void C_ZN10QTabWidget11setIconSizeERK5QSize(void* qthis, void* arg0); // 4
-  // proto:  bool QTabWidget::isMovable();
-extern bool C_ZNK10QTabWidget9isMovableEv(void* qthis); // 4
-  // proto:  int QTabWidget::heightForWidth(int width);
-extern int32_t C_ZNK10QTabWidget14heightForWidthEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QTabWidget::setTabEnabled(int index, bool );
-extern void C_ZN10QTabWidget13setTabEnabledEib(void* qthis, int32_t arg0, bool arg1); // 4
-  // proto:  int QTabWidget::currentIndex();
-extern int32_t C_ZNK10QTabWidget12currentIndexEv(void* qthis); // 4
-  // proto:  int QTabWidget::addTab(QWidget * widget, const QIcon & icon, const QString & label);
-extern int32_t C_ZN10QTabWidget6addTabEP7QWidgetRK5QIconRK7QString(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  int QTabWidget::addTab(QWidget * widget, const QString & );
-extern int32_t C_ZN10QTabWidget6addTabEP7QWidgetRK7QString(void* qthis, void* arg0, void* arg1); // 4
+// extern C begin: 63
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QTabWidget)=1
+//  ext block end
+
+//  body block begin
 type QTabWidget struct {
-  /*qbase*/ QWidget;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _tabCloseRequested QTabWidget_tabCloseRequested_signal;
-//  _tabBarDoubleClicked QTabWidget_tabBarDoubleClicked_signal;
-//  _tabBarClicked QTabWidget_tabBarClicked_signal;
-//  _currentChanged QTabWidget_currentChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// tabToolTip(int)
-func (this *QTabWidget) Tabtooltip(args ...interface{}) (ret interface{}) {
-  // tabToolTip(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget10tabToolTipEi
-    // invoke: QString tabToolTip(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTabWidget10tabToolTipEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "tabToolTip", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:57
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QTabWidget) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabBarAutoHide()
-func (this *QTabWidget) Tabbarautohide(args ...interface{}) (ret interface{}) {
-  // tabBarAutoHide()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget14tabBarAutoHideEv
-    // invoke: bool tabBarAutoHide()
-    var ret0 = C.C_ZNK10QTabWidget14tabBarAutoHideEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "tabBarAutoHide", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:71
+// index:0
+// void QTabWidget(class QWidget *)
+func NewQTabWidget(parent unsafe.Pointer) *QTabWidget {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidgetC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QTabWidget{cthis}
 }
 
-// isTabEnabled(int)
-func (this *QTabWidget) Istabenabled(args ...interface{}) (ret interface{}) {
-  // isTabEnabled(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget12isTabEnabledEi
-    // invoke: bool isTabEnabled(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTabWidget12isTabEnabledEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "isTabEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:72
+// index:0
+// virtual
+// void ~QTabWidget()
+func DeleteQTabWidget(*QTabWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabWhatsThis(int)
-func (this *QTabWidget) Tabwhatsthis(args ...interface{}) (ret interface{}) {
-  // tabWhatsThis(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget12tabWhatsThisEi
-    // invoke: QString tabWhatsThis(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTabWidget12tabWhatsThisEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "tabWhatsThis", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:74
+// index:0
+// int addTab(class QWidget *, const class QString &)
+func (this *QTabWidget) AddTab(widget unsafe.Pointer, arg1 unsafe.Pointer) {
+	// 0: (, QWidget * widget, const QString & arg1), (widget, arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget6addTabEP7QWidgetRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, widget, arg1)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabIcon(int)
-func (this *QTabWidget) Tabicon(args ...interface{}) (ret interface{}) {
-  // tabIcon(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget7tabIconEi
-    // invoke: QIcon tabIcon(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTabWidget7tabIconEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QIcon{}) // "QIcon"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "tabIcon", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:75
+// index:1
+// int addTab(class QWidget *, const class QIcon &, const class QString &)
+func (this *QTabWidget) AddTab_1(widget unsafe.Pointer, icon unsafe.Pointer, label unsafe.Pointer) {
+	// 1: (, QWidget * widget, const QIcon & icon, const QString & label), (widget, icon, label)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget6addTabEP7QWidgetRK5QIconRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, widget, icon, label)
+	gopp.ErrPrint(err, rv)
 }
 
-// minimumSizeHint()
-func (this *QTabWidget) Minimumsizehint(args ...interface{}) (ret interface{}) {
-  // minimumSizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget15minimumSizeHintEv
-    // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK10QTabWidget15minimumSizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "minimumSizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:77
+// index:0
+// int insertTab(int, class QWidget *, const class QString &)
+func (this *QTabWidget) InsertTab(index int, widget unsafe.Pointer, arg2 unsafe.Pointer) {
+	// 0: (, int index, QWidget * widget, const QString & arg2), (&index, widget, arg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget9insertTabEiP7QWidgetRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &index, widget, arg2)
+	gopp.ErrPrint(err, rv)
 }
 
-// setCurrentIndex(int)
-func (this *QTabWidget) Setcurrentindex(args ...interface{}) () {
-  // setCurrentIndex(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget15setCurrentIndexEi
-    // invoke: void setCurrentIndex(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QTabWidget15setCurrentIndexEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setCurrentIndex", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:78
+// index:1
+// int insertTab(int, class QWidget *, const class QIcon &, const class QString &)
+func (this *QTabWidget) InsertTab_1(index int, widget unsafe.Pointer, icon unsafe.Pointer, label unsafe.Pointer) {
+	// 1: (, int index, QWidget * widget, const QIcon & icon, const QString & label), (&index, widget, icon, label)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &index, widget, icon, label)
+	gopp.ErrPrint(err, rv)
 }
 
-// currentWidget()
-func (this *QTabWidget) Currentwidget(args ...interface{}) (ret interface{}) {
-  // currentWidget()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget13currentWidgetEv
-    // invoke: QWidget * currentWidget()
-    var ret0 = C.C_ZNK10QTabWidget13currentWidgetEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "currentWidget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:80
+// index:0
+// void removeTab(int)
+func (this *QTabWidget) RemoveTab(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget9removeTabEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// setMovable(_Bool)
-func (this *QTabWidget) Setmovable(args ...interface{}) () {
-  // setMovable(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget10setMovableEb
-    // invoke: void setMovable(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QTabWidget10setMovableEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setMovable", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:82
+// index:0
+// bool isTabEnabled(int)
+func (this *QTabWidget) IsTabEnabled(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12isTabEnabledEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabsClosable()
-func (this *QTabWidget) Tabsclosable(args ...interface{}) (ret interface{}) {
-  // tabsClosable()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget12tabsClosableEv
-    // invoke: bool tabsClosable()
-    var ret0 = C.C_ZNK10QTabWidget12tabsClosableEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "tabsClosable", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:83
+// index:0
+// void setTabEnabled(int, _Bool)
+func (this *QTabWidget) SetTabEnabled(index int, arg1 bool) {
+	// 0: (, int index, bool arg1), (&index, &arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget13setTabEnabledEib", ffiqt.FFI_TYPE_VOID, this.cthis, &index, &arg1)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTabIcon(int, const class QIcon &)
-func (this *QTabWidget) Settabicon(args ...interface{}) () {
-  // setTabIcon(int, const class QIcon &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget10setTabIconEiRK5QIcon
-    // invoke: void setTabIcon(int, const class QIcon &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtgui.QIcon).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN10QTabWidget10setTabIconEiRK5QIcon(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setTabIcon", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:85
+// index:0
+// QString tabText(int)
+func (this *QTabWidget) TabText(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget7tabTextEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// setCurrentWidget(class QWidget *)
-func (this *QTabWidget) Setcurrentwidget(args ...interface{}) () {
-  // setCurrentWidget(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget16setCurrentWidgetEP7QWidget
-    // invoke: void setCurrentWidget(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QTabWidget16setCurrentWidgetEP7QWidget(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setCurrentWidget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:86
+// index:0
+// void setTabText(int, const class QString &)
+func (this *QTabWidget) SetTabText(index int, arg1 unsafe.Pointer) {
+	// 0: (, int index, const QString & arg1), (&index, arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget10setTabTextEiRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &index, arg1)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QTabWidget()
-func (this *QTabWidget) Freeqtabwidget(args ...interface{}) () {
-  // ~QTabWidget()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidgetD0Ev
-    // invoke: void ~QTabWidget()
-    C.C_ZN10QTabWidgetD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "~QTabWidget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:88
+// index:0
+// QIcon tabIcon(int)
+func (this *QTabWidget) TabIcon(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget7tabIconEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// insertTab(int, class QWidget *, const class QString &)
-func (this *QTabWidget) Inserttab(args ...interface{}) (ret interface{}) {
-  // insertTab(int, class QWidget *, const class QString &)
-  // insertTab(int, class QWidget *, const class QIcon &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1][2] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
-  vtys[1][3] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget9insertTabEiP7QWidgetRK7QString
-    // invoke: int insertTab(int, class QWidget *, const class QString &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QWidget).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN10QTabWidget9insertTabEiP7QWidgetRK7QString(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString
-    // invoke: int insertTab(int, class QWidget *, const class QIcon &, const class QString &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QWidget).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtgui.QIcon).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString(this.Qclsinst, arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "insertTab", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:89
+// index:0
+// void setTabIcon(int, const class QIcon &)
+func (this *QTabWidget) SetTabIcon(index int, icon unsafe.Pointer) {
+	// 0: (, int index, const QIcon & icon), (&index, icon)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget10setTabIconEiRK5QIcon", ffiqt.FFI_TYPE_VOID, this.cthis, &index, icon)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabShape()
-func (this *QTabWidget) Tabshape(args ...interface{}) () {
-  // tabShape()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget8tabShapeEv
-    // invoke: QTabWidget::TabShape tabShape()
-    C.C_ZNK10QTabWidget8tabShapeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "tabShape", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:92
+// index:0
+// void setTabToolTip(int, const class QString &)
+func (this *QTabWidget) SetTabToolTip(index int, tip unsafe.Pointer) {
+	// 0: (, int index, const QString & tip), (&index, tip)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget13setTabToolTipEiRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &index, tip)
+	gopp.ErrPrint(err, rv)
 }
 
-// indexOf(class QWidget *)
-func (this *QTabWidget) Indexof(args ...interface{}) (ret interface{}) {
-  // indexOf(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget7indexOfEP7QWidget
-    // invoke: int indexOf(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTabWidget7indexOfEP7QWidget(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "indexOf", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:93
+// index:0
+// QString tabToolTip(int)
+func (this *QTabWidget) TabToolTip(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget10tabToolTipEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabBar()
-func (this *QTabWidget) Tabbar(args ...interface{}) (ret interface{}) {
-  // tabBar()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget6tabBarEv
-    // invoke: QTabBar * tabBar()
-    var ret0 = C.C_ZNK10QTabWidget6tabBarEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTabBar{}) // "QTabBar *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "tabBar", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:97
+// index:0
+// void setTabWhatsThis(int, const class QString &)
+func (this *QTabWidget) SetTabWhatsThis(index int, text unsafe.Pointer) {
+	// 0: (, int index, const QString & text), (&index, text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setTabWhatsThisEiRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &index, text)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTabToolTip(int, const class QString &)
-func (this *QTabWidget) Settabtooltip(args ...interface{}) () {
-  // setTabToolTip(int, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget13setTabToolTipEiRK7QString
-    // invoke: void setTabToolTip(int, const class QString &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN10QTabWidget13setTabToolTipEiRK7QString(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setTabToolTip", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:98
+// index:0
+// QString tabWhatsThis(int)
+func (this *QTabWidget) TabWhatsThis(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12tabWhatsThisEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// QTabWidget(class QWidget *)
-func NewQTabWidget(args ...interface{}) *QTabWidget {
-  // QTabWidget(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidgetC1EP7QWidget
-    // invoke: void QTabWidget(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN10QTabWidgetC2EP7QWidget(arg0)
-    return &QTabWidget{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QTabWidget", "QTabWidget", args)
-  }
-
-  return nil // QTabWidget{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qtabwidget.h:101
+// index:0
+// int currentIndex()
+func (this *QTabWidget) CurrentIndex() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12currentIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTabBarAutoHide(_Bool)
-func (this *QTabWidget) Settabbarautohide(args ...interface{}) () {
-  // setTabBarAutoHide(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget17setTabBarAutoHideEb
-    // invoke: void setTabBarAutoHide(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QTabWidget17setTabBarAutoHideEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setTabBarAutoHide", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:102
+// index:0
+// QWidget * currentWidget()
+func (this *QTabWidget) CurrentWidget() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget13currentWidgetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// documentMode()
-func (this *QTabWidget) Documentmode(args ...interface{}) (ret interface{}) {
-  // documentMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget12documentModeEv
-    // invoke: bool documentMode()
-    var ret0 = C.C_ZNK10QTabWidget12documentModeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "documentMode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:103
+// index:0
+// QWidget * widget(int)
+func (this *QTabWidget) Widget(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget6widgetEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
 }
 
-// widget(int)
-func (this *QTabWidget) Widget(args ...interface{}) (ret interface{}) {
-  // widget(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget6widgetEi
-    // invoke: QWidget * widget(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTabWidget6widgetEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "widget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:104
+// index:0
+// int indexOf(class QWidget *)
+func (this *QTabWidget) IndexOf(widget unsafe.Pointer) {
+	// 0: (, QWidget * widget), (widget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget7indexOfEP7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, widget)
+	gopp.ErrPrint(err, rv)
 }
 
-// removeTab(int)
-func (this *QTabWidget) Removetab(args ...interface{}) () {
-  // removeTab(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget9removeTabEi
-    // invoke: void removeTab(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QTabWidget9removeTabEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "removeTab", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:105
+// index:0
+// int count()
+func (this *QTabWidget) Count() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget5countEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// iconSize()
-func (this *QTabWidget) Iconsize(args ...interface{}) (ret interface{}) {
-  // iconSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget8iconSizeEv
-    // invoke: QSize iconSize()
-    var ret0 = C.C_ZNK10QTabWidget8iconSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "iconSize", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:109
+// index:0
+// QTabWidget::TabPosition tabPosition()
+func (this *QTabWidget) TabPosition() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget11tabPositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTabText(int, const class QString &)
-func (this *QTabWidget) Settabtext(args ...interface{}) () {
-  // setTabText(int, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget10setTabTextEiRK7QString
-    // invoke: void setTabText(int, const class QString &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN10QTabWidget10setTabTextEiRK7QString(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setTabText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:110
+// index:0
+// void setTabPosition(enum QTabWidget::TabPosition)
+func (this *QTabWidget) SetTabPosition(arg0 int) {
+	// 0: (, QTabWidget::TabPosition arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget14setTabPositionENS_11TabPositionE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabText(int)
-func (this *QTabWidget) Tabtext(args ...interface{}) (ret interface{}) {
-  // tabText(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget7tabTextEi
-    // invoke: QString tabText(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTabWidget7tabTextEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "tabText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:112
+// index:0
+// bool tabsClosable()
+func (this *QTabWidget) TabsClosable() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12tabsClosableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTabsClosable(_Bool)
-func (this *QTabWidget) Settabsclosable(args ...interface{}) () {
-  // setTabsClosable(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget15setTabsClosableEb
-    // invoke: void setTabsClosable(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QTabWidget15setTabsClosableEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setTabsClosable", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:113
+// index:0
+// void setTabsClosable(_Bool)
+func (this *QTabWidget) SetTabsClosable(closeable bool) {
+	// 0: (, bool closeable), (&closeable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setTabsClosableEb", ffiqt.FFI_TYPE_VOID, this.cthis, &closeable)
+	gopp.ErrPrint(err, rv)
 }
 
-// sizeHint()
-func (this *QTabWidget) Sizehint(args ...interface{}) (ret interface{}) {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget8sizeHintEv
-    // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK10QTabWidget8sizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "sizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:115
+// index:0
+// bool isMovable()
+func (this *QTabWidget) IsMovable() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget9isMovableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// tabPosition()
-func (this *QTabWidget) Tabposition(args ...interface{}) () {
-  // tabPosition()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget11tabPositionEv
-    // invoke: QTabWidget::TabPosition tabPosition()
-    C.C_ZNK10QTabWidget11tabPositionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "tabPosition", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:116
+// index:0
+// void setMovable(_Bool)
+func (this *QTabWidget) SetMovable(movable bool) {
+	// 0: (, bool movable), (&movable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget10setMovableEb", ffiqt.FFI_TYPE_VOID, this.cthis, &movable)
+	gopp.ErrPrint(err, rv)
 }
 
-// usesScrollButtons()
-func (this *QTabWidget) Usesscrollbuttons(args ...interface{}) (ret interface{}) {
-  // usesScrollButtons()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget17usesScrollButtonsEv
-    // invoke: bool usesScrollButtons()
-    var ret0 = C.C_ZNK10QTabWidget17usesScrollButtonsEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "usesScrollButtons", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:120
+// index:0
+// QTabWidget::TabShape tabShape()
+func (this *QTabWidget) TabShape() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget8tabShapeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDocumentMode(_Bool)
-func (this *QTabWidget) Setdocumentmode(args ...interface{}) () {
-  // setDocumentMode(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget15setDocumentModeEb
-    // invoke: void setDocumentMode(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QTabWidget15setDocumentModeEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setDocumentMode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:121
+// index:0
+// void setTabShape(enum QTabWidget::TabShape)
+func (this *QTabWidget) SetTabShape(s int) {
+	// 0: (, QTabWidget::TabShape s), (&s)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget11setTabShapeENS_8TabShapeE", ffiqt.FFI_TYPE_VOID, this.cthis, &s)
+	gopp.ErrPrint(err, rv)
 }
 
-// count()
-func (this *QTabWidget) Count(args ...interface{}) (ret interface{}) {
-  // count()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget5countEv
-    // invoke: int count()
-    var ret0 = C.C_ZNK10QTabWidget5countEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "count", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:123
+// index:0
+// virtual
+// QSize sizeHint()
+func (this *QTabWidget) SizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setUsesScrollButtons(_Bool)
-func (this *QTabWidget) Setusesscrollbuttons(args ...interface{}) () {
-  // setUsesScrollButtons(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget20setUsesScrollButtonsEb
-    // invoke: void setUsesScrollButtons(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QTabWidget20setUsesScrollButtonsEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setUsesScrollButtons", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:124
+// index:0
+// virtual
+// QSize minimumSizeHint()
+func (this *QTabWidget) MinimumSizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget15minimumSizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QTabWidget) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QTabWidget10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:125
+// index:0
+// virtual
+// int heightForWidth(int)
+func (this *QTabWidget) HeightForWidth(width int) {
+	// 0: (, int width), (&width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget14heightForWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &width)
+	gopp.ErrPrint(err, rv)
 }
 
-// elideMode()
-func (this *QTabWidget) Elidemode(args ...interface{}) () {
-  // elideMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget9elideModeEv
-    // invoke: Qt::TextElideMode elideMode()
-    C.C_ZNK10QTabWidget9elideModeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "elideMode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:126
+// index:0
+// virtual
+// bool hasHeightForWidth()
+func (this *QTabWidget) HasHeightForWidth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget17hasHeightForWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasHeightForWidth()
-func (this *QTabWidget) Hasheightforwidth(args ...interface{}) (ret interface{}) {
-  // hasHeightForWidth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget17hasHeightForWidthEv
-    // invoke: bool hasHeightForWidth()
-    var ret0 = C.C_ZNK10QTabWidget17hasHeightForWidthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "hasHeightForWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:128
+// index:0
+// void setCornerWidget(class QWidget *, Qt::Corner)
+func (this *QTabWidget) SetCornerWidget(w unsafe.Pointer, corner int) {
+	// 0: (, QWidget * w, Qt::Corner corner), (w, &corner)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setCornerWidgetEP7QWidgetN2Qt6CornerE", ffiqt.FFI_TYPE_VOID, this.cthis, w, &corner)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTabWhatsThis(int, const class QString &)
-func (this *QTabWidget) Settabwhatsthis(args ...interface{}) () {
-  // setTabWhatsThis(int, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget15setTabWhatsThisEiRK7QString
-    // invoke: void setTabWhatsThis(int, const class QString &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN10QTabWidget15setTabWhatsThisEiRK7QString(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setTabWhatsThis", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:129
+// index:0
+// QWidget * cornerWidget(Qt::Corner)
+func (this *QTabWidget) CornerWidget(corner int) {
+	// 0: (, Qt::Corner corner), (&corner)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12cornerWidgetEN2Qt6CornerE", ffiqt.FFI_TYPE_VOID, this.cthis, &corner)
+	gopp.ErrPrint(err, rv)
 }
 
-// clear()
-func (this *QTabWidget) Clear(args ...interface{}) () {
-  // clear()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget5clearEv
-    // invoke: void clear()
-    C.C_ZN10QTabWidget5clearEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "clear", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:131
+// index:0
+// Qt::TextElideMode elideMode()
+func (this *QTabWidget) ElideMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget9elideModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setIconSize(const class QSize &)
-func (this *QTabWidget) Seticonsize(args ...interface{}) () {
-  // setIconSize(const class QSize &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget11setIconSizeERK5QSize
-    // invoke: void setIconSize(const class QSize &)
-    var arg0 = args[0].(*qtcore.QSize).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QTabWidget11setIconSizeERK5QSize(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setIconSize", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:132
+// index:0
+// void setElideMode(Qt::TextElideMode)
+func (this *QTabWidget) SetElideMode(arg0 int) {
+	// 0: (, Qt::TextElideMode arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget12setElideModeEN2Qt13TextElideModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// isMovable()
-func (this *QTabWidget) Ismovable(args ...interface{}) (ret interface{}) {
-  // isMovable()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget9isMovableEv
-    // invoke: bool isMovable()
-    var ret0 = C.C_ZNK10QTabWidget9isMovableEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "isMovable", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:134
+// index:0
+// QSize iconSize()
+func (this *QTabWidget) IconSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget8iconSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// heightForWidth(int)
-func (this *QTabWidget) Heightforwidth(args ...interface{}) (ret interface{}) {
-  // heightForWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget14heightForWidthEi
-    // invoke: int heightForWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTabWidget14heightForWidthEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "heightForWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:135
+// index:0
+// void setIconSize(const class QSize &)
+func (this *QTabWidget) SetIconSize(size unsafe.Pointer) {
+	// 0: (, const QSize & size), (size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget11setIconSizeERK5QSize", ffiqt.FFI_TYPE_VOID, this.cthis, size)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTabEnabled(int, _Bool)
-func (this *QTabWidget) Settabenabled(args ...interface{}) () {
-  // setTabEnabled(int, _Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget13setTabEnabledEib
-    // invoke: void setTabEnabled(int, _Bool)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.bool(args[1].(bool))
-    if false {fmt.Println(arg1)}
-    C.C_ZN10QTabWidget13setTabEnabledEib(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTabWidget", "setTabEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:137
+// index:0
+// bool usesScrollButtons()
+func (this *QTabWidget) UsesScrollButtons() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget17usesScrollButtonsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// currentIndex()
-func (this *QTabWidget) Currentindex(args ...interface{}) (ret interface{}) {
-  // currentIndex()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTabWidget12currentIndexEv
-    // invoke: int currentIndex()
-    var ret0 = C.C_ZNK10QTabWidget12currentIndexEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "currentIndex", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:138
+// index:0
+// void setUsesScrollButtons(_Bool)
+func (this *QTabWidget) SetUsesScrollButtons(useButtons bool) {
+	// 0: (, bool useButtons), (&useButtons)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget20setUsesScrollButtonsEb", ffiqt.FFI_TYPE_VOID, this.cthis, &useButtons)
+	gopp.ErrPrint(err, rv)
 }
 
-// addTab(class QWidget *, const class QIcon &, const class QString &)
-func (this *QTabWidget) Addtab(args ...interface{}) (ret interface{}) {
-  // addTab(class QWidget *, const class QIcon &, const class QString &)
-  // addTab(class QWidget *, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][1] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
-  vtys[0][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTabWidget6addTabEP7QWidgetRK5QIconRK7QString
-    // invoke: int addTab(class QWidget *, const class QIcon &, const class QString &)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtgui.QIcon).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN10QTabWidget6addTabEP7QWidgetRK5QIconRK7QString(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN10QTabWidget6addTabEP7QWidgetRK7QString
-    // invoke: int addTab(class QWidget *, const class QString &)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QTabWidget6addTabEP7QWidgetRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTabWidget", "addTab", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qtabwidget.h:140
+// index:0
+// bool documentMode()
+func (this *QTabWidget) DocumentMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12documentModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qtabwidget.h:141
+// index:0
+// void setDocumentMode(_Bool)
+func (this *QTabWidget) SetDocumentMode(set bool) {
+	// 0: (, bool set), (&set)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setDocumentModeEb", ffiqt.FFI_TYPE_VOID, this.cthis, &set)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qtabwidget.h:143
+// index:0
+// bool tabBarAutoHide()
+func (this *QTabWidget) TabBarAutoHide() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget14tabBarAutoHideEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtabwidget.h:144
+// index:0
+// void setTabBarAutoHide(_Bool)
+func (this *QTabWidget) SetTabBarAutoHide(enabled bool) {
+	// 0: (, bool enabled), (&enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget17setTabBarAutoHideEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enabled)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtabwidget.h:146
+// index:0
+// void clear()
+func (this *QTabWidget) Clear() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtabwidget.h:148
+// index:0
+// QTabBar * tabBar()
+func (this *QTabWidget) TabBar() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget6tabBarEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtabwidget.h:151
+// index:0
+// void setCurrentIndex(int)
+func (this *QTabWidget) SetCurrentIndex(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setCurrentIndexEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtabwidget.h:152
+// index:0
+// void setCurrentWidget(class QWidget *)
+func (this *QTabWidget) SetCurrentWidget(widget unsafe.Pointer) {
+	// 0: (, QWidget * widget), (widget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget16setCurrentWidgetEP7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, widget)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtabwidget.h:155
+// index:0
+// void currentChanged(int)
+func (this *QTabWidget) CurrentChanged(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget14currentChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtabwidget.h:156
+// index:0
+// void tabCloseRequested(int)
+func (this *QTabWidget) TabCloseRequested(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget17tabCloseRequestedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtabwidget.h:157
+// index:0
+// void tabBarClicked(int)
+func (this *QTabWidget) TabBarClicked(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget13tabBarClickedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtabwidget.h:158
+// index:0
+// void tabBarDoubleClicked(int)
+func (this *QTabWidget) TabBarDoubleClicked(index int) {
+	// 0: (, int index), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget19tabBarDoubleClickedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

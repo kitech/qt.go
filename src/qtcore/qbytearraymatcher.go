@@ -1,287 +1,126 @@
+//  header block begin
+// /usr/include/qt/QtCore/qbytearraymatcher.h
+// #include <qbytearraymatcher.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qbytearraymatcher.h
-// dst-file: /src/core/qbytearraymatcher.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  int QByteArrayMatcher::indexIn(const char * str, int len, int from);
-extern int32_t C_ZNK17QByteArrayMatcher7indexInEPKcii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
-  // proto:  int QByteArrayMatcher::indexIn(const QByteArray & ba, int from);
-extern int32_t C_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi(void* qthis, void* arg0, int32_t arg1); // 4
-  // proto:  QByteArray QByteArrayMatcher::pattern();
-extern void* C_ZNK17QByteArrayMatcher7patternEv(void* qthis); // 2
-  // proto:  void QByteArrayMatcher::QByteArrayMatcher(const QByteArrayMatcher & other);
-extern void* C_ZN17QByteArrayMatcherC2ERKS_(void* arg0); // 3
-  // proto:  void QByteArrayMatcher::QByteArrayMatcher();
-extern void* C_ZN17QByteArrayMatcherC2Ev(); // 3
-  // proto:  void QByteArrayMatcher::QByteArrayMatcher(const char * pattern, int length);
-extern void* C_ZN17QByteArrayMatcherC2EPKci(void* arg0, int32_t arg1); // 3
-  // proto:  void QByteArrayMatcher::QByteArrayMatcher(const QByteArray & pattern);
-extern void* C_ZN17QByteArrayMatcherC2ERK10QByteArray(void* arg0); // 3
-  // proto:  void QByteArrayMatcher::setPattern(const QByteArray & pattern);
-extern void C_ZN17QByteArrayMatcher10setPatternERK10QByteArray(void* qthis, void* arg0); // 4
-  // proto:  void QByteArrayMatcher::~QByteArrayMatcher();
-extern void C_ZN17QByteArrayMatcherD2Ev(void* qthis); // 4
+// extern C begin: 16
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QByteArrayMatcher)=1040
+//  ext block end
+
+//  body block begin
 type QByteArrayMatcher struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// indexIn(const char *, int, int)
-func (this *QByteArrayMatcher) Indexin(args ...interface{}) (ret interface{}) {
-  // indexIn(const char *, int, int)
-  // indexIn(const class QByteArray &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.ByteTy(true) // "const char *"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QByteArrayMatcher7indexInEPKcii
-    // invoke: int indexIn(const char *, int, int)
-    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
-    var arg0 = argif0.(unsafe.Pointer)
-    if false {fmt.Println(argif0, arg0)}
-    if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK17QByteArrayMatcher7indexInEPKcii(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK17QByteArrayMatcher7indexInERK10QByteArrayi
-    // invoke: int indexIn(const class QByteArray &, int)
-    var arg0 = args[0].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QByteArrayMatcher", "indexIn", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qbytearraymatcher.h:53
+// index:0
+// void QByteArrayMatcher()
+func NewQByteArrayMatcher() *QByteArrayMatcher {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QByteArrayMatcher{cthis}
 }
 
-// pattern()
-func (this *QByteArrayMatcher) Pattern(args ...interface{}) (ret interface{}) {
-  // pattern()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QByteArrayMatcher7patternEv
-    // invoke: QByteArray pattern()
-    var ret0 = C.C_ZNK17QByteArrayMatcher7patternEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QByteArrayMatcher", "pattern", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qbytearraymatcher.h:54
+// index:1
+// void QByteArrayMatcher(const class QByteArray &)
+func NewQByteArrayMatcher_1(pattern unsafe.Pointer) *QByteArrayMatcher {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, pattern)
+	gopp.ErrPrint(err, rv)
+	return &QByteArrayMatcher{cthis}
 }
 
-// QByteArrayMatcher(const class QByteArrayMatcher &)
-func NewQByteArrayMatcher(args ...interface{}) *QByteArrayMatcher {
-  // QByteArrayMatcher(const class QByteArrayMatcher &)
-  // QByteArrayMatcher()
-  // QByteArrayMatcher(const char *, int)
-  // QByteArrayMatcher(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QByteArrayMatcher{}) // "const QByteArrayMatcher &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.ByteTy(true) // "const char *"
-  vtys[2][1] = qtrt.Int32Ty(false) // "int"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QByteArrayMatcherC1ERKS_
-    // invoke: void QByteArrayMatcher(const class QByteArrayMatcher &)
-    var arg0 = args[0].(*QByteArrayMatcher).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN17QByteArrayMatcherC2ERKS_(arg0)
-    return &QByteArrayMatcher{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN17QByteArrayMatcherC1Ev
-    // invoke: void QByteArrayMatcher()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN17QByteArrayMatcherC2Ev()
-    return &QByteArrayMatcher{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN17QByteArrayMatcherC1EPKci
-    // invoke: void QByteArrayMatcher(const char *, int)
-    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[2][0])
-    var arg0 = argif0.(unsafe.Pointer)
-    if false {fmt.Println(argif0, arg0)}
-    if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN17QByteArrayMatcherC2EPKci(arg0, arg1)
-    return &QByteArrayMatcher{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN17QByteArrayMatcherC1ERK10QByteArray
-    // invoke: void QByteArrayMatcher(const class QByteArray &)
-    var arg0 = args[0].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN17QByteArrayMatcherC2ERK10QByteArray(arg0)
-    return &QByteArrayMatcher{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QByteArrayMatcher", "QByteArrayMatcher", args)
-  }
-
-  return nil // QByteArrayMatcher{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qbytearraymatcher.h:55
+// index:2
+// void QByteArrayMatcher(const char *, int)
+func NewQByteArrayMatcher_2(pattern unsafe.Pointer, length int) *QByteArrayMatcher {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2EPKci", ffiqt.FFI_TYPE_VOID, cthis, pattern, &length)
+	gopp.ErrPrint(err, rv)
+	return &QByteArrayMatcher{cthis}
 }
 
-// setPattern(const class QByteArray &)
-func (this *QByteArrayMatcher) Setpattern(args ...interface{}) () {
-  // setPattern(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QByteArrayMatcher10setPatternERK10QByteArray
-    // invoke: void setPattern(const class QByteArray &)
-    var arg0 = args[0].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN17QByteArrayMatcher10setPatternERK10QByteArray(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QByteArrayMatcher", "setPattern", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qbytearraymatcher.h:57
+// index:0
+// void ~QByteArrayMatcher()
+func DeleteQByteArrayMatcher(*QByteArrayMatcher) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QByteArrayMatcher()
-func (this *QByteArrayMatcher) Freeqbytearraymatcher(args ...interface{}) () {
-  // ~QByteArrayMatcher()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QByteArrayMatcherD0Ev
-    // invoke: void ~QByteArrayMatcher()
-    C.C_ZN17QByteArrayMatcherD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QByteArrayMatcher", "~QByteArrayMatcher", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qbytearraymatcher.h:61
+// index:0
+// void setPattern(const class QByteArray &)
+func (this *QByteArrayMatcher) SetPattern(pattern unsafe.Pointer) {
+	// 0: (, const QByteArray & pattern), (pattern)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcher10setPatternERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.cthis, pattern)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qbytearraymatcher.h:63
+// index:0
+// int indexIn(const class QByteArray &, int)
+func (this *QByteArrayMatcher) IndexIn(ba unsafe.Pointer, from int) {
+	// 0: (, const QByteArray & ba, int from), (ba, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi", ffiqt.FFI_TYPE_VOID, this.cthis, ba, &from)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qbytearraymatcher.h:64
+// index:1
+// int indexIn(const char *, int, int)
+func (this *QByteArrayMatcher) IndexIn_1(str unsafe.Pointer, len int, from int) {
+	// 1: (, const char * str, int len, int from), (str, &len, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInEPKcii", ffiqt.FFI_TYPE_VOID, this.cthis, str, &len, &from)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qbytearraymatcher.h:65
+// index:0
+// inline
+// QByteArray pattern()
+func (this *QByteArrayMatcher) Pattern() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7patternEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

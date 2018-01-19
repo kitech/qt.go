@@ -1,627 +1,314 @@
+//  header block begin
+// /usr/include/qt/QtGui/qinputmethod.h
+// #include <qinputmethod.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qinputmethod.h
-// dst-file: /src/gui/qinputmethod.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QInputMethod::show();
-extern void C_ZN12QInputMethod4showEv(void* qthis); // 4
-  // proto:  QLocale QInputMethod::locale();
-extern void* C_ZNK12QInputMethod6localeEv(void* qthis); // 4
-  // proto:  void QInputMethod::setInputItemRectangle(const QRectF & rect);
-extern void C_ZN12QInputMethod21setInputItemRectangleERK6QRectF(void* qthis, void* arg0); // 4
-  // proto:  void QInputMethod::hide();
-extern void C_ZN12QInputMethod4hideEv(void* qthis); // 4
-  // proto:  QRectF QInputMethod::cursorRectangle();
-extern void* C_ZNK12QInputMethod15cursorRectangleEv(void* qthis); // 4
-  // proto:  QRectF QInputMethod::inputItemRectangle();
-extern void* C_ZNK12QInputMethod18inputItemRectangleEv(void* qthis); // 4
-  // proto:  bool QInputMethod::isAnimating();
-extern bool C_ZNK12QInputMethod11isAnimatingEv(void* qthis); // 4
-  // proto:  QRectF QInputMethod::anchorRectangle();
-extern void* C_ZNK12QInputMethod15anchorRectangleEv(void* qthis); // 4
-  // proto:  Qt::LayoutDirection QInputMethod::inputDirection();
-extern void C_ZNK12QInputMethod14inputDirectionEv(void* qthis); // 4
-  // proto:  void QInputMethod::setInputItemTransform(const QTransform & transform);
-extern void C_ZN12QInputMethod21setInputItemTransformERK10QTransform(void* qthis, void* arg0); // 4
-  // proto:  QRectF QInputMethod::keyboardRectangle();
-extern void* C_ZNK12QInputMethod17keyboardRectangleEv(void* qthis); // 4
-  // proto:  QRectF QInputMethod::inputItemClipRectangle();
-extern void* C_ZNK12QInputMethod22inputItemClipRectangleEv(void* qthis); // 4
-  // proto:  void QInputMethod::reset();
-extern void C_ZN12QInputMethod5resetEv(void* qthis); // 4
-  // proto:  const QMetaObject * QInputMethod::metaObject();
-extern void C_ZNK12QInputMethod10metaObjectEv(void* qthis); // 4
-  // proto:  QTransform QInputMethod::inputItemTransform();
-extern void* C_ZNK12QInputMethod18inputItemTransformEv(void* qthis); // 4
-  // proto:  bool QInputMethod::isVisible();
-extern bool C_ZNK12QInputMethod9isVisibleEv(void* qthis); // 4
-  // proto:  void QInputMethod::commit();
-extern void C_ZN12QInputMethod6commitEv(void* qthis); // 4
-  // proto:  void QInputMethod::setVisible(bool visible);
-extern void C_ZN12QInputMethod10setVisibleEb(void* qthis, bool arg0); // 4
+// extern C begin: 2
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QInputMethod)=1
+//  ext block end
+
+//  body block begin
 type QInputMethod struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _cursorRectangleChanged QInputMethod_cursorRectangleChanged_signal;
-//  _localeChanged QInputMethod_localeChanged_signal;
-//  _inputDirectionChanged QInputMethod_inputDirectionChanged_signal;
-//  _animatingChanged QInputMethod_animatingChanged_signal;
-//  _anchorRectangleChanged QInputMethod_anchorRectangleChanged_signal;
-//  _inputItemClipRectangleChanged QInputMethod_inputItemClipRectangleChanged_signal;
-//  _keyboardRectangleChanged QInputMethod_keyboardRectangleChanged_signal;
-//  _visibleChanged QInputMethod_visibleChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// show()
-func (this *QInputMethod) Show(args ...interface{}) () {
-  // show()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QInputMethod4showEv
-    // invoke: void show()
-    C.C_ZN12QInputMethod4showEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QInputMethod", "show", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:56
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QInputMethod) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// locale()
-func (this *QInputMethod) Locale(args ...interface{}) (ret interface{}) {
-  // locale()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QInputMethod6localeEv
-    // invoke: QLocale locale()
-    var ret0 = C.C_ZNK12QInputMethod6localeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QLocale{}) // "QLocale"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QInputMethod", "locale", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:68
+// index:0
+// QTransform inputItemTransform()
+func (this *QInputMethod) InputItemTransform() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod18inputItemTransformEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setInputItemRectangle(const class QRectF &)
-func (this *QInputMethod) Setinputitemrectangle(args ...interface{}) () {
-  // setInputItemRectangle(const class QRectF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QInputMethod21setInputItemRectangleERK6QRectF
-    // invoke: void setInputItemRectangle(const class QRectF &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QInputMethod21setInputItemRectangleERK6QRectF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QInputMethod", "setInputItemRectangle", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:69
+// index:0
+// void setInputItemTransform(const class QTransform &)
+func (this *QInputMethod) SetInputItemTransform(transform unsafe.Pointer) {
+	// 0: (, const QTransform & transform), (transform)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod21setInputItemTransformERK10QTransform", ffiqt.FFI_TYPE_VOID, this.cthis, transform)
+	gopp.ErrPrint(err, rv)
 }
 
-// hide()
-func (this *QInputMethod) Hide(args ...interface{}) () {
-  // hide()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QInputMethod4hideEv
-    // invoke: void hide()
-    C.C_ZN12QInputMethod4hideEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QInputMethod", "hide", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:71
+// index:0
+// QRectF inputItemRectangle()
+func (this *QInputMethod) InputItemRectangle() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod18inputItemRectangleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// cursorRectangle()
-func (this *QInputMethod) Cursorrectangle(args ...interface{}) (ret interface{}) {
-  // cursorRectangle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QInputMethod15cursorRectangleEv
-    // invoke: QRectF cursorRectangle()
-    var ret0 = C.C_ZNK12QInputMethod15cursorRectangleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QInputMethod", "cursorRectangle", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:72
+// index:0
+// void setInputItemRectangle(const class QRectF &)
+func (this *QInputMethod) SetInputItemRectangle(rect unsafe.Pointer) {
+	// 0: (, const QRectF & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod21setInputItemRectangleERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
 }
 
-// inputItemRectangle()
-func (this *QInputMethod) Inputitemrectangle(args ...interface{}) (ret interface{}) {
-  // inputItemRectangle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QInputMethod18inputItemRectangleEv
-    // invoke: QRectF inputItemRectangle()
-    var ret0 = C.C_ZNK12QInputMethod18inputItemRectangleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QInputMethod", "inputItemRectangle", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:75
+// index:0
+// QRectF cursorRectangle()
+func (this *QInputMethod) CursorRectangle() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod15cursorRectangleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isAnimating()
-func (this *QInputMethod) Isanimating(args ...interface{}) (ret interface{}) {
-  // isAnimating()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QInputMethod11isAnimatingEv
-    // invoke: bool isAnimating()
-    var ret0 = C.C_ZNK12QInputMethod11isAnimatingEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QInputMethod", "isAnimating", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:76
+// index:0
+// QRectF anchorRectangle()
+func (this *QInputMethod) AnchorRectangle() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod15anchorRectangleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// anchorRectangle()
-func (this *QInputMethod) Anchorrectangle(args ...interface{}) (ret interface{}) {
-  // anchorRectangle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QInputMethod15anchorRectangleEv
-    // invoke: QRectF anchorRectangle()
-    var ret0 = C.C_ZNK12QInputMethod15anchorRectangleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QInputMethod", "anchorRectangle", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:79
+// index:0
+// QRectF keyboardRectangle()
+func (this *QInputMethod) KeyboardRectangle() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod17keyboardRectangleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// inputDirection()
-func (this *QInputMethod) Inputdirection(args ...interface{}) () {
-  // inputDirection()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QInputMethod14inputDirectionEv
-    // invoke: Qt::LayoutDirection inputDirection()
-    C.C_ZNK12QInputMethod14inputDirectionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QInputMethod", "inputDirection", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:81
+// index:0
+// QRectF inputItemClipRectangle()
+func (this *QInputMethod) InputItemClipRectangle() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod22inputItemClipRectangleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setInputItemTransform(const class QTransform &)
-func (this *QInputMethod) Setinputitemtransform(args ...interface{}) () {
-  // setInputItemTransform(const class QTransform &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTransform{}) // "const QTransform &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QInputMethod21setInputItemTransformERK10QTransform
-    // invoke: void setInputItemTransform(const class QTransform &)
-    var arg0 = args[0].(*QTransform).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QInputMethod21setInputItemTransformERK10QTransform(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QInputMethod", "setInputItemTransform", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:89
+// index:0
+// bool isVisible()
+func (this *QInputMethod) IsVisible() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod9isVisibleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// keyboardRectangle()
-func (this *QInputMethod) Keyboardrectangle(args ...interface{}) (ret interface{}) {
-  // keyboardRectangle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QInputMethod17keyboardRectangleEv
-    // invoke: QRectF keyboardRectangle()
-    var ret0 = C.C_ZNK12QInputMethod17keyboardRectangleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QInputMethod", "keyboardRectangle", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:90
+// index:0
+// void setVisible(_Bool)
+func (this *QInputMethod) SetVisible(visible bool) {
+	// 0: (, bool visible), (&visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod10setVisibleEb", ffiqt.FFI_TYPE_VOID, this.cthis, &visible)
+	gopp.ErrPrint(err, rv)
 }
 
-// inputItemClipRectangle()
-func (this *QInputMethod) Inputitemcliprectangle(args ...interface{}) (ret interface{}) {
-  // inputItemClipRectangle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QInputMethod22inputItemClipRectangleEv
-    // invoke: QRectF inputItemClipRectangle()
-    var ret0 = C.C_ZNK12QInputMethod22inputItemClipRectangleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QInputMethod", "inputItemClipRectangle", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:92
+// index:0
+// bool isAnimating()
+func (this *QInputMethod) IsAnimating() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod11isAnimatingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// reset()
-func (this *QInputMethod) Reset(args ...interface{}) () {
-  // reset()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QInputMethod5resetEv
-    // invoke: void reset()
-    C.C_ZN12QInputMethod5resetEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QInputMethod", "reset", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:94
+// index:0
+// QLocale locale()
+func (this *QInputMethod) Locale() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod6localeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QInputMethod) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QInputMethod10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK12QInputMethod10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QInputMethod", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:95
+// index:0
+// Qt::LayoutDirection inputDirection()
+func (this *QInputMethod) InputDirection() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod14inputDirectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// inputItemTransform()
-func (this *QInputMethod) Inputitemtransform(args ...interface{}) (ret interface{}) {
-  // inputItemTransform()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QInputMethod18inputItemTransformEv
-    // invoke: QTransform inputItemTransform()
-    var ret0 = C.C_ZNK12QInputMethod18inputItemTransformEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QInputMethod", "inputItemTransform", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:97
+// index:0
+// static
+// QVariant queryFocusObject(Qt::InputMethodQuery, class QVariant)
+func (this *QInputMethod) QueryFocusObject(query int, argument unsafe.Pointer) {
+	// 0: (Qt::InputMethodQuery query, QVariant argument), (query, argument)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod16queryFocusObjectEN2Qt16InputMethodQueryE8QVariant", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QInputMethod_QueryFocusObject(query int, argument unsafe.Pointer) {
+	// 0: (Qt::InputMethodQuery query, QVariant argument), (query, argument)
+	var nilthis *QInputMethod
+	nilthis.QueryFocusObject(query, argument)
 }
 
-// isVisible()
-func (this *QInputMethod) Isvisible(args ...interface{}) (ret interface{}) {
-  // isVisible()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QInputMethod9isVisibleEv
-    // invoke: bool isVisible()
-    var ret0 = C.C_ZNK12QInputMethod9isVisibleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QInputMethod", "isVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:100
+// index:0
+// void show()
+func (this *QInputMethod) Show() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod4showEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// commit()
-func (this *QInputMethod) Commit(args ...interface{}) () {
-  // commit()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QInputMethod6commitEv
-    // invoke: void commit()
-    C.C_ZN12QInputMethod6commitEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QInputMethod", "commit", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:101
+// index:0
+// void hide()
+func (this *QInputMethod) Hide() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod4hideEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setVisible(_Bool)
-func (this *QInputMethod) Setvisible(args ...interface{}) () {
-  // setVisible(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QInputMethod10setVisibleEb
-    // invoke: void setVisible(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QInputMethod10setVisibleEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QInputMethod", "setVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qinputmethod.h:104
+// index:0
+// void reset()
+func (this *QInputMethod) Reset() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod5resetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qinputmethod.h:105
+// index:0
+// void commit()
+func (this *QInputMethod) Commit() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod6commitEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qinputmethod.h:107
+// index:0
+// void invokeAction(enum QInputMethod::Action, int)
+func (this *QInputMethod) InvokeAction(a int, cursorPosition int) {
+	// 0: (, QInputMethod::Action a, int cursorPosition), (&a, &cursorPosition)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod12invokeActionENS_6ActionEi", ffiqt.FFI_TYPE_VOID, this.cthis, &a, &cursorPosition)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qinputmethod.h:110
+// index:0
+// void cursorRectangleChanged()
+func (this *QInputMethod) CursorRectangleChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod22cursorRectangleChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qinputmethod.h:111
+// index:0
+// void anchorRectangleChanged()
+func (this *QInputMethod) AnchorRectangleChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod22anchorRectangleChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qinputmethod.h:112
+// index:0
+// void keyboardRectangleChanged()
+func (this *QInputMethod) KeyboardRectangleChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod24keyboardRectangleChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qinputmethod.h:113
+// index:0
+// void inputItemClipRectangleChanged()
+func (this *QInputMethod) InputItemClipRectangleChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod29inputItemClipRectangleChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qinputmethod.h:114
+// index:0
+// void visibleChanged()
+func (this *QInputMethod) VisibleChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod14visibleChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qinputmethod.h:115
+// index:0
+// void animatingChanged()
+func (this *QInputMethod) AnimatingChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod16animatingChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qinputmethod.h:116
+// index:0
+// void localeChanged()
+func (this *QInputMethod) LocaleChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod13localeChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qinputmethod.h:117
+// index:0
+// void inputDirectionChanged(Qt::LayoutDirection)
+func (this *QInputMethod) InputDirectionChanged(newDirection int) {
+	// 0: (, Qt::LayoutDirection newDirection), (&newDirection)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod21inputDirectionChangedEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_VOID, this.cthis, &newDirection)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

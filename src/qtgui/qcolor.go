@@ -1,3338 +1,1104 @@
+//  header block begin
+// /usr/include/qt/QtGui/qcolor.h
+// #include <qcolor.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qcolor.h
-// dst-file: /src/gui/qcolor.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  qreal QColor::hueF();
-extern double C_ZNK6QColor4hueFEv(void* qthis); // 4
-  // proto:  int QColor::yellow();
-extern int32_t C_ZNK6QColor6yellowEv(void* qthis); // 4
-  // proto:  qreal QColor::cyanF();
-extern double C_ZNK6QColor5cyanFEv(void* qthis); // 4
-  // proto:  qreal QColor::yellowF();
-extern double C_ZNK6QColor7yellowFEv(void* qthis); // 4
-  // proto: static bool QColor::isValidColor(const QString & name);
-extern bool C_ZN6QColor12isValidColorERK7QString(void* arg0); // 4
-  // proto:  void QColor::setHsvF(qreal h, qreal s, qreal v, qreal a);
-extern void C_ZN6QColor7setHsvFEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
-  // proto:  qreal QColor::magentaF();
-extern double C_ZNK6QColor8magentaFEv(void* qthis); // 4
-  // proto:  void QColor::setHsl(int h, int s, int l, int a);
-extern void C_ZN6QColor6setHslEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
-  // proto:  void QColor::setCmykF(qreal c, qreal m, qreal y, qreal k, qreal a);
-extern void C_ZN6QColor8setCmykFEddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4); // 4
-  // proto:  void QColor::setHsv(int h, int s, int v, int a);
-extern void C_ZN6QColor6setHsvEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
-  // proto:  QRgb QColor::rgb();
-extern int32_t C_ZNK6QColor3rgbEv(void* qthis); // 4
-  // proto:  int QColor::black();
-extern int32_t C_ZNK6QColor5blackEv(void* qthis); // 4
-  // proto: static QColor QColor::fromCmyk(int c, int m, int y, int k, int a);
-extern void* C_ZN6QColor8fromCmykEiiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4); // 4
-  // proto:  QColor::Spec QColor::spec();
-extern void C_ZNK6QColor4specEv(void* qthis); // 2
-  // proto:  int QColor::saturation();
-extern int32_t C_ZNK6QColor10saturationEv(void* qthis); // 4
-  // proto:  void QColor::setCmyk(int c, int m, int y, int k, int a);
-extern void C_ZN6QColor7setCmykEiiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4); // 4
-  // proto:  QColor QColor::lighter(int f);
-extern void* C_ZNK6QColor7lighterEi(void* qthis, int32_t arg0); // 2
-  // proto:  int QColor::cyan();
-extern int32_t C_ZNK6QColor4cyanEv(void* qthis); // 4
-  // proto: static QColor QColor::fromRgbF(qreal r, qreal g, qreal b, qreal a);
-extern void* C_ZN6QColor8fromRgbFEdddd(double arg0, double arg1, double arg2, double arg3); // 4
-  // proto:  void QColor::getHsvF(qreal * h, qreal * s, qreal * v, qreal * a);
-extern void C_ZNK6QColor7getHsvFEPdS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
-  // proto:  QString QColor::name();
-extern void* C_ZNK6QColor4nameEv(void* qthis); // 4
-  // proto:  QColor QColor::toRgb();
-extern void* C_ZNK6QColor5toRgbEv(void* qthis); // 4
-  // proto:  qreal QColor::hsvHueF();
-extern double C_ZNK6QColor7hsvHueFEv(void* qthis); // 4
-  // proto: static QColor QColor::fromRgba(QRgb rgba);
-extern void* C_ZN6QColor8fromRgbaEj(int32_t arg0); // 4
-  // proto:  void QColor::setAlphaF(qreal alpha);
-extern void C_ZN6QColor9setAlphaFEd(void* qthis, double arg0); // 4
-  // proto:  int QColor::hslSaturation();
-extern int32_t C_ZNK6QColor13hslSaturationEv(void* qthis); // 4
-  // proto:  qreal QColor::blackF();
-extern double C_ZNK6QColor6blackFEv(void* qthis); // 4
-  // proto:  qreal QColor::saturationF();
-extern double C_ZNK6QColor11saturationFEv(void* qthis); // 4
-  // proto:  void QColor::setRgb(QRgb rgb);
-extern void C_ZN6QColor6setRgbEj(void* qthis, int32_t arg0); // 4
-  // proto:  void QColor::setRgb(int r, int g, int b, int a);
-extern void C_ZN6QColor6setRgbEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
-  // proto:  int QColor::blue();
-extern int32_t C_ZNK6QColor4blueEv(void* qthis); // 4
-  // proto:  qreal QColor::blueF();
-extern double C_ZNK6QColor5blueFEv(void* qthis); // 4
-  // proto:  QRgb QColor::rgba();
-extern int32_t C_ZNK6QColor4rgbaEv(void* qthis); // 4
-  // proto:  int QColor::red();
-extern int32_t C_ZNK6QColor3redEv(void* qthis); // 4
-  // proto: static QColor QColor::fromHsvF(qreal h, qreal s, qreal v, qreal a);
-extern void* C_ZN6QColor8fromHsvFEdddd(double arg0, double arg1, double arg2, double arg3); // 4
-  // proto:  qreal QColor::alphaF();
-extern double C_ZNK6QColor6alphaFEv(void* qthis); // 4
-  // proto:  void QColor::setRedF(qreal red);
-extern void C_ZN6QColor7setRedFEd(void* qthis, double arg0); // 4
-  // proto:  int QColor::lightness();
-extern int32_t C_ZNK6QColor9lightnessEv(void* qthis); // 4
-  // proto: static QStringList QColor::colorNames();
-extern void C_ZN6QColor10colorNamesEv(); // 4
-  // proto:  void QColor::getCmykF(qreal * c, qreal * m, qreal * y, qreal * k, qreal * a);
-extern void C_ZN6QColor8getCmykFEPdS0_S0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4); // 4
-  // proto:  void QColor::setNamedColor(const QString & name);
-extern void C_ZN6QColor13setNamedColorERK7QString(void* qthis, void* arg0); // 4
-  // proto:  int QColor::alpha();
-extern int32_t C_ZNK6QColor5alphaEv(void* qthis); // 4
-  // proto:  void QColor::setRed(int red);
-extern void C_ZN6QColor6setRedEi(void* qthis, int32_t arg0); // 4
-  // proto:  QColor QColor::toCmyk();
-extern void* C_ZNK6QColor6toCmykEv(void* qthis); // 4
-  // proto:  qreal QColor::redF();
-extern double C_ZNK6QColor4redFEv(void* qthis); // 4
-  // proto:  void QColor::setRgba64(QRgba64 rgba);
-extern void C_ZN6QColor9setRgba64E7QRgba64(void* qthis, void* arg0); // 4
-  // proto:  int QColor::hue();
-extern int32_t C_ZNK6QColor3hueEv(void* qthis); // 4
-  // proto:  qreal QColor::hslSaturationF();
-extern double C_ZNK6QColor14hslSaturationFEv(void* qthis); // 4
-  // proto:  qreal QColor::hsvSaturationF();
-extern double C_ZNK6QColor14hsvSaturationFEv(void* qthis); // 4
-  // proto:  QColor QColor::toHsl();
-extern void* C_ZNK6QColor5toHslEv(void* qthis); // 4
-  // proto:  int QColor::value();
-extern int32_t C_ZNK6QColor5valueEv(void* qthis); // 4
-  // proto:  QColor QColor::toHsv();
-extern void* C_ZNK6QColor5toHsvEv(void* qthis); // 4
-  // proto:  QColor QColor::darker(int f);
-extern void* C_ZNK6QColor6darkerEi(void* qthis, int32_t arg0); // 2
-  // proto:  void QColor::setBlue(int blue);
-extern void C_ZN6QColor7setBlueEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QColor::setHslF(qreal h, qreal s, qreal l, qreal a);
-extern void C_ZN6QColor7setHslFEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
-  // proto:  qreal QColor::valueF();
-extern double C_ZNK6QColor6valueFEv(void* qthis); // 4
-  // proto: static QColor QColor::fromHsl(int h, int s, int l, int a);
-extern void* C_ZN6QColor7fromHslEiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
-  // proto:  int QColor::hslHue();
-extern int32_t C_ZNK6QColor6hslHueEv(void* qthis); // 4
-  // proto: static QColor QColor::fromHsv(int h, int s, int v, int a);
-extern void* C_ZN6QColor7fromHsvEiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
-  // proto:  void QColor::getRgb(int * r, int * g, int * b, int * a);
-extern void C_ZNK6QColor6getRgbEPiS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
-  // proto:  void QColor::setRgba(QRgb rgba);
-extern void C_ZN6QColor7setRgbaEj(void* qthis, int32_t arg0); // 4
-  // proto:  int QColor::magenta();
-extern int32_t C_ZNK6QColor7magentaEv(void* qthis); // 4
-  // proto: static QColor QColor::fromRgba64(QRgba64 rgba);
-extern void* C_ZN6QColor10fromRgba64E7QRgba64(void* arg0); // 4
-  // proto: static QColor QColor::fromRgba64(ushort r, ushort g, ushort b, ushort a);
-extern void* C_ZN6QColor10fromRgba64Etttt(int16_t arg0, int16_t arg1, int16_t arg2, int16_t arg3); // 4
-  // proto:  void QColor::QColor(const char * name);
-extern void* C_ZN6QColorC2EPKc(void* arg0); // 1
-  // proto:  void QColor::QColor(QRgb rgb);
-extern void* C_ZN6QColorC2Ej(int32_t arg0); // 3
-  // proto:  void QColor::QColor(const QColor & color);
-extern void* C_ZN6QColorC2ERKS_(void* arg0); // 1
-  // proto:  void QColor::QColor(int r, int g, int b, int a);
-extern void* C_ZN6QColorC2Eiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
-  // proto:  void QColor::QColor(QRgba64 rgba64);
-extern void* C_ZN6QColorC2E7QRgba64(void* arg0); // 3
-  // proto:  void QColor::QColor();
-extern void* C_ZN6QColorC2Ev(); // 1
-  // proto:  void QColor::QColor(const QString & name);
-extern void* C_ZN6QColorC2ERK7QString(void* arg0); // 1
-  // proto:  qreal QColor::hslHueF();
-extern double C_ZNK6QColor7hslHueFEv(void* qthis); // 4
-  // proto: static QColor QColor::fromHslF(qreal h, qreal s, qreal l, qreal a);
-extern void* C_ZN6QColor8fromHslFEdddd(double arg0, double arg1, double arg2, double arg3); // 4
-  // proto:  int QColor::hsvSaturation();
-extern int32_t C_ZNK6QColor13hsvSaturationEv(void* qthis); // 4
-  // proto:  void QColor::setRgbF(qreal r, qreal g, qreal b, qreal a);
-extern void C_ZN6QColor7setRgbFEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
-  // proto:  void QColor::setAlpha(int alpha);
-extern void C_ZN6QColor8setAlphaEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QColor::getRgbF(qreal * r, qreal * g, qreal * b, qreal * a);
-extern void C_ZNK6QColor7getRgbFEPdS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
-  // proto:  void QColor::setBlueF(qreal blue);
-extern void C_ZN6QColor8setBlueFEd(void* qthis, double arg0); // 4
-  // proto:  void QColor::getCmyk(int * c, int * m, int * y, int * k, int * a);
-extern void C_ZN6QColor7getCmykEPiS0_S0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4); // 4
-  // proto:  bool QColor::isValid();
-extern bool C_ZNK6QColor7isValidEv(void* qthis); // 2
-  // proto:  void QColor::getHsv(int * h, int * s, int * v, int * a);
-extern void C_ZNK6QColor6getHsvEPiS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
-  // proto:  QRgba64 QColor::rgba64();
-extern void* C_ZNK6QColor6rgba64Ev(void* qthis); // 4
-  // proto: static QColor QColor::fromCmykF(qreal c, qreal m, qreal y, qreal k, qreal a);
-extern void* C_ZN6QColor9fromCmykFEddddd(double arg0, double arg1, double arg2, double arg3, double arg4); // 4
-  // proto:  int QColor::hsvHue();
-extern int32_t C_ZNK6QColor6hsvHueEv(void* qthis); // 4
-  // proto:  void QColor::getHsl(int * h, int * s, int * l, int * a);
-extern void C_ZNK6QColor6getHslEPiS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
-  // proto:  void QColor::setGreen(int green);
-extern void C_ZN6QColor8setGreenEi(void* qthis, int32_t arg0); // 4
-  // proto:  QColor QColor::dark(int f);
-extern void* C_ZNK6QColor4darkEi(void* qthis, int32_t arg0); // 4
-  // proto:  qreal QColor::greenF();
-extern double C_ZNK6QColor6greenFEv(void* qthis); // 4
-  // proto:  QColor QColor::light(int f);
-extern void* C_ZNK6QColor5lightEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QColor::getHslF(qreal * h, qreal * s, qreal * l, qreal * a);
-extern void C_ZNK6QColor7getHslFEPdS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
-  // proto:  qreal QColor::lightnessF();
-extern double C_ZNK6QColor10lightnessFEv(void* qthis); // 4
-  // proto:  int QColor::green();
-extern int32_t C_ZNK6QColor5greenEv(void* qthis); // 4
-  // proto: static QColor QColor::fromRgb(QRgb rgb);
-extern void* C_ZN6QColor7fromRgbEj(int32_t arg0); // 4
-  // proto: static QColor QColor::fromRgb(int r, int g, int b, int a);
-extern void* C_ZN6QColor7fromRgbEiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
-  // proto:  void QColor::setGreenF(qreal green);
-extern void C_ZN6QColor9setGreenFEd(void* qthis, double arg0); // 4
+// extern C begin: 23
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QColor)=16
+//  ext block end
+
+//  body block begin
 type QColor struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
-}
-
-// hueF()
-func (this *QColor) Huef(args ...interface{}) (ret interface{}) {
-  // hueF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor4hueFEv
-    // invoke: qreal hueF()
-    var ret0 = C.C_ZNK6QColor4hueFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "hueF", args)
-  }
-
-  return
-}
-
-// yellow()
-func (this *QColor) Yellow(args ...interface{}) (ret interface{}) {
-  // yellow()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6yellowEv
-    // invoke: int yellow()
-    var ret0 = C.C_ZNK6QColor6yellowEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "yellow", args)
-  }
-
-  return
-}
-
-// cyanF()
-func (this *QColor) Cyanf(args ...interface{}) (ret interface{}) {
-  // cyanF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor5cyanFEv
-    // invoke: qreal cyanF()
-    var ret0 = C.C_ZNK6QColor5cyanFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "cyanF", args)
-  }
-
-  return
-}
-
-// yellowF()
-func (this *QColor) Yellowf(args ...interface{}) (ret interface{}) {
-  // yellowF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor7yellowFEv
-    // invoke: qreal yellowF()
-    var ret0 = C.C_ZNK6QColor7yellowFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "yellowF", args)
-  }
-
-  return
-}
-
-// isValidColor(const class QString &)
-func (this *QColor) Isvalidcolor_S(args ...interface{}) (ret interface{}) {
-  // isValidColor(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor12isValidColorERK7QString
-    // invoke: bool isValidColor(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN6QColor12isValidColorERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "isValidColor", args)
-  }
-
-  return
-}
-
-// setHsvF(qreal, qreal, qreal, qreal)
-func (this *QColor) Sethsvf(args ...interface{}) () {
-  // setHsvF(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor7setHsvFEdddd
-    // invoke: void setHsvF(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZN6QColor7setHsvFEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "setHsvF", args)
-  }
-
-  return
-}
-
-// magentaF()
-func (this *QColor) Magentaf(args ...interface{}) (ret interface{}) {
-  // magentaF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor8magentaFEv
-    // invoke: qreal magentaF()
-    var ret0 = C.C_ZNK6QColor8magentaFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "magentaF", args)
-  }
-
-  return
-}
-
-// setHsl(int, int, int, int)
-func (this *QColor) Sethsl(args ...interface{}) () {
-  // setHsl(int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor6setHslEiiii
-    // invoke: void setHsl(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZN6QColor6setHslEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "setHsl", args)
-  }
-
-  return
-}
-
-// setCmykF(qreal, qreal, qreal, qreal, qreal)
-func (this *QColor) Setcmykf(args ...interface{}) () {
-  // setCmykF(qreal, qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][4] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor8setCmykFEddddd
-    // invoke: void setCmykF(qreal, qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.double(qtrt.PrimConv(args[4], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg4)}
-    C.C_ZN6QColor8setCmykFEddddd(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
-  default:
-    qtrt.ErrorResolve("QColor", "setCmykF", args)
-  }
-
-  return
-}
-
-// setHsv(int, int, int, int)
-func (this *QColor) Sethsv(args ...interface{}) () {
-  // setHsv(int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor6setHsvEiiii
-    // invoke: void setHsv(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZN6QColor6setHsvEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "setHsv", args)
-  }
-
-  return
-}
-
-// rgb()
-func (this *QColor) Rgb(args ...interface{}) (ret interface{}) {
-  // rgb()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor3rgbEv
-    // invoke: QRgb rgb()
-    var ret0 = C.C_ZNK6QColor3rgbEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "QRgb"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "rgb", args)
-  }
-
-  return
-}
-
-// black()
-func (this *QColor) Black(args ...interface{}) (ret interface{}) {
-  // black()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor5blackEv
-    // invoke: int black()
-    var ret0 = C.C_ZNK6QColor5blackEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "black", args)
-  }
-
-  return
-}
-
-// fromCmyk(int, int, int, int, int)
-func (this *QColor) Fromcmyk_S(args ...interface{}) (ret interface{}) {
-  // fromCmyk(int, int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  vtys[0][4] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor8fromCmykEiiiii
-    // invoke: QColor fromCmyk(int, int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg4)}
-    var ret0 = C.C_ZN6QColor8fromCmykEiiiii(arg0, arg1, arg2, arg3, arg4)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "fromCmyk", args)
-  }
-
-  return
-}
-
-// spec()
-func (this *QColor) Spec(args ...interface{}) () {
-  // spec()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor4specEv
-    // invoke: QColor::Spec spec()
-    C.C_ZNK6QColor4specEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QColor", "spec", args)
-  }
-
-  return
-}
-
-// saturation()
-func (this *QColor) Saturation(args ...interface{}) (ret interface{}) {
-  // saturation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor10saturationEv
-    // invoke: int saturation()
-    var ret0 = C.C_ZNK6QColor10saturationEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "saturation", args)
-  }
-
-  return
-}
-
-// setCmyk(int, int, int, int, int)
-func (this *QColor) Setcmyk(args ...interface{}) () {
-  // setCmyk(int, int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  vtys[0][4] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor7setCmykEiiiii
-    // invoke: void setCmyk(int, int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg4)}
-    C.C_ZN6QColor7setCmykEiiiii(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
-  default:
-    qtrt.ErrorResolve("QColor", "setCmyk", args)
-  }
-
-  return
-}
-
-// lighter(int)
-func (this *QColor) Lighter(args ...interface{}) (ret interface{}) {
-  // lighter(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor7lighterEi
-    // invoke: QColor lighter(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QColor7lighterEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "lighter", args)
-  }
-
-  return
-}
-
-// cyan()
-func (this *QColor) Cyan(args ...interface{}) (ret interface{}) {
-  // cyan()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor4cyanEv
-    // invoke: int cyan()
-    var ret0 = C.C_ZNK6QColor4cyanEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "cyan", args)
-  }
-
-  return
-}
-
-// fromRgbF(qreal, qreal, qreal, qreal)
-func (this *QColor) Fromrgbf_S(args ...interface{}) (ret interface{}) {
-  // fromRgbF(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor8fromRgbFEdddd
-    // invoke: QColor fromRgbF(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN6QColor8fromRgbFEdddd(arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "fromRgbF", args)
-  }
-
-  return
-}
-
-// getHsvF(qreal *, qreal *, qreal *, qreal *)
-func (this *QColor) Gethsvf(args ...interface{}) () {
-  // getHsvF(qreal *, qreal *, qreal *, qreal *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][1] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][2] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][3] = qtrt.DoubleTy(true) // "qreal *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor7getHsvFEPdS0_S0_S0_
-    // invoke: void getHsvF(qreal *, qreal *, qreal *, qreal *)
-    var arg0 = (unsafe.Pointer)(args[0].(*float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZNK6QColor7getHsvFEPdS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "getHsvF", args)
-  }
-
-  return
-}
-
-// name()
-func (this *QColor) Name(args ...interface{}) (ret interface{}) {
-  // name()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor4nameEv
-    // invoke: QString name()
-    var ret0 = C.C_ZNK6QColor4nameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "name", args)
-  }
-
-  return
-}
-
-// toRgb()
-func (this *QColor) Torgb(args ...interface{}) (ret interface{}) {
-  // toRgb()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor5toRgbEv
-    // invoke: QColor toRgb()
-    var ret0 = C.C_ZNK6QColor5toRgbEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "toRgb", args)
-  }
-
-  return
-}
-
-// hsvHueF()
-func (this *QColor) Hsvhuef(args ...interface{}) (ret interface{}) {
-  // hsvHueF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor7hsvHueFEv
-    // invoke: qreal hsvHueF()
-    var ret0 = C.C_ZNK6QColor7hsvHueFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "hsvHueF", args)
-  }
-
-  return
-}
-
-// fromRgba(QRgb)
-func (this *QColor) Fromrgba_S(args ...interface{}) (ret interface{}) {
-  // fromRgba(QRgb)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "QRgb"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor8fromRgbaEj
-    // invoke: QColor fromRgba(QRgb)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN6QColor8fromRgbaEj(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "fromRgba", args)
-  }
-
-  return
-}
-
-// setAlphaF(qreal)
-func (this *QColor) Setalphaf(args ...interface{}) () {
-  // setAlphaF(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor9setAlphaFEd
-    // invoke: void setAlphaF(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor9setAlphaFEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColor", "setAlphaF", args)
-  }
-
-  return
-}
-
-// hslSaturation()
-func (this *QColor) Hslsaturation(args ...interface{}) (ret interface{}) {
-  // hslSaturation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor13hslSaturationEv
-    // invoke: int hslSaturation()
-    var ret0 = C.C_ZNK6QColor13hslSaturationEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "hslSaturation", args)
-  }
-
-  return
-}
-
-// blackF()
-func (this *QColor) Blackf(args ...interface{}) (ret interface{}) {
-  // blackF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6blackFEv
-    // invoke: qreal blackF()
-    var ret0 = C.C_ZNK6QColor6blackFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "blackF", args)
-  }
-
-  return
-}
-
-// saturationF()
-func (this *QColor) Saturationf(args ...interface{}) (ret interface{}) {
-  // saturationF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor11saturationFEv
-    // invoke: qreal saturationF()
-    var ret0 = C.C_ZNK6QColor11saturationFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "saturationF", args)
-  }
-
-  return
-}
-
-// setRgb(QRgb)
-func (this *QColor) Setrgb(args ...interface{}) () {
-  // setRgb(QRgb)
-  // setRgb(int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "QRgb"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1][2] = qtrt.Int32Ty(false) // "int"
-  vtys[1][3] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor6setRgbEj
-    // invoke: void setRgb(QRgb)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor6setRgbEj(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN6QColor6setRgbEiiii
-    // invoke: void setRgb(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZN6QColor6setRgbEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "setRgb", args)
-  }
-
-  return
-}
-
-// blue()
-func (this *QColor) Blue(args ...interface{}) (ret interface{}) {
-  // blue()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor4blueEv
-    // invoke: int blue()
-    var ret0 = C.C_ZNK6QColor4blueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "blue", args)
-  }
-
-  return
-}
-
-// blueF()
-func (this *QColor) Bluef(args ...interface{}) (ret interface{}) {
-  // blueF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor5blueFEv
-    // invoke: qreal blueF()
-    var ret0 = C.C_ZNK6QColor5blueFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "blueF", args)
-  }
-
-  return
-}
-
-// rgba()
-func (this *QColor) Rgba(args ...interface{}) (ret interface{}) {
-  // rgba()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor4rgbaEv
-    // invoke: QRgb rgba()
-    var ret0 = C.C_ZNK6QColor4rgbaEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "QRgb"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "rgba", args)
-  }
-
-  return
-}
-
-// red()
-func (this *QColor) Red(args ...interface{}) (ret interface{}) {
-  // red()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor3redEv
-    // invoke: int red()
-    var ret0 = C.C_ZNK6QColor3redEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "red", args)
-  }
-
-  return
-}
-
-// fromHsvF(qreal, qreal, qreal, qreal)
-func (this *QColor) Fromhsvf_S(args ...interface{}) (ret interface{}) {
-  // fromHsvF(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor8fromHsvFEdddd
-    // invoke: QColor fromHsvF(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN6QColor8fromHsvFEdddd(arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "fromHsvF", args)
-  }
-
-  return
-}
-
-// alphaF()
-func (this *QColor) Alphaf(args ...interface{}) (ret interface{}) {
-  // alphaF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6alphaFEv
-    // invoke: qreal alphaF()
-    var ret0 = C.C_ZNK6QColor6alphaFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "alphaF", args)
-  }
-
-  return
-}
-
-// setRedF(qreal)
-func (this *QColor) Setredf(args ...interface{}) () {
-  // setRedF(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor7setRedFEd
-    // invoke: void setRedF(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor7setRedFEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColor", "setRedF", args)
-  }
-
-  return
-}
-
-// lightness()
-func (this *QColor) Lightness(args ...interface{}) (ret interface{}) {
-  // lightness()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor9lightnessEv
-    // invoke: int lightness()
-    var ret0 = C.C_ZNK6QColor9lightnessEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "lightness", args)
-  }
-
-  return
-}
-
-// colorNames()
-func (this *QColor) Colornames_S(args ...interface{}) () {
-  // colorNames()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor10colorNamesEv
-    // invoke: QStringList colorNames()
-    C.C_ZN6QColor10colorNamesEv()
-  default:
-    qtrt.ErrorResolve("QColor", "colorNames", args)
-  }
-
-  return
-}
-
-// getCmykF(qreal *, qreal *, qreal *, qreal *, qreal *)
-func (this *QColor) Getcmykf(args ...interface{}) () {
-  // getCmykF(qreal *, qreal *, qreal *, qreal *, qreal *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][1] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][2] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][3] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][4] = qtrt.DoubleTy(true) // "qreal *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor8getCmykFEPdS0_S0_S0_S0_
-    // invoke: void getCmykF(qreal *, qreal *, qreal *, qreal *, qreal *)
-    var arg0 = (unsafe.Pointer)(args[0].(*float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*float64))
-    if false {fmt.Println(arg3)}
-    var arg4 = (unsafe.Pointer)(args[4].(*float64))
-    if false {fmt.Println(arg4)}
-    C.C_ZN6QColor8getCmykFEPdS0_S0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
-  default:
-    qtrt.ErrorResolve("QColor", "getCmykF", args)
-  }
-
-  return
-}
-
-// setNamedColor(const class QString &)
-func (this *QColor) Setnamedcolor(args ...interface{}) () {
-  // setNamedColor(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor13setNamedColorERK7QString
-    // invoke: void setNamedColor(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor13setNamedColorERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColor", "setNamedColor", args)
-  }
-
-  return
-}
-
-// alpha()
-func (this *QColor) Alpha(args ...interface{}) (ret interface{}) {
-  // alpha()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor5alphaEv
-    // invoke: int alpha()
-    var ret0 = C.C_ZNK6QColor5alphaEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "alpha", args)
-  }
-
-  return
-}
-
-// setRed(int)
-func (this *QColor) Setred(args ...interface{}) () {
-  // setRed(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor6setRedEi
-    // invoke: void setRed(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor6setRedEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColor", "setRed", args)
-  }
-
-  return
-}
-
-// toCmyk()
-func (this *QColor) Tocmyk(args ...interface{}) (ret interface{}) {
-  // toCmyk()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6toCmykEv
-    // invoke: QColor toCmyk()
-    var ret0 = C.C_ZNK6QColor6toCmykEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "toCmyk", args)
-  }
-
-  return
-}
-
-// redF()
-func (this *QColor) Redf(args ...interface{}) (ret interface{}) {
-  // redF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor4redFEv
-    // invoke: qreal redF()
-    var ret0 = C.C_ZNK6QColor4redFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "redF", args)
-  }
-
-  return
-}
-
-// setRgba64(class QRgba64)
-func (this *QColor) Setrgba64(args ...interface{}) () {
-  // setRgba64(class QRgba64)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRgba64{}) // "QRgba64"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor9setRgba64E7QRgba64
-    // invoke: void setRgba64(class QRgba64)
-    var arg0 = args[0].(*QRgba64).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor9setRgba64E7QRgba64(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColor", "setRgba64", args)
-  }
-
-  return
-}
-
-// hue()
-func (this *QColor) Hue(args ...interface{}) (ret interface{}) {
-  // hue()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor3hueEv
-    // invoke: int hue()
-    var ret0 = C.C_ZNK6QColor3hueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "hue", args)
-  }
-
-  return
-}
-
-// hslSaturationF()
-func (this *QColor) Hslsaturationf(args ...interface{}) (ret interface{}) {
-  // hslSaturationF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor14hslSaturationFEv
-    // invoke: qreal hslSaturationF()
-    var ret0 = C.C_ZNK6QColor14hslSaturationFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "hslSaturationF", args)
-  }
-
-  return
-}
-
-// hsvSaturationF()
-func (this *QColor) Hsvsaturationf(args ...interface{}) (ret interface{}) {
-  // hsvSaturationF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor14hsvSaturationFEv
-    // invoke: qreal hsvSaturationF()
-    var ret0 = C.C_ZNK6QColor14hsvSaturationFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "hsvSaturationF", args)
-  }
-
-  return
-}
-
-// toHsl()
-func (this *QColor) Tohsl(args ...interface{}) (ret interface{}) {
-  // toHsl()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor5toHslEv
-    // invoke: QColor toHsl()
-    var ret0 = C.C_ZNK6QColor5toHslEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "toHsl", args)
-  }
-
-  return
-}
-
-// value()
-func (this *QColor) Value(args ...interface{}) (ret interface{}) {
-  // value()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor5valueEv
-    // invoke: int value()
-    var ret0 = C.C_ZNK6QColor5valueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "value", args)
-  }
-
-  return
-}
-
-// toHsv()
-func (this *QColor) Tohsv(args ...interface{}) (ret interface{}) {
-  // toHsv()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor5toHsvEv
-    // invoke: QColor toHsv()
-    var ret0 = C.C_ZNK6QColor5toHsvEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "toHsv", args)
-  }
-
-  return
-}
-
-// darker(int)
-func (this *QColor) Darker(args ...interface{}) (ret interface{}) {
-  // darker(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6darkerEi
-    // invoke: QColor darker(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QColor6darkerEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "darker", args)
-  }
-
-  return
-}
-
-// setBlue(int)
-func (this *QColor) Setblue(args ...interface{}) () {
-  // setBlue(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor7setBlueEi
-    // invoke: void setBlue(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor7setBlueEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColor", "setBlue", args)
-  }
-
-  return
-}
-
-// setHslF(qreal, qreal, qreal, qreal)
-func (this *QColor) Sethslf(args ...interface{}) () {
-  // setHslF(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor7setHslFEdddd
-    // invoke: void setHslF(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZN6QColor7setHslFEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "setHslF", args)
-  }
-
-  return
-}
-
-// valueF()
-func (this *QColor) Valuef(args ...interface{}) (ret interface{}) {
-  // valueF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6valueFEv
-    // invoke: qreal valueF()
-    var ret0 = C.C_ZNK6QColor6valueFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "valueF", args)
-  }
-
-  return
-}
-
-// fromHsl(int, int, int, int)
-func (this *QColor) Fromhsl_S(args ...interface{}) (ret interface{}) {
-  // fromHsl(int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor7fromHslEiiii
-    // invoke: QColor fromHsl(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN6QColor7fromHslEiiii(arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "fromHsl", args)
-  }
-
-  return
-}
-
-// hslHue()
-func (this *QColor) Hslhue(args ...interface{}) (ret interface{}) {
-  // hslHue()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6hslHueEv
-    // invoke: int hslHue()
-    var ret0 = C.C_ZNK6QColor6hslHueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "hslHue", args)
-  }
-
-  return
-}
-
-// fromHsv(int, int, int, int)
-func (this *QColor) Fromhsv_S(args ...interface{}) (ret interface{}) {
-  // fromHsv(int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor7fromHsvEiiii
-    // invoke: QColor fromHsv(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN6QColor7fromHsvEiiii(arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "fromHsv", args)
-  }
-
-  return
-}
-
-// getRgb(int *, int *, int *, int *)
-func (this *QColor) Getrgb(args ...interface{}) () {
-  // getRgb(int *, int *, int *, int *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][1] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][2] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][3] = qtrt.Int32Ty(true) // "int *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6getRgbEPiS0_S0_S0_
-    // invoke: void getRgb(int *, int *, int *, int *)
-    var arg0 = (unsafe.Pointer)(args[0].(*int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZNK6QColor6getRgbEPiS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "getRgb", args)
-  }
-
-  return
-}
-
-// setRgba(QRgb)
-func (this *QColor) Setrgba(args ...interface{}) () {
-  // setRgba(QRgb)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "QRgb"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor7setRgbaEj
-    // invoke: void setRgba(QRgb)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor7setRgbaEj(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColor", "setRgba", args)
-  }
-
-  return
-}
-
-// magenta()
-func (this *QColor) Magenta(args ...interface{}) (ret interface{}) {
-  // magenta()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor7magentaEv
-    // invoke: int magenta()
-    var ret0 = C.C_ZNK6QColor7magentaEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "magenta", args)
-  }
-
-  return
-}
-
-// fromRgba64(class QRgba64)
-func (this *QColor) Fromrgba64_S(args ...interface{}) (ret interface{}) {
-  // fromRgba64(class QRgba64)
-  // fromRgba64(ushort, ushort, ushort, ushort)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRgba64{}) // "QRgba64"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int16Ty(false) // "ushort"
-  vtys[1][1] = qtrt.Int16Ty(false) // "ushort"
-  vtys[1][2] = qtrt.Int16Ty(false) // "ushort"
-  vtys[1][3] = qtrt.Int16Ty(false) // "ushort"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor10fromRgba64E7QRgba64
-    // invoke: QColor fromRgba64(class QRgba64)
-    var arg0 = args[0].(*QRgba64).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN6QColor10fromRgba64E7QRgba64(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN6QColor10fromRgba64Etttt
-    // invoke: QColor fromRgba64(ushort, ushort, ushort, ushort)
-    var arg0 = C.int16_t(qtrt.PrimConv(args[0], qtrt.Int16Ty(false)).(int16))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int16_t(qtrt.PrimConv(args[1], qtrt.Int16Ty(false)).(int16))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int16_t(qtrt.PrimConv(args[2], qtrt.Int16Ty(false)).(int16))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int16_t(qtrt.PrimConv(args[3], qtrt.Int16Ty(false)).(int16))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN6QColor10fromRgba64Etttt(arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "fromRgba64", args)
-  }
-
-  return
-}
-
-// QColor(const char *)
-func NewQColor(args ...interface{}) *QColor {
-  // QColor(const char *)
-  // QColor(QRgb)
-  // QColor(const class QColor &)
-  // QColor(int, int, int, int)
-  // QColor(class QRgba64)
-  // QColor()
-  // QColor(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.ByteTy(true) // "const char *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "QRgb"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = qtrt.Int32Ty(false) // "int"
-  vtys[3][1] = qtrt.Int32Ty(false) // "int"
-  vtys[3][2] = qtrt.Int32Ty(false) // "int"
-  vtys[3][3] = qtrt.Int32Ty(false) // "int"
-  vtys[4] = make(map[int32]reflect.Type)
-  vtys[4][0] = reflect.TypeOf(QRgba64{}) // "QRgba64"
-  vtys[5] = make(map[int32]reflect.Type)
-  vtys[6] = make(map[int32]reflect.Type)
-  vtys[6][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColorC1EPKc
-    // invoke: void QColor(const char *)
-    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
-    var arg0 = argif0.(unsafe.Pointer)
-    if false {fmt.Println(argif0, arg0)}
-    if free0 {defer C.free(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QColorC2EPKc(arg0)
-    return &QColor{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN6QColorC1Ej
-    // invoke: void QColor(QRgb)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QColorC2Ej(arg0)
-    return &QColor{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN6QColorC1ERKS_
-    // invoke: void QColor(const class QColor &)
-    var arg0 = args[0].(*QColor).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QColorC2ERKS_(arg0)
-    return &QColor{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN6QColorC1Eiiii
-    // invoke: void QColor(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QColorC2Eiiii(arg0, arg1, arg2, arg3)
-    return &QColor{Qclsinst:qthis}
-  case 4:
-    // invoke: _ZN6QColorC1E7QRgba64
-    // invoke: void QColor(class QRgba64)
-    var arg0 = args[0].(*QRgba64).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QColorC2E7QRgba64(arg0)
-    return &QColor{Qclsinst:qthis}
-  case 5:
-    // invoke: _ZN6QColorC1Ev
-    // invoke: void QColor()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QColorC2Ev()
-    return &QColor{Qclsinst:qthis}
-  case 6:
-    // invoke: _ZN6QColorC1ERK7QString
-    // invoke: void QColor(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QColorC2ERK7QString(arg0)
-    return &QColor{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QColor", "QColor", args)
-  }
-
-  return nil // QColor{Qclsinst:qthis}
-}
-
-// hslHueF()
-func (this *QColor) Hslhuef(args ...interface{}) (ret interface{}) {
-  // hslHueF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor7hslHueFEv
-    // invoke: qreal hslHueF()
-    var ret0 = C.C_ZNK6QColor7hslHueFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "hslHueF", args)
-  }
-
-  return
-}
-
-// fromHslF(qreal, qreal, qreal, qreal)
-func (this *QColor) Fromhslf_S(args ...interface{}) (ret interface{}) {
-  // fromHslF(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor8fromHslFEdddd
-    // invoke: QColor fromHslF(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN6QColor8fromHslFEdddd(arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "fromHslF", args)
-  }
-
-  return
-}
-
-// hsvSaturation()
-func (this *QColor) Hsvsaturation(args ...interface{}) (ret interface{}) {
-  // hsvSaturation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor13hsvSaturationEv
-    // invoke: int hsvSaturation()
-    var ret0 = C.C_ZNK6QColor13hsvSaturationEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "hsvSaturation", args)
-  }
-
-  return
-}
-
-// setRgbF(qreal, qreal, qreal, qreal)
-func (this *QColor) Setrgbf(args ...interface{}) () {
-  // setRgbF(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor7setRgbFEdddd
-    // invoke: void setRgbF(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZN6QColor7setRgbFEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "setRgbF", args)
-  }
-
-  return
-}
-
-// setAlpha(int)
-func (this *QColor) Setalpha(args ...interface{}) () {
-  // setAlpha(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor8setAlphaEi
-    // invoke: void setAlpha(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor8setAlphaEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColor", "setAlpha", args)
-  }
-
-  return
-}
-
-// getRgbF(qreal *, qreal *, qreal *, qreal *)
-func (this *QColor) Getrgbf(args ...interface{}) () {
-  // getRgbF(qreal *, qreal *, qreal *, qreal *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][1] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][2] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][3] = qtrt.DoubleTy(true) // "qreal *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor7getRgbFEPdS0_S0_S0_
-    // invoke: void getRgbF(qreal *, qreal *, qreal *, qreal *)
-    var arg0 = (unsafe.Pointer)(args[0].(*float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZNK6QColor7getRgbFEPdS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "getRgbF", args)
-  }
-
-  return
-}
-
-// setBlueF(qreal)
-func (this *QColor) Setbluef(args ...interface{}) () {
-  // setBlueF(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor8setBlueFEd
-    // invoke: void setBlueF(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor8setBlueFEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColor", "setBlueF", args)
-  }
-
-  return
-}
-
-// getCmyk(int *, int *, int *, int *, int *)
-func (this *QColor) Getcmyk(args ...interface{}) () {
-  // getCmyk(int *, int *, int *, int *, int *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][1] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][2] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][3] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][4] = qtrt.Int32Ty(true) // "int *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor7getCmykEPiS0_S0_S0_S0_
-    // invoke: void getCmyk(int *, int *, int *, int *, int *)
-    var arg0 = (unsafe.Pointer)(args[0].(*int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = (unsafe.Pointer)(args[4].(*int32))
-    if false {fmt.Println(arg4)}
-    C.C_ZN6QColor7getCmykEPiS0_S0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
-  default:
-    qtrt.ErrorResolve("QColor", "getCmyk", args)
-  }
-
-  return
-}
-
-// isValid()
-func (this *QColor) Isvalid(args ...interface{}) (ret interface{}) {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor7isValidEv
-    // invoke: bool isValid()
-    var ret0 = C.C_ZNK6QColor7isValidEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "isValid", args)
-  }
-
-  return
-}
-
-// getHsv(int *, int *, int *, int *)
-func (this *QColor) Gethsv(args ...interface{}) () {
-  // getHsv(int *, int *, int *, int *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][1] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][2] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][3] = qtrt.Int32Ty(true) // "int *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6getHsvEPiS0_S0_S0_
-    // invoke: void getHsv(int *, int *, int *, int *)
-    var arg0 = (unsafe.Pointer)(args[0].(*int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZNK6QColor6getHsvEPiS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "getHsv", args)
-  }
-
-  return
-}
-
-// rgba64()
-func (this *QColor) Rgba64(args ...interface{}) (ret interface{}) {
-  // rgba64()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6rgba64Ev
-    // invoke: QRgba64 rgba64()
-    var ret0 = C.C_ZNK6QColor6rgba64Ev(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRgba64{}) // "QRgba64"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "rgba64", args)
-  }
-
-  return
-}
-
-// fromCmykF(qreal, qreal, qreal, qreal, qreal)
-func (this *QColor) Fromcmykf_S(args ...interface{}) (ret interface{}) {
-  // fromCmykF(qreal, qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][4] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor9fromCmykFEddddd
-    // invoke: QColor fromCmykF(qreal, qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.double(qtrt.PrimConv(args[4], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg4)}
-    var ret0 = C.C_ZN6QColor9fromCmykFEddddd(arg0, arg1, arg2, arg3, arg4)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "fromCmykF", args)
-  }
-
-  return
-}
-
-// hsvHue()
-func (this *QColor) Hsvhue(args ...interface{}) (ret interface{}) {
-  // hsvHue()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6hsvHueEv
-    // invoke: int hsvHue()
-    var ret0 = C.C_ZNK6QColor6hsvHueEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "hsvHue", args)
-  }
-
-  return
-}
-
-// getHsl(int *, int *, int *, int *)
-func (this *QColor) Gethsl(args ...interface{}) () {
-  // getHsl(int *, int *, int *, int *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][1] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][2] = qtrt.Int32Ty(true) // "int *"
-  vtys[0][3] = qtrt.Int32Ty(true) // "int *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6getHslEPiS0_S0_S0_
-    // invoke: void getHsl(int *, int *, int *, int *)
-    var arg0 = (unsafe.Pointer)(args[0].(*int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZNK6QColor6getHslEPiS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "getHsl", args)
-  }
-
-  return
-}
-
-// setGreen(int)
-func (this *QColor) Setgreen(args ...interface{}) () {
-  // setGreen(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor8setGreenEi
-    // invoke: void setGreen(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor8setGreenEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColor", "setGreen", args)
-  }
-
-  return
-}
-
-// dark(int)
-func (this *QColor) Dark(args ...interface{}) (ret interface{}) {
-  // dark(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor4darkEi
-    // invoke: QColor dark(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QColor4darkEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "dark", args)
-  }
-
-  return
-}
-
-// greenF()
-func (this *QColor) Greenf(args ...interface{}) (ret interface{}) {
-  // greenF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor6greenFEv
-    // invoke: qreal greenF()
-    var ret0 = C.C_ZNK6QColor6greenFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "greenF", args)
-  }
-
-  return
-}
-
-// light(int)
-func (this *QColor) Light(args ...interface{}) (ret interface{}) {
-  // light(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor5lightEi
-    // invoke: QColor light(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QColor5lightEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "light", args)
-  }
-
-  return
-}
-
-// getHslF(qreal *, qreal *, qreal *, qreal *)
-func (this *QColor) Gethslf(args ...interface{}) () {
-  // getHslF(qreal *, qreal *, qreal *, qreal *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][1] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][2] = qtrt.DoubleTy(true) // "qreal *"
-  vtys[0][3] = qtrt.DoubleTy(true) // "qreal *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor7getHslFEPdS0_S0_S0_
-    // invoke: void getHslF(qreal *, qreal *, qreal *, qreal *)
-    var arg0 = (unsafe.Pointer)(args[0].(*float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = (unsafe.Pointer)(args[2].(*float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = (unsafe.Pointer)(args[3].(*float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZNK6QColor7getHslFEPdS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QColor", "getHslF", args)
-  }
-
-  return
-}
-
-// lightnessF()
-func (this *QColor) Lightnessf(args ...interface{}) (ret interface{}) {
-  // lightnessF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor10lightnessFEv
-    // invoke: qreal lightnessF()
-    var ret0 = C.C_ZNK6QColor10lightnessFEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "lightnessF", args)
-  }
-
-  return
-}
-
-// green()
-func (this *QColor) Green(args ...interface{}) (ret interface{}) {
-  // green()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QColor5greenEv
-    // invoke: int green()
-    var ret0 = C.C_ZNK6QColor5greenEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "green", args)
-  }
-
-  return
-}
-
-// fromRgb(QRgb)
-func (this *QColor) Fromrgb_S(args ...interface{}) (ret interface{}) {
-  // fromRgb(QRgb)
-  // fromRgb(int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "QRgb"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1][2] = qtrt.Int32Ty(false) // "int"
-  vtys[1][3] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor7fromRgbEj
-    // invoke: QColor fromRgb(QRgb)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN6QColor7fromRgbEj(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN6QColor7fromRgbEiiii
-    // invoke: QColor fromRgb(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN6QColor7fromRgbEiiii(arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColor", "fromRgb", args)
-  }
-
-  return
-}
-
-// setGreenF(qreal)
-func (this *QColor) Setgreenf(args ...interface{}) () {
-  // setGreenF(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QColor9setGreenFEd
-    // invoke: void setGreenF(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QColor9setGreenFEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColor", "setGreenF", args)
-  }
-
-  return
-}
-
-// <= body block end
-
+	cthis unsafe.Pointer
+}
+
+// /usr/include/qt/QtGui/qcolor.h:70
+// index:0
+// inline
+// void QColor()
+func NewQColor() *QColor {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QColor{cthis}
+}
+
+// /usr/include/qt/QtGui/qcolor.h:71
+// index:1
+// void QColor(Qt::GlobalColor)
+func NewQColor_1(color int) *QColor {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2EN2Qt11GlobalColorE", ffiqt.FFI_TYPE_VOID, cthis, &color)
+	gopp.ErrPrint(err, rv)
+	return &QColor{cthis}
+}
+
+// /usr/include/qt/QtGui/qcolor.h:72
+// index:2
+// inline
+// void QColor(int, int, int, int)
+func NewQColor_2(r int, g int, b int, a int) *QColor {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, &r, &g, &b, &a)
+	gopp.ErrPrint(err, rv)
+	return &QColor{cthis}
+}
+
+// /usr/include/qt/QtGui/qcolor.h:73
+// index:3
+// void QColor(QRgb)
+func NewQColor_3(rgb uint) *QColor {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2Ej", ffiqt.FFI_TYPE_VOID, cthis, &rgb)
+	gopp.ErrPrint(err, rv)
+	return &QColor{cthis}
+}
+
+// /usr/include/qt/QtGui/qcolor.h:74
+// index:4
+// void QColor(class QRgba64)
+func NewQColor_4(rgba64 unsafe.Pointer) *QColor {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2E7QRgba64", ffiqt.FFI_TYPE_VOID, cthis, rgba64)
+	gopp.ErrPrint(err, rv)
+	return &QColor{cthis}
+}
+
+// /usr/include/qt/QtGui/qcolor.h:76
+// index:5
+// inline
+// void QColor(const class QString &)
+func NewQColor_5(name unsafe.Pointer) *QColor {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, name)
+	gopp.ErrPrint(err, rv)
+	return &QColor{cthis}
+}
+
+// /usr/include/qt/QtGui/qcolor.h:78
+// index:6
+// inline
+// void QColor(class QStringView)
+func NewQColor_6(name unsafe.Pointer) *QColor {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2E11QStringView", ffiqt.FFI_TYPE_VOID, cthis, name)
+	gopp.ErrPrint(err, rv)
+	return &QColor{cthis}
+}
+
+// /usr/include/qt/QtGui/qcolor.h:79
+// index:7
+// inline
+// void QColor(const char *)
+func NewQColor_7(aname unsafe.Pointer) *QColor {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2EPKc", ffiqt.FFI_TYPE_VOID, cthis, aname)
+	gopp.ErrPrint(err, rv)
+	return &QColor{cthis}
+}
+
+// /usr/include/qt/QtGui/qcolor.h:80
+// index:8
+// inline
+// void QColor(class QLatin1String)
+func NewQColor_8(name unsafe.Pointer) *QColor {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2E13QLatin1String", ffiqt.FFI_TYPE_VOID, cthis, name)
+	gopp.ErrPrint(err, rv)
+	return &QColor{cthis}
+}
+
+// /usr/include/qt/QtGui/qcolor.h:81
+// index:9
+// void QColor(enum QColor::Spec)
+func NewQColor_9(spec int) *QColor {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2ENS_4SpecE", ffiqt.FFI_TYPE_VOID, cthis, &spec)
+	gopp.ErrPrint(err, rv)
+	return &QColor{cthis}
+}
+
+// /usr/include/qt/QtGui/qcolor.h:95
+// index:0
+// bool isValid()
+func (this *QColor) IsValid() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:98
+// index:0
+// QString name()
+func (this *QColor) Name() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:99
+// index:1
+// QString name(enum QColor::NameFormat)
+func (this *QColor) Name_1(format int) {
+	// 1: (, QColor::NameFormat format), (&format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4nameENS_10NameFormatE", ffiqt.FFI_TYPE_VOID, this.cthis, &format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:102
+// index:0
+// void setNamedColor(const class QString &)
+func (this *QColor) SetNamedColor(name unsafe.Pointer) {
+	// 0: (, const QString & name), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor13setNamedColorERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, name)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:104
+// index:1
+// void setNamedColor(class QStringView)
+func (this *QColor) SetNamedColor_1(name unsafe.Pointer) {
+	// 1: (, QStringView name), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor13setNamedColorE11QStringView", ffiqt.FFI_TYPE_VOID, this.cthis, name)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:105
+// index:2
+// void setNamedColor(class QLatin1String)
+func (this *QColor) SetNamedColor_2(name unsafe.Pointer) {
+	// 2: (, QLatin1String name), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor13setNamedColorE13QLatin1String", ffiqt.FFI_TYPE_VOID, this.cthis, name)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:107
+// index:0
+// static
+// QStringList colorNames()
+func (this *QColor) ColorNames() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor10colorNamesEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_ColorNames() {
+	// 0: (), ()
+	var nilthis *QColor
+	nilthis.ColorNames()
+}
+
+// /usr/include/qt/QtGui/qcolor.h:109
+// index:0
+// inline
+// QColor::Spec spec()
+func (this *QColor) Spec() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4specEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:112
+// index:0
+// int alpha()
+func (this *QColor) Alpha() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5alphaEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:113
+// index:0
+// void setAlpha(int)
+func (this *QColor) SetAlpha(alpha int) {
+	// 0: (, int alpha), (&alpha)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8setAlphaEi", ffiqt.FFI_TYPE_VOID, this.cthis, &alpha)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:115
+// index:0
+// qreal alphaF()
+func (this *QColor) AlphaF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6alphaFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:116
+// index:0
+// void setAlphaF(qreal)
+func (this *QColor) SetAlphaF(alpha float64) {
+	// 0: (, qreal alpha), (&alpha)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor9setAlphaFEd", ffiqt.FFI_TYPE_VOID, this.cthis, &alpha)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:118
+// index:0
+// int red()
+func (this *QColor) Red() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor3redEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:119
+// index:0
+// int green()
+func (this *QColor) Green() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5greenEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:120
+// index:0
+// int blue()
+func (this *QColor) Blue() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4blueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:121
+// index:0
+// void setRed(int)
+func (this *QColor) SetRed(red int) {
+	// 0: (, int red), (&red)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor6setRedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &red)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:122
+// index:0
+// void setGreen(int)
+func (this *QColor) SetGreen(green int) {
+	// 0: (, int green), (&green)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8setGreenEi", ffiqt.FFI_TYPE_VOID, this.cthis, &green)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:123
+// index:0
+// void setBlue(int)
+func (this *QColor) SetBlue(blue int) {
+	// 0: (, int blue), (&blue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setBlueEi", ffiqt.FFI_TYPE_VOID, this.cthis, &blue)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:125
+// index:0
+// qreal redF()
+func (this *QColor) RedF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4redFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:126
+// index:0
+// qreal greenF()
+func (this *QColor) GreenF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6greenFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:127
+// index:0
+// qreal blueF()
+func (this *QColor) BlueF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5blueFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:128
+// index:0
+// void setRedF(qreal)
+func (this *QColor) SetRedF(red float64) {
+	// 0: (, qreal red), (&red)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setRedFEd", ffiqt.FFI_TYPE_VOID, this.cthis, &red)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:129
+// index:0
+// void setGreenF(qreal)
+func (this *QColor) SetGreenF(green float64) {
+	// 0: (, qreal green), (&green)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor9setGreenFEd", ffiqt.FFI_TYPE_VOID, this.cthis, &green)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:130
+// index:0
+// void setBlueF(qreal)
+func (this *QColor) SetBlueF(blue float64) {
+	// 0: (, qreal blue), (&blue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8setBlueFEd", ffiqt.FFI_TYPE_VOID, this.cthis, &blue)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:132
+// index:0
+// void getRgb(int *, int *, int *, int *)
+func (this *QColor) GetRgb(r unsafe.Pointer, g unsafe.Pointer, b unsafe.Pointer, a unsafe.Pointer) {
+	// 0: (, int * r, int * g, int * b, int * a), (r, g, b, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6getRgbEPiS0_S0_S0_", ffiqt.FFI_TYPE_VOID, this.cthis, r, g, b, a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:133
+// index:0
+// void setRgb(int, int, int, int)
+func (this *QColor) SetRgb(r int, g int, b int, a int) {
+	// 0: (, int r, int g, int b, int a), (&r, &g, &b, &a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor6setRgbEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &r, &g, &b, &a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:145
+// index:1
+// void setRgb(QRgb)
+func (this *QColor) SetRgb_1(rgb uint) {
+	// 1: (, QRgb rgb), (&rgb)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor6setRgbEj", ffiqt.FFI_TYPE_VOID, this.cthis, &rgb)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:135
+// index:0
+// void getRgbF(qreal *, qreal *, qreal *, qreal *)
+func (this *QColor) GetRgbF(r unsafe.Pointer, g unsafe.Pointer, b unsafe.Pointer, a unsafe.Pointer) {
+	// 0: (, qreal * r, qreal * g, qreal * b, qreal * a), (r, g, b, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7getRgbFEPdS0_S0_S0_", ffiqt.FFI_TYPE_VOID, this.cthis, r, g, b, a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:136
+// index:0
+// void setRgbF(qreal, qreal, qreal, qreal)
+func (this *QColor) SetRgbF(r float64, g float64, b float64, a float64) {
+	// 0: (, qreal r, qreal g, qreal b, qreal a), (&r, &g, &b, &a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setRgbFEdddd", ffiqt.FFI_TYPE_VOID, this.cthis, &r, &g, &b, &a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:138
+// index:0
+// QRgba64 rgba64()
+func (this *QColor) Rgba64() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6rgba64Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:139
+// index:0
+// void setRgba64(class QRgba64)
+func (this *QColor) SetRgba64(rgba unsafe.Pointer) {
+	// 0: (, QRgba64 rgba), (rgba)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor9setRgba64E7QRgba64", ffiqt.FFI_TYPE_VOID, this.cthis, rgba)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:141
+// index:0
+// QRgb rgba()
+func (this *QColor) Rgba() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4rgbaEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:142
+// index:0
+// void setRgba(QRgb)
+func (this *QColor) SetRgba(rgba uint) {
+	// 0: (, QRgb rgba), (&rgba)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setRgbaEj", ffiqt.FFI_TYPE_VOID, this.cthis, &rgba)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:144
+// index:0
+// QRgb rgb()
+func (this *QColor) Rgb() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor3rgbEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:147
+// index:0
+// int hue()
+func (this *QColor) Hue() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor3hueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:148
+// index:0
+// int saturation()
+func (this *QColor) Saturation() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor10saturationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:149
+// index:0
+// int hsvHue()
+func (this *QColor) HsvHue() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6hsvHueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:150
+// index:0
+// int hsvSaturation()
+func (this *QColor) HsvSaturation() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor13hsvSaturationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:151
+// index:0
+// int value()
+func (this *QColor) Value() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5valueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:153
+// index:0
+// qreal hueF()
+func (this *QColor) HueF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4hueFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:154
+// index:0
+// qreal saturationF()
+func (this *QColor) SaturationF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor11saturationFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:155
+// index:0
+// qreal hsvHueF()
+func (this *QColor) HsvHueF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7hsvHueFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:156
+// index:0
+// qreal hsvSaturationF()
+func (this *QColor) HsvSaturationF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor14hsvSaturationFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:157
+// index:0
+// qreal valueF()
+func (this *QColor) ValueF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6valueFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:159
+// index:0
+// void getHsv(int *, int *, int *, int *)
+func (this *QColor) GetHsv(h unsafe.Pointer, s unsafe.Pointer, v unsafe.Pointer, a unsafe.Pointer) {
+	// 0: (, int * h, int * s, int * v, int * a), (h, s, v, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6getHsvEPiS0_S0_S0_", ffiqt.FFI_TYPE_VOID, this.cthis, h, s, v, a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:160
+// index:0
+// void setHsv(int, int, int, int)
+func (this *QColor) SetHsv(h int, s int, v int, a int) {
+	// 0: (, int h, int s, int v, int a), (&h, &s, &v, &a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor6setHsvEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &h, &s, &v, &a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:162
+// index:0
+// void getHsvF(qreal *, qreal *, qreal *, qreal *)
+func (this *QColor) GetHsvF(h unsafe.Pointer, s unsafe.Pointer, v unsafe.Pointer, a unsafe.Pointer) {
+	// 0: (, qreal * h, qreal * s, qreal * v, qreal * a), (h, s, v, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7getHsvFEPdS0_S0_S0_", ffiqt.FFI_TYPE_VOID, this.cthis, h, s, v, a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:163
+// index:0
+// void setHsvF(qreal, qreal, qreal, qreal)
+func (this *QColor) SetHsvF(h float64, s float64, v float64, a float64) {
+	// 0: (, qreal h, qreal s, qreal v, qreal a), (&h, &s, &v, &a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setHsvFEdddd", ffiqt.FFI_TYPE_VOID, this.cthis, &h, &s, &v, &a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:165
+// index:0
+// int cyan()
+func (this *QColor) Cyan() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4cyanEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:166
+// index:0
+// int magenta()
+func (this *QColor) Magenta() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7magentaEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:167
+// index:0
+// int yellow()
+func (this *QColor) Yellow() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6yellowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:168
+// index:0
+// int black()
+func (this *QColor) Black() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5blackEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:170
+// index:0
+// qreal cyanF()
+func (this *QColor) CyanF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5cyanFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:171
+// index:0
+// qreal magentaF()
+func (this *QColor) MagentaF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor8magentaFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:172
+// index:0
+// qreal yellowF()
+func (this *QColor) YellowF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7yellowFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:173
+// index:0
+// qreal blackF()
+func (this *QColor) BlackF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6blackFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:175
+// index:0
+// void getCmyk(int *, int *, int *, int *, int *)
+func (this *QColor) GetCmyk(c unsafe.Pointer, m unsafe.Pointer, y unsafe.Pointer, k unsafe.Pointer, a unsafe.Pointer) {
+	// 0: (, int * c, int * m, int * y, int * k, int * a), (c, m, y, k, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7getCmykEPiS0_S0_S0_S0_", ffiqt.FFI_TYPE_VOID, this.cthis, c, m, y, k, a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:176
+// index:0
+// void setCmyk(int, int, int, int, int)
+func (this *QColor) SetCmyk(c int, m int, y int, k int, a int) {
+	// 0: (, int c, int m, int y, int k, int a), (&c, &m, &y, &k, &a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setCmykEiiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &c, &m, &y, &k, &a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:178
+// index:0
+// void getCmykF(qreal *, qreal *, qreal *, qreal *, qreal *)
+func (this *QColor) GetCmykF(c unsafe.Pointer, m unsafe.Pointer, y unsafe.Pointer, k unsafe.Pointer, a unsafe.Pointer) {
+	// 0: (, qreal * c, qreal * m, qreal * y, qreal * k, qreal * a), (c, m, y, k, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8getCmykFEPdS0_S0_S0_S0_", ffiqt.FFI_TYPE_VOID, this.cthis, c, m, y, k, a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:179
+// index:0
+// void setCmykF(qreal, qreal, qreal, qreal, qreal)
+func (this *QColor) SetCmykF(c float64, m float64, y float64, k float64, a float64) {
+	// 0: (, qreal c, qreal m, qreal y, qreal k, qreal a), (&c, &m, &y, &k, &a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8setCmykFEddddd", ffiqt.FFI_TYPE_VOID, this.cthis, &c, &m, &y, &k, &a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:181
+// index:0
+// int hslHue()
+func (this *QColor) HslHue() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6hslHueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:182
+// index:0
+// int hslSaturation()
+func (this *QColor) HslSaturation() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor13hslSaturationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:183
+// index:0
+// int lightness()
+func (this *QColor) Lightness() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor9lightnessEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:185
+// index:0
+// qreal hslHueF()
+func (this *QColor) HslHueF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7hslHueFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:186
+// index:0
+// qreal hslSaturationF()
+func (this *QColor) HslSaturationF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor14hslSaturationFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:187
+// index:0
+// qreal lightnessF()
+func (this *QColor) LightnessF() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor10lightnessFEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:189
+// index:0
+// void getHsl(int *, int *, int *, int *)
+func (this *QColor) GetHsl(h unsafe.Pointer, s unsafe.Pointer, l unsafe.Pointer, a unsafe.Pointer) {
+	// 0: (, int * h, int * s, int * l, int * a), (h, s, l, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6getHslEPiS0_S0_S0_", ffiqt.FFI_TYPE_VOID, this.cthis, h, s, l, a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:190
+// index:0
+// void setHsl(int, int, int, int)
+func (this *QColor) SetHsl(h int, s int, l int, a int) {
+	// 0: (, int h, int s, int l, int a), (&h, &s, &l, &a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor6setHslEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &h, &s, &l, &a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:192
+// index:0
+// void getHslF(qreal *, qreal *, qreal *, qreal *)
+func (this *QColor) GetHslF(h unsafe.Pointer, s unsafe.Pointer, l unsafe.Pointer, a unsafe.Pointer) {
+	// 0: (, qreal * h, qreal * s, qreal * l, qreal * a), (h, s, l, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7getHslFEPdS0_S0_S0_", ffiqt.FFI_TYPE_VOID, this.cthis, h, s, l, a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:193
+// index:0
+// void setHslF(qreal, qreal, qreal, qreal)
+func (this *QColor) SetHslF(h float64, s float64, l float64, a float64) {
+	// 0: (, qreal h, qreal s, qreal l, qreal a), (&h, &s, &l, &a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setHslFEdddd", ffiqt.FFI_TYPE_VOID, this.cthis, &h, &s, &l, &a)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:195
+// index:0
+// QColor toRgb()
+func (this *QColor) ToRgb() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5toRgbEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:196
+// index:0
+// QColor toHsv()
+func (this *QColor) ToHsv() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5toHsvEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:197
+// index:0
+// QColor toCmyk()
+func (this *QColor) ToCmyk() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6toCmykEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:198
+// index:0
+// QColor toHsl()
+func (this *QColor) ToHsl() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5toHslEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:200
+// index:0
+// QColor convertTo(enum QColor::Spec)
+func (this *QColor) ConvertTo(colorSpec int) {
+	// 0: (, QColor::Spec colorSpec), (&colorSpec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor9convertToENS_4SpecE", ffiqt.FFI_TYPE_VOID, this.cthis, &colorSpec)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:202
+// index:0
+// static
+// QColor fromRgb(QRgb)
+func (this *QColor) FromRgb(rgb uint) {
+	// 0: (QRgb rgb), (rgb)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7fromRgbEj", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromRgb(rgb uint) {
+	// 0: (QRgb rgb), (rgb)
+	var nilthis *QColor
+	nilthis.FromRgb(rgb)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:205
+// index:1
+// static
+// QColor fromRgb(int, int, int, int)
+func (this *QColor) FromRgb_1(r int, g int, b int, a int) {
+	// 1: (int r, int g, int b, int a), (r, g, b, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7fromRgbEiiii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromRgb_1(r int, g int, b int, a int) {
+	// 1: (int r, int g, int b, int a), (r, g, b, a)
+	var nilthis *QColor
+	nilthis.FromRgb_1(r, g, b, a)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:203
+// index:0
+// static
+// QColor fromRgba(QRgb)
+func (this *QColor) FromRgba(rgba uint) {
+	// 0: (QRgb rgba), (rgba)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8fromRgbaEj", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromRgba(rgba uint) {
+	// 0: (QRgb rgba), (rgba)
+	var nilthis *QColor
+	nilthis.FromRgba(rgba)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:206
+// index:0
+// static
+// QColor fromRgbF(qreal, qreal, qreal, qreal)
+func (this *QColor) FromRgbF(r float64, g float64, b float64, a float64) {
+	// 0: (qreal r, qreal g, qreal b, qreal a), (r, g, b, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8fromRgbFEdddd", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromRgbF(r float64, g float64, b float64, a float64) {
+	// 0: (qreal r, qreal g, qreal b, qreal a), (r, g, b, a)
+	var nilthis *QColor
+	nilthis.FromRgbF(r, g, b, a)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:208
+// index:0
+// static
+// QColor fromRgba64(ushort, ushort, ushort, ushort)
+func (this *QColor) FromRgba64(r uint16, g uint16, b uint16, a uint16) {
+	// 0: (ushort r, ushort g, ushort b, ushort a), (r, g, b, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor10fromRgba64Etttt", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromRgba64(r uint16, g uint16, b uint16, a uint16) {
+	// 0: (ushort r, ushort g, ushort b, ushort a), (r, g, b, a)
+	var nilthis *QColor
+	nilthis.FromRgba64(r, g, b, a)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:209
+// index:1
+// static
+// QColor fromRgba64(class QRgba64)
+func (this *QColor) FromRgba64_1(rgba unsafe.Pointer) {
+	// 1: (QRgba64 rgba), (rgba)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor10fromRgba64E7QRgba64", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromRgba64_1(rgba unsafe.Pointer) {
+	// 1: (QRgba64 rgba), (rgba)
+	var nilthis *QColor
+	nilthis.FromRgba64_1(rgba)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:211
+// index:0
+// static
+// QColor fromHsv(int, int, int, int)
+func (this *QColor) FromHsv(h int, s int, v int, a int) {
+	// 0: (int h, int s, int v, int a), (h, s, v, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7fromHsvEiiii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromHsv(h int, s int, v int, a int) {
+	// 0: (int h, int s, int v, int a), (h, s, v, a)
+	var nilthis *QColor
+	nilthis.FromHsv(h, s, v, a)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:212
+// index:0
+// static
+// QColor fromHsvF(qreal, qreal, qreal, qreal)
+func (this *QColor) FromHsvF(h float64, s float64, v float64, a float64) {
+	// 0: (qreal h, qreal s, qreal v, qreal a), (h, s, v, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8fromHsvFEdddd", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromHsvF(h float64, s float64, v float64, a float64) {
+	// 0: (qreal h, qreal s, qreal v, qreal a), (h, s, v, a)
+	var nilthis *QColor
+	nilthis.FromHsvF(h, s, v, a)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:214
+// index:0
+// static
+// QColor fromCmyk(int, int, int, int, int)
+func (this *QColor) FromCmyk(c int, m int, y int, k int, a int) {
+	// 0: (int c, int m, int y, int k, int a), (c, m, y, k, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8fromCmykEiiiii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromCmyk(c int, m int, y int, k int, a int) {
+	// 0: (int c, int m, int y, int k, int a), (c, m, y, k, a)
+	var nilthis *QColor
+	nilthis.FromCmyk(c, m, y, k, a)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:215
+// index:0
+// static
+// QColor fromCmykF(qreal, qreal, qreal, qreal, qreal)
+func (this *QColor) FromCmykF(c float64, m float64, y float64, k float64, a float64) {
+	// 0: (qreal c, qreal m, qreal y, qreal k, qreal a), (c, m, y, k, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor9fromCmykFEddddd", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromCmykF(c float64, m float64, y float64, k float64, a float64) {
+	// 0: (qreal c, qreal m, qreal y, qreal k, qreal a), (c, m, y, k, a)
+	var nilthis *QColor
+	nilthis.FromCmykF(c, m, y, k, a)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:217
+// index:0
+// static
+// QColor fromHsl(int, int, int, int)
+func (this *QColor) FromHsl(h int, s int, l int, a int) {
+	// 0: (int h, int s, int l, int a), (h, s, l, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7fromHslEiiii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromHsl(h int, s int, l int, a int) {
+	// 0: (int h, int s, int l, int a), (h, s, l, a)
+	var nilthis *QColor
+	nilthis.FromHsl(h, s, l, a)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:218
+// index:0
+// static
+// QColor fromHslF(qreal, qreal, qreal, qreal)
+func (this *QColor) FromHslF(h float64, s float64, l float64, a float64) {
+	// 0: (qreal h, qreal s, qreal l, qreal a), (h, s, l, a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8fromHslFEdddd", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_FromHslF(h float64, s float64, l float64, a float64) {
+	// 0: (qreal h, qreal s, qreal l, qreal a), (h, s, l, a)
+	var nilthis *QColor
+	nilthis.FromHslF(h, s, l, a)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:220
+// index:0
+// QColor light(int)
+func (this *QColor) Light(f int) {
+	// 0: (, int f), (&f)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5lightEi", ffiqt.FFI_TYPE_VOID, this.cthis, &f)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:221
+// index:0
+// QColor lighter(int)
+func (this *QColor) Lighter(f int) {
+	// 0: (, int f), (&f)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7lighterEi", ffiqt.FFI_TYPE_VOID, this.cthis, &f)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:222
+// index:0
+// QColor dark(int)
+func (this *QColor) Dark(f int) {
+	// 0: (, int f), (&f)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4darkEi", ffiqt.FFI_TYPE_VOID, this.cthis, &f)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:223
+// index:0
+// QColor darker(int)
+func (this *QColor) Darker(f int) {
+	// 0: (, int f), (&f)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6darkerEi", ffiqt.FFI_TYPE_VOID, this.cthis, &f)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:231
+// index:0
+// static
+// bool isValidColor(const class QString &)
+func (this *QColor) IsValidColor(name unsafe.Pointer) {
+	// 0: (const QString & name), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_IsValidColor(name unsafe.Pointer) {
+	// 0: (const QString & name), (name)
+	var nilthis *QColor
+	nilthis.IsValidColor(name)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:233
+// index:1
+// static
+// bool isValidColor(class QStringView)
+func (this *QColor) IsValidColor_1(arg0 unsafe.Pointer) {
+	// 1: (QStringView arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorE11QStringView", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_IsValidColor_1(arg0 unsafe.Pointer) {
+	// 1: (QStringView arg0), (arg0)
+	var nilthis *QColor
+	nilthis.IsValidColor_1(arg0)
+}
+
+// /usr/include/qt/QtGui/qcolor.h:234
+// index:2
+// static
+// bool isValidColor(class QLatin1String)
+func (this *QColor) IsValidColor_2(arg0 unsafe.Pointer) {
+	// 2: (QLatin1String arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorE13QLatin1String", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QColor_IsValidColor_2(arg0 unsafe.Pointer) {
+	// 2: (QLatin1String arg0), (arg0)
+	var nilthis *QColor
+	nilthis.IsValidColor_2(arg0)
+}
+
+//  body block end

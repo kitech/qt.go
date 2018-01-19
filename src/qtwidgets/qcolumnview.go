@@ -1,527 +1,222 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qcolumnview.h
+// #include <qcolumnview.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qcolumnview.h
-// dst-file: /src/widgets/qcolumnview.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QColumnView::selectAll();
-extern void C_ZN11QColumnView9selectAllEv(void* qthis); // 4
-  // proto:  void QColumnView::setResizeGripsVisible(bool visible);
-extern void C_ZN11QColumnView21setResizeGripsVisibleEb(void* qthis, bool arg0); // 4
-  // proto:  void QColumnView::~QColumnView();
-extern void C_ZN11QColumnViewD2Ev(void* qthis); // 4
-  // proto:  bool QColumnView::resizeGripsVisible();
-extern bool C_ZNK11QColumnView18resizeGripsVisibleEv(void* qthis); // 4
-  // proto:  QModelIndex QColumnView::indexAt(const QPoint & point);
-extern void* C_ZNK11QColumnView7indexAtERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  QWidget * QColumnView::previewWidget();
-extern void* C_ZNK11QColumnView13previewWidgetEv(void* qthis); // 4
-  // proto:  QRect QColumnView::visualRect(const QModelIndex & index);
-extern void* C_ZNK11QColumnView10visualRectERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  void QColumnView::setPreviewWidget(QWidget * widget);
-extern void C_ZN11QColumnView16setPreviewWidgetEP7QWidget(void* qthis, void* arg0); // 4
-  // proto:  void QColumnView::setRootIndex(const QModelIndex & index);
-extern void C_ZN11QColumnView12setRootIndexERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QSize QColumnView::sizeHint();
-extern void* C_ZNK11QColumnView8sizeHintEv(void* qthis); // 4
-  // proto:  void QColumnView::setModel(QAbstractItemModel * model);
-extern void C_ZN11QColumnView8setModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
-  // proto:  void QColumnView::setSelectionModel(QItemSelectionModel * selectionModel);
-extern void C_ZN11QColumnView17setSelectionModelEP19QItemSelectionModel(void* qthis, void* arg0); // 4
-  // proto:  QList<int> QColumnView::columnWidths();
-extern void C_ZNK11QColumnView12columnWidthsEv(void* qthis); // 4
-  // proto:  const QMetaObject * QColumnView::metaObject();
-extern void C_ZNK11QColumnView10metaObjectEv(void* qthis); // 4
-  // proto:  void QColumnView::QColumnView(QWidget * parent);
-extern void* C_ZN11QColumnViewC2EP7QWidget(void* arg0); // 3
+// extern C begin: 10
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QColumnView)=1
+//  ext block end
+
+//  body block begin
 type QColumnView struct {
-  /*qbase*/ QAbstractItemView;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _updatePreviewWidget QColumnView_updatePreviewWidget_signal;
+	cthis unsafe.Pointer
 }
 
-// selectAll()
-func (this *QColumnView) Selectall(args ...interface{}) () {
-  // selectAll()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QColumnView9selectAllEv
-    // invoke: void selectAll()
-    C.C_ZN11QColumnView9selectAllEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QColumnView", "selectAll", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:54
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QColumnView) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setResizeGripsVisible(_Bool)
-func (this *QColumnView) Setresizegripsvisible(args ...interface{}) () {
-  // setResizeGripsVisible(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QColumnView21setResizeGripsVisibleEb
-    // invoke: void setResizeGripsVisible(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QColumnView21setResizeGripsVisibleEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColumnView", "setResizeGripsVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:58
+// index:0
+// void updatePreviewWidget(const class QModelIndex &)
+func (this *QColumnView) UpdatePreviewWidget(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView19updatePreviewWidgetERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QColumnView()
-func (this *QColumnView) Freeqcolumnview(args ...interface{}) () {
-  // ~QColumnView()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QColumnViewD0Ev
-    // invoke: void ~QColumnView()
-    C.C_ZN11QColumnViewD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QColumnView", "~QColumnView", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:61
+// index:0
+// void QColumnView(class QWidget *)
+func NewQColumnView(parent unsafe.Pointer) *QColumnView {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnViewC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QColumnView{cthis}
 }
 
-// resizeGripsVisible()
-func (this *QColumnView) Resizegripsvisible(args ...interface{}) (ret interface{}) {
-  // resizeGripsVisible()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QColumnView18resizeGripsVisibleEv
-    // invoke: bool resizeGripsVisible()
-    var ret0 = C.C_ZNK11QColumnView18resizeGripsVisibleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColumnView", "resizeGripsVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:62
+// index:0
+// virtual
+// void ~QColumnView()
+func DeleteQColumnView(*QColumnView) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnViewD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// indexAt(const class QPoint &)
-func (this *QColumnView) Indexat(args ...interface{}) (ret interface{}) {
-  // indexAt(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QColumnView7indexAtERK6QPoint
-    // invoke: QModelIndex indexAt(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QColumnView7indexAtERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColumnView", "indexAt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:65
+// index:0
+// virtual
+// QModelIndex indexAt(const class QPoint &)
+func (this *QColumnView) IndexAt(point unsafe.Pointer) {
+	// 0: (, const QPoint & point), (point)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView7indexAtERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, point)
+	gopp.ErrPrint(err, rv)
 }
 
-// previewWidget()
-func (this *QColumnView) Previewwidget(args ...interface{}) (ret interface{}) {
-  // previewWidget()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QColumnView13previewWidgetEv
-    // invoke: QWidget * previewWidget()
-    var ret0 = C.C_ZNK11QColumnView13previewWidgetEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColumnView", "previewWidget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:66
+// index:0
+// virtual
+// void scrollTo(const class QModelIndex &, enum QAbstractItemView::ScrollHint)
+func (this *QColumnView) ScrollTo(index unsafe.Pointer, hint int) {
+	// 0: (, const QModelIndex & index, QAbstractItemView::ScrollHint hint), (index, &hint)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", ffiqt.FFI_TYPE_VOID, this.cthis, index, &hint)
+	gopp.ErrPrint(err, rv)
 }
 
-// visualRect(const class QModelIndex &)
-func (this *QColumnView) Visualrect(args ...interface{}) (ret interface{}) {
-  // visualRect(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QColumnView10visualRectERK11QModelIndex
-    // invoke: QRect visualRect(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QColumnView10visualRectERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColumnView", "visualRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:67
+// index:0
+// virtual
+// QSize sizeHint()
+func (this *QColumnView) SizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setPreviewWidget(class QWidget *)
-func (this *QColumnView) Setpreviewwidget(args ...interface{}) () {
-  // setPreviewWidget(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QColumnView16setPreviewWidgetEP7QWidget
-    // invoke: void setPreviewWidget(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QColumnView16setPreviewWidgetEP7QWidget(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColumnView", "setPreviewWidget", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:68
+// index:0
+// virtual
+// QRect visualRect(const class QModelIndex &)
+func (this *QColumnView) VisualRect(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView10visualRectERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRootIndex(const class QModelIndex &)
-func (this *QColumnView) Setrootindex(args ...interface{}) () {
-  // setRootIndex(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QColumnView12setRootIndexERK11QModelIndex
-    // invoke: void setRootIndex(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QColumnView12setRootIndexERK11QModelIndex(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColumnView", "setRootIndex", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:69
+// index:0
+// virtual
+// void setModel(class QAbstractItemModel *)
+func (this *QColumnView) SetModel(model unsafe.Pointer) {
+	// 0: (, QAbstractItemModel * model), (model)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_VOID, this.cthis, model)
+	gopp.ErrPrint(err, rv)
 }
 
-// sizeHint()
-func (this *QColumnView) Sizehint(args ...interface{}) (ret interface{}) {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QColumnView8sizeHintEv
-    // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK11QColumnView8sizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QColumnView", "sizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:70
+// index:0
+// virtual
+// void setSelectionModel(class QItemSelectionModel *)
+func (this *QColumnView) SetSelectionModel(selectionModel unsafe.Pointer) {
+	// 0: (, QItemSelectionModel * selectionModel), (selectionModel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView17setSelectionModelEP19QItemSelectionModel", ffiqt.FFI_TYPE_VOID, this.cthis, selectionModel)
+	gopp.ErrPrint(err, rv)
 }
 
-// setModel(class QAbstractItemModel *)
-func (this *QColumnView) Setmodel(args ...interface{}) () {
-  // setModel(class QAbstractItemModel *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QAbstractItemModel{}) // "QAbstractItemModel *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QColumnView8setModelEP18QAbstractItemModel
-    // invoke: void setModel(class QAbstractItemModel *)
-    var arg0 = args[0].(*qtcore.QAbstractItemModel).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QColumnView8setModelEP18QAbstractItemModel(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColumnView", "setModel", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:71
+// index:0
+// virtual
+// void setRootIndex(const class QModelIndex &)
+func (this *QColumnView) SetRootIndex(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView12setRootIndexERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// setSelectionModel(class QItemSelectionModel *)
-func (this *QColumnView) Setselectionmodel(args ...interface{}) () {
-  // setSelectionModel(class QItemSelectionModel *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QItemSelectionModel{}) // "QItemSelectionModel *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QColumnView17setSelectionModelEP19QItemSelectionModel
-    // invoke: void setSelectionModel(class QItemSelectionModel *)
-    var arg0 = args[0].(*qtcore.QItemSelectionModel).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QColumnView17setSelectionModelEP19QItemSelectionModel(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QColumnView", "setSelectionModel", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:72
+// index:0
+// virtual
+// void selectAll()
+func (this *QColumnView) SelectAll() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView9selectAllEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// columnWidths()
-func (this *QColumnView) Columnwidths(args ...interface{}) () {
-  // columnWidths()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QColumnView12columnWidthsEv
-    // invoke: QList<int> columnWidths()
-    C.C_ZNK11QColumnView12columnWidthsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QColumnView", "columnWidths", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:75
+// index:0
+// void setResizeGripsVisible(_Bool)
+func (this *QColumnView) SetResizeGripsVisible(visible bool) {
+	// 0: (, bool visible), (&visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView21setResizeGripsVisibleEb", ffiqt.FFI_TYPE_VOID, this.cthis, &visible)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QColumnView) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QColumnView10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QColumnView10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QColumnView", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qcolumnview.h:76
+// index:0
+// bool resizeGripsVisible()
+func (this *QColumnView) ResizeGripsVisible() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView18resizeGripsVisibleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QColumnView(class QWidget *)
-func NewQColumnView(args ...interface{}) *QColumnView {
-  // QColumnView(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QColumnViewC1EP7QWidget
-    // invoke: void QColumnView(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QColumnViewC2EP7QWidget(arg0)
-    return &QColumnView{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QColumnView", "QColumnView", args)
-  }
-
-  return nil // QColumnView{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qcolumnview.h:78
+// index:0
+// QWidget * previewWidget()
+func (this *QColumnView) PreviewWidget() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView13previewWidgetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qcolumnview.h:79
+// index:0
+// void setPreviewWidget(class QWidget *)
+func (this *QColumnView) SetPreviewWidget(widget unsafe.Pointer) {
+	// 0: (, QWidget * widget), (widget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView16setPreviewWidgetEP7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, widget)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qcolumnview.h:82
+// index:0
+// QList<int> columnWidths()
+func (this *QColumnView) ColumnWidths() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView12columnWidthsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

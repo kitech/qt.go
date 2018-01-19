@@ -1,981 +1,442 @@
+//  header block begin
+// /usr/include/qt/QtCore/qtimezone.h
+// #include <qtimezone.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qtimezone.h
-// dst-file: /src/core/qtimezone.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QString QTimeZone::comment();
-extern void* C_ZNK9QTimeZone7commentEv(void* qthis); // 4
-  // proto: static QByteArray QTimeZone::systemTimeZoneId();
-extern void* C_ZN9QTimeZone16systemTimeZoneIdEv(); // 4
-  // proto: static bool QTimeZone::isTimeZoneIdAvailable(const QByteArray & ianaId);
-extern bool C_ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray(void* arg0); // 4
-  // proto:  QString QTimeZone::abbreviation(const QDateTime & atDateTime);
-extern void* C_ZNK9QTimeZone12abbreviationERK9QDateTime(void* qthis, void* arg0); // 4
-  // proto: static QByteArray QTimeZone::windowsIdToDefaultIanaId(const QByteArray & windowsId);
-extern void* C_ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray(void* arg0); // 4
-  // proto:  void QTimeZone::QTimeZone(const QTimeZone & other);
-extern void* C_ZN9QTimeZoneC2ERKS_(void* arg0); // 3
-  // proto:  void QTimeZone::QTimeZone(int offsetSeconds);
-extern void* C_ZN9QTimeZoneC2Ei(int32_t arg0); // 3
-  // proto:  void QTimeZone::QTimeZone();
-extern void* C_ZN9QTimeZoneC2Ev(); // 3
-  // proto:  void QTimeZone::QTimeZone(const QByteArray & ianaId);
-extern void* C_ZN9QTimeZoneC2ERK10QByteArray(void* arg0); // 3
-  // proto:  OffsetDataList QTimeZone::transitions(const QDateTime & fromDateTime, const QDateTime & toDateTime);
-extern void C_ZNK9QTimeZone11transitionsERK9QDateTimeS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QTimeZone::OffsetData QTimeZone::nextTransition(const QDateTime & afterDateTime);
-extern void C_ZNK9QTimeZone14nextTransitionERK9QDateTime(void* qthis, void* arg0); // 4
-  // proto:  QByteArray QTimeZone::id();
-extern void* C_ZNK9QTimeZone2idEv(void* qthis); // 4
-  // proto:  int QTimeZone::offsetFromUtc(const QDateTime & atDateTime);
-extern int32_t C_ZNK9QTimeZone13offsetFromUtcERK9QDateTime(void* qthis, void* arg0); // 4
-  // proto:  QTimeZone::OffsetData QTimeZone::previousTransition(const QDateTime & beforeDateTime);
-extern void C_ZNK9QTimeZone18previousTransitionERK9QDateTime(void* qthis, void* arg0); // 4
-  // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds();
-extern void C_ZN9QTimeZone20availableTimeZoneIdsEv(); // 4
-  // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds(int offsetSeconds);
-extern void C_ZN9QTimeZone20availableTimeZoneIdsEi(int32_t arg0); // 4
-  // proto:  void QTimeZone::~QTimeZone();
-extern void C_ZN9QTimeZoneD2Ev(void* qthis); // 4
-  // proto: static QList<QByteArray> QTimeZone::windowsIdToIanaIds(const QByteArray & windowsId);
-extern void C_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray(void* arg0); // 4
-  // proto: static QTimeZone QTimeZone::systemTimeZone();
-extern void* C_ZN9QTimeZone14systemTimeZoneEv(); // 4
-  // proto:  void QTimeZone::swap(QTimeZone & other);
-extern void C_ZN9QTimeZone4swapERS_(void* qthis, void* arg0); // 2
-  // proto:  QTimeZone::OffsetData QTimeZone::offsetData(const QDateTime & forDateTime);
-extern void C_ZNK9QTimeZone10offsetDataERK9QDateTime(void* qthis, void* arg0); // 4
-  // proto:  int QTimeZone::standardTimeOffset(const QDateTime & atDateTime);
-extern int32_t C_ZNK9QTimeZone18standardTimeOffsetERK9QDateTime(void* qthis, void* arg0); // 4
-  // proto:  bool QTimeZone::isValid();
-extern bool C_ZNK9QTimeZone7isValidEv(void* qthis); // 4
-  // proto:  bool QTimeZone::hasDaylightTime();
-extern bool C_ZNK9QTimeZone15hasDaylightTimeEv(void* qthis); // 4
-  // proto:  int QTimeZone::daylightTimeOffset(const QDateTime & atDateTime);
-extern int32_t C_ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime(void* qthis, void* arg0); // 4
-  // proto: static QTimeZone QTimeZone::utc();
-extern void* C_ZN9QTimeZone3utcEv(); // 4
-  // proto:  bool QTimeZone::hasTransitions();
-extern bool C_ZNK9QTimeZone14hasTransitionsEv(void* qthis); // 4
-  // proto: static QByteArray QTimeZone::ianaIdToWindowsId(const QByteArray & ianaId);
-extern void* C_ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray(void* arg0); // 4
-  // proto:  QLocale::Country QTimeZone::country();
-extern void C_ZNK9QTimeZone7countryEv(void* qthis); // 4
-  // proto:  bool QTimeZone::isDaylightTime(const QDateTime & atDateTime);
-extern bool C_ZNK9QTimeZone14isDaylightTimeERK9QDateTime(void* qthis, void* arg0); // 4
+// extern C begin: 19
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QTimeZone)=1
+//  ext block end
+
+//  body block begin
 type QTimeZone struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// comment()
-func (this *QTimeZone) Comment(args ...interface{}) (ret interface{}) {
-  // comment()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone7commentEv
-    // invoke: QString comment()
-    var ret0 = C.C_ZNK9QTimeZone7commentEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "comment", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:92
+// index:0
+// void QTimeZone()
+func NewQTimeZone() *QTimeZone {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QTimeZone{cthis}
 }
 
-// systemTimeZoneId()
-func (this *QTimeZone) Systemtimezoneid_S(args ...interface{}) (ret interface{}) {
-  // systemTimeZoneId()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeZone16systemTimeZoneIdEv
-    // invoke: QByteArray systemTimeZoneId()
-    var ret0 = C.C_ZN9QTimeZone16systemTimeZoneIdEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "systemTimeZoneId", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:93
+// index:1
+// void QTimeZone(const class QByteArray &)
+func NewQTimeZone_1(ianaId unsafe.Pointer) *QTimeZone {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, ianaId)
+	gopp.ErrPrint(err, rv)
+	return &QTimeZone{cthis}
 }
 
-// isTimeZoneIdAvailable(const class QByteArray &)
-func (this *QTimeZone) Istimezoneidavailable_S(args ...interface{}) (ret interface{}) {
-  // isTimeZoneIdAvailable(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray
-    // invoke: bool isTimeZoneIdAvailable(const class QByteArray &)
-    var arg0 = args[0].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "isTimeZoneIdAvailable", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:94
+// index:2
+// void QTimeZone(int)
+func NewQTimeZone_2(offsetSeconds int) *QTimeZone {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &offsetSeconds)
+	gopp.ErrPrint(err, rv)
+	return &QTimeZone{cthis}
 }
 
-// abbreviation(const class QDateTime &)
-func (this *QTimeZone) Abbreviation(args ...interface{}) (ret interface{}) {
-  // abbreviation(const class QDateTime &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone12abbreviationERK9QDateTime
-    // invoke: QString abbreviation(const class QDateTime &)
-    var arg0 = args[0].(*QDateTime).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTimeZone12abbreviationERK9QDateTime(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "abbreviation", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:95
+// index:3
+// void QTimeZone(const class QByteArray &, int, const class QString &, const class QString &, class QLocale::Country, const class QString &)
+func NewQTimeZone_3(zoneId unsafe.Pointer, offsetSeconds int, name unsafe.Pointer, abbreviation unsafe.Pointer, country int, comment unsafe.Pointer) *QTimeZone {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneC2ERK10QByteArrayiRK7QStringS5_N7QLocale7CountryES5_", ffiqt.FFI_TYPE_VOID, cthis, zoneId, &offsetSeconds, name, abbreviation, &country, comment)
+	gopp.ErrPrint(err, rv)
+	return &QTimeZone{cthis}
 }
 
-// windowsIdToDefaultIanaId(const class QByteArray &)
-func (this *QTimeZone) Windowsidtodefaultianaid_S(args ...interface{}) (ret interface{}) {
-  // windowsIdToDefaultIanaId(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray
-    // invoke: QByteArray windowsIdToDefaultIanaId(const class QByteArray &)
-    var arg0 = args[0].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "windowsIdToDefaultIanaId", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:99
+// index:0
+// void ~QTimeZone()
+func DeleteQTimeZone(*QTimeZone) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// QTimeZone(const class QTimeZone &)
-func NewQTimeZone(args ...interface{}) *QTimeZone {
-  // QTimeZone(const class QTimeZone &)
-  // QTimeZone(int)
-  // QTimeZone()
-  // QTimeZone(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTimeZone{}) // "const QTimeZone &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeZoneC1ERKS_
-    // invoke: void QTimeZone(const class QTimeZone &)
-    var arg0 = args[0].(*QTimeZone).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QTimeZoneC2ERKS_(arg0)
-    return &QTimeZone{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN9QTimeZoneC1Ei
-    // invoke: void QTimeZone(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QTimeZoneC2Ei(arg0)
-    return &QTimeZone{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN9QTimeZoneC1Ev
-    // invoke: void QTimeZone()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QTimeZoneC2Ev()
-    return &QTimeZone{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN9QTimeZoneC1ERK10QByteArray
-    // invoke: void QTimeZone(const class QByteArray &)
-    var arg0 = args[0].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QTimeZoneC2ERK10QByteArray(arg0)
-    return &QTimeZone{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QTimeZone", "QTimeZone", args)
-  }
-
-  return nil // QTimeZone{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qtimezone.h:106
+// index:0
+// inline
+// void swap(class QTimeZone &)
+func (this *QTimeZone) Swap(other unsafe.Pointer) {
+	// 0: (, QTimeZone & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// transitions(const class QDateTime &, const class QDateTime &)
-func (this *QTimeZone) Transitions(args ...interface{}) () {
-  // transitions(const class QDateTime &, const class QDateTime &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
-  vtys[0][1] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone11transitionsERK9QDateTimeS2_
-    // invoke: OffsetDataList transitions(const class QDateTime &, const class QDateTime &)
-    var arg0 = args[0].(*QDateTime).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QDateTime).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZNK9QTimeZone11transitionsERK9QDateTimeS2_(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTimeZone", "transitions", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:112
+// index:0
+// bool isValid()
+func (this *QTimeZone) IsValid() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// nextTransition(const class QDateTime &)
-func (this *QTimeZone) Nexttransition(args ...interface{}) () {
-  // nextTransition(const class QDateTime &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone14nextTransitionERK9QDateTime
-    // invoke: QTimeZone::OffsetData nextTransition(const class QDateTime &)
-    var arg0 = args[0].(*QDateTime).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK9QTimeZone14nextTransitionERK9QDateTime(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeZone", "nextTransition", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:114
+// index:0
+// QByteArray id()
+func (this *QTimeZone) Id() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone2idEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// id()
-func (this *QTimeZone) Id(args ...interface{}) (ret interface{}) {
-  // id()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone2idEv
-    // invoke: QByteArray id()
-    var ret0 = C.C_ZNK9QTimeZone2idEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "id", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:115
+// index:0
+// QLocale::Country country()
+func (this *QTimeZone) Country() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone7countryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// offsetFromUtc(const class QDateTime &)
-func (this *QTimeZone) Offsetfromutc(args ...interface{}) (ret interface{}) {
-  // offsetFromUtc(const class QDateTime &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone13offsetFromUtcERK9QDateTime
-    // invoke: int offsetFromUtc(const class QDateTime &)
-    var arg0 = args[0].(*QDateTime).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTimeZone13offsetFromUtcERK9QDateTime(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "offsetFromUtc", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:116
+// index:0
+// QString comment()
+func (this *QTimeZone) Comment() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone7commentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// previousTransition(const class QDateTime &)
-func (this *QTimeZone) Previoustransition(args ...interface{}) () {
-  // previousTransition(const class QDateTime &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone18previousTransitionERK9QDateTime
-    // invoke: QTimeZone::OffsetData previousTransition(const class QDateTime &)
-    var arg0 = args[0].(*QDateTime).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK9QTimeZone18previousTransitionERK9QDateTime(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeZone", "previousTransition", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:118
+// index:0
+// QString displayName(const class QDateTime &, class QTimeZone::NameType, const class QLocale &)
+func (this *QTimeZone) DisplayName(atDateTime unsafe.Pointer, nameType int, locale unsafe.Pointer) {
+	// 0: (, const QDateTime & atDateTime, QTimeZone::NameType nameType, const QLocale & locale), (atDateTime, &nameType, locale)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone11displayNameERK9QDateTimeNS_8NameTypeERK7QLocale", ffiqt.FFI_TYPE_VOID, this.cthis, atDateTime, &nameType, locale)
+	gopp.ErrPrint(err, rv)
 }
 
-// availableTimeZoneIds()
-func (this *QTimeZone) Availabletimezoneids_S(args ...interface{}) () {
-  // availableTimeZoneIds()
-  // availableTimeZoneIds(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeZone20availableTimeZoneIdsEv
-    // invoke: QList<QByteArray> availableTimeZoneIds()
-    C.C_ZN9QTimeZone20availableTimeZoneIdsEv()
-  case 1:
-    // invoke: _ZN9QTimeZone20availableTimeZoneIdsEi
-    // invoke: QList<QByteArray> availableTimeZoneIds(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTimeZone20availableTimeZoneIdsEi(arg0)
-  default:
-    qtrt.ErrorResolve("QTimeZone", "availableTimeZoneIds", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:121
+// index:1
+// QString displayName(class QTimeZone::TimeType, class QTimeZone::NameType, const class QLocale &)
+func (this *QTimeZone) DisplayName_1(timeType int, nameType int, locale unsafe.Pointer) {
+	// 1: (, QTimeZone::TimeType timeType, QTimeZone::NameType nameType, const QLocale & locale), (&timeType, &nameType, locale)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone11displayNameENS_8TimeTypeENS_8NameTypeERK7QLocale", ffiqt.FFI_TYPE_VOID, this.cthis, &timeType, &nameType, locale)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QTimeZone()
-func (this *QTimeZone) Freeqtimezone(args ...interface{}) () {
-  // ~QTimeZone()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeZoneD0Ev
-    // invoke: void ~QTimeZone()
-    C.C_ZN9QTimeZoneD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTimeZone", "~QTimeZone", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:124
+// index:0
+// QString abbreviation(const class QDateTime &)
+func (this *QTimeZone) Abbreviation(atDateTime unsafe.Pointer) {
+	// 0: (, const QDateTime & atDateTime), (atDateTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone12abbreviationERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, atDateTime)
+	gopp.ErrPrint(err, rv)
 }
 
-// windowsIdToIanaIds(const class QByteArray &)
-func (this *QTimeZone) Windowsidtoianaids_S(args ...interface{}) () {
-  // windowsIdToIanaIds(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray
-    // invoke: QList<QByteArray> windowsIdToIanaIds(const class QByteArray &)
-    var arg0 = args[0].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray(arg0)
-  default:
-    qtrt.ErrorResolve("QTimeZone", "windowsIdToIanaIds", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:126
+// index:0
+// int offsetFromUtc(const class QDateTime &)
+func (this *QTimeZone) OffsetFromUtc(atDateTime unsafe.Pointer) {
+	// 0: (, const QDateTime & atDateTime), (atDateTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone13offsetFromUtcERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, atDateTime)
+	gopp.ErrPrint(err, rv)
 }
 
-// systemTimeZone()
-func (this *QTimeZone) Systemtimezone_S(args ...interface{}) (ret interface{}) {
-  // systemTimeZone()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeZone14systemTimeZoneEv
-    // invoke: QTimeZone systemTimeZone()
-    var ret0 = C.C_ZN9QTimeZone14systemTimeZoneEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTimeZone{}) // "QTimeZone"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "systemTimeZone", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:127
+// index:0
+// int standardTimeOffset(const class QDateTime &)
+func (this *QTimeZone) StandardTimeOffset(atDateTime unsafe.Pointer) {
+	// 0: (, const QDateTime & atDateTime), (atDateTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone18standardTimeOffsetERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, atDateTime)
+	gopp.ErrPrint(err, rv)
 }
 
-// swap(class QTimeZone &)
-func (this *QTimeZone) Swap(args ...interface{}) () {
-  // swap(class QTimeZone &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTimeZone{}) // "QTimeZone &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeZone4swapERS_
-    // invoke: void swap(class QTimeZone &)
-    var arg0 = args[0].(*QTimeZone).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QTimeZone4swapERS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeZone", "swap", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:128
+// index:0
+// int daylightTimeOffset(const class QDateTime &)
+func (this *QTimeZone) DaylightTimeOffset(atDateTime unsafe.Pointer) {
+	// 0: (, const QDateTime & atDateTime), (atDateTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, atDateTime)
+	gopp.ErrPrint(err, rv)
 }
 
-// offsetData(const class QDateTime &)
-func (this *QTimeZone) Offsetdata(args ...interface{}) () {
-  // offsetData(const class QDateTime &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone10offsetDataERK9QDateTime
-    // invoke: QTimeZone::OffsetData offsetData(const class QDateTime &)
-    var arg0 = args[0].(*QDateTime).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK9QTimeZone10offsetDataERK9QDateTime(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTimeZone", "offsetData", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:130
+// index:0
+// bool hasDaylightTime()
+func (this *QTimeZone) HasDaylightTime() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone15hasDaylightTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// standardTimeOffset(const class QDateTime &)
-func (this *QTimeZone) Standardtimeoffset(args ...interface{}) (ret interface{}) {
-  // standardTimeOffset(const class QDateTime &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone18standardTimeOffsetERK9QDateTime
-    // invoke: int standardTimeOffset(const class QDateTime &)
-    var arg0 = args[0].(*QDateTime).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTimeZone18standardTimeOffsetERK9QDateTime(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "standardTimeOffset", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:131
+// index:0
+// bool isDaylightTime(const class QDateTime &)
+func (this *QTimeZone) IsDaylightTime(atDateTime unsafe.Pointer) {
+	// 0: (, const QDateTime & atDateTime), (atDateTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone14isDaylightTimeERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, atDateTime)
+	gopp.ErrPrint(err, rv)
 }
 
-// isValid()
-func (this *QTimeZone) Isvalid(args ...interface{}) (ret interface{}) {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone7isValidEv
-    // invoke: bool isValid()
-    var ret0 = C.C_ZNK9QTimeZone7isValidEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "isValid", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:133
+// index:0
+// QTimeZone::OffsetData offsetData(const class QDateTime &)
+func (this *QTimeZone) OffsetData(forDateTime unsafe.Pointer) {
+	// 0: (, const QDateTime & forDateTime), (forDateTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone10offsetDataERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, forDateTime)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasDaylightTime()
-func (this *QTimeZone) Hasdaylighttime(args ...interface{}) (ret interface{}) {
-  // hasDaylightTime()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone15hasDaylightTimeEv
-    // invoke: bool hasDaylightTime()
-    var ret0 = C.C_ZNK9QTimeZone15hasDaylightTimeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "hasDaylightTime", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:135
+// index:0
+// bool hasTransitions()
+func (this *QTimeZone) HasTransitions() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone14hasTransitionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// daylightTimeOffset(const class QDateTime &)
-func (this *QTimeZone) Daylighttimeoffset(args ...interface{}) (ret interface{}) {
-  // daylightTimeOffset(const class QDateTime &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime
-    // invoke: int daylightTimeOffset(const class QDateTime &)
-    var arg0 = args[0].(*QDateTime).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "daylightTimeOffset", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:136
+// index:0
+// QTimeZone::OffsetData nextTransition(const class QDateTime &)
+func (this *QTimeZone) NextTransition(afterDateTime unsafe.Pointer) {
+	// 0: (, const QDateTime & afterDateTime), (afterDateTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone14nextTransitionERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, afterDateTime)
+	gopp.ErrPrint(err, rv)
 }
 
-// utc()
-func (this *QTimeZone) Utc_S(args ...interface{}) (ret interface{}) {
-  // utc()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeZone3utcEv
-    // invoke: QTimeZone utc()
-    var ret0 = C.C_ZN9QTimeZone3utcEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTimeZone{}) // "QTimeZone"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "utc", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:137
+// index:0
+// QTimeZone::OffsetData previousTransition(const class QDateTime &)
+func (this *QTimeZone) PreviousTransition(beforeDateTime unsafe.Pointer) {
+	// 0: (, const QDateTime & beforeDateTime), (beforeDateTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone18previousTransitionERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, beforeDateTime)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasTransitions()
-func (this *QTimeZone) Hastransitions(args ...interface{}) (ret interface{}) {
-  // hasTransitions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone14hasTransitionsEv
-    // invoke: bool hasTransitions()
-    var ret0 = C.C_ZNK9QTimeZone14hasTransitionsEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "hasTransitions", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:138
+// index:0
+// QTimeZone::OffsetDataList transitions(const class QDateTime &, const class QDateTime &)
+func (this *QTimeZone) Transitions(fromDateTime unsafe.Pointer, toDateTime unsafe.Pointer) {
+	// 0: (, const QDateTime & fromDateTime, const QDateTime & toDateTime), (fromDateTime, toDateTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone11transitionsERK9QDateTimeS2_", ffiqt.FFI_TYPE_VOID, this.cthis, fromDateTime, toDateTime)
+	gopp.ErrPrint(err, rv)
 }
 
-// ianaIdToWindowsId(const class QByteArray &)
-func (this *QTimeZone) Ianaidtowindowsid_S(args ...interface{}) (ret interface{}) {
-  // ianaIdToWindowsId(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray
-    // invoke: QByteArray ianaIdToWindowsId(const class QByteArray &)
-    var arg0 = args[0].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "ianaIdToWindowsId", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:140
+// index:0
+// static
+// QByteArray systemTimeZoneId()
+func (this *QTimeZone) SystemTimeZoneId() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone16systemTimeZoneIdEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_SystemTimeZoneId() {
+	// 0: (), ()
+	var nilthis *QTimeZone
+	nilthis.SystemTimeZoneId()
 }
 
-// country()
-func (this *QTimeZone) Country(args ...interface{}) () {
-  // country()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone7countryEv
-    // invoke: QLocale::Country country()
-    C.C_ZNK9QTimeZone7countryEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTimeZone", "country", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:141
+// index:0
+// static
+// QTimeZone systemTimeZone()
+func (this *QTimeZone) SystemTimeZone() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone14systemTimeZoneEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_SystemTimeZone() {
+	// 0: (), ()
+	var nilthis *QTimeZone
+	nilthis.SystemTimeZone()
 }
 
-// isDaylightTime(const class QDateTime &)
-func (this *QTimeZone) Isdaylighttime(args ...interface{}) (ret interface{}) {
-  // isDaylightTime(const class QDateTime &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QDateTime{}) // "const QDateTime &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QTimeZone14isDaylightTimeERK9QDateTime
-    // invoke: bool isDaylightTime(const class QDateTime &)
-    var arg0 = args[0].(*QDateTime).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTimeZone14isDaylightTimeERK9QDateTime(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTimeZone", "isDaylightTime", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qtimezone.h:142
+// index:0
+// static
+// QTimeZone utc()
+func (this *QTimeZone) Utc() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone3utcEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_Utc() {
+	// 0: (), ()
+	var nilthis *QTimeZone
+	nilthis.Utc()
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qtimezone.h:144
+// index:0
+// static
+// bool isTimeZoneIdAvailable(const class QByteArray &)
+func (this *QTimeZone) IsTimeZoneIdAvailable(ianaId unsafe.Pointer) {
+	// 0: (const QByteArray & ianaId), (ianaId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_IsTimeZoneIdAvailable(ianaId unsafe.Pointer) {
+	// 0: (const QByteArray & ianaId), (ianaId)
+	var nilthis *QTimeZone
+	nilthis.IsTimeZoneIdAvailable(ianaId)
+}
 
+// /usr/include/qt/QtCore/qtimezone.h:146
+// index:0
+// static
+// QList<QByteArray> availableTimeZoneIds()
+func (this *QTimeZone) AvailableTimeZoneIds() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone20availableTimeZoneIdsEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_AvailableTimeZoneIds() {
+	// 0: (), ()
+	var nilthis *QTimeZone
+	nilthis.AvailableTimeZoneIds()
+}
+
+// /usr/include/qt/QtCore/qtimezone.h:147
+// index:1
+// static
+// QList<QByteArray> availableTimeZoneIds(class QLocale::Country)
+func (this *QTimeZone) AvailableTimeZoneIds_1(country int) {
+	// 1: (QLocale::Country country), (country)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone20availableTimeZoneIdsEN7QLocale7CountryE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_AvailableTimeZoneIds_1(country int) {
+	// 1: (QLocale::Country country), (country)
+	var nilthis *QTimeZone
+	nilthis.AvailableTimeZoneIds_1(country)
+}
+
+// /usr/include/qt/QtCore/qtimezone.h:148
+// index:2
+// static
+// QList<QByteArray> availableTimeZoneIds(int)
+func (this *QTimeZone) AvailableTimeZoneIds_2(offsetSeconds int) {
+	// 2: (int offsetSeconds), (offsetSeconds)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone20availableTimeZoneIdsEi", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_AvailableTimeZoneIds_2(offsetSeconds int) {
+	// 2: (int offsetSeconds), (offsetSeconds)
+	var nilthis *QTimeZone
+	nilthis.AvailableTimeZoneIds_2(offsetSeconds)
+}
+
+// /usr/include/qt/QtCore/qtimezone.h:150
+// index:0
+// static
+// QByteArray ianaIdToWindowsId(const class QByteArray &)
+func (this *QTimeZone) IanaIdToWindowsId(ianaId unsafe.Pointer) {
+	// 0: (const QByteArray & ianaId), (ianaId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_IanaIdToWindowsId(ianaId unsafe.Pointer) {
+	// 0: (const QByteArray & ianaId), (ianaId)
+	var nilthis *QTimeZone
+	nilthis.IanaIdToWindowsId(ianaId)
+}
+
+// /usr/include/qt/QtCore/qtimezone.h:151
+// index:0
+// static
+// QByteArray windowsIdToDefaultIanaId(const class QByteArray &)
+func (this *QTimeZone) WindowsIdToDefaultIanaId(windowsId unsafe.Pointer) {
+	// 0: (const QByteArray & windowsId), (windowsId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_WindowsIdToDefaultIanaId(windowsId unsafe.Pointer) {
+	// 0: (const QByteArray & windowsId), (windowsId)
+	var nilthis *QTimeZone
+	nilthis.WindowsIdToDefaultIanaId(windowsId)
+}
+
+// /usr/include/qt/QtCore/qtimezone.h:152
+// index:1
+// static
+// QByteArray windowsIdToDefaultIanaId(const class QByteArray &, class QLocale::Country)
+func (this *QTimeZone) WindowsIdToDefaultIanaId_1(windowsId unsafe.Pointer, country int) {
+	// 1: (const QByteArray & windowsId, QLocale::Country country), (windowsId, country)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArrayN7QLocale7CountryE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_WindowsIdToDefaultIanaId_1(windowsId unsafe.Pointer, country int) {
+	// 1: (const QByteArray & windowsId, QLocale::Country country), (windowsId, country)
+	var nilthis *QTimeZone
+	nilthis.WindowsIdToDefaultIanaId_1(windowsId, country)
+}
+
+// /usr/include/qt/QtCore/qtimezone.h:154
+// index:0
+// static
+// QList<QByteArray> windowsIdToIanaIds(const class QByteArray &)
+func (this *QTimeZone) WindowsIdToIanaIds(windowsId unsafe.Pointer) {
+	// 0: (const QByteArray & windowsId), (windowsId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_WindowsIdToIanaIds(windowsId unsafe.Pointer) {
+	// 0: (const QByteArray & windowsId), (windowsId)
+	var nilthis *QTimeZone
+	nilthis.WindowsIdToIanaIds(windowsId)
+}
+
+// /usr/include/qt/QtCore/qtimezone.h:155
+// index:1
+// static
+// QList<QByteArray> windowsIdToIanaIds(const class QByteArray &, class QLocale::Country)
+func (this *QTimeZone) WindowsIdToIanaIds_1(windowsId unsafe.Pointer, country int) {
+	// 1: (const QByteArray & windowsId, QLocale::Country country), (windowsId, country)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArrayN7QLocale7CountryE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTimeZone_WindowsIdToIanaIds_1(windowsId unsafe.Pointer, country int) {
+	// 1: (const QByteArray & windowsId, QLocale::Country country), (windowsId, country)
+	var nilthis *QTimeZone
+	nilthis.WindowsIdToIanaIds_1(windowsId, country)
+}
+
+//  body block end

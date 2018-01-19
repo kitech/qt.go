@@ -1,775 +1,343 @@
+//  header block begin
+// /usr/include/qt/QtGui/qregion.h
+// #include <qregion.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qregion.h
-// dst-file: /src/gui/qregion.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QRect QRegion::boundingRect();
-extern void* C_ZNK7QRegion12boundingRectEv(void* qthis); // 4
-  // proto:  void QRegion::QRegion(const QBitmap & bitmap);
-extern void* C_ZN7QRegionC2ERK7QBitmap(void* arg0); // 3
-  // proto:  void QRegion::QRegion(const QRegion & region);
-extern void* C_ZN7QRegionC2ERKS_(void* arg0); // 3
-  // proto:  void QRegion::QRegion();
-extern void* C_ZN7QRegionC2Ev(); // 3
-  // proto:  QRegion QRegion::xored(const QRegion & r);
-extern void* C_ZNK7QRegion5xoredERKS_(void* qthis, void* arg0); // 4
-  // proto:  bool QRegion::intersects(const QRect & r);
-extern bool C_ZNK7QRegion10intersectsERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  bool QRegion::intersects(const QRegion & r);
-extern bool C_ZNK7QRegion10intersectsERKS_(void* qthis, void* arg0); // 4
-  // proto:  QRegion QRegion::united(const QRegion & r);
-extern void* C_ZNK7QRegion6unitedERKS_(void* qthis, void* arg0); // 4
-  // proto:  QRegion QRegion::united(const QRect & r);
-extern void* C_ZNK7QRegion6unitedERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  QRegion QRegion::intersected(const QRegion & r);
-extern void* C_ZNK7QRegion11intersectedERKS_(void* qthis, void* arg0); // 4
-  // proto:  QRegion QRegion::intersected(const QRect & r);
-extern void* C_ZNK7QRegion11intersectedERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  bool QRegion::contains(const QPoint & p);
-extern bool C_ZNK7QRegion8containsERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  bool QRegion::contains(const QRect & r);
-extern bool C_ZNK7QRegion8containsERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  bool QRegion::isEmpty();
-extern bool C_ZNK7QRegion7isEmptyEv(void* qthis); // 4
-  // proto:  void QRegion::swap(QRegion & other);
-extern void C_ZN7QRegion4swapERS_(void* qthis, void* arg0); // 2
-  // proto:  void QRegion::translate(int dx, int dy);
-extern void C_ZN7QRegion9translateEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QRegion::translate(const QPoint & p);
-extern void C_ZN7QRegion9translateERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  void QRegion::~QRegion();
-extern void C_ZN7QRegionD2Ev(void* qthis); // 4
-  // proto:  int QRegion::rectCount();
-extern int32_t C_ZNK7QRegion9rectCountEv(void* qthis); // 4
-  // proto:  QVector<QRect> QRegion::rects();
-extern void C_ZNK7QRegion5rectsEv(void* qthis); // 4
-  // proto:  void QRegion::setRects(const QRect * rect, int num);
-extern void C_ZN7QRegion8setRectsEPK5QRecti(void* qthis, void* arg0, int32_t arg1); // 4
-  // proto:  QRegion QRegion::subtracted(const QRegion & r);
-extern void* C_ZNK7QRegion10subtractedERKS_(void* qthis, void* arg0); // 4
-  // proto:  bool QRegion::isNull();
-extern bool C_ZNK7QRegion6isNullEv(void* qthis); // 4
-  // proto:  QRegion QRegion::translated(int dx, int dy);
-extern void* C_ZNK7QRegion10translatedEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  QRegion QRegion::translated(const QPoint & p);
-extern void* C_ZNK7QRegion10translatedERK6QPoint(void* qthis, void* arg0); // 2
+// extern C begin: 104
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QRegion)=8
+//  ext block end
+
+//  body block begin
 type QRegion struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// boundingRect()
-func (this *QRegion) Boundingrect(args ...interface{}) (ret interface{}) {
-  // boundingRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion12boundingRectEv
-    // invoke: QRect boundingRect()
-    var ret0 = C.C_ZNK7QRegion12boundingRectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRegion", "boundingRect", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:67
+// index:0
+// void QRegion()
+func NewQRegion() *QRegion {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QRegion{cthis}
 }
 
-// QRegion(const class QBitmap &)
-func NewQRegion(args ...interface{}) *QRegion {
-  // QRegion(const class QBitmap &)
-  // QRegion(const class QRegion &)
-  // QRegion()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QBitmap{}) // "const QBitmap &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
-  vtys[2] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QRegionC1ERK7QBitmap
-    // invoke: void QRegion(const class QBitmap &)
-    var arg0 = args[0].(*QBitmap).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN7QRegionC2ERK7QBitmap(arg0)
-    return &QRegion{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN7QRegionC1ERKS_
-    // invoke: void QRegion(const class QRegion &)
-    var arg0 = args[0].(*QRegion).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN7QRegionC2ERKS_(arg0)
-    return &QRegion{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN7QRegionC1Ev
-    // invoke: void QRegion()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN7QRegionC2Ev()
-    return &QRegion{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QRegion", "QRegion", args)
-  }
-
-  return nil // QRegion{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qregion.h:68
+// index:1
+// void QRegion(int, int, int, int, enum QRegion::RegionType)
+func NewQRegion_1(x int, y int, w int, h int, t int) *QRegion {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2EiiiiNS_10RegionTypeE", ffiqt.FFI_TYPE_VOID, cthis, &x, &y, &w, &h, &t)
+	gopp.ErrPrint(err, rv)
+	return &QRegion{cthis}
 }
 
-// xored(const class QRegion &)
-func (this *QRegion) Xored(args ...interface{}) (ret interface{}) {
-  // xored(const class QRegion &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion5xoredERKS_
-    // invoke: QRegion xored(const class QRegion &)
-    var arg0 = args[0].(*QRegion).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegion5xoredERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRegion", "xored", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:69
+// index:2
+// void QRegion(const class QRect &, enum QRegion::RegionType)
+func NewQRegion_2(r unsafe.Pointer, t int) *QRegion {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK5QRectNS_10RegionTypeE", ffiqt.FFI_TYPE_VOID, cthis, r, &t)
+	gopp.ErrPrint(err, rv)
+	return &QRegion{cthis}
 }
 
-// intersects(const class QRect &)
-func (this *QRegion) Intersects(args ...interface{}) (ret interface{}) {
-  // intersects(const class QRect &)
-  // intersects(const class QRegion &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion10intersectsERK5QRect
-    // invoke: bool intersects(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegion10intersectsERK5QRect(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK7QRegion10intersectsERKS_
-    // invoke: bool intersects(const class QRegion &)
-    var arg0 = args[0].(*QRegion).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegion10intersectsERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRegion", "intersects", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:70
+// index:3
+// void QRegion(const class QPolygon &, Qt::FillRule)
+func NewQRegion_3(pa unsafe.Pointer, fillRule int) *QRegion {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK8QPolygonN2Qt8FillRuleE", ffiqt.FFI_TYPE_VOID, cthis, pa, &fillRule)
+	gopp.ErrPrint(err, rv)
+	return &QRegion{cthis}
 }
 
-// united(const class QRegion &)
-func (this *QRegion) United(args ...interface{}) (ret interface{}) {
-  // united(const class QRegion &)
-  // united(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion6unitedERKS_
-    // invoke: QRegion united(const class QRegion &)
-    var arg0 = args[0].(*QRegion).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegion6unitedERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK7QRegion6unitedERK5QRect
-    // invoke: QRegion united(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegion6unitedERK5QRect(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRegion", "united", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:74
+// index:4
+// void QRegion(const class QBitmap &)
+func NewQRegion_4(bitmap unsafe.Pointer) *QRegion {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK7QBitmap", ffiqt.FFI_TYPE_VOID, cthis, bitmap)
+	gopp.ErrPrint(err, rv)
+	return &QRegion{cthis}
 }
 
-// intersected(const class QRegion &)
-func (this *QRegion) Intersected(args ...interface{}) (ret interface{}) {
-  // intersected(const class QRegion &)
-  // intersected(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion11intersectedERKS_
-    // invoke: QRegion intersected(const class QRegion &)
-    var arg0 = args[0].(*QRegion).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegion11intersectedERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK7QRegion11intersectedERK5QRect
-    // invoke: QRegion intersected(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegion11intersectedERK5QRect(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRegion", "intersected", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:75
+// index:0
+// void ~QRegion()
+func DeleteQRegion(*QRegion) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// contains(const class QPoint &)
-func (this *QRegion) Contains(args ...interface{}) (ret interface{}) {
-  // contains(const class QPoint &)
-  // contains(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion8containsERK6QPoint
-    // invoke: bool contains(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegion8containsERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK7QRegion8containsERK5QRect
-    // invoke: bool contains(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegion8containsERK5QRect(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRegion", "contains", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:81
+// index:0
+// inline
+// void swap(class QRegion &)
+func (this *QRegion) Swap(other unsafe.Pointer) {
+	// 0: (, QRegion & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// isEmpty()
-func (this *QRegion) Isempty(args ...interface{}) (ret interface{}) {
-  // isEmpty()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion7isEmptyEv
-    // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK7QRegion7isEmptyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRegion", "isEmpty", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:82
+// index:0
+// bool isEmpty()
+func (this *QRegion) IsEmpty() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// swap(class QRegion &)
-func (this *QRegion) Swap(args ...interface{}) () {
-  // swap(class QRegion &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegion{}) // "QRegion &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QRegion4swapERS_
-    // invoke: void swap(class QRegion &)
-    var arg0 = args[0].(*QRegion).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QRegion4swapERS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRegion", "swap", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:83
+// index:0
+// bool isNull()
+func (this *QRegion) IsNull() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// translate(int, int)
-func (this *QRegion) Translate(args ...interface{}) () {
-  // translate(int, int)
-  // translate(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QRegion9translateEii
-    // invoke: void translate(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN7QRegion9translateEii(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZN7QRegion9translateERK6QPoint
-    // invoke: void translate(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QRegion9translateERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRegion", "translate", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:88
+// index:0
+// QRegion::const_iterator begin()
+func (this *QRegion) Begin() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion5beginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QRegion()
-func (this *QRegion) Freeqregion(args ...interface{}) () {
-  // ~QRegion()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QRegionD0Ev
-    // invoke: void ~QRegion()
-    C.C_ZN7QRegionD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QRegion", "~QRegion", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:89
+// index:0
+// inline
+// QRegion::const_iterator cbegin()
+func (this *QRegion) Cbegin() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6cbeginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// rectCount()
-func (this *QRegion) Rectcount(args ...interface{}) (ret interface{}) {
-  // rectCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion9rectCountEv
-    // invoke: int rectCount()
-    var ret0 = C.C_ZNK7QRegion9rectCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRegion", "rectCount", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:90
+// index:0
+// QRegion::const_iterator end()
+func (this *QRegion) End() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion3endEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// rects()
-func (this *QRegion) Rects(args ...interface{}) () {
-  // rects()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion5rectsEv
-    // invoke: QVector<QRect> rects()
-    C.C_ZNK7QRegion5rectsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QRegion", "rects", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:91
+// index:0
+// inline
+// QRegion::const_iterator cend()
+func (this *QRegion) Cend() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion4cendEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRects(const class QRect *, int)
-func (this *QRegion) Setrects(args ...interface{}) () {
-  // setRects(const class QRect *, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect *"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QRegion8setRectsEPK5QRecti
-    // invoke: void setRects(const class QRect *, int)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN7QRegion8setRectsEPK5QRecti(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QRegion", "setRects", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:97
+// index:0
+// bool contains(const class QPoint &)
+func (this *QRegion) Contains(p unsafe.Pointer) {
+	// 0: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion8containsERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
 }
 
-// subtracted(const class QRegion &)
-func (this *QRegion) Subtracted(args ...interface{}) (ret interface{}) {
-  // subtracted(const class QRegion &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion10subtractedERKS_
-    // invoke: QRegion subtracted(const class QRegion &)
-    var arg0 = args[0].(*QRegion).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegion10subtractedERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRegion", "subtracted", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:98
+// index:1
+// bool contains(const class QRect &)
+func (this *QRegion) Contains_1(r unsafe.Pointer) {
+	// 1: (, const QRect & r), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion8containsERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	gopp.ErrPrint(err, rv)
 }
 
-// isNull()
-func (this *QRegion) Isnull(args ...interface{}) (ret interface{}) {
-  // isNull()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion6isNullEv
-    // invoke: bool isNull()
-    var ret0 = C.C_ZNK7QRegion6isNullEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRegion", "isNull", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:100
+// index:0
+// void translate(int, int)
+func (this *QRegion) Translate(dx int, dy int) {
+	// 0: (, int dx, int dy), (&dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion9translateEii", ffiqt.FFI_TYPE_VOID, this.cthis, &dx, &dy)
+	gopp.ErrPrint(err, rv)
 }
 
-// translated(int, int)
-func (this *QRegion) Translated(args ...interface{}) (ret interface{}) {
-  // translated(int, int)
-  // translated(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegion10translatedEii
-    // invoke: QRegion translated(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK7QRegion10translatedEii(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK7QRegion10translatedERK6QPoint
-    // invoke: QRegion translated(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegion10translatedERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QRegion", "translated", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qregion.h:101
+// index:1
+// inline
+// void translate(const class QPoint &)
+func (this *QRegion) Translate_1(p unsafe.Pointer) {
+	// 1: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion9translateERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qregion.h:102
+// index:0
+// QRegion translated(int, int)
+func (this *QRegion) Translated(dx int, dy int) {
+	// 0: (, int dx, int dy), (&dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10translatedEii", ffiqt.FFI_TYPE_VOID, this.cthis, &dx, &dy)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qregion.h:103
+// index:1
+// inline
+// QRegion translated(const class QPoint &)
+func (this *QRegion) Translated_1(p unsafe.Pointer) {
+	// 1: (, const QPoint & p), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10translatedERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:105
+// index:0
+// QRegion united(const class QRegion &)
+func (this *QRegion) United(r unsafe.Pointer) {
+	// 0: (, const QRegion & r), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:106
+// index:1
+// QRegion united(const class QRect &)
+func (this *QRegion) United_1(r unsafe.Pointer) {
+	// 1: (, const QRect & r), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:107
+// index:0
+// QRegion intersected(const class QRegion &)
+func (this *QRegion) Intersected(r unsafe.Pointer) {
+	// 0: (, const QRegion & r), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:108
+// index:1
+// QRegion intersected(const class QRect &)
+func (this *QRegion) Intersected_1(r unsafe.Pointer) {
+	// 1: (, const QRect & r), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:109
+// index:0
+// QRegion subtracted(const class QRegion &)
+func (this *QRegion) Subtracted(r unsafe.Pointer) {
+	// 0: (, const QRegion & r), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10subtractedERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:110
+// index:0
+// QRegion xored(const class QRegion &)
+func (this *QRegion) Xored(r unsafe.Pointer) {
+	// 0: (, const QRegion & r), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion5xoredERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:121
+// index:0
+// bool intersects(const class QRegion &)
+func (this *QRegion) Intersects(r unsafe.Pointer) {
+	// 0: (, const QRegion & r), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10intersectsERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:122
+// index:1
+// bool intersects(const class QRect &)
+func (this *QRegion) Intersects_1(r unsafe.Pointer) {
+	// 1: (, const QRect & r), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10intersectsERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:124
+// index:0
+// QRect boundingRect()
+func (this *QRegion) BoundingRect() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion12boundingRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:125
+// index:0
+// QVector<QRect> rects()
+func (this *QRegion) Rects() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion5rectsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:126
+// index:0
+// void setRects(const class QRect *, int)
+func (this *QRegion) SetRects(rect unsafe.Pointer, num int) {
+	// 0: (, const QRect * rect, int num), (rect, &num)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion8setRectsEPK5QRecti", ffiqt.FFI_TYPE_VOID, this.cthis, rect, &num)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qregion.h:127
+// index:0
+// int rectCount()
+func (this *QRegion) RectCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion9rectCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

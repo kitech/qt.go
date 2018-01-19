@@ -1,11 +1,6 @@
 package qtrt
 
-import (
-	"log"
-	"reflect"
-	"testing"
-)
-
+/*
 func OverloadInvoke(args []interface{}, fs []interface{}) []interface{} {
 	var vtys = make(map[int32]map[int32]reflect.Type, 0)
 	for idx := 0; idx < len(fs); idx++ {
@@ -52,3 +47,5 @@ func Test_do1(t *testing.T) {
 	DemoOverload("1")
 	t.Log("do1 ok")
 }
+
+*/

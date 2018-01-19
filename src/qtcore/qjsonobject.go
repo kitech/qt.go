@@ -1,659 +1,333 @@
+//  header block begin
+// /usr/include/qt/QtCore/qjsonobject.h
+// #include <qjsonobject.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qjsonobject.h
-// dst-file: /src/core/qjsonobject.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QJsonObject::const_iterator QJsonObject::constBegin();
-extern void C_ZNK11QJsonObject10constBeginEv(void* qthis); // 2
-  // proto:  QJsonValue QJsonObject::value(const QString & key);
-extern void C_ZNK11QJsonObject5valueERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QJsonObject::const_iterator QJsonObject::constFind(const QString & key);
-extern void C_ZNK11QJsonObject9constFindERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QJsonObject::iterator QJsonObject::find(const QString & key);
-extern void C_ZN11QJsonObject4findERK7QString(void* qthis, void* arg0); // 4
-  // proto:  int QJsonObject::size();
-extern int32_t C_ZNK11QJsonObject4sizeEv(void* qthis); // 4
-  // proto:  QJsonObject::iterator QJsonObject::end();
-extern void C_ZN11QJsonObject3endEv(void* qthis); // 2
-  // proto:  bool QJsonObject::contains(const QString & key);
-extern bool C_ZNK11QJsonObject8containsERK7QString(void* qthis, void* arg0); // 4
-  // proto:  bool QJsonObject::isEmpty();
-extern bool C_ZNK11QJsonObject7isEmptyEv(void* qthis); // 4
-  // proto:  QJsonValue QJsonObject::take(const QString & key);
-extern void C_ZN11QJsonObject4takeERK7QString(void* qthis, void* arg0); // 4
-  // proto:  bool QJsonObject::empty();
-extern bool C_ZNK11QJsonObject5emptyEv(void* qthis); // 2
-  // proto:  QJsonObject::iterator QJsonObject::begin();
-extern void C_ZN11QJsonObject5beginEv(void* qthis); // 2
-  // proto:  QVariantHash QJsonObject::toVariantHash();
-extern void C_ZNK11QJsonObject13toVariantHashEv(void* qthis); // 4
-  // proto:  QStringList QJsonObject::keys();
-extern void C_ZNK11QJsonObject4keysEv(void* qthis); // 4
-  // proto:  void QJsonObject::~QJsonObject();
-extern void C_ZN11QJsonObjectD2Ev(void* qthis); // 4
-  // proto:  QVariantMap QJsonObject::toVariantMap();
-extern void C_ZNK11QJsonObject12toVariantMapEv(void* qthis); // 4
-  // proto:  int QJsonObject::count();
-extern int32_t C_ZNK11QJsonObject5countEv(void* qthis); // 2
-  // proto:  void QJsonObject::QJsonObject();
-extern void* C_ZN11QJsonObjectC2Ev(); // 3
-  // proto:  void QJsonObject::remove(const QString & key);
-extern void C_ZN11QJsonObject6removeERK7QString(void* qthis, void* arg0); // 4
-  // proto:  int QJsonObject::length();
-extern int32_t C_ZNK11QJsonObject6lengthEv(void* qthis); // 2
-  // proto:  QJsonObject::const_iterator QJsonObject::constEnd();
-extern void C_ZNK11QJsonObject8constEndEv(void* qthis); // 2
+// extern C begin: 22
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QJsonObject)=16
+//  ext block end
+
+//  body block begin
 type QJsonObject struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// constBegin()
-func (this *QJsonObject) Constbegin(args ...interface{}) () {
-  // constBegin()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject10constBeginEv
-    // invoke: QJsonObject::const_iterator constBegin()
-    C.C_ZNK11QJsonObject10constBeginEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "constBegin", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:61
+// index:0
+// void QJsonObject()
+func NewQJsonObject() *QJsonObject {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObjectC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QJsonObject{cthis}
 }
 
-// value(const class QString &)
-func (this *QJsonObject) Value(args ...interface{}) () {
-  // value(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject5valueERK7QString
-    // invoke: QJsonValue value(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK11QJsonObject5valueERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "value", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:72
+// index:0
+// void ~QJsonObject()
+func DeleteQJsonObject(*QJsonObject) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObjectD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// constFind(const class QString &)
-func (this *QJsonObject) Constfind(args ...interface{}) () {
-  // constFind(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject9constFindERK7QString
-    // invoke: QJsonObject::const_iterator constFind(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK11QJsonObject9constFindERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "constFind", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:90
+// index:0
+// inline
+// void swap(class QJsonObject &)
+func (this *QJsonObject) Swap(other unsafe.Pointer) {
+	// 0: (, QJsonObject & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObject4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// find(const class QString &)
-func (this *QJsonObject) Find(args ...interface{}) () {
-  // find(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QJsonObject4findERK7QString
-    // invoke: QJsonObject::iterator find(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QJsonObject4findERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "find", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:97
+// index:0
+// QVariantMap toVariantMap()
+func (this *QJsonObject) ToVariantMap() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject12toVariantMapEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// size()
-func (this *QJsonObject) Size(args ...interface{}) (ret interface{}) {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject4sizeEv
-    // invoke: int size()
-    var ret0 = C.C_ZNK11QJsonObject4sizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QJsonObject", "size", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:99
+// index:0
+// QVariantHash toVariantHash()
+func (this *QJsonObject) ToVariantHash() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject13toVariantHashEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// end()
-func (this *QJsonObject) End(args ...interface{}) () {
-  // end()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QJsonObject3endEv
-    // invoke: QJsonObject::iterator end()
-    C.C_ZN11QJsonObject3endEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "end", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:101
+// index:0
+// QStringList keys()
+func (this *QJsonObject) Keys() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject4keysEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// contains(const class QString &)
-func (this *QJsonObject) Contains(args ...interface{}) (ret interface{}) {
-  // contains(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject8containsERK7QString
-    // invoke: bool contains(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QJsonObject8containsERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QJsonObject", "contains", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:102
+// index:0
+// int size()
+func (this *QJsonObject) Size() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isEmpty()
-func (this *QJsonObject) Isempty(args ...interface{}) (ret interface{}) {
-  // isEmpty()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject7isEmptyEv
-    // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK11QJsonObject7isEmptyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QJsonObject", "isEmpty", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:103
+// index:0
+// inline
+// int count()
+func (this *QJsonObject) Count() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject5countEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// take(const class QString &)
-func (this *QJsonObject) Take(args ...interface{}) () {
-  // take(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QJsonObject4takeERK7QString
-    // invoke: QJsonValue take(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QJsonObject4takeERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "take", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:104
+// index:0
+// inline
+// int length()
+func (this *QJsonObject) Length() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject6lengthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// empty()
-func (this *QJsonObject) Empty(args ...interface{}) (ret interface{}) {
-  // empty()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject5emptyEv
-    // invoke: bool empty()
-    var ret0 = C.C_ZNK11QJsonObject5emptyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QJsonObject", "empty", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:105
+// index:0
+// bool isEmpty()
+func (this *QJsonObject) IsEmpty() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// begin()
-func (this *QJsonObject) Begin(args ...interface{}) () {
-  // begin()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QJsonObject5beginEv
-    // invoke: QJsonObject::iterator begin()
-    C.C_ZN11QJsonObject5beginEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "begin", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:107
+// index:0
+// QJsonValue value(const class QString &)
+func (this *QJsonObject) Value(key unsafe.Pointer) {
+	// 0: (, const QString & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject5valueERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
 }
 
-// toVariantHash()
-func (this *QJsonObject) Tovarianthash(args ...interface{}) () {
-  // toVariantHash()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject13toVariantHashEv
-    // invoke: QVariantHash toVariantHash()
-    C.C_ZNK11QJsonObject13toVariantHashEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "toVariantHash", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:108
+// index:1
+// QJsonValue value(class QLatin1String)
+func (this *QJsonObject) Value_1(key unsafe.Pointer) {
+	// 1: (, QLatin1String key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject5valueE13QLatin1String", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
 }
 
-// keys()
-func (this *QJsonObject) Keys(args ...interface{}) () {
-  // keys()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject4keysEv
-    // invoke: QStringList keys()
-    C.C_ZNK11QJsonObject4keysEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "keys", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:114
+// index:0
+// void remove(const class QString &)
+func (this *QJsonObject) Remove(key unsafe.Pointer) {
+	// 0: (, const QString & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObject6removeERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QJsonObject()
-func (this *QJsonObject) Freeqjsonobject(args ...interface{}) () {
-  // ~QJsonObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QJsonObjectD0Ev
-    // invoke: void ~QJsonObject()
-    C.C_ZN11QJsonObjectD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "~QJsonObject", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:115
+// index:0
+// QJsonValue take(const class QString &)
+func (this *QJsonObject) Take(key unsafe.Pointer) {
+	// 0: (, const QString & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObject4takeERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
 }
 
-// toVariantMap()
-func (this *QJsonObject) Tovariantmap(args ...interface{}) () {
-  // toVariantMap()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject12toVariantMapEv
-    // invoke: QVariantMap toVariantMap()
-    C.C_ZNK11QJsonObject12toVariantMapEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "toVariantMap", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:116
+// index:0
+// bool contains(const class QString &)
+func (this *QJsonObject) Contains(key unsafe.Pointer) {
+	// 0: (, const QString & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject8containsERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
 }
 
-// count()
-func (this *QJsonObject) Count(args ...interface{}) (ret interface{}) {
-  // count()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject5countEv
-    // invoke: int count()
-    var ret0 = C.C_ZNK11QJsonObject5countEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QJsonObject", "count", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:117
+// index:1
+// bool contains(class QLatin1String)
+func (this *QJsonObject) Contains_1(key unsafe.Pointer) {
+	// 1: (, QLatin1String key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject8containsE13QLatin1String", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
 }
 
-// QJsonObject()
-func NewQJsonObject(args ...interface{}) *QJsonObject {
-  // QJsonObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QJsonObjectC1Ev
-    // invoke: void QJsonObject()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QJsonObjectC2Ev()
-    return &QJsonObject{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QJsonObject", "QJsonObject", args)
-  }
-
-  return nil // QJsonObject{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qjsonobject.h:214
+// index:0
+// inline
+// QJsonObject::iterator begin()
+func (this *QJsonObject) Begin() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObject5beginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// remove(const class QString &)
-func (this *QJsonObject) Remove(args ...interface{}) () {
-  // remove(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QJsonObject6removeERK7QString
-    // invoke: void remove(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QJsonObject6removeERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "remove", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:215
+// index:1
+// inline
+// QJsonObject::const_iterator begin()
+func (this *QJsonObject) Begin_1() {
+	// 1: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject5beginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// length()
-func (this *QJsonObject) Length(args ...interface{}) (ret interface{}) {
-  // length()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject6lengthEv
-    // invoke: int length()
-    var ret0 = C.C_ZNK11QJsonObject6lengthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QJsonObject", "length", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:216
+// index:0
+// inline
+// QJsonObject::const_iterator constBegin()
+func (this *QJsonObject) ConstBegin() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject10constBeginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// constEnd()
-func (this *QJsonObject) Constend(args ...interface{}) () {
-  // constEnd()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QJsonObject8constEndEv
-    // invoke: QJsonObject::const_iterator constEnd()
-    C.C_ZNK11QJsonObject8constEndEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonObject", "constEnd", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qjsonobject.h:217
+// index:0
+// inline
+// QJsonObject::iterator end()
+func (this *QJsonObject) End() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObject3endEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qjsonobject.h:218
+// index:1
+// inline
+// QJsonObject::const_iterator end()
+func (this *QJsonObject) End_1() {
+	// 1: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject3endEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qjsonobject.h:219
+// index:0
+// inline
+// QJsonObject::const_iterator constEnd()
+func (this *QJsonObject) ConstEnd() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject8constEndEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qjsonobject.h:220
+// index:0
+// QJsonObject::iterator erase(class QJsonObject::iterator)
+func (this *QJsonObject) Erase(it unsafe.Pointer) {
+	// 0: (, QJsonObject::iterator it), (it)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObject5eraseENS_8iteratorE", ffiqt.FFI_TYPE_VOID, this.cthis, it)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qjsonobject.h:225
+// index:0
+// QJsonObject::iterator find(const class QString &)
+func (this *QJsonObject) Find(key unsafe.Pointer) {
+	// 0: (, const QString & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObject4findERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qjsonobject.h:226
+// index:1
+// QJsonObject::iterator find(class QLatin1String)
+func (this *QJsonObject) Find_1(key unsafe.Pointer) {
+	// 1: (, QLatin1String key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObject4findE13QLatin1String", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qjsonobject.h:227
+// index:2
+// inline
+// QJsonObject::const_iterator find(const class QString &)
+func (this *QJsonObject) Find_2(key unsafe.Pointer) {
+	// 2: (, const QString & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject4findERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qjsonobject.h:228
+// index:3
+// inline
+// QJsonObject::const_iterator find(class QLatin1String)
+func (this *QJsonObject) Find_3(key unsafe.Pointer) {
+	// 3: (, QLatin1String key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject4findE13QLatin1String", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qjsonobject.h:229
+// index:0
+// QJsonObject::const_iterator constFind(const class QString &)
+func (this *QJsonObject) ConstFind(key unsafe.Pointer) {
+	// 0: (, const QString & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject9constFindERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qjsonobject.h:230
+// index:1
+// QJsonObject::const_iterator constFind(class QLatin1String)
+func (this *QJsonObject) ConstFind_1(key unsafe.Pointer) {
+	// 1: (, QLatin1String key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject9constFindE13QLatin1String", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qjsonobject.h:238
+// index:0
+// inline
+// bool empty()
+func (this *QJsonObject) Empty() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject5emptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

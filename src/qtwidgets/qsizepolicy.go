@@ -1,544 +1,269 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qsizepolicy.h
+// #include <qsizepolicy.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qsizepolicy.h
-// dst-file: /src/widgets/qsizepolicy.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QSizePolicy::QSizePolicy();
-extern void* C_ZN11QSizePolicyC2Ev(); // 1
-  // proto:  void QSizePolicy::setHorizontalStretch(int stretchFactor);
-extern void C_ZN11QSizePolicy20setHorizontalStretchEi(void* qthis, int32_t arg0); // 2
-  // proto:  Qt::Orientations QSizePolicy::expandingDirections();
-extern void C_ZNK11QSizePolicy19expandingDirectionsEv(void* qthis); // 2
-  // proto:  void QSizePolicy::setWidthForHeight(bool b);
-extern void C_ZN11QSizePolicy17setWidthForHeightEb(void* qthis, bool arg0); // 2
-  // proto:  bool QSizePolicy::hasWidthForHeight();
-extern bool C_ZNK11QSizePolicy17hasWidthForHeightEv(void* qthis); // 2
-  // proto:  int QSizePolicy::verticalStretch();
-extern int32_t C_ZNK11QSizePolicy15verticalStretchEv(void* qthis); // 2
-  // proto:  void QSizePolicy::transpose();
-extern void C_ZN11QSizePolicy9transposeEv(void* qthis); // 2
-  // proto:  bool QSizePolicy::retainSizeWhenHidden();
-extern bool C_ZNK11QSizePolicy20retainSizeWhenHiddenEv(void* qthis); // 2
-  // proto:  void QSizePolicy::setVerticalStretch(int stretchFactor);
-extern void C_ZN11QSizePolicy18setVerticalStretchEi(void* qthis, int32_t arg0); // 2
-  // proto:  QSizePolicy::Policy QSizePolicy::verticalPolicy();
-extern void C_ZNK11QSizePolicy14verticalPolicyEv(void* qthis); // 2
-  // proto:  void QSizePolicy::setHeightForWidth(bool b);
-extern void C_ZN11QSizePolicy17setHeightForWidthEb(void* qthis, bool arg0); // 2
-  // proto:  bool QSizePolicy::hasHeightForWidth();
-extern bool C_ZNK11QSizePolicy17hasHeightForWidthEv(void* qthis); // 2
-  // proto:  int QSizePolicy::horizontalStretch();
-extern int32_t C_ZNK11QSizePolicy17horizontalStretchEv(void* qthis); // 2
-  // proto:  void QSizePolicy::setRetainSizeWhenHidden(bool retainSize);
-extern void C_ZN11QSizePolicy23setRetainSizeWhenHiddenEb(void* qthis, bool arg0); // 2
-  // proto:  QSizePolicy::ControlType QSizePolicy::controlType();
-extern void C_ZNK11QSizePolicy11controlTypeEv(void* qthis); // 4
-  // proto:  QSizePolicy::Policy QSizePolicy::horizontalPolicy();
-extern void C_ZNK11QSizePolicy16horizontalPolicyEv(void* qthis); // 2
+// extern C begin: 8
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QSizePolicy)=4
+//  ext block end
+
+//  body block begin
 type QSizePolicy struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// QSizePolicy()
-func NewQSizePolicy(args ...interface{}) *QSizePolicy {
-  // QSizePolicy()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QSizePolicyC1Ev
-    // invoke: void QSizePolicy()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QSizePolicyC2Ev()
-    return &QSizePolicy{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "QSizePolicy", args)
-  }
-
-  return nil // QSizePolicy{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qsizepolicy.h:113
+// index:0
+// inline
+// void QSizePolicy()
+func NewQSizePolicy() *QSizePolicy {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicyC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QSizePolicy{cthis}
 }
 
-// setHorizontalStretch(int)
-func (this *QSizePolicy) Sethorizontalstretch(args ...interface{}) () {
-  // setHorizontalStretch(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QSizePolicy20setHorizontalStretchEi
-    // invoke: void setHorizontalStretch(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QSizePolicy20setHorizontalStretchEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "setHorizontalStretch", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:116
+// index:1
+// inline
+// void QSizePolicy(enum QSizePolicy::Policy, enum QSizePolicy::Policy, enum QSizePolicy::ControlType)
+func NewQSizePolicy_1(horizontal int, vertical int, type_ int) *QSizePolicy {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicyC2ENS_6PolicyES0_NS_11ControlTypeE", ffiqt.FFI_TYPE_VOID, cthis, &horizontal, &vertical, &type_)
+	gopp.ErrPrint(err, rv)
+	return &QSizePolicy{cthis}
 }
 
-// expandingDirections()
-func (this *QSizePolicy) Expandingdirections(args ...interface{}) () {
-  // expandingDirections()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QSizePolicy19expandingDirectionsEv
-    // invoke: Qt::Orientations expandingDirections()
-    C.C_ZNK11QSizePolicy19expandingDirectionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "expandingDirections", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:128
+// index:0
+// inline
+// QSizePolicy::Policy horizontalPolicy()
+func (this *QSizePolicy) HorizontalPolicy() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy16horizontalPolicyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setWidthForHeight(_Bool)
-func (this *QSizePolicy) Setwidthforheight(args ...interface{}) () {
-  // setWidthForHeight(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QSizePolicy17setWidthForHeightEb
-    // invoke: void setWidthForHeight(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QSizePolicy17setWidthForHeightEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "setWidthForHeight", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:129
+// index:0
+// inline
+// QSizePolicy::Policy verticalPolicy()
+func (this *QSizePolicy) VerticalPolicy() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy14verticalPolicyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasWidthForHeight()
-func (this *QSizePolicy) Haswidthforheight(args ...interface{}) (ret interface{}) {
-  // hasWidthForHeight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QSizePolicy17hasWidthForHeightEv
-    // invoke: bool hasWidthForHeight()
-    var ret0 = C.C_ZNK11QSizePolicy17hasWidthForHeightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "hasWidthForHeight", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:130
+// index:0
+// QSizePolicy::ControlType controlType()
+func (this *QSizePolicy) ControlType() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy11controlTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// verticalStretch()
-func (this *QSizePolicy) Verticalstretch(args ...interface{}) (ret interface{}) {
-  // verticalStretch()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QSizePolicy15verticalStretchEv
-    // invoke: int verticalStretch()
-    var ret0 = C.C_ZNK11QSizePolicy15verticalStretchEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "verticalStretch", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:132
+// index:0
+// inline
+// void setHorizontalPolicy(enum QSizePolicy::Policy)
+func (this *QSizePolicy) SetHorizontalPolicy(d int) {
+	// 0: (, QSizePolicy::Policy d), (&d)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy19setHorizontalPolicyENS_6PolicyE", ffiqt.FFI_TYPE_VOID, this.cthis, &d)
+	gopp.ErrPrint(err, rv)
 }
 
-// transpose()
-func (this *QSizePolicy) Transpose(args ...interface{}) () {
-  // transpose()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QSizePolicy9transposeEv
-    // invoke: void transpose()
-    C.C_ZN11QSizePolicy9transposeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "transpose", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:133
+// index:0
+// inline
+// void setVerticalPolicy(enum QSizePolicy::Policy)
+func (this *QSizePolicy) SetVerticalPolicy(d int) {
+	// 0: (, QSizePolicy::Policy d), (&d)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setVerticalPolicyENS_6PolicyE", ffiqt.FFI_TYPE_VOID, this.cthis, &d)
+	gopp.ErrPrint(err, rv)
 }
 
-// retainSizeWhenHidden()
-func (this *QSizePolicy) Retainsizewhenhidden(args ...interface{}) (ret interface{}) {
-  // retainSizeWhenHidden()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QSizePolicy20retainSizeWhenHiddenEv
-    // invoke: bool retainSizeWhenHidden()
-    var ret0 = C.C_ZNK11QSizePolicy20retainSizeWhenHiddenEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "retainSizeWhenHidden", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:134
+// index:0
+// void setControlType(enum QSizePolicy::ControlType)
+func (this *QSizePolicy) SetControlType(type_ int) {
+	// 0: (, QSizePolicy::ControlType type), (&type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy14setControlTypeENS_11ControlTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &type_)
+	gopp.ErrPrint(err, rv)
 }
 
-// setVerticalStretch(int)
-func (this *QSizePolicy) Setverticalstretch(args ...interface{}) () {
-  // setVerticalStretch(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QSizePolicy18setVerticalStretchEi
-    // invoke: void setVerticalStretch(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QSizePolicy18setVerticalStretchEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "setVerticalStretch", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:136
+// index:0
+// inline
+// Qt::Orientations expandingDirections()
+func (this *QSizePolicy) ExpandingDirections() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy19expandingDirectionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// verticalPolicy()
-func (this *QSizePolicy) Verticalpolicy(args ...interface{}) () {
-  // verticalPolicy()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QSizePolicy14verticalPolicyEv
-    // invoke: QSizePolicy::Policy verticalPolicy()
-    C.C_ZNK11QSizePolicy14verticalPolicyEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "verticalPolicy", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:141
+// index:0
+// inline
+// void setHeightForWidth(_Bool)
+func (this *QSizePolicy) SetHeightForWidth(b bool) {
+	// 0: (, bool b), (&b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setHeightForWidthEb", ffiqt.FFI_TYPE_VOID, this.cthis, &b)
+	gopp.ErrPrint(err, rv)
 }
 
-// setHeightForWidth(_Bool)
-func (this *QSizePolicy) Setheightforwidth(args ...interface{}) () {
-  // setHeightForWidth(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QSizePolicy17setHeightForWidthEb
-    // invoke: void setHeightForWidth(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QSizePolicy17setHeightForWidthEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "setHeightForWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:142
+// index:0
+// inline
+// bool hasHeightForWidth()
+func (this *QSizePolicy) HasHeightForWidth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17hasHeightForWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasHeightForWidth()
-func (this *QSizePolicy) Hasheightforwidth(args ...interface{}) (ret interface{}) {
-  // hasHeightForWidth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QSizePolicy17hasHeightForWidthEv
-    // invoke: bool hasHeightForWidth()
-    var ret0 = C.C_ZNK11QSizePolicy17hasHeightForWidthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "hasHeightForWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:143
+// index:0
+// inline
+// void setWidthForHeight(_Bool)
+func (this *QSizePolicy) SetWidthForHeight(b bool) {
+	// 0: (, bool b), (&b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setWidthForHeightEb", ffiqt.FFI_TYPE_VOID, this.cthis, &b)
+	gopp.ErrPrint(err, rv)
 }
 
-// horizontalStretch()
-func (this *QSizePolicy) Horizontalstretch(args ...interface{}) (ret interface{}) {
-  // horizontalStretch()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QSizePolicy17horizontalStretchEv
-    // invoke: int horizontalStretch()
-    var ret0 = C.C_ZNK11QSizePolicy17horizontalStretchEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "horizontalStretch", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:144
+// index:0
+// inline
+// bool hasWidthForHeight()
+func (this *QSizePolicy) HasWidthForHeight() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17hasWidthForHeightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRetainSizeWhenHidden(_Bool)
-func (this *QSizePolicy) Setretainsizewhenhidden(args ...interface{}) () {
-  // setRetainSizeWhenHidden(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QSizePolicy23setRetainSizeWhenHiddenEb
-    // invoke: void setRetainSizeWhenHidden(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QSizePolicy23setRetainSizeWhenHiddenEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "setRetainSizeWhenHidden", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:153
+// index:0
+// inline
+// int horizontalStretch()
+func (this *QSizePolicy) HorizontalStretch() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17horizontalStretchEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// controlType()
-func (this *QSizePolicy) Controltype(args ...interface{}) () {
-  // controlType()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QSizePolicy11controlTypeEv
-    // invoke: QSizePolicy::ControlType controlType()
-    C.C_ZNK11QSizePolicy11controlTypeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "controlType", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:154
+// index:0
+// inline
+// int verticalStretch()
+func (this *QSizePolicy) VerticalStretch() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy15verticalStretchEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// horizontalPolicy()
-func (this *QSizePolicy) Horizontalpolicy(args ...interface{}) () {
-  // horizontalPolicy()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QSizePolicy16horizontalPolicyEv
-    // invoke: QSizePolicy::Policy horizontalPolicy()
-    C.C_ZNK11QSizePolicy16horizontalPolicyEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSizePolicy", "horizontalPolicy", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsizepolicy.h:155
+// index:0
+// inline
+// void setHorizontalStretch(int)
+func (this *QSizePolicy) SetHorizontalStretch(stretchFactor int) {
+	// 0: (, int stretchFactor), (&stretchFactor)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy20setHorizontalStretchEi", ffiqt.FFI_TYPE_VOID, this.cthis, &stretchFactor)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qsizepolicy.h:156
+// index:0
+// inline
+// void setVerticalStretch(int)
+func (this *QSizePolicy) SetVerticalStretch(stretchFactor int) {
+	// 0: (, int stretchFactor), (&stretchFactor)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy18setVerticalStretchEi", ffiqt.FFI_TYPE_VOID, this.cthis, &stretchFactor)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qsizepolicy.h:158
+// index:0
+// inline
+// bool retainSizeWhenHidden()
+func (this *QSizePolicy) RetainSizeWhenHidden() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy20retainSizeWhenHiddenEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qsizepolicy.h:159
+// index:0
+// inline
+// void setRetainSizeWhenHidden(_Bool)
+func (this *QSizePolicy) SetRetainSizeWhenHidden(retainSize bool) {
+	// 0: (, bool retainSize), (&retainSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy23setRetainSizeWhenHiddenEb", ffiqt.FFI_TYPE_VOID, this.cthis, &retainSize)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qsizepolicy.h:161
+// index:0
+// inline
+// void transpose()
+func (this *QSizePolicy) Transpose() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy9transposeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qsizepolicy.h:166
+// index:0
+// inline
+// QSizePolicy transposed()
+func (this *QSizePolicy) Transposed() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy10transposedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

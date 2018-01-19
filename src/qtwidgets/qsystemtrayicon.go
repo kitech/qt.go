@@ -1,579 +1,265 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h
+// #include <qsystemtrayicon.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qsystemtrayicon.h
-// dst-file: /src/widgets/qsystemtrayicon.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QSystemTrayIcon::show();
-extern void C_ZN15QSystemTrayIcon4showEv(void* qthis); // 2
-  // proto:  void QSystemTrayIcon::QSystemTrayIcon(const QIcon & icon, QObject * parent);
-extern void* C_ZN15QSystemTrayIconC2ERK5QIconP7QObject(void* arg0, void* arg1); // 3
-  // proto:  void QSystemTrayIcon::QSystemTrayIcon(QObject * parent);
-extern void* C_ZN15QSystemTrayIconC2EP7QObject(void* arg0); // 3
-  // proto:  void QSystemTrayIcon::hide();
-extern void C_ZN15QSystemTrayIcon4hideEv(void* qthis); // 2
-  // proto: static bool QSystemTrayIcon::isSystemTrayAvailable();
-extern bool C_ZN15QSystemTrayIcon21isSystemTrayAvailableEv(); // 4
-  // proto:  QMenu * QSystemTrayIcon::contextMenu();
-extern void* C_ZNK15QSystemTrayIcon11contextMenuEv(void* qthis); // 4
-  // proto:  void QSystemTrayIcon::setIcon(const QIcon & icon);
-extern void C_ZN15QSystemTrayIcon7setIconERK5QIcon(void* qthis, void* arg0); // 4
-  // proto:  QString QSystemTrayIcon::toolTip();
-extern void* C_ZNK15QSystemTrayIcon7toolTipEv(void* qthis); // 4
-  // proto:  QIcon QSystemTrayIcon::icon();
-extern void* C_ZNK15QSystemTrayIcon4iconEv(void* qthis); // 4
-  // proto:  void QSystemTrayIcon::setContextMenu(QMenu * menu);
-extern void C_ZN15QSystemTrayIcon14setContextMenuEP5QMenu(void* qthis, void* arg0); // 4
-  // proto:  void QSystemTrayIcon::setToolTip(const QString & tip);
-extern void C_ZN15QSystemTrayIcon10setToolTipERK7QString(void* qthis, void* arg0); // 4
-  // proto:  const QMetaObject * QSystemTrayIcon::metaObject();
-extern void C_ZNK15QSystemTrayIcon10metaObjectEv(void* qthis); // 4
-  // proto:  QRect QSystemTrayIcon::geometry();
-extern void* C_ZNK15QSystemTrayIcon8geometryEv(void* qthis); // 4
-  // proto:  void QSystemTrayIcon::~QSystemTrayIcon();
-extern void C_ZN15QSystemTrayIconD2Ev(void* qthis); // 4
-  // proto:  bool QSystemTrayIcon::isVisible();
-extern bool C_ZNK15QSystemTrayIcon9isVisibleEv(void* qthis); // 4
-  // proto: static bool QSystemTrayIcon::supportsMessages();
-extern bool C_ZN15QSystemTrayIcon16supportsMessagesEv(); // 4
-  // proto:  void QSystemTrayIcon::setVisible(bool visible);
-extern void C_ZN15QSystemTrayIcon10setVisibleEb(void* qthis, bool arg0); // 4
+// extern C begin: 11
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QSystemTrayIcon)=1
+//  ext block end
+
+//  body block begin
 type QSystemTrayIcon struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _activated QSystemTrayIcon_activated_signal;
-//  _messageClicked QSystemTrayIcon_messageClicked_signal;
+	cthis unsafe.Pointer
 }
 
-// show()
-func (this *QSystemTrayIcon) Show(args ...interface{}) () {
-  // show()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QSystemTrayIcon4showEv
-    // invoke: void show()
-    C.C_ZN15QSystemTrayIcon4showEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "show", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:63
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QSystemTrayIcon) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QSystemTrayIcon(const class QIcon &, class QObject *)
-func NewQSystemTrayIcon(args ...interface{}) *QSystemTrayIcon {
-  // QSystemTrayIcon(const class QIcon &, class QObject *)
-  // QSystemTrayIcon(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QSystemTrayIconC1ERK5QIconP7QObject
-    // invoke: void QSystemTrayIcon(const class QIcon &, class QObject *)
-    var arg0 = args[0].(*qtgui.QIcon).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN15QSystemTrayIconC2ERK5QIconP7QObject(arg0, arg1)
-    return &QSystemTrayIcon{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN15QSystemTrayIconC1EP7QObject
-    // invoke: void QSystemTrayIcon(class QObject *)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN15QSystemTrayIconC2EP7QObject(arg0)
-    return &QSystemTrayIcon{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "QSystemTrayIcon", args)
-  }
-
-  return nil // QSystemTrayIcon{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:69
+// index:0
+// void QSystemTrayIcon(class QObject *)
+func NewQSystemTrayIcon(parent unsafe.Pointer) *QSystemTrayIcon {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIconC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QSystemTrayIcon{cthis}
 }
 
-// hide()
-func (this *QSystemTrayIcon) Hide(args ...interface{}) () {
-  // hide()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QSystemTrayIcon4hideEv
-    // invoke: void hide()
-    C.C_ZN15QSystemTrayIcon4hideEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "hide", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:70
+// index:1
+// void QSystemTrayIcon(const class QIcon &, class QObject *)
+func NewQSystemTrayIcon_1(icon unsafe.Pointer, parent unsafe.Pointer) *QSystemTrayIcon {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIconC2ERK5QIconP7QObject", ffiqt.FFI_TYPE_VOID, cthis, icon, parent)
+	gopp.ErrPrint(err, rv)
+	return &QSystemTrayIcon{cthis}
 }
 
-// isSystemTrayAvailable()
-func (this *QSystemTrayIcon) Issystemtrayavailable_S(args ...interface{}) (ret interface{}) {
-  // isSystemTrayAvailable()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QSystemTrayIcon21isSystemTrayAvailableEv
-    // invoke: bool isSystemTrayAvailable()
-    var ret0 = C.C_ZN15QSystemTrayIcon21isSystemTrayAvailableEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "isSystemTrayAvailable", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:71
+// index:0
+// virtual
+// void ~QSystemTrayIcon()
+func DeleteQSystemTrayIcon(*QSystemTrayIcon) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIconD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// contextMenu()
-func (this *QSystemTrayIcon) Contextmenu(args ...interface{}) (ret interface{}) {
-  // contextMenu()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QSystemTrayIcon11contextMenuEv
-    // invoke: QMenu * contextMenu()
-    var ret0 = C.C_ZNK15QSystemTrayIcon11contextMenuEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "contextMenu", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:82
+// index:0
+// void setContextMenu(class QMenu *)
+func (this *QSystemTrayIcon) SetContextMenu(menu unsafe.Pointer) {
+	// 0: (, QMenu * menu), (menu)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon14setContextMenuEP5QMenu", ffiqt.FFI_TYPE_VOID, this.cthis, menu)
+	gopp.ErrPrint(err, rv)
 }
 
-// setIcon(const class QIcon &)
-func (this *QSystemTrayIcon) Seticon(args ...interface{}) () {
-  // setIcon(const class QIcon &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QSystemTrayIcon7setIconERK5QIcon
-    // invoke: void setIcon(const class QIcon &)
-    var arg0 = args[0].(*qtgui.QIcon).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN15QSystemTrayIcon7setIconERK5QIcon(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "setIcon", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:83
+// index:0
+// QMenu * contextMenu()
+func (this *QSystemTrayIcon) ContextMenu() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon11contextMenuEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// toolTip()
-func (this *QSystemTrayIcon) Tooltip(args ...interface{}) (ret interface{}) {
-  // toolTip()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QSystemTrayIcon7toolTipEv
-    // invoke: QString toolTip()
-    var ret0 = C.C_ZNK15QSystemTrayIcon7toolTipEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "toolTip", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:86
+// index:0
+// QIcon icon()
+func (this *QSystemTrayIcon) Icon() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon4iconEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// icon()
-func (this *QSystemTrayIcon) Icon(args ...interface{}) (ret interface{}) {
-  // icon()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QSystemTrayIcon4iconEv
-    // invoke: QIcon icon()
-    var ret0 = C.C_ZNK15QSystemTrayIcon4iconEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QIcon{}) // "QIcon"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "icon", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:87
+// index:0
+// void setIcon(const class QIcon &)
+func (this *QSystemTrayIcon) SetIcon(icon unsafe.Pointer) {
+	// 0: (, const QIcon & icon), (icon)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon7setIconERK5QIcon", ffiqt.FFI_TYPE_VOID, this.cthis, icon)
+	gopp.ErrPrint(err, rv)
 }
 
-// setContextMenu(class QMenu *)
-func (this *QSystemTrayIcon) Setcontextmenu(args ...interface{}) () {
-  // setContextMenu(class QMenu *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QMenu{}) // "QMenu *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QSystemTrayIcon14setContextMenuEP5QMenu
-    // invoke: void setContextMenu(class QMenu *)
-    var arg0 = args[0].(*QMenu).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN15QSystemTrayIcon14setContextMenuEP5QMenu(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "setContextMenu", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:89
+// index:0
+// QString toolTip()
+func (this *QSystemTrayIcon) ToolTip() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon7toolTipEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setToolTip(const class QString &)
-func (this *QSystemTrayIcon) Settooltip(args ...interface{}) () {
-  // setToolTip(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QSystemTrayIcon10setToolTipERK7QString
-    // invoke: void setToolTip(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN15QSystemTrayIcon10setToolTipERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "setToolTip", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:90
+// index:0
+// void setToolTip(const class QString &)
+func (this *QSystemTrayIcon) SetToolTip(tip unsafe.Pointer) {
+	// 0: (, const QString & tip), (tip)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon10setToolTipERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, tip)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QSystemTrayIcon) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QSystemTrayIcon10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QSystemTrayIcon10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:92
+// index:0
+// static
+// bool isSystemTrayAvailable()
+func (this *QSystemTrayIcon) IsSystemTrayAvailable() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon21isSystemTrayAvailableEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QSystemTrayIcon_IsSystemTrayAvailable() {
+	// 0: (), ()
+	var nilthis *QSystemTrayIcon
+	nilthis.IsSystemTrayAvailable()
 }
 
-// geometry()
-func (this *QSystemTrayIcon) Geometry(args ...interface{}) (ret interface{}) {
-  // geometry()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QSystemTrayIcon8geometryEv
-    // invoke: QRect geometry()
-    var ret0 = C.C_ZNK15QSystemTrayIcon8geometryEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "geometry", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:93
+// index:0
+// static
+// bool supportsMessages()
+func (this *QSystemTrayIcon) SupportsMessages() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon16supportsMessagesEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QSystemTrayIcon_SupportsMessages() {
+	// 0: (), ()
+	var nilthis *QSystemTrayIcon
+	nilthis.SupportsMessages()
 }
 
-// ~QSystemTrayIcon()
-func (this *QSystemTrayIcon) Freeqsystemtrayicon(args ...interface{}) () {
-  // ~QSystemTrayIcon()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QSystemTrayIconD0Ev
-    // invoke: void ~QSystemTrayIcon()
-    C.C_ZN15QSystemTrayIconD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "~QSystemTrayIcon", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:97
+// index:0
+// QRect geometry()
+func (this *QSystemTrayIcon) Geometry() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon8geometryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isVisible()
-func (this *QSystemTrayIcon) Isvisible(args ...interface{}) (ret interface{}) {
-  // isVisible()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QSystemTrayIcon9isVisibleEv
-    // invoke: bool isVisible()
-    var ret0 = C.C_ZNK15QSystemTrayIcon9isVisibleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "isVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:98
+// index:0
+// bool isVisible()
+func (this *QSystemTrayIcon) IsVisible() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon9isVisibleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// supportsMessages()
-func (this *QSystemTrayIcon) Supportsmessages_S(args ...interface{}) (ret interface{}) {
-  // supportsMessages()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QSystemTrayIcon16supportsMessagesEv
-    // invoke: bool supportsMessages()
-    var ret0 = C.C_ZN15QSystemTrayIcon16supportsMessagesEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "supportsMessages", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:101
+// index:0
+// void setVisible(_Bool)
+func (this *QSystemTrayIcon) SetVisible(visible bool) {
+	// 0: (, bool visible), (&visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon10setVisibleEb", ffiqt.FFI_TYPE_VOID, this.cthis, &visible)
+	gopp.ErrPrint(err, rv)
 }
 
-// setVisible(_Bool)
-func (this *QSystemTrayIcon) Setvisible(args ...interface{}) () {
-  // setVisible(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QSystemTrayIcon10setVisibleEb
-    // invoke: void setVisible(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN15QSystemTrayIcon10setVisibleEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSystemTrayIcon", "setVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:102
+// index:0
+// inline
+// void show()
+func (this *QSystemTrayIcon) Show() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon4showEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:103
+// index:0
+// inline
+// void hide()
+func (this *QSystemTrayIcon) Hide() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon4hideEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:104
+// index:0
+// void showMessage(const class QString &, const class QString &, const class QIcon &, int)
+func (this *QSystemTrayIcon) ShowMessage(title unsafe.Pointer, msg unsafe.Pointer, icon unsafe.Pointer, msecs int) {
+	// 0: (, const QString & title, const QString & msg, const QIcon & icon, int msecs), (title, msg, icon, &msecs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_RK5QIconi", ffiqt.FFI_TYPE_VOID, this.cthis, title, msg, icon, &msecs)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:105
+// index:1
+// void showMessage(const class QString &, const class QString &, class QSystemTrayIcon::MessageIcon, int)
+func (this *QSystemTrayIcon) ShowMessage_1(title unsafe.Pointer, msg unsafe.Pointer, icon int, msecs int) {
+	// 1: (, const QString & title, const QString & msg, QSystemTrayIcon::MessageIcon icon, int msecs), (title, msg, &icon, &msecs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_NS_11MessageIconEi", ffiqt.FFI_TYPE_VOID, this.cthis, title, msg, &icon, &msecs)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:109
+// index:0
+// void activated(class QSystemTrayIcon::ActivationReason)
+func (this *QSystemTrayIcon) Activated(reason int) {
+	// 0: (, QSystemTrayIcon::ActivationReason reason), (&reason)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE", ffiqt.FFI_TYPE_VOID, this.cthis, &reason)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:110
+// index:0
+// void messageClicked()
+func (this *QSystemTrayIcon) MessageClicked() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon14messageClickedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

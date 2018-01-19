@@ -1,487 +1,225 @@
+//  header block begin
+// /usr/include/qt/QtGui/qdrag.h
+// #include <qdrag.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qdrag.h
-// dst-file: /src/gui/qdrag.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QDrag::setMimeData(QMimeData * data);
-extern void C_ZN5QDrag11setMimeDataEP9QMimeData(void* qthis, void* arg0); // 4
-  // proto:  void QDrag::QDrag(QObject * dragSource);
-extern void* C_ZN5QDragC2EP7QObject(void* arg0); // 3
-  // proto: static void QDrag::cancel();
-extern void C_ZN5QDrag6cancelEv(); // 4
-  // proto:  QPixmap QDrag::pixmap();
-extern void* C_ZNK5QDrag6pixmapEv(void* qthis); // 4
-  // proto:  void QDrag::~QDrag();
-extern void C_ZN5QDragD2Ev(void* qthis); // 4
-  // proto:  Qt::DropAction QDrag::defaultAction();
-extern void C_ZNK5QDrag13defaultActionEv(void* qthis); // 4
-  // proto:  QObject * QDrag::source();
-extern void* C_ZNK5QDrag6sourceEv(void* qthis); // 4
-  // proto:  void QDrag::setPixmap(const QPixmap & );
-extern void C_ZN5QDrag9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
-  // proto:  Qt::DropActions QDrag::supportedActions();
-extern void C_ZNK5QDrag16supportedActionsEv(void* qthis); // 4
-  // proto:  void QDrag::setHotSpot(const QPoint & hotspot);
-extern void C_ZN5QDrag10setHotSpotERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  QPoint QDrag::hotSpot();
-extern void* C_ZNK5QDrag7hotSpotEv(void* qthis); // 4
-  // proto:  QMimeData * QDrag::mimeData();
-extern void* C_ZNK5QDrag8mimeDataEv(void* qthis); // 4
-  // proto:  const QMetaObject * QDrag::metaObject();
-extern void C_ZNK5QDrag10metaObjectEv(void* qthis); // 4
-  // proto:  QObject * QDrag::target();
-extern void* C_ZNK5QDrag6targetEv(void* qthis); // 4
+// extern C begin: 3
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QDrag)=1
+//  ext block end
+
+//  body block begin
 type QDrag struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _targetChanged QDrag_targetChanged_signal;
-//  _actionChanged QDrag_actionChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// setMimeData(class QMimeData *)
-func (this *QDrag) Setmimedata(args ...interface{}) () {
-  // setMimeData(class QMimeData *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QMimeData{}) // "QMimeData *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QDrag11setMimeDataEP9QMimeData
-    // invoke: void setMimeData(class QMimeData *)
-    var arg0 = args[0].(*qtcore.QMimeData).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QDrag11setMimeDataEP9QMimeData(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDrag", "setMimeData", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:59
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QDrag) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QDrag(class QObject *)
-func NewQDrag(args ...interface{}) *QDrag {
-  // QDrag(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QDragC1EP7QObject
-    // invoke: void QDrag(class QObject *)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN5QDragC2EP7QObject(arg0)
-    return &QDrag{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QDrag", "QDrag", args)
-  }
-
-  return nil // QDrag{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qdrag.h:62
+// index:0
+// void QDrag(class QObject *)
+func NewQDrag(dragSource unsafe.Pointer) *QDrag {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDragC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, dragSource)
+	gopp.ErrPrint(err, rv)
+	return &QDrag{cthis}
 }
 
-// cancel()
-func (this *QDrag) Cancel_S(args ...interface{}) () {
-  // cancel()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QDrag6cancelEv
-    // invoke: void cancel()
-    C.C_ZN5QDrag6cancelEv()
-  default:
-    qtrt.ErrorResolve("QDrag", "cancel", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:63
+// index:0
+// virtual
+// void ~QDrag()
+func DeleteQDrag(*QDrag) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDragD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// pixmap()
-func (this *QDrag) Pixmap(args ...interface{}) (ret interface{}) {
-  // pixmap()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QDrag6pixmapEv
-    // invoke: QPixmap pixmap()
-    var ret0 = C.C_ZNK5QDrag6pixmapEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPixmap{}) // "QPixmap"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDrag", "pixmap", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:65
+// index:0
+// void setMimeData(class QMimeData *)
+func (this *QDrag) SetMimeData(data unsafe.Pointer) {
+	// 0: (, QMimeData * data), (data)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag11setMimeDataEP9QMimeData", ffiqt.FFI_TYPE_VOID, this.cthis, data)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QDrag()
-func (this *QDrag) Freeqdrag(args ...interface{}) () {
-  // ~QDrag()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QDragD0Ev
-    // invoke: void ~QDrag()
-    C.C_ZN5QDragD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDrag", "~QDrag", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:66
+// index:0
+// QMimeData * mimeData()
+func (this *QDrag) MimeData() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag8mimeDataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// defaultAction()
-func (this *QDrag) Defaultaction(args ...interface{}) () {
-  // defaultAction()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QDrag13defaultActionEv
-    // invoke: Qt::DropAction defaultAction()
-    C.C_ZNK5QDrag13defaultActionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDrag", "defaultAction", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:68
+// index:0
+// void setPixmap(const class QPixmap &)
+func (this *QDrag) SetPixmap(arg0 unsafe.Pointer) {
+	// 0: (, const QPixmap & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag9setPixmapERK7QPixmap", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// source()
-func (this *QDrag) Source(args ...interface{}) (ret interface{}) {
-  // source()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QDrag6sourceEv
-    // invoke: QObject * source()
-    var ret0 = C.C_ZNK5QDrag6sourceEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDrag", "source", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:69
+// index:0
+// QPixmap pixmap()
+func (this *QDrag) Pixmap() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag6pixmapEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setPixmap(const class QPixmap &)
-func (this *QDrag) Setpixmap(args ...interface{}) () {
-  // setPixmap(const class QPixmap &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPixmap{}) // "const QPixmap &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QDrag9setPixmapERK7QPixmap
-    // invoke: void setPixmap(const class QPixmap &)
-    var arg0 = args[0].(*QPixmap).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QDrag9setPixmapERK7QPixmap(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDrag", "setPixmap", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:71
+// index:0
+// void setHotSpot(const class QPoint &)
+func (this *QDrag) SetHotSpot(hotspot unsafe.Pointer) {
+	// 0: (, const QPoint & hotspot), (hotspot)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag10setHotSpotERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, hotspot)
+	gopp.ErrPrint(err, rv)
 }
 
-// supportedActions()
-func (this *QDrag) Supportedactions(args ...interface{}) () {
-  // supportedActions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QDrag16supportedActionsEv
-    // invoke: Qt::DropActions supportedActions()
-    C.C_ZNK5QDrag16supportedActionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDrag", "supportedActions", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:72
+// index:0
+// QPoint hotSpot()
+func (this *QDrag) HotSpot() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag7hotSpotEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setHotSpot(const class QPoint &)
-func (this *QDrag) Sethotspot(args ...interface{}) () {
-  // setHotSpot(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN5QDrag10setHotSpotERK6QPoint
-    // invoke: void setHotSpot(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN5QDrag10setHotSpotERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDrag", "setHotSpot", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:74
+// index:0
+// QObject * source()
+func (this *QDrag) Source() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag6sourceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// hotSpot()
-func (this *QDrag) Hotspot(args ...interface{}) (ret interface{}) {
-  // hotSpot()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QDrag7hotSpotEv
-    // invoke: QPoint hotSpot()
-    var ret0 = C.C_ZNK5QDrag7hotSpotEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDrag", "hotSpot", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:75
+// index:0
+// QObject * target()
+func (this *QDrag) Target() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag6targetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// mimeData()
-func (this *QDrag) Mimedata(args ...interface{}) (ret interface{}) {
-  // mimeData()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QDrag8mimeDataEv
-    // invoke: QMimeData * mimeData()
-    var ret0 = C.C_ZNK5QDrag8mimeDataEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QMimeData{}) // "QMimeData *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDrag", "mimeData", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:81
+// index:0
+// void setDragCursor(const class QPixmap &, Qt::DropAction)
+func (this *QDrag) SetDragCursor(cursor unsafe.Pointer, action int) {
+	// 0: (, const QPixmap & cursor, Qt::DropAction action), (cursor, &action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13setDragCursorERK7QPixmapN2Qt10DropActionE", ffiqt.FFI_TYPE_VOID, this.cthis, cursor, &action)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QDrag) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QDrag10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK5QDrag10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDrag", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:82
+// index:0
+// QPixmap dragCursor(Qt::DropAction)
+func (this *QDrag) DragCursor(action int) {
+	// 0: (, Qt::DropAction action), (&action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag10dragCursorEN2Qt10DropActionE", ffiqt.FFI_TYPE_VOID, this.cthis, &action)
+	gopp.ErrPrint(err, rv)
 }
 
-// target()
-func (this *QDrag) Target(args ...interface{}) (ret interface{}) {
-  // target()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK5QDrag6targetEv
-    // invoke: QObject * target()
-    var ret0 = C.C_ZNK5QDrag6targetEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDrag", "target", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qdrag.h:84
+// index:0
+// Qt::DropActions supportedActions()
+func (this *QDrag) SupportedActions() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag16supportedActionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qdrag.h:85
+// index:0
+// Qt::DropAction defaultAction()
+func (this *QDrag) DefaultAction() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag13defaultActionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qdrag.h:87
+// index:0
+// static
+// void cancel()
+func (this *QDrag) Cancel() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag6cancelEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QDrag_Cancel() {
+	// 0: (), ()
+	var nilthis *QDrag
+	nilthis.Cancel()
+}
+
+// /usr/include/qt/QtGui/qdrag.h:90
+// index:0
+// void actionChanged(Qt::DropAction)
+func (this *QDrag) ActionChanged(action int) {
+	// 0: (, Qt::DropAction action), (&action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13actionChangedEN2Qt10DropActionE", ffiqt.FFI_TYPE_VOID, this.cthis, &action)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qdrag.h:91
+// index:0
+// void targetChanged(class QObject *)
+func (this *QDrag) TargetChanged(newTarget unsafe.Pointer) {
+	// 0: (, QObject * newTarget), (newTarget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13targetChangedEP7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, newTarget)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

@@ -1,492 +1,205 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qframe.h
+// #include <qframe.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qframe.h
-// dst-file: /src/widgets/qframe.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  int QFrame::frameStyle();
-extern int32_t C_ZNK6QFrame10frameStyleEv(void* qthis); // 4
-  // proto:  void QFrame::~QFrame();
-extern void C_ZN6QFrameD2Ev(void* qthis); // 4
-  // proto:  int QFrame::frameWidth();
-extern int32_t C_ZNK6QFrame10frameWidthEv(void* qthis); // 4
-  // proto:  void QFrame::setLineWidth(int );
-extern void C_ZN6QFrame12setLineWidthEi(void* qthis, int32_t arg0); // 4
-  // proto:  const QMetaObject * QFrame::metaObject();
-extern void C_ZNK6QFrame10metaObjectEv(void* qthis); // 4
-  // proto:  void QFrame::setFrameStyle(int );
-extern void C_ZN6QFrame13setFrameStyleEi(void* qthis, int32_t arg0); // 4
-  // proto:  QRect QFrame::frameRect();
-extern void* C_ZNK6QFrame9frameRectEv(void* qthis); // 4
-  // proto:  QFrame::Shadow QFrame::frameShadow();
-extern void C_ZNK6QFrame11frameShadowEv(void* qthis); // 4
-  // proto:  void QFrame::setFrameRect(const QRect & );
-extern void C_ZN6QFrame12setFrameRectERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  int QFrame::midLineWidth();
-extern int32_t C_ZNK6QFrame12midLineWidthEv(void* qthis); // 4
-  // proto:  QSize QFrame::sizeHint();
-extern void* C_ZNK6QFrame8sizeHintEv(void* qthis); // 4
-  // proto:  QFrame::Shape QFrame::frameShape();
-extern void C_ZNK6QFrame10frameShapeEv(void* qthis); // 4
-  // proto:  void QFrame::setMidLineWidth(int );
-extern void C_ZN6QFrame15setMidLineWidthEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QFrame::lineWidth();
-extern int32_t C_ZNK6QFrame9lineWidthEv(void* qthis); // 4
+// extern C begin: 10
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QFrame)=1
+//  ext block end
+
+//  body block begin
 type QFrame struct {
-  /*qbase*/ QWidget;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// frameStyle()
-func (this *QFrame) Framestyle(args ...interface{}) (ret interface{}) {
-  // frameStyle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QFrame10frameStyleEv
-    // invoke: int frameStyle()
-    var ret0 = C.C_ZNK6QFrame10frameStyleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFrame", "frameStyle", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:54
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QFrame) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QFrame()
-func (this *QFrame) Freeqframe(args ...interface{}) () {
-  // ~QFrame()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QFrameD0Ev
-    // invoke: void ~QFrame()
-    C.C_ZN6QFrameD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFrame", "~QFrame", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:65
+// index:0
+// virtual
+// void ~QFrame()
+func DeleteQFrame(*QFrame) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrameD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// frameWidth()
-func (this *QFrame) Framewidth(args ...interface{}) (ret interface{}) {
-  // frameWidth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QFrame10frameWidthEv
-    // invoke: int frameWidth()
-    var ret0 = C.C_ZNK6QFrame10frameWidthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFrame", "frameWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:67
+// index:0
+// int frameStyle()
+func (this *QFrame) FrameStyle() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameStyleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setLineWidth(int)
-func (this *QFrame) Setlinewidth(args ...interface{}) () {
-  // setLineWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QFrame12setLineWidthEi
-    // invoke: void setLineWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QFrame12setLineWidthEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFrame", "setLineWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:68
+// index:0
+// void setFrameStyle(int)
+func (this *QFrame) SetFrameStyle(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameStyleEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QFrame) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QFrame10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK6QFrame10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFrame", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:70
+// index:0
+// int frameWidth()
+func (this *QFrame) FrameWidth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFrameStyle(int)
-func (this *QFrame) Setframestyle(args ...interface{}) () {
-  // setFrameStyle(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QFrame13setFrameStyleEi
-    // invoke: void setFrameStyle(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QFrame13setFrameStyleEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFrame", "setFrameStyle", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:72
+// index:0
+// virtual
+// QSize sizeHint()
+func (this *QFrame) SizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// frameRect()
-func (this *QFrame) Framerect(args ...interface{}) (ret interface{}) {
-  // frameRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QFrame9frameRectEv
-    // invoke: QRect frameRect()
-    var ret0 = C.C_ZNK6QFrame9frameRectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFrame", "frameRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:96
+// index:0
+// QFrame::Shape frameShape()
+func (this *QFrame) FrameShape() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameShapeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// frameShadow()
-func (this *QFrame) Frameshadow(args ...interface{}) () {
-  // frameShadow()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QFrame11frameShadowEv
-    // invoke: QFrame::Shadow frameShadow()
-    C.C_ZNK6QFrame11frameShadowEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFrame", "frameShadow", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:97
+// index:0
+// void setFrameShape(enum QFrame::Shape)
+func (this *QFrame) SetFrameShape(arg0 int) {
+	// 0: (, QFrame::Shape arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameShapeENS_5ShapeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFrameRect(const class QRect &)
-func (this *QFrame) Setframerect(args ...interface{}) () {
-  // setFrameRect(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QFrame12setFrameRectERK5QRect
-    // invoke: void setFrameRect(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QFrame12setFrameRectERK5QRect(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFrame", "setFrameRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:98
+// index:0
+// QFrame::Shadow frameShadow()
+func (this *QFrame) FrameShadow() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame11frameShadowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// midLineWidth()
-func (this *QFrame) Midlinewidth(args ...interface{}) (ret interface{}) {
-  // midLineWidth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QFrame12midLineWidthEv
-    // invoke: int midLineWidth()
-    var ret0 = C.C_ZNK6QFrame12midLineWidthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFrame", "midLineWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:99
+// index:0
+// void setFrameShadow(enum QFrame::Shadow)
+func (this *QFrame) SetFrameShadow(arg0 int) {
+	// 0: (, QFrame::Shadow arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame14setFrameShadowENS_6ShadowE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// sizeHint()
-func (this *QFrame) Sizehint(args ...interface{}) (ret interface{}) {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QFrame8sizeHintEv
-    // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK6QFrame8sizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFrame", "sizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:101
+// index:0
+// int lineWidth()
+func (this *QFrame) LineWidth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9lineWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// frameShape()
-func (this *QFrame) Frameshape(args ...interface{}) () {
-  // frameShape()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QFrame10frameShapeEv
-    // invoke: QFrame::Shape frameShape()
-    C.C_ZNK6QFrame10frameShapeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFrame", "frameShape", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:102
+// index:0
+// void setLineWidth(int)
+func (this *QFrame) SetLineWidth(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame12setLineWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setMidLineWidth(int)
-func (this *QFrame) Setmidlinewidth(args ...interface{}) () {
-  // setMidLineWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QFrame15setMidLineWidthEi
-    // invoke: void setMidLineWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QFrame15setMidLineWidthEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFrame", "setMidLineWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:104
+// index:0
+// int midLineWidth()
+func (this *QFrame) MidLineWidth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame12midLineWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// lineWidth()
-func (this *QFrame) Linewidth(args ...interface{}) (ret interface{}) {
-  // lineWidth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QFrame9lineWidthEv
-    // invoke: int lineWidth()
-    var ret0 = C.C_ZNK6QFrame9lineWidthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFrame", "lineWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qframe.h:105
+// index:0
+// void setMidLineWidth(int)
+func (this *QFrame) SetMidLineWidth(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame15setMidLineWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qframe.h:107
+// index:0
+// QRect frameRect()
+func (this *QFrame) FrameRect() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9frameRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qframe.h:108
+// index:0
+// void setFrameRect(const class QRect &)
+func (this *QFrame) SetFrameRect(arg0 unsafe.Pointer) {
+	// 0: (, const QRect & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame12setFrameRectERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

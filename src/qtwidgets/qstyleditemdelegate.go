@@ -1,473 +1,176 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h
+// #include <qstyleditemdelegate.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qstyleditemdelegate.h
-// dst-file: /src/widgets/qstyleditemdelegate.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QItemEditorFactory * QStyledItemDelegate::itemEditorFactory();
-extern void* C_ZNK19QStyledItemDelegate17itemEditorFactoryEv(void* qthis); // 4
-  // proto:  QWidget * QStyledItemDelegate::createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void* C_ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  void QStyledItemDelegate::updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void C_ZNK19QStyledItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  void QStyledItemDelegate::QStyledItemDelegate(QObject * parent);
-extern void* C_ZN19QStyledItemDelegateC2EP7QObject(void* arg0); // 3
-  // proto:  void QStyledItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void C_ZNK19QStyledItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  void QStyledItemDelegate::setModelData(QWidget * editor, QAbstractItemModel * model, const QModelIndex & index);
-extern void C_ZNK19QStyledItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
-  // proto:  QString QStyledItemDelegate::displayText(const QVariant & value, const QLocale & locale);
-extern void* C_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  void QStyledItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
-extern void C_ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  void QStyledItemDelegate::~QStyledItemDelegate();
-extern void C_ZN19QStyledItemDelegateD2Ev(void* qthis); // 4
-  // proto:  QSize QStyledItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void* C_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  const QMetaObject * QStyledItemDelegate::metaObject();
-extern void C_ZNK19QStyledItemDelegate10metaObjectEv(void* qthis); // 4
-  // proto:  void QStyledItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
-extern void C_ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory(void* qthis, void* arg0); // 4
+// extern C begin: 14
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QStyledItemDelegate)=1
+//  ext block end
+
+//  body block begin
 type QStyledItemDelegate struct {
-  /*qbase*/ QAbstractItemDelegate;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// itemEditorFactory()
-func (this *QStyledItemDelegate) Itemeditorfactory(args ...interface{}) (ret interface{}) {
-  // itemEditorFactory()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QStyledItemDelegate17itemEditorFactoryEv
-    // invoke: QItemEditorFactory * itemEditorFactory()
-    var ret0 = C.C_ZNK19QStyledItemDelegate17itemEditorFactoryEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QItemEditorFactory{}) // "QItemEditorFactory *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "itemEditorFactory", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:58
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QStyledItemDelegate) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) Createeditor(args ...interface{}) (ret interface{}) {
-  // createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][1] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
-  vtys[0][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
-    // invoke: QWidget * createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QStyleOptionViewItem).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "createEditor", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:61
+// index:0
+// void QStyledItemDelegate(class QObject *)
+func NewQStyledItemDelegate(parent unsafe.Pointer) *QStyledItemDelegate {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegateC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QStyledItemDelegate{cthis}
 }
 
-// updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) Updateeditorgeometry(args ...interface{}) () {
-  // updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][1] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
-  vtys[0][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QStyledItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
-    // invoke: void updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QStyleOptionViewItem).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZNK19QStyledItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "updateEditorGeometry", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:62
+// index:0
+// virtual
+// void ~QStyledItemDelegate()
+func DeleteQStyledItemDelegate(*QStyledItemDelegate) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegateD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// QStyledItemDelegate(class QObject *)
-func NewQStyledItemDelegate(args ...interface{}) *QStyledItemDelegate {
-  // QStyledItemDelegate(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QStyledItemDelegateC1EP7QObject
-    // invoke: void QStyledItemDelegate(class QObject *)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN19QStyledItemDelegateC2EP7QObject(arg0)
-    return &QStyledItemDelegate{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "QStyledItemDelegate", args)
-  }
-
-  return nil // QStyledItemDelegate{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:65
+// index:0
+// virtual
+// void paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
+func (this *QStyledItemDelegate) Paint(painter unsafe.Pointer, option unsafe.Pointer, index unsafe.Pointer) {
+	// 0: (, QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index), (painter, option, index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, painter, option, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) Paint(args ...interface{}) () {
-  // paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QPainter{}) // "QPainter *"
-  vtys[0][1] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
-  vtys[0][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QStyledItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex
-    // invoke: void paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
-    var arg0 = args[0].(*qtgui.QPainter).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QStyleOptionViewItem).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZNK19QStyledItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "paint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:67
+// index:0
+// virtual
+// QSize sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
+func (this *QStyledItemDelegate) SizeHint(option unsafe.Pointer, index unsafe.Pointer) {
+	// 0: (, const QStyleOptionViewItem & option, const QModelIndex & index), (option, index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, option, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
-func (this *QStyledItemDelegate) Setmodeldata(args ...interface{}) () {
-  // setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][1] = reflect.TypeOf(qtcore.QAbstractItemModel{}) // "QAbstractItemModel *"
-  vtys[0][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QStyledItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex
-    // invoke: void setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QAbstractItemModel).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZNK19QStyledItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "setModelData", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:71
+// index:0
+// virtual
+// QWidget * createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
+func (this *QStyledItemDelegate) CreateEditor(parent unsafe.Pointer, option unsafe.Pointer, index unsafe.Pointer) {
+	// 0: (, QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index), (parent, option, index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent, option, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// displayText(const class QVariant &, const class QLocale &)
-func (this *QStyledItemDelegate) Displaytext(args ...interface{}) (ret interface{}) {
-  // displayText(const class QVariant &, const class QLocale &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QVariant{}) // "const QVariant &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QLocale{}) // "const QLocale &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale
-    // invoke: QString displayText(const class QVariant &, const class QLocale &)
-    var arg0 = args[0].(*qtcore.QVariant).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QLocale).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "displayText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:75
+// index:0
+// virtual
+// void setEditorData(class QWidget *, const class QModelIndex &)
+func (this *QStyledItemDelegate) SetEditorData(editor unsafe.Pointer, index unsafe.Pointer) {
+	// 0: (, QWidget * editor, const QModelIndex & index), (editor, index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, editor, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// setEditorData(class QWidget *, const class QModelIndex &)
-func (this *QStyledItemDelegate) Seteditordata(args ...interface{}) () {
-  // setEditorData(class QWidget *, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex
-    // invoke: void setEditorData(class QWidget *, const class QModelIndex &)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "setEditorData", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:76
+// index:0
+// virtual
+// void setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
+func (this *QStyledItemDelegate) SetModelData(editor unsafe.Pointer, model unsafe.Pointer, index unsafe.Pointer) {
+	// 0: (, QWidget * editor, QAbstractItemModel * model, const QModelIndex & index), (editor, model, index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, editor, model, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QStyledItemDelegate()
-func (this *QStyledItemDelegate) Freeqstyleditemdelegate(args ...interface{}) () {
-  // ~QStyledItemDelegate()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QStyledItemDelegateD0Ev
-    // invoke: void ~QStyledItemDelegate()
-    C.C_ZN19QStyledItemDelegateD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "~QStyledItemDelegate", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:80
+// index:0
+// virtual
+// void updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
+func (this *QStyledItemDelegate) UpdateEditorGeometry(editor unsafe.Pointer, option unsafe.Pointer, index unsafe.Pointer) {
+	// 0: (, QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index), (editor, option, index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, editor, option, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) Sizehint(args ...interface{}) (ret interface{}) {
-  // sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex
-    // invoke: QSize sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
-    var arg0 = args[0].(*QStyleOptionViewItem).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "sizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:85
+// index:0
+// QItemEditorFactory * itemEditorFactory()
+func (this *QStyledItemDelegate) ItemEditorFactory() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate17itemEditorFactoryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QStyledItemDelegate) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QStyledItemDelegate10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK19QStyledItemDelegate10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:86
+// index:0
+// void setItemEditorFactory(class QItemEditorFactory *)
+func (this *QStyledItemDelegate) SetItemEditorFactory(factory unsafe.Pointer) {
+	// 0: (, QItemEditorFactory * factory), (factory)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory", ffiqt.FFI_TYPE_VOID, this.cthis, factory)
+	gopp.ErrPrint(err, rv)
 }
 
-// setItemEditorFactory(class QItemEditorFactory *)
-func (this *QStyledItemDelegate) Setitemeditorfactory(args ...interface{}) () {
-  // setItemEditorFactory(class QItemEditorFactory *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QItemEditorFactory{}) // "QItemEditorFactory *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory
-    // invoke: void setItemEditorFactory(class QItemEditorFactory *)
-    var arg0 = args[0].(*QItemEditorFactory).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStyledItemDelegate", "setItemEditorFactory", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:88
+// index:0
+// virtual
+// QString displayText(const class QVariant &, const class QLocale &)
+func (this *QStyledItemDelegate) DisplayText(value unsafe.Pointer, locale unsafe.Pointer) {
+	// 0: (, const QVariant & value, const QLocale & locale), (value, locale)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale", ffiqt.FFI_TYPE_VOID, this.cthis, value, locale)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
-
+//  body block end

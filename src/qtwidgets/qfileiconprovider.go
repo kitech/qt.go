@@ -1,214 +1,117 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qfileiconprovider.h
+// #include <qfileiconprovider.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qfileiconprovider.h
-// dst-file: /src/widgets/qfileiconprovider.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QFileIconProvider::~QFileIconProvider();
-extern void C_ZN17QFileIconProviderD2Ev(void* qthis); // 4
-  // proto:  void QFileIconProvider::QFileIconProvider();
-extern void* C_ZN17QFileIconProviderC2Ev(); // 3
-  // proto:  QString QFileIconProvider::type(const QFileInfo & info);
-extern void* C_ZNK17QFileIconProvider4typeERK9QFileInfo(void* qthis, void* arg0); // 4
-  // proto:  Options QFileIconProvider::options();
-extern void C_ZNK17QFileIconProvider7optionsEv(void* qthis); // 4
-  // proto:  QIcon QFileIconProvider::icon(const QFileInfo & info);
-extern void* C_ZNK17QFileIconProvider4iconERK9QFileInfo(void* qthis, void* arg0); // 4
+// extern C begin: 22
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QFileIconProvider)=1
+//  ext block end
+
+//  body block begin
 type QFileIconProvider struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// ~QFileIconProvider()
-func (this *QFileIconProvider) Freeqfileiconprovider(args ...interface{}) () {
-  // ~QFileIconProvider()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QFileIconProviderD0Ev
-    // invoke: void ~QFileIconProvider()
-    C.C_ZN17QFileIconProviderD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileIconProvider", "~QFileIconProvider", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfileiconprovider.h:56
+// index:0
+// void QFileIconProvider()
+func NewQFileIconProvider() *QFileIconProvider {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFileIconProviderC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QFileIconProvider{cthis}
 }
 
-// QFileIconProvider()
-func NewQFileIconProvider(args ...interface{}) *QFileIconProvider {
-  // QFileIconProvider()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QFileIconProviderC1Ev
-    // invoke: void QFileIconProvider()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN17QFileIconProviderC2Ev()
-    return &QFileIconProvider{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QFileIconProvider", "QFileIconProvider", args)
-  }
-
-  return nil // QFileIconProvider{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qfileiconprovider.h:57
+// index:0
+// virtual
+// void ~QFileIconProvider()
+func DeleteQFileIconProvider(*QFileIconProvider) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFileIconProviderD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// type(const class QFileInfo &)
-func (this *QFileIconProvider) Type_(args ...interface{}) (ret interface{}) {
-  // type(const class QFileInfo &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QFileInfo{}) // "const QFileInfo &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QFileIconProvider4typeERK9QFileInfo
-    // invoke: QString type(const class QFileInfo &)
-    var arg0 = args[0].(*qtcore.QFileInfo).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QFileIconProvider4typeERK9QFileInfo(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileIconProvider", "type", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfileiconprovider.h:65
+// index:0
+// virtual
+// QIcon icon(enum QFileIconProvider::IconType)
+func (this *QFileIconProvider) Icon(type_ int) {
+	// 0: (, QFileIconProvider::IconType type), (&type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconENS_8IconTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &type_)
+	gopp.ErrPrint(err, rv)
 }
 
-// options()
-func (this *QFileIconProvider) Options(args ...interface{}) () {
-  // options()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QFileIconProvider7optionsEv
-    // invoke: Options options()
-    C.C_ZNK17QFileIconProvider7optionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileIconProvider", "options", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfileiconprovider.h:66
+// index:1
+// virtual
+// QIcon icon(const class QFileInfo &)
+func (this *QFileIconProvider) Icon_1(info unsafe.Pointer) {
+	// 1: (, const QFileInfo & info), (info)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconERK9QFileInfo", ffiqt.FFI_TYPE_VOID, this.cthis, info)
+	gopp.ErrPrint(err, rv)
 }
 
-// icon(const class QFileInfo &)
-func (this *QFileIconProvider) Icon(args ...interface{}) (ret interface{}) {
-  // icon(const class QFileInfo &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QFileInfo{}) // "const QFileInfo &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QFileIconProvider4iconERK9QFileInfo
-    // invoke: QIcon icon(const class QFileInfo &)
-    var arg0 = args[0].(*qtcore.QFileInfo).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QFileIconProvider4iconERK9QFileInfo(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QIcon{}) // "QIcon"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileIconProvider", "icon", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfileiconprovider.h:67
+// index:0
+// virtual
+// QString type(const class QFileInfo &)
+func (this *QFileIconProvider) Type(info unsafe.Pointer) {
+	// 0: (, const QFileInfo & info), (info)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4typeERK9QFileInfo", ffiqt.FFI_TYPE_VOID, this.cthis, info)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qfileiconprovider.h:70
+// index:0
+// QFileIconProvider::Options options()
+func (this *QFileIconProvider) Options() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider7optionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+//  body block end

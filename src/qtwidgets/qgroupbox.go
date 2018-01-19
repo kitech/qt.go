@@ -1,512 +1,216 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qgroupbox.h
+// #include <qgroupbox.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qgroupbox.h
-// dst-file: /src/widgets/qgroupbox.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QGroupBox::~QGroupBox();
-extern void C_ZN9QGroupBoxD2Ev(void* qthis); // 4
-  // proto:  void QGroupBox::setTitle(const QString & title);
-extern void C_ZN9QGroupBox8setTitleERK7QString(void* qthis, void* arg0); // 4
-  // proto:  bool QGroupBox::isCheckable();
-extern bool C_ZNK9QGroupBox11isCheckableEv(void* qthis); // 4
-  // proto:  Qt::Alignment QGroupBox::alignment();
-extern void C_ZNK9QGroupBox9alignmentEv(void* qthis); // 4
-  // proto:  void QGroupBox::setFlat(bool flat);
-extern void C_ZN9QGroupBox7setFlatEb(void* qthis, bool arg0); // 4
-  // proto:  void QGroupBox::QGroupBox(QWidget * parent);
-extern void* C_ZN9QGroupBoxC2EP7QWidget(void* arg0); // 3
-  // proto:  void QGroupBox::QGroupBox(const QString & title, QWidget * parent);
-extern void* C_ZN9QGroupBoxC2ERK7QStringP7QWidget(void* arg0, void* arg1); // 3
-  // proto:  QString QGroupBox::title();
-extern void* C_ZNK9QGroupBox5titleEv(void* qthis); // 4
-  // proto:  bool QGroupBox::isChecked();
-extern bool C_ZNK9QGroupBox9isCheckedEv(void* qthis); // 4
-  // proto:  void QGroupBox::setAlignment(int alignment);
-extern void C_ZN9QGroupBox12setAlignmentEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QGroupBox::setChecked(bool checked);
-extern void C_ZN9QGroupBox10setCheckedEb(void* qthis, bool arg0); // 4
-  // proto:  void QGroupBox::setCheckable(bool checkable);
-extern void C_ZN9QGroupBox12setCheckableEb(void* qthis, bool arg0); // 4
-  // proto:  bool QGroupBox::isFlat();
-extern bool C_ZNK9QGroupBox6isFlatEv(void* qthis); // 4
-  // proto:  const QMetaObject * QGroupBox::metaObject();
-extern void C_ZNK9QGroupBox10metaObjectEv(void* qthis); // 4
-  // proto:  QSize QGroupBox::minimumSizeHint();
-extern void* C_ZNK9QGroupBox15minimumSizeHintEv(void* qthis); // 4
+// extern C begin: 80
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QGroupBox)=1
+//  ext block end
+
+//  body block begin
 type QGroupBox struct {
-  /*qbase*/ QWidget;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _clicked QGroupBox_clicked_signal;
-//  _toggled QGroupBox_toggled_signal;
+	cthis unsafe.Pointer
 }
 
-// ~QGroupBox()
-func (this *QGroupBox) Freeqgroupbox(args ...interface{}) () {
-  // ~QGroupBox()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QGroupBoxD0Ev
-    // invoke: void ~QGroupBox()
-    C.C_ZN9QGroupBoxD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGroupBox", "~QGroupBox", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:54
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QGroupBox) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTitle(const class QString &)
-func (this *QGroupBox) Settitle(args ...interface{}) () {
-  // setTitle(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QGroupBox8setTitleERK7QString
-    // invoke: void setTitle(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QGroupBox8setTitleERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGroupBox", "setTitle", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:62
+// index:0
+// void QGroupBox(class QWidget *)
+func NewQGroupBox(parent unsafe.Pointer) *QGroupBox {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QGroupBox{cthis}
 }
 
-// isCheckable()
-func (this *QGroupBox) Ischeckable(args ...interface{}) (ret interface{}) {
-  // isCheckable()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGroupBox11isCheckableEv
-    // invoke: bool isCheckable()
-    var ret0 = C.C_ZNK9QGroupBox11isCheckableEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGroupBox", "isCheckable", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:63
+// index:1
+// void QGroupBox(const class QString &, class QWidget *)
+func NewQGroupBox_1(title unsafe.Pointer, parent unsafe.Pointer) *QGroupBox {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBoxC2ERK7QStringP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, title, parent)
+	gopp.ErrPrint(err, rv)
+	return &QGroupBox{cthis}
 }
 
-// alignment()
-func (this *QGroupBox) Alignment(args ...interface{}) () {
-  // alignment()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGroupBox9alignmentEv
-    // invoke: Qt::Alignment alignment()
-    C.C_ZNK9QGroupBox9alignmentEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGroupBox", "alignment", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:64
+// index:0
+// virtual
+// void ~QGroupBox()
+func DeleteQGroupBox(*QGroupBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBoxD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFlat(_Bool)
-func (this *QGroupBox) Setflat(args ...interface{}) () {
-  // setFlat(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QGroupBox7setFlatEb
-    // invoke: void setFlat(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QGroupBox7setFlatEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGroupBox", "setFlat", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:66
+// index:0
+// QString title()
+func (this *QGroupBox) Title() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox5titleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QGroupBox(class QWidget *)
-func NewQGroupBox(args ...interface{}) *QGroupBox {
-  // QGroupBox(class QWidget *)
-  // QGroupBox(const class QString &, class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QGroupBoxC1EP7QWidget
-    // invoke: void QGroupBox(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QGroupBoxC2EP7QWidget(arg0)
-    return &QGroupBox{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN9QGroupBoxC1ERK7QStringP7QWidget
-    // invoke: void QGroupBox(const class QString &, class QWidget *)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QWidget).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QGroupBoxC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QGroupBox{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QGroupBox", "QGroupBox", args)
-  }
-
-  return nil // QGroupBox{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qgroupbox.h:67
+// index:0
+// void setTitle(const class QString &)
+func (this *QGroupBox) SetTitle(title unsafe.Pointer) {
+	// 0: (, const QString & title), (title)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox8setTitleERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, title)
+	gopp.ErrPrint(err, rv)
 }
 
-// title()
-func (this *QGroupBox) Title(args ...interface{}) (ret interface{}) {
-  // title()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGroupBox5titleEv
-    // invoke: QString title()
-    var ret0 = C.C_ZNK9QGroupBox5titleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGroupBox", "title", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:69
+// index:0
+// Qt::Alignment alignment()
+func (this *QGroupBox) Alignment() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox9alignmentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isChecked()
-func (this *QGroupBox) Ischecked(args ...interface{}) (ret interface{}) {
-  // isChecked()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGroupBox9isCheckedEv
-    // invoke: bool isChecked()
-    var ret0 = C.C_ZNK9QGroupBox9isCheckedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGroupBox", "isChecked", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:70
+// index:0
+// void setAlignment(int)
+func (this *QGroupBox) SetAlignment(alignment int) {
+	// 0: (, int alignment), (&alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox12setAlignmentEi", ffiqt.FFI_TYPE_VOID, this.cthis, &alignment)
+	gopp.ErrPrint(err, rv)
 }
 
-// setAlignment(int)
-func (this *QGroupBox) Setalignment(args ...interface{}) () {
-  // setAlignment(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QGroupBox12setAlignmentEi
-    // invoke: void setAlignment(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QGroupBox12setAlignmentEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGroupBox", "setAlignment", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:72
+// index:0
+// virtual
+// QSize minimumSizeHint()
+func (this *QGroupBox) MinimumSizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox15minimumSizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setChecked(_Bool)
-func (this *QGroupBox) Setchecked(args ...interface{}) () {
-  // setChecked(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QGroupBox10setCheckedEb
-    // invoke: void setChecked(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QGroupBox10setCheckedEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGroupBox", "setChecked", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:74
+// index:0
+// bool isFlat()
+func (this *QGroupBox) IsFlat() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox6isFlatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setCheckable(_Bool)
-func (this *QGroupBox) Setcheckable(args ...interface{}) () {
-  // setCheckable(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QGroupBox12setCheckableEb
-    // invoke: void setCheckable(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QGroupBox12setCheckableEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGroupBox", "setCheckable", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:75
+// index:0
+// void setFlat(_Bool)
+func (this *QGroupBox) SetFlat(flat bool) {
+	// 0: (, bool flat), (&flat)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7setFlatEb", ffiqt.FFI_TYPE_VOID, this.cthis, &flat)
+	gopp.ErrPrint(err, rv)
 }
 
-// isFlat()
-func (this *QGroupBox) Isflat(args ...interface{}) (ret interface{}) {
-  // isFlat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGroupBox6isFlatEv
-    // invoke: bool isFlat()
-    var ret0 = C.C_ZNK9QGroupBox6isFlatEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGroupBox", "isFlat", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:76
+// index:0
+// bool isCheckable()
+func (this *QGroupBox) IsCheckable() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox11isCheckableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QGroupBox) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGroupBox10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QGroupBox10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGroupBox", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:77
+// index:0
+// void setCheckable(_Bool)
+func (this *QGroupBox) SetCheckable(checkable bool) {
+	// 0: (, bool checkable), (&checkable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox12setCheckableEb", ffiqt.FFI_TYPE_VOID, this.cthis, &checkable)
+	gopp.ErrPrint(err, rv)
 }
 
-// minimumSizeHint()
-func (this *QGroupBox) Minimumsizehint(args ...interface{}) (ret interface{}) {
-  // minimumSizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGroupBox15minimumSizeHintEv
-    // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK9QGroupBox15minimumSizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGroupBox", "minimumSizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgroupbox.h:78
+// index:0
+// bool isChecked()
+func (this *QGroupBox) IsChecked() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox9isCheckedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qgroupbox.h:81
+// index:0
+// void setChecked(_Bool)
+func (this *QGroupBox) SetChecked(checked bool) {
+	// 0: (, bool checked), (&checked)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox10setCheckedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &checked)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qgroupbox.h:84
+// index:0
+// void clicked(_Bool)
+func (this *QGroupBox) Clicked(checked bool) {
+	// 0: (, bool checked), (&checked)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7clickedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &checked)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgroupbox.h:85
+// index:0
+// void toggled(_Bool)
+func (this *QGroupBox) Toggled(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7toggledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

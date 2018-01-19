@@ -1,278 +1,125 @@
+//  header block begin
+// /usr/include/qt/QtCore/qfileselector.h
+// #include <qfileselector.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qfileselector.h
-// dst-file: /src/core/qfileselector.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QFileSelector::QFileSelector(QObject * parent);
-extern void* C_ZN13QFileSelectorC2EP7QObject(void* arg0); // 3
-  // proto:  const QMetaObject * QFileSelector::metaObject();
-extern void C_ZNK13QFileSelector10metaObjectEv(void* qthis); // 4
-  // proto:  QStringList QFileSelector::allSelectors();
-extern void C_ZNK13QFileSelector12allSelectorsEv(void* qthis); // 4
-  // proto:  QStringList QFileSelector::extraSelectors();
-extern void C_ZNK13QFileSelector14extraSelectorsEv(void* qthis); // 4
-  // proto:  void QFileSelector::setExtraSelectors(const QStringList & list);
-extern void C_ZN13QFileSelector17setExtraSelectorsERK11QStringList(void* qthis, void* arg0); // 4
-  // proto:  void QFileSelector::~QFileSelector();
-extern void C_ZN13QFileSelectorD2Ev(void* qthis); // 4
-  // proto:  QString QFileSelector::select(const QString & filePath);
-extern void* C_ZNK13QFileSelector6selectERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QUrl QFileSelector::select(const QUrl & filePath);
-extern void* C_ZNK13QFileSelector6selectERK4QUrl(void* qthis, void* arg0); // 4
+// extern C begin: 8
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QFileSelector)=1
+//  ext block end
+
+//  body block begin
 type QFileSelector struct {
-  /*qbase*/ QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// QFileSelector(class QObject *)
-func NewQFileSelector(args ...interface{}) *QFileSelector {
-  // QFileSelector(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFileSelectorC1EP7QObject
-    // invoke: void QFileSelector(class QObject *)
-    var arg0 = args[0].(*QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN13QFileSelectorC2EP7QObject(arg0)
-    return &QFileSelector{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QFileSelector", "QFileSelector", args)
-  }
-
-  return nil // QFileSelector{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qfileselector.h:51
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QFileSelector) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QFileSelector) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFileSelector10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK13QFileSelector10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileSelector", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileselector.h:53
+// index:0
+// void QFileSelector(class QObject *)
+func NewQFileSelector(parent unsafe.Pointer) *QFileSelector {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelectorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QFileSelector{cthis}
 }
 
-// allSelectors()
-func (this *QFileSelector) Allselectors(args ...interface{}) () {
-  // allSelectors()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFileSelector12allSelectorsEv
-    // invoke: QStringList allSelectors()
-    C.C_ZNK13QFileSelector12allSelectorsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileSelector", "allSelectors", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileselector.h:54
+// index:0
+// virtual
+// void ~QFileSelector()
+func DeleteQFileSelector(*QFileSelector) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelectorD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// extraSelectors()
-func (this *QFileSelector) Extraselectors(args ...interface{}) () {
-  // extraSelectors()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFileSelector14extraSelectorsEv
-    // invoke: QStringList extraSelectors()
-    C.C_ZNK13QFileSelector14extraSelectorsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileSelector", "extraSelectors", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileselector.h:56
+// index:0
+// QString select(const class QString &)
+func (this *QFileSelector) Select(filePath unsafe.Pointer) {
+	// 0: (, const QString & filePath), (filePath)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector6selectERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, filePath)
+	gopp.ErrPrint(err, rv)
 }
 
-// setExtraSelectors(const class QStringList &)
-func (this *QFileSelector) Setextraselectors(args ...interface{}) () {
-  // setExtraSelectors(const class QStringList &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFileSelector17setExtraSelectorsERK11QStringList
-    // invoke: void setExtraSelectors(const class QStringList &)
-    var arg0 = args[0].(*QStringList).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QFileSelector17setExtraSelectorsERK11QStringList(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileSelector", "setExtraSelectors", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileselector.h:57
+// index:1
+// QUrl select(const class QUrl &)
+func (this *QFileSelector) Select_1(filePath unsafe.Pointer) {
+	// 1: (, const QUrl & filePath), (filePath)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector6selectERK4QUrl", ffiqt.FFI_TYPE_VOID, this.cthis, filePath)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QFileSelector()
-func (this *QFileSelector) Freeqfileselector(args ...interface{}) () {
-  // ~QFileSelector()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFileSelectorD0Ev
-    // invoke: void ~QFileSelector()
-    C.C_ZN13QFileSelectorD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileSelector", "~QFileSelector", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileselector.h:59
+// index:0
+// QStringList extraSelectors()
+func (this *QFileSelector) ExtraSelectors() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector14extraSelectorsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// select(const class QString &)
-func (this *QFileSelector) Select_(args ...interface{}) (ret interface{}) {
-  // select(const class QString &)
-  // select(const class QUrl &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QUrl{}) // "const QUrl &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFileSelector6selectERK7QString
-    // invoke: QString select(const class QString &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QFileSelector6selectERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK13QFileSelector6selectERK4QUrl
-    // invoke: QUrl select(const class QUrl &)
-    var arg0 = args[0].(*QUrl).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QFileSelector6selectERK4QUrl(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QUrl{}) // "QUrl"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSelector", "select", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qfileselector.h:60
+// index:0
+// void setExtraSelectors(const class QStringList &)
+func (this *QFileSelector) SetExtraSelectors(list unsafe.Pointer) {
+	// 0: (, const QStringList & list), (list)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelector17setExtraSelectorsERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, list)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qfileselector.h:62
+// index:0
+// QStringList allSelectors()
+func (this *QFileSelector) AllSelectors() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector12allSelectorsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+//  body block end

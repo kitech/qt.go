@@ -1,483 +1,223 @@
+//  header block begin
+// /usr/include/qt/QtGui/qoffscreensurface.h
+// #include <qoffscreensurface.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qoffscreensurface.h
-// dst-file: /src/gui/qoffscreensurface.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QOffscreenSurface::QOffscreenSurface(QScreen * screen);
-extern void* C_ZN17QOffscreenSurfaceC2EP7QScreen(void* arg0); // 3
-  // proto:  QSurface::SurfaceType QOffscreenSurface::surfaceType();
-extern void C_ZNK17QOffscreenSurface11surfaceTypeEv(void* qthis); // 4
-  // proto:  QSize QOffscreenSurface::size();
-extern void* C_ZNK17QOffscreenSurface4sizeEv(void* qthis); // 4
-  // proto:  void QOffscreenSurface::setScreen(QScreen * screen);
-extern void C_ZN17QOffscreenSurface9setScreenEP7QScreen(void* qthis, void* arg0); // 4
-  // proto:  void QOffscreenSurface::setFormat(const QSurfaceFormat & format);
-extern void C_ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat(void* qthis, void* arg0); // 4
-  // proto:  void QOffscreenSurface::create();
-extern void C_ZN17QOffscreenSurface6createEv(void* qthis); // 4
-  // proto:  QSurfaceFormat QOffscreenSurface::format();
-extern void* C_ZNK17QOffscreenSurface6formatEv(void* qthis); // 4
-  // proto:  void QOffscreenSurface::destroy();
-extern void C_ZN17QOffscreenSurface7destroyEv(void* qthis); // 4
-  // proto:  QPlatformOffscreenSurface * QOffscreenSurface::handle();
-extern void C_ZNK17QOffscreenSurface6handleEv(void* qthis); // 4
-  // proto:  bool QOffscreenSurface::isValid();
-extern bool C_ZNK17QOffscreenSurface7isValidEv(void* qthis); // 4
-  // proto:  QScreen * QOffscreenSurface::screen();
-extern void* C_ZNK17QOffscreenSurface6screenEv(void* qthis); // 4
-  // proto:  void QOffscreenSurface::~QOffscreenSurface();
-extern void C_ZN17QOffscreenSurfaceD2Ev(void* qthis); // 4
-  // proto:  const QMetaObject * QOffscreenSurface::metaObject();
-extern void C_ZNK17QOffscreenSurface10metaObjectEv(void* qthis); // 4
-  // proto:  QSurfaceFormat QOffscreenSurface::requestedFormat();
-extern void* C_ZNK17QOffscreenSurface15requestedFormatEv(void* qthis); // 4
+// extern C begin: 43
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QOffscreenSurface)=1
+//  ext block end
+
+//  body block begin
 type QOffscreenSurface struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _screenChanged QOffscreenSurface_screenChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// QOffscreenSurface(class QScreen *)
-func NewQOffscreenSurface(args ...interface{}) *QOffscreenSurface {
-  // QOffscreenSurface(class QScreen *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QScreen{}) // "QScreen *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QOffscreenSurfaceC1EP7QScreen
-    // invoke: void QOffscreenSurface(class QScreen *)
-    var arg0 = args[0].(*QScreen).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN17QOffscreenSurfaceC2EP7QScreen(arg0)
-    return &QOffscreenSurface{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "QOffscreenSurface", args)
-  }
-
-  return nil // QOffscreenSurface{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qoffscreensurface.h:56
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QOffscreenSurface) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// surfaceType()
-func (this *QOffscreenSurface) Surfacetype(args ...interface{}) () {
-  // surfaceType()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QOffscreenSurface11surfaceTypeEv
-    // invoke: QSurface::SurfaceType surfaceType()
-    C.C_ZNK17QOffscreenSurface11surfaceTypeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "surfaceType", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:61
+// index:0
+// void QOffscreenSurface(class QScreen *, class QObject *)
+func NewQOffscreenSurface(screen unsafe.Pointer, parent unsafe.Pointer) *QOffscreenSurface {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurfaceC2EP7QScreenP7QObject", ffiqt.FFI_TYPE_VOID, cthis, screen, parent)
+	gopp.ErrPrint(err, rv)
+	return &QOffscreenSurface{cthis}
 }
 
-// size()
-func (this *QOffscreenSurface) Size(args ...interface{}) (ret interface{}) {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QOffscreenSurface4sizeEv
-    // invoke: QSize size()
-    var ret0 = C.C_ZNK17QOffscreenSurface4sizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "size", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:62
+// index:1
+// void QOffscreenSurface(class QScreen *)
+func NewQOffscreenSurface_1(screen unsafe.Pointer) *QOffscreenSurface {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurfaceC2EP7QScreen", ffiqt.FFI_TYPE_VOID, cthis, screen)
+	gopp.ErrPrint(err, rv)
+	return &QOffscreenSurface{cthis}
 }
 
-// setScreen(class QScreen *)
-func (this *QOffscreenSurface) Setscreen(args ...interface{}) () {
-  // setScreen(class QScreen *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QScreen{}) // "QScreen *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QOffscreenSurface9setScreenEP7QScreen
-    // invoke: void setScreen(class QScreen *)
-    var arg0 = args[0].(*QScreen).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN17QOffscreenSurface9setScreenEP7QScreen(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "setScreen", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:63
+// index:0
+// virtual
+// void ~QOffscreenSurface()
+func DeleteQOffscreenSurface(*QOffscreenSurface) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFormat(const class QSurfaceFormat &)
-func (this *QOffscreenSurface) Setformat(args ...interface{}) () {
-  // setFormat(const class QSurfaceFormat &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QSurfaceFormat{}) // "const QSurfaceFormat &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat
-    // invoke: void setFormat(const class QSurfaceFormat &)
-    var arg0 = args[0].(*QSurfaceFormat).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "setFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:65
+// index:0
+// virtual
+// QSurface::SurfaceType surfaceType()
+func (this *QOffscreenSurface) SurfaceType() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface11surfaceTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// create()
-func (this *QOffscreenSurface) Create(args ...interface{}) () {
-  // create()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QOffscreenSurface6createEv
-    // invoke: void create()
-    C.C_ZN17QOffscreenSurface6createEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "create", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:67
+// index:0
+// void create()
+func (this *QOffscreenSurface) Create() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurface6createEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// format()
-func (this *QOffscreenSurface) Format(args ...interface{}) (ret interface{}) {
-  // format()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QOffscreenSurface6formatEv
-    // invoke: QSurfaceFormat format()
-    var ret0 = C.C_ZNK17QOffscreenSurface6formatEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QSurfaceFormat{}) // "QSurfaceFormat"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "format", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:68
+// index:0
+// void destroy()
+func (this *QOffscreenSurface) Destroy() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurface7destroyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// destroy()
-func (this *QOffscreenSurface) Destroy(args ...interface{}) () {
-  // destroy()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QOffscreenSurface7destroyEv
-    // invoke: void destroy()
-    C.C_ZN17QOffscreenSurface7destroyEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "destroy", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:70
+// index:0
+// bool isValid()
+func (this *QOffscreenSurface) IsValid() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// handle()
-func (this *QOffscreenSurface) Handle(args ...interface{}) () {
-  // handle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QOffscreenSurface6handleEv
-    // invoke: QPlatformOffscreenSurface * handle()
-    C.C_ZNK17QOffscreenSurface6handleEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "handle", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:72
+// index:0
+// void setFormat(const class QSurfaceFormat &)
+func (this *QOffscreenSurface) SetFormat(format unsafe.Pointer) {
+	// 0: (, const QSurfaceFormat & format), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat", ffiqt.FFI_TYPE_VOID, this.cthis, format)
+	gopp.ErrPrint(err, rv)
 }
 
-// isValid()
-func (this *QOffscreenSurface) Isvalid(args ...interface{}) (ret interface{}) {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QOffscreenSurface7isValidEv
-    // invoke: bool isValid()
-    var ret0 = C.C_ZNK17QOffscreenSurface7isValidEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "isValid", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:73
+// index:0
+// virtual
+// QSurfaceFormat format()
+func (this *QOffscreenSurface) Format() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface6formatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// screen()
-func (this *QOffscreenSurface) Screen(args ...interface{}) (ret interface{}) {
-  // screen()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QOffscreenSurface6screenEv
-    // invoke: QScreen * screen()
-    var ret0 = C.C_ZNK17QOffscreenSurface6screenEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QScreen{}) // "QScreen *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "screen", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:74
+// index:0
+// QSurfaceFormat requestedFormat()
+func (this *QOffscreenSurface) RequestedFormat() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface15requestedFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QOffscreenSurface()
-func (this *QOffscreenSurface) Freeqoffscreensurface(args ...interface{}) () {
-  // ~QOffscreenSurface()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QOffscreenSurfaceD0Ev
-    // invoke: void ~QOffscreenSurface()
-    C.C_ZN17QOffscreenSurfaceD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "~QOffscreenSurface", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:76
+// index:0
+// virtual
+// QSize size()
+func (this *QOffscreenSurface) Size() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QOffscreenSurface) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QOffscreenSurface10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK17QOffscreenSurface10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:78
+// index:0
+// QScreen * screen()
+func (this *QOffscreenSurface) Screen() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface6screenEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// requestedFormat()
-func (this *QOffscreenSurface) Requestedformat(args ...interface{}) (ret interface{}) {
-  // requestedFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QOffscreenSurface15requestedFormatEv
-    // invoke: QSurfaceFormat requestedFormat()
-    var ret0 = C.C_ZNK17QOffscreenSurface15requestedFormatEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QSurfaceFormat{}) // "QSurfaceFormat"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QOffscreenSurface", "requestedFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qoffscreensurface.h:79
+// index:0
+// void setScreen(class QScreen *)
+func (this *QOffscreenSurface) SetScreen(screen unsafe.Pointer) {
+	// 0: (, QScreen * screen), (screen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurface9setScreenEP7QScreen", ffiqt.FFI_TYPE_VOID, this.cthis, screen)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qoffscreensurface.h:81
+// index:0
+// QPlatformOffscreenSurface * handle()
+func (this *QOffscreenSurface) Handle() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface6handleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qoffscreensurface.h:83
+// index:0
+// void * nativeHandle()
+func (this *QOffscreenSurface) NativeHandle() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface12nativeHandleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qoffscreensurface.h:84
+// index:0
+// void setNativeHandle(void *)
+func (this *QOffscreenSurface) SetNativeHandle(handle unsafe.Pointer) {
+	// 0: (, void * handle), (handle)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurface15setNativeHandleEPv", ffiqt.FFI_TYPE_VOID, this.cthis, handle)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qoffscreensurface.h:87
+// index:0
+// void screenChanged(class QScreen *)
+func (this *QOffscreenSurface) ScreenChanged(screen unsafe.Pointer) {
+	// 0: (, QScreen * screen), (screen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurface13screenChangedEP7QScreen", ffiqt.FFI_TYPE_VOID, this.cthis, screen)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

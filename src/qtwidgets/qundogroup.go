@@ -1,611 +1,277 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qundogroup.h
+// #include <qundogroup.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qundogroup.h
-// dst-file: /src/widgets/qundogroup.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QAction * QUndoGroup::createUndoAction(QObject * parent, const QString & prefix);
-extern void* C_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  bool QUndoGroup::isClean();
-extern bool C_ZNK10QUndoGroup7isCleanEv(void* qthis); // 4
-  // proto:  void QUndoGroup::redo();
-extern void C_ZN10QUndoGroup4redoEv(void* qthis); // 4
-  // proto:  bool QUndoGroup::canUndo();
-extern bool C_ZNK10QUndoGroup7canUndoEv(void* qthis); // 4
-  // proto:  void QUndoGroup::~QUndoGroup();
-extern void C_ZN10QUndoGroupD2Ev(void* qthis); // 4
-  // proto:  void QUndoGroup::QUndoGroup(QObject * parent);
-extern void* C_ZN10QUndoGroupC2EP7QObject(void* arg0); // 3
-  // proto:  QString QUndoGroup::redoText();
-extern void* C_ZNK10QUndoGroup8redoTextEv(void* qthis); // 4
-  // proto:  void QUndoGroup::undo();
-extern void C_ZN10QUndoGroup4undoEv(void* qthis); // 4
-  // proto:  bool QUndoGroup::canRedo();
-extern bool C_ZNK10QUndoGroup7canRedoEv(void* qthis); // 4
-  // proto:  void QUndoGroup::addStack(QUndoStack * stack);
-extern void C_ZN10QUndoGroup8addStackEP10QUndoStack(void* qthis, void* arg0); // 4
-  // proto:  QAction * QUndoGroup::createRedoAction(QObject * parent, const QString & prefix);
-extern void* C_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  const QMetaObject * QUndoGroup::metaObject();
-extern void C_ZNK10QUndoGroup10metaObjectEv(void* qthis); // 4
-  // proto:  QString QUndoGroup::undoText();
-extern void* C_ZNK10QUndoGroup8undoTextEv(void* qthis); // 4
-  // proto:  void QUndoGroup::removeStack(QUndoStack * stack);
-extern void C_ZN10QUndoGroup11removeStackEP10QUndoStack(void* qthis, void* arg0); // 4
-  // proto:  void QUndoGroup::setActiveStack(QUndoStack * stack);
-extern void C_ZN10QUndoGroup14setActiveStackEP10QUndoStack(void* qthis, void* arg0); // 4
-  // proto:  QList<QUndoStack *> QUndoGroup::stacks();
-extern void C_ZNK10QUndoGroup6stacksEv(void* qthis); // 4
-  // proto:  QUndoStack * QUndoGroup::activeStack();
-extern void* C_ZNK10QUndoGroup11activeStackEv(void* qthis); // 4
+// extern C begin: 58
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QUndoGroup)=1
+//  ext block end
+
+//  body block begin
 type QUndoGroup struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _redoTextChanged QUndoGroup_redoTextChanged_signal;
-//  _cleanChanged QUndoGroup_cleanChanged_signal;
-//  _canUndoChanged QUndoGroup_canUndoChanged_signal;
-//  _indexChanged QUndoGroup_indexChanged_signal;
-//  _activeStackChanged QUndoGroup_activeStackChanged_signal;
-//  _canRedoChanged QUndoGroup_canRedoChanged_signal;
-//  _undoTextChanged QUndoGroup_undoTextChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// createUndoAction(class QObject *, const class QString &)
-func (this *QUndoGroup) Createundoaction(args ...interface{}) (ret interface{}) {
-  // createUndoAction(class QObject *, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString
-    // invoke: QAction * createUndoAction(class QObject *, const class QString &)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "createUndoAction", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:57
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QUndoGroup) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isClean()
-func (this *QUndoGroup) Isclean(args ...interface{}) (ret interface{}) {
-  // isClean()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QUndoGroup7isCleanEv
-    // invoke: bool isClean()
-    var ret0 = C.C_ZNK10QUndoGroup7isCleanEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "isClean", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:61
+// index:0
+// void QUndoGroup(class QObject *)
+func NewQUndoGroup(parent unsafe.Pointer) *QUndoGroup {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QUndoGroup{cthis}
 }
 
-// redo()
-func (this *QUndoGroup) Redo(args ...interface{}) () {
-  // redo()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QUndoGroup4redoEv
-    // invoke: void redo()
-    C.C_ZN10QUndoGroup4redoEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "redo", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:62
+// index:0
+// virtual
+// void ~QUndoGroup()
+func DeleteQUndoGroup(*QUndoGroup) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroupD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// canUndo()
-func (this *QUndoGroup) Canundo(args ...interface{}) (ret interface{}) {
-  // canUndo()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QUndoGroup7canUndoEv
-    // invoke: bool canUndo()
-    var ret0 = C.C_ZNK10QUndoGroup7canUndoEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "canUndo", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:64
+// index:0
+// void addStack(class QUndoStack *)
+func (this *QUndoGroup) AddStack(stack unsafe.Pointer) {
+	// 0: (, QUndoStack * stack), (stack)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup8addStackEP10QUndoStack", ffiqt.FFI_TYPE_VOID, this.cthis, stack)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QUndoGroup()
-func (this *QUndoGroup) Freequndogroup(args ...interface{}) () {
-  // ~QUndoGroup()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QUndoGroupD0Ev
-    // invoke: void ~QUndoGroup()
-    C.C_ZN10QUndoGroupD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "~QUndoGroup", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:65
+// index:0
+// void removeStack(class QUndoStack *)
+func (this *QUndoGroup) RemoveStack(stack unsafe.Pointer) {
+	// 0: (, QUndoStack * stack), (stack)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup11removeStackEP10QUndoStack", ffiqt.FFI_TYPE_VOID, this.cthis, stack)
+	gopp.ErrPrint(err, rv)
 }
 
-// QUndoGroup(class QObject *)
-func NewQUndoGroup(args ...interface{}) *QUndoGroup {
-  // QUndoGroup(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QUndoGroupC1EP7QObject
-    // invoke: void QUndoGroup(class QObject *)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN10QUndoGroupC2EP7QObject(arg0)
-    return &QUndoGroup{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "QUndoGroup", args)
-  }
-
-  return nil // QUndoGroup{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qundogroup.h:66
+// index:0
+// QList<QUndoStack *> stacks()
+func (this *QUndoGroup) Stacks() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup6stacksEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// redoText()
-func (this *QUndoGroup) Redotext(args ...interface{}) (ret interface{}) {
-  // redoText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QUndoGroup8redoTextEv
-    // invoke: QString redoText()
-    var ret0 = C.C_ZNK10QUndoGroup8redoTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "redoText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:67
+// index:0
+// QUndoStack * activeStack()
+func (this *QUndoGroup) ActiveStack() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup11activeStackEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// undo()
-func (this *QUndoGroup) Undo(args ...interface{}) () {
-  // undo()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QUndoGroup4undoEv
-    // invoke: void undo()
-    C.C_ZN10QUndoGroup4undoEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "undo", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:70
+// index:0
+// QAction * createUndoAction(class QObject *, const class QString &)
+func (this *QUndoGroup) CreateUndoAction(parent unsafe.Pointer, prefix unsafe.Pointer) {
+	// 0: (, QObject * parent, const QString & prefix), (parent, prefix)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, parent, prefix)
+	gopp.ErrPrint(err, rv)
 }
 
-// canRedo()
-func (this *QUndoGroup) Canredo(args ...interface{}) (ret interface{}) {
-  // canRedo()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QUndoGroup7canRedoEv
-    // invoke: bool canRedo()
-    var ret0 = C.C_ZNK10QUndoGroup7canRedoEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "canRedo", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:72
+// index:0
+// QAction * createRedoAction(class QObject *, const class QString &)
+func (this *QUndoGroup) CreateRedoAction(parent unsafe.Pointer, prefix unsafe.Pointer) {
+	// 0: (, QObject * parent, const QString & prefix), (parent, prefix)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, parent, prefix)
+	gopp.ErrPrint(err, rv)
 }
 
-// addStack(class QUndoStack *)
-func (this *QUndoGroup) Addstack(args ...interface{}) () {
-  // addStack(class QUndoStack *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QUndoStack{}) // "QUndoStack *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QUndoGroup8addStackEP10QUndoStack
-    // invoke: void addStack(class QUndoStack *)
-    var arg0 = args[0].(*QUndoStack).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QUndoGroup8addStackEP10QUndoStack(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "addStack", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:75
+// index:0
+// bool canUndo()
+func (this *QUndoGroup) CanUndo() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup7canUndoEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// createRedoAction(class QObject *, const class QString &)
-func (this *QUndoGroup) Createredoaction(args ...interface{}) (ret interface{}) {
-  // createRedoAction(class QObject *, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString
-    // invoke: QAction * createRedoAction(class QObject *, const class QString &)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "createRedoAction", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:76
+// index:0
+// bool canRedo()
+func (this *QUndoGroup) CanRedo() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup7canRedoEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QUndoGroup) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QUndoGroup10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QUndoGroup10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:77
+// index:0
+// QString undoText()
+func (this *QUndoGroup) UndoText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup8undoTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// undoText()
-func (this *QUndoGroup) Undotext(args ...interface{}) (ret interface{}) {
-  // undoText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QUndoGroup8undoTextEv
-    // invoke: QString undoText()
-    var ret0 = C.C_ZNK10QUndoGroup8undoTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "undoText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:78
+// index:0
+// QString redoText()
+func (this *QUndoGroup) RedoText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup8redoTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// removeStack(class QUndoStack *)
-func (this *QUndoGroup) Removestack(args ...interface{}) () {
-  // removeStack(class QUndoStack *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QUndoStack{}) // "QUndoStack *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QUndoGroup11removeStackEP10QUndoStack
-    // invoke: void removeStack(class QUndoStack *)
-    var arg0 = args[0].(*QUndoStack).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QUndoGroup11removeStackEP10QUndoStack(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "removeStack", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:79
+// index:0
+// bool isClean()
+func (this *QUndoGroup) IsClean() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup7isCleanEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setActiveStack(class QUndoStack *)
-func (this *QUndoGroup) Setactivestack(args ...interface{}) () {
-  // setActiveStack(class QUndoStack *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QUndoStack{}) // "QUndoStack *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QUndoGroup14setActiveStackEP10QUndoStack
-    // invoke: void setActiveStack(class QUndoStack *)
-    var arg0 = args[0].(*QUndoStack).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN10QUndoGroup14setActiveStackEP10QUndoStack(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "setActiveStack", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:82
+// index:0
+// void undo()
+func (this *QUndoGroup) Undo() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup4undoEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// stacks()
-func (this *QUndoGroup) Stacks(args ...interface{}) () {
-  // stacks()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QUndoGroup6stacksEv
-    // invoke: QList<QUndoStack *> stacks()
-    C.C_ZNK10QUndoGroup6stacksEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "stacks", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:83
+// index:0
+// void redo()
+func (this *QUndoGroup) Redo() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup4redoEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// activeStack()
-func (this *QUndoGroup) Activestack(args ...interface{}) (ret interface{}) {
-  // activeStack()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QUndoGroup11activeStackEv
-    // invoke: QUndoStack * activeStack()
-    var ret0 = C.C_ZNK10QUndoGroup11activeStackEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QUndoStack{}) // "QUndoStack *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QUndoGroup", "activeStack", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qundogroup.h:84
+// index:0
+// void setActiveStack(class QUndoStack *)
+func (this *QUndoGroup) SetActiveStack(stack unsafe.Pointer) {
+	// 0: (, QUndoStack * stack), (stack)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup14setActiveStackEP10QUndoStack", ffiqt.FFI_TYPE_VOID, this.cthis, stack)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qundogroup.h:87
+// index:0
+// void activeStackChanged(class QUndoStack *)
+func (this *QUndoGroup) ActiveStackChanged(stack unsafe.Pointer) {
+	// 0: (, QUndoStack * stack), (stack)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup18activeStackChangedEP10QUndoStack", ffiqt.FFI_TYPE_VOID, this.cthis, stack)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qundogroup.h:88
+// index:0
+// void indexChanged(int)
+func (this *QUndoGroup) IndexChanged(idx int) {
+	// 0: (, int idx), (&idx)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup12indexChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &idx)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qundogroup.h:89
+// index:0
+// void cleanChanged(_Bool)
+func (this *QUndoGroup) CleanChanged(clean bool) {
+	// 0: (, bool clean), (&clean)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup12cleanChangedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &clean)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qundogroup.h:90
+// index:0
+// void canUndoChanged(_Bool)
+func (this *QUndoGroup) CanUndoChanged(canUndo bool) {
+	// 0: (, bool canUndo), (&canUndo)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup14canUndoChangedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &canUndo)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qundogroup.h:91
+// index:0
+// void canRedoChanged(_Bool)
+func (this *QUndoGroup) CanRedoChanged(canRedo bool) {
+	// 0: (, bool canRedo), (&canRedo)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup14canRedoChangedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &canRedo)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qundogroup.h:92
+// index:0
+// void undoTextChanged(const class QString &)
+func (this *QUndoGroup) UndoTextChanged(undoText unsafe.Pointer) {
+	// 0: (, const QString & undoText), (undoText)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup15undoTextChangedERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, undoText)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qundogroup.h:93
+// index:0
+// void redoTextChanged(const class QString &)
+func (this *QUndoGroup) RedoTextChanged(redoText unsafe.Pointer) {
+	// 0: (, const QString & redoText), (redoText)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup15redoTextChangedERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, redoText)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

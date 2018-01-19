@@ -1,357 +1,165 @@
+//  header block begin
+// /usr/include/qt/QtGui/qtextdocumentfragment.h
+// #include <qtextdocumentfragment.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qtextdocumentfragment.h
-// dst-file: /src/gui/qtextdocumentfragment.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QString QTextDocumentFragment::toHtml(const QByteArray & encoding);
-extern void* C_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray(void* qthis, void* arg0); // 4
-  // proto: static QTextDocumentFragment QTextDocumentFragment::fromPlainText(const QString & plainText);
-extern void* C_ZN21QTextDocumentFragment13fromPlainTextERK7QString(void* arg0); // 4
-  // proto:  void QTextDocumentFragment::~QTextDocumentFragment();
-extern void C_ZN21QTextDocumentFragmentD2Ev(void* qthis); // 4
-  // proto:  bool QTextDocumentFragment::isEmpty();
-extern bool C_ZNK21QTextDocumentFragment7isEmptyEv(void* qthis); // 4
-  // proto:  QString QTextDocumentFragment::toPlainText();
-extern void* C_ZNK21QTextDocumentFragment11toPlainTextEv(void* qthis); // 4
-  // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextDocument * document);
-extern void* C_ZN21QTextDocumentFragmentC2EPK13QTextDocument(void* arg0); // 3
-  // proto:  void QTextDocumentFragment::QTextDocumentFragment();
-extern void* C_ZN21QTextDocumentFragmentC2Ev(); // 3
-  // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextDocumentFragment & rhs);
-extern void* C_ZN21QTextDocumentFragmentC2ERKS_(void* arg0); // 3
-  // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextCursor & range);
-extern void* C_ZN21QTextDocumentFragmentC2ERK11QTextCursor(void* arg0); // 3
-  // proto: static QTextDocumentFragment QTextDocumentFragment::fromHtml(const QString & html);
-extern void* C_ZN21QTextDocumentFragment8fromHtmlERK7QString(void* arg0); // 4
-  // proto: static QTextDocumentFragment QTextDocumentFragment::fromHtml(const QString & html, const QTextDocument * resourceProvider);
-extern void* C_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument(void* arg0, void* arg1); // 4
+// extern C begin: 10
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QTextDocumentFragment)=8
+//  ext block end
+
+//  body block begin
 type QTextDocumentFragment struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// toHtml(const class QByteArray &)
-func (this *QTextDocumentFragment) Tohtml(args ...interface{}) (ret interface{}) {
-  // toHtml(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QTextDocumentFragment6toHtmlERK10QByteArray
-    // invoke: QString toHtml(const class QByteArray &)
-    var arg0 = args[0].(*qtcore.QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextDocumentFragment", "toHtml", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:57
+// index:0
+// void QTextDocumentFragment()
+func NewQTextDocumentFragment() *QTextDocumentFragment {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QTextDocumentFragment{cthis}
 }
 
-// fromPlainText(const class QString &)
-func (this *QTextDocumentFragment) Fromplaintext_S(args ...interface{}) (ret interface{}) {
-  // fromPlainText(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QTextDocumentFragment13fromPlainTextERK7QString
-    // invoke: QTextDocumentFragment fromPlainText(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN21QTextDocumentFragment13fromPlainTextERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTextDocumentFragment{}) // "QTextDocumentFragment"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextDocumentFragment", "fromPlainText", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:58
+// index:1
+// void QTextDocumentFragment(const class QTextDocument *)
+func NewQTextDocumentFragment_1(document unsafe.Pointer) *QTextDocumentFragment {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2EPK13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, document)
+	gopp.ErrPrint(err, rv)
+	return &QTextDocumentFragment{cthis}
 }
 
-// ~QTextDocumentFragment()
-func (this *QTextDocumentFragment) Freeqtextdocumentfragment(args ...interface{}) () {
-  // ~QTextDocumentFragment()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QTextDocumentFragmentD0Ev
-    // invoke: void ~QTextDocumentFragment()
-    C.C_ZN21QTextDocumentFragmentD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextDocumentFragment", "~QTextDocumentFragment", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:59
+// index:2
+// void QTextDocumentFragment(const class QTextCursor &)
+func NewQTextDocumentFragment_2(range_ unsafe.Pointer) *QTextDocumentFragment {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2ERK11QTextCursor", ffiqt.FFI_TYPE_VOID, cthis, range_)
+	gopp.ErrPrint(err, rv)
+	return &QTextDocumentFragment{cthis}
 }
 
-// isEmpty()
-func (this *QTextDocumentFragment) Isempty(args ...interface{}) (ret interface{}) {
-  // isEmpty()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QTextDocumentFragment7isEmptyEv
-    // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK21QTextDocumentFragment7isEmptyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextDocumentFragment", "isEmpty", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:62
+// index:0
+// void ~QTextDocumentFragment()
+func DeleteQTextDocumentFragment(*QTextDocumentFragment) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// toPlainText()
-func (this *QTextDocumentFragment) Toplaintext(args ...interface{}) (ret interface{}) {
-  // toPlainText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QTextDocumentFragment11toPlainTextEv
-    // invoke: QString toPlainText()
-    var ret0 = C.C_ZNK21QTextDocumentFragment11toPlainTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextDocumentFragment", "toPlainText", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:64
+// index:0
+// bool isEmpty()
+func (this *QTextDocumentFragment) IsEmpty() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QTextDocumentFragment(const class QTextDocument *)
-func NewQTextDocumentFragment(args ...interface{}) *QTextDocumentFragment {
-  // QTextDocumentFragment(const class QTextDocument *)
-  // QTextDocumentFragment()
-  // QTextDocumentFragment(const class QTextDocumentFragment &)
-  // QTextDocumentFragment(const class QTextCursor &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTextDocument{}) // "const QTextDocument *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QTextDocumentFragment{}) // "const QTextDocumentFragment &"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(QTextCursor{}) // "const QTextCursor &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QTextDocumentFragmentC1EPK13QTextDocument
-    // invoke: void QTextDocumentFragment(const class QTextDocument *)
-    var arg0 = args[0].(*QTextDocument).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN21QTextDocumentFragmentC2EPK13QTextDocument(arg0)
-    return &QTextDocumentFragment{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN21QTextDocumentFragmentC1Ev
-    // invoke: void QTextDocumentFragment()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN21QTextDocumentFragmentC2Ev()
-    return &QTextDocumentFragment{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN21QTextDocumentFragmentC1ERKS_
-    // invoke: void QTextDocumentFragment(const class QTextDocumentFragment &)
-    var arg0 = args[0].(*QTextDocumentFragment).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN21QTextDocumentFragmentC2ERKS_(arg0)
-    return &QTextDocumentFragment{Qclsinst:qthis}
-  case 3:
-    // invoke: _ZN21QTextDocumentFragmentC1ERK11QTextCursor
-    // invoke: void QTextDocumentFragment(const class QTextCursor &)
-    var arg0 = args[0].(*QTextCursor).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN21QTextDocumentFragmentC2ERK11QTextCursor(arg0)
-    return &QTextDocumentFragment{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QTextDocumentFragment", "QTextDocumentFragment", args)
-  }
-
-  return nil // QTextDocumentFragment{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:66
+// index:0
+// QString toPlainText()
+func (this *QTextDocumentFragment) ToPlainText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment11toPlainTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// fromHtml(const class QString &)
-func (this *QTextDocumentFragment) Fromhtml_S(args ...interface{}) (ret interface{}) {
-  // fromHtml(const class QString &)
-  // fromHtml(const class QString &, const class QTextDocument *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][1] = reflect.TypeOf(QTextDocument{}) // "const QTextDocument *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QTextDocumentFragment8fromHtmlERK7QString
-    // invoke: QTextDocumentFragment fromHtml(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN21QTextDocumentFragment8fromHtmlERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTextDocumentFragment{}) // "QTextDocumentFragment"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument
-    // invoke: QTextDocumentFragment fromHtml(const class QString &, const class QTextDocument *)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QTextDocument).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument(arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTextDocumentFragment{}) // "QTextDocumentFragment"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QTextDocumentFragment", "fromHtml", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:68
+// index:0
+// QString toHtml(const class QByteArray &)
+func (this *QTextDocumentFragment) ToHtml(encoding unsafe.Pointer) {
+	// 0: (, const QByteArray & encoding), (encoding)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.cthis, encoding)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:71
+// index:0
+// static
+// QTextDocumentFragment fromPlainText(const class QString &)
+func (this *QTextDocumentFragment) FromPlainText(plainText unsafe.Pointer) {
+	// 0: (const QString & plainText), (plainText)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment13fromPlainTextERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTextDocumentFragment_FromPlainText(plainText unsafe.Pointer) {
+	// 0: (const QString & plainText), (plainText)
+	var nilthis *QTextDocumentFragment
+	nilthis.FromPlainText(plainText)
+}
 
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:73
+// index:0
+// static
+// QTextDocumentFragment fromHtml(const class QString &)
+func (this *QTextDocumentFragment) FromHtml(html unsafe.Pointer) {
+	// 0: (const QString & html), (html)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment8fromHtmlERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTextDocumentFragment_FromHtml(html unsafe.Pointer) {
+	// 0: (const QString & html), (html)
+	var nilthis *QTextDocumentFragment
+	nilthis.FromHtml(html)
+}
+
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:74
+// index:1
+// static
+// QTextDocumentFragment fromHtml(const class QString &, const class QTextDocument *)
+func (this *QTextDocumentFragment) FromHtml_1(html unsafe.Pointer, resourceProvider unsafe.Pointer) {
+	// 1: (const QString & html, const QTextDocument * resourceProvider), (html, resourceProvider)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QTextDocumentFragment_FromHtml_1(html unsafe.Pointer, resourceProvider unsafe.Pointer) {
+	// 1: (const QString & html, const QTextDocument * resourceProvider), (html, resourceProvider)
+	var nilthis *QTextDocumentFragment
+	nilthis.FromHtml_1(html, resourceProvider)
+}
+
+//  body block end

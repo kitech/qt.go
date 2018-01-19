@@ -1,1665 +1,558 @@
+//  header block begin
+// /usr/include/qt/QtGui/qimagereader.h
+// #include <qimagereader.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qimagereader.h
-// dst-file: /src/gui/qimagereader.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QImageReader::setAutoDetectImageFormat(bool enabled);
-extern void C_ZN12QImageReader24setAutoDetectImageFormatEb(void* qthis, bool arg0); // 4
-  // proto:  QString QImageReader::text(const QString & key);
-extern void* C_ZNK12QImageReader4textERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QRect QImageReader::currentImageRect();
-extern void* C_ZNK12QImageReader16currentImageRectEv(void* qthis); // 4
-  // proto: static QList<QByteArray> QImageReader::supportedMimeTypes();
-extern void C_ZN12QImageReader18supportedMimeTypesEv(); // 4
-  // proto:  QByteArray QImageReader::subType();
-extern void* C_ZNK12QImageReader7subTypeEv(void* qthis); // 4
-  // proto:  void QImageReader::setDecideFormatFromContent(bool ignored);
-extern void C_ZN12QImageReader26setDecideFormatFromContentEb(void* qthis, bool arg0); // 4
-  // proto:  void QImageReader::setScaledSize(const QSize & size);
-extern void C_ZN12QImageReader13setScaledSizeERK5QSize(void* qthis, void* arg0); // 4
-  // proto:  void QImageReader::setScaledClipRect(const QRect & rect);
-extern void C_ZN12QImageReader17setScaledClipRectERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  bool QImageReader::canRead();
-extern bool C_ZNK12QImageReader7canReadEv(void* qthis); // 4
-  // proto:  QString QImageReader::fileName();
-extern void* C_ZNK12QImageReader8fileNameEv(void* qthis); // 4
-  // proto:  int QImageReader::quality();
-extern int32_t C_ZNK12QImageReader7qualityEv(void* qthis); // 4
-  // proto:  int QImageReader::imageCount();
-extern int32_t C_ZNK12QImageReader10imageCountEv(void* qthis); // 4
-  // proto:  QSize QImageReader::size();
-extern void* C_ZNK12QImageReader4sizeEv(void* qthis); // 4
-  // proto:  void QImageReader::QImageReader(const QString & fileName, const QByteArray & format);
-extern void* C_ZN12QImageReaderC2ERK7QStringRK10QByteArray(void* arg0, void* arg1); // 3
-  // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
-extern void* C_ZN12QImageReaderC2EP9QIODeviceRK10QByteArray(void* arg0, void* arg1); // 3
-  // proto:  void QImageReader::QImageReader();
-extern void* C_ZN12QImageReaderC2Ev(); // 3
-  // proto:  int QImageReader::loopCount();
-extern int32_t C_ZNK12QImageReader9loopCountEv(void* qthis); // 4
-  // proto:  QRect QImageReader::scaledClipRect();
-extern void* C_ZNK12QImageReader14scaledClipRectEv(void* qthis); // 4
-  // proto:  bool QImageReader::autoDetectImageFormat();
-extern bool C_ZNK12QImageReader21autoDetectImageFormatEv(void* qthis); // 4
-  // proto:  bool QImageReader::jumpToNextImage();
-extern bool C_ZN12QImageReader15jumpToNextImageEv(void* qthis); // 4
-  // proto:  QStringList QImageReader::textKeys();
-extern void C_ZNK12QImageReader8textKeysEv(void* qthis); // 4
-  // proto:  QColor QImageReader::backgroundColor();
-extern void* C_ZNK12QImageReader15backgroundColorEv(void* qthis); // 4
-  // proto:  void QImageReader::setDevice(QIODevice * device);
-extern void C_ZN12QImageReader9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
-  // proto:  QImageIOHandler::Transformations QImageReader::transformation();
-extern void C_ZNK12QImageReader14transformationEv(void* qthis); // 4
-  // proto:  bool QImageReader::autoTransform();
-extern bool C_ZNK12QImageReader13autoTransformEv(void* qthis); // 4
-  // proto:  bool QImageReader::jumpToImage(int imageNumber);
-extern bool C_ZN12QImageReader11jumpToImageEi(void* qthis, int32_t arg0); // 4
-  // proto: static QList<QByteArray> QImageReader::supportedImageFormats();
-extern void C_ZN12QImageReader21supportedImageFormatsEv(); // 4
-  // proto:  void QImageReader::setAutoTransform(bool enabled);
-extern void C_ZN12QImageReader16setAutoTransformEb(void* qthis, bool arg0); // 4
-  // proto:  QRect QImageReader::clipRect();
-extern void* C_ZNK12QImageReader8clipRectEv(void* qthis); // 4
-  // proto:  QString QImageReader::errorString();
-extern void* C_ZNK12QImageReader11errorStringEv(void* qthis); // 4
-  // proto:  QByteArray QImageReader::format();
-extern void* C_ZNK12QImageReader6formatEv(void* qthis); // 4
-  // proto:  QImage QImageReader::read();
-extern void* C_ZN12QImageReader4readEv(void* qthis); // 4
-  // proto:  bool QImageReader::read(QImage * image);
-extern bool C_ZN12QImageReader4readEP6QImage(void* qthis, void* arg0); // 4
-  // proto:  void QImageReader::setBackgroundColor(const QColor & color);
-extern void C_ZN12QImageReader18setBackgroundColorERK6QColor(void* qthis, void* arg0); // 4
-  // proto:  int QImageReader::currentImageNumber();
-extern int32_t C_ZNK12QImageReader18currentImageNumberEv(void* qthis); // 4
-  // proto:  void QImageReader::setGamma(float gamma);
-extern void C_ZN12QImageReader8setGammaEf(void* qthis, float arg0); // 4
-  // proto:  QIODevice * QImageReader::device();
-extern void* C_ZNK12QImageReader6deviceEv(void* qthis); // 4
-  // proto:  bool QImageReader::supportsAnimation();
-extern bool C_ZNK12QImageReader17supportsAnimationEv(void* qthis); // 4
-  // proto:  QList<QByteArray> QImageReader::supportedSubTypes();
-extern void C_ZNK12QImageReader17supportedSubTypesEv(void* qthis); // 4
-  // proto:  void QImageReader::setClipRect(const QRect & rect);
-extern void C_ZN12QImageReader11setClipRectERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  void QImageReader::setFileName(const QString & fileName);
-extern void C_ZN12QImageReader11setFileNameERK7QString(void* qthis, void* arg0); // 4
-  // proto:  int QImageReader::nextImageDelay();
-extern int32_t C_ZNK12QImageReader14nextImageDelayEv(void* qthis); // 4
-  // proto:  void QImageReader::~QImageReader();
-extern void C_ZN12QImageReaderD2Ev(void* qthis); // 4
-  // proto:  void QImageReader::setFormat(const QByteArray & format);
-extern void C_ZN12QImageReader9setFormatERK10QByteArray(void* qthis, void* arg0); // 4
-  // proto:  void QImageReader::setQuality(int quality);
-extern void C_ZN12QImageReader10setQualityEi(void* qthis, int32_t arg0); // 4
-  // proto:  QSize QImageReader::scaledSize();
-extern void* C_ZNK12QImageReader10scaledSizeEv(void* qthis); // 4
-  // proto: static QByteArray QImageReader::imageFormat(QIODevice * device);
-extern void* C_ZN12QImageReader11imageFormatEP9QIODevice(void* arg0); // 4
-  // proto: static QByteArray QImageReader::imageFormat(const QString & fileName);
-extern void* C_ZN12QImageReader11imageFormatERK7QString(void* arg0); // 4
-  // proto:  QImage::Format QImageReader::imageFormat();
-extern void C_ZNK12QImageReader11imageFormatEv(void* qthis); // 4
-  // proto:  QImageReader::ImageReaderError QImageReader::error();
-extern void C_ZNK12QImageReader5errorEv(void* qthis); // 4
-  // proto:  float QImageReader::gamma();
-extern float C_ZNK12QImageReader5gammaEv(void* qthis); // 4
-  // proto:  bool QImageReader::decideFormatFromContent();
-extern bool C_ZNK12QImageReader23decideFormatFromContentEv(void* qthis); // 4
+// extern C begin: 67
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QImageReader)=8
+//  ext block end
+
+//  body block begin
 type QImageReader struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// setAutoDetectImageFormat(_Bool)
-func (this *QImageReader) Setautodetectimageformat(args ...interface{}) () {
-  // setAutoDetectImageFormat(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader24setAutoDetectImageFormatEb
-    // invoke: void setAutoDetectImageFormat(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader24setAutoDetectImageFormatEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setAutoDetectImageFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:71
+// index:0
+// void QImageReader()
+func NewQImageReader() *QImageReader {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReaderC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QImageReader{cthis}
 }
 
-// text(const class QString &)
-func (this *QImageReader) Text(args ...interface{}) (ret interface{}) {
-  // text(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader4textERK7QString
-    // invoke: QString text(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QImageReader4textERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "text", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:72
+// index:1
+// void QImageReader(class QIODevice *, const class QByteArray &)
+func NewQImageReader_1(device unsafe.Pointer, format unsafe.Pointer) *QImageReader {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReaderC2EP9QIODeviceRK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, device, format)
+	gopp.ErrPrint(err, rv)
+	return &QImageReader{cthis}
 }
 
-// currentImageRect()
-func (this *QImageReader) Currentimagerect(args ...interface{}) (ret interface{}) {
-  // currentImageRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader16currentImageRectEv
-    // invoke: QRect currentImageRect()
-    var ret0 = C.C_ZNK12QImageReader16currentImageRectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "currentImageRect", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:73
+// index:2
+// void QImageReader(const class QString &, const class QByteArray &)
+func NewQImageReader_2(fileName unsafe.Pointer, format unsafe.Pointer) *QImageReader {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReaderC2ERK7QStringRK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, fileName, format)
+	gopp.ErrPrint(err, rv)
+	return &QImageReader{cthis}
 }
 
-// supportedMimeTypes()
-func (this *QImageReader) Supportedmimetypes_S(args ...interface{}) () {
-  // supportedMimeTypes()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader18supportedMimeTypesEv
-    // invoke: QList<QByteArray> supportedMimeTypes()
-    C.C_ZN12QImageReader18supportedMimeTypesEv()
-  default:
-    qtrt.ErrorResolve("QImageReader", "supportedMimeTypes", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:74
+// index:0
+// void ~QImageReader()
+func DeleteQImageReader(*QImageReader) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReaderD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// subType()
-func (this *QImageReader) Subtype(args ...interface{}) (ret interface{}) {
-  // subType()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader7subTypeEv
-    // invoke: QByteArray subType()
-    var ret0 = C.C_ZNK12QImageReader7subTypeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QByteArray{}) // "QByteArray"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "subType", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:76
+// index:0
+// void setFormat(const class QByteArray &)
+func (this *QImageReader) SetFormat(format unsafe.Pointer) {
+	// 0: (, const QByteArray & format), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader9setFormatERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.cthis, format)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDecideFormatFromContent(_Bool)
-func (this *QImageReader) Setdecideformatfromcontent(args ...interface{}) () {
-  // setDecideFormatFromContent(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader26setDecideFormatFromContentEb
-    // invoke: void setDecideFormatFromContent(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader26setDecideFormatFromContentEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setDecideFormatFromContent", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:77
+// index:0
+// QByteArray format()
+func (this *QImageReader) Format() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader6formatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setScaledSize(const class QSize &)
-func (this *QImageReader) Setscaledsize(args ...interface{}) () {
-  // setScaledSize(const class QSize &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader13setScaledSizeERK5QSize
-    // invoke: void setScaledSize(const class QSize &)
-    var arg0 = args[0].(*qtcore.QSize).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader13setScaledSizeERK5QSize(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setScaledSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:79
+// index:0
+// void setAutoDetectImageFormat(_Bool)
+func (this *QImageReader) SetAutoDetectImageFormat(enabled bool) {
+	// 0: (, bool enabled), (&enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader24setAutoDetectImageFormatEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enabled)
+	gopp.ErrPrint(err, rv)
 }
 
-// setScaledClipRect(const class QRect &)
-func (this *QImageReader) Setscaledcliprect(args ...interface{}) () {
-  // setScaledClipRect(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader17setScaledClipRectERK5QRect
-    // invoke: void setScaledClipRect(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader17setScaledClipRectERK5QRect(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setScaledClipRect", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:80
+// index:0
+// bool autoDetectImageFormat()
+func (this *QImageReader) AutoDetectImageFormat() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader21autoDetectImageFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// canRead()
-func (this *QImageReader) Canread(args ...interface{}) (ret interface{}) {
-  // canRead()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader7canReadEv
-    // invoke: bool canRead()
-    var ret0 = C.C_ZNK12QImageReader7canReadEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "canRead", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:82
+// index:0
+// void setDecideFormatFromContent(_Bool)
+func (this *QImageReader) SetDecideFormatFromContent(ignored bool) {
+	// 0: (, bool ignored), (&ignored)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader26setDecideFormatFromContentEb", ffiqt.FFI_TYPE_VOID, this.cthis, &ignored)
+	gopp.ErrPrint(err, rv)
 }
 
-// fileName()
-func (this *QImageReader) Filename(args ...interface{}) (ret interface{}) {
-  // fileName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader8fileNameEv
-    // invoke: QString fileName()
-    var ret0 = C.C_ZNK12QImageReader8fileNameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "fileName", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:83
+// index:0
+// bool decideFormatFromContent()
+func (this *QImageReader) DecideFormatFromContent() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader23decideFormatFromContentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// quality()
-func (this *QImageReader) Quality(args ...interface{}) (ret interface{}) {
-  // quality()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader7qualityEv
-    // invoke: int quality()
-    var ret0 = C.C_ZNK12QImageReader7qualityEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "quality", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:85
+// index:0
+// void setDevice(class QIODevice *)
+func (this *QImageReader) SetDevice(device unsafe.Pointer) {
+	// 0: (, QIODevice * device), (device)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_VOID, this.cthis, device)
+	gopp.ErrPrint(err, rv)
 }
 
-// imageCount()
-func (this *QImageReader) Imagecount(args ...interface{}) (ret interface{}) {
-  // imageCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader10imageCountEv
-    // invoke: int imageCount()
-    var ret0 = C.C_ZNK12QImageReader10imageCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "imageCount", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:86
+// index:0
+// QIODevice * device()
+func (this *QImageReader) Device() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader6deviceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// size()
-func (this *QImageReader) Size(args ...interface{}) (ret interface{}) {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader4sizeEv
-    // invoke: QSize size()
-    var ret0 = C.C_ZNK12QImageReader4sizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "size", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:88
+// index:0
+// void setFileName(const class QString &)
+func (this *QImageReader) SetFileName(fileName unsafe.Pointer) {
+	// 0: (, const QString & fileName), (fileName)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader11setFileNameERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, fileName)
+	gopp.ErrPrint(err, rv)
 }
 
-// QImageReader(const class QString &, const class QByteArray &)
-func NewQImageReader(args ...interface{}) *QImageReader {
-  // QImageReader(const class QString &, const class QByteArray &)
-  // QImageReader(class QIODevice *, const class QByteArray &)
-  // QImageReader()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
-  vtys[1][1] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
-  vtys[2] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReaderC1ERK7QStringRK10QByteArray
-    // invoke: void QImageReader(const class QString &, const class QByteArray &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QByteArray).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN12QImageReaderC2ERK7QStringRK10QByteArray(arg0, arg1)
-    return &QImageReader{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN12QImageReaderC1EP9QIODeviceRK10QByteArray
-    // invoke: void QImageReader(class QIODevice *, const class QByteArray &)
-    var arg0 = args[0].(*qtcore.QIODevice).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QByteArray).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN12QImageReaderC2EP9QIODeviceRK10QByteArray(arg0, arg1)
-    return &QImageReader{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN12QImageReaderC1Ev
-    // invoke: void QImageReader()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN12QImageReaderC2Ev()
-    return &QImageReader{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QImageReader", "QImageReader", args)
-  }
-
-  return nil // QImageReader{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qimagereader.h:89
+// index:0
+// QString fileName()
+func (this *QImageReader) FileName() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader8fileNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// loopCount()
-func (this *QImageReader) Loopcount(args ...interface{}) (ret interface{}) {
-  // loopCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader9loopCountEv
-    // invoke: int loopCount()
-    var ret0 = C.C_ZNK12QImageReader9loopCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "loopCount", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:91
+// index:0
+// QSize size()
+func (this *QImageReader) Size() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// scaledClipRect()
-func (this *QImageReader) Scaledcliprect(args ...interface{}) (ret interface{}) {
-  // scaledClipRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader14scaledClipRectEv
-    // invoke: QRect scaledClipRect()
-    var ret0 = C.C_ZNK12QImageReader14scaledClipRectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "scaledClipRect", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:93
+// index:0
+// QImage::Format imageFormat()
+func (this *QImageReader) ImageFormat() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader11imageFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// autoDetectImageFormat()
-func (this *QImageReader) Autodetectimageformat(args ...interface{}) (ret interface{}) {
-  // autoDetectImageFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader21autoDetectImageFormatEv
-    // invoke: bool autoDetectImageFormat()
-    var ret0 = C.C_ZNK12QImageReader21autoDetectImageFormatEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "autoDetectImageFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:143
+// index:1
+// static
+// QByteArray imageFormat(const class QString &)
+func (this *QImageReader) ImageFormat_1(fileName unsafe.Pointer) {
+	// 1: (const QString & fileName), (fileName)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader11imageFormatERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QImageReader_ImageFormat_1(fileName unsafe.Pointer) {
+	// 1: (const QString & fileName), (fileName)
+	var nilthis *QImageReader
+	nilthis.ImageFormat_1(fileName)
 }
 
-// jumpToNextImage()
-func (this *QImageReader) Jumptonextimage(args ...interface{}) (ret interface{}) {
-  // jumpToNextImage()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader15jumpToNextImageEv
-    // invoke: bool jumpToNextImage()
-    var ret0 = C.C_ZN12QImageReader15jumpToNextImageEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "jumpToNextImage", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:144
+// index:2
+// static
+// QByteArray imageFormat(class QIODevice *)
+func (this *QImageReader) ImageFormat_2(device unsafe.Pointer) {
+	// 2: (QIODevice * device), (device)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader11imageFormatEP9QIODevice", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QImageReader_ImageFormat_2(device unsafe.Pointer) {
+	// 2: (QIODevice * device), (device)
+	var nilthis *QImageReader
+	nilthis.ImageFormat_2(device)
 }
 
-// textKeys()
-func (this *QImageReader) Textkeys(args ...interface{}) () {
-  // textKeys()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader8textKeysEv
-    // invoke: QStringList textKeys()
-    C.C_ZNK12QImageReader8textKeysEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageReader", "textKeys", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:95
+// index:0
+// QStringList textKeys()
+func (this *QImageReader) TextKeys() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader8textKeysEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// backgroundColor()
-func (this *QImageReader) Backgroundcolor(args ...interface{}) (ret interface{}) {
-  // backgroundColor()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader15backgroundColorEv
-    // invoke: QColor backgroundColor()
-    var ret0 = C.C_ZNK12QImageReader15backgroundColorEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "backgroundColor", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:96
+// index:0
+// QString text(const class QString &)
+func (this *QImageReader) Text(key unsafe.Pointer) {
+	// 0: (, const QString & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader4textERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDevice(class QIODevice *)
-func (this *QImageReader) Setdevice(args ...interface{}) () {
-  // setDevice(class QIODevice *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader9setDeviceEP9QIODevice
-    // invoke: void setDevice(class QIODevice *)
-    var arg0 = args[0].(*qtcore.QIODevice).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader9setDeviceEP9QIODevice(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setDevice", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:98
+// index:0
+// void setClipRect(const class QRect &)
+func (this *QImageReader) SetClipRect(rect unsafe.Pointer) {
+	// 0: (, const QRect & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader11setClipRectERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
 }
 
-// transformation()
-func (this *QImageReader) Transformation(args ...interface{}) () {
-  // transformation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader14transformationEv
-    // invoke: QImageIOHandler::Transformations transformation()
-    C.C_ZNK12QImageReader14transformationEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageReader", "transformation", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:99
+// index:0
+// QRect clipRect()
+func (this *QImageReader) ClipRect() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader8clipRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// autoTransform()
-func (this *QImageReader) Autotransform(args ...interface{}) (ret interface{}) {
-  // autoTransform()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader13autoTransformEv
-    // invoke: bool autoTransform()
-    var ret0 = C.C_ZNK12QImageReader13autoTransformEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "autoTransform", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:101
+// index:0
+// void setScaledSize(const class QSize &)
+func (this *QImageReader) SetScaledSize(size unsafe.Pointer) {
+	// 0: (, const QSize & size), (size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader13setScaledSizeERK5QSize", ffiqt.FFI_TYPE_VOID, this.cthis, size)
+	gopp.ErrPrint(err, rv)
 }
 
-// jumpToImage(int)
-func (this *QImageReader) Jumptoimage(args ...interface{}) (ret interface{}) {
-  // jumpToImage(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader11jumpToImageEi
-    // invoke: bool jumpToImage(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QImageReader11jumpToImageEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "jumpToImage", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:102
+// index:0
+// QSize scaledSize()
+func (this *QImageReader) ScaledSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader10scaledSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// supportedImageFormats()
-func (this *QImageReader) Supportedimageformats_S(args ...interface{}) () {
-  // supportedImageFormats()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader21supportedImageFormatsEv
-    // invoke: QList<QByteArray> supportedImageFormats()
-    C.C_ZN12QImageReader21supportedImageFormatsEv()
-  default:
-    qtrt.ErrorResolve("QImageReader", "supportedImageFormats", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:104
+// index:0
+// void setQuality(int)
+func (this *QImageReader) SetQuality(quality int) {
+	// 0: (, int quality), (&quality)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader10setQualityEi", ffiqt.FFI_TYPE_VOID, this.cthis, &quality)
+	gopp.ErrPrint(err, rv)
 }
 
-// setAutoTransform(_Bool)
-func (this *QImageReader) Setautotransform(args ...interface{}) () {
-  // setAutoTransform(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader16setAutoTransformEb
-    // invoke: void setAutoTransform(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader16setAutoTransformEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setAutoTransform", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:105
+// index:0
+// int quality()
+func (this *QImageReader) Quality() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader7qualityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// clipRect()
-func (this *QImageReader) Cliprect(args ...interface{}) (ret interface{}) {
-  // clipRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader8clipRectEv
-    // invoke: QRect clipRect()
-    var ret0 = C.C_ZNK12QImageReader8clipRectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "clipRect", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:107
+// index:0
+// void setScaledClipRect(const class QRect &)
+func (this *QImageReader) SetScaledClipRect(rect unsafe.Pointer) {
+	// 0: (, const QRect & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader17setScaledClipRectERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
 }
 
-// errorString()
-func (this *QImageReader) Errorstring(args ...interface{}) (ret interface{}) {
-  // errorString()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader11errorStringEv
-    // invoke: QString errorString()
-    var ret0 = C.C_ZNK12QImageReader11errorStringEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "errorString", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:108
+// index:0
+// QRect scaledClipRect()
+func (this *QImageReader) ScaledClipRect() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader14scaledClipRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// format()
-func (this *QImageReader) Format(args ...interface{}) (ret interface{}) {
-  // format()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader6formatEv
-    // invoke: QByteArray format()
-    var ret0 = C.C_ZNK12QImageReader6formatEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QByteArray{}) // "QByteArray"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "format", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:110
+// index:0
+// void setBackgroundColor(const class QColor &)
+func (this *QImageReader) SetBackgroundColor(color unsafe.Pointer) {
+	// 0: (, const QColor & color), (color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader18setBackgroundColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, color)
+	gopp.ErrPrint(err, rv)
 }
 
-// read()
-func (this *QImageReader) Read(args ...interface{}) (ret interface{}) {
-  // read()
-  // read(class QImage *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QImage{}) // "QImage *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader4readEv
-    // invoke: QImage read()
-    var ret0 = C.C_ZN12QImageReader4readEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QImage{}) // "QImage"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN12QImageReader4readEP6QImage
-    // invoke: bool read(class QImage *)
-    var arg0 = args[0].(*QImage).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QImageReader4readEP6QImage(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "read", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:111
+// index:0
+// QColor backgroundColor()
+func (this *QImageReader) BackgroundColor() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader15backgroundColorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setBackgroundColor(const class QColor &)
-func (this *QImageReader) Setbackgroundcolor(args ...interface{}) () {
-  // setBackgroundColor(const class QColor &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QColor{}) // "const QColor &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader18setBackgroundColorERK6QColor
-    // invoke: void setBackgroundColor(const class QColor &)
-    var arg0 = args[0].(*QColor).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader18setBackgroundColorERK6QColor(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setBackgroundColor", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:113
+// index:0
+// bool supportsAnimation()
+func (this *QImageReader) SupportsAnimation() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader17supportsAnimationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// currentImageNumber()
-func (this *QImageReader) Currentimagenumber(args ...interface{}) (ret interface{}) {
-  // currentImageNumber()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader18currentImageNumberEv
-    // invoke: int currentImageNumber()
-    var ret0 = C.C_ZNK12QImageReader18currentImageNumberEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "currentImageNumber", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:115
+// index:0
+// QImageIOHandler::Transformations transformation()
+func (this *QImageReader) Transformation() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader14transformationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setGamma(float)
-func (this *QImageReader) Setgamma(args ...interface{}) () {
-  // setGamma(float)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.FloatTy(false) // "float"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader8setGammaEf
-    // invoke: void setGamma(float)
-    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader8setGammaEf(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setGamma", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:117
+// index:0
+// void setAutoTransform(_Bool)
+func (this *QImageReader) SetAutoTransform(enabled bool) {
+	// 0: (, bool enabled), (&enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader16setAutoTransformEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enabled)
+	gopp.ErrPrint(err, rv)
 }
 
-// device()
-func (this *QImageReader) Device(args ...interface{}) (ret interface{}) {
-  // device()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader6deviceEv
-    // invoke: QIODevice * device()
-    var ret0 = C.C_ZNK12QImageReader6deviceEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "device", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:118
+// index:0
+// bool autoTransform()
+func (this *QImageReader) AutoTransform() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader13autoTransformEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// supportsAnimation()
-func (this *QImageReader) Supportsanimation(args ...interface{}) (ret interface{}) {
-  // supportsAnimation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader17supportsAnimationEv
-    // invoke: bool supportsAnimation()
-    var ret0 = C.C_ZNK12QImageReader17supportsAnimationEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "supportsAnimation", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:120
+// index:0
+// void setGamma(float)
+func (this *QImageReader) SetGamma(gamma float32) {
+	// 0: (, float gamma), (&gamma)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader8setGammaEf", ffiqt.FFI_TYPE_VOID, this.cthis, &gamma)
+	gopp.ErrPrint(err, rv)
 }
 
-// supportedSubTypes()
-func (this *QImageReader) Supportedsubtypes(args ...interface{}) () {
-  // supportedSubTypes()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader17supportedSubTypesEv
-    // invoke: QList<QByteArray> supportedSubTypes()
-    C.C_ZNK12QImageReader17supportedSubTypesEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageReader", "supportedSubTypes", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:121
+// index:0
+// float gamma()
+func (this *QImageReader) Gamma() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader5gammaEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setClipRect(const class QRect &)
-func (this *QImageReader) Setcliprect(args ...interface{}) () {
-  // setClipRect(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader11setClipRectERK5QRect
-    // invoke: void setClipRect(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader11setClipRectERK5QRect(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setClipRect", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:123
+// index:0
+// QByteArray subType()
+func (this *QImageReader) SubType() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader7subTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFileName(const class QString &)
-func (this *QImageReader) Setfilename(args ...interface{}) () {
-  // setFileName(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader11setFileNameERK7QString
-    // invoke: void setFileName(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader11setFileNameERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setFileName", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:124
+// index:0
+// QList<QByteArray> supportedSubTypes()
+func (this *QImageReader) SupportedSubTypes() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader17supportedSubTypesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// nextImageDelay()
-func (this *QImageReader) Nextimagedelay(args ...interface{}) (ret interface{}) {
-  // nextImageDelay()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader14nextImageDelayEv
-    // invoke: int nextImageDelay()
-    var ret0 = C.C_ZNK12QImageReader14nextImageDelayEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "nextImageDelay", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:126
+// index:0
+// bool canRead()
+func (this *QImageReader) CanRead() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader7canReadEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QImageReader()
-func (this *QImageReader) Freeqimagereader(args ...interface{}) () {
-  // ~QImageReader()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReaderD0Ev
-    // invoke: void ~QImageReader()
-    C.C_ZN12QImageReaderD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageReader", "~QImageReader", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:127
+// index:0
+// QImage read()
+func (this *QImageReader) Read() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader4readEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setFormat(const class QByteArray &)
-func (this *QImageReader) Setformat(args ...interface{}) () {
-  // setFormat(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader9setFormatERK10QByteArray
-    // invoke: void setFormat(const class QByteArray &)
-    var arg0 = args[0].(*qtcore.QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader9setFormatERK10QByteArray(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:128
+// index:1
+// bool read(class QImage *)
+func (this *QImageReader) Read_1(image unsafe.Pointer) {
+	// 1: (, QImage * image), (image)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader4readEP6QImage", ffiqt.FFI_TYPE_VOID, this.cthis, image)
+	gopp.ErrPrint(err, rv)
 }
 
-// setQuality(int)
-func (this *QImageReader) Setquality(args ...interface{}) () {
-  // setQuality(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader10setQualityEi
-    // invoke: void setQuality(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QImageReader10setQualityEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageReader", "setQuality", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:130
+// index:0
+// bool jumpToNextImage()
+func (this *QImageReader) JumpToNextImage() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader15jumpToNextImageEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// scaledSize()
-func (this *QImageReader) Scaledsize(args ...interface{}) (ret interface{}) {
-  // scaledSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader10scaledSizeEv
-    // invoke: QSize scaledSize()
-    var ret0 = C.C_ZNK12QImageReader10scaledSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "scaledSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:131
+// index:0
+// bool jumpToImage(int)
+func (this *QImageReader) JumpToImage(imageNumber int) {
+	// 0: (, int imageNumber), (&imageNumber)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader11jumpToImageEi", ffiqt.FFI_TYPE_VOID, this.cthis, &imageNumber)
+	gopp.ErrPrint(err, rv)
 }
 
-// imageFormat(class QIODevice *)
-func (this *QImageReader) Imageformat_S(args ...interface{}) (ret interface{}) {
-  // imageFormat(class QIODevice *)
-  // imageFormat(const class QString &)
-  // imageFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[2] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QImageReader11imageFormatEP9QIODevice
-    // invoke: QByteArray imageFormat(class QIODevice *)
-    var arg0 = args[0].(*qtcore.QIODevice).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QImageReader11imageFormatEP9QIODevice(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QByteArray{}) // "QByteArray"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN12QImageReader11imageFormatERK7QString
-    // invoke: QByteArray imageFormat(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QImageReader11imageFormatERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QByteArray{}) // "QByteArray"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZNK12QImageReader11imageFormatEv
-    // invoke: QImage::Format imageFormat()
-    C.C_ZNK12QImageReader11imageFormatEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageReader", "imageFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:132
+// index:0
+// int loopCount()
+func (this *QImageReader) LoopCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader9loopCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// error()
-func (this *QImageReader) Error(args ...interface{}) () {
-  // error()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader5errorEv
-    // invoke: QImageReader::ImageReaderError error()
-    C.C_ZNK12QImageReader5errorEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageReader", "error", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:133
+// index:0
+// int imageCount()
+func (this *QImageReader) ImageCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader10imageCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// gamma()
-func (this *QImageReader) Gamma(args ...interface{}) (ret interface{}) {
-  // gamma()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader5gammaEv
-    // invoke: float gamma()
-    var ret0 = C.C_ZNK12QImageReader5gammaEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.FloatTy(false) // "float"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "gamma", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:134
+// index:0
+// int nextImageDelay()
+func (this *QImageReader) NextImageDelay() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader14nextImageDelayEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// decideFormatFromContent()
-func (this *QImageReader) Decideformatfromcontent(args ...interface{}) (ret interface{}) {
-  // decideFormatFromContent()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QImageReader23decideFormatFromContentEv
-    // invoke: bool decideFormatFromContent()
-    var ret0 = C.C_ZNK12QImageReader23decideFormatFromContentEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImageReader", "decideFormatFromContent", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimagereader.h:135
+// index:0
+// int currentImageNumber()
+func (this *QImageReader) CurrentImageNumber() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader18currentImageNumberEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qimagereader.h:136
+// index:0
+// QRect currentImageRect()
+func (this *QImageReader) CurrentImageRect() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader16currentImageRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qimagereader.h:138
+// index:0
+// QImageReader::ImageReaderError error()
+func (this *QImageReader) Error() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader5errorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimagereader.h:139
+// index:0
+// QString errorString()
+func (this *QImageReader) ErrorString() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader11errorStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimagereader.h:141
+// index:0
+// bool supportsOption(class QImageIOHandler::ImageOption)
+func (this *QImageReader) SupportsOption(option int) {
+	// 0: (, QImageIOHandler::ImageOption option), (&option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader14supportsOptionEN15QImageIOHandler11ImageOptionE", ffiqt.FFI_TYPE_VOID, this.cthis, &option)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimagereader.h:145
+// index:0
+// static
+// QList<QByteArray> supportedImageFormats()
+func (this *QImageReader) SupportedImageFormats() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader21supportedImageFormatsEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QImageReader_SupportedImageFormats() {
+	// 0: (), ()
+	var nilthis *QImageReader
+	nilthis.SupportedImageFormats()
+}
+
+// /usr/include/qt/QtGui/qimagereader.h:146
+// index:0
+// static
+// QList<QByteArray> supportedMimeTypes()
+func (this *QImageReader) SupportedMimeTypes() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader18supportedMimeTypesEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QImageReader_SupportedMimeTypes() {
+	// 0: (), ()
+	var nilthis *QImageReader
+	nilthis.SupportedMimeTypes()
+}
+
+//  body block end

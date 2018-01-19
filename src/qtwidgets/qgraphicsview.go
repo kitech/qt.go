@@ -1,1775 +1,795 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qgraphicsview.h
+// #include <qgraphicsview.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qgraphicsview.h
-// dst-file: /src/widgets/qgraphicsview.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QGraphicsView::setBackgroundBrush(const QBrush & brush);
-extern void C_ZN13QGraphicsView18setBackgroundBrushERK6QBrush(void* qthis, void* arg0); // 4
-  // proto:  Qt::Alignment QGraphicsView::alignment();
-extern void C_ZNK13QGraphicsView9alignmentEv(void* qthis); // 4
-  // proto:  void QGraphicsView::resetCachedContent();
-extern void C_ZN13QGraphicsView18resetCachedContentEv(void* qthis); // 4
-  // proto:  QPainter::RenderHints QGraphicsView::renderHints();
-extern void C_ZNK13QGraphicsView11renderHintsEv(void* qthis); // 4
-  // proto:  void QGraphicsView::setMatrix(const QMatrix & matrix, bool combine);
-extern void C_ZN13QGraphicsView9setMatrixERK7QMatrixb(void* qthis, void* arg0, bool arg1); // 4
-  // proto:  void QGraphicsView::shear(qreal sh, qreal sv);
-extern void C_ZN13QGraphicsView5shearEdd(void* qthis, double arg0, double arg1); // 4
-  // proto:  void QGraphicsView::resetTransform();
-extern void C_ZN13QGraphicsView14resetTransformEv(void* qthis); // 4
-  // proto:  void QGraphicsView::rotate(qreal angle);
-extern void C_ZN13QGraphicsView6rotateEd(void* qthis, double arg0); // 4
-  // proto:  const QMetaObject * QGraphicsView::metaObject();
-extern void C_ZNK13QGraphicsView10metaObjectEv(void* qthis); // 4
-  // proto:  QGraphicsItem * QGraphicsView::itemAt(int x, int y);
-extern void C_ZNK13QGraphicsView6itemAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
-  // proto:  QGraphicsItem * QGraphicsView::itemAt(const QPoint & pos);
-extern void C_ZNK13QGraphicsView6itemAtERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  OptimizationFlags QGraphicsView::optimizationFlags();
-extern void C_ZNK13QGraphicsView17optimizationFlagsEv(void* qthis); // 4
-  // proto:  void QGraphicsView::updateSceneRect(const QRectF & rect);
-extern void C_ZN13QGraphicsView15updateSceneRectERK6QRectF(void* qthis, void* arg0); // 4
-  // proto:  void QGraphicsView::setTransform(const QTransform & matrix, bool combine);
-extern void C_ZN13QGraphicsView12setTransformERK10QTransformb(void* qthis, void* arg0, bool arg1); // 4
-  // proto:  QGraphicsView::ViewportAnchor QGraphicsView::resizeAnchor();
-extern void C_ZNK13QGraphicsView12resizeAnchorEv(void* qthis); // 4
-  // proto:  void QGraphicsView::scale(qreal sx, qreal sy);
-extern void C_ZN13QGraphicsView5scaleEdd(void* qthis, double arg0, double arg1); // 4
-  // proto:  QMatrix QGraphicsView::matrix();
-extern void* C_ZNK13QGraphicsView6matrixEv(void* qthis); // 4
-  // proto:  void QGraphicsView::setScene(QGraphicsScene * scene);
-extern void C_ZN13QGraphicsView8setSceneEP14QGraphicsScene(void* qthis, void* arg0); // 4
-  // proto:  QSize QGraphicsView::sizeHint();
-extern void* C_ZNK13QGraphicsView8sizeHintEv(void* qthis); // 4
-  // proto:  QList<QGraphicsItem *> QGraphicsView::items(int x, int y);
-extern void C_ZNK13QGraphicsView5itemsEii(void* qthis, int32_t arg0, int32_t arg1); // 2
-  // proto:  QList<QGraphicsItem *> QGraphicsView::items(const QPoint & pos);
-extern void C_ZNK13QGraphicsView5itemsERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  QList<QGraphicsItem *> QGraphicsView::items();
-extern void C_ZNK13QGraphicsView5itemsEv(void* qthis); // 4
-  // proto:  Qt::ItemSelectionMode QGraphicsView::rubberBandSelectionMode();
-extern void C_ZNK13QGraphicsView23rubberBandSelectionModeEv(void* qthis); // 4
-  // proto:  void QGraphicsView::setSceneRect(qreal x, qreal y, qreal w, qreal h);
-extern void C_ZN13QGraphicsView12setSceneRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
-  // proto:  void QGraphicsView::setSceneRect(const QRectF & rect);
-extern void C_ZN13QGraphicsView12setSceneRectERK6QRectF(void* qthis, void* arg0); // 4
-  // proto:  QPolygon QGraphicsView::mapFromScene(const QPolygonF & polygon);
-extern void* C_ZNK13QGraphicsView12mapFromSceneERK9QPolygonF(void* qthis, void* arg0); // 4
-  // proto:  QPainterPath QGraphicsView::mapFromScene(const QPainterPath & path);
-extern void* C_ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(void* qthis, void* arg0); // 4
-  // proto:  QPoint QGraphicsView::mapFromScene(qreal x, qreal y);
-extern void* C_ZNK13QGraphicsView12mapFromSceneEdd(void* qthis, double arg0, double arg1); // 2
-  // proto:  QPolygon QGraphicsView::mapFromScene(const QRectF & rect);
-extern void* C_ZNK13QGraphicsView12mapFromSceneERK6QRectF(void* qthis, void* arg0); // 4
-  // proto:  QPoint QGraphicsView::mapFromScene(const QPointF & point);
-extern void* C_ZNK13QGraphicsView12mapFromSceneERK7QPointF(void* qthis, void* arg0); // 4
-  // proto:  QPolygon QGraphicsView::mapFromScene(qreal x, qreal y, qreal w, qreal h);
-extern void* C_ZNK13QGraphicsView12mapFromSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
-  // proto:  QGraphicsView::DragMode QGraphicsView::dragMode();
-extern void C_ZNK13QGraphicsView8dragModeEv(void* qthis); // 4
-  // proto:  QGraphicsScene * QGraphicsView::scene();
-extern void C_ZNK13QGraphicsView5sceneEv(void* qthis); // 4
-  // proto:  void QGraphicsView::~QGraphicsView();
-extern void C_ZN13QGraphicsViewD2Ev(void* qthis); // 4
-  // proto:  QGraphicsView::ViewportAnchor QGraphicsView::transformationAnchor();
-extern void C_ZNK13QGraphicsView20transformationAnchorEv(void* qthis); // 4
-  // proto:  void QGraphicsView::QGraphicsView(QWidget * parent);
-extern void* C_ZN13QGraphicsViewC2EP7QWidget(void* arg0); // 3
-  // proto:  void QGraphicsView::QGraphicsView(QGraphicsScene * scene, QWidget * parent);
-extern void* C_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget(void* arg0, void* arg1); // 3
-  // proto:  QRect QGraphicsView::rubberBandRect();
-extern void* C_ZNK13QGraphicsView14rubberBandRectEv(void* qthis); // 4
-  // proto:  QTransform QGraphicsView::transform();
-extern void* C_ZNK13QGraphicsView9transformEv(void* qthis); // 4
-  // proto:  QBrush QGraphicsView::foregroundBrush();
-extern void* C_ZNK13QGraphicsView15foregroundBrushEv(void* qthis); // 4
-  // proto:  void QGraphicsView::setForegroundBrush(const QBrush & brush);
-extern void C_ZN13QGraphicsView18setForegroundBrushERK6QBrush(void* qthis, void* arg0); // 4
-  // proto:  void QGraphicsView::ensureVisible(const QRectF & rect, int xmargin, int ymargin);
-extern void C_ZN13QGraphicsView13ensureVisibleERK6QRectFii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
-  // proto:  void QGraphicsView::ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin, int ymargin);
-extern void C_ZN13QGraphicsView13ensureVisibleEddddii(void* qthis, double arg0, double arg1, double arg2, double arg3, int32_t arg4, int32_t arg5); // 2
-  // proto:  void QGraphicsView::ensureVisible(const QGraphicsItem * item, int xmargin, int ymargin);
-extern void C_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
-  // proto:  void QGraphicsView::setInteractive(bool allowed);
-extern void C_ZN13QGraphicsView14setInteractiveEb(void* qthis, bool arg0); // 4
-  // proto:  bool QGraphicsView::isTransformed();
-extern bool C_ZNK13QGraphicsView13isTransformedEv(void* qthis); // 4
-  // proto:  bool QGraphicsView::isInteractive();
-extern bool C_ZNK13QGraphicsView13isInteractiveEv(void* qthis); // 4
-  // proto:  QBrush QGraphicsView::backgroundBrush();
-extern void* C_ZNK13QGraphicsView15backgroundBrushEv(void* qthis); // 4
-  // proto:  QPainterPath QGraphicsView::mapToScene(const QPainterPath & path);
-extern void* C_ZNK13QGraphicsView10mapToSceneERK12QPainterPath(void* qthis, void* arg0); // 4
-  // proto:  QPointF QGraphicsView::mapToScene(int x, int y);
-extern void* C_ZNK13QGraphicsView10mapToSceneEii(void* qthis, int32_t arg0, int32_t arg1); // 2
-  // proto:  QPolygonF QGraphicsView::mapToScene(const QRect & rect);
-extern void* C_ZNK13QGraphicsView10mapToSceneERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  QPolygonF QGraphicsView::mapToScene(const QPolygon & polygon);
-extern void* C_ZNK13QGraphicsView10mapToSceneERK8QPolygon(void* qthis, void* arg0); // 4
-  // proto:  QPolygonF QGraphicsView::mapToScene(int x, int y, int w, int h);
-extern void* C_ZNK13QGraphicsView10mapToSceneEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
-  // proto:  QPointF QGraphicsView::mapToScene(const QPoint & point);
-extern void* C_ZNK13QGraphicsView10mapToSceneERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  void QGraphicsView::resetMatrix();
-extern void C_ZN13QGraphicsView11resetMatrixEv(void* qthis); // 4
-  // proto:  void QGraphicsView::centerOn(const QPointF & pos);
-extern void C_ZN13QGraphicsView8centerOnERK7QPointF(void* qthis, void* arg0); // 4
-  // proto:  void QGraphicsView::centerOn(const QGraphicsItem * item);
-extern void C_ZN13QGraphicsView8centerOnEPK13QGraphicsItem(void* qthis, void* arg0); // 4
-  // proto:  void QGraphicsView::centerOn(qreal x, qreal y);
-extern void C_ZN13QGraphicsView8centerOnEdd(void* qthis, double arg0, double arg1); // 2
-  // proto:  void QGraphicsView::translate(qreal dx, qreal dy);
-extern void C_ZN13QGraphicsView9translateEdd(void* qthis, double arg0, double arg1); // 4
-  // proto:  QGraphicsView::ViewportUpdateMode QGraphicsView::viewportUpdateMode();
-extern void C_ZNK13QGraphicsView18viewportUpdateModeEv(void* qthis); // 4
-  // proto:  QRectF QGraphicsView::sceneRect();
-extern void* C_ZNK13QGraphicsView9sceneRectEv(void* qthis); // 4
-  // proto:  CacheMode QGraphicsView::cacheMode();
-extern void C_ZNK13QGraphicsView9cacheModeEv(void* qthis); // 4
-  // proto:  QTransform QGraphicsView::viewportTransform();
-extern void* C_ZNK13QGraphicsView17viewportTransformEv(void* qthis); // 4
+// extern C begin: 13
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QGraphicsView)=1
+//  ext block end
+
+//  body block begin
 type QGraphicsView struct {
-  /*qbase*/ QAbstractScrollArea;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _rubberBandChanged QGraphicsView_rubberBandChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// setBackgroundBrush(const class QBrush &)
-func (this *QGraphicsView) Setbackgroundbrush(args ...interface{}) () {
-  // setBackgroundBrush(const class QBrush &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView18setBackgroundBrushERK6QBrush
-    // invoke: void setBackgroundBrush(const class QBrush &)
-    var arg0 = args[0].(*qtgui.QBrush).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsView18setBackgroundBrushERK6QBrush(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "setBackgroundBrush", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:61
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QGraphicsView) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// alignment()
-func (this *QGraphicsView) Alignment(args ...interface{}) () {
-  // alignment()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView9alignmentEv
-    // invoke: Qt::Alignment alignment()
-    C.C_ZNK13QGraphicsView9alignmentEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "alignment", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:117
+// index:0
+// void QGraphicsView(class QWidget *)
+func NewQGraphicsView(parent unsafe.Pointer) *QGraphicsView {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsViewC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QGraphicsView{cthis}
 }
 
-// resetCachedContent()
-func (this *QGraphicsView) Resetcachedcontent(args ...interface{}) () {
-  // resetCachedContent()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView18resetCachedContentEv
-    // invoke: void resetCachedContent()
-    C.C_ZN13QGraphicsView18resetCachedContentEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "resetCachedContent", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:118
+// index:1
+// void QGraphicsView(class QGraphicsScene *, class QWidget *)
+func NewQGraphicsView_1(scene unsafe.Pointer, parent unsafe.Pointer) *QGraphicsView {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, scene, parent)
+	gopp.ErrPrint(err, rv)
+	return &QGraphicsView{cthis}
 }
 
-// renderHints()
-func (this *QGraphicsView) Renderhints(args ...interface{}) () {
-  // renderHints()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView11renderHintsEv
-    // invoke: QPainter::RenderHints renderHints()
-    C.C_ZNK13QGraphicsView11renderHintsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "renderHints", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:119
+// index:0
+// virtual
+// void ~QGraphicsView()
+func DeleteQGraphicsView(*QGraphicsView) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsViewD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// setMatrix(const class QMatrix &, _Bool)
-func (this *QGraphicsView) Setmatrix(args ...interface{}) () {
-  // setMatrix(const class QMatrix &, _Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QMatrix{}) // "const QMatrix &"
-  vtys[0][1] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView9setMatrixERK7QMatrixb
-    // invoke: void setMatrix(const class QMatrix &, _Bool)
-    var arg0 = args[0].(*qtgui.QMatrix).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.bool(args[1].(bool))
-    if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsView9setMatrixERK7QMatrixb(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "setMatrix", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:121
+// index:0
+// virtual
+// QSize sizeHint()
+func (this *QGraphicsView) SizeHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// shear(qreal, qreal)
-func (this *QGraphicsView) Shear(args ...interface{}) () {
-  // shear(qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView5shearEdd
-    // invoke: void shear(qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsView5shearEdd(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "shear", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:123
+// index:0
+// QPainter::RenderHints renderHints()
+func (this *QGraphicsView) RenderHints() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView11renderHintsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// resetTransform()
-func (this *QGraphicsView) Resettransform(args ...interface{}) () {
-  // resetTransform()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView14resetTransformEv
-    // invoke: void resetTransform()
-    C.C_ZN13QGraphicsView14resetTransformEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "resetTransform", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:124
+// index:0
+// void setRenderHint(class QPainter::RenderHint, _Bool)
+func (this *QGraphicsView) SetRenderHint(hint int, enabled bool) {
+	// 0: (, QPainter::RenderHint hint, bool enabled), (&hint, &enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView13setRenderHintEN8QPainter10RenderHintEb", ffiqt.FFI_TYPE_VOID, this.cthis, &hint, &enabled)
+	gopp.ErrPrint(err, rv)
 }
 
-// rotate(qreal)
-func (this *QGraphicsView) Rotate(args ...interface{}) () {
-  // rotate(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView6rotateEd
-    // invoke: void rotate(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsView6rotateEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "rotate", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:127
+// index:0
+// Qt::Alignment alignment()
+func (this *QGraphicsView) Alignment() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView9alignmentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QGraphicsView) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK13QGraphicsView10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:130
+// index:0
+// QGraphicsView::ViewportAnchor transformationAnchor()
+func (this *QGraphicsView) TransformationAnchor() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView20transformationAnchorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// itemAt(int, int)
-func (this *QGraphicsView) Itemat(args ...interface{}) () {
-  // itemAt(int, int)
-  // itemAt(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView6itemAtEii
-    // invoke: QGraphicsItem * itemAt(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZNK13QGraphicsView6itemAtEii(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZNK13QGraphicsView6itemAtERK6QPoint
-    // invoke: QGraphicsItem * itemAt(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK13QGraphicsView6itemAtERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "itemAt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:131
+// index:0
+// void setTransformationAnchor(enum QGraphicsView::ViewportAnchor)
+func (this *QGraphicsView) SetTransformationAnchor(anchor int) {
+	// 0: (, QGraphicsView::ViewportAnchor anchor), (&anchor)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView23setTransformationAnchorENS_14ViewportAnchorE", ffiqt.FFI_TYPE_VOID, this.cthis, &anchor)
+	gopp.ErrPrint(err, rv)
 }
 
-// optimizationFlags()
-func (this *QGraphicsView) Optimizationflags(args ...interface{}) () {
-  // optimizationFlags()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView17optimizationFlagsEv
-    // invoke: OptimizationFlags optimizationFlags()
-    C.C_ZNK13QGraphicsView17optimizationFlagsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "optimizationFlags", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:133
+// index:0
+// QGraphicsView::ViewportAnchor resizeAnchor()
+func (this *QGraphicsView) ResizeAnchor() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView12resizeAnchorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// updateSceneRect(const class QRectF &)
-func (this *QGraphicsView) Updatescenerect(args ...interface{}) () {
-  // updateSceneRect(const class QRectF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView15updateSceneRectERK6QRectF
-    // invoke: void updateSceneRect(const class QRectF &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsView15updateSceneRectERK6QRectF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "updateSceneRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:134
+// index:0
+// void setResizeAnchor(enum QGraphicsView::ViewportAnchor)
+func (this *QGraphicsView) SetResizeAnchor(anchor int) {
+	// 0: (, QGraphicsView::ViewportAnchor anchor), (&anchor)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView15setResizeAnchorENS_14ViewportAnchorE", ffiqt.FFI_TYPE_VOID, this.cthis, &anchor)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTransform(const class QTransform &, _Bool)
-func (this *QGraphicsView) Settransform(args ...interface{}) () {
-  // setTransform(const class QTransform &, _Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QTransform{}) // "const QTransform &"
-  vtys[0][1] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView12setTransformERK10QTransformb
-    // invoke: void setTransform(const class QTransform &, _Bool)
-    var arg0 = args[0].(*qtgui.QTransform).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.bool(args[1].(bool))
-    if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsView12setTransformERK10QTransformb(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "setTransform", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:136
+// index:0
+// QGraphicsView::ViewportUpdateMode viewportUpdateMode()
+func (this *QGraphicsView) ViewportUpdateMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView18viewportUpdateModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// resizeAnchor()
-func (this *QGraphicsView) Resizeanchor(args ...interface{}) () {
-  // resizeAnchor()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView12resizeAnchorEv
-    // invoke: QGraphicsView::ViewportAnchor resizeAnchor()
-    C.C_ZNK13QGraphicsView12resizeAnchorEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "resizeAnchor", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:137
+// index:0
+// void setViewportUpdateMode(enum QGraphicsView::ViewportUpdateMode)
+func (this *QGraphicsView) SetViewportUpdateMode(mode int) {
+	// 0: (, QGraphicsView::ViewportUpdateMode mode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView21setViewportUpdateModeENS_18ViewportUpdateModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// scale(qreal, qreal)
-func (this *QGraphicsView) Scale(args ...interface{}) () {
-  // scale(qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView5scaleEdd
-    // invoke: void scale(qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsView5scaleEdd(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "scale", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:139
+// index:0
+// QGraphicsView::OptimizationFlags optimizationFlags()
+func (this *QGraphicsView) OptimizationFlags() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView17optimizationFlagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// matrix()
-func (this *QGraphicsView) Matrix(args ...interface{}) (ret interface{}) {
-  // matrix()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView6matrixEv
-    // invoke: QMatrix matrix()
-    var ret0 = C.C_ZNK13QGraphicsView6matrixEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QMatrix{}) // "QMatrix"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "matrix", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:140
+// index:0
+// void setOptimizationFlag(enum QGraphicsView::OptimizationFlag, _Bool)
+func (this *QGraphicsView) SetOptimizationFlag(flag int, enabled bool) {
+	// 0: (, QGraphicsView::OptimizationFlag flag, bool enabled), (&flag, &enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView19setOptimizationFlagENS_16OptimizationFlagEb", ffiqt.FFI_TYPE_VOID, this.cthis, &flag, &enabled)
+	gopp.ErrPrint(err, rv)
 }
 
-// setScene(class QGraphicsScene *)
-func (this *QGraphicsView) Setscene(args ...interface{}) () {
-  // setScene(class QGraphicsScene *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QGraphicsScene{}) // "QGraphicsScene *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView8setSceneEP14QGraphicsScene
-    // invoke: void setScene(class QGraphicsScene *)
-    var arg0 = args[0].(*QGraphicsScene).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsView8setSceneEP14QGraphicsScene(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "setScene", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:143
+// index:0
+// QGraphicsView::DragMode dragMode()
+func (this *QGraphicsView) DragMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView8dragModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// sizeHint()
-func (this *QGraphicsView) Sizehint(args ...interface{}) (ret interface{}) {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView8sizeHintEv
-    // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK13QGraphicsView8sizeHintEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "sizeHint", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:144
+// index:0
+// void setDragMode(enum QGraphicsView::DragMode)
+func (this *QGraphicsView) SetDragMode(mode int) {
+	// 0: (, QGraphicsView::DragMode mode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView11setDragModeENS_8DragModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// items(int, int)
-func (this *QGraphicsView) Items(args ...interface{}) () {
-  // items(int, int)
-  // items(const class QPoint &)
-  // items()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  vtys[2] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView5itemsEii
-    // invoke: QList<QGraphicsItem *> items(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZNK13QGraphicsView5itemsEii(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZNK13QGraphicsView5itemsERK6QPoint
-    // invoke: QList<QGraphicsItem *> items(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK13QGraphicsView5itemsERK6QPoint(this.Qclsinst, arg0)
-  case 2:
-    // invoke: _ZNK13QGraphicsView5itemsEv
-    // invoke: QList<QGraphicsItem *> items()
-    C.C_ZNK13QGraphicsView5itemsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "items", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:147
+// index:0
+// Qt::ItemSelectionMode rubberBandSelectionMode()
+func (this *QGraphicsView) RubberBandSelectionMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView23rubberBandSelectionModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// rubberBandSelectionMode()
-func (this *QGraphicsView) Rubberbandselectionmode(args ...interface{}) () {
-  // rubberBandSelectionMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView23rubberBandSelectionModeEv
-    // invoke: Qt::ItemSelectionMode rubberBandSelectionMode()
-    C.C_ZNK13QGraphicsView23rubberBandSelectionModeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "rubberBandSelectionMode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:148
+// index:0
+// void setRubberBandSelectionMode(Qt::ItemSelectionMode)
+func (this *QGraphicsView) SetRubberBandSelectionMode(mode int) {
+	// 0: (, Qt::ItemSelectionMode mode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView26setRubberBandSelectionModeEN2Qt17ItemSelectionModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// setSceneRect(qreal, qreal, qreal, qreal)
-func (this *QGraphicsView) Setscenerect(args ...interface{}) () {
-  // setSceneRect(qreal, qreal, qreal, qreal)
-  // setSceneRect(const class QRectF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][3] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView12setSceneRectEdddd
-    // invoke: void setSceneRect(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    C.C_ZN13QGraphicsView12setSceneRectEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
-  case 1:
-    // invoke: _ZN13QGraphicsView12setSceneRectERK6QRectF
-    // invoke: void setSceneRect(const class QRectF &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsView12setSceneRectERK6QRectF(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "setSceneRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:149
+// index:0
+// QRect rubberBandRect()
+func (this *QGraphicsView) RubberBandRect() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView14rubberBandRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// mapFromScene(const class QPolygonF &)
-func (this *QGraphicsView) Mapfromscene(args ...interface{}) (ret interface{}) {
-  // mapFromScene(const class QPolygonF &)
-  // mapFromScene(const class QPainterPath &)
-  // mapFromScene(qreal, qreal)
-  // mapFromScene(const class QRectF &)
-  // mapFromScene(const class QPointF &)
-  // mapFromScene(qreal, qreal, qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QPolygonF{}) // "const QPolygonF &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtgui.QPainterPath{}) // "const QPainterPath &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[2][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  vtys[4] = make(map[int32]reflect.Type)
-  vtys[4][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
-  vtys[5] = make(map[int32]reflect.Type)
-  vtys[5][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[5][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[5][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[5][3] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView12mapFromSceneERK9QPolygonF
-    // invoke: QPolygon mapFromScene(const class QPolygonF &)
-    var arg0 = args[0].(*qtgui.QPolygonF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneERK9QPolygonF(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QPolygon{}) // "QPolygon"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK13QGraphicsView12mapFromSceneERK12QPainterPath
-    // invoke: QPainterPath mapFromScene(const class QPainterPath &)
-    var arg0 = args[0].(*qtgui.QPainterPath).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QPainterPath{}) // "QPainterPath"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZNK13QGraphicsView12mapFromSceneEdd
-    // invoke: QPoint mapFromScene(qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneEdd(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 3:
-    // invoke: _ZNK13QGraphicsView12mapFromSceneERK6QRectF
-    // invoke: QPolygon mapFromScene(const class QRectF &)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneERK6QRectF(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QPolygon{}) // "QPolygon"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 4:
-    // invoke: _ZNK13QGraphicsView12mapFromSceneERK7QPointF
-    // invoke: QPoint mapFromScene(const class QPointF &)
-    var arg0 = args[0].(*qtcore.QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneERK7QPointF(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 5:
-    // invoke: _ZNK13QGraphicsView12mapFromSceneEdddd
-    // invoke: QPolygon mapFromScene(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QPolygon{}) // "QPolygon"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "mapFromScene", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:152
+// index:0
+// QGraphicsView::CacheMode cacheMode()
+func (this *QGraphicsView) CacheMode() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView9cacheModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// dragMode()
-func (this *QGraphicsView) Dragmode(args ...interface{}) () {
-  // dragMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView8dragModeEv
-    // invoke: QGraphicsView::DragMode dragMode()
-    C.C_ZNK13QGraphicsView8dragModeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "dragMode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:154
+// index:0
+// void resetCachedContent()
+func (this *QGraphicsView) ResetCachedContent() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView18resetCachedContentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// scene()
-func (this *QGraphicsView) Scene(args ...interface{}) () {
-  // scene()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView5sceneEv
-    // invoke: QGraphicsScene * scene()
-    C.C_ZNK13QGraphicsView5sceneEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "scene", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:156
+// index:0
+// bool isInteractive()
+func (this *QGraphicsView) IsInteractive() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView13isInteractiveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QGraphicsView()
-func (this *QGraphicsView) Freeqgraphicsview(args ...interface{}) () {
-  // ~QGraphicsView()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsViewD0Ev
-    // invoke: void ~QGraphicsView()
-    C.C_ZN13QGraphicsViewD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "~QGraphicsView", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:157
+// index:0
+// void setInteractive(_Bool)
+func (this *QGraphicsView) SetInteractive(allowed bool) {
+	// 0: (, bool allowed), (&allowed)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView14setInteractiveEb", ffiqt.FFI_TYPE_VOID, this.cthis, &allowed)
+	gopp.ErrPrint(err, rv)
 }
 
-// transformationAnchor()
-func (this *QGraphicsView) Transformationanchor(args ...interface{}) () {
-  // transformationAnchor()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView20transformationAnchorEv
-    // invoke: QGraphicsView::ViewportAnchor transformationAnchor()
-    C.C_ZNK13QGraphicsView20transformationAnchorEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "transformationAnchor", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:159
+// index:0
+// QGraphicsScene * scene()
+func (this *QGraphicsView) Scene() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView5sceneEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QGraphicsView(class QWidget *)
-func NewQGraphicsView(args ...interface{}) *QGraphicsView {
-  // QGraphicsView(class QWidget *)
-  // QGraphicsView(class QGraphicsScene *, class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QGraphicsScene{}) // "QGraphicsScene *"
-  vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsViewC1EP7QWidget
-    // invoke: void QGraphicsView(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN13QGraphicsViewC2EP7QWidget(arg0)
-    return &QGraphicsView{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget
-    // invoke: void QGraphicsView(class QGraphicsScene *, class QWidget *)
-    var arg0 = args[0].(*QGraphicsScene).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QWidget).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget(arg0, arg1)
-    return &QGraphicsView{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "QGraphicsView", args)
-  }
-
-  return nil // QGraphicsView{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qgraphicsview.h:160
+// index:0
+// void setScene(class QGraphicsScene *)
+func (this *QGraphicsView) SetScene(scene unsafe.Pointer) {
+	// 0: (, QGraphicsScene * scene), (scene)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView8setSceneEP14QGraphicsScene", ffiqt.FFI_TYPE_VOID, this.cthis, scene)
+	gopp.ErrPrint(err, rv)
 }
 
-// rubberBandRect()
-func (this *QGraphicsView) Rubberbandrect(args ...interface{}) (ret interface{}) {
-  // rubberBandRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView14rubberBandRectEv
-    // invoke: QRect rubberBandRect()
-    var ret0 = C.C_ZNK13QGraphicsView14rubberBandRectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "rubberBandRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:162
+// index:0
+// QRectF sceneRect()
+func (this *QGraphicsView) SceneRect() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView9sceneRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// transform()
-func (this *QGraphicsView) Transform(args ...interface{}) (ret interface{}) {
-  // transform()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView9transformEv
-    // invoke: QTransform transform()
-    var ret0 = C.C_ZNK13QGraphicsView9transformEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QTransform{}) // "QTransform"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "transform", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:163
+// index:0
+// void setSceneRect(const class QRectF &)
+func (this *QGraphicsView) SetSceneRect(rect unsafe.Pointer) {
+	// 0: (, const QRectF & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView12setSceneRectERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
 }
 
-// foregroundBrush()
-func (this *QGraphicsView) Foregroundbrush(args ...interface{}) (ret interface{}) {
-  // foregroundBrush()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView15foregroundBrushEv
-    // invoke: QBrush foregroundBrush()
-    var ret0 = C.C_ZNK13QGraphicsView15foregroundBrushEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QBrush{}) // "QBrush"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "foregroundBrush", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:164
+// index:1
+// inline
+// void setSceneRect(qreal, qreal, qreal, qreal)
+func (this *QGraphicsView) SetSceneRect_1(x float64, y float64, w float64, h float64) {
+	// 1: (, qreal x, qreal y, qreal w, qreal h), (&x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView12setSceneRectEdddd", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h)
+	gopp.ErrPrint(err, rv)
 }
 
-// setForegroundBrush(const class QBrush &)
-func (this *QGraphicsView) Setforegroundbrush(args ...interface{}) () {
-  // setForegroundBrush(const class QBrush &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QBrush{}) // "const QBrush &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView18setForegroundBrushERK6QBrush
-    // invoke: void setForegroundBrush(const class QBrush &)
-    var arg0 = args[0].(*qtgui.QBrush).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsView18setForegroundBrushERK6QBrush(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "setForegroundBrush", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:166
+// index:0
+// QMatrix matrix()
+func (this *QGraphicsView) Matrix() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView6matrixEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ensureVisible(const class QRectF &, int, int)
-func (this *QGraphicsView) Ensurevisible(args ...interface{}) () {
-  // ensureVisible(const class QRectF &, int, int)
-  // ensureVisible(qreal, qreal, qreal, qreal, int, int)
-  // ensureVisible(const class QGraphicsItem *, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRectF{}) // "const QRectF &"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][2] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][3] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][4] = qtrt.Int32Ty(false) // "int"
-  vtys[1][5] = qtrt.Int32Ty(false) // "int"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QGraphicsItem{}) // "const QGraphicsItem *"
-  vtys[2][1] = qtrt.Int32Ty(false) // "int"
-  vtys[2][2] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView13ensureVisibleERK6QRectFii
-    // invoke: void ensureVisible(const class QRectF &, int, int)
-    var arg0 = args[0].(*qtcore.QRectF).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    C.C_ZN13QGraphicsView13ensureVisibleERK6QRectFii(this.Qclsinst, arg0, arg1, arg2)
-  case 1:
-    // invoke: _ZN13QGraphicsView13ensureVisibleEddddii
-    // invoke: void ensureVisible(qreal, qreal, qreal, qreal, int, int)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg4)}
-    var arg5 = C.int32_t(qtrt.PrimConv(args[5], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg5)}
-    C.C_ZN13QGraphicsView13ensureVisibleEddddii(this.Qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
-  case 2:
-    // invoke: _ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii
-    // invoke: void ensureVisible(const class QGraphicsItem *, int, int)
-    var arg0 = args[0].(*QGraphicsItem).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    C.C_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "ensureVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:167
+// index:0
+// void setMatrix(const class QMatrix &, _Bool)
+func (this *QGraphicsView) SetMatrix(matrix unsafe.Pointer, combine bool) {
+	// 0: (, const QMatrix & matrix, bool combine), (matrix, &combine)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView9setMatrixERK7QMatrixb", ffiqt.FFI_TYPE_VOID, this.cthis, matrix, &combine)
+	gopp.ErrPrint(err, rv)
 }
 
-// setInteractive(_Bool)
-func (this *QGraphicsView) Setinteractive(args ...interface{}) () {
-  // setInteractive(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView14setInteractiveEb
-    // invoke: void setInteractive(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsView14setInteractiveEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "setInteractive", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:168
+// index:0
+// void resetMatrix()
+func (this *QGraphicsView) ResetMatrix() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView11resetMatrixEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isTransformed()
-func (this *QGraphicsView) Istransformed(args ...interface{}) (ret interface{}) {
-  // isTransformed()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView13isTransformedEv
-    // invoke: bool isTransformed()
-    var ret0 = C.C_ZNK13QGraphicsView13isTransformedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "isTransformed", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:169
+// index:0
+// QTransform transform()
+func (this *QGraphicsView) Transform() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView9transformEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isInteractive()
-func (this *QGraphicsView) Isinteractive(args ...interface{}) (ret interface{}) {
-  // isInteractive()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView13isInteractiveEv
-    // invoke: bool isInteractive()
-    var ret0 = C.C_ZNK13QGraphicsView13isInteractiveEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "isInteractive", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:170
+// index:0
+// QTransform viewportTransform()
+func (this *QGraphicsView) ViewportTransform() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView17viewportTransformEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// backgroundBrush()
-func (this *QGraphicsView) Backgroundbrush(args ...interface{}) (ret interface{}) {
-  // backgroundBrush()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView15backgroundBrushEv
-    // invoke: QBrush backgroundBrush()
-    var ret0 = C.C_ZNK13QGraphicsView15backgroundBrushEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QBrush{}) // "QBrush"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "backgroundBrush", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:171
+// index:0
+// bool isTransformed()
+func (this *QGraphicsView) IsTransformed() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView13isTransformedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// mapToScene(const class QPainterPath &)
-func (this *QGraphicsView) Maptoscene(args ...interface{}) (ret interface{}) {
-  // mapToScene(const class QPainterPath &)
-  // mapToScene(int, int)
-  // mapToScene(const class QRect &)
-  // mapToScene(const class QPolygon &)
-  // mapToScene(int, int, int, int)
-  // mapToScene(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QPainterPath{}) // "const QPainterPath &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  vtys[3] = make(map[int32]reflect.Type)
-  vtys[3][0] = reflect.TypeOf(qtgui.QPolygon{}) // "const QPolygon &"
-  vtys[4] = make(map[int32]reflect.Type)
-  vtys[4][0] = qtrt.Int32Ty(false) // "int"
-  vtys[4][1] = qtrt.Int32Ty(false) // "int"
-  vtys[4][2] = qtrt.Int32Ty(false) // "int"
-  vtys[4][3] = qtrt.Int32Ty(false) // "int"
-  vtys[5] = make(map[int32]reflect.Type)
-  vtys[5][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView10mapToSceneERK12QPainterPath
-    // invoke: QPainterPath mapToScene(const class QPainterPath &)
-    var arg0 = args[0].(*qtgui.QPainterPath).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneERK12QPainterPath(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QPainterPath{}) // "QPainterPath"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK13QGraphicsView10mapToSceneEii
-    // invoke: QPointF mapToScene(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneEii(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPointF{}) // "QPointF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZNK13QGraphicsView10mapToSceneERK5QRect
-    // invoke: QPolygonF mapToScene(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneERK5QRect(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QPolygonF{}) // "QPolygonF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 3:
-    // invoke: _ZNK13QGraphicsView10mapToSceneERK8QPolygon
-    // invoke: QPolygonF mapToScene(const class QPolygon &)
-    var arg0 = args[0].(*qtgui.QPolygon).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneERK8QPolygon(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QPolygonF{}) // "QPolygonF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 4:
-    // invoke: _ZNK13QGraphicsView10mapToSceneEiiii
-    // invoke: QPolygonF mapToScene(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QPolygonF{}) // "QPolygonF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 5:
-    // invoke: _ZNK13QGraphicsView10mapToSceneERK6QPoint
-    // invoke: QPointF mapToScene(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPointF{}) // "QPointF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "mapToScene", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:172
+// index:0
+// void setTransform(const class QTransform &, _Bool)
+func (this *QGraphicsView) SetTransform(matrix unsafe.Pointer, combine bool) {
+	// 0: (, const QTransform & matrix, bool combine), (matrix, &combine)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView12setTransformERK10QTransformb", ffiqt.FFI_TYPE_VOID, this.cthis, matrix, &combine)
+	gopp.ErrPrint(err, rv)
 }
 
-// resetMatrix()
-func (this *QGraphicsView) Resetmatrix(args ...interface{}) () {
-  // resetMatrix()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView11resetMatrixEv
-    // invoke: void resetMatrix()
-    C.C_ZN13QGraphicsView11resetMatrixEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "resetMatrix", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:173
+// index:0
+// void resetTransform()
+func (this *QGraphicsView) ResetTransform() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView14resetTransformEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// centerOn(const class QPointF &)
-func (this *QGraphicsView) Centeron(args ...interface{}) () {
-  // centerOn(const class QPointF &)
-  // centerOn(const class QGraphicsItem *)
-  // centerOn(qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPointF{}) // "const QPointF &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QGraphicsItem{}) // "const QGraphicsItem *"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[2][1] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView8centerOnERK7QPointF
-    // invoke: void centerOn(const class QPointF &)
-    var arg0 = args[0].(*qtcore.QPointF).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsView8centerOnERK7QPointF(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN13QGraphicsView8centerOnEPK13QGraphicsItem
-    // invoke: void centerOn(const class QGraphicsItem *)
-    var arg0 = args[0].(*QGraphicsItem).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsView8centerOnEPK13QGraphicsItem(this.Qclsinst, arg0)
-  case 2:
-    // invoke: _ZN13QGraphicsView8centerOnEdd
-    // invoke: void centerOn(qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsView8centerOnEdd(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "centerOn", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:174
+// index:0
+// void rotate(qreal)
+func (this *QGraphicsView) Rotate(angle float64) {
+	// 0: (, qreal angle), (&angle)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView6rotateEd", ffiqt.FFI_TYPE_VOID, this.cthis, &angle)
+	gopp.ErrPrint(err, rv)
 }
 
-// translate(qreal, qreal)
-func (this *QGraphicsView) Translate(args ...interface{}) () {
-  // translate(qreal, qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QGraphicsView9translateEdd
-    // invoke: void translate(qreal, qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsView9translateEdd(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "translate", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:175
+// index:0
+// void scale(qreal, qreal)
+func (this *QGraphicsView) Scale(sx float64, sy float64) {
+	// 0: (, qreal sx, qreal sy), (&sx, &sy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView5scaleEdd", ffiqt.FFI_TYPE_VOID, this.cthis, &sx, &sy)
+	gopp.ErrPrint(err, rv)
 }
 
-// viewportUpdateMode()
-func (this *QGraphicsView) Viewportupdatemode(args ...interface{}) () {
-  // viewportUpdateMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView18viewportUpdateModeEv
-    // invoke: QGraphicsView::ViewportUpdateMode viewportUpdateMode()
-    C.C_ZNK13QGraphicsView18viewportUpdateModeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "viewportUpdateMode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:176
+// index:0
+// void shear(qreal, qreal)
+func (this *QGraphicsView) Shear(sh float64, sv float64) {
+	// 0: (, qreal sh, qreal sv), (&sh, &sv)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView5shearEdd", ffiqt.FFI_TYPE_VOID, this.cthis, &sh, &sv)
+	gopp.ErrPrint(err, rv)
 }
 
-// sceneRect()
-func (this *QGraphicsView) Scenerect(args ...interface{}) (ret interface{}) {
-  // sceneRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView9sceneRectEv
-    // invoke: QRectF sceneRect()
-    var ret0 = C.C_ZNK13QGraphicsView9sceneRectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRectF{}) // "QRectF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "sceneRect", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:177
+// index:0
+// void translate(qreal, qreal)
+func (this *QGraphicsView) Translate(dx float64, dy float64) {
+	// 0: (, qreal dx, qreal dy), (&dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView9translateEdd", ffiqt.FFI_TYPE_VOID, this.cthis, &dx, &dy)
+	gopp.ErrPrint(err, rv)
 }
 
-// cacheMode()
-func (this *QGraphicsView) Cachemode(args ...interface{}) () {
-  // cacheMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView9cacheModeEv
-    // invoke: CacheMode cacheMode()
-    C.C_ZNK13QGraphicsView9cacheModeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "cacheMode", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:179
+// index:0
+// void centerOn(const class QPointF &)
+func (this *QGraphicsView) CenterOn(pos unsafe.Pointer) {
+	// 0: (, const QPointF & pos), (pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView8centerOnERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, pos)
+	gopp.ErrPrint(err, rv)
 }
 
-// viewportTransform()
-func (this *QGraphicsView) Viewporttransform(args ...interface{}) (ret interface{}) {
-  // viewportTransform()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QGraphicsView17viewportTransformEv
-    // invoke: QTransform viewportTransform()
-    var ret0 = C.C_ZNK13QGraphicsView17viewportTransformEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QTransform{}) // "QTransform"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QGraphicsView", "viewportTransform", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qgraphicsview.h:180
+// index:1
+// inline
+// void centerOn(qreal, qreal)
+func (this *QGraphicsView) CenterOn_1(x float64, y float64) {
+	// 1: (, qreal x, qreal y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView8centerOnEdd", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qgraphicsview.h:181
+// index:2
+// void centerOn(const class QGraphicsItem *)
+func (this *QGraphicsView) CenterOn_2(item unsafe.Pointer) {
+	// 2: (, const QGraphicsItem * item), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView8centerOnEPK13QGraphicsItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qgraphicsview.h:182
+// index:0
+// void ensureVisible(const class QRectF &, int, int)
+func (this *QGraphicsView) EnsureVisible(rect unsafe.Pointer, xmargin int, ymargin int) {
+	// 0: (, const QRectF & rect, int xmargin, int ymargin), (rect, &xmargin, &ymargin)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleERK6QRectFii", ffiqt.FFI_TYPE_VOID, this.cthis, rect, &xmargin, &ymargin)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:183
+// index:1
+// inline
+// void ensureVisible(qreal, qreal, qreal, qreal, int, int)
+func (this *QGraphicsView) EnsureVisible_1(x float64, y float64, w float64, h float64, xmargin int, ymargin int) {
+	// 1: (, qreal x, qreal y, qreal w, qreal h, int xmargin, int ymargin), (&x, &y, &w, &h, &xmargin, &ymargin)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEddddii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h, &xmargin, &ymargin)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:184
+// index:2
+// void ensureVisible(const class QGraphicsItem *, int, int)
+func (this *QGraphicsView) EnsureVisible_2(item unsafe.Pointer, xmargin int, ymargin int) {
+	// 2: (, const QGraphicsItem * item, int xmargin, int ymargin), (item, &xmargin, &ymargin)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii", ffiqt.FFI_TYPE_VOID, this.cthis, item, &xmargin, &ymargin)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:185
+// index:0
+// void fitInView(const class QRectF &, Qt::AspectRatioMode)
+func (this *QGraphicsView) FitInView(rect unsafe.Pointer, aspectRadioMode int) {
+	// 0: (, const QRectF & rect, Qt::AspectRatioMode aspectRadioMode), (rect, &aspectRadioMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewERK6QRectFN2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_VOID, this.cthis, rect, &aspectRadioMode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:186
+// index:1
+// inline
+// void fitInView(qreal, qreal, qreal, qreal, Qt::AspectRatioMode)
+func (this *QGraphicsView) FitInView_1(x float64, y float64, w float64, h float64, aspectRadioMode int) {
+	// 1: (, qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRadioMode), (&x, &y, &w, &h, &aspectRadioMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewEddddN2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h, &aspectRadioMode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:188
+// index:2
+// void fitInView(const class QGraphicsItem *, Qt::AspectRatioMode)
+func (this *QGraphicsView) FitInView_2(item unsafe.Pointer, aspectRadioMode int) {
+	// 2: (, const QGraphicsItem * item, Qt::AspectRatioMode aspectRadioMode), (item, &aspectRadioMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewEPK13QGraphicsItemN2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_VOID, this.cthis, item, &aspectRadioMode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:191
+// index:0
+// void render(class QPainter *, const class QRectF &, const class QRect &, Qt::AspectRatioMode)
+func (this *QGraphicsView) Render(painter unsafe.Pointer, target unsafe.Pointer, source unsafe.Pointer, aspectRatioMode int) {
+	// 0: (, QPainter * painter, const QRectF & target, const QRect & source, Qt::AspectRatioMode aspectRatioMode), (painter, target, source, &aspectRatioMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView6renderEP8QPainterRK6QRectFRK5QRectN2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_VOID, this.cthis, painter, target, source, &aspectRatioMode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:194
+// index:0
+// QList<QGraphicsItem *> items()
+func (this *QGraphicsView) Items() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:195
+// index:1
+// QList<QGraphicsItem *> items(const class QPoint &)
+func (this *QGraphicsView) Items_1(pos unsafe.Pointer) {
+	// 1: (, const QPoint & pos), (pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:196
+// index:2
+// inline
+// QList<QGraphicsItem *> items(int, int)
+func (this *QGraphicsView) Items_2(x int, y int) {
+	// 2: (, int x, int y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsEii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:197
+// index:3
+// QList<QGraphicsItem *> items(const class QRect &, Qt::ItemSelectionMode)
+func (this *QGraphicsView) Items_3(rect unsafe.Pointer, mode int) {
+	// 3: (, const QRect & rect, Qt::ItemSelectionMode mode), (rect, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsERK5QRectN2Qt17ItemSelectionModeE", ffiqt.FFI_TYPE_VOID, this.cthis, rect, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:198
+// index:4
+// inline
+// QList<QGraphicsItem *> items(int, int, int, int, Qt::ItemSelectionMode)
+func (this *QGraphicsView) Items_4(x int, y int, w int, h int, mode int) {
+	// 4: (, int x, int y, int w, int h, Qt::ItemSelectionMode mode), (&x, &y, &w, &h, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsEiiiiN2Qt17ItemSelectionModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:199
+// index:5
+// QList<QGraphicsItem *> items(const class QPolygon &, Qt::ItemSelectionMode)
+func (this *QGraphicsView) Items_5(polygon unsafe.Pointer, mode int) {
+	// 5: (, const QPolygon & polygon, Qt::ItemSelectionMode mode), (polygon, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsERK8QPolygonN2Qt17ItemSelectionModeE", ffiqt.FFI_TYPE_VOID, this.cthis, polygon, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:200
+// index:6
+// QList<QGraphicsItem *> items(const class QPainterPath &, Qt::ItemSelectionMode)
+func (this *QGraphicsView) Items_6(path unsafe.Pointer, mode int) {
+	// 6: (, const QPainterPath & path, Qt::ItemSelectionMode mode), (path, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsERK12QPainterPathN2Qt17ItemSelectionModeE", ffiqt.FFI_TYPE_VOID, this.cthis, path, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:201
+// index:0
+// QGraphicsItem * itemAt(const class QPoint &)
+func (this *QGraphicsView) ItemAt(pos unsafe.Pointer) {
+	// 0: (, const QPoint & pos), (pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView6itemAtERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:202
+// index:1
+// inline
+// QGraphicsItem * itemAt(int, int)
+func (this *QGraphicsView) ItemAt_1(x int, y int) {
+	// 1: (, int x, int y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView6itemAtEii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:204
+// index:0
+// QPointF mapToScene(const class QPoint &)
+func (this *QGraphicsView) MapToScene(point unsafe.Pointer) {
+	// 0: (, const QPoint & point), (point)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, point)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:205
+// index:1
+// QPolygonF mapToScene(const class QRect &)
+func (this *QGraphicsView) MapToScene_1(rect unsafe.Pointer) {
+	// 1: (, const QRect & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:206
+// index:2
+// QPolygonF mapToScene(const class QPolygon &)
+func (this *QGraphicsView) MapToScene_2(polygon unsafe.Pointer) {
+	// 2: (, const QPolygon & polygon), (polygon)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneERK8QPolygon", ffiqt.FFI_TYPE_VOID, this.cthis, polygon)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:207
+// index:3
+// QPainterPath mapToScene(const class QPainterPath &)
+func (this *QGraphicsView) MapToScene_3(path unsafe.Pointer) {
+	// 3: (, const QPainterPath & path), (path)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneERK12QPainterPath", ffiqt.FFI_TYPE_VOID, this.cthis, path)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:212
+// index:4
+// inline
+// QPointF mapToScene(int, int)
+func (this *QGraphicsView) MapToScene_4(x int, y int) {
+	// 4: (, int x, int y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneEii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:213
+// index:5
+// inline
+// QPolygonF mapToScene(int, int, int, int)
+func (this *QGraphicsView) MapToScene_5(x int, y int, w int, h int) {
+	// 5: (, int x, int y, int w, int h), (&x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:208
+// index:0
+// QPoint mapFromScene(const class QPointF &)
+func (this *QGraphicsView) MapFromScene(point unsafe.Pointer) {
+	// 0: (, const QPointF & point), (point)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, point)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:209
+// index:1
+// QPolygon mapFromScene(const class QRectF &)
+func (this *QGraphicsView) MapFromScene_1(rect unsafe.Pointer) {
+	// 1: (, const QRectF & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:210
+// index:2
+// QPolygon mapFromScene(const class QPolygonF &)
+func (this *QGraphicsView) MapFromScene_2(polygon unsafe.Pointer) {
+	// 2: (, const QPolygonF & polygon), (polygon)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneERK9QPolygonF", ffiqt.FFI_TYPE_VOID, this.cthis, polygon)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:211
+// index:3
+// QPainterPath mapFromScene(const class QPainterPath &)
+func (this *QGraphicsView) MapFromScene_3(path unsafe.Pointer) {
+	// 3: (, const QPainterPath & path), (path)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneERK12QPainterPath", ffiqt.FFI_TYPE_VOID, this.cthis, path)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:214
+// index:4
+// inline
+// QPoint mapFromScene(qreal, qreal)
+func (this *QGraphicsView) MapFromScene_4(x float64, y float64) {
+	// 4: (, qreal x, qreal y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneEdd", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:215
+// index:5
+// inline
+// QPolygon mapFromScene(qreal, qreal, qreal, qreal)
+func (this *QGraphicsView) MapFromScene_5(x float64, y float64, w float64, h float64) {
+	// 5: (, qreal x, qreal y, qreal w, qreal h), (&x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneEdddd", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:217
+// index:0
+// virtual
+// QVariant inputMethodQuery(Qt::InputMethodQuery)
+func (this *QGraphicsView) InputMethodQuery(query int) {
+	// 0: (, Qt::InputMethodQuery query), (&query)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView16inputMethodQueryEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_VOID, this.cthis, &query)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:219
+// index:0
+// QBrush backgroundBrush()
+func (this *QGraphicsView) BackgroundBrush() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView15backgroundBrushEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:220
+// index:0
+// void setBackgroundBrush(const class QBrush &)
+func (this *QGraphicsView) SetBackgroundBrush(brush unsafe.Pointer) {
+	// 0: (, const QBrush & brush), (brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView18setBackgroundBrushERK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, brush)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:222
+// index:0
+// QBrush foregroundBrush()
+func (this *QGraphicsView) ForegroundBrush() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGraphicsView15foregroundBrushEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:223
+// index:0
+// void setForegroundBrush(const class QBrush &)
+func (this *QGraphicsView) SetForegroundBrush(brush unsafe.Pointer) {
+	// 0: (, const QBrush & brush), (brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView18setForegroundBrushERK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, brush)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:228
+// index:0
+// void updateSceneRect(const class QRectF &)
+func (this *QGraphicsView) UpdateSceneRect(rect unsafe.Pointer) {
+	// 0: (, const QRectF & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView15updateSceneRectERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:232
+// index:0
+// void rubberBandChanged(class QRect, class QPointF, class QPointF)
+func (this *QGraphicsView) RubberBandChanged(viewportRect unsafe.Pointer, fromScenePoint unsafe.Pointer, toScenePoint unsafe.Pointer) {
+	// 0: (, QRect viewportRect, QPointF fromScenePoint, QPointF toScenePoint), (viewportRect, fromScenePoint, toScenePoint)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView17rubberBandChangedE5QRect7QPointFS1_", ffiqt.FFI_TYPE_VOID, this.cthis, viewportRect, fromScenePoint, toScenePoint)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

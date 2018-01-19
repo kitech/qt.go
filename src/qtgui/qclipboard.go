@@ -1,258 +1,236 @@
+//  header block begin
+// /usr/include/qt/QtGui/qclipboard.h
+// #include <qclipboard.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qclipboard.h
-// dst-file: /src/gui/qclipboard.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  bool QClipboard::ownsClipboard();
-extern bool C_ZNK10QClipboard13ownsClipboardEv(void* qthis); // 4
-  // proto:  bool QClipboard::supportsFindBuffer();
-extern bool C_ZNK10QClipboard18supportsFindBufferEv(void* qthis); // 4
-  // proto:  bool QClipboard::ownsFindBuffer();
-extern bool C_ZNK10QClipboard14ownsFindBufferEv(void* qthis); // 4
-  // proto:  bool QClipboard::supportsSelection();
-extern bool C_ZNK10QClipboard17supportsSelectionEv(void* qthis); // 4
-  // proto:  const QMetaObject * QClipboard::metaObject();
-extern void C_ZNK10QClipboard10metaObjectEv(void* qthis); // 4
-  // proto:  bool QClipboard::ownsSelection();
-extern bool C_ZNK10QClipboard13ownsSelectionEv(void* qthis); // 4
+// extern C begin: 11
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QClipboard)=1
+//  ext block end
+
+//  body block begin
 type QClipboard struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _changed QClipboard_changed_signal;
-//  _findBufferChanged QClipboard_findBufferChanged_signal;
-//  _selectionChanged QClipboard_selectionChanged_signal;
-//  _dataChanged QClipboard_dataChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// ownsClipboard()
-func (this *QClipboard) Ownsclipboard(args ...interface{}) (ret interface{}) {
-  // ownsClipboard()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QClipboard13ownsClipboardEv
-    // invoke: bool ownsClipboard()
-    var ret0 = C.C_ZNK10QClipboard13ownsClipboardEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QClipboard", "ownsClipboard", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qclipboard.h:57
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QClipboard) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// supportsFindBuffer()
-func (this *QClipboard) Supportsfindbuffer(args ...interface{}) (ret interface{}) {
-  // supportsFindBuffer()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QClipboard18supportsFindBufferEv
-    // invoke: bool supportsFindBuffer()
-    var ret0 = C.C_ZNK10QClipboard18supportsFindBufferEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QClipboard", "supportsFindBuffer", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qclipboard.h:65
+// index:0
+// void clear(enum QClipboard::Mode)
+func (this *QClipboard) Clear(mode int) {
+	// 0: (, QClipboard::Mode mode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard5clearENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// ownsFindBuffer()
-func (this *QClipboard) Ownsfindbuffer(args ...interface{}) (ret interface{}) {
-  // ownsFindBuffer()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QClipboard14ownsFindBufferEv
-    // invoke: bool ownsFindBuffer()
-    var ret0 = C.C_ZNK10QClipboard14ownsFindBufferEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QClipboard", "ownsFindBuffer", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qclipboard.h:67
+// index:0
+// bool supportsSelection()
+func (this *QClipboard) SupportsSelection() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard17supportsSelectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// supportsSelection()
-func (this *QClipboard) Supportsselection(args ...interface{}) (ret interface{}) {
-  // supportsSelection()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QClipboard17supportsSelectionEv
-    // invoke: bool supportsSelection()
-    var ret0 = C.C_ZNK10QClipboard17supportsSelectionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QClipboard", "supportsSelection", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qclipboard.h:68
+// index:0
+// bool supportsFindBuffer()
+func (this *QClipboard) SupportsFindBuffer() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard18supportsFindBufferEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QClipboard) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QClipboard10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QClipboard10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QClipboard", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qclipboard.h:70
+// index:0
+// bool ownsSelection()
+func (this *QClipboard) OwnsSelection() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard13ownsSelectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ownsSelection()
-func (this *QClipboard) Ownsselection(args ...interface{}) (ret interface{}) {
-  // ownsSelection()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QClipboard13ownsSelectionEv
-    // invoke: bool ownsSelection()
-    var ret0 = C.C_ZNK10QClipboard13ownsSelectionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QClipboard", "ownsSelection", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qclipboard.h:71
+// index:0
+// bool ownsClipboard()
+func (this *QClipboard) OwnsClipboard() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard13ownsClipboardEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qclipboard.h:72
+// index:0
+// bool ownsFindBuffer()
+func (this *QClipboard) OwnsFindBuffer() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard14ownsFindBufferEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qclipboard.h:74
+// index:0
+// QString text(enum QClipboard::Mode)
+func (this *QClipboard) Text(mode int) {
+	// 0: (, QClipboard::Mode mode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard4textENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:75
+// index:1
+// QString text(class QString &, enum QClipboard::Mode)
+func (this *QClipboard) Text_1(subtype unsafe.Pointer, mode int) {
+	// 1: (, QString & subtype, QClipboard::Mode mode), (subtype, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard4textER7QStringNS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, subtype, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:76
+// index:0
+// void setText(const class QString &, enum QClipboard::Mode)
+func (this *QClipboard) SetText(arg0 unsafe.Pointer, mode int) {
+	// 0: (, const QString & arg0, QClipboard::Mode mode), (arg0, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard7setTextERK7QStringNS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:78
+// index:0
+// const QMimeData * mimeData(enum QClipboard::Mode)
+func (this *QClipboard) MimeData(mode int) {
+	// 0: (, QClipboard::Mode mode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard8mimeDataENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:79
+// index:0
+// void setMimeData(class QMimeData *, enum QClipboard::Mode)
+func (this *QClipboard) SetMimeData(data unsafe.Pointer, mode int) {
+	// 0: (, QMimeData * data, QClipboard::Mode mode), (data, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard11setMimeDataEP9QMimeDataNS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, data, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:81
+// index:0
+// QImage image(enum QClipboard::Mode)
+func (this *QClipboard) Image(mode int) {
+	// 0: (, QClipboard::Mode mode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard5imageENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:82
+// index:0
+// QPixmap pixmap(enum QClipboard::Mode)
+func (this *QClipboard) Pixmap(mode int) {
+	// 0: (, QClipboard::Mode mode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard6pixmapENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:83
+// index:0
+// void setImage(const class QImage &, enum QClipboard::Mode)
+func (this *QClipboard) SetImage(arg0 unsafe.Pointer, mode int) {
+	// 0: (, const QImage & arg0, QClipboard::Mode mode), (arg0, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard8setImageERK6QImageNS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:84
+// index:0
+// void setPixmap(const class QPixmap &, enum QClipboard::Mode)
+func (this *QClipboard) SetPixmap(arg0 unsafe.Pointer, mode int) {
+	// 0: (, const QPixmap & arg0, QClipboard::Mode mode), (arg0, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard9setPixmapERK7QPixmapNS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:87
+// index:0
+// void changed(class QClipboard::Mode)
+func (this *QClipboard) Changed(mode int) {
+	// 0: (, QClipboard::Mode mode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard7changedENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:88
+// index:0
+// void selectionChanged()
+func (this *QClipboard) SelectionChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard16selectionChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:89
+// index:0
+// void findBufferChanged()
+func (this *QClipboard) FindBufferChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard17findBufferChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qclipboard.h:90
+// index:0
+// void dataChanged()
+func (this *QClipboard) DataChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard11dataChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

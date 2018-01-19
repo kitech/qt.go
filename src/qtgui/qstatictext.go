@@ -1,484 +1,201 @@
+//  header block begin
+// /usr/include/qt/QtGui/qstatictext.h
+// #include <qstatictext.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qstatictext.h
-// dst-file: /src/gui/qstatictext.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QSizeF QStaticText::size();
-extern void* C_ZNK11QStaticText4sizeEv(void* qthis); // 4
-  // proto:  void QStaticText::prepare(const QTransform & matrix, const QFont & font);
-extern void C_ZN11QStaticText7prepareERK10QTransformRK5QFont(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QStaticText::PerformanceHint QStaticText::performanceHint();
-extern void C_ZNK11QStaticText15performanceHintEv(void* qthis); // 4
-  // proto:  QString QStaticText::text();
-extern void* C_ZNK11QStaticText4textEv(void* qthis); // 4
-  // proto:  void QStaticText::setText(const QString & text);
-extern void C_ZN11QStaticText7setTextERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QStaticText::setTextWidth(qreal textWidth);
-extern void C_ZN11QStaticText12setTextWidthEd(void* qthis, double arg0); // 4
-  // proto:  void QStaticText::swap(QStaticText & other);
-extern void C_ZN11QStaticText4swapERS_(void* qthis, void* arg0); // 2
-  // proto:  Qt::TextFormat QStaticText::textFormat();
-extern void C_ZNK11QStaticText10textFormatEv(void* qthis); // 4
-  // proto:  void QStaticText::setTextOption(const QTextOption & textOption);
-extern void C_ZN11QStaticText13setTextOptionERK11QTextOption(void* qthis, void* arg0); // 4
-  // proto:  QTextOption QStaticText::textOption();
-extern void* C_ZNK11QStaticText10textOptionEv(void* qthis); // 4
-  // proto:  qreal QStaticText::textWidth();
-extern double C_ZNK11QStaticText9textWidthEv(void* qthis); // 4
-  // proto:  void QStaticText::~QStaticText();
-extern void C_ZN11QStaticTextD2Ev(void* qthis); // 4
-  // proto:  void QStaticText::QStaticText();
-extern void* C_ZN11QStaticTextC2Ev(); // 3
-  // proto:  void QStaticText::QStaticText(const QString & text);
-extern void* C_ZN11QStaticTextC2ERK7QString(void* arg0); // 3
-  // proto:  void QStaticText::QStaticText(const QStaticText & other);
-extern void* C_ZN11QStaticTextC2ERKS_(void* arg0); // 3
+// extern C begin: 53
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QStaticText)=1
+//  ext block end
+
+//  body block begin
 type QStaticText struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// size()
-func (this *QStaticText) Size(args ...interface{}) (ret interface{}) {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStaticText4sizeEv
-    // invoke: QSizeF size()
-    var ret0 = C.C_ZNK11QStaticText4sizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSizeF{}) // "QSizeF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStaticText", "size", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:64
+// index:0
+// void QStaticText()
+func NewQStaticText() *QStaticText {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QStaticText{cthis}
 }
 
-// prepare(const class QTransform &, const class QFont &)
-func (this *QStaticText) Prepare(args ...interface{}) () {
-  // prepare(const class QTransform &, const class QFont &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTransform{}) // "const QTransform &"
-  vtys[0][1] = reflect.TypeOf(QFont{}) // "const QFont &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStaticText7prepareERK10QTransformRK5QFont
-    // invoke: void prepare(const class QTransform &, const class QFont &)
-    var arg0 = args[0].(*QTransform).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QFont).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN11QStaticText7prepareERK10QTransformRK5QFont(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QStaticText", "prepare", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:65
+// index:1
+// void QStaticText(const class QString &)
+func NewQStaticText_1(text unsafe.Pointer) *QStaticText {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, text)
+	gopp.ErrPrint(err, rv)
+	return &QStaticText{cthis}
 }
 
-// performanceHint()
-func (this *QStaticText) Performancehint(args ...interface{}) () {
-  // performanceHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStaticText15performanceHintEv
-    // invoke: QStaticText::PerformanceHint performanceHint()
-    C.C_ZNK11QStaticText15performanceHintEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStaticText", "performanceHint", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:71
+// index:0
+// void ~QStaticText()
+func DeleteQStaticText(*QStaticText) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// text()
-func (this *QStaticText) Text(args ...interface{}) (ret interface{}) {
-  // text()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStaticText4textEv
-    // invoke: QString text()
-    var ret0 = C.C_ZNK11QStaticText4textEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStaticText", "text", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:73
+// index:0
+// inline
+// void swap(class QStaticText &)
+func (this *QStaticText) Swap(other unsafe.Pointer) {
+	// 0: (, QStaticText & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// setText(const class QString &)
-func (this *QStaticText) Settext(args ...interface{}) () {
-  // setText(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStaticText7setTextERK7QString
-    // invoke: void setText(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QStaticText7setTextERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStaticText", "setText", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:75
+// index:0
+// void setText(const class QString &)
+func (this *QStaticText) SetText(text unsafe.Pointer) {
+	// 0: (, const QString & text), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTextWidth(qreal)
-func (this *QStaticText) Settextwidth(args ...interface{}) () {
-  // setTextWidth(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStaticText12setTextWidthEd
-    // invoke: void setTextWidth(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QStaticText12setTextWidthEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStaticText", "setTextWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:76
+// index:0
+// QString text()
+func (this *QStaticText) Text() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText4textEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// swap(class QStaticText &)
-func (this *QStaticText) Swap(args ...interface{}) () {
-  // swap(class QStaticText &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QStaticText{}) // "QStaticText &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStaticText4swapERS_
-    // invoke: void swap(class QStaticText &)
-    var arg0 = args[0].(*QStaticText).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QStaticText4swapERS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStaticText", "swap", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:78
+// index:0
+// void setTextFormat(Qt::TextFormat)
+func (this *QStaticText) SetTextFormat(textFormat int) {
+	// 0: (, Qt::TextFormat textFormat), (&textFormat)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText13setTextFormatEN2Qt10TextFormatE", ffiqt.FFI_TYPE_VOID, this.cthis, &textFormat)
+	gopp.ErrPrint(err, rv)
 }
 
-// textFormat()
-func (this *QStaticText) Textformat(args ...interface{}) () {
-  // textFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStaticText10textFormatEv
-    // invoke: Qt::TextFormat textFormat()
-    C.C_ZNK11QStaticText10textFormatEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStaticText", "textFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:79
+// index:0
+// Qt::TextFormat textFormat()
+func (this *QStaticText) TextFormat() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText10textFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setTextOption(const class QTextOption &)
-func (this *QStaticText) Settextoption(args ...interface{}) () {
-  // setTextOption(const class QTextOption &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTextOption{}) // "const QTextOption &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStaticText13setTextOptionERK11QTextOption
-    // invoke: void setTextOption(const class QTextOption &)
-    var arg0 = args[0].(*QTextOption).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QStaticText13setTextOptionERK11QTextOption(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStaticText", "setTextOption", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:81
+// index:0
+// void setTextWidth(qreal)
+func (this *QStaticText) SetTextWidth(textWidth float64) {
+	// 0: (, qreal textWidth), (&textWidth)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText12setTextWidthEd", ffiqt.FFI_TYPE_VOID, this.cthis, &textWidth)
+	gopp.ErrPrint(err, rv)
 }
 
-// textOption()
-func (this *QStaticText) Textoption(args ...interface{}) (ret interface{}) {
-  // textOption()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStaticText10textOptionEv
-    // invoke: QTextOption textOption()
-    var ret0 = C.C_ZNK11QStaticText10textOptionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTextOption{}) // "QTextOption"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStaticText", "textOption", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:82
+// index:0
+// qreal textWidth()
+func (this *QStaticText) TextWidth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText9textWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// textWidth()
-func (this *QStaticText) Textwidth(args ...interface{}) (ret interface{}) {
-  // textWidth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QStaticText9textWidthEv
-    // invoke: qreal textWidth()
-    var ret0 = C.C_ZNK11QStaticText9textWidthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStaticText", "textWidth", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:84
+// index:0
+// void setTextOption(const class QTextOption &)
+func (this *QStaticText) SetTextOption(textOption unsafe.Pointer) {
+	// 0: (, const QTextOption & textOption), (textOption)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText13setTextOptionERK11QTextOption", ffiqt.FFI_TYPE_VOID, this.cthis, textOption)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QStaticText()
-func (this *QStaticText) Freeqstatictext(args ...interface{}) () {
-  // ~QStaticText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStaticTextD0Ev
-    // invoke: void ~QStaticText()
-    C.C_ZN11QStaticTextD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QStaticText", "~QStaticText", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qstatictext.h:85
+// index:0
+// QTextOption textOption()
+func (this *QStaticText) TextOption() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText10textOptionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QStaticText()
-func NewQStaticText(args ...interface{}) *QStaticText {
-  // QStaticText()
-  // QStaticText(const class QString &)
-  // QStaticText(const class QStaticText &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QStaticText{}) // "const QStaticText &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QStaticTextC1Ev
-    // invoke: void QStaticText()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QStaticTextC2Ev()
-    return &QStaticText{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN11QStaticTextC1ERK7QString
-    // invoke: void QStaticText(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QStaticTextC2ERK7QString(arg0)
-    return &QStaticText{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN11QStaticTextC1ERKS_
-    // invoke: void QStaticText(const class QStaticText &)
-    var arg0 = args[0].(*QStaticText).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QStaticTextC2ERKS_(arg0)
-    return &QStaticText{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QStaticText", "QStaticText", args)
-  }
-
-  return nil // QStaticText{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qstatictext.h:87
+// index:0
+// QSizeF size()
+func (this *QStaticText) Size() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qstatictext.h:89
+// index:0
+// void prepare(const class QTransform &, const class QFont &)
+func (this *QStaticText) Prepare(matrix unsafe.Pointer, font unsafe.Pointer) {
+	// 0: (, const QTransform & matrix, const QFont & font), (matrix, font)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText7prepareERK10QTransformRK5QFont", ffiqt.FFI_TYPE_VOID, this.cthis, matrix, font)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qstatictext.h:91
+// index:0
+// void setPerformanceHint(enum QStaticText::PerformanceHint)
+func (this *QStaticText) SetPerformanceHint(performanceHint int) {
+	// 0: (, QStaticText::PerformanceHint performanceHint), (&performanceHint)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText18setPerformanceHintENS_15PerformanceHintE", ffiqt.FFI_TYPE_VOID, this.cthis, &performanceHint)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstatictext.h:92
+// index:0
+// QStaticText::PerformanceHint performanceHint()
+func (this *QStaticText) PerformanceHint() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText15performanceHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

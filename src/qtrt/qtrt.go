@@ -2,6 +2,8 @@ package qtrt
 
 /*
 #cgo CFLAGS: -std=c11
+
+#include <stdlib.h>
 */
 import "C"
 
@@ -9,6 +11,11 @@ import (
 	"reflect"
 	"unsafe"
 )
+
+func Malloc(sz int) unsafe.Pointer        { return C.calloc(1, C.size_t(sz)) }
+func Calloc(n int, sz int) unsafe.Pointer { return C.calloc(C.size_t(n), C.size_t(sz)) }
+func FreeMem(p unsafe.Pointer)            { C.free(p) }
+func CString(s string) unsafe.Pointer     { return unsafe.Pointer(C.CString(s)) }
 
 /////////
 

@@ -11,7 +11,7 @@ import (
 func KeepMe() {}
 
 // 类似C++的overload name resolve
-func SymbolResolve(args []interface{}, vtys map[int32]map[int32]reflect.Type) int32 {
+func SymbolResolve(args []interface{}, vtys map[uint8]map[uint8]reflect.Type) int32 {
 	// cycle 1
 	if ret := symbolResolveComplete(args, vtys); ret != -1 {
 		return ret
@@ -27,9 +27,9 @@ func SymbolResolve(args []interface{}, vtys map[int32]map[int32]reflect.Type) in
 	if argc < 0 {
 	}
 
-	matsyms := make(map[int32]bool, 0)
+	matsyms := make(map[uint8]bool, 0)
 	for symidx := 0; symidx < len(vtys); symidx++ {
-		vty := vtys[int32(symidx)]
+		vty := vtys[uint8(symidx)]
 		pnum := len(vty)
 
 		// TODO maybe have default values
@@ -41,7 +41,7 @@ func SymbolResolve(args []interface{}, vtys map[int32]map[int32]reflect.Type) in
 		for idx := 0; idx < len(vty); idx++ {
 			matp[idx] = false
 
-			ety := vty[int32(idx)]
+			ety := vty[uint8(idx)]
 			aty := reflect.TypeOf(args[idx])
 
 			if ety.Kind() != reflect.Struct && (aty.ConvertibleTo(ety) || aty.AssignableTo(ety)) {
@@ -63,7 +63,7 @@ func SymbolResolve(args []interface{}, vtys map[int32]map[int32]reflect.Type) in
 
 		// 查找到第一个match的symbol即返回
 		if ismat {
-			matsyms[int32(symidx)] = true // 准备多级match
+			matsyms[uint8(symidx)] = true // 准备多级match
 			return int32(symidx)
 		}
 	}
@@ -76,14 +76,14 @@ func FillDefaultValues(args []interface{}, dvals []interface{}) []interface{} {
 }
 
 // 完全匹配，参数个数，参数类型
-func symbolResolveComplete(args []interface{}, vtys map[int32]map[int32]reflect.Type) int32 {
+func symbolResolveComplete(args []interface{}, vtys map[uint8]map[uint8]reflect.Type) int32 {
 	argc := len(args)
 	if argc < 0 {
 	}
 
-	matsyms := make(map[int32]bool, 0)
+	matsyms := make(map[uint8]bool, 0)
 	for symidx := 0; symidx < len(vtys); symidx++ {
-		vty := vtys[int32(symidx)]
+		vty := vtys[uint8(symidx)]
 		pnum := len(vty)
 
 		if argc != pnum {
@@ -95,7 +95,7 @@ func symbolResolveComplete(args []interface{}, vtys map[int32]map[int32]reflect.
 		for idx := 0; idx < len(vty); idx++ {
 			matp[idx] = false
 
-			ety := vty[int32(idx)]
+			ety := vty[uint8(idx)]
 			aty := reflect.TypeOf(args[idx])
 
 			if aty.AssignableTo(ety) {
@@ -111,7 +111,7 @@ func symbolResolveComplete(args []interface{}, vtys map[int32]map[int32]reflect.
 
 		// 查找到第一个match的symbol即返回
 		if ismat {
-			matsyms[int32(symidx)] = true // 准备多级match
+			matsyms[uint8(symidx)] = true // 准备多级match
 			return int32(symidx)
 		}
 	}
@@ -130,14 +130,14 @@ func symbolResolveType() {
 
 // 参数个数匹配
 // 参数类型转换匹配
-func symbolResolveConvert(args []interface{}, vtys map[int32]map[int32]reflect.Type) int32 {
+func symbolResolveConvert(args []interface{}, vtys map[uint8]map[uint8]reflect.Type) int32 {
 	argc := len(args)
 	if argc < 0 {
 	}
 
 	matsyms := make(map[int32]bool, 0)
 	for symidx := 0; symidx < len(vtys); symidx++ {
-		vty := vtys[int32(symidx)]
+		vty := vtys[uint8(symidx)]
 		pnum := len(vty)
 
 		if argc != pnum {
@@ -149,7 +149,7 @@ func symbolResolveConvert(args []interface{}, vtys map[int32]map[int32]reflect.T
 		for idx := 0; idx < len(vty); idx++ {
 			matp[idx] = false
 
-			ety := vty[int32(idx)]
+			ety := vty[uint8(idx)]
 			aty := reflect.TypeOf(args[idx])
 
 			// 关键点？

@@ -1,761 +1,287 @@
+//  header block begin
+// /usr/include/qt/QtCore/qdatastream.h
+// #include <qdatastream.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qdatastream.h
-// dst-file: /src/core/qdatastream.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QDataStream::startTransaction();
-extern void C_ZN11QDataStream16startTransactionEv(void* qthis); // 4
-  // proto:  void QDataStream::~QDataStream();
-extern void C_ZN11QDataStreamD2Ev(void* qthis); // 4
-  // proto:  void QDataStream::unsetDevice();
-extern void C_ZN11QDataStream11unsetDeviceEv(void* qthis); // 4
-  // proto:  void QDataStream::abortTransaction();
-extern void C_ZN11QDataStream16abortTransactionEv(void* qthis); // 4
-  // proto:  void QDataStream::setVersion(int );
-extern void C_ZN11QDataStream10setVersionEi(void* qthis, int32_t arg0); // 2
-  // proto:  QDataStream & QDataStream::writeBytes(const char * , uint len);
-extern void* C_ZN11QDataStream10writeBytesEPKcj(void* qthis, void* arg0, int32_t arg1); // 4
-  // proto:  int QDataStream::skipRawData(int len);
-extern int32_t C_ZN11QDataStream11skipRawDataEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QDataStream::version();
-extern int32_t C_ZNK11QDataStream7versionEv(void* qthis); // 2
-  // proto:  QDataStream & QDataStream::readBytes(char *& , uint & len);
-extern void* C_ZN11QDataStream9readBytesERPcRj(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  void QDataStream::setDevice(QIODevice * );
-extern void C_ZN11QDataStream9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
-  // proto:  QDataStream::ByteOrder QDataStream::byteOrder();
-extern void C_ZNK11QDataStream9byteOrderEv(void* qthis); // 2
-  // proto:  QDataStream::Status QDataStream::status();
-extern void C_ZNK11QDataStream6statusEv(void* qthis); // 4
-  // proto:  int QDataStream::readRawData(char * , int len);
-extern int32_t C_ZN11QDataStream11readRawDataEPci(void* qthis, void* arg0, int32_t arg1); // 4
-  // proto:  QDataStream::FloatingPointPrecision QDataStream::floatingPointPrecision();
-extern void C_ZNK11QDataStream22floatingPointPrecisionEv(void* qthis); // 4
-  // proto:  int QDataStream::writeRawData(const char * , int len);
-extern int32_t C_ZN11QDataStream12writeRawDataEPKci(void* qthis, void* arg0, int32_t arg1); // 4
-  // proto:  void QDataStream::rollbackTransaction();
-extern void C_ZN11QDataStream19rollbackTransactionEv(void* qthis); // 4
-  // proto:  QIODevice * QDataStream::device();
-extern void* C_ZNK11QDataStream6deviceEv(void* qthis); // 2
-  // proto:  void QDataStream::resetStatus();
-extern void C_ZN11QDataStream11resetStatusEv(void* qthis); // 4
-  // proto:  bool QDataStream::atEnd();
-extern bool C_ZNK11QDataStream5atEndEv(void* qthis); // 4
-  // proto:  bool QDataStream::commitTransaction();
-extern bool C_ZN11QDataStream17commitTransactionEv(void* qthis); // 4
-  // proto:  void QDataStream::QDataStream(const QByteArray & );
-extern void* C_ZN11QDataStreamC2ERK10QByteArray(void* arg0); // 3
-  // proto:  void QDataStream::QDataStream();
-extern void* C_ZN11QDataStreamC2Ev(); // 3
-  // proto:  void QDataStream::QDataStream(QIODevice * );
-extern void* C_ZN11QDataStreamC2EP9QIODevice(void* arg0); // 3
+// extern C begin: 8
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QDataStream)=1
+//  ext block end
+
+//  body block begin
 type QDataStream struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// startTransaction()
-func (this *QDataStream) Starttransaction(args ...interface{}) () {
-  // startTransaction()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream16startTransactionEv
-    // invoke: void startTransaction()
-    C.C_ZN11QDataStream16startTransactionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDataStream", "startTransaction", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:123
+// index:0
+// void QDataStream()
+func NewQDataStream() *QDataStream {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QDataStream{cthis}
 }
 
-// ~QDataStream()
-func (this *QDataStream) Freeqdatastream(args ...interface{}) () {
-  // ~QDataStream()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStreamD0Ev
-    // invoke: void ~QDataStream()
-    C.C_ZN11QDataStreamD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDataStream", "~QDataStream", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:124
+// index:1
+// void QDataStream(class QIODevice *)
+func NewQDataStream_1(arg0 unsafe.Pointer) *QDataStream {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, arg0)
+	gopp.ErrPrint(err, rv)
+	return &QDataStream{cthis}
 }
 
-// unsetDevice()
-func (this *QDataStream) Unsetdevice(args ...interface{}) () {
-  // unsetDevice()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream11unsetDeviceEv
-    // invoke: void unsetDevice()
-    C.C_ZN11QDataStream11unsetDeviceEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDataStream", "unsetDevice", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:126
+// index:2
+// void QDataStream(const class QByteArray &)
+func NewQDataStream_2(arg0 unsafe.Pointer) *QDataStream {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, arg0)
+	gopp.ErrPrint(err, rv)
+	return &QDataStream{cthis}
 }
 
-// abortTransaction()
-func (this *QDataStream) Aborttransaction(args ...interface{}) () {
-  // abortTransaction()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream16abortTransactionEv
-    // invoke: void abortTransaction()
-    C.C_ZN11QDataStream16abortTransactionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDataStream", "abortTransaction", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:127
+// index:0
+// void ~QDataStream()
+func DeleteQDataStream(*QDataStream) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// setVersion(int)
-func (this *QDataStream) Setversion(args ...interface{}) () {
-  // setVersion(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream10setVersionEi
-    // invoke: void setVersion(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QDataStream10setVersionEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDataStream", "setVersion", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:129
+// index:0
+// QIODevice * device()
+func (this *QDataStream) Device() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream6deviceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// writeBytes(const char *, uint)
-func (this *QDataStream) Writebytes(args ...interface{}) (ret interface{}) {
-  // writeBytes(const char *, uint)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.ByteTy(true) // "const char *"
-  vtys[0][1] = qtrt.Int32Ty(false) // "uint"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream10writeBytesEPKcj
-    // invoke: QDataStream & writeBytes(const char *, uint)
-    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
-    var arg0 = argif0.(unsafe.Pointer)
-    if false {fmt.Println(argif0, arg0)}
-    if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN11QDataStream10writeBytesEPKcj(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QDataStream{}) // "QDataStream &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDataStream", "writeBytes", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:130
+// index:0
+// void setDevice(class QIODevice *)
+func (this *QDataStream) SetDevice(arg0 unsafe.Pointer) {
+	// 0: (, QIODevice * arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// skipRawData(int)
-func (this *QDataStream) Skiprawdata(args ...interface{}) (ret interface{}) {
-  // skipRawData(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream11skipRawDataEi
-    // invoke: int skipRawData(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QDataStream11skipRawDataEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDataStream", "skipRawData", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:131
+// index:0
+// void unsetDevice()
+func (this *QDataStream) UnsetDevice() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11unsetDeviceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// version()
-func (this *QDataStream) Version(args ...interface{}) (ret interface{}) {
-  // version()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDataStream7versionEv
-    // invoke: int version()
-    var ret0 = C.C_ZNK11QDataStream7versionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDataStream", "version", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:133
+// index:0
+// bool atEnd()
+func (this *QDataStream) AtEnd() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream5atEndEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// readBytes(char *&, uint &)
-func (this *QDataStream) Readbytes(args ...interface{}) (ret interface{}) {
-  // readBytes(char *&, uint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.StringTy(false) // "char *&"
-  vtys[0][1] = qtrt.Int32Ty(false) // "uint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream9readBytesERPcRj
-    // invoke: QDataStream & readBytes(char *&, uint &)
-    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
-    var arg0 = argif0.(unsafe.Pointer)
-    if false {fmt.Println(argif0, arg0)}
-    if free0 {defer C.free(arg0)}
-    var arg1 = (unsafe.Pointer)(args[1].(*int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN11QDataStream9readBytesERPcRj(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QDataStream{}) // "QDataStream &"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDataStream", "readBytes", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:135
+// index:0
+// QDataStream::Status status()
+func (this *QDataStream) Status() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream6statusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDevice(class QIODevice *)
-func (this *QDataStream) Setdevice(args ...interface{}) () {
-  // setDevice(class QIODevice *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream9setDeviceEP9QIODevice
-    // invoke: void setDevice(class QIODevice *)
-    var arg0 = args[0].(*QIODevice).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QDataStream9setDeviceEP9QIODevice(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDataStream", "setDevice", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:136
+// index:0
+// void setStatus(enum QDataStream::Status)
+func (this *QDataStream) SetStatus(status int) {
+	// 0: (, QDataStream::Status status), (&status)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setStatusENS_6StatusE", ffiqt.FFI_TYPE_VOID, this.cthis, &status)
+	gopp.ErrPrint(err, rv)
 }
 
-// byteOrder()
-func (this *QDataStream) Byteorder(args ...interface{}) () {
-  // byteOrder()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDataStream9byteOrderEv
-    // invoke: QDataStream::ByteOrder byteOrder()
-    C.C_ZNK11QDataStream9byteOrderEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDataStream", "byteOrder", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:137
+// index:0
+// void resetStatus()
+func (this *QDataStream) ResetStatus() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11resetStatusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// status()
-func (this *QDataStream) Status(args ...interface{}) () {
-  // status()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDataStream6statusEv
-    // invoke: QDataStream::Status status()
-    C.C_ZNK11QDataStream6statusEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDataStream", "status", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:139
+// index:0
+// QDataStream::FloatingPointPrecision floatingPointPrecision()
+func (this *QDataStream) FloatingPointPrecision() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream22floatingPointPrecisionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// readRawData(char *, int)
-func (this *QDataStream) Readrawdata(args ...interface{}) (ret interface{}) {
-  // readRawData(char *, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.ByteTy(true) // "char *"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream11readRawDataEPci
-    // invoke: int readRawData(char *, int)
-    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
-    var arg0 = argif0.(unsafe.Pointer)
-    if false {fmt.Println(argif0, arg0)}
-    if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN11QDataStream11readRawDataEPci(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDataStream", "readRawData", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:140
+// index:0
+// void setFloatingPointPrecision(enum QDataStream::FloatingPointPrecision)
+func (this *QDataStream) SetFloatingPointPrecision(precision int) {
+	// 0: (, QDataStream::FloatingPointPrecision precision), (&precision)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream25setFloatingPointPrecisionENS_22FloatingPointPrecisionE", ffiqt.FFI_TYPE_VOID, this.cthis, &precision)
+	gopp.ErrPrint(err, rv)
 }
 
-// floatingPointPrecision()
-func (this *QDataStream) Floatingpointprecision(args ...interface{}) () {
-  // floatingPointPrecision()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDataStream22floatingPointPrecisionEv
-    // invoke: QDataStream::FloatingPointPrecision floatingPointPrecision()
-    C.C_ZNK11QDataStream22floatingPointPrecisionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDataStream", "floatingPointPrecision", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:142
+// index:0
+// QDataStream::ByteOrder byteOrder()
+func (this *QDataStream) ByteOrder() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream9byteOrderEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// writeRawData(const char *, int)
-func (this *QDataStream) Writerawdata(args ...interface{}) (ret interface{}) {
-  // writeRawData(const char *, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.ByteTy(true) // "const char *"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream12writeRawDataEPKci
-    // invoke: int writeRawData(const char *, int)
-    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
-    var arg0 = argif0.(unsafe.Pointer)
-    if false {fmt.Println(argif0, arg0)}
-    if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN11QDataStream12writeRawDataEPKci(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDataStream", "writeRawData", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:143
+// index:0
+// void setByteOrder(enum QDataStream::ByteOrder)
+func (this *QDataStream) SetByteOrder(arg0 int) {
+	// 0: (, QDataStream::ByteOrder arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream12setByteOrderENS_9ByteOrderE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// rollbackTransaction()
-func (this *QDataStream) Rollbacktransaction(args ...interface{}) () {
-  // rollbackTransaction()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream19rollbackTransactionEv
-    // invoke: void rollbackTransaction()
-    C.C_ZN11QDataStream19rollbackTransactionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDataStream", "rollbackTransaction", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:145
+// index:0
+// int version()
+func (this *QDataStream) Version() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream7versionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// device()
-func (this *QDataStream) Device(args ...interface{}) (ret interface{}) {
-  // device()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDataStream6deviceEv
-    // invoke: QIODevice * device()
-    var ret0 = C.C_ZNK11QDataStream6deviceEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QIODevice{}) // "QIODevice *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDataStream", "device", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:146
+// index:0
+// void setVersion(int)
+func (this *QDataStream) SetVersion(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream10setVersionEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// resetStatus()
-func (this *QDataStream) Resetstatus(args ...interface{}) () {
-  // resetStatus()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream11resetStatusEv
-    // invoke: void resetStatus()
-    C.C_ZN11QDataStream11resetStatusEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QDataStream", "resetStatus", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:179
+// index:0
+// QDataStream & readBytes(char *&, uint &)
+func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer, len uint) {
+	// 0: (, char *& arg0, uint & len), (arg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9readBytesERPcRj", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &len)
+	gopp.ErrPrint(err, rv)
 }
 
-// atEnd()
-func (this *QDataStream) Atend(args ...interface{}) (ret interface{}) {
-  // atEnd()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QDataStream5atEndEv
-    // invoke: bool atEnd()
-    var ret0 = C.C_ZNK11QDataStream5atEndEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDataStream", "atEnd", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:180
+// index:0
+// int readRawData(char *, int)
+func (this *QDataStream) ReadRawData(arg0 unsafe.Pointer, len int) {
+	// 0: (, char * arg0, int len), (arg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11readRawDataEPci", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &len)
+	gopp.ErrPrint(err, rv)
 }
 
-// commitTransaction()
-func (this *QDataStream) Committransaction(args ...interface{}) (ret interface{}) {
-  // commitTransaction()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStream17commitTransactionEv
-    // invoke: bool commitTransaction()
-    var ret0 = C.C_ZN11QDataStream17commitTransactionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QDataStream", "commitTransaction", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qdatastream.h:182
+// index:0
+// QDataStream & writeBytes(const char *, uint)
+func (this *QDataStream) WriteBytes(arg0 unsafe.Pointer, len uint) {
+	// 0: (, const char * arg0, uint len), (arg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream10writeBytesEPKcj", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &len)
+	gopp.ErrPrint(err, rv)
 }
 
-// QDataStream(const class QByteArray &)
-func NewQDataStream(args ...interface{}) *QDataStream {
-  // QDataStream(const class QByteArray &)
-  // QDataStream()
-  // QDataStream(class QIODevice *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QDataStreamC1ERK10QByteArray
-    // invoke: void QDataStream(const class QByteArray &)
-    var arg0 = args[0].(*QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QDataStreamC2ERK10QByteArray(arg0)
-    return &QDataStream{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN11QDataStreamC1Ev
-    // invoke: void QDataStream()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QDataStreamC2Ev()
-    return &QDataStream{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN11QDataStreamC1EP9QIODevice
-    // invoke: void QDataStream(class QIODevice *)
-    var arg0 = args[0].(*QIODevice).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QDataStreamC2EP9QIODevice(arg0)
-    return &QDataStream{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QDataStream", "QDataStream", args)
-  }
-
-  return nil // QDataStream{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qdatastream.h:183
+// index:0
+// int writeRawData(const char *, int)
+func (this *QDataStream) WriteRawData(arg0 unsafe.Pointer, len int) {
+	// 0: (, const char * arg0, int len), (arg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream12writeRawDataEPKci", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &len)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qdatastream.h:185
+// index:0
+// int skipRawData(int)
+func (this *QDataStream) SkipRawData(len int) {
+	// 0: (, int len), (&len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11skipRawDataEi", ffiqt.FFI_TYPE_VOID, this.cthis, &len)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qdatastream.h:187
+// index:0
+// void startTransaction()
+func (this *QDataStream) StartTransaction() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream16startTransactionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qdatastream.h:188
+// index:0
+// bool commitTransaction()
+func (this *QDataStream) CommitTransaction() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream17commitTransactionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qdatastream.h:189
+// index:0
+// void rollbackTransaction()
+func (this *QDataStream) RollbackTransaction() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream19rollbackTransactionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qdatastream.h:190
+// index:0
+// void abortTransaction()
+func (this *QDataStream) AbortTransaction() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream16abortTransactionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

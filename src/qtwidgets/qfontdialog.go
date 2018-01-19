@@ -1,393 +1,204 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qfontdialog.h
+// #include <qfontdialog.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qfontdialog.h
-// dst-file: /src/widgets/qfontdialog.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QFontDialog::open(QObject * receiver, const char * member);
-extern void C_ZN11QFontDialog4openEP7QObjectPKc(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QFont QFontDialog::selectedFont();
-extern void* C_ZNK11QFontDialog12selectedFontEv(void* qthis); // 4
-  // proto:  void QFontDialog::QFontDialog(QWidget * parent);
-extern void* C_ZN11QFontDialogC2EP7QWidget(void* arg0); // 3
-  // proto:  void QFontDialog::QFontDialog(const QFont & initial, QWidget * parent);
-extern void* C_ZN11QFontDialogC2ERK5QFontP7QWidget(void* arg0, void* arg1); // 3
-  // proto: static QFont QFontDialog::getFont(bool * ok, QWidget * parent);
-extern void* C_ZN11QFontDialog7getFontEPbP7QWidget(void* arg0, void* arg1); // 4
-  // proto:  QFont QFontDialog::currentFont();
-extern void* C_ZNK11QFontDialog11currentFontEv(void* qthis); // 4
-  // proto:  void QFontDialog::~QFontDialog();
-extern void C_ZN11QFontDialogD2Ev(void* qthis); // 4
-  // proto:  const QMetaObject * QFontDialog::metaObject();
-extern void C_ZNK11QFontDialog10metaObjectEv(void* qthis); // 4
-  // proto:  void QFontDialog::setCurrentFont(const QFont & font);
-extern void C_ZN11QFontDialog14setCurrentFontERK5QFont(void* qthis, void* arg0); // 4
-  // proto:  FontDialogOptions QFontDialog::options();
-extern void C_ZNK11QFontDialog7optionsEv(void* qthis); // 4
-  // proto:  void QFontDialog::setVisible(bool visible);
-extern void C_ZN11QFontDialog10setVisibleEb(void* qthis, bool arg0); // 4
+// extern C begin: 10
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QFontDialog)=1
+//  ext block end
+
+//  body block begin
 type QFontDialog struct {
-  /*qbase*/ QDialog;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _fontSelected QFontDialog_fontSelected_signal;
-//  _currentFontChanged QFontDialog_currentFontChanged_signal;
+	cthis unsafe.Pointer
 }
 
-// open(class QObject *, const char *)
-func (this *QFontDialog) Open(args ...interface{}) () {
-  // open(class QObject *, const char *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  vtys[0][1] = qtrt.ByteTy(true) // "const char *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QFontDialog4openEP7QObjectPKc
-    // invoke: void open(class QObject *, const char *)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
-    var arg1 = argif1.(unsafe.Pointer)
-    if false {fmt.Println(argif1, arg1)}
-    if free1 {defer C.free(arg1)}
-    C.C_ZN11QFontDialog4openEP7QObjectPKc(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QFontDialog", "open", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfontdialog.h:57
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QFontDialog) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// selectedFont()
-func (this *QFontDialog) Selectedfont(args ...interface{}) (ret interface{}) {
-  // selectedFont()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QFontDialog12selectedFontEv
-    // invoke: QFont selectedFont()
-    var ret0 = C.C_ZNK11QFontDialog12selectedFontEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QFont{}) // "QFont"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDialog", "selectedFont", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfontdialog.h:75
+// index:0
+// void QFontDialog(class QWidget *)
+func NewQFontDialog(parent unsafe.Pointer) *QFontDialog {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialogC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QFontDialog{cthis}
 }
 
-// QFontDialog(class QWidget *)
-func NewQFontDialog(args ...interface{}) *QFontDialog {
-  // QFontDialog(class QWidget *)
-  // QFontDialog(const class QFont &, class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtgui.QFont{}) // "const QFont &"
-  vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QFontDialogC1EP7QWidget
-    // invoke: void QFontDialog(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QFontDialogC2EP7QWidget(arg0)
-    return &QFontDialog{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN11QFontDialogC1ERK5QFontP7QWidget
-    // invoke: void QFontDialog(const class QFont &, class QWidget *)
-    var arg0 = args[0].(*qtgui.QFont).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QWidget).Qclsinst
-    if false {fmt.Println(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QFontDialogC2ERK5QFontP7QWidget(arg0, arg1)
-    return &QFontDialog{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QFontDialog", "QFontDialog", args)
-  }
-
-  return nil // QFontDialog{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qfontdialog.h:76
+// index:1
+// void QFontDialog(const class QFont &, class QWidget *)
+func NewQFontDialog_1(initial unsafe.Pointer, parent unsafe.Pointer) *QFontDialog {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialogC2ERK5QFontP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, initial, parent)
+	gopp.ErrPrint(err, rv)
+	return &QFontDialog{cthis}
 }
 
-// getFont(_Bool *, class QWidget *)
-func (this *QFontDialog) Getfont_S(args ...interface{}) (ret interface{}) {
-  // getFont(_Bool *, class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(true) // "bool *"
-  vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QFontDialog7getFontEPbP7QWidget
-    // invoke: QFont getFont(_Bool *, class QWidget *)
-    var arg0 = (unsafe.Pointer)(args[0].(*bool))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QWidget).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN11QFontDialog7getFontEPbP7QWidget(arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QFont{}) // "QFont"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDialog", "getFont", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfontdialog.h:77
+// index:0
+// virtual
+// void ~QFontDialog()
+func DeleteQFontDialog(*QFontDialog) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialogD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// currentFont()
-func (this *QFontDialog) Currentfont(args ...interface{}) (ret interface{}) {
-  // currentFont()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QFontDialog11currentFontEv
-    // invoke: QFont currentFont()
-    var ret0 = C.C_ZNK11QFontDialog11currentFontEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QFont{}) // "QFont"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDialog", "currentFont", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfontdialog.h:79
+// index:0
+// void setCurrentFont(const class QFont &)
+func (this *QFontDialog) SetCurrentFont(font unsafe.Pointer) {
+	// 0: (, const QFont & font), (font)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog14setCurrentFontERK5QFont", ffiqt.FFI_TYPE_VOID, this.cthis, font)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QFontDialog()
-func (this *QFontDialog) Freeqfontdialog(args ...interface{}) () {
-  // ~QFontDialog()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QFontDialogD0Ev
-    // invoke: void ~QFontDialog()
-    C.C_ZN11QFontDialogD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFontDialog", "~QFontDialog", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfontdialog.h:80
+// index:0
+// QFont currentFont()
+func (this *QFontDialog) CurrentFont() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog11currentFontEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QFontDialog) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QFontDialog10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QFontDialog10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFontDialog", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfontdialog.h:82
+// index:0
+// QFont selectedFont()
+func (this *QFontDialog) SelectedFont() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog12selectedFontEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setCurrentFont(const class QFont &)
-func (this *QFontDialog) Setcurrentfont(args ...interface{}) () {
-  // setCurrentFont(const class QFont &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QFont{}) // "const QFont &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QFontDialog14setCurrentFontERK5QFont
-    // invoke: void setCurrentFont(const class QFont &)
-    var arg0 = args[0].(*qtgui.QFont).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QFontDialog14setCurrentFontERK5QFont(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFontDialog", "setCurrentFont", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfontdialog.h:84
+// index:0
+// void setOption(enum QFontDialog::FontDialogOption, _Bool)
+func (this *QFontDialog) SetOption(option int, on bool) {
+	// 0: (, QFontDialog::FontDialogOption option, bool on), (&option, &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog9setOptionENS_16FontDialogOptionEb", ffiqt.FFI_TYPE_VOID, this.cthis, &option, &on)
+	gopp.ErrPrint(err, rv)
 }
 
-// options()
-func (this *QFontDialog) Options(args ...interface{}) () {
-  // options()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QFontDialog7optionsEv
-    // invoke: FontDialogOptions options()
-    C.C_ZNK11QFontDialog7optionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFontDialog", "options", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfontdialog.h:85
+// index:0
+// bool testOption(enum QFontDialog::FontDialogOption)
+func (this *QFontDialog) TestOption(option int) {
+	// 0: (, QFontDialog::FontDialogOption option), (&option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog10testOptionENS_16FontDialogOptionE", ffiqt.FFI_TYPE_VOID, this.cthis, &option)
+	gopp.ErrPrint(err, rv)
 }
 
-// setVisible(_Bool)
-func (this *QFontDialog) Setvisible(args ...interface{}) () {
-  // setVisible(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QFontDialog10setVisibleEb
-    // invoke: void setVisible(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QFontDialog10setVisibleEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFontDialog", "setVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfontdialog.h:87
+// index:0
+// QFontDialog::FontDialogOptions options()
+func (this *QFontDialog) Options() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog7optionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qfontdialog.h:90
+// index:0
+// void open(class QObject *, const char *)
+func (this *QFontDialog) Open(receiver unsafe.Pointer, member unsafe.Pointer) {
+	// 0: (, QObject * receiver, const char * member), (receiver, member)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog4openEP7QObjectPKc", ffiqt.FFI_TYPE_VOID, this.cthis, receiver, member)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qfontdialog.h:92
+// index:0
+// virtual
+// void setVisible(_Bool)
+func (this *QFontDialog) SetVisible(visible bool) {
+	// 0: (, bool visible), (&visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog10setVisibleEb", ffiqt.FFI_TYPE_VOID, this.cthis, &visible)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qfontdialog.h:94
+// index:0
+// static
+// QFont getFont(_Bool *, class QWidget *)
+func (this *QFontDialog) GetFont(ok unsafe.Pointer, parent unsafe.Pointer) {
+	// 0: (bool * ok, QWidget * parent), (ok, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbP7QWidget", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFontDialog_GetFont(ok unsafe.Pointer, parent unsafe.Pointer) {
+	// 0: (bool * ok, QWidget * parent), (ok, parent)
+	var nilthis *QFontDialog
+	nilthis.GetFont(ok, parent)
+}
+
+// /usr/include/qt/QtWidgets/qfontdialog.h:99
+// index:0
+// void currentFontChanged(const class QFont &)
+func (this *QFontDialog) CurrentFontChanged(font unsafe.Pointer) {
+	// 0: (, const QFont & font), (font)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog18currentFontChangedERK5QFont", ffiqt.FFI_TYPE_VOID, this.cthis, font)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qfontdialog.h:100
+// index:0
+// void fontSelected(const class QFont &)
+func (this *QFontDialog) FontSelected(font unsafe.Pointer) {
+	// 0: (, const QFont & font), (font)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog12fontSelectedERK5QFont", ffiqt.FFI_TYPE_VOID, this.cthis, font)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

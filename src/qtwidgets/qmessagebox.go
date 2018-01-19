@@ -1,1418 +1,646 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qmessagebox.h
+// #include <qmessagebox.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qmessagebox.h
-// dst-file: /src/widgets/qmessagebox.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QMessageBox::setCheckBox(QCheckBox * cb);
-extern void C_ZN11QMessageBox11setCheckBoxEP9QCheckBox(void* qthis, void* arg0); // 4
-  // proto:  Qt::TextInteractionFlags QMessageBox::textInteractionFlags();
-extern void C_ZNK11QMessageBox20textInteractionFlagsEv(void* qthis); // 4
-  // proto:  void QMessageBox::setDetailedText(const QString & text);
-extern void C_ZN11QMessageBox15setDetailedTextERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QString QMessageBox::text();
-extern void* C_ZNK11QMessageBox4textEv(void* qthis); // 4
-  // proto:  void QMessageBox::setButtonText(int button, const QString & text);
-extern void C_ZN11QMessageBox13setButtonTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
-  // proto:  QPixmap QMessageBox::iconPixmap();
-extern void* C_ZNK11QMessageBox10iconPixmapEv(void* qthis); // 4
-  // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern int32_t C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
-  // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern int32_t C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
-  // proto:  QString QMessageBox::detailedText();
-extern void* C_ZNK11QMessageBox12detailedTextEv(void* qthis); // 4
-  // proto:  QMessageBox::StandardButton QMessageBox::standardButton(QAbstractButton * button);
-extern void C_ZNK11QMessageBox14standardButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
-  // proto:  void QMessageBox::removeButton(QAbstractButton * button);
-extern void C_ZN11QMessageBox12removeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
-  // proto:  void QMessageBox::open(QObject * receiver, const char * member);
-extern void C_ZN11QMessageBox4openEP7QObjectPKc(void* qthis, void* arg0, void* arg1); // 4
-  // proto: static void QMessageBox::aboutQt(QWidget * parent, const QString & title);
-extern void C_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(void* arg0, void* arg1); // 4
-  // proto:  QString QMessageBox::informativeText();
-extern void* C_ZNK11QMessageBox15informativeTextEv(void* qthis); // 4
-  // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern int32_t C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
-  // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern int32_t C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
-  // proto:  QMessageBox::ButtonRole QMessageBox::buttonRole(QAbstractButton * button);
-extern void C_ZNK11QMessageBox10buttonRoleEP15QAbstractButton(void* qthis, void* arg0); // 4
-  // proto:  QList<QAbstractButton *> QMessageBox::buttons();
-extern void C_ZNK11QMessageBox7buttonsEv(void* qthis); // 4
-  // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern int32_t C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
-  // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern int32_t C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
-  // proto:  QAbstractButton * QMessageBox::escapeButton();
-extern void C_ZNK11QMessageBox12escapeButtonEv(void* qthis); // 4
-  // proto:  void QMessageBox::setIconPixmap(const QPixmap & pixmap);
-extern void C_ZN11QMessageBox13setIconPixmapERK7QPixmap(void* qthis, void* arg0); // 4
-  // proto:  void QMessageBox::setWindowTitle(const QString & title);
-extern void C_ZN11QMessageBox14setWindowTitleERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QAbstractButton * QMessageBox::clickedButton();
-extern void C_ZNK11QMessageBox13clickedButtonEv(void* qthis); // 4
-  // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern int32_t C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
-  // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern int32_t C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
-  // proto:  void QMessageBox::setInformativeText(const QString & text);
-extern void C_ZN11QMessageBox18setInformativeTextERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QCheckBox * QMessageBox::checkBox();
-extern void* C_ZNK11QMessageBox8checkBoxEv(void* qthis); // 4
-  // proto:  void QMessageBox::setEscapeButton(QAbstractButton * button);
-extern void C_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
-  // proto:  QMessageBox::Icon QMessageBox::icon();
-extern void C_ZNK11QMessageBox4iconEv(void* qthis); // 4
-  // proto: static void QMessageBox::about(QWidget * parent, const QString & title, const QString & text);
-extern void C_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(void* arg0, void* arg1, void* arg2); // 4
-  // proto:  const QMetaObject * QMessageBox::metaObject();
-extern void C_ZNK11QMessageBox10metaObjectEv(void* qthis); // 4
-  // proto:  void QMessageBox::~QMessageBox();
-extern void C_ZN11QMessageBoxD2Ev(void* qthis); // 4
-  // proto:  void QMessageBox::setText(const QString & text);
-extern void C_ZN11QMessageBox7setTextERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QString QMessageBox::buttonText(int button);
-extern void* C_ZNK11QMessageBox10buttonTextEi(void* qthis, int32_t arg0); // 4
-  // proto:  StandardButtons QMessageBox::standardButtons();
-extern void C_ZNK11QMessageBox15standardButtonsEv(void* qthis); // 4
-  // proto:  QPushButton * QMessageBox::defaultButton();
-extern void* C_ZNK11QMessageBox13defaultButtonEv(void* qthis); // 4
-  // proto:  void QMessageBox::setDefaultButton(QPushButton * button);
-extern void C_ZN11QMessageBox16setDefaultButtonEP11QPushButton(void* qthis, void* arg0); // 4
-  // proto:  void QMessageBox::QMessageBox(QWidget * parent);
-extern void* C_ZN11QMessageBoxC2EP7QWidget(void* arg0); // 3
-  // proto:  Qt::TextFormat QMessageBox::textFormat();
-extern void C_ZNK11QMessageBox10textFormatEv(void* qthis); // 4
+// extern C begin: 29
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QMessageBox)=1
+//  ext block end
+
+//  body block begin
 type QMessageBox struct {
-  /*qbase*/ QDialog;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _buttonClicked QMessageBox_buttonClicked_signal;
+	cthis unsafe.Pointer
 }
 
-// setCheckBox(class QCheckBox *)
-func (this *QMessageBox) Setcheckbox(args ...interface{}) () {
-  // setCheckBox(class QCheckBox *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QCheckBox{}) // "QCheckBox *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox11setCheckBoxEP9QCheckBox
-    // invoke: void setCheckBox(class QCheckBox *)
-    var arg0 = args[0].(*QCheckBox).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox11setCheckBoxEP9QCheckBox(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "setCheckBox", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:58
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QMessageBox) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// textInteractionFlags()
-func (this *QMessageBox) Textinteractionflags(args ...interface{}) () {
-  // textInteractionFlags()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox20textInteractionFlagsEv
-    // invoke: Qt::TextInteractionFlags textInteractionFlags()
-    C.C_ZNK11QMessageBox20textInteractionFlagsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "textInteractionFlags", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:135
+// index:0
+// void QMessageBox(class QWidget *)
+func NewQMessageBox(parent unsafe.Pointer) *QMessageBox {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QMessageBox{cthis}
 }
 
-// setDetailedText(const class QString &)
-func (this *QMessageBox) Setdetailedtext(args ...interface{}) () {
-  // setDetailedText(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox15setDetailedTextERK7QString
-    // invoke: void setDetailedText(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox15setDetailedTextERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "setDetailedText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:139
+// index:0
+// virtual
+// void ~QMessageBox()
+func DeleteQMessageBox(*QMessageBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBoxD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// text()
-func (this *QMessageBox) Text(args ...interface{}) (ret interface{}) {
-  // text()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox4textEv
-    // invoke: QString text()
-    var ret0 = C.C_ZNK11QMessageBox4textEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMessageBox", "text", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:141
+// index:0
+// void addButton(class QAbstractButton *, enum QMessageBox::ButtonRole)
+func (this *QMessageBox) AddButton(button unsafe.Pointer, role int) {
+	// 0: (, QAbstractButton * button, QMessageBox::ButtonRole role), (button, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox9addButtonEP15QAbstractButtonNS_10ButtonRoleE", ffiqt.FFI_TYPE_VOID, this.cthis, button, &role)
+	gopp.ErrPrint(err, rv)
 }
 
-// setButtonText(int, const class QString &)
-func (this *QMessageBox) Setbuttontext(args ...interface{}) () {
-  // setButtonText(int, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox13setButtonTextEiRK7QString
-    // invoke: void setButtonText(int, const class QString &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN11QMessageBox13setButtonTextEiRK7QString(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "setButtonText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:142
+// index:1
+// QPushButton * addButton(const class QString &, enum QMessageBox::ButtonRole)
+func (this *QMessageBox) AddButton_1(text unsafe.Pointer, role int) {
+	// 1: (, const QString & text, QMessageBox::ButtonRole role), (text, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox9addButtonERK7QStringNS_10ButtonRoleE", ffiqt.FFI_TYPE_VOID, this.cthis, text, &role)
+	gopp.ErrPrint(err, rv)
 }
 
-// iconPixmap()
-func (this *QMessageBox) Iconpixmap(args ...interface{}) (ret interface{}) {
-  // iconPixmap()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox10iconPixmapEv
-    // invoke: QPixmap iconPixmap()
-    var ret0 = C.C_ZNK11QMessageBox10iconPixmapEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QPixmap{}) // "QPixmap"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMessageBox", "iconPixmap", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:143
+// index:2
+// QPushButton * addButton(enum QMessageBox::StandardButton)
+func (this *QMessageBox) AddButton_2(button int) {
+	// 2: (, QMessageBox::StandardButton button), (&button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox9addButtonENS_14StandardButtonE", ffiqt.FFI_TYPE_VOID, this.cthis, &button)
+	gopp.ErrPrint(err, rv)
 }
 
-// warning(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-func (this *QMessageBox) Warning_S(args ...interface{}) (ret interface{}) {
-  // warning(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-  // warning(class QWidget *, const class QString &, const class QString &, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][3] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][4] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][5] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][6] = qtrt.Int32Ty(false) // "int"
-  vtys[0][7] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][3] = qtrt.Int32Ty(false) // "int"
-  vtys[1][4] = qtrt.Int32Ty(false) // "int"
-  vtys[1][5] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii
-    // invoke: int warning(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg4)}
-    var arg5 = args[5].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg5)}
-    var arg6 = C.int32_t(qtrt.PrimConv(args[6], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg6)}
-    var arg7 = C.int32_t(qtrt.PrimConv(args[7], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg7)}
-    var ret0 = C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii
-    // invoke: int warning(class QWidget *, const class QString &, const class QString &, int, int, int)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg4)}
-    var arg5 = C.int32_t(qtrt.PrimConv(args[5], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg5)}
-    var ret0 = C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMessageBox", "warning", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:144
+// index:0
+// void removeButton(class QAbstractButton *)
+func (this *QMessageBox) RemoveButton(button unsafe.Pointer) {
+	// 0: (, QAbstractButton * button), (button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox12removeButtonEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.cthis, button)
+	gopp.ErrPrint(err, rv)
 }
 
-// detailedText()
-func (this *QMessageBox) Detailedtext(args ...interface{}) (ret interface{}) {
-  // detailedText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox12detailedTextEv
-    // invoke: QString detailedText()
-    var ret0 = C.C_ZNK11QMessageBox12detailedTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMessageBox", "detailedText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:147
+// index:0
+// void open(class QObject *, const char *)
+func (this *QMessageBox) Open(receiver unsafe.Pointer, member unsafe.Pointer) {
+	// 0: (, QObject * receiver, const char * member), (receiver, member)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox4openEP7QObjectPKc", ffiqt.FFI_TYPE_VOID, this.cthis, receiver, member)
+	gopp.ErrPrint(err, rv)
 }
 
-// standardButton(class QAbstractButton *)
-func (this *QMessageBox) Standardbutton(args ...interface{}) () {
-  // standardButton(class QAbstractButton *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAbstractButton{}) // "QAbstractButton *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox14standardButtonEP15QAbstractButton
-    // invoke: QMessageBox::StandardButton standardButton(class QAbstractButton *)
-    var arg0 = args[0].(*QAbstractButton).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK11QMessageBox14standardButtonEP15QAbstractButton(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "standardButton", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:149
+// index:0
+// QList<QAbstractButton *> buttons()
+func (this *QMessageBox) Buttons() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox7buttonsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// removeButton(class QAbstractButton *)
-func (this *QMessageBox) Removebutton(args ...interface{}) () {
-  // removeButton(class QAbstractButton *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAbstractButton{}) // "QAbstractButton *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox12removeButtonEP15QAbstractButton
-    // invoke: void removeButton(class QAbstractButton *)
-    var arg0 = args[0].(*QAbstractButton).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox12removeButtonEP15QAbstractButton(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "removeButton", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:150
+// index:0
+// QMessageBox::ButtonRole buttonRole(class QAbstractButton *)
+func (this *QMessageBox) ButtonRole(button unsafe.Pointer) {
+	// 0: (, QAbstractButton * button), (button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox10buttonRoleEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.cthis, button)
+	gopp.ErrPrint(err, rv)
 }
 
-// open(class QObject *, const char *)
-func (this *QMessageBox) Open(args ...interface{}) () {
-  // open(class QObject *, const char *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  vtys[0][1] = qtrt.ByteTy(true) // "const char *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox4openEP7QObjectPKc
-    // invoke: void open(class QObject *, const char *)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
-    var arg1 = argif1.(unsafe.Pointer)
-    if false {fmt.Println(argif1, arg1)}
-    if free1 {defer C.free(arg1)}
-    C.C_ZN11QMessageBox4openEP7QObjectPKc(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "open", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:153
+// index:0
+// QMessageBox::StandardButtons standardButtons()
+func (this *QMessageBox) StandardButtons() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox15standardButtonsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// aboutQt(class QWidget *, const class QString &)
-func (this *QMessageBox) Aboutqt_S(args ...interface{}) () {
-  // aboutQt(class QWidget *, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox7aboutQtEP7QWidgetRK7QString
-    // invoke: void aboutQt(class QWidget *, const class QString &)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "aboutQt", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:154
+// index:0
+// QMessageBox::StandardButton standardButton(class QAbstractButton *)
+func (this *QMessageBox) StandardButton(button unsafe.Pointer) {
+	// 0: (, QAbstractButton * button), (button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox14standardButtonEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.cthis, button)
+	gopp.ErrPrint(err, rv)
 }
 
-// informativeText()
-func (this *QMessageBox) Informativetext(args ...interface{}) (ret interface{}) {
-  // informativeText()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox15informativeTextEv
-    // invoke: QString informativeText()
-    var ret0 = C.C_ZNK11QMessageBox15informativeTextEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMessageBox", "informativeText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:155
+// index:0
+// QAbstractButton * button(enum QMessageBox::StandardButton)
+func (this *QMessageBox) Button(which int) {
+	// 0: (, QMessageBox::StandardButton which), (&which)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox6buttonENS_14StandardButtonE", ffiqt.FFI_TYPE_VOID, this.cthis, &which)
+	gopp.ErrPrint(err, rv)
 }
 
-// question(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-func (this *QMessageBox) Question_S(args ...interface{}) (ret interface{}) {
-  // question(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-  // question(class QWidget *, const class QString &, const class QString &, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][3] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][4] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][5] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][6] = qtrt.Int32Ty(false) // "int"
-  vtys[0][7] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][3] = qtrt.Int32Ty(false) // "int"
-  vtys[1][4] = qtrt.Int32Ty(false) // "int"
-  vtys[1][5] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii
-    // invoke: int question(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg4)}
-    var arg5 = args[5].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg5)}
-    var arg6 = C.int32_t(qtrt.PrimConv(args[6], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg6)}
-    var arg7 = C.int32_t(qtrt.PrimConv(args[7], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg7)}
-    var ret0 = C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii
-    // invoke: int question(class QWidget *, const class QString &, const class QString &, int, int, int)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg4)}
-    var arg5 = C.int32_t(qtrt.PrimConv(args[5], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg5)}
-    var ret0 = C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMessageBox", "question", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:157
+// index:0
+// QPushButton * defaultButton()
+func (this *QMessageBox) DefaultButton() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox13defaultButtonEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// buttonRole(class QAbstractButton *)
-func (this *QMessageBox) Buttonrole(args ...interface{}) () {
-  // buttonRole(class QAbstractButton *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAbstractButton{}) // "QAbstractButton *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox10buttonRoleEP15QAbstractButton
-    // invoke: QMessageBox::ButtonRole buttonRole(class QAbstractButton *)
-    var arg0 = args[0].(*QAbstractButton).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK11QMessageBox10buttonRoleEP15QAbstractButton(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "buttonRole", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:158
+// index:0
+// void setDefaultButton(class QPushButton *)
+func (this *QMessageBox) SetDefaultButton(button unsafe.Pointer) {
+	// 0: (, QPushButton * button), (button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox16setDefaultButtonEP11QPushButton", ffiqt.FFI_TYPE_VOID, this.cthis, button)
+	gopp.ErrPrint(err, rv)
 }
 
-// buttons()
-func (this *QMessageBox) Buttons(args ...interface{}) () {
-  // buttons()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox7buttonsEv
-    // invoke: QList<QAbstractButton *> buttons()
-    C.C_ZNK11QMessageBox7buttonsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "buttons", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:159
+// index:1
+// void setDefaultButton(enum QMessageBox::StandardButton)
+func (this *QMessageBox) SetDefaultButton_1(button int) {
+	// 1: (, QMessageBox::StandardButton button), (&button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox16setDefaultButtonENS_14StandardButtonE", ffiqt.FFI_TYPE_VOID, this.cthis, &button)
+	gopp.ErrPrint(err, rv)
 }
 
-// critical(class QWidget *, const class QString &, const class QString &, int, int, int)
-func (this *QMessageBox) Critical_S(args ...interface{}) (ret interface{}) {
-  // critical(class QWidget *, const class QString &, const class QString &, int, int, int)
-  // critical(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  vtys[0][4] = qtrt.Int32Ty(false) // "int"
-  vtys[0][5] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][3] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][4] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][5] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][6] = qtrt.Int32Ty(false) // "int"
-  vtys[1][7] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii
-    // invoke: int critical(class QWidget *, const class QString &, const class QString &, int, int, int)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg4)}
-    var arg5 = C.int32_t(qtrt.PrimConv(args[5], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg5)}
-    var ret0 = C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii
-    // invoke: int critical(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg4)}
-    var arg5 = args[5].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg5)}
-    var arg6 = C.int32_t(qtrt.PrimConv(args[6], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg6)}
-    var arg7 = C.int32_t(qtrt.PrimConv(args[7], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg7)}
-    var ret0 = C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMessageBox", "critical", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:161
+// index:0
+// QAbstractButton * escapeButton()
+func (this *QMessageBox) EscapeButton() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox12escapeButtonEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// escapeButton()
-func (this *QMessageBox) Escapebutton(args ...interface{}) () {
-  // escapeButton()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox12escapeButtonEv
-    // invoke: QAbstractButton * escapeButton()
-    C.C_ZNK11QMessageBox12escapeButtonEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "escapeButton", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:162
+// index:0
+// void setEscapeButton(class QAbstractButton *)
+func (this *QMessageBox) SetEscapeButton(button unsafe.Pointer) {
+	// 0: (, QAbstractButton * button), (button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.cthis, button)
+	gopp.ErrPrint(err, rv)
 }
 
-// setIconPixmap(const class QPixmap &)
-func (this *QMessageBox) Seticonpixmap(args ...interface{}) () {
-  // setIconPixmap(const class QPixmap &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtgui.QPixmap{}) // "const QPixmap &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox13setIconPixmapERK7QPixmap
-    // invoke: void setIconPixmap(const class QPixmap &)
-    var arg0 = args[0].(*qtgui.QPixmap).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox13setIconPixmapERK7QPixmap(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "setIconPixmap", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:163
+// index:1
+// void setEscapeButton(enum QMessageBox::StandardButton)
+func (this *QMessageBox) SetEscapeButton_1(button int) {
+	// 1: (, QMessageBox::StandardButton button), (&button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox15setEscapeButtonENS_14StandardButtonE", ffiqt.FFI_TYPE_VOID, this.cthis, &button)
+	gopp.ErrPrint(err, rv)
 }
 
-// setWindowTitle(const class QString &)
-func (this *QMessageBox) Setwindowtitle(args ...interface{}) () {
-  // setWindowTitle(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox14setWindowTitleERK7QString
-    // invoke: void setWindowTitle(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox14setWindowTitleERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "setWindowTitle", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:165
+// index:0
+// QAbstractButton * clickedButton()
+func (this *QMessageBox) ClickedButton() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox13clickedButtonEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// clickedButton()
-func (this *QMessageBox) Clickedbutton(args ...interface{}) () {
-  // clickedButton()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox13clickedButtonEv
-    // invoke: QAbstractButton * clickedButton()
-    C.C_ZNK11QMessageBox13clickedButtonEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "clickedButton", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:167
+// index:0
+// QString text()
+func (this *QMessageBox) Text() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox4textEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// information(class QWidget *, const class QString &, const class QString &, int, int, int)
-func (this *QMessageBox) Information_S(args ...interface{}) (ret interface{}) {
-  // information(class QWidget *, const class QString &, const class QString &, int, int, int)
-  // information(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  vtys[0][4] = qtrt.Int32Ty(false) // "int"
-  vtys[0][5] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[1][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][3] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][4] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][5] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][6] = qtrt.Int32Ty(false) // "int"
-  vtys[1][7] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii
-    // invoke: int information(class QWidget *, const class QString &, const class QString &, int, int, int)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg4)}
-    var arg5 = C.int32_t(qtrt.PrimConv(args[5], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg5)}
-    var ret0 = C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii
-    // invoke: int information(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg4)}
-    var arg5 = args[5].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg5)}
-    var arg6 = C.int32_t(qtrt.PrimConv(args[6], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg6)}
-    var arg7 = C.int32_t(qtrt.PrimConv(args[7], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg7)}
-    var ret0 = C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMessageBox", "information", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:168
+// index:0
+// void setText(const class QString &)
+func (this *QMessageBox) SetText(text unsafe.Pointer) {
+	// 0: (, const QString & text), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	gopp.ErrPrint(err, rv)
 }
 
-// setInformativeText(const class QString &)
-func (this *QMessageBox) Setinformativetext(args ...interface{}) () {
-  // setInformativeText(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox18setInformativeTextERK7QString
-    // invoke: void setInformativeText(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox18setInformativeTextERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "setInformativeText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:170
+// index:0
+// QMessageBox::Icon icon()
+func (this *QMessageBox) Icon() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox4iconEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// checkBox()
-func (this *QMessageBox) Checkbox(args ...interface{}) (ret interface{}) {
-  // checkBox()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox8checkBoxEv
-    // invoke: QCheckBox * checkBox()
-    var ret0 = C.C_ZNK11QMessageBox8checkBoxEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QCheckBox{}) // "QCheckBox *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMessageBox", "checkBox", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:171
+// index:0
+// void setIcon(enum QMessageBox::Icon)
+func (this *QMessageBox) SetIcon(arg0 int) {
+	// 0: (, QMessageBox::Icon arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7setIconENS_4IconE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setEscapeButton(class QAbstractButton *)
-func (this *QMessageBox) Setescapebutton(args ...interface{}) () {
-  // setEscapeButton(class QAbstractButton *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAbstractButton{}) // "QAbstractButton *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox15setEscapeButtonEP15QAbstractButton
-    // invoke: void setEscapeButton(class QAbstractButton *)
-    var arg0 = args[0].(*QAbstractButton).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "setEscapeButton", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:173
+// index:0
+// QPixmap iconPixmap()
+func (this *QMessageBox) IconPixmap() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox10iconPixmapEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// icon()
-func (this *QMessageBox) Icon(args ...interface{}) () {
-  // icon()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox4iconEv
-    // invoke: QMessageBox::Icon icon()
-    C.C_ZNK11QMessageBox4iconEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "icon", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:174
+// index:0
+// void setIconPixmap(const class QPixmap &)
+func (this *QMessageBox) SetIconPixmap(pixmap unsafe.Pointer) {
+	// 0: (, const QPixmap & pixmap), (pixmap)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox13setIconPixmapERK7QPixmap", ffiqt.FFI_TYPE_VOID, this.cthis, pixmap)
+	gopp.ErrPrint(err, rv)
 }
 
-// about(class QWidget *, const class QString &, const class QString &)
-func (this *QMessageBox) About_S(args ...interface{}) () {
-  // about(class QWidget *, const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][2] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_
-    // invoke: void about(class QWidget *, const class QString &, const class QString &)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "about", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:176
+// index:0
+// Qt::TextFormat textFormat()
+func (this *QMessageBox) TextFormat() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox10textFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QMessageBox) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QMessageBox10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:177
+// index:0
+// void setTextFormat(Qt::TextFormat)
+func (this *QMessageBox) SetTextFormat(format int) {
+	// 0: (, Qt::TextFormat format), (&format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox13setTextFormatEN2Qt10TextFormatE", ffiqt.FFI_TYPE_VOID, this.cthis, &format)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QMessageBox()
-func (this *QMessageBox) Freeqmessagebox(args ...interface{}) () {
-  // ~QMessageBox()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBoxD0Ev
-    // invoke: void ~QMessageBox()
-    C.C_ZN11QMessageBoxD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "~QMessageBox", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:180
+// index:0
+// Qt::TextInteractionFlags textInteractionFlags()
+func (this *QMessageBox) TextInteractionFlags() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox20textInteractionFlagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setText(const class QString &)
-func (this *QMessageBox) Settext(args ...interface{}) () {
-  // setText(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox7setTextERK7QString
-    // invoke: void setText(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox7setTextERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "setText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:182
+// index:0
+// void setCheckBox(class QCheckBox *)
+func (this *QMessageBox) SetCheckBox(cb unsafe.Pointer) {
+	// 0: (, QCheckBox * cb), (cb)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox11setCheckBoxEP9QCheckBox", ffiqt.FFI_TYPE_VOID, this.cthis, cb)
+	gopp.ErrPrint(err, rv)
 }
 
-// buttonText(int)
-func (this *QMessageBox) Buttontext(args ...interface{}) (ret interface{}) {
-  // buttonText(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox10buttonTextEi
-    // invoke: QString buttonText(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QMessageBox10buttonTextEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMessageBox", "buttonText", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:183
+// index:0
+// QCheckBox * checkBox()
+func (this *QMessageBox) CheckBox() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox8checkBoxEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// standardButtons()
-func (this *QMessageBox) Standardbuttons(args ...interface{}) () {
-  // standardButtons()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox15standardButtonsEv
-    // invoke: StandardButtons standardButtons()
-    C.C_ZNK11QMessageBox15standardButtonsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "standardButtons", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:197
+// index:0
+// static
+// void about(class QWidget *, const class QString &, const class QString &)
+func (this *QMessageBox) About(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer) {
+	// 0: (QWidget * parent, const QString & title, const QString & text), (parent, title, text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_About(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer) {
+	// 0: (QWidget * parent, const QString & title, const QString & text), (parent, title, text)
+	var nilthis *QMessageBox
+	nilthis.About(parent, title, text)
 }
 
-// defaultButton()
-func (this *QMessageBox) Defaultbutton(args ...interface{}) (ret interface{}) {
-  // defaultButton()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox13defaultButtonEv
-    // invoke: QPushButton * defaultButton()
-    var ret0 = C.C_ZNK11QMessageBox13defaultButtonEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPushButton{}) // "QPushButton *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QMessageBox", "defaultButton", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:198
+// index:0
+// static
+// void aboutQt(class QWidget *, const class QString &)
+func (this *QMessageBox) AboutQt(parent unsafe.Pointer, title unsafe.Pointer) {
+	// 0: (QWidget * parent, const QString & title), (parent, title)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_AboutQt(parent unsafe.Pointer, title unsafe.Pointer) {
+	// 0: (QWidget * parent, const QString & title), (parent, title)
+	var nilthis *QMessageBox
+	nilthis.AboutQt(parent, title)
 }
 
-// setDefaultButton(class QPushButton *)
-func (this *QMessageBox) Setdefaultbutton(args ...interface{}) () {
-  // setDefaultButton(class QPushButton *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPushButton{}) // "QPushButton *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBox16setDefaultButtonEP11QPushButton
-    // invoke: void setDefaultButton(class QPushButton *)
-    var arg0 = args[0].(*QPushButton).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox16setDefaultButtonEP11QPushButton(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "setDefaultButton", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:207
+// index:0
+// static
+// int information(class QWidget *, const class QString &, const class QString &, int, int, int)
+func (this *QMessageBox) Information(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int, button2 int) {
+	// 0: (QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2), (parent, title, text, button0, button1, button2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Information(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int, button2 int) {
+	// 0: (QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2), (parent, title, text, button0, button1, button2)
+	var nilthis *QMessageBox
+	nilthis.Information(parent, title, text, button0, button1, button2)
 }
 
-// QMessageBox(class QWidget *)
-func NewQMessageBox(args ...interface{}) *QMessageBox {
-  // QMessageBox(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QMessageBoxC1EP7QWidget
-    // invoke: void QMessageBox(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QMessageBoxC2EP7QWidget(arg0)
-    return &QMessageBox{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QMessageBox", "QMessageBox", args)
-  }
-
-  return nil // QMessageBox{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qmessagebox.h:210
+// index:1
+// static
+// int information(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
+func (this *QMessageBox) Information_1(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0Text unsafe.Pointer, button1Text unsafe.Pointer, button2Text unsafe.Pointer, defaultButtonNumber int, escapeButtonNumber int) {
+	// 1: (QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber), (parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Information_1(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0Text unsafe.Pointer, button1Text unsafe.Pointer, button2Text unsafe.Pointer, defaultButtonNumber int, escapeButtonNumber int) {
+	// 1: (QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber), (parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	var nilthis *QMessageBox
+	nilthis.Information_1(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
 }
 
-// textFormat()
-func (this *QMessageBox) Textformat(args ...interface{}) () {
-  // textFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QMessageBox10textFormatEv
-    // invoke: Qt::TextFormat textFormat()
-    C.C_ZNK11QMessageBox10textFormatEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QMessageBox", "textFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qmessagebox.h:217
+// index:2
+// static inline
+// QMessageBox::StandardButton information(class QWidget *, const class QString &, const class QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Information_2(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int) {
+	// 2: (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButton button0, QMessageBox::StandardButton button1), (parent, title, text, button0, button1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Information_2(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int) {
+	// 2: (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButton button0, QMessageBox::StandardButton button1), (parent, title, text, button0, button1)
+	var nilthis *QMessageBox
+	nilthis.Information_2(parent, title, text, button0, button1)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qmessagebox.h:222
+// index:0
+// static
+// int question(class QWidget *, const class QString &, const class QString &, int, int, int)
+func (this *QMessageBox) Question(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int, button2 int) {
+	// 0: (QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2), (parent, title, text, button0, button1, button2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Question(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int, button2 int) {
+	// 0: (QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2), (parent, title, text, button0, button1, button2)
+	var nilthis *QMessageBox
+	nilthis.Question(parent, title, text, button0, button1, button2)
+}
 
+// /usr/include/qt/QtWidgets/qmessagebox.h:225
+// index:1
+// static
+// int question(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
+func (this *QMessageBox) Question_1(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0Text unsafe.Pointer, button1Text unsafe.Pointer, button2Text unsafe.Pointer, defaultButtonNumber int, escapeButtonNumber int) {
+	// 1: (QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber), (parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Question_1(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0Text unsafe.Pointer, button1Text unsafe.Pointer, button2Text unsafe.Pointer, defaultButtonNumber int, escapeButtonNumber int) {
+	// 1: (QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber), (parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	var nilthis *QMessageBox
+	nilthis.Question_1(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:232
+// index:2
+// static inline
+// int question(class QWidget *, const class QString &, const class QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Question_2(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int) {
+	// 2: (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButton button0, QMessageBox::StandardButton button1), (parent, title, text, button0, button1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Question_2(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int) {
+	// 2: (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButton button0, QMessageBox::StandardButton button1), (parent, title, text, button0, button1)
+	var nilthis *QMessageBox
+	nilthis.Question_2(parent, title, text, button0, button1)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:237
+// index:0
+// static
+// int warning(class QWidget *, const class QString &, const class QString &, int, int, int)
+func (this *QMessageBox) Warning(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int, button2 int) {
+	// 0: (QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2), (parent, title, text, button0, button1, button2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Warning(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int, button2 int) {
+	// 0: (QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2), (parent, title, text, button0, button1, button2)
+	var nilthis *QMessageBox
+	nilthis.Warning(parent, title, text, button0, button1, button2)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:240
+// index:1
+// static
+// int warning(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
+func (this *QMessageBox) Warning_1(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0Text unsafe.Pointer, button1Text unsafe.Pointer, button2Text unsafe.Pointer, defaultButtonNumber int, escapeButtonNumber int) {
+	// 1: (QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber), (parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Warning_1(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0Text unsafe.Pointer, button1Text unsafe.Pointer, button2Text unsafe.Pointer, defaultButtonNumber int, escapeButtonNumber int) {
+	// 1: (QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber), (parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	var nilthis *QMessageBox
+	nilthis.Warning_1(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:247
+// index:2
+// static inline
+// int warning(class QWidget *, const class QString &, const class QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Warning_2(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int) {
+	// 2: (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButton button0, QMessageBox::StandardButton button1), (parent, title, text, button0, button1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Warning_2(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int) {
+	// 2: (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButton button0, QMessageBox::StandardButton button1), (parent, title, text, button0, button1)
+	var nilthis *QMessageBox
+	nilthis.Warning_2(parent, title, text, button0, button1)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:252
+// index:0
+// static
+// int critical(class QWidget *, const class QString &, const class QString &, int, int, int)
+func (this *QMessageBox) Critical(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int, button2 int) {
+	// 0: (QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2), (parent, title, text, button0, button1, button2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Critical(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int, button2 int) {
+	// 0: (QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2), (parent, title, text, button0, button1, button2)
+	var nilthis *QMessageBox
+	nilthis.Critical(parent, title, text, button0, button1, button2)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:255
+// index:1
+// static
+// int critical(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
+func (this *QMessageBox) Critical_1(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0Text unsafe.Pointer, button1Text unsafe.Pointer, button2Text unsafe.Pointer, defaultButtonNumber int, escapeButtonNumber int) {
+	// 1: (QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber), (parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Critical_1(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0Text unsafe.Pointer, button1Text unsafe.Pointer, button2Text unsafe.Pointer, defaultButtonNumber int, escapeButtonNumber int) {
+	// 1: (QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber), (parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	var nilthis *QMessageBox
+	nilthis.Critical_1(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:262
+// index:2
+// static inline
+// int critical(class QWidget *, const class QString &, const class QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Critical_2(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int) {
+	// 2: (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButton button0, QMessageBox::StandardButton button1), (parent, title, text, button0, button1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_Critical_2(parent unsafe.Pointer, title unsafe.Pointer, text unsafe.Pointer, button0 int, button1 int) {
+	// 2: (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButton button0, QMessageBox::StandardButton button1), (parent, title, text, button0, button1)
+	var nilthis *QMessageBox
+	nilthis.Critical_2(parent, title, text, button0, button1)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:267
+// index:0
+// QString buttonText(int)
+func (this *QMessageBox) ButtonText(button int) {
+	// 0: (, int button), (&button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox10buttonTextEi", ffiqt.FFI_TYPE_VOID, this.cthis, &button)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:268
+// index:0
+// void setButtonText(int, const class QString &)
+func (this *QMessageBox) SetButtonText(button int, text unsafe.Pointer) {
+	// 0: (, int button, const QString & text), (&button, text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox13setButtonTextEiRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, &button, text)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:270
+// index:0
+// QString informativeText()
+func (this *QMessageBox) InformativeText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox15informativeTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:271
+// index:0
+// void setInformativeText(const class QString &)
+func (this *QMessageBox) SetInformativeText(text unsafe.Pointer) {
+	// 0: (, const QString & text), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox18setInformativeTextERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:274
+// index:0
+// QString detailedText()
+func (this *QMessageBox) DetailedText() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMessageBox12detailedTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:275
+// index:0
+// void setDetailedText(const class QString &)
+func (this *QMessageBox) SetDetailedText(text unsafe.Pointer) {
+	// 0: (, const QString & text), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox15setDetailedTextERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:278
+// index:0
+// void setWindowTitle(const class QString &)
+func (this *QMessageBox) SetWindowTitle(title unsafe.Pointer) {
+	// 0: (, const QString & title), (title)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox14setWindowTitleERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, title)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:279
+// index:0
+// void setWindowModality(Qt::WindowModality)
+func (this *QMessageBox) SetWindowModality(windowModality int) {
+	// 0: (, Qt::WindowModality windowModality), (&windowModality)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox17setWindowModalityEN2Qt14WindowModalityE", ffiqt.FFI_TYPE_VOID, this.cthis, &windowModality)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:282
+// index:0
+// static
+// QPixmap standardIcon(enum QMessageBox::Icon)
+func (this *QMessageBox) StandardIcon(icon int) {
+	// 0: (QMessageBox::Icon icon), (icon)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox12standardIconENS_4IconE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QMessageBox_StandardIcon(icon int) {
+	// 0: (QMessageBox::Icon icon), (icon)
+	var nilthis *QMessageBox
+	nilthis.StandardIcon(icon)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:285
+// index:0
+// void buttonClicked(class QAbstractButton *)
+func (this *QMessageBox) ButtonClicked(button unsafe.Pointer) {
+	// 0: (, QAbstractButton * button), (button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox13buttonClickedEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.cthis, button)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

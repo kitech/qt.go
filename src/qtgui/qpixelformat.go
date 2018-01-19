@@ -1,796 +1,297 @@
+//  header block begin
+// /usr/include/qt/QtGui/qpixelformat.h
+// #include <qpixelformat.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qpixelformat.h
-// dst-file: /src/gui/qpixelformat.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QPixelFormat::YUVLayout QPixelFormat::yuvLayout();
-extern void C_ZNK12QPixelFormat9yuvLayoutEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::yellowSize();
-extern unsigned char C_ZNK12QPixelFormat10yellowSizeEv(void* qthis); // 2
-  // proto:  QPixelFormat::AlphaPosition QPixelFormat::alphaPosition();
-extern void C_ZNK12QPixelFormat13alphaPositionEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::cyanSize();
-extern unsigned char C_ZNK12QPixelFormat8cyanSizeEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::lightnessSize();
-extern unsigned char C_ZNK12QPixelFormat13lightnessSizeEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::brightnessSize();
-extern unsigned char C_ZNK12QPixelFormat14brightnessSizeEv(void* qthis); // 2
-  // proto:  void QPixelFormat::QPixelFormat();
-extern void* C_ZN12QPixelFormatC2Ev(); // 1
-  // proto:  uchar QPixelFormat::bitsPerPixel();
-extern unsigned char C_ZNK12QPixelFormat12bitsPerPixelEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::blackSize();
-extern unsigned char C_ZNK12QPixelFormat9blackSizeEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::redSize();
-extern unsigned char C_ZNK12QPixelFormat7redSizeEv(void* qthis); // 2
-  // proto:  QPixelFormat::ByteOrder QPixelFormat::byteOrder();
-extern void C_ZNK12QPixelFormat9byteOrderEv(void* qthis); // 2
-  // proto:  QPixelFormat::TypeInterpretation QPixelFormat::typeInterpretation();
-extern void C_ZNK12QPixelFormat18typeInterpretationEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::channelCount();
-extern unsigned char C_ZNK12QPixelFormat12channelCountEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::alphaSize();
-extern unsigned char C_ZNK12QPixelFormat9alphaSizeEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::hueSize();
-extern unsigned char C_ZNK12QPixelFormat7hueSizeEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::saturationSize();
-extern unsigned char C_ZNK12QPixelFormat14saturationSizeEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::magentaSize();
-extern unsigned char C_ZNK12QPixelFormat11magentaSizeEv(void* qthis); // 2
-  // proto:  QPixelFormat::AlphaPremultiplied QPixelFormat::premultiplied();
-extern void C_ZNK12QPixelFormat13premultipliedEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::subEnum();
-extern unsigned char C_ZNK12QPixelFormat7subEnumEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::greenSize();
-extern unsigned char C_ZNK12QPixelFormat9greenSizeEv(void* qthis); // 2
-  // proto:  QPixelFormat::ColorModel QPixelFormat::colorModel();
-extern void C_ZNK12QPixelFormat10colorModelEv(void* qthis); // 2
-  // proto:  QPixelFormat::AlphaUsage QPixelFormat::alphaUsage();
-extern void C_ZNK12QPixelFormat10alphaUsageEv(void* qthis); // 2
-  // proto:  uchar QPixelFormat::blueSize();
-extern unsigned char C_ZNK12QPixelFormat8blueSizeEv(void* qthis); // 2
+// extern C begin: 54
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QPixelFormat)=8
+//  ext block end
+
+//  body block begin
 type QPixelFormat struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// yuvLayout()
-func (this *QPixelFormat) Yuvlayout(args ...interface{}) () {
-  // yuvLayout()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat9yuvLayoutEv
-    // invoke: QPixelFormat::YUVLayout yuvLayout()
-    C.C_ZNK12QPixelFormat9yuvLayoutEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "yuvLayout", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:163
+// index:0
+// inline
+// void QPixelFormat()
+func NewQPixelFormat() *QPixelFormat {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixelFormatC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QPixelFormat{cthis}
 }
 
-// yellowSize()
-func (this *QPixelFormat) Yellowsize(args ...interface{}) (ret interface{}) {
-  // yellowSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat10yellowSizeEv
-    // invoke: uchar yellowSize()
-    var ret0 = C.C_ZNK12QPixelFormat10yellowSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "yellowSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:164
+// index:1
+// inline
+// void QPixelFormat(enum QPixelFormat::ColorModel, uchar, uchar, uchar, uchar, uchar, uchar, enum QPixelFormat::AlphaUsage, enum QPixelFormat::AlphaPosition, enum QPixelFormat::AlphaPremultiplied, enum QPixelFormat::TypeInterpretation, enum QPixelFormat::ByteOrder, uchar)
+func NewQPixelFormat_1(colorModel int, firstSize byte, secondSize byte, thirdSize byte, fourthSize byte, fifthSize byte, alphaSize byte, alphaUsage int, alphaPosition int, premultiplied int, typeInterpretation int, byteOrder int, subEnum byte) *QPixelFormat {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixelFormatC2ENS_10ColorModelEhhhhhhNS_10AlphaUsageENS_13AlphaPositionENS_18AlphaPremultipliedENS_18TypeInterpretationENS_9ByteOrderEh", ffiqt.FFI_TYPE_VOID, cthis, &colorModel, &firstSize, &secondSize, &thirdSize, &fourthSize, &fifthSize, &alphaSize, &alphaUsage, &alphaPosition, &premultiplied, &typeInterpretation, &byteOrder, &subEnum)
+	gopp.ErrPrint(err, rv)
+	return &QPixelFormat{cthis}
 }
 
-// alphaPosition()
-func (this *QPixelFormat) Alphaposition(args ...interface{}) () {
-  // alphaPosition()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat13alphaPositionEv
-    // invoke: QPixelFormat::AlphaPosition alphaPosition()
-    C.C_ZNK12QPixelFormat13alphaPositionEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "alphaPosition", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:178
+// index:0
+// inline
+// QPixelFormat::ColorModel colorModel()
+func (this *QPixelFormat) ColorModel() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10colorModelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// cyanSize()
-func (this *QPixelFormat) Cyansize(args ...interface{}) (ret interface{}) {
-  // cyanSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat8cyanSizeEv
-    // invoke: uchar cyanSize()
-    var ret0 = C.C_ZNK12QPixelFormat8cyanSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "cyanSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:179
+// index:0
+// inline
+// uchar channelCount()
+func (this *QPixelFormat) ChannelCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat12channelCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// lightnessSize()
-func (this *QPixelFormat) Lightnesssize(args ...interface{}) (ret interface{}) {
-  // lightnessSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat13lightnessSizeEv
-    // invoke: uchar lightnessSize()
-    var ret0 = C.C_ZNK12QPixelFormat13lightnessSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "lightnessSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:186
+// index:0
+// inline
+// uchar redSize()
+func (this *QPixelFormat) RedSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7redSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// brightnessSize()
-func (this *QPixelFormat) Brightnesssize(args ...interface{}) (ret interface{}) {
-  // brightnessSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat14brightnessSizeEv
-    // invoke: uchar brightnessSize()
-    var ret0 = C.C_ZNK12QPixelFormat14brightnessSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "brightnessSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:187
+// index:0
+// inline
+// uchar greenSize()
+func (this *QPixelFormat) GreenSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9greenSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QPixelFormat()
-func NewQPixelFormat(args ...interface{}) *QPixelFormat {
-  // QPixelFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QPixelFormatC1Ev
-    // invoke: void QPixelFormat()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN12QPixelFormatC2Ev()
-    return &QPixelFormat{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "QPixelFormat", args)
-  }
-
-  return nil // QPixelFormat{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qpixelformat.h:188
+// index:0
+// inline
+// uchar blueSize()
+func (this *QPixelFormat) BlueSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat8blueSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// bitsPerPixel()
-func (this *QPixelFormat) Bitsperpixel(args ...interface{}) (ret interface{}) {
-  // bitsPerPixel()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat12bitsPerPixelEv
-    // invoke: uchar bitsPerPixel()
-    var ret0 = C.C_ZNK12QPixelFormat12bitsPerPixelEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "bitsPerPixel", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:190
+// index:0
+// inline
+// uchar cyanSize()
+func (this *QPixelFormat) CyanSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat8cyanSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// blackSize()
-func (this *QPixelFormat) Blacksize(args ...interface{}) (ret interface{}) {
-  // blackSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat9blackSizeEv
-    // invoke: uchar blackSize()
-    var ret0 = C.C_ZNK12QPixelFormat9blackSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "blackSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:191
+// index:0
+// inline
+// uchar magentaSize()
+func (this *QPixelFormat) MagentaSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat11magentaSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// redSize()
-func (this *QPixelFormat) Redsize(args ...interface{}) (ret interface{}) {
-  // redSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat7redSizeEv
-    // invoke: uchar redSize()
-    var ret0 = C.C_ZNK12QPixelFormat7redSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "redSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:192
+// index:0
+// inline
+// uchar yellowSize()
+func (this *QPixelFormat) YellowSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10yellowSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// byteOrder()
-func (this *QPixelFormat) Byteorder(args ...interface{}) () {
-  // byteOrder()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat9byteOrderEv
-    // invoke: QPixelFormat::ByteOrder byteOrder()
-    C.C_ZNK12QPixelFormat9byteOrderEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "byteOrder", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:193
+// index:0
+// inline
+// uchar blackSize()
+func (this *QPixelFormat) BlackSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9blackSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// typeInterpretation()
-func (this *QPixelFormat) Typeinterpretation(args ...interface{}) () {
-  // typeInterpretation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat18typeInterpretationEv
-    // invoke: QPixelFormat::TypeInterpretation typeInterpretation()
-    C.C_ZNK12QPixelFormat18typeInterpretationEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "typeInterpretation", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:195
+// index:0
+// inline
+// uchar hueSize()
+func (this *QPixelFormat) HueSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7hueSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// channelCount()
-func (this *QPixelFormat) Channelcount(args ...interface{}) (ret interface{}) {
-  // channelCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat12channelCountEv
-    // invoke: uchar channelCount()
-    var ret0 = C.C_ZNK12QPixelFormat12channelCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "channelCount", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:196
+// index:0
+// inline
+// uchar saturationSize()
+func (this *QPixelFormat) SaturationSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat14saturationSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// alphaSize()
-func (this *QPixelFormat) Alphasize(args ...interface{}) (ret interface{}) {
-  // alphaSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat9alphaSizeEv
-    // invoke: uchar alphaSize()
-    var ret0 = C.C_ZNK12QPixelFormat9alphaSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "alphaSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:197
+// index:0
+// inline
+// uchar lightnessSize()
+func (this *QPixelFormat) LightnessSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13lightnessSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// hueSize()
-func (this *QPixelFormat) Huesize(args ...interface{}) (ret interface{}) {
-  // hueSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat7hueSizeEv
-    // invoke: uchar hueSize()
-    var ret0 = C.C_ZNK12QPixelFormat7hueSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "hueSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:198
+// index:0
+// inline
+// uchar brightnessSize()
+func (this *QPixelFormat) BrightnessSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat14brightnessSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// saturationSize()
-func (this *QPixelFormat) Saturationsize(args ...interface{}) (ret interface{}) {
-  // saturationSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat14saturationSizeEv
-    // invoke: uchar saturationSize()
-    var ret0 = C.C_ZNK12QPixelFormat14saturationSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "saturationSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:200
+// index:0
+// inline
+// uchar alphaSize()
+func (this *QPixelFormat) AlphaSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9alphaSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// magentaSize()
-func (this *QPixelFormat) Magentasize(args ...interface{}) (ret interface{}) {
-  // magentaSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat11magentaSizeEv
-    // invoke: uchar magentaSize()
-    var ret0 = C.C_ZNK12QPixelFormat11magentaSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "magentaSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:202
+// index:0
+// inline
+// uchar bitsPerPixel()
+func (this *QPixelFormat) BitsPerPixel() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat12bitsPerPixelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// premultiplied()
-func (this *QPixelFormat) Premultiplied(args ...interface{}) () {
-  // premultiplied()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat13premultipliedEv
-    // invoke: QPixelFormat::AlphaPremultiplied premultiplied()
-    C.C_ZNK12QPixelFormat13premultipliedEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "premultiplied", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:209
+// index:0
+// inline
+// QPixelFormat::AlphaUsage alphaUsage()
+func (this *QPixelFormat) AlphaUsage() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10alphaUsageEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// subEnum()
-func (this *QPixelFormat) Subenum(args ...interface{}) (ret interface{}) {
-  // subEnum()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat7subEnumEv
-    // invoke: uchar subEnum()
-    var ret0 = C.C_ZNK12QPixelFormat7subEnumEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "subEnum", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:210
+// index:0
+// inline
+// QPixelFormat::AlphaPosition alphaPosition()
+func (this *QPixelFormat) AlphaPosition() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13alphaPositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// greenSize()
-func (this *QPixelFormat) Greensize(args ...interface{}) (ret interface{}) {
-  // greenSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat9greenSizeEv
-    // invoke: uchar greenSize()
-    var ret0 = C.C_ZNK12QPixelFormat9greenSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "greenSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:211
+// index:0
+// inline
+// QPixelFormat::AlphaPremultiplied premultiplied()
+func (this *QPixelFormat) Premultiplied() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13premultipliedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// colorModel()
-func (this *QPixelFormat) Colormodel(args ...interface{}) () {
-  // colorModel()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat10colorModelEv
-    // invoke: QPixelFormat::ColorModel colorModel()
-    C.C_ZNK12QPixelFormat10colorModelEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "colorModel", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:212
+// index:0
+// inline
+// QPixelFormat::TypeInterpretation typeInterpretation()
+func (this *QPixelFormat) TypeInterpretation() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat18typeInterpretationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// alphaUsage()
-func (this *QPixelFormat) Alphausage(args ...interface{}) () {
-  // alphaUsage()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat10alphaUsageEv
-    // invoke: QPixelFormat::AlphaUsage alphaUsage()
-    C.C_ZNK12QPixelFormat10alphaUsageEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "alphaUsage", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:213
+// index:0
+// inline
+// QPixelFormat::ByteOrder byteOrder()
+func (this *QPixelFormat) ByteOrder() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9byteOrderEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// blueSize()
-func (this *QPixelFormat) Bluesize(args ...interface{}) (ret interface{}) {
-  // blueSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QPixelFormat8blueSizeEv
-    // invoke: uchar blueSize()
-    var ret0 = C.C_ZNK12QPixelFormat8blueSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(false) // "uchar"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixelFormat", "blueSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixelformat.h:215
+// index:0
+// inline
+// QPixelFormat::YUVLayout yuvLayout()
+func (this *QPixelFormat) YuvLayout() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9yuvLayoutEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qpixelformat.h:216
+// index:0
+// inline
+// uchar subEnum()
+func (this *QPixelFormat) SubEnum() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7subEnumEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+//  body block end

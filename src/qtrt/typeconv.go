@@ -1,7 +1,12 @@
 package qtrt
 
 /*
+#include <stdlib.h>
 #include <stdint.h>
+
+static void carr_set_item(char** pp, int idx, char*p)
+{ pp[idx] = p; }
+
 */
 import "C"
 import "unsafe"
@@ -80,4 +85,17 @@ func PrimConv(fvi interface{}, to reflect.Type) (reti interface{}) {
 	}
 
 	return
+}
+
+func StringSliceToCCharPP(ss []string) unsafe.Pointer {
+	var tp *C.char
+	p := C.calloc(C.size_t(len(ss)), C.size_t(unsafe.Sizeof(tp)))
+	var pp **C.char = (**C.char)(p)
+
+	for i, _ := range ss {
+		s := C.CString(ss[i])
+		C.carr_set_item(pp, C.int(i), s)
+	}
+
+	return p
 }

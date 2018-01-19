@@ -1,220 +1,121 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qerrormessage.h
+// #include <qerrormessage.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qerrormessage.h
-// dst-file: /src/widgets/qerrormessage.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  const QMetaObject * QErrorMessage::metaObject();
-extern void C_ZNK13QErrorMessage10metaObjectEv(void* qthis); // 4
-  // proto:  void QErrorMessage::QErrorMessage(QWidget * parent);
-extern void* C_ZN13QErrorMessageC2EP7QWidget(void* arg0); // 3
-  // proto:  void QErrorMessage::~QErrorMessage();
-extern void C_ZN13QErrorMessageD2Ev(void* qthis); // 4
-  // proto: static QErrorMessage * QErrorMessage::qtHandler();
-extern void* C_ZN13QErrorMessage9qtHandlerEv(); // 4
-  // proto:  void QErrorMessage::showMessage(const QString & message, const QString & type);
-extern void C_ZN13QErrorMessage11showMessageERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  void QErrorMessage::showMessage(const QString & message);
-extern void C_ZN13QErrorMessage11showMessageERK7QString(void* qthis, void* arg0); // 4
+// extern C begin: 15
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QErrorMessage)=1
+//  ext block end
+
+//  body block begin
 type QErrorMessage struct {
-  /*qbase*/ QDialog;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// metaObject()
-func (this *QErrorMessage) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QErrorMessage10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK13QErrorMessage10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QErrorMessage", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qerrormessage.h:55
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QErrorMessage) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QErrorMessage10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// QErrorMessage(class QWidget *)
-func NewQErrorMessage(args ...interface{}) *QErrorMessage {
-  // QErrorMessage(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QErrorMessageC1EP7QWidget
-    // invoke: void QErrorMessage(class QWidget *)
-    var arg0 = args[0].(*QWidget).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN13QErrorMessageC2EP7QWidget(arg0)
-    return &QErrorMessage{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QErrorMessage", "QErrorMessage", args)
-  }
-
-  return nil // QErrorMessage{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qerrormessage.h:58
+// index:0
+// void QErrorMessage(class QWidget *)
+func NewQErrorMessage(parent unsafe.Pointer) *QErrorMessage {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessageC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QErrorMessage{cthis}
 }
 
-// ~QErrorMessage()
-func (this *QErrorMessage) Freeqerrormessage(args ...interface{}) () {
-  // ~QErrorMessage()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QErrorMessageD0Ev
-    // invoke: void ~QErrorMessage()
-    C.C_ZN13QErrorMessageD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QErrorMessage", "~QErrorMessage", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qerrormessage.h:59
+// index:0
+// virtual
+// void ~QErrorMessage()
+func DeleteQErrorMessage(*QErrorMessage) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessageD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// qtHandler()
-func (this *QErrorMessage) Qthandler_S(args ...interface{}) (ret interface{}) {
-  // qtHandler()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QErrorMessage9qtHandlerEv
-    // invoke: QErrorMessage * qtHandler()
-    var ret0 = C.C_ZN13QErrorMessage9qtHandlerEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QErrorMessage{}) // "QErrorMessage *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QErrorMessage", "qtHandler", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qerrormessage.h:61
+// index:0
+// static
+// QErrorMessage * qtHandler()
+func (this *QErrorMessage) QtHandler() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage9qtHandlerEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QErrorMessage_QtHandler() {
+	// 0: (), ()
+	var nilthis *QErrorMessage
+	nilthis.QtHandler()
 }
 
-// showMessage(const class QString &, const class QString &)
-func (this *QErrorMessage) Showmessage(args ...interface{}) () {
-  // showMessage(const class QString &, const class QString &)
-  // showMessage(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QErrorMessage11showMessageERK7QStringS2_
-    // invoke: void showMessage(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN13QErrorMessage11showMessageERK7QStringS2_(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZN13QErrorMessage11showMessageERK7QString
-    // invoke: void showMessage(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QErrorMessage11showMessageERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QErrorMessage", "showMessage", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qerrormessage.h:64
+// index:0
+// void showMessage(const class QString &)
+func (this *QErrorMessage) ShowMessage(message unsafe.Pointer) {
+	// 0: (, const QString & message), (message)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, message)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qerrormessage.h:65
+// index:1
+// void showMessage(const class QString &, const class QString &)
+func (this *QErrorMessage) ShowMessage_1(message unsafe.Pointer, type_ unsafe.Pointer) {
+	// 1: (, const QString & message, const QString & type), (message, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, message, type_)
+	gopp.ErrPrint(err, rv)
+}
 
+//  body block end

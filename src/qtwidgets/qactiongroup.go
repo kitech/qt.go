@@ -1,539 +1,224 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qactiongroup.h
+// #include <qactiongroup.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qactiongroup.h
-// dst-file: /src/widgets/qactiongroup.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  QAction * QActionGroup::addAction(QAction * a);
-extern void* C_ZN12QActionGroup9addActionEP7QAction(void* qthis, void* arg0); // 4
-  // proto:  QAction * QActionGroup::addAction(const QIcon & icon, const QString & text);
-extern void* C_ZN12QActionGroup9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QAction * QActionGroup::addAction(const QString & text);
-extern void* C_ZN12QActionGroup9addActionERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QList<QAction *> QActionGroup::actions();
-extern void C_ZNK12QActionGroup7actionsEv(void* qthis); // 4
-  // proto:  QAction * QActionGroup::checkedAction();
-extern void* C_ZNK12QActionGroup13checkedActionEv(void* qthis); // 4
-  // proto:  void QActionGroup::setDisabled(bool b);
-extern void C_ZN12QActionGroup11setDisabledEb(void* qthis, bool arg0); // 2
-  // proto:  void QActionGroup::QActionGroup(QObject * parent);
-extern void* C_ZN12QActionGroupC2EP7QObject(void* arg0); // 3
-  // proto:  void QActionGroup::setEnabled(bool );
-extern void C_ZN12QActionGroup10setEnabledEb(void* qthis, bool arg0); // 4
-  // proto:  void QActionGroup::setExclusive(bool );
-extern void C_ZN12QActionGroup12setExclusiveEb(void* qthis, bool arg0); // 4
-  // proto:  void QActionGroup::removeAction(QAction * a);
-extern void C_ZN12QActionGroup12removeActionEP7QAction(void* qthis, void* arg0); // 4
-  // proto:  bool QActionGroup::isExclusive();
-extern bool C_ZNK12QActionGroup11isExclusiveEv(void* qthis); // 4
-  // proto:  const QMetaObject * QActionGroup::metaObject();
-extern void C_ZNK12QActionGroup10metaObjectEv(void* qthis); // 4
-  // proto:  void QActionGroup::~QActionGroup();
-extern void C_ZN12QActionGroupD2Ev(void* qthis); // 4
-  // proto:  bool QActionGroup::isVisible();
-extern bool C_ZNK12QActionGroup9isVisibleEv(void* qthis); // 4
-  // proto:  void QActionGroup::setVisible(bool );
-extern void C_ZN12QActionGroup10setVisibleEb(void* qthis, bool arg0); // 4
-  // proto:  bool QActionGroup::isEnabled();
-extern bool C_ZNK12QActionGroup9isEnabledEv(void* qthis); // 4
+// extern C begin: 64
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QActionGroup)=1
+//  ext block end
+
+//  body block begin
 type QActionGroup struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _triggered QActionGroup_triggered_signal;
-//  _hovered QActionGroup_hovered_signal;
+	cthis unsafe.Pointer
 }
 
-// addAction(class QAction *)
-func (this *QActionGroup) Addaction(args ...interface{}) (ret interface{}) {
-  // addAction(class QAction *)
-  // addAction(const class QIcon &, const class QString &)
-  // addAction(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtgui.QIcon{}) // "const QIcon &"
-  vtys[1][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QActionGroup9addActionEP7QAction
-    // invoke: QAction * addAction(class QAction *)
-    var arg0 = args[0].(*QAction).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QActionGroup9addActionEP7QAction(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN12QActionGroup9addActionERK5QIconRK7QString
-    // invoke: QAction * addAction(const class QIcon &, const class QString &)
-    var arg0 = args[0].(*qtgui.QIcon).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN12QActionGroup9addActionERK5QIconRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZN12QActionGroup9addActionERK7QString
-    // invoke: QAction * addAction(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QActionGroup9addActionERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QActionGroup", "addAction", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:55
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QActionGroup) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// actions()
-func (this *QActionGroup) Actions(args ...interface{}) () {
-  // actions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QActionGroup7actionsEv
-    // invoke: QList<QAction *> actions()
-    C.C_ZNK12QActionGroup7actionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "actions", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:63
+// index:0
+// void QActionGroup(class QObject *)
+func NewQActionGroup(parent unsafe.Pointer) *QActionGroup {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QActionGroup{cthis}
 }
 
-// checkedAction()
-func (this *QActionGroup) Checkedaction(args ...interface{}) (ret interface{}) {
-  // checkedAction()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QActionGroup13checkedActionEv
-    // invoke: QAction * checkedAction()
-    var ret0 = C.C_ZNK12QActionGroup13checkedActionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QActionGroup", "checkedAction", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:64
+// index:0
+// virtual
+// void ~QActionGroup()
+func DeleteQActionGroup(*QActionGroup) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroupD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDisabled(_Bool)
-func (this *QActionGroup) Setdisabled(args ...interface{}) () {
-  // setDisabled(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QActionGroup11setDisabledEb
-    // invoke: void setDisabled(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup11setDisabledEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "setDisabled", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:66
+// index:0
+// QAction * addAction(class QAction *)
+func (this *QActionGroup) AddAction(a unsafe.Pointer) {
+	// 0: (, QAction * a), (a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, a)
+	gopp.ErrPrint(err, rv)
 }
 
-// QActionGroup(class QObject *)
-func NewQActionGroup(args ...interface{}) *QActionGroup {
-  // QActionGroup(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QActionGroupC1EP7QObject
-    // invoke: void QActionGroup(class QObject *)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN12QActionGroupC2EP7QObject(arg0)
-    return &QActionGroup{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QActionGroup", "QActionGroup", args)
-  }
-
-  return nil // QActionGroup{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qactiongroup.h:67
+// index:1
+// QAction * addAction(const class QString &)
+func (this *QActionGroup) AddAction_1(text unsafe.Pointer) {
+	// 1: (, const QString & text), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	gopp.ErrPrint(err, rv)
 }
 
-// setEnabled(_Bool)
-func (this *QActionGroup) Setenabled(args ...interface{}) () {
-  // setEnabled(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QActionGroup10setEnabledEb
-    // invoke: void setEnabled(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup10setEnabledEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "setEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:68
+// index:2
+// QAction * addAction(const class QIcon &, const class QString &)
+func (this *QActionGroup) AddAction_2(icon unsafe.Pointer, text unsafe.Pointer) {
+	// 2: (, const QIcon & icon, const QString & text), (icon, text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK5QIconRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, icon, text)
+	gopp.ErrPrint(err, rv)
 }
 
-// setExclusive(_Bool)
-func (this *QActionGroup) Setexclusive(args ...interface{}) () {
-  // setExclusive(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QActionGroup12setExclusiveEb
-    // invoke: void setExclusive(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup12setExclusiveEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "setExclusive", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:69
+// index:0
+// void removeAction(class QAction *)
+func (this *QActionGroup) RemoveAction(a unsafe.Pointer) {
+	// 0: (, QAction * a), (a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup12removeActionEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, a)
+	gopp.ErrPrint(err, rv)
 }
 
-// removeAction(class QAction *)
-func (this *QActionGroup) Removeaction(args ...interface{}) () {
-  // removeAction(class QAction *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QActionGroup12removeActionEP7QAction
-    // invoke: void removeAction(class QAction *)
-    var arg0 = args[0].(*QAction).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup12removeActionEP7QAction(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "removeAction", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:70
+// index:0
+// QList<QAction *> actions()
+func (this *QActionGroup) Actions() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup7actionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isExclusive()
-func (this *QActionGroup) Isexclusive(args ...interface{}) (ret interface{}) {
-  // isExclusive()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QActionGroup11isExclusiveEv
-    // invoke: bool isExclusive()
-    var ret0 = C.C_ZNK12QActionGroup11isExclusiveEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QActionGroup", "isExclusive", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:72
+// index:0
+// QAction * checkedAction()
+func (this *QActionGroup) CheckedAction() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup13checkedActionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QActionGroup) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QActionGroup10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK12QActionGroup10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:73
+// index:0
+// bool isExclusive()
+func (this *QActionGroup) IsExclusive() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup11isExclusiveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QActionGroup()
-func (this *QActionGroup) Freeqactiongroup(args ...interface{}) () {
-  // ~QActionGroup()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QActionGroupD0Ev
-    // invoke: void ~QActionGroup()
-    C.C_ZN12QActionGroupD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "~QActionGroup", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:74
+// index:0
+// bool isEnabled()
+func (this *QActionGroup) IsEnabled() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup9isEnabledEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isVisible()
-func (this *QActionGroup) Isvisible(args ...interface{}) (ret interface{}) {
-  // isVisible()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QActionGroup9isVisibleEv
-    // invoke: bool isVisible()
-    var ret0 = C.C_ZNK12QActionGroup9isVisibleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QActionGroup", "isVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:75
+// index:0
+// bool isVisible()
+func (this *QActionGroup) IsVisible() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup9isVisibleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setVisible(_Bool)
-func (this *QActionGroup) Setvisible(args ...interface{}) () {
-  // setVisible(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QActionGroup10setVisibleEb
-    // invoke: void setVisible(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup10setVisibleEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "setVisible", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:79
+// index:0
+// void setEnabled(_Bool)
+func (this *QActionGroup) SetEnabled(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setEnabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// isEnabled()
-func (this *QActionGroup) Isenabled(args ...interface{}) (ret interface{}) {
-  // isEnabled()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QActionGroup9isEnabledEv
-    // invoke: bool isEnabled()
-    var ret0 = C.C_ZNK12QActionGroup9isEnabledEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QActionGroup", "isEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qactiongroup.h:80
+// index:0
+// inline
+// void setDisabled(_Bool)
+func (this *QActionGroup) SetDisabled(b bool) {
+	// 0: (, bool b), (&b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup11setDisabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &b)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qactiongroup.h:81
+// index:0
+// void setVisible(_Bool)
+func (this *QActionGroup) SetVisible(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setVisibleEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qactiongroup.h:82
+// index:0
+// void setExclusive(_Bool)
+func (this *QActionGroup) SetExclusive(arg0 bool) {
+	// 0: (, bool arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup12setExclusiveEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qactiongroup.h:85
+// index:0
+// void triggered(class QAction *)
+func (this *QActionGroup) Triggered(arg0 unsafe.Pointer) {
+	// 0: (, QAction * arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9triggeredEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qactiongroup.h:86
+// index:0
+// void hovered(class QAction *)
+func (this *QActionGroup) Hovered(arg0 unsafe.Pointer) {
+	// 0: (, QAction * arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup7hoveredEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

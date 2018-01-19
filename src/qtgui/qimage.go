@@ -1,2497 +1,952 @@
+//  header block begin
+// /usr/include/qt/QtGui/qimage.h
+// #include <qimage.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qimage.h
-// dst-file: /src/gui/qimage.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  bool QImage::load(QIODevice * device, const char * format);
-extern bool C_ZN6QImage4loadEP9QIODevicePKc(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  bool QImage::load(const QString & fileName, const char * format);
-extern bool C_ZN6QImage4loadERK7QStringPKc(void* qthis, void* arg0, void* arg1); // 4
-  // proto: static QImage::Format QImage::toImageFormat(QPixelFormat format);
-extern void C_ZN6QImage13toImageFormatE12QPixelFormat(void* arg0); // 4
-  // proto:  void QImage::setPixelColor(const QPoint & pt, const QColor & c);
-extern void C_ZN6QImage13setPixelColorERK6QPointRK6QColor(void* qthis, void* arg0, void* arg1); // 2
-  // proto:  void QImage::setPixelColor(int x, int y, const QColor & c);
-extern void C_ZN6QImage13setPixelColorEiiRK6QColor(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
-  // proto:  QString QImage::text(const QString & key);
-extern void* C_ZNK6QImage4textERK7QString(void* qthis, void* arg0); // 4
-  // proto:  QPoint QImage::offset();
-extern void* C_ZNK6QImage6offsetEv(void* qthis); // 4
-  // proto:  const uchar * QImage::constScanLine(int );
-extern void* C_ZNK6QImage13constScanLineEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QImage::height();
-extern int32_t C_ZNK6QImage6heightEv(void* qthis); // 4
-  // proto: static QImage QImage::fromData(const uchar * data, int size, const char * format);
-extern void* C_ZN6QImage8fromDataEPKhiPKc(void* arg0, int32_t arg1, void* arg2); // 4
-  // proto: static QImage QImage::fromData(const QByteArray & data, const char * format);
-extern void* C_ZN6QImage8fromDataERK10QByteArrayPKc(void* arg0, void* arg1); // 2
-  // proto:  uchar * QImage::scanLine(int );
-extern void* C_ZN6QImage8scanLineEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QImage::byteCount();
-extern int32_t C_ZNK6QImage9byteCountEv(void* qthis); // 4
-  // proto:  qint64 QImage::cacheKey();
-extern int64_t C_ZNK6QImage8cacheKeyEv(void* qthis); // 4
-  // proto:  void QImage::setColorCount(int );
-extern void C_ZN6QImage13setColorCountEi(void* qthis, int32_t arg0); // 4
-  // proto:  const uchar * QImage::constBits();
-extern void* C_ZNK6QImage9constBitsEv(void* qthis); // 4
-  // proto:  QColor QImage::pixelColor(const QPoint & pt);
-extern void* C_ZNK6QImage10pixelColorERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  QColor QImage::pixelColor(int x, int y);
-extern void* C_ZNK6QImage10pixelColorEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  int QImage::bitPlaneCount();
-extern int32_t C_ZNK6QImage13bitPlaneCountEv(void* qthis); // 4
-  // proto: static QMatrix QImage::trueMatrix(const QMatrix & , int w, int h);
-extern void* C_ZN6QImage10trueMatrixERK7QMatrixii(void* arg0, int32_t arg1, int32_t arg2); // 4
-  // proto: static QTransform QImage::trueMatrix(const QTransform & , int w, int h);
-extern void* C_ZN6QImage10trueMatrixERK10QTransformii(void* arg0, int32_t arg1, int32_t arg2); // 4
-  // proto:  void QImage::detach();
-extern void C_ZN6QImage6detachEv(void* qthis); // 4
-  // proto:  int QImage::width();
-extern int32_t C_ZNK6QImage5widthEv(void* qthis); // 4
-  // proto:  QPaintEngine * QImage::paintEngine();
-extern void* C_ZNK6QImage11paintEngineEv(void* qthis); // 4
-  // proto:  QSize QImage::size();
-extern void* C_ZNK6QImage4sizeEv(void* qthis); // 4
-  // proto:  int QImage::devType();
-extern int32_t C_ZNK6QImage7devTypeEv(void* qthis); // 4
-  // proto:  QImage QImage::mirrored(bool horizontally, bool vertically);
-extern void* C_ZNKR6QImage8mirroredEbb(void* qthis, bool arg0, bool arg1); // 2
-  // proto:  QRgb QImage::color(int i);
-extern int32_t C_ZNK6QImage5colorEi(void* qthis, int32_t arg0); // 4
-  // proto:  bool QImage::valid(int x, int y);
-extern bool C_ZNK6QImage5validEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  bool QImage::valid(const QPoint & pt);
-extern bool C_ZNK6QImage5validERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  void QImage::setDevicePixelRatio(qreal scaleFactor);
-extern void C_ZN6QImage19setDevicePixelRatioEd(void* qthis, double arg0); // 4
-  // proto:  QStringList QImage::textKeys();
-extern void C_ZNK6QImage8textKeysEv(void* qthis); // 4
-  // proto:  void QImage::setOffset(const QPoint & );
-extern void C_ZN6QImage9setOffsetERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  bool QImage::save(const QString & fileName, const char * format, int quality);
-extern bool C_ZNK6QImage4saveERK7QStringPKci(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
-  // proto:  bool QImage::save(QIODevice * device, const char * format, int quality);
-extern bool C_ZNK6QImage4saveEP9QIODevicePKci(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
-  // proto:  uchar * QImage::bits();
-extern void* C_ZN6QImage4bitsEv(void* qthis); // 4
-  // proto:  QRgb QImage::pixel(const QPoint & pt);
-extern int32_t C_ZNK6QImage5pixelERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  QRgb QImage::pixel(int x, int y);
-extern int32_t C_ZNK6QImage5pixelEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QImage::swap(QImage & other);
-extern void C_ZN6QImage4swapERS_(void* qthis, void* arg0); // 2
-  // proto:  bool QImage::isDetached();
-extern bool C_ZNK6QImage10isDetachedEv(void* qthis); // 4
-  // proto:  QImage QImage::alphaChannel();
-extern void* C_ZNK6QImage12alphaChannelEv(void* qthis); // 4
-  // proto:  void QImage::setPixel(int x, int y, uint index_or_rgb);
-extern void C_ZN6QImage8setPixelEiij(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2); // 4
-  // proto:  void QImage::setPixel(const QPoint & pt, uint index_or_rgb);
-extern void C_ZN6QImage8setPixelERK6QPointj(void* qthis, void* arg0, int32_t arg1); // 2
-  // proto:  void QImage::setDotsPerMeterY(int );
-extern void C_ZN6QImage16setDotsPerMeterYEi(void* qthis, int32_t arg0); // 4
-  // proto:  QImage::Format QImage::format();
-extern void C_ZNK6QImage6formatEv(void* qthis); // 4
-  // proto:  bool QImage::hasAlphaChannel();
-extern bool C_ZNK6QImage15hasAlphaChannelEv(void* qthis); // 4
-  // proto:  QPixelFormat QImage::pixelFormat();
-extern void* C_ZNK6QImage11pixelFormatEv(void* qthis); // 4
-  // proto:  QImage QImage::rgbSwapped();
-extern void* C_ZNKR6QImage10rgbSwappedEv(void* qthis); // 2
-  // proto:  bool QImage::isGrayscale();
-extern bool C_ZNK6QImage11isGrayscaleEv(void* qthis); // 4
-  // proto:  QImage QImage::createHeuristicMask(bool clipTight);
-extern void* C_ZNK6QImage19createHeuristicMaskEb(void* qthis, bool arg0); // 4
-  // proto:  int QImage::bytesPerLine();
-extern int32_t C_ZNK6QImage12bytesPerLineEv(void* qthis); // 4
-  // proto:  QImage QImage::copy(const QRect & rect);
-extern void* C_ZNK6QImage4copyERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  QImage QImage::copy(int x, int y, int w, int h);
-extern void* C_ZNK6QImage4copyEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
-  // proto:  int QImage::dotsPerMeterY();
-extern int32_t C_ZNK6QImage13dotsPerMeterYEv(void* qthis); // 4
-  // proto:  int QImage::dotsPerMeterX();
-extern int32_t C_ZNK6QImage13dotsPerMeterXEv(void* qthis); // 4
-  // proto:  QRect QImage::rect();
-extern void* C_ZNK6QImage4rectEv(void* qthis); // 4
-  // proto:  void QImage::setDotsPerMeterX(int );
-extern void C_ZN6QImage16setDotsPerMeterXEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QImage::setAlphaChannel(const QImage & alphaChannel);
-extern void C_ZN6QImage15setAlphaChannelERKS_(void* qthis, void* arg0); // 4
-  // proto:  void QImage::setColor(int i, QRgb c);
-extern void C_ZN6QImage8setColorEij(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  qreal QImage::devicePixelRatio();
-extern double C_ZNK6QImage16devicePixelRatioEv(void* qthis); // 4
-  // proto:  bool QImage::loadFromData(const uchar * buf, int len, const char * format);
-extern bool C_ZN6QImage12loadFromDataEPKhiPKc(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
-  // proto:  bool QImage::loadFromData(const QByteArray & data, const char * aformat);
-extern bool C_ZN6QImage12loadFromDataERK10QByteArrayPKc(void* qthis, void* arg0, void* arg1); // 2
-  // proto:  void QImage::setText(const QString & key, const QString & value);
-extern void C_ZN6QImage7setTextERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  bool QImage::allGray();
-extern bool C_ZNK6QImage7allGrayEv(void* qthis); // 4
-  // proto:  int QImage::colorCount();
-extern int32_t C_ZNK6QImage10colorCountEv(void* qthis); // 4
-  // proto:  bool QImage::isNull();
-extern bool C_ZNK6QImage6isNullEv(void* qthis); // 4
-  // proto:  int QImage::depth();
-extern int32_t C_ZNK6QImage5depthEv(void* qthis); // 4
-  // proto:  void QImage::~QImage();
-extern void C_ZN6QImageD2Ev(void* qthis); // 4
-  // proto:  int QImage::pixelIndex(int x, int y);
-extern int32_t C_ZNK6QImage10pixelIndexEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  int QImage::pixelIndex(const QPoint & pt);
-extern int32_t C_ZNK6QImage10pixelIndexERK6QPoint(void* qthis, void* arg0); // 2
-  // proto:  void QImage::fill(uint pixel);
-extern void C_ZN6QImage4fillEj(void* qthis, int32_t arg0); // 4
-  // proto:  void QImage::fill(const QColor & color);
-extern void C_ZN6QImage4fillERK6QColor(void* qthis, void* arg0); // 4
-  // proto:  QVector<QRgb> QImage::colorTable();
-extern void C_ZNK6QImage10colorTableEv(void* qthis); // 4
-  // proto:  void QImage::QImage();
-extern void* C_ZN6QImageC2Ev(); // 3
-  // proto:  void QImage::QImage(const QString & fileName, const char * format);
-extern void* C_ZN6QImageC2ERK7QStringPKc(void* arg0, void* arg1); // 3
-  // proto:  void QImage::QImage(const QImage & );
-extern void* C_ZN6QImageC2ERKS_(void* arg0); // 3
+// extern C begin: 24
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QImage)=32
+//  ext block end
+
+//  body block begin
 type QImage struct {
-  /*qbase*/ QPaintDevice;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// load(class QIODevice *, const char *)
-func (this *QImage) Load(args ...interface{}) (ret interface{}) {
-  // load(class QIODevice *, const char *)
-  // load(const class QString &, const char *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
-  vtys[0][1] = qtrt.ByteTy(true) // "const char *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][1] = qtrt.ByteTy(true) // "const char *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage4loadEP9QIODevicePKc
-    // invoke: bool load(class QIODevice *, const char *)
-    var arg0 = args[0].(*qtcore.QIODevice).Qclsinst
-    if false {fmt.Println(arg0)}
-    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
-    var arg1 = argif1.(unsafe.Pointer)
-    if false {fmt.Println(argif1, arg1)}
-    if free1 {defer C.free(arg1)}
-    var ret0 = C.C_ZN6QImage4loadEP9QIODevicePKc(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN6QImage4loadERK7QStringPKc
-    // invoke: bool load(const class QString &, const char *)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[1][1])
-    var arg1 = argif1.(unsafe.Pointer)
-    if false {fmt.Println(argif1, arg1)}
-    if free1 {defer C.free(arg1)}
-    var ret0 = C.C_ZN6QImage4loadERK7QStringPKc(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "load", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:136
+// index:0
+// void QImage()
+func NewQImage() *QImage {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImageC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QImage{cthis}
 }
 
-// toImageFormat(class QPixelFormat)
-func (this *QImage) Toimageformat_S(args ...interface{}) () {
-  // toImageFormat(class QPixelFormat)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPixelFormat{}) // "QPixelFormat"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage13toImageFormatE12QPixelFormat
-    // invoke: QImage::Format toImageFormat(class QPixelFormat)
-    var arg0 = args[0].(*QPixelFormat).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QImage13toImageFormatE12QPixelFormat(arg0)
-  default:
-    qtrt.ErrorResolve("QImage", "toImageFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:137
+// index:1
+// void QImage(const class QSize &, enum QImage::Format)
+func NewQImage_1(size unsafe.Pointer, format int) *QImage {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImageC2ERK5QSizeNS_6FormatE", ffiqt.FFI_TYPE_VOID, cthis, size, &format)
+	gopp.ErrPrint(err, rv)
+	return &QImage{cthis}
 }
 
-// setPixelColor(const class QPoint &, const class QColor &)
-func (this *QImage) Setpixelcolor(args ...interface{}) () {
-  // setPixelColor(const class QPoint &, const class QColor &)
-  // setPixelColor(int, int, const class QColor &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  vtys[0][1] = reflect.TypeOf(QColor{}) // "const QColor &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1][2] = reflect.TypeOf(QColor{}) // "const QColor &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage13setPixelColorERK6QPointRK6QColor
-    // invoke: void setPixelColor(const class QPoint &, const class QColor &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QColor).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN6QImage13setPixelColorERK6QPointRK6QColor(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZN6QImage13setPixelColorEiiRK6QColor
-    // invoke: void setPixelColor(int, int, const class QColor &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*QColor).Qclsinst
-    if false {fmt.Println(arg2)}
-    C.C_ZN6QImage13setPixelColorEiiRK6QColor(this.Qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QImage", "setPixelColor", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:138
+// index:2
+// void QImage(int, int, enum QImage::Format)
+func NewQImage_2(width int, height int, format int) *QImage {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImageC2EiiNS_6FormatE", ffiqt.FFI_TYPE_VOID, cthis, &width, &height, &format)
+	gopp.ErrPrint(err, rv)
+	return &QImage{cthis}
 }
 
-// text(const class QString &)
-func (this *QImage) Text(args ...interface{}) (ret interface{}) {
-  // text(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage4textERK7QString
-    // invoke: QString text(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QImage4textERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "text", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:145
+// index:3
+// void QImage(const char *const *)
+func NewQImage_3(xpm []interface{}) *QImage {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImageC2EPKPKc", ffiqt.FFI_TYPE_VOID, cthis, xpm)
+	gopp.ErrPrint(err, rv)
+	return &QImage{cthis}
 }
 
-// offset()
-func (this *QImage) Offset(args ...interface{}) (ret interface{}) {
-  // offset()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage6offsetEv
-    // invoke: QPoint offset()
-    var ret0 = C.C_ZNK6QImage6offsetEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "offset", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:147
+// index:4
+// void QImage(const class QString &, const char *)
+func NewQImage_4(fileName unsafe.Pointer, format unsafe.Pointer) *QImage {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImageC2ERK7QStringPKc", ffiqt.FFI_TYPE_VOID, cthis, fileName, format)
+	gopp.ErrPrint(err, rv)
+	return &QImage{cthis}
 }
 
-// constScanLine(int)
-func (this *QImage) Constscanline(args ...interface{}) (ret interface{}) {
-  // constScanLine(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage13constScanLineEi
-    // invoke: const uchar * constScanLine(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QImage13constScanLineEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(true) // "const uchar *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "constScanLine", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:155
+// index:0
+// virtual
+// void ~QImage()
+func DeleteQImage(*QImage) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImageD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// height()
-func (this *QImage) Height(args ...interface{}) (ret interface{}) {
-  // height()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage6heightEv
-    // invoke: int height()
-    var ret0 = C.C_ZNK6QImage6heightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "height", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:162
+// index:0
+// inline
+// void swap(class QImage &)
+func (this *QImage) Swap(other unsafe.Pointer) {
+	// 0: (, QImage & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// fromData(const uchar *, int, const char *)
-func (this *QImage) Fromdata_S(args ...interface{}) (ret interface{}) {
-  // fromData(const uchar *, int, const char *)
-  // fromData(const class QByteArray &, const char *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.ByteTy(true) // "const uchar *"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.ByteTy(true) // "const char *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
-  vtys[1][1] = qtrt.ByteTy(true) // "const char *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage8fromDataEPKhiPKc
-    // invoke: QImage fromData(const uchar *, int, const char *)
-    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
-    var arg0 = argif0.(unsafe.Pointer)
-    if false {fmt.Println(argif0, arg0)}
-    if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[0][2])
-    var arg2 = argif2.(unsafe.Pointer)
-    if false {fmt.Println(argif2, arg2)}
-    if free2 {defer C.free(arg2)}
-    var ret0 = C.C_ZN6QImage8fromDataEPKhiPKc(arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QImage{}) // "QImage"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN6QImage8fromDataERK10QByteArrayPKc
-    // invoke: QImage fromData(const class QByteArray &, const char *)
-    var arg0 = args[0].(*qtcore.QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[1][1])
-    var arg1 = argif1.(unsafe.Pointer)
-    if false {fmt.Println(argif1, arg1)}
-    if free1 {defer C.free(arg1)}
-    var ret0 = C.C_ZN6QImage8fromDataERK10QByteArrayPKc(arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QImage{}) // "QImage"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "fromData", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:165
+// index:0
+// bool isNull()
+func (this *QImage) IsNull() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// scanLine(int)
-func (this *QImage) Scanline(args ...interface{}) (ret interface{}) {
-  // scanLine(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage8scanLineEi
-    // invoke: uchar * scanLine(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN6QImage8scanLineEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(true) // "uchar *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "scanLine", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:167
+// index:0
+// virtual
+// int devType()
+func (this *QImage) DevType() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage7devTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// byteCount()
-func (this *QImage) Bytecount(args ...interface{}) (ret interface{}) {
-  // byteCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage9byteCountEv
-    // invoke: int byteCount()
-    var ret0 = C.C_ZNK6QImage9byteCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "byteCount", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:172
+// index:0
+// void detach()
+func (this *QImage) Detach() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage6detachEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// cacheKey()
-func (this *QImage) Cachekey(args ...interface{}) (ret interface{}) {
-  // cacheKey()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage8cacheKeyEv
-    // invoke: qint64 cacheKey()
-    var ret0 = C.C_ZNK6QImage8cacheKeyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int64Ty(false) // "qint64"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "cacheKey", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:173
+// index:0
+// bool isDetached()
+func (this *QImage) IsDetached() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10isDetachedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setColorCount(int)
-func (this *QImage) Setcolorcount(args ...interface{}) () {
-  // setColorCount(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage13setColorCountEi
-    // invoke: void setColorCount(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QImage13setColorCountEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImage", "setColorCount", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:175
+// index:0
+// QImage copy(const class QRect &)
+func (this *QImage) Copy(rect unsafe.Pointer) {
+	// 0: (, const QRect & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4copyERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
 }
 
-// constBits()
-func (this *QImage) Constbits(args ...interface{}) (ret interface{}) {
-  // constBits()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage9constBitsEv
-    // invoke: const uchar * constBits()
-    var ret0 = C.C_ZNK6QImage9constBitsEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(true) // "const uchar *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "constBits", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:176
+// index:1
+// inline
+// QImage copy(int, int, int, int)
+func (this *QImage) Copy_1(x int, y int, w int, h int) {
+	// 1: (, int x, int y, int w, int h), (&x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4copyEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h)
+	gopp.ErrPrint(err, rv)
 }
 
-// pixelColor(const class QPoint &)
-func (this *QImage) Pixelcolor(args ...interface{}) (ret interface{}) {
-  // pixelColor(const class QPoint &)
-  // pixelColor(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage10pixelColorERK6QPoint
-    // invoke: QColor pixelColor(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QImage10pixelColorERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK6QImage10pixelColorEii
-    // invoke: QColor pixelColor(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK6QImage10pixelColorEii(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QColor{}) // "QColor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "pixelColor", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:179
+// index:0
+// QImage::Format format()
+func (this *QImage) Format() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6formatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// bitPlaneCount()
-func (this *QImage) Bitplanecount(args ...interface{}) (ret interface{}) {
-  // bitPlaneCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage13bitPlaneCountEv
-    // invoke: int bitPlaneCount()
-    var ret0 = C.C_ZNK6QImage13bitPlaneCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "bitPlaneCount", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:195
+// index:0
+// bool reinterpretAsFormat(enum QImage::Format)
+func (this *QImage) ReinterpretAsFormat(f int) {
+	// 0: (, QImage::Format f), (&f)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage19reinterpretAsFormatENS_6FormatE", ffiqt.FFI_TYPE_VOID, this.cthis, &f)
+	gopp.ErrPrint(err, rv)
 }
 
-// trueMatrix(const class QMatrix &, int, int)
-func (this *QImage) Truematrix_S(args ...interface{}) (ret interface{}) {
-  // trueMatrix(const class QMatrix &, int, int)
-  // trueMatrix(const class QTransform &, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QMatrix{}) // "const QMatrix &"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QTransform{}) // "const QTransform &"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1][2] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage10trueMatrixERK7QMatrixii
-    // invoke: QMatrix trueMatrix(const class QMatrix &, int, int)
-    var arg0 = args[0].(*QMatrix).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN6QImage10trueMatrixERK7QMatrixii(arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QMatrix{}) // "QMatrix"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN6QImage10trueMatrixERK10QTransformii
-    // invoke: QTransform trueMatrix(const class QTransform &, int, int)
-    var arg0 = args[0].(*QTransform).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN6QImage10trueMatrixERK10QTransformii(arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "trueMatrix", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:197
+// index:0
+// int width()
+func (this *QImage) Width() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5widthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// detach()
-func (this *QImage) Detach(args ...interface{}) () {
-  // detach()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage6detachEv
-    // invoke: void detach()
-    C.C_ZN6QImage6detachEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QImage", "detach", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:198
+// index:0
+// int height()
+func (this *QImage) Height() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6heightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// width()
-func (this *QImage) Width(args ...interface{}) (ret interface{}) {
-  // width()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage5widthEv
-    // invoke: int width()
-    var ret0 = C.C_ZNK6QImage5widthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "width", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:199
+// index:0
+// QSize size()
+func (this *QImage) Size() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// paintEngine()
-func (this *QImage) Paintengine(args ...interface{}) (ret interface{}) {
-  // paintEngine()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage11paintEngineEv
-    // invoke: QPaintEngine * paintEngine()
-    var ret0 = C.C_ZNK6QImage11paintEngineEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPaintEngine{}) // "QPaintEngine *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "paintEngine", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:200
+// index:0
+// QRect rect()
+func (this *QImage) Rect() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4rectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// size()
-func (this *QImage) Size(args ...interface{}) (ret interface{}) {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage4sizeEv
-    // invoke: QSize size()
-    var ret0 = C.C_ZNK6QImage4sizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "size", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:202
+// index:0
+// int depth()
+func (this *QImage) Depth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5depthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// devType()
-func (this *QImage) Devtype(args ...interface{}) (ret interface{}) {
-  // devType()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage7devTypeEv
-    // invoke: int devType()
-    var ret0 = C.C_ZNK6QImage7devTypeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "devType", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:203
+// index:0
+// int colorCount()
+func (this *QImage) ColorCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10colorCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// mirrored(_Bool, _Bool)
-func (this *QImage) Mirrored(args ...interface{}) (ret interface{}) {
-  // mirrored(_Bool, _Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  vtys[0][1] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNKR6QImage8mirroredEbb
-    // invoke: QImage mirrored(_Bool, _Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.bool(args[1].(bool))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNKR6QImage8mirroredEbb(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QImage{}) // "QImage"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "mirrored", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:204
+// index:0
+// int bitPlaneCount()
+func (this *QImage) BitPlaneCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage13bitPlaneCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// color(int)
-func (this *QImage) Color(args ...interface{}) (ret interface{}) {
-  // color(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage5colorEi
-    // invoke: QRgb color(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QImage5colorEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "QRgb"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "color", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:206
+// index:0
+// QRgb color(int)
+func (this *QImage) Color(i int) {
+	// 0: (, int i), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5colorEi", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	gopp.ErrPrint(err, rv)
 }
 
-// valid(int, int)
-func (this *QImage) Valid(args ...interface{}) (ret interface{}) {
-  // valid(int, int)
-  // valid(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage5validEii
-    // invoke: bool valid(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK6QImage5validEii(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK6QImage5validERK6QPoint
-    // invoke: bool valid(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QImage5validERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "valid", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:207
+// index:0
+// void setColor(int, QRgb)
+func (this *QImage) SetColor(i int, c uint) {
+	// 0: (, int i, QRgb c), (&i, &c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8setColorEij", ffiqt.FFI_TYPE_VOID, this.cthis, &i, &c)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDevicePixelRatio(qreal)
-func (this *QImage) Setdevicepixelratio(args ...interface{}) () {
-  // setDevicePixelRatio(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage19setDevicePixelRatioEd
-    // invoke: void setDevicePixelRatio(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QImage19setDevicePixelRatioEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImage", "setDevicePixelRatio", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:208
+// index:0
+// void setColorCount(int)
+func (this *QImage) SetColorCount(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage13setColorCountEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// textKeys()
-func (this *QImage) Textkeys(args ...interface{}) () {
-  // textKeys()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage8textKeysEv
-    // invoke: QStringList textKeys()
-    C.C_ZNK6QImage8textKeysEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QImage", "textKeys", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:210
+// index:0
+// bool allGray()
+func (this *QImage) AllGray() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage7allGrayEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setOffset(const class QPoint &)
-func (this *QImage) Setoffset(args ...interface{}) () {
-  // setOffset(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage9setOffsetERK6QPoint
-    // invoke: void setOffset(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QImage9setOffsetERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImage", "setOffset", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:211
+// index:0
+// bool isGrayscale()
+func (this *QImage) IsGrayscale() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11isGrayscaleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// save(const class QString &, const char *, int)
-func (this *QImage) Save(args ...interface{}) (ret interface{}) {
-  // save(const class QString &, const char *, int)
-  // save(class QIODevice *, const char *, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = qtrt.ByteTy(true) // "const char *"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QIODevice{}) // "QIODevice *"
-  vtys[1][1] = qtrt.ByteTy(true) // "const char *"
-  vtys[1][2] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage4saveERK7QStringPKci
-    // invoke: bool save(const class QString &, const char *, int)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
-    var arg1 = argif1.(unsafe.Pointer)
-    if false {fmt.Println(argif1, arg1)}
-    if free1 {defer C.free(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK6QImage4saveERK7QStringPKci(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK6QImage4saveEP9QIODevicePKci
-    // invoke: bool save(class QIODevice *, const char *, int)
-    var arg0 = args[0].(*qtcore.QIODevice).Qclsinst
-    if false {fmt.Println(arg0)}
-    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[1][1])
-    var arg1 = argif1.(unsafe.Pointer)
-    if false {fmt.Println(argif1, arg1)}
-    if free1 {defer C.free(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK6QImage4saveEP9QIODevicePKci(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "save", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:213
+// index:0
+// uchar * bits()
+func (this *QImage) Bits() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage4bitsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// bits()
-func (this *QImage) Bits(args ...interface{}) (ret interface{}) {
-  // bits()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage4bitsEv
-    // invoke: uchar * bits()
-    var ret0 = C.C_ZN6QImage4bitsEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.ByteTy(true) // "uchar *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "bits", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:214
+// index:1
+// const uchar * bits()
+func (this *QImage) Bits_1() {
+	// 1: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4bitsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// pixel(const class QPoint &)
-func (this *QImage) Pixel(args ...interface{}) (ret interface{}) {
-  // pixel(const class QPoint &)
-  // pixel(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage5pixelERK6QPoint
-    // invoke: QRgb pixel(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QImage5pixelERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "QRgb"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK6QImage5pixelEii
-    // invoke: QRgb pixel(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK6QImage5pixelEii(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "QRgb"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "pixel", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:215
+// index:0
+// const uchar * constBits()
+func (this *QImage) ConstBits() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage9constBitsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// swap(class QImage &)
-func (this *QImage) Swap(args ...interface{}) () {
-  // swap(class QImage &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QImage{}) // "QImage &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage4swapERS_
-    // invoke: void swap(class QImage &)
-    var arg0 = args[0].(*QImage).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QImage4swapERS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImage", "swap", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:218
+// index:0
+// int byteCount()
+func (this *QImage) ByteCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage9byteCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// isDetached()
-func (this *QImage) Isdetached(args ...interface{}) (ret interface{}) {
-  // isDetached()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage10isDetachedEv
-    // invoke: bool isDetached()
-    var ret0 = C.C_ZNK6QImage10isDetachedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "isDetached", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:220
+// index:0
+// qsizetype sizeInBytes()
+func (this *QImage) SizeInBytes() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11sizeInBytesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// alphaChannel()
-func (this *QImage) Alphachannel(args ...interface{}) (ret interface{}) {
-  // alphaChannel()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage12alphaChannelEv
-    // invoke: QImage alphaChannel()
-    var ret0 = C.C_ZNK6QImage12alphaChannelEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QImage{}) // "QImage"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "alphaChannel", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:222
+// index:0
+// uchar * scanLine(int)
+func (this *QImage) ScanLine(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8scanLineEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setPixel(int, int, uint)
-func (this *QImage) Setpixel(args ...interface{}) () {
-  // setPixel(int, int, uint)
-  // setPixel(const class QPoint &, uint)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "uint"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  vtys[1][1] = qtrt.Int32Ty(false) // "uint"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage8setPixelEiij
-    // invoke: void setPixel(int, int, uint)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    C.C_ZN6QImage8setPixelEiij(this.Qclsinst, arg0, arg1, arg2)
-  case 1:
-    // invoke: _ZN6QImage8setPixelERK6QPointj
-    // invoke: void setPixel(const class QPoint &, uint)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN6QImage8setPixelERK6QPointj(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QImage", "setPixel", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:223
+// index:1
+// const uchar * scanLine(int)
+func (this *QImage) ScanLine_1(arg0 int) {
+	// 1: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage8scanLineEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDotsPerMeterY(int)
-func (this *QImage) Setdotspermetery(args ...interface{}) () {
-  // setDotsPerMeterY(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage16setDotsPerMeterYEi
-    // invoke: void setDotsPerMeterY(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QImage16setDotsPerMeterYEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImage", "setDotsPerMeterY", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:224
+// index:0
+// const uchar * constScanLine(int)
+func (this *QImage) ConstScanLine(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage13constScanLineEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
 }
 
-// format()
-func (this *QImage) Format(args ...interface{}) () {
-  // format()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage6formatEv
-    // invoke: QImage::Format format()
-    C.C_ZNK6QImage6formatEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QImage", "format", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:225
+// index:0
+// int bytesPerLine()
+func (this *QImage) BytesPerLine() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage12bytesPerLineEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasAlphaChannel()
-func (this *QImage) Hasalphachannel(args ...interface{}) (ret interface{}) {
-  // hasAlphaChannel()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage15hasAlphaChannelEv
-    // invoke: bool hasAlphaChannel()
-    var ret0 = C.C_ZNK6QImage15hasAlphaChannelEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "hasAlphaChannel", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:227
+// index:0
+// bool valid(int, int)
+func (this *QImage) Valid(x int, y int) {
+	// 0: (, int x, int y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5validEii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
 }
 
-// pixelFormat()
-func (this *QImage) Pixelformat(args ...interface{}) (ret interface{}) {
-  // pixelFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage11pixelFormatEv
-    // invoke: QPixelFormat pixelFormat()
-    var ret0 = C.C_ZNK6QImage11pixelFormatEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPixelFormat{}) // "QPixelFormat"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "pixelFormat", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:228
+// index:1
+// bool valid(const class QPoint &)
+func (this *QImage) Valid_1(pt unsafe.Pointer) {
+	// 1: (, const QPoint & pt), (pt)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5validERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, pt)
+	gopp.ErrPrint(err, rv)
 }
 
-// rgbSwapped()
-func (this *QImage) Rgbswapped(args ...interface{}) (ret interface{}) {
-  // rgbSwapped()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNKR6QImage10rgbSwappedEv
-    // invoke: QImage rgbSwapped()
-    var ret0 = C.C_ZNKR6QImage10rgbSwappedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QImage{}) // "QImage"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "rgbSwapped", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:230
+// index:0
+// int pixelIndex(int, int)
+func (this *QImage) PixelIndex(x int, y int) {
+	// 0: (, int x, int y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10pixelIndexEii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
 }
 
-// isGrayscale()
-func (this *QImage) Isgrayscale(args ...interface{}) (ret interface{}) {
-  // isGrayscale()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage11isGrayscaleEv
-    // invoke: bool isGrayscale()
-    var ret0 = C.C_ZNK6QImage11isGrayscaleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "isGrayscale", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:231
+// index:1
+// int pixelIndex(const class QPoint &)
+func (this *QImage) PixelIndex_1(pt unsafe.Pointer) {
+	// 1: (, const QPoint & pt), (pt)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10pixelIndexERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, pt)
+	gopp.ErrPrint(err, rv)
 }
 
-// createHeuristicMask(_Bool)
-func (this *QImage) Createheuristicmask(args ...interface{}) (ret interface{}) {
-  // createHeuristicMask(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage19createHeuristicMaskEb
-    // invoke: QImage createHeuristicMask(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QImage19createHeuristicMaskEb(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QImage{}) // "QImage"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "createHeuristicMask", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:233
+// index:0
+// QRgb pixel(int, int)
+func (this *QImage) Pixel(x int, y int) {
+	// 0: (, int x, int y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5pixelEii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
 }
 
-// bytesPerLine()
-func (this *QImage) Bytesperline(args ...interface{}) (ret interface{}) {
-  // bytesPerLine()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage12bytesPerLineEv
-    // invoke: int bytesPerLine()
-    var ret0 = C.C_ZNK6QImage12bytesPerLineEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "bytesPerLine", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:234
+// index:1
+// QRgb pixel(const class QPoint &)
+func (this *QImage) Pixel_1(pt unsafe.Pointer) {
+	// 1: (, const QPoint & pt), (pt)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5pixelERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, pt)
+	gopp.ErrPrint(err, rv)
 }
 
-// copy(const class QRect &)
-func (this *QImage) Copy(args ...interface{}) (ret interface{}) {
-  // copy(const class QRect &)
-  // copy(int, int, int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1][2] = qtrt.Int32Ty(false) // "int"
-  vtys[1][3] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage4copyERK5QRect
-    // invoke: QImage copy(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QImage4copyERK5QRect(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QImage{}) // "QImage"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK6QImage4copyEiiii
-    // invoke: QImage copy(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK6QImage4copyEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QImage{}) // "QImage"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "copy", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:236
+// index:0
+// void setPixel(int, int, uint)
+func (this *QImage) SetPixel(x int, y int, index_or_rgb uint) {
+	// 0: (, int x, int y, uint index_or_rgb), (&x, &y, &index_or_rgb)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8setPixelEiij", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &index_or_rgb)
+	gopp.ErrPrint(err, rv)
 }
 
-// dotsPerMeterY()
-func (this *QImage) Dotspermetery(args ...interface{}) (ret interface{}) {
-  // dotsPerMeterY()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage13dotsPerMeterYEv
-    // invoke: int dotsPerMeterY()
-    var ret0 = C.C_ZNK6QImage13dotsPerMeterYEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "dotsPerMeterY", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:237
+// index:1
+// void setPixel(const class QPoint &, uint)
+func (this *QImage) SetPixel_1(pt unsafe.Pointer, index_or_rgb uint) {
+	// 1: (, const QPoint & pt, uint index_or_rgb), (pt, &index_or_rgb)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8setPixelERK6QPointj", ffiqt.FFI_TYPE_VOID, this.cthis, pt, &index_or_rgb)
+	gopp.ErrPrint(err, rv)
 }
 
-// dotsPerMeterX()
-func (this *QImage) Dotspermeterx(args ...interface{}) (ret interface{}) {
-  // dotsPerMeterX()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage13dotsPerMeterXEv
-    // invoke: int dotsPerMeterX()
-    var ret0 = C.C_ZNK6QImage13dotsPerMeterXEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "dotsPerMeterX", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:239
+// index:0
+// QColor pixelColor(int, int)
+func (this *QImage) PixelColor(x int, y int) {
+	// 0: (, int x, int y), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10pixelColorEii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	gopp.ErrPrint(err, rv)
 }
 
-// rect()
-func (this *QImage) Rect(args ...interface{}) (ret interface{}) {
-  // rect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage4rectEv
-    // invoke: QRect rect()
-    var ret0 = C.C_ZNK6QImage4rectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "rect", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:240
+// index:1
+// QColor pixelColor(const class QPoint &)
+func (this *QImage) PixelColor_1(pt unsafe.Pointer) {
+	// 1: (, const QPoint & pt), (pt)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10pixelColorERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, pt)
+	gopp.ErrPrint(err, rv)
 }
 
-// setDotsPerMeterX(int)
-func (this *QImage) Setdotspermeterx(args ...interface{}) () {
-  // setDotsPerMeterX(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage16setDotsPerMeterXEi
-    // invoke: void setDotsPerMeterX(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QImage16setDotsPerMeterXEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImage", "setDotsPerMeterX", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:242
+// index:0
+// void setPixelColor(int, int, const class QColor &)
+func (this *QImage) SetPixelColor(x int, y int, c unsafe.Pointer) {
+	// 0: (, int x, int y, const QColor & c), (&x, &y, c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage13setPixelColorEiiRK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, c)
+	gopp.ErrPrint(err, rv)
 }
 
-// setAlphaChannel(const class QImage &)
-func (this *QImage) Setalphachannel(args ...interface{}) () {
-  // setAlphaChannel(const class QImage &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QImage{}) // "const QImage &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage15setAlphaChannelERKS_
-    // invoke: void setAlphaChannel(const class QImage &)
-    var arg0 = args[0].(*QImage).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QImage15setAlphaChannelERKS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImage", "setAlphaChannel", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:243
+// index:1
+// void setPixelColor(const class QPoint &, const class QColor &)
+func (this *QImage) SetPixelColor_1(pt unsafe.Pointer, c unsafe.Pointer) {
+	// 1: (, const QPoint & pt, const QColor & c), (pt, c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage13setPixelColorERK6QPointRK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, pt, c)
+	gopp.ErrPrint(err, rv)
 }
 
-// setColor(int, QRgb)
-func (this *QImage) Setcolor(args ...interface{}) () {
-  // setColor(int, QRgb)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "QRgb"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage8setColorEij
-    // invoke: void setColor(int, QRgb)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN6QImage8setColorEij(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QImage", "setColor", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:245
+// index:0
+// QVector<QRgb> colorTable()
+func (this *QImage) ColorTable() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10colorTableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// devicePixelRatio()
-func (this *QImage) Devicepixelratio(args ...interface{}) (ret interface{}) {
-  // devicePixelRatio()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage16devicePixelRatioEv
-    // invoke: qreal devicePixelRatio()
-    var ret0 = C.C_ZNK6QImage16devicePixelRatioEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "devicePixelRatio", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:252
+// index:0
+// qreal devicePixelRatio()
+func (this *QImage) DevicePixelRatio() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage16devicePixelRatioEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// loadFromData(const uchar *, int, const char *)
-func (this *QImage) Loadfromdata(args ...interface{}) (ret interface{}) {
-  // loadFromData(const uchar *, int, const char *)
-  // loadFromData(const class QByteArray &, const char *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.ByteTy(true) // "const uchar *"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.ByteTy(true) // "const char *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
-  vtys[1][1] = qtrt.ByteTy(true) // "const char *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage12loadFromDataEPKhiPKc
-    // invoke: bool loadFromData(const uchar *, int, const char *)
-    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
-    var arg0 = argif0.(unsafe.Pointer)
-    if false {fmt.Println(argif0, arg0)}
-    if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[0][2])
-    var arg2 = argif2.(unsafe.Pointer)
-    if false {fmt.Println(argif2, arg2)}
-    if free2 {defer C.free(arg2)}
-    var ret0 = C.C_ZN6QImage12loadFromDataEPKhiPKc(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN6QImage12loadFromDataERK10QByteArrayPKc
-    // invoke: bool loadFromData(const class QByteArray &, const char *)
-    var arg0 = args[0].(*qtcore.QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[1][1])
-    var arg1 = argif1.(unsafe.Pointer)
-    if false {fmt.Println(argif1, arg1)}
-    if free1 {defer C.free(arg1)}
-    var ret0 = C.C_ZN6QImage12loadFromDataERK10QByteArrayPKc(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "loadFromData", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:253
+// index:0
+// void setDevicePixelRatio(qreal)
+func (this *QImage) SetDevicePixelRatio(scaleFactor float64) {
+	// 0: (, qreal scaleFactor), (&scaleFactor)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage19setDevicePixelRatioEd", ffiqt.FFI_TYPE_VOID, this.cthis, &scaleFactor)
+	gopp.ErrPrint(err, rv)
 }
 
-// setText(const class QString &, const class QString &)
-func (this *QImage) Settext(args ...interface{}) () {
-  // setText(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage7setTextERK7QStringS2_
-    // invoke: void setText(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN6QImage7setTextERK7QStringS2_(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QImage", "setText", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:255
+// index:0
+// void fill(uint)
+func (this *QImage) Fill(pixel uint) {
+	// 0: (, uint pixel), (&pixel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage4fillEj", ffiqt.FFI_TYPE_VOID, this.cthis, &pixel)
+	gopp.ErrPrint(err, rv)
 }
 
-// allGray()
-func (this *QImage) Allgray(args ...interface{}) (ret interface{}) {
-  // allGray()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage7allGrayEv
-    // invoke: bool allGray()
-    var ret0 = C.C_ZNK6QImage7allGrayEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "allGray", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:256
+// index:1
+// void fill(const class QColor &)
+func (this *QImage) Fill_1(color unsafe.Pointer) {
+	// 1: (, const QColor & color), (color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage4fillERK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, color)
+	gopp.ErrPrint(err, rv)
 }
 
-// colorCount()
-func (this *QImage) Colorcount(args ...interface{}) (ret interface{}) {
-  // colorCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage10colorCountEv
-    // invoke: int colorCount()
-    var ret0 = C.C_ZNK6QImage10colorCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "colorCount", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:257
+// index:2
+// void fill(Qt::GlobalColor)
+func (this *QImage) Fill_2(color int) {
+	// 2: (, Qt::GlobalColor color), (&color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage4fillEN2Qt11GlobalColorE", ffiqt.FFI_TYPE_VOID, this.cthis, &color)
+	gopp.ErrPrint(err, rv)
 }
 
-// isNull()
-func (this *QImage) Isnull(args ...interface{}) (ret interface{}) {
-  // isNull()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage6isNullEv
-    // invoke: bool isNull()
-    var ret0 = C.C_ZNK6QImage6isNullEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "isNull", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:260
+// index:0
+// bool hasAlphaChannel()
+func (this *QImage) HasAlphaChannel() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage15hasAlphaChannelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// depth()
-func (this *QImage) Depth(args ...interface{}) (ret interface{}) {
-  // depth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage5depthEv
-    // invoke: int depth()
-    var ret0 = C.C_ZNK6QImage5depthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "depth", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:261
+// index:0
+// void setAlphaChannel(const class QImage &)
+func (this *QImage) SetAlphaChannel(alphaChannel unsafe.Pointer) {
+	// 0: (, const QImage & alphaChannel), (alphaChannel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage15setAlphaChannelERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, alphaChannel)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QImage()
-func (this *QImage) Freeqimage(args ...interface{}) () {
-  // ~QImage()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImageD0Ev
-    // invoke: void ~QImage()
-    C.C_ZN6QImageD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QImage", "~QImage", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:262
+// index:0
+// QImage alphaChannel()
+func (this *QImage) AlphaChannel() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage12alphaChannelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// pixelIndex(int, int)
-func (this *QImage) Pixelindex(args ...interface{}) (ret interface{}) {
-  // pixelIndex(int, int)
-  // pixelIndex(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage10pixelIndexEii
-    // invoke: int pixelIndex(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK6QImage10pixelIndexEii(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK6QImage10pixelIndexERK6QPoint
-    // invoke: int pixelIndex(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QImage10pixelIndexERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QImage", "pixelIndex", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:265
+// index:0
+// QImage createHeuristicMask(_Bool)
+func (this *QImage) CreateHeuristicMask(clipTight bool) {
+	// 0: (, bool clipTight), (&clipTight)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage19createHeuristicMaskEb", ffiqt.FFI_TYPE_VOID, this.cthis, &clipTight)
+	gopp.ErrPrint(err, rv)
 }
 
-// fill(uint)
-func (this *QImage) Fill(args ...interface{}) () {
-  // fill(uint)
-  // fill(const class QColor &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "uint"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QColor{}) // "const QColor &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImage4fillEj
-    // invoke: void fill(uint)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QImage4fillEj(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN6QImage4fillERK6QColor
-    // invoke: void fill(const class QColor &)
-    var arg0 = args[0].(*QColor).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN6QImage4fillERK6QColor(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImage", "fill", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:267
+// index:0
+// QImage createMaskFromColor(QRgb, Qt::MaskMode)
+func (this *QImage) CreateMaskFromColor(color uint, mode int) {
+	// 0: (, QRgb color, Qt::MaskMode mode), (&color, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage19createMaskFromColorEjN2Qt8MaskModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &color, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// colorTable()
-func (this *QImage) Colortable(args ...interface{}) () {
-  // colorTable()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QImage10colorTableEv
-    // invoke: QVector<QRgb> colorTable()
-    C.C_ZNK6QImage10colorTableEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QImage", "colorTable", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qimage.h:269
+// index:0
+// inline
+// QImage scaled(int, int, Qt::AspectRatioMode, Qt::TransformationMode)
+func (this *QImage) Scaled(w int, h int, aspectMode int, mode int) {
+	// 0: (, int w, int h, Qt::AspectRatioMode aspectMode, Qt::TransformationMode mode), (&w, &h, &aspectMode, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6scaledEiiN2Qt15AspectRatioModeENS0_18TransformationModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &w, &h, &aspectMode, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// QImage()
-func NewQImage(args ...interface{}) *QImage {
-  // QImage()
-  // QImage(const class QString &, const char *)
-  // QImage(const class QImage &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][1] = qtrt.ByteTy(true) // "const char *"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QImage{}) // "const QImage &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QImageC1Ev
-    // invoke: void QImage()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QImageC2Ev()
-    return &QImage{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN6QImageC1ERK7QStringPKc
-    // invoke: void QImage(const class QString &, const char *)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[1][1])
-    var arg1 = argif1.(unsafe.Pointer)
-    if false {fmt.Println(argif1, arg1)}
-    if free1 {defer C.free(arg1)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QImageC2ERK7QStringPKc(arg0, arg1)
-    return &QImage{Qclsinst:qthis}
-  case 2:
-    // invoke: _ZN6QImageC1ERKS_
-    // invoke: void QImage(const class QImage &)
-    var arg0 = args[0].(*QImage).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN6QImageC2ERKS_(arg0)
-    return &QImage{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QImage", "QImage", args)
-  }
-
-  return nil // QImage{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qimage.h:272
+// index:1
+// QImage scaled(const class QSize &, Qt::AspectRatioMode, Qt::TransformationMode)
+func (this *QImage) Scaled_1(s unsafe.Pointer, aspectMode int, mode int) {
+	// 1: (, const QSize & s, Qt::AspectRatioMode aspectMode, Qt::TransformationMode mode), (s, &aspectMode, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6scaledERK5QSizeN2Qt15AspectRatioModeENS3_18TransformationModeE", ffiqt.FFI_TYPE_VOID, this.cthis, s, &aspectMode, &mode)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qimage.h:274
+// index:0
+// QImage scaledToWidth(int, Qt::TransformationMode)
+func (this *QImage) ScaledToWidth(w int, mode int) {
+	// 0: (, int w, Qt::TransformationMode mode), (&w, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage13scaledToWidthEiN2Qt18TransformationModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &w, &mode)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtGui/qimage.h:275
+// index:0
+// QImage scaledToHeight(int, Qt::TransformationMode)
+func (this *QImage) ScaledToHeight(h int, mode int) {
+	// 0: (, int h, Qt::TransformationMode mode), (&h, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage14scaledToHeightEiN2Qt18TransformationModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &h, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:276
+// index:0
+// QImage transformed(const class QMatrix &, Qt::TransformationMode)
+func (this *QImage) Transformed(matrix unsafe.Pointer, mode int) {
+	// 0: (, const QMatrix & matrix, Qt::TransformationMode mode), (matrix, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11transformedERK7QMatrixN2Qt18TransformationModeE", ffiqt.FFI_TYPE_VOID, this.cthis, matrix, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:278
+// index:1
+// QImage transformed(const class QTransform &, Qt::TransformationMode)
+func (this *QImage) Transformed_1(matrix unsafe.Pointer, mode int) {
+	// 1: (, const QTransform & matrix, Qt::TransformationMode mode), (matrix, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11transformedERK10QTransformN2Qt18TransformationModeE", ffiqt.FFI_TYPE_VOID, this.cthis, matrix, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:277
+// index:0
+// static
+// QMatrix trueMatrix(const class QMatrix &, int, int)
+func (this *QImage) TrueMatrix(arg0 unsafe.Pointer, w int, h int) {
+	// 0: (const QMatrix & arg0, int w, int h), (arg0, w, h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage10trueMatrixERK7QMatrixii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QImage_TrueMatrix(arg0 unsafe.Pointer, w int, h int) {
+	// 0: (const QMatrix & arg0, int w, int h), (arg0, w, h)
+	var nilthis *QImage
+	nilthis.TrueMatrix(arg0, w, h)
+}
+
+// /usr/include/qt/QtGui/qimage.h:279
+// index:1
+// static
+// QTransform trueMatrix(const class QTransform &, int, int)
+func (this *QImage) TrueMatrix_1(arg0 unsafe.Pointer, w int, h int) {
+	// 1: (const QTransform & arg0, int w, int h), (arg0, w, h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage10trueMatrixERK10QTransformii", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QImage_TrueMatrix_1(arg0 unsafe.Pointer, w int, h int) {
+	// 1: (const QTransform & arg0, int w, int h), (arg0, w, h)
+	var nilthis *QImage
+	nilthis.TrueMatrix_1(arg0, w, h)
+}
+
+// /usr/include/qt/QtGui/qimage.h:281
+// index:0
+// inline
+// QImage mirrored(_Bool, _Bool)
+func (this *QImage) Mirrored(horizontally bool, vertically bool) {
+	// 0: (, bool horizontally, bool vertically), (&horizontally, &vertically)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR6QImage8mirroredEbb", ffiqt.FFI_TYPE_VOID, this.cthis, &horizontally, &vertically)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:283
+// index:1
+// inline
+// QImage && mirrored(_Bool, _Bool)
+func (this *QImage) Mirrored_1(horizontally bool, vertically bool) {
+	// 1: (, bool horizontally, bool vertically), (&horizontally, &vertically)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO6QImage8mirroredEbb", ffiqt.FFI_TYPE_VOID, this.cthis, &horizontally, &vertically)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:285
+// index:0
+// inline
+// QImage rgbSwapped()
+func (this *QImage) RgbSwapped() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR6QImage10rgbSwappedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:287
+// index:1
+// inline
+// QImage && rgbSwapped()
+func (this *QImage) RgbSwapped_1() {
+	// 1: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO6QImage10rgbSwappedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:293
+// index:0
+// void invertPixels(enum QImage::InvertMode)
+func (this *QImage) InvertPixels(arg0 int) {
+	// 0: (, QImage::InvertMode arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage12invertPixelsENS_10InvertModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:296
+// index:0
+// bool load(class QIODevice *, const char *)
+func (this *QImage) Load(device unsafe.Pointer, format unsafe.Pointer) {
+	// 0: (, QIODevice * device, const char * format), (device, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage4loadEP9QIODevicePKc", ffiqt.FFI_TYPE_VOID, this.cthis, device, format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:297
+// index:1
+// bool load(const class QString &, const char *)
+func (this *QImage) Load_1(fileName unsafe.Pointer, format unsafe.Pointer) {
+	// 1: (, const QString & fileName, const char * format), (fileName, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage4loadERK7QStringPKc", ffiqt.FFI_TYPE_VOID, this.cthis, fileName, format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:298
+// index:0
+// bool loadFromData(const uchar *, int, const char *)
+func (this *QImage) LoadFromData(buf unsafe.Pointer, len int, format unsafe.Pointer) {
+	// 0: (, const uchar * buf, int len, const char * format), (buf, &len, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage12loadFromDataEPKhiPKc", ffiqt.FFI_TYPE_VOID, this.cthis, buf, &len, format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:299
+// index:1
+// inline
+// bool loadFromData(const class QByteArray &, const char *)
+func (this *QImage) LoadFromData_1(data unsafe.Pointer, aformat unsafe.Pointer) {
+	// 1: (, const QByteArray & data, const char * aformat), (data, aformat)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage12loadFromDataERK10QByteArrayPKc", ffiqt.FFI_TYPE_VOID, this.cthis, data, aformat)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:302
+// index:0
+// bool save(const class QString &, const char *, int)
+func (this *QImage) Save(fileName unsafe.Pointer, format unsafe.Pointer, quality int) {
+	// 0: (, const QString & fileName, const char * format, int quality), (fileName, format, &quality)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4saveERK7QStringPKci", ffiqt.FFI_TYPE_VOID, this.cthis, fileName, format, &quality)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:303
+// index:1
+// bool save(class QIODevice *, const char *, int)
+func (this *QImage) Save_1(device unsafe.Pointer, format unsafe.Pointer, quality int) {
+	// 1: (, QIODevice * device, const char * format, int quality), (device, format, &quality)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4saveEP9QIODevicePKci", ffiqt.FFI_TYPE_VOID, this.cthis, device, format, &quality)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:305
+// index:0
+// static
+// QImage fromData(const uchar *, int, const char *)
+func (this *QImage) FromData(data unsafe.Pointer, size int, format unsafe.Pointer) {
+	// 0: (const uchar * data, int size, const char * format), (data, size, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8fromDataEPKhiPKc", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QImage_FromData(data unsafe.Pointer, size int, format unsafe.Pointer) {
+	// 0: (const uchar * data, int size, const char * format), (data, size, format)
+	var nilthis *QImage
+	nilthis.FromData(data, size, format)
+}
+
+// /usr/include/qt/QtGui/qimage.h:306
+// index:1
+// static inline
+// QImage fromData(const class QByteArray &, const char *)
+func (this *QImage) FromData_1(data unsafe.Pointer, format unsafe.Pointer) {
+	// 1: (const QByteArray & data, const char * format), (data, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8fromDataERK10QByteArrayPKc", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QImage_FromData_1(data unsafe.Pointer, format unsafe.Pointer) {
+	// 1: (const QByteArray & data, const char * format), (data, format)
+	var nilthis *QImage
+	nilthis.FromData_1(data, format)
+}
+
+// /usr/include/qt/QtGui/qimage.h:312
+// index:0
+// qint64 cacheKey()
+func (this *QImage) CacheKey() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage8cacheKeyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:314
+// index:0
+// virtual
+// QPaintEngine * paintEngine()
+func (this *QImage) PaintEngine() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11paintEngineEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:317
+// index:0
+// int dotsPerMeterX()
+func (this *QImage) DotsPerMeterX() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage13dotsPerMeterXEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:318
+// index:0
+// int dotsPerMeterY()
+func (this *QImage) DotsPerMeterY() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage13dotsPerMeterYEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:319
+// index:0
+// void setDotsPerMeterX(int)
+func (this *QImage) SetDotsPerMeterX(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage16setDotsPerMeterXEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:320
+// index:0
+// void setDotsPerMeterY(int)
+func (this *QImage) SetDotsPerMeterY(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage16setDotsPerMeterYEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:321
+// index:0
+// QPoint offset()
+func (this *QImage) Offset() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6offsetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:322
+// index:0
+// void setOffset(const class QPoint &)
+func (this *QImage) SetOffset(arg0 unsafe.Pointer) {
+	// 0: (, const QPoint & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage9setOffsetERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:324
+// index:0
+// QStringList textKeys()
+func (this *QImage) TextKeys() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage8textKeysEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:325
+// index:0
+// QString text(const class QString &)
+func (this *QImage) Text(key unsafe.Pointer) {
+	// 0: (, const QString & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4textERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:326
+// index:0
+// void setText(const class QString &, const class QString &)
+func (this *QImage) SetText(key unsafe.Pointer, value unsafe.Pointer) {
+	// 0: (, const QString & key, const QString & value), (key, value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage7setTextERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, key, value)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:328
+// index:0
+// QPixelFormat pixelFormat()
+func (this *QImage) PixelFormat() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11pixelFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qimage.h:329
+// index:0
+// static
+// QPixelFormat toPixelFormat(class QImage::Format)
+func (this *QImage) ToPixelFormat(format int) {
+	// 0: (QImage::Format format), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage13toPixelFormatENS_6FormatE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QImage_ToPixelFormat(format int) {
+	// 0: (QImage::Format format), (format)
+	var nilthis *QImage
+	nilthis.ToPixelFormat(format)
+}
+
+// /usr/include/qt/QtGui/qimage.h:330
+// index:0
+// static
+// QImage::Format toImageFormat(class QPixelFormat)
+func (this *QImage) ToImageFormat(format unsafe.Pointer) {
+	// 0: (QPixelFormat format), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage13toImageFormatE12QPixelFormat", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QImage_ToImageFormat(format unsafe.Pointer) {
+	// 0: (QPixelFormat format), (format)
+	var nilthis *QImage
+	nilthis.ToImageFormat(format)
+}
+
+//  body block end

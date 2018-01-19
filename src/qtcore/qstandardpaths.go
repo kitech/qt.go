@@ -1,186 +1,156 @@
+//  header block begin
+// /usr/include/qt/QtCore/qstandardpaths.h
+// #include <qstandardpaths.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qstandardpaths.h
-// dst-file: /src/core/qstandardpaths.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto: static void QStandardPaths::setTestModeEnabled(bool testMode);
-extern void C_ZN14QStandardPaths18setTestModeEnabledEb(bool arg0); // 4
-  // proto: static void QStandardPaths::enableTestMode(bool testMode);
-extern void C_ZN14QStandardPaths14enableTestModeEb(bool arg0); // 4
-  // proto: static QString QStandardPaths::findExecutable(const QString & executableName, const QStringList & paths);
-extern void* C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(void* arg0, void* arg1); // 4
-  // proto: static bool QStandardPaths::isTestModeEnabled();
-extern bool C_ZN14QStandardPaths17isTestModeEnabledEv(); // 4
+// extern C begin: 56
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QStandardPaths)=1
+//  ext block end
+
+//  body block begin
 type QStandardPaths struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// setTestModeEnabled(_Bool)
-func (this *QStandardPaths) Settestmodeenabled_S(args ...interface{}) () {
-  // setTestModeEnabled(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QStandardPaths18setTestModeEnabledEb
-    // invoke: void setTestModeEnabled(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QStandardPaths18setTestModeEnabledEb(arg0)
-  default:
-    qtrt.ErrorResolve("QStandardPaths", "setTestModeEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstandardpaths.h:81
+// index:0
+// static
+// QString writableLocation(enum QStandardPaths::StandardLocation)
+func (this *QStandardPaths) WritableLocation(type_ int) {
+	// 0: (QStandardPaths::StandardLocation type), (type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths16writableLocationENS_16StandardLocationE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QStandardPaths_WritableLocation(type_ int) {
+	// 0: (QStandardPaths::StandardLocation type), (type_)
+	var nilthis *QStandardPaths
+	nilthis.WritableLocation(type_)
 }
 
-// enableTestMode(_Bool)
-func (this *QStandardPaths) Enabletestmode_S(args ...interface{}) () {
-  // enableTestMode(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QStandardPaths14enableTestModeEb
-    // invoke: void enableTestMode(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN14QStandardPaths14enableTestModeEb(arg0)
-  default:
-    qtrt.ErrorResolve("QStandardPaths", "enableTestMode", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstandardpaths.h:82
+// index:0
+// static
+// QStringList standardLocations(enum QStandardPaths::StandardLocation)
+func (this *QStandardPaths) StandardLocations(type_ int) {
+	// 0: (QStandardPaths::StandardLocation type), (type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths17standardLocationsENS_16StandardLocationE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QStandardPaths_StandardLocations(type_ int) {
+	// 0: (QStandardPaths::StandardLocation type), (type_)
+	var nilthis *QStandardPaths
+	nilthis.StandardLocations(type_)
 }
 
-// findExecutable(const class QString &, const class QStringList &)
-func (this *QStandardPaths) Findexecutable_S(args ...interface{}) (ret interface{}) {
-  // findExecutable(const class QString &, const class QStringList &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(QStringList{}) // "const QStringList &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList
-    // invoke: QString findExecutable(const class QString &, const class QStringList &)
-    var arg0 = args[0].(*QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QStringList).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStandardPaths", "findExecutable", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstandardpaths.h:94
+// index:0
+// static
+// QString displayName(enum QStandardPaths::StandardLocation)
+func (this *QStandardPaths) DisplayName(type_ int) {
+	// 0: (QStandardPaths::StandardLocation type), (type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths11displayNameENS_16StandardLocationE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QStandardPaths_DisplayName(type_ int) {
+	// 0: (QStandardPaths::StandardLocation type), (type_)
+	var nilthis *QStandardPaths
+	nilthis.DisplayName(type_)
 }
 
-// isTestModeEnabled()
-func (this *QStandardPaths) Istestmodeenabled_S(args ...interface{}) (ret interface{}) {
-  // isTestModeEnabled()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QStandardPaths17isTestModeEnabledEv
-    // invoke: bool isTestModeEnabled()
-    var ret0 = C.C_ZN14QStandardPaths17isTestModeEnabledEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QStandardPaths", "isTestModeEnabled", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qstandardpaths.h:97
+// index:0
+// static
+// QString findExecutable(const class QString &, const class QStringList &)
+func (this *QStandardPaths) FindExecutable(executableName unsafe.Pointer, paths unsafe.Pointer) {
+	// 0: (const QString & executableName, const QStringList & paths), (executableName, paths)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QStandardPaths_FindExecutable(executableName unsafe.Pointer, paths unsafe.Pointer) {
+	// 0: (const QString & executableName, const QStringList & paths), (executableName, paths)
+	var nilthis *QStandardPaths
+	nilthis.FindExecutable(executableName, paths)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qstandardpaths.h:100
+// index:0
+// static
+// void enableTestMode(_Bool)
+func (this *QStandardPaths) EnableTestMode(testMode bool) {
+	// 0: (bool testMode), (testMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths14enableTestModeEb", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QStandardPaths_EnableTestMode(testMode bool) {
+	// 0: (bool testMode), (testMode)
+	var nilthis *QStandardPaths
+	nilthis.EnableTestMode(testMode)
+}
 
+// /usr/include/qt/QtCore/qstandardpaths.h:102
+// index:0
+// static
+// void setTestModeEnabled(_Bool)
+func (this *QStandardPaths) SetTestModeEnabled(testMode bool) {
+	// 0: (bool testMode), (testMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths18setTestModeEnabledEb", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QStandardPaths_SetTestModeEnabled(testMode bool) {
+	// 0: (bool testMode), (testMode)
+	var nilthis *QStandardPaths
+	nilthis.SetTestModeEnabled(testMode)
+}
+
+// /usr/include/qt/QtCore/qstandardpaths.h:103
+// index:0
+// static
+// bool isTestModeEnabled()
+func (this *QStandardPaths) IsTestModeEnabled() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths17isTestModeEnabledEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QStandardPaths_IsTestModeEnabled() {
+	// 0: (), ()
+	var nilthis *QStandardPaths
+	nilthis.IsTestModeEnabled()
+}
+
+//  body block end

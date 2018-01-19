@@ -1,172 +1,90 @@
+//  header block begin
+// /usr/include/qt/QtCore/qparallelanimationgroup.h
+// #include <qparallelanimationgroup.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qparallelanimationgroup.h
-// dst-file: /src/core/qparallelanimationgroup.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QParallelAnimationGroup::QParallelAnimationGroup(QObject * parent);
-extern void* C_ZN23QParallelAnimationGroupC2EP7QObject(void* arg0); // 3
-  // proto:  void QParallelAnimationGroup::~QParallelAnimationGroup();
-extern void C_ZN23QParallelAnimationGroupD2Ev(void* qthis); // 4
-  // proto:  int QParallelAnimationGroup::duration();
-extern int32_t C_ZNK23QParallelAnimationGroup8durationEv(void* qthis); // 4
-  // proto:  const QMetaObject * QParallelAnimationGroup::metaObject();
-extern void C_ZNK23QParallelAnimationGroup10metaObjectEv(void* qthis); // 4
+// extern C begin: 9
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QParallelAnimationGroup)=1
+//  ext block end
+
+//  body block begin
 type QParallelAnimationGroup struct {
-  /*qbase*/ QAnimationGroup;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// QParallelAnimationGroup(class QObject *)
-func NewQParallelAnimationGroup(args ...interface{}) *QParallelAnimationGroup {
-  // QParallelAnimationGroup(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN23QParallelAnimationGroupC1EP7QObject
-    // invoke: void QParallelAnimationGroup(class QObject *)
-    var arg0 = args[0].(*QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN23QParallelAnimationGroupC2EP7QObject(arg0)
-    return &QParallelAnimationGroup{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QParallelAnimationGroup", "QParallelAnimationGroup", args)
-  }
-
-  return nil // QParallelAnimationGroup{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:53
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QParallelAnimationGroup) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QParallelAnimationGroup()
-func (this *QParallelAnimationGroup) Freeqparallelanimationgroup(args ...interface{}) () {
-  // ~QParallelAnimationGroup()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN23QParallelAnimationGroupD0Ev
-    // invoke: void ~QParallelAnimationGroup()
-    C.C_ZN23QParallelAnimationGroupD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QParallelAnimationGroup", "~QParallelAnimationGroup", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:56
+// index:0
+// void QParallelAnimationGroup(class QObject *)
+func NewQParallelAnimationGroup(parent unsafe.Pointer) *QParallelAnimationGroup {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QParallelAnimationGroup{cthis}
 }
 
-// duration()
-func (this *QParallelAnimationGroup) Duration(args ...interface{}) (ret interface{}) {
-  // duration()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK23QParallelAnimationGroup8durationEv
-    // invoke: int duration()
-    var ret0 = C.C_ZNK23QParallelAnimationGroup8durationEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QParallelAnimationGroup", "duration", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:57
+// index:0
+// virtual
+// void ~QParallelAnimationGroup()
+func DeleteQParallelAnimationGroup(*QParallelAnimationGroup) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QParallelAnimationGroup) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK23QParallelAnimationGroup10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK23QParallelAnimationGroup10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QParallelAnimationGroup", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:59
+// index:0
+// virtual
+// int duration()
+func (this *QParallelAnimationGroup) Duration() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup8durationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
-
+//  body block end

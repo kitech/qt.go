@@ -1,921 +1,377 @@
+//  header block begin
+// /usr/include/qt/QtGui/qfontdatabase.h
+// #include <qfontdatabase.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qfontdatabase.h
-// dst-file: /src/gui/qfontdatabase.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto: static int QFontDatabase::addApplicationFontFromData(const QByteArray & fontData);
-extern int32_t C_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray(void* arg0); // 4
-  // proto:  int QFontDatabase::weight(const QString & family, const QString & style);
-extern int32_t C_ZNK13QFontDatabase6weightERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  bool QFontDatabase::isFixedPitch(const QString & family, const QString & style);
-extern bool C_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QFont QFontDatabase::font(const QString & family, const QString & style, int pointSize);
-extern void* C_ZNK13QFontDatabase4fontERK7QStringS2_i(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
-  // proto:  QList<int> QFontDatabase::pointSizes(const QString & family, const QString & style);
-extern void C_ZN13QFontDatabase10pointSizesERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QList<QFontDatabase::WritingSystem> QFontDatabase::writingSystems();
-extern void C_ZNK13QFontDatabase14writingSystemsEv(void* qthis); // 4
-  // proto:  QList<QFontDatabase::WritingSystem> QFontDatabase::writingSystems(const QString & family);
-extern void C_ZNK13QFontDatabase14writingSystemsERK7QString(void* qthis, void* arg0); // 4
-  // proto:  bool QFontDatabase::isPrivateFamily(const QString & family);
-extern bool C_ZNK13QFontDatabase15isPrivateFamilyERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QFontDatabase::QFontDatabase();
-extern void* C_ZN13QFontDatabaseC2Ev(); // 3
-  // proto:  QString QFontDatabase::styleString(const QFontInfo & fontInfo);
-extern void* C_ZN13QFontDatabase11styleStringERK9QFontInfo(void* qthis, void* arg0); // 4
-  // proto:  QString QFontDatabase::styleString(const QFont & font);
-extern void* C_ZN13QFontDatabase11styleStringERK5QFont(void* qthis, void* arg0); // 4
-  // proto:  bool QFontDatabase::italic(const QString & family, const QString & style);
-extern bool C_ZNK13QFontDatabase6italicERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QStringList QFontDatabase::styles(const QString & family);
-extern void C_ZNK13QFontDatabase6stylesERK7QString(void* qthis, void* arg0); // 4
-  // proto:  bool QFontDatabase::isSmoothlyScalable(const QString & family, const QString & style);
-extern bool C_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  bool QFontDatabase::bold(const QString & family, const QString & style);
-extern bool C_ZNK13QFontDatabase4boldERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  bool QFontDatabase::isScalable(const QString & family, const QString & style);
-extern bool C_ZNK13QFontDatabase10isScalableERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto: static int QFontDatabase::addApplicationFont(const QString & fileName);
-extern int32_t C_ZN13QFontDatabase18addApplicationFontERK7QString(void* arg0); // 4
-  // proto:  bool QFontDatabase::isBitmapScalable(const QString & family, const QString & style);
-extern bool C_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto: static QStringList QFontDatabase::applicationFontFamilies(int id);
-extern void C_ZN13QFontDatabase23applicationFontFamiliesEi(int32_t arg0); // 4
-  // proto: static bool QFontDatabase::supportsThreadedFontRendering();
-extern bool C_ZN13QFontDatabase29supportsThreadedFontRenderingEv(); // 4
-  // proto:  QList<int> QFontDatabase::smoothSizes(const QString & family, const QString & style);
-extern void C_ZN13QFontDatabase11smoothSizesERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
-  // proto: static bool QFontDatabase::removeApplicationFont(int id);
-extern bool C_ZN13QFontDatabase21removeApplicationFontEi(int32_t arg0); // 4
-  // proto:  bool QFontDatabase::hasFamily(const QString & family);
-extern bool C_ZNK13QFontDatabase9hasFamilyERK7QString(void* qthis, void* arg0); // 4
-  // proto: static QList<int> QFontDatabase::standardSizes();
-extern void C_ZN13QFontDatabase13standardSizesEv(); // 4
-  // proto: static bool QFontDatabase::removeAllApplicationFonts();
-extern bool C_ZN13QFontDatabase25removeAllApplicationFontsEv(); // 4
+// extern C begin: 11
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QFontDatabase)=8
+//  ext block end
+
+//  body block begin
 type QFontDatabase struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// addApplicationFontFromData(const class QByteArray &)
-func (this *QFontDatabase) Addapplicationfontfromdata_S(args ...interface{}) (ret interface{}) {
-  // addApplicationFontFromData(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QByteArray{}) // "const QByteArray &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray
-    // invoke: int addApplicationFontFromData(const class QByteArray &)
-    var arg0 = args[0].(*qtcore.QByteArray).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "addApplicationFontFromData", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:116
+// index:0
+// static
+// QList<int> standardSizes()
+func (this *QFontDatabase) StandardSizes() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase13standardSizesEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFontDatabase_StandardSizes() {
+	// 0: (), ()
+	var nilthis *QFontDatabase
+	nilthis.StandardSizes()
 }
 
-// weight(const class QString &, const class QString &)
-func (this *QFontDatabase) Weight(args ...interface{}) (ret interface{}) {
-  // weight(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase6weightERK7QStringS2_
-    // invoke: int weight(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QFontDatabase6weightERK7QStringS2_(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "weight", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:118
+// index:0
+// void QFontDatabase()
+func NewQFontDatabase() *QFontDatabase {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabaseC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QFontDatabase{cthis}
 }
 
-// isFixedPitch(const class QString &, const class QString &)
-func (this *QFontDatabase) Isfixedpitch(args ...interface{}) (ret interface{}) {
-  // isFixedPitch(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase12isFixedPitchERK7QStringS2_
-    // invoke: bool isFixedPitch(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "isFixedPitch", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:120
+// index:0
+// QList<QFontDatabase::WritingSystem> writingSystems()
+func (this *QFontDatabase) WritingSystems() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase14writingSystemsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// font(const class QString &, const class QString &, int)
-func (this *QFontDatabase) Font(args ...interface{}) (ret interface{}) {
-  // font(const class QString &, const class QString &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase4fontERK7QStringS2_i
-    // invoke: QFont font(const class QString &, const class QString &, int)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK13QFontDatabase4fontERK7QStringS2_i(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QFont{}) // "QFont"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "font", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:121
+// index:1
+// QList<QFontDatabase::WritingSystem> writingSystems(const class QString &)
+func (this *QFontDatabase) WritingSystems_1(family unsafe.Pointer) {
+	// 1: (, const QString & family), (family)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase14writingSystemsERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, family)
+	gopp.ErrPrint(err, rv)
 }
 
-// pointSizes(const class QString &, const class QString &)
-func (this *QFontDatabase) Pointsizes(args ...interface{}) () {
-  // pointSizes(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFontDatabase10pointSizesERK7QStringS2_
-    // invoke: QList<int> pointSizes(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN13QFontDatabase10pointSizesERK7QStringS2_(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "pointSizes", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:123
+// index:0
+// QStringList families(enum QFontDatabase::WritingSystem)
+func (this *QFontDatabase) Families(writingSystem int) {
+	// 0: (, QFontDatabase::WritingSystem writingSystem), (&writingSystem)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase8familiesENS_13WritingSystemE", ffiqt.FFI_TYPE_VOID, this.cthis, &writingSystem)
+	gopp.ErrPrint(err, rv)
 }
 
-// writingSystems()
-func (this *QFontDatabase) Writingsystems(args ...interface{}) () {
-  // writingSystems()
-  // writingSystems(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase14writingSystemsEv
-    // invoke: QList<QFontDatabase::WritingSystem> writingSystems()
-    C.C_ZNK13QFontDatabase14writingSystemsEv(this.Qclsinst)
-  case 1:
-    // invoke: _ZNK13QFontDatabase14writingSystemsERK7QString
-    // invoke: QList<QFontDatabase::WritingSystem> writingSystems(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK13QFontDatabase14writingSystemsERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "writingSystems", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:124
+// index:0
+// QStringList styles(const class QString &)
+func (this *QFontDatabase) Styles(family unsafe.Pointer) {
+	// 0: (, const QString & family), (family)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase6stylesERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, family)
+	gopp.ErrPrint(err, rv)
 }
 
-// isPrivateFamily(const class QString &)
-func (this *QFontDatabase) Isprivatefamily(args ...interface{}) (ret interface{}) {
-  // isPrivateFamily(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase15isPrivateFamilyERK7QString
-    // invoke: bool isPrivateFamily(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QFontDatabase15isPrivateFamilyERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "isPrivateFamily", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:125
+// index:0
+// QList<int> pointSizes(const class QString &, const class QString &)
+func (this *QFontDatabase) PointSizes(family unsafe.Pointer, style unsafe.Pointer) {
+	// 0: (, const QString & family, const QString & style), (family, style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase10pointSizesERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, family, style)
+	gopp.ErrPrint(err, rv)
 }
 
-// QFontDatabase()
-func NewQFontDatabase(args ...interface{}) *QFontDatabase {
-  // QFontDatabase()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFontDatabaseC1Ev
-    // invoke: void QFontDatabase()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN13QFontDatabaseC2Ev()
-    return &QFontDatabase{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "QFontDatabase", args)
-  }
-
-  return nil // QFontDatabase{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qfontdatabase.h:126
+// index:0
+// QList<int> smoothSizes(const class QString &, const class QString &)
+func (this *QFontDatabase) SmoothSizes(family unsafe.Pointer, style unsafe.Pointer) {
+	// 0: (, const QString & family, const QString & style), (family, style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase11smoothSizesERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, family, style)
+	gopp.ErrPrint(err, rv)
 }
 
-// styleString(const class QFontInfo &)
-func (this *QFontDatabase) Stylestring(args ...interface{}) (ret interface{}) {
-  // styleString(const class QFontInfo &)
-  // styleString(const class QFont &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QFontInfo{}) // "const QFontInfo &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QFont{}) // "const QFont &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFontDatabase11styleStringERK9QFontInfo
-    // invoke: QString styleString(const class QFontInfo &)
-    var arg0 = args[0].(*QFontInfo).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN13QFontDatabase11styleStringERK9QFontInfo(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN13QFontDatabase11styleStringERK5QFont
-    // invoke: QString styleString(const class QFont &)
-    var arg0 = args[0].(*QFont).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN13QFontDatabase11styleStringERK5QFont(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "styleString", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:127
+// index:0
+// QString styleString(const class QFont &)
+func (this *QFontDatabase) StyleString(font unsafe.Pointer) {
+	// 0: (, const QFont & font), (font)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK5QFont", ffiqt.FFI_TYPE_VOID, this.cthis, font)
+	gopp.ErrPrint(err, rv)
 }
 
-// italic(const class QString &, const class QString &)
-func (this *QFontDatabase) Italic(args ...interface{}) (ret interface{}) {
-  // italic(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase6italicERK7QStringS2_
-    // invoke: bool italic(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QFontDatabase6italicERK7QStringS2_(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "italic", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:128
+// index:1
+// QString styleString(const class QFontInfo &)
+func (this *QFontDatabase) StyleString_1(fontInfo unsafe.Pointer) {
+	// 1: (, const QFontInfo & fontInfo), (fontInfo)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK9QFontInfo", ffiqt.FFI_TYPE_VOID, this.cthis, fontInfo)
+	gopp.ErrPrint(err, rv)
 }
 
-// styles(const class QString &)
-func (this *QFontDatabase) Styles(args ...interface{}) () {
-  // styles(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase6stylesERK7QString
-    // invoke: QStringList styles(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK13QFontDatabase6stylesERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "styles", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:130
+// index:0
+// QFont font(const class QString &, const class QString &, int)
+func (this *QFontDatabase) Font(family unsafe.Pointer, style unsafe.Pointer, pointSize int) {
+	// 0: (, const QString & family, const QString & style, int pointSize), (family, style, &pointSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase4fontERK7QStringS2_i", ffiqt.FFI_TYPE_VOID, this.cthis, family, style, &pointSize)
+	gopp.ErrPrint(err, rv)
 }
 
-// isSmoothlyScalable(const class QString &, const class QString &)
-func (this *QFontDatabase) Issmoothlyscalable(args ...interface{}) (ret interface{}) {
-  // isSmoothlyScalable(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_
-    // invoke: bool isSmoothlyScalable(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "isSmoothlyScalable", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:132
+// index:0
+// bool isBitmapScalable(const class QString &, const class QString &)
+func (this *QFontDatabase) IsBitmapScalable(family unsafe.Pointer, style unsafe.Pointer) {
+	// 0: (, const QString & family, const QString & style), (family, style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, family, style)
+	gopp.ErrPrint(err, rv)
 }
 
-// bold(const class QString &, const class QString &)
-func (this *QFontDatabase) Bold(args ...interface{}) (ret interface{}) {
-  // bold(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase4boldERK7QStringS2_
-    // invoke: bool bold(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QFontDatabase4boldERK7QStringS2_(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "bold", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:133
+// index:0
+// bool isSmoothlyScalable(const class QString &, const class QString &)
+func (this *QFontDatabase) IsSmoothlyScalable(family unsafe.Pointer, style unsafe.Pointer) {
+	// 0: (, const QString & family, const QString & style), (family, style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, family, style)
+	gopp.ErrPrint(err, rv)
 }
 
-// isScalable(const class QString &, const class QString &)
-func (this *QFontDatabase) Isscalable(args ...interface{}) (ret interface{}) {
-  // isScalable(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase10isScalableERK7QStringS2_
-    // invoke: bool isScalable(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QFontDatabase10isScalableERK7QStringS2_(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "isScalable", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:134
+// index:0
+// bool isScalable(const class QString &, const class QString &)
+func (this *QFontDatabase) IsScalable(family unsafe.Pointer, style unsafe.Pointer) {
+	// 0: (, const QString & family, const QString & style), (family, style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase10isScalableERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, family, style)
+	gopp.ErrPrint(err, rv)
 }
 
-// addApplicationFont(const class QString &)
-func (this *QFontDatabase) Addapplicationfont_S(args ...interface{}) (ret interface{}) {
-  // addApplicationFont(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFontDatabase18addApplicationFontERK7QString
-    // invoke: int addApplicationFont(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN13QFontDatabase18addApplicationFontERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "addApplicationFont", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:135
+// index:0
+// bool isFixedPitch(const class QString &, const class QString &)
+func (this *QFontDatabase) IsFixedPitch(family unsafe.Pointer, style unsafe.Pointer) {
+	// 0: (, const QString & family, const QString & style), (family, style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, family, style)
+	gopp.ErrPrint(err, rv)
 }
 
-// isBitmapScalable(const class QString &, const class QString &)
-func (this *QFontDatabase) Isbitmapscalable(args ...interface{}) (ret interface{}) {
-  // isBitmapScalable(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_
-    // invoke: bool isBitmapScalable(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "isBitmapScalable", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:137
+// index:0
+// bool italic(const class QString &, const class QString &)
+func (this *QFontDatabase) Italic(family unsafe.Pointer, style unsafe.Pointer) {
+	// 0: (, const QString & family, const QString & style), (family, style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase6italicERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, family, style)
+	gopp.ErrPrint(err, rv)
 }
 
-// applicationFontFamilies(int)
-func (this *QFontDatabase) Applicationfontfamilies_S(args ...interface{}) () {
-  // applicationFontFamilies(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFontDatabase23applicationFontFamiliesEi
-    // invoke: QStringList applicationFontFamilies(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN13QFontDatabase23applicationFontFamiliesEi(arg0)
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "applicationFontFamilies", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:138
+// index:0
+// bool bold(const class QString &, const class QString &)
+func (this *QFontDatabase) Bold(family unsafe.Pointer, style unsafe.Pointer) {
+	// 0: (, const QString & family, const QString & style), (family, style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase4boldERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, family, style)
+	gopp.ErrPrint(err, rv)
 }
 
-// supportsThreadedFontRendering()
-func (this *QFontDatabase) Supportsthreadedfontrendering_S(args ...interface{}) (ret interface{}) {
-  // supportsThreadedFontRendering()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFontDatabase29supportsThreadedFontRenderingEv
-    // invoke: bool supportsThreadedFontRendering()
-    var ret0 = C.C_ZN13QFontDatabase29supportsThreadedFontRenderingEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "supportsThreadedFontRendering", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:139
+// index:0
+// int weight(const class QString &, const class QString &)
+func (this *QFontDatabase) Weight(family unsafe.Pointer, style unsafe.Pointer) {
+	// 0: (, const QString & family, const QString & style), (family, style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase6weightERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, family, style)
+	gopp.ErrPrint(err, rv)
 }
 
-// smoothSizes(const class QString &, const class QString &)
-func (this *QFontDatabase) Smoothsizes(args ...interface{}) () {
-  // smoothSizes(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFontDatabase11smoothSizesERK7QStringS2_
-    // invoke: QList<int> smoothSizes(const class QString &, const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    C.C_ZN13QFontDatabase11smoothSizesERK7QStringS2_(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "smoothSizes", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:141
+// index:0
+// bool hasFamily(const class QString &)
+func (this *QFontDatabase) HasFamily(family unsafe.Pointer) {
+	// 0: (, const QString & family), (family)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase9hasFamilyERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, family)
+	gopp.ErrPrint(err, rv)
 }
 
-// removeApplicationFont(int)
-func (this *QFontDatabase) Removeapplicationfont_S(args ...interface{}) (ret interface{}) {
-  // removeApplicationFont(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFontDatabase21removeApplicationFontEi
-    // invoke: bool removeApplicationFont(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN13QFontDatabase21removeApplicationFontEi(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "removeApplicationFont", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:142
+// index:0
+// bool isPrivateFamily(const class QString &)
+func (this *QFontDatabase) IsPrivateFamily(family unsafe.Pointer) {
+	// 0: (, const QString & family), (family)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase15isPrivateFamilyERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, family)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasFamily(const class QString &)
-func (this *QFontDatabase) Hasfamily(args ...interface{}) (ret interface{}) {
-  // hasFamily(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QFontDatabase9hasFamilyERK7QString
-    // invoke: bool hasFamily(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QFontDatabase9hasFamilyERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "hasFamily", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:144
+// index:0
+// static
+// QString writingSystemName(enum QFontDatabase::WritingSystem)
+func (this *QFontDatabase) WritingSystemName(writingSystem int) {
+	// 0: (QFontDatabase::WritingSystem writingSystem), (writingSystem)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase17writingSystemNameENS_13WritingSystemE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFontDatabase_WritingSystemName(writingSystem int) {
+	// 0: (QFontDatabase::WritingSystem writingSystem), (writingSystem)
+	var nilthis *QFontDatabase
+	nilthis.WritingSystemName(writingSystem)
 }
 
-// standardSizes()
-func (this *QFontDatabase) Standardsizes_S(args ...interface{}) () {
-  // standardSizes()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFontDatabase13standardSizesEv
-    // invoke: QList<int> standardSizes()
-    C.C_ZN13QFontDatabase13standardSizesEv()
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "standardSizes", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:145
+// index:0
+// static
+// QString writingSystemSample(enum QFontDatabase::WritingSystem)
+func (this *QFontDatabase) WritingSystemSample(writingSystem int) {
+	// 0: (QFontDatabase::WritingSystem writingSystem), (writingSystem)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase19writingSystemSampleENS_13WritingSystemE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFontDatabase_WritingSystemSample(writingSystem int) {
+	// 0: (QFontDatabase::WritingSystem writingSystem), (writingSystem)
+	var nilthis *QFontDatabase
+	nilthis.WritingSystemSample(writingSystem)
 }
 
-// removeAllApplicationFonts()
-func (this *QFontDatabase) Removeallapplicationfonts_S(args ...interface{}) (ret interface{}) {
-  // removeAllApplicationFonts()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QFontDatabase25removeAllApplicationFontsEv
-    // invoke: bool removeAllApplicationFonts()
-    var ret0 = C.C_ZN13QFontDatabase25removeAllApplicationFontsEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFontDatabase", "removeAllApplicationFonts", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qfontdatabase.h:147
+// index:0
+// static
+// int addApplicationFont(const class QString &)
+func (this *QFontDatabase) AddApplicationFont(fileName unsafe.Pointer) {
+	// 0: (const QString & fileName), (fileName)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase18addApplicationFontERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFontDatabase_AddApplicationFont(fileName unsafe.Pointer) {
+	// 0: (const QString & fileName), (fileName)
+	var nilthis *QFontDatabase
+	nilthis.AddApplicationFont(fileName)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qfontdatabase.h:148
+// index:0
+// static
+// int addApplicationFontFromData(const class QByteArray &)
+func (this *QFontDatabase) AddApplicationFontFromData(fontData unsafe.Pointer) {
+	// 0: (const QByteArray & fontData), (fontData)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFontDatabase_AddApplicationFontFromData(fontData unsafe.Pointer) {
+	// 0: (const QByteArray & fontData), (fontData)
+	var nilthis *QFontDatabase
+	nilthis.AddApplicationFontFromData(fontData)
+}
 
+// /usr/include/qt/QtGui/qfontdatabase.h:149
+// index:0
+// static
+// QStringList applicationFontFamilies(int)
+func (this *QFontDatabase) ApplicationFontFamilies(id int) {
+	// 0: (int id), (id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase23applicationFontFamiliesEi", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFontDatabase_ApplicationFontFamilies(id int) {
+	// 0: (int id), (id)
+	var nilthis *QFontDatabase
+	nilthis.ApplicationFontFamilies(id)
+}
+
+// /usr/include/qt/QtGui/qfontdatabase.h:150
+// index:0
+// static
+// bool removeApplicationFont(int)
+func (this *QFontDatabase) RemoveApplicationFont(id int) {
+	// 0: (int id), (id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase21removeApplicationFontEi", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFontDatabase_RemoveApplicationFont(id int) {
+	// 0: (int id), (id)
+	var nilthis *QFontDatabase
+	nilthis.RemoveApplicationFont(id)
+}
+
+// /usr/include/qt/QtGui/qfontdatabase.h:151
+// index:0
+// static
+// bool removeAllApplicationFonts()
+func (this *QFontDatabase) RemoveAllApplicationFonts() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase25removeAllApplicationFontsEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFontDatabase_RemoveAllApplicationFonts() {
+	// 0: (), ()
+	var nilthis *QFontDatabase
+	nilthis.RemoveAllApplicationFonts()
+}
+
+// /usr/include/qt/QtGui/qfontdatabase.h:154
+// index:0
+// static
+// bool supportsThreadedFontRendering()
+func (this *QFontDatabase) SupportsThreadedFontRendering() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase29supportsThreadedFontRenderingEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFontDatabase_SupportsThreadedFontRendering() {
+	// 0: (), ()
+	var nilthis *QFontDatabase
+	nilthis.SupportsThreadedFontRendering()
+}
+
+// /usr/include/qt/QtGui/qfontdatabase.h:157
+// index:0
+// static
+// QFont systemFont(enum QFontDatabase::SystemFont)
+func (this *QFontDatabase) SystemFont(type_ int) {
+	// 0: (QFontDatabase::SystemFont type), (type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase10systemFontENS_10SystemFontE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QFontDatabase_SystemFont(type_ int) {
+	// 0: (QFontDatabase::SystemFont type), (type_)
+	var nilthis *QFontDatabase
+	nilthis.SystemFont(type_)
+}
+
+//  body block end

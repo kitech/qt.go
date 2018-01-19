@@ -21,7 +21,8 @@ widgets:
 	CC=clang CXX=clang++ go install -v -x qtwidgets
 
 eg:
-	CC=clang CXX=clang++ go build -v -x src/eg/coreapp.go
+	# CC=clang CXX=clang++ go build -v -x src/eg/coreapp.go
+	CC=clang CXX=clang++ go build -v -x src/eg/guiapp.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/button.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/eg00.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/eg10.go

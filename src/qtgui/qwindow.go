@@ -1,3119 +1,1239 @@
+//  header block begin
+// /usr/include/qt/QtGui/qwindow.h
+// #include <qwindow.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qwindow.h
-// dst-file: /src/gui/qwindow.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QWindow::~QWindow();
-extern void C_ZN7QWindowD2Ev(void* qthis); // 4
-  // proto:  QWindow * QWindow::transientParent();
-extern void* C_ZNK7QWindow15transientParentEv(void* qthis); // 4
-  // proto:  void QWindow::show();
-extern void C_ZN7QWindow4showEv(void* qthis); // 4
-  // proto:  QObject * QWindow::focusObject();
-extern void* C_ZNK7QWindow11focusObjectEv(void* qthis); // 4
-  // proto:  void QWindow::setScreen(QScreen * screen);
-extern void C_ZN7QWindow9setScreenEP7QScreen(void* qthis, void* arg0); // 4
-  // proto:  QString QWindow::title();
-extern void* C_ZNK7QWindow5titleEv(void* qthis); // 4
-  // proto:  void QWindow::resize(const QSize & newSize);
-extern void C_ZN7QWindow6resizeERK5QSize(void* qthis, void* arg0); // 4
-  // proto:  void QWindow::resize(int w, int h);
-extern void C_ZN7QWindow6resizeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QWindow::setIcon(const QIcon & icon);
-extern void C_ZN7QWindow7setIconERK5QIcon(void* qthis, void* arg0); // 4
-  // proto:  QPlatformWindow * QWindow::handle();
-extern void C_ZNK7QWindow6handleEv(void* qthis); // 4
-  // proto:  QSurfaceFormat QWindow::format();
-extern void* C_ZNK7QWindow6formatEv(void* qthis); // 4
-  // proto:  void QWindow::setGeometry(int posx, int posy, int w, int h);
-extern void C_ZN7QWindow11setGeometryEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
-  // proto:  void QWindow::setGeometry(const QRect & rect);
-extern void C_ZN7QWindow11setGeometryERK5QRect(void* qthis, void* arg0); // 4
-  // proto:  QPoint QWindow::mapFromGlobal(const QPoint & pos);
-extern void* C_ZNK7QWindow13mapFromGlobalERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  QRect QWindow::frameGeometry();
-extern void* C_ZNK7QWindow13frameGeometryEv(void* qthis); // 4
-  // proto:  const QMetaObject * QWindow::metaObject();
-extern void C_ZNK7QWindow10metaObjectEv(void* qthis); // 4
-  // proto:  QSurfaceFormat QWindow::requestedFormat();
-extern void* C_ZNK7QWindow15requestedFormatEv(void* qthis); // 4
-  // proto:  QSize QWindow::minimumSize();
-extern void* C_ZNK7QWindow11minimumSizeEv(void* qthis); // 4
-  // proto:  Qt::WindowState QWindow::windowState();
-extern void C_ZNK7QWindow11windowStateEv(void* qthis); // 4
-  // proto:  void QWindow::setMaximumHeight(int h);
-extern void C_ZN7QWindow16setMaximumHeightEi(void* qthis, int32_t arg0); // 4
-  // proto:  int QWindow::x();
-extern void C_ZNK7QWindow1xEv(void* qthis); // 2
-  // proto:  QSize QWindow::maximumSize();
-extern void* C_ZNK7QWindow11maximumSizeEv(void* qthis); // 4
-  // proto:  int QWindow::minimumHeight();
-extern int32_t C_ZNK7QWindow13minimumHeightEv(void* qthis); // 2
-  // proto:  bool QWindow::close();
-extern bool C_ZN7QWindow5closeEv(void* qthis); // 4
-  // proto:  void QWindow::requestActivate();
-extern void C_ZN7QWindow15requestActivateEv(void* qthis); // 4
-  // proto:  void QWindow::setMaximumSize(const QSize & size);
-extern void C_ZN7QWindow14setMaximumSizeERK5QSize(void* qthis, void* arg0); // 4
-  // proto:  void QWindow::hide();
-extern void C_ZN7QWindow4hideEv(void* qthis); // 4
-  // proto:  void QWindow::setParent(QWindow * parent);
-extern void C_ZN7QWindow9setParentEPS_(void* qthis, void* arg0); // 4
-  // proto:  void QWindow::requestUpdate();
-extern void C_ZN7QWindow13requestUpdateEv(void* qthis); // 4
-  // proto:  void QWindow::setTransientParent(QWindow * parent);
-extern void C_ZN7QWindow18setTransientParentEPS_(void* qthis, void* arg0); // 4
-  // proto:  QWindow * QWindow::parent();
-extern void* C_ZNK7QWindow6parentEv(void* qthis); // 4
-  // proto:  QScreen * QWindow::screen();
-extern void* C_ZNK7QWindow6screenEv(void* qthis); // 4
-  // proto:  QAccessibleInterface * QWindow::accessibleRoot();
-extern void* C_ZNK7QWindow14accessibleRootEv(void* qthis); // 4
-  // proto:  void QWindow::setPosition(int posx, int posy);
-extern void C_ZN7QWindow11setPositionEii(void* qthis, int32_t arg0, int32_t arg1); // 4
-  // proto:  void QWindow::setPosition(const QPoint & pt);
-extern void C_ZN7QWindow11setPositionERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  bool QWindow::isActive();
-extern bool C_ZNK7QWindow8isActiveEv(void* qthis); // 4
-  // proto:  QRect QWindow::geometry();
-extern void* C_ZNK7QWindow8geometryEv(void* qthis); // 4
-  // proto:  bool QWindow::isVisible();
-extern bool C_ZNK7QWindow9isVisibleEv(void* qthis); // 4
-  // proto:  QPoint QWindow::mapToGlobal(const QPoint & pos);
-extern void* C_ZNK7QWindow11mapToGlobalERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  void QWindow::setMaximumWidth(int w);
-extern void C_ZN7QWindow15setMaximumWidthEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QWindow::setMinimumSize(const QSize & size);
-extern void C_ZN7QWindow14setMinimumSizeERK5QSize(void* qthis, void* arg0); // 4
-  // proto:  int QWindow::height();
-extern int32_t C_ZNK7QWindow6heightEv(void* qthis); // 2
-  // proto:  qreal QWindow::devicePixelRatio();
-extern double C_ZNK7QWindow16devicePixelRatioEv(void* qthis); // 4
-  // proto:  void QWindow::setWidth(int arg);
-extern void C_ZN7QWindow8setWidthEi(void* qthis, int32_t arg0); // 4
-  // proto:  QSize QWindow::size();
-extern void* C_ZNK7QWindow4sizeEv(void* qthis); // 2
-  // proto:  void QWindow::unsetCursor();
-extern void C_ZN7QWindow11unsetCursorEv(void* qthis); // 4
-  // proto:  WId QWindow::winId();
-extern void C_ZNK7QWindow5winIdEv(void* qthis); // 4
-  // proto:  void QWindow::raise();
-extern void C_ZN7QWindow5raiseEv(void* qthis); // 4
-  // proto:  void QWindow::setFormat(const QSurfaceFormat & format);
-extern void C_ZN7QWindow9setFormatERK14QSurfaceFormat(void* qthis, void* arg0); // 4
-  // proto:  void QWindow::create();
-extern void C_ZN7QWindow6createEv(void* qthis); // 4
-  // proto:  QSize QWindow::sizeIncrement();
-extern void* C_ZNK7QWindow13sizeIncrementEv(void* qthis); // 4
-  // proto:  int QWindow::width();
-extern int32_t C_ZNK7QWindow5widthEv(void* qthis); // 2
-  // proto:  Qt::WindowType QWindow::type();
-extern void C_ZNK7QWindow4typeEv(void* qthis); // 4
-  // proto:  QSurface::SurfaceType QWindow::surfaceType();
-extern void C_ZNK7QWindow11surfaceTypeEv(void* qthis); // 4
-  // proto:  void QWindow::showMaximized();
-extern void C_ZN7QWindow13showMaximizedEv(void* qthis); // 4
-  // proto:  int QWindow::maximumWidth();
-extern int32_t C_ZNK7QWindow12maximumWidthEv(void* qthis); // 2
-  // proto:  QWindow::Visibility QWindow::visibility();
-extern void C_ZNK7QWindow10visibilityEv(void* qthis); // 4
-  // proto:  void QWindow::setMask(const QRegion & region);
-extern void C_ZN7QWindow7setMaskERK7QRegion(void* qthis, void* arg0); // 4
-  // proto:  void QWindow::setSizeIncrement(const QSize & size);
-extern void C_ZN7QWindow16setSizeIncrementERK5QSize(void* qthis, void* arg0); // 4
-  // proto:  void QWindow::QWindow(QWindow * parent);
-extern void* C_ZN7QWindowC2EPS_(void* arg0); // 3
-  // proto:  void QWindow::QWindow(QScreen * screen);
-extern void* C_ZN7QWindowC2EP7QScreen(void* arg0); // 3
-  // proto:  bool QWindow::setKeyboardGrabEnabled(bool grab);
-extern bool C_ZN7QWindow22setKeyboardGrabEnabledEb(void* qthis, bool arg0); // 4
-  // proto:  bool QWindow::isTopLevel();
-extern bool C_ZNK7QWindow10isTopLevelEv(void* qthis); // 4
-  // proto:  bool QWindow::isModal();
-extern bool C_ZNK7QWindow7isModalEv(void* qthis); // 4
-  // proto:  void QWindow::setMinimumWidth(int w);
-extern void C_ZN7QWindow15setMinimumWidthEi(void* qthis, int32_t arg0); // 4
-  // proto:  QMargins QWindow::frameMargins();
-extern void* C_ZNK7QWindow12frameMarginsEv(void* qthis); // 4
-  // proto:  QCursor QWindow::cursor();
-extern void* C_ZNK7QWindow6cursorEv(void* qthis); // 4
-  // proto:  void QWindow::setVisible(bool visible);
-extern void C_ZN7QWindow10setVisibleEb(void* qthis, bool arg0); // 4
-  // proto:  QIcon QWindow::icon();
-extern void* C_ZNK7QWindow4iconEv(void* qthis); // 4
-  // proto:  Qt::ScreenOrientation QWindow::contentOrientation();
-extern void C_ZNK7QWindow18contentOrientationEv(void* qthis); // 4
-  // proto:  void QWindow::setTitle(const QString & );
-extern void C_ZN7QWindow8setTitleERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QWindow::showMinimized();
-extern void C_ZN7QWindow13showMinimizedEv(void* qthis); // 4
-  // proto:  QSize QWindow::baseSize();
-extern void* C_ZNK7QWindow8baseSizeEv(void* qthis); // 4
-  // proto:  Qt::WindowModality QWindow::modality();
-extern void C_ZNK7QWindow8modalityEv(void* qthis); // 4
-  // proto:  void QWindow::showFullScreen();
-extern void C_ZN7QWindow14showFullScreenEv(void* qthis); // 4
-  // proto:  void QWindow::setMinimumHeight(int h);
-extern void C_ZN7QWindow16setMinimumHeightEi(void* qthis, int32_t arg0); // 4
-  // proto:  QString QWindow::filePath();
-extern void* C_ZNK7QWindow8filePathEv(void* qthis); // 4
-  // proto:  void QWindow::setOpacity(qreal level);
-extern void C_ZN7QWindow10setOpacityEd(void* qthis, double arg0); // 4
-  // proto:  void QWindow::showNormal();
-extern void C_ZN7QWindow10showNormalEv(void* qthis); // 4
-  // proto:  void QWindow::destroy();
-extern void C_ZN7QWindow7destroyEv(void* qthis); // 4
-  // proto:  void QWindow::setBaseSize(const QSize & size);
-extern void C_ZN7QWindow11setBaseSizeERK5QSize(void* qthis, void* arg0); // 4
-  // proto:  qreal QWindow::opacity();
-extern double C_ZNK7QWindow7opacityEv(void* qthis); // 4
-  // proto:  int QWindow::minimumWidth();
-extern int32_t C_ZNK7QWindow12minimumWidthEv(void* qthis); // 2
-  // proto:  int QWindow::maximumHeight();
-extern int32_t C_ZNK7QWindow13maximumHeightEv(void* qthis); // 2
-  // proto:  QPoint QWindow::framePosition();
-extern void* C_ZNK7QWindow13framePositionEv(void* qthis); // 4
-  // proto:  bool QWindow::setMouseGrabEnabled(bool grab);
-extern bool C_ZN7QWindow19setMouseGrabEnabledEb(void* qthis, bool arg0); // 4
-  // proto:  void QWindow::alert(int msec);
-extern void C_ZN7QWindow5alertEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QWindow::setX(int arg);
-extern void C_ZN7QWindow4setXEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QWindow::setY(int arg);
-extern void C_ZN7QWindow4setYEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QWindow::setCursor(const QCursor & );
-extern void C_ZN7QWindow9setCursorERK7QCursor(void* qthis, void* arg0); // 4
-  // proto:  void QWindow::setHeight(int arg);
-extern void C_ZN7QWindow9setHeightEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QWindow::lower();
-extern void C_ZN7QWindow5lowerEv(void* qthis); // 4
-  // proto:  void QWindow::setFilePath(const QString & filePath);
-extern void C_ZN7QWindow11setFilePathERK7QString(void* qthis, void* arg0); // 4
-  // proto:  bool QWindow::isExposed();
-extern bool C_ZNK7QWindow9isExposedEv(void* qthis); // 4
-  // proto:  QRegion QWindow::mask();
-extern void* C_ZNK7QWindow4maskEv(void* qthis); // 4
-  // proto:  Qt::WindowFlags QWindow::flags();
-extern void C_ZNK7QWindow5flagsEv(void* qthis); // 4
-  // proto:  void QWindow::setFramePosition(const QPoint & point);
-extern void C_ZN7QWindow16setFramePositionERK6QPoint(void* qthis, void* arg0); // 4
-  // proto:  int QWindow::y();
-extern void C_ZNK7QWindow1yEv(void* qthis); // 2
-  // proto:  QPoint QWindow::position();
-extern void* C_ZNK7QWindow8positionEv(void* qthis); // 2
+// extern C begin: 18
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QWindow)=1
+//  ext block end
+
+//  body block begin
 type QWindow struct {
-  /*qbase*/ qtcore.QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _modalityChanged QWindow_modalityChanged_signal;
-//  _activeChanged QWindow_activeChanged_signal;
-//  _heightChanged QWindow_heightChanged_signal;
-//  _contentOrientationChanged QWindow_contentOrientationChanged_signal;
-//  _minimumWidthChanged QWindow_minimumWidthChanged_signal;
-//  _opacityChanged QWindow_opacityChanged_signal;
-//  _visibleChanged QWindow_visibleChanged_signal;
-//  _screenChanged QWindow_screenChanged_signal;
-//  _maximumHeightChanged QWindow_maximumHeightChanged_signal;
-//  _yChanged QWindow_yChanged_signal;
-//  _widthChanged QWindow_widthChanged_signal;
-//  _windowStateChanged QWindow_windowStateChanged_signal;
-//  _windowTitleChanged QWindow_windowTitleChanged_signal;
-//  _visibilityChanged QWindow_visibilityChanged_signal;
-//  _minimumHeightChanged QWindow_minimumHeightChanged_signal;
-//  _xChanged QWindow_xChanged_signal;
-//  _focusObjectChanged QWindow_focusObjectChanged_signal;
-//  _maximumWidthChanged QWindow_maximumWidthChanged_signal;
-}
-
-// ~QWindow()
-func (this *QWindow) Freeqwindow(args ...interface{}) () {
-  // ~QWindow()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindowD0Ev
-    // invoke: void ~QWindow()
-    C.C_ZN7QWindowD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "~QWindow", args)
-  }
-
-  return
-}
-
-// transientParent()
-func (this *QWindow) Transientparent(args ...interface{}) (ret interface{}) {
-  // transientParent()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow15transientParentEv
-    // invoke: QWindow * transientParent()
-    var ret0 = C.C_ZNK7QWindow15transientParentEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "transientParent", args)
-  }
-
-  return
-}
-
-// show()
-func (this *QWindow) Show(args ...interface{}) () {
-  // show()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow4showEv
-    // invoke: void show()
-    C.C_ZN7QWindow4showEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "show", args)
-  }
-
-  return
-}
-
-// focusObject()
-func (this *QWindow) Focusobject(args ...interface{}) (ret interface{}) {
-  // focusObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow11focusObjectEv
-    // invoke: QObject * focusObject()
-    var ret0 = C.C_ZNK7QWindow11focusObjectEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "focusObject", args)
-  }
-
-  return
-}
-
-// setScreen(class QScreen *)
-func (this *QWindow) Setscreen(args ...interface{}) () {
-  // setScreen(class QScreen *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QScreen{}) // "QScreen *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow9setScreenEP7QScreen
-    // invoke: void setScreen(class QScreen *)
-    var arg0 = args[0].(*QScreen).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow9setScreenEP7QScreen(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setScreen", args)
-  }
-
-  return
-}
-
-// title()
-func (this *QWindow) Title(args ...interface{}) (ret interface{}) {
-  // title()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow5titleEv
-    // invoke: QString title()
-    var ret0 = C.C_ZNK7QWindow5titleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "title", args)
-  }
-
-  return
-}
-
-// resize(const class QSize &)
-func (this *QWindow) Resize(args ...interface{}) () {
-  // resize(const class QSize &)
-  // resize(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow6resizeERK5QSize
-    // invoke: void resize(const class QSize &)
-    var arg0 = args[0].(*qtcore.QSize).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow6resizeERK5QSize(this.Qclsinst, arg0)
-  case 1:
-    // invoke: _ZN7QWindow6resizeEii
-    // invoke: void resize(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN7QWindow6resizeEii(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QWindow", "resize", args)
-  }
-
-  return
-}
-
-// setIcon(const class QIcon &)
-func (this *QWindow) Seticon(args ...interface{}) () {
-  // setIcon(const class QIcon &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QIcon{}) // "const QIcon &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow7setIconERK5QIcon
-    // invoke: void setIcon(const class QIcon &)
-    var arg0 = args[0].(*QIcon).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow7setIconERK5QIcon(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setIcon", args)
-  }
-
-  return
-}
-
-// handle()
-func (this *QWindow) Handle(args ...interface{}) () {
-  // handle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow6handleEv
-    // invoke: QPlatformWindow * handle()
-    C.C_ZNK7QWindow6handleEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "handle", args)
-  }
-
-  return
-}
-
-// format()
-func (this *QWindow) Format(args ...interface{}) (ret interface{}) {
-  // format()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow6formatEv
-    // invoke: QSurfaceFormat format()
-    var ret0 = C.C_ZNK7QWindow6formatEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QSurfaceFormat{}) // "QSurfaceFormat"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "format", args)
-  }
-
-  return
-}
-
-// setGeometry(int, int, int, int)
-func (this *QWindow) Setgeometry(args ...interface{}) () {
-  // setGeometry(int, int, int, int)
-  // setGeometry(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QRect{}) // "const QRect &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow11setGeometryEiiii
-    // invoke: void setGeometry(int, int, int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg3)}
-    C.C_ZN7QWindow11setGeometryEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
-  case 1:
-    // invoke: _ZN7QWindow11setGeometryERK5QRect
-    // invoke: void setGeometry(const class QRect &)
-    var arg0 = args[0].(*qtcore.QRect).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow11setGeometryERK5QRect(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setGeometry", args)
-  }
-
-  return
-}
-
-// mapFromGlobal(const class QPoint &)
-func (this *QWindow) Mapfromglobal(args ...interface{}) (ret interface{}) {
-  // mapFromGlobal(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow13mapFromGlobalERK6QPoint
-    // invoke: QPoint mapFromGlobal(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QWindow13mapFromGlobalERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "mapFromGlobal", args)
-  }
-
-  return
-}
-
-// frameGeometry()
-func (this *QWindow) Framegeometry(args ...interface{}) (ret interface{}) {
-  // frameGeometry()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow13frameGeometryEv
-    // invoke: QRect frameGeometry()
-    var ret0 = C.C_ZNK7QWindow13frameGeometryEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "frameGeometry", args)
-  }
-
-  return
-}
-
-// metaObject()
-func (this *QWindow) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK7QWindow10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "metaObject", args)
-  }
-
-  return
-}
-
-// requestedFormat()
-func (this *QWindow) Requestedformat(args ...interface{}) (ret interface{}) {
-  // requestedFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow15requestedFormatEv
-    // invoke: QSurfaceFormat requestedFormat()
-    var ret0 = C.C_ZNK7QWindow15requestedFormatEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QSurfaceFormat{}) // "QSurfaceFormat"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "requestedFormat", args)
-  }
-
-  return
-}
-
-// minimumSize()
-func (this *QWindow) Minimumsize(args ...interface{}) (ret interface{}) {
-  // minimumSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow11minimumSizeEv
-    // invoke: QSize minimumSize()
-    var ret0 = C.C_ZNK7QWindow11minimumSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "minimumSize", args)
-  }
-
-  return
-}
-
-// windowState()
-func (this *QWindow) Windowstate(args ...interface{}) () {
-  // windowState()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow11windowStateEv
-    // invoke: Qt::WindowState windowState()
-    C.C_ZNK7QWindow11windowStateEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "windowState", args)
-  }
-
-  return
-}
-
-// setMaximumHeight(int)
-func (this *QWindow) Setmaximumheight(args ...interface{}) () {
-  // setMaximumHeight(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow16setMaximumHeightEi
-    // invoke: void setMaximumHeight(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow16setMaximumHeightEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setMaximumHeight", args)
-  }
-
-  return
-}
-
-// x()
-func (this *QWindow) X(args ...interface{}) () {
-  // x()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow1xEv
-    // invoke: int x()
-    C.C_ZNK7QWindow1xEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "x", args)
-  }
-
-  return
-}
-
-// maximumSize()
-func (this *QWindow) Maximumsize(args ...interface{}) (ret interface{}) {
-  // maximumSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow11maximumSizeEv
-    // invoke: QSize maximumSize()
-    var ret0 = C.C_ZNK7QWindow11maximumSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "maximumSize", args)
-  }
-
-  return
-}
-
-// minimumHeight()
-func (this *QWindow) Minimumheight(args ...interface{}) (ret interface{}) {
-  // minimumHeight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow13minimumHeightEv
-    // invoke: int minimumHeight()
-    var ret0 = C.C_ZNK7QWindow13minimumHeightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "minimumHeight", args)
-  }
-
-  return
-}
-
-// close()
-func (this *QWindow) Close(args ...interface{}) (ret interface{}) {
-  // close()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow5closeEv
-    // invoke: bool close()
-    var ret0 = C.C_ZN7QWindow5closeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "close", args)
-  }
-
-  return
-}
-
-// requestActivate()
-func (this *QWindow) Requestactivate(args ...interface{}) () {
-  // requestActivate()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow15requestActivateEv
-    // invoke: void requestActivate()
-    C.C_ZN7QWindow15requestActivateEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "requestActivate", args)
-  }
-
-  return
-}
-
-// setMaximumSize(const class QSize &)
-func (this *QWindow) Setmaximumsize(args ...interface{}) () {
-  // setMaximumSize(const class QSize &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow14setMaximumSizeERK5QSize
-    // invoke: void setMaximumSize(const class QSize &)
-    var arg0 = args[0].(*qtcore.QSize).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow14setMaximumSizeERK5QSize(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setMaximumSize", args)
-  }
-
-  return
-}
-
-// hide()
-func (this *QWindow) Hide(args ...interface{}) () {
-  // hide()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow4hideEv
-    // invoke: void hide()
-    C.C_ZN7QWindow4hideEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "hide", args)
-  }
-
-  return
-}
-
-// setParent(class QWindow *)
-func (this *QWindow) Setparent(args ...interface{}) () {
-  // setParent(class QWindow *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWindow{}) // "QWindow *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow9setParentEPS_
-    // invoke: void setParent(class QWindow *)
-    var arg0 = args[0].(*QWindow).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow9setParentEPS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setParent", args)
-  }
-
-  return
-}
-
-// requestUpdate()
-func (this *QWindow) Requestupdate(args ...interface{}) () {
-  // requestUpdate()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow13requestUpdateEv
-    // invoke: void requestUpdate()
-    C.C_ZN7QWindow13requestUpdateEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "requestUpdate", args)
-  }
-
-  return
-}
-
-// setTransientParent(class QWindow *)
-func (this *QWindow) Settransientparent(args ...interface{}) () {
-  // setTransientParent(class QWindow *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWindow{}) // "QWindow *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow18setTransientParentEPS_
-    // invoke: void setTransientParent(class QWindow *)
-    var arg0 = args[0].(*QWindow).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow18setTransientParentEPS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setTransientParent", args)
-  }
-
-  return
-}
-
-// parent()
-func (this *QWindow) Parent(args ...interface{}) (ret interface{}) {
-  // parent()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow6parentEv
-    // invoke: QWindow * parent()
-    var ret0 = C.C_ZNK7QWindow6parentEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "parent", args)
-  }
-
-  return
-}
-
-// screen()
-func (this *QWindow) Screen(args ...interface{}) (ret interface{}) {
-  // screen()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow6screenEv
-    // invoke: QScreen * screen()
-    var ret0 = C.C_ZNK7QWindow6screenEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QScreen{}) // "QScreen *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "screen", args)
-  }
-
-  return
-}
-
-// accessibleRoot()
-func (this *QWindow) Accessibleroot(args ...interface{}) (ret interface{}) {
-  // accessibleRoot()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow14accessibleRootEv
-    // invoke: QAccessibleInterface * accessibleRoot()
-    var ret0 = C.C_ZNK7QWindow14accessibleRootEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "accessibleRoot", args)
-  }
-
-  return
-}
-
-// setPosition(int, int)
-func (this *QWindow) Setposition(args ...interface{}) () {
-  // setPosition(int, int)
-  // setPosition(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow11setPositionEii
-    // invoke: void setPosition(int, int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN7QWindow11setPositionEii(this.Qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZN7QWindow11setPositionERK6QPoint
-    // invoke: void setPosition(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow11setPositionERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setPosition", args)
-  }
-
-  return
-}
-
-// isActive()
-func (this *QWindow) Isactive(args ...interface{}) (ret interface{}) {
-  // isActive()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow8isActiveEv
-    // invoke: bool isActive()
-    var ret0 = C.C_ZNK7QWindow8isActiveEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "isActive", args)
-  }
-
-  return
-}
-
-// geometry()
-func (this *QWindow) Geometry(args ...interface{}) (ret interface{}) {
-  // geometry()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow8geometryEv
-    // invoke: QRect geometry()
-    var ret0 = C.C_ZNK7QWindow8geometryEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "geometry", args)
-  }
-
-  return
-}
-
-// isVisible()
-func (this *QWindow) Isvisible(args ...interface{}) (ret interface{}) {
-  // isVisible()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow9isVisibleEv
-    // invoke: bool isVisible()
-    var ret0 = C.C_ZNK7QWindow9isVisibleEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "isVisible", args)
-  }
-
-  return
-}
-
-// mapToGlobal(const class QPoint &)
-func (this *QWindow) Maptoglobal(args ...interface{}) (ret interface{}) {
-  // mapToGlobal(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow11mapToGlobalERK6QPoint
-    // invoke: QPoint mapToGlobal(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QWindow11mapToGlobalERK6QPoint(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "mapToGlobal", args)
-  }
-
-  return
-}
-
-// setMaximumWidth(int)
-func (this *QWindow) Setmaximumwidth(args ...interface{}) () {
-  // setMaximumWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow15setMaximumWidthEi
-    // invoke: void setMaximumWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow15setMaximumWidthEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setMaximumWidth", args)
-  }
-
-  return
-}
-
-// setMinimumSize(const class QSize &)
-func (this *QWindow) Setminimumsize(args ...interface{}) () {
-  // setMinimumSize(const class QSize &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow14setMinimumSizeERK5QSize
-    // invoke: void setMinimumSize(const class QSize &)
-    var arg0 = args[0].(*qtcore.QSize).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow14setMinimumSizeERK5QSize(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setMinimumSize", args)
-  }
-
-  return
-}
-
-// height()
-func (this *QWindow) Height(args ...interface{}) (ret interface{}) {
-  // height()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow6heightEv
-    // invoke: int height()
-    var ret0 = C.C_ZNK7QWindow6heightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "height", args)
-  }
-
-  return
-}
-
-// devicePixelRatio()
-func (this *QWindow) Devicepixelratio(args ...interface{}) (ret interface{}) {
-  // devicePixelRatio()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow16devicePixelRatioEv
-    // invoke: qreal devicePixelRatio()
-    var ret0 = C.C_ZNK7QWindow16devicePixelRatioEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "devicePixelRatio", args)
-  }
-
-  return
-}
-
-// setWidth(int)
-func (this *QWindow) Setwidth(args ...interface{}) () {
-  // setWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow8setWidthEi
-    // invoke: void setWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow8setWidthEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setWidth", args)
-  }
-
-  return
-}
-
-// size()
-func (this *QWindow) Size(args ...interface{}) (ret interface{}) {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow4sizeEv
-    // invoke: QSize size()
-    var ret0 = C.C_ZNK7QWindow4sizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "size", args)
-  }
-
-  return
-}
-
-// unsetCursor()
-func (this *QWindow) Unsetcursor(args ...interface{}) () {
-  // unsetCursor()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow11unsetCursorEv
-    // invoke: void unsetCursor()
-    C.C_ZN7QWindow11unsetCursorEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "unsetCursor", args)
-  }
-
-  return
-}
-
-// winId()
-func (this *QWindow) Winid(args ...interface{}) () {
-  // winId()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow5winIdEv
-    // invoke: WId winId()
-    C.C_ZNK7QWindow5winIdEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "winId", args)
-  }
-
-  return
-}
-
-// raise()
-func (this *QWindow) Raise(args ...interface{}) () {
-  // raise()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow5raiseEv
-    // invoke: void raise()
-    C.C_ZN7QWindow5raiseEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "raise", args)
-  }
-
-  return
-}
-
-// setFormat(const class QSurfaceFormat &)
-func (this *QWindow) Setformat(args ...interface{}) () {
-  // setFormat(const class QSurfaceFormat &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QSurfaceFormat{}) // "const QSurfaceFormat &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow9setFormatERK14QSurfaceFormat
-    // invoke: void setFormat(const class QSurfaceFormat &)
-    var arg0 = args[0].(*QSurfaceFormat).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow9setFormatERK14QSurfaceFormat(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setFormat", args)
-  }
-
-  return
-}
-
-// create()
-func (this *QWindow) Create(args ...interface{}) () {
-  // create()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow6createEv
-    // invoke: void create()
-    C.C_ZN7QWindow6createEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "create", args)
-  }
-
-  return
-}
-
-// sizeIncrement()
-func (this *QWindow) Sizeincrement(args ...interface{}) (ret interface{}) {
-  // sizeIncrement()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow13sizeIncrementEv
-    // invoke: QSize sizeIncrement()
-    var ret0 = C.C_ZNK7QWindow13sizeIncrementEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "sizeIncrement", args)
-  }
-
-  return
-}
-
-// width()
-func (this *QWindow) Width(args ...interface{}) (ret interface{}) {
-  // width()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow5widthEv
-    // invoke: int width()
-    var ret0 = C.C_ZNK7QWindow5widthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "width", args)
-  }
-
-  return
-}
-
-// type()
-func (this *QWindow) Type_(args ...interface{}) () {
-  // type()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow4typeEv
-    // invoke: Qt::WindowType type()
-    C.C_ZNK7QWindow4typeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "type", args)
-  }
-
-  return
-}
-
-// surfaceType()
-func (this *QWindow) Surfacetype(args ...interface{}) () {
-  // surfaceType()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow11surfaceTypeEv
-    // invoke: QSurface::SurfaceType surfaceType()
-    C.C_ZNK7QWindow11surfaceTypeEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "surfaceType", args)
-  }
-
-  return
-}
-
-// showMaximized()
-func (this *QWindow) Showmaximized(args ...interface{}) () {
-  // showMaximized()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow13showMaximizedEv
-    // invoke: void showMaximized()
-    C.C_ZN7QWindow13showMaximizedEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "showMaximized", args)
-  }
-
-  return
-}
-
-// maximumWidth()
-func (this *QWindow) Maximumwidth(args ...interface{}) (ret interface{}) {
-  // maximumWidth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow12maximumWidthEv
-    // invoke: int maximumWidth()
-    var ret0 = C.C_ZNK7QWindow12maximumWidthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "maximumWidth", args)
-  }
-
-  return
-}
-
-// visibility()
-func (this *QWindow) Visibility(args ...interface{}) () {
-  // visibility()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow10visibilityEv
-    // invoke: QWindow::Visibility visibility()
-    C.C_ZNK7QWindow10visibilityEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "visibility", args)
-  }
-
-  return
-}
-
-// setMask(const class QRegion &)
-func (this *QWindow) Setmask(args ...interface{}) () {
-  // setMask(const class QRegion &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow7setMaskERK7QRegion
-    // invoke: void setMask(const class QRegion &)
-    var arg0 = args[0].(*QRegion).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow7setMaskERK7QRegion(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setMask", args)
-  }
-
-  return
-}
-
-// setSizeIncrement(const class QSize &)
-func (this *QWindow) Setsizeincrement(args ...interface{}) () {
-  // setSizeIncrement(const class QSize &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow16setSizeIncrementERK5QSize
-    // invoke: void setSizeIncrement(const class QSize &)
-    var arg0 = args[0].(*qtcore.QSize).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow16setSizeIncrementERK5QSize(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setSizeIncrement", args)
-  }
-
-  return
-}
-
-// QWindow(class QWindow *)
-func NewQWindow(args ...interface{}) *QWindow {
-  // QWindow(class QWindow *)
-  // QWindow(class QScreen *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWindow{}) // "QWindow *"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QScreen{}) // "QScreen *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindowC1EPS_
-    // invoke: void QWindow(class QWindow *)
-    var arg0 = args[0].(*QWindow).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN7QWindowC2EPS_(arg0)
-    return &QWindow{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN7QWindowC1EP7QScreen
-    // invoke: void QWindow(class QScreen *)
-    var arg0 = args[0].(*QScreen).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN7QWindowC2EP7QScreen(arg0)
-    return &QWindow{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QWindow", "QWindow", args)
-  }
-
-  return nil // QWindow{Qclsinst:qthis}
-}
-
-// setKeyboardGrabEnabled(_Bool)
-func (this *QWindow) Setkeyboardgrabenabled(args ...interface{}) (ret interface{}) {
-  // setKeyboardGrabEnabled(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow22setKeyboardGrabEnabledEb
-    // invoke: bool setKeyboardGrabEnabled(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN7QWindow22setKeyboardGrabEnabledEb(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "setKeyboardGrabEnabled", args)
-  }
-
-  return
-}
-
-// isTopLevel()
-func (this *QWindow) Istoplevel(args ...interface{}) (ret interface{}) {
-  // isTopLevel()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow10isTopLevelEv
-    // invoke: bool isTopLevel()
-    var ret0 = C.C_ZNK7QWindow10isTopLevelEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "isTopLevel", args)
-  }
-
-  return
-}
-
-// isModal()
-func (this *QWindow) Ismodal(args ...interface{}) (ret interface{}) {
-  // isModal()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow7isModalEv
-    // invoke: bool isModal()
-    var ret0 = C.C_ZNK7QWindow7isModalEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "isModal", args)
-  }
-
-  return
-}
-
-// setMinimumWidth(int)
-func (this *QWindow) Setminimumwidth(args ...interface{}) () {
-  // setMinimumWidth(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow15setMinimumWidthEi
-    // invoke: void setMinimumWidth(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow15setMinimumWidthEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setMinimumWidth", args)
-  }
-
-  return
-}
-
-// frameMargins()
-func (this *QWindow) Framemargins(args ...interface{}) (ret interface{}) {
-  // frameMargins()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow12frameMarginsEv
-    // invoke: QMargins frameMargins()
-    var ret0 = C.C_ZNK7QWindow12frameMarginsEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QMargins{}) // "QMargins"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "frameMargins", args)
-  }
-
-  return
-}
-
-// cursor()
-func (this *QWindow) Cursor(args ...interface{}) (ret interface{}) {
-  // cursor()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow6cursorEv
-    // invoke: QCursor cursor()
-    var ret0 = C.C_ZNK7QWindow6cursorEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QCursor{}) // "QCursor"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "cursor", args)
-  }
-
-  return
-}
-
-// setVisible(_Bool)
-func (this *QWindow) Setvisible(args ...interface{}) () {
-  // setVisible(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow10setVisibleEb
-    // invoke: void setVisible(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow10setVisibleEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setVisible", args)
-  }
-
-  return
-}
-
-// icon()
-func (this *QWindow) Icon(args ...interface{}) (ret interface{}) {
-  // icon()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow4iconEv
-    // invoke: QIcon icon()
-    var ret0 = C.C_ZNK7QWindow4iconEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "icon", args)
-  }
-
-  return
-}
-
-// contentOrientation()
-func (this *QWindow) Contentorientation(args ...interface{}) () {
-  // contentOrientation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow18contentOrientationEv
-    // invoke: Qt::ScreenOrientation contentOrientation()
-    C.C_ZNK7QWindow18contentOrientationEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "contentOrientation", args)
-  }
-
-  return
-}
-
-// setTitle(const class QString &)
-func (this *QWindow) Settitle(args ...interface{}) () {
-  // setTitle(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow8setTitleERK7QString
-    // invoke: void setTitle(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow8setTitleERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setTitle", args)
-  }
-
-  return
-}
-
-// showMinimized()
-func (this *QWindow) Showminimized(args ...interface{}) () {
-  // showMinimized()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow13showMinimizedEv
-    // invoke: void showMinimized()
-    C.C_ZN7QWindow13showMinimizedEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "showMinimized", args)
-  }
-
-  return
-}
-
-// baseSize()
-func (this *QWindow) Basesize(args ...interface{}) (ret interface{}) {
-  // baseSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow8baseSizeEv
-    // invoke: QSize baseSize()
-    var ret0 = C.C_ZNK7QWindow8baseSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "baseSize", args)
-  }
-
-  return
-}
-
-// modality()
-func (this *QWindow) Modality(args ...interface{}) () {
-  // modality()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow8modalityEv
-    // invoke: Qt::WindowModality modality()
-    C.C_ZNK7QWindow8modalityEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "modality", args)
-  }
-
-  return
-}
-
-// showFullScreen()
-func (this *QWindow) Showfullscreen(args ...interface{}) () {
-  // showFullScreen()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow14showFullScreenEv
-    // invoke: void showFullScreen()
-    C.C_ZN7QWindow14showFullScreenEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "showFullScreen", args)
-  }
-
-  return
-}
-
-// setMinimumHeight(int)
-func (this *QWindow) Setminimumheight(args ...interface{}) () {
-  // setMinimumHeight(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow16setMinimumHeightEi
-    // invoke: void setMinimumHeight(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow16setMinimumHeightEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setMinimumHeight", args)
-  }
-
-  return
-}
-
-// filePath()
-func (this *QWindow) Filepath(args ...interface{}) (ret interface{}) {
-  // filePath()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow8filePathEv
-    // invoke: QString filePath()
-    var ret0 = C.C_ZNK7QWindow8filePathEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "filePath", args)
-  }
-
-  return
-}
-
-// setOpacity(qreal)
-func (this *QWindow) Setopacity(args ...interface{}) () {
-  // setOpacity(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow10setOpacityEd
-    // invoke: void setOpacity(qreal)
-    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow10setOpacityEd(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setOpacity", args)
-  }
-
-  return
-}
-
-// showNormal()
-func (this *QWindow) Shownormal(args ...interface{}) () {
-  // showNormal()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow10showNormalEv
-    // invoke: void showNormal()
-    C.C_ZN7QWindow10showNormalEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "showNormal", args)
-  }
-
-  return
-}
-
-// destroy()
-func (this *QWindow) Destroy(args ...interface{}) () {
-  // destroy()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow7destroyEv
-    // invoke: void destroy()
-    C.C_ZN7QWindow7destroyEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "destroy", args)
-  }
-
-  return
-}
-
-// setBaseSize(const class QSize &)
-func (this *QWindow) Setbasesize(args ...interface{}) () {
-  // setBaseSize(const class QSize &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QSize{}) // "const QSize &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow11setBaseSizeERK5QSize
-    // invoke: void setBaseSize(const class QSize &)
-    var arg0 = args[0].(*qtcore.QSize).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow11setBaseSizeERK5QSize(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setBaseSize", args)
-  }
-
-  return
-}
-
-// opacity()
-func (this *QWindow) Opacity(args ...interface{}) (ret interface{}) {
-  // opacity()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow7opacityEv
-    // invoke: qreal opacity()
-    var ret0 = C.C_ZNK7QWindow7opacityEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.DoubleTy(false) // "qreal"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "opacity", args)
-  }
-
-  return
-}
-
-// minimumWidth()
-func (this *QWindow) Minimumwidth(args ...interface{}) (ret interface{}) {
-  // minimumWidth()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow12minimumWidthEv
-    // invoke: int minimumWidth()
-    var ret0 = C.C_ZNK7QWindow12minimumWidthEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "minimumWidth", args)
-  }
-
-  return
-}
-
-// maximumHeight()
-func (this *QWindow) Maximumheight(args ...interface{}) (ret interface{}) {
-  // maximumHeight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow13maximumHeightEv
-    // invoke: int maximumHeight()
-    var ret0 = C.C_ZNK7QWindow13maximumHeightEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "maximumHeight", args)
-  }
-
-  return
-}
-
-// framePosition()
-func (this *QWindow) Frameposition(args ...interface{}) (ret interface{}) {
-  // framePosition()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow13framePositionEv
-    // invoke: QPoint framePosition()
-    var ret0 = C.C_ZNK7QWindow13framePositionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "framePosition", args)
-  }
-
-  return
-}
-
-// setMouseGrabEnabled(_Bool)
-func (this *QWindow) Setmousegrabenabled(args ...interface{}) (ret interface{}) {
-  // setMouseGrabEnabled(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow19setMouseGrabEnabledEb
-    // invoke: bool setMouseGrabEnabled(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN7QWindow19setMouseGrabEnabledEb(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "setMouseGrabEnabled", args)
-  }
-
-  return
-}
-
-// alert(int)
-func (this *QWindow) Alert(args ...interface{}) () {
-  // alert(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow5alertEi
-    // invoke: void alert(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow5alertEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "alert", args)
-  }
-
-  return
-}
-
-// setX(int)
-func (this *QWindow) Setx(args ...interface{}) () {
-  // setX(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow4setXEi
-    // invoke: void setX(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow4setXEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setX", args)
-  }
-
-  return
-}
-
-// setY(int)
-func (this *QWindow) Sety(args ...interface{}) () {
-  // setY(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow4setYEi
-    // invoke: void setY(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow4setYEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setY", args)
-  }
-
-  return
-}
-
-// setCursor(const class QCursor &)
-func (this *QWindow) Setcursor(args ...interface{}) () {
-  // setCursor(const class QCursor &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QCursor{}) // "const QCursor &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow9setCursorERK7QCursor
-    // invoke: void setCursor(const class QCursor &)
-    var arg0 = args[0].(*QCursor).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow9setCursorERK7QCursor(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setCursor", args)
-  }
-
-  return
-}
-
-// setHeight(int)
-func (this *QWindow) Setheight(args ...interface{}) () {
-  // setHeight(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow9setHeightEi
-    // invoke: void setHeight(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow9setHeightEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setHeight", args)
-  }
-
-  return
-}
-
-// lower()
-func (this *QWindow) Lower(args ...interface{}) () {
-  // lower()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow5lowerEv
-    // invoke: void lower()
-    C.C_ZN7QWindow5lowerEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "lower", args)
-  }
-
-  return
-}
-
-// setFilePath(const class QString &)
-func (this *QWindow) Setfilepath(args ...interface{}) () {
-  // setFilePath(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow11setFilePathERK7QString
-    // invoke: void setFilePath(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow11setFilePathERK7QString(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setFilePath", args)
-  }
-
-  return
-}
-
-// isExposed()
-func (this *QWindow) Isexposed(args ...interface{}) (ret interface{}) {
-  // isExposed()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow9isExposedEv
-    // invoke: bool isExposed()
-    var ret0 = C.C_ZNK7QWindow9isExposedEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "isExposed", args)
-  }
-
-  return
-}
-
-// mask()
-func (this *QWindow) Mask(args ...interface{}) (ret interface{}) {
-  // mask()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow4maskEv
-    // invoke: QRegion mask()
-    var ret0 = C.C_ZNK7QWindow4maskEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "mask", args)
-  }
-
-  return
-}
-
-// flags()
-func (this *QWindow) Flags(args ...interface{}) () {
-  // flags()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow5flagsEv
-    // invoke: Qt::WindowFlags flags()
-    C.C_ZNK7QWindow5flagsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "flags", args)
-  }
-
-  return
-}
-
-// setFramePosition(const class QPoint &)
-func (this *QWindow) Setframeposition(args ...interface{}) () {
-  // setFramePosition(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QPoint{}) // "const QPoint &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QWindow16setFramePositionERK6QPoint
-    // invoke: void setFramePosition(const class QPoint &)
-    var arg0 = args[0].(*qtcore.QPoint).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow16setFramePositionERK6QPoint(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QWindow", "setFramePosition", args)
-  }
-
-  return
-}
-
-// y()
-func (this *QWindow) Y(args ...interface{}) () {
-  // y()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow1yEv
-    // invoke: int y()
-    C.C_ZNK7QWindow1yEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QWindow", "y", args)
-  }
-
-  return
-}
-
-// position()
-func (this *QWindow) Position(args ...interface{}) (ret interface{}) {
-  // position()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QWindow8positionEv
-    // invoke: QPoint position()
-    var ret0 = C.C_ZNK7QWindow8positionEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QPoint{}) // "QPoint"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QWindow", "position", args)
-  }
-
-  return
-}
-
-// <= body block end
-
+	cthis unsafe.Pointer
+}
+
+// /usr/include/qt/QtGui/qwindow.h:97
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QWindow) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:144
+// index:0
+// void QWindow(class QScreen *)
+func NewQWindow(screen unsafe.Pointer) *QWindow {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindowC2EP7QScreen", ffiqt.FFI_TYPE_VOID, cthis, screen)
+	gopp.ErrPrint(err, rv)
+	return &QWindow{cthis}
+}
+
+// /usr/include/qt/QtGui/qwindow.h:145
+// index:1
+// void QWindow(class QWindow *)
+func NewQWindow_1(parent unsafe.Pointer) *QWindow {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindowC2EPS_", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QWindow{cthis}
+}
+
+// /usr/include/qt/QtGui/qwindow.h:146
+// index:0
+// virtual
+// void ~QWindow()
+func DeleteQWindow(*QWindow) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindowD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:148
+// index:0
+// void setSurfaceType(enum QSurface::SurfaceType)
+func (this *QWindow) SetSurfaceType(surfaceType int) {
+	// 0: (, QSurface::SurfaceType surfaceType), (&surfaceType)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14setSurfaceTypeEN8QSurface11SurfaceTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &surfaceType)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:149
+// index:0
+// virtual
+// QSurface::SurfaceType surfaceType()
+func (this *QWindow) SurfaceType() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11surfaceTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:151
+// index:0
+// bool isVisible()
+func (this *QWindow) IsVisible() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow9isVisibleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:153
+// index:0
+// QWindow::Visibility visibility()
+func (this *QWindow) Visibility() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow10visibilityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:154
+// index:0
+// void setVisibility(enum QWindow::Visibility)
+func (this *QWindow) SetVisibility(v int) {
+	// 0: (, QWindow::Visibility v), (&v)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13setVisibilityENS_10VisibilityE", ffiqt.FFI_TYPE_VOID, this.cthis, &v)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:156
+// index:0
+// void create()
+func (this *QWindow) Create() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow6createEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:158
+// index:0
+// WId winId()
+func (this *QWindow) WinId() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow5winIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:160
+// index:0
+// QWindow * parent(enum QWindow::AncestorMode)
+func (this *QWindow) Parent(mode int) {
+	// 0: (, QWindow::AncestorMode mode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6parentENS_12AncestorModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:161
+// index:1
+// QWindow * parent()
+func (this *QWindow) Parent_1() {
+	// 1: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6parentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:162
+// index:0
+// void setParent(class QWindow *)
+func (this *QWindow) SetParent(parent unsafe.Pointer) {
+	// 0: (, QWindow * parent), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9setParentEPS_", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:164
+// index:0
+// bool isTopLevel()
+func (this *QWindow) IsTopLevel() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow10isTopLevelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:166
+// index:0
+// bool isModal()
+func (this *QWindow) IsModal() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow7isModalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:167
+// index:0
+// Qt::WindowModality modality()
+func (this *QWindow) Modality() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8modalityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:168
+// index:0
+// void setModality(Qt::WindowModality)
+func (this *QWindow) SetModality(modality int) {
+	// 0: (, Qt::WindowModality modality), (&modality)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setModalityEN2Qt14WindowModalityE", ffiqt.FFI_TYPE_VOID, this.cthis, &modality)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:170
+// index:0
+// void setFormat(const class QSurfaceFormat &)
+func (this *QWindow) SetFormat(format unsafe.Pointer) {
+	// 0: (, const QSurfaceFormat & format), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9setFormatERK14QSurfaceFormat", ffiqt.FFI_TYPE_VOID, this.cthis, format)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:171
+// index:0
+// virtual
+// QSurfaceFormat format()
+func (this *QWindow) Format() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6formatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:172
+// index:0
+// QSurfaceFormat requestedFormat()
+func (this *QWindow) RequestedFormat() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow15requestedFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:175
+// index:0
+// Qt::WindowFlags flags()
+func (this *QWindow) Flags() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow5flagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:176
+// index:0
+// void setFlag(Qt::WindowType, _Bool)
+func (this *QWindow) SetFlag(arg0 int, on bool) {
+	// 0: (, Qt::WindowType arg0, bool on), (&arg0, &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow7setFlagEN2Qt10WindowTypeEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, &on)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:177
+// index:0
+// Qt::WindowType type()
+func (this *QWindow) Type() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:179
+// index:0
+// QString title()
+func (this *QWindow) Title() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow5titleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:181
+// index:0
+// void setOpacity(qreal)
+func (this *QWindow) SetOpacity(level float64) {
+	// 0: (, qreal level), (&level)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow10setOpacityEd", ffiqt.FFI_TYPE_VOID, this.cthis, &level)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:182
+// index:0
+// qreal opacity()
+func (this *QWindow) Opacity() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow7opacityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:184
+// index:0
+// void setMask(const class QRegion &)
+func (this *QWindow) SetMask(region unsafe.Pointer) {
+	// 0: (, const QRegion & region), (region)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow7setMaskERK7QRegion", ffiqt.FFI_TYPE_VOID, this.cthis, region)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:185
+// index:0
+// QRegion mask()
+func (this *QWindow) Mask() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow4maskEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:187
+// index:0
+// bool isActive()
+func (this *QWindow) IsActive() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8isActiveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:189
+// index:0
+// void reportContentOrientationChange(Qt::ScreenOrientation)
+func (this *QWindow) ReportContentOrientationChange(orientation int) {
+	// 0: (, Qt::ScreenOrientation orientation), (&orientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow30reportContentOrientationChangeEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, this.cthis, &orientation)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:190
+// index:0
+// Qt::ScreenOrientation contentOrientation()
+func (this *QWindow) ContentOrientation() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow18contentOrientationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:192
+// index:0
+// qreal devicePixelRatio()
+func (this *QWindow) DevicePixelRatio() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow16devicePixelRatioEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:194
+// index:0
+// Qt::WindowState windowState()
+func (this *QWindow) WindowState() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11windowStateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:195
+// index:0
+// Qt::WindowStates windowStates()
+func (this *QWindow) WindowStates() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow12windowStatesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:196
+// index:0
+// void setWindowState(Qt::WindowState)
+func (this *QWindow) SetWindowState(state int) {
+	// 0: (, Qt::WindowState state), (&state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14setWindowStateEN2Qt11WindowStateE", ffiqt.FFI_TYPE_VOID, this.cthis, &state)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:199
+// index:0
+// void setTransientParent(class QWindow *)
+func (this *QWindow) SetTransientParent(parent unsafe.Pointer) {
+	// 0: (, QWindow * parent), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow18setTransientParentEPS_", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:200
+// index:0
+// QWindow * transientParent()
+func (this *QWindow) TransientParent() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow15transientParentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:202
+// index:0
+// bool isAncestorOf(const class QWindow *, enum QWindow::AncestorMode)
+func (this *QWindow) IsAncestorOf(child unsafe.Pointer, mode int) {
+	// 0: (, const QWindow * child, QWindow::AncestorMode mode), (child, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow12isAncestorOfEPKS_NS_12AncestorModeE", ffiqt.FFI_TYPE_VOID, this.cthis, child, &mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:204
+// index:0
+// bool isExposed()
+func (this *QWindow) IsExposed() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow9isExposedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:206
+// index:0
+// inline
+// int minimumWidth()
+func (this *QWindow) MinimumWidth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow12minimumWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:207
+// index:0
+// inline
+// int minimumHeight()
+func (this *QWindow) MinimumHeight() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13minimumHeightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:208
+// index:0
+// inline
+// int maximumWidth()
+func (this *QWindow) MaximumWidth() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow12maximumWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:209
+// index:0
+// inline
+// int maximumHeight()
+func (this *QWindow) MaximumHeight() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13maximumHeightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:211
+// index:0
+// QSize minimumSize()
+func (this *QWindow) MinimumSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11minimumSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:212
+// index:0
+// QSize maximumSize()
+func (this *QWindow) MaximumSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11maximumSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:213
+// index:0
+// QSize baseSize()
+func (this *QWindow) BaseSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8baseSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:214
+// index:0
+// QSize sizeIncrement()
+func (this *QWindow) SizeIncrement() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13sizeIncrementEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:216
+// index:0
+// void setMinimumSize(const class QSize &)
+func (this *QWindow) SetMinimumSize(size unsafe.Pointer) {
+	// 0: (, const QSize & size), (size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14setMinimumSizeERK5QSize", ffiqt.FFI_TYPE_VOID, this.cthis, size)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:217
+// index:0
+// void setMaximumSize(const class QSize &)
+func (this *QWindow) SetMaximumSize(size unsafe.Pointer) {
+	// 0: (, const QSize & size), (size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14setMaximumSizeERK5QSize", ffiqt.FFI_TYPE_VOID, this.cthis, size)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:218
+// index:0
+// void setBaseSize(const class QSize &)
+func (this *QWindow) SetBaseSize(size unsafe.Pointer) {
+	// 0: (, const QSize & size), (size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setBaseSizeERK5QSize", ffiqt.FFI_TYPE_VOID, this.cthis, size)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:219
+// index:0
+// void setSizeIncrement(const class QSize &)
+func (this *QWindow) SetSizeIncrement(size unsafe.Pointer) {
+	// 0: (, const QSize & size), (size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow16setSizeIncrementERK5QSize", ffiqt.FFI_TYPE_VOID, this.cthis, size)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:221
+// index:0
+// QRect geometry()
+func (this *QWindow) Geometry() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8geometryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:223
+// index:0
+// QMargins frameMargins()
+func (this *QWindow) FrameMargins() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow12frameMarginsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:224
+// index:0
+// QRect frameGeometry()
+func (this *QWindow) FrameGeometry() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13frameGeometryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:226
+// index:0
+// QPoint framePosition()
+func (this *QWindow) FramePosition() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13framePositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:227
+// index:0
+// void setFramePosition(const class QPoint &)
+func (this *QWindow) SetFramePosition(point unsafe.Pointer) {
+	// 0: (, const QPoint & point), (point)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow16setFramePositionERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, point)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:229
+// index:0
+// inline
+// int width()
+func (this *QWindow) Width() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow5widthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:230
+// index:0
+// inline
+// int height()
+func (this *QWindow) Height() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6heightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:231
+// index:0
+// inline
+// int x()
+func (this *QWindow) X() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow1xEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:232
+// index:0
+// inline
+// int y()
+func (this *QWindow) Y() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow1yEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:234
+// index:0
+// inline virtual
+// QSize size()
+func (this *QWindow) Size() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:235
+// index:0
+// inline
+// QPoint position()
+func (this *QWindow) Position() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8positionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:237
+// index:0
+// void setPosition(const class QPoint &)
+func (this *QWindow) SetPosition(pt unsafe.Pointer) {
+	// 0: (, const QPoint & pt), (pt)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setPositionERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, pt)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:238
+// index:1
+// void setPosition(int, int)
+func (this *QWindow) SetPosition_1(posx int, posy int) {
+	// 1: (, int posx, int posy), (&posx, &posy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setPositionEii", ffiqt.FFI_TYPE_VOID, this.cthis, &posx, &posy)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:240
+// index:0
+// void resize(const class QSize &)
+func (this *QWindow) Resize(newSize unsafe.Pointer) {
+	// 0: (, const QSize & newSize), (newSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow6resizeERK5QSize", ffiqt.FFI_TYPE_VOID, this.cthis, newSize)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:241
+// index:1
+// void resize(int, int)
+func (this *QWindow) Resize_1(w int, h int) {
+	// 1: (, int w, int h), (&w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow6resizeEii", ffiqt.FFI_TYPE_VOID, this.cthis, &w, &h)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:243
+// index:0
+// void setFilePath(const class QString &)
+func (this *QWindow) SetFilePath(filePath unsafe.Pointer) {
+	// 0: (, const QString & filePath), (filePath)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setFilePathERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, filePath)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:244
+// index:0
+// QString filePath()
+func (this *QWindow) FilePath() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8filePathEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:246
+// index:0
+// void setIcon(const class QIcon &)
+func (this *QWindow) SetIcon(icon unsafe.Pointer) {
+	// 0: (, const QIcon & icon), (icon)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow7setIconERK5QIcon", ffiqt.FFI_TYPE_VOID, this.cthis, icon)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:247
+// index:0
+// QIcon icon()
+func (this *QWindow) Icon() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow4iconEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:249
+// index:0
+// void destroy()
+func (this *QWindow) Destroy() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow7destroyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:251
+// index:0
+// QPlatformWindow * handle()
+func (this *QWindow) Handle() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6handleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:253
+// index:0
+// bool setKeyboardGrabEnabled(_Bool)
+func (this *QWindow) SetKeyboardGrabEnabled(grab bool) {
+	// 0: (, bool grab), (&grab)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow22setKeyboardGrabEnabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &grab)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:254
+// index:0
+// bool setMouseGrabEnabled(_Bool)
+func (this *QWindow) SetMouseGrabEnabled(grab bool) {
+	// 0: (, bool grab), (&grab)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow19setMouseGrabEnabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &grab)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:256
+// index:0
+// QScreen * screen()
+func (this *QWindow) Screen() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6screenEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:257
+// index:0
+// void setScreen(class QScreen *)
+func (this *QWindow) SetScreen(screen unsafe.Pointer) {
+	// 0: (, QScreen * screen), (screen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9setScreenEP7QScreen", ffiqt.FFI_TYPE_VOID, this.cthis, screen)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:259
+// index:0
+// virtual
+// QAccessibleInterface * accessibleRoot()
+func (this *QWindow) AccessibleRoot() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow14accessibleRootEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:260
+// index:0
+// virtual
+// QObject * focusObject()
+func (this *QWindow) FocusObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11focusObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:262
+// index:0
+// QPoint mapToGlobal(const class QPoint &)
+func (this *QWindow) MapToGlobal(pos unsafe.Pointer) {
+	// 0: (, const QPoint & pos), (pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11mapToGlobalERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:263
+// index:0
+// QPoint mapFromGlobal(const class QPoint &)
+func (this *QWindow) MapFromGlobal(pos unsafe.Pointer) {
+	// 0: (, const QPoint & pos), (pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13mapFromGlobalERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:266
+// index:0
+// QCursor cursor()
+func (this *QWindow) Cursor() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6cursorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:267
+// index:0
+// void setCursor(const class QCursor &)
+func (this *QWindow) SetCursor(arg0 unsafe.Pointer) {
+	// 0: (, const QCursor & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9setCursorERK7QCursor", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:268
+// index:0
+// void unsetCursor()
+func (this *QWindow) UnsetCursor() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11unsetCursorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:271
+// index:0
+// static
+// QWindow * fromWinId(WId)
+func (this *QWindow) FromWinId(id uint64) {
+	// 0: (WId id), (id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9fromWinIdEy", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QWindow_FromWinId(id uint64) {
+	// 0: (WId id), (id)
+	var nilthis *QWindow
+	nilthis.FromWinId(id)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:274
+// index:0
+// void setVulkanInstance(class QVulkanInstance *)
+func (this *QWindow) SetVulkanInstance(instance unsafe.Pointer) {
+	// 0: (, QVulkanInstance * instance), (instance)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow17setVulkanInstanceEP15QVulkanInstance", ffiqt.FFI_TYPE_VOID, this.cthis, instance)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:275
+// index:0
+// QVulkanInstance * vulkanInstance()
+func (this *QWindow) VulkanInstance() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow14vulkanInstanceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:279
+// index:0
+// void requestActivate()
+func (this *QWindow) RequestActivate() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15requestActivateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:281
+// index:0
+// void setVisible(_Bool)
+func (this *QWindow) SetVisible(visible bool) {
+	// 0: (, bool visible), (&visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow10setVisibleEb", ffiqt.FFI_TYPE_VOID, this.cthis, &visible)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:283
+// index:0
+// void show()
+func (this *QWindow) Show() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow4showEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:284
+// index:0
+// void hide()
+func (this *QWindow) Hide() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow4hideEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:286
+// index:0
+// void showMinimized()
+func (this *QWindow) ShowMinimized() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13showMinimizedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:287
+// index:0
+// void showMaximized()
+func (this *QWindow) ShowMaximized() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13showMaximizedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:288
+// index:0
+// void showFullScreen()
+func (this *QWindow) ShowFullScreen() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14showFullScreenEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:289
+// index:0
+// void showNormal()
+func (this *QWindow) ShowNormal() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow10showNormalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:291
+// index:0
+// bool close()
+func (this *QWindow) Close() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow5closeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:292
+// index:0
+// void raise()
+func (this *QWindow) Raise() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow5raiseEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:293
+// index:0
+// void lower()
+func (this *QWindow) Lower() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow5lowerEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:295
+// index:0
+// void setTitle(const class QString &)
+func (this *QWindow) SetTitle(arg0 unsafe.Pointer) {
+	// 0: (, const QString & arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow8setTitleERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:297
+// index:0
+// void setX(int)
+func (this *QWindow) SetX(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow4setXEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:298
+// index:0
+// void setY(int)
+func (this *QWindow) SetY(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow4setYEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:299
+// index:0
+// void setWidth(int)
+func (this *QWindow) SetWidth(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow8setWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:300
+// index:0
+// void setHeight(int)
+func (this *QWindow) SetHeight(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9setHeightEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:301
+// index:0
+// void setGeometry(int, int, int, int)
+func (this *QWindow) SetGeometry(posx int, posy int, w int, h int) {
+	// 0: (, int posx, int posy, int w, int h), (&posx, &posy, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setGeometryEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &posx, &posy, &w, &h)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:302
+// index:1
+// void setGeometry(const class QRect &)
+func (this *QWindow) SetGeometry_1(rect unsafe.Pointer) {
+	// 1: (, const QRect & rect), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setGeometryERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:304
+// index:0
+// void setMinimumWidth(int)
+func (this *QWindow) SetMinimumWidth(w int) {
+	// 0: (, int w), (&w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15setMinimumWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &w)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:305
+// index:0
+// void setMinimumHeight(int)
+func (this *QWindow) SetMinimumHeight(h int) {
+	// 0: (, int h), (&h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow16setMinimumHeightEi", ffiqt.FFI_TYPE_VOID, this.cthis, &h)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:306
+// index:0
+// void setMaximumWidth(int)
+func (this *QWindow) SetMaximumWidth(w int) {
+	// 0: (, int w), (&w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15setMaximumWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &w)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:307
+// index:0
+// void setMaximumHeight(int)
+func (this *QWindow) SetMaximumHeight(h int) {
+	// 0: (, int h), (&h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow16setMaximumHeightEi", ffiqt.FFI_TYPE_VOID, this.cthis, &h)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:309
+// index:0
+// void alert(int)
+func (this *QWindow) Alert(msec int) {
+	// 0: (, int msec), (&msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow5alertEi", ffiqt.FFI_TYPE_VOID, this.cthis, &msec)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:311
+// index:0
+// void requestUpdate()
+func (this *QWindow) RequestUpdate() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13requestUpdateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:314
+// index:0
+// void screenChanged(class QScreen *)
+func (this *QWindow) ScreenChanged(screen unsafe.Pointer) {
+	// 0: (, QScreen * screen), (screen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13screenChangedEP7QScreen", ffiqt.FFI_TYPE_VOID, this.cthis, screen)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:315
+// index:0
+// void modalityChanged(Qt::WindowModality)
+func (this *QWindow) ModalityChanged(modality int) {
+	// 0: (, Qt::WindowModality modality), (&modality)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15modalityChangedEN2Qt14WindowModalityE", ffiqt.FFI_TYPE_VOID, this.cthis, &modality)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:316
+// index:0
+// void windowStateChanged(Qt::WindowState)
+func (this *QWindow) WindowStateChanged(windowState int) {
+	// 0: (, Qt::WindowState windowState), (&windowState)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow18windowStateChangedEN2Qt11WindowStateE", ffiqt.FFI_TYPE_VOID, this.cthis, &windowState)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:317
+// index:0
+// void windowTitleChanged(const class QString &)
+func (this *QWindow) WindowTitleChanged(title unsafe.Pointer) {
+	// 0: (, const QString & title), (title)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow18windowTitleChangedERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, title)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:319
+// index:0
+// void xChanged(int)
+func (this *QWindow) XChanged(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow8xChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:320
+// index:0
+// void yChanged(int)
+func (this *QWindow) YChanged(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow8yChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:322
+// index:0
+// void widthChanged(int)
+func (this *QWindow) WidthChanged(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow12widthChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:323
+// index:0
+// void heightChanged(int)
+func (this *QWindow) HeightChanged(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13heightChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:325
+// index:0
+// void minimumWidthChanged(int)
+func (this *QWindow) MinimumWidthChanged(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow19minimumWidthChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:326
+// index:0
+// void minimumHeightChanged(int)
+func (this *QWindow) MinimumHeightChanged(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow20minimumHeightChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:327
+// index:0
+// void maximumWidthChanged(int)
+func (this *QWindow) MaximumWidthChanged(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow19maximumWidthChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:328
+// index:0
+// void maximumHeightChanged(int)
+func (this *QWindow) MaximumHeightChanged(arg int) {
+	// 0: (, int arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow20maximumHeightChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:330
+// index:0
+// void visibleChanged(_Bool)
+func (this *QWindow) VisibleChanged(arg bool) {
+	// 0: (, bool arg), (&arg)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14visibleChangedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:331
+// index:0
+// void visibilityChanged(class QWindow::Visibility)
+func (this *QWindow) VisibilityChanged(visibility int) {
+	// 0: (, QWindow::Visibility visibility), (&visibility)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow17visibilityChangedENS_10VisibilityE", ffiqt.FFI_TYPE_VOID, this.cthis, &visibility)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:332
+// index:0
+// void activeChanged()
+func (this *QWindow) ActiveChanged() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13activeChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:333
+// index:0
+// void contentOrientationChanged(Qt::ScreenOrientation)
+func (this *QWindow) ContentOrientationChanged(orientation int) {
+	// 0: (, Qt::ScreenOrientation orientation), (&orientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow25contentOrientationChangedEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, this.cthis, &orientation)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:335
+// index:0
+// void focusObjectChanged(class QObject *)
+func (this *QWindow) FocusObjectChanged(object unsafe.Pointer) {
+	// 0: (, QObject * object), (object)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow18focusObjectChangedEP7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, object)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:337
+// index:0
+// void opacityChanged(qreal)
+func (this *QWindow) OpacityChanged(opacity float64) {
+	// 0: (, qreal opacity), (&opacity)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14opacityChangedEd", ffiqt.FFI_TYPE_VOID, this.cthis, &opacity)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

@@ -1,264 +1,116 @@
+//  header block begin
+// /usr/include/qt/QtCore/qobjectcleanuphandler.h
+// #include <qobjectcleanuphandler.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qobjectcleanuphandler.h
-// dst-file: /src/core/qobjectcleanuphandler.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  const QMetaObject * QObjectCleanupHandler::metaObject();
-extern void C_ZNK21QObjectCleanupHandler10metaObjectEv(void* qthis); // 4
-  // proto:  void QObjectCleanupHandler::clear();
-extern void C_ZN21QObjectCleanupHandler5clearEv(void* qthis); // 4
-  // proto:  void QObjectCleanupHandler::QObjectCleanupHandler();
-extern void* C_ZN21QObjectCleanupHandlerC2Ev(); // 3
-  // proto:  QObject * QObjectCleanupHandler::add(QObject * object);
-extern void* C_ZN21QObjectCleanupHandler3addEP7QObject(void* qthis, void* arg0); // 4
-  // proto:  bool QObjectCleanupHandler::isEmpty();
-extern bool C_ZNK21QObjectCleanupHandler7isEmptyEv(void* qthis); // 4
-  // proto:  void QObjectCleanupHandler::remove(QObject * object);
-extern void C_ZN21QObjectCleanupHandler6removeEP7QObject(void* qthis, void* arg0); // 4
-  // proto:  void QObjectCleanupHandler::~QObjectCleanupHandler();
-extern void C_ZN21QObjectCleanupHandlerD2Ev(void* qthis); // 4
+// extern C begin: 13
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QObjectCleanupHandler)=1
+//  ext block end
+
+//  body block begin
 type QObjectCleanupHandler struct {
-  /*qbase*/ QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// metaObject()
-func (this *QObjectCleanupHandler) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QObjectCleanupHandler10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK21QObjectCleanupHandler10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QObjectCleanupHandler", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qobjectcleanuphandler.h:50
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QObjectCleanupHandler) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// clear()
-func (this *QObjectCleanupHandler) Clear(args ...interface{}) () {
-  // clear()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QObjectCleanupHandler5clearEv
-    // invoke: void clear()
-    C.C_ZN21QObjectCleanupHandler5clearEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QObjectCleanupHandler", "clear", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qobjectcleanuphandler.h:53
+// index:0
+// void QObjectCleanupHandler()
+func NewQObjectCleanupHandler() *QObjectCleanupHandler {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QObjectCleanupHandler{cthis}
 }
 
-// QObjectCleanupHandler()
-func NewQObjectCleanupHandler(args ...interface{}) *QObjectCleanupHandler {
-  // QObjectCleanupHandler()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QObjectCleanupHandlerC1Ev
-    // invoke: void QObjectCleanupHandler()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN21QObjectCleanupHandlerC2Ev()
-    return &QObjectCleanupHandler{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QObjectCleanupHandler", "QObjectCleanupHandler", args)
-  }
-
-  return nil // QObjectCleanupHandler{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qobjectcleanuphandler.h:54
+// index:0
+// virtual
+// void ~QObjectCleanupHandler()
+func DeleteQObjectCleanupHandler(*QObjectCleanupHandler) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// add(class QObject *)
-func (this *QObjectCleanupHandler) Add(args ...interface{}) (ret interface{}) {
-  // add(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QObjectCleanupHandler3addEP7QObject
-    // invoke: QObject * add(class QObject *)
-    var arg0 = args[0].(*QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN21QObjectCleanupHandler3addEP7QObject(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QObjectCleanupHandler", "add", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qobjectcleanuphandler.h:56
+// index:0
+// QObject * add(class QObject *)
+func (this *QObjectCleanupHandler) Add(object unsafe.Pointer) {
+	// 0: (, QObject * object), (object)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, object)
+	gopp.ErrPrint(err, rv)
 }
 
-// isEmpty()
-func (this *QObjectCleanupHandler) Isempty(args ...interface{}) (ret interface{}) {
-  // isEmpty()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QObjectCleanupHandler7isEmptyEv
-    // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK21QObjectCleanupHandler7isEmptyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QObjectCleanupHandler", "isEmpty", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qobjectcleanuphandler.h:57
+// index:0
+// void remove(class QObject *)
+func (this *QObjectCleanupHandler) Remove(object unsafe.Pointer) {
+	// 0: (, QObject * object), (object)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, object)
+	gopp.ErrPrint(err, rv)
 }
 
-// remove(class QObject *)
-func (this *QObjectCleanupHandler) Remove(args ...interface{}) () {
-  // remove(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QObjectCleanupHandler6removeEP7QObject
-    // invoke: void remove(class QObject *)
-    var arg0 = args[0].(*QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN21QObjectCleanupHandler6removeEP7QObject(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QObjectCleanupHandler", "remove", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qobjectcleanuphandler.h:58
+// index:0
+// bool isEmpty()
+func (this *QObjectCleanupHandler) IsEmpty() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QObjectCleanupHandler()
-func (this *QObjectCleanupHandler) Freeqobjectcleanuphandler(args ...interface{}) () {
-  // ~QObjectCleanupHandler()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN21QObjectCleanupHandlerD0Ev
-    // invoke: void ~QObjectCleanupHandler()
-    C.C_ZN21QObjectCleanupHandlerD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QObjectCleanupHandler", "~QObjectCleanupHandler", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qobjectcleanuphandler.h:59
+// index:0
+// void clear()
+func (this *QObjectCleanupHandler) Clear() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
-
+//  body block end

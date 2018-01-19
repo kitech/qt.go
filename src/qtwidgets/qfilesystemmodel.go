@@ -1,1584 +1,529 @@
+//  header block begin
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h
+// #include <qfilesystemmodel.h>
+// #include <QtWidgets>
 package qtwidgets
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtWidgets/qfilesystemmodel.h
-// dst-file: /src/widgets/qfilesystemmodel.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-import "qtgui"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QFileSystemModel::setNameFilters(const QStringList & filters);
-extern void C_ZN16QFileSystemModel14setNameFiltersERK11QStringList(void* qthis, void* arg0); // 4
-  // proto:  int QFileSystemModel::columnCount(const QModelIndex & parent);
-extern int32_t C_ZNK16QFileSystemModel11columnCountERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QVariant QFileSystemModel::myComputer(int role);
-extern void* C_ZNK16QFileSystemModel10myComputerEi(void* qthis, int32_t arg0); // 4
-  // proto:  QModelIndex QFileSystemModel::mkdir(const QModelIndex & parent, const QString & name);
-extern void* C_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(void* qthis, void* arg0, void* arg1); // 4
-  // proto:  QModelIndex QFileSystemModel::setRootPath(const QString & path);
-extern void* C_ZN16QFileSystemModel11setRootPathERK7QString(void* qthis, void* arg0); // 4
-  // proto:  void QFileSystemModel::~QFileSystemModel();
-extern void C_ZN16QFileSystemModelD2Ev(void* qthis); // 4
-  // proto:  QModelIndex QFileSystemModel::sibling(int row, int column, const QModelIndex & idx);
-extern void* C_ZNK16QFileSystemModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
-  // proto:  void QFileSystemModel::QFileSystemModel(QObject * parent);
-extern void* C_ZN16QFileSystemModelC2EP7QObject(void* arg0); // 3
-  // proto:  qint64 QFileSystemModel::size(const QModelIndex & index);
-extern int64_t C_ZNK16QFileSystemModel4sizeERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QModelIndex QFileSystemModel::index(const QString & path, int column);
-extern void* C_ZNK16QFileSystemModel5indexERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 4
-  // proto:  QModelIndex QFileSystemModel::index(int row, int column, const QModelIndex & parent);
-extern void* C_ZNK16QFileSystemModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
-  // proto:  bool QFileSystemModel::resolveSymlinks();
-extern bool C_ZNK16QFileSystemModel15resolveSymlinksEv(void* qthis); // 4
-  // proto:  bool QFileSystemModel::hasChildren(const QModelIndex & parent);
-extern bool C_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  bool QFileSystemModel::isReadOnly();
-extern bool C_ZNK16QFileSystemModel10isReadOnlyEv(void* qthis); // 4
-  // proto:  bool QFileSystemModel::isDir(const QModelIndex & index);
-extern bool C_ZNK16QFileSystemModel5isDirERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QStringList QFileSystemModel::nameFilters();
-extern void C_ZNK16QFileSystemModel11nameFiltersEv(void* qthis); // 4
-  // proto:  bool QFileSystemModel::rmdir(const QModelIndex & index);
-extern bool C_ZN16QFileSystemModel5rmdirERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QFileInfo QFileSystemModel::fileInfo(const QModelIndex & index);
-extern void* C_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QFile::Permissions QFileSystemModel::permissions(const QModelIndex & index);
-extern void C_ZNK16QFileSystemModel11permissionsERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QString QFileSystemModel::type(const QModelIndex & index);
-extern void* C_ZNK16QFileSystemModel4typeERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  void QFileSystemModel::setNameFilterDisables(bool enable);
-extern void C_ZN16QFileSystemModel21setNameFilterDisablesEb(void* qthis, bool arg0); // 4
-  // proto:  void QFileSystemModel::setIconProvider(QFileIconProvider * provider);
-extern void C_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0); // 4
-  // proto:  bool QFileSystemModel::setData(const QModelIndex & index, const QVariant & value, int role);
-extern bool C_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
-  // proto:  bool QFileSystemModel::canFetchMore(const QModelIndex & parent);
-extern bool C_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QModelIndex QFileSystemModel::parent(const QModelIndex & child);
-extern void* C_ZNK16QFileSystemModel6parentERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QString QFileSystemModel::filePath(const QModelIndex & index);
-extern void* C_ZNK16QFileSystemModel8filePathERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QString QFileSystemModel::fileName(const QModelIndex & index);
-extern void* C_ZNK16QFileSystemModel8fileNameERK11QModelIndex(void* qthis, void* arg0); // 2
-  // proto:  int QFileSystemModel::rowCount(const QModelIndex & parent);
-extern int32_t C_ZNK16QFileSystemModel8rowCountERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QFileIconProvider * QFileSystemModel::iconProvider();
-extern void* C_ZNK16QFileSystemModel12iconProviderEv(void* qthis); // 4
-  // proto:  bool QFileSystemModel::nameFilterDisables();
-extern bool C_ZNK16QFileSystemModel18nameFilterDisablesEv(void* qthis); // 4
-  // proto:  QVariant QFileSystemModel::data(const QModelIndex & index, int role);
-extern void* C_ZNK16QFileSystemModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1); // 4
-  // proto:  QStringList QFileSystemModel::mimeTypes();
-extern void C_ZNK16QFileSystemModel9mimeTypesEv(void* qthis); // 4
-  // proto:  const QMetaObject * QFileSystemModel::metaObject();
-extern void C_ZNK16QFileSystemModel10metaObjectEv(void* qthis); // 4
-  // proto:  void QFileSystemModel::setResolveSymlinks(bool enable);
-extern void C_ZN16QFileSystemModel18setResolveSymlinksEb(void* qthis, bool arg0); // 4
-  // proto:  QString QFileSystemModel::rootPath();
-extern void* C_ZNK16QFileSystemModel8rootPathEv(void* qthis); // 4
-  // proto:  bool QFileSystemModel::remove(const QModelIndex & index);
-extern bool C_ZN16QFileSystemModel6removeERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QDir::Filters QFileSystemModel::filter();
-extern void C_ZNK16QFileSystemModel6filterEv(void* qthis); // 4
-  // proto:  void QFileSystemModel::setReadOnly(bool enable);
-extern void C_ZN16QFileSystemModel11setReadOnlyEb(void* qthis, bool arg0); // 4
-  // proto:  Qt::ItemFlags QFileSystemModel::flags(const QModelIndex & index);
-extern void C_ZNK16QFileSystemModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QDir QFileSystemModel::rootDirectory();
-extern void* C_ZNK16QFileSystemModel13rootDirectoryEv(void* qthis); // 4
-  // proto:  QDateTime QFileSystemModel::lastModified(const QModelIndex & index);
-extern void* C_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  QIcon QFileSystemModel::fileIcon(const QModelIndex & index);
-extern void* C_ZNK16QFileSystemModel8fileIconERK11QModelIndex(void* qthis, void* arg0); // 2
-  // proto:  void QFileSystemModel::fetchMore(const QModelIndex & parent);
-extern void C_ZN16QFileSystemModel9fetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
-  // proto:  Qt::DropActions QFileSystemModel::supportedDropActions();
-extern void C_ZNK16QFileSystemModel20supportedDropActionsEv(void* qthis); // 4
+// extern C begin: 66
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
+import "qtgui"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {qtgui.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
 }
 
-// class sizeof(QFileSystemModel)=1
+//  ext block end
+
+//  body block begin
 type QFileSystemModel struct {
-  /*qbase*/ qtcore.QAbstractItemModel;
-  Qclsinst unsafe.Pointer /* *C.void */;
-//  _rootPathChanged QFileSystemModel_rootPathChanged_signal;
-//  _directoryLoaded QFileSystemModel_directoryLoaded_signal;
-//  _fileRenamed QFileSystemModel_fileRenamed_signal;
+	cthis unsafe.Pointer
 }
 
-// setNameFilters(const class QStringList &)
-func (this *QFileSystemModel) Setnamefilters(args ...interface{}) () {
-  // setNameFilters(const class QStringList &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QStringList{}) // "const QStringList &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModel14setNameFiltersERK11QStringList
-    // invoke: void setNameFilters(const class QStringList &)
-    var arg0 = args[0].(*qtcore.QStringList).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel14setNameFiltersERK11QStringList(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "setNameFilters", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:60
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QFileSystemModel) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// columnCount(const class QModelIndex &)
-func (this *QFileSystemModel) Columncount(args ...interface{}) (ret interface{}) {
-  // columnCount(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel11columnCountERK11QModelIndex
-    // invoke: int columnCount(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel11columnCountERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "columnCount", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:66
+// index:0
+// void rootPathChanged(const class QString &)
+func (this *QFileSystemModel) RootPathChanged(newPath unsafe.Pointer) {
+	// 0: (, const QString & newPath), (newPath)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel15rootPathChangedERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, newPath)
+	gopp.ErrPrint(err, rv)
 }
 
-// myComputer(int)
-func (this *QFileSystemModel) Mycomputer(args ...interface{}) (ret interface{}) {
-  // myComputer(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel10myComputerEi
-    // invoke: QVariant myComputer(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel10myComputerEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QVariant{}) // "QVariant"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "myComputer", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:67
+// index:0
+// void fileRenamed(const class QString &, const class QString &, const class QString &)
+func (this *QFileSystemModel) FileRenamed(path unsafe.Pointer, oldName unsafe.Pointer, newName unsafe.Pointer) {
+	// 0: (, const QString & path, const QString & oldName, const QString & newName), (path, oldName, newName)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_", ffiqt.FFI_TYPE_VOID, this.cthis, path, oldName, newName)
+	gopp.ErrPrint(err, rv)
 }
 
-// mkdir(const class QModelIndex &, const class QString &)
-func (this *QFileSystemModel) Mkdir(args ...interface{}) (ret interface{}) {
-  // mkdir(const class QModelIndex &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString
-    // invoke: QModelIndex mkdir(const class QModelIndex &, const class QString &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "mkdir", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:68
+// index:0
+// void directoryLoaded(const class QString &)
+func (this *QFileSystemModel) DirectoryLoaded(path unsafe.Pointer) {
+	// 0: (, const QString & path), (path)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel15directoryLoadedERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, path)
+	gopp.ErrPrint(err, rv)
 }
 
-// setRootPath(const class QString &)
-func (this *QFileSystemModel) Setrootpath(args ...interface{}) (ret interface{}) {
-  // setRootPath(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModel11setRootPathERK7QString
-    // invoke: QModelIndex setRootPath(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN16QFileSystemModel11setRootPathERK7QString(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "setRootPath", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:78
+// index:0
+// void QFileSystemModel(class QObject *)
+func NewQFileSystemModel(parent unsafe.Pointer) *QFileSystemModel {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModelC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QFileSystemModel{cthis}
 }
 
-// ~QFileSystemModel()
-func (this *QFileSystemModel) Freeqfilesystemmodel(args ...interface{}) () {
-  // ~QFileSystemModel()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModelD0Ev
-    // invoke: void ~QFileSystemModel()
-    C.C_ZN16QFileSystemModelD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "~QFileSystemModel", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:79
+// index:0
+// virtual
+// void ~QFileSystemModel()
+func DeleteQFileSystemModel(*QFileSystemModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModelD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// sibling(int, int, const class QModelIndex &)
-func (this *QFileSystemModel) Sibling(args ...interface{}) (ret interface{}) {
-  // sibling(int, int, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel7siblingEiiRK11QModelIndex
-    // invoke: QModelIndex sibling(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK16QFileSystemModel7siblingEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "sibling", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:81
+// index:0
+// virtual
+// QModelIndex index(int, int, const class QModelIndex &)
+func (this *QFileSystemModel) Index(row int, column int, parent unsafe.Pointer) {
+	// 0: (, int row, int column, const QModelIndex & parent), (&row, &column, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// QFileSystemModel(class QObject *)
-func NewQFileSystemModel(args ...interface{}) *QFileSystemModel {
-  // QFileSystemModel(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModelC1EP7QObject
-    // invoke: void QFileSystemModel(class QObject *)
-    var arg0 = args[0].(*qtcore.QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN16QFileSystemModelC2EP7QObject(arg0)
-    return &QFileSystemModel{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "QFileSystemModel", args)
-  }
-
-  return nil // QFileSystemModel{Qclsinst:qthis}
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:82
+// index:1
+// QModelIndex index(const class QString &, int)
+func (this *QFileSystemModel) Index_1(path unsafe.Pointer, column int) {
+	// 1: (, const QString & path, int column), (path, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel5indexERK7QStringi", ffiqt.FFI_TYPE_VOID, this.cthis, path, &column)
+	gopp.ErrPrint(err, rv)
 }
 
-// size(const class QModelIndex &)
-func (this *QFileSystemModel) Size(args ...interface{}) (ret interface{}) {
-  // size(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel4sizeERK11QModelIndex
-    // invoke: qint64 size(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel4sizeERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int64Ty(false) // "qint64"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "size", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:83
+// index:0
+// virtual
+// QModelIndex parent(const class QModelIndex &)
+func (this *QFileSystemModel) Parent(child unsafe.Pointer) {
+	// 0: (, const QModelIndex & child), (child)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel6parentERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, child)
+	gopp.ErrPrint(err, rv)
 }
 
-// index(const class QString &, int)
-func (this *QFileSystemModel) Index(args ...interface{}) (ret interface{}) {
-  // index(const class QString &, int)
-  // index(int, int, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1][2] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel5indexERK7QStringi
-    // invoke: QModelIndex index(const class QString &, int)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK16QFileSystemModel5indexERK7QStringi(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZNK16QFileSystemModel5indexEiiRK11QModelIndex
-    // invoke: QModelIndex index(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK16QFileSystemModel5indexEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "index", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:85
+// index:0
+// virtual
+// QModelIndex sibling(int, int, const class QModelIndex &)
+func (this *QFileSystemModel) Sibling(row int, column int, idx unsafe.Pointer) {
+	// 0: (, int row, int column, const QModelIndex & idx), (&row, &column, idx)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column, idx)
+	gopp.ErrPrint(err, rv)
 }
 
-// resolveSymlinks()
-func (this *QFileSystemModel) Resolvesymlinks(args ...interface{}) (ret interface{}) {
-  // resolveSymlinks()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel15resolveSymlinksEv
-    // invoke: bool resolveSymlinks()
-    var ret0 = C.C_ZNK16QFileSystemModel15resolveSymlinksEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "resolveSymlinks", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:86
+// index:0
+// virtual
+// bool hasChildren(const class QModelIndex &)
+func (this *QFileSystemModel) HasChildren(parent unsafe.Pointer) {
+	// 0: (, const QModelIndex & parent), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// hasChildren(const class QModelIndex &)
-func (this *QFileSystemModel) Haschildren(args ...interface{}) (ret interface{}) {
-  // hasChildren(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel11hasChildrenERK11QModelIndex
-    // invoke: bool hasChildren(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "hasChildren", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:87
+// index:0
+// virtual
+// bool canFetchMore(const class QModelIndex &)
+func (this *QFileSystemModel) CanFetchMore(parent unsafe.Pointer) {
+	// 0: (, const QModelIndex & parent), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// isReadOnly()
-func (this *QFileSystemModel) Isreadonly(args ...interface{}) (ret interface{}) {
-  // isReadOnly()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel10isReadOnlyEv
-    // invoke: bool isReadOnly()
-    var ret0 = C.C_ZNK16QFileSystemModel10isReadOnlyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "isReadOnly", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:88
+// index:0
+// virtual
+// void fetchMore(const class QModelIndex &)
+func (this *QFileSystemModel) FetchMore(parent unsafe.Pointer) {
+	// 0: (, const QModelIndex & parent), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel9fetchMoreERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// isDir(const class QModelIndex &)
-func (this *QFileSystemModel) Isdir(args ...interface{}) (ret interface{}) {
-  // isDir(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel5isDirERK11QModelIndex
-    // invoke: bool isDir(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel5isDirERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "isDir", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:90
+// index:0
+// virtual
+// int rowCount(const class QModelIndex &)
+func (this *QFileSystemModel) RowCount(parent unsafe.Pointer) {
+	// 0: (, const QModelIndex & parent), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// nameFilters()
-func (this *QFileSystemModel) Namefilters(args ...interface{}) () {
-  // nameFilters()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel11nameFiltersEv
-    // invoke: QStringList nameFilters()
-    C.C_ZNK16QFileSystemModel11nameFiltersEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "nameFilters", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:91
+// index:0
+// virtual
+// int columnCount(const class QModelIndex &)
+func (this *QFileSystemModel) ColumnCount(parent unsafe.Pointer) {
+	// 0: (, const QModelIndex & parent), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel11columnCountERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// rmdir(const class QModelIndex &)
-func (this *QFileSystemModel) Rmdir(args ...interface{}) (ret interface{}) {
-  // rmdir(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModel5rmdirERK11QModelIndex
-    // invoke: bool rmdir(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN16QFileSystemModel5rmdirERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "rmdir", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:93
+// index:0
+// QVariant myComputer(int)
+func (this *QFileSystemModel) MyComputer(role int) {
+	// 0: (, int role), (&role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel10myComputerEi", ffiqt.FFI_TYPE_VOID, this.cthis, &role)
+	gopp.ErrPrint(err, rv)
 }
 
-// fileInfo(const class QModelIndex &)
-func (this *QFileSystemModel) Fileinfo(args ...interface{}) (ret interface{}) {
-  // fileInfo(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel8fileInfoERK11QModelIndex
-    // invoke: QFileInfo fileInfo(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QFileInfo{}) // "QFileInfo"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "fileInfo", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:94
+// index:0
+// virtual
+// QVariant data(const class QModelIndex &, int)
+func (this *QFileSystemModel) Data(index unsafe.Pointer, role int) {
+	// 0: (, const QModelIndex & index, int role), (index, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_VOID, this.cthis, index, &role)
+	gopp.ErrPrint(err, rv)
 }
 
-// permissions(const class QModelIndex &)
-func (this *QFileSystemModel) Permissions(args ...interface{}) () {
-  // permissions(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel11permissionsERK11QModelIndex
-    // invoke: QFile::Permissions permissions(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK16QFileSystemModel11permissionsERK11QModelIndex(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "permissions", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:95
+// index:0
+// virtual
+// bool setData(const class QModelIndex &, const class QVariant &, int)
+func (this *QFileSystemModel) SetData(index unsafe.Pointer, value unsafe.Pointer, role int) {
+	// 0: (, const QModelIndex & index, const QVariant & value, int role), (index, value, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti", ffiqt.FFI_TYPE_VOID, this.cthis, index, value, &role)
+	gopp.ErrPrint(err, rv)
 }
 
-// type(const class QModelIndex &)
-func (this *QFileSystemModel) Type_(args ...interface{}) (ret interface{}) {
-  // type(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel4typeERK11QModelIndex
-    // invoke: QString type(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel4typeERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "type", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:97
+// index:0
+// virtual
+// QVariant headerData(int, Qt::Orientation, int)
+func (this *QFileSystemModel) HeaderData(section int, orientation int, role int) {
+	// 0: (, int section, Qt::Orientation orientation, int role), (&section, &orientation, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel10headerDataEiN2Qt11OrientationEi", ffiqt.FFI_TYPE_VOID, this.cthis, &section, &orientation, &role)
+	gopp.ErrPrint(err, rv)
 }
 
-// setNameFilterDisables(_Bool)
-func (this *QFileSystemModel) Setnamefilterdisables(args ...interface{}) () {
-  // setNameFilterDisables(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModel21setNameFilterDisablesEb
-    // invoke: void setNameFilterDisables(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel21setNameFilterDisablesEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "setNameFilterDisables", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:99
+// index:0
+// virtual
+// Qt::ItemFlags flags(const class QModelIndex &)
+func (this *QFileSystemModel) Flags(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// setIconProvider(class QFileIconProvider *)
-func (this *QFileSystemModel) Seticonprovider(args ...interface{}) () {
-  // setIconProvider(class QFileIconProvider *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QFileIconProvider{}) // "QFileIconProvider *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider
-    // invoke: void setIconProvider(class QFileIconProvider *)
-    var arg0 = args[0].(*QFileIconProvider).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "setIconProvider", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:101
+// index:0
+// virtual
+// void sort(int, Qt::SortOrder)
+func (this *QFileSystemModel) Sort(column int, order int) {
+	// 0: (, int column, Qt::SortOrder order), (&column, &order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel4sortEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_VOID, this.cthis, &column, &order)
+	gopp.ErrPrint(err, rv)
 }
 
-// setData(const class QModelIndex &, const class QVariant &, int)
-func (this *QFileSystemModel) Setdata(args ...interface{}) (ret interface{}) {
-  // setData(const class QModelIndex &, const class QVariant &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  vtys[0][1] = reflect.TypeOf(qtcore.QVariant{}) // "const QVariant &"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti
-    // invoke: bool setData(const class QModelIndex &, const class QVariant &, int)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*qtcore.QVariant).Qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(this.Qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "setData", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:103
+// index:0
+// virtual
+// QStringList mimeTypes()
+func (this *QFileSystemModel) MimeTypes() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel9mimeTypesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// canFetchMore(const class QModelIndex &)
-func (this *QFileSystemModel) Canfetchmore(args ...interface{}) (ret interface{}) {
-  // canFetchMore(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex
-    // invoke: bool canFetchMore(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "canFetchMore", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:105
+// index:0
+// virtual
+// bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
+func (this *QFileSystemModel) DropMimeData(data unsafe.Pointer, action int, row int, column int, parent unsafe.Pointer) {
+	// 0: (, const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent), (data, &action, &row, &column, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, data, &action, &row, &column, parent)
+	gopp.ErrPrint(err, rv)
 }
 
-// parent(const class QModelIndex &)
-func (this *QFileSystemModel) Parent(args ...interface{}) (ret interface{}) {
-  // parent(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel6parentERK11QModelIndex
-    // invoke: QModelIndex parent(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel6parentERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QModelIndex{}) // "QModelIndex"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "parent", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:107
+// index:0
+// virtual
+// Qt::DropActions supportedDropActions()
+func (this *QFileSystemModel) SupportedDropActions() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel20supportedDropActionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// filePath(const class QModelIndex &)
-func (this *QFileSystemModel) Filepath(args ...interface{}) (ret interface{}) {
-  // filePath(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel8filePathERK11QModelIndex
-    // invoke: QString filePath(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel8filePathERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "filePath", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:110
+// index:0
+// QModelIndex setRootPath(const class QString &)
+func (this *QFileSystemModel) SetRootPath(path unsafe.Pointer) {
+	// 0: (, const QString & path), (path)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel11setRootPathERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, path)
+	gopp.ErrPrint(err, rv)
 }
 
-// fileName(const class QModelIndex &)
-func (this *QFileSystemModel) Filename(args ...interface{}) (ret interface{}) {
-  // fileName(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel8fileNameERK11QModelIndex
-    // invoke: QString fileName(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel8fileNameERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "fileName", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:111
+// index:0
+// QString rootPath()
+func (this *QFileSystemModel) RootPath() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel8rootPathEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// rowCount(const class QModelIndex &)
-func (this *QFileSystemModel) Rowcount(args ...interface{}) (ret interface{}) {
-  // rowCount(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel8rowCountERK11QModelIndex
-    // invoke: int rowCount(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel8rowCountERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "rowCount", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:112
+// index:0
+// QDir rootDirectory()
+func (this *QFileSystemModel) RootDirectory() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel13rootDirectoryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// iconProvider()
-func (this *QFileSystemModel) Iconprovider(args ...interface{}) (ret interface{}) {
-  // iconProvider()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel12iconProviderEv
-    // invoke: QFileIconProvider * iconProvider()
-    var ret0 = C.C_ZNK16QFileSystemModel12iconProviderEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QFileIconProvider{}) // "QFileIconProvider *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "iconProvider", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:114
+// index:0
+// void setIconProvider(class QFileIconProvider *)
+func (this *QFileSystemModel) SetIconProvider(provider unsafe.Pointer) {
+	// 0: (, QFileIconProvider * provider), (provider)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider", ffiqt.FFI_TYPE_VOID, this.cthis, provider)
+	gopp.ErrPrint(err, rv)
 }
 
-// nameFilterDisables()
-func (this *QFileSystemModel) Namefilterdisables(args ...interface{}) (ret interface{}) {
-  // nameFilterDisables()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel18nameFilterDisablesEv
-    // invoke: bool nameFilterDisables()
-    var ret0 = C.C_ZNK16QFileSystemModel18nameFilterDisablesEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "nameFilterDisables", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:115
+// index:0
+// QFileIconProvider * iconProvider()
+func (this *QFileSystemModel) IconProvider() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel12iconProviderEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// data(const class QModelIndex &, int)
-func (this *QFileSystemModel) Data(args ...interface{}) (ret interface{}) {
-  // data(const class QModelIndex &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel4dataERK11QModelIndexi
-    // invoke: QVariant data(const class QModelIndex &, int)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK16QFileSystemModel4dataERK11QModelIndexi(this.Qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QVariant{}) // "QVariant"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "data", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:118
+// index:0
+// QDir::Filters filter()
+func (this *QFileSystemModel) Filter() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel6filterEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// mimeTypes()
-func (this *QFileSystemModel) Mimetypes(args ...interface{}) () {
-  // mimeTypes()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel9mimeTypesEv
-    // invoke: QStringList mimeTypes()
-    C.C_ZNK16QFileSystemModel9mimeTypesEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "mimeTypes", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:120
+// index:0
+// void setResolveSymlinks(_Bool)
+func (this *QFileSystemModel) SetResolveSymlinks(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel18setResolveSymlinksEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QFileSystemModel) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK16QFileSystemModel10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:121
+// index:0
+// bool resolveSymlinks()
+func (this *QFileSystemModel) ResolveSymlinks() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel15resolveSymlinksEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setResolveSymlinks(_Bool)
-func (this *QFileSystemModel) Setresolvesymlinks(args ...interface{}) () {
-  // setResolveSymlinks(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModel18setResolveSymlinksEb
-    // invoke: void setResolveSymlinks(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel18setResolveSymlinksEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "setResolveSymlinks", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:123
+// index:0
+// void setReadOnly(_Bool)
+func (this *QFileSystemModel) SetReadOnly(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel11setReadOnlyEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// rootPath()
-func (this *QFileSystemModel) Rootpath(args ...interface{}) (ret interface{}) {
-  // rootPath()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel8rootPathEv
-    // invoke: QString rootPath()
-    var ret0 = C.C_ZNK16QFileSystemModel8rootPathEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "rootPath", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:124
+// index:0
+// bool isReadOnly()
+func (this *QFileSystemModel) IsReadOnly() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel10isReadOnlyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// remove(const class QModelIndex &)
-func (this *QFileSystemModel) Remove(args ...interface{}) (ret interface{}) {
-  // remove(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModel6removeERK11QModelIndex
-    // invoke: bool remove(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN16QFileSystemModel6removeERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "remove", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:126
+// index:0
+// void setNameFilterDisables(_Bool)
+func (this *QFileSystemModel) SetNameFilterDisables(enable bool) {
+	// 0: (, bool enable), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel21setNameFilterDisablesEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	gopp.ErrPrint(err, rv)
 }
 
-// filter()
-func (this *QFileSystemModel) Filter(args ...interface{}) () {
-  // filter()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel6filterEv
-    // invoke: QDir::Filters filter()
-    C.C_ZNK16QFileSystemModel6filterEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "filter", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:127
+// index:0
+// bool nameFilterDisables()
+func (this *QFileSystemModel) NameFilterDisables() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel18nameFilterDisablesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setReadOnly(_Bool)
-func (this *QFileSystemModel) Setreadonly(args ...interface{}) () {
-  // setReadOnly(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModel11setReadOnlyEb
-    // invoke: void setReadOnly(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel11setReadOnlyEb(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "setReadOnly", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:129
+// index:0
+// void setNameFilters(const class QStringList &)
+func (this *QFileSystemModel) SetNameFilters(filters unsafe.Pointer) {
+	// 0: (, const QStringList & filters), (filters)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel14setNameFiltersERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, filters)
+	gopp.ErrPrint(err, rv)
 }
 
-// flags(const class QModelIndex &)
-func (this *QFileSystemModel) Flags(args ...interface{}) () {
-  // flags(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel5flagsERK11QModelIndex
-    // invoke: Qt::ItemFlags flags(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZNK16QFileSystemModel5flagsERK11QModelIndex(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "flags", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:130
+// index:0
+// QStringList nameFilters()
+func (this *QFileSystemModel) NameFilters() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel11nameFiltersEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// rootDirectory()
-func (this *QFileSystemModel) Rootdirectory(args ...interface{}) (ret interface{}) {
-  // rootDirectory()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel13rootDirectoryEv
-    // invoke: QDir rootDirectory()
-    var ret0 = C.C_ZNK16QFileSystemModel13rootDirectoryEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QDir{}) // "QDir"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "rootDirectory", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:132
+// index:0
+// QString filePath(const class QModelIndex &)
+func (this *QFileSystemModel) FilePath(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel8filePathERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// lastModified(const class QModelIndex &)
-func (this *QFileSystemModel) Lastmodified(args ...interface{}) (ret interface{}) {
-  // lastModified(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel12lastModifiedERK11QModelIndex
-    // invoke: QDateTime lastModified(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QDateTime{}) // "QDateTime"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "lastModified", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:133
+// index:0
+// bool isDir(const class QModelIndex &)
+func (this *QFileSystemModel) IsDir(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel5isDirERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// fileIcon(const class QModelIndex &)
-func (this *QFileSystemModel) Fileicon(args ...interface{}) (ret interface{}) {
-  // fileIcon(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel8fileIconERK11QModelIndex
-    // invoke: QIcon fileIcon(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel8fileIconERK11QModelIndex(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtgui.QIcon{}) // "QIcon"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "fileIcon", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:134
+// index:0
+// qint64 size(const class QModelIndex &)
+func (this *QFileSystemModel) Size(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel4sizeERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// fetchMore(const class QModelIndex &)
-func (this *QFileSystemModel) Fetchmore(args ...interface{}) () {
-  // fetchMore(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QModelIndex{}) // "const QModelIndex &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QFileSystemModel9fetchMoreERK11QModelIndex
-    // invoke: void fetchMore(const class QModelIndex &)
-    var arg0 = args[0].(*qtcore.QModelIndex).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel9fetchMoreERK11QModelIndex(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "fetchMore", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:135
+// index:0
+// QString type(const class QModelIndex &)
+func (this *QFileSystemModel) Type(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel4typeERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// supportedDropActions()
-func (this *QFileSystemModel) Supporteddropactions(args ...interface{}) () {
-  // supportedDropActions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QFileSystemModel20supportedDropActionsEv
-    // invoke: Qt::DropActions supportedDropActions()
-    C.C_ZNK16QFileSystemModel20supportedDropActionsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QFileSystemModel", "supportedDropActions", args)
-  }
-
-  return
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:136
+// index:0
+// QDateTime lastModified(const class QModelIndex &)
+func (this *QFileSystemModel) LastModified(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:138
+// index:0
+// QModelIndex mkdir(const class QModelIndex &, const class QString &)
+func (this *QFileSystemModel) Mkdir(parent unsafe.Pointer, name unsafe.Pointer) {
+	// 0: (, const QModelIndex & parent, const QString & name), (parent, name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, parent, name)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:139
+// index:0
+// bool rmdir(const class QModelIndex &)
+func (this *QFileSystemModel) Rmdir(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel5rmdirERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:140
+// index:0
+// inline
+// QString fileName(const class QModelIndex &)
+func (this *QFileSystemModel) FileName(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel8fileNameERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:141
+// index:0
+// inline
+// QIcon fileIcon(const class QModelIndex &)
+func (this *QFileSystemModel) FileIcon(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel8fileIconERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:142
+// index:0
+// QFile::Permissions permissions(const class QModelIndex &)
+func (this *QFileSystemModel) Permissions(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel11permissionsERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:143
+// index:0
+// QFileInfo fileInfo(const class QModelIndex &)
+func (this *QFileSystemModel) FileInfo(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel8fileInfoERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:144
+// index:0
+// bool remove(const class QModelIndex &)
+func (this *QFileSystemModel) Remove(index unsafe.Pointer) {
+	// 0: (, const QModelIndex & index), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel6removeERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

@@ -1,256 +1,205 @@
+//  header block begin
+// /usr/include/qt/QtGui/qpixmapcache.h
+// #include <qpixmapcache.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qpixmapcache.h
-// dst-file: /src/gui/qpixmapcache.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto: static int QPixmapCache::cacheLimit();
-extern int32_t C_ZN12QPixmapCache10cacheLimitEv(); // 4
-  // proto: static void QPixmapCache::clear();
-extern void C_ZN12QPixmapCache5clearEv(); // 4
-  // proto: static void QPixmapCache::remove(const QString & key);
-extern void C_ZN12QPixmapCache6removeERK7QString(void* arg0); // 4
-  // proto: static void QPixmapCache::setCacheLimit(int );
-extern void C_ZN12QPixmapCache13setCacheLimitEi(int32_t arg0); // 4
-  // proto: static QPixmap * QPixmapCache::find(const QString & key);
-extern void* C_ZN12QPixmapCache4findERK7QString(void* arg0); // 4
-  // proto: static bool QPixmapCache::find(const QString & key, QPixmap & pixmap);
-extern bool C_ZN12QPixmapCache4findERK7QStringR7QPixmap(void* arg0, void* arg1); // 4
-  // proto: static bool QPixmapCache::find(const QString & key, QPixmap * pixmap);
-extern bool C_ZN12QPixmapCache4findERK7QStringP7QPixmap(void* arg0, void* arg1); // 4
+// extern C begin: 29
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QPixmapCache)=1
+//  ext block end
+
+//  body block begin
 type QPixmapCache struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// cacheLimit()
-func (this *QPixmapCache) Cachelimit_S(args ...interface{}) (ret interface{}) {
-  // cacheLimit()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QPixmapCache10cacheLimitEv
-    // invoke: int cacheLimit()
-    var ret0 = C.C_ZN12QPixmapCache10cacheLimitEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixmapCache", "cacheLimit", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixmapcache.h:77
+// index:0
+// static
+// int cacheLimit()
+func (this *QPixmapCache) CacheLimit() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache10cacheLimitEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPixmapCache_CacheLimit() {
+	// 0: (), ()
+	var nilthis *QPixmapCache
+	nilthis.CacheLimit()
 }
 
-// clear()
-func (this *QPixmapCache) Clear_S(args ...interface{}) () {
-  // clear()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QPixmapCache5clearEv
-    // invoke: void clear()
-    C.C_ZN12QPixmapCache5clearEv()
-  default:
-    qtrt.ErrorResolve("QPixmapCache", "clear", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixmapcache.h:78
+// index:0
+// static
+// void setCacheLimit(int)
+func (this *QPixmapCache) SetCacheLimit(arg0 int) {
+	// 0: (int arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache13setCacheLimitEi", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPixmapCache_SetCacheLimit(arg0 int) {
+	// 0: (int arg0), (arg0)
+	var nilthis *QPixmapCache
+	nilthis.SetCacheLimit(arg0)
 }
 
-// remove(const class QString &)
-func (this *QPixmapCache) Remove_S(args ...interface{}) () {
-  // remove(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QPixmapCache6removeERK7QString
-    // invoke: void remove(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QPixmapCache6removeERK7QString(arg0)
-  default:
-    qtrt.ErrorResolve("QPixmapCache", "remove", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixmapcache.h:79
+// index:0
+// static
+// QPixmap * find(const class QString &)
+func (this *QPixmapCache) Find(key unsafe.Pointer) {
+	// 0: (const QString & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPixmapCache_Find(key unsafe.Pointer) {
+	// 0: (const QString & key), (key)
+	var nilthis *QPixmapCache
+	nilthis.Find(key)
 }
 
-// setCacheLimit(int)
-func (this *QPixmapCache) Setcachelimit_S(args ...interface{}) () {
-  // setCacheLimit(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QPixmapCache13setCacheLimitEi
-    // invoke: void setCacheLimit(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN12QPixmapCache13setCacheLimitEi(arg0)
-  default:
-    qtrt.ErrorResolve("QPixmapCache", "setCacheLimit", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixmapcache.h:80
+// index:1
+// static
+// bool find(const class QString &, class QPixmap &)
+func (this *QPixmapCache) Find_1(key unsafe.Pointer, pixmap unsafe.Pointer) {
+	// 1: (const QString & key, QPixmap & pixmap), (key, pixmap)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringR7QPixmap", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPixmapCache_Find_1(key unsafe.Pointer, pixmap unsafe.Pointer) {
+	// 1: (const QString & key, QPixmap & pixmap), (key, pixmap)
+	var nilthis *QPixmapCache
+	nilthis.Find_1(key, pixmap)
 }
 
-// find(const class QString &)
-func (this *QPixmapCache) Find_S(args ...interface{}) (ret interface{}) {
-  // find(const class QString &)
-  // find(const class QString &, class QPixmap &)
-  // find(const class QString &, class QPixmap *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[1][1] = reflect.TypeOf(QPixmap{}) // "QPixmap &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(qtcore.QString{}) // "const QString &"
-  vtys[2][1] = reflect.TypeOf(QPixmap{}) // "QPixmap *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QPixmapCache4findERK7QString
-    // invoke: QPixmap * find(const class QString &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QPixmapCache4findERK7QString(arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QPixmap{}) // "QPixmap *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 1:
-    // invoke: _ZN12QPixmapCache4findERK7QStringR7QPixmap
-    // invoke: bool find(const class QString &, class QPixmap &)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QPixmap).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  case 2:
-    // invoke: _ZN12QPixmapCache4findERK7QStringP7QPixmap
-    // invoke: bool find(const class QString &, class QPixmap *)
-    var arg0 = args[0].(*qtcore.QString).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(*QPixmap).Qclsinst
-    if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN12QPixmapCache4findERK7QStringP7QPixmap(arg0, arg1)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPixmapCache", "find", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpixmapcache.h:81
+// index:2
+// static
+// bool find(const class QString &, class QPixmap *)
+func (this *QPixmapCache) Find_2(key unsafe.Pointer, pixmap unsafe.Pointer) {
+	// 2: (const QString & key, QPixmap * pixmap), (key, pixmap)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringP7QPixmap", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPixmapCache_Find_2(key unsafe.Pointer, pixmap unsafe.Pointer) {
+	// 2: (const QString & key, QPixmap * pixmap), (key, pixmap)
+	var nilthis *QPixmapCache
+	nilthis.Find_2(key, pixmap)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qpixmapcache.h:82
+// index:3
+// static
+// bool find(const class QPixmapCache::Key &, class QPixmap *)
+func (this *QPixmapCache) Find_3(key unsafe.Pointer, pixmap unsafe.Pointer) {
+	// 3: (const QPixmapCache::Key & key, QPixmap * pixmap), (key, pixmap)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERKNS_3KeyEP7QPixmap", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPixmapCache_Find_3(key unsafe.Pointer, pixmap unsafe.Pointer) {
+	// 3: (const QPixmapCache::Key & key, QPixmap * pixmap), (key, pixmap)
+	var nilthis *QPixmapCache
+	nilthis.Find_3(key, pixmap)
+}
 
+// /usr/include/qt/QtGui/qpixmapcache.h:85
+// index:0
+// static
+// bool replace(const class QPixmapCache::Key &, const class QPixmap &)
+func (this *QPixmapCache) Replace(key unsafe.Pointer, pixmap unsafe.Pointer) {
+	// 0: (const QPixmapCache::Key & key, const QPixmap & pixmap), (key, pixmap)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache7replaceERKNS_3KeyERK7QPixmap", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPixmapCache_Replace(key unsafe.Pointer, pixmap unsafe.Pointer) {
+	// 0: (const QPixmapCache::Key & key, const QPixmap & pixmap), (key, pixmap)
+	var nilthis *QPixmapCache
+	nilthis.Replace(key, pixmap)
+}
+
+// /usr/include/qt/QtGui/qpixmapcache.h:86
+// index:0
+// static
+// void remove(const class QString &)
+func (this *QPixmapCache) Remove(key unsafe.Pointer) {
+	// 0: (const QString & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache6removeERK7QString", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPixmapCache_Remove(key unsafe.Pointer) {
+	// 0: (const QString & key), (key)
+	var nilthis *QPixmapCache
+	nilthis.Remove(key)
+}
+
+// /usr/include/qt/QtGui/qpixmapcache.h:87
+// index:1
+// static
+// void remove(const class QPixmapCache::Key &)
+func (this *QPixmapCache) Remove_1(key unsafe.Pointer) {
+	// 1: (const QPixmapCache::Key & key), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache6removeERKNS_3KeyE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPixmapCache_Remove_1(key unsafe.Pointer) {
+	// 1: (const QPixmapCache::Key & key), (key)
+	var nilthis *QPixmapCache
+	nilthis.Remove_1(key)
+}
+
+// /usr/include/qt/QtGui/qpixmapcache.h:88
+// index:0
+// static
+// void clear()
+func (this *QPixmapCache) Clear() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache5clearEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPixmapCache_Clear() {
+	// 0: (), ()
+	var nilthis *QPixmapCache
+	nilthis.Clear()
+}
+
+//  body block end

@@ -1,577 +1,404 @@
+//  header block begin
+// /usr/include/qt/QtGui/qpagesize.h
+// #include <qpagesize.h>
+// #include <QtGui>
 package qtgui
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtGui/qpagesize.h
-// dst-file: /src/gui/qpagesize.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-import "qtcore"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  int QPageSize::windowsId();
-extern int32_t C_ZNK9QPageSize9windowsIdEv(void* qthis); // 4
-  // proto:  QSize QPageSize::sizePixels(int resolution);
-extern void* C_ZNK9QPageSize10sizePixelsEi(void* qthis, int32_t arg0); // 4
-  // proto:  QRect QPageSize::rectPixels(int resolution);
-extern void* C_ZNK9QPageSize10rectPixelsEi(void* qthis, int32_t arg0); // 4
-  // proto:  QString QPageSize::name();
-extern void* C_ZNK9QPageSize4nameEv(void* qthis); // 4
-  // proto:  QPageSize::Unit QPageSize::definitionUnits();
-extern void C_ZNK9QPageSize15definitionUnitsEv(void* qthis); // 4
-  // proto:  bool QPageSize::isValid();
-extern bool C_ZNK9QPageSize7isValidEv(void* qthis); // 4
-  // proto:  bool QPageSize::isEquivalentTo(const QPageSize & other);
-extern bool C_ZNK9QPageSize14isEquivalentToERKS_(void* qthis, void* arg0); // 4
-  // proto:  void QPageSize::~QPageSize();
-extern void C_ZN9QPageSizeD2Ev(void* qthis); // 4
-  // proto:  QSize QPageSize::sizePoints();
-extern void* C_ZNK9QPageSize10sizePointsEv(void* qthis); // 4
-  // proto:  void QPageSize::swap(QPageSize & other);
-extern void C_ZN9QPageSize4swapERS_(void* qthis, void* arg0); // 2
-  // proto:  QString QPageSize::key();
-extern void* C_ZNK9QPageSize3keyEv(void* qthis); // 4
-  // proto:  QRect QPageSize::rectPoints();
-extern void* C_ZNK9QPageSize10rectPointsEv(void* qthis); // 4
-  // proto:  void QPageSize::QPageSize(const QPageSize & other);
-extern void* C_ZN9QPageSizeC2ERKS_(void* arg0); // 3
-  // proto:  void QPageSize::QPageSize();
-extern void* C_ZN9QPageSizeC2Ev(); // 3
-  // proto: static QPageSize::PageSizeId QPageSize::id(int windowsId);
-extern void C_ZN9QPageSize2idEi(int32_t arg0); // 4
-  // proto:  QPageSize::PageSizeId QPageSize::id();
-extern void C_ZNK9QPageSize2idEv(void* qthis); // 4
-  // proto:  QSizeF QPageSize::definitionSize();
-extern void* C_ZNK9QPageSize14definitionSizeEv(void* qthis); // 4
+// extern C begin: 4
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
+import "qtcore"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {qtcore.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
 }
 
-// class sizeof(QPageSize)=1
+//  ext block end
+
+//  body block begin
 type QPageSize struct {
-  // qbase: None;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// windowsId()
-func (this *QPageSize) Windowsid(args ...interface{}) (ret interface{}) {
-  // windowsId()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QPageSize9windowsIdEv
-    // invoke: int windowsId()
-    var ret0 = C.C_ZNK9QPageSize9windowsIdEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPageSize", "windowsId", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:230
+// index:0
+// void QPageSize()
+func NewQPageSize() *QPageSize {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	return &QPageSize{cthis}
 }
 
-// sizePixels(int)
-func (this *QPageSize) Sizepixels(args ...interface{}) (ret interface{}) {
-  // sizePixels(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QPageSize10sizePixelsEi
-    // invoke: QSize sizePixels(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QPageSize10sizePixelsEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPageSize", "sizePixels", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:231
+// index:1
+// void QPageSize(enum QPageSize::PageSizeId)
+func NewQPageSize_1(pageSizeId int) *QPageSize {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ENS_10PageSizeIdE", ffiqt.FFI_TYPE_VOID, cthis, &pageSizeId)
+	gopp.ErrPrint(err, rv)
+	return &QPageSize{cthis}
 }
 
-// rectPixels(int)
-func (this *QPageSize) Rectpixels(args ...interface{}) (ret interface{}) {
-  // rectPixels(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QPageSize10rectPixelsEi
-    // invoke: QRect rectPixels(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QPageSize10rectPixelsEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPageSize", "rectPixels", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:232
+// index:2
+// void QPageSize(const class QSize &, const class QString &, enum QPageSize::SizeMatchPolicy)
+func NewQPageSize_2(pointSize unsafe.Pointer, name unsafe.Pointer, matchPolicy int) *QPageSize {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ERK5QSizeRK7QStringNS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_VOID, cthis, pointSize, name, &matchPolicy)
+	gopp.ErrPrint(err, rv)
+	return &QPageSize{cthis}
 }
 
-// name()
-func (this *QPageSize) Name(args ...interface{}) (ret interface{}) {
-  // name()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QPageSize4nameEv
-    // invoke: QString name()
-    var ret0 = C.C_ZNK9QPageSize4nameEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPageSize", "name", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:235
+// index:3
+// void QPageSize(const class QSizeF &, enum QPageSize::Unit, const class QString &, enum QPageSize::SizeMatchPolicy)
+func NewQPageSize_3(size unsafe.Pointer, units int, name unsafe.Pointer, matchPolicy int) *QPageSize {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ERK6QSizeFNS_4UnitERK7QStringNS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_VOID, cthis, size, &units, name, &matchPolicy)
+	gopp.ErrPrint(err, rv)
+	return &QPageSize{cthis}
 }
 
-// definitionUnits()
-func (this *QPageSize) Definitionunits(args ...interface{}) () {
-  // definitionUnits()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QPageSize15definitionUnitsEv
-    // invoke: QPageSize::Unit definitionUnits()
-    C.C_ZNK9QPageSize15definitionUnitsEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPageSize", "definitionUnits", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:243
+// index:0
+// void ~QPageSize()
+func DeleteQPageSize(*QPageSize) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// isValid()
-func (this *QPageSize) Isvalid(args ...interface{}) (ret interface{}) {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QPageSize7isValidEv
-    // invoke: bool isValid()
-    var ret0 = C.C_ZNK9QPageSize7isValidEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPageSize", "isValid", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:246
+// index:0
+// inline
+// void swap(class QPageSize &)
+func (this *QPageSize) Swap(other unsafe.Pointer) {
+	// 0: (, QPageSize & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// isEquivalentTo(const class QPageSize &)
-func (this *QPageSize) Isequivalentto(args ...interface{}) (ret interface{}) {
-  // isEquivalentTo(const class QPageSize &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPageSize{}) // "const QPageSize &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QPageSize14isEquivalentToERKS_
-    // invoke: bool isEquivalentTo(const class QPageSize &)
-    var arg0 = args[0].(*QPageSize).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QPageSize14isEquivalentToERKS_(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPageSize", "isEquivalentTo", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:249
+// index:0
+// bool isEquivalentTo(const class QPageSize &)
+func (this *QPageSize) IsEquivalentTo(other unsafe.Pointer) {
+	// 0: (, const QPageSize & other), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize14isEquivalentToERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QPageSize()
-func (this *QPageSize) Freeqpagesize(args ...interface{}) () {
-  // ~QPageSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QPageSizeD0Ev
-    // invoke: void ~QPageSize()
-    C.C_ZN9QPageSizeD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPageSize", "~QPageSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:251
+// index:0
+// bool isValid()
+func (this *QPageSize) IsValid() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// sizePoints()
-func (this *QPageSize) Sizepoints(args ...interface{}) (ret interface{}) {
-  // sizePoints()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QPageSize10sizePointsEv
-    // invoke: QSize sizePoints()
-    var ret0 = C.C_ZNK9QPageSize10sizePointsEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSize{}) // "QSize"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPageSize", "sizePoints", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:253
+// index:0
+// QString key()
+func (this *QPageSize) Key() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize3keyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// swap(class QPageSize &)
-func (this *QPageSize) Swap(args ...interface{}) () {
-  // swap(class QPageSize &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPageSize{}) // "QPageSize &"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QPageSize4swapERS_
-    // invoke: void swap(class QPageSize &)
-    var arg0 = args[0].(*QPageSize).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QPageSize4swapERS_(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QPageSize", "swap", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:271
+// index:1
+// static
+// QString key(enum QPageSize::PageSizeId)
+func (this *QPageSize) Key_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize3keyENS_10PageSizeIdE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPageSize_Key_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	var nilthis *QPageSize
+	nilthis.Key_1(pageSizeId)
 }
 
-// key()
-func (this *QPageSize) Key(args ...interface{}) (ret interface{}) {
-  // key()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QPageSize3keyEv
-    // invoke: QString key()
-    var ret0 = C.C_ZNK9QPageSize3keyEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QString{}) // "QString"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPageSize", "key", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:254
+// index:0
+// QString name()
+func (this *QPageSize) Name() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// rectPoints()
-func (this *QPageSize) Rectpoints(args ...interface{}) (ret interface{}) {
-  // rectPoints()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QPageSize10rectPointsEv
-    // invoke: QRect rectPoints()
-    var ret0 = C.C_ZNK9QPageSize10rectPointsEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QRect{}) // "QRect"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPageSize", "rectPoints", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:272
+// index:1
+// static
+// QString name(enum QPageSize::PageSizeId)
+func (this *QPageSize) Name_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize4nameENS_10PageSizeIdE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPageSize_Name_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	var nilthis *QPageSize
+	nilthis.Name_1(pageSizeId)
 }
 
-// QPageSize(const class QPageSize &)
-func NewQPageSize(args ...interface{}) *QPageSize {
-  // QPageSize(const class QPageSize &)
-  // QPageSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPageSize{}) // "const QPageSize &"
-  vtys[1] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QPageSizeC1ERKS_
-    // invoke: void QPageSize(const class QPageSize &)
-    var arg0 = args[0].(*QPageSize).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QPageSizeC2ERKS_(arg0)
-    return &QPageSize{Qclsinst:qthis}
-  case 1:
-    // invoke: _ZN9QPageSizeC1Ev
-    // invoke: void QPageSize()
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN9QPageSizeC2Ev()
-    return &QPageSize{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QPageSize", "QPageSize", args)
-  }
-
-  return nil // QPageSize{Qclsinst:qthis}
+// /usr/include/qt/QtGui/qpagesize.h:256
+// index:0
+// QPageSize::PageSizeId id()
+func (this *QPageSize) Id() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize2idEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// id(int)
-func (this *QPageSize) Id_S(args ...interface{}) () {
-  // id(int)
-  // id()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QPageSize2idEi
-    // invoke: QPageSize::PageSizeId id(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN9QPageSize2idEi(arg0)
-  case 1:
-    // invoke: _ZNK9QPageSize2idEv
-    // invoke: QPageSize::PageSizeId id()
-    C.C_ZNK9QPageSize2idEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QPageSize", "id", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:274
+// index:1
+// static
+// QPageSize::PageSizeId id(const class QSize &, enum QPageSize::SizeMatchPolicy)
+func (this *QPageSize) Id_1(pointSize unsafe.Pointer, matchPolicy int) {
+	// 1: (const QSize & pointSize, QPageSize::SizeMatchPolicy matchPolicy), (pointSize, matchPolicy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize2idERK5QSizeNS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPageSize_Id_1(pointSize unsafe.Pointer, matchPolicy int) {
+	// 1: (const QSize & pointSize, QPageSize::SizeMatchPolicy matchPolicy), (pointSize, matchPolicy)
+	var nilthis *QPageSize
+	nilthis.Id_1(pointSize, matchPolicy)
 }
 
-// definitionSize()
-func (this *QPageSize) Definitionsize(args ...interface{}) (ret interface{}) {
-  // definitionSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QPageSize14definitionSizeEv
-    // invoke: QSizeF definitionSize()
-    var ret0 = C.C_ZNK9QPageSize14definitionSizeEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(qtcore.QSizeF{}) // "QSizeF"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QPageSize", "definitionSize", args)
-  }
-
-  return
+// /usr/include/qt/QtGui/qpagesize.h:276
+// index:2
+// static
+// QPageSize::PageSizeId id(const class QSizeF &, enum QPageSize::Unit, enum QPageSize::SizeMatchPolicy)
+func (this *QPageSize) Id_2(size unsafe.Pointer, units int, matchPolicy int) {
+	// 2: (const QSizeF & size, QPageSize::Unit units, QPageSize::SizeMatchPolicy matchPolicy), (size, units, matchPolicy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize2idERK6QSizeFNS_4UnitENS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPageSize_Id_2(size unsafe.Pointer, units int, matchPolicy int) {
+	// 2: (const QSizeF & size, QPageSize::Unit units, QPageSize::SizeMatchPolicy matchPolicy), (size, units, matchPolicy)
+	var nilthis *QPageSize
+	nilthis.Id_2(size, units, matchPolicy)
 }
 
-// <= body block end
+// /usr/include/qt/QtGui/qpagesize.h:279
+// index:3
+// static
+// QPageSize::PageSizeId id(int)
+func (this *QPageSize) Id_3(windowsId int) {
+	// 3: (int windowsId), (windowsId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize2idEi", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPageSize_Id_3(windowsId int) {
+	// 3: (int windowsId), (windowsId)
+	var nilthis *QPageSize
+	nilthis.Id_3(windowsId)
+}
 
+// /usr/include/qt/QtGui/qpagesize.h:258
+// index:0
+// int windowsId()
+func (this *QPageSize) WindowsId() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize9windowsIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:280
+// index:1
+// static
+// int windowsId(enum QPageSize::PageSizeId)
+func (this *QPageSize) WindowsId_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize9windowsIdENS_10PageSizeIdE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPageSize_WindowsId_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	var nilthis *QPageSize
+	nilthis.WindowsId_1(pageSizeId)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:260
+// index:0
+// QSizeF definitionSize()
+func (this *QPageSize) DefinitionSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize14definitionSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:282
+// index:1
+// static
+// QSizeF definitionSize(enum QPageSize::PageSizeId)
+func (this *QPageSize) DefinitionSize_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize14definitionSizeENS_10PageSizeIdE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPageSize_DefinitionSize_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	var nilthis *QPageSize
+	nilthis.DefinitionSize_1(pageSizeId)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:261
+// index:0
+// QPageSize::Unit definitionUnits()
+func (this *QPageSize) DefinitionUnits() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize15definitionUnitsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:283
+// index:1
+// static
+// QPageSize::Unit definitionUnits(enum QPageSize::PageSizeId)
+func (this *QPageSize) DefinitionUnits_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize15definitionUnitsENS_10PageSizeIdE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPageSize_DefinitionUnits_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	var nilthis *QPageSize
+	nilthis.DefinitionUnits_1(pageSizeId)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:263
+// index:0
+// QSizeF size(enum QPageSize::Unit)
+func (this *QPageSize) Size(units int) {
+	// 0: (, QPageSize::Unit units), (&units)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize4sizeENS_4UnitE", ffiqt.FFI_TYPE_VOID, this.cthis, &units)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:285
+// index:1
+// static
+// QSizeF size(enum QPageSize::PageSizeId, enum QPageSize::Unit)
+func (this *QPageSize) Size_1(pageSizeId int, units int) {
+	// 1: (QPageSize::PageSizeId pageSizeId, QPageSize::Unit units), (pageSizeId, units)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize4sizeENS_10PageSizeIdENS_4UnitE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPageSize_Size_1(pageSizeId int, units int) {
+	// 1: (QPageSize::PageSizeId pageSizeId, QPageSize::Unit units), (pageSizeId, units)
+	var nilthis *QPageSize
+	nilthis.Size_1(pageSizeId, units)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:264
+// index:0
+// QSize sizePoints()
+func (this *QPageSize) SizePoints() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10sizePointsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:286
+// index:1
+// static
+// QSize sizePoints(enum QPageSize::PageSizeId)
+func (this *QPageSize) SizePoints_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize10sizePointsENS_10PageSizeIdE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPageSize_SizePoints_1(pageSizeId int) {
+	// 1: (QPageSize::PageSizeId pageSizeId), (pageSizeId)
+	var nilthis *QPageSize
+	nilthis.SizePoints_1(pageSizeId)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:265
+// index:0
+// QSize sizePixels(int)
+func (this *QPageSize) SizePixels(resolution int) {
+	// 0: (, int resolution), (&resolution)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10sizePixelsEi", ffiqt.FFI_TYPE_VOID, this.cthis, &resolution)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:287
+// index:1
+// static
+// QSize sizePixels(enum QPageSize::PageSizeId, int)
+func (this *QPageSize) SizePixels_1(pageSizeId int, resolution int) {
+	// 1: (QPageSize::PageSizeId pageSizeId, int resolution), (pageSizeId, resolution)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize10sizePixelsENS_10PageSizeIdEi", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QPageSize_SizePixels_1(pageSizeId int, resolution int) {
+	// 1: (QPageSize::PageSizeId pageSizeId, int resolution), (pageSizeId, resolution)
+	var nilthis *QPageSize
+	nilthis.SizePixels_1(pageSizeId, resolution)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:267
+// index:0
+// QRectF rect(enum QPageSize::Unit)
+func (this *QPageSize) Rect(units int) {
+	// 0: (, QPageSize::Unit units), (&units)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize4rectENS_4UnitE", ffiqt.FFI_TYPE_VOID, this.cthis, &units)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:268
+// index:0
+// QRect rectPoints()
+func (this *QPageSize) RectPoints() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10rectPointsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:269
+// index:0
+// QRect rectPixels(int)
+func (this *QPageSize) RectPixels(resolution int) {
+	// 0: (, int resolution), (&resolution)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10rectPixelsEi", ffiqt.FFI_TYPE_VOID, this.cthis, &resolution)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end

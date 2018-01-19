@@ -1,557 +1,230 @@
+//  header block begin
+// /usr/include/qt/QtCore/qthreadpool.h
+// #include <qthreadpool.h>
+// #include <QtCore>
 package qtcore
-// auto generated, do not modify.
-// created: Sun Aug  7 10:49:52 2016
-// src-file: /QtCore/qthreadpool.h
-// dst-file: /src/core/qthreadpool.go
-//
 
-// header block begin =>
+//  header block end
 
-
-// <= header block end
-
-// main block begin =>
-// <= main block end
-
-// use block begin =>
-import "fmt"
-import "reflect"
-import "unsafe"
-import "qtrt"
-// <= use block end
-
-// ext block begin =>
+//  ext block begin
 
 /*
 #include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <wchar.h>
-#include <uchar.h>
-  // proto:  void QThreadPool::setExpiryTimeout(int expiryTimeout);
-extern void C_ZN11QThreadPool16setExpiryTimeoutEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QThreadPool::reserveThread();
-extern void C_ZN11QThreadPool13reserveThreadEv(void* qthis); // 4
-  // proto:  void QThreadPool::cancel(QRunnable * runnable);
-extern void C_ZN11QThreadPool6cancelEP9QRunnable(void* qthis, void* arg0); // 4
-  // proto:  void QThreadPool::QThreadPool(QObject * parent);
-extern void* C_ZN11QThreadPoolC2EP7QObject(void* arg0); // 3
-  // proto:  bool QThreadPool::waitForDone(int msecs);
-extern bool C_ZN11QThreadPool11waitForDoneEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QThreadPool::start(QRunnable * runnable, int priority);
-extern void C_ZN11QThreadPool5startEP9QRunnablei(void* qthis, void* arg0, int32_t arg1); // 4
-  // proto:  int QThreadPool::activeThreadCount();
-extern int32_t C_ZNK11QThreadPool17activeThreadCountEv(void* qthis); // 4
-  // proto:  void QThreadPool::setMaxThreadCount(int maxThreadCount);
-extern void C_ZN11QThreadPool17setMaxThreadCountEi(void* qthis, int32_t arg0); // 4
-  // proto:  void QThreadPool::~QThreadPool();
-extern void C_ZN11QThreadPoolD2Ev(void* qthis); // 4
-  // proto: static QThreadPool * QThreadPool::globalInstance();
-extern void* C_ZN11QThreadPool14globalInstanceEv(); // 4
-  // proto:  const QMetaObject * QThreadPool::metaObject();
-extern void C_ZNK11QThreadPool10metaObjectEv(void* qthis); // 4
-  // proto:  void QThreadPool::clear();
-extern void C_ZN11QThreadPool5clearEv(void* qthis); // 4
-  // proto:  void QThreadPool::releaseThread();
-extern void C_ZN11QThreadPool13releaseThreadEv(void* qthis); // 4
-  // proto:  bool QThreadPool::tryStart(QRunnable * runnable);
-extern bool C_ZN11QThreadPool8tryStartEP9QRunnable(void* qthis, void* arg0); // 4
-  // proto:  int QThreadPool::maxThreadCount();
-extern int32_t C_ZNK11QThreadPool14maxThreadCountEv(void* qthis); // 4
-  // proto:  int QThreadPool::expiryTimeout();
-extern int32_t C_ZNK11QThreadPool13expiryTimeoutEv(void* qthis); // 4
+// extern C begin: 27
 */
-import "C"
-// } // <= ext block end
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "qtrt"
+import "mkuse/cffiqt"
+import "gopp"
 
-// body block begin =>
 func init() {
-  if false {qtrt.KeepMe()}
-  if false {fmt.Println(123)}
-  if false {reflect.TypeOf(123)}
-  if false {reflect.TypeOf(unsafe.Sizeof(0))}
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
+	}
 }
 
-// class sizeof(QThreadPool)=1
+//  ext block end
+
+//  body block begin
 type QThreadPool struct {
-  /*qbase*/ QObject;
-  Qclsinst unsafe.Pointer /* *C.void */;
+	cthis unsafe.Pointer
 }
 
-// setExpiryTimeout(int)
-func (this *QThreadPool) Setexpirytimeout(args ...interface{}) () {
-  // setExpiryTimeout(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPool16setExpiryTimeoutEi
-    // invoke: void setExpiryTimeout(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QThreadPool16setExpiryTimeoutEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QThreadPool", "setExpiryTimeout", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:56
+// index:0
+// virtual
+// const QMetaObject * metaObject()
+func (this *QThreadPool) MetaObject() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// reserveThread()
-func (this *QThreadPool) Reservethread(args ...interface{}) () {
-  // reserveThread()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPool13reserveThreadEv
-    // invoke: void reserveThread()
-    C.C_ZN11QThreadPool13reserveThreadEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QThreadPool", "reserveThread", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:65
+// index:0
+// void QThreadPool(class QObject *)
+func NewQThreadPool(parent unsafe.Pointer) *QThreadPool {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPoolC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	return &QThreadPool{cthis}
 }
 
-// cancel(class QRunnable *)
-func (this *QThreadPool) Cancel(args ...interface{}) () {
-  // cancel(class QRunnable *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRunnable{}) // "QRunnable *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPool6cancelEP9QRunnable
-    // invoke: void cancel(class QRunnable *)
-    var arg0 = args[0].(*QRunnable).Qclsinst
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QThreadPool6cancelEP9QRunnable(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QThreadPool", "cancel", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:66
+// index:0
+// virtual
+// void ~QThreadPool()
+func DeleteQThreadPool(*QThreadPool) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPoolD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
 }
 
-// QThreadPool(class QObject *)
-func NewQThreadPool(args ...interface{}) *QThreadPool {
-  // QThreadPool(class QObject *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPoolC1EP7QObject
-    // invoke: void QThreadPool(class QObject *)
-    var arg0 = args[0].(*QObject).Qclsinst
-    if false {fmt.Println(arg0)}
-    var qthis = unsafe.Pointer(C.malloc(5))
-    if false {reflect.TypeOf(qthis)}
-    qthis = C.C_ZN11QThreadPoolC2EP7QObject(arg0)
-    return &QThreadPool{Qclsinst:qthis}
-  default:
-    qtrt.ErrorResolve("QThreadPool", "QThreadPool", args)
-  }
-
-  return nil // QThreadPool{Qclsinst:qthis}
+// /usr/include/qt/QtCore/qthreadpool.h:68
+// index:0
+// static
+// QThreadPool * globalInstance()
+func (this *QThreadPool) GlobalInstance() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool14globalInstanceEv", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QThreadPool_GlobalInstance() {
+	// 0: (), ()
+	var nilthis *QThreadPool
+	nilthis.GlobalInstance()
 }
 
-// waitForDone(int)
-func (this *QThreadPool) Waitfordone(args ...interface{}) (ret interface{}) {
-  // waitForDone(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPool11waitForDoneEi
-    // invoke: bool waitForDone(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QThreadPool11waitForDoneEi(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QThreadPool", "waitForDone", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:70
+// index:0
+// void start(class QRunnable *, int)
+func (this *QThreadPool) Start(runnable unsafe.Pointer, priority int) {
+	// 0: (, QRunnable * runnable, int priority), (runnable, &priority)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool5startEP9QRunnablei", ffiqt.FFI_TYPE_VOID, this.cthis, runnable, &priority)
+	gopp.ErrPrint(err, rv)
 }
 
-// start(class QRunnable *, int)
-func (this *QThreadPool) Start(args ...interface{}) () {
-  // start(class QRunnable *, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRunnable{}) // "QRunnable *"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPool5startEP9QRunnablei
-    // invoke: void start(class QRunnable *, int)
-    var arg0 = args[0].(*QRunnable).Qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg1)}
-    C.C_ZN11QThreadPool5startEP9QRunnablei(this.Qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QThreadPool", "start", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:71
+// index:0
+// bool tryStart(class QRunnable *)
+func (this *QThreadPool) TryStart(runnable unsafe.Pointer) {
+	// 0: (, QRunnable * runnable), (runnable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool8tryStartEP9QRunnable", ffiqt.FFI_TYPE_VOID, this.cthis, runnable)
+	gopp.ErrPrint(err, rv)
 }
 
-// activeThreadCount()
-func (this *QThreadPool) Activethreadcount(args ...interface{}) (ret interface{}) {
-  // activeThreadCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QThreadPool17activeThreadCountEv
-    // invoke: int activeThreadCount()
-    var ret0 = C.C_ZNK11QThreadPool17activeThreadCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QThreadPool", "activeThreadCount", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:73
+// index:0
+// int expiryTimeout()
+func (this *QThreadPool) ExpiryTimeout() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool13expiryTimeoutEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// setMaxThreadCount(int)
-func (this *QThreadPool) Setmaxthreadcount(args ...interface{}) () {
-  // setMaxThreadCount(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPool17setMaxThreadCountEi
-    // invoke: void setMaxThreadCount(int)
-    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
-    if false {fmt.Println(arg0)}
-    C.C_ZN11QThreadPool17setMaxThreadCountEi(this.Qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QThreadPool", "setMaxThreadCount", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:74
+// index:0
+// void setExpiryTimeout(int)
+func (this *QThreadPool) SetExpiryTimeout(expiryTimeout int) {
+	// 0: (, int expiryTimeout), (&expiryTimeout)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool16setExpiryTimeoutEi", ffiqt.FFI_TYPE_VOID, this.cthis, &expiryTimeout)
+	gopp.ErrPrint(err, rv)
 }
 
-// ~QThreadPool()
-func (this *QThreadPool) Freeqthreadpool(args ...interface{}) () {
-  // ~QThreadPool()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPoolD0Ev
-    // invoke: void ~QThreadPool()
-    C.C_ZN11QThreadPoolD2Ev(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QThreadPool", "~QThreadPool", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:76
+// index:0
+// int maxThreadCount()
+func (this *QThreadPool) MaxThreadCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool14maxThreadCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// globalInstance()
-func (this *QThreadPool) Globalinstance_S(args ...interface{}) (ret interface{}) {
-  // globalInstance()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPool14globalInstanceEv
-    // invoke: QThreadPool * globalInstance()
-    var ret0 = C.C_ZN11QThreadPool14globalInstanceEv()
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = reflect.TypeOf(QThreadPool{}) // "QThreadPool *"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QThreadPool", "globalInstance", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:77
+// index:0
+// void setMaxThreadCount(int)
+func (this *QThreadPool) SetMaxThreadCount(maxThreadCount int) {
+	// 0: (, int maxThreadCount), (&maxThreadCount)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool17setMaxThreadCountEi", ffiqt.FFI_TYPE_VOID, this.cthis, &maxThreadCount)
+	gopp.ErrPrint(err, rv)
 }
 
-// metaObject()
-func (this *QThreadPool) Metaobject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QThreadPool10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QThreadPool10metaObjectEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QThreadPool", "metaObject", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:79
+// index:0
+// int activeThreadCount()
+func (this *QThreadPool) ActiveThreadCount() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool17activeThreadCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// clear()
-func (this *QThreadPool) Clear(args ...interface{}) () {
-  // clear()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPool5clearEv
-    // invoke: void clear()
-    C.C_ZN11QThreadPool5clearEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QThreadPool", "clear", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:81
+// index:0
+// void setStackSize(uint)
+func (this *QThreadPool) SetStackSize(stackSize uint) {
+	// 0: (, uint stackSize), (&stackSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool12setStackSizeEj", ffiqt.FFI_TYPE_VOID, this.cthis, &stackSize)
+	gopp.ErrPrint(err, rv)
 }
 
-// releaseThread()
-func (this *QThreadPool) Releasethread(args ...interface{}) () {
-  // releaseThread()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPool13releaseThreadEv
-    // invoke: void releaseThread()
-    C.C_ZN11QThreadPool13releaseThreadEv(this.Qclsinst)
-  default:
-    qtrt.ErrorResolve("QThreadPool", "releaseThread", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:82
+// index:0
+// uint stackSize()
+func (this *QThreadPool) StackSize() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool9stackSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// tryStart(class QRunnable *)
-func (this *QThreadPool) Trystart(args ...interface{}) (ret interface{}) {
-  // tryStart(class QRunnable *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRunnable{}) // "QRunnable *"
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QThreadPool8tryStartEP9QRunnable
-    // invoke: bool tryStart(class QRunnable *)
-    var arg0 = args[0].(*QRunnable).Qclsinst
-    if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QThreadPool8tryStartEP9QRunnable(this.Qclsinst, arg0)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.BoolTy(false) // "bool"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QThreadPool", "tryStart", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:84
+// index:0
+// void reserveThread()
+func (this *QThreadPool) ReserveThread() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool13reserveThreadEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// maxThreadCount()
-func (this *QThreadPool) Maxthreadcount(args ...interface{}) (ret interface{}) {
-  // maxThreadCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QThreadPool14maxThreadCountEv
-    // invoke: int maxThreadCount()
-    var ret0 = C.C_ZNK11QThreadPool14maxThreadCountEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QThreadPool", "maxThreadCount", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:85
+// index:0
+// void releaseThread()
+func (this *QThreadPool) ReleaseThread() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool13releaseThreadEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
 }
 
-// expiryTimeout()
-func (this *QThreadPool) Expirytimeout(args ...interface{}) (ret interface{}) {
-  // expiryTimeout()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  var dargExists = make(map[int32]map[int32]bool)
-  if false {fmt.Println(dargExists)}
-  var dargValues = make(map[int32]map[int32]interface{})
-  if false {fmt.Println(dargValues)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QThreadPool13expiryTimeoutEv
-    // invoke: int expiryTimeout()
-    var ret0 = C.C_ZNK11QThreadPool13expiryTimeoutEv(this.Qclsinst)
-    if false {reflect.TypeOf(ret0)}
-    ret = ret0
-    var rety = qtrt.Int32Ty(false) // "int"
-    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
-        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
-    } else {
-        ret = qtrt.HandyConvert2go(ret0, rety)
-    }
-  default:
-    qtrt.ErrorResolve("QThreadPool", "expiryTimeout", args)
-  }
-
-  return
+// /usr/include/qt/QtCore/qthreadpool.h:87
+// index:0
+// bool waitForDone(int)
+func (this *QThreadPool) WaitForDone(msecs int) {
+	// 0: (, int msecs), (&msecs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool11waitForDoneEi", ffiqt.FFI_TYPE_VOID, this.cthis, &msecs)
+	gopp.ErrPrint(err, rv)
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qthreadpool.h:89
+// index:0
+// void clear()
+func (this *QThreadPool) Clear() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	gopp.ErrPrint(err, rv)
+}
 
+// /usr/include/qt/QtCore/qthreadpool.h:93
+// index:0
+// void cancel(class QRunnable *)
+func (this *QThreadPool) Cancel(runnable unsafe.Pointer) {
+	// 0: (, QRunnable * runnable), (runnable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool6cancelEP9QRunnable", ffiqt.FFI_TYPE_VOID, this.cthis, runnable)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qthreadpool.h:95
+// index:0
+// bool tryTake(class QRunnable *)
+func (this *QThreadPool) TryTake(runnable unsafe.Pointer) {
+	// 0: (, QRunnable * runnable), (runnable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool7tryTakeEP9QRunnable", ffiqt.FFI_TYPE_VOID, this.cthis, runnable)
+	gopp.ErrPrint(err, rv)
+}
+
+//  body block end
