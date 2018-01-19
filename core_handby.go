@@ -9,6 +9,8 @@ extern void ffi_call_ex(void*fn, int retype, uint64_t *rc, int argc, uint8_t* ar
 */
 import "C"
 import (
+	"gopp"
+	"log"
 	"unsafe"
 )
 
@@ -122,6 +124,25 @@ func (app *QApplication5) Exec5() {
 	// log.Println(err, retval)
 }
 
+/////
+func test_handy_qt() {
+	s := NewQString5FromStr("abcdefg")
+	log.Println(s)
+	log.Println(s.Length())
+	if true {
+		return
+	}
+
+	app := NewQApplication5()
+	log.Println(app)
+
+	w := NewQWidget5()
+	log.Println(w)
+	w.Show()
+
+	app.Exec5()
+}
+
 ////
 type QString5 struct {
 	cptr unsafe.Pointer
@@ -131,4 +152,47 @@ func NewQString5() *QString5 {
 	o := &QString5{}
 
 	return o
+}
+
+func NewQString5FromStr(s string) *QString5 {
+	o := &QString5{}
+	t := C.calloc(1, 256)
+	r := (unsafe.Pointer)(C.CString(s))
+	InvokeQtFunc6("_ZN7QStringC2EPKc", FFI_TYPE_VOID, t, r)
+	o.cptr = t
+	return o
+}
+
+func (str *QString5) Length() int {
+	l, err := InvokeQtFunc6("_ZNK7QString6lengthEv", FFI_TYPE_INT, str.cptr)
+	gopp.ErrPrint(err)
+	return (convRetval(FFI_TYPE_INT, l).(int))
+}
+
+type QByteArray5 struct {
+	cptr unsafe.Pointer
+}
+
+func NewQByteArray5() *QByteArray5 {
+	o := &QByteArray5{}
+
+	return o
+}
+
+func NewQByteArray5FromStr(s string) *QByteArray5 {
+	o := &QByteArray5{}
+
+	t := C.calloc(1, 256)
+	r := unsafe.Pointer(C.CString(s))
+
+	InvokeQtFunc6("_ZN10QByteArrayC2EPKci", FFI_TYPE_VOID, t, r, int(-1))
+
+	o.cptr = t
+	return o
+}
+
+func (ba *QByteArray5) Length() int {
+	l, err := InvokeQtFunc6("_ZNK10QByteArray6lengthEv", FFI_TYPE_INT, ba.cptr)
+	gopp.ErrPrint(err)
+	return (convRetval(FFI_TYPE_INT, l).(int))
 }

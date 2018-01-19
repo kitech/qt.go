@@ -182,7 +182,7 @@ func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, e
 	C.ffi_call_ex(addr, C.int(retype), &retval, C.int(len(argtys)),
 		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0]))
 
-	return uint64(retval), fmt.Errorf("Symbol not found: %s", symname)
+	return uint64(retval), nil
 }
 
 func getSymAddr(symname string) unsafe.Pointer {
@@ -194,6 +194,7 @@ func getSymAddr(symname string) unsafe.Pointer {
 		}
 		return addr
 	}
+	log.Println(fmt.Errorf("Symbol not found: %s", symname))
 	return nil
 }
 
@@ -225,10 +226,25 @@ func convArg(argx interface{}) (argty byte, argval uint64) {
 	case reflect.UnsafePointer:
 		argty = FFI_TYPE_POINTER
 		argval = uint64(av.Pointer())
+	default:
+		log.Println("Unknown type:", argty, argval, aty.String(), argx)
 	}
-	log.Println(argty, argval, aty.String(), argx)
 
 	return
+}
+
+func convRetval(retype byte, retval interface{}) interface{} {
+	refv := reflect.ValueOf(retval)
+	switch retype {
+	case FFI_TYPE_VOID:
+	case FFI_TYPE_INT:
+		return refv.Convert(gopp.IntTy).Interface()
+	case FFI_TYPE_UINT8:
+		return refv.Convert(gopp.Uint8Ty).Interface()
+	default:
+		log.Println("Unknown type:", refv.Type().String())
+	}
+	return retval
 }
 
 func test() {
