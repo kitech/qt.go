@@ -55,25 +55,26 @@ type QCloseEvent struct {
 func (this *QCloseEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:477
-// index:0
-// void QCloseEvent()
-func NewQCloseEvent() *QCloseEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QCloseEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQCloseEventFromPointer(cthis)
-	return gothis
-}
 func NewQCloseEventFromPointer(cthis unsafe.Pointer) *QCloseEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QCloseEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:477
+// index:0
+// Public
+// void QCloseEvent()
+func NewQCloseEvent() *QCloseEvent {
+	cthis := qtrt.Calloc(1, 256) // 24
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QCloseEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQCloseEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:478
 // index:0
-// virtual
+// Public virtual
 // void ~QCloseEvent()
 func DeleteQCloseEvent(*QCloseEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QCloseEventD2Ev", ffiqt.FFI_TYPE_VOID)

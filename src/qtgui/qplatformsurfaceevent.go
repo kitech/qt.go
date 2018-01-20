@@ -55,25 +55,26 @@ type QPlatformSurfaceEvent struct {
 func (this *QPlatformSurfaceEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:451
-// index:0
-// void QPlatformSurfaceEvent(enum QPlatformSurfaceEvent::SurfaceEventType)
-func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", ffiqt.FFI_TYPE_VOID, cthis, &surfaceEventType)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQPlatformSurfaceEventFromPointer(cthis)
-	return gothis
-}
 func NewQPlatformSurfaceEventFromPointer(cthis unsafe.Pointer) *QPlatformSurfaceEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QPlatformSurfaceEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:451
+// index:0
+// Public
+// void QPlatformSurfaceEvent(enum QPlatformSurfaceEvent::SurfaceEventType)
+func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
+	cthis := qtrt.Calloc(1, 256) // 24
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", ffiqt.FFI_TYPE_VOID, cthis, &surfaceEventType)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQPlatformSurfaceEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:452
 // index:0
-// virtual
+// Public virtual
 // void ~QPlatformSurfaceEvent()
 func DeleteQPlatformSurfaceEvent(*QPlatformSurfaceEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -82,12 +83,12 @@ func DeleteQPlatformSurfaceEvent(*QPlatformSurfaceEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:454
 // index:0
-// inline
+// Public inline
 // QPlatformSurfaceEvent::SurfaceEventType surfaceEventType()
-func (this *QPlatformSurfaceEvent) SurfaceEventType() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPlatformSurfaceEvent) SurfaceEventType() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

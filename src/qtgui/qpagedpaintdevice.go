@@ -55,27 +55,29 @@ type QPagedPaintDevice struct {
 func (this *QPagedPaintDevice) GetCthis() unsafe.Pointer {
 	return this.QPaintDevice.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:58
-// index:0
-// void QPagedPaintDevice()
-func NewQPagedPaintDevice() *QPagedPaintDevice {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDeviceC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQPagedPaintDeviceFromPointer(cthis)
-	return gothis
-}
 func NewQPagedPaintDeviceFromPointer(cthis unsafe.Pointer) *QPagedPaintDevice {
 	bcthis0 := NewQPaintDeviceFromPointer(cthis)
 	return &QPagedPaintDevice{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:58
+// index:0
+// Public
+// void QPagedPaintDevice()
+func NewQPagedPaintDevice() *QPagedPaintDevice {
+	cthis := qtrt.Calloc(1, 256) // 32
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDeviceC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQPagedPaintDeviceFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:244
 // index:1
+// Protected
 // void QPagedPaintDevice(class QPagedPaintDevicePrivate *)
 func NewQPagedPaintDevice_1(dd unsafe.Pointer) *QPagedPaintDevice {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 32
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDeviceC1EP24QPagedPaintDevicePrivate", ffiqt.FFI_TYPE_VOID, cthis, dd)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPagedPaintDeviceFromPointer(cthis)
@@ -84,7 +86,7 @@ func NewQPagedPaintDevice_1(dd unsafe.Pointer) *QPagedPaintDevice {
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:59
 // index:0
-// virtual
+// Public virtual
 // void ~QPagedPaintDevice()
 func DeleteQPagedPaintDevice(*QPagedPaintDevice) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDeviceD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -93,150 +95,155 @@ func DeleteQPagedPaintDevice(*QPagedPaintDevice) {
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:61
 // index:0
-// pure virtual
+// Public pure virtual
 // bool newPage()
-func (this *QPagedPaintDevice) NewPage() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice7newPageEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPagedPaintDevice) NewPage() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice7newPageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:219
 // index:0
+// Public
 // bool setPageLayout(const class QPageLayout &)
-func (this *QPagedPaintDevice) SetPageLayout(pageLayout unsafe.Pointer) {
-	// 0: (, pageLayout const QPageLayout &), (pageLayout)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pageLayout)
+func (this *QPagedPaintDevice) SetPageLayout(pageLayout *QPageLayout) interface{} {
+	var convArg0 = pageLayout.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:220
 // index:0
+// Public
 // bool setPageSize(const class QPageSize &)
-func (this *QPagedPaintDevice) SetPageSize(pageSize unsafe.Pointer) {
-	// 0: (, pageSize const QPageSize &), (pageSize)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pageSize)
+func (this *QPagedPaintDevice) SetPageSize(pageSize *QPageSize) interface{} {
+	var convArg0 = pageSize.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:226
 // index:1
-// virtual
+// Public virtual
 // void setPageSize(enum QPagedPaintDevice::PageSize)
 func (this *QPagedPaintDevice) SetPageSize_1(size int) {
-	// 1: (, size QPagedPaintDevice::PageSize), (&size)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice11setPageSizeENS_8PageSizeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice11setPageSizeENS_8PageSizeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &size)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:221
 // index:0
+// Public
 // bool setPageOrientation(class QPageLayout::Orientation)
-func (this *QPagedPaintDevice) SetPageOrientation(orientation int) {
-	// 0: (, orientation QPageLayout::Orientation), (&orientation)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice18setPageOrientationEN11QPageLayout11OrientationE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &orientation)
+func (this *QPagedPaintDevice) SetPageOrientation(orientation int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice18setPageOrientationEN11QPageLayout11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &orientation)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:222
 // index:0
+// Public
 // bool setPageMargins(const class QMarginsF &)
-func (this *QPagedPaintDevice) SetPageMargins(margins unsafe.Pointer) {
-	// 0: (, margins const QMarginsF &), (margins)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), margins)
+func (this *QPagedPaintDevice) SetPageMargins(margins *qtcore.QMarginsF) interface{} {
+	var convArg0 = margins.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:223
 // index:1
+// Public
 // bool setPageMargins(const class QMarginsF &, class QPageLayout::Unit)
-func (this *QPagedPaintDevice) SetPageMargins_1(margins unsafe.Pointer, units int) {
-	// 1: (, margins const QMarginsF &, units QPageLayout::Unit), (margins, &units)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsFN11QPageLayout4UnitE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), margins, &units)
+func (this *QPagedPaintDevice) SetPageMargins_1(margins *qtcore.QMarginsF, units int) interface{} {
+	var convArg0 = margins.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsFN11QPageLayout4UnitE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &units)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:224
 // index:0
+// Public
 // QPageLayout pageLayout()
-func (this *QPagedPaintDevice) PageLayout() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPagedPaintDevice10pageLayoutEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPagedPaintDevice) PageLayout() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPagedPaintDevice10pageLayoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:227
 // index:0
+// Public
 // QPagedPaintDevice::PageSize pageSize()
-func (this *QPagedPaintDevice) PageSize() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPagedPaintDevice8pageSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPagedPaintDevice) PageSize() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPagedPaintDevice8pageSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:229
 // index:0
-// virtual
+// Public virtual
 // void setPageSizeMM(const class QSizeF &)
-func (this *QPagedPaintDevice) SetPageSizeMM(size unsafe.Pointer) {
-	// 0: (, size const QSizeF &), (size)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), size)
+func (this *QPagedPaintDevice) SetPageSizeMM(size *qtcore.QSizeF) {
+	var convArg0 = size.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:230
 // index:0
+// Public
 // QSizeF pageSizeMM()
-func (this *QPagedPaintDevice) PageSizeMM() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPagedPaintDevice10pageSizeMMEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPagedPaintDevice) PageSizeMM() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPagedPaintDevice10pageSizeMMEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:240
-// index:0
-// virtual
-// void setMargins(const struct QPagedPaintDevice::Margins &)
-func (this *QPagedPaintDevice) SetMargins(margins unsafe.Pointer) {
-	// 0: (, margins const QPagedPaintDevice::Margins &), (margins)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice10setMarginsERKNS_7MarginsE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), margins)
-	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:241
 // index:0
+// Public
 // QPagedPaintDevice::Margins margins()
-func (this *QPagedPaintDevice) Margins() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPagedPaintDevice7marginsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPagedPaintDevice) Margins() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPagedPaintDevice7marginsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:245
 // index:0
+// Protected
 // QPagedPaintDevicePrivate * dd()
-func (this *QPagedPaintDevice) Dd() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice2ddEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPagedPaintDevice) Dd() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice2ddEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:246
 // index:0
+// Protected
 // QPageLayout devicePageLayout()
-func (this *QPagedPaintDevice) DevicePageLayout() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPagedPaintDevice16devicePageLayoutEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPagedPaintDevice) DevicePageLayout() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPagedPaintDevice16devicePageLayoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:247
 // index:1
+// Protected
 // QPageLayout & devicePageLayout()
-func (this *QPagedPaintDevice) DevicePageLayout_1() {
-	// 1: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice16devicePageLayoutEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPagedPaintDevice) DevicePageLayout_1() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice16devicePageLayoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

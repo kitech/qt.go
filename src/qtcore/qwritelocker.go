@@ -51,25 +51,25 @@ type QWriteLocker struct {
 func (this *QWriteLocker) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQWriteLockerFromPointer(cthis unsafe.Pointer) *QWriteLocker {
+	return &QWriteLocker{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qreadwritelock.h:131
 // index:0
-// inline
+// Public inline
 // void QWriteLocker(class QReadWriteLock *)
 func NewQWriteLocker(readWriteLock unsafe.Pointer) *QWriteLocker {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLockerC2EP14QReadWriteLock", ffiqt.FFI_TYPE_VOID, cthis, readWriteLock)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQWriteLockerFromPointer(cthis)
 	return gothis
 }
-func NewQWriteLockerFromPointer(cthis unsafe.Pointer) *QWriteLocker {
-	return &QWriteLocker{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qreadwritelock.h:133
 // index:0
-// inline
+// Public inline
 // void ~QWriteLocker()
 func DeleteQWriteLocker(*QWriteLocker) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLockerD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -78,32 +78,30 @@ func DeleteQWriteLocker(*QWriteLocker) {
 
 // /usr/include/qt/QtCore/qreadwritelock.h:136
 // index:0
-// inline
+// Public inline
 // void unlock()
 func (this *QWriteLocker) Unlock() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLocker6unlockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLocker6unlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:146
 // index:0
-// inline
+// Public inline
 // void relock()
 func (this *QWriteLocker) Relock() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLocker6relockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLocker6relockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:156
 // index:0
-// inline
+// Public inline
 // QReadWriteLock * readWriteLock()
-func (this *QWriteLocker) ReadWriteLock() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QWriteLocker13readWriteLockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QWriteLocker) ReadWriteLock() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QWriteLocker13readWriteLockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

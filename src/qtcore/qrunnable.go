@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 7
+// extern C begin: 6
 */
 // import "C"
 import "unsafe"
@@ -51,35 +51,34 @@ type QRunnable struct {
 func (this *QRunnable) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQRunnableFromPointer(cthis unsafe.Pointer) *QRunnable {
+	return &QRunnable{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qrunnable.h:58
 // index:0
-// pure virtual
+// Public pure virtual
 // void run()
 func (this *QRunnable) Run() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnable3runEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnable3runEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qrunnable.h:60
 // index:0
-// inline
+// Public inline
 // void QRunnable()
 func NewQRunnable() *QRunnable {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnableC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRunnableFromPointer(cthis)
 	return gothis
 }
-func NewQRunnableFromPointer(cthis unsafe.Pointer) *QRunnable {
-	return &QRunnable{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qrunnable.h:61
 // index:0
-// virtual
+// Public virtual
 // void ~QRunnable()
 func DeleteQRunnable(*QRunnable) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnableD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -88,21 +87,20 @@ func DeleteQRunnable(*QRunnable) {
 
 // /usr/include/qt/QtCore/qrunnable.h:63
 // index:0
-// inline
+// Public inline
 // bool autoDelete()
-func (this *QRunnable) AutoDelete() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QRunnable10autoDeleteEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QRunnable) AutoDelete() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QRunnable10autoDeleteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qrunnable.h:64
 // index:0
-// inline
+// Public inline
 // void setAutoDelete(_Bool)
 func (this *QRunnable) SetAutoDelete(_autoDelete bool) {
-	// 0: (, _autoDelete bool), (&_autoDelete)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnable13setAutoDeleteEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &_autoDelete)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnable13setAutoDeleteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &_autoDelete)
 	gopp.ErrPrint(err, rv)
 }
 

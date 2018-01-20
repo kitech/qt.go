@@ -55,10 +55,13 @@ type QAccessibleImageInterface struct {
 func (this *QAccessibleImageInterface) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQAccessibleImageInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleImageInterface {
+	return &QAccessibleImageInterface{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qaccessible.h:655
 // index:0
-// virtual
+// Public virtual
 // void ~QAccessibleImageInterface()
 func DeleteQAccessibleImageInterface(*QAccessibleImageInterface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QAccessibleImageInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -67,32 +70,32 @@ func DeleteQAccessibleImageInterface(*QAccessibleImageInterface) {
 
 // /usr/include/qt/QtGui/qaccessible.h:657
 // index:0
-// pure virtual
+// Public pure virtual
 // QString imageDescription()
-func (this *QAccessibleImageInterface) ImageDescription() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface16imageDescriptionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleImageInterface) ImageDescription() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface16imageDescriptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:658
 // index:0
-// pure virtual
+// Public pure virtual
 // QSize imageSize()
-func (this *QAccessibleImageInterface) ImageSize() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface9imageSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleImageInterface) ImageSize() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface9imageSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:659
 // index:0
-// pure virtual
+// Public pure virtual
 // QPoint imagePosition()
-func (this *QAccessibleImageInterface) ImagePosition() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface13imagePositionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleImageInterface) ImagePosition() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface13imagePositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

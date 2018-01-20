@@ -55,10 +55,13 @@ type QAccessibleTableCellInterface struct {
 func (this *QAccessibleTableCellInterface) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQAccessibleTableCellInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleTableCellInterface {
+	return &QAccessibleTableCellInterface{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qaccessible.h:578
 // index:0
-// virtual
+// Public virtual
 // void ~QAccessibleTableCellInterface()
 func DeleteQAccessibleTableCellInterface(*QAccessibleTableCellInterface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTableCellInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -67,82 +70,82 @@ func DeleteQAccessibleTableCellInterface(*QAccessibleTableCellInterface) {
 
 // /usr/include/qt/QtGui/qaccessible.h:580
 // index:0
-// pure virtual
+// Public pure virtual
 // bool isSelected()
-func (this *QAccessibleTableCellInterface) IsSelected() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface10isSelectedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleTableCellInterface) IsSelected() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface10isSelectedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:582
 // index:0
-// pure virtual
+// Public pure virtual
 // QList<QAccessibleInterface *> columnHeaderCells()
-func (this *QAccessibleTableCellInterface) ColumnHeaderCells() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface17columnHeaderCellsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleTableCellInterface) ColumnHeaderCells() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface17columnHeaderCellsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:583
 // index:0
-// pure virtual
+// Public pure virtual
 // QList<QAccessibleInterface *> rowHeaderCells()
-func (this *QAccessibleTableCellInterface) RowHeaderCells() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface14rowHeaderCellsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleTableCellInterface) RowHeaderCells() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface14rowHeaderCellsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:584
 // index:0
-// pure virtual
+// Public pure virtual
 // int columnIndex()
-func (this *QAccessibleTableCellInterface) ColumnIndex() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface11columnIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleTableCellInterface) ColumnIndex() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface11columnIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:585
 // index:0
-// pure virtual
+// Public pure virtual
 // int rowIndex()
-func (this *QAccessibleTableCellInterface) RowIndex() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface8rowIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleTableCellInterface) RowIndex() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface8rowIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:586
 // index:0
-// pure virtual
+// Public pure virtual
 // int columnExtent()
-func (this *QAccessibleTableCellInterface) ColumnExtent() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface12columnExtentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleTableCellInterface) ColumnExtent() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface12columnExtentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:587
 // index:0
-// pure virtual
+// Public pure virtual
 // int rowExtent()
-func (this *QAccessibleTableCellInterface) RowExtent() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface9rowExtentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleTableCellInterface) RowExtent() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface9rowExtentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:589
 // index:0
-// pure virtual
+// Public pure virtual
 // QAccessibleInterface * table()
-func (this *QAccessibleTableCellInterface) Table() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface5tableEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleTableCellInterface) Table() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface5tableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

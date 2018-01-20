@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 108
+// extern C begin: 106
 */
 // import "C"
 import "unsafe"
@@ -51,9 +51,13 @@ type QCollatorSortKey struct {
 func (this *QCollatorSortKey) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQCollatorSortKeyFromPointer(cthis unsafe.Pointer) *QCollatorSortKey {
+	return &QCollatorSortKey{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qcollator.h:58
 // index:0
+// Public
 // void ~QCollatorSortKey()
 func DeleteQCollatorSortKey(*QCollatorSortKey) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCollatorSortKeyD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -62,35 +66,35 @@ func DeleteQCollatorSortKey(*QCollatorSortKey) {
 
 // /usr/include/qt/QtCore/qcollator.h:64
 // index:0
-// inline
+// Public inline
 // void swap(class QCollatorSortKey &)
-func (this *QCollatorSortKey) Swap(other unsafe.Pointer) {
-	// 0: (, other QCollatorSortKey &), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCollatorSortKey4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
+func (this *QCollatorSortKey) Swap(other *QCollatorSortKey) {
+	var convArg0 = other.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCollatorSortKey4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcollator.h:67
 // index:0
+// Public
 // int compare(const class QCollatorSortKey &)
-func (this *QCollatorSortKey) Compare(key unsafe.Pointer) {
-	// 0: (, key const QCollatorSortKey &), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QCollatorSortKey7compareERKS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key)
+func (this *QCollatorSortKey) Compare(key *QCollatorSortKey) interface{} {
+	var convArg0 = key.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QCollatorSortKey7compareERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcollator.h:70
 // index:0
+// Protected
 // void QCollatorSortKey(class QCollatorSortKeyPrivate *)
 func NewQCollatorSortKey(arg0 unsafe.Pointer) *QCollatorSortKey {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCollatorSortKeyC2EP23QCollatorSortKeyPrivate", ffiqt.FFI_TYPE_VOID, cthis, arg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCollatorSortKeyFromPointer(cthis)
 	return gothis
-}
-func NewQCollatorSortKeyFromPointer(cthis unsafe.Pointer) *QCollatorSortKey {
-	return &QCollatorSortKey{&qtrt.CObject{cthis}}
 }
 
 //  body block end

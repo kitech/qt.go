@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
@@ -51,24 +51,25 @@ type QAbstractNativeEventFilter struct {
 func (this *QAbstractNativeEventFilter) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQAbstractNativeEventFilterFromPointer(cthis unsafe.Pointer) *QAbstractNativeEventFilter {
+	return &QAbstractNativeEventFilter{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qabstractnativeeventfilter.h:52
 // index:0
+// Public
 // void QAbstractNativeEventFilter()
 func NewQAbstractNativeEventFilter() *QAbstractNativeEventFilter {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilterC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractNativeEventFilterFromPointer(cthis)
 	return gothis
 }
-func NewQAbstractNativeEventFilterFromPointer(cthis unsafe.Pointer) *QAbstractNativeEventFilter {
-	return &QAbstractNativeEventFilter{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qabstractnativeeventfilter.h:53
 // index:0
-// virtual
+// Public virtual
 // void ~QAbstractNativeEventFilter()
 func DeleteQAbstractNativeEventFilter(*QAbstractNativeEventFilter) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilterD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -77,12 +78,13 @@ func DeleteQAbstractNativeEventFilter(*QAbstractNativeEventFilter) {
 
 // /usr/include/qt/QtCore/qabstractnativeeventfilter.h:55
 // index:0
-// pure virtual
+// Public pure virtual
 // bool nativeEventFilter(const class QByteArray &, void *, long *)
-func (this *QAbstractNativeEventFilter) NativeEventFilter(eventType unsafe.Pointer, message unsafe.Pointer, result unsafe.Pointer) {
-	// 0: (, eventType const QByteArray &, message void *, result long *), (eventType, message, result)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl", ffiqt.FFI_TYPE_VOID, this.GetCthis(), eventType, message, result)
+func (this *QAbstractNativeEventFilter) NativeEventFilter(eventType *QByteArray, message unsafe.Pointer, result unsafe.Pointer) interface{} {
+	var convArg0 = eventType.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, result)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

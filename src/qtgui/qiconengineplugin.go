@@ -55,35 +55,36 @@ type QIconEnginePlugin struct {
 func (this *QIconEnginePlugin) GetCthis() unsafe.Pointer {
 	return this.QObject.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qiconengineplugin.h:56
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QIconEnginePlugin) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QIconEnginePlugin10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qiconengineplugin.h:58
-// index:0
-// void QIconEnginePlugin(class QObject *)
-func NewQIconEnginePlugin(parent unsafe.Pointer) *QIconEnginePlugin {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQIconEnginePluginFromPointer(cthis)
-	return gothis
-}
 func NewQIconEnginePluginFromPointer(cthis unsafe.Pointer) *QIconEnginePlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QIconEnginePlugin{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qiconengineplugin.h:56
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QIconEnginePlugin) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QIconEnginePlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtGui/qiconengineplugin.h:58
+// index:0
+// Public
+// void QIconEnginePlugin(class QObject *)
+func NewQIconEnginePlugin(parent unsafe.Pointer) *QIconEnginePlugin {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQIconEnginePluginFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qiconengineplugin.h:59
 // index:0
-// virtual
+// Public virtual
 // void ~QIconEnginePlugin()
 func DeleteQIconEnginePlugin(*QIconEnginePlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePluginD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -92,12 +93,13 @@ func DeleteQIconEnginePlugin(*QIconEnginePlugin) {
 
 // /usr/include/qt/QtGui/qiconengineplugin.h:61
 // index:0
-// pure virtual
+// Public pure virtual
 // QIconEngine * create(const class QString &)
-func (this *QIconEnginePlugin) Create(filename unsafe.Pointer) {
-	// 0: (, filename const QString &), (filename)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePlugin6createERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), filename)
+func (this *QIconEnginePlugin) Create(filename *qtcore.QString) interface{} {
+	var convArg0 = filename.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePlugin6createERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

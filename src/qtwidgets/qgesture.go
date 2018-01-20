@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 56
+// extern C begin: 54
 */
 // import "C"
 import "unsafe"
@@ -59,38 +59,28 @@ type QGesture struct {
 func (this *QGesture) GetCthis() unsafe.Pointer {
 	return this.QObject.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qgesture.h:63
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QGesture) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qgesture.h:73
-// index:0
-// void QGesture(class QObject *)
-func NewQGesture(parent unsafe.Pointer) *QGesture {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQGestureFromPointer(cthis)
-	return gothis
-}
 func NewQGestureFromPointer(cthis unsafe.Pointer) *QGesture {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QGesture{bcthis0}
 }
 
-// /usr/include/qt/QtWidgets/qgesture.h:94
-// index:1
-// void QGesture(class QGesturePrivate &, class QObject *)
-func NewQGesture_1(dd unsafe.Pointer, parent unsafe.Pointer) *QGesture {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGestureC2ER15QGesturePrivateP7QObject", ffiqt.FFI_TYPE_VOID, cthis, dd, parent)
+// /usr/include/qt/QtWidgets/qgesture.h:63
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QGesture) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qgesture.h:73
+// index:0
+// Public
+// void QGesture(class QObject *)
+func NewQGesture(parent unsafe.Pointer) *QGesture {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGestureFromPointer(cthis)
 	return gothis
@@ -98,7 +88,7 @@ func NewQGesture_1(dd unsafe.Pointer, parent unsafe.Pointer) *QGesture {
 
 // /usr/include/qt/QtWidgets/qgesture.h:74
 // index:0
-// virtual
+// Public virtual
 // void ~QGesture()
 func DeleteQGesture(*QGesture) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGestureD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -107,74 +97,80 @@ func DeleteQGesture(*QGesture) {
 
 // /usr/include/qt/QtWidgets/qgesture.h:76
 // index:0
+// Public
 // Qt::GestureType gestureType()
-func (this *QGesture) GestureType() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture11gestureTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGesture) GestureType() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture11gestureTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:78
 // index:0
+// Public
 // Qt::GestureState state()
-func (this *QGesture) State() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture5stateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGesture) State() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture5stateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:80
 // index:0
+// Public
 // QPointF hotSpot()
-func (this *QGesture) HotSpot() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture7hotSpotEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGesture) HotSpot() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture7hotSpotEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:81
 // index:0
+// Public
 // void setHotSpot(const class QPointF &)
-func (this *QGesture) SetHotSpot(value unsafe.Pointer) {
-	// 0: (, value const QPointF &), (value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGesture10setHotSpotERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), value)
+func (this *QGesture) SetHotSpot(value *qtcore.QPointF) {
+	var convArg0 = value.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGesture10setHotSpotERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:82
 // index:0
+// Public
 // bool hasHotSpot()
-func (this *QGesture) HasHotSpot() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture10hasHotSpotEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGesture) HasHotSpot() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture10hasHotSpotEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:83
 // index:0
+// Public
 // void unsetHotSpot()
 func (this *QGesture) UnsetHotSpot() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGesture12unsetHotSpotEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGesture12unsetHotSpotEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:90
 // index:0
+// Public
 // void setGestureCancelPolicy(enum QGesture::GestureCancelPolicy)
 func (this *QGesture) SetGestureCancelPolicy(policy int) {
-	// 0: (, policy QGesture::GestureCancelPolicy), (&policy)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGesture22setGestureCancelPolicyENS_19GestureCancelPolicyE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &policy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGesture22setGestureCancelPolicyENS_19GestureCancelPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &policy)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:91
 // index:0
+// Public
 // QGesture::GestureCancelPolicy gestureCancelPolicy()
-func (this *QGesture) GestureCancelPolicy() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture19gestureCancelPolicyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGesture) GestureCancelPolicy() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture19gestureCancelPolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

@@ -51,27 +51,31 @@ type QCommandLineOption struct {
 func (this *QCommandLineOption) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
-
-// /usr/include/qt/QtCore/qcommandlineoption.h:61
-// index:0
-// void QCommandLineOption(const class QString &)
-func NewQCommandLineOption(name unsafe.Pointer) *QCommandLineOption {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, name)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQCommandLineOptionFromPointer(cthis)
-	return gothis
-}
 func NewQCommandLineOptionFromPointer(cthis unsafe.Pointer) *QCommandLineOption {
 	return &QCommandLineOption{&qtrt.CObject{cthis}}
 }
 
+// /usr/include/qt/QtCore/qcommandlineoption.h:61
+// index:0
+// Public
+// void QCommandLineOption(const class QString &)
+func NewQCommandLineOption(name *QString) *QCommandLineOption {
+	cthis := qtrt.Calloc(1, 256) // 8
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQCommandLineOptionFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qcommandlineoption.h:62
 // index:1
+// Public
 // void QCommandLineOption(const class QStringList &)
-func NewQCommandLineOption_1(names unsafe.Pointer) *QCommandLineOption {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK11QStringList", ffiqt.FFI_TYPE_VOID, cthis, names)
+func NewQCommandLineOption_1(names *QStringList) *QCommandLineOption {
+	cthis := qtrt.Calloc(1, 256) // 8
+	var convArg0 = names.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK11QStringList", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCommandLineOptionFromPointer(cthis)
 	return gothis
@@ -79,10 +83,15 @@ func NewQCommandLineOption_1(names unsafe.Pointer) *QCommandLineOption {
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:63
 // index:2
+// Public
 // void QCommandLineOption(const class QString &, const class QString &, const class QString &, const class QString &)
-func NewQCommandLineOption_2(name unsafe.Pointer, description unsafe.Pointer, valueName unsafe.Pointer, defaultValue unsafe.Pointer) *QCommandLineOption {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK7QStringS2_S2_S2_", ffiqt.FFI_TYPE_VOID, cthis, name, description, valueName, defaultValue)
+func NewQCommandLineOption_2(name *QString, description *QString, valueName *QString, defaultValue *QString) *QCommandLineOption {
+	cthis := qtrt.Calloc(1, 256) // 8
+	var convArg0 = name.GetCthis()
+	var convArg1 = description.GetCthis()
+	var convArg2 = valueName.GetCthis()
+	var convArg3 = defaultValue.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK7QStringS2_S2_S2_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCommandLineOptionFromPointer(cthis)
 	return gothis
@@ -90,10 +99,15 @@ func NewQCommandLineOption_2(name unsafe.Pointer, description unsafe.Pointer, va
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:66
 // index:3
+// Public
 // void QCommandLineOption(const class QStringList &, const class QString &, const class QString &, const class QString &)
-func NewQCommandLineOption_3(names unsafe.Pointer, description unsafe.Pointer, valueName unsafe.Pointer, defaultValue unsafe.Pointer) *QCommandLineOption {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_", ffiqt.FFI_TYPE_VOID, cthis, names, description, valueName, defaultValue)
+func NewQCommandLineOption_3(names *QStringList, description *QString, valueName *QString, defaultValue *QString) *QCommandLineOption {
+	cthis := qtrt.Calloc(1, 256) // 8
+	var convArg0 = names.GetCthis()
+	var convArg1 = description.GetCthis()
+	var convArg2 = valueName.GetCthis()
+	var convArg3 = defaultValue.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCommandLineOptionFromPointer(cthis)
 	return gothis
@@ -101,6 +115,7 @@ func NewQCommandLineOption_3(names unsafe.Pointer, description unsafe.Pointer, v
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:71
 // index:0
+// Public
 // void ~QCommandLineOption()
 func DeleteQCommandLineOption(*QCommandLineOption) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -109,120 +124,121 @@ func DeleteQCommandLineOption(*QCommandLineOption) {
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:78
 // index:0
-// inline
+// Public inline
 // void swap(class QCommandLineOption &)
-func (this *QCommandLineOption) Swap(other unsafe.Pointer) {
-	// 0: (, other QCommandLineOption &), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
+func (this *QCommandLineOption) Swap(other *QCommandLineOption) {
+	var convArg0 = other.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:81
 // index:0
+// Public
 // QStringList names()
-func (this *QCommandLineOption) Names() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption5namesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QCommandLineOption) Names() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption5namesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:83
 // index:0
+// Public
 // void setValueName(const class QString &)
-func (this *QCommandLineOption) SetValueName(name unsafe.Pointer) {
-	// 0: (, name const QString &), (name)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption12setValueNameERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), name)
+func (this *QCommandLineOption) SetValueName(name *QString) {
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption12setValueNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:84
 // index:0
+// Public
 // QString valueName()
-func (this *QCommandLineOption) ValueName() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption9valueNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QCommandLineOption) ValueName() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption9valueNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:86
 // index:0
+// Public
 // void setDescription(const class QString &)
-func (this *QCommandLineOption) SetDescription(description unsafe.Pointer) {
-	// 0: (, description const QString &), (description)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption14setDescriptionERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), description)
+func (this *QCommandLineOption) SetDescription(description *QString) {
+	var convArg0 = description.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption14setDescriptionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:87
 // index:0
+// Public
 // QString description()
-func (this *QCommandLineOption) Description() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption11descriptionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QCommandLineOption) Description() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption11descriptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:89
 // index:0
+// Public
 // void setDefaultValue(const class QString &)
-func (this *QCommandLineOption) SetDefaultValue(defaultValue unsafe.Pointer) {
-	// 0: (, defaultValue const QString &), (defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption15setDefaultValueERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), defaultValue)
+func (this *QCommandLineOption) SetDefaultValue(defaultValue *QString) {
+	var convArg0 = defaultValue.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption15setDefaultValueERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:90
 // index:0
+// Public
 // void setDefaultValues(const class QStringList &)
-func (this *QCommandLineOption) SetDefaultValues(defaultValues unsafe.Pointer) {
-	// 0: (, defaultValues const QStringList &), (defaultValues)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption16setDefaultValuesERK11QStringList", ffiqt.FFI_TYPE_VOID, this.GetCthis(), defaultValues)
+func (this *QCommandLineOption) SetDefaultValues(defaultValues *QStringList) {
+	var convArg0 = defaultValues.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption16setDefaultValuesERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:91
 // index:0
+// Public
 // QStringList defaultValues()
-func (this *QCommandLineOption) DefaultValues() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption13defaultValuesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QCommandLineOption) DefaultValues() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption13defaultValuesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:93
 // index:0
+// Public
 // QCommandLineOption::Flags flags()
-func (this *QCommandLineOption) Flags() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption5flagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QCommandLineOption) Flags() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qcommandlineoption.h:94
-// index:0
-// void setFlags(QCommandLineOption::Flags)
-func (this *QCommandLineOption) SetFlags(aflags int) {
-	// 0: (, QFlags<QCommandLineOption::Flag> aflags), (aflags)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption8setFlagsE6QFlagsINS_4FlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), aflags)
-	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:98
 // index:0
+// Public
 // void setHidden(_Bool)
 func (this *QCommandLineOption) SetHidden(hidden bool) {
-	// 0: (, hidden bool), (&hidden)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption9setHiddenEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &hidden)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption9setHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &hidden)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:100
 // index:0
+// Public
 // bool isHidden()
-func (this *QCommandLineOption) IsHidden() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption8isHiddenEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QCommandLineOption) IsHidden() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption8isHiddenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

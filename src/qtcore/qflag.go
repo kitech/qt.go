@@ -51,28 +51,28 @@ type QFlag struct {
 func (this *QFlag) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQFlagFromPointer(cthis unsafe.Pointer) *QFlag {
+	return &QFlag{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qflags.h:57
 // index:0
-// inline
+// Public inline
 // void QFlag(int)
 func NewQFlag(ai int) *QFlag {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 4
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(cthis)
 	return gothis
 }
-func NewQFlagFromPointer(cthis unsafe.Pointer) *QFlag {
-	return &QFlag{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qflags.h:68
 // index:1
-// inline
+// Public inline
 // void QFlag(uint)
 func NewQFlag_1(ai uint) *QFlag {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 4
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ej", ffiqt.FFI_TYPE_VOID, cthis, &ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(cthis)
@@ -81,10 +81,10 @@ func NewQFlag_1(ai uint) *QFlag {
 
 // /usr/include/qt/QtCore/qflags.h:69
 // index:2
-// inline
+// Public inline
 // void QFlag(short)
 func NewQFlag_2(ai int16) *QFlag {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 4
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Es", ffiqt.FFI_TYPE_VOID, cthis, &ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(cthis)
@@ -93,10 +93,10 @@ func NewQFlag_2(ai int16) *QFlag {
 
 // /usr/include/qt/QtCore/qflags.h:70
 // index:3
-// inline
+// Public inline
 // void QFlag(ushort)
 func NewQFlag_3(ai uint16) *QFlag {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 4
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Et", ffiqt.FFI_TYPE_VOID, cthis, &ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(cthis)

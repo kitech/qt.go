@@ -51,28 +51,28 @@ type QJsonValueRef struct {
 func (this *QJsonValueRef) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQJsonValueRefFromPointer(cthis unsafe.Pointer) *QJsonValueRef {
+	return &QJsonValueRef{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qjsonvalue.h:174
 // index:0
-// inline
+// Public inline
 // void QJsonValueRef(class QJsonArray *, int)
 func NewQJsonValueRef(array unsafe.Pointer, idx int) *QJsonValueRef {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValueRefC2EP10QJsonArrayi", ffiqt.FFI_TYPE_VOID, cthis, array, &idx)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonValueRefFromPointer(cthis)
 	return gothis
 }
-func NewQJsonValueRefFromPointer(cthis unsafe.Pointer) *QJsonValueRef {
-	return &QJsonValueRef{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qjsonvalue.h:176
 // index:1
-// inline
+// Public inline
 // void QJsonValueRef(class QJsonObject *, int)
 func NewQJsonValueRef_1(object unsafe.Pointer, idx int) *QJsonValueRef {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValueRefC2EP11QJsonObjecti", ffiqt.FFI_TYPE_VOID, cthis, object, &idx)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonValueRefFromPointer(cthis)
@@ -81,189 +81,193 @@ func NewQJsonValueRef_1(object unsafe.Pointer, idx int) *QJsonValueRef {
 
 // /usr/include/qt/QtCore/qjsonvalue.h:183
 // index:0
+// Public
 // QVariant toVariant()
-func (this *QJsonValueRef) ToVariant() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef9toVariantEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) ToVariant() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef9toVariantEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:184
 // index:0
-// inline
+// Public inline
 // QJsonValue::Type type()
-func (this *QJsonValueRef) Type() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) Type() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:185
 // index:0
-// inline
+// Public inline
 // bool isNull()
-func (this *QJsonValueRef) IsNull() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6isNullEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) IsNull() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:186
 // index:0
-// inline
+// Public inline
 // bool isBool()
-func (this *QJsonValueRef) IsBool() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6isBoolEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) IsBool() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6isBoolEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:187
 // index:0
-// inline
+// Public inline
 // bool isDouble()
-func (this *QJsonValueRef) IsDouble() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isDoubleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) IsDouble() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isDoubleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:188
 // index:0
-// inline
+// Public inline
 // bool isString()
-func (this *QJsonValueRef) IsString() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) IsString() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:189
 // index:0
-// inline
+// Public inline
 // bool isArray()
-func (this *QJsonValueRef) IsArray() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef7isArrayEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) IsArray() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef7isArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:190
 // index:0
-// inline
+// Public inline
 // bool isObject()
-func (this *QJsonValueRef) IsObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) IsObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:191
 // index:0
-// inline
+// Public inline
 // bool isUndefined()
-func (this *QJsonValueRef) IsUndefined() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef11isUndefinedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) IsUndefined() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef11isUndefinedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:193
 // index:0
-// inline
+// Public inline
 // bool toBool()
-func (this *QJsonValueRef) ToBool() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) ToBool() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:201
 // index:1
-// inline
+// Public inline
 // bool toBool(_Bool)
-func (this *QJsonValueRef) ToBool_1(defaultValue bool) {
-	// 1: (, defaultValue bool), (&defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &defaultValue)
+func (this *QJsonValueRef) ToBool_1(defaultValue bool) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &defaultValue)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:194
 // index:0
-// inline
+// Public inline
 // int toInt()
-func (this *QJsonValueRef) ToInt() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) ToInt() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:202
 // index:1
-// inline
+// Public inline
 // int toInt(int)
-func (this *QJsonValueRef) ToInt_1(defaultValue int) {
-	// 1: (, defaultValue int), (&defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &defaultValue)
+func (this *QJsonValueRef) ToInt_1(defaultValue int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &defaultValue)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:195
 // index:0
-// inline
+// Public inline
 // double toDouble()
-func (this *QJsonValueRef) ToDouble() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) ToDouble() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:203
 // index:1
-// inline
+// Public inline
 // double toDouble(double)
-func (this *QJsonValueRef) ToDouble_1(defaultValue float64) {
-	// 1: (, defaultValue double), (&defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &defaultValue)
+func (this *QJsonValueRef) ToDouble_1(defaultValue float64) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &defaultValue)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:196
 // index:0
-// inline
+// Public inline
 // QString toString()
-func (this *QJsonValueRef) ToString() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) ToString() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:204
 // index:1
-// inline
+// Public inline
 // QString toString(const class QString &)
-func (this *QJsonValueRef) ToString_1(defaultValue unsafe.Pointer) {
-	// 1: (, defaultValue const QString &), (defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), defaultValue)
+func (this *QJsonValueRef) ToString_1(defaultValue *QString) interface{} {
+	var convArg0 = defaultValue.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:197
 // index:0
+// Public
 // QJsonArray toArray()
-func (this *QJsonValueRef) ToArray() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef7toArrayEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) ToArray() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef7toArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:198
 // index:0
+// Public
 // QJsonObject toObject()
-func (this *QJsonValueRef) ToObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QJsonValueRef) ToObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

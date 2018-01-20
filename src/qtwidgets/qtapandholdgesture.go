@@ -59,35 +59,36 @@ type QTapAndHoldGesture struct {
 func (this *QTapAndHoldGesture) GetCthis() unsafe.Pointer {
 	return this.QGesture.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qgesture.h:254
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QTapAndHoldGesture) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QTapAndHoldGesture10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qgesture.h:260
-// index:0
-// void QTapAndHoldGesture(class QObject *)
-func NewQTapAndHoldGesture(parent unsafe.Pointer) *QTapAndHoldGesture {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTapAndHoldGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQTapAndHoldGestureFromPointer(cthis)
-	return gothis
-}
 func NewQTapAndHoldGestureFromPointer(cthis unsafe.Pointer) *QTapAndHoldGesture {
 	bcthis0 := NewQGestureFromPointer(cthis)
 	return &QTapAndHoldGesture{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qgesture.h:254
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QTapAndHoldGesture) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QTapAndHoldGesture10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qgesture.h:260
+// index:0
+// Public
+// void QTapAndHoldGesture(class QObject *)
+func NewQTapAndHoldGesture(parent unsafe.Pointer) *QTapAndHoldGesture {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTapAndHoldGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTapAndHoldGestureFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgesture.h:261
 // index:0
-// virtual
+// Public virtual
 // void ~QTapAndHoldGesture()
 func DeleteQTapAndHoldGesture(*QTapAndHoldGesture) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTapAndHoldGestureD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -96,48 +97,47 @@ func DeleteQTapAndHoldGesture(*QTapAndHoldGesture) {
 
 // /usr/include/qt/QtWidgets/qgesture.h:263
 // index:0
+// Public
 // QPointF position()
-func (this *QTapAndHoldGesture) Position() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QTapAndHoldGesture8positionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTapAndHoldGesture) Position() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QTapAndHoldGesture8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:264
 // index:0
+// Public
 // void setPosition(const class QPointF &)
-func (this *QTapAndHoldGesture) SetPosition(pos unsafe.Pointer) {
-	// 0: (, pos const QPointF &), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTapAndHoldGesture11setPositionERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
+func (this *QTapAndHoldGesture) SetPosition(pos *qtcore.QPointF) {
+	var convArg0 = pos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTapAndHoldGesture11setPositionERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:266
 // index:0
-// static
+// Public static
 // void setTimeout(int)
 func (this *QTapAndHoldGesture) SetTimeout(msecs int) {
-	// 0: (msecs int), (msecs)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTapAndHoldGesture10setTimeoutEi", ffiqt.FFI_TYPE_VOID)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTapAndHoldGesture10setTimeoutEi", ffiqt.FFI_TYPE_POINTER, msecs)
 	gopp.ErrPrint(err, rv)
 }
 func QTapAndHoldGesture_SetTimeout(msecs int) {
-	// 0: (msecs int), (msecs)
 	var nilthis *QTapAndHoldGesture
 	nilthis.SetTimeout(msecs)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:267
 // index:0
-// static
+// Public static
 // int timeout()
-func (this *QTapAndHoldGesture) Timeout() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTapAndHoldGesture7timeoutEv", ffiqt.FFI_TYPE_VOID)
+func (this *QTapAndHoldGesture) Timeout() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTapAndHoldGesture7timeoutEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 func QTapAndHoldGesture_Timeout() {
-	// 0: (), ()
 	var nilthis *QTapAndHoldGesture
 	nilthis.Timeout()
 }

@@ -59,27 +59,29 @@ type QStyleOptionTab struct {
 func (this *QStyleOptionTab) GetCthis() unsafe.Pointer {
 	return this.QStyleOption.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:285
-// index:0
-// void QStyleOptionTab()
-func NewQStyleOptionTab() *QStyleOptionTab {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionTabFromPointer(cthis)
-	return gothis
-}
 func NewQStyleOptionTabFromPointer(cthis unsafe.Pointer) *QStyleOptionTab {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionTab{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:285
+// index:0
+// Public
+// void QStyleOptionTab()
+func NewQStyleOptionTab() *QStyleOptionTab {
+	cthis := qtrt.Calloc(1, 256) // 136
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionTabFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:289
 // index:1
+// Protected
 // void QStyleOptionTab(int)
 func NewQStyleOptionTab_1(version int) *QStyleOptionTab {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 136
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabFromPointer(cthis)

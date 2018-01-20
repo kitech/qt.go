@@ -59,25 +59,26 @@ type QGraphicsSceneMoveEvent struct {
 func (this *QGraphicsSceneMoveEvent) GetCthis() unsafe.Pointer {
 	return this.QGraphicsSceneEvent.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:313
-// index:0
-// void QGraphicsSceneMoveEvent()
-func NewQGraphicsSceneMoveEvent() *QGraphicsSceneMoveEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsSceneMoveEventFromPointer(cthis)
-	return gothis
-}
 func NewQGraphicsSceneMoveEventFromPointer(cthis unsafe.Pointer) *QGraphicsSceneMoveEvent {
 	bcthis0 := NewQGraphicsSceneEventFromPointer(cthis)
 	return &QGraphicsSceneMoveEvent{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:313
+// index:0
+// Public
+// void QGraphicsSceneMoveEvent()
+func NewQGraphicsSceneMoveEvent() *QGraphicsSceneMoveEvent {
+	cthis := qtrt.Calloc(1, 256) // 32
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQGraphicsSceneMoveEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:314
 // index:0
-// virtual
+// Public virtual
 // void ~QGraphicsSceneMoveEvent()
 func DeleteQGraphicsSceneMoveEvent(*QGraphicsSceneMoveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -86,37 +87,41 @@ func DeleteQGraphicsSceneMoveEvent(*QGraphicsSceneMoveEvent) {
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:316
 // index:0
+// Public
 // QPointF oldPos()
-func (this *QGraphicsSceneMoveEvent) OldPos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6oldPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneMoveEvent) OldPos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:317
 // index:0
+// Public
 // void setOldPos(const class QPointF &)
-func (this *QGraphicsSceneMoveEvent) SetOldPos(pos unsafe.Pointer) {
-	// 0: (, pos const QPointF &), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
+func (this *QGraphicsSceneMoveEvent) SetOldPos(pos *qtcore.QPointF) {
+	var convArg0 = pos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:319
 // index:0
+// Public
 // QPointF newPos()
-func (this *QGraphicsSceneMoveEvent) NewPos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6newPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneMoveEvent) NewPos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6newPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:320
 // index:0
+// Public
 // void setNewPos(const class QPointF &)
-func (this *QGraphicsSceneMoveEvent) SetNewPos(pos unsafe.Pointer) {
-	// 0: (, pos const QPointF &), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
+func (this *QGraphicsSceneMoveEvent) SetNewPos(pos *qtcore.QPointF) {
+	var convArg0 = pos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

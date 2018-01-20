@@ -59,5 +59,8 @@ type QWidgetData struct {
 func (this *QWidgetData) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQWidgetDataFromPointer(cthis unsafe.Pointer) *QWidgetData {
+	return &QWidgetData{&qtrt.CObject{cthis}}
+}
 
 //  body block end

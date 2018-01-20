@@ -51,78 +51,78 @@ type QBasicMutex struct {
 func (this *QBasicMutex) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQBasicMutexFromPointer(cthis unsafe.Pointer) *QBasicMutex {
+	return &QBasicMutex{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qmutex.h:71
 // index:0
-// inline
+// Public inline
 // void QBasicMutex()
 func NewQBasicMutex() *QBasicMutex {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutexC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBasicMutexFromPointer(cthis)
 	return gothis
 }
-func NewQBasicMutexFromPointer(cthis unsafe.Pointer) *QBasicMutex {
-	return &QBasicMutex{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qmutex.h:77
 // index:0
-// inline
+// Public inline
 // void lock()
 func (this *QBasicMutex) Lock() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex4lockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex4lockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:83
 // index:0
-// inline
+// Public inline
 // void unlock()
 func (this *QBasicMutex) Unlock() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex6unlockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex6unlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:89
 // index:0
-// inline
+// Public inline
 // bool tryLock()
-func (this *QBasicMutex) TryLock() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex7tryLockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QBasicMutex) TryLock() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex7tryLockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qmutex.h:94
 // index:0
-// inline
+// Public inline
 // bool try_lock()
-func (this *QBasicMutex) Try_lock() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex8try_lockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QBasicMutex) Try_lock() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex8try_lockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qmutex.h:96
 // index:0
+// Public
 // bool isRecursive()
-func (this *QBasicMutex) IsRecursive() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex11isRecursiveEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QBasicMutex) IsRecursive() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex11isRecursiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qmutex.h:97
 // index:1
+// Public
 // bool isRecursive()
-func (this *QBasicMutex) IsRecursive_1() {
-	// 1: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QBasicMutex11isRecursiveEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QBasicMutex) IsRecursive_1() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QBasicMutex11isRecursiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

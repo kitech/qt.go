@@ -55,30 +55,32 @@ type QAccessibleTextRemoveEvent struct {
 func (this *QAccessibleTextRemoveEvent) GetCthis() unsafe.Pointer {
 	return this.QAccessibleTextCursorEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qaccessible.h:834
-// index:0
-// inline
-// void QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
-func NewQAccessibleTextRemoveEvent(obj unsafe.Pointer, position int, text unsafe.Pointer) *QAccessibleTextRemoveEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextRemoveEventC2EP7QObjectiRK7QString", ffiqt.FFI_TYPE_VOID, cthis, obj, &position, text)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQAccessibleTextRemoveEventFromPointer(cthis)
-	return gothis
-}
 func NewQAccessibleTextRemoveEventFromPointer(cthis unsafe.Pointer) *QAccessibleTextRemoveEvent {
 	bcthis0 := NewQAccessibleTextCursorEventFromPointer(cthis)
 	return &QAccessibleTextRemoveEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qaccessible.h:834
+// index:0
+// Public inline
+// void QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
+func NewQAccessibleTextRemoveEvent(obj unsafe.Pointer, position int, text *qtcore.QString) *QAccessibleTextRemoveEvent {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextRemoveEventC2EP7QObjectiRK7QString", ffiqt.FFI_TYPE_VOID, cthis, obj, &position, convArg2)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQAccessibleTextRemoveEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qaccessible.h:840
 // index:1
-// inline
+// Public inline
 // void QAccessibleTextRemoveEvent(class QAccessibleInterface *, int, const class QString &)
-func NewQAccessibleTextRemoveEvent_1(iface unsafe.Pointer, position int, text unsafe.Pointer) *QAccessibleTextRemoveEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextRemoveEventC2EP20QAccessibleInterfaceiRK7QString", ffiqt.FFI_TYPE_VOID, cthis, iface, &position, text)
+func NewQAccessibleTextRemoveEvent_1(iface unsafe.Pointer, position int, text *qtcore.QString) *QAccessibleTextRemoveEvent {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextRemoveEventC2EP20QAccessibleInterfaceiRK7QString", ffiqt.FFI_TYPE_VOID, cthis, iface, &position, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextRemoveEventFromPointer(cthis)
 	return gothis
@@ -86,7 +88,7 @@ func NewQAccessibleTextRemoveEvent_1(iface unsafe.Pointer, position int, text un
 
 // /usr/include/qt/QtGui/qaccessible.h:847
 // index:0
-// virtual
+// Public virtual
 // void ~QAccessibleTextRemoveEvent()
 func DeleteQAccessibleTextRemoveEvent(*QAccessibleTextRemoveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextRemoveEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -95,22 +97,22 @@ func DeleteQAccessibleTextRemoveEvent(*QAccessibleTextRemoveEvent) {
 
 // /usr/include/qt/QtGui/qaccessible.h:849
 // index:0
-// inline
+// Public inline
 // QString textRemoved()
-func (this *QAccessibleTextRemoveEvent) TextRemoved() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextRemoveEvent11textRemovedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleTextRemoveEvent) TextRemoved() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextRemoveEvent11textRemovedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:852
 // index:0
-// inline
+// Public inline
 // int changePosition()
-func (this *QAccessibleTextRemoveEvent) ChangePosition() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextRemoveEvent14changePositionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleTextRemoveEvent) ChangePosition() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextRemoveEvent14changePositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

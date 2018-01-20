@@ -55,25 +55,28 @@ type QMoveEvent struct {
 func (this *QMoveEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:421
-// index:0
-// void QMoveEvent(const class QPoint &, const class QPoint &)
-func NewQMoveEvent(pos unsafe.Pointer, oldPos unsafe.Pointer) *QMoveEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMoveEventC2ERK6QPointS2_", ffiqt.FFI_TYPE_VOID, cthis, pos, oldPos)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQMoveEventFromPointer(cthis)
-	return gothis
-}
 func NewQMoveEventFromPointer(cthis unsafe.Pointer) *QMoveEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QMoveEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:421
+// index:0
+// Public
+// void QMoveEvent(const class QPoint &, const class QPoint &)
+func NewQMoveEvent(pos *qtcore.QPoint, oldPos *qtcore.QPoint) *QMoveEvent {
+	cthis := qtrt.Calloc(1, 256) // 40
+	var convArg0 = pos.GetCthis()
+	var convArg1 = oldPos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMoveEventC2ERK6QPointS2_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQMoveEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:422
 // index:0
-// virtual
+// Public virtual
 // void ~QMoveEvent()
 func DeleteQMoveEvent(*QMoveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMoveEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -82,22 +85,22 @@ func DeleteQMoveEvent(*QMoveEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:424
 // index:0
-// inline
+// Public inline
 // const QPoint & pos()
-func (this *QMoveEvent) Pos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent3posEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QMoveEvent) Pos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:425
 // index:0
-// inline
+// Public inline
 // const QPoint & oldPos()
-func (this *QMoveEvent) OldPos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent6oldPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QMoveEvent) OldPos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

@@ -59,35 +59,36 @@ type QStyledItemDelegate struct {
 func (this *QStyledItemDelegate) GetCthis() unsafe.Pointer {
 	return this.QAbstractItemDelegate.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:58
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QStyledItemDelegate) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:61
-// index:0
-// void QStyledItemDelegate(class QObject *)
-func NewQStyledItemDelegate(parent unsafe.Pointer) *QStyledItemDelegate {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegateC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStyledItemDelegateFromPointer(cthis)
-	return gothis
-}
 func NewQStyledItemDelegateFromPointer(cthis unsafe.Pointer) *QStyledItemDelegate {
 	bcthis0 := NewQAbstractItemDelegateFromPointer(cthis)
 	return &QStyledItemDelegate{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:58
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QStyledItemDelegate) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:61
+// index:0
+// Public
+// void QStyledItemDelegate(class QObject *)
+func NewQStyledItemDelegate(parent unsafe.Pointer) *QStyledItemDelegate {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegateC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyledItemDelegateFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:62
 // index:0
-// virtual
+// Public virtual
 // void ~QStyledItemDelegate()
 func DeleteQStyledItemDelegate(*QStyledItemDelegate) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegateD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -96,120 +97,131 @@ func DeleteQStyledItemDelegate(*QStyledItemDelegate) {
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:65
 // index:0
-// virtual
+// Public virtual
 // void paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) Paint(painter unsafe.Pointer, option unsafe.Pointer, index unsafe.Pointer) {
-	// 0: (, painter QPainter *, option const QStyleOptionViewItem &, index const QModelIndex &), (painter, option, index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), painter, option, index)
+func (this *QStyledItemDelegate) Paint(painter unsafe.Pointer, option *QStyleOptionViewItem, index *qtcore.QModelIndex) {
+	var convArg1 = option.GetCthis()
+	var convArg2 = index.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), painter, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:67
 // index:0
-// virtual
+// Public virtual
 // QSize sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) SizeHint(option unsafe.Pointer, index unsafe.Pointer) {
-	// 0: (, option const QStyleOptionViewItem &, index const QModelIndex &), (option, index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), option, index)
+func (this *QStyledItemDelegate) SizeHint(option *QStyleOptionViewItem, index *qtcore.QModelIndex) interface{} {
+	var convArg0 = option.GetCthis()
+	var convArg1 = index.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:71
 // index:0
-// virtual
+// Public virtual
 // QWidget * createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) CreateEditor(parent unsafe.Pointer, option unsafe.Pointer, index unsafe.Pointer) {
-	// 0: (, parent QWidget *, option const QStyleOptionViewItem &, index const QModelIndex &), (parent, option, index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), parent, option, index)
+func (this *QStyledItemDelegate) CreateEditor(parent unsafe.Pointer, option *QStyleOptionViewItem, index *qtcore.QModelIndex) interface{} {
+	var convArg1 = option.GetCthis()
+	var convArg2 = index.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), parent, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:75
 // index:0
-// virtual
+// Public virtual
 // void setEditorData(class QWidget *, const class QModelIndex &)
-func (this *QStyledItemDelegate) SetEditorData(editor unsafe.Pointer, index unsafe.Pointer) {
-	// 0: (, editor QWidget *, index const QModelIndex &), (editor, index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), editor, index)
+func (this *QStyledItemDelegate) SetEditorData(editor unsafe.Pointer, index *qtcore.QModelIndex) {
+	var convArg1 = index.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), editor, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:76
 // index:0
-// virtual
+// Public virtual
 // void setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
-func (this *QStyledItemDelegate) SetModelData(editor unsafe.Pointer, model unsafe.Pointer, index unsafe.Pointer) {
-	// 0: (, editor QWidget *, model QAbstractItemModel *, index const QModelIndex &), (editor, model, index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), editor, model, index)
+func (this *QStyledItemDelegate) SetModelData(editor unsafe.Pointer, model unsafe.Pointer, index *qtcore.QModelIndex) {
+	var convArg2 = index.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), editor, model, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:80
 // index:0
-// virtual
+// Public virtual
 // void updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) UpdateEditorGeometry(editor unsafe.Pointer, option unsafe.Pointer, index unsafe.Pointer) {
-	// 0: (, editor QWidget *, option const QStyleOptionViewItem &, index const QModelIndex &), (editor, option, index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), editor, option, index)
+func (this *QStyledItemDelegate) UpdateEditorGeometry(editor unsafe.Pointer, option *QStyleOptionViewItem, index *qtcore.QModelIndex) {
+	var convArg1 = option.GetCthis()
+	var convArg2 = index.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), editor, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:85
 // index:0
+// Public
 // QItemEditorFactory * itemEditorFactory()
-func (this *QStyledItemDelegate) ItemEditorFactory() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate17itemEditorFactoryEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QStyledItemDelegate) ItemEditorFactory() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate17itemEditorFactoryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:86
 // index:0
+// Public
 // void setItemEditorFactory(class QItemEditorFactory *)
 func (this *QStyledItemDelegate) SetItemEditorFactory(factory unsafe.Pointer) {
-	// 0: (, factory QItemEditorFactory *), (factory)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory", ffiqt.FFI_TYPE_VOID, this.GetCthis(), factory)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), factory)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:88
 // index:0
-// virtual
+// Public virtual
 // QString displayText(const class QVariant &, const class QLocale &)
-func (this *QStyledItemDelegate) DisplayText(value unsafe.Pointer, locale unsafe.Pointer) {
-	// 0: (, value const QVariant &, locale const QLocale &), (value, locale)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale", ffiqt.FFI_TYPE_VOID, this.GetCthis(), value, locale)
+func (this *QStyledItemDelegate) DisplayText(value *qtcore.QVariant, locale *qtcore.QLocale) interface{} {
+	var convArg0 = value.GetCthis()
+	var convArg1 = locale.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:91
 // index:0
-// virtual
+// Protected virtual
 // void initStyleOption(class QStyleOptionViewItem *, const class QModelIndex &)
-func (this *QStyledItemDelegate) InitStyleOption(option unsafe.Pointer, index unsafe.Pointer) {
-	// 0: (, option QStyleOptionViewItem *, index const QModelIndex &), (option, index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate15initStyleOptionEP20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), option, index)
+func (this *QStyledItemDelegate) InitStyleOption(option unsafe.Pointer, index *qtcore.QModelIndex) {
+	var convArg1 = index.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate15initStyleOptionEP20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:94
 // index:0
-// virtual
+// Protected virtual
 // bool eventFilter(class QObject *, class QEvent *)
-func (this *QStyledItemDelegate) EventFilter(object unsafe.Pointer, event unsafe.Pointer) {
-	// 0: (, object QObject *, event QEvent *), (object, event)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegate11eventFilterEP7QObjectP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), object, event)
+func (this *QStyledItemDelegate) EventFilter(object unsafe.Pointer, event unsafe.Pointer) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegate11eventFilterEP7QObjectP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), object, event)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:95
 // index:0
-// virtual
+// Protected virtual
 // bool editorEvent(class QEvent *, class QAbstractItemModel *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) EditorEvent(event unsafe.Pointer, model unsafe.Pointer, option unsafe.Pointer, index unsafe.Pointer) {
-	// 0: (, event QEvent *, model QAbstractItemModel *, option const QStyleOptionViewItem &, index const QModelIndex &), (event, model, option, index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event, model, option, index)
+func (this *QStyledItemDelegate) EditorEvent(event unsafe.Pointer, model unsafe.Pointer, option *QStyleOptionViewItem, index *qtcore.QModelIndex) interface{} {
+	var convArg2 = option.GetCthis()
+	var convArg3 = index.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event, model, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

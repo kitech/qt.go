@@ -55,25 +55,26 @@ type QHideEvent struct {
 func (this *QHideEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:501
-// index:0
-// void QHideEvent()
-func NewQHideEvent() *QHideEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHideEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQHideEventFromPointer(cthis)
-	return gothis
-}
 func NewQHideEventFromPointer(cthis unsafe.Pointer) *QHideEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QHideEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:501
+// index:0
+// Public
+// void QHideEvent()
+func NewQHideEvent() *QHideEvent {
+	cthis := qtrt.Calloc(1, 256) // 24
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHideEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQHideEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:502
 // index:0
-// virtual
+// Public virtual
 // void ~QHideEvent()
 func DeleteQHideEvent(*QHideEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHideEventD2Ev", ffiqt.FFI_TYPE_VOID)

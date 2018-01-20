@@ -51,50 +51,60 @@ type QAssociativeIterable struct {
 func (this *QAssociativeIterable) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQAssociativeIterableFromPointer(cthis unsafe.Pointer) *QAssociativeIterable {
+	return &QAssociativeIterable{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qvariant.h:680
 // index:0
+// Public
 // QAssociativeIterable::const_iterator begin()
-func (this *QAssociativeIterable) Begin() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable5beginEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAssociativeIterable) Begin() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qvariant.h:681
 // index:0
+// Public
 // QAssociativeIterable::const_iterator end()
-func (this *QAssociativeIterable) End() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable3endEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAssociativeIterable) End() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qvariant.h:682
 // index:0
+// Public
 // QAssociativeIterable::const_iterator find(const class QVariant &)
-func (this *QAssociativeIterable) Find(key unsafe.Pointer) {
-	// 0: (, key const QVariant &), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable4findERK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key)
+func (this *QAssociativeIterable) Find(key *QVariant) interface{} {
+	var convArg0 = key.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable4findERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qvariant.h:684
 // index:0
+// Public
 // QVariant value(const class QVariant &)
-func (this *QAssociativeIterable) Value(key unsafe.Pointer) {
-	// 0: (, key const QVariant &), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable5valueERK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key)
+func (this *QAssociativeIterable) Value(key *QVariant) interface{} {
+	var convArg0 = key.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable5valueERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qvariant.h:686
 // index:0
+// Public
 // int size()
-func (this *QAssociativeIterable) Size() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAssociativeIterable) Size() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

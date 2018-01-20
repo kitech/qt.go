@@ -51,26 +51,28 @@ type QXmlStreamReader struct {
 func (this *QXmlStreamReader) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQXmlStreamReaderFromPointer(cthis unsafe.Pointer) *QXmlStreamReader {
+	return &QXmlStreamReader{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qxmlstream.h:360
 // index:0
+// Public
 // void QXmlStreamReader()
 func NewQXmlStreamReader() *QXmlStreamReader {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(cthis)
 	return gothis
 }
-func NewQXmlStreamReaderFromPointer(cthis unsafe.Pointer) *QXmlStreamReader {
-	return &QXmlStreamReader{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qxmlstream.h:361
 // index:1
+// Public
 // void QXmlStreamReader(class QIODevice *)
 func NewQXmlStreamReader_1(device unsafe.Pointer) *QXmlStreamReader {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, device)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(cthis)
@@ -79,10 +81,12 @@ func NewQXmlStreamReader_1(device unsafe.Pointer) *QXmlStreamReader {
 
 // /usr/include/qt/QtCore/qxmlstream.h:362
 // index:2
+// Public
 // void QXmlStreamReader(const class QByteArray &)
-func NewQXmlStreamReader_2(data unsafe.Pointer) *QXmlStreamReader {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, data)
+func NewQXmlStreamReader_2(data *QByteArray) *QXmlStreamReader {
+	cthis := qtrt.Calloc(1, 256) // 8
+	var convArg0 = data.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(cthis)
 	return gothis
@@ -90,10 +94,12 @@ func NewQXmlStreamReader_2(data unsafe.Pointer) *QXmlStreamReader {
 
 // /usr/include/qt/QtCore/qxmlstream.h:363
 // index:3
+// Public
 // void QXmlStreamReader(const class QString &)
-func NewQXmlStreamReader_3(data unsafe.Pointer) *QXmlStreamReader {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, data)
+func NewQXmlStreamReader_3(data *QString) *QXmlStreamReader {
+	cthis := qtrt.Calloc(1, 256) // 8
+	var convArg0 = data.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(cthis)
 	return gothis
@@ -101,10 +107,13 @@ func NewQXmlStreamReader_3(data unsafe.Pointer) *QXmlStreamReader {
 
 // /usr/include/qt/QtCore/qxmlstream.h:364
 // index:4
+// Public
 // void QXmlStreamReader(const char *)
-func NewQXmlStreamReader_4(data unsafe.Pointer) *QXmlStreamReader {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2EPKc", ffiqt.FFI_TYPE_VOID, cthis, data)
+func NewQXmlStreamReader_4(data string) *QXmlStreamReader {
+	cthis := qtrt.Calloc(1, 256) // 8
+	var convArg0 = qtrt.CString(data)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2EPKc", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(cthis)
 	return gothis
@@ -112,6 +121,7 @@ func NewQXmlStreamReader_4(data unsafe.Pointer) *QXmlStreamReader {
 
 // /usr/include/qt/QtCore/qxmlstream.h:365
 // index:0
+// Public
 // void ~QXmlStreamReader()
 func DeleteQXmlStreamReader(*QXmlStreamReader) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -120,489 +130,528 @@ func DeleteQXmlStreamReader(*QXmlStreamReader) {
 
 // /usr/include/qt/QtCore/qxmlstream.h:367
 // index:0
+// Public
 // void setDevice(class QIODevice *)
 func (this *QXmlStreamReader) SetDevice(device unsafe.Pointer) {
-	// 0: (, device QIODevice *), (device)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_VOID, this.GetCthis(), device)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), device)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:368
 // index:0
+// Public
 // QIODevice * device()
-func (this *QXmlStreamReader) Device() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader6deviceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) Device() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:369
 // index:0
+// Public
 // void addData(const class QByteArray &)
-func (this *QXmlStreamReader) AddData(data unsafe.Pointer) {
-	// 0: (, data const QByteArray &), (data)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data)
+func (this *QXmlStreamReader) AddData(data *QByteArray) {
+	var convArg0 = data.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:370
 // index:1
+// Public
 // void addData(const class QString &)
-func (this *QXmlStreamReader) AddData_1(data unsafe.Pointer) {
-	// 1: (, data const QString &), (data)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data)
+func (this *QXmlStreamReader) AddData_1(data *QString) {
+	var convArg0 = data.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:371
 // index:2
+// Public
 // void addData(const char *)
-func (this *QXmlStreamReader) AddData_2(data unsafe.Pointer) {
-	// 2: (, data const char *), (data)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataEPKc", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data)
+func (this *QXmlStreamReader) AddData_2(data string) {
+	var convArg0 = qtrt.CString(data)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:372
 // index:0
+// Public
 // void clear()
 func (this *QXmlStreamReader) Clear() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader5clearEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:375
 // index:0
+// Public
 // bool atEnd()
-func (this *QXmlStreamReader) AtEnd() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader5atEndEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) AtEnd() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader5atEndEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:376
 // index:0
+// Public
 // QXmlStreamReader::TokenType readNext()
-func (this *QXmlStreamReader) ReadNext() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader8readNextEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) ReadNext() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader8readNextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:378
 // index:0
+// Public
 // bool readNextStartElement()
-func (this *QXmlStreamReader) ReadNextStartElement() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader20readNextStartElementEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) ReadNextStartElement() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader20readNextStartElementEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:379
 // index:0
+// Public
 // void skipCurrentElement()
 func (this *QXmlStreamReader) SkipCurrentElement() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader18skipCurrentElementEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader18skipCurrentElementEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:381
 // index:0
+// Public
 // QXmlStreamReader::TokenType tokenType()
-func (this *QXmlStreamReader) TokenType() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader9tokenTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) TokenType() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader9tokenTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:382
 // index:0
+// Public
 // QString tokenString()
-func (this *QXmlStreamReader) TokenString() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader11tokenStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) TokenString() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader11tokenStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:384
 // index:0
+// Public
 // void setNamespaceProcessing(_Bool)
 func (this *QXmlStreamReader) SetNamespaceProcessing(arg0 bool) {
-	// 0: (, bool arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader22setNamespaceProcessingEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader22setNamespaceProcessingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:385
 // index:0
+// Public
 // bool namespaceProcessing()
-func (this *QXmlStreamReader) NamespaceProcessing() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader19namespaceProcessingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) NamespaceProcessing() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader19namespaceProcessingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:387
 // index:0
-// inline
+// Public inline
 // bool isStartDocument()
-func (this *QXmlStreamReader) IsStartDocument() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader15isStartDocumentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsStartDocument() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader15isStartDocumentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:388
 // index:0
-// inline
+// Public inline
 // bool isEndDocument()
-func (this *QXmlStreamReader) IsEndDocument() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader13isEndDocumentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsEndDocument() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader13isEndDocumentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:389
 // index:0
-// inline
+// Public inline
 // bool isStartElement()
-func (this *QXmlStreamReader) IsStartElement() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader14isStartElementEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsStartElement() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader14isStartElementEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:390
 // index:0
-// inline
+// Public inline
 // bool isEndElement()
-func (this *QXmlStreamReader) IsEndElement() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader12isEndElementEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsEndElement() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader12isEndElementEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:391
 // index:0
-// inline
+// Public inline
 // bool isCharacters()
-func (this *QXmlStreamReader) IsCharacters() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader12isCharactersEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsCharacters() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader12isCharactersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:392
 // index:0
+// Public
 // bool isWhitespace()
-func (this *QXmlStreamReader) IsWhitespace() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader12isWhitespaceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsWhitespace() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader12isWhitespaceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:393
 // index:0
+// Public
 // bool isCDATA()
-func (this *QXmlStreamReader) IsCDATA() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader7isCDATAEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsCDATA() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader7isCDATAEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:394
 // index:0
-// inline
+// Public inline
 // bool isComment()
-func (this *QXmlStreamReader) IsComment() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader9isCommentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsComment() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader9isCommentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:395
 // index:0
-// inline
+// Public inline
 // bool isDTD()
-func (this *QXmlStreamReader) IsDTD() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader5isDTDEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsDTD() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader5isDTDEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:396
 // index:0
-// inline
+// Public inline
 // bool isEntityReference()
-func (this *QXmlStreamReader) IsEntityReference() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader17isEntityReferenceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsEntityReference() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader17isEntityReferenceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:397
 // index:0
-// inline
+// Public inline
 // bool isProcessingInstruction()
-func (this *QXmlStreamReader) IsProcessingInstruction() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader23isProcessingInstructionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsProcessingInstruction() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader23isProcessingInstructionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:399
 // index:0
+// Public
 // bool isStandaloneDocument()
-func (this *QXmlStreamReader) IsStandaloneDocument() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader20isStandaloneDocumentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) IsStandaloneDocument() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader20isStandaloneDocumentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:400
 // index:0
+// Public
 // QStringRef documentVersion()
-func (this *QXmlStreamReader) DocumentVersion() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader15documentVersionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) DocumentVersion() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader15documentVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:401
 // index:0
+// Public
 // QStringRef documentEncoding()
-func (this *QXmlStreamReader) DocumentEncoding() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader16documentEncodingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) DocumentEncoding() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader16documentEncodingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:403
 // index:0
+// Public
 // qint64 lineNumber()
-func (this *QXmlStreamReader) LineNumber() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader10lineNumberEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) LineNumber() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader10lineNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:404
 // index:0
+// Public
 // qint64 columnNumber()
-func (this *QXmlStreamReader) ColumnNumber() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader12columnNumberEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) ColumnNumber() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader12columnNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:405
 // index:0
+// Public
 // qint64 characterOffset()
-func (this *QXmlStreamReader) CharacterOffset() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader15characterOffsetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) CharacterOffset() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader15characterOffsetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:407
 // index:0
+// Public
 // QXmlStreamAttributes attributes()
-func (this *QXmlStreamReader) Attributes() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader10attributesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) Attributes() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader10attributesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:414
 // index:0
+// Public
 // QString readElementText(enum QXmlStreamReader::ReadElementTextBehaviour)
-func (this *QXmlStreamReader) ReadElementText(behaviour int) {
-	// 0: (, behaviour QXmlStreamReader::ReadElementTextBehaviour), (&behaviour)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader15readElementTextENS_24ReadElementTextBehaviourE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &behaviour)
+func (this *QXmlStreamReader) ReadElementText(behaviour int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader15readElementTextENS_24ReadElementTextBehaviourE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &behaviour)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:416
 // index:0
+// Public
 // QStringRef name()
-func (this *QXmlStreamReader) Name() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) Name() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:417
 // index:0
+// Public
 // QStringRef namespaceUri()
-func (this *QXmlStreamReader) NamespaceUri() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader12namespaceUriEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) NamespaceUri() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader12namespaceUriEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:418
 // index:0
+// Public
 // QStringRef qualifiedName()
-func (this *QXmlStreamReader) QualifiedName() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader13qualifiedNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) QualifiedName() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader13qualifiedNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:419
 // index:0
+// Public
 // QStringRef prefix()
-func (this *QXmlStreamReader) Prefix() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader6prefixEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) Prefix() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader6prefixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:421
 // index:0
+// Public
 // QStringRef processingInstructionTarget()
-func (this *QXmlStreamReader) ProcessingInstructionTarget() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader27processingInstructionTargetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) ProcessingInstructionTarget() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader27processingInstructionTargetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:422
 // index:0
+// Public
 // QStringRef processingInstructionData()
-func (this *QXmlStreamReader) ProcessingInstructionData() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader25processingInstructionDataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) ProcessingInstructionData() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader25processingInstructionDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:424
 // index:0
+// Public
 // QStringRef text()
-func (this *QXmlStreamReader) Text() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader4textEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) Text() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:426
 // index:0
+// Public
 // QXmlStreamNamespaceDeclarations namespaceDeclarations()
-func (this *QXmlStreamReader) NamespaceDeclarations() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader21namespaceDeclarationsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) NamespaceDeclarations() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader21namespaceDeclarationsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:427
 // index:0
+// Public
 // void addExtraNamespaceDeclaration(const class QXmlStreamNamespaceDeclaration &)
-func (this *QXmlStreamReader) AddExtraNamespaceDeclaration(extraNamespaceDeclaraction unsafe.Pointer) {
-	// 0: (, extraNamespaceDeclaraction const QXmlStreamNamespaceDeclaration &), (extraNamespaceDeclaraction)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration", ffiqt.FFI_TYPE_VOID, this.GetCthis(), extraNamespaceDeclaraction)
+func (this *QXmlStreamReader) AddExtraNamespaceDeclaration(extraNamespaceDeclaraction *QXmlStreamNamespaceDeclaration) {
+	var convArg0 = extraNamespaceDeclaraction.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:429
 // index:0
+// Public
 // QXmlStreamNotationDeclarations notationDeclarations()
-func (this *QXmlStreamReader) NotationDeclarations() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader20notationDeclarationsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) NotationDeclarations() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader20notationDeclarationsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:430
 // index:0
+// Public
 // QXmlStreamEntityDeclarations entityDeclarations()
-func (this *QXmlStreamReader) EntityDeclarations() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader18entityDeclarationsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) EntityDeclarations() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader18entityDeclarationsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:431
 // index:0
+// Public
 // QStringRef dtdName()
-func (this *QXmlStreamReader) DtdName() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader7dtdNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) DtdName() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader7dtdNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:432
 // index:0
+// Public
 // QStringRef dtdPublicId()
-func (this *QXmlStreamReader) DtdPublicId() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader11dtdPublicIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) DtdPublicId() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader11dtdPublicIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:433
 // index:0
+// Public
 // QStringRef dtdSystemId()
-func (this *QXmlStreamReader) DtdSystemId() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader11dtdSystemIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) DtdSystemId() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader11dtdSystemIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:443
 // index:0
+// Public
 // void raiseError(const class QString &)
-func (this *QXmlStreamReader) RaiseError(message unsafe.Pointer) {
-	// 0: (, message const QString &), (message)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader10raiseErrorERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), message)
+func (this *QXmlStreamReader) RaiseError(message *QString) {
+	var convArg0 = message.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader10raiseErrorERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:444
 // index:0
+// Public
 // QString errorString()
-func (this *QXmlStreamReader) ErrorString() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader11errorStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) ErrorString() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:445
 // index:0
+// Public
 // QXmlStreamReader::Error error()
-func (this *QXmlStreamReader) Error() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader5errorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) Error() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader5errorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:447
 // index:0
-// inline
+// Public inline
 // bool hasError()
-func (this *QXmlStreamReader) HasError() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader8hasErrorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) HasError() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader8hasErrorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:452
 // index:0
+// Public
 // void setEntityResolver(class QXmlStreamEntityResolver *)
 func (this *QXmlStreamReader) SetEntityResolver(resolver unsafe.Pointer) {
-	// 0: (, resolver QXmlStreamEntityResolver *), (resolver)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver", ffiqt.FFI_TYPE_VOID, this.GetCthis(), resolver)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), resolver)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:453
 // index:0
+// Public
 // QXmlStreamEntityResolver * entityResolver()
-func (this *QXmlStreamReader) EntityResolver() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader14entityResolverEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamReader) EntityResolver() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader14entityResolverEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

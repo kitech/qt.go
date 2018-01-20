@@ -55,153 +55,101 @@ type QPixmapCache struct {
 func (this *QPixmapCache) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQPixmapCacheFromPointer(cthis unsafe.Pointer) *QPixmapCache {
+	return &QPixmapCache{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qpixmapcache.h:77
 // index:0
-// static
+// Public static
 // int cacheLimit()
-func (this *QPixmapCache) CacheLimit() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache10cacheLimitEv", ffiqt.FFI_TYPE_VOID)
+func (this *QPixmapCache) CacheLimit() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache10cacheLimitEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 func QPixmapCache_CacheLimit() {
-	// 0: (), ()
 	var nilthis *QPixmapCache
 	nilthis.CacheLimit()
 }
 
 // /usr/include/qt/QtGui/qpixmapcache.h:78
 // index:0
-// static
+// Public static
 // void setCacheLimit(int)
 func (this *QPixmapCache) SetCacheLimit(arg0 int) {
-	// 0: (int arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache13setCacheLimitEi", ffiqt.FFI_TYPE_VOID)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache13setCacheLimitEi", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_SetCacheLimit(arg0 int) {
-	// 0: (int arg0), (arg0)
 	var nilthis *QPixmapCache
 	nilthis.SetCacheLimit(arg0)
 }
 
 // /usr/include/qt/QtGui/qpixmapcache.h:79
 // index:0
-// static
+// Public static
 // QPixmap * find(const class QString &)
-func (this *QPixmapCache) Find(key unsafe.Pointer) {
-	// 0: (key const QString &), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QString", ffiqt.FFI_TYPE_VOID)
+func (this *QPixmapCache) Find(key *qtcore.QString) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QString", ffiqt.FFI_TYPE_POINTER, key)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
-func QPixmapCache_Find(key unsafe.Pointer) {
-	// 0: (key const QString &), (key)
+func QPixmapCache_Find(key *qtcore.QString) {
 	var nilthis *QPixmapCache
 	nilthis.Find(key)
 }
 
 // /usr/include/qt/QtGui/qpixmapcache.h:80
 // index:1
-// static
+// Public static
 // bool find(const class QString &, class QPixmap &)
-func (this *QPixmapCache) Find_1(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 1: (key const QString &, pixmap QPixmap &), (key, pixmap)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringR7QPixmap", ffiqt.FFI_TYPE_VOID)
+func (this *QPixmapCache) Find_1(key *qtcore.QString, pixmap *QPixmap) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringR7QPixmap", ffiqt.FFI_TYPE_POINTER, key, pixmap)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
-func QPixmapCache_Find_1(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 1: (key const QString &, pixmap QPixmap &), (key, pixmap)
+func QPixmapCache_Find_1(key *qtcore.QString, pixmap *QPixmap) {
 	var nilthis *QPixmapCache
 	nilthis.Find_1(key, pixmap)
 }
 
 // /usr/include/qt/QtGui/qpixmapcache.h:81
 // index:2
-// static
+// Public static
 // bool find(const class QString &, class QPixmap *)
-func (this *QPixmapCache) Find_2(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 2: (key const QString &, pixmap QPixmap *), (key, pixmap)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringP7QPixmap", ffiqt.FFI_TYPE_VOID)
+func (this *QPixmapCache) Find_2(key *qtcore.QString, pixmap unsafe.Pointer) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringP7QPixmap", ffiqt.FFI_TYPE_POINTER, key, pixmap)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
-func QPixmapCache_Find_2(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 2: (key const QString &, pixmap QPixmap *), (key, pixmap)
+func QPixmapCache_Find_2(key *qtcore.QString, pixmap unsafe.Pointer) {
 	var nilthis *QPixmapCache
 	nilthis.Find_2(key, pixmap)
 }
 
-// /usr/include/qt/QtGui/qpixmapcache.h:82
-// index:3
-// static
-// bool find(const class QPixmapCache::Key &, class QPixmap *)
-func (this *QPixmapCache) Find_3(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 3: (key const QPixmapCache::Key &, pixmap QPixmap *), (key, pixmap)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERKNS_3KeyEP7QPixmap", ffiqt.FFI_TYPE_VOID)
-	gopp.ErrPrint(err, rv)
-}
-func QPixmapCache_Find_3(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 3: (key const QPixmapCache::Key &, pixmap QPixmap *), (key, pixmap)
-	var nilthis *QPixmapCache
-	nilthis.Find_3(key, pixmap)
-}
-
-// /usr/include/qt/QtGui/qpixmapcache.h:85
-// index:0
-// static
-// bool replace(const class QPixmapCache::Key &, const class QPixmap &)
-func (this *QPixmapCache) Replace(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 0: (key const QPixmapCache::Key &, pixmap const QPixmap &), (key, pixmap)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache7replaceERKNS_3KeyERK7QPixmap", ffiqt.FFI_TYPE_VOID)
-	gopp.ErrPrint(err, rv)
-}
-func QPixmapCache_Replace(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 0: (key const QPixmapCache::Key &, pixmap const QPixmap &), (key, pixmap)
-	var nilthis *QPixmapCache
-	nilthis.Replace(key, pixmap)
-}
-
 // /usr/include/qt/QtGui/qpixmapcache.h:86
 // index:0
-// static
+// Public static
 // void remove(const class QString &)
-func (this *QPixmapCache) Remove(key unsafe.Pointer) {
-	// 0: (key const QString &), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache6removeERK7QString", ffiqt.FFI_TYPE_VOID)
+func (this *QPixmapCache) Remove(key *qtcore.QString) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache6removeERK7QString", ffiqt.FFI_TYPE_POINTER, key)
 	gopp.ErrPrint(err, rv)
 }
-func QPixmapCache_Remove(key unsafe.Pointer) {
-	// 0: (key const QString &), (key)
+func QPixmapCache_Remove(key *qtcore.QString) {
 	var nilthis *QPixmapCache
 	nilthis.Remove(key)
 }
 
-// /usr/include/qt/QtGui/qpixmapcache.h:87
-// index:1
-// static
-// void remove(const class QPixmapCache::Key &)
-func (this *QPixmapCache) Remove_1(key unsafe.Pointer) {
-	// 1: (key const QPixmapCache::Key &), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache6removeERKNS_3KeyE", ffiqt.FFI_TYPE_VOID)
-	gopp.ErrPrint(err, rv)
-}
-func QPixmapCache_Remove_1(key unsafe.Pointer) {
-	// 1: (key const QPixmapCache::Key &), (key)
-	var nilthis *QPixmapCache
-	nilthis.Remove_1(key)
-}
-
 // /usr/include/qt/QtGui/qpixmapcache.h:88
 // index:0
-// static
+// Public static
 // void clear()
 func (this *QPixmapCache) Clear() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache5clearEv", ffiqt.FFI_TYPE_VOID)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache5clearEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_Clear() {
-	// 0: (), ()
 	var nilthis *QPixmapCache
 	nilthis.Clear()
 }

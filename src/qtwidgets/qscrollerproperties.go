@@ -59,24 +59,25 @@ type QScrollerProperties struct {
 func (this *QScrollerProperties) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQScrollerPropertiesFromPointer(cthis unsafe.Pointer) *QScrollerProperties {
+	return &QScrollerProperties{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:60
 // index:0
+// Public
 // void QScrollerProperties()
 func NewQScrollerProperties() *QScrollerProperties {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerPropertiesC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQScrollerPropertiesFromPointer(cthis)
 	return gothis
 }
-func NewQScrollerPropertiesFromPointer(cthis unsafe.Pointer) *QScrollerProperties {
-	return &QScrollerProperties{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:63
 // index:0
-// virtual
+// Public virtual
 // void ~QScrollerProperties()
 func DeleteQScrollerProperties(*QScrollerProperties) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerPropertiesD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -85,49 +86,47 @@ func DeleteQScrollerProperties(*QScrollerProperties) {
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:68
 // index:0
-// static
+// Public static
 // void setDefaultScrollerProperties(const class QScrollerProperties &)
-func (this *QScrollerProperties) SetDefaultScrollerProperties(sp unsafe.Pointer) {
-	// 0: (sp const QScrollerProperties &), (sp)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_", ffiqt.FFI_TYPE_VOID)
+func (this *QScrollerProperties) SetDefaultScrollerProperties(sp *QScrollerProperties) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_", ffiqt.FFI_TYPE_POINTER, sp)
 	gopp.ErrPrint(err, rv)
 }
-func QScrollerProperties_SetDefaultScrollerProperties(sp unsafe.Pointer) {
-	// 0: (sp const QScrollerProperties &), (sp)
+func QScrollerProperties_SetDefaultScrollerProperties(sp *QScrollerProperties) {
 	var nilthis *QScrollerProperties
 	nilthis.SetDefaultScrollerProperties(sp)
 }
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:69
 // index:0
-// static
+// Public static
 // void unsetDefaultScrollerProperties()
 func (this *QScrollerProperties) UnsetDefaultScrollerProperties() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv", ffiqt.FFI_TYPE_VOID)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 }
 func QScrollerProperties_UnsetDefaultScrollerProperties() {
-	// 0: (), ()
 	var nilthis *QScrollerProperties
 	nilthis.UnsetDefaultScrollerProperties()
 }
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:117
 // index:0
+// Public
 // QVariant scrollMetric(enum QScrollerProperties::ScrollMetric)
-func (this *QScrollerProperties) ScrollMetric(metric int) {
-	// 0: (, metric QScrollerProperties::ScrollMetric), (&metric)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollerProperties12scrollMetricENS_12ScrollMetricE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &metric)
+func (this *QScrollerProperties) ScrollMetric(metric int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollerProperties12scrollMetricENS_12ScrollMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &metric)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:118
 // index:0
+// Public
 // void setScrollMetric(enum QScrollerProperties::ScrollMetric, const class QVariant &)
-func (this *QScrollerProperties) SetScrollMetric(metric int, value unsafe.Pointer) {
-	// 0: (, metric QScrollerProperties::ScrollMetric, value const QVariant &), (&metric, value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties15setScrollMetricENS_12ScrollMetricERK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &metric, value)
+func (this *QScrollerProperties) SetScrollMetric(metric int, value *qtcore.QVariant) {
+	var convArg1 = value.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties15setScrollMetricENS_12ScrollMetricERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &metric, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -55,10 +55,13 @@ type QAbstractUndoItem struct {
 func (this *QAbstractUndoItem) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQAbstractUndoItemFromPointer(cthis unsafe.Pointer) *QAbstractUndoItem {
+	return &QAbstractUndoItem{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qtextdocument.h:86
 // index:0
-// pure virtual
+// Public pure virtual
 // void ~QAbstractUndoItem()
 func DeleteQAbstractUndoItem(*QAbstractUndoItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractUndoItemD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -67,21 +70,19 @@ func DeleteQAbstractUndoItem(*QAbstractUndoItem) {
 
 // /usr/include/qt/QtGui/qtextdocument.h:87
 // index:0
-// pure virtual
+// Public pure virtual
 // void undo()
 func (this *QAbstractUndoItem) Undo() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractUndoItem4undoEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractUndoItem4undoEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:88
 // index:0
-// pure virtual
+// Public pure virtual
 // void redo()
 func (this *QAbstractUndoItem) Redo() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractUndoItem4redoEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractUndoItem4redoEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

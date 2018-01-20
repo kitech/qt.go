@@ -55,25 +55,27 @@ type QExposeEvent struct {
 func (this *QExposeEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:434
-// index:0
-// void QExposeEvent(const class QRegion &)
-func NewQExposeEvent(rgn unsafe.Pointer) *QExposeEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QExposeEventC2ERK7QRegion", ffiqt.FFI_TYPE_VOID, cthis, rgn)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQExposeEventFromPointer(cthis)
-	return gothis
-}
 func NewQExposeEventFromPointer(cthis unsafe.Pointer) *QExposeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QExposeEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:434
+// index:0
+// Public
+// void QExposeEvent(const class QRegion &)
+func NewQExposeEvent(rgn *QRegion) *QExposeEvent {
+	cthis := qtrt.Calloc(1, 256) // 32
+	var convArg0 = rgn.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QExposeEventC2ERK7QRegion", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQExposeEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:435
 // index:0
-// virtual
+// Public virtual
 // void ~QExposeEvent()
 func DeleteQExposeEvent(*QExposeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QExposeEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -82,12 +84,12 @@ func DeleteQExposeEvent(*QExposeEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:437
 // index:0
-// inline
+// Public inline
 // const QRegion & region()
-func (this *QExposeEvent) Region() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QExposeEvent6regionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QExposeEvent) Region() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QExposeEvent6regionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

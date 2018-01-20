@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 107
+// extern C begin: 104
 */
 // import "C"
 import "unsafe"
@@ -59,28 +59,18 @@ type QGraphicsSceneEvent struct {
 func (this *QGraphicsSceneEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:67
-// index:0
-// void QGraphicsSceneEvent(enum QEvent::Type)
-func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsSceneEventFromPointer(cthis)
-	return gothis
-}
 func NewQGraphicsSceneEventFromPointer(cthis unsafe.Pointer) *QGraphicsSceneEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QGraphicsSceneEvent{bcthis0}
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:74
-// index:1
-// void QGraphicsSceneEvent(class QGraphicsSceneEventPrivate &, enum QEvent::Type)
-func NewQGraphicsSceneEvent_1(dd unsafe.Pointer, type_ int) *QGraphicsSceneEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2ER26QGraphicsSceneEventPrivateN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, dd, &type_)
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:67
+// index:0
+// Public
+// void QGraphicsSceneEvent(enum QEvent::Type)
+func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
+	cthis := qtrt.Calloc(1, 256) // 32
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsSceneEventFromPointer(cthis)
 	return gothis
@@ -88,7 +78,7 @@ func NewQGraphicsSceneEvent_1(dd unsafe.Pointer, type_ int) *QGraphicsSceneEvent
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:68
 // index:0
-// virtual
+// Public virtual
 // void ~QGraphicsSceneEvent()
 func DeleteQGraphicsSceneEvent(*QGraphicsSceneEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -97,40 +87,41 @@ func DeleteQGraphicsSceneEvent(*QGraphicsSceneEvent) {
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:70
 // index:0
+// Public
 // QWidget * widget()
-func (this *QGraphicsSceneEvent) Widget() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsSceneEvent6widgetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneEvent) Widget() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsSceneEvent6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:71
 // index:0
+// Public
 // void setWidget(class QWidget *)
 func (this *QGraphicsSceneEvent) SetWidget(widget unsafe.Pointer) {
-	// 0: (, widget QWidget *), (widget)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), widget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:76
 // index:0
-// inline
+// Protected inline
 // QGraphicsSceneEventPrivate * d_func()
-func (this *QGraphicsSceneEvent) D_func() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEvent6d_funcEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneEvent) D_func() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEvent6d_funcEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:76
 // index:1
-// inline
+// Protected inline
 // const QGraphicsSceneEventPrivate * d_func()
-func (this *QGraphicsSceneEvent) D_func_1() {
-	// 1: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsSceneEvent6d_funcEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneEvent) D_func_1() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsSceneEvent6d_funcEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

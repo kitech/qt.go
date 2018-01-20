@@ -51,20 +51,21 @@ type QVariantComparisonHelper struct {
 func (this *QVariantComparisonHelper) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQVariantComparisonHelperFromPointer(cthis unsafe.Pointer) *QVariantComparisonHelper {
+	return &QVariantComparisonHelper{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qvariant.h:560
 // index:0
-// inline
+// Public inline
 // void QVariantComparisonHelper(const class QVariant &)
-func NewQVariantComparisonHelper(var_ unsafe.Pointer) *QVariantComparisonHelper {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QVariantComparisonHelperC2ERK8QVariant", ffiqt.FFI_TYPE_VOID, cthis, var_)
+func NewQVariantComparisonHelper(var_ *QVariant) *QVariantComparisonHelper {
+	cthis := qtrt.Calloc(1, 256) // 8
+	var convArg0 = var_.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QVariantComparisonHelperC2ERK8QVariant", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantComparisonHelperFromPointer(cthis)
 	return gothis
-}
-func NewQVariantComparisonHelperFromPointer(cthis unsafe.Pointer) *QVariantComparisonHelper {
-	return &QVariantComparisonHelper{&qtrt.CObject{cthis}}
 }
 
 //  body block end

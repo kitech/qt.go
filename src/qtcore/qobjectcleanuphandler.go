@@ -51,35 +51,36 @@ type QObjectCleanupHandler struct {
 func (this *QObjectCleanupHandler) GetCthis() unsafe.Pointer {
 	return this.QObject.GetCthis()
 }
-
-// /usr/include/qt/QtCore/qobjectcleanuphandler.h:50
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QObjectCleanupHandler) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qobjectcleanuphandler.h:53
-// index:0
-// void QObjectCleanupHandler()
-func NewQObjectCleanupHandler() *QObjectCleanupHandler {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQObjectCleanupHandlerFromPointer(cthis)
-	return gothis
-}
 func NewQObjectCleanupHandlerFromPointer(cthis unsafe.Pointer) *QObjectCleanupHandler {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QObjectCleanupHandler{bcthis0}
 }
 
+// /usr/include/qt/QtCore/qobjectcleanuphandler.h:50
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QObjectCleanupHandler) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qobjectcleanuphandler.h:53
+// index:0
+// Public
+// void QObjectCleanupHandler()
+func NewQObjectCleanupHandler() *QObjectCleanupHandler {
+	cthis := qtrt.Calloc(1, 256) // 24
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQObjectCleanupHandlerFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:54
 // index:0
-// virtual
+// Public virtual
 // void ~QObjectCleanupHandler()
 func DeleteQObjectCleanupHandler(*QObjectCleanupHandler) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -88,37 +89,39 @@ func DeleteQObjectCleanupHandler(*QObjectCleanupHandler) {
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:56
 // index:0
+// Public
 // QObject * add(class QObject *)
-func (this *QObjectCleanupHandler) Add(object unsafe.Pointer) {
-	// 0: (, object QObject *), (object)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), object)
+func (this *QObjectCleanupHandler) Add(object unsafe.Pointer) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), object)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:57
 // index:0
+// Public
 // void remove(class QObject *)
 func (this *QObjectCleanupHandler) Remove(object unsafe.Pointer) {
-	// 0: (, object QObject *), (object)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), object)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), object)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:58
 // index:0
+// Public
 // bool isEmpty()
-func (this *QObjectCleanupHandler) IsEmpty() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QObjectCleanupHandler) IsEmpty() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:59
 // index:0
+// Public
 // void clear()
 func (this *QObjectCleanupHandler) Clear() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler5clearEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

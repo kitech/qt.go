@@ -59,27 +59,29 @@ type QStyleOptionTitleBar struct {
 func (this *QStyleOptionTitleBar) GetCthis() unsafe.Pointer {
 	return this.QStyleOptionComplex.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:619
-// index:0
-// void QStyleOptionTitleBar()
-func NewQStyleOptionTitleBar() *QStyleOptionTitleBar {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionTitleBarFromPointer(cthis)
-	return gothis
-}
 func NewQStyleOptionTitleBarFromPointer(cthis unsafe.Pointer) *QStyleOptionTitleBar {
 	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
 	return &QStyleOptionTitleBar{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:619
+// index:0
+// Public
+// void QStyleOptionTitleBar()
+func NewQStyleOptionTitleBar() *QStyleOptionTitleBar {
+	cthis := qtrt.Calloc(1, 256) // 96
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionTitleBarFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:623
 // index:1
+// Protected
 // void QStyleOptionTitleBar(int)
 func NewQStyleOptionTitleBar_1(version int) *QStyleOptionTitleBar {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 96
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTitleBarFromPointer(cthis)

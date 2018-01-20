@@ -59,20 +59,21 @@ type QStyleOptionComplex struct {
 func (this *QStyleOptionComplex) GetCthis() unsafe.Pointer {
 	return this.QStyleOption.GetCthis()
 }
+func NewQStyleOptionComplexFromPointer(cthis unsafe.Pointer) *QStyleOptionComplex {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionComplex{bcthis0}
+}
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:509
 // index:0
+// Public
 // void QStyleOptionComplex(int, int)
 func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 72
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", ffiqt.FFI_TYPE_VOID, cthis, &version, &type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionComplexFromPointer(cthis)
 	return gothis
-}
-func NewQStyleOptionComplexFromPointer(cthis unsafe.Pointer) *QStyleOptionComplex {
-	bcthis0 := NewQStyleOptionFromPointer(cthis)
-	return &QStyleOptionComplex{bcthis0}
 }
 
 //  body block end

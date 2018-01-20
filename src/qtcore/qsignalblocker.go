@@ -51,29 +51,30 @@ type QSignalBlocker struct {
 func (this *QSignalBlocker) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQSignalBlockerFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
+	return &QSignalBlocker{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qobject.h:547
 // index:0
-// inline
+// Public inline
 // void QSignalBlocker(class QObject *)
 func NewQSignalBlocker(o unsafe.Pointer) *QSignalBlocker {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, o)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSignalBlockerFromPointer(cthis)
 	return gothis
 }
-func NewQSignalBlockerFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
-	return &QSignalBlocker{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qobject.h:548
 // index:1
-// inline
+// Public inline
 // void QSignalBlocker(class QObject &)
-func NewQSignalBlocker_1(o unsafe.Pointer) *QSignalBlocker {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerC2ER7QObject", ffiqt.FFI_TYPE_VOID, cthis, o)
+func NewQSignalBlocker_1(o *QObject) *QSignalBlocker {
+	cthis := qtrt.Calloc(1, 256) // 16
+	var convArg0 = o.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerC2ER7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSignalBlockerFromPointer(cthis)
 	return gothis
@@ -81,7 +82,7 @@ func NewQSignalBlocker_1(o unsafe.Pointer) *QSignalBlocker {
 
 // /usr/include/qt/QtCore/qobject.h:549
 // index:0
-// inline
+// Public inline
 // void ~QSignalBlocker()
 func DeleteQSignalBlocker(*QSignalBlocker) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -90,21 +91,19 @@ func DeleteQSignalBlocker(*QSignalBlocker) {
 
 // /usr/include/qt/QtCore/qobject.h:556
 // index:0
-// inline
+// Public inline
 // void reblock()
 func (this *QSignalBlocker) Reblock() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlocker7reblockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlocker7reblockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qobject.h:557
 // index:0
-// inline
+// Public inline
 // void unblock()
 func (this *QSignalBlocker) Unblock() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlocker7unblockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlocker7unblockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

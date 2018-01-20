@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 16
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
@@ -51,111 +51,86 @@ type QEventLoop struct {
 func (this *QEventLoop) GetCthis() unsafe.Pointer {
 	return this.QObject.GetCthis()
 }
-
-// /usr/include/qt/QtCore/qeventloop.h:52
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QEventLoop) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QEventLoop10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qeventloop.h:56
-// index:0
-// void QEventLoop(class QObject *)
-func NewQEventLoop(parent unsafe.Pointer) *QEventLoop {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoopC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQEventLoopFromPointer(cthis)
-	return gothis
-}
 func NewQEventLoopFromPointer(cthis unsafe.Pointer) *QEventLoop {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QEventLoop{bcthis0}
 }
 
+// /usr/include/qt/QtCore/qeventloop.h:52
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QEventLoop) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QEventLoop10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qeventloop.h:56
+// index:0
+// Public
+// void QEventLoop(class QObject *)
+func NewQEventLoop(parent unsafe.Pointer) *QEventLoop {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoopC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQEventLoopFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qeventloop.h:57
 // index:0
-// virtual
+// Public virtual
 // void ~QEventLoop()
 func DeleteQEventLoop(*QEventLoop) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoopD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qeventloop.h:70
-// index:0
-// bool processEvents(QEventLoop::ProcessEventsFlags)
-func (this *QEventLoop) ProcessEvents(flags int) {
-	// 0: (, QFlags<QEventLoop::ProcessEventsFlag> flags), (flags)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), flags)
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qeventloop.h:71
-// index:1
-// void processEvents(QEventLoop::ProcessEventsFlags, int)
-func (this *QEventLoop) ProcessEvents_1(flags int, maximumTime int) {
-	// 1: (, QFlags<QEventLoop::ProcessEventsFlag> flags, maximumTime int), (flags, &maximumTime)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), flags, &maximumTime)
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qeventloop.h:73
-// index:0
-// int exec(QEventLoop::ProcessEventsFlags)
-func (this *QEventLoop) Exec(flags int) {
-	// 0: (, QFlags<QEventLoop::ProcessEventsFlag> flags), (flags)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), flags)
-	gopp.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtCore/qeventloop.h:74
 // index:0
+// Public
 // void exit(int)
 func (this *QEventLoop) Exit(returnCode int) {
-	// 0: (, returnCode int), (&returnCode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4exitEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &returnCode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4exitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &returnCode)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qeventloop.h:75
 // index:0
+// Public
 // bool isRunning()
-func (this *QEventLoop) IsRunning() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QEventLoop9isRunningEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QEventLoop) IsRunning() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QEventLoop9isRunningEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qeventloop.h:77
 // index:0
+// Public
 // void wakeUp()
 func (this *QEventLoop) WakeUp() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop6wakeUpEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop6wakeUpEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qeventloop.h:79
 // index:0
-// virtual
+// Public virtual
 // bool event(class QEvent *)
-func (this *QEventLoop) Event(event unsafe.Pointer) {
-	// 0: (, event QEvent *), (event)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+func (this *QEventLoop) Event(event unsafe.Pointer) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qeventloop.h:82
 // index:0
+// Public
 // void quit()
 func (this *QEventLoop) Quit() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4quitEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4quitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

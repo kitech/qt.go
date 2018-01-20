@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 12
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
@@ -59,25 +59,26 @@ type QGraphicsSceneHoverEvent struct {
 func (this *QGraphicsSceneHoverEvent) GetCthis() unsafe.Pointer {
 	return this.QGraphicsSceneEvent.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:201
-// index:0
-// void QGraphicsSceneHoverEvent(enum QEvent::Type)
-func NewQGraphicsSceneHoverEvent(type_ int) *QGraphicsSceneHoverEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsSceneHoverEventFromPointer(cthis)
-	return gothis
-}
 func NewQGraphicsSceneHoverEventFromPointer(cthis unsafe.Pointer) *QGraphicsSceneHoverEvent {
 	bcthis0 := NewQGraphicsSceneEventFromPointer(cthis)
 	return &QGraphicsSceneHoverEvent{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:201
+// index:0
+// Public
+// void QGraphicsSceneHoverEvent(enum QEvent::Type)
+func NewQGraphicsSceneHoverEvent(type_ int) *QGraphicsSceneHoverEvent {
+	cthis := qtrt.Calloc(1, 256) // 32
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQGraphicsSceneHoverEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:202
 // index:0
-// virtual
+// Public virtual
 // void ~QGraphicsSceneHoverEvent()
 func DeleteQGraphicsSceneHoverEvent(*QGraphicsSceneHoverEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -86,128 +87,132 @@ func DeleteQGraphicsSceneHoverEvent(*QGraphicsSceneHoverEvent) {
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:204
 // index:0
+// Public
 // QPointF pos()
-func (this *QGraphicsSceneHoverEvent) Pos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent3posEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneHoverEvent) Pos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:205
 // index:0
+// Public
 // void setPos(const class QPointF &)
-func (this *QGraphicsSceneHoverEvent) SetPos(pos unsafe.Pointer) {
-	// 0: (, pos const QPointF &), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
+func (this *QGraphicsSceneHoverEvent) SetPos(pos *qtcore.QPointF) {
+	var convArg0 = pos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:207
 // index:0
+// Public
 // QPointF scenePos()
-func (this *QGraphicsSceneHoverEvent) ScenePos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent8scenePosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneHoverEvent) ScenePos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent8scenePosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:208
 // index:0
+// Public
 // void setScenePos(const class QPointF &)
-func (this *QGraphicsSceneHoverEvent) SetScenePos(pos unsafe.Pointer) {
-	// 0: (, pos const QPointF &), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
+func (this *QGraphicsSceneHoverEvent) SetScenePos(pos *qtcore.QPointF) {
+	var convArg0 = pos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:210
 // index:0
+// Public
 // QPoint screenPos()
-func (this *QGraphicsSceneHoverEvent) ScreenPos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent9screenPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneHoverEvent) ScreenPos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent9screenPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:211
 // index:0
+// Public
 // void setScreenPos(const class QPoint &)
-func (this *QGraphicsSceneHoverEvent) SetScreenPos(pos unsafe.Pointer) {
-	// 0: (, pos const QPoint &), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
+func (this *QGraphicsSceneHoverEvent) SetScreenPos(pos *qtcore.QPoint) {
+	var convArg0 = pos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:213
 // index:0
+// Public
 // QPointF lastPos()
-func (this *QGraphicsSceneHoverEvent) LastPos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent7lastPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneHoverEvent) LastPos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent7lastPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:214
 // index:0
+// Public
 // void setLastPos(const class QPointF &)
-func (this *QGraphicsSceneHoverEvent) SetLastPos(pos unsafe.Pointer) {
-	// 0: (, pos const QPointF &), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
+func (this *QGraphicsSceneHoverEvent) SetLastPos(pos *qtcore.QPointF) {
+	var convArg0 = pos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:216
 // index:0
+// Public
 // QPointF lastScenePos()
-func (this *QGraphicsSceneHoverEvent) LastScenePos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneHoverEvent) LastScenePos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:217
 // index:0
+// Public
 // void setLastScenePos(const class QPointF &)
-func (this *QGraphicsSceneHoverEvent) SetLastScenePos(pos unsafe.Pointer) {
-	// 0: (, pos const QPointF &), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
+func (this *QGraphicsSceneHoverEvent) SetLastScenePos(pos *qtcore.QPointF) {
+	var convArg0 = pos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:219
 // index:0
+// Public
 // QPoint lastScreenPos()
-func (this *QGraphicsSceneHoverEvent) LastScreenPos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneHoverEvent) LastScreenPos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:220
 // index:0
+// Public
 // void setLastScreenPos(const class QPoint &)
-func (this *QGraphicsSceneHoverEvent) SetLastScreenPos(pos unsafe.Pointer) {
-	// 0: (, pos const QPoint &), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
+func (this *QGraphicsSceneHoverEvent) SetLastScreenPos(pos *qtcore.QPoint) {
+	var convArg0 = pos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:222
 // index:0
+// Public
 // Qt::KeyboardModifiers modifiers()
-func (this *QGraphicsSceneHoverEvent) Modifiers() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent9modifiersEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsSceneHoverEvent) Modifiers() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent9modifiersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:223
-// index:0
-// void setModifiers(Qt::KeyboardModifiers)
-func (this *QGraphicsSceneHoverEvent) SetModifiers(modifiers int) {
-	// 0: (, QFlags<Qt::KeyboardModifier> modifiers), (&modifiers)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &modifiers)
-	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

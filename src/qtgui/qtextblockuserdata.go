@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 16
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
@@ -55,10 +55,13 @@ type QTextBlockUserData struct {
 func (this *QTextBlockUserData) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQTextBlockUserDataFromPointer(cthis unsafe.Pointer) *QTextBlockUserData {
+	return &QTextBlockUserData{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qtextobject.h:198
 // index:0
-// virtual
+// Public virtual
 // void ~QTextBlockUserData()
 func DeleteQTextBlockUserData(*QTextBlockUserData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTextBlockUserDataD2Ev", ffiqt.FFI_TYPE_VOID)

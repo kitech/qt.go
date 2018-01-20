@@ -55,10 +55,13 @@ type QAbstractOpenGLFunctions struct {
 func (this *QAbstractOpenGLFunctions) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQAbstractOpenGLFunctionsFromPointer(cthis unsafe.Pointer) *QAbstractOpenGLFunctions {
+	return &QAbstractOpenGLFunctions{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:213
 // index:0
-// virtual
+// Public virtual
 // void ~QAbstractOpenGLFunctions()
 func DeleteQAbstractOpenGLFunctions(*QAbstractOpenGLFunctions) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -67,73 +70,73 @@ func DeleteQAbstractOpenGLFunctions(*QAbstractOpenGLFunctions) {
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:215
 // index:0
-// virtual
+// Public virtual
 // bool initializeOpenGLFunctions()
-func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:217
 // index:0
-// inline
+// Public inline
 // QAbstractOpenGLFunctionsPrivate * d_func()
-func (this *QAbstractOpenGLFunctions) D_func() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions6d_funcEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAbstractOpenGLFunctions) D_func() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions6d_funcEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:217
 // index:1
-// inline
+// Public inline
 // const QAbstractOpenGLFunctionsPrivate * d_func()
-func (this *QAbstractOpenGLFunctions) D_func_1() {
-	// 1: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions6d_funcEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAbstractOpenGLFunctions) D_func_1() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions6d_funcEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:220
 // index:0
+// Protected
 // void QAbstractOpenGLFunctions()
 func NewQAbstractOpenGLFunctions() *QAbstractOpenGLFunctions {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractOpenGLFunctionsFromPointer(cthis)
 	return gothis
 }
-func NewQAbstractOpenGLFunctionsFromPointer(cthis unsafe.Pointer) *QAbstractOpenGLFunctions {
-	return &QAbstractOpenGLFunctions{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:223
 // index:0
+// Protected
 // bool isInitialized()
-func (this *QAbstractOpenGLFunctions) IsInitialized() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions13isInitializedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAbstractOpenGLFunctions) IsInitialized() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions13isInitializedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:225
 // index:0
+// Protected
 // void setOwningContext(const class QOpenGLContext *)
 func (this *QAbstractOpenGLFunctions) SetOwningContext(context unsafe.Pointer) {
-	// 0: (, context const QOpenGLContext *), (context)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions16setOwningContextEPK14QOpenGLContext", ffiqt.FFI_TYPE_VOID, this.GetCthis(), context)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions16setOwningContextEPK14QOpenGLContext", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), context)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:226
 // index:0
+// Protected
 // QOpenGLContext * owningContext()
-func (this *QAbstractOpenGLFunctions) OwningContext() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions13owningContextEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAbstractOpenGLFunctions) OwningContext() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions13owningContextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 25
+// extern C begin: 23
 */
 // import "C"
 import "unsafe"
@@ -59,35 +59,36 @@ type QSwipeGesture struct {
 func (this *QSwipeGesture) GetCthis() unsafe.Pointer {
 	return this.QGesture.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qgesture.h:209
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QSwipeGesture) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qgesture.h:221
-// index:0
-// void QSwipeGesture(class QObject *)
-func NewQSwipeGesture(parent unsafe.Pointer) *QSwipeGesture {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQSwipeGestureFromPointer(cthis)
-	return gothis
-}
 func NewQSwipeGestureFromPointer(cthis unsafe.Pointer) *QSwipeGesture {
 	bcthis0 := NewQGestureFromPointer(cthis)
 	return &QSwipeGesture{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qgesture.h:209
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QSwipeGesture) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qgesture.h:221
+// index:0
+// Public
+// void QSwipeGesture(class QObject *)
+func NewQSwipeGesture(parent unsafe.Pointer) *QSwipeGesture {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQSwipeGestureFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgesture.h:222
 // index:0
-// virtual
+// Public virtual
 // void ~QSwipeGesture()
 func DeleteQSwipeGesture(*QSwipeGesture) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGestureD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -96,37 +97,40 @@ func DeleteQSwipeGesture(*QSwipeGesture) {
 
 // /usr/include/qt/QtWidgets/qgesture.h:224
 // index:0
+// Public
 // QSwipeGesture::SwipeDirection horizontalDirection()
-func (this *QSwipeGesture) HorizontalDirection() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture19horizontalDirectionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSwipeGesture) HorizontalDirection() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture19horizontalDirectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:225
 // index:0
+// Public
 // QSwipeGesture::SwipeDirection verticalDirection()
-func (this *QSwipeGesture) VerticalDirection() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture17verticalDirectionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSwipeGesture) VerticalDirection() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture17verticalDirectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:227
 // index:0
+// Public
 // qreal swipeAngle()
-func (this *QSwipeGesture) SwipeAngle() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10swipeAngleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSwipeGesture) SwipeAngle() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10swipeAngleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:228
 // index:0
+// Public
 // void setSwipeAngle(qreal)
 func (this *QSwipeGesture) SetSwipeAngle(value float64) {
-	// 0: (, value qreal), (&value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGesture13setSwipeAngleEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGesture13setSwipeAngleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &value)
 	gopp.ErrPrint(err, rv)
 }
 

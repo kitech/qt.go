@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 2
+// extern C begin: 1
 */
 // import "C"
 import "unsafe"
@@ -55,25 +55,26 @@ type QDragLeaveEvent struct {
 func (this *QDragLeaveEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:671
-// index:0
-// void QDragLeaveEvent()
-func NewQDragLeaveEvent() *QDragLeaveEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragLeaveEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQDragLeaveEventFromPointer(cthis)
-	return gothis
-}
 func NewQDragLeaveEventFromPointer(cthis unsafe.Pointer) *QDragLeaveEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QDragLeaveEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:671
+// index:0
+// Public
+// void QDragLeaveEvent()
+func NewQDragLeaveEvent() *QDragLeaveEvent {
+	cthis := qtrt.Calloc(1, 256) // 24
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragLeaveEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDragLeaveEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:672
 // index:0
-// virtual
+// Public virtual
 // void ~QDragLeaveEvent()
 func DeleteQDragLeaveEvent(*QDragLeaveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragLeaveEventD2Ev", ffiqt.FFI_TYPE_VOID)

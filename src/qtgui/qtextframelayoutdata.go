@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
@@ -55,10 +55,13 @@ type QTextFrameLayoutData struct {
 func (this *QTextFrameLayoutData) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQTextFrameLayoutDataFromPointer(cthis unsafe.Pointer) *QTextFrameLayoutData {
+	return &QTextFrameLayoutData{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qtextobject.h:114
 // index:0
-// virtual
+// Public virtual
 // void ~QTextFrameLayoutData()
 func DeleteQTextFrameLayoutData(*QTextFrameLayoutData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextFrameLayoutDataD2Ev", ffiqt.FFI_TYPE_VOID)

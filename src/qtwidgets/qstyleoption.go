@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 23
+// extern C begin: 21
 */
 // import "C"
 import "unsafe"
@@ -59,23 +59,25 @@ type QStyleOption struct {
 func (this *QStyleOption) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQStyleOptionFromPointer(cthis unsafe.Pointer) *QStyleOption {
+	return &QStyleOption{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:102
 // index:0
+// Public
 // void QStyleOption(int, int)
 func NewQStyleOption(version int, type_ int) *QStyleOption {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 64
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOptionC2Eii", ffiqt.FFI_TYPE_VOID, cthis, &version, &type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFromPointer(cthis)
 	return gothis
 }
-func NewQStyleOptionFromPointer(cthis unsafe.Pointer) *QStyleOption {
-	return &QStyleOption{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:104
 // index:0
+// Public
 // void ~QStyleOption()
 func DeleteQStyleOption(*QStyleOption) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOptionD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -84,20 +86,19 @@ func DeleteQStyleOption(*QStyleOption) {
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:106
 // index:0
+// Public
 // void init(const class QWidget *)
 func (this *QStyleOption) Init(w unsafe.Pointer) {
-	// 0: (, w const QWidget *), (w)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption4initEPK7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption4initEPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:107
 // index:0
-// inline
+// Public inline
 // void initFrom(const class QWidget *)
 func (this *QStyleOption) InitFrom(w unsafe.Pointer) {
-	// 0: (, w const QWidget *), (w)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption8initFromEPK7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption8initFromEPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 }
 

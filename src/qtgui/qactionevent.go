@@ -55,25 +55,26 @@ type QActionEvent struct {
 func (this *QActionEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:727
-// index:0
-// void QActionEvent(int, class QAction *, class QAction *)
-func NewQActionEvent(type_ int, action unsafe.Pointer, before unsafe.Pointer) *QActionEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", ffiqt.FFI_TYPE_VOID, cthis, &type_, action, before)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQActionEventFromPointer(cthis)
-	return gothis
-}
 func NewQActionEventFromPointer(cthis unsafe.Pointer) *QActionEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QActionEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:727
+// index:0
+// Public
+// void QActionEvent(int, class QAction *, class QAction *)
+func NewQActionEvent(type_ int, action unsafe.Pointer, before unsafe.Pointer) *QActionEvent {
+	cthis := qtrt.Calloc(1, 256) // 40
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", ffiqt.FFI_TYPE_VOID, cthis, &type_, action, before)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQActionEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:728
 // index:0
-// virtual
+// Public virtual
 // void ~QActionEvent()
 func DeleteQActionEvent(*QActionEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -82,22 +83,22 @@ func DeleteQActionEvent(*QActionEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:730
 // index:0
-// inline
+// Public inline
 // QAction * action()
-func (this *QActionEvent) Action() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6actionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QActionEvent) Action() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6actionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:731
 // index:0
-// inline
+// Public inline
 // QAction * before()
-func (this *QActionEvent) Before() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6beforeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QActionEvent) Before() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6beforeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

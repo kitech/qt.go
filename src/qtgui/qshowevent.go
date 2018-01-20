@@ -55,25 +55,26 @@ type QShowEvent struct {
 func (this *QShowEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:493
-// index:0
-// void QShowEvent()
-func NewQShowEvent() *QShowEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QShowEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQShowEventFromPointer(cthis)
-	return gothis
-}
 func NewQShowEventFromPointer(cthis unsafe.Pointer) *QShowEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QShowEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:493
+// index:0
+// Public
+// void QShowEvent()
+func NewQShowEvent() *QShowEvent {
+	cthis := qtrt.Calloc(1, 256) // 24
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QShowEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQShowEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:494
 // index:0
-// virtual
+// Public virtual
 // void ~QShowEvent()
 func DeleteQShowEvent(*QShowEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QShowEventD2Ev", ffiqt.FFI_TYPE_VOID)

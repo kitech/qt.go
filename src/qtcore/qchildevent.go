@@ -51,25 +51,26 @@ type QChildEvent struct {
 func (this *QChildEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtCore/qcoreevent.h:352
-// index:0
-// void QChildEvent(enum QEvent::Type, class QObject *)
-func NewQChildEvent(type_ int, child unsafe.Pointer) *QChildEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &type_, child)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQChildEventFromPointer(cthis)
-	return gothis
-}
 func NewQChildEventFromPointer(cthis unsafe.Pointer) *QChildEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
 	return &QChildEvent{bcthis0}
 }
 
+// /usr/include/qt/QtCore/qcoreevent.h:352
+// index:0
+// Public
+// void QChildEvent(enum QEvent::Type, class QObject *)
+func NewQChildEvent(type_ int, child unsafe.Pointer) *QChildEvent {
+	cthis := qtrt.Calloc(1, 256) // 32
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &type_, child)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQChildEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qcoreevent.h:353
 // index:0
-// virtual
+// Public virtual
 // void ~QChildEvent()
 func DeleteQChildEvent(*QChildEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -78,42 +79,42 @@ func DeleteQChildEvent(*QChildEvent) {
 
 // /usr/include/qt/QtCore/qcoreevent.h:354
 // index:0
-// inline
+// Public inline
 // QObject * child()
-func (this *QChildEvent) Child() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5childEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QChildEvent) Child() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5childEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:355
 // index:0
-// inline
+// Public inline
 // bool added()
-func (this *QChildEvent) Added() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5addedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QChildEvent) Added() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5addedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:356
 // index:0
-// inline
+// Public inline
 // bool polished()
-func (this *QChildEvent) Polished() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent8polishedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QChildEvent) Polished() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent8polishedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:357
 // index:0
-// inline
+// Public inline
 // bool removed()
-func (this *QChildEvent) Removed() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent7removedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QChildEvent) Removed() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent7removedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

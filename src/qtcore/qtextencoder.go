@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 29
+// extern C begin: 27
 */
 // import "C"
 import "unsafe"
@@ -51,28 +51,17 @@ type QTextEncoder struct {
 func (this *QTextEncoder) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
-
-// /usr/include/qt/QtCore/qtextcodec.h:141
-// index:0
-// inline
-// void QTextEncoder(const class QTextCodec *)
-func NewQTextEncoder(codec unsafe.Pointer) *QTextEncoder {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoderC2EPK10QTextCodec", ffiqt.FFI_TYPE_VOID, cthis, codec)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQTextEncoderFromPointer(cthis)
-	return gothis
-}
 func NewQTextEncoderFromPointer(cthis unsafe.Pointer) *QTextEncoder {
 	return &QTextEncoder{&qtrt.CObject{cthis}}
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:142
-// index:1
-// void QTextEncoder(const class QTextCodec *, class QTextCodec::ConversionFlags)
-func NewQTextEncoder_1(codec unsafe.Pointer, flags int) *QTextEncoder {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoderC2EPK10QTextCodec6QFlagsINS0_14ConversionFlagEE", ffiqt.FFI_TYPE_VOID, cthis, codec, &flags)
+// /usr/include/qt/QtCore/qtextcodec.h:141
+// index:0
+// Public inline
+// void QTextEncoder(const class QTextCodec *)
+func NewQTextEncoder(codec unsafe.Pointer) *QTextEncoder {
+	cthis := qtrt.Calloc(1, 256) // 40
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoderC2EPK10QTextCodec", ffiqt.FFI_TYPE_VOID, cthis, codec)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextEncoderFromPointer(cthis)
 	return gothis
@@ -80,6 +69,7 @@ func NewQTextEncoder_1(codec unsafe.Pointer, flags int) *QTextEncoder {
 
 // /usr/include/qt/QtCore/qtextcodec.h:143
 // index:0
+// Public
 // void ~QTextEncoder()
 func DeleteQTextEncoder(*QTextEncoder) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoderD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -88,38 +78,44 @@ func DeleteQTextEncoder(*QTextEncoder) {
 
 // /usr/include/qt/QtCore/qtextcodec.h:145
 // index:0
+// Public
 // QByteArray fromUnicode(const class QString &)
-func (this *QTextEncoder) FromUnicode(str unsafe.Pointer) {
-	// 0: (, str const QString &), (str)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), str)
+func (this *QTextEncoder) FromUnicode(str *QString) interface{} {
+	var convArg0 = str.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:147
 // index:1
+// Public
 // QByteArray fromUnicode(class QStringView)
-func (this *QTextEncoder) FromUnicode_1(str unsafe.Pointer) {
-	// 1: (, str QStringView), (str)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeE11QStringView", ffiqt.FFI_TYPE_VOID, this.GetCthis(), str)
+func (this *QTextEncoder) FromUnicode_1(str *QStringView) interface{} {
+	var convArg0 = str.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeE11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:148
 // index:2
+// Public
 // QByteArray fromUnicode(const class QChar *, int)
-func (this *QTextEncoder) FromUnicode_2(uc unsafe.Pointer, len int) {
-	// 2: (, uc const QChar *, len int), (uc, &len)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeEPK5QChari", ffiqt.FFI_TYPE_VOID, this.GetCthis(), uc, &len)
+func (this *QTextEncoder) FromUnicode_2(uc unsafe.Pointer, len int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeEPK5QChari", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), uc, &len)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:149
 // index:0
+// Public
 // bool hasFailure()
-func (this *QTextEncoder) HasFailure() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextEncoder10hasFailureEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextEncoder) HasFailure() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextEncoder10hasFailureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

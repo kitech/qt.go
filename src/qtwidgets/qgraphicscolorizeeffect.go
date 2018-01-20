@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 18
+// extern C begin: 16
 */
 // import "C"
 import "unsafe"
@@ -59,35 +59,36 @@ type QGraphicsColorizeEffect struct {
 func (this *QGraphicsColorizeEffect) GetCthis() unsafe.Pointer {
 	return this.QGraphicsEffect.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qgraphicseffect.h:128
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QGraphicsColorizeEffect) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qgraphicseffect.h:132
-// index:0
-// void QGraphicsColorizeEffect(class QObject *)
-func NewQGraphicsColorizeEffect(parent unsafe.Pointer) *QGraphicsColorizeEffect {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsColorizeEffectFromPointer(cthis)
-	return gothis
-}
 func NewQGraphicsColorizeEffectFromPointer(cthis unsafe.Pointer) *QGraphicsColorizeEffect {
 	bcthis0 := NewQGraphicsEffectFromPointer(cthis)
 	return &QGraphicsColorizeEffect{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:128
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QGraphicsColorizeEffect) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:132
+// index:0
+// Public
+// void QGraphicsColorizeEffect(class QObject *)
+func NewQGraphicsColorizeEffect(parent unsafe.Pointer) *QGraphicsColorizeEffect {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQGraphicsColorizeEffectFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:133
 // index:0
-// virtual
+// Public virtual
 // void ~QGraphicsColorizeEffect()
 func DeleteQGraphicsColorizeEffect(*QGraphicsColorizeEffect) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -96,65 +97,68 @@ func DeleteQGraphicsColorizeEffect(*QGraphicsColorizeEffect) {
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:135
 // index:0
+// Public
 // QColor color()
-func (this *QGraphicsColorizeEffect) Color() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect5colorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsColorizeEffect) Color() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect5colorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:136
 // index:0
+// Public
 // qreal strength()
-func (this *QGraphicsColorizeEffect) Strength() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect8strengthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGraphicsColorizeEffect) Strength() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect8strengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:139
 // index:0
+// Public
 // void setColor(const class QColor &)
-func (this *QGraphicsColorizeEffect) SetColor(c unsafe.Pointer) {
-	// 0: (, c const QColor &), (c)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect8setColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), c)
+func (this *QGraphicsColorizeEffect) SetColor(c *qtgui.QColor) {
+	var convArg0 = c.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:140
 // index:0
+// Public
 // void setStrength(qreal)
 func (this *QGraphicsColorizeEffect) SetStrength(strength float64) {
-	// 0: (, strength qreal), (&strength)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect11setStrengthEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &strength)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect11setStrengthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &strength)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:143
 // index:0
+// Public
 // void colorChanged(const class QColor &)
-func (this *QGraphicsColorizeEffect) ColorChanged(color unsafe.Pointer) {
-	// 0: (, color const QColor &), (color)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect12colorChangedERK6QColor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), color)
+func (this *QGraphicsColorizeEffect) ColorChanged(color *qtgui.QColor) {
+	var convArg0 = color.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect12colorChangedERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:144
 // index:0
+// Public
 // void strengthChanged(qreal)
 func (this *QGraphicsColorizeEffect) StrengthChanged(strength float64) {
-	// 0: (, strength qreal), (&strength)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect15strengthChangedEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &strength)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect15strengthChangedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &strength)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:147
 // index:0
-// virtual
+// Protected virtual
 // void draw(class QPainter *)
 func (this *QGraphicsColorizeEffect) Draw(painter unsafe.Pointer) {
-	// 0: (, painter QPainter *), (painter)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect4drawEP8QPainter", ffiqt.FFI_TYPE_VOID, this.GetCthis(), painter)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), painter)
 	gopp.ErrPrint(err, rv)
 }
 

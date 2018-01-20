@@ -59,38 +59,28 @@ type QGraphicsTransform struct {
 func (this *QGraphicsTransform) GetCthis() unsafe.Pointer {
 	return this.QObject.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qgraphicstransform.h:58
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QGraphicsTransform) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsTransform10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qgraphicstransform.h:60
-// index:0
-// void QGraphicsTransform(class QObject *)
-func NewQGraphicsTransform(parent unsafe.Pointer) *QGraphicsTransform {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransformC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsTransformFromPointer(cthis)
-	return gothis
-}
 func NewQGraphicsTransformFromPointer(cthis unsafe.Pointer) *QGraphicsTransform {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QGraphicsTransform{bcthis0}
 }
 
-// /usr/include/qt/QtWidgets/qgraphicstransform.h:69
-// index:1
-// void QGraphicsTransform(class QGraphicsTransformPrivate &, class QObject *)
-func NewQGraphicsTransform_1(p unsafe.Pointer, parent unsafe.Pointer) *QGraphicsTransform {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransformC1ER25QGraphicsTransformPrivateP7QObject", ffiqt.FFI_TYPE_VOID, cthis, p, parent)
+// /usr/include/qt/QtWidgets/qgraphicstransform.h:58
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QGraphicsTransform) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsTransform10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qgraphicstransform.h:60
+// index:0
+// Public
+// void QGraphicsTransform(class QObject *)
+func NewQGraphicsTransform(parent unsafe.Pointer) *QGraphicsTransform {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransformC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsTransformFromPointer(cthis)
 	return gothis
@@ -98,7 +88,7 @@ func NewQGraphicsTransform_1(p unsafe.Pointer, parent unsafe.Pointer) *QGraphics
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:61
 // index:0
-// virtual
+// Public virtual
 // void ~QGraphicsTransform()
 func DeleteQGraphicsTransform(*QGraphicsTransform) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransformD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -107,20 +97,19 @@ func DeleteQGraphicsTransform(*QGraphicsTransform) {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:63
 // index:0
-// pure virtual
+// Public pure virtual
 // void applyTo(class QMatrix4x4 *)
 func (this *QGraphicsTransform) ApplyTo(matrix unsafe.Pointer) {
-	// 0: (, matrix QMatrix4x4 *), (matrix)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsTransform7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_VOID, this.GetCthis(), matrix)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsTransform7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), matrix)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:66
 // index:0
+// Protected
 // void update()
 func (this *QGraphicsTransform) Update() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransform6updateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransform6updateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -55,33 +55,34 @@ type QGenericPluginFactory struct {
 func (this *QGenericPluginFactory) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQGenericPluginFactoryFromPointer(cthis unsafe.Pointer) *QGenericPluginFactory {
+	return &QGenericPluginFactory{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qgenericpluginfactory.h:55
 // index:0
-// static
+// Public static
 // QStringList keys()
-func (this *QGenericPluginFactory) Keys() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGenericPluginFactory4keysEv", ffiqt.FFI_TYPE_VOID)
+func (this *QGenericPluginFactory) Keys() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGenericPluginFactory4keysEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 func QGenericPluginFactory_Keys() {
-	// 0: (), ()
 	var nilthis *QGenericPluginFactory
 	nilthis.Keys()
 }
 
 // /usr/include/qt/QtGui/qgenericpluginfactory.h:56
 // index:0
-// static
+// Public static
 // QObject * create(const class QString &, const class QString &)
-func (this *QGenericPluginFactory) Create(arg0 unsafe.Pointer, arg1 unsafe.Pointer) {
-	// 0: (const QString & arg0, const QString & arg1), (arg0, arg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGenericPluginFactory6createERK7QStringS2_", ffiqt.FFI_TYPE_VOID)
+func (this *QGenericPluginFactory) Create(arg0 *qtcore.QString, arg1 *qtcore.QString) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGenericPluginFactory6createERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, arg0, arg1)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
-func QGenericPluginFactory_Create(arg0 unsafe.Pointer, arg1 unsafe.Pointer) {
-	// 0: (const QString & arg0, const QString & arg1), (arg0, arg1)
+func QGenericPluginFactory_Create(arg0 *qtcore.QString, arg1 *qtcore.QString) {
 	var nilthis *QGenericPluginFactory
 	nilthis.Create(arg0, arg1)
 }

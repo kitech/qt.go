@@ -51,29 +51,30 @@ type QSemaphoreReleaser struct {
 func (this *QSemaphoreReleaser) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQSemaphoreReleaserFromPointer(cthis unsafe.Pointer) *QSemaphoreReleaser {
+	return &QSemaphoreReleaser{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qsemaphore.h:75
 // index:0
-// inline
+// Public inline
 // void QSemaphoreReleaser()
 func NewQSemaphoreReleaser() *QSemaphoreReleaser {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSemaphoreReleaserFromPointer(cthis)
 	return gothis
 }
-func NewQSemaphoreReleaserFromPointer(cthis unsafe.Pointer) *QSemaphoreReleaser {
-	return &QSemaphoreReleaser{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qsemaphore.h:76
 // index:1
-// inline
+// Public inline
 // void QSemaphoreReleaser(class QSemaphore &, int)
-func NewQSemaphoreReleaser_1(sem unsafe.Pointer, n int) *QSemaphoreReleaser {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, sem, &n)
+func NewQSemaphoreReleaser_1(sem *QSemaphore, n int) *QSemaphoreReleaser {
+	cthis := qtrt.Calloc(1, 256) // 16
+	var convArg0 = sem.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &n)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSemaphoreReleaserFromPointer(cthis)
 	return gothis
@@ -81,10 +82,10 @@ func NewQSemaphoreReleaser_1(sem unsafe.Pointer, n int) *QSemaphoreReleaser {
 
 // /usr/include/qt/QtCore/qsemaphore.h:78
 // index:2
-// inline
+// Public inline
 // void QSemaphoreReleaser(class QSemaphore *, int)
 func NewQSemaphoreReleaser_2(sem unsafe.Pointer, n int) *QSemaphoreReleaser {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, sem, &n)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSemaphoreReleaserFromPointer(cthis)
@@ -93,7 +94,7 @@ func NewQSemaphoreReleaser_2(sem unsafe.Pointer, n int) *QSemaphoreReleaser {
 
 // /usr/include/qt/QtCore/qsemaphore.h:86
 // index:0
-// inline
+// Public inline
 // void ~QSemaphoreReleaser()
 func DeleteQSemaphoreReleaser(*QSemaphoreReleaser) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -102,32 +103,32 @@ func DeleteQSemaphoreReleaser(*QSemaphoreReleaser) {
 
 // /usr/include/qt/QtCore/qsemaphore.h:92
 // index:0
-// inline
+// Public inline
 // void swap(class QSemaphoreReleaser &)
-func (this *QSemaphoreReleaser) Swap(other unsafe.Pointer) {
-	// 0: (, other QSemaphoreReleaser &), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
+func (this *QSemaphoreReleaser) Swap(other *QSemaphoreReleaser) {
+	var convArg0 = other.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:98
 // index:0
-// inline
+// Public inline
 // QSemaphore * semaphore()
-func (this *QSemaphoreReleaser) Semaphore() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSemaphoreReleaser) Semaphore() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:101
 // index:0
-// inline
+// Public inline
 // QSemaphore * cancel()
-func (this *QSemaphoreReleaser) Cancel() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser6cancelEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSemaphoreReleaser) Cancel() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser6cancelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

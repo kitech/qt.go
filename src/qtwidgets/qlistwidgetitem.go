@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 69
+// extern C begin: 65
 */
 // import "C"
 import "unsafe"
@@ -59,27 +59,30 @@ type QListWidgetItem struct {
 func (this *QListWidgetItem) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQListWidgetItemFromPointer(cthis unsafe.Pointer) *QListWidgetItem {
+	return &QListWidgetItem{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:64
 // index:0
+// Public
 // void QListWidgetItem(class QListWidget *, int)
 func NewQListWidgetItem(view unsafe.Pointer, type_ int) *QListWidgetItem {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 48
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItemC2EP11QListWidgeti", ffiqt.FFI_TYPE_VOID, cthis, view, &type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQListWidgetItemFromPointer(cthis)
 	return gothis
 }
-func NewQListWidgetItemFromPointer(cthis unsafe.Pointer) *QListWidgetItem {
-	return &QListWidgetItem{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:65
 // index:1
+// Public
 // void QListWidgetItem(const class QString &, class QListWidget *, int)
-func NewQListWidgetItem_1(text unsafe.Pointer, view unsafe.Pointer, type_ int) *QListWidgetItem {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti", ffiqt.FFI_TYPE_VOID, cthis, text, view, &type_)
+func NewQListWidgetItem_1(text *qtcore.QString, view unsafe.Pointer, type_ int) *QListWidgetItem {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, view, &type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQListWidgetItemFromPointer(cthis)
 	return gothis
@@ -87,10 +90,13 @@ func NewQListWidgetItem_1(text unsafe.Pointer, view unsafe.Pointer, type_ int) *
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:66
 // index:2
+// Public
 // void QListWidgetItem(const class QIcon &, const class QString &, class QListWidget *, int)
-func NewQListWidgetItem_2(icon unsafe.Pointer, text unsafe.Pointer, view unsafe.Pointer, type_ int) *QListWidgetItem {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti", ffiqt.FFI_TYPE_VOID, cthis, icon, text, view, &type_)
+func NewQListWidgetItem_2(icon *qtgui.QIcon, text *qtcore.QString, view unsafe.Pointer, type_ int) *QListWidgetItem {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = icon.GetCthis()
+	var convArg1 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, view, &type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQListWidgetItemFromPointer(cthis)
 	return gothis
@@ -98,7 +104,7 @@ func NewQListWidgetItem_2(icon unsafe.Pointer, text unsafe.Pointer, view unsafe.
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:69
 // index:0
-// virtual
+// Public virtual
 // void ~QListWidgetItem()
 func DeleteQListWidgetItem(*QListWidgetItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItemD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -107,391 +113,378 @@ func DeleteQListWidgetItem(*QListWidgetItem) {
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:71
 // index:0
-// virtual
+// Public virtual
 // QListWidgetItem * clone()
-func (this *QListWidgetItem) Clone() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5cloneEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) Clone() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5cloneEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:73
 // index:0
-// inline
+// Public inline
 // QListWidget * listWidget()
-func (this *QListWidgetItem) ListWidget() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10listWidgetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) ListWidget() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10listWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:75
 // index:0
-// inline
+// Public inline
 // void setSelected(_Bool)
 func (this *QListWidgetItem) SetSelected(select_ bool) {
-	// 0: (, select bool), (&select_)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &select_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &select_)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:76
 // index:0
-// inline
+// Public inline
 // bool isSelected()
-func (this *QListWidgetItem) IsSelected() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10isSelectedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) IsSelected() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10isSelectedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:78
 // index:0
-// inline
+// Public inline
 // void setHidden(_Bool)
 func (this *QListWidgetItem) SetHidden(hide bool) {
-	// 0: (, hide bool), (&hide)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem9setHiddenEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &hide)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem9setHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &hide)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:79
 // index:0
-// inline
+// Public inline
 // bool isHidden()
-func (this *QListWidgetItem) IsHidden() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem8isHiddenEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) IsHidden() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem8isHiddenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:81
 // index:0
-// inline
+// Public inline
 // Qt::ItemFlags flags()
-func (this *QListWidgetItem) Flags() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5flagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) Flags() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qlistwidget.h:82
-// index:0
-// void setFlags(Qt::ItemFlags)
-func (this *QListWidgetItem) SetFlags(flags int) {
-	// 0: (, QFlags<Qt::ItemFlag> flags), (&flags)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem8setFlagsE6QFlagsIN2Qt8ItemFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &flags)
-	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:84
 // index:0
-// inline
+// Public inline
 // QString text()
-func (this *QListWidgetItem) Text() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4textEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) Text() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:86
 // index:0
-// inline
+// Public inline
 // void setText(const class QString &)
-func (this *QListWidgetItem) SetText(text unsafe.Pointer) {
-	// 0: (, text const QString &), (text)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text)
+func (this *QListWidgetItem) SetText(text *qtcore.QString) {
+	var convArg0 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:88
 // index:0
-// inline
+// Public inline
 // QIcon icon()
-func (this *QListWidgetItem) Icon() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4iconEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) Icon() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4iconEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:90
 // index:0
-// inline
+// Public inline
 // void setIcon(const class QIcon &)
-func (this *QListWidgetItem) SetIcon(icon unsafe.Pointer) {
-	// 0: (, icon const QIcon &), (icon)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setIconERK5QIcon", ffiqt.FFI_TYPE_VOID, this.GetCthis(), icon)
+func (this *QListWidgetItem) SetIcon(icon *qtgui.QIcon) {
+	var convArg0 = icon.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setIconERK5QIcon", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:92
 // index:0
-// inline
+// Public inline
 // QString statusTip()
-func (this *QListWidgetItem) StatusTip() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9statusTipEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) StatusTip() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9statusTipEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:94
 // index:0
-// inline
+// Public inline
 // void setStatusTip(const class QString &)
-func (this *QListWidgetItem) SetStatusTip(statusTip unsafe.Pointer) {
-	// 0: (, statusTip const QString &), (statusTip)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setStatusTipERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), statusTip)
+func (this *QListWidgetItem) SetStatusTip(statusTip *qtcore.QString) {
+	var convArg0 = statusTip.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setStatusTipERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:97
 // index:0
-// inline
+// Public inline
 // QString toolTip()
-func (this *QListWidgetItem) ToolTip() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem7toolTipEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) ToolTip() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem7toolTipEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:99
 // index:0
-// inline
+// Public inline
 // void setToolTip(const class QString &)
-func (this *QListWidgetItem) SetToolTip(toolTip unsafe.Pointer) {
-	// 0: (, toolTip const QString &), (toolTip)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem10setToolTipERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), toolTip)
+func (this *QListWidgetItem) SetToolTip(toolTip *qtcore.QString) {
+	var convArg0 = toolTip.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem10setToolTipERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:103
 // index:0
-// inline
+// Public inline
 // QString whatsThis()
-func (this *QListWidgetItem) WhatsThis() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9whatsThisEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) WhatsThis() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9whatsThisEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:105
 // index:0
-// inline
+// Public inline
 // void setWhatsThis(const class QString &)
-func (this *QListWidgetItem) SetWhatsThis(whatsThis unsafe.Pointer) {
-	// 0: (, whatsThis const QString &), (whatsThis)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setWhatsThisERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), whatsThis)
+func (this *QListWidgetItem) SetWhatsThis(whatsThis *qtcore.QString) {
+	var convArg0 = whatsThis.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setWhatsThisERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:108
 // index:0
-// inline
+// Public inline
 // QFont font()
-func (this *QListWidgetItem) Font() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4fontEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) Font() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4fontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:110
 // index:0
-// inline
+// Public inline
 // void setFont(const class QFont &)
-func (this *QListWidgetItem) SetFont(font unsafe.Pointer) {
-	// 0: (, font const QFont &), (font)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setFontERK5QFont", ffiqt.FFI_TYPE_VOID, this.GetCthis(), font)
+func (this *QListWidgetItem) SetFont(font *qtgui.QFont) {
+	var convArg0 = font.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setFontERK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:112
 // index:0
-// inline
+// Public inline
 // int textAlignment()
-func (this *QListWidgetItem) TextAlignment() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem13textAlignmentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) TextAlignment() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem13textAlignmentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:114
 // index:0
-// inline
+// Public inline
 // void setTextAlignment(int)
 func (this *QListWidgetItem) SetTextAlignment(alignment int) {
-	// 0: (, alignment int), (&alignment)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem16setTextAlignmentEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem16setTextAlignmentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &alignment)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:117
 // index:0
-// inline
+// Public inline
 // QColor backgroundColor()
-func (this *QListWidgetItem) BackgroundColor() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem15backgroundColorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) BackgroundColor() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem15backgroundColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:119
 // index:0
-// inline virtual
+// Public inline virtual
 // void setBackgroundColor(const class QColor &)
-func (this *QListWidgetItem) SetBackgroundColor(color unsafe.Pointer) {
-	// 0: (, color const QColor &), (color)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem18setBackgroundColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), color)
+func (this *QListWidgetItem) SetBackgroundColor(color *qtgui.QColor) {
+	var convArg0 = color.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem18setBackgroundColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:122
 // index:0
-// inline
+// Public inline
 // QBrush background()
-func (this *QListWidgetItem) Background() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10backgroundEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) Background() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10backgroundEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:124
 // index:0
-// inline
+// Public inline
 // void setBackground(const class QBrush &)
-func (this *QListWidgetItem) SetBackground(brush unsafe.Pointer) {
-	// 0: (, brush const QBrush &), (brush)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setBackgroundERK6QBrush", ffiqt.FFI_TYPE_VOID, this.GetCthis(), brush)
+func (this *QListWidgetItem) SetBackground(brush *qtgui.QBrush) {
+	var convArg0 = brush.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setBackgroundERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:127
 // index:0
-// inline
+// Public inline
 // QColor textColor()
-func (this *QListWidgetItem) TextColor() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9textColorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) TextColor() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9textColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:129
 // index:0
-// inline
+// Public inline
 // void setTextColor(const class QColor &)
-func (this *QListWidgetItem) SetTextColor(color unsafe.Pointer) {
-	// 0: (, color const QColor &), (color)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setTextColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), color)
+func (this *QListWidgetItem) SetTextColor(color *qtgui.QColor) {
+	var convArg0 = color.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setTextColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:132
 // index:0
-// inline
+// Public inline
 // QBrush foreground()
-func (this *QListWidgetItem) Foreground() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10foregroundEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) Foreground() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10foregroundEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:134
 // index:0
-// inline
+// Public inline
 // void setForeground(const class QBrush &)
-func (this *QListWidgetItem) SetForeground(brush unsafe.Pointer) {
-	// 0: (, brush const QBrush &), (brush)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setForegroundERK6QBrush", ffiqt.FFI_TYPE_VOID, this.GetCthis(), brush)
+func (this *QListWidgetItem) SetForeground(brush *qtgui.QBrush) {
+	var convArg0 = brush.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setForegroundERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:137
 // index:0
-// inline
+// Public inline
 // Qt::CheckState checkState()
-func (this *QListWidgetItem) CheckState() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10checkStateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) CheckState() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10checkStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:139
 // index:0
-// inline
+// Public inline
 // void setCheckState(Qt::CheckState)
 func (this *QListWidgetItem) SetCheckState(state int) {
-	// 0: (, state Qt::CheckState), (&state)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setCheckStateEN2Qt10CheckStateE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setCheckStateEN2Qt10CheckStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &state)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:142
 // index:0
-// inline
+// Public inline
 // QSize sizeHint()
-func (this *QListWidgetItem) SizeHint() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) SizeHint() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:144
 // index:0
-// inline
+// Public inline
 // void setSizeHint(const class QSize &)
-func (this *QListWidgetItem) SetSizeHint(size unsafe.Pointer) {
-	// 0: (, size const QSize &), (size)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem11setSizeHintERK5QSize", ffiqt.FFI_TYPE_VOID, this.GetCthis(), size)
+func (this *QListWidgetItem) SetSizeHint(size *qtcore.QSize) {
+	var convArg0 = size.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem11setSizeHintERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:147
 // index:0
-// virtual
+// Public virtual
 // QVariant data(int)
-func (this *QListWidgetItem) Data(role int) {
-	// 0: (, role int), (&role)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4dataEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &role)
+func (this *QListWidgetItem) Data(role int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4dataEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &role)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:148
 // index:0
-// virtual
+// Public virtual
 // void setData(int, const class QVariant &)
-func (this *QListWidgetItem) SetData(role int, value unsafe.Pointer) {
-	// 0: (, role int, value const QVariant &), (&role, value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setDataEiRK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &role, value)
+func (this *QListWidgetItem) SetData(role int, value *qtcore.QVariant) {
+	var convArg1 = value.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setDataEiRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &role, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:153
 // index:0
-// virtual
+// Public virtual
 // void read(class QDataStream &)
-func (this *QListWidgetItem) Read(in unsafe.Pointer) {
-	// 0: (, in QDataStream &), (in)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem4readER11QDataStream", ffiqt.FFI_TYPE_VOID, this.GetCthis(), in)
+func (this *QListWidgetItem) Read(in *qtcore.QDataStream) {
+	var convArg0 = in.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem4readER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:154
 // index:0
-// virtual
+// Public virtual
 // void write(class QDataStream &)
-func (this *QListWidgetItem) Write(out unsafe.Pointer) {
-	// 0: (, out QDataStream &), (out)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5writeER11QDataStream", ffiqt.FFI_TYPE_VOID, this.GetCthis(), out)
+func (this *QListWidgetItem) Write(out *qtcore.QDataStream) {
+	var convArg0 = out.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5writeER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:158
 // index:0
-// inline
+// Public inline
 // int type()
-func (this *QListWidgetItem) Type() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QListWidgetItem) Type() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

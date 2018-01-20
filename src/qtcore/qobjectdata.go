@@ -51,10 +51,13 @@ type QObjectData struct {
 func (this *QObjectData) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQObjectDataFromPointer(cthis unsafe.Pointer) *QObjectData {
+	return &QObjectData{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qobject.h:97
 // index:0
-// pure virtual
+// Public pure virtual
 // void ~QObjectData()
 func DeleteQObjectData(*QObjectData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QObjectDataD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -63,11 +66,12 @@ func DeleteQObjectData(*QObjectData) {
 
 // /usr/include/qt/QtCore/qobject.h:112
 // index:0
+// Public
 // QMetaObject * dynamicMetaObject()
-func (this *QObjectData) DynamicMetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QObjectData17dynamicMetaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QObjectData) DynamicMetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QObjectData17dynamicMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

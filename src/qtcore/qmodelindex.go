@@ -51,130 +51,130 @@ type QModelIndex struct {
 func (this *QModelIndex) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQModelIndexFromPointer(cthis unsafe.Pointer) *QModelIndex {
+	return &QModelIndex{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:58
 // index:0
-// inline
+// Public inline
 // void QModelIndex()
 func NewQModelIndex() *QModelIndex {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QModelIndexC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQModelIndexFromPointer(cthis)
 	return gothis
 }
-func NewQModelIndexFromPointer(cthis unsafe.Pointer) *QModelIndex {
-	return &QModelIndex{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:60
 // index:0
-// inline
+// Public inline
 // int row()
-func (this *QModelIndex) Row() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex3rowEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QModelIndex) Row() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex3rowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:61
 // index:0
-// inline
+// Public inline
 // int column()
-func (this *QModelIndex) Column() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6columnEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QModelIndex) Column() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6columnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:62
 // index:0
-// inline
+// Public inline
 // quintptr internalId()
-func (this *QModelIndex) InternalId() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex10internalIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QModelIndex) InternalId() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex10internalIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:63
 // index:0
-// inline
+// Public inline
 // void * internalPointer()
-func (this *QModelIndex) InternalPointer() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex15internalPointerEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QModelIndex) InternalPointer() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex15internalPointerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:64
 // index:0
-// inline
+// Public inline
 // QModelIndex parent()
-func (this *QModelIndex) Parent() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6parentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QModelIndex) Parent() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:65
 // index:0
-// inline
+// Public inline
 // QModelIndex sibling(int, int)
-func (this *QModelIndex) Sibling(row int, column int) {
-	// 0: (, row int, column int), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7siblingEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
+func (this *QModelIndex) Sibling(row int, column int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7siblingEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:67
 // index:0
-// inline
+// Public inline
 // QModelIndex child(int, int)
-func (this *QModelIndex) Child(row int, column int) {
-	// 0: (, row int, column int), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5childEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
+func (this *QModelIndex) Child(row int, column int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5childEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:69
 // index:0
-// inline
+// Public inline
 // QVariant data(int)
-func (this *QModelIndex) Data(role int) {
-	// 0: (, role int), (&role)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex4dataEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &role)
+func (this *QModelIndex) Data(role int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex4dataEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &role)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:70
 // index:0
-// inline
+// Public inline
 // Qt::ItemFlags flags()
-func (this *QModelIndex) Flags() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5flagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QModelIndex) Flags() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:71
 // index:0
-// inline
+// Public inline
 // const QAbstractItemModel * model()
-func (this *QModelIndex) Model() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5modelEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QModelIndex) Model() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:72
 // index:0
-// inline
+// Public inline
 // bool isValid()
-func (this *QModelIndex) IsValid() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QModelIndex) IsValid() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

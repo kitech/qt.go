@@ -59,23 +59,25 @@ type QStyleHintReturn struct {
 func (this *QStyleHintReturn) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQStyleHintReturnFromPointer(cthis unsafe.Pointer) *QStyleHintReturn {
+	return &QStyleHintReturn{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:710
 // index:0
+// Public
 // void QStyleHintReturn(int, int)
 func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", ffiqt.FFI_TYPE_VOID, cthis, &version, &type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleHintReturnFromPointer(cthis)
 	return gothis
 }
-func NewQStyleHintReturnFromPointer(cthis unsafe.Pointer) *QStyleHintReturn {
-	return &QStyleHintReturn{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:711
 // index:0
+// Public
 // void ~QStyleHintReturn()
 func DeleteQStyleHintReturn(*QStyleHintReturn) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnD2Ev", ffiqt.FFI_TYPE_VOID)

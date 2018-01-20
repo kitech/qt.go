@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 44
+// extern C begin: 43
 */
 // import "C"
 import "unsafe"
@@ -59,35 +59,36 @@ type QDataWidgetMapper struct {
 func (this *QDataWidgetMapper) GetCthis() unsafe.Pointer {
 	return this.QObject.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:57
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QDataWidgetMapper) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:64
-// index:0
-// void QDataWidgetMapper(class QObject *)
-func NewQDataWidgetMapper(parent unsafe.Pointer) *QDataWidgetMapper {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapperC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQDataWidgetMapperFromPointer(cthis)
-	return gothis
-}
 func NewQDataWidgetMapperFromPointer(cthis unsafe.Pointer) *QDataWidgetMapper {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QDataWidgetMapper{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:57
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QDataWidgetMapper) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:64
+// index:0
+// Public
+// void QDataWidgetMapper(class QObject *)
+func NewQDataWidgetMapper(parent unsafe.Pointer) *QDataWidgetMapper {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapperC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDataWidgetMapperFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:65
 // index:0
-// virtual
+// Public virtual
 // void ~QDataWidgetMapper()
 func DeleteQDataWidgetMapper(*QDataWidgetMapper) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapperD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -96,245 +97,257 @@ func DeleteQDataWidgetMapper(*QDataWidgetMapper) {
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:67
 // index:0
+// Public
 // void setModel(class QAbstractItemModel *)
 func (this *QDataWidgetMapper) SetModel(model unsafe.Pointer) {
-	// 0: (, model QAbstractItemModel *), (model)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_VOID, this.GetCthis(), model)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), model)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:68
 // index:0
+// Public
 // QAbstractItemModel * model()
-func (this *QDataWidgetMapper) Model() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper5modelEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDataWidgetMapper) Model() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:70
 // index:0
+// Public
 // void setItemDelegate(class QAbstractItemDelegate *)
 func (this *QDataWidgetMapper) SetItemDelegate(delegate unsafe.Pointer) {
-	// 0: (, delegate QAbstractItemDelegate *), (delegate)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate", ffiqt.FFI_TYPE_VOID, this.GetCthis(), delegate)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), delegate)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:71
 // index:0
+// Public
 // QAbstractItemDelegate * itemDelegate()
-func (this *QDataWidgetMapper) ItemDelegate() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper12itemDelegateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDataWidgetMapper) ItemDelegate() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper12itemDelegateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:73
 // index:0
+// Public
 // void setRootIndex(const class QModelIndex &)
-func (this *QDataWidgetMapper) SetRootIndex(index unsafe.Pointer) {
-	// 0: (, index const QModelIndex &), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
+func (this *QDataWidgetMapper) SetRootIndex(index *qtcore.QModelIndex) {
+	var convArg0 = index.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:74
 // index:0
+// Public
 // QModelIndex rootIndex()
-func (this *QDataWidgetMapper) RootIndex() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper9rootIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDataWidgetMapper) RootIndex() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper9rootIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:76
 // index:0
+// Public
 // void setOrientation(Qt::Orientation)
 func (this *QDataWidgetMapper) SetOrientation(aOrientation int) {
-	// 0: (, aOrientation Qt::Orientation), (&aOrientation)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &aOrientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &aOrientation)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:77
 // index:0
+// Public
 // Qt::Orientation orientation()
-func (this *QDataWidgetMapper) Orientation() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper11orientationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDataWidgetMapper) Orientation() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper11orientationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:81
 // index:0
+// Public
 // void setSubmitPolicy(enum QDataWidgetMapper::SubmitPolicy)
 func (this *QDataWidgetMapper) SetSubmitPolicy(policy int) {
-	// 0: (, policy QDataWidgetMapper::SubmitPolicy), (&policy)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setSubmitPolicyENS_12SubmitPolicyE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &policy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setSubmitPolicyENS_12SubmitPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &policy)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:82
 // index:0
+// Public
 // QDataWidgetMapper::SubmitPolicy submitPolicy()
-func (this *QDataWidgetMapper) SubmitPolicy() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper12submitPolicyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDataWidgetMapper) SubmitPolicy() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper12submitPolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:84
 // index:0
+// Public
 // void addMapping(class QWidget *, int)
 func (this *QDataWidgetMapper) AddMapping(widget unsafe.Pointer, section int) {
-	// 0: (, widget QWidget *, section int), (widget, &section)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper10addMappingEP7QWidgeti", ffiqt.FFI_TYPE_VOID, this.GetCthis(), widget, &section)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper10addMappingEP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget, &section)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:85
 // index:1
+// Public
 // void addMapping(class QWidget *, int, const class QByteArray &)
-func (this *QDataWidgetMapper) AddMapping_1(widget unsafe.Pointer, section int, propertyName unsafe.Pointer) {
-	// 1: (, widget QWidget *, section int, propertyName const QByteArray &), (widget, &section, propertyName)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray", ffiqt.FFI_TYPE_VOID, this.GetCthis(), widget, &section, propertyName)
+func (this *QDataWidgetMapper) AddMapping_1(widget unsafe.Pointer, section int, propertyName *qtcore.QByteArray) {
+	var convArg2 = propertyName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget, &section, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:86
 // index:0
+// Public
 // void removeMapping(class QWidget *)
 func (this *QDataWidgetMapper) RemoveMapping(widget unsafe.Pointer) {
-	// 0: (, widget QWidget *), (widget)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper13removeMappingEP7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), widget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper13removeMappingEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:87
 // index:0
+// Public
 // int mappedSection(class QWidget *)
-func (this *QDataWidgetMapper) MappedSection(widget unsafe.Pointer) {
-	// 0: (, widget QWidget *), (widget)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), widget)
+func (this *QDataWidgetMapper) MappedSection(widget unsafe.Pointer) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:88
 // index:0
+// Public
 // QByteArray mappedPropertyName(class QWidget *)
-func (this *QDataWidgetMapper) MappedPropertyName(widget unsafe.Pointer) {
-	// 0: (, widget QWidget *), (widget)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), widget)
+func (this *QDataWidgetMapper) MappedPropertyName(widget unsafe.Pointer) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:89
 // index:0
+// Public
 // QWidget * mappedWidgetAt(int)
-func (this *QDataWidgetMapper) MappedWidgetAt(section int) {
-	// 0: (, section int), (&section)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper14mappedWidgetAtEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &section)
+func (this *QDataWidgetMapper) MappedWidgetAt(section int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper14mappedWidgetAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &section)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:90
 // index:0
+// Public
 // void clearMapping()
 func (this *QDataWidgetMapper) ClearMapping() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper12clearMappingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper12clearMappingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:92
 // index:0
+// Public
 // int currentIndex()
-func (this *QDataWidgetMapper) CurrentIndex() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper12currentIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDataWidgetMapper) CurrentIndex() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:95
 // index:0
+// Public
 // void revert()
 func (this *QDataWidgetMapper) Revert() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper6revertEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper6revertEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:96
 // index:0
+// Public
 // bool submit()
-func (this *QDataWidgetMapper) Submit() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper6submitEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDataWidgetMapper) Submit() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper6submitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:98
 // index:0
+// Public
 // void toFirst()
 func (this *QDataWidgetMapper) ToFirst() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper7toFirstEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper7toFirstEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:99
 // index:0
+// Public
 // void toLast()
 func (this *QDataWidgetMapper) ToLast() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper6toLastEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper6toLastEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:100
 // index:0
+// Public
 // void toNext()
 func (this *QDataWidgetMapper) ToNext() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper6toNextEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper6toNextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:101
 // index:0
+// Public
 // void toPrevious()
 func (this *QDataWidgetMapper) ToPrevious() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper10toPreviousEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper10toPreviousEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:102
 // index:0
-// virtual
+// Public virtual
 // void setCurrentIndex(int)
 func (this *QDataWidgetMapper) SetCurrentIndex(index int) {
-	// 0: (, index int), (&index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setCurrentIndexEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setCurrentIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:103
 // index:0
+// Public
 // void setCurrentModelIndex(const class QModelIndex &)
-func (this *QDataWidgetMapper) SetCurrentModelIndex(index unsafe.Pointer) {
-	// 0: (, index const QModelIndex &), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
+func (this *QDataWidgetMapper) SetCurrentModelIndex(index *qtcore.QModelIndex) {
+	var convArg0 = index.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:106
 // index:0
+// Public
 // void currentIndexChanged(int)
 func (this *QDataWidgetMapper) CurrentIndexChanged(index int) {
-	// 0: (, index int), (&index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper19currentIndexChangedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper19currentIndexChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
 }
 

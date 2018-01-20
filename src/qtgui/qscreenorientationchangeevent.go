@@ -55,25 +55,26 @@ type QScreenOrientationChangeEvent struct {
 func (this *QScreenOrientationChangeEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:1038
-// index:0
-// void QScreenOrientationChangeEvent(class QScreen *, Qt::ScreenOrientation)
-func NewQScreenOrientationChangeEvent(screen unsafe.Pointer, orientation int) *QScreenOrientationChangeEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventC2EP7QScreenN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, cthis, screen, &orientation)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQScreenOrientationChangeEventFromPointer(cthis)
-	return gothis
-}
 func NewQScreenOrientationChangeEventFromPointer(cthis unsafe.Pointer) *QScreenOrientationChangeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QScreenOrientationChangeEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:1038
+// index:0
+// Public
+// void QScreenOrientationChangeEvent(class QScreen *, Qt::ScreenOrientation)
+func NewQScreenOrientationChangeEvent(screen unsafe.Pointer, orientation int) *QScreenOrientationChangeEvent {
+	cthis := qtrt.Calloc(1, 256) // 40
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventC2EP7QScreenN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, cthis, screen, &orientation)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQScreenOrientationChangeEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:1039
 // index:0
-// virtual
+// Public virtual
 // void ~QScreenOrientationChangeEvent()
 func DeleteQScreenOrientationChangeEvent(*QScreenOrientationChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -82,20 +83,22 @@ func DeleteQScreenOrientationChangeEvent(*QScreenOrientationChangeEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:1041
 // index:0
+// Public
 // QScreen * screen()
-func (this *QScreenOrientationChangeEvent) Screen() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent6screenEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QScreenOrientationChangeEvent) Screen() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent6screenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:1042
 // index:0
+// Public
 // Qt::ScreenOrientation orientation()
-func (this *QScreenOrientationChangeEvent) Orientation() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent11orientationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QScreenOrientationChangeEvent) Orientation() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent11orientationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

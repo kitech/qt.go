@@ -59,27 +59,29 @@ type QStyleOptionButton struct {
 func (this *QStyleOptionButton) GetCthis() unsafe.Pointer {
 	return this.QStyleOption.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:248
-// index:0
-// void QStyleOptionButton()
-func NewQStyleOptionButton() *QStyleOptionButton {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionButtonC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionButtonFromPointer(cthis)
-	return gothis
-}
 func NewQStyleOptionButtonFromPointer(cthis unsafe.Pointer) *QStyleOptionButton {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionButton{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:248
+// index:0
+// Public
+// void QStyleOptionButton()
+func NewQStyleOptionButton() *QStyleOptionButton {
+	cthis := qtrt.Calloc(1, 256) // 96
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionButtonC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionButtonFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:252
 // index:1
+// Protected
 // void QStyleOptionButton(int)
 func NewQStyleOptionButton_1(version int) *QStyleOptionButton {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 96
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionButtonC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionButtonFromPointer(cthis)

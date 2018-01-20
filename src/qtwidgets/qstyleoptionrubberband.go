@@ -59,27 +59,29 @@ type QStyleOptionRubberBand struct {
 func (this *QStyleOptionRubberBand) GetCthis() unsafe.Pointer {
 	return this.QStyleOption.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:491
-// index:0
-// void QStyleOptionRubberBand()
-func NewQStyleOptionRubberBand() *QStyleOptionRubberBand {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionRubberBandFromPointer(cthis)
-	return gothis
-}
 func NewQStyleOptionRubberBandFromPointer(cthis unsafe.Pointer) *QStyleOptionRubberBand {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionRubberBand{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:491
+// index:0
+// Public
+// void QStyleOptionRubberBand()
+func NewQStyleOptionRubberBand() *QStyleOptionRubberBand {
+	cthis := qtrt.Calloc(1, 256) // 72
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionRubberBandFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:495
 // index:1
+// Protected
 // void QStyleOptionRubberBand(int)
 func NewQStyleOptionRubberBand_1(version int) *QStyleOptionRubberBand {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 72
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionRubberBandFromPointer(cthis)

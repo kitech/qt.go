@@ -59,27 +59,29 @@ type QStyleOptionDockWidget struct {
 func (this *QStyleOptionDockWidget) GetCthis() unsafe.Pointer {
 	return this.QStyleOption.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:391
-// index:0
-// void QStyleOptionDockWidget()
-func NewQStyleOptionDockWidget() *QStyleOptionDockWidget {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionDockWidgetFromPointer(cthis)
-	return gothis
-}
 func NewQStyleOptionDockWidgetFromPointer(cthis unsafe.Pointer) *QStyleOptionDockWidget {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionDockWidget{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:391
+// index:0
+// Public
+// void QStyleOptionDockWidget()
+func NewQStyleOptionDockWidget() *QStyleOptionDockWidget {
+	cthis := qtrt.Calloc(1, 256) // 80
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionDockWidgetFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:395
 // index:1
+// Protected
 // void QStyleOptionDockWidget(int)
 func NewQStyleOptionDockWidget_1(version int) *QStyleOptionDockWidget {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 80
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionDockWidgetFromPointer(cthis)

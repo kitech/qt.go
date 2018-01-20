@@ -51,10 +51,13 @@ type QXmlStreamEntityResolver struct {
 func (this *QXmlStreamEntityResolver) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQXmlStreamEntityResolverFromPointer(cthis unsafe.Pointer) *QXmlStreamEntityResolver {
+	return &QXmlStreamEntityResolver{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qxmlstream.h:336
 // index:0
-// virtual
+// Public virtual
 // void ~QXmlStreamEntityResolver()
 func DeleteQXmlStreamEntityResolver(*QXmlStreamEntityResolver) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolverD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -63,22 +66,25 @@ func DeleteQXmlStreamEntityResolver(*QXmlStreamEntityResolver) {
 
 // /usr/include/qt/QtCore/qxmlstream.h:337
 // index:0
-// virtual
+// Public virtual
 // QString resolveEntity(const class QString &, const class QString &)
-func (this *QXmlStreamEntityResolver) ResolveEntity(publicId unsafe.Pointer, systemId unsafe.Pointer) {
-	// 0: (, publicId const QString &, systemId const QString &), (publicId, systemId)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), publicId, systemId)
+func (this *QXmlStreamEntityResolver) ResolveEntity(publicId *QString, systemId *QString) interface{} {
+	var convArg0 = publicId.GetCthis()
+	var convArg1 = systemId.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:338
 // index:0
-// virtual
+// Public virtual
 // QString resolveUndeclaredEntity(const class QString &)
-func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(name unsafe.Pointer) {
-	// 0: (, name const QString &), (name)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), name)
+func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(name *QString) interface{} {
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

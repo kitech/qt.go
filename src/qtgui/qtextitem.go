@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 204
+// extern C begin: 197
 */
 // import "C"
 import "unsafe"
@@ -55,59 +55,68 @@ type QTextItem struct {
 func (this *QTextItem) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQTextItemFromPointer(cthis unsafe.Pointer) *QTextItem {
+	return &QTextItem{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qpaintengine.h:75
 // index:0
+// Public
 // qreal descent()
-func (this *QTextItem) Descent() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem7descentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextItem) Descent() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem7descentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:76
 // index:0
+// Public
 // qreal ascent()
-func (this *QTextItem) Ascent() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem6ascentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextItem) Ascent() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem6ascentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:77
 // index:0
+// Public
 // qreal width()
-func (this *QTextItem) Width() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem5widthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextItem) Width() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:79
 // index:0
+// Public
 // QTextItem::RenderFlags renderFlags()
-func (this *QTextItem) RenderFlags() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem11renderFlagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextItem) RenderFlags() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem11renderFlagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:80
 // index:0
+// Public
 // QString text()
-func (this *QTextItem) Text() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4textEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextItem) Text() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:81
 // index:0
+// Public
 // QFont font()
-func (this *QTextItem) Font() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4fontEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextItem) Font() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4fontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

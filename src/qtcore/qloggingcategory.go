@@ -51,27 +51,33 @@ type QLoggingCategory struct {
 func (this *QLoggingCategory) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
-
-// /usr/include/qt/QtCore/qloggingcategory.h:53
-// index:0
-// void QLoggingCategory(const char *)
-func NewQLoggingCategory(category unsafe.Pointer) *QLoggingCategory {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc", ffiqt.FFI_TYPE_VOID, cthis, category)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQLoggingCategoryFromPointer(cthis)
-	return gothis
-}
 func NewQLoggingCategoryFromPointer(cthis unsafe.Pointer) *QLoggingCategory {
 	return &QLoggingCategory{&qtrt.CObject{cthis}}
 }
 
+// /usr/include/qt/QtCore/qloggingcategory.h:53
+// index:0
+// Public
+// void QLoggingCategory(const char *)
+func NewQLoggingCategory(category string) *QLoggingCategory {
+	cthis := qtrt.Calloc(1, 256) // 24
+	var convArg0 = qtrt.CString(category)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQLoggingCategoryFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qloggingcategory.h:54
 // index:1
+// Public
 // void QLoggingCategory(const char *, enum QtMsgType)
-func NewQLoggingCategory_1(category unsafe.Pointer, severityLevel int) *QLoggingCategory {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc9QtMsgType", ffiqt.FFI_TYPE_VOID, cthis, category, &severityLevel)
+func NewQLoggingCategory_1(category string, severityLevel int) *QLoggingCategory {
+	cthis := qtrt.Calloc(1, 256) // 24
+	var convArg0 = qtrt.CString(category)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc9QtMsgType", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &severityLevel)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLoggingCategoryFromPointer(cthis)
 	return gothis
@@ -79,6 +85,7 @@ func NewQLoggingCategory_1(category unsafe.Pointer, severityLevel int) *QLogging
 
 // /usr/include/qt/QtCore/qloggingcategory.h:55
 // index:0
+// Public
 // void ~QLoggingCategory()
 func DeleteQLoggingCategory(*QLoggingCategory) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -87,98 +94,96 @@ func DeleteQLoggingCategory(*QLoggingCategory) {
 
 // /usr/include/qt/QtCore/qloggingcategory.h:57
 // index:0
+// Public
 // bool isEnabled(enum QtMsgType)
-func (this *QLoggingCategory) IsEnabled(type_ int) {
-	// 0: (, type QtMsgType), (&type_)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory9isEnabledE9QtMsgType", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &type_)
+func (this *QLoggingCategory) IsEnabled(type_ int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory9isEnabledE9QtMsgType", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qloggingcategory.h:58
 // index:0
+// Public
 // void setEnabled(enum QtMsgType, _Bool)
 func (this *QLoggingCategory) SetEnabled(type_ int, enable bool) {
-	// 0: (, type QtMsgType, enable bool), (&type_, &enable)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &type_, &enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_, &enable)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qloggingcategory.h:61
 // index:0
-// inline
+// Public inline
 // bool isDebugEnabled()
-func (this *QLoggingCategory) IsDebugEnabled() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory14isDebugEnabledEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QLoggingCategory) IsDebugEnabled() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory14isDebugEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qloggingcategory.h:62
 // index:0
-// inline
+// Public inline
 // bool isInfoEnabled()
-func (this *QLoggingCategory) IsInfoEnabled() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory13isInfoEnabledEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QLoggingCategory) IsInfoEnabled() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory13isInfoEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qloggingcategory.h:63
 // index:0
-// inline
+// Public inline
 // bool isWarningEnabled()
-func (this *QLoggingCategory) IsWarningEnabled() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory16isWarningEnabledEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QLoggingCategory) IsWarningEnabled() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory16isWarningEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qloggingcategory.h:64
 // index:0
-// inline
+// Public inline
 // bool isCriticalEnabled()
-func (this *QLoggingCategory) IsCriticalEnabled() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory17isCriticalEnabledEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QLoggingCategory) IsCriticalEnabled() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory17isCriticalEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qloggingcategory.h:71
 // index:0
-// inline
+// Public inline
 // const char * categoryName()
-func (this *QLoggingCategory) CategoryName() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory12categoryNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QLoggingCategory) CategoryName() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory12categoryNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qloggingcategory.h:77
 // index:0
-// static
+// Public static
 // QLoggingCategory * defaultCategory()
-func (this *QLoggingCategory) DefaultCategory() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory15defaultCategoryEv", ffiqt.FFI_TYPE_VOID)
+func (this *QLoggingCategory) DefaultCategory() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory15defaultCategoryEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 func QLoggingCategory_DefaultCategory() {
-	// 0: (), ()
 	var nilthis *QLoggingCategory
 	nilthis.DefaultCategory()
 }
 
 // /usr/include/qt/QtCore/qloggingcategory.h:82
 // index:0
-// static
+// Public static
 // void setFilterRules(const class QString &)
-func (this *QLoggingCategory) SetFilterRules(rules unsafe.Pointer) {
-	// 0: (rules const QString &), (rules)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory14setFilterRulesERK7QString", ffiqt.FFI_TYPE_VOID)
+func (this *QLoggingCategory) SetFilterRules(rules *QString) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory14setFilterRulesERK7QString", ffiqt.FFI_TYPE_POINTER, rules)
 	gopp.ErrPrint(err, rv)
 }
-func QLoggingCategory_SetFilterRules(rules unsafe.Pointer) {
-	// 0: (rules const QString &), (rules)
+func QLoggingCategory_SetFilterRules(rules *QString) {
 	var nilthis *QLoggingCategory
 	nilthis.SetFilterRules(rules)
 }

@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 55
+// extern C begin: 53
 */
 // import "C"
 import "unsafe"
@@ -55,27 +55,30 @@ type QStaticText struct {
 func (this *QStaticText) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQStaticTextFromPointer(cthis unsafe.Pointer) *QStaticText {
+	return &QStaticText{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qstatictext.h:64
 // index:0
+// Public
 // void QStaticText()
 func NewQStaticText() *QStaticText {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStaticTextFromPointer(cthis)
 	return gothis
 }
-func NewQStaticTextFromPointer(cthis unsafe.Pointer) *QStaticText {
-	return &QStaticText{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtGui/qstatictext.h:65
 // index:1
+// Public
 // void QStaticText(const class QString &)
-func NewQStaticText_1(text unsafe.Pointer) *QStaticText {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, text)
+func NewQStaticText_1(text *qtcore.QString) *QStaticText {
+	cthis := qtrt.Calloc(1, 256) // 8
+	var convArg0 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStaticTextFromPointer(cthis)
 	return gothis
@@ -83,6 +86,7 @@ func NewQStaticText_1(text unsafe.Pointer) *QStaticText {
 
 // /usr/include/qt/QtGui/qstatictext.h:71
 // index:0
+// Public
 // void ~QStaticText()
 func DeleteQStaticText(*QStaticText) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -91,120 +95,130 @@ func DeleteQStaticText(*QStaticText) {
 
 // /usr/include/qt/QtGui/qstatictext.h:73
 // index:0
-// inline
+// Public inline
 // void swap(class QStaticText &)
-func (this *QStaticText) Swap(other unsafe.Pointer) {
-	// 0: (, other QStaticText &), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
+func (this *QStaticText) Swap(other *QStaticText) {
+	var convArg0 = other.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:75
 // index:0
+// Public
 // void setText(const class QString &)
-func (this *QStaticText) SetText(text unsafe.Pointer) {
-	// 0: (, text const QString &), (text)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text)
+func (this *QStaticText) SetText(text *qtcore.QString) {
+	var convArg0 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText7setTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:76
 // index:0
+// Public
 // QString text()
-func (this *QStaticText) Text() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText4textEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QStaticText) Text() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:78
 // index:0
+// Public
 // void setTextFormat(Qt::TextFormat)
 func (this *QStaticText) SetTextFormat(textFormat int) {
-	// 0: (, textFormat Qt::TextFormat), (&textFormat)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText13setTextFormatEN2Qt10TextFormatE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &textFormat)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText13setTextFormatEN2Qt10TextFormatE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &textFormat)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:79
 // index:0
+// Public
 // Qt::TextFormat textFormat()
-func (this *QStaticText) TextFormat() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText10textFormatEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QStaticText) TextFormat() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText10textFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:81
 // index:0
+// Public
 // void setTextWidth(qreal)
 func (this *QStaticText) SetTextWidth(textWidth float64) {
-	// 0: (, textWidth qreal), (&textWidth)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText12setTextWidthEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &textWidth)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText12setTextWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &textWidth)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:82
 // index:0
+// Public
 // qreal textWidth()
-func (this *QStaticText) TextWidth() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText9textWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QStaticText) TextWidth() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText9textWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:84
 // index:0
+// Public
 // void setTextOption(const class QTextOption &)
-func (this *QStaticText) SetTextOption(textOption unsafe.Pointer) {
-	// 0: (, textOption const QTextOption &), (textOption)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText13setTextOptionERK11QTextOption", ffiqt.FFI_TYPE_VOID, this.GetCthis(), textOption)
+func (this *QStaticText) SetTextOption(textOption *QTextOption) {
+	var convArg0 = textOption.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText13setTextOptionERK11QTextOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:85
 // index:0
+// Public
 // QTextOption textOption()
-func (this *QStaticText) TextOption() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText10textOptionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QStaticText) TextOption() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText10textOptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:87
 // index:0
+// Public
 // QSizeF size()
-func (this *QStaticText) Size() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QStaticText) Size() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:89
 // index:0
+// Public
 // void prepare(const class QTransform &, const class QFont &)
-func (this *QStaticText) Prepare(matrix unsafe.Pointer, font unsafe.Pointer) {
-	// 0: (, matrix const QTransform &, font const QFont &), (matrix, font)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText7prepareERK10QTransformRK5QFont", ffiqt.FFI_TYPE_VOID, this.GetCthis(), matrix, font)
+func (this *QStaticText) Prepare(matrix *QTransform, font *QFont) {
+	var convArg0 = matrix.GetCthis()
+	var convArg1 = font.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText7prepareERK10QTransformRK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:91
 // index:0
+// Public
 // void setPerformanceHint(enum QStaticText::PerformanceHint)
 func (this *QStaticText) SetPerformanceHint(performanceHint int) {
-	// 0: (, performanceHint QStaticText::PerformanceHint), (&performanceHint)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText18setPerformanceHintENS_15PerformanceHintE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &performanceHint)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText18setPerformanceHintENS_15PerformanceHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &performanceHint)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:92
 // index:0
+// Public
 // QStaticText::PerformanceHint performanceHint()
-func (this *QStaticText) PerformanceHint() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText15performanceHintEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QStaticText) PerformanceHint() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText15performanceHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

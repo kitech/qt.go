@@ -51,29 +51,30 @@ type QXmlStreamStringRef struct {
 func (this *QXmlStreamStringRef) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQXmlStreamStringRefFromPointer(cthis unsafe.Pointer) *QXmlStreamStringRef {
+	return &QXmlStreamStringRef{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qxmlstream.h:58
 // index:0
-// inline
+// Public inline
 // void QXmlStreamStringRef()
 func NewQXmlStreamStringRef() *QXmlStreamStringRef {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamStringRefFromPointer(cthis)
 	return gothis
 }
-func NewQXmlStreamStringRefFromPointer(cthis unsafe.Pointer) *QXmlStreamStringRef {
-	return &QXmlStreamStringRef{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qxmlstream.h:59
 // index:1
-// inline
+// Public inline
 // void QXmlStreamStringRef(const class QStringRef &)
-func NewQXmlStreamStringRef_1(aString unsafe.Pointer) *QXmlStreamStringRef {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2ERK10QStringRef", ffiqt.FFI_TYPE_VOID, cthis, aString)
+func NewQXmlStreamStringRef_1(aString *QStringRef) *QXmlStreamStringRef {
+	cthis := qtrt.Calloc(1, 256) // 16
+	var convArg0 = aString.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2ERK10QStringRef", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamStringRefFromPointer(cthis)
 	return gothis
@@ -81,11 +82,12 @@ func NewQXmlStreamStringRef_1(aString unsafe.Pointer) *QXmlStreamStringRef {
 
 // /usr/include/qt/QtCore/qxmlstream.h:61
 // index:2
-// inline
+// Public inline
 // void QXmlStreamStringRef(const class QString &)
-func NewQXmlStreamStringRef_2(aString unsafe.Pointer) *QXmlStreamStringRef {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, aString)
+func NewQXmlStreamStringRef_2(aString *QString) *QXmlStreamStringRef {
+	cthis := qtrt.Calloc(1, 256) // 16
+	var convArg0 = aString.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamStringRefFromPointer(cthis)
 	return gothis
@@ -93,10 +95,10 @@ func NewQXmlStreamStringRef_2(aString unsafe.Pointer) *QXmlStreamStringRef {
 
 // /usr/include/qt/QtCore/qxmlstream.h:63
 // index:3
-// inline
+// Public inline
 // void QXmlStreamStringRef(class QString &&)
 func NewQXmlStreamStringRef_3(aString unsafe.Pointer) *QXmlStreamStringRef {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2EO7QString", ffiqt.FFI_TYPE_VOID, cthis, aString)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamStringRefFromPointer(cthis)
@@ -105,7 +107,7 @@ func NewQXmlStreamStringRef_3(aString unsafe.Pointer) *QXmlStreamStringRef {
 
 // /usr/include/qt/QtCore/qxmlstream.h:77
 // index:0
-// inline
+// Public inline
 // void ~QXmlStreamStringRef()
 func DeleteQXmlStreamStringRef(*QXmlStreamStringRef) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -114,52 +116,51 @@ func DeleteQXmlStreamStringRef(*QXmlStreamStringRef) {
 
 // /usr/include/qt/QtCore/qxmlstream.h:82
 // index:0
-// inline
+// Public inline
 // void swap(class QXmlStreamStringRef &)
-func (this *QXmlStreamStringRef) Swap(other unsafe.Pointer) {
-	// 0: (, other QXmlStreamStringRef &), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRef4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
+func (this *QXmlStreamStringRef) Swap(other *QXmlStreamStringRef) {
+	var convArg0 = other.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRef4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:89
 // index:0
-// inline
+// Public inline
 // void clear()
 func (this *QXmlStreamStringRef) Clear() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRef5clearEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRef5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:91
 // index:0
-// inline
+// Public inline
 // const QString * string()
-func (this *QXmlStreamStringRef) String() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef6stringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamStringRef) String() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef6stringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:92
 // index:0
-// inline
+// Public inline
 // int position()
-func (this *QXmlStreamStringRef) Position() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef8positionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamStringRef) Position() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:93
 // index:0
-// inline
+// Public inline
 // int size()
-func (this *QXmlStreamStringRef) Size() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamStringRef) Size() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

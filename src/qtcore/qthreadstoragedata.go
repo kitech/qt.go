@@ -51,9 +51,13 @@ type QThreadStorageData struct {
 func (this *QThreadStorageData) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQThreadStorageDataFromPointer(cthis unsafe.Pointer) *QThreadStorageData {
+	return &QThreadStorageData{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qthreadstorage.h:54
 // index:0
+// Public
 // void ~QThreadStorageData()
 func DeleteQThreadStorageData(*QThreadStorageData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageDataD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -62,33 +66,33 @@ func DeleteQThreadStorageData(*QThreadStorageData) {
 
 // /usr/include/qt/QtCore/qthreadstorage.h:56
 // index:0
+// Public
 // void ** get()
-func (this *QThreadStorageData) Get() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QThreadStorageData3getEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QThreadStorageData) Get() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QThreadStorageData3getEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qthreadstorage.h:57
 // index:0
+// Public
 // void ** set(void *)
-func (this *QThreadStorageData) Set(p unsafe.Pointer) {
-	// 0: (, p void *), (p)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageData3setEPv", ffiqt.FFI_TYPE_VOID, this.GetCthis(), p)
+func (this *QThreadStorageData) Set(p unsafe.Pointer) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageData3setEPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qthreadstorage.h:59
 // index:0
-// static
+// Public static
 // void finish(void **)
 func (this *QThreadStorageData) Finish(arg0 unsafe.Pointer) {
-	// 0: (void ** arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageData6finishEPPv", ffiqt.FFI_TYPE_VOID)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageData6finishEPPv", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 }
 func QThreadStorageData_Finish(arg0 unsafe.Pointer) {
-	// 0: (void ** arg0), (arg0)
 	var nilthis *QThreadStorageData
 	nilthis.Finish(arg0)
 }

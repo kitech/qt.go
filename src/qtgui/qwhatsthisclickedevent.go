@@ -55,25 +55,27 @@ type QWhatsThisClickedEvent struct {
 func (this *QWhatsThisClickedEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:713
-// index:0
-// void QWhatsThisClickedEvent(const class QString &)
-func NewQWhatsThisClickedEvent(href unsafe.Pointer) *QWhatsThisClickedEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, href)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQWhatsThisClickedEventFromPointer(cthis)
-	return gothis
-}
 func NewQWhatsThisClickedEventFromPointer(cthis unsafe.Pointer) *QWhatsThisClickedEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QWhatsThisClickedEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:713
+// index:0
+// Public
+// void QWhatsThisClickedEvent(const class QString &)
+func NewQWhatsThisClickedEvent(href *qtcore.QString) *QWhatsThisClickedEvent {
+	cthis := qtrt.Calloc(1, 256) // 32
+	var convArg0 = href.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQWhatsThisClickedEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:714
 // index:0
-// virtual
+// Public virtual
 // void ~QWhatsThisClickedEvent()
 func DeleteQWhatsThisClickedEvent(*QWhatsThisClickedEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -82,12 +84,12 @@ func DeleteQWhatsThisClickedEvent(*QWhatsThisClickedEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:716
 // index:0
-// inline
+// Public inline
 // QString href()
-func (this *QWhatsThisClickedEvent) Href() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QWhatsThisClickedEvent) Href() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

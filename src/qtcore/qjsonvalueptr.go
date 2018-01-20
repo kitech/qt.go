@@ -51,20 +51,21 @@ type QJsonValuePtr struct {
 func (this *QJsonValuePtr) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQJsonValuePtrFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
+	return &QJsonValuePtr{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qjsonvalue.h:226
 // index:0
-// inline
+// Public inline
 // void QJsonValuePtr(const class QJsonValue &)
-func NewQJsonValuePtr(val unsafe.Pointer) *QJsonValuePtr {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValuePtrC2ERK10QJsonValue", ffiqt.FFI_TYPE_VOID, cthis, val)
+func NewQJsonValuePtr(val *QJsonValue) *QJsonValuePtr {
+	cthis := qtrt.Calloc(1, 256) // 24
+	var convArg0 = val.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValuePtrC2ERK10QJsonValue", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonValuePtrFromPointer(cthis)
 	return gothis
-}
-func NewQJsonValuePtrFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
-	return &QJsonValuePtr{&qtrt.CObject{cthis}}
 }
 
 //  body block end

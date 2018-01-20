@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 5
 */
 // import "C"
 import "unsafe"
@@ -55,25 +55,26 @@ type QToolBarChangeEvent struct {
 func (this *QToolBarChangeEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:754
-// index:0
-// void QToolBarChangeEvent(_Bool)
-func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", ffiqt.FFI_TYPE_VOID, cthis, &t)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQToolBarChangeEventFromPointer(cthis)
-	return gothis
-}
 func NewQToolBarChangeEventFromPointer(cthis unsafe.Pointer) *QToolBarChangeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QToolBarChangeEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:754
+// index:0
+// Public
+// void QToolBarChangeEvent(_Bool)
+func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
+	cthis := qtrt.Calloc(1, 256) // 24
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", ffiqt.FFI_TYPE_VOID, cthis, &t)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQToolBarChangeEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:755
 // index:0
-// virtual
+// Public virtual
 // void ~QToolBarChangeEvent()
 func DeleteQToolBarChangeEvent(*QToolBarChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -82,12 +83,12 @@ func DeleteQToolBarChangeEvent(*QToolBarChangeEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:757
 // index:0
-// inline
+// Public inline
 // bool toggle()
-func (this *QToolBarChangeEvent) Toggle() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QToolBarChangeEvent) Toggle() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

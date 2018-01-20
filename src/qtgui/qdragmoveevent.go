@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 13
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -55,17 +55,6 @@ type QDragMoveEvent struct {
 func (this *QDragMoveEvent) GetCthis() unsafe.Pointer {
 	return this.QDropEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:642
-// index:0
-// void QDragMoveEvent(const class QPoint &, Qt::DropActions, const class QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
-func NewQDragMoveEvent(pos unsafe.Pointer, actions int, data unsafe.Pointer, buttons int, modifiers int, type_ int) *QDragMoveEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, pos, &actions, data, &buttons, &modifiers, &type_)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQDragMoveEventFromPointer(cthis)
-	return gothis
-}
 func NewQDragMoveEventFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 	bcthis0 := NewQDropEventFromPointer(cthis)
 	return &QDragMoveEvent{bcthis0}
@@ -73,7 +62,7 @@ func NewQDragMoveEventFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 
 // /usr/include/qt/QtGui/qevent.h:644
 // index:0
-// virtual
+// Public virtual
 // void ~QDragMoveEvent()
 func DeleteQDragMoveEvent(*QDragMoveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -82,51 +71,49 @@ func DeleteQDragMoveEvent(*QDragMoveEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:646
 // index:0
-// inline
+// Public inline
 // QRect answerRect()
-func (this *QDragMoveEvent) AnswerRect() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDragMoveEvent) AnswerRect() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:648
 // index:0
-// inline
+// Public inline
 // void accept()
 func (this *QDragMoveEvent) Accept() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:651
 // index:1
-// inline
+// Public inline
 // void accept(const class QRect &)
-func (this *QDragMoveEvent) Accept_1(r unsafe.Pointer) {
-	// 1: (, r const QRect &), (r)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), r)
+func (this *QDragMoveEvent) Accept_1(r *qtcore.QRect) {
+	var convArg0 = r.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:649
 // index:0
-// inline
+// Public inline
 // void ignore()
 func (this *QDragMoveEvent) Ignore() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:652
 // index:1
-// inline
+// Public inline
 // void ignore(const class QRect &)
-func (this *QDragMoveEvent) Ignore_1(r unsafe.Pointer) {
-	// 1: (, r const QRect &), (r)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), r)
+func (this *QDragMoveEvent) Ignore_1(r *qtcore.QRect) {
+	var convArg0 = r.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

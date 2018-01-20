@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 5
+// extern C begin: 4
 */
 // import "C"
 import "unsafe"
@@ -55,17 +55,6 @@ type QDropEvent struct {
 func (this *QDropEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:608
-// index:0
-// void QDropEvent(const class QPointF &, Qt::DropActions, const class QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
-func NewQDropEvent(pos unsafe.Pointer, actions int, data unsafe.Pointer, buttons int, modifiers int, type_ int) *QDropEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEventC2ERK7QPointF6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, pos, &actions, data, &buttons, &modifiers, &type_)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQDropEventFromPointer(cthis)
-	return gothis
-}
 func NewQDropEventFromPointer(cthis unsafe.Pointer) *QDropEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QDropEvent{bcthis0}
@@ -73,7 +62,7 @@ func NewQDropEventFromPointer(cthis unsafe.Pointer) *QDropEvent {
 
 // /usr/include/qt/QtGui/qevent.h:610
 // index:0
-// virtual
+// Public virtual
 // void ~QDropEvent()
 func DeleteQDropEvent(*QDropEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -82,110 +71,110 @@ func DeleteQDropEvent(*QDropEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:612
 // index:0
-// inline
+// Public inline
 // QPoint pos()
-func (this *QDropEvent) Pos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent3posEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDropEvent) Pos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:613
 // index:0
-// inline
+// Public inline
 // const QPointF & posF()
-func (this *QDropEvent) PosF() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent4posFEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDropEvent) PosF() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent4posFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:614
 // index:0
-// inline
+// Public inline
 // Qt::MouseButtons mouseButtons()
-func (this *QDropEvent) MouseButtons() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent12mouseButtonsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDropEvent) MouseButtons() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent12mouseButtonsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:615
 // index:0
-// inline
+// Public inline
 // Qt::KeyboardModifiers keyboardModifiers()
-func (this *QDropEvent) KeyboardModifiers() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent17keyboardModifiersEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDropEvent) KeyboardModifiers() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent17keyboardModifiersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:617
 // index:0
-// inline
+// Public inline
 // Qt::DropActions possibleActions()
-func (this *QDropEvent) PossibleActions() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent15possibleActionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDropEvent) PossibleActions() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent15possibleActionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:618
 // index:0
-// inline
+// Public inline
 // Qt::DropAction proposedAction()
-func (this *QDropEvent) ProposedAction() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent14proposedActionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDropEvent) ProposedAction() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent14proposedActionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:619
 // index:0
-// inline
+// Public inline
 // void acceptProposedAction()
 func (this *QDropEvent) AcceptProposedAction() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEvent20acceptProposedActionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEvent20acceptProposedActionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:621
 // index:0
-// inline
+// Public inline
 // Qt::DropAction dropAction()
-func (this *QDropEvent) DropAction() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent10dropActionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDropEvent) DropAction() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent10dropActionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:622
 // index:0
+// Public
 // void setDropAction(Qt::DropAction)
 func (this *QDropEvent) SetDropAction(action int) {
-	// 0: (, action Qt::DropAction), (&action)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEvent13setDropActionEN2Qt10DropActionE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEvent13setDropActionEN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &action)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:624
 // index:0
+// Public
 // QObject * source()
-func (this *QDropEvent) Source() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent6sourceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDropEvent) Source() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent6sourceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:625
 // index:0
-// inline
+// Public inline
 // const QMimeData * mimeData()
-func (this *QDropEvent) MimeData() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent8mimeDataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDropEvent) MimeData() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent8mimeDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

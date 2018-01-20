@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 19
+// extern C begin: 17
 */
 // import "C"
 import "unsafe"
@@ -59,26 +59,26 @@ type QSpacerItem struct {
 func (this *QSpacerItem) GetCthis() unsafe.Pointer {
 	return this.QLayoutItem.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qlayoutitem.h:95
-// index:0
-// inline
-// void QSpacerItem(int, int, class QSizePolicy::Policy, class QSizePolicy::Policy)
-func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", ffiqt.FFI_TYPE_VOID, cthis, &w, &h, &hData, &vData)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQSpacerItemFromPointer(cthis)
-	return gothis
-}
 func NewQSpacerItemFromPointer(cthis unsafe.Pointer) *QSpacerItem {
 	bcthis0 := NewQLayoutItemFromPointer(cthis)
 	return &QSpacerItem{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qlayoutitem.h:95
+// index:0
+// Public inline
+// void QSpacerItem(int, int, class QSizePolicy::Policy, class QSizePolicy::Policy)
+func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
+	cthis := qtrt.Calloc(1, 256) // 40
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", ffiqt.FFI_TYPE_VOID, cthis, &w, &h, &hData, &vData)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQSpacerItemFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qlayoutitem.h:99
 // index:0
-// virtual
+// Public virtual
 // void ~QSpacerItem()
 func DeleteQSpacerItem(*QSpacerItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItemD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -87,101 +87,101 @@ func DeleteQSpacerItem(*QSpacerItem) {
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:101
 // index:0
+// Public
 // void changeSize(int, int, class QSizePolicy::Policy, class QSizePolicy::Policy)
 func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
-	// 0: (, w int, h int, hData QSizePolicy::Policy, vData QSizePolicy::Policy), (&w, &h, &hData, &vData)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &w, &h, &hData, &vData)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &w, &h, &hData, &vData)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:104
 // index:0
-// virtual
+// Public virtual
 // QSize sizeHint()
-func (this *QSpacerItem) SizeHint() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSpacerItem) SizeHint() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:105
 // index:0
-// virtual
+// Public virtual
 // QSize minimumSize()
-func (this *QSpacerItem) MinimumSize() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem11minimumSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSpacerItem) MinimumSize() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:106
 // index:0
-// virtual
+// Public virtual
 // QSize maximumSize()
-func (this *QSpacerItem) MaximumSize() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem11maximumSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSpacerItem) MaximumSize() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:107
 // index:0
-// virtual
+// Public virtual
 // Qt::Orientations expandingDirections()
-func (this *QSpacerItem) ExpandingDirections() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem19expandingDirectionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSpacerItem) ExpandingDirections() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem19expandingDirectionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:108
 // index:0
-// virtual
+// Public virtual
 // bool isEmpty()
-func (this *QSpacerItem) IsEmpty() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSpacerItem) IsEmpty() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:109
 // index:0
-// virtual
+// Public virtual
 // void setGeometry(const class QRect &)
-func (this *QSpacerItem) SetGeometry(arg0 unsafe.Pointer) {
-	// 0: (, const QRect & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem11setGeometryERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
+func (this *QSpacerItem) SetGeometry(arg0 *qtcore.QRect) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem11setGeometryERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:110
 // index:0
-// virtual
+// Public virtual
 // QRect geometry()
-func (this *QSpacerItem) Geometry() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem8geometryEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSpacerItem) Geometry() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem8geometryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:111
 // index:0
-// virtual
+// Public virtual
 // QSpacerItem * spacerItem()
-func (this *QSpacerItem) SpacerItem() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem10spacerItemEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSpacerItem) SpacerItem() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem10spacerItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:112
 // index:0
-// inline
+// Public inline
 // QSizePolicy sizePolicy()
-func (this *QSpacerItem) SizePolicy() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem10sizePolicyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSpacerItem) SizePolicy() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem10sizePolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

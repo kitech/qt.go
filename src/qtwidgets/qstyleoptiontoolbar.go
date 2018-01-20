@@ -59,27 +59,29 @@ type QStyleOptionToolBar struct {
 func (this *QStyleOptionToolBar) GetCthis() unsafe.Pointer {
 	return this.QStyleOption.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:315
-// index:0
-// void QStyleOptionToolBar()
-func NewQStyleOptionToolBar() *QStyleOptionToolBar {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionToolBarC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionToolBarFromPointer(cthis)
-	return gothis
-}
 func NewQStyleOptionToolBarFromPointer(cthis unsafe.Pointer) *QStyleOptionToolBar {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionToolBar{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:315
+// index:0
+// Public
+// void QStyleOptionToolBar()
+func NewQStyleOptionToolBar() *QStyleOptionToolBar {
+	cthis := qtrt.Calloc(1, 256) // 88
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionToolBarC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionToolBarFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:319
 // index:1
+// Protected
 // void QStyleOptionToolBar(int)
 func NewQStyleOptionToolBar_1(version int) *QStyleOptionToolBar {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 88
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionToolBarC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionToolBarFromPointer(cthis)

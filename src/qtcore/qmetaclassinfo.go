@@ -51,48 +51,50 @@ type QMetaClassInfo struct {
 func (this *QMetaClassInfo) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQMetaClassInfoFromPointer(cthis unsafe.Pointer) *QMetaClassInfo {
+	return &QMetaClassInfo{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qmetaobject.h:303
 // index:0
-// inline
+// Public inline
 // void QMetaClassInfo()
 func NewQMetaClassInfo() *QMetaClassInfo {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMetaClassInfoC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMetaClassInfoFromPointer(cthis)
 	return gothis
 }
-func NewQMetaClassInfoFromPointer(cthis unsafe.Pointer) *QMetaClassInfo {
-	return &QMetaClassInfo{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qmetaobject.h:304
 // index:0
+// Public
 // const char * name()
-func (this *QMetaClassInfo) Name() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QMetaClassInfo) Name() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:305
 // index:0
+// Public
 // const char * value()
-func (this *QMetaClassInfo) Value() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo5valueEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QMetaClassInfo) Value() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:306
 // index:0
-// inline
+// Public inline
 // const QMetaObject * enclosingMetaObject()
-func (this *QMetaClassInfo) EnclosingMetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo19enclosingMetaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QMetaClassInfo) EnclosingMetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo19enclosingMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

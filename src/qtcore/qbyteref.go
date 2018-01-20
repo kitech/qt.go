@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 132
+// extern C begin: 129
 */
 // import "C"
 import "unsafe"
@@ -50,6 +50,9 @@ type QByteRef struct {
 
 func (this *QByteRef) GetCthis() unsafe.Pointer {
 	return this.Cthis
+}
+func NewQByteRefFromPointer(cthis unsafe.Pointer) *QByteRef {
+	return &QByteRef{&qtrt.CObject{cthis}}
 }
 
 //  body block end

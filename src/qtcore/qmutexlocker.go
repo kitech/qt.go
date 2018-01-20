@@ -51,25 +51,25 @@ type QMutexLocker struct {
 func (this *QMutexLocker) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQMutexLockerFromPointer(cthis unsafe.Pointer) *QMutexLocker {
+	return &QMutexLocker{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qmutex.h:199
 // index:0
-// inline
+// Public inline
 // void QMutexLocker(class QBasicMutex *)
 func NewQMutexLocker(m unsafe.Pointer) *QMutexLocker {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLockerC2EP11QBasicMutex", ffiqt.FFI_TYPE_VOID, cthis, m)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMutexLockerFromPointer(cthis)
 	return gothis
 }
-func NewQMutexLockerFromPointer(cthis unsafe.Pointer) *QMutexLocker {
-	return &QMutexLocker{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qmutex.h:213
 // index:0
-// inline
+// Public inline
 // void ~QMutexLocker()
 func DeleteQMutexLocker(*QMutexLocker) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLockerD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -78,32 +78,30 @@ func DeleteQMutexLocker(*QMutexLocker) {
 
 // /usr/include/qt/QtCore/qmutex.h:215
 // index:0
-// inline
+// Public inline
 // void unlock()
 func (this *QMutexLocker) Unlock() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLocker6unlockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLocker6unlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:223
 // index:0
-// inline
+// Public inline
 // void relock()
 func (this *QMutexLocker) Relock() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLocker6relockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLocker6relockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:238
 // index:0
-// inline
+// Public inline
 // QMutex * mutex()
-func (this *QMutexLocker) Mutex() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMutexLocker5mutexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QMutexLocker) Mutex() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMutexLocker5mutexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

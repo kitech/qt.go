@@ -55,10 +55,13 @@ type QAccessibleBridge struct {
 func (this *QAccessibleBridge) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQAccessibleBridgeFromPointer(cthis unsafe.Pointer) *QAccessibleBridge {
+	return &QAccessibleBridge{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:58
 // index:0
-// inline virtual
+// Public inline virtual
 // void ~QAccessibleBridge()
 func DeleteQAccessibleBridge(*QAccessibleBridge) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleBridgeD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -67,21 +70,19 @@ func DeleteQAccessibleBridge(*QAccessibleBridge) {
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:59
 // index:0
-// pure virtual
+// Public pure virtual
 // void setRootObject(class QAccessibleInterface *)
 func (this *QAccessibleBridge) SetRootObject(arg0 unsafe.Pointer) {
-	// 0: (, QAccessibleInterface * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:60
 // index:0
-// pure virtual
+// Public pure virtual
 // void notifyAccessibilityUpdate(class QAccessibleEvent *)
 func (this *QAccessibleBridge) NotifyAccessibilityUpdate(event unsafe.Pointer) {
-	// 0: (, event QAccessibleEvent *), (event)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -51,23 +51,25 @@ type QXmlStreamNotationDeclaration struct {
 func (this *QXmlStreamNotationDeclaration) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQXmlStreamNotationDeclarationFromPointer(cthis unsafe.Pointer) *QXmlStreamNotationDeclaration {
+	return &QXmlStreamNotationDeclaration{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qxmlstream.h:241
 // index:0
+// Public
 // void QXmlStreamNotationDeclaration()
 func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 56
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamNotationDeclarationFromPointer(cthis)
 	return gothis
 }
-func NewQXmlStreamNotationDeclarationFromPointer(cthis unsafe.Pointer) *QXmlStreamNotationDeclaration {
-	return &QXmlStreamNotationDeclaration{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qxmlstream.h:243
 // index:0
+// Public
 // void ~QXmlStreamNotationDeclaration()
 func DeleteQXmlStreamNotationDeclaration(*QXmlStreamNotationDeclaration) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -76,32 +78,32 @@ func DeleteQXmlStreamNotationDeclaration(*QXmlStreamNotationDeclaration) {
 
 // /usr/include/qt/QtCore/qxmlstream.h:264
 // index:0
-// inline
+// Public inline
 // QStringRef name()
-func (this *QXmlStreamNotationDeclaration) Name() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamNotationDeclaration) Name() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:265
 // index:0
-// inline
+// Public inline
 // QStringRef systemId()
-func (this *QXmlStreamNotationDeclaration) SystemId() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamNotationDeclaration) SystemId() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:266
 // index:0
-// inline
+// Public inline
 // QStringRef publicId()
-func (this *QXmlStreamNotationDeclaration) PublicId() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QXmlStreamNotationDeclaration) PublicId() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

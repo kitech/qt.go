@@ -51,40 +51,42 @@ type QGenericArgument struct {
 func (this *QGenericArgument) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
-
-// /usr/include/qt/QtCore/qobjectdefs.h:297
-// index:0
-// inline
-// void QGenericArgument(const char *, const void *)
-func NewQGenericArgument(aName unsafe.Pointer, aData unsafe.Pointer) *QGenericArgument {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QGenericArgumentC2EPKcPKv", ffiqt.FFI_TYPE_VOID, cthis, aName, aData)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQGenericArgumentFromPointer(cthis)
-	return gothis
-}
 func NewQGenericArgumentFromPointer(cthis unsafe.Pointer) *QGenericArgument {
 	return &QGenericArgument{&qtrt.CObject{cthis}}
 }
 
+// /usr/include/qt/QtCore/qobjectdefs.h:297
+// index:0
+// Public inline
+// void QGenericArgument(const char *, const void *)
+func NewQGenericArgument(aName string, aData unsafe.Pointer) *QGenericArgument {
+	cthis := qtrt.Calloc(1, 256) // 16
+	var convArg0 = qtrt.CString(aName)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QGenericArgumentC2EPKcPKv", ffiqt.FFI_TYPE_VOID, cthis, convArg0, aData)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQGenericArgumentFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qobjectdefs.h:299
 // index:0
-// inline
+// Public inline
 // void * data()
-func (this *QGenericArgument) Data() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QGenericArgument4dataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGenericArgument) Data() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QGenericArgument4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qobjectdefs.h:300
 // index:0
-// inline
+// Public inline
 // const char * name()
-func (this *QGenericArgument) Name() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QGenericArgument4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QGenericArgument) Name() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QGenericArgument4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

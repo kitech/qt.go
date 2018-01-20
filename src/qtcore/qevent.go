@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 18
+// extern C begin: 17
 */
 // import "C"
 import "unsafe"
@@ -51,24 +51,25 @@ type QEvent struct {
 func (this *QEvent) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQEventFromPointer(cthis unsafe.Pointer) *QEvent {
+	return &QEvent{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qcoreevent.h:297
 // index:0
+// Public
 // void QEvent(enum QEvent::Type)
 func NewQEvent(type_ int) *QEvent {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEventC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventFromPointer(cthis)
 	return gothis
 }
-func NewQEventFromPointer(cthis unsafe.Pointer) *QEvent {
-	return &QEvent{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qcoreevent.h:299
 // index:0
-// virtual
+// Public virtual
 // void ~QEvent()
 func DeleteQEvent(*QEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -77,75 +78,71 @@ func DeleteQEvent(*QEvent) {
 
 // /usr/include/qt/QtCore/qcoreevent.h:301
 // index:0
-// inline
+// Public inline
 // QEvent::Type type()
-func (this *QEvent) Type() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QEvent) Type() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:302
 // index:0
-// inline
+// Public inline
 // bool spontaneous()
-func (this *QEvent) Spontaneous() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent11spontaneousEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QEvent) Spontaneous() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent11spontaneousEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:304
 // index:0
-// inline
+// Public inline
 // void setAccepted(_Bool)
 func (this *QEvent) SetAccepted(accepted bool) {
-	// 0: (, accepted bool), (&accepted)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent11setAcceptedEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &accepted)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent11setAcceptedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &accepted)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:305
 // index:0
-// inline
+// Public inline
 // bool isAccepted()
-func (this *QEvent) IsAccepted() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent10isAcceptedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QEvent) IsAccepted() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent10isAcceptedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:307
 // index:0
-// inline
+// Public inline
 // void accept()
 func (this *QEvent) Accept() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent6acceptEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent6acceptEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:308
 // index:0
-// inline
+// Public inline
 // void ignore()
 func (this *QEvent) Ignore() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent6ignoreEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent6ignoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:310
 // index:0
-// static
+// Public static
 // int registerEventType(int)
-func (this *QEvent) RegisterEventType(hint int) {
-	// 0: (hint int), (hint)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", ffiqt.FFI_TYPE_VOID)
+func (this *QEvent) RegisterEventType(hint int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", ffiqt.FFI_TYPE_POINTER, hint)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 func QEvent_RegisterEventType(hint int) {
-	// 0: (hint int), (hint)
 	var nilthis *QEvent
 	nilthis.RegisterEventType(hint)
 }

@@ -51,20 +51,20 @@ type QSharedData struct {
 func (this *QSharedData) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQSharedDataFromPointer(cthis unsafe.Pointer) *QSharedData {
+	return &QSharedData{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qshareddata.h:60
 // index:0
-// inline
+// Public inline
 // void QSharedData()
 func NewQSharedData() *QSharedData {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 4
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSharedDataC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSharedDataFromPointer(cthis)
 	return gothis
-}
-func NewQSharedDataFromPointer(cthis unsafe.Pointer) *QSharedData {
-	return &QSharedData{&qtrt.CObject{cthis}}
 }
 
 //  body block end

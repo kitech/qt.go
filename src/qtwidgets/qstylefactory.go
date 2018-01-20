@@ -59,33 +59,34 @@ type QStyleFactory struct {
 func (this *QStyleFactory) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQStyleFactoryFromPointer(cthis unsafe.Pointer) *QStyleFactory {
+	return &QStyleFactory{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtWidgets/qstylefactory.h:54
 // index:0
-// static
+// Public static
 // QStringList keys()
-func (this *QStyleFactory) Keys() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStyleFactory4keysEv", ffiqt.FFI_TYPE_VOID)
+func (this *QStyleFactory) Keys() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStyleFactory4keysEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 func QStyleFactory_Keys() {
-	// 0: (), ()
 	var nilthis *QStyleFactory
 	nilthis.Keys()
 }
 
 // /usr/include/qt/QtWidgets/qstylefactory.h:55
 // index:0
-// static
+// Public static
 // QStyle * create(const class QString &)
-func (this *QStyleFactory) Create(arg0 unsafe.Pointer) {
-	// 0: (const QString & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStyleFactory6createERK7QString", ffiqt.FFI_TYPE_VOID)
+func (this *QStyleFactory) Create(arg0 *qtcore.QString) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStyleFactory6createERK7QString", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
-func QStyleFactory_Create(arg0 unsafe.Pointer) {
-	// 0: (const QString & arg0), (arg0)
+func QStyleFactory_Create(arg0 *qtcore.QString) {
 	var nilthis *QStyleFactory
 	nilthis.Create(arg0)
 }

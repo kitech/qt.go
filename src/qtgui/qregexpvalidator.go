@@ -55,38 +55,41 @@ type QRegExpValidator struct {
 func (this *QRegExpValidator) GetCthis() unsafe.Pointer {
 	return this.QValidator.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qvalidator.h:173
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QRegExpValidator) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QRegExpValidator10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qvalidator.h:177
-// index:0
-// void QRegExpValidator(class QObject *)
-func NewQRegExpValidator(parent unsafe.Pointer) *QRegExpValidator {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQRegExpValidatorFromPointer(cthis)
-	return gothis
-}
 func NewQRegExpValidatorFromPointer(cthis unsafe.Pointer) *QRegExpValidator {
 	bcthis0 := NewQValidatorFromPointer(cthis)
 	return &QRegExpValidator{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qvalidator.h:173
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QRegExpValidator) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QRegExpValidator10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtGui/qvalidator.h:177
+// index:0
+// Public
+// void QRegExpValidator(class QObject *)
+func NewQRegExpValidator(parent unsafe.Pointer) *QRegExpValidator {
+	cthis := qtrt.Calloc(1, 256) // 24
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQRegExpValidatorFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qvalidator.h:178
 // index:1
+// Public
 // void QRegExpValidator(const class QRegExp &, class QObject *)
-func NewQRegExpValidator_1(rx unsafe.Pointer, parent unsafe.Pointer) *QRegExpValidator {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidatorC2ERK7QRegExpP7QObject", ffiqt.FFI_TYPE_VOID, cthis, rx, parent)
+func NewQRegExpValidator_1(rx *qtcore.QRegExp, parent unsafe.Pointer) *QRegExpValidator {
+	cthis := qtrt.Calloc(1, 256) // 24
+	var convArg0 = rx.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidatorC2ERK7QRegExpP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegExpValidatorFromPointer(cthis)
 	return gothis
@@ -94,7 +97,7 @@ func NewQRegExpValidator_1(rx unsafe.Pointer, parent unsafe.Pointer) *QRegExpVal
 
 // /usr/include/qt/QtGui/qvalidator.h:179
 // index:0
-// virtual
+// Public virtual
 // void ~QRegExpValidator()
 func DeleteQRegExpValidator(*QRegExpValidator) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidatorD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -103,39 +106,42 @@ func DeleteQRegExpValidator(*QRegExpValidator) {
 
 // /usr/include/qt/QtGui/qvalidator.h:181
 // index:0
-// virtual
+// Public virtual
 // QValidator::State validate(class QString &, int &)
-func (this *QRegExpValidator) Validate(input unsafe.Pointer, pos int) {
-	// 0: (, input QString &, pos int &), (input, &pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QRegExpValidator8validateER7QStringRi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), input, &pos)
+func (this *QRegExpValidator) Validate(input *qtcore.QString, pos int) interface{} {
+	var convArg0 = input.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QRegExpValidator8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:183
 // index:0
+// Public
 // void setRegExp(const class QRegExp &)
-func (this *QRegExpValidator) SetRegExp(rx unsafe.Pointer) {
-	// 0: (, rx const QRegExp &), (rx)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidator9setRegExpERK7QRegExp", ffiqt.FFI_TYPE_VOID, this.GetCthis(), rx)
+func (this *QRegExpValidator) SetRegExp(rx *qtcore.QRegExp) {
+	var convArg0 = rx.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidator9setRegExpERK7QRegExp", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:184
 // index:0
-// inline
+// Public inline
 // const QRegExp & regExp()
-func (this *QRegExpValidator) RegExp() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QRegExpValidator6regExpEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QRegExpValidator) RegExp() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QRegExpValidator6regExpEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:187
 // index:0
+// Public
 // void regExpChanged(const class QRegExp &)
-func (this *QRegExpValidator) RegExpChanged(regExp unsafe.Pointer) {
-	// 0: (, regExp const QRegExp &), (regExp)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidator13regExpChangedERK7QRegExp", ffiqt.FFI_TYPE_VOID, this.GetCthis(), regExp)
+func (this *QRegExpValidator) RegExpChanged(regExp *qtcore.QRegExp) {
+	var convArg0 = regExp.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidator13regExpChangedERK7QRegExp", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

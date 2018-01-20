@@ -59,24 +59,26 @@ type QStyleHintReturnVariant struct {
 func (this *QStyleHintReturnVariant) GetCthis() unsafe.Pointer {
 	return this.QStyleHintReturn.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:733
-// index:0
-// void QStyleHintReturnVariant()
-func NewQStyleHintReturnVariant() *QStyleHintReturnVariant {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleHintReturnVariantC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleHintReturnVariantFromPointer(cthis)
-	return gothis
-}
 func NewQStyleHintReturnVariantFromPointer(cthis unsafe.Pointer) *QStyleHintReturnVariant {
 	bcthis0 := NewQStyleHintReturnFromPointer(cthis)
 	return &QStyleHintReturnVariant{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:733
+// index:0
+// Public
+// void QStyleHintReturnVariant()
+func NewQStyleHintReturnVariant() *QStyleHintReturnVariant {
+	cthis := qtrt.Calloc(1, 256) // 24
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleHintReturnVariantC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleHintReturnVariantFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:734
 // index:0
+// Public
 // void ~QStyleHintReturnVariant()
 func DeleteQStyleHintReturnVariant(*QStyleHintReturnVariant) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleHintReturnVariantD2Ev", ffiqt.FFI_TYPE_VOID)

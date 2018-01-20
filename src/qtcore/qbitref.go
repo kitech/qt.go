@@ -51,5 +51,8 @@ type QBitRef struct {
 func (this *QBitRef) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQBitRefFromPointer(cthis unsafe.Pointer) *QBitRef {
+	return &QBitRef{&qtrt.CObject{cthis}}
+}
 
 //  body block end

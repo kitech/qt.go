@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 51
+// extern C begin: 49
 */
 // import "C"
 import "unsafe"
@@ -51,10 +51,13 @@ type QObjectUserData struct {
 func (this *QObjectUserData) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQObjectUserDataFromPointer(cthis unsafe.Pointer) *QObjectUserData {
+	return &QObjectUserData{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qobject.h:478
 // index:0
-// virtual
+// Public virtual
 // void ~QObjectUserData()
 func DeleteQObjectUserData(*QObjectUserData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QObjectUserDataD2Ev", ffiqt.FFI_TYPE_VOID)

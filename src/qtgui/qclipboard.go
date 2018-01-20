@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 12
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
@@ -55,185 +55,203 @@ type QClipboard struct {
 func (this *QClipboard) GetCthis() unsafe.Pointer {
 	return this.QObject.GetCthis()
 }
+func NewQClipboardFromPointer(cthis unsafe.Pointer) *QClipboard {
+	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
+	return &QClipboard{bcthis0}
+}
 
 // /usr/include/qt/QtGui/qclipboard.h:57
 // index:0
-// virtual
+// Public virtual
 // const QMetaObject * metaObject()
-func (this *QClipboard) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QClipboard) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:65
 // index:0
+// Public
 // void clear(enum QClipboard::Mode)
 func (this *QClipboard) Clear(mode int) {
-	// 0: (, mode QClipboard::Mode), (&mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard5clearENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard5clearENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:67
 // index:0
+// Public
 // bool supportsSelection()
-func (this *QClipboard) SupportsSelection() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard17supportsSelectionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QClipboard) SupportsSelection() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard17supportsSelectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:68
 // index:0
+// Public
 // bool supportsFindBuffer()
-func (this *QClipboard) SupportsFindBuffer() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard18supportsFindBufferEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QClipboard) SupportsFindBuffer() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard18supportsFindBufferEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:70
 // index:0
+// Public
 // bool ownsSelection()
-func (this *QClipboard) OwnsSelection() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard13ownsSelectionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QClipboard) OwnsSelection() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard13ownsSelectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:71
 // index:0
+// Public
 // bool ownsClipboard()
-func (this *QClipboard) OwnsClipboard() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard13ownsClipboardEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QClipboard) OwnsClipboard() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard13ownsClipboardEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:72
 // index:0
+// Public
 // bool ownsFindBuffer()
-func (this *QClipboard) OwnsFindBuffer() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard14ownsFindBufferEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QClipboard) OwnsFindBuffer() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard14ownsFindBufferEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:74
 // index:0
+// Public
 // QString text(enum QClipboard::Mode)
-func (this *QClipboard) Text(mode int) {
-	// 0: (, mode QClipboard::Mode), (&mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard4textENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mode)
+func (this *QClipboard) Text(mode int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard4textENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:75
 // index:1
+// Public
 // QString text(class QString &, enum QClipboard::Mode)
-func (this *QClipboard) Text_1(subtype unsafe.Pointer, mode int) {
-	// 1: (, subtype QString &, mode QClipboard::Mode), (subtype, &mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard4textER7QStringNS_4ModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), subtype, &mode)
+func (this *QClipboard) Text_1(subtype *qtcore.QString, mode int) interface{} {
+	var convArg0 = subtype.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard4textER7QStringNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &mode)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:76
 // index:0
+// Public
 // void setText(const class QString &, enum QClipboard::Mode)
-func (this *QClipboard) SetText(arg0 unsafe.Pointer, mode int) {
-	// 0: (, const QString & arg0, mode QClipboard::Mode), (arg0, &mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard7setTextERK7QStringNS_4ModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, &mode)
+func (this *QClipboard) SetText(arg0 *qtcore.QString, mode int) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard7setTextERK7QStringNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &mode)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:78
 // index:0
+// Public
 // const QMimeData * mimeData(enum QClipboard::Mode)
-func (this *QClipboard) MimeData(mode int) {
-	// 0: (, mode QClipboard::Mode), (&mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard8mimeDataENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mode)
+func (this *QClipboard) MimeData(mode int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard8mimeDataENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:79
 // index:0
+// Public
 // void setMimeData(class QMimeData *, enum QClipboard::Mode)
 func (this *QClipboard) SetMimeData(data unsafe.Pointer, mode int) {
-	// 0: (, data QMimeData *, mode QClipboard::Mode), (data, &mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard11setMimeDataEP9QMimeDataNS_4ModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard11setMimeDataEP9QMimeDataNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), data, &mode)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:81
 // index:0
+// Public
 // QImage image(enum QClipboard::Mode)
-func (this *QClipboard) Image(mode int) {
-	// 0: (, mode QClipboard::Mode), (&mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard5imageENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mode)
+func (this *QClipboard) Image(mode int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard5imageENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:82
 // index:0
+// Public
 // QPixmap pixmap(enum QClipboard::Mode)
-func (this *QClipboard) Pixmap(mode int) {
-	// 0: (, mode QClipboard::Mode), (&mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard6pixmapENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mode)
+func (this *QClipboard) Pixmap(mode int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard6pixmapENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:83
 // index:0
+// Public
 // void setImage(const class QImage &, enum QClipboard::Mode)
-func (this *QClipboard) SetImage(arg0 unsafe.Pointer, mode int) {
-	// 0: (, const QImage & arg0, mode QClipboard::Mode), (arg0, &mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard8setImageERK6QImageNS_4ModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, &mode)
+func (this *QClipboard) SetImage(arg0 *QImage, mode int) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard8setImageERK6QImageNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &mode)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:84
 // index:0
+// Public
 // void setPixmap(const class QPixmap &, enum QClipboard::Mode)
-func (this *QClipboard) SetPixmap(arg0 unsafe.Pointer, mode int) {
-	// 0: (, const QPixmap & arg0, mode QClipboard::Mode), (arg0, &mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard9setPixmapERK7QPixmapNS_4ModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, &mode)
+func (this *QClipboard) SetPixmap(arg0 *QPixmap, mode int) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard9setPixmapERK7QPixmapNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &mode)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:87
 // index:0
+// Public
 // void changed(class QClipboard::Mode)
 func (this *QClipboard) Changed(mode int) {
-	// 0: (, mode QClipboard::Mode), (&mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard7changedENS_4ModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard7changedENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:88
 // index:0
+// Public
 // void selectionChanged()
 func (this *QClipboard) SelectionChanged() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard16selectionChangedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard16selectionChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:89
 // index:0
+// Public
 // void findBufferChanged()
 func (this *QClipboard) FindBufferChanged() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard17findBufferChangedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard17findBufferChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:90
 // index:0
+// Public
 // void dataChanged()
 func (this *QClipboard) DataChanged() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard11dataChangedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard11dataChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

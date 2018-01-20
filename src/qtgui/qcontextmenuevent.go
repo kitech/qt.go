@@ -55,39 +55,33 @@ type QContextMenuEvent struct {
 func (this *QContextMenuEvent) GetCthis() unsafe.Pointer {
 	return this.QInputEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:511
-// index:0
-// void QContextMenuEvent(enum QContextMenuEvent::Reason, const class QPoint &, const class QPoint &, Qt::KeyboardModifiers)
-func NewQContextMenuEvent(reason int, pos unsafe.Pointer, globalPos unsafe.Pointer, modifiers int) *QContextMenuEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_VOID, cthis, &reason, pos, globalPos, &modifiers)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQContextMenuEventFromPointer(cthis)
-	return gothis
-}
 func NewQContextMenuEventFromPointer(cthis unsafe.Pointer) *QContextMenuEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
 	return &QContextMenuEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:513
-// index:1
+// index:0
+// Public
 // void QContextMenuEvent(enum QContextMenuEvent::Reason, const class QPoint &, const class QPoint &)
-func NewQContextMenuEvent_1(reason int, pos unsafe.Pointer, globalPos unsafe.Pointer) *QContextMenuEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_", ffiqt.FFI_TYPE_VOID, cthis, &reason, pos, globalPos)
+func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QContextMenuEvent {
+	cthis := qtrt.Calloc(1, 256) // 56
+	var convArg1 = pos.GetCthis()
+	var convArg2 = globalPos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_", ffiqt.FFI_TYPE_VOID, cthis, &reason, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQContextMenuEventFromPointer(cthis)
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:514
-// index:2
+// index:1
+// Public
 // void QContextMenuEvent(enum QContextMenuEvent::Reason, const class QPoint &)
-func NewQContextMenuEvent_2(reason int, pos unsafe.Pointer) *QContextMenuEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPoint", ffiqt.FFI_TYPE_VOID, cthis, &reason, pos)
+func NewQContextMenuEvent_1(reason int, pos *qtcore.QPoint) *QContextMenuEvent {
+	cthis := qtrt.Calloc(1, 256) // 56
+	var convArg1 = pos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPoint", ffiqt.FFI_TYPE_VOID, cthis, &reason, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQContextMenuEventFromPointer(cthis)
 	return gothis
@@ -95,7 +89,7 @@ func NewQContextMenuEvent_2(reason int, pos unsafe.Pointer) *QContextMenuEvent {
 
 // /usr/include/qt/QtGui/qevent.h:515
 // index:0
-// virtual
+// Public virtual
 // void ~QContextMenuEvent()
 func DeleteQContextMenuEvent(*QContextMenuEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -104,72 +98,72 @@ func DeleteQContextMenuEvent(*QContextMenuEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:517
 // index:0
-// inline
+// Public inline
 // int x()
-func (this *QContextMenuEvent) X() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent1xEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QContextMenuEvent) X() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:518
 // index:0
-// inline
+// Public inline
 // int y()
-func (this *QContextMenuEvent) Y() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent1yEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QContextMenuEvent) Y() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:519
 // index:0
-// inline
+// Public inline
 // int globalX()
-func (this *QContextMenuEvent) GlobalX() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent7globalXEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QContextMenuEvent) GlobalX() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:520
 // index:0
-// inline
+// Public inline
 // int globalY()
-func (this *QContextMenuEvent) GlobalY() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent7globalYEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QContextMenuEvent) GlobalY() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:522
 // index:0
-// inline
+// Public inline
 // const QPoint & pos()
-func (this *QContextMenuEvent) Pos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent3posEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QContextMenuEvent) Pos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:523
 // index:0
-// inline
+// Public inline
 // const QPoint & globalPos()
-func (this *QContextMenuEvent) GlobalPos() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent9globalPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QContextMenuEvent) GlobalPos() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:525
 // index:0
-// inline
+// Public inline
 // QContextMenuEvent::Reason reason()
-func (this *QContextMenuEvent) Reason() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent6reasonEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QContextMenuEvent) Reason() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent6reasonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

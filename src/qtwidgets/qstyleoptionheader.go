@@ -59,27 +59,29 @@ type QStyleOptionHeader struct {
 func (this *QStyleOptionHeader) GetCthis() unsafe.Pointer {
 	return this.QStyleOption.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:226
-// index:0
-// void QStyleOptionHeader()
-func NewQStyleOptionHeader() *QStyleOptionHeader {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionHeaderFromPointer(cthis)
-	return gothis
-}
 func NewQStyleOptionHeaderFromPointer(cthis unsafe.Pointer) *QStyleOptionHeader {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionHeader{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:226
+// index:0
+// Public
+// void QStyleOptionHeader()
+func NewQStyleOptionHeader() *QStyleOptionHeader {
+	cthis := qtrt.Calloc(1, 256) // 120
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionHeaderFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:230
 // index:1
+// Protected
 // void QStyleOptionHeader(int)
 func NewQStyleOptionHeader_1(version int) *QStyleOptionHeader {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 120
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionHeaderFromPointer(cthis)

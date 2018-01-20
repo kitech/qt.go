@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 27
+// extern C begin: 24
 */
 // import "C"
 import "unsafe"
@@ -59,24 +59,25 @@ type QFileIconProvider struct {
 func (this *QFileIconProvider) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQFileIconProviderFromPointer(cthis unsafe.Pointer) *QFileIconProvider {
+	return &QFileIconProvider{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:56
 // index:0
+// Public
 // void QFileIconProvider()
 func NewQFileIconProvider() *QFileIconProvider {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFileIconProviderC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFileIconProviderFromPointer(cthis)
 	return gothis
 }
-func NewQFileIconProviderFromPointer(cthis unsafe.Pointer) *QFileIconProvider {
-	return &QFileIconProvider{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:57
 // index:0
-// virtual
+// Public virtual
 // void ~QFileIconProvider()
 func DeleteQFileIconProvider(*QFileIconProvider) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFileIconProviderD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -85,50 +86,44 @@ func DeleteQFileIconProvider(*QFileIconProvider) {
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:65
 // index:0
-// virtual
+// Public virtual
 // QIcon icon(enum QFileIconProvider::IconType)
-func (this *QFileIconProvider) Icon(type_ int) {
-	// 0: (, type QFileIconProvider::IconType), (&type_)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconENS_8IconTypeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &type_)
+func (this *QFileIconProvider) Icon(type_ int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconENS_8IconTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:66
 // index:1
-// virtual
+// Public virtual
 // QIcon icon(const class QFileInfo &)
-func (this *QFileIconProvider) Icon_1(info unsafe.Pointer) {
-	// 1: (, info const QFileInfo &), (info)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconERK9QFileInfo", ffiqt.FFI_TYPE_VOID, this.GetCthis(), info)
+func (this *QFileIconProvider) Icon_1(info *qtcore.QFileInfo) interface{} {
+	var convArg0 = info.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconERK9QFileInfo", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:67
 // index:0
-// virtual
+// Public virtual
 // QString type(const class QFileInfo &)
-func (this *QFileIconProvider) Type(info unsafe.Pointer) {
-	// 0: (, info const QFileInfo &), (info)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4typeERK9QFileInfo", ffiqt.FFI_TYPE_VOID, this.GetCthis(), info)
+func (this *QFileIconProvider) Type(info *qtcore.QFileInfo) interface{} {
+	var convArg0 = info.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4typeERK9QFileInfo", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qfileiconprovider.h:69
-// index:0
-// void setOptions(QFileIconProvider::Options)
-func (this *QFileIconProvider) SetOptions(options int) {
-	// 0: (, QFlags<QFileIconProvider::Option> options), (options)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFileIconProvider10setOptionsE6QFlagsINS_6OptionEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), options)
-	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:70
 // index:0
+// Public
 // QFileIconProvider::Options options()
-func (this *QFileIconProvider) Options() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider7optionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QFileIconProvider) Options() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider7optionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

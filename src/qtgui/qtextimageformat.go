@@ -55,28 +55,31 @@ type QTextImageFormat struct {
 func (this *QTextImageFormat) GetCthis() unsafe.Pointer {
 	return this.QTextCharFormat.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qtextformat.h:735
-// index:0
-// void QTextImageFormat()
-func NewQTextImageFormat() *QTextImageFormat {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormatC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQTextImageFormatFromPointer(cthis)
-	return gothis
-}
 func NewQTextImageFormatFromPointer(cthis unsafe.Pointer) *QTextImageFormat {
 	bcthis0 := NewQTextCharFormatFromPointer(cthis)
 	return &QTextImageFormat{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qtextformat.h:735
+// index:0
+// Public
+// void QTextImageFormat()
+func NewQTextImageFormat() *QTextImageFormat {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormatC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextImageFormatFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qtextformat.h:752
 // index:1
+// Protected
 // void QTextImageFormat(const class QTextFormat &)
-func NewQTextImageFormat_1(format unsafe.Pointer) *QTextImageFormat {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormatC2ERK11QTextFormat", ffiqt.FFI_TYPE_VOID, cthis, format)
+func NewQTextImageFormat_1(format *QTextFormat) *QTextImageFormat {
+	cthis := qtrt.Calloc(1, 256) // 16
+	var convArg0 = format.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormatC2ERK11QTextFormat", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextImageFormatFromPointer(cthis)
 	return gothis
@@ -84,72 +87,70 @@ func NewQTextImageFormat_1(format unsafe.Pointer) *QTextImageFormat {
 
 // /usr/include/qt/QtGui/qtextformat.h:737
 // index:0
-// inline
+// Public inline
 // bool isValid()
-func (this *QTextImageFormat) IsValid() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextImageFormat) IsValid() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:739
 // index:0
-// inline
+// Public inline
 // void setName(const class QString &)
-func (this *QTextImageFormat) SetName(name unsafe.Pointer) {
-	// 0: (, name const QString &), (name)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormat7setNameERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), name)
+func (this *QTextImageFormat) SetName(name *qtcore.QString) {
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormat7setNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:740
 // index:0
-// inline
+// Public inline
 // QString name()
-func (this *QTextImageFormat) Name() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextImageFormat) Name() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:743
 // index:0
-// inline
+// Public inline
 // void setWidth(qreal)
 func (this *QTextImageFormat) SetWidth(width float64) {
-	// 0: (, width qreal), (&width)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormat8setWidthEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormat8setWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:744
 // index:0
-// inline
+// Public inline
 // qreal width()
-func (this *QTextImageFormat) Width() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat5widthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextImageFormat) Width() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:747
 // index:0
-// inline
+// Public inline
 // void setHeight(qreal)
 func (this *QTextImageFormat) SetHeight(height float64) {
-	// 0: (, height qreal), (&height)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormat9setHeightEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &height)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormat9setHeightEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &height)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:748
 // index:0
-// inline
+// Public inline
 // qreal height()
-func (this *QTextImageFormat) Height() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat6heightEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextImageFormat) Height() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

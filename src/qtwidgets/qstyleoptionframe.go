@@ -59,27 +59,29 @@ type QStyleOptionFrame struct {
 func (this *QStyleOptionFrame) GetCthis() unsafe.Pointer {
 	return this.QStyleOption.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:143
-// index:0
-// void QStyleOptionFrame()
-func NewQStyleOptionFrame() *QStyleOptionFrame {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionFrameFromPointer(cthis)
-	return gothis
-}
 func NewQStyleOptionFrameFromPointer(cthis unsafe.Pointer) *QStyleOptionFrame {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionFrame{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:143
+// index:0
+// Public
+// void QStyleOptionFrame()
+func NewQStyleOptionFrame() *QStyleOptionFrame {
+	cthis := qtrt.Calloc(1, 256) // 80
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionFrameFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:147
 // index:1
+// Protected
 // void QStyleOptionFrame(int)
 func NewQStyleOptionFrame_1(version int) *QStyleOptionFrame {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 80
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFrameFromPointer(cthis)

@@ -56,98 +56,87 @@ type QPaintDeviceWindow struct {
 func (this *QPaintDeviceWindow) GetCthis() unsafe.Pointer {
 	return this.QWindow.GetCthis()
 }
+func NewQPaintDeviceWindowFromPointer(cthis unsafe.Pointer) *QPaintDeviceWindow {
+	bcthis0 := NewQWindowFromPointer(cthis)
+	bcthis1 := NewQPaintDeviceFromPointer(cthis)
+	return &QPaintDeviceWindow{bcthis0, bcthis1}
+}
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:54
 // index:0
-// virtual
+// Public virtual
 // const QMetaObject * metaObject()
-func (this *QPaintDeviceWindow) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPaintDeviceWindow) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:58
 // index:0
+// Public
 // void update(const class QRect &)
-func (this *QPaintDeviceWindow) Update(rect unsafe.Pointer) {
-	// 0: (, rect const QRect &), (rect)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), rect)
+func (this *QPaintDeviceWindow) Update(rect *qtcore.QRect) {
+	var convArg0 = rect.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:59
 // index:1
+// Public
 // void update(const class QRegion &)
-func (this *QPaintDeviceWindow) Update_1(region unsafe.Pointer) {
-	// 1: (, region const QRegion &), (region)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK7QRegion", ffiqt.FFI_TYPE_VOID, this.GetCthis(), region)
+func (this *QPaintDeviceWindow) Update_1(region *QRegion) {
+	var convArg0 = region.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK7QRegion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:66
 // index:2
+// Public
 // void update()
 func (this *QPaintDeviceWindow) Update_2() {
-	// 2: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:69
 // index:0
-// virtual
+// Protected virtual
 // void paintEvent(class QPaintEvent *)
 func (this *QPaintDeviceWindow) PaintEvent(event unsafe.Pointer) {
-	// 0: (, event QPaintEvent *), (event)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:71
 // index:0
-// virtual
+// Protected virtual
 // int metric(enum QPaintDevice::PaintDeviceMetric)
-func (this *QPaintDeviceWindow) Metric(metric int) {
-	// 0: (, metric QPaintDevice::PaintDeviceMetric), (&metric)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &metric)
+func (this *QPaintDeviceWindow) Metric(metric int) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &metric)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:72
 // index:0
-// virtual
+// Protected virtual
 // void exposeEvent(class QExposeEvent *)
 func (this *QPaintDeviceWindow) ExposeEvent(arg0 unsafe.Pointer) {
-	// 0: (, QExposeEvent * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow11exposeEventEP12QExposeEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow11exposeEventEP12QExposeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:73
 // index:0
-// virtual
+// Protected virtual
 // bool event(class QEvent *)
-func (this *QPaintDeviceWindow) Event(event unsafe.Pointer) {
-	// 0: (, event QEvent *), (event)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+func (this *QPaintDeviceWindow) Event(event unsafe.Pointer) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qpaintdevicewindow.h:75
-// index:0
-// void QPaintDeviceWindow(class QPaintDeviceWindowPrivate &, class QWindow *)
-func NewQPaintDeviceWindow(dd unsafe.Pointer, parent unsafe.Pointer) *QPaintDeviceWindow {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindowC2ER25QPaintDeviceWindowPrivateP7QWindow", ffiqt.FFI_TYPE_VOID, cthis, dd, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQPaintDeviceWindowFromPointer(cthis)
-	return gothis
-}
-func NewQPaintDeviceWindowFromPointer(cthis unsafe.Pointer) *QPaintDeviceWindow {
-	bcthis0 := NewQWindowFromPointer(cthis)
-	bcthis1 := NewQPaintDeviceFromPointer(cthis)
-	return &QPaintDeviceWindow{bcthis0, bcthis1}
+	return rv
 }
 
 //  body block end

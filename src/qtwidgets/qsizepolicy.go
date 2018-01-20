@@ -59,28 +59,28 @@ type QSizePolicy struct {
 func (this *QSizePolicy) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQSizePolicyFromPointer(cthis unsafe.Pointer) *QSizePolicy {
+	return &QSizePolicy{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:113
 // index:0
-// inline
+// Public inline
 // void QSizePolicy()
 func NewQSizePolicy() *QSizePolicy {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 4
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicyC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSizePolicyFromPointer(cthis)
 	return gothis
 }
-func NewQSizePolicyFromPointer(cthis unsafe.Pointer) *QSizePolicy {
-	return &QSizePolicy{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:116
 // index:1
-// inline
+// Public inline
 // void QSizePolicy(enum QSizePolicy::Policy, enum QSizePolicy::Policy, enum QSizePolicy::ControlType)
 func NewQSizePolicy_1(horizontal int, vertical int, type_ int) *QSizePolicy {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 4
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicyC2ENS_6PolicyES0_NS_11ControlTypeE", ffiqt.FFI_TYPE_VOID, cthis, &horizontal, &vertical, &type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSizePolicyFromPointer(cthis)
@@ -89,190 +89,183 @@ func NewQSizePolicy_1(horizontal int, vertical int, type_ int) *QSizePolicy {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:128
 // index:0
-// inline
+// Public inline
 // QSizePolicy::Policy horizontalPolicy()
-func (this *QSizePolicy) HorizontalPolicy() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy16horizontalPolicyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSizePolicy) HorizontalPolicy() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy16horizontalPolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:129
 // index:0
-// inline
+// Public inline
 // QSizePolicy::Policy verticalPolicy()
-func (this *QSizePolicy) VerticalPolicy() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy14verticalPolicyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSizePolicy) VerticalPolicy() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy14verticalPolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:130
 // index:0
+// Public
 // QSizePolicy::ControlType controlType()
-func (this *QSizePolicy) ControlType() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy11controlTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSizePolicy) ControlType() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy11controlTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:132
 // index:0
-// inline
+// Public inline
 // void setHorizontalPolicy(enum QSizePolicy::Policy)
 func (this *QSizePolicy) SetHorizontalPolicy(d int) {
-	// 0: (, d QSizePolicy::Policy), (&d)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy19setHorizontalPolicyENS_6PolicyE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &d)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy19setHorizontalPolicyENS_6PolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &d)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:133
 // index:0
-// inline
+// Public inline
 // void setVerticalPolicy(enum QSizePolicy::Policy)
 func (this *QSizePolicy) SetVerticalPolicy(d int) {
-	// 0: (, d QSizePolicy::Policy), (&d)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setVerticalPolicyENS_6PolicyE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &d)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setVerticalPolicyENS_6PolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &d)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:134
 // index:0
+// Public
 // void setControlType(enum QSizePolicy::ControlType)
 func (this *QSizePolicy) SetControlType(type_ int) {
-	// 0: (, type QSizePolicy::ControlType), (&type_)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy14setControlTypeENS_11ControlTypeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy14setControlTypeENS_11ControlTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:136
 // index:0
-// inline
+// Public inline
 // Qt::Orientations expandingDirections()
-func (this *QSizePolicy) ExpandingDirections() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy19expandingDirectionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSizePolicy) ExpandingDirections() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy19expandingDirectionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:141
 // index:0
-// inline
+// Public inline
 // void setHeightForWidth(_Bool)
 func (this *QSizePolicy) SetHeightForWidth(b bool) {
-	// 0: (, b bool), (&b)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setHeightForWidthEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setHeightForWidthEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:142
 // index:0
-// inline
+// Public inline
 // bool hasHeightForWidth()
-func (this *QSizePolicy) HasHeightForWidth() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17hasHeightForWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSizePolicy) HasHeightForWidth() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17hasHeightForWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:143
 // index:0
-// inline
+// Public inline
 // void setWidthForHeight(_Bool)
 func (this *QSizePolicy) SetWidthForHeight(b bool) {
-	// 0: (, b bool), (&b)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setWidthForHeightEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setWidthForHeightEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:144
 // index:0
-// inline
+// Public inline
 // bool hasWidthForHeight()
-func (this *QSizePolicy) HasWidthForHeight() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17hasWidthForHeightEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSizePolicy) HasWidthForHeight() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17hasWidthForHeightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:153
 // index:0
-// inline
+// Public inline
 // int horizontalStretch()
-func (this *QSizePolicy) HorizontalStretch() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17horizontalStretchEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSizePolicy) HorizontalStretch() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17horizontalStretchEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:154
 // index:0
-// inline
+// Public inline
 // int verticalStretch()
-func (this *QSizePolicy) VerticalStretch() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy15verticalStretchEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSizePolicy) VerticalStretch() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy15verticalStretchEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:155
 // index:0
-// inline
+// Public inline
 // void setHorizontalStretch(int)
 func (this *QSizePolicy) SetHorizontalStretch(stretchFactor int) {
-	// 0: (, stretchFactor int), (&stretchFactor)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy20setHorizontalStretchEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &stretchFactor)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy20setHorizontalStretchEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &stretchFactor)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:156
 // index:0
-// inline
+// Public inline
 // void setVerticalStretch(int)
 func (this *QSizePolicy) SetVerticalStretch(stretchFactor int) {
-	// 0: (, stretchFactor int), (&stretchFactor)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy18setVerticalStretchEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &stretchFactor)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy18setVerticalStretchEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &stretchFactor)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:158
 // index:0
-// inline
+// Public inline
 // bool retainSizeWhenHidden()
-func (this *QSizePolicy) RetainSizeWhenHidden() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy20retainSizeWhenHiddenEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSizePolicy) RetainSizeWhenHidden() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy20retainSizeWhenHiddenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:159
 // index:0
-// inline
+// Public inline
 // void setRetainSizeWhenHidden(_Bool)
 func (this *QSizePolicy) SetRetainSizeWhenHidden(retainSize bool) {
-	// 0: (, retainSize bool), (&retainSize)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy23setRetainSizeWhenHiddenEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &retainSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy23setRetainSizeWhenHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &retainSize)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:161
 // index:0
-// inline
+// Public inline
 // void transpose()
 func (this *QSizePolicy) Transpose() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy9transposeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy9transposeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:166
 // index:0
-// inline
+// Public inline
 // QSizePolicy transposed()
-func (this *QSizePolicy) Transposed() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy10transposedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QSizePolicy) Transposed() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy10transposedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

@@ -55,28 +55,32 @@ type QFileOpenEvent struct {
 func (this *QFileOpenEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:738
-// index:0
-// void QFileOpenEvent(const class QString &)
-func NewQFileOpenEvent(file unsafe.Pointer) *QFileOpenEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QFileOpenEventC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, file)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQFileOpenEventFromPointer(cthis)
-	return gothis
-}
 func NewQFileOpenEventFromPointer(cthis unsafe.Pointer) *QFileOpenEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QFileOpenEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:738
+// index:0
+// Public
+// void QFileOpenEvent(const class QString &)
+func NewQFileOpenEvent(file *qtcore.QString) *QFileOpenEvent {
+	cthis := qtrt.Calloc(1, 256) // 40
+	var convArg0 = file.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QFileOpenEventC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQFileOpenEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:739
 // index:1
+// Public
 // void QFileOpenEvent(const class QUrl &)
-func NewQFileOpenEvent_1(url unsafe.Pointer) *QFileOpenEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QFileOpenEventC2ERK4QUrl", ffiqt.FFI_TYPE_VOID, cthis, url)
+func NewQFileOpenEvent_1(url *qtcore.QUrl) *QFileOpenEvent {
+	cthis := qtrt.Calloc(1, 256) // 40
+	var convArg0 = url.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QFileOpenEventC2ERK4QUrl", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFileOpenEventFromPointer(cthis)
 	return gothis
@@ -84,7 +88,7 @@ func NewQFileOpenEvent_1(url unsafe.Pointer) *QFileOpenEvent {
 
 // /usr/include/qt/QtGui/qevent.h:740
 // index:0
-// virtual
+// Public virtual
 // void ~QFileOpenEvent()
 func DeleteQFileOpenEvent(*QFileOpenEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QFileOpenEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -93,31 +97,22 @@ func DeleteQFileOpenEvent(*QFileOpenEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:742
 // index:0
-// inline
+// Public inline
 // QString file()
-func (this *QFileOpenEvent) File() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent4fileEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QFileOpenEvent) File() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent4fileEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:743
 // index:0
-// inline
+// Public inline
 // QUrl url()
-func (this *QFileOpenEvent) Url() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent3urlEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QFileOpenEvent) Url() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent3urlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qevent.h:744
-// index:0
-// bool openFile(class QFile &, class QIODevice::OpenMode)
-func (this *QFileOpenEvent) OpenFile(file unsafe.Pointer, flags int) {
-	// 0: (, file QFile &, QFlags<QIODevice::OpenModeFlag> flags), (file, &flags)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent8openFileER5QFile6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), file, &flags)
-	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

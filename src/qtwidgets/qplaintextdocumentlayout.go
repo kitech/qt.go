@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 116
+// extern C begin: 112
 */
 // import "C"
 import "unsafe"
@@ -59,144 +59,138 @@ type QPlainTextDocumentLayout struct {
 func (this *QPlainTextDocumentLayout) GetCthis() unsafe.Pointer {
 	return this.QAbstractTextDocumentLayout.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qplaintextedit.h:297
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QPlainTextDocumentLayout) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qplaintextedit.h:302
-// index:0
-// void QPlainTextDocumentLayout(class QTextDocument *)
-func NewQPlainTextDocumentLayout(document unsafe.Pointer) *QPlainTextDocumentLayout {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, document)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQPlainTextDocumentLayoutFromPointer(cthis)
-	return gothis
-}
 func NewQPlainTextDocumentLayoutFromPointer(cthis unsafe.Pointer) *QPlainTextDocumentLayout {
 	bcthis0 := qtgui.NewQAbstractTextDocumentLayoutFromPointer(cthis)
 	return &QPlainTextDocumentLayout{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qplaintextedit.h:297
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QPlainTextDocumentLayout) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qplaintextedit.h:302
+// index:0
+// Public
+// void QPlainTextDocumentLayout(class QTextDocument *)
+func NewQPlainTextDocumentLayout(document unsafe.Pointer) *QPlainTextDocumentLayout {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, document)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQPlainTextDocumentLayoutFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qplaintextedit.h:303
 // index:0
-// virtual
+// Public virtual
 // void ~QPlainTextDocumentLayout()
 func DeleteQPlainTextDocumentLayout(*QPlainTextDocumentLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:305
-// index:0
-// virtual
-// void draw(class QPainter *, const struct QAbstractTextDocumentLayout::PaintContext &)
-func (this *QPlainTextDocumentLayout) Draw(arg0 unsafe.Pointer, arg1 unsafe.Pointer) {
-	// 0: (, QPainter * arg0, const QAbstractTextDocumentLayout::PaintContext & arg1), (arg0, arg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout4drawEP8QPainterRKN27QAbstractTextDocumentLayout12PaintContextE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, arg1)
-	gopp.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qplaintextedit.h:306
 // index:0
-// virtual
+// Public virtual
 // int hitTest(const class QPointF &, Qt::HitTestAccuracy)
-func (this *QPlainTextDocumentLayout) HitTest(arg0 unsafe.Pointer, arg1 int) {
-	// 0: (, const QPointF & arg0, Qt::HitTestAccuracy arg1), (arg0, &arg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout7hitTestERK7QPointFN2Qt15HitTestAccuracyE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, &arg1)
+func (this *QPlainTextDocumentLayout) HitTest(arg0 *qtcore.QPointF, arg1 int) interface{} {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout7hitTestERK7QPointFN2Qt15HitTestAccuracyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:308
 // index:0
-// virtual
+// Public virtual
 // int pageCount()
-func (this *QPlainTextDocumentLayout) PageCount() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout9pageCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPlainTextDocumentLayout) PageCount() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout9pageCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:309
 // index:0
-// virtual
+// Public virtual
 // QSizeF documentSize()
-func (this *QPlainTextDocumentLayout) DocumentSize() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout12documentSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPlainTextDocumentLayout) DocumentSize() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout12documentSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:311
 // index:0
-// virtual
+// Public virtual
 // QRectF frameBoundingRect(class QTextFrame *)
-func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 unsafe.Pointer) {
-	// 0: (, QTextFrame * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
+func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 unsafe.Pointer) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:312
 // index:0
-// virtual
+// Public virtual
 // QRectF blockBoundingRect(const class QTextBlock &)
-func (this *QPlainTextDocumentLayout) BlockBoundingRect(block unsafe.Pointer) {
-	// 0: (, block const QTextBlock &), (block)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock", ffiqt.FFI_TYPE_VOID, this.GetCthis(), block)
+func (this *QPlainTextDocumentLayout) BlockBoundingRect(block *qtgui.QTextBlock) interface{} {
+	var convArg0 = block.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:314
 // index:0
+// Public
 // void ensureBlockLayout(const class QTextBlock &)
-func (this *QPlainTextDocumentLayout) EnsureBlockLayout(block unsafe.Pointer) {
-	// 0: (, block const QTextBlock &), (block)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17ensureBlockLayoutERK10QTextBlock", ffiqt.FFI_TYPE_VOID, this.GetCthis(), block)
+func (this *QPlainTextDocumentLayout) EnsureBlockLayout(block *qtgui.QTextBlock) {
+	var convArg0 = block.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17ensureBlockLayoutERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:316
 // index:0
+// Public
 // void setCursorWidth(int)
 func (this *QPlainTextDocumentLayout) SetCursorWidth(width int) {
-	// 0: (, width int), (&width)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout14setCursorWidthEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout14setCursorWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:317
 // index:0
+// Public
 // int cursorWidth()
-func (this *QPlainTextDocumentLayout) CursorWidth() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout11cursorWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPlainTextDocumentLayout) CursorWidth() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout11cursorWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:319
 // index:0
+// Public
 // void requestUpdate()
 func (this *QPlainTextDocumentLayout) RequestUpdate() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout13requestUpdateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout13requestUpdateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:322
 // index:0
-// virtual
+// Protected virtual
 // void documentChanged(int, int, int)
 func (this *QPlainTextDocumentLayout) DocumentChanged(from int, arg1 int, charsAdded int) {
-	// 0: (, from int, int arg1, charsAdded int), (&from, &arg1, &charsAdded)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout15documentChangedEiii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &from, &arg1, &charsAdded)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout15documentChangedEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &from, &arg1, &charsAdded)
 	gopp.ErrPrint(err, rv)
 }
 

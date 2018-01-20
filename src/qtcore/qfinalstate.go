@@ -51,38 +51,28 @@ type QFinalState struct {
 func (this *QFinalState) GetCthis() unsafe.Pointer {
 	return this.QAbstractState.GetCthis()
 }
-
-// /usr/include/qt/QtCore/qfinalstate.h:52
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QFinalState) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFinalState10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qfinalstate.h:54
-// index:0
-// void QFinalState(class QState *)
-func NewQFinalState(parent unsafe.Pointer) *QFinalState {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQFinalStateFromPointer(cthis)
-	return gothis
-}
 func NewQFinalStateFromPointer(cthis unsafe.Pointer) *QFinalState {
 	bcthis0 := NewQAbstractStateFromPointer(cthis)
 	return &QFinalState{bcthis0}
 }
 
-// /usr/include/qt/QtCore/qfinalstate.h:64
-// index:1
-// void QFinalState(class QFinalStatePrivate &, class QState *)
-func NewQFinalState_1(dd unsafe.Pointer, parent unsafe.Pointer) *QFinalState {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateC2ER18QFinalStatePrivateP6QState", ffiqt.FFI_TYPE_VOID, cthis, dd, parent)
+// /usr/include/qt/QtCore/qfinalstate.h:52
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QFinalState) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFinalState10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qfinalstate.h:54
+// index:0
+// Public
+// void QFinalState(class QState *)
+func NewQFinalState(parent unsafe.Pointer) *QFinalState {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFinalStateFromPointer(cthis)
 	return gothis
@@ -90,7 +80,7 @@ func NewQFinalState_1(dd unsafe.Pointer, parent unsafe.Pointer) *QFinalState {
 
 // /usr/include/qt/QtCore/qfinalstate.h:55
 // index:0
-// virtual
+// Public virtual
 // void ~QFinalState()
 func DeleteQFinalState(*QFinalState) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -99,32 +89,30 @@ func DeleteQFinalState(*QFinalState) {
 
 // /usr/include/qt/QtCore/qfinalstate.h:58
 // index:0
-// virtual
+// Protected virtual
 // void onEntry(class QEvent *)
 func (this *QFinalState) OnEntry(event unsafe.Pointer) {
-	// 0: (, event QEvent *), (event)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState7onEntryEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState7onEntryEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qfinalstate.h:59
 // index:0
-// virtual
+// Protected virtual
 // void onExit(class QEvent *)
 func (this *QFinalState) OnExit(event unsafe.Pointer) {
-	// 0: (, event QEvent *), (event)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState6onExitEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState6onExitEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qfinalstate.h:61
 // index:0
-// virtual
+// Protected virtual
 // bool event(class QEvent *)
-func (this *QFinalState) Event(e unsafe.Pointer) {
-	// 0: (, e QEvent *), (e)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), e)
+func (this *QFinalState) Event(e unsafe.Pointer) interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

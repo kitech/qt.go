@@ -51,25 +51,26 @@ type QTimerEvent struct {
 func (this *QTimerEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtCore/qcoreevent.h:340
-// index:0
-// void QTimerEvent(int)
-func NewQTimerEvent(timerId int) *QTimerEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTimerEventC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &timerId)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQTimerEventFromPointer(cthis)
-	return gothis
-}
 func NewQTimerEventFromPointer(cthis unsafe.Pointer) *QTimerEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
 	return &QTimerEvent{bcthis0}
 }
 
+// /usr/include/qt/QtCore/qcoreevent.h:340
+// index:0
+// Public
+// void QTimerEvent(int)
+func NewQTimerEvent(timerId int) *QTimerEvent {
+	cthis := qtrt.Calloc(1, 256) // 24
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTimerEventC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &timerId)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTimerEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qcoreevent.h:341
 // index:0
-// virtual
+// Public virtual
 // void ~QTimerEvent()
 func DeleteQTimerEvent(*QTimerEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTimerEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -78,12 +79,12 @@ func DeleteQTimerEvent(*QTimerEvent) {
 
 // /usr/include/qt/QtCore/qcoreevent.h:342
 // index:0
-// inline
+// Public inline
 // int timerId()
-func (this *QTimerEvent) TimerId() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTimerEvent7timerIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTimerEvent) TimerId() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTimerEvent7timerIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

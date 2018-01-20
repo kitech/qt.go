@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 11
+// extern C begin: 8
 */
 // import "C"
 import "unsafe"
@@ -51,26 +51,28 @@ type QEventLoopLocker struct {
 func (this *QEventLoopLocker) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQEventLoopLockerFromPointer(cthis unsafe.Pointer) *QEventLoopLocker {
+	return &QEventLoopLocker{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtCore/qeventloop.h:93
 // index:0
+// Public
 // void QEventLoopLocker()
 func NewQEventLoopLocker() *QEventLoopLocker {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(cthis)
 	return gothis
 }
-func NewQEventLoopLockerFromPointer(cthis unsafe.Pointer) *QEventLoopLocker {
-	return &QEventLoopLocker{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtCore/qeventloop.h:94
 // index:1
+// Public
 // void QEventLoopLocker(class QEventLoop *)
 func NewQEventLoopLocker_1(loop unsafe.Pointer) *QEventLoopLocker {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", ffiqt.FFI_TYPE_VOID, cthis, loop)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(cthis)
@@ -79,9 +81,10 @@ func NewQEventLoopLocker_1(loop unsafe.Pointer) *QEventLoopLocker {
 
 // /usr/include/qt/QtCore/qeventloop.h:95
 // index:2
+// Public
 // void QEventLoopLocker(class QThread *)
 func NewQEventLoopLocker_2(thread unsafe.Pointer) *QEventLoopLocker {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", ffiqt.FFI_TYPE_VOID, cthis, thread)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(cthis)
@@ -90,6 +93,7 @@ func NewQEventLoopLocker_2(thread unsafe.Pointer) *QEventLoopLocker {
 
 // /usr/include/qt/QtCore/qeventloop.h:96
 // index:0
+// Public
 // void ~QEventLoopLocker()
 func DeleteQEventLoopLocker(*QEventLoopLocker) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerD2Ev", ffiqt.FFI_TYPE_VOID)

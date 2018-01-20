@@ -55,25 +55,28 @@ type QResizeEvent struct {
 func (this *QResizeEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:463
-// index:0
-// void QResizeEvent(const class QSize &, const class QSize &)
-func NewQResizeEvent(size unsafe.Pointer, oldSize unsafe.Pointer) *QResizeEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QResizeEventC2ERK5QSizeS2_", ffiqt.FFI_TYPE_VOID, cthis, size, oldSize)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQResizeEventFromPointer(cthis)
-	return gothis
-}
 func NewQResizeEventFromPointer(cthis unsafe.Pointer) *QResizeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QResizeEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:463
+// index:0
+// Public
+// void QResizeEvent(const class QSize &, const class QSize &)
+func NewQResizeEvent(size *qtcore.QSize, oldSize *qtcore.QSize) *QResizeEvent {
+	cthis := qtrt.Calloc(1, 256) // 40
+	var convArg0 = size.GetCthis()
+	var convArg1 = oldSize.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QResizeEventC2ERK5QSizeS2_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQResizeEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:464
 // index:0
-// virtual
+// Public virtual
 // void ~QResizeEvent()
 func DeleteQResizeEvent(*QResizeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QResizeEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -82,22 +85,22 @@ func DeleteQResizeEvent(*QResizeEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:466
 // index:0
-// inline
+// Public inline
 // const QSize & size()
-func (this *QResizeEvent) Size() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QResizeEvent) Size() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:467
 // index:0
-// inline
+// Public inline
 // const QSize & oldSize()
-func (this *QResizeEvent) OldSize() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent7oldSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QResizeEvent) OldSize() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent7oldSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

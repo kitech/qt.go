@@ -55,27 +55,30 @@ type QPainterPathStroker struct {
 func (this *QPainterPathStroker) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQPainterPathStrokerFromPointer(cthis unsafe.Pointer) *QPainterPathStroker {
+	return &QPainterPathStroker{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qpainterpath.h:246
 // index:0
+// Public
 // void QPainterPathStroker()
 func NewQPainterPathStroker() *QPainterPathStroker {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStrokerC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPainterPathStrokerFromPointer(cthis)
 	return gothis
 }
-func NewQPainterPathStrokerFromPointer(cthis unsafe.Pointer) *QPainterPathStroker {
-	return &QPainterPathStroker{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtGui/qpainterpath.h:247
 // index:1
+// Public
 // void QPainterPathStroker(const class QPen &)
-func NewQPainterPathStroker_1(pen unsafe.Pointer) *QPainterPathStroker {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStrokerC2ERK4QPen", ffiqt.FFI_TYPE_VOID, cthis, pen)
+func NewQPainterPathStroker_1(pen *QPen) *QPainterPathStroker {
+	cthis := qtrt.Calloc(1, 256) // 8
+	var convArg0 = pen.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStrokerC2ERK4QPen", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPainterPathStrokerFromPointer(cthis)
 	return gothis
@@ -83,6 +86,7 @@ func NewQPainterPathStroker_1(pen unsafe.Pointer) *QPainterPathStroker {
 
 // /usr/include/qt/QtGui/qpainterpath.h:248
 // index:0
+// Public
 // void ~QPainterPathStroker()
 func DeleteQPainterPathStroker(*QPainterPathStroker) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStrokerD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -91,137 +95,146 @@ func DeleteQPainterPathStroker(*QPainterPathStroker) {
 
 // /usr/include/qt/QtGui/qpainterpath.h:250
 // index:0
+// Public
 // void setWidth(qreal)
 func (this *QPainterPathStroker) SetWidth(width float64) {
-	// 0: (, width qreal), (&width)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker8setWidthEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker8setWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:251
 // index:0
+// Public
 // qreal width()
-func (this *QPainterPathStroker) Width() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker5widthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPainterPathStroker) Width() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:253
 // index:0
+// Public
 // void setCapStyle(Qt::PenCapStyle)
 func (this *QPainterPathStroker) SetCapStyle(style int) {
-	// 0: (, style Qt::PenCapStyle), (&style)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker11setCapStyleEN2Qt11PenCapStyleE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker11setCapStyleEN2Qt11PenCapStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &style)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:254
 // index:0
+// Public
 // Qt::PenCapStyle capStyle()
-func (this *QPainterPathStroker) CapStyle() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker8capStyleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPainterPathStroker) CapStyle() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker8capStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:256
 // index:0
+// Public
 // void setJoinStyle(Qt::PenJoinStyle)
 func (this *QPainterPathStroker) SetJoinStyle(style int) {
-	// 0: (, style Qt::PenJoinStyle), (&style)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker12setJoinStyleEN2Qt12PenJoinStyleE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker12setJoinStyleEN2Qt12PenJoinStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &style)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:257
 // index:0
+// Public
 // Qt::PenJoinStyle joinStyle()
-func (this *QPainterPathStroker) JoinStyle() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker9joinStyleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPainterPathStroker) JoinStyle() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker9joinStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:259
 // index:0
+// Public
 // void setMiterLimit(qreal)
 func (this *QPainterPathStroker) SetMiterLimit(length float64) {
-	// 0: (, length qreal), (&length)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker13setMiterLimitEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &length)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker13setMiterLimitEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &length)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:260
 // index:0
+// Public
 // qreal miterLimit()
-func (this *QPainterPathStroker) MiterLimit() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker10miterLimitEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPainterPathStroker) MiterLimit() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker10miterLimitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:262
 // index:0
+// Public
 // void setCurveThreshold(qreal)
 func (this *QPainterPathStroker) SetCurveThreshold(threshold float64) {
-	// 0: (, threshold qreal), (&threshold)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker17setCurveThresholdEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &threshold)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker17setCurveThresholdEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &threshold)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:263
 // index:0
+// Public
 // qreal curveThreshold()
-func (this *QPainterPathStroker) CurveThreshold() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker14curveThresholdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPainterPathStroker) CurveThreshold() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker14curveThresholdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:265
 // index:0
+// Public
 // void setDashPattern(Qt::PenStyle)
 func (this *QPainterPathStroker) SetDashPattern(arg0 int) {
-	// 0: (, Qt::PenStyle arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker14setDashPatternEN2Qt8PenStyleE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker14setDashPatternEN2Qt8PenStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:267
 // index:0
+// Public
 // QVector<qreal> dashPattern()
-func (this *QPainterPathStroker) DashPattern() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker11dashPatternEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPainterPathStroker) DashPattern() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker11dashPatternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:269
 // index:0
+// Public
 // void setDashOffset(qreal)
 func (this *QPainterPathStroker) SetDashOffset(offset float64) {
-	// 0: (, offset qreal), (&offset)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker13setDashOffsetEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &offset)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker13setDashOffsetEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &offset)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:270
 // index:0
+// Public
 // qreal dashOffset()
-func (this *QPainterPathStroker) DashOffset() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker10dashOffsetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QPainterPathStroker) DashOffset() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker10dashOffsetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:272
 // index:0
+// Public
 // QPainterPath createStroke(const class QPainterPath &)
-func (this *QPainterPathStroker) CreateStroke(path unsafe.Pointer) {
-	// 0: (, path const QPainterPath &), (path)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath", ffiqt.FFI_TYPE_VOID, this.GetCthis(), path)
+func (this *QPainterPathStroker) CreateStroke(path *QPainterPath) interface{} {
+	var convArg0 = path.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

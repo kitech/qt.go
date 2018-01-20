@@ -55,23 +55,25 @@ type QTouchDevice struct {
 func (this *QTouchDevice) GetCthis() unsafe.Pointer {
 	return this.Cthis
 }
+func NewQTouchDeviceFromPointer(cthis unsafe.Pointer) *QTouchDevice {
+	return &QTouchDevice{&qtrt.CObject{cthis}}
+}
 
 // /usr/include/qt/QtGui/qtouchdevice.h:73
 // index:0
+// Public
 // void QTouchDevice()
 func NewQTouchDevice() *QTouchDevice {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDeviceC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTouchDeviceFromPointer(cthis)
 	return gothis
 }
-func NewQTouchDeviceFromPointer(cthis unsafe.Pointer) *QTouchDevice {
-	return &QTouchDevice{&qtrt.CObject{cthis}}
-}
 
 // /usr/include/qt/QtGui/qtouchdevice.h:74
 // index:0
+// Public
 // void ~QTouchDevice()
 func DeleteQTouchDevice(*QTouchDevice) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDeviceD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -80,88 +82,83 @@ func DeleteQTouchDevice(*QTouchDevice) {
 
 // /usr/include/qt/QtGui/qtouchdevice.h:76
 // index:0
-// static
+// Public static
 // QList<const QTouchDevice *> devices()
-func (this *QTouchDevice) Devices() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7devicesEv", ffiqt.FFI_TYPE_VOID)
+func (this *QTouchDevice) Devices() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7devicesEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 func QTouchDevice_Devices() {
-	// 0: (), ()
 	var nilthis *QTouchDevice
 	nilthis.Devices()
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:78
 // index:0
+// Public
 // QString name()
-func (this *QTouchDevice) Name() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTouchDevice) Name() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:79
 // index:0
+// Public
 // QTouchDevice::DeviceType type()
-func (this *QTouchDevice) Type() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTouchDevice) Type() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:80
 // index:0
+// Public
 // QTouchDevice::Capabilities capabilities()
-func (this *QTouchDevice) Capabilities() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice12capabilitiesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTouchDevice) Capabilities() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice12capabilitiesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:81
 // index:0
+// Public
 // int maximumTouchPoints()
-func (this *QTouchDevice) MaximumTouchPoints() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice18maximumTouchPointsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTouchDevice) MaximumTouchPoints() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice18maximumTouchPointsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:83
 // index:0
+// Public
 // void setName(const class QString &)
-func (this *QTouchDevice) SetName(name unsafe.Pointer) {
-	// 0: (, name const QString &), (name)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7setNameERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), name)
+func (this *QTouchDevice) SetName(name *qtcore.QString) {
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7setNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:84
 // index:0
+// Public
 // void setType(enum QTouchDevice::DeviceType)
 func (this *QTouchDevice) SetType(devType int) {
-	// 0: (, devType QTouchDevice::DeviceType), (&devType)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7setTypeENS_10DeviceTypeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &devType)
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qtouchdevice.h:85
-// index:0
-// void setCapabilities(QTouchDevice::Capabilities)
-func (this *QTouchDevice) SetCapabilities(caps int) {
-	// 0: (, QFlags<QTouchDevice::CapabilityFlag> caps), (caps)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice15setCapabilitiesE6QFlagsINS_14CapabilityFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), caps)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7setTypeENS_10DeviceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &devType)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:86
 // index:0
+// Public
 // void setMaximumTouchPoints(int)
 func (this *QTouchDevice) SetMaximumTouchPoints(max int) {
-	// 0: (, max int), (&max)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice21setMaximumTouchPointsEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice21setMaximumTouchPointsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &max)
 	gopp.ErrPrint(err, rv)
 }
 

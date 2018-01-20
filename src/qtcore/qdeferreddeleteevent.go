@@ -51,25 +51,26 @@ type QDeferredDeleteEvent struct {
 func (this *QDeferredDeleteEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtCore/qcoreevent.h:377
-// index:0
-// void QDeferredDeleteEvent()
-func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDeferredDeleteEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQDeferredDeleteEventFromPointer(cthis)
-	return gothis
-}
 func NewQDeferredDeleteEventFromPointer(cthis unsafe.Pointer) *QDeferredDeleteEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
 	return &QDeferredDeleteEvent{bcthis0}
 }
 
+// /usr/include/qt/QtCore/qcoreevent.h:377
+// index:0
+// Public
+// void QDeferredDeleteEvent()
+func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
+	cthis := qtrt.Calloc(1, 256) // 24
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDeferredDeleteEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDeferredDeleteEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qcoreevent.h:378
 // index:0
-// virtual
+// Public virtual
 // void ~QDeferredDeleteEvent()
 func DeleteQDeferredDeleteEvent(*QDeferredDeleteEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDeferredDeleteEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -78,12 +79,12 @@ func DeleteQDeferredDeleteEvent(*QDeferredDeleteEvent) {
 
 // /usr/include/qt/QtCore/qcoreevent.h:379
 // index:0
-// inline
+// Public inline
 // int loopLevel()
-func (this *QDeferredDeleteEvent) LoopLevel() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QDeferredDeleteEvent9loopLevelEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDeferredDeleteEvent) LoopLevel() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QDeferredDeleteEvent9loopLevelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

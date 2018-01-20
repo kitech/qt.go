@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 26
+// extern C begin: 24
 */
 // import "C"
 import "unsafe"
@@ -55,28 +55,31 @@ type QTextListFormat struct {
 func (this *QTextListFormat) GetCthis() unsafe.Pointer {
 	return this.QTextFormat.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qtextformat.h:681
-// index:0
-// void QTextListFormat()
-func NewQTextListFormat() *QTextListFormat {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormatC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQTextListFormatFromPointer(cthis)
-	return gothis
-}
 func NewQTextListFormatFromPointer(cthis unsafe.Pointer) *QTextListFormat {
 	bcthis0 := NewQTextFormatFromPointer(cthis)
 	return &QTextListFormat{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qtextformat.h:681
+// index:0
+// Public
+// void QTextListFormat()
+func NewQTextListFormat() *QTextListFormat {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormatC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextListFormatFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qtextformat.h:714
 // index:1
+// Protected
 // void QTextListFormat(const class QTextFormat &)
-func NewQTextListFormat_1(fmt unsafe.Pointer) *QTextListFormat {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormatC2ERK11QTextFormat", ffiqt.FFI_TYPE_VOID, cthis, fmt)
+func NewQTextListFormat_1(fmt *QTextFormat) *QTextListFormat {
+	cthis := qtrt.Calloc(1, 256) // 16
+	var convArg0 = fmt.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormatC2ERK11QTextFormat", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextListFormatFromPointer(cthis)
 	return gothis
@@ -84,92 +87,90 @@ func NewQTextListFormat_1(fmt unsafe.Pointer) *QTextListFormat {
 
 // /usr/include/qt/QtGui/qtextformat.h:683
 // index:0
-// inline
+// Public inline
 // bool isValid()
-func (this *QTextListFormat) IsValid() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextListFormat7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextListFormat) IsValid() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextListFormat7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:697
 // index:0
-// inline
+// Public inline
 // void setStyle(enum QTextListFormat::Style)
 func (this *QTextListFormat) SetStyle(style int) {
-	// 0: (, style QTextListFormat::Style), (&style)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat8setStyleENS_5StyleE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat8setStyleENS_5StyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &style)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:698
 // index:0
-// inline
+// Public inline
 // QTextListFormat::Style style()
-func (this *QTextListFormat) Style() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextListFormat5styleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextListFormat) Style() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextListFormat5styleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:701
 // index:0
-// inline
+// Public inline
 // void setIndent(int)
 func (this *QTextListFormat) SetIndent(indent int) {
-	// 0: (, indent int), (&indent)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat9setIndentEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &indent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat9setIndentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &indent)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:702
 // index:0
-// inline
+// Public inline
 // int indent()
-func (this *QTextListFormat) Indent() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextListFormat6indentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextListFormat) Indent() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextListFormat6indentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:705
 // index:0
-// inline
+// Public inline
 // void setNumberPrefix(const class QString &)
-func (this *QTextListFormat) SetNumberPrefix(numberPrefix unsafe.Pointer) {
-	// 0: (, numberPrefix const QString &), (numberPrefix)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat15setNumberPrefixERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), numberPrefix)
+func (this *QTextListFormat) SetNumberPrefix(numberPrefix *qtcore.QString) {
+	var convArg0 = numberPrefix.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat15setNumberPrefixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:706
 // index:0
-// inline
+// Public inline
 // QString numberPrefix()
-func (this *QTextListFormat) NumberPrefix() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextListFormat12numberPrefixEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextListFormat) NumberPrefix() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextListFormat12numberPrefixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:709
 // index:0
-// inline
+// Public inline
 // void setNumberSuffix(const class QString &)
-func (this *QTextListFormat) SetNumberSuffix(numberSuffix unsafe.Pointer) {
-	// 0: (, numberSuffix const QString &), (numberSuffix)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat15setNumberSuffixERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), numberSuffix)
+func (this *QTextListFormat) SetNumberSuffix(numberSuffix *qtcore.QString) {
+	var convArg0 = numberSuffix.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat15setNumberSuffixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:710
 // index:0
-// inline
+// Public inline
 // QString numberSuffix()
-func (this *QTextListFormat) NumberSuffix() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextListFormat12numberSuffixEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QTextListFormat) NumberSuffix() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextListFormat12numberSuffixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

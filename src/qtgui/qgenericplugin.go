@@ -55,35 +55,36 @@ type QGenericPlugin struct {
 func (this *QGenericPlugin) GetCthis() unsafe.Pointer {
 	return this.QObject.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qgenericplugin.h:53
-// index:0
-// virtual
-// const QMetaObject * metaObject()
-func (this *QGenericPlugin) MetaObject() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGenericPlugin10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qgenericplugin.h:55
-// index:0
-// void QGenericPlugin(class QObject *)
-func NewQGenericPlugin(parent unsafe.Pointer) *QGenericPlugin {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQGenericPluginFromPointer(cthis)
-	return gothis
-}
 func NewQGenericPluginFromPointer(cthis unsafe.Pointer) *QGenericPlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QGenericPlugin{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qgenericplugin.h:53
+// index:0
+// Public virtual
+// const QMetaObject * metaObject()
+func (this *QGenericPlugin) MetaObject() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGenericPlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	return rv
+}
+
+// /usr/include/qt/QtGui/qgenericplugin.h:55
+// index:0
+// Public
+// void QGenericPlugin(class QObject *)
+func NewQGenericPlugin(parent unsafe.Pointer) *QGenericPlugin {
+	cthis := qtrt.Calloc(1, 256) // 16
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQGenericPluginFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qgenericplugin.h:56
 // index:0
-// virtual
+// Public virtual
 // void ~QGenericPlugin()
 func DeleteQGenericPlugin(*QGenericPlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -92,12 +93,14 @@ func DeleteQGenericPlugin(*QGenericPlugin) {
 
 // /usr/include/qt/QtGui/qgenericplugin.h:58
 // index:0
-// pure virtual
+// Public pure virtual
 // QObject * create(const class QString &, const class QString &)
-func (this *QGenericPlugin) Create(name unsafe.Pointer, spec unsafe.Pointer) {
-	// 0: (, name const QString &, spec const QString &), (name, spec)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPlugin6createERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), name, spec)
+func (this *QGenericPlugin) Create(name *qtcore.QString, spec *qtcore.QString) interface{} {
+	var convArg0 = name.GetCthis()
+	var convArg1 = spec.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPlugin6createERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

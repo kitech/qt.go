@@ -51,25 +51,27 @@ type QDynamicPropertyChangeEvent struct {
 func (this *QDynamicPropertyChangeEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtCore/qcoreevent.h:365
-// index:0
-// void QDynamicPropertyChangeEvent(const class QByteArray &)
-func NewQDynamicPropertyChangeEvent(name unsafe.Pointer) *QDynamicPropertyChangeEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, name)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQDynamicPropertyChangeEventFromPointer(cthis)
-	return gothis
-}
 func NewQDynamicPropertyChangeEventFromPointer(cthis unsafe.Pointer) *QDynamicPropertyChangeEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
 	return &QDynamicPropertyChangeEvent{bcthis0}
 }
 
+// /usr/include/qt/QtCore/qcoreevent.h:365
+// index:0
+// Public
+// void QDynamicPropertyChangeEvent(const class QByteArray &)
+func NewQDynamicPropertyChangeEvent(name *QByteArray) *QDynamicPropertyChangeEvent {
+	cthis := qtrt.Calloc(1, 256) // 32
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDynamicPropertyChangeEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qcoreevent.h:366
 // index:0
-// virtual
+// Public virtual
 // void ~QDynamicPropertyChangeEvent()
 func DeleteQDynamicPropertyChangeEvent(*QDynamicPropertyChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -78,12 +80,12 @@ func DeleteQDynamicPropertyChangeEvent(*QDynamicPropertyChangeEvent) {
 
 // /usr/include/qt/QtCore/qcoreevent.h:368
 // index:0
-// inline
+// Public inline
 // QByteArray propertyName()
-func (this *QDynamicPropertyChangeEvent) PropertyName() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QDynamicPropertyChangeEvent) PropertyName() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

@@ -59,27 +59,29 @@ type QStyleOptionSizeGrip struct {
 func (this *QStyleOptionSizeGrip) GetCthis() unsafe.Pointer {
 	return this.QStyleOptionComplex.GetCthis()
 }
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:653
-// index:0
-// void QStyleOptionSizeGrip()
-func NewQStyleOptionSizeGrip() *QStyleOptionSizeGrip {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionSizeGripFromPointer(cthis)
-	return gothis
-}
 func NewQStyleOptionSizeGripFromPointer(cthis unsafe.Pointer) *QStyleOptionSizeGrip {
 	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
 	return &QStyleOptionSizeGrip{bcthis0}
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:653
+// index:0
+// Public
+// void QStyleOptionSizeGrip()
+func NewQStyleOptionSizeGrip() *QStyleOptionSizeGrip {
+	cthis := qtrt.Calloc(1, 256) // 80
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionSizeGripFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:656
 // index:1
+// Protected
 // void QStyleOptionSizeGrip(int)
 func NewQStyleOptionSizeGrip_1(version int) *QStyleOptionSizeGrip {
-	cthis := qtrt.Calloc(1, 256)
+	cthis := qtrt.Calloc(1, 256) // 80
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSizeGripFromPointer(cthis)

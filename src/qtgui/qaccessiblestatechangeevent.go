@@ -55,38 +55,14 @@ type QAccessibleStateChangeEvent struct {
 func (this *QAccessibleStateChangeEvent) GetCthis() unsafe.Pointer {
 	return this.QAccessibleEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qaccessible.h:723
-// index:0
-// inline
-// void QAccessibleStateChangeEvent(class QObject *, class QAccessible::State)
-func NewQAccessibleStateChangeEvent(obj unsafe.Pointer, state int) *QAccessibleStateChangeEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleStateChangeEventC2EP7QObjectN11QAccessible5StateE", ffiqt.FFI_TYPE_VOID, cthis, obj, &state)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQAccessibleStateChangeEventFromPointer(cthis)
-	return gothis
-}
 func NewQAccessibleStateChangeEventFromPointer(cthis unsafe.Pointer) *QAccessibleStateChangeEvent {
 	bcthis0 := NewQAccessibleEventFromPointer(cthis)
 	return &QAccessibleStateChangeEvent{bcthis0}
 }
 
-// /usr/include/qt/QtGui/qaccessible.h:728
-// index:1
-// inline
-// void QAccessibleStateChangeEvent(class QAccessibleInterface *, class QAccessible::State)
-func NewQAccessibleStateChangeEvent_1(iface unsafe.Pointer, state int) *QAccessibleStateChangeEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleStateChangeEventC2EP20QAccessibleInterfaceN11QAccessible5StateE", ffiqt.FFI_TYPE_VOID, cthis, iface, &state)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQAccessibleStateChangeEventFromPointer(cthis)
-	return gothis
-}
-
 // /usr/include/qt/QtGui/qaccessible.h:733
 // index:0
-// virtual
+// Public virtual
 // void ~QAccessibleStateChangeEvent()
 func DeleteQAccessibleStateChangeEvent(*QAccessibleStateChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleStateChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -95,12 +71,12 @@ func DeleteQAccessibleStateChangeEvent(*QAccessibleStateChangeEvent) {
 
 // /usr/include/qt/QtGui/qaccessible.h:735
 // index:0
-// inline
+// Public inline
 // QAccessible::State changedStates()
-func (this *QAccessibleStateChangeEvent) ChangedStates() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAccessibleStateChangeEvent13changedStatesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QAccessibleStateChangeEvent) ChangedStates() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAccessibleStateChangeEvent13changedStatesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end

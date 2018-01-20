@@ -55,25 +55,27 @@ type QStatusTipEvent struct {
 func (this *QStatusTipEvent) GetCthis() unsafe.Pointer {
 	return this.QEvent.GetCthis()
 }
-
-// /usr/include/qt/QtGui/qevent.h:700
-// index:0
-// void QStatusTipEvent(const class QString &)
-func NewQStatusTipEvent(tip unsafe.Pointer) *QStatusTipEvent {
-	cthis := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStatusTipEventC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, tip)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQStatusTipEventFromPointer(cthis)
-	return gothis
-}
 func NewQStatusTipEventFromPointer(cthis unsafe.Pointer) *QStatusTipEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QStatusTipEvent{bcthis0}
 }
 
+// /usr/include/qt/QtGui/qevent.h:700
+// index:0
+// Public
+// void QStatusTipEvent(const class QString &)
+func NewQStatusTipEvent(tip *qtcore.QString) *QStatusTipEvent {
+	cthis := qtrt.Calloc(1, 256) // 32
+	var convArg0 = tip.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStatusTipEventC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStatusTipEventFromPointer(cthis)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:701
 // index:0
-// virtual
+// Public virtual
 // void ~QStatusTipEvent()
 func DeleteQStatusTipEvent(*QStatusTipEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStatusTipEventD2Ev", ffiqt.FFI_TYPE_VOID)
@@ -82,12 +84,12 @@ func DeleteQStatusTipEvent(*QStatusTipEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:703
 // index:0
-// inline
+// Public inline
 // QString tip()
-func (this *QStatusTipEvent) Tip() {
-	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QStatusTipEvent3tipEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+func (this *QStatusTipEvent) Tip() interface{} {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QStatusTipEvent3tipEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	return rv
 }
 
 //  body block end
