@@ -1,4 +1,4 @@
-package main
+package ffiqt
 
 /*
 #cgo CFLAGS: -I/usr/lib/libffi-3.2.1/include/
@@ -85,6 +85,7 @@ import (
 	"gopp"
 	"log"
 	"reflect"
+	"strings"
 	"unsafe"
 
 	"github.com/gonuts/ffi"
@@ -175,7 +176,7 @@ func InvokeQtFunc5(symname string, retype byte, argc int, types []byte, args []u
 
 func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, error) {
 	addr := getSymAddr(symname)
-	log.Println("FFI Call:", symname, addr)
+	log.Println("FFI Call:", symname, addr, len(args))
 
 	argtys, argvals := convArgs(args...)
 	var retval C.uint64_t = 0
@@ -185,10 +186,15 @@ func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, e
 	return uint64(retval), nil
 }
 
+func isUndefinedSymbolErr(err error) bool {
+	return err != nil && strings.Contains(err.Error(), ": undefined symbol: ")
+}
 func getSymAddr(symname string) unsafe.Pointer {
 	for _, lib := range libs {
 		addr, err := lib.Symbol(symname)
-		gopp.ErrPrint(err)
+		if !isUndefinedSymbolErr(err) {
+			gopp.ErrPrint(err, "")
+		}
 		if err != nil {
 			continue
 		}
@@ -274,3 +280,5 @@ const (
 	FFI_TYPE_POINTER    = byte(C.FFI_TYPE_POINTER)
 	FFI_TYPE_COMPLEX    = byte(C.FFI_TYPE_COMPLEX)
 )
+
+func KeepMe() {}

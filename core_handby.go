@@ -1,4 +1,4 @@
-package main
+package ffiqt
 
 /*
 #include <stdlib.h>
@@ -163,6 +163,10 @@ func NewQString5FromStr(s string) *QString5 {
 	return o
 }
 
+func NewQString5FromPointer(p unsafe.Pointer) *QString5 {
+	return &QString5{p}
+}
+
 func (str *QString5) Length() int {
 	l, err := InvokeQtFunc6("_ZNK7QString6lengthEv", FFI_TYPE_INT, str.cptr)
 	gopp.ErrPrint(err)
@@ -189,6 +193,10 @@ func NewQByteArray5FromStr(s string) *QByteArray5 {
 
 	o.cptr = t
 	return o
+}
+
+func NewQByteArray5FromPointer(p unsafe.Pointer) *QByteArray5 {
+	return &QByteArray5{p}
 }
 
 func (ba *QByteArray5) Length() int {

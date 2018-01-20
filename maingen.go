@@ -1,4 +1,4 @@
-package main
+package ffiqt
 
 import (
 	"fmt"
@@ -76,18 +76,18 @@ func main_a() {
 			cp.Appendv("body", "// ", chksym, mi.FullName, mi.Signature)
 			{
 				overloadSuffix := gopp.IfElseStr(mi.OverloadNumber == 0, "", fmt.Sprintf("_%d", mi.OverloadNumber))
+				bindingName := fmt.Sprintf("%s_%s%s", ci.Name, mi.Name, overloadSuffix)
 				if strings.HasPrefix(mi.Name, "operator") {
 					valiname := rewriteOperatorMethodName(mi.Name)
+					bindingName = fmt.Sprintf("%s_%s%s", ci.Name, valiname, overloadSuffix)
 					// log.Println(mi.Name, "=>", valiname)
-					cp.Append("body", fmt.Sprintf("func %s_%s%s(){}",
-						ci.Name, valiname, overloadSuffix))
 				} else if strings.HasPrefix(mi.Name, "~") {
-					cp.Append("body", fmt.Sprintf("func %s_%s%s(){}",
-						ci.Name, "Dtor_"+mi.Name[1:], overloadSuffix))
+					bindingName = fmt.Sprintf("%s_%s%s", ci.Name, "Dtor_"+mi.Name[1:], overloadSuffix)
 				} else {
-					cp.Append("body", fmt.Sprintf("func %s_%s%s(){}",
-						ci.Name, mi.Name, overloadSuffix))
 				}
+				cp.Append("body", fmt.Sprintf("func %s(){", bindingName))
+				cp.Append("body", fmt.Sprintf("  // InvokeQtFunc6(\"%s\", FFI_TYPE_VOID)", symname))
+				cp.Append("body", fmt.Sprintf("}"))
 			}
 
 			argumento := methodso.GetIndex(j).Get("parameter")

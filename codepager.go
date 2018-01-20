@@ -1,4 +1,4 @@
-package main
+package ffiqt
 
 import (
 	"fmt"
