@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QStyleHints struct {
-	cthis unsafe.Pointer
+	*qtcore.QObject
+}
+
+func (this *QStyleHints) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:54
@@ -58,7 +62,7 @@ type QStyleHints struct {
 // const QMetaObject * metaObject()
 func (this *QStyleHints) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -66,8 +70,8 @@ func (this *QStyleHints) MetaObject() {
 // index:0
 // void setMouseDoubleClickInterval(int)
 func (this *QStyleHints) SetMouseDoubleClickInterval(mouseDoubleClickInterval int) {
-	// 0: (, int mouseDoubleClickInterval), (&mouseDoubleClickInterval)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints27setMouseDoubleClickIntervalEi", ffiqt.FFI_TYPE_VOID, this.cthis, &mouseDoubleClickInterval)
+	// 0: (, mouseDoubleClickInterval int), (&mouseDoubleClickInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints27setMouseDoubleClickIntervalEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mouseDoubleClickInterval)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -76,7 +80,7 @@ func (this *QStyleHints) SetMouseDoubleClickInterval(mouseDoubleClickInterval in
 // int mouseDoubleClickInterval()
 func (this *QStyleHints) MouseDoubleClickInterval() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints24mouseDoubleClickIntervalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints24mouseDoubleClickIntervalEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -84,8 +88,8 @@ func (this *QStyleHints) MouseDoubleClickInterval() {
 // index:0
 // void setMousePressAndHoldInterval(int)
 func (this *QStyleHints) SetMousePressAndHoldInterval(mousePressAndHoldInterval int) {
-	// 0: (, int mousePressAndHoldInterval), (&mousePressAndHoldInterval)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints28setMousePressAndHoldIntervalEi", ffiqt.FFI_TYPE_VOID, this.cthis, &mousePressAndHoldInterval)
+	// 0: (, mousePressAndHoldInterval int), (&mousePressAndHoldInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints28setMousePressAndHoldIntervalEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mousePressAndHoldInterval)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -94,7 +98,7 @@ func (this *QStyleHints) SetMousePressAndHoldInterval(mousePressAndHoldInterval 
 // int mousePressAndHoldInterval()
 func (this *QStyleHints) MousePressAndHoldInterval() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints25mousePressAndHoldIntervalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints25mousePressAndHoldIntervalEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -102,8 +106,8 @@ func (this *QStyleHints) MousePressAndHoldInterval() {
 // index:0
 // void setStartDragDistance(int)
 func (this *QStyleHints) SetStartDragDistance(startDragDistance int) {
-	// 0: (, int startDragDistance), (&startDragDistance)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints20setStartDragDistanceEi", ffiqt.FFI_TYPE_VOID, this.cthis, &startDragDistance)
+	// 0: (, startDragDistance int), (&startDragDistance)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints20setStartDragDistanceEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &startDragDistance)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,7 +116,7 @@ func (this *QStyleHints) SetStartDragDistance(startDragDistance int) {
 // int startDragDistance()
 func (this *QStyleHints) StartDragDistance() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17startDragDistanceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17startDragDistanceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -120,8 +124,8 @@ func (this *QStyleHints) StartDragDistance() {
 // index:0
 // void setStartDragTime(int)
 func (this *QStyleHints) SetStartDragTime(startDragTime int) {
-	// 0: (, int startDragTime), (&startDragTime)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints16setStartDragTimeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &startDragTime)
+	// 0: (, startDragTime int), (&startDragTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints16setStartDragTimeEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &startDragTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +134,7 @@ func (this *QStyleHints) SetStartDragTime(startDragTime int) {
 // int startDragTime()
 func (this *QStyleHints) StartDragTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints13startDragTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints13startDragTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -139,7 +143,7 @@ func (this *QStyleHints) StartDragTime() {
 // int startDragVelocity()
 func (this *QStyleHints) StartDragVelocity() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17startDragVelocityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17startDragVelocityEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -147,8 +151,8 @@ func (this *QStyleHints) StartDragVelocity() {
 // index:0
 // void setKeyboardInputInterval(int)
 func (this *QStyleHints) SetKeyboardInputInterval(keyboardInputInterval int) {
-	// 0: (, int keyboardInputInterval), (&keyboardInputInterval)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints24setKeyboardInputIntervalEi", ffiqt.FFI_TYPE_VOID, this.cthis, &keyboardInputInterval)
+	// 0: (, keyboardInputInterval int), (&keyboardInputInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints24setKeyboardInputIntervalEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &keyboardInputInterval)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -157,7 +161,7 @@ func (this *QStyleHints) SetKeyboardInputInterval(keyboardInputInterval int) {
 // int keyboardInputInterval()
 func (this *QStyleHints) KeyboardInputInterval() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21keyboardInputIntervalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21keyboardInputIntervalEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -166,7 +170,7 @@ func (this *QStyleHints) KeyboardInputInterval() {
 // int keyboardAutoRepeatRate()
 func (this *QStyleHints) KeyboardAutoRepeatRate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints22keyboardAutoRepeatRateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints22keyboardAutoRepeatRateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -174,8 +178,8 @@ func (this *QStyleHints) KeyboardAutoRepeatRate() {
 // index:0
 // void setCursorFlashTime(int)
 func (this *QStyleHints) SetCursorFlashTime(cursorFlashTime int) {
-	// 0: (, int cursorFlashTime), (&cursorFlashTime)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints18setCursorFlashTimeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &cursorFlashTime)
+	// 0: (, cursorFlashTime int), (&cursorFlashTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints18setCursorFlashTimeEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &cursorFlashTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -184,7 +188,7 @@ func (this *QStyleHints) SetCursorFlashTime(cursorFlashTime int) {
 // int cursorFlashTime()
 func (this *QStyleHints) CursorFlashTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15cursorFlashTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15cursorFlashTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,7 +197,7 @@ func (this *QStyleHints) CursorFlashTime() {
 // bool showIsFullScreen()
 func (this *QStyleHints) ShowIsFullScreen() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16showIsFullScreenEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16showIsFullScreenEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -202,7 +206,7 @@ func (this *QStyleHints) ShowIsFullScreen() {
 // bool showIsMaximized()
 func (this *QStyleHints) ShowIsMaximized() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15showIsMaximizedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15showIsMaximizedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +215,7 @@ func (this *QStyleHints) ShowIsMaximized() {
 // bool showShortcutsInContextMenus()
 func (this *QStyleHints) ShowShortcutsInContextMenus() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints27showShortcutsInContextMenusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints27showShortcutsInContextMenusEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -220,7 +224,7 @@ func (this *QStyleHints) ShowShortcutsInContextMenus() {
 // int passwordMaskDelay()
 func (this *QStyleHints) PasswordMaskDelay() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17passwordMaskDelayEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17passwordMaskDelayEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -229,7 +233,7 @@ func (this *QStyleHints) PasswordMaskDelay() {
 // QChar passwordMaskCharacter()
 func (this *QStyleHints) PasswordMaskCharacter() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21passwordMaskCharacterEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21passwordMaskCharacterEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -238,7 +242,7 @@ func (this *QStyleHints) PasswordMaskCharacter() {
 // qreal fontSmoothingGamma()
 func (this *QStyleHints) FontSmoothingGamma() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints18fontSmoothingGammaEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints18fontSmoothingGammaEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -247,7 +251,7 @@ func (this *QStyleHints) FontSmoothingGamma() {
 // bool useRtlExtensions()
 func (this *QStyleHints) UseRtlExtensions() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16useRtlExtensionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16useRtlExtensionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -256,7 +260,7 @@ func (this *QStyleHints) UseRtlExtensions() {
 // bool setFocusOnTouchRelease()
 func (this *QStyleHints) SetFocusOnTouchRelease() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints22setFocusOnTouchReleaseEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints22setFocusOnTouchReleaseEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -265,7 +269,7 @@ func (this *QStyleHints) SetFocusOnTouchRelease() {
 // Qt::TabFocusBehavior tabFocusBehavior()
 func (this *QStyleHints) TabFocusBehavior() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16tabFocusBehaviorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16tabFocusBehaviorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -273,8 +277,8 @@ func (this *QStyleHints) TabFocusBehavior() {
 // index:0
 // void setTabFocusBehavior(Qt::TabFocusBehavior)
 func (this *QStyleHints) SetTabFocusBehavior(tabFocusBehavior int) {
-	// 0: (, Qt::TabFocusBehavior tabFocusBehavior), (&tabFocusBehavior)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints19setTabFocusBehaviorEN2Qt16TabFocusBehaviorE", ffiqt.FFI_TYPE_VOID, this.cthis, &tabFocusBehavior)
+	// 0: (, tabFocusBehavior Qt::TabFocusBehavior), (&tabFocusBehavior)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints19setTabFocusBehaviorEN2Qt16TabFocusBehaviorE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &tabFocusBehavior)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -283,7 +287,7 @@ func (this *QStyleHints) SetTabFocusBehavior(tabFocusBehavior int) {
 // bool singleClickActivation()
 func (this *QStyleHints) SingleClickActivation() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21singleClickActivationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21singleClickActivationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -292,7 +296,7 @@ func (this *QStyleHints) SingleClickActivation() {
 // bool useHoverEffects()
 func (this *QStyleHints) UseHoverEffects() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15useHoverEffectsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15useHoverEffectsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -300,8 +304,8 @@ func (this *QStyleHints) UseHoverEffects() {
 // index:0
 // void setUseHoverEffects(_Bool)
 func (this *QStyleHints) SetUseHoverEffects(useHoverEffects bool) {
-	// 0: (, bool useHoverEffects), (&useHoverEffects)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints18setUseHoverEffectsEb", ffiqt.FFI_TYPE_VOID, this.cthis, &useHoverEffects)
+	// 0: (, useHoverEffects bool), (&useHoverEffects)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints18setUseHoverEffectsEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &useHoverEffects)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -310,7 +314,7 @@ func (this *QStyleHints) SetUseHoverEffects(useHoverEffects bool) {
 // int wheelScrollLines()
 func (this *QStyleHints) WheelScrollLines() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16wheelScrollLinesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16wheelScrollLinesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -318,8 +322,8 @@ func (this *QStyleHints) WheelScrollLines() {
 // index:0
 // void setWheelScrollLines(int)
 func (this *QStyleHints) SetWheelScrollLines(scrollLines int) {
-	// 0: (, int scrollLines), (&scrollLines)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints19setWheelScrollLinesEi", ffiqt.FFI_TYPE_VOID, this.cthis, &scrollLines)
+	// 0: (, scrollLines int), (&scrollLines)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints19setWheelScrollLinesEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &scrollLines)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -327,8 +331,8 @@ func (this *QStyleHints) SetWheelScrollLines(scrollLines int) {
 // index:0
 // void cursorFlashTimeChanged(int)
 func (this *QStyleHints) CursorFlashTimeChanged(cursorFlashTime int) {
-	// 0: (, int cursorFlashTime), (&cursorFlashTime)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints22cursorFlashTimeChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &cursorFlashTime)
+	// 0: (, cursorFlashTime int), (&cursorFlashTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints22cursorFlashTimeChangedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &cursorFlashTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -336,8 +340,8 @@ func (this *QStyleHints) CursorFlashTimeChanged(cursorFlashTime int) {
 // index:0
 // void keyboardInputIntervalChanged(int)
 func (this *QStyleHints) KeyboardInputIntervalChanged(keyboardInputInterval int) {
-	// 0: (, int keyboardInputInterval), (&keyboardInputInterval)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints28keyboardInputIntervalChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &keyboardInputInterval)
+	// 0: (, keyboardInputInterval int), (&keyboardInputInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints28keyboardInputIntervalChangedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &keyboardInputInterval)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -345,8 +349,8 @@ func (this *QStyleHints) KeyboardInputIntervalChanged(keyboardInputInterval int)
 // index:0
 // void mouseDoubleClickIntervalChanged(int)
 func (this *QStyleHints) MouseDoubleClickIntervalChanged(mouseDoubleClickInterval int) {
-	// 0: (, int mouseDoubleClickInterval), (&mouseDoubleClickInterval)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints31mouseDoubleClickIntervalChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &mouseDoubleClickInterval)
+	// 0: (, mouseDoubleClickInterval int), (&mouseDoubleClickInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints31mouseDoubleClickIntervalChangedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mouseDoubleClickInterval)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -354,8 +358,8 @@ func (this *QStyleHints) MouseDoubleClickIntervalChanged(mouseDoubleClickInterva
 // index:0
 // void mousePressAndHoldIntervalChanged(int)
 func (this *QStyleHints) MousePressAndHoldIntervalChanged(mousePressAndHoldInterval int) {
-	// 0: (, int mousePressAndHoldInterval), (&mousePressAndHoldInterval)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints32mousePressAndHoldIntervalChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &mousePressAndHoldInterval)
+	// 0: (, mousePressAndHoldInterval int), (&mousePressAndHoldInterval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints32mousePressAndHoldIntervalChangedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mousePressAndHoldInterval)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -363,8 +367,8 @@ func (this *QStyleHints) MousePressAndHoldIntervalChanged(mousePressAndHoldInter
 // index:0
 // void startDragDistanceChanged(int)
 func (this *QStyleHints) StartDragDistanceChanged(startDragDistance int) {
-	// 0: (, int startDragDistance), (&startDragDistance)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints24startDragDistanceChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &startDragDistance)
+	// 0: (, startDragDistance int), (&startDragDistance)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints24startDragDistanceChangedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &startDragDistance)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -372,8 +376,8 @@ func (this *QStyleHints) StartDragDistanceChanged(startDragDistance int) {
 // index:0
 // void startDragTimeChanged(int)
 func (this *QStyleHints) StartDragTimeChanged(startDragTime int) {
-	// 0: (, int startDragTime), (&startDragTime)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints20startDragTimeChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &startDragTime)
+	// 0: (, startDragTime int), (&startDragTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints20startDragTimeChangedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &startDragTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -381,8 +385,8 @@ func (this *QStyleHints) StartDragTimeChanged(startDragTime int) {
 // index:0
 // void tabFocusBehaviorChanged(Qt::TabFocusBehavior)
 func (this *QStyleHints) TabFocusBehaviorChanged(tabFocusBehavior int) {
-	// 0: (, Qt::TabFocusBehavior tabFocusBehavior), (&tabFocusBehavior)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints23tabFocusBehaviorChangedEN2Qt16TabFocusBehaviorE", ffiqt.FFI_TYPE_VOID, this.cthis, &tabFocusBehavior)
+	// 0: (, tabFocusBehavior Qt::TabFocusBehavior), (&tabFocusBehavior)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints23tabFocusBehaviorChangedEN2Qt16TabFocusBehaviorE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &tabFocusBehavior)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -390,8 +394,8 @@ func (this *QStyleHints) TabFocusBehaviorChanged(tabFocusBehavior int) {
 // index:0
 // void useHoverEffectsChanged(_Bool)
 func (this *QStyleHints) UseHoverEffectsChanged(useHoverEffects bool) {
-	// 0: (, bool useHoverEffects), (&useHoverEffects)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints22useHoverEffectsChangedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &useHoverEffects)
+	// 0: (, useHoverEffects bool), (&useHoverEffects)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints22useHoverEffectsChangedEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &useHoverEffects)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -399,8 +403,8 @@ func (this *QStyleHints) UseHoverEffectsChanged(useHoverEffects bool) {
 // index:0
 // void wheelScrollLinesChanged(int)
 func (this *QStyleHints) WheelScrollLinesChanged(scrollLines int) {
-	// 0: (, int scrollLines), (&scrollLines)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints23wheelScrollLinesChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &scrollLines)
+	// 0: (, scrollLines int), (&scrollLines)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints23wheelScrollLinesChangedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &scrollLines)
 	gopp.ErrPrint(err, rv)
 }
 

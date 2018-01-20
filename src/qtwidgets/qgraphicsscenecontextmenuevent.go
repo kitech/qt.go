@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 14
+// extern C begin: 16
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QGraphicsSceneContextMenuEvent struct {
-	cthis unsafe.Pointer
+	*QGraphicsSceneEvent
+}
+
+func (this *QGraphicsSceneContextMenuEvent) GetCthis() unsafe.Pointer {
+	return this.QGraphicsSceneEvent.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:174
@@ -63,7 +67,12 @@ func NewQGraphicsSceneContextMenuEvent(type_ int) *QGraphicsSceneContextMenuEven
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QGraphicsSceneContextMenuEvent{cthis}
+	gothis := NewQGraphicsSceneContextMenuEventFromPointer(cthis)
+	return gothis
+}
+func NewQGraphicsSceneContextMenuEventFromPointer(cthis unsafe.Pointer) *QGraphicsSceneContextMenuEvent {
+	bcthis0 := NewQGraphicsSceneEventFromPointer(cthis)
+	return &QGraphicsSceneContextMenuEvent{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:175
@@ -80,7 +89,7 @@ func DeleteQGraphicsSceneContextMenuEvent(*QGraphicsSceneContextMenuEvent) {
 // QPointF pos()
 func (this *QGraphicsSceneContextMenuEvent) Pos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QGraphicsSceneContextMenuEvent3posEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QGraphicsSceneContextMenuEvent3posEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,8 +97,8 @@ func (this *QGraphicsSceneContextMenuEvent) Pos() {
 // index:0
 // void setPos(const class QPointF &)
 func (this *QGraphicsSceneContextMenuEvent) SetPos(pos unsafe.Pointer) {
-	// 0: (, const QPointF & pos), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, pos)
+	// 0: (, pos const QPointF &), (pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -98,7 +107,7 @@ func (this *QGraphicsSceneContextMenuEvent) SetPos(pos unsafe.Pointer) {
 // QPointF scenePos()
 func (this *QGraphicsSceneContextMenuEvent) ScenePos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,8 +115,8 @@ func (this *QGraphicsSceneContextMenuEvent) ScenePos() {
 // index:0
 // void setScenePos(const class QPointF &)
 func (this *QGraphicsSceneContextMenuEvent) SetScenePos(pos unsafe.Pointer) {
-	// 0: (, const QPointF & pos), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, pos)
+	// 0: (, pos const QPointF &), (pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +125,7 @@ func (this *QGraphicsSceneContextMenuEvent) SetScenePos(pos unsafe.Pointer) {
 // QPoint screenPos()
 func (this *QGraphicsSceneContextMenuEvent) ScreenPos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -124,8 +133,8 @@ func (this *QGraphicsSceneContextMenuEvent) ScreenPos() {
 // index:0
 // void setScreenPos(const class QPoint &)
 func (this *QGraphicsSceneContextMenuEvent) SetScreenPos(pos unsafe.Pointer) {
-	// 0: (, const QPoint & pos), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, pos)
+	// 0: (, pos const QPoint &), (pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,7 +143,16 @@ func (this *QGraphicsSceneContextMenuEvent) SetScreenPos(pos unsafe.Pointer) {
 // Qt::KeyboardModifiers modifiers()
 func (this *QGraphicsSceneContextMenuEvent) Modifiers() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QGraphicsSceneContextMenuEvent9modifiersEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QGraphicsSceneContextMenuEvent9modifiersEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:187
+// index:0
+// void setModifiers(Qt::KeyboardModifiers)
+func (this *QGraphicsSceneContextMenuEvent) SetModifiers(modifiers int) {
+	// 0: (, QFlags<Qt::KeyboardModifier> modifiers), (&modifiers)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &modifiers)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,7 +161,7 @@ func (this *QGraphicsSceneContextMenuEvent) Modifiers() {
 // QGraphicsSceneContextMenuEvent::Reason reason()
 func (this *QGraphicsSceneContextMenuEvent) Reason() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QGraphicsSceneContextMenuEvent6reasonEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QGraphicsSceneContextMenuEvent6reasonEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,8 +169,8 @@ func (this *QGraphicsSceneContextMenuEvent) Reason() {
 // index:0
 // void setReason(enum QGraphicsSceneContextMenuEvent::Reason)
 func (this *QGraphicsSceneContextMenuEvent) SetReason(reason int) {
-	// 0: (, QGraphicsSceneContextMenuEvent::Reason reason), (&reason)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent9setReasonENS_6ReasonE", ffiqt.FFI_TYPE_VOID, this.cthis, &reason)
+	// 0: (, reason QGraphicsSceneContextMenuEvent::Reason), (&reason)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent9setReasonENS_6ReasonE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &reason)
 	gopp.ErrPrint(err, rv)
 }
 

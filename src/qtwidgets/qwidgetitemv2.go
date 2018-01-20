@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QWidgetItemV2 struct {
-	cthis unsafe.Pointer
+	*QWidgetItem
+}
+
+func (this *QWidgetItemV2) GetCthis() unsafe.Pointer {
+	return this.QWidgetItem.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:148
@@ -63,7 +67,12 @@ func NewQWidgetItemV2(widget unsafe.Pointer) *QWidgetItemV2 {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetItemV2C2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, widget)
 	gopp.ErrPrint(err, rv)
-	return &QWidgetItemV2{cthis}
+	gothis := NewQWidgetItemV2FromPointer(cthis)
+	return gothis
+}
+func NewQWidgetItemV2FromPointer(cthis unsafe.Pointer) *QWidgetItemV2 {
+	bcthis0 := NewQWidgetItemFromPointer(cthis)
+	return &QWidgetItemV2{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:149
@@ -81,7 +90,7 @@ func DeleteQWidgetItemV2(*QWidgetItemV2) {
 // QSize sizeHint()
 func (this *QWidgetItemV2) SizeHint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV28sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV28sizeHintEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -91,7 +100,7 @@ func (this *QWidgetItemV2) SizeHint() {
 // QSize minimumSize()
 func (this *QWidgetItemV2) MinimumSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV211minimumSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV211minimumSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -101,7 +110,7 @@ func (this *QWidgetItemV2) MinimumSize() {
 // QSize maximumSize()
 func (this *QWidgetItemV2) MaximumSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV211maximumSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV211maximumSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -110,8 +119,8 @@ func (this *QWidgetItemV2) MaximumSize() {
 // virtual
 // int heightForWidth(int)
 func (this *QWidgetItemV2) HeightForWidth(width int) {
-	// 0: (, int width), (&width)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV214heightForWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &width)
+	// 0: (, width int), (&width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV214heightForWidthEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &width)
 	gopp.ErrPrint(err, rv)
 }
 

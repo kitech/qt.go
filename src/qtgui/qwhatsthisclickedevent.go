@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QWhatsThisClickedEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QWhatsThisClickedEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:713
@@ -59,7 +63,12 @@ func NewQWhatsThisClickedEvent(href unsafe.Pointer) *QWhatsThisClickedEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, href)
 	gopp.ErrPrint(err, rv)
-	return &QWhatsThisClickedEvent{cthis}
+	gothis := NewQWhatsThisClickedEventFromPointer(cthis)
+	return gothis
+}
+func NewQWhatsThisClickedEventFromPointer(cthis unsafe.Pointer) *QWhatsThisClickedEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QWhatsThisClickedEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:714
@@ -77,7 +86,7 @@ func DeleteQWhatsThisClickedEvent(*QWhatsThisClickedEvent) {
 // QString href()
 func (this *QWhatsThisClickedEvent) Href() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

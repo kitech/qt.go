@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QMutex struct {
-	cthis unsafe.Pointer
+	*QBasicMutex
+}
+
+func (this *QMutex) GetCthis() unsafe.Pointer {
+	return this.QBasicMutex.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qmutex.h:130
@@ -55,7 +59,12 @@ func NewQMutex(mode int) *QMutex {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutexC2ENS_13RecursionModeE", ffiqt.FFI_TYPE_VOID, cthis, &mode)
 	gopp.ErrPrint(err, rv)
-	return &QMutex{cthis}
+	gothis := NewQMutexFromPointer(cthis)
+	return gothis
+}
+func NewQMutexFromPointer(cthis unsafe.Pointer) *QMutex {
+	bcthis0 := NewQBasicMutexFromPointer(cthis)
+	return &QMutex{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qmutex.h:131
@@ -71,7 +80,7 @@ func DeleteQMutex(*QMutex) {
 // void lock()
 func (this *QMutex) Lock() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex4lockEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex4lockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -79,8 +88,8 @@ func (this *QMutex) Lock() {
 // index:0
 // bool tryLock(int)
 func (this *QMutex) TryLock(timeout int) {
-	// 0: (, int timeout), (&timeout)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex7tryLockEi", ffiqt.FFI_TYPE_VOID, this.cthis, &timeout)
+	// 0: (, timeout int), (&timeout)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex7tryLockEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &timeout)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -89,7 +98,7 @@ func (this *QMutex) TryLock(timeout int) {
 // void unlock()
 func (this *QMutex) Unlock() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex6unlockEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex6unlockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +108,7 @@ func (this *QMutex) Unlock() {
 // bool try_lock()
 func (this *QMutex) Try_lock() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex8try_lockEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex8try_lockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,7 +118,7 @@ func (this *QMutex) Try_lock() {
 // bool isRecursive()
 func (this *QMutex) IsRecursive() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QMutex11isRecursiveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QMutex11isRecursiveEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

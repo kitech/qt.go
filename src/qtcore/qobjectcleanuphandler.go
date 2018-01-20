@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QObjectCleanupHandler struct {
-	cthis unsafe.Pointer
+	*QObject
+}
+
+func (this *QObjectCleanupHandler) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:50
@@ -54,7 +58,7 @@ type QObjectCleanupHandler struct {
 // const QMetaObject * metaObject()
 func (this *QObjectCleanupHandler) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -65,7 +69,12 @@ func NewQObjectCleanupHandler() *QObjectCleanupHandler {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QObjectCleanupHandler{cthis}
+	gothis := NewQObjectCleanupHandlerFromPointer(cthis)
+	return gothis
+}
+func NewQObjectCleanupHandlerFromPointer(cthis unsafe.Pointer) *QObjectCleanupHandler {
+	bcthis0 := NewQObjectFromPointer(cthis)
+	return &QObjectCleanupHandler{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:54
@@ -81,8 +90,8 @@ func DeleteQObjectCleanupHandler(*QObjectCleanupHandler) {
 // index:0
 // QObject * add(class QObject *)
 func (this *QObjectCleanupHandler) Add(object unsafe.Pointer) {
-	// 0: (, QObject * object), (object)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, object)
+	// 0: (, object QObject *), (object)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), object)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -90,8 +99,8 @@ func (this *QObjectCleanupHandler) Add(object unsafe.Pointer) {
 // index:0
 // void remove(class QObject *)
 func (this *QObjectCleanupHandler) Remove(object unsafe.Pointer) {
-	// 0: (, QObject * object), (object)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, object)
+	// 0: (, object QObject *), (object)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), object)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,7 +109,7 @@ func (this *QObjectCleanupHandler) Remove(object unsafe.Pointer) {
 // bool isEmpty()
 func (this *QObjectCleanupHandler) IsEmpty() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,7 +118,7 @@ func (this *QObjectCleanupHandler) IsEmpty() {
 // void clear()
 func (this *QObjectCleanupHandler) Clear() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler5clearEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

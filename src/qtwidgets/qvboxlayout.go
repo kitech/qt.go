@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QVBoxLayout struct {
-	cthis unsafe.Pointer
+	*QBoxLayout
+}
+
+func (this *QVBoxLayout) GetCthis() unsafe.Pointer {
+	return this.QBoxLayout.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:128
@@ -62,7 +66,7 @@ type QVBoxLayout struct {
 // const QMetaObject * metaObject()
 func (this *QVBoxLayout) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QVBoxLayout10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QVBoxLayout10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQVBoxLayout() *QVBoxLayout {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QVBoxLayoutC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QVBoxLayout{cthis}
+	gothis := NewQVBoxLayoutFromPointer(cthis)
+	return gothis
+}
+func NewQVBoxLayoutFromPointer(cthis unsafe.Pointer) *QVBoxLayout {
+	bcthis0 := NewQBoxLayoutFromPointer(cthis)
+	return &QVBoxLayout{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:131
@@ -83,7 +92,8 @@ func NewQVBoxLayout_1(parent unsafe.Pointer) *QVBoxLayout {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QVBoxLayoutC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QVBoxLayout{cthis}
+	gothis := NewQVBoxLayoutFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:132

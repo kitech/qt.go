@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QThreadStorageData struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QThreadStorageData) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qthreadstorage.h:54
@@ -61,7 +65,7 @@ func DeleteQThreadStorageData(*QThreadStorageData) {
 // void ** get()
 func (this *QThreadStorageData) Get() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QThreadStorageData3getEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QThreadStorageData3getEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -69,8 +73,8 @@ func (this *QThreadStorageData) Get() {
 // index:0
 // void ** set(void *)
 func (this *QThreadStorageData) Set(p unsafe.Pointer) {
-	// 0: (, void * p), (p)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageData3setEPv", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	// 0: (, p void *), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageData3setEPv", ffiqt.FFI_TYPE_VOID, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
 }
 

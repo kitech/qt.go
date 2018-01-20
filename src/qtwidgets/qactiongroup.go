@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 64
+// extern C begin: 66
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QActionGroup struct {
-	cthis unsafe.Pointer
+	*qtcore.QObject
+}
+
+func (this *QActionGroup) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qactiongroup.h:55
@@ -62,7 +66,7 @@ type QActionGroup struct {
 // const QMetaObject * metaObject()
 func (this *QActionGroup) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQActionGroup(parent unsafe.Pointer) *QActionGroup {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QActionGroup{cthis}
+	gothis := NewQActionGroupFromPointer(cthis)
+	return gothis
+}
+func NewQActionGroupFromPointer(cthis unsafe.Pointer) *QActionGroup {
+	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
+	return &QActionGroup{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qactiongroup.h:64
@@ -89,8 +98,8 @@ func DeleteQActionGroup(*QActionGroup) {
 // index:0
 // QAction * addAction(class QAction *)
 func (this *QActionGroup) AddAction(a unsafe.Pointer) {
-	// 0: (, QAction * a), (a)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, a)
+	// 0: (, a QAction *), (a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionEP7QAction", ffiqt.FFI_TYPE_VOID, this.GetCthis(), a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -98,8 +107,8 @@ func (this *QActionGroup) AddAction(a unsafe.Pointer) {
 // index:1
 // QAction * addAction(const class QString &)
 func (this *QActionGroup) AddAction_1(text unsafe.Pointer) {
-	// 1: (, const QString & text), (text)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	// 1: (, text const QString &), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,8 +116,8 @@ func (this *QActionGroup) AddAction_1(text unsafe.Pointer) {
 // index:2
 // QAction * addAction(const class QIcon &, const class QString &)
 func (this *QActionGroup) AddAction_2(icon unsafe.Pointer, text unsafe.Pointer) {
-	// 2: (, const QIcon & icon, const QString & text), (icon, text)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK5QIconRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, icon, text)
+	// 2: (, icon const QIcon &, text const QString &), (icon, text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK5QIconRK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), icon, text)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,8 +125,8 @@ func (this *QActionGroup) AddAction_2(icon unsafe.Pointer, text unsafe.Pointer) 
 // index:0
 // void removeAction(class QAction *)
 func (this *QActionGroup) RemoveAction(a unsafe.Pointer) {
-	// 0: (, QAction * a), (a)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup12removeActionEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, a)
+	// 0: (, a QAction *), (a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup12removeActionEP7QAction", ffiqt.FFI_TYPE_VOID, this.GetCthis(), a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +135,7 @@ func (this *QActionGroup) RemoveAction(a unsafe.Pointer) {
 // QList<QAction *> actions()
 func (this *QActionGroup) Actions() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup7actionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup7actionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,7 +144,7 @@ func (this *QActionGroup) Actions() {
 // QAction * checkedAction()
 func (this *QActionGroup) CheckedAction() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup13checkedActionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup13checkedActionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,7 +153,7 @@ func (this *QActionGroup) CheckedAction() {
 // bool isExclusive()
 func (this *QActionGroup) IsExclusive() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup11isExclusiveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup11isExclusiveEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,7 +162,7 @@ func (this *QActionGroup) IsExclusive() {
 // bool isEnabled()
 func (this *QActionGroup) IsEnabled() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup9isEnabledEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup9isEnabledEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +171,7 @@ func (this *QActionGroup) IsEnabled() {
 // bool isVisible()
 func (this *QActionGroup) IsVisible() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup9isVisibleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup9isVisibleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -171,7 +180,7 @@ func (this *QActionGroup) IsVisible() {
 // void setEnabled(_Bool)
 func (this *QActionGroup) SetEnabled(arg0 bool) {
 	// 0: (, bool arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setEnabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setEnabledEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,8 +189,8 @@ func (this *QActionGroup) SetEnabled(arg0 bool) {
 // inline
 // void setDisabled(_Bool)
 func (this *QActionGroup) SetDisabled(b bool) {
-	// 0: (, bool b), (&b)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup11setDisabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &b)
+	// 0: (, b bool), (&b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup11setDisabledEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -190,7 +199,7 @@ func (this *QActionGroup) SetDisabled(b bool) {
 // void setVisible(_Bool)
 func (this *QActionGroup) SetVisible(arg0 bool) {
 	// 0: (, bool arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setVisibleEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setVisibleEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -199,7 +208,7 @@ func (this *QActionGroup) SetVisible(arg0 bool) {
 // void setExclusive(_Bool)
 func (this *QActionGroup) SetExclusive(arg0 bool) {
 	// 0: (, bool arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup12setExclusiveEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup12setExclusiveEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -208,7 +217,7 @@ func (this *QActionGroup) SetExclusive(arg0 bool) {
 // void triggered(class QAction *)
 func (this *QActionGroup) Triggered(arg0 unsafe.Pointer) {
 	// 0: (, QAction * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9triggeredEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9triggeredEP7QAction", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -217,7 +226,7 @@ func (this *QActionGroup) Triggered(arg0 unsafe.Pointer) {
 // void hovered(class QAction *)
 func (this *QActionGroup) Hovered(arg0 unsafe.Pointer) {
 	// 0: (, QAction * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup7hoveredEP7QAction", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup7hoveredEP7QAction", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

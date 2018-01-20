@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QDesktopServices struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QDesktopServices) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qdesktopservices.h:59
@@ -57,12 +61,12 @@ type QDesktopServices struct {
 // static
 // bool openUrl(const class QUrl &)
 func (this *QDesktopServices) OpenUrl(url unsafe.Pointer) {
-	// 0: (const QUrl & url), (url)
+	// 0: (url const QUrl &), (url)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices7openUrlERK4QUrl", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QDesktopServices_OpenUrl(url unsafe.Pointer) {
-	// 0: (const QUrl & url), (url)
+	// 0: (url const QUrl &), (url)
 	var nilthis *QDesktopServices
 	nilthis.OpenUrl(url)
 }
@@ -72,12 +76,12 @@ func QDesktopServices_OpenUrl(url unsafe.Pointer) {
 // static
 // void setUrlHandler(const class QString &, class QObject *, const char *)
 func (this *QDesktopServices) SetUrlHandler(scheme unsafe.Pointer, receiver unsafe.Pointer, method unsafe.Pointer) {
-	// 0: (const QString & scheme, QObject * receiver, const char * method), (scheme, receiver, method)
+	// 0: (scheme const QString &, receiver QObject *, method const char *), (scheme, receiver, method)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QDesktopServices_SetUrlHandler(scheme unsafe.Pointer, receiver unsafe.Pointer, method unsafe.Pointer) {
-	// 0: (const QString & scheme, QObject * receiver, const char * method), (scheme, receiver, method)
+	// 0: (scheme const QString &, receiver QObject *, method const char *), (scheme, receiver, method)
 	var nilthis *QDesktopServices
 	nilthis.SetUrlHandler(scheme, receiver, method)
 }
@@ -87,12 +91,12 @@ func QDesktopServices_SetUrlHandler(scheme unsafe.Pointer, receiver unsafe.Point
 // static
 // void unsetUrlHandler(const class QString &)
 func (this *QDesktopServices) UnsetUrlHandler(scheme unsafe.Pointer) {
-	// 0: (const QString & scheme), (scheme)
+	// 0: (scheme const QString &), (scheme)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices15unsetUrlHandlerERK7QString", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QDesktopServices_UnsetUrlHandler(scheme unsafe.Pointer) {
-	// 0: (const QString & scheme), (scheme)
+	// 0: (scheme const QString &), (scheme)
 	var nilthis *QDesktopServices
 	nilthis.UnsetUrlHandler(scheme)
 }

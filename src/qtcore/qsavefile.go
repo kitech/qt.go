@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 18
+// extern C begin: 21
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QSaveFile struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QSaveFile) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qsavefile.h:62
@@ -54,7 +58,7 @@ type QSaveFile struct {
 // const QMetaObject * metaObject()
 func (this *QSaveFile) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSaveFile10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSaveFile10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -65,7 +69,11 @@ func NewQSaveFile(name unsafe.Pointer) *QSaveFile {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, name)
 	gopp.ErrPrint(err, rv)
-	return &QSaveFile{cthis}
+	gothis := NewQSaveFileFromPointer(cthis)
+	return gothis
+}
+func NewQSaveFileFromPointer(cthis unsafe.Pointer) *QSaveFile {
+	return &QSaveFile{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qsavefile.h:70
@@ -75,7 +83,8 @@ func NewQSaveFile_1(parent unsafe.Pointer) *QSaveFile {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QSaveFile{cthis}
+	gothis := NewQSaveFileFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qsavefile.h:71
@@ -85,7 +94,8 @@ func NewQSaveFile_2(name unsafe.Pointer, parent unsafe.Pointer) *QSaveFile {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_VOID, cthis, name, parent)
 	gopp.ErrPrint(err, rv)
-	return &QSaveFile{cthis}
+	gothis := NewQSaveFileFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qsavefile.h:73
@@ -103,7 +113,7 @@ func DeleteQSaveFile(*QSaveFile) {
 // QString fileName()
 func (this *QSaveFile) FileName() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSaveFile8fileNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSaveFile8fileNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -111,8 +121,18 @@ func (this *QSaveFile) FileName() {
 // index:0
 // void setFileName(const class QString &)
 func (this *QSaveFile) SetFileName(name unsafe.Pointer) {
-	// 0: (, const QString & name), (name)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile11setFileNameERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, name)
+	// 0: (, name const QString &), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile11setFileNameERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), name)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qsavefile.h:78
+// index:0
+// virtual
+// bool open(QIODevice::OpenMode)
+func (this *QSaveFile) Open(flags int) {
+	// 0: (, QFlags<QIODevice::OpenModeFlag> flags), (flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -121,7 +141,7 @@ func (this *QSaveFile) SetFileName(name unsafe.Pointer) {
 // bool commit()
 func (this *QSaveFile) Commit() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile6commitEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile6commitEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +150,7 @@ func (this *QSaveFile) Commit() {
 // void cancelWriting()
 func (this *QSaveFile) CancelWriting() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile13cancelWritingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile13cancelWritingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -138,8 +158,8 @@ func (this *QSaveFile) CancelWriting() {
 // index:0
 // void setDirectWriteFallback(_Bool)
 func (this *QSaveFile) SetDirectWriteFallback(enabled bool) {
-	// 0: (, bool enabled), (&enabled)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile22setDirectWriteFallbackEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enabled)
+	// 0: (, enabled bool), (&enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile22setDirectWriteFallbackEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &enabled)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -148,7 +168,17 @@ func (this *QSaveFile) SetDirectWriteFallback(enabled bool) {
 // bool directWriteFallback()
 func (this *QSaveFile) DirectWriteFallback() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSaveFile19directWriteFallbackEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSaveFile19directWriteFallbackEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qsavefile.h:87
+// index:0
+// virtual
+// qint64 writeData(const char *, qint64)
+func (this *QSaveFile) WriteData(data unsafe.Pointer, len int64) {
+	// 0: (, data const char *, len qint64), (data, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile9writeDataEPKcx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data, &len)
 	gopp.ErrPrint(err, rv)
 }
 

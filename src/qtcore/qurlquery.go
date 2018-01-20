@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 41
+// extern C begin: 42
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QUrlQuery struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QUrlQuery) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:59
@@ -55,7 +59,11 @@ func NewQUrlQuery() *QUrlQuery {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQueryC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QUrlQuery{cthis}
+	gothis := NewQUrlQueryFromPointer(cthis)
+	return gothis
+}
+func NewQUrlQueryFromPointer(cthis unsafe.Pointer) *QUrlQuery {
+	return &QUrlQuery{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:60
@@ -65,7 +73,8 @@ func NewQUrlQuery_1(url unsafe.Pointer) *QUrlQuery {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQueryC2ERK4QUrl", ffiqt.FFI_TYPE_VOID, cthis, url)
 	gopp.ErrPrint(err, rv)
-	return &QUrlQuery{cthis}
+	gothis := NewQUrlQueryFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:61
@@ -75,7 +84,8 @@ func NewQUrlQuery_2(queryString unsafe.Pointer) *QUrlQuery {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQueryC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, queryString)
 	gopp.ErrPrint(err, rv)
-	return &QUrlQuery{cthis}
+	gothis := NewQUrlQueryFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:67
@@ -91,8 +101,8 @@ func DeleteQUrlQuery(*QUrlQuery) {
 // inline
 // void swap(class QUrlQuery &)
 func (this *QUrlQuery) Swap(other unsafe.Pointer) {
-	// 0: (, QUrlQuery & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QUrlQuery &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -101,7 +111,7 @@ func (this *QUrlQuery) Swap(other unsafe.Pointer) {
 // bool isEmpty()
 func (this *QUrlQuery) IsEmpty() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -110,7 +120,7 @@ func (this *QUrlQuery) IsEmpty() {
 // bool isDetached()
 func (this *QUrlQuery) IsDetached() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery10isDetachedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery10isDetachedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -119,7 +129,7 @@ func (this *QUrlQuery) IsDetached() {
 // void clear()
 func (this *QUrlQuery) Clear() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery5clearEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,8 +137,8 @@ func (this *QUrlQuery) Clear() {
 // index:0
 // void setQuery(const class QString &)
 func (this *QUrlQuery) SetQuery(queryString unsafe.Pointer) {
-	// 0: (, const QString & queryString), (queryString)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery8setQueryERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, queryString)
+	// 0: (, queryString const QString &), (queryString)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery8setQueryERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), queryString)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -136,8 +146,8 @@ func (this *QUrlQuery) SetQuery(queryString unsafe.Pointer) {
 // index:0
 // void setQueryDelimiters(class QChar, class QChar)
 func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter unsafe.Pointer, pairDelimiter unsafe.Pointer) {
-	// 0: (, QChar valueDelimiter, QChar pairDelimiter), (valueDelimiter, pairDelimiter)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_", ffiqt.FFI_TYPE_VOID, this.cthis, valueDelimiter, pairDelimiter)
+	// 0: (, valueDelimiter QChar, pairDelimiter QChar), (valueDelimiter, pairDelimiter)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), valueDelimiter, pairDelimiter)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -146,7 +156,7 @@ func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter unsafe.Pointer, pairDel
 // QChar queryValueDelimiter()
 func (this *QUrlQuery) QueryValueDelimiter() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery19queryValueDelimiterEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery19queryValueDelimiterEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -155,7 +165,7 @@ func (this *QUrlQuery) QueryValueDelimiter() {
 // QChar queryPairDelimiter()
 func (this *QUrlQuery) QueryPairDelimiter() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery18queryPairDelimiterEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery18queryPairDelimiterEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -163,8 +173,8 @@ func (this *QUrlQuery) QueryPairDelimiter() {
 // index:0
 // bool hasQueryItem(const class QString &)
 func (this *QUrlQuery) HasQueryItem(key unsafe.Pointer) {
-	// 0: (, const QString & key), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery12hasQueryItemERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	// 0: (, key const QString &), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery12hasQueryItemERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,8 +182,8 @@ func (this *QUrlQuery) HasQueryItem(key unsafe.Pointer) {
 // index:0
 // void addQueryItem(const class QString &, const class QString &)
 func (this *QUrlQuery) AddQueryItem(key unsafe.Pointer, value unsafe.Pointer) {
-	// 0: (, const QString & key, const QString & value), (key, value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery12addQueryItemERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, key, value)
+	// 0: (, key const QString &, value const QString &), (key, value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery12addQueryItemERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key, value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -181,8 +191,8 @@ func (this *QUrlQuery) AddQueryItem(key unsafe.Pointer, value unsafe.Pointer) {
 // index:0
 // void removeQueryItem(const class QString &)
 func (this *QUrlQuery) RemoveQueryItem(key unsafe.Pointer) {
-	// 0: (, const QString & key), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery15removeQueryItemERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	// 0: (, key const QString &), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery15removeQueryItemERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -190,8 +200,8 @@ func (this *QUrlQuery) RemoveQueryItem(key unsafe.Pointer) {
 // index:0
 // void removeAllQueryItems(const class QString &)
 func (this *QUrlQuery) RemoveAllQueryItems(key unsafe.Pointer) {
-	// 0: (, const QString & key), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery19removeAllQueryItemsERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	// 0: (, key const QString &), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery19removeAllQueryItemsERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
 }
 

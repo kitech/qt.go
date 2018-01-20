@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QCryptographicHash struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QCryptographicHash) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qcryptographichash.h:92
@@ -55,7 +59,11 @@ func NewQCryptographicHash(method int) *QCryptographicHash {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashC2ENS_9AlgorithmE", ffiqt.FFI_TYPE_VOID, cthis, &method)
 	gopp.ErrPrint(err, rv)
-	return &QCryptographicHash{cthis}
+	gothis := NewQCryptographicHashFromPointer(cthis)
+	return gothis
+}
+func NewQCryptographicHashFromPointer(cthis unsafe.Pointer) *QCryptographicHash {
+	return &QCryptographicHash{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qcryptographichash.h:93
@@ -71,7 +79,7 @@ func DeleteQCryptographicHash(*QCryptographicHash) {
 // void reset()
 func (this *QCryptographicHash) Reset() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash5resetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash5resetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -79,8 +87,8 @@ func (this *QCryptographicHash) Reset() {
 // index:0
 // void addData(const char *, int)
 func (this *QCryptographicHash) AddData(data unsafe.Pointer, length int) {
-	// 0: (, const char * data, int length), (data, &length)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataEPKci", ffiqt.FFI_TYPE_VOID, this.cthis, data, &length)
+	// 0: (, data const char *, length int), (data, &length)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataEPKci", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data, &length)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,8 +96,8 @@ func (this *QCryptographicHash) AddData(data unsafe.Pointer, length int) {
 // index:1
 // void addData(const class QByteArray &)
 func (this *QCryptographicHash) AddData_1(data unsafe.Pointer) {
-	// 1: (, const QByteArray & data), (data)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.cthis, data)
+	// 1: (, data const QByteArray &), (data)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,8 +105,8 @@ func (this *QCryptographicHash) AddData_1(data unsafe.Pointer) {
 // index:2
 // bool addData(class QIODevice *)
 func (this *QCryptographicHash) AddData_2(device unsafe.Pointer) {
-	// 2: (, QIODevice * device), (device)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataEP9QIODevice", ffiqt.FFI_TYPE_VOID, this.cthis, device)
+	// 2: (, device QIODevice *), (device)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataEP9QIODevice", ffiqt.FFI_TYPE_VOID, this.GetCthis(), device)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +115,7 @@ func (this *QCryptographicHash) AddData_2(device unsafe.Pointer) {
 // QByteArray result()
 func (this *QCryptographicHash) Result() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCryptographicHash6resultEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCryptographicHash6resultEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,12 +124,12 @@ func (this *QCryptographicHash) Result() {
 // static
 // QByteArray hash(const class QByteArray &, enum QCryptographicHash::Algorithm)
 func (this *QCryptographicHash) Hash(data unsafe.Pointer, method int) {
-	// 0: (const QByteArray & data, QCryptographicHash::Algorithm method), (data, method)
+	// 0: (data const QByteArray &, method QCryptographicHash::Algorithm), (data, method)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash4hashERK10QByteArrayNS_9AlgorithmE", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QCryptographicHash_Hash(data unsafe.Pointer, method int) {
-	// 0: (const QByteArray & data, QCryptographicHash::Algorithm method), (data, method)
+	// 0: (data const QByteArray &, method QCryptographicHash::Algorithm), (data, method)
 	var nilthis *QCryptographicHash
 	nilthis.Hash(data, method)
 }

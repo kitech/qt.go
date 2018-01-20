@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 54
+// extern C begin: 23
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QPixelFormat struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QPixelFormat) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:163
@@ -60,7 +64,11 @@ func NewQPixelFormat() *QPixelFormat {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixelFormatC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QPixelFormat{cthis}
+	gothis := NewQPixelFormatFromPointer(cthis)
+	return gothis
+}
+func NewQPixelFormatFromPointer(cthis unsafe.Pointer) *QPixelFormat {
+	return &QPixelFormat{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:164
@@ -71,7 +79,8 @@ func NewQPixelFormat_1(colorModel int, firstSize byte, secondSize byte, thirdSiz
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixelFormatC2ENS_10ColorModelEhhhhhhNS_10AlphaUsageENS_13AlphaPositionENS_18AlphaPremultipliedENS_18TypeInterpretationENS_9ByteOrderEh", ffiqt.FFI_TYPE_VOID, cthis, &colorModel, &firstSize, &secondSize, &thirdSize, &fourthSize, &fifthSize, &alphaSize, &alphaUsage, &alphaPosition, &premultiplied, &typeInterpretation, &byteOrder, &subEnum)
 	gopp.ErrPrint(err, rv)
-	return &QPixelFormat{cthis}
+	gothis := NewQPixelFormatFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:178
@@ -80,7 +89,7 @@ func NewQPixelFormat_1(colorModel int, firstSize byte, secondSize byte, thirdSiz
 // QPixelFormat::ColorModel colorModel()
 func (this *QPixelFormat) ColorModel() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10colorModelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10colorModelEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -90,7 +99,7 @@ func (this *QPixelFormat) ColorModel() {
 // uchar channelCount()
 func (this *QPixelFormat) ChannelCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat12channelCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat12channelCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,7 +109,7 @@ func (this *QPixelFormat) ChannelCount() {
 // uchar redSize()
 func (this *QPixelFormat) RedSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7redSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7redSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -110,7 +119,7 @@ func (this *QPixelFormat) RedSize() {
 // uchar greenSize()
 func (this *QPixelFormat) GreenSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9greenSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9greenSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -120,7 +129,7 @@ func (this *QPixelFormat) GreenSize() {
 // uchar blueSize()
 func (this *QPixelFormat) BlueSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat8blueSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat8blueSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +139,7 @@ func (this *QPixelFormat) BlueSize() {
 // uchar cyanSize()
 func (this *QPixelFormat) CyanSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat8cyanSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat8cyanSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,7 +149,7 @@ func (this *QPixelFormat) CyanSize() {
 // uchar magentaSize()
 func (this *QPixelFormat) MagentaSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat11magentaSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat11magentaSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -150,7 +159,7 @@ func (this *QPixelFormat) MagentaSize() {
 // uchar yellowSize()
 func (this *QPixelFormat) YellowSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10yellowSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10yellowSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -160,7 +169,7 @@ func (this *QPixelFormat) YellowSize() {
 // uchar blackSize()
 func (this *QPixelFormat) BlackSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9blackSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9blackSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,7 +179,7 @@ func (this *QPixelFormat) BlackSize() {
 // uchar hueSize()
 func (this *QPixelFormat) HueSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7hueSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7hueSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,7 +189,7 @@ func (this *QPixelFormat) HueSize() {
 // uchar saturationSize()
 func (this *QPixelFormat) SaturationSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat14saturationSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat14saturationSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -190,7 +199,7 @@ func (this *QPixelFormat) SaturationSize() {
 // uchar lightnessSize()
 func (this *QPixelFormat) LightnessSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13lightnessSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13lightnessSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -200,7 +209,7 @@ func (this *QPixelFormat) LightnessSize() {
 // uchar brightnessSize()
 func (this *QPixelFormat) BrightnessSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat14brightnessSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat14brightnessSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -210,7 +219,7 @@ func (this *QPixelFormat) BrightnessSize() {
 // uchar alphaSize()
 func (this *QPixelFormat) AlphaSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9alphaSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9alphaSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -220,7 +229,7 @@ func (this *QPixelFormat) AlphaSize() {
 // uchar bitsPerPixel()
 func (this *QPixelFormat) BitsPerPixel() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat12bitsPerPixelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat12bitsPerPixelEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -230,7 +239,7 @@ func (this *QPixelFormat) BitsPerPixel() {
 // QPixelFormat::AlphaUsage alphaUsage()
 func (this *QPixelFormat) AlphaUsage() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10alphaUsageEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10alphaUsageEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -240,7 +249,7 @@ func (this *QPixelFormat) AlphaUsage() {
 // QPixelFormat::AlphaPosition alphaPosition()
 func (this *QPixelFormat) AlphaPosition() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13alphaPositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13alphaPositionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -250,7 +259,7 @@ func (this *QPixelFormat) AlphaPosition() {
 // QPixelFormat::AlphaPremultiplied premultiplied()
 func (this *QPixelFormat) Premultiplied() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13premultipliedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13premultipliedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -260,7 +269,7 @@ func (this *QPixelFormat) Premultiplied() {
 // QPixelFormat::TypeInterpretation typeInterpretation()
 func (this *QPixelFormat) TypeInterpretation() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat18typeInterpretationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat18typeInterpretationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -270,7 +279,7 @@ func (this *QPixelFormat) TypeInterpretation() {
 // QPixelFormat::ByteOrder byteOrder()
 func (this *QPixelFormat) ByteOrder() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9byteOrderEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9byteOrderEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -280,7 +289,7 @@ func (this *QPixelFormat) ByteOrder() {
 // QPixelFormat::YUVLayout yuvLayout()
 func (this *QPixelFormat) YuvLayout() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9yuvLayoutEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9yuvLayoutEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -290,7 +299,7 @@ func (this *QPixelFormat) YuvLayout() {
 // uchar subEnum()
 func (this *QPixelFormat) SubEnum() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7subEnumEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7subEnumEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

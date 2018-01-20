@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 4
+// extern C begin: 6
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QEnterEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QEnterEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:85
@@ -59,7 +63,12 @@ func NewQEnterEvent(localPos unsafe.Pointer, windowPos unsafe.Pointer, screenPos
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QEnterEventC2ERK7QPointFS2_S2_", ffiqt.FFI_TYPE_VOID, cthis, localPos, windowPos, screenPos)
 	gopp.ErrPrint(err, rv)
-	return &QEnterEvent{cthis}
+	gothis := NewQEnterEventFromPointer(cthis)
+	return gothis
+}
+func NewQEnterEventFromPointer(cthis unsafe.Pointer) *QEnterEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QEnterEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:86
@@ -77,7 +86,7 @@ func DeleteQEnterEvent(*QEnterEvent) {
 // QPoint pos()
 func (this *QEnterEvent) Pos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent3posEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent3posEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -87,7 +96,7 @@ func (this *QEnterEvent) Pos() {
 // QPoint globalPos()
 func (this *QEnterEvent) GlobalPos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent9globalPosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent9globalPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,7 +106,7 @@ func (this *QEnterEvent) GlobalPos() {
 // int x()
 func (this *QEnterEvent) X() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent1xEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent1xEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +116,7 @@ func (this *QEnterEvent) X() {
 // int y()
 func (this *QEnterEvent) Y() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent1yEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent1yEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +126,7 @@ func (this *QEnterEvent) Y() {
 // int globalX()
 func (this *QEnterEvent) GlobalX() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent7globalXEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent7globalXEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,7 +136,7 @@ func (this *QEnterEvent) GlobalX() {
 // int globalY()
 func (this *QEnterEvent) GlobalY() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent7globalYEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent7globalYEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -137,7 +146,7 @@ func (this *QEnterEvent) GlobalY() {
 // const QPointF & localPos()
 func (this *QEnterEvent) LocalPos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent8localPosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent8localPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -147,7 +156,7 @@ func (this *QEnterEvent) LocalPos() {
 // const QPointF & windowPos()
 func (this *QEnterEvent) WindowPos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent9windowPosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent9windowPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -157,7 +166,7 @@ func (this *QEnterEvent) WindowPos() {
 // const QPointF & screenPos()
 func (this *QEnterEvent) ScreenPos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent9screenPosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent9screenPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QJsonValueRefPtr struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QJsonValueRefPtr) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:237
@@ -56,7 +60,11 @@ func NewQJsonValueRefPtr(array unsafe.Pointer, idx int) *QJsonValueRefPtr {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP10QJsonArrayi", ffiqt.FFI_TYPE_VOID, cthis, array, &idx)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValueRefPtr{cthis}
+	gothis := NewQJsonValueRefPtrFromPointer(cthis)
+	return gothis
+}
+func NewQJsonValueRefPtrFromPointer(cthis unsafe.Pointer) *QJsonValueRefPtr {
+	return &QJsonValueRefPtr{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:239
@@ -67,7 +75,8 @@ func NewQJsonValueRefPtr_1(object unsafe.Pointer, idx int) *QJsonValueRefPtr {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP11QJsonObjecti", ffiqt.FFI_TYPE_VOID, cthis, object, &idx)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValueRefPtr{cthis}
+	gothis := NewQJsonValueRefPtrFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

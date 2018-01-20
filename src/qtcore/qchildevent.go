@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QChildEvent struct {
-	cthis unsafe.Pointer
+	*QEvent
+}
+
+func (this *QChildEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:352
@@ -55,7 +59,12 @@ func NewQChildEvent(type_ int, child unsafe.Pointer) *QChildEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &type_, child)
 	gopp.ErrPrint(err, rv)
-	return &QChildEvent{cthis}
+	gothis := NewQChildEventFromPointer(cthis)
+	return gothis
+}
+func NewQChildEventFromPointer(cthis unsafe.Pointer) *QChildEvent {
+	bcthis0 := NewQEventFromPointer(cthis)
+	return &QChildEvent{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:353
@@ -73,7 +82,7 @@ func DeleteQChildEvent(*QChildEvent) {
 // QObject * child()
 func (this *QChildEvent) Child() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5childEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5childEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -83,7 +92,7 @@ func (this *QChildEvent) Child() {
 // bool added()
 func (this *QChildEvent) Added() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5addedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5addedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -93,7 +102,7 @@ func (this *QChildEvent) Added() {
 // bool polished()
 func (this *QChildEvent) Polished() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent8polishedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent8polishedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -103,7 +112,7 @@ func (this *QChildEvent) Polished() {
 // bool removed()
 func (this *QChildEvent) Removed() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent7removedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent7removedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

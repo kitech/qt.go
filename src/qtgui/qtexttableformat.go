@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 29
+// extern C begin: 31
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextTableFormat struct {
-	cthis unsafe.Pointer
+	*QTextFrameFormat
+}
+
+func (this *QTextTableFormat) GetCthis() unsafe.Pointer {
+	return this.QTextFrameFormat.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:887
@@ -59,7 +63,23 @@ func NewQTextTableFormat() *QTextTableFormat {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormatC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QTextTableFormat{cthis}
+	gothis := NewQTextTableFormatFromPointer(cthis)
+	return gothis
+}
+func NewQTextTableFormatFromPointer(cthis unsafe.Pointer) *QTextTableFormat {
+	bcthis0 := NewQTextFrameFormatFromPointer(cthis)
+	return &QTextTableFormat{bcthis0}
+}
+
+// /usr/include/qt/QtGui/qtextformat.h:923
+// index:1
+// void QTextTableFormat(const class QTextFormat &)
+func NewQTextTableFormat_1(fmt unsafe.Pointer) *QTextTableFormat {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormatC2ERK11QTextFormat", ffiqt.FFI_TYPE_VOID, cthis, fmt)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextTableFormatFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:889
@@ -68,7 +88,7 @@ func NewQTextTableFormat() *QTextTableFormat {
 // bool isValid()
 func (this *QTextTableFormat) IsValid() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -78,7 +98,7 @@ func (this *QTextTableFormat) IsValid() {
 // int columns()
 func (this *QTextTableFormat) Columns() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat7columnsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat7columnsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -87,8 +107,8 @@ func (this *QTextTableFormat) Columns() {
 // inline
 // void setColumns(int)
 func (this *QTextTableFormat) SetColumns(columns int) {
-	// 0: (, int columns), (&columns)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat10setColumnsEi", ffiqt.FFI_TYPE_VOID, this.cthis, &columns)
+	// 0: (, columns int), (&columns)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat10setColumnsEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &columns)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -98,7 +118,7 @@ func (this *QTextTableFormat) SetColumns(columns int) {
 // QVector<QTextLength> columnWidthConstraints()
 func (this *QTextTableFormat) ColumnWidthConstraints() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat22columnWidthConstraintsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat22columnWidthConstraintsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +128,7 @@ func (this *QTextTableFormat) ColumnWidthConstraints() {
 // void clearColumnWidthConstraints()
 func (this *QTextTableFormat) ClearColumnWidthConstraints() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat27clearColumnWidthConstraintsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat27clearColumnWidthConstraintsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -118,7 +138,7 @@ func (this *QTextTableFormat) ClearColumnWidthConstraints() {
 // qreal cellSpacing()
 func (this *QTextTableFormat) CellSpacing() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellSpacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellSpacingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,8 +147,8 @@ func (this *QTextTableFormat) CellSpacing() {
 // inline
 // void setCellSpacing(qreal)
 func (this *QTextTableFormat) SetCellSpacing(spacing float64) {
-	// 0: (, qreal spacing), (&spacing)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat14setCellSpacingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &spacing)
+	// 0: (, spacing qreal), (&spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat14setCellSpacingEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -138,7 +158,7 @@ func (this *QTextTableFormat) SetCellSpacing(spacing float64) {
 // qreal cellPadding()
 func (this *QTextTableFormat) CellPadding() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellPaddingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellPaddingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -147,8 +167,18 @@ func (this *QTextTableFormat) CellPadding() {
 // inline
 // void setCellPadding(qreal)
 func (this *QTextTableFormat) SetCellPadding(padding float64) {
-	// 0: (, qreal padding), (&padding)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat14setCellPaddingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &padding)
+	// 0: (, padding qreal), (&padding)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat14setCellPaddingEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &padding)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qtextformat.h:913
+// index:0
+// inline
+// void setAlignment(Qt::Alignment)
+func (this *QTextTableFormat) SetAlignment(alignment int) {
+	// 0: (, QFlags<Qt::AlignmentFlag> alignment), (&alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &alignment)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -158,7 +188,7 @@ func (this *QTextTableFormat) SetCellPadding(padding float64) {
 // Qt::Alignment alignment()
 func (this *QTextTableFormat) Alignment() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat9alignmentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat9alignmentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -167,8 +197,8 @@ func (this *QTextTableFormat) Alignment() {
 // inline
 // void setHeaderRowCount(int)
 func (this *QTextTableFormat) SetHeaderRowCount(count int) {
-	// 0: (, int count), (&count)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat17setHeaderRowCountEi", ffiqt.FFI_TYPE_VOID, this.cthis, &count)
+	// 0: (, count int), (&count)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat17setHeaderRowCountEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &count)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -178,7 +208,7 @@ func (this *QTextTableFormat) SetHeaderRowCount(count int) {
 // int headerRowCount()
 func (this *QTextTableFormat) HeaderRowCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat14headerRowCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat14headerRowCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QOperatingSystemVersion struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QOperatingSystemVersion) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:85
@@ -56,7 +60,11 @@ func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) 
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", ffiqt.FFI_TYPE_VOID, cthis, &osType, &vmajor, &vminor, &vmicro)
 	gopp.ErrPrint(err, rv)
-	return &QOperatingSystemVersion{cthis}
+	gothis := NewQOperatingSystemVersionFromPointer(cthis)
+	return gothis
+}
+func NewQOperatingSystemVersionFromPointer(cthis unsafe.Pointer) *QOperatingSystemVersion {
+	return &QOperatingSystemVersion{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:93
@@ -95,7 +103,7 @@ func QOperatingSystemVersion_CurrentType() {
 // int majorVersion()
 func (this *QOperatingSystemVersion) MajorVersion() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12majorVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12majorVersionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -105,7 +113,7 @@ func (this *QOperatingSystemVersion) MajorVersion() {
 // int minorVersion()
 func (this *QOperatingSystemVersion) MinorVersion() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12minorVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12minorVersionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -115,7 +123,7 @@ func (this *QOperatingSystemVersion) MinorVersion() {
 // int microVersion()
 func (this *QOperatingSystemVersion) MicroVersion() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12microVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12microVersionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,7 +133,7 @@ func (this *QOperatingSystemVersion) MicroVersion() {
 // int segmentCount()
 func (this *QOperatingSystemVersion) SegmentCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12segmentCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12segmentCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,7 +143,7 @@ func (this *QOperatingSystemVersion) SegmentCount() {
 // QOperatingSystemVersion::OSType type()
 func (this *QOperatingSystemVersion) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,7 +152,7 @@ func (this *QOperatingSystemVersion) Type() {
 // QString name()
 func (this *QOperatingSystemVersion) Name() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QFocusEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QFocusEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:389
@@ -59,7 +63,12 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", ffiqt.FFI_TYPE_VOID, cthis, &type_, &reason)
 	gopp.ErrPrint(err, rv)
-	return &QFocusEvent{cthis}
+	gothis := NewQFocusEventFromPointer(cthis)
+	return gothis
+}
+func NewQFocusEventFromPointer(cthis unsafe.Pointer) *QFocusEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QFocusEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:390
@@ -77,7 +86,7 @@ func DeleteQFocusEvent(*QFocusEvent) {
 // bool gotFocus()
 func (this *QFocusEvent) GotFocus() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent8gotFocusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent8gotFocusEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -87,7 +96,7 @@ func (this *QFocusEvent) GotFocus() {
 // bool lostFocus()
 func (this *QFocusEvent) LostFocus() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent9lostFocusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent9lostFocusEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -96,7 +105,7 @@ func (this *QFocusEvent) LostFocus() {
 // Qt::FocusReason reason()
 func (this *QFocusEvent) Reason() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent6reasonEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent6reasonEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

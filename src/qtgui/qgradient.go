@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QGradient struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QGradient) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qbrush.h:206
@@ -59,7 +63,11 @@ func NewQGradient() *QGradient {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradientC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QGradient{cthis}
+	gothis := NewQGradientFromPointer(cthis)
+	return gothis
+}
+func NewQGradientFromPointer(cthis unsafe.Pointer) *QGradient {
+	return &QGradient{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qbrush.h:208
@@ -68,7 +76,7 @@ func NewQGradient() *QGradient {
 // QGradient::Type type()
 func (this *QGradient) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -77,8 +85,8 @@ func (this *QGradient) Type() {
 // inline
 // void setSpread(enum QGradient::Spread)
 func (this *QGradient) SetSpread(spread int) {
-	// 0: (, QGradient::Spread spread), (&spread)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient9setSpreadENS_6SpreadE", ffiqt.FFI_TYPE_VOID, this.cthis, &spread)
+	// 0: (, spread QGradient::Spread), (&spread)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient9setSpreadENS_6SpreadE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &spread)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,7 +96,7 @@ func (this *QGradient) SetSpread(spread int) {
 // QGradient::Spread spread()
 func (this *QGradient) Spread() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient6spreadEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient6spreadEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -96,8 +104,8 @@ func (this *QGradient) Spread() {
 // index:0
 // void setColorAt(qreal, const class QColor &)
 func (this *QGradient) SetColorAt(pos float64, color unsafe.Pointer) {
-	// 0: (, qreal pos, const QColor & color), (&pos, color)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient10setColorAtEdRK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, &pos, color)
+	// 0: (, pos qreal, color const QColor &), (&pos, color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient10setColorAtEdRK6QColor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &pos, color)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,7 +114,7 @@ func (this *QGradient) SetColorAt(pos float64, color unsafe.Pointer) {
 // QGradientStops stops()
 func (this *QGradient) Stops() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient5stopsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient5stopsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -115,7 +123,7 @@ func (this *QGradient) Stops() {
 // QGradient::CoordinateMode coordinateMode()
 func (this *QGradient) CoordinateMode() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient14coordinateModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient14coordinateModeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -123,8 +131,8 @@ func (this *QGradient) CoordinateMode() {
 // index:0
 // void setCoordinateMode(enum QGradient::CoordinateMode)
 func (this *QGradient) SetCoordinateMode(mode int) {
-	// 0: (, QGradient::CoordinateMode mode), (&mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient17setCoordinateModeENS_14CoordinateModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	// 0: (, mode QGradient::CoordinateMode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient17setCoordinateModeENS_14CoordinateModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,7 +141,7 @@ func (this *QGradient) SetCoordinateMode(mode int) {
 // QGradient::InterpolationMode interpolationMode()
 func (this *QGradient) InterpolationMode() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient17interpolationModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient17interpolationModeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -141,8 +149,8 @@ func (this *QGradient) InterpolationMode() {
 // index:0
 // void setInterpolationMode(enum QGradient::InterpolationMode)
 func (this *QGradient) SetInterpolationMode(mode int) {
-	// 0: (, QGradient::InterpolationMode mode), (&mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient20setInterpolationModeENS_17InterpolationModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	// 0: (, mode QGradient::InterpolationMode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient20setInterpolationModeENS_17InterpolationModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
 }
 

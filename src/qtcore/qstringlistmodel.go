@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QStringListModel struct {
-	cthis unsafe.Pointer
+	*QAbstractListModel
+}
+
+func (this *QStringListModel) GetCthis() unsafe.Pointer {
+	return this.QAbstractListModel.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qstringlistmodel.h:53
@@ -54,7 +58,7 @@ type QStringListModel struct {
 // const QMetaObject * metaObject()
 func (this *QStringListModel) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -65,7 +69,12 @@ func NewQStringListModel(parent unsafe.Pointer) *QStringListModel {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModelC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QStringListModel{cthis}
+	gothis := NewQStringListModelFromPointer(cthis)
+	return gothis
+}
+func NewQStringListModelFromPointer(cthis unsafe.Pointer) *QStringListModel {
+	bcthis0 := NewQAbstractListModelFromPointer(cthis)
+	return &QStringListModel{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qstringlistmodel.h:56
@@ -75,7 +84,8 @@ func NewQStringListModel_1(strings unsafe.Pointer, parent unsafe.Pointer) *QStri
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModelC2ERK11QStringListP7QObject", ffiqt.FFI_TYPE_VOID, cthis, strings, parent)
 	gopp.ErrPrint(err, rv)
-	return &QStringListModel{cthis}
+	gothis := NewQStringListModelFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qstringlistmodel.h:58
@@ -83,8 +93,8 @@ func NewQStringListModel_1(strings unsafe.Pointer, parent unsafe.Pointer) *QStri
 // virtual
 // int rowCount(const class QModelIndex &)
 func (this *QStringListModel) RowCount(parent unsafe.Pointer) {
-	// 0: (, const QModelIndex & parent), (parent)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	// 0: (, parent const QModelIndex &), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), parent)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -93,8 +103,8 @@ func (this *QStringListModel) RowCount(parent unsafe.Pointer) {
 // virtual
 // QModelIndex sibling(int, int, const class QModelIndex &)
 func (this *QStringListModel) Sibling(row int, column int, idx unsafe.Pointer) {
-	// 0: (, int row, int column, const QModelIndex & idx), (&row, &column, idx)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column, idx)
+	// 0: (, row int, column int, idx const QModelIndex &), (&row, &column, idx)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column, idx)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -103,8 +113,8 @@ func (this *QStringListModel) Sibling(row int, column int, idx unsafe.Pointer) {
 // virtual
 // QVariant data(const class QModelIndex &, int)
 func (this *QStringListModel) Data(index unsafe.Pointer, role int) {
-	// 0: (, const QModelIndex & index, int role), (index, &role)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_VOID, this.cthis, index, &role)
+	// 0: (, index const QModelIndex &, role int), (index, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index, &role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -113,8 +123,8 @@ func (this *QStringListModel) Data(index unsafe.Pointer, role int) {
 // virtual
 // bool setData(const class QModelIndex &, const class QVariant &, int)
 func (this *QStringListModel) SetData(index unsafe.Pointer, value unsafe.Pointer, role int) {
-	// 0: (, const QModelIndex & index, const QVariant & value, int role), (index, value, &role)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti", ffiqt.FFI_TYPE_VOID, this.cthis, index, value, &role)
+	// 0: (, index const QModelIndex &, value const QVariant &, role int), (index, value, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index, value, &role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -123,8 +133,8 @@ func (this *QStringListModel) SetData(index unsafe.Pointer, value unsafe.Pointer
 // virtual
 // Qt::ItemFlags flags(const class QModelIndex &)
 func (this *QStringListModel) Flags(index unsafe.Pointer) {
-	// 0: (, const QModelIndex & index), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,8 +143,8 @@ func (this *QStringListModel) Flags(index unsafe.Pointer) {
 // virtual
 // bool insertRows(int, int, const class QModelIndex &)
 func (this *QStringListModel) InsertRows(row int, count int, parent unsafe.Pointer) {
-	// 0: (, int row, int count, const QModelIndex & parent), (&row, &count, parent)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel10insertRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &count, parent)
+	// 0: (, row int, count int, parent const QModelIndex &), (&row, &count, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel10insertRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &count, parent)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,8 +153,8 @@ func (this *QStringListModel) InsertRows(row int, count int, parent unsafe.Point
 // virtual
 // bool removeRows(int, int, const class QModelIndex &)
 func (this *QStringListModel) RemoveRows(row int, count int, parent unsafe.Pointer) {
-	// 0: (, int row, int count, const QModelIndex & parent), (&row, &count, parent)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel10removeRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &count, parent)
+	// 0: (, row int, count int, parent const QModelIndex &), (&row, &count, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel10removeRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &count, parent)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,8 +163,8 @@ func (this *QStringListModel) RemoveRows(row int, count int, parent unsafe.Point
 // virtual
 // void sort(int, Qt::SortOrder)
 func (this *QStringListModel) Sort(column int, order int) {
-	// 0: (, int column, Qt::SortOrder order), (&column, &order)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel4sortEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_VOID, this.cthis, &column, &order)
+	// 0: (, column int, order Qt::SortOrder), (&column, &order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel4sortEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &column, &order)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -163,7 +173,7 @@ func (this *QStringListModel) Sort(column int, order int) {
 // QStringList stringList()
 func (this *QStringListModel) StringList() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel10stringListEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel10stringListEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -171,8 +181,8 @@ func (this *QStringListModel) StringList() {
 // index:0
 // void setStringList(const class QStringList &)
 func (this *QStringListModel) SetStringList(strings unsafe.Pointer) {
-	// 0: (, const QStringList & strings), (strings)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel13setStringListERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, strings)
+	// 0: (, strings const QStringList &), (strings)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel13setStringListERK11QStringList", ffiqt.FFI_TYPE_VOID, this.GetCthis(), strings)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -182,7 +192,7 @@ func (this *QStringListModel) SetStringList(strings unsafe.Pointer) {
 // Qt::DropActions supportedDropActions()
 func (this *QStringListModel) SupportedDropActions() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel20supportedDropActionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel20supportedDropActionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

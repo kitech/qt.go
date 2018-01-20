@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QButtonGroup struct {
-	cthis unsafe.Pointer
+	*qtcore.QObject
+}
+
+func (this *QButtonGroup) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qbuttongroup.h:56
@@ -62,7 +66,7 @@ type QButtonGroup struct {
 // const QMetaObject * metaObject()
 func (this *QButtonGroup) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQButtonGroup(parent unsafe.Pointer) *QButtonGroup {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QButtonGroup{cthis}
+	gothis := NewQButtonGroupFromPointer(cthis)
+	return gothis
+}
+func NewQButtonGroupFromPointer(cthis unsafe.Pointer) *QButtonGroup {
+	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
+	return &QButtonGroup{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qbuttongroup.h:61
@@ -90,7 +99,7 @@ func DeleteQButtonGroup(*QButtonGroup) {
 // void setExclusive(_Bool)
 func (this *QButtonGroup) SetExclusive(arg0 bool) {
 	// 0: (, bool arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup12setExclusiveEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup12setExclusiveEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +108,7 @@ func (this *QButtonGroup) SetExclusive(arg0 bool) {
 // bool exclusive()
 func (this *QButtonGroup) Exclusive() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup9exclusiveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup9exclusiveEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,8 +116,8 @@ func (this *QButtonGroup) Exclusive() {
 // index:0
 // void addButton(class QAbstractButton *, int)
 func (this *QButtonGroup) AddButton(arg0 unsafe.Pointer, id int) {
-	// 0: (, QAbstractButton * arg0, int id), (arg0, &id)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup9addButtonEP15QAbstractButtoni", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &id)
+	// 0: (, QAbstractButton * arg0, id int), (arg0, &id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup9addButtonEP15QAbstractButtoni", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, &id)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +126,7 @@ func (this *QButtonGroup) AddButton(arg0 unsafe.Pointer, id int) {
 // void removeButton(class QAbstractButton *)
 func (this *QButtonGroup) RemoveButton(arg0 unsafe.Pointer) {
 	// 0: (, QAbstractButton * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup12removeButtonEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup12removeButtonEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +135,7 @@ func (this *QButtonGroup) RemoveButton(arg0 unsafe.Pointer) {
 // QList<QAbstractButton *> buttons()
 func (this *QButtonGroup) Buttons() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup7buttonsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup7buttonsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,7 +144,7 @@ func (this *QButtonGroup) Buttons() {
 // QAbstractButton * checkedButton()
 func (this *QButtonGroup) CheckedButton() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup13checkedButtonEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup13checkedButtonEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,8 +152,8 @@ func (this *QButtonGroup) CheckedButton() {
 // index:0
 // QAbstractButton * button(int)
 func (this *QButtonGroup) Button(id int) {
-	// 0: (, int id), (&id)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup6buttonEi", ffiqt.FFI_TYPE_VOID, this.cthis, &id)
+	// 0: (, id int), (&id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup6buttonEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &id)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,8 +161,8 @@ func (this *QButtonGroup) Button(id int) {
 // index:0
 // void setId(class QAbstractButton *, int)
 func (this *QButtonGroup) SetId(button unsafe.Pointer, id int) {
-	// 0: (, QAbstractButton * button, int id), (button, &id)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup5setIdEP15QAbstractButtoni", ffiqt.FFI_TYPE_VOID, this.cthis, button, &id)
+	// 0: (, button QAbstractButton *, id int), (button, &id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup5setIdEP15QAbstractButtoni", ffiqt.FFI_TYPE_VOID, this.GetCthis(), button, &id)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -161,8 +170,8 @@ func (this *QButtonGroup) SetId(button unsafe.Pointer, id int) {
 // index:0
 // int id(class QAbstractButton *)
 func (this *QButtonGroup) Id(button unsafe.Pointer) {
-	// 0: (, QAbstractButton * button), (button)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup2idEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.cthis, button)
+	// 0: (, button QAbstractButton *), (button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup2idEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.GetCthis(), button)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -171,7 +180,7 @@ func (this *QButtonGroup) Id(button unsafe.Pointer) {
 // int checkedId()
 func (this *QButtonGroup) CheckedId() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup9checkedIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup9checkedIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,7 +189,7 @@ func (this *QButtonGroup) CheckedId() {
 // void buttonClicked(class QAbstractButton *)
 func (this *QButtonGroup) ButtonClicked(arg0 unsafe.Pointer) {
 	// 0: (, QAbstractButton * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonClickedEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonClickedEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -189,7 +198,7 @@ func (this *QButtonGroup) ButtonClicked(arg0 unsafe.Pointer) {
 // void buttonClicked(int)
 func (this *QButtonGroup) ButtonClicked_1(arg0 int) {
 	// 1: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonClickedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonClickedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -198,7 +207,7 @@ func (this *QButtonGroup) ButtonClicked_1(arg0 int) {
 // void buttonPressed(class QAbstractButton *)
 func (this *QButtonGroup) ButtonPressed(arg0 unsafe.Pointer) {
 	// 0: (, QAbstractButton * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonPressedEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonPressedEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -207,7 +216,7 @@ func (this *QButtonGroup) ButtonPressed(arg0 unsafe.Pointer) {
 // void buttonPressed(int)
 func (this *QButtonGroup) ButtonPressed_1(arg0 int) {
 	// 1: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonPressedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonPressedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,7 +225,7 @@ func (this *QButtonGroup) ButtonPressed_1(arg0 int) {
 // void buttonReleased(class QAbstractButton *)
 func (this *QButtonGroup) ButtonReleased(arg0 unsafe.Pointer) {
 	// 0: (, QAbstractButton * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup14buttonReleasedEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup14buttonReleasedEP15QAbstractButton", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,7 +234,7 @@ func (this *QButtonGroup) ButtonReleased(arg0 unsafe.Pointer) {
 // void buttonReleased(int)
 func (this *QButtonGroup) ButtonReleased_1(arg0 int) {
 	// 1: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup14buttonReleasedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup14buttonReleasedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -234,7 +243,7 @@ func (this *QButtonGroup) ButtonReleased_1(arg0 int) {
 // void buttonToggled(class QAbstractButton *, _Bool)
 func (this *QButtonGroup) ButtonToggled(arg0 unsafe.Pointer, arg1 bool) {
 	// 0: (, QAbstractButton * arg0, bool arg1), (arg0, &arg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonToggledEP15QAbstractButtonb", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonToggledEP15QAbstractButtonb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, &arg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -243,7 +252,7 @@ func (this *QButtonGroup) ButtonToggled(arg0 unsafe.Pointer, arg1 bool) {
 // void buttonToggled(int, _Bool)
 func (this *QButtonGroup) ButtonToggled_1(arg0 int, arg1 bool) {
 	// 1: (, int arg0, bool arg1), (&arg0, &arg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonToggledEib", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, &arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonToggledEib", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0, &arg1)
 	gopp.ErrPrint(err, rv)
 }
 

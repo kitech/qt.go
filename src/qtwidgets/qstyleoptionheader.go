@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionHeader struct {
-	cthis unsafe.Pointer
+	*QStyleOption
+}
+
+func (this *QStyleOptionHeader) GetCthis() unsafe.Pointer {
+	return this.QStyleOption.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:226
@@ -63,7 +67,23 @@ func NewQStyleOptionHeader() *QStyleOptionHeader {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionHeader{cthis}
+	gothis := NewQStyleOptionHeaderFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionHeaderFromPointer(cthis unsafe.Pointer) *QStyleOptionHeader {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionHeader{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:230
+// index:1
+// void QStyleOptionHeader(int)
+func NewQStyleOptionHeader_1(version int) *QStyleOptionHeader {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionHeaderFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

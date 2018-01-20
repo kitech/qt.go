@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextTable struct {
-	cthis unsafe.Pointer
+	*QTextFrame
+}
+
+func (this *QTextTable) GetCthis() unsafe.Pointer {
+	return this.QTextFrame.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:100
@@ -58,7 +62,7 @@ type QTextTable struct {
 // const QMetaObject * metaObject()
 func (this *QTextTable) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -69,7 +73,12 @@ func NewQTextTable(doc unsafe.Pointer) *QTextTable {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTableC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, doc)
 	gopp.ErrPrint(err, rv)
-	return &QTextTable{cthis}
+	gothis := NewQTextTableFromPointer(cthis)
+	return gothis
+}
+func NewQTextTableFromPointer(cthis unsafe.Pointer) *QTextTable {
+	bcthis0 := NewQTextFrameFromPointer(cthis)
+	return &QTextTable{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:103
@@ -85,8 +94,8 @@ func DeleteQTextTable(*QTextTable) {
 // index:0
 // void resize(int, int)
 func (this *QTextTable) Resize(rows int, cols int) {
-	// 0: (, int rows, int cols), (&rows, &cols)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable6resizeEii", ffiqt.FFI_TYPE_VOID, this.cthis, &rows, &cols)
+	// 0: (, rows int, cols int), (&rows, &cols)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable6resizeEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &rows, &cols)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -94,8 +103,8 @@ func (this *QTextTable) Resize(rows int, cols int) {
 // index:0
 // void insertRows(int, int)
 func (this *QTextTable) InsertRows(pos int, num int) {
-	// 0: (, int pos, int num), (&pos, &num)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable10insertRowsEii", ffiqt.FFI_TYPE_VOID, this.cthis, &pos, &num)
+	// 0: (, pos int, num int), (&pos, &num)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable10insertRowsEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &pos, &num)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -103,8 +112,8 @@ func (this *QTextTable) InsertRows(pos int, num int) {
 // index:0
 // void insertColumns(int, int)
 func (this *QTextTable) InsertColumns(pos int, num int) {
-	// 0: (, int pos, int num), (&pos, &num)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable13insertColumnsEii", ffiqt.FFI_TYPE_VOID, this.cthis, &pos, &num)
+	// 0: (, pos int, num int), (&pos, &num)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable13insertColumnsEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &pos, &num)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,8 +121,8 @@ func (this *QTextTable) InsertColumns(pos int, num int) {
 // index:0
 // void appendRows(int)
 func (this *QTextTable) AppendRows(count int) {
-	// 0: (, int count), (&count)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable10appendRowsEi", ffiqt.FFI_TYPE_VOID, this.cthis, &count)
+	// 0: (, count int), (&count)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable10appendRowsEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &count)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -121,8 +130,8 @@ func (this *QTextTable) AppendRows(count int) {
 // index:0
 // void appendColumns(int)
 func (this *QTextTable) AppendColumns(count int) {
-	// 0: (, int count), (&count)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable13appendColumnsEi", ffiqt.FFI_TYPE_VOID, this.cthis, &count)
+	// 0: (, count int), (&count)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable13appendColumnsEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &count)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,8 +139,8 @@ func (this *QTextTable) AppendColumns(count int) {
 // index:0
 // void removeRows(int, int)
 func (this *QTextTable) RemoveRows(pos int, num int) {
-	// 0: (, int pos, int num), (&pos, &num)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable10removeRowsEii", ffiqt.FFI_TYPE_VOID, this.cthis, &pos, &num)
+	// 0: (, pos int, num int), (&pos, &num)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable10removeRowsEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &pos, &num)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -139,8 +148,8 @@ func (this *QTextTable) RemoveRows(pos int, num int) {
 // index:0
 // void removeColumns(int, int)
 func (this *QTextTable) RemoveColumns(pos int, num int) {
-	// 0: (, int pos, int num), (&pos, &num)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable13removeColumnsEii", ffiqt.FFI_TYPE_VOID, this.cthis, &pos, &num)
+	// 0: (, pos int, num int), (&pos, &num)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable13removeColumnsEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &pos, &num)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -148,8 +157,8 @@ func (this *QTextTable) RemoveColumns(pos int, num int) {
 // index:0
 // void mergeCells(int, int, int, int)
 func (this *QTextTable) MergeCells(row int, col int, numRows int, numCols int) {
-	// 0: (, int row, int col, int numRows, int numCols), (&row, &col, &numRows, &numCols)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable10mergeCellsEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &col, &numRows, &numCols)
+	// 0: (, row int, col int, numRows int, numCols int), (&row, &col, &numRows, &numCols)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable10mergeCellsEiiii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &col, &numRows, &numCols)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -157,8 +166,8 @@ func (this *QTextTable) MergeCells(row int, col int, numRows int, numCols int) {
 // index:1
 // void mergeCells(const class QTextCursor &)
 func (this *QTextTable) MergeCells_1(cursor unsafe.Pointer) {
-	// 1: (, const QTextCursor & cursor), (cursor)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable10mergeCellsERK11QTextCursor", ffiqt.FFI_TYPE_VOID, this.cthis, cursor)
+	// 1: (, cursor const QTextCursor &), (cursor)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable10mergeCellsERK11QTextCursor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), cursor)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -166,8 +175,8 @@ func (this *QTextTable) MergeCells_1(cursor unsafe.Pointer) {
 // index:0
 // void splitCell(int, int, int, int)
 func (this *QTextTable) SplitCell(row int, col int, numRows int, numCols int) {
-	// 0: (, int row, int col, int numRows, int numCols), (&row, &col, &numRows, &numCols)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable9splitCellEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &col, &numRows, &numCols)
+	// 0: (, row int, col int, numRows int, numCols int), (&row, &col, &numRows, &numCols)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable9splitCellEiiii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &col, &numRows, &numCols)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -176,7 +185,7 @@ func (this *QTextTable) SplitCell(row int, col int, numRows int, numCols int) {
 // int rows()
 func (this *QTextTable) Rows() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable4rowsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable4rowsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -185,7 +194,7 @@ func (this *QTextTable) Rows() {
 // int columns()
 func (this *QTextTable) Columns() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable7columnsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable7columnsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,8 +202,8 @@ func (this *QTextTable) Columns() {
 // index:0
 // QTextTableCell cellAt(int, int)
 func (this *QTextTable) CellAt(row int, col int) {
-	// 0: (, int row, int col), (&row, &col)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6cellAtEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &col)
+	// 0: (, row int, col int), (&row, &col)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6cellAtEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &col)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -202,8 +211,8 @@ func (this *QTextTable) CellAt(row int, col int) {
 // index:1
 // QTextTableCell cellAt(int)
 func (this *QTextTable) CellAt_1(position int) {
-	// 1: (, int position), (&position)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6cellAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &position)
+	// 1: (, position int), (&position)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6cellAtEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &position)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,8 +220,8 @@ func (this *QTextTable) CellAt_1(position int) {
 // index:2
 // QTextTableCell cellAt(const class QTextCursor &)
 func (this *QTextTable) CellAt_2(c unsafe.Pointer) {
-	// 2: (, const QTextCursor & c), (c)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6cellAtERK11QTextCursor", ffiqt.FFI_TYPE_VOID, this.cthis, c)
+	// 2: (, c const QTextCursor &), (c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6cellAtERK11QTextCursor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -220,8 +229,8 @@ func (this *QTextTable) CellAt_2(c unsafe.Pointer) {
 // index:0
 // QTextCursor rowStart(const class QTextCursor &)
 func (this *QTextTable) RowStart(c unsafe.Pointer) {
-	// 0: (, const QTextCursor & c), (c)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable8rowStartERK11QTextCursor", ffiqt.FFI_TYPE_VOID, this.cthis, c)
+	// 0: (, c const QTextCursor &), (c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable8rowStartERK11QTextCursor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -229,8 +238,8 @@ func (this *QTextTable) RowStart(c unsafe.Pointer) {
 // index:0
 // QTextCursor rowEnd(const class QTextCursor &)
 func (this *QTextTable) RowEnd(c unsafe.Pointer) {
-	// 0: (, const QTextCursor & c), (c)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6rowEndERK11QTextCursor", ffiqt.FFI_TYPE_VOID, this.cthis, c)
+	// 0: (, c const QTextCursor &), (c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6rowEndERK11QTextCursor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -238,8 +247,8 @@ func (this *QTextTable) RowEnd(c unsafe.Pointer) {
 // index:0
 // void setFormat(const class QTextTableFormat &)
 func (this *QTextTable) SetFormat(format unsafe.Pointer) {
-	// 0: (, const QTextTableFormat & format), (format)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable9setFormatERK16QTextTableFormat", ffiqt.FFI_TYPE_VOID, this.cthis, format)
+	// 0: (, format const QTextTableFormat &), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable9setFormatERK16QTextTableFormat", ffiqt.FFI_TYPE_VOID, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -249,7 +258,7 @@ func (this *QTextTable) SetFormat(format unsafe.Pointer) {
 // QTextTableFormat format()
 func (this *QTextTable) Format() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6formatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6formatEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

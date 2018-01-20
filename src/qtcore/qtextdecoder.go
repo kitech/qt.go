@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QTextDecoder struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTextDecoder) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:158
@@ -56,7 +60,22 @@ func NewQTextDecoder(codec unsafe.Pointer) *QTextDecoder {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec", ffiqt.FFI_TYPE_VOID, cthis, codec)
 	gopp.ErrPrint(err, rv)
-	return &QTextDecoder{cthis}
+	gothis := NewQTextDecoderFromPointer(cthis)
+	return gothis
+}
+func NewQTextDecoderFromPointer(cthis unsafe.Pointer) *QTextDecoder {
+	return &QTextDecoder{&qtrt.CObject{cthis}}
+}
+
+// /usr/include/qt/QtCore/qtextcodec.h:159
+// index:1
+// void QTextDecoder(const class QTextCodec *, class QTextCodec::ConversionFlags)
+func NewQTextDecoder_1(codec unsafe.Pointer, flags int) *QTextDecoder {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec6QFlagsINS0_14ConversionFlagEE", ffiqt.FFI_TYPE_VOID, cthis, codec, &flags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextDecoderFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:160
@@ -71,8 +90,8 @@ func DeleteQTextDecoder(*QTextDecoder) {
 // index:0
 // QString toUnicode(const char *, int)
 func (this *QTextDecoder) ToUnicode(chars unsafe.Pointer, len int) {
-	// 0: (, const char * chars, int len), (chars, &len)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEPKci", ffiqt.FFI_TYPE_VOID, this.cthis, chars, &len)
+	// 0: (, chars const char *, len int), (chars, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEPKci", ffiqt.FFI_TYPE_VOID, this.GetCthis(), chars, &len)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -80,8 +99,8 @@ func (this *QTextDecoder) ToUnicode(chars unsafe.Pointer, len int) {
 // index:1
 // QString toUnicode(const class QByteArray &)
 func (this *QTextDecoder) ToUnicode_1(ba unsafe.Pointer) {
-	// 1: (, const QByteArray & ba), (ba)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.cthis, ba)
+	// 1: (, ba const QByteArray &), (ba)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.GetCthis(), ba)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -89,8 +108,8 @@ func (this *QTextDecoder) ToUnicode_1(ba unsafe.Pointer) {
 // index:2
 // void toUnicode(class QString *, const char *, int)
 func (this *QTextDecoder) ToUnicode_2(target unsafe.Pointer, chars unsafe.Pointer, len int) {
-	// 2: (, QString * target, const char * chars, int len), (target, chars, &len)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEP7QStringPKci", ffiqt.FFI_TYPE_VOID, this.cthis, target, chars, &len)
+	// 2: (, target QString *, chars const char *, len int), (target, chars, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEP7QStringPKci", ffiqt.FFI_TYPE_VOID, this.GetCthis(), target, chars, &len)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +118,7 @@ func (this *QTextDecoder) ToUnicode_2(target unsafe.Pointer, chars unsafe.Pointe
 // bool hasFailure()
 func (this *QTextDecoder) HasFailure() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextDecoder10hasFailureEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextDecoder10hasFailureEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

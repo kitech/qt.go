@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QMimeData struct {
-	cthis unsafe.Pointer
+	*QObject
+}
+
+func (this *QMimeData) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:54
@@ -54,7 +58,7 @@ type QMimeData struct {
 // const QMetaObject * metaObject()
 func (this *QMimeData) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -65,7 +69,12 @@ func NewQMimeData() *QMimeData {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeDataC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QMimeData{cthis}
+	gothis := NewQMimeDataFromPointer(cthis)
+	return gothis
+}
+func NewQMimeDataFromPointer(cthis unsafe.Pointer) *QMimeData {
+	bcthis0 := NewQObjectFromPointer(cthis)
+	return &QMimeData{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:57
@@ -82,7 +91,7 @@ func DeleteQMimeData(*QMimeData) {
 // QList<QUrl> urls()
 func (this *QMimeData) Urls() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4urlsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4urlsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -91,7 +100,7 @@ func (this *QMimeData) Urls() {
 // bool hasUrls()
 func (this *QMimeData) HasUrls() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7hasUrlsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7hasUrlsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,7 +109,7 @@ func (this *QMimeData) HasUrls() {
 // QString text()
 func (this *QMimeData) Text() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4textEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4textEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,8 +117,8 @@ func (this *QMimeData) Text() {
 // index:0
 // void setText(const class QString &)
 func (this *QMimeData) SetText(text unsafe.Pointer) {
-	// 0: (, const QString & text), (text)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	// 0: (, text const QString &), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -118,7 +127,7 @@ func (this *QMimeData) SetText(text unsafe.Pointer) {
 // bool hasText()
 func (this *QMimeData) HasText() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7hasTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7hasTextEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,7 +136,7 @@ func (this *QMimeData) HasText() {
 // QString html()
 func (this *QMimeData) Html() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4htmlEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4htmlEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,8 +144,8 @@ func (this *QMimeData) Html() {
 // index:0
 // void setHtml(const class QString &)
 func (this *QMimeData) SetHtml(html unsafe.Pointer) {
-	// 0: (, const QString & html), (html)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData7setHtmlERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, html)
+	// 0: (, html const QString &), (html)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData7setHtmlERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), html)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,7 +154,7 @@ func (this *QMimeData) SetHtml(html unsafe.Pointer) {
 // bool hasHtml()
 func (this *QMimeData) HasHtml() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7hasHtmlEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7hasHtmlEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -154,7 +163,7 @@ func (this *QMimeData) HasHtml() {
 // QVariant imageData()
 func (this *QMimeData) ImageData() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9imageDataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9imageDataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,8 +171,8 @@ func (this *QMimeData) ImageData() {
 // index:0
 // void setImageData(const class QVariant &)
 func (this *QMimeData) SetImageData(image unsafe.Pointer) {
-	// 0: (, const QVariant & image), (image)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData12setImageDataERK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, image)
+	// 0: (, image const QVariant &), (image)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData12setImageDataERK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), image)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +181,7 @@ func (this *QMimeData) SetImageData(image unsafe.Pointer) {
 // bool hasImage()
 func (this *QMimeData) HasImage() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData8hasImageEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData8hasImageEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -181,7 +190,7 @@ func (this *QMimeData) HasImage() {
 // QVariant colorData()
 func (this *QMimeData) ColorData() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9colorDataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9colorDataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -189,8 +198,8 @@ func (this *QMimeData) ColorData() {
 // index:0
 // void setColorData(const class QVariant &)
 func (this *QMimeData) SetColorData(color unsafe.Pointer) {
-	// 0: (, const QVariant & color), (color)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData12setColorDataERK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, color)
+	// 0: (, color const QVariant &), (color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData12setColorDataERK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), color)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -199,7 +208,7 @@ func (this *QMimeData) SetColorData(color unsafe.Pointer) {
 // bool hasColor()
 func (this *QMimeData) HasColor() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData8hasColorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData8hasColorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -207,8 +216,8 @@ func (this *QMimeData) HasColor() {
 // index:0
 // QByteArray data(const class QString &)
 func (this *QMimeData) Data(mimetype unsafe.Pointer) {
-	// 0: (, const QString & mimetype), (mimetype)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4dataERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, mimetype)
+	// 0: (, mimetype const QString &), (mimetype)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4dataERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), mimetype)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,8 +225,8 @@ func (this *QMimeData) Data(mimetype unsafe.Pointer) {
 // index:0
 // void setData(const class QString &, const class QByteArray &)
 func (this *QMimeData) SetData(mimetype unsafe.Pointer, data unsafe.Pointer) {
-	// 0: (, const QString & mimetype, const QByteArray & data), (mimetype, data)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData7setDataERK7QStringRK10QByteArray", ffiqt.FFI_TYPE_VOID, this.cthis, mimetype, data)
+	// 0: (, mimetype const QString &, data const QByteArray &), (mimetype, data)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData7setDataERK7QStringRK10QByteArray", ffiqt.FFI_TYPE_VOID, this.GetCthis(), mimetype, data)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,8 +234,8 @@ func (this *QMimeData) SetData(mimetype unsafe.Pointer, data unsafe.Pointer) {
 // index:0
 // void removeFormat(const class QString &)
 func (this *QMimeData) RemoveFormat(mimetype unsafe.Pointer) {
-	// 0: (, const QString & mimetype), (mimetype)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData12removeFormatERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, mimetype)
+	// 0: (, mimetype const QString &), (mimetype)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData12removeFormatERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), mimetype)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -235,8 +244,8 @@ func (this *QMimeData) RemoveFormat(mimetype unsafe.Pointer) {
 // virtual
 // bool hasFormat(const class QString &)
 func (this *QMimeData) HasFormat(mimetype unsafe.Pointer) {
-	// 0: (, const QString & mimetype), (mimetype)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9hasFormatERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, mimetype)
+	// 0: (, mimetype const QString &), (mimetype)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9hasFormatERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), mimetype)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -246,7 +255,7 @@ func (this *QMimeData) HasFormat(mimetype unsafe.Pointer) {
 // QStringList formats()
 func (this *QMimeData) Formats() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7formatsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7formatsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -255,7 +264,17 @@ func (this *QMimeData) Formats() {
 // void clear()
 func (this *QMimeData) Clear() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData5clearEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qmimedata.h:88
+// index:0
+// virtual
+// QVariant retrieveData(const class QString &, class QVariant::Type)
+func (this *QMimeData) RetrieveData(mimetype unsafe.Pointer, preferredType int) {
+	// 0: (, mimetype const QString &, preferredType QVariant::Type), (mimetype, &preferredType)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData12retrieveDataERK7QStringN8QVariant4TypeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), mimetype, &preferredType)
 	gopp.ErrPrint(err, rv)
 }
 

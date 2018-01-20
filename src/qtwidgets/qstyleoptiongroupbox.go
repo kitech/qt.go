@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionGroupBox struct {
-	cthis unsafe.Pointer
+	*QStyleOptionComplex
+}
+
+func (this *QStyleOptionGroupBox) GetCthis() unsafe.Pointer {
+	return this.QStyleOptionComplex.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:639
@@ -63,7 +67,23 @@ func NewQStyleOptionGroupBox() *QStyleOptionGroupBox {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionGroupBox{cthis}
+	gothis := NewQStyleOptionGroupBoxFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionGroupBoxFromPointer(cthis unsafe.Pointer) *QStyleOptionGroupBox {
+	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
+	return &QStyleOptionGroupBox{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:642
+// index:1
+// void QStyleOptionGroupBox(int)
+func NewQStyleOptionGroupBox_1(version int) *QStyleOptionGroupBox {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionGroupBoxFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

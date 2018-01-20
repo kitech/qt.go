@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionMenuItem struct {
-	cthis unsafe.Pointer
+	*QStyleOption
+}
+
+func (this *QStyleOptionMenuItem) GetCthis() unsafe.Pointer {
+	return this.QStyleOption.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:372
@@ -63,7 +67,23 @@ func NewQStyleOptionMenuItem() *QStyleOptionMenuItem {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionMenuItem{cthis}
+	gothis := NewQStyleOptionMenuItemFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionMenuItemFromPointer(cthis unsafe.Pointer) *QStyleOptionMenuItem {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionMenuItem{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:376
+// index:1
+// void QStyleOptionMenuItem(int)
+func NewQStyleOptionMenuItem_1(version int) *QStyleOptionMenuItem {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionMenuItemFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

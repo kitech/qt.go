@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 3
+// extern C begin: 5
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QScreen struct {
-	cthis unsafe.Pointer
+	*qtcore.QObject
+}
+
+func (this *QScreen) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qscreen.h:68
@@ -58,7 +62,7 @@ type QScreen struct {
 // const QMetaObject * metaObject()
 func (this *QScreen) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -76,7 +80,7 @@ func DeleteQScreen(*QScreen) {
 // QPlatformScreen * handle()
 func (this *QScreen) Handle() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen6handleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen6handleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -85,7 +89,7 @@ func (this *QScreen) Handle() {
 // QString name()
 func (this *QScreen) Name() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -94,7 +98,7 @@ func (this *QScreen) Name() {
 // QString manufacturer()
 func (this *QScreen) Manufacturer() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen12manufacturerEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen12manufacturerEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -103,7 +107,7 @@ func (this *QScreen) Manufacturer() {
 // QString model()
 func (this *QScreen) Model() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen5modelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen5modelEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,7 +116,7 @@ func (this *QScreen) Model() {
 // QString serialNumber()
 func (this *QScreen) SerialNumber() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen12serialNumberEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen12serialNumberEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -121,7 +125,7 @@ func (this *QScreen) SerialNumber() {
 // int depth()
 func (this *QScreen) Depth() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen5depthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen5depthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +134,7 @@ func (this *QScreen) Depth() {
 // QSize size()
 func (this *QScreen) Size() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -139,7 +143,7 @@ func (this *QScreen) Size() {
 // QRect geometry()
 func (this *QScreen) Geometry() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen8geometryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen8geometryEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -148,7 +152,7 @@ func (this *QScreen) Geometry() {
 // QSizeF physicalSize()
 func (this *QScreen) PhysicalSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen12physicalSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen12physicalSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -157,7 +161,7 @@ func (this *QScreen) PhysicalSize() {
 // qreal physicalDotsPerInchX()
 func (this *QScreen) PhysicalDotsPerInchX() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen20physicalDotsPerInchXEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen20physicalDotsPerInchXEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -166,7 +170,7 @@ func (this *QScreen) PhysicalDotsPerInchX() {
 // qreal physicalDotsPerInchY()
 func (this *QScreen) PhysicalDotsPerInchY() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen20physicalDotsPerInchYEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen20physicalDotsPerInchYEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -175,7 +179,7 @@ func (this *QScreen) PhysicalDotsPerInchY() {
 // qreal physicalDotsPerInch()
 func (this *QScreen) PhysicalDotsPerInch() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19physicalDotsPerInchEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19physicalDotsPerInchEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -184,7 +188,7 @@ func (this *QScreen) PhysicalDotsPerInch() {
 // qreal logicalDotsPerInchX()
 func (this *QScreen) LogicalDotsPerInchX() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19logicalDotsPerInchXEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19logicalDotsPerInchXEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,7 +197,7 @@ func (this *QScreen) LogicalDotsPerInchX() {
 // qreal logicalDotsPerInchY()
 func (this *QScreen) LogicalDotsPerInchY() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19logicalDotsPerInchYEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19logicalDotsPerInchYEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -202,7 +206,7 @@ func (this *QScreen) LogicalDotsPerInchY() {
 // qreal logicalDotsPerInch()
 func (this *QScreen) LogicalDotsPerInch() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen18logicalDotsPerInchEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen18logicalDotsPerInchEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +215,7 @@ func (this *QScreen) LogicalDotsPerInch() {
 // qreal devicePixelRatio()
 func (this *QScreen) DevicePixelRatio() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen16devicePixelRatioEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen16devicePixelRatioEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -220,7 +224,7 @@ func (this *QScreen) DevicePixelRatio() {
 // QSize availableSize()
 func (this *QScreen) AvailableSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen13availableSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen13availableSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -229,7 +233,7 @@ func (this *QScreen) AvailableSize() {
 // QRect availableGeometry()
 func (this *QScreen) AvailableGeometry() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen17availableGeometryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen17availableGeometryEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -238,7 +242,7 @@ func (this *QScreen) AvailableGeometry() {
 // QList<QScreen *> virtualSiblings()
 func (this *QScreen) VirtualSiblings() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen15virtualSiblingsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen15virtualSiblingsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -247,7 +251,7 @@ func (this *QScreen) VirtualSiblings() {
 // QSize virtualSize()
 func (this *QScreen) VirtualSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen11virtualSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen11virtualSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -256,7 +260,7 @@ func (this *QScreen) VirtualSize() {
 // QRect virtualGeometry()
 func (this *QScreen) VirtualGeometry() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen15virtualGeometryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen15virtualGeometryEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -265,7 +269,7 @@ func (this *QScreen) VirtualGeometry() {
 // QSize availableVirtualSize()
 func (this *QScreen) AvailableVirtualSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen20availableVirtualSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen20availableVirtualSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -274,7 +278,7 @@ func (this *QScreen) AvailableVirtualSize() {
 // QRect availableVirtualGeometry()
 func (this *QScreen) AvailableVirtualGeometry() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen24availableVirtualGeometryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen24availableVirtualGeometryEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -283,7 +287,7 @@ func (this *QScreen) AvailableVirtualGeometry() {
 // Qt::ScreenOrientation primaryOrientation()
 func (this *QScreen) PrimaryOrientation() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen18primaryOrientationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen18primaryOrientationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -292,7 +296,7 @@ func (this *QScreen) PrimaryOrientation() {
 // Qt::ScreenOrientation orientation()
 func (this *QScreen) Orientation() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen11orientationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen11orientationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -301,7 +305,7 @@ func (this *QScreen) Orientation() {
 // Qt::ScreenOrientation nativeOrientation()
 func (this *QScreen) NativeOrientation() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen17nativeOrientationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen17nativeOrientationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -310,7 +314,16 @@ func (this *QScreen) NativeOrientation() {
 // Qt::ScreenOrientations orientationUpdateMask()
 func (this *QScreen) OrientationUpdateMask() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen21orientationUpdateMaskEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen21orientationUpdateMaskEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qscreen.h:140
+// index:0
+// void setOrientationUpdateMask(Qt::ScreenOrientations)
+func (this *QScreen) SetOrientationUpdateMask(mask int) {
+	// 0: (, QFlags<Qt::ScreenOrientation> mask), (&mask)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen24setOrientationUpdateMaskE6QFlagsIN2Qt17ScreenOrientationEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mask)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -318,8 +331,8 @@ func (this *QScreen) OrientationUpdateMask() {
 // index:0
 // int angleBetween(Qt::ScreenOrientation, Qt::ScreenOrientation)
 func (this *QScreen) AngleBetween(a int, b int) {
-	// 0: (, Qt::ScreenOrientation a, Qt::ScreenOrientation b), (&a, &b)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen12angleBetweenEN2Qt17ScreenOrientationES1_", ffiqt.FFI_TYPE_VOID, this.cthis, &a, &b)
+	// 0: (, a Qt::ScreenOrientation, b Qt::ScreenOrientation), (&a, &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen12angleBetweenEN2Qt17ScreenOrientationES1_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &a, &b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -327,8 +340,8 @@ func (this *QScreen) AngleBetween(a int, b int) {
 // index:0
 // QTransform transformBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const class QRect &)
 func (this *QScreen) TransformBetween(a int, b int, target unsafe.Pointer) {
-	// 0: (, Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect & target), (&a, &b, target)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen16transformBetweenEN2Qt17ScreenOrientationES1_RK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, &a, &b, target)
+	// 0: (, a Qt::ScreenOrientation, b Qt::ScreenOrientation, target const QRect &), (&a, &b, target)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen16transformBetweenEN2Qt17ScreenOrientationES1_RK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &a, &b, target)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -336,8 +349,8 @@ func (this *QScreen) TransformBetween(a int, b int, target unsafe.Pointer) {
 // index:0
 // QRect mapBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const class QRect &)
 func (this *QScreen) MapBetween(a int, b int, rect unsafe.Pointer) {
-	// 0: (, Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect & rect), (&a, &b, rect)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen10mapBetweenEN2Qt17ScreenOrientationES1_RK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, &a, &b, rect)
+	// 0: (, a Qt::ScreenOrientation, b Qt::ScreenOrientation, rect const QRect &), (&a, &b, rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen10mapBetweenEN2Qt17ScreenOrientationES1_RK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &a, &b, rect)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -345,8 +358,8 @@ func (this *QScreen) MapBetween(a int, b int, rect unsafe.Pointer) {
 // index:0
 // bool isPortrait(Qt::ScreenOrientation)
 func (this *QScreen) IsPortrait(orientation int) {
-	// 0: (, Qt::ScreenOrientation orientation), (&orientation)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen10isPortraitEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, this.cthis, &orientation)
+	// 0: (, orientation Qt::ScreenOrientation), (&orientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen10isPortraitEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &orientation)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -354,8 +367,8 @@ func (this *QScreen) IsPortrait(orientation int) {
 // index:0
 // bool isLandscape(Qt::ScreenOrientation)
 func (this *QScreen) IsLandscape(orientation int) {
-	// 0: (, Qt::ScreenOrientation orientation), (&orientation)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen11isLandscapeEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, this.cthis, &orientation)
+	// 0: (, orientation Qt::ScreenOrientation), (&orientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen11isLandscapeEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &orientation)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -363,8 +376,8 @@ func (this *QScreen) IsLandscape(orientation int) {
 // index:0
 // QPixmap grabWindow(WId, int, int, int, int)
 func (this *QScreen) GrabWindow(window uint64, x int, y int, w int, h int) {
-	// 0: (, WId window, int x, int y, int w, int h), (&window, &x, &y, &w, &h)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &window, &x, &y, &w, &h)
+	// 0: (, window WId, x int, y int, w int, h int), (&window, &x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &window, &x, &y, &w, &h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -373,7 +386,7 @@ func (this *QScreen) GrabWindow(window uint64, x int, y int, w int, h int) {
 // qreal refreshRate()
 func (this *QScreen) RefreshRate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen11refreshRateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen11refreshRateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -381,8 +394,8 @@ func (this *QScreen) RefreshRate() {
 // index:0
 // void geometryChanged(const class QRect &)
 func (this *QScreen) GeometryChanged(geometry unsafe.Pointer) {
-	// 0: (, const QRect & geometry), (geometry)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen15geometryChangedERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, geometry)
+	// 0: (, geometry const QRect &), (geometry)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen15geometryChangedERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), geometry)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -390,8 +403,8 @@ func (this *QScreen) GeometryChanged(geometry unsafe.Pointer) {
 // index:0
 // void availableGeometryChanged(const class QRect &)
 func (this *QScreen) AvailableGeometryChanged(geometry unsafe.Pointer) {
-	// 0: (, const QRect & geometry), (geometry)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen24availableGeometryChangedERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, geometry)
+	// 0: (, geometry const QRect &), (geometry)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen24availableGeometryChangedERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), geometry)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -399,8 +412,8 @@ func (this *QScreen) AvailableGeometryChanged(geometry unsafe.Pointer) {
 // index:0
 // void physicalSizeChanged(const class QSizeF &)
 func (this *QScreen) PhysicalSizeChanged(size unsafe.Pointer) {
-	// 0: (, const QSizeF & size), (size)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen19physicalSizeChangedERK6QSizeF", ffiqt.FFI_TYPE_VOID, this.cthis, size)
+	// 0: (, size const QSizeF &), (size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen19physicalSizeChangedERK6QSizeF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -408,8 +421,8 @@ func (this *QScreen) PhysicalSizeChanged(size unsafe.Pointer) {
 // index:0
 // void physicalDotsPerInchChanged(qreal)
 func (this *QScreen) PhysicalDotsPerInchChanged(dpi float64) {
-	// 0: (, qreal dpi), (&dpi)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen26physicalDotsPerInchChangedEd", ffiqt.FFI_TYPE_VOID, this.cthis, &dpi)
+	// 0: (, dpi qreal), (&dpi)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen26physicalDotsPerInchChangedEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &dpi)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -417,8 +430,8 @@ func (this *QScreen) PhysicalDotsPerInchChanged(dpi float64) {
 // index:0
 // void logicalDotsPerInchChanged(qreal)
 func (this *QScreen) LogicalDotsPerInchChanged(dpi float64) {
-	// 0: (, qreal dpi), (&dpi)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen25logicalDotsPerInchChangedEd", ffiqt.FFI_TYPE_VOID, this.cthis, &dpi)
+	// 0: (, dpi qreal), (&dpi)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen25logicalDotsPerInchChangedEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &dpi)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -426,8 +439,8 @@ func (this *QScreen) LogicalDotsPerInchChanged(dpi float64) {
 // index:0
 // void virtualGeometryChanged(const class QRect &)
 func (this *QScreen) VirtualGeometryChanged(rect unsafe.Pointer) {
-	// 0: (, const QRect & rect), (rect)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen22virtualGeometryChangedERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	// 0: (, rect const QRect &), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen22virtualGeometryChangedERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), rect)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -435,8 +448,8 @@ func (this *QScreen) VirtualGeometryChanged(rect unsafe.Pointer) {
 // index:0
 // void primaryOrientationChanged(Qt::ScreenOrientation)
 func (this *QScreen) PrimaryOrientationChanged(orientation int) {
-	// 0: (, Qt::ScreenOrientation orientation), (&orientation)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen25primaryOrientationChangedEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, this.cthis, &orientation)
+	// 0: (, orientation Qt::ScreenOrientation), (&orientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen25primaryOrientationChangedEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &orientation)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -444,8 +457,8 @@ func (this *QScreen) PrimaryOrientationChanged(orientation int) {
 // index:0
 // void orientationChanged(Qt::ScreenOrientation)
 func (this *QScreen) OrientationChanged(orientation int) {
-	// 0: (, Qt::ScreenOrientation orientation), (&orientation)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen18orientationChangedEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, this.cthis, &orientation)
+	// 0: (, orientation Qt::ScreenOrientation), (&orientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen18orientationChangedEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &orientation)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -453,8 +466,8 @@ func (this *QScreen) OrientationChanged(orientation int) {
 // index:0
 // void refreshRateChanged(qreal)
 func (this *QScreen) RefreshRateChanged(refreshRate float64) {
-	// 0: (, qreal refreshRate), (&refreshRate)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen18refreshRateChangedEd", ffiqt.FFI_TYPE_VOID, this.cthis, &refreshRate)
+	// 0: (, refreshRate qreal), (&refreshRate)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen18refreshRateChangedEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &refreshRate)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 16
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextBlockUserData struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTextBlockUserData) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:198

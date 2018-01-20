@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 56
+// extern C begin: 62
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QStandardPaths struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QStandardPaths) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qstandardpaths.h:81
@@ -53,12 +57,12 @@ type QStandardPaths struct {
 // static
 // QString writableLocation(enum QStandardPaths::StandardLocation)
 func (this *QStandardPaths) WritableLocation(type_ int) {
-	// 0: (QStandardPaths::StandardLocation type), (type_)
+	// 0: (type QStandardPaths::StandardLocation), (type_)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths16writableLocationENS_16StandardLocationE", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QStandardPaths_WritableLocation(type_ int) {
-	// 0: (QStandardPaths::StandardLocation type), (type_)
+	// 0: (type QStandardPaths::StandardLocation), (type_)
 	var nilthis *QStandardPaths
 	nilthis.WritableLocation(type_)
 }
@@ -68,14 +72,44 @@ func QStandardPaths_WritableLocation(type_ int) {
 // static
 // QStringList standardLocations(enum QStandardPaths::StandardLocation)
 func (this *QStandardPaths) StandardLocations(type_ int) {
-	// 0: (QStandardPaths::StandardLocation type), (type_)
+	// 0: (type QStandardPaths::StandardLocation), (type_)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths17standardLocationsENS_16StandardLocationE", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QStandardPaths_StandardLocations(type_ int) {
-	// 0: (QStandardPaths::StandardLocation type), (type_)
+	// 0: (type QStandardPaths::StandardLocation), (type_)
 	var nilthis *QStandardPaths
 	nilthis.StandardLocations(type_)
+}
+
+// /usr/include/qt/QtCore/qstandardpaths.h:91
+// index:0
+// static
+// QString locate(enum QStandardPaths::StandardLocation, const class QString &, QStandardPaths::LocateOptions)
+func (this *QStandardPaths) Locate(type_ int, fileName unsafe.Pointer, options int) {
+	// 0: (type QStandardPaths::StandardLocation, fileName const QString &, QFlags<QStandardPaths::LocateOption> options), (type_, fileName, options)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths6locateENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QStandardPaths_Locate(type_ int, fileName unsafe.Pointer, options int) {
+	// 0: (type QStandardPaths::StandardLocation, fileName const QString &, QFlags<QStandardPaths::LocateOption> options), (type_, fileName, options)
+	var nilthis *QStandardPaths
+	nilthis.Locate(type_, fileName, options)
+}
+
+// /usr/include/qt/QtCore/qstandardpaths.h:92
+// index:0
+// static
+// QStringList locateAll(enum QStandardPaths::StandardLocation, const class QString &, QStandardPaths::LocateOptions)
+func (this *QStandardPaths) LocateAll(type_ int, fileName unsafe.Pointer, options int) {
+	// 0: (type QStandardPaths::StandardLocation, fileName const QString &, QFlags<QStandardPaths::LocateOption> options), (type_, fileName, options)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths9locateAllENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QStandardPaths_LocateAll(type_ int, fileName unsafe.Pointer, options int) {
+	// 0: (type QStandardPaths::StandardLocation, fileName const QString &, QFlags<QStandardPaths::LocateOption> options), (type_, fileName, options)
+	var nilthis *QStandardPaths
+	nilthis.LocateAll(type_, fileName, options)
 }
 
 // /usr/include/qt/QtCore/qstandardpaths.h:94
@@ -83,12 +117,12 @@ func QStandardPaths_StandardLocations(type_ int) {
 // static
 // QString displayName(enum QStandardPaths::StandardLocation)
 func (this *QStandardPaths) DisplayName(type_ int) {
-	// 0: (QStandardPaths::StandardLocation type), (type_)
+	// 0: (type QStandardPaths::StandardLocation), (type_)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths11displayNameENS_16StandardLocationE", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QStandardPaths_DisplayName(type_ int) {
-	// 0: (QStandardPaths::StandardLocation type), (type_)
+	// 0: (type QStandardPaths::StandardLocation), (type_)
 	var nilthis *QStandardPaths
 	nilthis.DisplayName(type_)
 }
@@ -98,12 +132,12 @@ func QStandardPaths_DisplayName(type_ int) {
 // static
 // QString findExecutable(const class QString &, const class QStringList &)
 func (this *QStandardPaths) FindExecutable(executableName unsafe.Pointer, paths unsafe.Pointer) {
-	// 0: (const QString & executableName, const QStringList & paths), (executableName, paths)
+	// 0: (executableName const QString &, paths const QStringList &), (executableName, paths)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QStandardPaths_FindExecutable(executableName unsafe.Pointer, paths unsafe.Pointer) {
-	// 0: (const QString & executableName, const QStringList & paths), (executableName, paths)
+	// 0: (executableName const QString &, paths const QStringList &), (executableName, paths)
 	var nilthis *QStandardPaths
 	nilthis.FindExecutable(executableName, paths)
 }
@@ -113,12 +147,12 @@ func QStandardPaths_FindExecutable(executableName unsafe.Pointer, paths unsafe.P
 // static
 // void enableTestMode(_Bool)
 func (this *QStandardPaths) EnableTestMode(testMode bool) {
-	// 0: (bool testMode), (testMode)
+	// 0: (testMode bool), (testMode)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths14enableTestModeEb", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QStandardPaths_EnableTestMode(testMode bool) {
-	// 0: (bool testMode), (testMode)
+	// 0: (testMode bool), (testMode)
 	var nilthis *QStandardPaths
 	nilthis.EnableTestMode(testMode)
 }
@@ -128,12 +162,12 @@ func QStandardPaths_EnableTestMode(testMode bool) {
 // static
 // void setTestModeEnabled(_Bool)
 func (this *QStandardPaths) SetTestModeEnabled(testMode bool) {
-	// 0: (bool testMode), (testMode)
+	// 0: (testMode bool), (testMode)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths18setTestModeEnabledEb", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QStandardPaths_SetTestModeEnabled(testMode bool) {
-	// 0: (bool testMode), (testMode)
+	// 0: (testMode bool), (testMode)
 	var nilthis *QStandardPaths
 	nilthis.SetTestModeEnabled(testMode)
 }

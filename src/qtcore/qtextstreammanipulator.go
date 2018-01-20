@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 41
+// extern C begin: 47
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QTextStreamManipulator struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTextStreamManipulator) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:217
@@ -53,8 +57,8 @@ type QTextStreamManipulator struct {
 // inline
 // void exec(class QTextStream &)
 func (this *QTextStreamManipulator) Exec(s unsafe.Pointer) {
-	// 0: (, QTextStream & s), (s)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QTextStreamManipulator4execER11QTextStream", ffiqt.FFI_TYPE_VOID, this.cthis, s)
+	// 0: (, s QTextStream &), (s)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QTextStreamManipulator4execER11QTextStream", ffiqt.FFI_TYPE_VOID, this.GetCthis(), s)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 38
+// extern C begin: 69
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QListWidgetItem struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QListWidgetItem) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:64
@@ -63,7 +67,11 @@ func NewQListWidgetItem(view unsafe.Pointer, type_ int) *QListWidgetItem {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItemC2EP11QListWidgeti", ffiqt.FFI_TYPE_VOID, cthis, view, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QListWidgetItem{cthis}
+	gothis := NewQListWidgetItemFromPointer(cthis)
+	return gothis
+}
+func NewQListWidgetItemFromPointer(cthis unsafe.Pointer) *QListWidgetItem {
+	return &QListWidgetItem{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:65
@@ -73,7 +81,8 @@ func NewQListWidgetItem_1(text unsafe.Pointer, view unsafe.Pointer, type_ int) *
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti", ffiqt.FFI_TYPE_VOID, cthis, text, view, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QListWidgetItem{cthis}
+	gothis := NewQListWidgetItemFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:66
@@ -83,7 +92,8 @@ func NewQListWidgetItem_2(icon unsafe.Pointer, text unsafe.Pointer, view unsafe.
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti", ffiqt.FFI_TYPE_VOID, cthis, icon, text, view, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QListWidgetItem{cthis}
+	gothis := NewQListWidgetItemFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:69
@@ -101,7 +111,7 @@ func DeleteQListWidgetItem(*QListWidgetItem) {
 // QListWidgetItem * clone()
 func (this *QListWidgetItem) Clone() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5cloneEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5cloneEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -111,7 +121,7 @@ func (this *QListWidgetItem) Clone() {
 // QListWidget * listWidget()
 func (this *QListWidgetItem) ListWidget() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10listWidgetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10listWidgetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -120,8 +130,8 @@ func (this *QListWidgetItem) ListWidget() {
 // inline
 // void setSelected(_Bool)
 func (this *QListWidgetItem) SetSelected(select_ bool) {
-	// 0: (, bool select), (&select_)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &select_)
+	// 0: (, select bool), (&select_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &select_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -131,7 +141,7 @@ func (this *QListWidgetItem) SetSelected(select_ bool) {
 // bool isSelected()
 func (this *QListWidgetItem) IsSelected() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10isSelectedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10isSelectedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,8 +150,8 @@ func (this *QListWidgetItem) IsSelected() {
 // inline
 // void setHidden(_Bool)
 func (this *QListWidgetItem) SetHidden(hide bool) {
-	// 0: (, bool hide), (&hide)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem9setHiddenEb", ffiqt.FFI_TYPE_VOID, this.cthis, &hide)
+	// 0: (, hide bool), (&hide)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem9setHiddenEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &hide)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,7 +161,7 @@ func (this *QListWidgetItem) SetHidden(hide bool) {
 // bool isHidden()
 func (this *QListWidgetItem) IsHidden() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem8isHiddenEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem8isHiddenEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -161,7 +171,16 @@ func (this *QListWidgetItem) IsHidden() {
 // Qt::ItemFlags flags()
 func (this *QListWidgetItem) Flags() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5flagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5flagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qlistwidget.h:82
+// index:0
+// void setFlags(Qt::ItemFlags)
+func (this *QListWidgetItem) SetFlags(flags int) {
+	// 0: (, QFlags<Qt::ItemFlag> flags), (&flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem8setFlagsE6QFlagsIN2Qt8ItemFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -171,7 +190,7 @@ func (this *QListWidgetItem) Flags() {
 // QString text()
 func (this *QListWidgetItem) Text() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4textEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4textEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,8 +199,8 @@ func (this *QListWidgetItem) Text() {
 // inline
 // void setText(const class QString &)
 func (this *QListWidgetItem) SetText(text unsafe.Pointer) {
-	// 0: (, const QString & text), (text)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	// 0: (, text const QString &), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -191,7 +210,7 @@ func (this *QListWidgetItem) SetText(text unsafe.Pointer) {
 // QIcon icon()
 func (this *QListWidgetItem) Icon() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4iconEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4iconEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -200,8 +219,8 @@ func (this *QListWidgetItem) Icon() {
 // inline
 // void setIcon(const class QIcon &)
 func (this *QListWidgetItem) SetIcon(icon unsafe.Pointer) {
-	// 0: (, const QIcon & icon), (icon)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setIconERK5QIcon", ffiqt.FFI_TYPE_VOID, this.cthis, icon)
+	// 0: (, icon const QIcon &), (icon)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setIconERK5QIcon", ffiqt.FFI_TYPE_VOID, this.GetCthis(), icon)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +230,7 @@ func (this *QListWidgetItem) SetIcon(icon unsafe.Pointer) {
 // QString statusTip()
 func (this *QListWidgetItem) StatusTip() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9statusTipEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9statusTipEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -220,8 +239,8 @@ func (this *QListWidgetItem) StatusTip() {
 // inline
 // void setStatusTip(const class QString &)
 func (this *QListWidgetItem) SetStatusTip(statusTip unsafe.Pointer) {
-	// 0: (, const QString & statusTip), (statusTip)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setStatusTipERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, statusTip)
+	// 0: (, statusTip const QString &), (statusTip)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setStatusTipERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), statusTip)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -231,7 +250,7 @@ func (this *QListWidgetItem) SetStatusTip(statusTip unsafe.Pointer) {
 // QString toolTip()
 func (this *QListWidgetItem) ToolTip() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem7toolTipEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem7toolTipEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -240,8 +259,8 @@ func (this *QListWidgetItem) ToolTip() {
 // inline
 // void setToolTip(const class QString &)
 func (this *QListWidgetItem) SetToolTip(toolTip unsafe.Pointer) {
-	// 0: (, const QString & toolTip), (toolTip)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem10setToolTipERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, toolTip)
+	// 0: (, toolTip const QString &), (toolTip)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem10setToolTipERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), toolTip)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -251,7 +270,7 @@ func (this *QListWidgetItem) SetToolTip(toolTip unsafe.Pointer) {
 // QString whatsThis()
 func (this *QListWidgetItem) WhatsThis() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9whatsThisEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9whatsThisEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -260,8 +279,8 @@ func (this *QListWidgetItem) WhatsThis() {
 // inline
 // void setWhatsThis(const class QString &)
 func (this *QListWidgetItem) SetWhatsThis(whatsThis unsafe.Pointer) {
-	// 0: (, const QString & whatsThis), (whatsThis)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setWhatsThisERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, whatsThis)
+	// 0: (, whatsThis const QString &), (whatsThis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setWhatsThisERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), whatsThis)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -271,7 +290,7 @@ func (this *QListWidgetItem) SetWhatsThis(whatsThis unsafe.Pointer) {
 // QFont font()
 func (this *QListWidgetItem) Font() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4fontEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4fontEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -280,8 +299,8 @@ func (this *QListWidgetItem) Font() {
 // inline
 // void setFont(const class QFont &)
 func (this *QListWidgetItem) SetFont(font unsafe.Pointer) {
-	// 0: (, const QFont & font), (font)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setFontERK5QFont", ffiqt.FFI_TYPE_VOID, this.cthis, font)
+	// 0: (, font const QFont &), (font)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setFontERK5QFont", ffiqt.FFI_TYPE_VOID, this.GetCthis(), font)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -291,7 +310,7 @@ func (this *QListWidgetItem) SetFont(font unsafe.Pointer) {
 // int textAlignment()
 func (this *QListWidgetItem) TextAlignment() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem13textAlignmentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem13textAlignmentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -300,8 +319,8 @@ func (this *QListWidgetItem) TextAlignment() {
 // inline
 // void setTextAlignment(int)
 func (this *QListWidgetItem) SetTextAlignment(alignment int) {
-	// 0: (, int alignment), (&alignment)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem16setTextAlignmentEi", ffiqt.FFI_TYPE_VOID, this.cthis, &alignment)
+	// 0: (, alignment int), (&alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem16setTextAlignmentEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &alignment)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -311,7 +330,7 @@ func (this *QListWidgetItem) SetTextAlignment(alignment int) {
 // QColor backgroundColor()
 func (this *QListWidgetItem) BackgroundColor() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem15backgroundColorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem15backgroundColorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -320,8 +339,8 @@ func (this *QListWidgetItem) BackgroundColor() {
 // inline virtual
 // void setBackgroundColor(const class QColor &)
 func (this *QListWidgetItem) SetBackgroundColor(color unsafe.Pointer) {
-	// 0: (, const QColor & color), (color)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem18setBackgroundColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, color)
+	// 0: (, color const QColor &), (color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem18setBackgroundColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), color)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -331,7 +350,7 @@ func (this *QListWidgetItem) SetBackgroundColor(color unsafe.Pointer) {
 // QBrush background()
 func (this *QListWidgetItem) Background() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10backgroundEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10backgroundEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -340,8 +359,8 @@ func (this *QListWidgetItem) Background() {
 // inline
 // void setBackground(const class QBrush &)
 func (this *QListWidgetItem) SetBackground(brush unsafe.Pointer) {
-	// 0: (, const QBrush & brush), (brush)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setBackgroundERK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, brush)
+	// 0: (, brush const QBrush &), (brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setBackgroundERK6QBrush", ffiqt.FFI_TYPE_VOID, this.GetCthis(), brush)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -351,7 +370,7 @@ func (this *QListWidgetItem) SetBackground(brush unsafe.Pointer) {
 // QColor textColor()
 func (this *QListWidgetItem) TextColor() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9textColorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem9textColorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -360,8 +379,8 @@ func (this *QListWidgetItem) TextColor() {
 // inline
 // void setTextColor(const class QColor &)
 func (this *QListWidgetItem) SetTextColor(color unsafe.Pointer) {
-	// 0: (, const QColor & color), (color)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setTextColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, color)
+	// 0: (, color const QColor &), (color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setTextColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), color)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -371,7 +390,7 @@ func (this *QListWidgetItem) SetTextColor(color unsafe.Pointer) {
 // QBrush foreground()
 func (this *QListWidgetItem) Foreground() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10foregroundEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10foregroundEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -380,8 +399,8 @@ func (this *QListWidgetItem) Foreground() {
 // inline
 // void setForeground(const class QBrush &)
 func (this *QListWidgetItem) SetForeground(brush unsafe.Pointer) {
-	// 0: (, const QBrush & brush), (brush)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setForegroundERK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, brush)
+	// 0: (, brush const QBrush &), (brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setForegroundERK6QBrush", ffiqt.FFI_TYPE_VOID, this.GetCthis(), brush)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -391,7 +410,7 @@ func (this *QListWidgetItem) SetForeground(brush unsafe.Pointer) {
 // Qt::CheckState checkState()
 func (this *QListWidgetItem) CheckState() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10checkStateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10checkStateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -400,8 +419,8 @@ func (this *QListWidgetItem) CheckState() {
 // inline
 // void setCheckState(Qt::CheckState)
 func (this *QListWidgetItem) SetCheckState(state int) {
-	// 0: (, Qt::CheckState state), (&state)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setCheckStateEN2Qt10CheckStateE", ffiqt.FFI_TYPE_VOID, this.cthis, &state)
+	// 0: (, state Qt::CheckState), (&state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setCheckStateEN2Qt10CheckStateE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &state)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -411,7 +430,7 @@ func (this *QListWidgetItem) SetCheckState(state int) {
 // QSize sizeHint()
 func (this *QListWidgetItem) SizeHint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -420,8 +439,8 @@ func (this *QListWidgetItem) SizeHint() {
 // inline
 // void setSizeHint(const class QSize &)
 func (this *QListWidgetItem) SetSizeHint(size unsafe.Pointer) {
-	// 0: (, const QSize & size), (size)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem11setSizeHintERK5QSize", ffiqt.FFI_TYPE_VOID, this.cthis, size)
+	// 0: (, size const QSize &), (size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem11setSizeHintERK5QSize", ffiqt.FFI_TYPE_VOID, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -430,8 +449,8 @@ func (this *QListWidgetItem) SetSizeHint(size unsafe.Pointer) {
 // virtual
 // QVariant data(int)
 func (this *QListWidgetItem) Data(role int) {
-	// 0: (, int role), (&role)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4dataEi", ffiqt.FFI_TYPE_VOID, this.cthis, &role)
+	// 0: (, role int), (&role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4dataEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -440,8 +459,8 @@ func (this *QListWidgetItem) Data(role int) {
 // virtual
 // void setData(int, const class QVariant &)
 func (this *QListWidgetItem) SetData(role int, value unsafe.Pointer) {
-	// 0: (, int role, const QVariant & value), (&role, value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setDataEiRK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, &role, value)
+	// 0: (, role int, value const QVariant &), (&role, value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setDataEiRK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &role, value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -450,8 +469,8 @@ func (this *QListWidgetItem) SetData(role int, value unsafe.Pointer) {
 // virtual
 // void read(class QDataStream &)
 func (this *QListWidgetItem) Read(in unsafe.Pointer) {
-	// 0: (, QDataStream & in), (in)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem4readER11QDataStream", ffiqt.FFI_TYPE_VOID, this.cthis, in)
+	// 0: (, in QDataStream &), (in)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem4readER11QDataStream", ffiqt.FFI_TYPE_VOID, this.GetCthis(), in)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -460,8 +479,8 @@ func (this *QListWidgetItem) Read(in unsafe.Pointer) {
 // virtual
 // void write(class QDataStream &)
 func (this *QListWidgetItem) Write(out unsafe.Pointer) {
-	// 0: (, QDataStream & out), (out)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5writeER11QDataStream", ffiqt.FFI_TYPE_VOID, this.cthis, out)
+	// 0: (, out QDataStream &), (out)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5writeER11QDataStream", ffiqt.FFI_TYPE_VOID, this.GetCthis(), out)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -471,7 +490,7 @@ func (this *QListWidgetItem) Write(out unsafe.Pointer) {
 // int type()
 func (this *QListWidgetItem) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

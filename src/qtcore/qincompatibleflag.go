@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QIncompatibleFlag struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QIncompatibleFlag) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qflags.h:80
@@ -56,7 +60,11 @@ func NewQIncompatibleFlag(i int) *QIncompatibleFlag {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIncompatibleFlagC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &i)
 	gopp.ErrPrint(err, rv)
-	return &QIncompatibleFlag{cthis}
+	gothis := NewQIncompatibleFlagFromPointer(cthis)
+	return gothis
+}
+func NewQIncompatibleFlagFromPointer(cthis unsafe.Pointer) *QIncompatibleFlag {
+	return &QIncompatibleFlag{&qtrt.CObject{cthis}}
 }
 
 //  body block end

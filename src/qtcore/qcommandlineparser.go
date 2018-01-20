@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 49
+// extern C begin: 54
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QCommandLineParser struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QCommandLineParser) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qcommandlineparser.h:59
@@ -55,7 +59,11 @@ func NewQCommandLineParser() *QCommandLineParser {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParserC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QCommandLineParser{cthis}
+	gothis := NewQCommandLineParserFromPointer(cthis)
+	return gothis
+}
+func NewQCommandLineParserFromPointer(cthis unsafe.Pointer) *QCommandLineParser {
+	return &QCommandLineParser{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qcommandlineparser.h:60
@@ -70,8 +78,8 @@ func DeleteQCommandLineParser(*QCommandLineParser) {
 // index:0
 // void setSingleDashWordOptionMode(enum QCommandLineParser::SingleDashWordOptionMode)
 func (this *QCommandLineParser) SetSingleDashWordOptionMode(parsingMode int) {
-	// 0: (, QCommandLineParser::SingleDashWordOptionMode parsingMode), (&parsingMode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser27setSingleDashWordOptionModeENS_24SingleDashWordOptionModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &parsingMode)
+	// 0: (, parsingMode QCommandLineParser::SingleDashWordOptionMode), (&parsingMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser27setSingleDashWordOptionModeENS_24SingleDashWordOptionModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &parsingMode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -79,8 +87,8 @@ func (this *QCommandLineParser) SetSingleDashWordOptionMode(parsingMode int) {
 // index:0
 // void setOptionsAfterPositionalArgumentsMode(enum QCommandLineParser::OptionsAfterPositionalArgumentsMode)
 func (this *QCommandLineParser) SetOptionsAfterPositionalArgumentsMode(mode int) {
-	// 0: (, QCommandLineParser::OptionsAfterPositionalArgumentsMode mode), (&mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser38setOptionsAfterPositionalArgumentsModeENS_35OptionsAfterPositionalArgumentsModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	// 0: (, mode QCommandLineParser::OptionsAfterPositionalArgumentsMode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser38setOptionsAfterPositionalArgumentsModeENS_35OptionsAfterPositionalArgumentsModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,8 +96,8 @@ func (this *QCommandLineParser) SetOptionsAfterPositionalArgumentsMode(mode int)
 // index:0
 // bool addOption(const class QCommandLineOption &)
 func (this *QCommandLineParser) AddOption(commandLineOption unsafe.Pointer) {
-	// 0: (, const QCommandLineOption & commandLineOption), (commandLineOption)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser9addOptionERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.cthis, commandLineOption)
+	// 0: (, commandLineOption const QCommandLineOption &), (commandLineOption)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser9addOptionERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.GetCthis(), commandLineOption)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -98,7 +106,7 @@ func (this *QCommandLineParser) AddOption(commandLineOption unsafe.Pointer) {
 // QCommandLineOption addVersionOption()
 func (this *QCommandLineParser) AddVersionOption() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser16addVersionOptionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser16addVersionOptionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +115,7 @@ func (this *QCommandLineParser) AddVersionOption() {
 // QCommandLineOption addHelpOption()
 func (this *QCommandLineParser) AddHelpOption() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser13addHelpOptionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser13addHelpOptionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -115,8 +123,8 @@ func (this *QCommandLineParser) AddHelpOption() {
 // index:0
 // void setApplicationDescription(const class QString &)
 func (this *QCommandLineParser) SetApplicationDescription(description unsafe.Pointer) {
-	// 0: (, const QString & description), (description)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser25setApplicationDescriptionERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, description)
+	// 0: (, description const QString &), (description)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser25setApplicationDescriptionERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), description)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,7 +133,7 @@ func (this *QCommandLineParser) SetApplicationDescription(description unsafe.Poi
 // QString applicationDescription()
 func (this *QCommandLineParser) ApplicationDescription() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser22applicationDescriptionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser22applicationDescriptionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,8 +141,8 @@ func (this *QCommandLineParser) ApplicationDescription() {
 // index:0
 // void addPositionalArgument(const class QString &, const class QString &, const class QString &)
 func (this *QCommandLineParser) AddPositionalArgument(name unsafe.Pointer, description unsafe.Pointer, syntax unsafe.Pointer) {
-	// 0: (, const QString & name, const QString & description, const QString & syntax), (name, description, syntax)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_", ffiqt.FFI_TYPE_VOID, this.cthis, name, description, syntax)
+	// 0: (, name const QString &, description const QString &, syntax const QString &), (name, description, syntax)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), name, description, syntax)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,7 +151,7 @@ func (this *QCommandLineParser) AddPositionalArgument(name unsafe.Pointer, descr
 // void clearPositionalArguments()
 func (this *QCommandLineParser) ClearPositionalArguments() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser24clearPositionalArgumentsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser24clearPositionalArgumentsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,8 +159,8 @@ func (this *QCommandLineParser) ClearPositionalArguments() {
 // index:0
 // void process(const class QStringList &)
 func (this *QCommandLineParser) Process(arguments unsafe.Pointer) {
-	// 0: (, const QStringList & arguments), (arguments)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser7processERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, arguments)
+	// 0: (, arguments const QStringList &), (arguments)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser7processERK11QStringList", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arguments)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -160,8 +168,8 @@ func (this *QCommandLineParser) Process(arguments unsafe.Pointer) {
 // index:1
 // void process(const class QCoreApplication &)
 func (this *QCommandLineParser) Process_1(app unsafe.Pointer) {
-	// 1: (, const QCoreApplication & app), (app)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser7processERK16QCoreApplication", ffiqt.FFI_TYPE_VOID, this.cthis, app)
+	// 1: (, app const QCoreApplication &), (app)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser7processERK16QCoreApplication", ffiqt.FFI_TYPE_VOID, this.GetCthis(), app)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,8 +177,8 @@ func (this *QCommandLineParser) Process_1(app unsafe.Pointer) {
 // index:0
 // bool parse(const class QStringList &)
 func (this *QCommandLineParser) Parse(arguments unsafe.Pointer) {
-	// 0: (, const QStringList & arguments), (arguments)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser5parseERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, arguments)
+	// 0: (, arguments const QStringList &), (arguments)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser5parseERK11QStringList", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arguments)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -179,7 +187,7 @@ func (this *QCommandLineParser) Parse(arguments unsafe.Pointer) {
 // QString errorText()
 func (this *QCommandLineParser) ErrorText() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser9errorTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser9errorTextEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -187,8 +195,8 @@ func (this *QCommandLineParser) ErrorText() {
 // index:0
 // bool isSet(const class QString &)
 func (this *QCommandLineParser) IsSet(name unsafe.Pointer) {
-	// 0: (, const QString & name), (name)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, name)
+	// 0: (, name const QString &), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), name)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -196,8 +204,8 @@ func (this *QCommandLineParser) IsSet(name unsafe.Pointer) {
 // index:1
 // bool isSet(const class QCommandLineOption &)
 func (this *QCommandLineParser) IsSet_1(option unsafe.Pointer) {
-	// 1: (, const QCommandLineOption & option), (option)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.cthis, option)
+	// 1: (, option const QCommandLineOption &), (option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -205,8 +213,8 @@ func (this *QCommandLineParser) IsSet_1(option unsafe.Pointer) {
 // index:0
 // QString value(const class QString &)
 func (this *QCommandLineParser) Value(name unsafe.Pointer) {
-	// 0: (, const QString & name), (name)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, name)
+	// 0: (, name const QString &), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), name)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -214,8 +222,8 @@ func (this *QCommandLineParser) Value(name unsafe.Pointer) {
 // index:1
 // QString value(const class QCommandLineOption &)
 func (this *QCommandLineParser) Value_1(option unsafe.Pointer) {
-	// 1: (, const QCommandLineOption & option), (option)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.cthis, option)
+	// 1: (, option const QCommandLineOption &), (option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -223,8 +231,8 @@ func (this *QCommandLineParser) Value_1(option unsafe.Pointer) {
 // index:0
 // QStringList values(const class QString &)
 func (this *QCommandLineParser) Values(name unsafe.Pointer) {
-	// 0: (, const QString & name), (name)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser6valuesERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, name)
+	// 0: (, name const QString &), (name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser6valuesERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), name)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -232,8 +240,8 @@ func (this *QCommandLineParser) Values(name unsafe.Pointer) {
 // index:1
 // QStringList values(const class QCommandLineOption &)
 func (this *QCommandLineParser) Values_1(option unsafe.Pointer) {
-	// 1: (, const QCommandLineOption & option), (option)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser6valuesERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.cthis, option)
+	// 1: (, option const QCommandLineOption &), (option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser6valuesERK18QCommandLineOption", ffiqt.FFI_TYPE_VOID, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -242,7 +250,7 @@ func (this *QCommandLineParser) Values_1(option unsafe.Pointer) {
 // QStringList positionalArguments()
 func (this *QCommandLineParser) PositionalArguments() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser19positionalArgumentsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser19positionalArgumentsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -251,7 +259,7 @@ func (this *QCommandLineParser) PositionalArguments() {
 // QStringList optionNames()
 func (this *QCommandLineParser) OptionNames() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser11optionNamesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser11optionNamesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -260,7 +268,7 @@ func (this *QCommandLineParser) OptionNames() {
 // QStringList unknownOptionNames()
 func (this *QCommandLineParser) UnknownOptionNames() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser18unknownOptionNamesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser18unknownOptionNamesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -269,7 +277,7 @@ func (this *QCommandLineParser) UnknownOptionNames() {
 // void showVersion()
 func (this *QCommandLineParser) ShowVersion() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser11showVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser11showVersionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -277,8 +285,8 @@ func (this *QCommandLineParser) ShowVersion() {
 // index:0
 // void showHelp(int)
 func (this *QCommandLineParser) ShowHelp(exitCode int) {
-	// 0: (, int exitCode), (&exitCode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser8showHelpEi", ffiqt.FFI_TYPE_VOID, this.cthis, &exitCode)
+	// 0: (, exitCode int), (&exitCode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser8showHelpEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &exitCode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -287,7 +295,7 @@ func (this *QCommandLineParser) ShowHelp(exitCode int) {
 // QString helpText()
 func (this *QCommandLineParser) HelpText() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser8helpTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser8helpTextEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

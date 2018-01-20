@@ -17,6 +17,11 @@ func Calloc(n int, sz int) unsafe.Pointer { return C.calloc(C.size_t(n), C.size_
 func FreeMem(p unsafe.Pointer)            { C.free(p) }
 func CString(s string) unsafe.Pointer     { return unsafe.Pointer(C.CString(s)) }
 
+// 所有的Qt绑定类必须继承自这个
+type CObject struct {
+	Cthis unsafe.Pointer
+}
+
 /////////
 
 func BoolTy(pointer bool) reflect.Type {

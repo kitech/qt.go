@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionSpinBox struct {
-	cthis unsafe.Pointer
+	*QStyleOptionComplex
+}
+
+func (this *QStyleOptionSpinBox) GetCthis() unsafe.Pointer {
+	return this.QStyleOptionComplex.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:552
@@ -63,7 +67,23 @@ func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionSpinBox{cthis}
+	gothis := NewQStyleOptionSpinBoxFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionSpinBoxFromPointer(cthis unsafe.Pointer) *QStyleOptionSpinBox {
+	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
+	return &QStyleOptionSpinBox{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:556
+// index:1
+// void QStyleOptionSpinBox(int)
+func NewQStyleOptionSpinBox_1(version int) *QStyleOptionSpinBox {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionSpinBoxFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QDateEdit struct {
-	cthis unsafe.Pointer
+	*QDateTimeEdit
+}
+
+func (this *QDateEdit) GetCthis() unsafe.Pointer {
+	return this.QDateTimeEdit.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:217
@@ -62,7 +66,7 @@ type QDateEdit struct {
 // const QMetaObject * metaObject()
 func (this *QDateEdit) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDateEdit10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDateEdit10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQDateEdit(parent unsafe.Pointer) *QDateEdit {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEditC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QDateEdit{cthis}
+	gothis := NewQDateEditFromPointer(cthis)
+	return gothis
+}
+func NewQDateEditFromPointer(cthis unsafe.Pointer) *QDateEdit {
+	bcthis0 := NewQDateTimeEditFromPointer(cthis)
+	return &QDateEdit{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:221
@@ -83,7 +92,8 @@ func NewQDateEdit_1(date unsafe.Pointer, parent unsafe.Pointer) *QDateEdit {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEditC2ERK5QDateP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, date, parent)
 	gopp.ErrPrint(err, rv)
-	return &QDateEdit{cthis}
+	gothis := NewQDateEditFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:222
@@ -99,8 +109,8 @@ func DeleteQDateEdit(*QDateEdit) {
 // index:0
 // void userDateChanged(const class QDate &)
 func (this *QDateEdit) UserDateChanged(date unsafe.Pointer) {
-	// 0: (, const QDate & date), (date)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEdit15userDateChangedERK5QDate", ffiqt.FFI_TYPE_VOID, this.cthis, date)
+	// 0: (, date const QDate &), (date)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEdit15userDateChangedERK5QDate", ffiqt.FFI_TYPE_VOID, this.GetCthis(), date)
 	gopp.ErrPrint(err, rv)
 }
 

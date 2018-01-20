@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QWriteLocker struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QWriteLocker) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:131
@@ -56,7 +60,11 @@ func NewQWriteLocker(readWriteLock unsafe.Pointer) *QWriteLocker {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLockerC2EP14QReadWriteLock", ffiqt.FFI_TYPE_VOID, cthis, readWriteLock)
 	gopp.ErrPrint(err, rv)
-	return &QWriteLocker{cthis}
+	gothis := NewQWriteLockerFromPointer(cthis)
+	return gothis
+}
+func NewQWriteLockerFromPointer(cthis unsafe.Pointer) *QWriteLocker {
+	return &QWriteLocker{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:133
@@ -74,7 +82,7 @@ func DeleteQWriteLocker(*QWriteLocker) {
 // void unlock()
 func (this *QWriteLocker) Unlock() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLocker6unlockEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLocker6unlockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -84,7 +92,7 @@ func (this *QWriteLocker) Unlock() {
 // void relock()
 func (this *QWriteLocker) Relock() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLocker6relockEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLocker6relockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -94,7 +102,7 @@ func (this *QWriteLocker) Relock() {
 // QReadWriteLock * readWriteLock()
 func (this *QWriteLocker) ReadWriteLock() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QWriteLocker13readWriteLockEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QWriteLocker13readWriteLockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

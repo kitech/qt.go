@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionRubberBand struct {
-	cthis unsafe.Pointer
+	*QStyleOption
+}
+
+func (this *QStyleOptionRubberBand) GetCthis() unsafe.Pointer {
+	return this.QStyleOption.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:491
@@ -63,7 +67,23 @@ func NewQStyleOptionRubberBand() *QStyleOptionRubberBand {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionRubberBand{cthis}
+	gothis := NewQStyleOptionRubberBandFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionRubberBandFromPointer(cthis unsafe.Pointer) *QStyleOptionRubberBand {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionRubberBand{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:495
+// index:1
+// void QStyleOptionRubberBand(int)
+func NewQStyleOptionRubberBand_1(version int) *QStyleOptionRubberBand {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionRubberBandFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

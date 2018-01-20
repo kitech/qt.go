@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QUndoCommand struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QUndoCommand) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:60
@@ -63,7 +67,11 @@ func NewQUndoCommand(parent unsafe.Pointer) *QUndoCommand {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommandC2EPS_", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QUndoCommand{cthis}
+	gothis := NewQUndoCommandFromPointer(cthis)
+	return gothis
+}
+func NewQUndoCommandFromPointer(cthis unsafe.Pointer) *QUndoCommand {
+	return &QUndoCommand{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:61
@@ -73,7 +81,8 @@ func NewQUndoCommand_1(text unsafe.Pointer, parent unsafe.Pointer) *QUndoCommand
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommandC2ERK7QStringPS_", ffiqt.FFI_TYPE_VOID, cthis, text, parent)
 	gopp.ErrPrint(err, rv)
-	return &QUndoCommand{cthis}
+	gothis := NewQUndoCommandFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:62
@@ -91,7 +100,7 @@ func DeleteQUndoCommand(*QUndoCommand) {
 // void undo()
 func (this *QUndoCommand) Undo() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand4undoEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand4undoEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -101,7 +110,7 @@ func (this *QUndoCommand) Undo() {
 // void redo()
 func (this *QUndoCommand) Redo() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand4redoEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand4redoEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -110,7 +119,7 @@ func (this *QUndoCommand) Redo() {
 // QString text()
 func (this *QUndoCommand) Text() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand4textEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand4textEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -119,7 +128,7 @@ func (this *QUndoCommand) Text() {
 // QString actionText()
 func (this *QUndoCommand) ActionText() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand10actionTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand10actionTextEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,8 +136,8 @@ func (this *QUndoCommand) ActionText() {
 // index:0
 // void setText(const class QString &)
 func (this *QUndoCommand) SetText(text unsafe.Pointer) {
-	// 0: (, const QString & text), (text)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	// 0: (, text const QString &), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -137,7 +146,7 @@ func (this *QUndoCommand) SetText(text unsafe.Pointer) {
 // bool isObsolete()
 func (this *QUndoCommand) IsObsolete() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand10isObsoleteEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand10isObsoleteEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,8 +154,8 @@ func (this *QUndoCommand) IsObsolete() {
 // index:0
 // void setObsolete(_Bool)
 func (this *QUndoCommand) SetObsolete(obsolete bool) {
-	// 0: (, bool obsolete), (&obsolete)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand11setObsoleteEb", ffiqt.FFI_TYPE_VOID, this.cthis, &obsolete)
+	// 0: (, obsolete bool), (&obsolete)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand11setObsoleteEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &obsolete)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -156,7 +165,7 @@ func (this *QUndoCommand) SetObsolete(obsolete bool) {
 // int id()
 func (this *QUndoCommand) Id() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand2idEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand2idEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -165,8 +174,8 @@ func (this *QUndoCommand) Id() {
 // virtual
 // bool mergeWith(const class QUndoCommand *)
 func (this *QUndoCommand) MergeWith(other unsafe.Pointer) {
-	// 0: (, const QUndoCommand * other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand9mergeWithEPKS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other const QUndoCommand *), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand9mergeWithEPKS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -175,7 +184,7 @@ func (this *QUndoCommand) MergeWith(other unsafe.Pointer) {
 // int childCount()
 func (this *QUndoCommand) ChildCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand10childCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand10childCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -183,8 +192,8 @@ func (this *QUndoCommand) ChildCount() {
 // index:0
 // const QUndoCommand * child(int)
 func (this *QUndoCommand) Child(index int) {
-	// 0: (, int index), (&index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand5childEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	// 0: (, index int), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand5childEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
 }
 

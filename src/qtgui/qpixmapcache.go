@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 29
+// extern C begin: 6
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QPixmapCache struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QPixmapCache) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qpixmapcache.h:77
@@ -87,12 +91,12 @@ func QPixmapCache_SetCacheLimit(arg0 int) {
 // static
 // QPixmap * find(const class QString &)
 func (this *QPixmapCache) Find(key unsafe.Pointer) {
-	// 0: (const QString & key), (key)
+	// 0: (key const QString &), (key)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QString", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_Find(key unsafe.Pointer) {
-	// 0: (const QString & key), (key)
+	// 0: (key const QString &), (key)
 	var nilthis *QPixmapCache
 	nilthis.Find(key)
 }
@@ -102,12 +106,12 @@ func QPixmapCache_Find(key unsafe.Pointer) {
 // static
 // bool find(const class QString &, class QPixmap &)
 func (this *QPixmapCache) Find_1(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 1: (const QString & key, QPixmap & pixmap), (key, pixmap)
+	// 1: (key const QString &, pixmap QPixmap &), (key, pixmap)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringR7QPixmap", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_Find_1(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 1: (const QString & key, QPixmap & pixmap), (key, pixmap)
+	// 1: (key const QString &, pixmap QPixmap &), (key, pixmap)
 	var nilthis *QPixmapCache
 	nilthis.Find_1(key, pixmap)
 }
@@ -117,12 +121,12 @@ func QPixmapCache_Find_1(key unsafe.Pointer, pixmap unsafe.Pointer) {
 // static
 // bool find(const class QString &, class QPixmap *)
 func (this *QPixmapCache) Find_2(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 2: (const QString & key, QPixmap * pixmap), (key, pixmap)
+	// 2: (key const QString &, pixmap QPixmap *), (key, pixmap)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringP7QPixmap", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_Find_2(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 2: (const QString & key, QPixmap * pixmap), (key, pixmap)
+	// 2: (key const QString &, pixmap QPixmap *), (key, pixmap)
 	var nilthis *QPixmapCache
 	nilthis.Find_2(key, pixmap)
 }
@@ -132,12 +136,12 @@ func QPixmapCache_Find_2(key unsafe.Pointer, pixmap unsafe.Pointer) {
 // static
 // bool find(const class QPixmapCache::Key &, class QPixmap *)
 func (this *QPixmapCache) Find_3(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 3: (const QPixmapCache::Key & key, QPixmap * pixmap), (key, pixmap)
+	// 3: (key const QPixmapCache::Key &, pixmap QPixmap *), (key, pixmap)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERKNS_3KeyEP7QPixmap", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_Find_3(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 3: (const QPixmapCache::Key & key, QPixmap * pixmap), (key, pixmap)
+	// 3: (key const QPixmapCache::Key &, pixmap QPixmap *), (key, pixmap)
 	var nilthis *QPixmapCache
 	nilthis.Find_3(key, pixmap)
 }
@@ -147,12 +151,12 @@ func QPixmapCache_Find_3(key unsafe.Pointer, pixmap unsafe.Pointer) {
 // static
 // bool replace(const class QPixmapCache::Key &, const class QPixmap &)
 func (this *QPixmapCache) Replace(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 0: (const QPixmapCache::Key & key, const QPixmap & pixmap), (key, pixmap)
+	// 0: (key const QPixmapCache::Key &, pixmap const QPixmap &), (key, pixmap)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache7replaceERKNS_3KeyERK7QPixmap", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_Replace(key unsafe.Pointer, pixmap unsafe.Pointer) {
-	// 0: (const QPixmapCache::Key & key, const QPixmap & pixmap), (key, pixmap)
+	// 0: (key const QPixmapCache::Key &, pixmap const QPixmap &), (key, pixmap)
 	var nilthis *QPixmapCache
 	nilthis.Replace(key, pixmap)
 }
@@ -162,12 +166,12 @@ func QPixmapCache_Replace(key unsafe.Pointer, pixmap unsafe.Pointer) {
 // static
 // void remove(const class QString &)
 func (this *QPixmapCache) Remove(key unsafe.Pointer) {
-	// 0: (const QString & key), (key)
+	// 0: (key const QString &), (key)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache6removeERK7QString", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_Remove(key unsafe.Pointer) {
-	// 0: (const QString & key), (key)
+	// 0: (key const QString &), (key)
 	var nilthis *QPixmapCache
 	nilthis.Remove(key)
 }
@@ -177,12 +181,12 @@ func QPixmapCache_Remove(key unsafe.Pointer) {
 // static
 // void remove(const class QPixmapCache::Key &)
 func (this *QPixmapCache) Remove_1(key unsafe.Pointer) {
-	// 1: (const QPixmapCache::Key & key), (key)
+	// 1: (key const QPixmapCache::Key &), (key)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache6removeERKNS_3KeyE", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_Remove_1(key unsafe.Pointer) {
-	// 1: (const QPixmapCache::Key & key), (key)
+	// 1: (key const QPixmapCache::Key &), (key)
 	var nilthis *QPixmapCache
 	nilthis.Remove_1(key)
 }

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionTab struct {
-	cthis unsafe.Pointer
+	*QStyleOption
+}
+
+func (this *QStyleOptionTab) GetCthis() unsafe.Pointer {
+	return this.QStyleOption.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:285
@@ -63,7 +67,23 @@ func NewQStyleOptionTab() *QStyleOptionTab {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionTab{cthis}
+	gothis := NewQStyleOptionTabFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionTabFromPointer(cthis unsafe.Pointer) *QStyleOptionTab {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionTab{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:289
+// index:1
+// void QStyleOptionTab(int)
+func NewQStyleOptionTab_1(version int) *QStyleOptionTab {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionTabFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

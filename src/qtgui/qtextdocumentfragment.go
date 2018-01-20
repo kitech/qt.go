@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 19
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextDocumentFragment struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTextDocumentFragment) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:57
@@ -59,7 +63,11 @@ func NewQTextDocumentFragment() *QTextDocumentFragment {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QTextDocumentFragment{cthis}
+	gothis := NewQTextDocumentFragmentFromPointer(cthis)
+	return gothis
+}
+func NewQTextDocumentFragmentFromPointer(cthis unsafe.Pointer) *QTextDocumentFragment {
+	return &QTextDocumentFragment{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:58
@@ -69,7 +77,8 @@ func NewQTextDocumentFragment_1(document unsafe.Pointer) *QTextDocumentFragment 
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2EPK13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, document)
 	gopp.ErrPrint(err, rv)
-	return &QTextDocumentFragment{cthis}
+	gothis := NewQTextDocumentFragmentFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:59
@@ -79,7 +88,8 @@ func NewQTextDocumentFragment_2(range_ unsafe.Pointer) *QTextDocumentFragment {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2ERK11QTextCursor", ffiqt.FFI_TYPE_VOID, cthis, range_)
 	gopp.ErrPrint(err, rv)
-	return &QTextDocumentFragment{cthis}
+	gothis := NewQTextDocumentFragmentFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:62
@@ -95,7 +105,7 @@ func DeleteQTextDocumentFragment(*QTextDocumentFragment) {
 // bool isEmpty()
 func (this *QTextDocumentFragment) IsEmpty() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -104,7 +114,7 @@ func (this *QTextDocumentFragment) IsEmpty() {
 // QString toPlainText()
 func (this *QTextDocumentFragment) ToPlainText() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment11toPlainTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment11toPlainTextEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,8 +122,8 @@ func (this *QTextDocumentFragment) ToPlainText() {
 // index:0
 // QString toHtml(const class QByteArray &)
 func (this *QTextDocumentFragment) ToHtml(encoding unsafe.Pointer) {
-	// 0: (, const QByteArray & encoding), (encoding)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.cthis, encoding)
+	// 0: (, encoding const QByteArray &), (encoding)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.GetCthis(), encoding)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -122,12 +132,12 @@ func (this *QTextDocumentFragment) ToHtml(encoding unsafe.Pointer) {
 // static
 // QTextDocumentFragment fromPlainText(const class QString &)
 func (this *QTextDocumentFragment) FromPlainText(plainText unsafe.Pointer) {
-	// 0: (const QString & plainText), (plainText)
+	// 0: (plainText const QString &), (plainText)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment13fromPlainTextERK7QString", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QTextDocumentFragment_FromPlainText(plainText unsafe.Pointer) {
-	// 0: (const QString & plainText), (plainText)
+	// 0: (plainText const QString &), (plainText)
 	var nilthis *QTextDocumentFragment
 	nilthis.FromPlainText(plainText)
 }
@@ -137,12 +147,12 @@ func QTextDocumentFragment_FromPlainText(plainText unsafe.Pointer) {
 // static
 // QTextDocumentFragment fromHtml(const class QString &)
 func (this *QTextDocumentFragment) FromHtml(html unsafe.Pointer) {
-	// 0: (const QString & html), (html)
+	// 0: (html const QString &), (html)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment8fromHtmlERK7QString", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QTextDocumentFragment_FromHtml(html unsafe.Pointer) {
-	// 0: (const QString & html), (html)
+	// 0: (html const QString &), (html)
 	var nilthis *QTextDocumentFragment
 	nilthis.FromHtml(html)
 }
@@ -152,12 +162,12 @@ func QTextDocumentFragment_FromHtml(html unsafe.Pointer) {
 // static
 // QTextDocumentFragment fromHtml(const class QString &, const class QTextDocument *)
 func (this *QTextDocumentFragment) FromHtml_1(html unsafe.Pointer, resourceProvider unsafe.Pointer) {
-	// 1: (const QString & html, const QTextDocument * resourceProvider), (html, resourceProvider)
+	// 1: (html const QString &, resourceProvider const QTextDocument *), (html, resourceProvider)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QTextDocumentFragment_FromHtml_1(html unsafe.Pointer, resourceProvider unsafe.Pointer) {
-	// 1: (const QString & html, const QTextDocument * resourceProvider), (html, resourceProvider)
+	// 1: (html const QString &, resourceProvider const QTextDocument *), (html, resourceProvider)
 	var nilthis *QTextDocumentFragment
 	nilthis.FromHtml_1(html, resourceProvider)
 }

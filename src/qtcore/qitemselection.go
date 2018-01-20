@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 27
+// extern C begin: 32
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QItemSelection struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QItemSelection) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:250
@@ -56,7 +60,11 @@ func NewQItemSelection() *QItemSelection {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QItemSelection{cthis}
+	gothis := NewQItemSelectionFromPointer(cthis)
+	return gothis
+}
+func NewQItemSelectionFromPointer(cthis unsafe.Pointer) *QItemSelection {
+	return &QItemSelection{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:251
@@ -66,15 +74,16 @@ func NewQItemSelection_1(topLeft unsafe.Pointer, bottomRight unsafe.Pointer) *QI
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionC2ERK11QModelIndexS2_", ffiqt.FFI_TYPE_VOID, cthis, topLeft, bottomRight)
 	gopp.ErrPrint(err, rv)
-	return &QItemSelection{cthis}
+	gothis := NewQItemSelectionFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:255
 // index:0
 // void select(const class QModelIndex &, const class QModelIndex &)
 func (this *QItemSelection) Select(topLeft unsafe.Pointer, bottomRight unsafe.Pointer) {
-	// 0: (, const QModelIndex & topLeft, const QModelIndex & bottomRight), (topLeft, bottomRight)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection6selectERK11QModelIndexS2_", ffiqt.FFI_TYPE_VOID, this.cthis, topLeft, bottomRight)
+	// 0: (, topLeft const QModelIndex &, bottomRight const QModelIndex &), (topLeft, bottomRight)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection6selectERK11QModelIndexS2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), topLeft, bottomRight)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -82,8 +91,8 @@ func (this *QItemSelection) Select(topLeft unsafe.Pointer, bottomRight unsafe.Po
 // index:0
 // bool contains(const class QModelIndex &)
 func (this *QItemSelection) Contains(index unsafe.Pointer) {
-	// 0: (, const QModelIndex & index), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QItemSelection8containsERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QItemSelection8containsERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -92,7 +101,16 @@ func (this *QItemSelection) Contains(index unsafe.Pointer) {
 // QModelIndexList indexes()
 func (this *QItemSelection) Indexes() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QItemSelection7indexesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QItemSelection7indexesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:258
+// index:0
+// void merge(const class QItemSelection &, class QItemSelectionModel::SelectionFlags)
+func (this *QItemSelection) Merge(other unsafe.Pointer, command int) {
+	// 0: (, other const QItemSelection &, QFlags<QItemSelectionModel::SelectionFlag> command), (other, &command)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection5mergeERKS_6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other, &command)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -101,12 +119,12 @@ func (this *QItemSelection) Indexes() {
 // static
 // void split(const class QItemSelectionRange &, const class QItemSelectionRange &, class QItemSelection *)
 func (this *QItemSelection) Split(range_ unsafe.Pointer, other unsafe.Pointer, result unsafe.Pointer) {
-	// 0: (const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result), (range_, other, result)
+	// 0: (range const QItemSelectionRange &, other const QItemSelectionRange &, result QItemSelection *), (range_, other, result)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QItemSelection_Split(range_ unsafe.Pointer, other unsafe.Pointer, result unsafe.Pointer) {
-	// 0: (const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result), (range_, other, result)
+	// 0: (range const QItemSelectionRange &, other const QItemSelectionRange &, result QItemSelection *), (range_, other, result)
 	var nilthis *QItemSelection
 	nilthis.Split(range_, other, result)
 }

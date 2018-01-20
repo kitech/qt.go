@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QJsonArray struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QJsonArray) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qjsonarray.h:59
@@ -55,7 +59,11 @@ func NewQJsonArray() *QJsonArray {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArrayC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QJsonArray{cthis}
+	gothis := NewQJsonArrayFromPointer(cthis)
+	return gothis
+}
+func NewQJsonArrayFromPointer(cthis unsafe.Pointer) *QJsonArray {
+	return &QJsonArray{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qjsonarray.h:70
@@ -71,12 +79,12 @@ func DeleteQJsonArray(*QJsonArray) {
 // static
 // QJsonArray fromStringList(const class QStringList &)
 func (this *QJsonArray) FromStringList(list unsafe.Pointer) {
-	// 0: (const QStringList & list), (list)
+	// 0: (list const QStringList &), (list)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray14fromStringListERK11QStringList", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QJsonArray_FromStringList(list unsafe.Pointer) {
-	// 0: (const QStringList & list), (list)
+	// 0: (list const QStringList &), (list)
 	var nilthis *QJsonArray
 	nilthis.FromStringList(list)
 }
@@ -86,7 +94,7 @@ func QJsonArray_FromStringList(list unsafe.Pointer) {
 // QVariantList toVariantList()
 func (this *QJsonArray) ToVariantList() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray13toVariantListEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray13toVariantListEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -95,7 +103,7 @@ func (this *QJsonArray) ToVariantList() {
 // int size()
 func (this *QJsonArray) Size() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -105,7 +113,7 @@ func (this *QJsonArray) Size() {
 // int count()
 func (this *QJsonArray) Count() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray5countEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray5countEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -114,7 +122,7 @@ func (this *QJsonArray) Count() {
 // bool isEmpty()
 func (this *QJsonArray) IsEmpty() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -122,8 +130,8 @@ func (this *QJsonArray) IsEmpty() {
 // index:0
 // QJsonValue at(int)
 func (this *QJsonArray) At(i int) {
-	// 0: (, int i), (&i)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray2atEi", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	// 0: (, i int), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray2atEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &i)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -132,7 +140,7 @@ func (this *QJsonArray) At(i int) {
 // QJsonValue first()
 func (this *QJsonArray) First() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray5firstEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray5firstEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -141,7 +149,7 @@ func (this *QJsonArray) First() {
 // QJsonValue last()
 func (this *QJsonArray) Last() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray4lastEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray4lastEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,8 +157,8 @@ func (this *QJsonArray) Last() {
 // index:0
 // void removeAt(int)
 func (this *QJsonArray) RemoveAt(i int) {
-	// 0: (, int i), (&i)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray8removeAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	// 0: (, i int), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray8removeAtEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &i)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -158,8 +166,8 @@ func (this *QJsonArray) RemoveAt(i int) {
 // index:0
 // QJsonValue takeAt(int)
 func (this *QJsonArray) TakeAt(i int) {
-	// 0: (, int i), (&i)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray6takeAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	// 0: (, i int), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray6takeAtEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &i)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,7 +177,7 @@ func (this *QJsonArray) TakeAt(i int) {
 // void removeFirst()
 func (this *QJsonArray) RemoveFirst() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray11removeFirstEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray11removeFirstEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -179,7 +187,7 @@ func (this *QJsonArray) RemoveFirst() {
 // void removeLast()
 func (this *QJsonArray) RemoveLast() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray10removeLastEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray10removeLastEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -187,8 +195,8 @@ func (this *QJsonArray) RemoveLast() {
 // index:0
 // void replace(int, const class QJsonValue &)
 func (this *QJsonArray) Replace(i int, value unsafe.Pointer) {
-	// 0: (, int i, const QJsonValue & value), (&i, value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray7replaceEiRK10QJsonValue", ffiqt.FFI_TYPE_VOID, this.cthis, &i, value)
+	// 0: (, i int, value const QJsonValue &), (&i, value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray7replaceEiRK10QJsonValue", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &i, value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -196,8 +204,8 @@ func (this *QJsonArray) Replace(i int, value unsafe.Pointer) {
 // index:0
 // bool contains(const class QJsonValue &)
 func (this *QJsonArray) Contains(element unsafe.Pointer) {
-	// 0: (, const QJsonValue & element), (element)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray8containsERK10QJsonValue", ffiqt.FFI_TYPE_VOID, this.cthis, element)
+	// 0: (, element const QJsonValue &), (element)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray8containsERK10QJsonValue", ffiqt.FFI_TYPE_VOID, this.GetCthis(), element)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -206,8 +214,8 @@ func (this *QJsonArray) Contains(element unsafe.Pointer) {
 // inline
 // void swap(class QJsonArray &)
 func (this *QJsonArray) Swap(other unsafe.Pointer) {
-	// 0: (, QJsonArray & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QJsonArray &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -217,7 +225,7 @@ func (this *QJsonArray) Swap(other unsafe.Pointer) {
 // QJsonArray::iterator begin()
 func (this *QJsonArray) Begin() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray5beginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray5beginEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -227,7 +235,7 @@ func (this *QJsonArray) Begin() {
 // QJsonArray::const_iterator begin()
 func (this *QJsonArray) Begin_1() {
 	// 1: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray5beginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray5beginEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -237,7 +245,7 @@ func (this *QJsonArray) Begin_1() {
 // QJsonArray::const_iterator constBegin()
 func (this *QJsonArray) ConstBegin() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray10constBeginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray10constBeginEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -247,7 +255,7 @@ func (this *QJsonArray) ConstBegin() {
 // QJsonArray::iterator end()
 func (this *QJsonArray) End() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray3endEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray3endEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -257,7 +265,7 @@ func (this *QJsonArray) End() {
 // QJsonArray::const_iterator end()
 func (this *QJsonArray) End_1() {
 	// 1: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray3endEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray3endEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -267,7 +275,7 @@ func (this *QJsonArray) End_1() {
 // QJsonArray::const_iterator constEnd()
 func (this *QJsonArray) ConstEnd() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray8constEndEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray8constEndEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -276,8 +284,8 @@ func (this *QJsonArray) ConstEnd() {
 // inline
 // QJsonArray::iterator erase(class QJsonArray::iterator)
 func (this *QJsonArray) Erase(it unsafe.Pointer) {
-	// 0: (, QJsonArray::iterator it), (it)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray5eraseENS_8iteratorE", ffiqt.FFI_TYPE_VOID, this.cthis, it)
+	// 0: (, it QJsonArray::iterator), (it)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray5eraseENS_8iteratorE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), it)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -286,8 +294,8 @@ func (this *QJsonArray) Erase(it unsafe.Pointer) {
 // inline
 // void push_back(const class QJsonValue &)
 func (this *QJsonArray) Push_back(t unsafe.Pointer) {
-	// 0: (, const QJsonValue & t), (t)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray9push_backERK10QJsonValue", ffiqt.FFI_TYPE_VOID, this.cthis, t)
+	// 0: (, t const QJsonValue &), (t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray9push_backERK10QJsonValue", ffiqt.FFI_TYPE_VOID, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -296,8 +304,8 @@ func (this *QJsonArray) Push_back(t unsafe.Pointer) {
 // inline
 // void push_front(const class QJsonValue &)
 func (this *QJsonArray) Push_front(t unsafe.Pointer) {
-	// 0: (, const QJsonValue & t), (t)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray10push_frontERK10QJsonValue", ffiqt.FFI_TYPE_VOID, this.cthis, t)
+	// 0: (, t const QJsonValue &), (t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray10push_frontERK10QJsonValue", ffiqt.FFI_TYPE_VOID, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -307,7 +315,7 @@ func (this *QJsonArray) Push_front(t unsafe.Pointer) {
 // void pop_front()
 func (this *QJsonArray) Pop_front() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray9pop_frontEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray9pop_frontEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -317,7 +325,7 @@ func (this *QJsonArray) Pop_front() {
 // void pop_back()
 func (this *QJsonArray) Pop_back() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray8pop_backEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray8pop_backEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -327,7 +335,7 @@ func (this *QJsonArray) Pop_back() {
 // bool empty()
 func (this *QJsonArray) Empty() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray5emptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray5emptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

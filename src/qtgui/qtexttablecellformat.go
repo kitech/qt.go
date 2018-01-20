@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 13
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextTableCellFormat struct {
-	cthis unsafe.Pointer
+	*QTextCharFormat
+}
+
+func (this *QTextTableCellFormat) GetCthis() unsafe.Pointer {
+	return this.QTextCharFormat.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:945
@@ -59,7 +63,23 @@ func NewQTextTableCellFormat() *QTextTableCellFormat {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormatC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QTextTableCellFormat{cthis}
+	gothis := NewQTextTableCellFormatFromPointer(cthis)
+	return gothis
+}
+func NewQTextTableCellFormatFromPointer(cthis unsafe.Pointer) *QTextTableCellFormat {
+	bcthis0 := NewQTextCharFormatFromPointer(cthis)
+	return &QTextTableCellFormat{bcthis0}
+}
+
+// /usr/include/qt/QtGui/qtextformat.h:964
+// index:1
+// void QTextTableCellFormat(const class QTextFormat &)
+func NewQTextTableCellFormat_1(fmt unsafe.Pointer) *QTextTableCellFormat {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormatC2ERK11QTextFormat", ffiqt.FFI_TYPE_VOID, cthis, fmt)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextTableCellFormatFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:947
@@ -68,7 +88,7 @@ func NewQTextTableCellFormat() *QTextTableCellFormat {
 // bool isValid()
 func (this *QTextTableCellFormat) IsValid() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -77,8 +97,8 @@ func (this *QTextTableCellFormat) IsValid() {
 // inline
 // void setTopPadding(qreal)
 func (this *QTextTableCellFormat) SetTopPadding(padding float64) {
-	// 0: (, qreal padding), (&padding)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormat13setTopPaddingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &padding)
+	// 0: (, padding qreal), (&padding)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormat13setTopPaddingEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &padding)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,7 +108,7 @@ func (this *QTextTableCellFormat) SetTopPadding(padding float64) {
 // qreal topPadding()
 func (this *QTextTableCellFormat) TopPadding() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat10topPaddingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat10topPaddingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,8 +117,8 @@ func (this *QTextTableCellFormat) TopPadding() {
 // inline
 // void setBottomPadding(qreal)
 func (this *QTextTableCellFormat) SetBottomPadding(padding float64) {
-	// 0: (, qreal padding), (&padding)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormat16setBottomPaddingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &padding)
+	// 0: (, padding qreal), (&padding)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormat16setBottomPaddingEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &padding)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +128,7 @@ func (this *QTextTableCellFormat) SetBottomPadding(padding float64) {
 // qreal bottomPadding()
 func (this *QTextTableCellFormat) BottomPadding() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat13bottomPaddingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat13bottomPaddingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,8 +137,8 @@ func (this *QTextTableCellFormat) BottomPadding() {
 // inline
 // void setLeftPadding(qreal)
 func (this *QTextTableCellFormat) SetLeftPadding(padding float64) {
-	// 0: (, qreal padding), (&padding)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormat14setLeftPaddingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &padding)
+	// 0: (, padding qreal), (&padding)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormat14setLeftPaddingEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &padding)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -128,7 +148,7 @@ func (this *QTextTableCellFormat) SetLeftPadding(padding float64) {
 // qreal leftPadding()
 func (this *QTextTableCellFormat) LeftPadding() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat11leftPaddingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat11leftPaddingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -137,8 +157,8 @@ func (this *QTextTableCellFormat) LeftPadding() {
 // inline
 // void setRightPadding(qreal)
 func (this *QTextTableCellFormat) SetRightPadding(padding float64) {
-	// 0: (, qreal padding), (&padding)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormat15setRightPaddingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &padding)
+	// 0: (, padding qreal), (&padding)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormat15setRightPaddingEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &padding)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -148,7 +168,7 @@ func (this *QTextTableCellFormat) SetRightPadding(padding float64) {
 // qreal rightPadding()
 func (this *QTextTableCellFormat) RightPadding() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat12rightPaddingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat12rightPaddingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -157,8 +177,8 @@ func (this *QTextTableCellFormat) RightPadding() {
 // inline
 // void setPadding(qreal)
 func (this *QTextTableCellFormat) SetPadding(padding float64) {
-	// 0: (, qreal padding), (&padding)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormat10setPaddingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &padding)
+	// 0: (, padding qreal), (&padding)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormat10setPaddingEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &padding)
 	gopp.ErrPrint(err, rv)
 }
 

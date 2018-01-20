@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QXmlStreamEntityDeclaration struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QXmlStreamEntityDeclaration) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:286
@@ -55,7 +59,11 @@ func NewQXmlStreamEntityDeclaration() *QXmlStreamEntityDeclaration {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QXmlStreamEntityDeclaration{cthis}
+	gothis := NewQXmlStreamEntityDeclarationFromPointer(cthis)
+	return gothis
+}
+func NewQXmlStreamEntityDeclarationFromPointer(cthis unsafe.Pointer) *QXmlStreamEntityDeclaration {
+	return &QXmlStreamEntityDeclaration{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:288
@@ -72,7 +80,7 @@ func DeleteQXmlStreamEntityDeclaration(*QXmlStreamEntityDeclaration) {
 // QStringRef name()
 func (this *QXmlStreamEntityDeclaration) Name() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -82,7 +90,7 @@ func (this *QXmlStreamEntityDeclaration) Name() {
 // QStringRef notationName()
 func (this *QXmlStreamEntityDeclaration) NotationName() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration12notationNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration12notationNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -92,7 +100,7 @@ func (this *QXmlStreamEntityDeclaration) NotationName() {
 // QStringRef systemId()
 func (this *QXmlStreamEntityDeclaration) SystemId() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8systemIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8systemIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -102,7 +110,7 @@ func (this *QXmlStreamEntityDeclaration) SystemId() {
 // QStringRef publicId()
 func (this *QXmlStreamEntityDeclaration) PublicId() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8publicIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8publicIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,7 +120,7 @@ func (this *QXmlStreamEntityDeclaration) PublicId() {
 // QStringRef value()
 func (this *QXmlStreamEntityDeclaration) Value() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration5valueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration5valueEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

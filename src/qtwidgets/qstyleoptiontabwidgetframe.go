@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionTabWidgetFrame struct {
-	cthis unsafe.Pointer
+	*QStyleOption
+}
+
+func (this *QStyleOptionTabWidgetFrame) GetCthis() unsafe.Pointer {
+	return this.QStyleOption.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:171
@@ -63,7 +67,23 @@ func NewQStyleOptionTabWidgetFrame() *QStyleOptionTabWidgetFrame {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionTabWidgetFrame{cthis}
+	gothis := NewQStyleOptionTabWidgetFrameFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionTabWidgetFrameFromPointer(cthis unsafe.Pointer) *QStyleOptionTabWidgetFrame {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionTabWidgetFrame{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:176
+// index:1
+// void QStyleOptionTabWidgetFrame(int)
+func NewQStyleOptionTabWidgetFrame_1(version int) *QStyleOptionTabWidgetFrame {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionTabWidgetFrameFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

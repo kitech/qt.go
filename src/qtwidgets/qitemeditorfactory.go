@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 13
+// extern C begin: 3
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QItemEditorFactory struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QItemEditorFactory) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:98
@@ -64,7 +68,11 @@ func NewQItemEditorFactory() *QItemEditorFactory {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactoryC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QItemEditorFactory{cthis}
+	gothis := NewQItemEditorFactoryFromPointer(cthis)
+	return gothis
+}
+func NewQItemEditorFactoryFromPointer(cthis unsafe.Pointer) *QItemEditorFactory {
+	return &QItemEditorFactory{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:99
@@ -81,8 +89,8 @@ func DeleteQItemEditorFactory(*QItemEditorFactory) {
 // virtual
 // QWidget * createEditor(int, class QWidget *)
 func (this *QItemEditorFactory) CreateEditor(userType int, parent unsafe.Pointer) {
-	// 0: (, int userType, QWidget * parent), (&userType, parent)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory12createEditorEiP7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, &userType, parent)
+	// 0: (, userType int, parent QWidget *), (&userType, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory12createEditorEiP7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &userType, parent)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -91,8 +99,8 @@ func (this *QItemEditorFactory) CreateEditor(userType int, parent unsafe.Pointer
 // virtual
 // QByteArray valuePropertyName(int)
 func (this *QItemEditorFactory) ValuePropertyName(userType int) {
-	// 0: (, int userType), (&userType)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory17valuePropertyNameEi", ffiqt.FFI_TYPE_VOID, this.cthis, &userType)
+	// 0: (, userType int), (&userType)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory17valuePropertyNameEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &userType)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,8 +108,8 @@ func (this *QItemEditorFactory) ValuePropertyName(userType int) {
 // index:0
 // void registerEditor(int, class QItemEditorCreatorBase *)
 func (this *QItemEditorFactory) RegisterEditor(userType int, creator unsafe.Pointer) {
-	// 0: (, int userType, QItemEditorCreatorBase * creator), (&userType, creator)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase", ffiqt.FFI_TYPE_VOID, this.cthis, &userType, creator)
+	// 0: (, userType int, creator QItemEditorCreatorBase *), (&userType, creator)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &userType, creator)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,12 +133,12 @@ func QItemEditorFactory_DefaultFactory() {
 // static
 // void setDefaultFactory(class QItemEditorFactory *)
 func (this *QItemEditorFactory) SetDefaultFactory(factory unsafe.Pointer) {
-	// 0: (QItemEditorFactory * factory), (factory)
+	// 0: (factory QItemEditorFactory *), (factory)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory17setDefaultFactoryEPS_", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QItemEditorFactory_SetDefaultFactory(factory unsafe.Pointer) {
-	// 0: (QItemEditorFactory * factory), (factory)
+	// 0: (factory QItemEditorFactory *), (factory)
 	var nilthis *QItemEditorFactory
 	nilthis.SetDefaultFactory(factory)
 }

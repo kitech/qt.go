@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QHelpEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QHelpEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:680
@@ -59,7 +63,12 @@ func NewQHelpEvent(type_ int, pos unsafe.Pointer, globalPos unsafe.Pointer) *QHe
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventC2EN6QEvent4TypeERK6QPointS4_", ffiqt.FFI_TYPE_VOID, cthis, &type_, pos, globalPos)
 	gopp.ErrPrint(err, rv)
-	return &QHelpEvent{cthis}
+	gothis := NewQHelpEventFromPointer(cthis)
+	return gothis
+}
+func NewQHelpEventFromPointer(cthis unsafe.Pointer) *QHelpEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QHelpEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:681
@@ -77,7 +86,7 @@ func DeleteQHelpEvent(*QHelpEvent) {
 // int x()
 func (this *QHelpEvent) X() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1xEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1xEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -87,7 +96,7 @@ func (this *QHelpEvent) X() {
 // int y()
 func (this *QHelpEvent) Y() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1yEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1yEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,7 +106,7 @@ func (this *QHelpEvent) Y() {
 // int globalX()
 func (this *QHelpEvent) GlobalX() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalXEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalXEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +116,7 @@ func (this *QHelpEvent) GlobalX() {
 // int globalY()
 func (this *QHelpEvent) GlobalY() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalYEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalYEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +126,7 @@ func (this *QHelpEvent) GlobalY() {
 // const QPoint & pos()
 func (this *QHelpEvent) Pos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent3posEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent3posEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,7 +136,7 @@ func (this *QHelpEvent) Pos() {
 // const QPoint & globalPos()
 func (this *QHelpEvent) GlobalPos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent9globalPosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent9globalPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

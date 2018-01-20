@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 2
+// extern C begin: 3
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleHintReturn struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QStyleHintReturn) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:710
@@ -63,7 +67,11 @@ func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", ffiqt.FFI_TYPE_VOID, cthis, &version, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QStyleHintReturn{cthis}
+	gothis := NewQStyleHintReturnFromPointer(cthis)
+	return gothis
+}
+func NewQStyleHintReturnFromPointer(cthis unsafe.Pointer) *QStyleHintReturn {
+	return &QStyleHintReturn{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:711

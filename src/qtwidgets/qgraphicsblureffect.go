@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 9
+// extern C begin: 10
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QGraphicsBlurEffect struct {
-	cthis unsafe.Pointer
+	*QGraphicsEffect
+}
+
+func (this *QGraphicsBlurEffect) GetCthis() unsafe.Pointer {
+	return this.QGraphicsEffect.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:157
@@ -62,7 +66,7 @@ type QGraphicsBlurEffect struct {
 // const QMetaObject * metaObject()
 func (this *QGraphicsBlurEffect) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQGraphicsBlurEffect(parent unsafe.Pointer) *QGraphicsBlurEffect {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QGraphicsBlurEffect{cthis}
+	gothis := NewQGraphicsBlurEffectFromPointer(cthis)
+	return gothis
+}
+func NewQGraphicsBlurEffectFromPointer(cthis unsafe.Pointer) *QGraphicsBlurEffect {
+	bcthis0 := NewQGraphicsEffectFromPointer(cthis)
+	return &QGraphicsBlurEffect{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:171
@@ -90,8 +99,8 @@ func DeleteQGraphicsBlurEffect(*QGraphicsBlurEffect) {
 // virtual
 // QRectF boundingRectFor(const class QRectF &)
 func (this *QGraphicsBlurEffect) BoundingRectFor(rect unsafe.Pointer) {
-	// 0: (, const QRectF & rect), (rect)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	// 0: (, rect const QRectF &), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), rect)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,7 +109,7 @@ func (this *QGraphicsBlurEffect) BoundingRectFor(rect unsafe.Pointer) {
 // qreal blurRadius()
 func (this *QGraphicsBlurEffect) BlurRadius() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10blurRadiusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10blurRadiusEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,7 +118,7 @@ func (this *QGraphicsBlurEffect) BlurRadius() {
 // QGraphicsBlurEffect::BlurHints blurHints()
 func (this *QGraphicsBlurEffect) BlurHints() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect9blurHintsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect9blurHintsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,8 +126,17 @@ func (this *QGraphicsBlurEffect) BlurHints() {
 // index:0
 // void setBlurRadius(qreal)
 func (this *QGraphicsBlurEffect) SetBlurRadius(blurRadius float64) {
-	// 0: (, qreal blurRadius), (&blurRadius)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect13setBlurRadiusEd", ffiqt.FFI_TYPE_VOID, this.cthis, &blurRadius)
+	// 0: (, blurRadius qreal), (&blurRadius)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect13setBlurRadiusEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &blurRadius)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:179
+// index:0
+// void setBlurHints(QGraphicsBlurEffect::BlurHints)
+func (this *QGraphicsBlurEffect) SetBlurHints(hints int) {
+	// 0: (, QFlags<QGraphicsBlurEffect::BlurHint> hints), (hints)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect12setBlurHintsE6QFlagsINS_8BlurHintEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), hints)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,8 +144,27 @@ func (this *QGraphicsBlurEffect) SetBlurRadius(blurRadius float64) {
 // index:0
 // void blurRadiusChanged(qreal)
 func (this *QGraphicsBlurEffect) BlurRadiusChanged(blurRadius float64) {
-	// 0: (, qreal blurRadius), (&blurRadius)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect17blurRadiusChangedEd", ffiqt.FFI_TYPE_VOID, this.cthis, &blurRadius)
+	// 0: (, blurRadius qreal), (&blurRadius)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect17blurRadiusChangedEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &blurRadius)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:183
+// index:0
+// void blurHintsChanged(QGraphicsBlurEffect::BlurHints)
+func (this *QGraphicsBlurEffect) BlurHintsChanged(hints int) {
+	// 0: (, QFlags<QGraphicsBlurEffect::BlurHint> hints), (hints)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect16blurHintsChangedE6QFlagsINS_8BlurHintEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), hints)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:186
+// index:0
+// virtual
+// void draw(class QPainter *)
+func (this *QGraphicsBlurEffect) Draw(painter unsafe.Pointer) {
+	// 0: (, painter QPainter *), (painter)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect4drawEP8QPainter", ffiqt.FFI_TYPE_VOID, this.GetCthis(), painter)
 	gopp.ErrPrint(err, rv)
 }
 

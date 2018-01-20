@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 29
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QGuiApplication struct {
-	cthis unsafe.Pointer
+	*qtcore.QCoreApplication
+}
+
+func (this *QGuiApplication) GetCthis() unsafe.Pointer {
+	return this.QCoreApplication.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qguiapplication.h:74
@@ -58,7 +62,7 @@ type QGuiApplication struct {
 // const QMetaObject * metaObject()
 func (this *QGuiApplication) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -70,7 +74,23 @@ func NewQGuiApplication(argc int, argv []string, arg2 int) *QGuiApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplicationC2ERiPPci", ffiqt.FFI_TYPE_VOID, cthis, &argc, convArg1, &arg2)
 	gopp.ErrPrint(err, rv)
-	return &QGuiApplication{cthis}
+	gothis := NewQGuiApplicationFromPointer(cthis)
+	return gothis
+}
+func NewQGuiApplicationFromPointer(cthis unsafe.Pointer) *QGuiApplication {
+	bcthis0 := qtcore.NewQCoreApplicationFromPointer(cthis)
+	return &QGuiApplication{bcthis0}
+}
+
+// /usr/include/qt/QtGui/qguiapplication.h:195
+// index:1
+// void QGuiApplication(class QGuiApplicationPrivate &)
+func NewQGuiApplication_1(p unsafe.Pointer) *QGuiApplication {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplicationC2ER22QGuiApplicationPrivate", ffiqt.FFI_TYPE_VOID, cthis, p)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQGuiApplicationFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qguiapplication.h:89
@@ -87,12 +107,12 @@ func DeleteQGuiApplication(*QGuiApplication) {
 // static
 // void setApplicationDisplayName(const class QString &)
 func (this *QGuiApplication) SetApplicationDisplayName(name unsafe.Pointer) {
-	// 0: (const QString & name), (name)
+	// 0: (name const QString &), (name)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication25setApplicationDisplayNameERK7QString", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QGuiApplication_SetApplicationDisplayName(name unsafe.Pointer) {
-	// 0: (const QString & name), (name)
+	// 0: (name const QString &), (name)
 	var nilthis *QGuiApplication
 	nilthis.SetApplicationDisplayName(name)
 }
@@ -117,12 +137,12 @@ func QGuiApplication_ApplicationDisplayName() {
 // static
 // void setDesktopFileName(const class QString &)
 func (this *QGuiApplication) SetDesktopFileName(name unsafe.Pointer) {
-	// 0: (const QString & name), (name)
+	// 0: (name const QString &), (name)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication18setDesktopFileNameERK7QString", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QGuiApplication_SetDesktopFileName(name unsafe.Pointer) {
-	// 0: (const QString & name), (name)
+	// 0: (name const QString &), (name)
 	var nilthis *QGuiApplication
 	nilthis.SetDesktopFileName(name)
 }
@@ -177,12 +197,12 @@ func QGuiApplication_TopLevelWindows() {
 // static
 // QWindow * topLevelAt(const class QPoint &)
 func (this *QGuiApplication) TopLevelAt(pos unsafe.Pointer) {
-	// 0: (const QPoint & pos), (pos)
+	// 0: (pos const QPoint &), (pos)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication10topLevelAtERK6QPoint", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QGuiApplication_TopLevelAt(pos unsafe.Pointer) {
-	// 0: (const QPoint & pos), (pos)
+	// 0: (pos const QPoint &), (pos)
 	var nilthis *QGuiApplication
 	nilthis.TopLevelAt(pos)
 }
@@ -192,12 +212,12 @@ func QGuiApplication_TopLevelAt(pos unsafe.Pointer) {
 // static
 // void setWindowIcon(const class QIcon &)
 func (this *QGuiApplication) SetWindowIcon(icon unsafe.Pointer) {
-	// 0: (const QIcon & icon), (icon)
+	// 0: (icon const QIcon &), (icon)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication13setWindowIconERK5QIcon", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QGuiApplication_SetWindowIcon(icon unsafe.Pointer) {
-	// 0: (const QIcon & icon), (icon)
+	// 0: (icon const QIcon &), (icon)
 	var nilthis *QGuiApplication
 	nilthis.SetWindowIcon(icon)
 }
@@ -312,12 +332,12 @@ func QGuiApplication_Screens() {
 // static
 // QScreen * screenAt(const class QPoint &)
 func (this *QGuiApplication) ScreenAt(point unsafe.Pointer) {
-	// 0: (const QPoint & point), (point)
+	// 0: (point const QPoint &), (point)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication8screenAtERK6QPoint", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QGuiApplication_ScreenAt(point unsafe.Pointer) {
-	// 0: (const QPoint & point), (point)
+	// 0: (point const QPoint &), (point)
 	var nilthis *QGuiApplication
 	nilthis.ScreenAt(point)
 }
@@ -327,7 +347,7 @@ func QGuiApplication_ScreenAt(point unsafe.Pointer) {
 // qreal devicePixelRatio()
 func (this *QGuiApplication) DevicePixelRatio() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication16devicePixelRatioEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication16devicePixelRatioEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -456,12 +476,12 @@ func QGuiApplication_Palette() {
 // static
 // void setPalette(const class QPalette &)
 func (this *QGuiApplication) SetPalette(pal unsafe.Pointer) {
-	// 0: (const QPalette & pal), (pal)
+	// 0: (pal const QPalette &), (pal)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication10setPaletteERK8QPalette", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QGuiApplication_SetPalette(pal unsafe.Pointer) {
-	// 0: (const QPalette & pal), (pal)
+	// 0: (pal const QPalette &), (pal)
 	var nilthis *QGuiApplication
 	nilthis.SetPalette(pal)
 }
@@ -516,12 +536,12 @@ func QGuiApplication_MouseButtons() {
 // static
 // void setLayoutDirection(Qt::LayoutDirection)
 func (this *QGuiApplication) SetLayoutDirection(direction int) {
-	// 0: (Qt::LayoutDirection direction), (direction)
+	// 0: (direction Qt::LayoutDirection), (direction)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication18setLayoutDirectionEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QGuiApplication_SetLayoutDirection(direction int) {
-	// 0: (Qt::LayoutDirection direction), (direction)
+	// 0: (direction Qt::LayoutDirection), (direction)
 	var nilthis *QGuiApplication
 	nilthis.SetLayoutDirection(direction)
 }
@@ -591,12 +611,12 @@ func QGuiApplication_StyleHints() {
 // static
 // void setDesktopSettingsAware(_Bool)
 func (this *QGuiApplication) SetDesktopSettingsAware(on bool) {
-	// 0: (bool on), (on)
+	// 0: (on bool), (on)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication23setDesktopSettingsAwareEb", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QGuiApplication_SetDesktopSettingsAware(on bool) {
-	// 0: (bool on), (on)
+	// 0: (on bool), (on)
 	var nilthis *QGuiApplication
 	nilthis.SetDesktopSettingsAware(on)
 }
@@ -651,12 +671,12 @@ func QGuiApplication_PlatformNativeInterface() {
 // static
 // QFunctionPointer platformFunction(const class QByteArray &)
 func (this *QGuiApplication) PlatformFunction(function unsafe.Pointer) {
-	// 0: (const QByteArray & function), (function)
+	// 0: (function const QByteArray &), (function)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication16platformFunctionERK10QByteArray", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QGuiApplication_PlatformFunction(function unsafe.Pointer) {
-	// 0: (const QByteArray & function), (function)
+	// 0: (function const QByteArray &), (function)
 	var nilthis *QGuiApplication
 	nilthis.PlatformFunction(function)
 }
@@ -666,12 +686,12 @@ func QGuiApplication_PlatformFunction(function unsafe.Pointer) {
 // static
 // void setQuitOnLastWindowClosed(_Bool)
 func (this *QGuiApplication) SetQuitOnLastWindowClosed(quit bool) {
-	// 0: (bool quit), (quit)
+	// 0: (quit bool), (quit)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication25setQuitOnLastWindowClosedEb", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QGuiApplication_SetQuitOnLastWindowClosed(quit bool) {
-	// 0: (bool quit), (quit)
+	// 0: (quit bool), (quit)
 	var nilthis *QGuiApplication
 	nilthis.SetQuitOnLastWindowClosed(quit)
 }
@@ -727,7 +747,7 @@ func QGuiApplication_Exec() {
 // bool notify(class QObject *, class QEvent *)
 func (this *QGuiApplication) Notify(arg0 unsafe.Pointer, arg1 unsafe.Pointer) {
 	// 0: (, QObject * arg0, QEvent * arg1), (arg0, arg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication6notifyEP7QObjectP6QEvent", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication6notifyEP7QObjectP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, arg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -736,7 +756,7 @@ func (this *QGuiApplication) Notify(arg0 unsafe.Pointer, arg1 unsafe.Pointer) {
 // bool isSessionRestored()
 func (this *QGuiApplication) IsSessionRestored() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication17isSessionRestoredEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication17isSessionRestoredEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -745,7 +765,7 @@ func (this *QGuiApplication) IsSessionRestored() {
 // QString sessionId()
 func (this *QGuiApplication) SessionId() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication9sessionIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication9sessionIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -754,7 +774,7 @@ func (this *QGuiApplication) SessionId() {
 // QString sessionKey()
 func (this *QGuiApplication) SessionKey() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication10sessionKeyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication10sessionKeyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -763,7 +783,7 @@ func (this *QGuiApplication) SessionKey() {
 // bool isSavingSession()
 func (this *QGuiApplication) IsSavingSession() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication15isSavingSessionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication15isSavingSessionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -817,7 +837,7 @@ func QGuiApplication_Sync() {
 // void fontDatabaseChanged()
 func (this *QGuiApplication) FontDatabaseChanged() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication19fontDatabaseChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication19fontDatabaseChangedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -825,8 +845,8 @@ func (this *QGuiApplication) FontDatabaseChanged() {
 // index:0
 // void screenAdded(class QScreen *)
 func (this *QGuiApplication) ScreenAdded(screen unsafe.Pointer) {
-	// 0: (, QScreen * screen), (screen)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication11screenAddedEP7QScreen", ffiqt.FFI_TYPE_VOID, this.cthis, screen)
+	// 0: (, screen QScreen *), (screen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication11screenAddedEP7QScreen", ffiqt.FFI_TYPE_VOID, this.GetCthis(), screen)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -834,8 +854,8 @@ func (this *QGuiApplication) ScreenAdded(screen unsafe.Pointer) {
 // index:0
 // void screenRemoved(class QScreen *)
 func (this *QGuiApplication) ScreenRemoved(screen unsafe.Pointer) {
-	// 0: (, QScreen * screen), (screen)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication13screenRemovedEP7QScreen", ffiqt.FFI_TYPE_VOID, this.cthis, screen)
+	// 0: (, screen QScreen *), (screen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication13screenRemovedEP7QScreen", ffiqt.FFI_TYPE_VOID, this.GetCthis(), screen)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -843,8 +863,8 @@ func (this *QGuiApplication) ScreenRemoved(screen unsafe.Pointer) {
 // index:0
 // void primaryScreenChanged(class QScreen *)
 func (this *QGuiApplication) PrimaryScreenChanged(screen unsafe.Pointer) {
-	// 0: (, QScreen * screen), (screen)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication20primaryScreenChangedEP7QScreen", ffiqt.FFI_TYPE_VOID, this.cthis, screen)
+	// 0: (, screen QScreen *), (screen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication20primaryScreenChangedEP7QScreen", ffiqt.FFI_TYPE_VOID, this.GetCthis(), screen)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -853,7 +873,7 @@ func (this *QGuiApplication) PrimaryScreenChanged(screen unsafe.Pointer) {
 // void lastWindowClosed()
 func (this *QGuiApplication) LastWindowClosed() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication16lastWindowClosedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication16lastWindowClosedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -861,8 +881,8 @@ func (this *QGuiApplication) LastWindowClosed() {
 // index:0
 // void focusObjectChanged(class QObject *)
 func (this *QGuiApplication) FocusObjectChanged(focusObject unsafe.Pointer) {
-	// 0: (, QObject * focusObject), (focusObject)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication18focusObjectChangedEP7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, focusObject)
+	// 0: (, focusObject QObject *), (focusObject)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication18focusObjectChangedEP7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), focusObject)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -870,8 +890,8 @@ func (this *QGuiApplication) FocusObjectChanged(focusObject unsafe.Pointer) {
 // index:0
 // void focusWindowChanged(class QWindow *)
 func (this *QGuiApplication) FocusWindowChanged(focusWindow unsafe.Pointer) {
-	// 0: (, QWindow * focusWindow), (focusWindow)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication18focusWindowChangedEP7QWindow", ffiqt.FFI_TYPE_VOID, this.cthis, focusWindow)
+	// 0: (, focusWindow QWindow *), (focusWindow)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication18focusWindowChangedEP7QWindow", ffiqt.FFI_TYPE_VOID, this.GetCthis(), focusWindow)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -879,8 +899,8 @@ func (this *QGuiApplication) FocusWindowChanged(focusWindow unsafe.Pointer) {
 // index:0
 // void applicationStateChanged(Qt::ApplicationState)
 func (this *QGuiApplication) ApplicationStateChanged(state int) {
-	// 0: (, Qt::ApplicationState state), (&state)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication23applicationStateChangedEN2Qt16ApplicationStateE", ffiqt.FFI_TYPE_VOID, this.cthis, &state)
+	// 0: (, state Qt::ApplicationState), (&state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication23applicationStateChangedEN2Qt16ApplicationStateE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &state)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -888,8 +908,8 @@ func (this *QGuiApplication) ApplicationStateChanged(state int) {
 // index:0
 // void layoutDirectionChanged(Qt::LayoutDirection)
 func (this *QGuiApplication) LayoutDirectionChanged(direction int) {
-	// 0: (, Qt::LayoutDirection direction), (&direction)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication22layoutDirectionChangedEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_VOID, this.cthis, &direction)
+	// 0: (, direction Qt::LayoutDirection), (&direction)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication22layoutDirectionChangedEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &direction)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -897,8 +917,8 @@ func (this *QGuiApplication) LayoutDirectionChanged(direction int) {
 // index:0
 // void commitDataRequest(class QSessionManager &)
 func (this *QGuiApplication) CommitDataRequest(sessionManager unsafe.Pointer) {
-	// 0: (, QSessionManager & sessionManager), (sessionManager)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication17commitDataRequestER15QSessionManager", ffiqt.FFI_TYPE_VOID, this.cthis, sessionManager)
+	// 0: (, sessionManager QSessionManager &), (sessionManager)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication17commitDataRequestER15QSessionManager", ffiqt.FFI_TYPE_VOID, this.GetCthis(), sessionManager)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -906,8 +926,8 @@ func (this *QGuiApplication) CommitDataRequest(sessionManager unsafe.Pointer) {
 // index:0
 // void saveStateRequest(class QSessionManager &)
 func (this *QGuiApplication) SaveStateRequest(sessionManager unsafe.Pointer) {
-	// 0: (, QSessionManager & sessionManager), (sessionManager)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication16saveStateRequestER15QSessionManager", ffiqt.FFI_TYPE_VOID, this.cthis, sessionManager)
+	// 0: (, sessionManager QSessionManager &), (sessionManager)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication16saveStateRequestER15QSessionManager", ffiqt.FFI_TYPE_VOID, this.GetCthis(), sessionManager)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -915,8 +935,8 @@ func (this *QGuiApplication) SaveStateRequest(sessionManager unsafe.Pointer) {
 // index:0
 // void paletteChanged(const class QPalette &)
 func (this *QGuiApplication) PaletteChanged(pal unsafe.Pointer) {
-	// 0: (, const QPalette & pal), (pal)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication14paletteChangedERK8QPalette", ffiqt.FFI_TYPE_VOID, this.cthis, pal)
+	// 0: (, pal const QPalette &), (pal)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication14paletteChangedERK8QPalette", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pal)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -925,7 +945,27 @@ func (this *QGuiApplication) PaletteChanged(pal unsafe.Pointer) {
 // void applicationDisplayNameChanged()
 func (this *QGuiApplication) ApplicationDisplayNameChanged() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication29applicationDisplayNameChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication29applicationDisplayNameChangedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qguiapplication.h:192
+// index:0
+// virtual
+// bool event(class QEvent *)
+func (this *QGuiApplication) Event(arg0 unsafe.Pointer) {
+	// 0: (, QEvent * arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qguiapplication.h:193
+// index:0
+// virtual
+// bool compressEvent(class QEvent *, class QObject *, class QPostEventList *)
+func (this *QGuiApplication) CompressEvent(arg0 unsafe.Pointer, receiver unsafe.Pointer, arg2 unsafe.Pointer) {
+	// 0: (, QEvent * arg0, receiver QObject *, QPostEventList * arg2), (arg0, receiver, arg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication13compressEventEP6QEventP7QObjectP14QPostEventList", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, receiver, arg2)
 	gopp.ErrPrint(err, rv)
 }
 

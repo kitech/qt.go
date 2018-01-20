@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QXmlStreamNotationDeclaration struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QXmlStreamNotationDeclaration) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:241
@@ -55,7 +59,11 @@ func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QXmlStreamNotationDeclaration{cthis}
+	gothis := NewQXmlStreamNotationDeclarationFromPointer(cthis)
+	return gothis
+}
+func NewQXmlStreamNotationDeclarationFromPointer(cthis unsafe.Pointer) *QXmlStreamNotationDeclaration {
+	return &QXmlStreamNotationDeclaration{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:243
@@ -72,7 +80,7 @@ func DeleteQXmlStreamNotationDeclaration(*QXmlStreamNotationDeclaration) {
 // QStringRef name()
 func (this *QXmlStreamNotationDeclaration) Name() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -82,7 +90,7 @@ func (this *QXmlStreamNotationDeclaration) Name() {
 // QStringRef systemId()
 func (this *QXmlStreamNotationDeclaration) SystemId() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -92,7 +100,7 @@ func (this *QXmlStreamNotationDeclaration) SystemId() {
 // QStringRef publicId()
 func (this *QXmlStreamNotationDeclaration) PublicId() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

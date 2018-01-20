@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextList struct {
-	cthis unsafe.Pointer
+	*QTextBlockGroup
+}
+
+func (this *QTextList) GetCthis() unsafe.Pointer {
+	return this.QTextBlockGroup.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:55
@@ -58,7 +62,7 @@ type QTextList struct {
 // const QMetaObject * metaObject()
 func (this *QTextList) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -69,7 +73,12 @@ func NewQTextList(doc unsafe.Pointer) *QTextList {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextListC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, doc)
 	gopp.ErrPrint(err, rv)
-	return &QTextList{cthis}
+	gothis := NewQTextListFromPointer(cthis)
+	return gothis
+}
+func NewQTextListFromPointer(cthis unsafe.Pointer) *QTextList {
+	bcthis0 := NewQTextBlockGroupFromPointer(cthis)
+	return &QTextList{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:58
@@ -86,7 +95,7 @@ func DeleteQTextList(*QTextList) {
 // int count()
 func (this *QTextList) Count() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList5countEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList5countEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -96,7 +105,7 @@ func (this *QTextList) Count() {
 // bool isEmpty()
 func (this *QTextList) IsEmpty() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -104,8 +113,8 @@ func (this *QTextList) IsEmpty() {
 // index:0
 // QTextBlock item(int)
 func (this *QTextList) Item(i int) {
-	// 0: (, int i), (&i)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList4itemEi", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	// 0: (, i int), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList4itemEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &i)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -114,7 +123,7 @@ func (this *QTextList) Item(i int) {
 // int itemNumber(const class QTextBlock &)
 func (this *QTextList) ItemNumber(arg0 unsafe.Pointer) {
 	// 0: (, const QTextBlock & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList10itemNumberERK10QTextBlock", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList10itemNumberERK10QTextBlock", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -123,7 +132,7 @@ func (this *QTextList) ItemNumber(arg0 unsafe.Pointer) {
 // QString itemText(const class QTextBlock &)
 func (this *QTextList) ItemText(arg0 unsafe.Pointer) {
 	// 0: (, const QTextBlock & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList8itemTextERK10QTextBlock", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList8itemTextERK10QTextBlock", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -131,8 +140,8 @@ func (this *QTextList) ItemText(arg0 unsafe.Pointer) {
 // index:0
 // void removeItem(int)
 func (this *QTextList) RemoveItem(i int) {
-	// 0: (, int i), (&i)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList10removeItemEi", ffiqt.FFI_TYPE_VOID, this.cthis, &i)
+	// 0: (, i int), (&i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList10removeItemEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &i)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -141,7 +150,7 @@ func (this *QTextList) RemoveItem(i int) {
 // void remove(const class QTextBlock &)
 func (this *QTextList) Remove(arg0 unsafe.Pointer) {
 	// 0: (, const QTextBlock & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList6removeERK10QTextBlock", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList6removeERK10QTextBlock", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,8 +158,8 @@ func (this *QTextList) Remove(arg0 unsafe.Pointer) {
 // index:0
 // void add(const class QTextBlock &)
 func (this *QTextList) Add(block unsafe.Pointer) {
-	// 0: (, const QTextBlock & block), (block)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList3addERK10QTextBlock", ffiqt.FFI_TYPE_VOID, this.cthis, block)
+	// 0: (, block const QTextBlock &), (block)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList3addERK10QTextBlock", ffiqt.FFI_TYPE_VOID, this.GetCthis(), block)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -159,8 +168,8 @@ func (this *QTextList) Add(block unsafe.Pointer) {
 // inline
 // void setFormat(const class QTextListFormat &)
 func (this *QTextList) SetFormat(format unsafe.Pointer) {
-	// 0: (, const QTextListFormat & format), (format)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList9setFormatERK15QTextListFormat", ffiqt.FFI_TYPE_VOID, this.cthis, format)
+	// 0: (, format const QTextListFormat &), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList9setFormatERK15QTextListFormat", ffiqt.FFI_TYPE_VOID, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,7 +179,7 @@ func (this *QTextList) SetFormat(format unsafe.Pointer) {
 // QTextListFormat format()
 func (this *QTextList) Format() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList6formatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList6formatEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

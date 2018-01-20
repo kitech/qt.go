@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QPersistentModelIndex struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QPersistentModelIndex) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:107
@@ -55,7 +59,11 @@ func NewQPersistentModelIndex() *QPersistentModelIndex {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPersistentModelIndexC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QPersistentModelIndex{cthis}
+	gothis := NewQPersistentModelIndexFromPointer(cthis)
+	return gothis
+}
+func NewQPersistentModelIndexFromPointer(cthis unsafe.Pointer) *QPersistentModelIndex {
+	return &QPersistentModelIndex{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:108
@@ -65,7 +73,8 @@ func NewQPersistentModelIndex_1(index unsafe.Pointer) *QPersistentModelIndex {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPersistentModelIndexC2ERK11QModelIndex", ffiqt.FFI_TYPE_VOID, cthis, index)
 	gopp.ErrPrint(err, rv)
-	return &QPersistentModelIndex{cthis}
+	gothis := NewQPersistentModelIndexFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:110
@@ -81,8 +90,8 @@ func DeleteQPersistentModelIndex(*QPersistentModelIndex) {
 // inline
 // void swap(class QPersistentModelIndex &)
 func (this *QPersistentModelIndex) Swap(other unsafe.Pointer) {
-	// 0: (, QPersistentModelIndex & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPersistentModelIndex4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QPersistentModelIndex &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPersistentModelIndex4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -91,7 +100,7 @@ func (this *QPersistentModelIndex) Swap(other unsafe.Pointer) {
 // int row()
 func (this *QPersistentModelIndex) Row() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex3rowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex3rowEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,7 +109,7 @@ func (this *QPersistentModelIndex) Row() {
 // int column()
 func (this *QPersistentModelIndex) Column() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex6columnEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex6columnEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,7 +118,7 @@ func (this *QPersistentModelIndex) Column() {
 // void * internalPointer()
 func (this *QPersistentModelIndex) InternalPointer() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex15internalPointerEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex15internalPointerEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -118,7 +127,7 @@ func (this *QPersistentModelIndex) InternalPointer() {
 // quintptr internalId()
 func (this *QPersistentModelIndex) InternalId() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex10internalIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex10internalIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,7 +136,7 @@ func (this *QPersistentModelIndex) InternalId() {
 // QModelIndex parent()
 func (this *QPersistentModelIndex) Parent() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex6parentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex6parentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,8 +144,8 @@ func (this *QPersistentModelIndex) Parent() {
 // index:0
 // QModelIndex sibling(int, int)
 func (this *QPersistentModelIndex) Sibling(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex7siblingEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex7siblingEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,8 +153,8 @@ func (this *QPersistentModelIndex) Sibling(row int, column int) {
 // index:0
 // QModelIndex child(int, int)
 func (this *QPersistentModelIndex) Child(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5childEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5childEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,8 +162,8 @@ func (this *QPersistentModelIndex) Child(row int, column int) {
 // index:0
 // QVariant data(int)
 func (this *QPersistentModelIndex) Data(role int) {
-	// 0: (, int role), (&role)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex4dataEi", ffiqt.FFI_TYPE_VOID, this.cthis, &role)
+	// 0: (, role int), (&role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex4dataEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -163,7 +172,7 @@ func (this *QPersistentModelIndex) Data(role int) {
 // Qt::ItemFlags flags()
 func (this *QPersistentModelIndex) Flags() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5flagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5flagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +181,7 @@ func (this *QPersistentModelIndex) Flags() {
 // const QAbstractItemModel * model()
 func (this *QPersistentModelIndex) Model() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5modelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5modelEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -181,7 +190,7 @@ func (this *QPersistentModelIndex) Model() {
 // bool isValid()
 func (this *QPersistentModelIndex) IsValid() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

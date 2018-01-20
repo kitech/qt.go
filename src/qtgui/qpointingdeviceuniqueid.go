@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 3
+// extern C begin: 4
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QPointingDeviceUniqueId struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QPointingDeviceUniqueId) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qevent.h:809
@@ -60,7 +64,11 @@ func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueIdC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QPointingDeviceUniqueId{cthis}
+	gothis := NewQPointingDeviceUniqueIdFromPointer(cthis)
+	return gothis
+}
+func NewQPointingDeviceUniqueIdFromPointer(cthis unsafe.Pointer) *QPointingDeviceUniqueId {
+	return &QPointingDeviceUniqueId{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qevent.h:813
@@ -68,12 +76,12 @@ func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
 // static
 // QPointingDeviceUniqueId fromNumericId(qint64)
 func (this *QPointingDeviceUniqueId) FromNumericId(id int64) {
-	// 0: (qint64 id), (id)
+	// 0: (id qint64), (id)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueId13fromNumericIdEx", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QPointingDeviceUniqueId_FromNumericId(id int64) {
-	// 0: (qint64 id), (id)
+	// 0: (id qint64), (id)
 	var nilthis *QPointingDeviceUniqueId
 	nilthis.FromNumericId(id)
 }
@@ -84,7 +92,7 @@ func QPointingDeviceUniqueId_FromNumericId(id int64) {
 // bool isValid()
 func (this *QPointingDeviceUniqueId) IsValid() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -93,7 +101,7 @@ func (this *QPointingDeviceUniqueId) IsValid() {
 // qint64 numericId()
 func (this *QPointingDeviceUniqueId) NumericId() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId9numericIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId9numericIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 5
+// extern C begin: 14
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QSpinBox struct {
-	cthis unsafe.Pointer
+	*QAbstractSpinBox
+}
+
+func (this *QSpinBox) GetCthis() unsafe.Pointer {
+	return this.QAbstractSpinBox.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:53
@@ -62,7 +66,7 @@ type QSpinBox struct {
 // const QMetaObject * metaObject()
 func (this *QSpinBox) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQSpinBox(parent unsafe.Pointer) *QSpinBox {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QSpinBox{cthis}
+	gothis := NewQSpinBoxFromPointer(cthis)
+	return gothis
+}
+func NewQSpinBoxFromPointer(cthis unsafe.Pointer) *QSpinBox {
+	bcthis0 := NewQAbstractSpinBoxFromPointer(cthis)
+	return &QSpinBox{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:66
@@ -90,7 +99,7 @@ func DeleteQSpinBox(*QSpinBox) {
 // int value()
 func (this *QSpinBox) Value() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox5valueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox5valueEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +108,7 @@ func (this *QSpinBox) Value() {
 // QString prefix()
 func (this *QSpinBox) Prefix() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox6prefixEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox6prefixEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,8 +116,8 @@ func (this *QSpinBox) Prefix() {
 // index:0
 // void setPrefix(const class QString &)
 func (this *QSpinBox) SetPrefix(prefix unsafe.Pointer) {
-	// 0: (, const QString & prefix), (prefix)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox9setPrefixERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, prefix)
+	// 0: (, prefix const QString &), (prefix)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox9setPrefixERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), prefix)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +126,7 @@ func (this *QSpinBox) SetPrefix(prefix unsafe.Pointer) {
 // QString suffix()
 func (this *QSpinBox) Suffix() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox6suffixEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox6suffixEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,8 +134,8 @@ func (this *QSpinBox) Suffix() {
 // index:0
 // void setSuffix(const class QString &)
 func (this *QSpinBox) SetSuffix(suffix unsafe.Pointer) {
-	// 0: (, const QString & suffix), (suffix)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox9setSuffixERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, suffix)
+	// 0: (, suffix const QString &), (suffix)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox9setSuffixERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), suffix)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,7 +144,7 @@ func (this *QSpinBox) SetSuffix(suffix unsafe.Pointer) {
 // QString cleanText()
 func (this *QSpinBox) CleanText() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox9cleanTextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox9cleanTextEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,7 +153,7 @@ func (this *QSpinBox) CleanText() {
 // int singleStep()
 func (this *QSpinBox) SingleStep() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox10singleStepEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox10singleStepEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,8 +161,8 @@ func (this *QSpinBox) SingleStep() {
 // index:0
 // void setSingleStep(int)
 func (this *QSpinBox) SetSingleStep(val int) {
-	// 0: (, int val), (&val)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox13setSingleStepEi", ffiqt.FFI_TYPE_VOID, this.cthis, &val)
+	// 0: (, val int), (&val)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox13setSingleStepEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &val)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +171,7 @@ func (this *QSpinBox) SetSingleStep(val int) {
 // int minimum()
 func (this *QSpinBox) Minimum() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox7minimumEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox7minimumEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,8 +179,8 @@ func (this *QSpinBox) Minimum() {
 // index:0
 // void setMinimum(int)
 func (this *QSpinBox) SetMinimum(min int) {
-	// 0: (, int min), (&min)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox10setMinimumEi", ffiqt.FFI_TYPE_VOID, this.cthis, &min)
+	// 0: (, min int), (&min)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox10setMinimumEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &min)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,7 +189,7 @@ func (this *QSpinBox) SetMinimum(min int) {
 // int maximum()
 func (this *QSpinBox) Maximum() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox7maximumEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox7maximumEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -188,8 +197,8 @@ func (this *QSpinBox) Maximum() {
 // index:0
 // void setMaximum(int)
 func (this *QSpinBox) SetMaximum(max int) {
-	// 0: (, int max), (&max)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox10setMaximumEi", ffiqt.FFI_TYPE_VOID, this.cthis, &max)
+	// 0: (, max int), (&max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox10setMaximumEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -197,8 +206,8 @@ func (this *QSpinBox) SetMaximum(max int) {
 // index:0
 // void setRange(int, int)
 func (this *QSpinBox) SetRange(min int, max int) {
-	// 0: (, int min, int max), (&min, &max)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox8setRangeEii", ffiqt.FFI_TYPE_VOID, this.cthis, &min, &max)
+	// 0: (, min int, max int), (&min, &max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox8setRangeEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &min, &max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -207,7 +216,7 @@ func (this *QSpinBox) SetRange(min int, max int) {
 // int displayIntegerBase()
 func (this *QSpinBox) DisplayIntegerBase() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox18displayIntegerBaseEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox18displayIntegerBaseEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -215,8 +224,58 @@ func (this *QSpinBox) DisplayIntegerBase() {
 // index:0
 // void setDisplayIntegerBase(int)
 func (this *QSpinBox) SetDisplayIntegerBase(base int) {
-	// 0: (, int base), (&base)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox21setDisplayIntegerBaseEi", ffiqt.FFI_TYPE_VOID, this.cthis, &base)
+	// 0: (, base int), (&base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox21setDisplayIntegerBaseEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &base)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:93
+// index:0
+// virtual
+// bool event(class QEvent *)
+func (this *QSpinBox) Event(event unsafe.Pointer) {
+	// 0: (, event QEvent *), (event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:94
+// index:0
+// virtual
+// QValidator::State validate(class QString &, int &)
+func (this *QSpinBox) Validate(input unsafe.Pointer, pos int) {
+	// 0: (, input QString &, pos int &), (input, &pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox8validateER7QStringRi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), input, &pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:95
+// index:0
+// virtual
+// int valueFromText(const class QString &)
+func (this *QSpinBox) ValueFromText(text unsafe.Pointer) {
+	// 0: (, text const QString &), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox13valueFromTextERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:96
+// index:0
+// virtual
+// QString textFromValue(int)
+func (this *QSpinBox) TextFromValue(val int) {
+	// 0: (, val int), (&val)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox13textFromValueEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &val)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:97
+// index:0
+// virtual
+// void fixup(class QString &)
+func (this *QSpinBox) Fixup(str unsafe.Pointer) {
+	// 0: (, str QString &), (str)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox5fixupER7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), str)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -224,8 +283,8 @@ func (this *QSpinBox) SetDisplayIntegerBase(base int) {
 // index:0
 // void setValue(int)
 func (this *QSpinBox) SetValue(val int) {
-	// 0: (, int val), (&val)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox8setValueEi", ffiqt.FFI_TYPE_VOID, this.cthis, &val)
+	// 0: (, val int), (&val)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox8setValueEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &val)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -234,7 +293,7 @@ func (this *QSpinBox) SetValue(val int) {
 // void valueChanged(int)
 func (this *QSpinBox) ValueChanged(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -243,7 +302,7 @@ func (this *QSpinBox) ValueChanged(arg0 int) {
 // void valueChanged(const class QString &)
 func (this *QSpinBox) ValueChanged_1(arg0 unsafe.Pointer) {
 	// 1: (, const QString & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

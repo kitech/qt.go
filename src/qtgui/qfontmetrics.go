@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QFontMetrics struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QFontMetrics) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qfontmetrics.h:61
@@ -59,7 +63,11 @@ func NewQFontMetrics(arg0 unsafe.Pointer) *QFontMetrics {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QFontMetricsC2ERK5QFont", ffiqt.FFI_TYPE_VOID, cthis, arg0)
 	gopp.ErrPrint(err, rv)
-	return &QFontMetrics{cthis}
+	gothis := NewQFontMetricsFromPointer(cthis)
+	return gothis
+}
+func NewQFontMetricsFromPointer(cthis unsafe.Pointer) *QFontMetrics {
+	return &QFontMetrics{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qfontmetrics.h:62
@@ -69,7 +77,8 @@ func NewQFontMetrics_1(arg0 unsafe.Pointer, pd unsafe.Pointer) *QFontMetrics {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QFontMetricsC2ERK5QFontP12QPaintDevice", ffiqt.FFI_TYPE_VOID, cthis, arg0, pd)
 	gopp.ErrPrint(err, rv)
-	return &QFontMetrics{cthis}
+	gothis := NewQFontMetricsFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qfontmetrics.h:64
@@ -85,8 +94,8 @@ func DeleteQFontMetrics(*QFontMetrics) {
 // inline
 // void swap(class QFontMetrics &)
 func (this *QFontMetrics) Swap(other unsafe.Pointer) {
-	// 0: (, QFontMetrics & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QFontMetrics4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QFontMetrics &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QFontMetrics4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -95,7 +104,7 @@ func (this *QFontMetrics) Swap(other unsafe.Pointer) {
 // int ascent()
 func (this *QFontMetrics) Ascent() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics6ascentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics6ascentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -104,7 +113,7 @@ func (this *QFontMetrics) Ascent() {
 // int capHeight()
 func (this *QFontMetrics) CapHeight() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics9capHeightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics9capHeightEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -113,7 +122,7 @@ func (this *QFontMetrics) CapHeight() {
 // int descent()
 func (this *QFontMetrics) Descent() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics7descentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics7descentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -122,7 +131,7 @@ func (this *QFontMetrics) Descent() {
 // int height()
 func (this *QFontMetrics) Height() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics6heightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics6heightEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -131,7 +140,7 @@ func (this *QFontMetrics) Height() {
 // int leading()
 func (this *QFontMetrics) Leading() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics7leadingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics7leadingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,7 +149,7 @@ func (this *QFontMetrics) Leading() {
 // int lineSpacing()
 func (this *QFontMetrics) LineSpacing() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics11lineSpacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics11lineSpacingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,7 +158,7 @@ func (this *QFontMetrics) LineSpacing() {
 // int minLeftBearing()
 func (this *QFontMetrics) MinLeftBearing() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics14minLeftBearingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics14minLeftBearingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -158,7 +167,7 @@ func (this *QFontMetrics) MinLeftBearing() {
 // int minRightBearing()
 func (this *QFontMetrics) MinRightBearing() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics15minRightBearingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics15minRightBearingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -167,7 +176,7 @@ func (this *QFontMetrics) MinRightBearing() {
 // int maxWidth()
 func (this *QFontMetrics) MaxWidth() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics8maxWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics8maxWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -176,7 +185,7 @@ func (this *QFontMetrics) MaxWidth() {
 // int xHeight()
 func (this *QFontMetrics) XHeight() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics7xHeightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics7xHeightEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -185,7 +194,7 @@ func (this *QFontMetrics) XHeight() {
 // int averageCharWidth()
 func (this *QFontMetrics) AverageCharWidth() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics16averageCharWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics16averageCharWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -194,7 +203,7 @@ func (this *QFontMetrics) AverageCharWidth() {
 // bool inFont(class QChar)
 func (this *QFontMetrics) InFont(arg0 unsafe.Pointer) {
 	// 0: (, QChar arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics6inFontE5QChar", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics6inFontE5QChar", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -202,8 +211,8 @@ func (this *QFontMetrics) InFont(arg0 unsafe.Pointer) {
 // index:0
 // bool inFontUcs4(uint)
 func (this *QFontMetrics) InFontUcs4(ucs4 uint) {
-	// 0: (, uint ucs4), (&ucs4)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics10inFontUcs4Ej", ffiqt.FFI_TYPE_VOID, this.cthis, &ucs4)
+	// 0: (, ucs4 uint), (&ucs4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics10inFontUcs4Ej", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &ucs4)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -212,7 +221,7 @@ func (this *QFontMetrics) InFontUcs4(ucs4 uint) {
 // int leftBearing(class QChar)
 func (this *QFontMetrics) LeftBearing(arg0 unsafe.Pointer) {
 	// 0: (, QChar arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics11leftBearingE5QChar", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics11leftBearingE5QChar", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -221,7 +230,7 @@ func (this *QFontMetrics) LeftBearing(arg0 unsafe.Pointer) {
 // int rightBearing(class QChar)
 func (this *QFontMetrics) RightBearing(arg0 unsafe.Pointer) {
 	// 0: (, QChar arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12rightBearingE5QChar", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12rightBearingE5QChar", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -229,8 +238,8 @@ func (this *QFontMetrics) RightBearing(arg0 unsafe.Pointer) {
 // index:0
 // int width(const class QString &, int)
 func (this *QFontMetrics) Width(arg0 unsafe.Pointer, len int) {
-	// 0: (, const QString & arg0, int len), (arg0, &len)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics5widthERK7QStringi", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &len)
+	// 0: (, const QString & arg0, len int), (arg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics5widthERK7QStringi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, &len)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -238,8 +247,8 @@ func (this *QFontMetrics) Width(arg0 unsafe.Pointer, len int) {
 // index:1
 // int width(const class QString &, int, int)
 func (this *QFontMetrics) Width_1(arg0 unsafe.Pointer, len int, flags int) {
-	// 1: (, const QString & arg0, int len, int flags), (arg0, &len, &flags)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics5widthERK7QStringii", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &len, &flags)
+	// 1: (, const QString & arg0, len int, flags int), (arg0, &len, &flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics5widthERK7QStringii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, &len, &flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -248,7 +257,7 @@ func (this *QFontMetrics) Width_1(arg0 unsafe.Pointer, len int, flags int) {
 // int width(class QChar)
 func (this *QFontMetrics) Width_2(arg0 unsafe.Pointer) {
 	// 2: (, QChar arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics5widthE5QChar", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics5widthE5QChar", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -256,8 +265,8 @@ func (this *QFontMetrics) Width_2(arg0 unsafe.Pointer) {
 // index:0
 // int charWidth(const class QString &, int)
 func (this *QFontMetrics) CharWidth(str unsafe.Pointer, pos int) {
-	// 0: (, const QString & str, int pos), (str, &pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics9charWidthERK7QStringi", ffiqt.FFI_TYPE_VOID, this.cthis, str, &pos)
+	// 0: (, str const QString &, pos int), (str, &pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics9charWidthERK7QStringi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), str, &pos)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -266,7 +275,7 @@ func (this *QFontMetrics) CharWidth(str unsafe.Pointer, pos int) {
 // QRect boundingRect(class QChar)
 func (this *QFontMetrics) BoundingRect(arg0 unsafe.Pointer) {
 	// 0: (, QChar arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectE5QChar", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectE5QChar", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -274,8 +283,8 @@ func (this *QFontMetrics) BoundingRect(arg0 unsafe.Pointer) {
 // index:1
 // QRect boundingRect(const class QString &)
 func (this *QFontMetrics) BoundingRect_1(text unsafe.Pointer) {
-	// 1: (, const QString & text), (text)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	// 1: (, text const QString &), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -283,8 +292,8 @@ func (this *QFontMetrics) BoundingRect_1(text unsafe.Pointer) {
 // index:2
 // QRect boundingRect(const class QRect &, int, const class QString &, int, int *)
 func (this *QFontMetrics) BoundingRect_2(r unsafe.Pointer, flags int, text unsafe.Pointer, tabstops int, tabarray unsafe.Pointer) {
-	// 2: (, const QRect & r, int flags, const QString & text, int tabstops, int * tabarray), (r, &flags, text, &tabstops, tabarray)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi", ffiqt.FFI_TYPE_VOID, this.cthis, r, &flags, text, &tabstops, tabarray)
+	// 2: (, r const QRect &, flags int, text const QString &, tabstops int, tabarray int *), (r, &flags, text, &tabstops, tabarray)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), r, &flags, text, &tabstops, tabarray)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -293,8 +302,8 @@ func (this *QFontMetrics) BoundingRect_2(r unsafe.Pointer, flags int, text unsaf
 // inline
 // QRect boundingRect(int, int, int, int, int, const class QString &, int, int *)
 func (this *QFontMetrics) BoundingRect_3(x int, y int, w int, h int, flags int, text unsafe.Pointer, tabstops int, tabarray unsafe.Pointer) {
-	// 3: (, int x, int y, int w, int h, int flags, const QString & text, int tabstops, int * tabarray), (&x, &y, &w, &h, &flags, text, &tabstops, tabarray)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, &w, &h, &flags, text, &tabstops, tabarray)
+	// 3: (, x int, y int, w int, h int, flags int, text const QString &, tabstops int, tabarray int *), (&x, &y, &w, &h, &flags, text, &tabstops, tabarray)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &x, &y, &w, &h, &flags, text, &tabstops, tabarray)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -302,8 +311,8 @@ func (this *QFontMetrics) BoundingRect_3(x int, y int, w int, h int, flags int, 
 // index:0
 // QSize size(int, const class QString &, int, int *)
 func (this *QFontMetrics) Size(flags int, str unsafe.Pointer, tabstops int, tabarray unsafe.Pointer) {
-	// 0: (, int flags, const QString & str, int tabstops, int * tabarray), (&flags, str, &tabstops, tabarray)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics4sizeEiRK7QStringiPi", ffiqt.FFI_TYPE_VOID, this.cthis, &flags, str, &tabstops, tabarray)
+	// 0: (, flags int, str const QString &, tabstops int, tabarray int *), (&flags, str, &tabstops, tabarray)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics4sizeEiRK7QStringiPi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &flags, str, &tabstops, tabarray)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -311,8 +320,8 @@ func (this *QFontMetrics) Size(flags int, str unsafe.Pointer, tabstops int, taba
 // index:0
 // QRect tightBoundingRect(const class QString &)
 func (this *QFontMetrics) TightBoundingRect(text unsafe.Pointer) {
-	// 0: (, const QString & text), (text)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics17tightBoundingRectERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	// 0: (, text const QString &), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics17tightBoundingRectERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -320,8 +329,8 @@ func (this *QFontMetrics) TightBoundingRect(text unsafe.Pointer) {
 // index:0
 // QString elidedText(const class QString &, Qt::TextElideMode, int, int)
 func (this *QFontMetrics) ElidedText(text unsafe.Pointer, mode int, width int, flags int) {
-	// 0: (, const QString & text, Qt::TextElideMode mode, int width, int flags), (text, &mode, &width, &flags)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics10elidedTextERK7QStringN2Qt13TextElideModeEii", ffiqt.FFI_TYPE_VOID, this.cthis, text, &mode, &width, &flags)
+	// 0: (, text const QString &, mode Qt::TextElideMode, width int, flags int), (text, &mode, &width, &flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics10elidedTextERK7QStringN2Qt13TextElideModeEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text, &mode, &width, &flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -330,7 +339,7 @@ func (this *QFontMetrics) ElidedText(text unsafe.Pointer, mode int, width int, f
 // int underlinePos()
 func (this *QFontMetrics) UnderlinePos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12underlinePosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12underlinePosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -339,7 +348,7 @@ func (this *QFontMetrics) UnderlinePos() {
 // int overlinePos()
 func (this *QFontMetrics) OverlinePos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics11overlinePosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics11overlinePosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -348,7 +357,7 @@ func (this *QFontMetrics) OverlinePos() {
 // int strikeOutPos()
 func (this *QFontMetrics) StrikeOutPos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12strikeOutPosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12strikeOutPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -357,7 +366,7 @@ func (this *QFontMetrics) StrikeOutPos() {
 // int lineWidth()
 func (this *QFontMetrics) LineWidth() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics9lineWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics9lineWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

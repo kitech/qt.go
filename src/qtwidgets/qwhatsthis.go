@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QWhatsThis struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QWhatsThis) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtWidgets/qwhatsthis.h:58
@@ -106,12 +110,12 @@ func QWhatsThis_LeaveWhatsThisMode() {
 // static
 // void showText(const class QPoint &, const class QString &, class QWidget *)
 func (this *QWhatsThis) ShowText(pos unsafe.Pointer, text unsafe.Pointer, w unsafe.Pointer) {
-	// 0: (const QPoint & pos, const QString & text, QWidget * w), (pos, text, w)
+	// 0: (pos const QPoint &, text const QString &, w QWidget *), (pos, text, w)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QWhatsThis_ShowText(pos unsafe.Pointer, text unsafe.Pointer, w unsafe.Pointer) {
-	// 0: (const QPoint & pos, const QString & text, QWidget * w), (pos, text, w)
+	// 0: (pos const QPoint &, text const QString &, w QWidget *), (pos, text, w)
 	var nilthis *QWhatsThis
 	nilthis.ShowText(pos, text, w)
 }
@@ -136,12 +140,12 @@ func QWhatsThis_HideText() {
 // static
 // QAction * createAction(class QObject *)
 func (this *QWhatsThis) CreateAction(parent unsafe.Pointer) {
-	// 0: (QObject * parent), (parent)
+	// 0: (parent QObject *), (parent)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QWhatsThis_CreateAction(parent unsafe.Pointer) {
-	// 0: (QObject * parent), (parent)
+	// 0: (parent QObject *), (parent)
 	var nilthis *QWhatsThis
 	nilthis.CreateAction(parent)
 }

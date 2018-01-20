@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextOption struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTextOption) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:85
@@ -59,7 +63,22 @@ func NewQTextOption() *QTextOption {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOptionC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QTextOption{cthis}
+	gothis := NewQTextOptionFromPointer(cthis)
+	return gothis
+}
+func NewQTextOptionFromPointer(cthis unsafe.Pointer) *QTextOption {
+	return &QTextOption{&qtrt.CObject{cthis}}
+}
+
+// /usr/include/qt/QtGui/qtextoption.h:86
+// index:1
+// void QTextOption(Qt::Alignment)
+func NewQTextOption_1(alignment int) *QTextOption {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOptionC2E6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_VOID, cthis, &alignment)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextOptionFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:87
@@ -70,13 +89,23 @@ func DeleteQTextOption(*QTextOption) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qtextoption.h:92
+// index:0
+// inline
+// void setAlignment(Qt::Alignment)
+func (this *QTextOption) SetAlignment(alignment int) {
+	// 0: (, QFlags<Qt::AlignmentFlag> alignment), (&alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qtextoption.h:93
 // index:0
 // inline
 // Qt::Alignment alignment()
 func (this *QTextOption) Alignment() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption9alignmentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption9alignmentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -85,8 +114,8 @@ func (this *QTextOption) Alignment() {
 // inline
 // void setTextDirection(Qt::LayoutDirection)
 func (this *QTextOption) SetTextDirection(aDirection int) {
-	// 0: (, Qt::LayoutDirection aDirection), (&aDirection)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption16setTextDirectionEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_VOID, this.cthis, &aDirection)
+	// 0: (, aDirection Qt::LayoutDirection), (&aDirection)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption16setTextDirectionEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &aDirection)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -96,7 +125,7 @@ func (this *QTextOption) SetTextDirection(aDirection int) {
 // Qt::LayoutDirection textDirection()
 func (this *QTextOption) TextDirection() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption13textDirectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption13textDirectionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -105,8 +134,8 @@ func (this *QTextOption) TextDirection() {
 // inline
 // void setWrapMode(enum QTextOption::WrapMode)
 func (this *QTextOption) SetWrapMode(wrap int) {
-	// 0: (, QTextOption::WrapMode wrap), (&wrap)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption11setWrapModeENS_8WrapModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &wrap)
+	// 0: (, wrap QTextOption::WrapMode), (&wrap)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption11setWrapModeENS_8WrapModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &wrap)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +145,17 @@ func (this *QTextOption) SetWrapMode(wrap int) {
 // QTextOption::WrapMode wrapMode()
 func (this *QTextOption) WrapMode() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption8wrapModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption8wrapModeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qtextoption.h:117
+// index:0
+// inline
+// void setFlags(QTextOption::Flags)
+func (this *QTextOption) SetFlags(flags int) {
+	// 0: (, QFlags<QTextOption::Flag> flags), (flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption8setFlagsE6QFlagsINS_4FlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +165,7 @@ func (this *QTextOption) WrapMode() {
 // QTextOption::Flags flags()
 func (this *QTextOption) Flags() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption5flagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption5flagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,8 +174,8 @@ func (this *QTextOption) Flags() {
 // inline
 // void setTabStop(qreal)
 func (this *QTextOption) SetTabStop(tabStop float64) {
-	// 0: (, qreal tabStop), (&tabStop)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption10setTabStopEd", ffiqt.FFI_TYPE_VOID, this.cthis, &tabStop)
+	// 0: (, tabStop qreal), (&tabStop)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption10setTabStopEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &tabStop)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -146,7 +185,7 @@ func (this *QTextOption) SetTabStop(tabStop float64) {
 // qreal tabStop()
 func (this *QTextOption) TabStop() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption7tabStopEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption7tabStopEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -155,8 +194,8 @@ func (this *QTextOption) TabStop() {
 // inline
 // void setTabStopDistance(qreal)
 func (this *QTextOption) SetTabStopDistance(tabStopDistance float64) {
-	// 0: (, qreal tabStopDistance), (&tabStopDistance)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption18setTabStopDistanceEd", ffiqt.FFI_TYPE_VOID, this.cthis, &tabStopDistance)
+	// 0: (, tabStopDistance qreal), (&tabStopDistance)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption18setTabStopDistanceEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &tabStopDistance)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -166,7 +205,7 @@ func (this *QTextOption) SetTabStopDistance(tabStopDistance float64) {
 // qreal tabStopDistance()
 func (this *QTextOption) TabStopDistance() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption15tabStopDistanceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption15tabStopDistanceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -175,7 +214,7 @@ func (this *QTextOption) TabStopDistance() {
 // QList<qreal> tabArray()
 func (this *QTextOption) TabArray() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption8tabArrayEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption8tabArrayEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -184,7 +223,7 @@ func (this *QTextOption) TabArray() {
 // QList<QTextOption::Tab> tabs()
 func (this *QTextOption) Tabs() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption4tabsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption4tabsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,8 +232,8 @@ func (this *QTextOption) Tabs() {
 // inline
 // void setUseDesignMetrics(_Bool)
 func (this *QTextOption) SetUseDesignMetrics(b bool) {
-	// 0: (, bool b), (&b)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption19setUseDesignMetricsEb", ffiqt.FFI_TYPE_VOID, this.cthis, &b)
+	// 0: (, b bool), (&b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption19setUseDesignMetricsEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -204,7 +243,7 @@ func (this *QTextOption) SetUseDesignMetrics(b bool) {
 // bool useDesignMetrics()
 func (this *QTextOption) UseDesignMetrics() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption16useDesignMetricsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption16useDesignMetricsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

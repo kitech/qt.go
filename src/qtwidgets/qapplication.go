@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QApplication struct {
-	cthis unsafe.Pointer
+	*qtgui.QGuiApplication
+}
+
+func (this *QApplication) GetCthis() unsafe.Pointer {
+	return this.QGuiApplication.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:74
@@ -62,7 +66,7 @@ type QApplication struct {
 // const QMetaObject * metaObject()
 func (this *QApplication) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QApplication10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QApplication10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -74,7 +78,12 @@ func NewQApplication(argc int, argv []string, arg2 int) *QApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplicationC2ERiPPci", ffiqt.FFI_TYPE_VOID, cthis, &argc, convArg1, &arg2)
 	gopp.ErrPrint(err, rv)
-	return &QApplication{cthis}
+	gothis := NewQApplicationFromPointer(cthis)
+	return gothis
+}
+func NewQApplicationFromPointer(cthis unsafe.Pointer) *QApplication {
+	bcthis0 := qtgui.NewQGuiApplicationFromPointer(cthis)
+	return &QApplication{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:96
@@ -181,12 +190,12 @@ func QApplication_Palette(arg0 unsafe.Pointer) {
 // static
 // QPalette palette(const char *)
 func (this *QApplication) Palette_1(className unsafe.Pointer) {
-	// 1: (const char * className), (className)
+	// 1: (className const char *), (className)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication7paletteEPKc", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_Palette_1(className unsafe.Pointer) {
-	// 1: (const char * className), (className)
+	// 1: (className const char *), (className)
 	var nilthis *QApplication
 	nilthis.Palette_1(className)
 }
@@ -196,12 +205,12 @@ func QApplication_Palette_1(className unsafe.Pointer) {
 // static
 // void setPalette(const class QPalette &, const char *)
 func (this *QApplication) SetPalette(arg0 unsafe.Pointer, className unsafe.Pointer) {
-	// 0: (const QPalette & arg0, const char * className), (arg0, className)
+	// 0: (const QPalette & arg0, className const char *), (arg0, className)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication10setPaletteERK8QPalettePKc", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_SetPalette(arg0 unsafe.Pointer, className unsafe.Pointer) {
-	// 0: (const QPalette & arg0, const char * className), (arg0, className)
+	// 0: (const QPalette & arg0, className const char *), (arg0, className)
 	var nilthis *QApplication
 	nilthis.SetPalette(arg0, className)
 }
@@ -241,12 +250,12 @@ func QApplication_Font_1(arg0 unsafe.Pointer) {
 // static
 // QFont font(const char *)
 func (this *QApplication) Font_2(className unsafe.Pointer) {
-	// 2: (const char * className), (className)
+	// 2: (className const char *), (className)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication4fontEPKc", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_Font_2(className unsafe.Pointer) {
-	// 2: (const char * className), (className)
+	// 2: (className const char *), (className)
 	var nilthis *QApplication
 	nilthis.Font_2(className)
 }
@@ -256,12 +265,12 @@ func QApplication_Font_2(className unsafe.Pointer) {
 // static
 // void setFont(const class QFont &, const char *)
 func (this *QApplication) SetFont(arg0 unsafe.Pointer, className unsafe.Pointer) {
-	// 0: (const QFont & arg0, const char * className), (arg0, className)
+	// 0: (const QFont & arg0, className const char *), (arg0, className)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication7setFontERK5QFontPKc", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_SetFont(arg0 unsafe.Pointer, className unsafe.Pointer) {
-	// 0: (const QFont & arg0, const char * className), (arg0, className)
+	// 0: (const QFont & arg0, className const char *), (arg0, className)
 	var nilthis *QApplication
 	nilthis.SetFont(arg0, className)
 }
@@ -286,12 +295,12 @@ func QApplication_FontMetrics() {
 // static
 // void setWindowIcon(const class QIcon &)
 func (this *QApplication) SetWindowIcon(icon unsafe.Pointer) {
-	// 0: (const QIcon & icon), (icon)
+	// 0: (icon const QIcon &), (icon)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication13setWindowIconERK5QIcon", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_SetWindowIcon(icon unsafe.Pointer) {
-	// 0: (const QIcon & icon), (icon)
+	// 0: (icon const QIcon &), (icon)
 	var nilthis *QApplication
 	nilthis.SetWindowIcon(icon)
 }
@@ -421,12 +430,12 @@ func QApplication_ActiveWindow() {
 // static
 // void setActiveWindow(class QWidget *)
 func (this *QApplication) SetActiveWindow(act unsafe.Pointer) {
-	// 0: (QWidget * act), (act)
+	// 0: (act QWidget *), (act)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication15setActiveWindowEP7QWidget", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_SetActiveWindow(act unsafe.Pointer) {
-	// 0: (QWidget * act), (act)
+	// 0: (act QWidget *), (act)
 	var nilthis *QApplication
 	nilthis.SetActiveWindow(act)
 }
@@ -436,12 +445,12 @@ func QApplication_SetActiveWindow(act unsafe.Pointer) {
 // static
 // QWidget * widgetAt(const class QPoint &)
 func (this *QApplication) WidgetAt(p unsafe.Pointer) {
-	// 0: (const QPoint & p), (p)
+	// 0: (p const QPoint &), (p)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication8widgetAtERK6QPoint", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_WidgetAt(p unsafe.Pointer) {
-	// 0: (const QPoint & p), (p)
+	// 0: (p const QPoint &), (p)
 	var nilthis *QApplication
 	nilthis.WidgetAt(p)
 }
@@ -451,12 +460,12 @@ func QApplication_WidgetAt(p unsafe.Pointer) {
 // static inline
 // QWidget * widgetAt(int, int)
 func (this *QApplication) WidgetAt_1(x int, y int) {
-	// 1: (int x, int y), (x, y)
+	// 1: (x int, y int), (x, y)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication8widgetAtEii", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_WidgetAt_1(x int, y int) {
-	// 1: (int x, int y), (x, y)
+	// 1: (x int, y int), (x, y)
 	var nilthis *QApplication
 	nilthis.WidgetAt_1(x, y)
 }
@@ -466,12 +475,12 @@ func QApplication_WidgetAt_1(x int, y int) {
 // static
 // QWidget * topLevelAt(const class QPoint &)
 func (this *QApplication) TopLevelAt(p unsafe.Pointer) {
-	// 0: (const QPoint & p), (p)
+	// 0: (p const QPoint &), (p)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication10topLevelAtERK6QPoint", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_TopLevelAt(p unsafe.Pointer) {
-	// 0: (const QPoint & p), (p)
+	// 0: (p const QPoint &), (p)
 	var nilthis *QApplication
 	nilthis.TopLevelAt(p)
 }
@@ -481,12 +490,12 @@ func QApplication_TopLevelAt(p unsafe.Pointer) {
 // static inline
 // QWidget * topLevelAt(int, int)
 func (this *QApplication) TopLevelAt_1(x int, y int) {
-	// 1: (int x, int y), (x, y)
+	// 1: (x int, y int), (x, y)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication10topLevelAtEii", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_TopLevelAt_1(x int, y int) {
-	// 1: (int x, int y), (x, y)
+	// 1: (x int, y int), (x, y)
 	var nilthis *QApplication
 	nilthis.TopLevelAt_1(x, y)
 }
@@ -511,12 +520,12 @@ func QApplication_Beep() {
 // static
 // void alert(class QWidget *, int)
 func (this *QApplication) Alert(widget unsafe.Pointer, duration int) {
-	// 0: (QWidget * widget, int duration), (widget, duration)
+	// 0: (widget QWidget *, duration int), (widget, duration)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication5alertEP7QWidgeti", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_Alert(widget unsafe.Pointer, duration int) {
-	// 0: (QWidget * widget, int duration), (widget, duration)
+	// 0: (widget QWidget *, duration int), (widget, duration)
 	var nilthis *QApplication
 	nilthis.Alert(widget, duration)
 }
@@ -676,12 +685,12 @@ func QApplication_GlobalStrut() {
 // static
 // void setStartDragTime(int)
 func (this *QApplication) SetStartDragTime(ms int) {
-	// 0: (int ms), (ms)
+	// 0: (ms int), (ms)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication16setStartDragTimeEi", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_SetStartDragTime(ms int) {
-	// 0: (int ms), (ms)
+	// 0: (ms int), (ms)
 	var nilthis *QApplication
 	nilthis.SetStartDragTime(ms)
 }
@@ -706,12 +715,12 @@ func QApplication_StartDragTime() {
 // static
 // void setStartDragDistance(int)
 func (this *QApplication) SetStartDragDistance(l int) {
-	// 0: (int l), (l)
+	// 0: (l int), (l)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication20setStartDragDistanceEi", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_SetStartDragDistance(l int) {
-	// 0: (int l), (l)
+	// 0: (l int), (l)
 	var nilthis *QApplication
 	nilthis.SetStartDragDistance(l)
 }
@@ -751,12 +760,12 @@ func QApplication_IsEffectEnabled(arg0 int) {
 // static
 // void setEffectEnabled(Qt::UIEffect, _Bool)
 func (this *QApplication) SetEffectEnabled(arg0 int, enable bool) {
-	// 0: (Qt::UIEffect arg0, bool enable), (arg0, enable)
+	// 0: (Qt::UIEffect arg0, enable bool), (arg0, enable)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication16setEffectEnabledEN2Qt8UIEffectEb", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QApplication_SetEffectEnabled(arg0 int, enable bool) {
-	// 0: (Qt::UIEffect arg0, bool enable), (arg0, enable)
+	// 0: (Qt::UIEffect arg0, enable bool), (arg0, enable)
 	var nilthis *QApplication
 	nilthis.SetEffectEnabled(arg0, enable)
 }
@@ -782,7 +791,7 @@ func QApplication_Exec() {
 // bool notify(class QObject *, class QEvent *)
 func (this *QApplication) Notify(arg0 unsafe.Pointer, arg1 unsafe.Pointer) {
 	// 0: (, QObject * arg0, QEvent * arg1), (arg0, arg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication6notifyEP7QObjectP6QEvent", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication6notifyEP7QObjectP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, arg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -790,8 +799,8 @@ func (this *QApplication) Notify(arg0 unsafe.Pointer, arg1 unsafe.Pointer) {
 // index:0
 // void focusChanged(class QWidget *, class QWidget *)
 func (this *QApplication) FocusChanged(old unsafe.Pointer, now unsafe.Pointer) {
-	// 0: (, QWidget * old, QWidget * now), (old, now)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication12focusChangedEP7QWidgetS1_", ffiqt.FFI_TYPE_VOID, this.cthis, old, now)
+	// 0: (, old QWidget *, now QWidget *), (old, now)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication12focusChangedEP7QWidgetS1_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), old, now)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -800,7 +809,7 @@ func (this *QApplication) FocusChanged(old unsafe.Pointer, now unsafe.Pointer) {
 // QString styleSheet()
 func (this *QApplication) StyleSheet() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QApplication10styleSheetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QApplication10styleSheetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -808,8 +817,8 @@ func (this *QApplication) StyleSheet() {
 // index:0
 // void setStyleSheet(const class QString &)
 func (this *QApplication) SetStyleSheet(sheet unsafe.Pointer) {
-	// 0: (, const QString & sheet), (sheet)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication13setStyleSheetERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, sheet)
+	// 0: (, sheet const QString &), (sheet)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication13setStyleSheetERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), sheet)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -817,8 +826,8 @@ func (this *QApplication) SetStyleSheet(sheet unsafe.Pointer) {
 // index:0
 // void setAutoSipEnabled(const _Bool)
 func (this *QApplication) SetAutoSipEnabled(enabled bool) {
-	// 0: (, const bool enabled), (&enabled)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication17setAutoSipEnabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enabled)
+	// 0: (, enabled const bool), (&enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication17setAutoSipEnabledEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &enabled)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -827,7 +836,7 @@ func (this *QApplication) SetAutoSipEnabled(enabled bool) {
 // bool autoSipEnabled()
 func (this *QApplication) AutoSipEnabled() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QApplication14autoSipEnabledEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QApplication14autoSipEnabledEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -859,6 +868,26 @@ func QApplication_AboutQt() {
 	// 0: (), ()
 	var nilthis *QApplication
 	nilthis.AboutQt()
+}
+
+// /usr/include/qt/QtWidgets/qapplication.h:204
+// index:0
+// virtual
+// bool event(class QEvent *)
+func (this *QApplication) Event(arg0 unsafe.Pointer) {
+	// 0: (, QEvent * arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qapplication.h:205
+// index:0
+// virtual
+// bool compressEvent(class QEvent *, class QObject *, class QPostEventList *)
+func (this *QApplication) CompressEvent(arg0 unsafe.Pointer, receiver unsafe.Pointer, arg2 unsafe.Pointer) {
+	// 0: (, QEvent * arg0, receiver QObject *, QPostEventList * arg2), (arg0, receiver, arg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication13compressEventEP6QEventP7QObjectP14QPostEventList", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, receiver, arg2)
+	gopp.ErrPrint(err, rv)
 }
 
 //  body block end

@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 0
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QSharedData struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QSharedData) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qshareddata.h:60
@@ -56,7 +60,11 @@ func NewQSharedData() *QSharedData {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSharedDataC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QSharedData{cthis}
+	gothis := NewQSharedDataFromPointer(cthis)
+	return gothis
+}
+func NewQSharedDataFromPointer(cthis unsafe.Pointer) *QSharedData {
+	return &QSharedData{&qtrt.CObject{cthis}}
 }
 
 //  body block end

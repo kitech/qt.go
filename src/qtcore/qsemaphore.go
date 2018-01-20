@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 11
+// extern C begin: 13
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QSemaphore struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QSemaphore) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:55
@@ -55,7 +59,11 @@ func NewQSemaphore(n int) *QSemaphore {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphoreC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &n)
 	gopp.ErrPrint(err, rv)
-	return &QSemaphore{cthis}
+	gothis := NewQSemaphoreFromPointer(cthis)
+	return gothis
+}
+func NewQSemaphoreFromPointer(cthis unsafe.Pointer) *QSemaphore {
+	return &QSemaphore{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:56
@@ -70,8 +78,8 @@ func DeleteQSemaphore(*QSemaphore) {
 // index:0
 // void acquire(int)
 func (this *QSemaphore) Acquire(n int) {
-	// 0: (, int n), (&n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore7acquireEi", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	// 0: (, n int), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore7acquireEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -79,8 +87,8 @@ func (this *QSemaphore) Acquire(n int) {
 // index:0
 // bool tryAcquire(int)
 func (this *QSemaphore) TryAcquire(n int) {
-	// 0: (, int n), (&n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	// 0: (, n int), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,8 +96,8 @@ func (this *QSemaphore) TryAcquire(n int) {
 // index:1
 // bool tryAcquire(int, int)
 func (this *QSemaphore) TryAcquire_1(n int, timeout int) {
-	// 1: (, int n, int timeout), (&n, &timeout)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEii", ffiqt.FFI_TYPE_VOID, this.cthis, &n, &timeout)
+	// 1: (, n int, timeout int), (&n, &timeout)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &n, &timeout)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,8 +105,8 @@ func (this *QSemaphore) TryAcquire_1(n int, timeout int) {
 // index:0
 // void release(int)
 func (this *QSemaphore) Release(n int) {
-	// 0: (, int n), (&n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore7releaseEi", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	// 0: (, n int), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore7releaseEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +115,7 @@ func (this *QSemaphore) Release(n int) {
 // int available()
 func (this *QSemaphore) Available() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSemaphore9availableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSemaphore9availableEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

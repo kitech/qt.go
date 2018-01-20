@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionDockWidget struct {
-	cthis unsafe.Pointer
+	*QStyleOption
+}
+
+func (this *QStyleOptionDockWidget) GetCthis() unsafe.Pointer {
+	return this.QStyleOption.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:391
@@ -63,7 +67,23 @@ func NewQStyleOptionDockWidget() *QStyleOptionDockWidget {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionDockWidget{cthis}
+	gothis := NewQStyleOptionDockWidgetFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionDockWidgetFromPointer(cthis unsafe.Pointer) *QStyleOptionDockWidget {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionDockWidget{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:395
+// index:1
+// void QStyleOptionDockWidget(int)
+func NewQStyleOptionDockWidget_1(version int) *QStyleOptionDockWidget {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionDockWidgetFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

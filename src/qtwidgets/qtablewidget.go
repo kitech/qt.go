@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 42
+// extern C begin: 43
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QTableWidget struct {
-	cthis unsafe.Pointer
+	*QTableView
+}
+
+func (this *QTableWidget) GetCthis() unsafe.Pointer {
+	return this.QTableView.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:216
@@ -62,7 +66,7 @@ type QTableWidget struct {
 // const QMetaObject * metaObject()
 func (this *QTableWidget) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQTableWidget(parent unsafe.Pointer) *QTableWidget {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidgetC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QTableWidget{cthis}
+	gothis := NewQTableWidgetFromPointer(cthis)
+	return gothis
+}
+func NewQTableWidgetFromPointer(cthis unsafe.Pointer) *QTableWidget {
+	bcthis0 := NewQTableViewFromPointer(cthis)
+	return &QTableWidget{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:223
@@ -83,7 +92,8 @@ func NewQTableWidget_1(rows int, columns int, parent unsafe.Pointer) *QTableWidg
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidgetC2EiiP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, &rows, &columns, parent)
 	gopp.ErrPrint(err, rv)
-	return &QTableWidget{cthis}
+	gothis := NewQTableWidgetFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:224
@@ -99,8 +109,8 @@ func DeleteQTableWidget(*QTableWidget) {
 // index:0
 // void setRowCount(int)
 func (this *QTableWidget) SetRowCount(rows int) {
-	// 0: (, int rows), (&rows)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11setRowCountEi", ffiqt.FFI_TYPE_VOID, this.cthis, &rows)
+	// 0: (, rows int), (&rows)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11setRowCountEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &rows)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,7 +119,7 @@ func (this *QTableWidget) SetRowCount(rows int) {
 // int rowCount()
 func (this *QTableWidget) RowCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget8rowCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget8rowCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,8 +127,8 @@ func (this *QTableWidget) RowCount() {
 // index:0
 // void setColumnCount(int)
 func (this *QTableWidget) SetColumnCount(columns int) {
-	// 0: (, int columns), (&columns)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget14setColumnCountEi", ffiqt.FFI_TYPE_VOID, this.cthis, &columns)
+	// 0: (, columns int), (&columns)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget14setColumnCountEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &columns)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,7 +137,7 @@ func (this *QTableWidget) SetColumnCount(columns int) {
 // int columnCount()
 func (this *QTableWidget) ColumnCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget11columnCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget11columnCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,8 +145,8 @@ func (this *QTableWidget) ColumnCount() {
 // index:0
 // int row(const class QTableWidgetItem *)
 func (this *QTableWidget) Row(item unsafe.Pointer) {
-	// 0: (, const QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget3rowEPK16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item const QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget3rowEPK16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,8 +154,8 @@ func (this *QTableWidget) Row(item unsafe.Pointer) {
 // index:0
 // int column(const class QTableWidgetItem *)
 func (this *QTableWidget) Column(item unsafe.Pointer) {
-	// 0: (, const QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget6columnEPK16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item const QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget6columnEPK16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,8 +163,8 @@ func (this *QTableWidget) Column(item unsafe.Pointer) {
 // index:0
 // QTableWidgetItem * item(int, int)
 func (this *QTableWidget) Item(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget4itemEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget4itemEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,8 +172,8 @@ func (this *QTableWidget) Item(row int, column int) {
 // index:0
 // void setItem(int, int, class QTableWidgetItem *)
 func (this *QTableWidget) SetItem(row int, column int, item unsafe.Pointer) {
-	// 0: (, int row, int column, QTableWidgetItem * item), (&row, &column, item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget7setItemEiiP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column, item)
+	// 0: (, row int, column int, item QTableWidgetItem *), (&row, &column, item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget7setItemEiiP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column, item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -171,8 +181,8 @@ func (this *QTableWidget) SetItem(row int, column int, item unsafe.Pointer) {
 // index:0
 // QTableWidgetItem * takeItem(int, int)
 func (this *QTableWidget) TakeItem(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget8takeItemEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget8takeItemEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,8 +190,8 @@ func (this *QTableWidget) TakeItem(row int, column int) {
 // index:0
 // QTableWidgetItem * verticalHeaderItem(int)
 func (this *QTableWidget) VerticalHeaderItem(row int) {
-	// 0: (, int row), (&row)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget18verticalHeaderItemEi", ffiqt.FFI_TYPE_VOID, this.cthis, &row)
+	// 0: (, row int), (&row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget18verticalHeaderItemEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -189,8 +199,8 @@ func (this *QTableWidget) VerticalHeaderItem(row int) {
 // index:0
 // void setVerticalHeaderItem(int, class QTableWidgetItem *)
 func (this *QTableWidget) SetVerticalHeaderItem(row int, item unsafe.Pointer) {
-	// 0: (, int row, QTableWidgetItem * item), (&row, item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, &row, item)
+	// 0: (, row int, item QTableWidgetItem *), (&row, item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -198,8 +208,8 @@ func (this *QTableWidget) SetVerticalHeaderItem(row int, item unsafe.Pointer) {
 // index:0
 // QTableWidgetItem * takeVerticalHeaderItem(int)
 func (this *QTableWidget) TakeVerticalHeaderItem(row int) {
-	// 0: (, int row), (&row)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget22takeVerticalHeaderItemEi", ffiqt.FFI_TYPE_VOID, this.cthis, &row)
+	// 0: (, row int), (&row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget22takeVerticalHeaderItemEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -207,8 +217,8 @@ func (this *QTableWidget) TakeVerticalHeaderItem(row int) {
 // index:0
 // QTableWidgetItem * horizontalHeaderItem(int)
 func (this *QTableWidget) HorizontalHeaderItem(column int) {
-	// 0: (, int column), (&column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget20horizontalHeaderItemEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	// 0: (, column int), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget20horizontalHeaderItemEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,8 +226,8 @@ func (this *QTableWidget) HorizontalHeaderItem(column int) {
 // index:0
 // void setHorizontalHeaderItem(int, class QTableWidgetItem *)
 func (this *QTableWidget) SetHorizontalHeaderItem(column int, item unsafe.Pointer) {
-	// 0: (, int column, QTableWidgetItem * item), (&column, item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, &column, item)
+	// 0: (, column int, item QTableWidgetItem *), (&column, item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &column, item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,8 +235,8 @@ func (this *QTableWidget) SetHorizontalHeaderItem(column int, item unsafe.Pointe
 // index:0
 // QTableWidgetItem * takeHorizontalHeaderItem(int)
 func (this *QTableWidget) TakeHorizontalHeaderItem(column int) {
-	// 0: (, int column), (&column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget24takeHorizontalHeaderItemEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	// 0: (, column int), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget24takeHorizontalHeaderItemEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -234,8 +244,8 @@ func (this *QTableWidget) TakeHorizontalHeaderItem(column int) {
 // index:0
 // void setVerticalHeaderLabels(const class QStringList &)
 func (this *QTableWidget) SetVerticalHeaderLabels(labels unsafe.Pointer) {
-	// 0: (, const QStringList & labels), (labels)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, labels)
+	// 0: (, labels const QStringList &), (labels)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList", ffiqt.FFI_TYPE_VOID, this.GetCthis(), labels)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -243,8 +253,8 @@ func (this *QTableWidget) SetVerticalHeaderLabels(labels unsafe.Pointer) {
 // index:0
 // void setHorizontalHeaderLabels(const class QStringList &)
 func (this *QTableWidget) SetHorizontalHeaderLabels(labels unsafe.Pointer) {
-	// 0: (, const QStringList & labels), (labels)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, labels)
+	// 0: (, labels const QStringList &), (labels)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList", ffiqt.FFI_TYPE_VOID, this.GetCthis(), labels)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -253,7 +263,7 @@ func (this *QTableWidget) SetHorizontalHeaderLabels(labels unsafe.Pointer) {
 // int currentRow()
 func (this *QTableWidget) CurrentRow() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget10currentRowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget10currentRowEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -262,7 +272,7 @@ func (this *QTableWidget) CurrentRow() {
 // int currentColumn()
 func (this *QTableWidget) CurrentColumn() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget13currentColumnEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget13currentColumnEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -271,7 +281,7 @@ func (this *QTableWidget) CurrentColumn() {
 // QTableWidgetItem * currentItem()
 func (this *QTableWidget) CurrentItem() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget11currentItemEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget11currentItemEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -279,8 +289,17 @@ func (this *QTableWidget) CurrentItem() {
 // index:0
 // void setCurrentItem(class QTableWidgetItem *)
 func (this *QTableWidget) SetCurrentItem(item unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:253
+// index:1
+// void setCurrentItem(class QTableWidgetItem *, class QItemSelectionModel::SelectionFlags)
+func (this *QTableWidget) SetCurrentItem_1(item unsafe.Pointer, command int) {
+	// 1: (, item QTableWidgetItem *, QFlags<QItemSelectionModel::SelectionFlag> command), (item, &command)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item, &command)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -288,8 +307,17 @@ func (this *QTableWidget) SetCurrentItem(item unsafe.Pointer) {
 // index:0
 // void setCurrentCell(int, int)
 func (this *QTableWidget) SetCurrentCell(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget14setCurrentCellEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget14setCurrentCellEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:255
+// index:1
+// void setCurrentCell(int, int, class QItemSelectionModel::SelectionFlags)
+func (this *QTableWidget) SetCurrentCell_1(row int, column int, command int) {
+	// 1: (, row int, column int, QFlags<QItemSelectionModel::SelectionFlag> command), (&row, &column, &command)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget14setCurrentCellEii6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column, &command)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -297,8 +325,8 @@ func (this *QTableWidget) SetCurrentCell(row int, column int) {
 // index:0
 // void sortItems(int, Qt::SortOrder)
 func (this *QTableWidget) SortItems(column int, order int) {
-	// 0: (, int column, Qt::SortOrder order), (&column, &order)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget9sortItemsEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_VOID, this.cthis, &column, &order)
+	// 0: (, column int, order Qt::SortOrder), (&column, &order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget9sortItemsEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &column, &order)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -306,8 +334,8 @@ func (this *QTableWidget) SortItems(column int, order int) {
 // index:0
 // void setSortingEnabled(_Bool)
 func (this *QTableWidget) SetSortingEnabled(enable bool) {
-	// 0: (, bool enable), (&enable)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget17setSortingEnabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	// 0: (, enable bool), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget17setSortingEnabledEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -316,7 +344,7 @@ func (this *QTableWidget) SetSortingEnabled(enable bool) {
 // bool isSortingEnabled()
 func (this *QTableWidget) IsSortingEnabled() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget16isSortingEnabledEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget16isSortingEnabledEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -324,8 +352,8 @@ func (this *QTableWidget) IsSortingEnabled() {
 // index:0
 // void editItem(class QTableWidgetItem *)
 func (this *QTableWidget) EditItem(item unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget8editItemEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget8editItemEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -333,8 +361,8 @@ func (this *QTableWidget) EditItem(item unsafe.Pointer) {
 // index:0
 // void openPersistentEditor(class QTableWidgetItem *)
 func (this *QTableWidget) OpenPersistentEditor(item unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -342,8 +370,8 @@ func (this *QTableWidget) OpenPersistentEditor(item unsafe.Pointer) {
 // index:0
 // void closePersistentEditor(class QTableWidgetItem *)
 func (this *QTableWidget) ClosePersistentEditor(item unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -351,8 +379,8 @@ func (this *QTableWidget) ClosePersistentEditor(item unsafe.Pointer) {
 // index:0
 // bool isPersistentEditorOpen(class QTableWidgetItem *)
 func (this *QTableWidget) IsPersistentEditorOpen(item unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget22isPersistentEditorOpenEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget22isPersistentEditorOpenEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -360,8 +388,8 @@ func (this *QTableWidget) IsPersistentEditorOpen(item unsafe.Pointer) {
 // index:0
 // QWidget * cellWidget(int, int)
 func (this *QTableWidget) CellWidget(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget10cellWidgetEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget10cellWidgetEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -369,8 +397,8 @@ func (this *QTableWidget) CellWidget(row int, column int) {
 // index:0
 // void setCellWidget(int, int, class QWidget *)
 func (this *QTableWidget) SetCellWidget(row int, column int, widget unsafe.Pointer) {
-	// 0: (, int row, int column, QWidget * widget), (&row, &column, widget)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget13setCellWidgetEiiP7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column, widget)
+	// 0: (, row int, column int, widget QWidget *), (&row, &column, widget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget13setCellWidgetEiiP7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column, widget)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -379,8 +407,8 @@ func (this *QTableWidget) SetCellWidget(row int, column int, widget unsafe.Point
 // inline
 // void removeCellWidget(int, int)
 func (this *QTableWidget) RemoveCellWidget(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget16removeCellWidgetEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget16removeCellWidgetEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -388,8 +416,8 @@ func (this *QTableWidget) RemoveCellWidget(row int, column int) {
 // index:0
 // bool isItemSelected(const class QTableWidgetItem *)
 func (this *QTableWidget) IsItemSelected(item unsafe.Pointer) {
-	// 0: (, const QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item const QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -397,8 +425,8 @@ func (this *QTableWidget) IsItemSelected(item unsafe.Pointer) {
 // index:0
 // void setItemSelected(const class QTableWidgetItem *, _Bool)
 func (this *QTableWidget) SetItemSelected(item unsafe.Pointer, select_ bool) {
-	// 0: (, const QTableWidgetItem * item, bool select), (item, &select_)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb", ffiqt.FFI_TYPE_VOID, this.cthis, item, &select_)
+	// 0: (, item const QTableWidgetItem *, select bool), (item, &select_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item, &select_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -406,8 +434,8 @@ func (this *QTableWidget) SetItemSelected(item unsafe.Pointer, select_ bool) {
 // index:0
 // void setRangeSelected(const class QTableWidgetSelectionRange &, _Bool)
 func (this *QTableWidget) SetRangeSelected(range_ unsafe.Pointer, select_ bool) {
-	// 0: (, const QTableWidgetSelectionRange & range, bool select), (range_, &select_)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb", ffiqt.FFI_TYPE_VOID, this.cthis, range_, &select_)
+	// 0: (, range const QTableWidgetSelectionRange &, select bool), (range_, &select_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), range_, &select_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -416,7 +444,7 @@ func (this *QTableWidget) SetRangeSelected(range_ unsafe.Pointer, select_ bool) 
 // QList<QTableWidgetSelectionRange> selectedRanges()
 func (this *QTableWidget) SelectedRanges() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget14selectedRangesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget14selectedRangesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -425,7 +453,16 @@ func (this *QTableWidget) SelectedRanges() {
 // QList<QTableWidgetItem *> selectedItems()
 func (this *QTableWidget) SelectedItems() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget13selectedItemsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget13selectedItemsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:277
+// index:0
+// QList<QTableWidgetItem *> findItems(const class QString &, Qt::MatchFlags)
+func (this *QTableWidget) FindItems(text unsafe.Pointer, flags int) {
+	// 0: (, text const QString &, QFlags<Qt::MatchFlag> flags), (text, &flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget9findItemsERK7QString6QFlagsIN2Qt9MatchFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text, &flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -433,8 +470,8 @@ func (this *QTableWidget) SelectedItems() {
 // index:0
 // int visualRow(int)
 func (this *QTableWidget) VisualRow(logicalRow int) {
-	// 0: (, int logicalRow), (&logicalRow)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget9visualRowEi", ffiqt.FFI_TYPE_VOID, this.cthis, &logicalRow)
+	// 0: (, logicalRow int), (&logicalRow)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget9visualRowEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &logicalRow)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -442,8 +479,8 @@ func (this *QTableWidget) VisualRow(logicalRow int) {
 // index:0
 // int visualColumn(int)
 func (this *QTableWidget) VisualColumn(logicalColumn int) {
-	// 0: (, int logicalColumn), (&logicalColumn)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget12visualColumnEi", ffiqt.FFI_TYPE_VOID, this.cthis, &logicalColumn)
+	// 0: (, logicalColumn int), (&logicalColumn)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget12visualColumnEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &logicalColumn)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -451,8 +488,8 @@ func (this *QTableWidget) VisualColumn(logicalColumn int) {
 // index:0
 // QTableWidgetItem * itemAt(const class QPoint &)
 func (this *QTableWidget) ItemAt(p unsafe.Pointer) {
-	// 0: (, const QPoint & p), (p)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget6itemAtERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	// 0: (, p const QPoint &), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget6itemAtERK6QPoint", ffiqt.FFI_TYPE_VOID, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -461,8 +498,8 @@ func (this *QTableWidget) ItemAt(p unsafe.Pointer) {
 // inline
 // QTableWidgetItem * itemAt(int, int)
 func (this *QTableWidget) ItemAt_1(x int, y int) {
-	// 1: (, int x, int y), (&x, &y)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget6itemAtEii", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y)
+	// 1: (, x int, y int), (&x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget6itemAtEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &x, &y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -470,8 +507,8 @@ func (this *QTableWidget) ItemAt_1(x int, y int) {
 // index:0
 // QRect visualItemRect(const class QTableWidgetItem *)
 func (this *QTableWidget) VisualItemRect(item unsafe.Pointer) {
-	// 0: (, const QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item const QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -480,7 +517,7 @@ func (this *QTableWidget) VisualItemRect(item unsafe.Pointer) {
 // const QTableWidgetItem * itemPrototype()
 func (this *QTableWidget) ItemPrototype() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget13itemPrototypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget13itemPrototypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -488,8 +525,8 @@ func (this *QTableWidget) ItemPrototype() {
 // index:0
 // void setItemPrototype(const class QTableWidgetItem *)
 func (this *QTableWidget) SetItemPrototype(item unsafe.Pointer) {
-	// 0: (, const QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item const QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -497,8 +534,8 @@ func (this *QTableWidget) SetItemPrototype(item unsafe.Pointer) {
 // index:0
 // void scrollToItem(const class QTableWidgetItem *, class QAbstractItemView::ScrollHint)
 func (this *QTableWidget) ScrollToItem(item unsafe.Pointer, hint int) {
-	// 0: (, const QTableWidgetItem * item, QAbstractItemView::ScrollHint hint), (item, &hint)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget12scrollToItemEPK16QTableWidgetItemN17QAbstractItemView10ScrollHintE", ffiqt.FFI_TYPE_VOID, this.cthis, item, &hint)
+	// 0: (, item const QTableWidgetItem *, hint QAbstractItemView::ScrollHint), (item, &hint)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget12scrollToItemEPK16QTableWidgetItemN17QAbstractItemView10ScrollHintE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item, &hint)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -506,8 +543,8 @@ func (this *QTableWidget) ScrollToItem(item unsafe.Pointer, hint int) {
 // index:0
 // void insertRow(int)
 func (this *QTableWidget) InsertRow(row int) {
-	// 0: (, int row), (&row)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget9insertRowEi", ffiqt.FFI_TYPE_VOID, this.cthis, &row)
+	// 0: (, row int), (&row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget9insertRowEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -515,8 +552,8 @@ func (this *QTableWidget) InsertRow(row int) {
 // index:0
 // void insertColumn(int)
 func (this *QTableWidget) InsertColumn(column int) {
-	// 0: (, int column), (&column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget12insertColumnEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	// 0: (, column int), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget12insertColumnEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -524,8 +561,8 @@ func (this *QTableWidget) InsertColumn(column int) {
 // index:0
 // void removeRow(int)
 func (this *QTableWidget) RemoveRow(row int) {
-	// 0: (, int row), (&row)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget9removeRowEi", ffiqt.FFI_TYPE_VOID, this.cthis, &row)
+	// 0: (, row int), (&row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget9removeRowEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -533,8 +570,8 @@ func (this *QTableWidget) RemoveRow(row int) {
 // index:0
 // void removeColumn(int)
 func (this *QTableWidget) RemoveColumn(column int) {
-	// 0: (, int column), (&column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget12removeColumnEi", ffiqt.FFI_TYPE_VOID, this.cthis, &column)
+	// 0: (, column int), (&column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget12removeColumnEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -543,7 +580,7 @@ func (this *QTableWidget) RemoveColumn(column int) {
 // void clear()
 func (this *QTableWidget) Clear() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget5clearEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -552,7 +589,7 @@ func (this *QTableWidget) Clear() {
 // void clearContents()
 func (this *QTableWidget) ClearContents() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget13clearContentsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget13clearContentsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -560,8 +597,8 @@ func (this *QTableWidget) ClearContents() {
 // index:0
 // void itemPressed(class QTableWidgetItem *)
 func (this *QTableWidget) ItemPressed(item unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11itemPressedEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11itemPressedEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -569,8 +606,8 @@ func (this *QTableWidget) ItemPressed(item unsafe.Pointer) {
 // index:0
 // void itemClicked(class QTableWidgetItem *)
 func (this *QTableWidget) ItemClicked(item unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11itemClickedEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11itemClickedEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -578,8 +615,8 @@ func (this *QTableWidget) ItemClicked(item unsafe.Pointer) {
 // index:0
 // void itemDoubleClicked(class QTableWidgetItem *)
 func (this *QTableWidget) ItemDoubleClicked(item unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget17itemDoubleClickedEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget17itemDoubleClickedEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -587,8 +624,8 @@ func (this *QTableWidget) ItemDoubleClicked(item unsafe.Pointer) {
 // index:0
 // void itemActivated(class QTableWidgetItem *)
 func (this *QTableWidget) ItemActivated(item unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget13itemActivatedEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget13itemActivatedEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -596,8 +633,8 @@ func (this *QTableWidget) ItemActivated(item unsafe.Pointer) {
 // index:0
 // void itemEntered(class QTableWidgetItem *)
 func (this *QTableWidget) ItemEntered(item unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11itemEnteredEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11itemEnteredEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -605,8 +642,8 @@ func (this *QTableWidget) ItemEntered(item unsafe.Pointer) {
 // index:0
 // void itemChanged(class QTableWidgetItem *)
 func (this *QTableWidget) ItemChanged(item unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11itemChangedEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11itemChangedEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -614,8 +651,8 @@ func (this *QTableWidget) ItemChanged(item unsafe.Pointer) {
 // index:0
 // void currentItemChanged(class QTableWidgetItem *, class QTableWidgetItem *)
 func (this *QTableWidget) CurrentItemChanged(current unsafe.Pointer, previous unsafe.Pointer) {
-	// 0: (, QTableWidgetItem * current, QTableWidgetItem * previous), (current, previous)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget18currentItemChangedEP16QTableWidgetItemS1_", ffiqt.FFI_TYPE_VOID, this.cthis, current, previous)
+	// 0: (, current QTableWidgetItem *, previous QTableWidgetItem *), (current, previous)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget18currentItemChangedEP16QTableWidgetItemS1_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), current, previous)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -624,7 +661,7 @@ func (this *QTableWidget) CurrentItemChanged(current unsafe.Pointer, previous un
 // void itemSelectionChanged()
 func (this *QTableWidget) ItemSelectionChanged() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget20itemSelectionChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget20itemSelectionChangedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -632,8 +669,8 @@ func (this *QTableWidget) ItemSelectionChanged() {
 // index:0
 // void cellPressed(int, int)
 func (this *QTableWidget) CellPressed(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11cellPressedEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11cellPressedEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -641,8 +678,8 @@ func (this *QTableWidget) CellPressed(row int, column int) {
 // index:0
 // void cellClicked(int, int)
 func (this *QTableWidget) CellClicked(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11cellClickedEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11cellClickedEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -650,8 +687,8 @@ func (this *QTableWidget) CellClicked(row int, column int) {
 // index:0
 // void cellDoubleClicked(int, int)
 func (this *QTableWidget) CellDoubleClicked(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget17cellDoubleClickedEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget17cellDoubleClickedEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -659,8 +696,8 @@ func (this *QTableWidget) CellDoubleClicked(row int, column int) {
 // index:0
 // void cellActivated(int, int)
 func (this *QTableWidget) CellActivated(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget13cellActivatedEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget13cellActivatedEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -668,8 +705,8 @@ func (this *QTableWidget) CellActivated(row int, column int) {
 // index:0
 // void cellEntered(int, int)
 func (this *QTableWidget) CellEntered(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11cellEnteredEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11cellEnteredEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -677,8 +714,8 @@ func (this *QTableWidget) CellEntered(row int, column int) {
 // index:0
 // void cellChanged(int, int)
 func (this *QTableWidget) CellChanged(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11cellChangedEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget11cellChangedEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -686,8 +723,85 @@ func (this *QTableWidget) CellChanged(row int, column int) {
 // index:0
 // void currentCellChanged(int, int, int, int)
 func (this *QTableWidget) CurrentCellChanged(currentRow int, currentColumn int, previousRow int, previousColumn int) {
-	// 0: (, int currentRow, int currentColumn, int previousRow, int previousColumn), (&currentRow, &currentColumn, &previousRow, &previousColumn)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget18currentCellChangedEiiii", ffiqt.FFI_TYPE_VOID, this.cthis, &currentRow, &currentColumn, &previousRow, &previousColumn)
+	// 0: (, currentRow int, currentColumn int, previousRow int, previousColumn int), (&currentRow, &currentColumn, &previousRow, &previousColumn)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget18currentCellChangedEiiii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &currentRow, &currentColumn, &previousRow, &previousColumn)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:321
+// index:0
+// virtual
+// bool event(class QEvent *)
+func (this *QTableWidget) Event(e unsafe.Pointer) {
+	// 0: (, e QEvent *), (e)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), e)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:322
+// index:0
+// virtual
+// QStringList mimeTypes()
+func (this *QTableWidget) MimeTypes() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget9mimeTypesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:328
+// index:0
+// virtual
+// bool dropMimeData(int, int, const class QMimeData *, Qt::DropAction)
+func (this *QTableWidget) DropMimeData(row int, column int, data unsafe.Pointer, action int) {
+	// 0: (, row int, column int, data const QMimeData *, action Qt::DropAction), (&row, &column, data, &action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget12dropMimeDataEiiPK9QMimeDataN2Qt10DropActionE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column, data, &action)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:329
+// index:0
+// virtual
+// Qt::DropActions supportedDropActions()
+func (this *QTableWidget) SupportedDropActions() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget20supportedDropActionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:336
+// index:0
+// QList<QTableWidgetItem *> items(const class QMimeData *)
+func (this *QTableWidget) Items(data unsafe.Pointer) {
+	// 0: (, data const QMimeData *), (data)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget5itemsEPK9QMimeData", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:338
+// index:0
+// QModelIndex indexFromItem(class QTableWidgetItem *)
+func (this *QTableWidget) IndexFromItem(item unsafe.Pointer) {
+	// 0: (, item QTableWidgetItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget13indexFromItemEP16QTableWidgetItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:339
+// index:0
+// QTableWidgetItem * itemFromIndex(const class QModelIndex &)
+func (this *QTableWidget) ItemFromIndex(index unsafe.Pointer) {
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget13itemFromIndexERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:343
+// index:0
+// virtual
+// void dropEvent(class QDropEvent *)
+func (this *QTableWidget) DropEvent(event unsafe.Pointer) {
+	// 0: (, event QDropEvent *), (event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget9dropEventEP10QDropEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
 	gopp.ErrPrint(err, rv)
 }
 

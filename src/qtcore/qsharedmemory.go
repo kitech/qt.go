@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 42
+// extern C begin: 43
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QSharedMemory struct {
-	cthis unsafe.Pointer
+	*QObject
+}
+
+func (this *QSharedMemory) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:54
@@ -54,7 +58,7 @@ type QSharedMemory struct {
 // const QMetaObject * metaObject()
 func (this *QSharedMemory) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -65,7 +69,12 @@ func NewQSharedMemory(parent unsafe.Pointer) *QSharedMemory {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemoryC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QSharedMemory{cthis}
+	gothis := NewQSharedMemoryFromPointer(cthis)
+	return gothis
+}
+func NewQSharedMemoryFromPointer(cthis unsafe.Pointer) *QSharedMemory {
+	bcthis0 := NewQObjectFromPointer(cthis)
+	return &QSharedMemory{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:78
@@ -75,7 +84,8 @@ func NewQSharedMemory_1(key unsafe.Pointer, parent unsafe.Pointer) *QSharedMemor
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemoryC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_VOID, cthis, key, parent)
 	gopp.ErrPrint(err, rv)
-	return &QSharedMemory{cthis}
+	gothis := NewQSharedMemoryFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:79
@@ -91,8 +101,8 @@ func DeleteQSharedMemory(*QSharedMemory) {
 // index:0
 // void setKey(const class QString &)
 func (this *QSharedMemory) SetKey(key unsafe.Pointer) {
-	// 0: (, const QString & key), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6setKeyERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	// 0: (, key const QString &), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6setKeyERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -101,7 +111,7 @@ func (this *QSharedMemory) SetKey(key unsafe.Pointer) {
 // QString key()
 func (this *QSharedMemory) Key() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory3keyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory3keyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,8 +119,8 @@ func (this *QSharedMemory) Key() {
 // index:0
 // void setNativeKey(const class QString &)
 func (this *QSharedMemory) SetNativeKey(key unsafe.Pointer) {
-	// 0: (, const QString & key), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory12setNativeKeyERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	// 0: (, key const QString &), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory12setNativeKeyERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -119,7 +129,7 @@ func (this *QSharedMemory) SetNativeKey(key unsafe.Pointer) {
 // QString nativeKey()
 func (this *QSharedMemory) NativeKey() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory9nativeKeyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory9nativeKeyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,8 +137,8 @@ func (this *QSharedMemory) NativeKey() {
 // index:0
 // bool create(int, enum QSharedMemory::AccessMode)
 func (this *QSharedMemory) Create(size int, mode int) {
-	// 0: (, int size, QSharedMemory::AccessMode mode), (&size, &mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6createEiNS_10AccessModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &size, &mode)
+	// 0: (, size int, mode QSharedMemory::AccessMode), (&size, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6createEiNS_10AccessModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &size, &mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -137,7 +147,7 @@ func (this *QSharedMemory) Create(size int, mode int) {
 // int size()
 func (this *QSharedMemory) Size() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,8 +155,8 @@ func (this *QSharedMemory) Size() {
 // index:0
 // bool attach(enum QSharedMemory::AccessMode)
 func (this *QSharedMemory) Attach(mode int) {
-	// 0: (, QSharedMemory::AccessMode mode), (&mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6attachENS_10AccessModeE", ffiqt.FFI_TYPE_VOID, this.cthis, &mode)
+	// 0: (, mode QSharedMemory::AccessMode), (&mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6attachENS_10AccessModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -155,7 +165,7 @@ func (this *QSharedMemory) Attach(mode int) {
 // bool isAttached()
 func (this *QSharedMemory) IsAttached() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory10isAttachedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory10isAttachedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -164,7 +174,7 @@ func (this *QSharedMemory) IsAttached() {
 // bool detach()
 func (this *QSharedMemory) Detach() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6detachEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6detachEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -173,7 +183,7 @@ func (this *QSharedMemory) Detach() {
 // void * data()
 func (this *QSharedMemory) Data() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory4dataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory4dataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -182,7 +192,7 @@ func (this *QSharedMemory) Data() {
 // const void * data()
 func (this *QSharedMemory) Data_1() {
 	// 1: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory4dataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory4dataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -191,7 +201,7 @@ func (this *QSharedMemory) Data_1() {
 // const void * constData()
 func (this *QSharedMemory) ConstData() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory9constDataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory9constDataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -200,7 +210,7 @@ func (this *QSharedMemory) ConstData() {
 // bool lock()
 func (this *QSharedMemory) Lock() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory4lockEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory4lockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -209,7 +219,7 @@ func (this *QSharedMemory) Lock() {
 // bool unlock()
 func (this *QSharedMemory) Unlock() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6unlockEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6unlockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -218,7 +228,7 @@ func (this *QSharedMemory) Unlock() {
 // QSharedMemory::SharedMemoryError error()
 func (this *QSharedMemory) Error() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory5errorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory5errorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -227,7 +237,7 @@ func (this *QSharedMemory) Error() {
 // QString errorString()
 func (this *QSharedMemory) ErrorString() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory11errorStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory11errorStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

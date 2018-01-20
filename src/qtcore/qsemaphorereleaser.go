@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QSemaphoreReleaser struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QSemaphoreReleaser) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:75
@@ -56,7 +60,11 @@ func NewQSemaphoreReleaser() *QSemaphoreReleaser {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QSemaphoreReleaser{cthis}
+	gothis := NewQSemaphoreReleaserFromPointer(cthis)
+	return gothis
+}
+func NewQSemaphoreReleaserFromPointer(cthis unsafe.Pointer) *QSemaphoreReleaser {
+	return &QSemaphoreReleaser{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:76
@@ -67,7 +75,8 @@ func NewQSemaphoreReleaser_1(sem unsafe.Pointer, n int) *QSemaphoreReleaser {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, sem, &n)
 	gopp.ErrPrint(err, rv)
-	return &QSemaphoreReleaser{cthis}
+	gothis := NewQSemaphoreReleaserFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:78
@@ -78,7 +87,8 @@ func NewQSemaphoreReleaser_2(sem unsafe.Pointer, n int) *QSemaphoreReleaser {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, sem, &n)
 	gopp.ErrPrint(err, rv)
-	return &QSemaphoreReleaser{cthis}
+	gothis := NewQSemaphoreReleaserFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:86
@@ -95,8 +105,8 @@ func DeleteQSemaphoreReleaser(*QSemaphoreReleaser) {
 // inline
 // void swap(class QSemaphoreReleaser &)
 func (this *QSemaphoreReleaser) Swap(other unsafe.Pointer) {
-	// 0: (, QSemaphoreReleaser & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QSemaphoreReleaser &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,7 +116,7 @@ func (this *QSemaphoreReleaser) Swap(other unsafe.Pointer) {
 // QSemaphore * semaphore()
 func (this *QSemaphoreReleaser) Semaphore() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +126,7 @@ func (this *QSemaphoreReleaser) Semaphore() {
 // QSemaphore * cancel()
 func (this *QSemaphoreReleaser) Cancel() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser6cancelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser6cancelEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

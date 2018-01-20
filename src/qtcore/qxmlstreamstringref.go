@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QXmlStreamStringRef struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QXmlStreamStringRef) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:58
@@ -56,7 +60,11 @@ func NewQXmlStreamStringRef() *QXmlStreamStringRef {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QXmlStreamStringRef{cthis}
+	gothis := NewQXmlStreamStringRefFromPointer(cthis)
+	return gothis
+}
+func NewQXmlStreamStringRefFromPointer(cthis unsafe.Pointer) *QXmlStreamStringRef {
+	return &QXmlStreamStringRef{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:59
@@ -67,7 +75,8 @@ func NewQXmlStreamStringRef_1(aString unsafe.Pointer) *QXmlStreamStringRef {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2ERK10QStringRef", ffiqt.FFI_TYPE_VOID, cthis, aString)
 	gopp.ErrPrint(err, rv)
-	return &QXmlStreamStringRef{cthis}
+	gothis := NewQXmlStreamStringRefFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:61
@@ -78,7 +87,8 @@ func NewQXmlStreamStringRef_2(aString unsafe.Pointer) *QXmlStreamStringRef {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, aString)
 	gopp.ErrPrint(err, rv)
-	return &QXmlStreamStringRef{cthis}
+	gothis := NewQXmlStreamStringRefFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:63
@@ -89,7 +99,8 @@ func NewQXmlStreamStringRef_3(aString unsafe.Pointer) *QXmlStreamStringRef {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2EO7QString", ffiqt.FFI_TYPE_VOID, cthis, aString)
 	gopp.ErrPrint(err, rv)
-	return &QXmlStreamStringRef{cthis}
+	gothis := NewQXmlStreamStringRefFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:77
@@ -106,8 +117,8 @@ func DeleteQXmlStreamStringRef(*QXmlStreamStringRef) {
 // inline
 // void swap(class QXmlStreamStringRef &)
 func (this *QXmlStreamStringRef) Swap(other unsafe.Pointer) {
-	// 0: (, QXmlStreamStringRef & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRef4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QXmlStreamStringRef &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRef4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +128,7 @@ func (this *QXmlStreamStringRef) Swap(other unsafe.Pointer) {
 // void clear()
 func (this *QXmlStreamStringRef) Clear() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRef5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRef5clearEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,7 +138,7 @@ func (this *QXmlStreamStringRef) Clear() {
 // const QString * string()
 func (this *QXmlStreamStringRef) String() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef6stringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef6stringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -137,7 +148,7 @@ func (this *QXmlStreamStringRef) String() {
 // int position()
 func (this *QXmlStreamStringRef) Position() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef8positionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef8positionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -147,7 +158,7 @@ func (this *QXmlStreamStringRef) Position() {
 // int size()
 func (this *QXmlStreamStringRef) Size() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

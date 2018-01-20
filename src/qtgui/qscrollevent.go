@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QScrollEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QScrollEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:1022
@@ -59,7 +63,12 @@ func NewQScrollEvent(contentPos unsafe.Pointer, overshoot unsafe.Pointer, scroll
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QScrollEventC2ERK7QPointFS2_NS_11ScrollStateE", ffiqt.FFI_TYPE_VOID, cthis, contentPos, overshoot, &scrollState)
 	gopp.ErrPrint(err, rv)
-	return &QScrollEvent{cthis}
+	gothis := NewQScrollEventFromPointer(cthis)
+	return gothis
+}
+func NewQScrollEventFromPointer(cthis unsafe.Pointer) *QScrollEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QScrollEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:1023
@@ -76,7 +85,7 @@ func DeleteQScrollEvent(*QScrollEvent) {
 // QPointF contentPos()
 func (this *QScrollEvent) ContentPos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent10contentPosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent10contentPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -85,7 +94,7 @@ func (this *QScrollEvent) ContentPos() {
 // QPointF overshootDistance()
 func (this *QScrollEvent) OvershootDistance() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent17overshootDistanceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent17overshootDistanceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -94,7 +103,7 @@ func (this *QScrollEvent) OvershootDistance() {
 // QScrollEvent::ScrollState scrollState()
 func (this *QScrollEvent) ScrollState() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent11scrollStateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent11scrollStateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

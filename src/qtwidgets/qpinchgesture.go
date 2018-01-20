@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QPinchGesture struct {
-	cthis unsafe.Pointer
+	*QGesture
+}
+
+func (this *QPinchGesture) GetCthis() unsafe.Pointer {
+	return this.QGesture.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:136
@@ -62,7 +66,7 @@ type QPinchGesture struct {
 // const QMetaObject * metaObject()
 func (this *QPinchGesture) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQPinchGesture(parent unsafe.Pointer) *QPinchGesture {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QPinchGesture{cthis}
+	gothis := NewQPinchGestureFromPointer(cthis)
+	return gothis
+}
+func NewQPinchGestureFromPointer(cthis unsafe.Pointer) *QPinchGesture {
+	bcthis0 := NewQGestureFromPointer(cthis)
+	return &QPinchGesture{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:166
@@ -90,7 +99,16 @@ func DeleteQPinchGesture(*QPinchGesture) {
 // QPinchGesture::ChangeFlags totalChangeFlags()
 func (this *QPinchGesture) TotalChangeFlags() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture16totalChangeFlagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture16totalChangeFlagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgesture.h:169
+// index:0
+// void setTotalChangeFlags(QPinchGesture::ChangeFlags)
+func (this *QPinchGesture) SetTotalChangeFlags(value int) {
+	// 0: (, QFlags<QPinchGesture::ChangeFlag> value), (value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture19setTotalChangeFlagsE6QFlagsINS_10ChangeFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +117,16 @@ func (this *QPinchGesture) TotalChangeFlags() {
 // QPinchGesture::ChangeFlags changeFlags()
 func (this *QPinchGesture) ChangeFlags() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture11changeFlagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture11changeFlagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgesture.h:172
+// index:0
+// void setChangeFlags(QPinchGesture::ChangeFlags)
+func (this *QPinchGesture) SetChangeFlags(value int) {
+	// 0: (, QFlags<QPinchGesture::ChangeFlag> value), (value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture14setChangeFlagsE6QFlagsINS_10ChangeFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +135,7 @@ func (this *QPinchGesture) ChangeFlags() {
 // QPointF startCenterPoint()
 func (this *QPinchGesture) StartCenterPoint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture16startCenterPointEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture16startCenterPointEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +144,7 @@ func (this *QPinchGesture) StartCenterPoint() {
 // QPointF lastCenterPoint()
 func (this *QPinchGesture) LastCenterPoint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture15lastCenterPointEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture15lastCenterPointEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +153,7 @@ func (this *QPinchGesture) LastCenterPoint() {
 // QPointF centerPoint()
 func (this *QPinchGesture) CenterPoint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture11centerPointEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture11centerPointEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,8 +161,8 @@ func (this *QPinchGesture) CenterPoint() {
 // index:0
 // void setStartCenterPoint(const class QPointF &)
 func (this *QPinchGesture) SetStartCenterPoint(value unsafe.Pointer) {
-	// 0: (, const QPointF & value), (value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture19setStartCenterPointERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, value)
+	// 0: (, value const QPointF &), (value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture19setStartCenterPointERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,8 +170,8 @@ func (this *QPinchGesture) SetStartCenterPoint(value unsafe.Pointer) {
 // index:0
 // void setLastCenterPoint(const class QPointF &)
 func (this *QPinchGesture) SetLastCenterPoint(value unsafe.Pointer) {
-	// 0: (, const QPointF & value), (value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture18setLastCenterPointERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, value)
+	// 0: (, value const QPointF &), (value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture18setLastCenterPointERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,8 +179,8 @@ func (this *QPinchGesture) SetLastCenterPoint(value unsafe.Pointer) {
 // index:0
 // void setCenterPoint(const class QPointF &)
 func (this *QPinchGesture) SetCenterPoint(value unsafe.Pointer) {
-	// 0: (, const QPointF & value), (value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture14setCenterPointERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, value)
+	// 0: (, value const QPointF &), (value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture14setCenterPointERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +189,7 @@ func (this *QPinchGesture) SetCenterPoint(value unsafe.Pointer) {
 // qreal totalScaleFactor()
 func (this *QPinchGesture) TotalScaleFactor() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture16totalScaleFactorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture16totalScaleFactorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -171,7 +198,7 @@ func (this *QPinchGesture) TotalScaleFactor() {
 // qreal lastScaleFactor()
 func (this *QPinchGesture) LastScaleFactor() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture15lastScaleFactorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture15lastScaleFactorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,7 +207,7 @@ func (this *QPinchGesture) LastScaleFactor() {
 // qreal scaleFactor()
 func (this *QPinchGesture) ScaleFactor() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture11scaleFactorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture11scaleFactorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -188,8 +215,8 @@ func (this *QPinchGesture) ScaleFactor() {
 // index:0
 // void setTotalScaleFactor(qreal)
 func (this *QPinchGesture) SetTotalScaleFactor(value float64) {
-	// 0: (, qreal value), (&value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture19setTotalScaleFactorEd", ffiqt.FFI_TYPE_VOID, this.cthis, &value)
+	// 0: (, value qreal), (&value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture19setTotalScaleFactorEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -197,8 +224,8 @@ func (this *QPinchGesture) SetTotalScaleFactor(value float64) {
 // index:0
 // void setLastScaleFactor(qreal)
 func (this *QPinchGesture) SetLastScaleFactor(value float64) {
-	// 0: (, qreal value), (&value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture18setLastScaleFactorEd", ffiqt.FFI_TYPE_VOID, this.cthis, &value)
+	// 0: (, value qreal), (&value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture18setLastScaleFactorEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -206,8 +233,8 @@ func (this *QPinchGesture) SetLastScaleFactor(value float64) {
 // index:0
 // void setScaleFactor(qreal)
 func (this *QPinchGesture) SetScaleFactor(value float64) {
-	// 0: (, qreal value), (&value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture14setScaleFactorEd", ffiqt.FFI_TYPE_VOID, this.cthis, &value)
+	// 0: (, value qreal), (&value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture14setScaleFactorEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,7 +243,7 @@ func (this *QPinchGesture) SetScaleFactor(value float64) {
 // qreal totalRotationAngle()
 func (this *QPinchGesture) TotalRotationAngle() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture18totalRotationAngleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture18totalRotationAngleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,7 +252,7 @@ func (this *QPinchGesture) TotalRotationAngle() {
 // qreal lastRotationAngle()
 func (this *QPinchGesture) LastRotationAngle() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture17lastRotationAngleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture17lastRotationAngleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -234,7 +261,7 @@ func (this *QPinchGesture) LastRotationAngle() {
 // qreal rotationAngle()
 func (this *QPinchGesture) RotationAngle() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture13rotationAngleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture13rotationAngleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -242,8 +269,8 @@ func (this *QPinchGesture) RotationAngle() {
 // index:0
 // void setTotalRotationAngle(qreal)
 func (this *QPinchGesture) SetTotalRotationAngle(value float64) {
-	// 0: (, qreal value), (&value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture21setTotalRotationAngleEd", ffiqt.FFI_TYPE_VOID, this.cthis, &value)
+	// 0: (, value qreal), (&value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture21setTotalRotationAngleEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -251,8 +278,8 @@ func (this *QPinchGesture) SetTotalRotationAngle(value float64) {
 // index:0
 // void setLastRotationAngle(qreal)
 func (this *QPinchGesture) SetLastRotationAngle(value float64) {
-	// 0: (, qreal value), (&value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture20setLastRotationAngleEd", ffiqt.FFI_TYPE_VOID, this.cthis, &value)
+	// 0: (, value qreal), (&value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture20setLastRotationAngleEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -260,8 +287,8 @@ func (this *QPinchGesture) SetLastRotationAngle(value float64) {
 // index:0
 // void setRotationAngle(qreal)
 func (this *QPinchGesture) SetRotationAngle(value float64) {
-	// 0: (, qreal value), (&value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture16setRotationAngleEd", ffiqt.FFI_TYPE_VOID, this.cthis, &value)
+	// 0: (, value qreal), (&value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture16setRotationAngleEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &value)
 	gopp.ErrPrint(err, rv)
 }
 

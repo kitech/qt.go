@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QActionEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QActionEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:727
@@ -59,7 +63,12 @@ func NewQActionEvent(type_ int, action unsafe.Pointer, before unsafe.Pointer) *Q
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", ffiqt.FFI_TYPE_VOID, cthis, &type_, action, before)
 	gopp.ErrPrint(err, rv)
-	return &QActionEvent{cthis}
+	gothis := NewQActionEventFromPointer(cthis)
+	return gothis
+}
+func NewQActionEventFromPointer(cthis unsafe.Pointer) *QActionEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QActionEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:728
@@ -77,7 +86,7 @@ func DeleteQActionEvent(*QActionEvent) {
 // QAction * action()
 func (this *QActionEvent) Action() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6actionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6actionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -87,7 +96,7 @@ func (this *QActionEvent) Action() {
 // QAction * before()
 func (this *QActionEvent) Before() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6beforeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6beforeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QTableWidgetItem struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTableWidgetItem) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:82
@@ -63,7 +67,11 @@ func NewQTableWidgetItem(type_ int) *QTableWidgetItem {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItemC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QTableWidgetItem{cthis}
+	gothis := NewQTableWidgetItemFromPointer(cthis)
+	return gothis
+}
+func NewQTableWidgetItemFromPointer(cthis unsafe.Pointer) *QTableWidgetItem {
+	return &QTableWidgetItem{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:83
@@ -73,7 +81,8 @@ func NewQTableWidgetItem_1(text unsafe.Pointer, type_ int) *QTableWidgetItem {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItemC2ERK7QStringi", ffiqt.FFI_TYPE_VOID, cthis, text, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QTableWidgetItem{cthis}
+	gothis := NewQTableWidgetItemFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:84
@@ -83,7 +92,8 @@ func NewQTableWidgetItem_2(icon unsafe.Pointer, text unsafe.Pointer, type_ int) 
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi", ffiqt.FFI_TYPE_VOID, cthis, icon, text, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QTableWidgetItem{cthis}
+	gothis := NewQTableWidgetItemFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:86
@@ -101,7 +111,7 @@ func DeleteQTableWidgetItem(*QTableWidgetItem) {
 // QTableWidgetItem * clone()
 func (this *QTableWidgetItem) Clone() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem5cloneEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem5cloneEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -111,7 +121,7 @@ func (this *QTableWidgetItem) Clone() {
 // QTableWidget * tableWidget()
 func (this *QTableWidgetItem) TableWidget() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem11tableWidgetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem11tableWidgetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -121,7 +131,7 @@ func (this *QTableWidgetItem) TableWidget() {
 // int row()
 func (this *QTableWidgetItem) Row() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem3rowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem3rowEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -131,7 +141,7 @@ func (this *QTableWidgetItem) Row() {
 // int column()
 func (this *QTableWidgetItem) Column() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem6columnEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem6columnEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,8 +150,8 @@ func (this *QTableWidgetItem) Column() {
 // inline
 // void setSelected(_Bool)
 func (this *QTableWidgetItem) SetSelected(select_ bool) {
-	// 0: (, bool select), (&select_)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &select_)
+	// 0: (, select bool), (&select_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &select_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,7 +161,7 @@ func (this *QTableWidgetItem) SetSelected(select_ bool) {
 // bool isSelected()
 func (this *QTableWidgetItem) IsSelected() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem10isSelectedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem10isSelectedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -161,7 +171,16 @@ func (this *QTableWidgetItem) IsSelected() {
 // Qt::ItemFlags flags()
 func (this *QTableWidgetItem) Flags() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem5flagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem5flagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:99
+// index:0
+// void setFlags(Qt::ItemFlags)
+func (this *QTableWidgetItem) SetFlags(flags int) {
+	// 0: (, QFlags<Qt::ItemFlag> flags), (&flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem8setFlagsE6QFlagsIN2Qt8ItemFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -171,7 +190,7 @@ func (this *QTableWidgetItem) Flags() {
 // QString text()
 func (this *QTableWidgetItem) Text() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem4textEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem4textEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,8 +199,8 @@ func (this *QTableWidgetItem) Text() {
 // inline
 // void setText(const class QString &)
 func (this *QTableWidgetItem) SetText(text unsafe.Pointer) {
-	// 0: (, const QString & text), (text)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, text)
+	// 0: (, text const QString &), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem7setTextERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -191,7 +210,7 @@ func (this *QTableWidgetItem) SetText(text unsafe.Pointer) {
 // QIcon icon()
 func (this *QTableWidgetItem) Icon() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem4iconEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem4iconEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -200,8 +219,8 @@ func (this *QTableWidgetItem) Icon() {
 // inline
 // void setIcon(const class QIcon &)
 func (this *QTableWidgetItem) SetIcon(icon unsafe.Pointer) {
-	// 0: (, const QIcon & icon), (icon)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem7setIconERK5QIcon", ffiqt.FFI_TYPE_VOID, this.cthis, icon)
+	// 0: (, icon const QIcon &), (icon)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem7setIconERK5QIcon", ffiqt.FFI_TYPE_VOID, this.GetCthis(), icon)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +230,7 @@ func (this *QTableWidgetItem) SetIcon(icon unsafe.Pointer) {
 // QString statusTip()
 func (this *QTableWidgetItem) StatusTip() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem9statusTipEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem9statusTipEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -220,8 +239,8 @@ func (this *QTableWidgetItem) StatusTip() {
 // inline
 // void setStatusTip(const class QString &)
 func (this *QTableWidgetItem) SetStatusTip(statusTip unsafe.Pointer) {
-	// 0: (, const QString & statusTip), (statusTip)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem12setStatusTipERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, statusTip)
+	// 0: (, statusTip const QString &), (statusTip)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem12setStatusTipERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), statusTip)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -231,7 +250,7 @@ func (this *QTableWidgetItem) SetStatusTip(statusTip unsafe.Pointer) {
 // QString toolTip()
 func (this *QTableWidgetItem) ToolTip() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem7toolTipEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem7toolTipEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -240,8 +259,8 @@ func (this *QTableWidgetItem) ToolTip() {
 // inline
 // void setToolTip(const class QString &)
 func (this *QTableWidgetItem) SetToolTip(toolTip unsafe.Pointer) {
-	// 0: (, const QString & toolTip), (toolTip)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem10setToolTipERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, toolTip)
+	// 0: (, toolTip const QString &), (toolTip)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem10setToolTipERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), toolTip)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -251,7 +270,7 @@ func (this *QTableWidgetItem) SetToolTip(toolTip unsafe.Pointer) {
 // QString whatsThis()
 func (this *QTableWidgetItem) WhatsThis() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem9whatsThisEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem9whatsThisEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -260,8 +279,8 @@ func (this *QTableWidgetItem) WhatsThis() {
 // inline
 // void setWhatsThis(const class QString &)
 func (this *QTableWidgetItem) SetWhatsThis(whatsThis unsafe.Pointer) {
-	// 0: (, const QString & whatsThis), (whatsThis)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem12setWhatsThisERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, whatsThis)
+	// 0: (, whatsThis const QString &), (whatsThis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem12setWhatsThisERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), whatsThis)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -271,7 +290,7 @@ func (this *QTableWidgetItem) SetWhatsThis(whatsThis unsafe.Pointer) {
 // QFont font()
 func (this *QTableWidgetItem) Font() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem4fontEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem4fontEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -280,8 +299,8 @@ func (this *QTableWidgetItem) Font() {
 // inline
 // void setFont(const class QFont &)
 func (this *QTableWidgetItem) SetFont(font unsafe.Pointer) {
-	// 0: (, const QFont & font), (font)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem7setFontERK5QFont", ffiqt.FFI_TYPE_VOID, this.cthis, font)
+	// 0: (, font const QFont &), (font)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem7setFontERK5QFont", ffiqt.FFI_TYPE_VOID, this.GetCthis(), font)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -291,7 +310,7 @@ func (this *QTableWidgetItem) SetFont(font unsafe.Pointer) {
 // int textAlignment()
 func (this *QTableWidgetItem) TextAlignment() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem13textAlignmentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem13textAlignmentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -300,8 +319,8 @@ func (this *QTableWidgetItem) TextAlignment() {
 // inline
 // void setTextAlignment(int)
 func (this *QTableWidgetItem) SetTextAlignment(alignment int) {
-	// 0: (, int alignment), (&alignment)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem16setTextAlignmentEi", ffiqt.FFI_TYPE_VOID, this.cthis, &alignment)
+	// 0: (, alignment int), (&alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem16setTextAlignmentEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &alignment)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -311,7 +330,7 @@ func (this *QTableWidgetItem) SetTextAlignment(alignment int) {
 // QColor backgroundColor()
 func (this *QTableWidgetItem) BackgroundColor() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem15backgroundColorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem15backgroundColorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -320,8 +339,8 @@ func (this *QTableWidgetItem) BackgroundColor() {
 // inline
 // void setBackgroundColor(const class QColor &)
 func (this *QTableWidgetItem) SetBackgroundColor(color unsafe.Pointer) {
-	// 0: (, const QColor & color), (color)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem18setBackgroundColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, color)
+	// 0: (, color const QColor &), (color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem18setBackgroundColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), color)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -331,7 +350,7 @@ func (this *QTableWidgetItem) SetBackgroundColor(color unsafe.Pointer) {
 // QBrush background()
 func (this *QTableWidgetItem) Background() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem10backgroundEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem10backgroundEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -340,8 +359,8 @@ func (this *QTableWidgetItem) Background() {
 // inline
 // void setBackground(const class QBrush &)
 func (this *QTableWidgetItem) SetBackground(brush unsafe.Pointer) {
-	// 0: (, const QBrush & brush), (brush)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem13setBackgroundERK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, brush)
+	// 0: (, brush const QBrush &), (brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem13setBackgroundERK6QBrush", ffiqt.FFI_TYPE_VOID, this.GetCthis(), brush)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -351,7 +370,7 @@ func (this *QTableWidgetItem) SetBackground(brush unsafe.Pointer) {
 // QColor textColor()
 func (this *QTableWidgetItem) TextColor() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem9textColorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem9textColorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -360,8 +379,8 @@ func (this *QTableWidgetItem) TextColor() {
 // inline
 // void setTextColor(const class QColor &)
 func (this *QTableWidgetItem) SetTextColor(color unsafe.Pointer) {
-	// 0: (, const QColor & color), (color)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem12setTextColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, color)
+	// 0: (, color const QColor &), (color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem12setTextColorERK6QColor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), color)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -371,7 +390,7 @@ func (this *QTableWidgetItem) SetTextColor(color unsafe.Pointer) {
 // QBrush foreground()
 func (this *QTableWidgetItem) Foreground() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem10foregroundEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem10foregroundEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -380,8 +399,8 @@ func (this *QTableWidgetItem) Foreground() {
 // inline
 // void setForeground(const class QBrush &)
 func (this *QTableWidgetItem) SetForeground(brush unsafe.Pointer) {
-	// 0: (, const QBrush & brush), (brush)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem13setForegroundERK6QBrush", ffiqt.FFI_TYPE_VOID, this.cthis, brush)
+	// 0: (, brush const QBrush &), (brush)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem13setForegroundERK6QBrush", ffiqt.FFI_TYPE_VOID, this.GetCthis(), brush)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -391,7 +410,7 @@ func (this *QTableWidgetItem) SetForeground(brush unsafe.Pointer) {
 // Qt::CheckState checkState()
 func (this *QTableWidgetItem) CheckState() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem10checkStateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem10checkStateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -400,8 +419,8 @@ func (this *QTableWidgetItem) CheckState() {
 // inline
 // void setCheckState(Qt::CheckState)
 func (this *QTableWidgetItem) SetCheckState(state int) {
-	// 0: (, Qt::CheckState state), (&state)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem13setCheckStateEN2Qt10CheckStateE", ffiqt.FFI_TYPE_VOID, this.cthis, &state)
+	// 0: (, state Qt::CheckState), (&state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem13setCheckStateEN2Qt10CheckStateE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &state)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -411,7 +430,7 @@ func (this *QTableWidgetItem) SetCheckState(state int) {
 // QSize sizeHint()
 func (this *QTableWidgetItem) SizeHint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -420,8 +439,8 @@ func (this *QTableWidgetItem) SizeHint() {
 // inline
 // void setSizeHint(const class QSize &)
 func (this *QTableWidgetItem) SetSizeHint(size unsafe.Pointer) {
-	// 0: (, const QSize & size), (size)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem11setSizeHintERK5QSize", ffiqt.FFI_TYPE_VOID, this.cthis, size)
+	// 0: (, size const QSize &), (size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem11setSizeHintERK5QSize", ffiqt.FFI_TYPE_VOID, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -430,8 +449,8 @@ func (this *QTableWidgetItem) SetSizeHint(size unsafe.Pointer) {
 // virtual
 // QVariant data(int)
 func (this *QTableWidgetItem) Data(role int) {
-	// 0: (, int role), (&role)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem4dataEi", ffiqt.FFI_TYPE_VOID, this.cthis, &role)
+	// 0: (, role int), (&role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem4dataEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -440,8 +459,8 @@ func (this *QTableWidgetItem) Data(role int) {
 // virtual
 // void setData(int, const class QVariant &)
 func (this *QTableWidgetItem) SetData(role int, value unsafe.Pointer) {
-	// 0: (, int role, const QVariant & value), (&role, value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem7setDataEiRK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, &role, value)
+	// 0: (, role int, value const QVariant &), (&role, value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem7setDataEiRK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &role, value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -450,8 +469,8 @@ func (this *QTableWidgetItem) SetData(role int, value unsafe.Pointer) {
 // virtual
 // void read(class QDataStream &)
 func (this *QTableWidgetItem) Read(in unsafe.Pointer) {
-	// 0: (, QDataStream & in), (in)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem4readER11QDataStream", ffiqt.FFI_TYPE_VOID, this.cthis, in)
+	// 0: (, in QDataStream &), (in)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem4readER11QDataStream", ffiqt.FFI_TYPE_VOID, this.GetCthis(), in)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -460,8 +479,8 @@ func (this *QTableWidgetItem) Read(in unsafe.Pointer) {
 // virtual
 // void write(class QDataStream &)
 func (this *QTableWidgetItem) Write(out unsafe.Pointer) {
-	// 0: (, QDataStream & out), (out)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem5writeER11QDataStream", ffiqt.FFI_TYPE_VOID, this.cthis, out)
+	// 0: (, out QDataStream &), (out)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem5writeER11QDataStream", ffiqt.FFI_TYPE_VOID, this.GetCthis(), out)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -471,7 +490,7 @@ func (this *QTableWidgetItem) Write(out unsafe.Pointer) {
 // int type()
 func (this *QTableWidgetItem) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

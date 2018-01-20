@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QRegularExpressionValidator struct {
-	cthis unsafe.Pointer
+	*QValidator
+}
+
+func (this *QRegularExpressionValidator) GetCthis() unsafe.Pointer {
+	return this.QValidator.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:203
@@ -58,7 +62,7 @@ type QRegularExpressionValidator struct {
 // const QMetaObject * metaObject()
 func (this *QRegularExpressionValidator) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -69,7 +73,12 @@ func NewQRegularExpressionValidator(parent unsafe.Pointer) *QRegularExpressionVa
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QRegularExpressionValidator{cthis}
+	gothis := NewQRegularExpressionValidatorFromPointer(cthis)
+	return gothis
+}
+func NewQRegularExpressionValidatorFromPointer(cthis unsafe.Pointer) *QRegularExpressionValidator {
+	bcthis0 := NewQValidatorFromPointer(cthis)
+	return &QRegularExpressionValidator{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:208
@@ -79,7 +88,8 @@ func NewQRegularExpressionValidator_1(re unsafe.Pointer, parent unsafe.Pointer) 
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2ERK18QRegularExpressionP7QObject", ffiqt.FFI_TYPE_VOID, cthis, re, parent)
 	gopp.ErrPrint(err, rv)
-	return &QRegularExpressionValidator{cthis}
+	gothis := NewQRegularExpressionValidatorFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:209
@@ -96,8 +106,8 @@ func DeleteQRegularExpressionValidator(*QRegularExpressionValidator) {
 // virtual
 // QValidator::State validate(class QString &, int &)
 func (this *QRegularExpressionValidator) Validate(input unsafe.Pointer, pos int) {
-	// 0: (, QString & input, int & pos), (input, &pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator8validateER7QStringRi", ffiqt.FFI_TYPE_VOID, this.cthis, input, &pos)
+	// 0: (, input QString &, pos int &), (input, &pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator8validateER7QStringRi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), input, &pos)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,7 +116,7 @@ func (this *QRegularExpressionValidator) Validate(input unsafe.Pointer, pos int)
 // QRegularExpression regularExpression()
 func (this *QRegularExpressionValidator) RegularExpression() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator17regularExpressionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator17regularExpressionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -114,8 +124,8 @@ func (this *QRegularExpressionValidator) RegularExpression() {
 // index:0
 // void setRegularExpression(const class QRegularExpression &)
 func (this *QRegularExpressionValidator) SetRegularExpression(re unsafe.Pointer) {
-	// 0: (, const QRegularExpression & re), (re)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression", ffiqt.FFI_TYPE_VOID, this.cthis, re)
+	// 0: (, re const QRegularExpression &), (re)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression", ffiqt.FFI_TYPE_VOID, this.GetCthis(), re)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -123,8 +133,8 @@ func (this *QRegularExpressionValidator) SetRegularExpression(re unsafe.Pointer)
 // index:0
 // void regularExpressionChanged(const class QRegularExpression &)
 func (this *QRegularExpressionValidator) RegularExpressionChanged(re unsafe.Pointer) {
-	// 0: (, const QRegularExpression & re), (re)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression", ffiqt.FFI_TYPE_VOID, this.cthis, re)
+	// 0: (, re const QRegularExpression &), (re)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression", ffiqt.FFI_TYPE_VOID, this.GetCthis(), re)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QAssociativeIterable struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QAssociativeIterable) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:680
@@ -53,7 +57,7 @@ type QAssociativeIterable struct {
 // QAssociativeIterable::const_iterator begin()
 func (this *QAssociativeIterable) Begin() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable5beginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable5beginEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -62,7 +66,7 @@ func (this *QAssociativeIterable) Begin() {
 // QAssociativeIterable::const_iterator end()
 func (this *QAssociativeIterable) End() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable3endEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable3endEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -70,8 +74,8 @@ func (this *QAssociativeIterable) End() {
 // index:0
 // QAssociativeIterable::const_iterator find(const class QVariant &)
 func (this *QAssociativeIterable) Find(key unsafe.Pointer) {
-	// 0: (, const QVariant & key), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable4findERK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	// 0: (, key const QVariant &), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable4findERK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -79,8 +83,8 @@ func (this *QAssociativeIterable) Find(key unsafe.Pointer) {
 // index:0
 // QVariant value(const class QVariant &)
 func (this *QAssociativeIterable) Value(key unsafe.Pointer) {
-	// 0: (, const QVariant & key), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable5valueERK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	// 0: (, key const QVariant &), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable5valueERK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -89,7 +93,7 @@ func (this *QAssociativeIterable) Value(key unsafe.Pointer) {
 // int size()
 func (this *QAssociativeIterable) Size() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

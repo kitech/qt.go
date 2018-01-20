@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QMetaProperty struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QMetaProperty) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:248
@@ -55,7 +59,11 @@ func NewQMetaProperty() *QMetaProperty {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMetaPropertyC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QMetaProperty{cthis}
+	gothis := NewQMetaPropertyFromPointer(cthis)
+	return gothis
+}
+func NewQMetaPropertyFromPointer(cthis unsafe.Pointer) *QMetaProperty {
+	return &QMetaProperty{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:250
@@ -63,7 +71,7 @@ func NewQMetaProperty() *QMetaProperty {
 // const char * name()
 func (this *QMetaProperty) Name() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -72,7 +80,7 @@ func (this *QMetaProperty) Name() {
 // const char * typeName()
 func (this *QMetaProperty) TypeName() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8typeNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8typeNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -81,7 +89,7 @@ func (this *QMetaProperty) TypeName() {
 // QVariant::Type type()
 func (this *QMetaProperty) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -90,7 +98,7 @@ func (this *QMetaProperty) Type() {
 // int userType()
 func (this *QMetaProperty) UserType() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8userTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8userTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +107,7 @@ func (this *QMetaProperty) UserType() {
 // int propertyIndex()
 func (this *QMetaProperty) PropertyIndex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty13propertyIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty13propertyIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +116,7 @@ func (this *QMetaProperty) PropertyIndex() {
 // bool isReadable()
 func (this *QMetaProperty) IsReadable() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isReadableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isReadableEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +125,7 @@ func (this *QMetaProperty) IsReadable() {
 // bool isWritable()
 func (this *QMetaProperty) IsWritable() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isWritableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isWritableEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +134,7 @@ func (this *QMetaProperty) IsWritable() {
 // bool isResettable()
 func (this *QMetaProperty) IsResettable() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12isResettableEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12isResettableEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,8 +142,8 @@ func (this *QMetaProperty) IsResettable() {
 // index:0
 // bool isDesignable(const class QObject *)
 func (this *QMetaProperty) IsDesignable(obj unsafe.Pointer) {
-	// 0: (, const QObject * obj), (obj)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12isDesignableEPK7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, obj)
+	// 0: (, obj const QObject *), (obj)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12isDesignableEPK7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), obj)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,8 +151,8 @@ func (this *QMetaProperty) IsDesignable(obj unsafe.Pointer) {
 // index:0
 // bool isScriptable(const class QObject *)
 func (this *QMetaProperty) IsScriptable(obj unsafe.Pointer) {
-	// 0: (, const QObject * obj), (obj)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12isScriptableEPK7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, obj)
+	// 0: (, obj const QObject *), (obj)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12isScriptableEPK7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), obj)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,8 +160,8 @@ func (this *QMetaProperty) IsScriptable(obj unsafe.Pointer) {
 // index:0
 // bool isStored(const class QObject *)
 func (this *QMetaProperty) IsStored(obj unsafe.Pointer) {
-	// 0: (, const QObject * obj), (obj)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8isStoredEPK7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, obj)
+	// 0: (, obj const QObject *), (obj)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8isStoredEPK7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), obj)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -161,8 +169,8 @@ func (this *QMetaProperty) IsStored(obj unsafe.Pointer) {
 // index:0
 // bool isEditable(const class QObject *)
 func (this *QMetaProperty) IsEditable(obj unsafe.Pointer) {
-	// 0: (, const QObject * obj), (obj)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isEditableEPK7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, obj)
+	// 0: (, obj const QObject *), (obj)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isEditableEPK7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), obj)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,8 +178,8 @@ func (this *QMetaProperty) IsEditable(obj unsafe.Pointer) {
 // index:0
 // bool isUser(const class QObject *)
 func (this *QMetaProperty) IsUser(obj unsafe.Pointer) {
-	// 0: (, const QObject * obj), (obj)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty6isUserEPK7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, obj)
+	// 0: (, obj const QObject *), (obj)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty6isUserEPK7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), obj)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,7 +188,7 @@ func (this *QMetaProperty) IsUser(obj unsafe.Pointer) {
 // bool isConstant()
 func (this *QMetaProperty) IsConstant() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isConstantEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isConstantEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -189,7 +197,7 @@ func (this *QMetaProperty) IsConstant() {
 // bool isFinal()
 func (this *QMetaProperty) IsFinal() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty7isFinalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty7isFinalEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -198,7 +206,7 @@ func (this *QMetaProperty) IsFinal() {
 // bool isFlagType()
 func (this *QMetaProperty) IsFlagType() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isFlagTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isFlagTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -207,7 +215,7 @@ func (this *QMetaProperty) IsFlagType() {
 // bool isEnumType()
 func (this *QMetaProperty) IsEnumType() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isEnumTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isEnumTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,7 +224,7 @@ func (this *QMetaProperty) IsEnumType() {
 // QMetaEnum enumerator()
 func (this *QMetaProperty) Enumerator() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10enumeratorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10enumeratorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,7 +233,7 @@ func (this *QMetaProperty) Enumerator() {
 // bool hasNotifySignal()
 func (this *QMetaProperty) HasNotifySignal() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty15hasNotifySignalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty15hasNotifySignalEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -234,7 +242,7 @@ func (this *QMetaProperty) HasNotifySignal() {
 // QMetaMethod notifySignal()
 func (this *QMetaProperty) NotifySignal() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12notifySignalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12notifySignalEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -243,7 +251,7 @@ func (this *QMetaProperty) NotifySignal() {
 // int notifySignalIndex()
 func (this *QMetaProperty) NotifySignalIndex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty17notifySignalIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty17notifySignalIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -252,7 +260,7 @@ func (this *QMetaProperty) NotifySignalIndex() {
 // int revision()
 func (this *QMetaProperty) Revision() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8revisionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8revisionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -260,8 +268,8 @@ func (this *QMetaProperty) Revision() {
 // index:0
 // QVariant read(const class QObject *)
 func (this *QMetaProperty) Read(obj unsafe.Pointer) {
-	// 0: (, const QObject * obj), (obj)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty4readEPK7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, obj)
+	// 0: (, obj const QObject *), (obj)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty4readEPK7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), obj)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -269,8 +277,8 @@ func (this *QMetaProperty) Read(obj unsafe.Pointer) {
 // index:0
 // bool write(class QObject *, const class QVariant &)
 func (this *QMetaProperty) Write(obj unsafe.Pointer, value unsafe.Pointer) {
-	// 0: (, QObject * obj, const QVariant & value), (obj, value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty5writeEP7QObjectRK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, obj, value)
+	// 0: (, obj QObject *, value const QVariant &), (obj, value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty5writeEP7QObjectRK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), obj, value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -278,8 +286,8 @@ func (this *QMetaProperty) Write(obj unsafe.Pointer, value unsafe.Pointer) {
 // index:0
 // bool reset(class QObject *)
 func (this *QMetaProperty) Reset(obj unsafe.Pointer) {
-	// 0: (, QObject * obj), (obj)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty5resetEP7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, obj)
+	// 0: (, obj QObject *), (obj)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty5resetEP7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), obj)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -287,8 +295,8 @@ func (this *QMetaProperty) Reset(obj unsafe.Pointer) {
 // index:0
 // QVariant readOnGadget(const void *)
 func (this *QMetaProperty) ReadOnGadget(gadget unsafe.Pointer) {
-	// 0: (, const void * gadget), (gadget)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12readOnGadgetEPKv", ffiqt.FFI_TYPE_VOID, this.cthis, gadget)
+	// 0: (, gadget const void *), (gadget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12readOnGadgetEPKv", ffiqt.FFI_TYPE_VOID, this.GetCthis(), gadget)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -296,8 +304,8 @@ func (this *QMetaProperty) ReadOnGadget(gadget unsafe.Pointer) {
 // index:0
 // bool writeOnGadget(void *, const class QVariant &)
 func (this *QMetaProperty) WriteOnGadget(gadget unsafe.Pointer, value unsafe.Pointer) {
-	// 0: (, void * gadget, const QVariant & value), (gadget, value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty13writeOnGadgetEPvRK8QVariant", ffiqt.FFI_TYPE_VOID, this.cthis, gadget, value)
+	// 0: (, gadget void *, value const QVariant &), (gadget, value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty13writeOnGadgetEPvRK8QVariant", ffiqt.FFI_TYPE_VOID, this.GetCthis(), gadget, value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -305,8 +313,8 @@ func (this *QMetaProperty) WriteOnGadget(gadget unsafe.Pointer, value unsafe.Poi
 // index:0
 // bool resetOnGadget(void *)
 func (this *QMetaProperty) ResetOnGadget(gadget unsafe.Pointer) {
-	// 0: (, void * gadget), (gadget)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty13resetOnGadgetEPv", ffiqt.FFI_TYPE_VOID, this.cthis, gadget)
+	// 0: (, gadget void *), (gadget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty13resetOnGadgetEPv", ffiqt.FFI_TYPE_VOID, this.GetCthis(), gadget)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -315,7 +323,7 @@ func (this *QMetaProperty) ResetOnGadget(gadget unsafe.Pointer) {
 // bool hasStdCppSet()
 func (this *QMetaProperty) HasStdCppSet() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12hasStdCppSetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12hasStdCppSetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -325,7 +333,7 @@ func (this *QMetaProperty) HasStdCppSet() {
 // bool isValid()
 func (this *QMetaProperty) IsValid() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -335,7 +343,7 @@ func (this *QMetaProperty) IsValid() {
 // const QMetaObject * enclosingMetaObject()
 func (this *QMetaProperty) EnclosingMetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty19enclosingMetaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty19enclosingMetaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QPlatformSurfaceEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QPlatformSurfaceEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:451
@@ -59,7 +63,12 @@ func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", ffiqt.FFI_TYPE_VOID, cthis, &surfaceEventType)
 	gopp.ErrPrint(err, rv)
-	return &QPlatformSurfaceEvent{cthis}
+	gothis := NewQPlatformSurfaceEventFromPointer(cthis)
+	return gothis
+}
+func NewQPlatformSurfaceEventFromPointer(cthis unsafe.Pointer) *QPlatformSurfaceEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QPlatformSurfaceEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:452
@@ -77,7 +86,7 @@ func DeleteQPlatformSurfaceEvent(*QPlatformSurfaceEvent) {
 // QPlatformSurfaceEvent::SurfaceEventType surfaceEventType()
 func (this *QPlatformSurfaceEvent) SurfaceEventType() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextObject struct {
-	cthis unsafe.Pointer
+	*qtcore.QObject
+}
+
+func (this *QTextObject) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:62
@@ -58,7 +62,51 @@ type QTextObject struct {
 // const QMetaObject * metaObject()
 func (this *QTextObject) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qtextobject.h:65
+// index:0
+// void QTextObject(class QTextDocument *)
+func NewQTextObject(doc unsafe.Pointer) *QTextObject {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, doc)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextObjectFromPointer(cthis)
+	return gothis
+}
+func NewQTextObjectFromPointer(cthis unsafe.Pointer) *QTextObject {
+	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
+	return &QTextObject{bcthis0}
+}
+
+// /usr/include/qt/QtGui/qtextobject.h:81
+// index:1
+// void QTextObject(class QTextObjectPrivate &, class QTextDocument *)
+func NewQTextObject_1(p unsafe.Pointer, doc unsafe.Pointer) *QTextObject {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectC2ER18QTextObjectPrivateP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, p, doc)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextObjectFromPointer(cthis)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qtextobject.h:66
+// index:0
+// virtual
+// void ~QTextObject()
+func DeleteQTextObject(*QTextObject) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectD2Ev", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qtextobject.h:68
+// index:0
+// void setFormat(const class QTextFormat &)
+func (this *QTextObject) SetFormat(format unsafe.Pointer) {
+	// 0: (, format const QTextFormat &), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObject9setFormatERK11QTextFormat", ffiqt.FFI_TYPE_VOID, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -67,7 +115,7 @@ func (this *QTextObject) MetaObject() {
 // QTextFormat format()
 func (this *QTextObject) Format() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject6formatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject6formatEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -76,7 +124,7 @@ func (this *QTextObject) Format() {
 // int formatIndex()
 func (this *QTextObject) FormatIndex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject11formatIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject11formatIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -85,7 +133,7 @@ func (this *QTextObject) FormatIndex() {
 // QTextDocument * document()
 func (this *QTextObject) Document() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject8documentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject8documentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -94,7 +142,7 @@ func (this *QTextObject) Document() {
 // int objectIndex()
 func (this *QTextObject) ObjectIndex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject11objectIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject11objectIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -103,7 +151,7 @@ func (this *QTextObject) ObjectIndex() {
 // QTextDocumentPrivate * docHandle()
 func (this *QTextObject) DocHandle() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject9docHandleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject9docHandleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

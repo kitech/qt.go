@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QCloseEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QCloseEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:477
@@ -59,7 +63,12 @@ func NewQCloseEvent() *QCloseEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QCloseEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QCloseEvent{cthis}
+	gothis := NewQCloseEventFromPointer(cthis)
+	return gothis
+}
+func NewQCloseEventFromPointer(cthis unsafe.Pointer) *QCloseEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QCloseEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:478

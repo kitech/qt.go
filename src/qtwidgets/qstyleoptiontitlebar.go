@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionTitleBar struct {
-	cthis unsafe.Pointer
+	*QStyleOptionComplex
+}
+
+func (this *QStyleOptionTitleBar) GetCthis() unsafe.Pointer {
+	return this.QStyleOptionComplex.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:619
@@ -63,7 +67,23 @@ func NewQStyleOptionTitleBar() *QStyleOptionTitleBar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionTitleBar{cthis}
+	gothis := NewQStyleOptionTitleBarFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionTitleBarFromPointer(cthis unsafe.Pointer) *QStyleOptionTitleBar {
+	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
+	return &QStyleOptionTitleBar{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:623
+// index:1
+// void QStyleOptionTitleBar(int)
+func NewQStyleOptionTitleBar_1(version int) *QStyleOptionTitleBar {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionTitleBarFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

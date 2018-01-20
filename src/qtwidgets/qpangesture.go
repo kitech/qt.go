@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 11
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QPanGesture struct {
-	cthis unsafe.Pointer
+	*QGesture
+}
+
+func (this *QPanGesture) GetCthis() unsafe.Pointer {
+	return this.QGesture.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:106
@@ -62,7 +66,7 @@ type QPanGesture struct {
 // const QMetaObject * metaObject()
 func (this *QPanGesture) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQPanGesture(parent unsafe.Pointer) *QPanGesture {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QPanGesture{cthis}
+	gothis := NewQPanGestureFromPointer(cthis)
+	return gothis
+}
+func NewQPanGestureFromPointer(cthis unsafe.Pointer) *QPanGesture {
+	bcthis0 := NewQGestureFromPointer(cthis)
+	return &QPanGesture{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:118
@@ -90,7 +99,7 @@ func DeleteQPanGesture(*QPanGesture) {
 // QPointF lastOffset()
 func (this *QPanGesture) LastOffset() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture10lastOffsetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture10lastOffsetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +108,7 @@ func (this *QPanGesture) LastOffset() {
 // QPointF offset()
 func (this *QPanGesture) Offset() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture6offsetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture6offsetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +117,7 @@ func (this *QPanGesture) Offset() {
 // QPointF delta()
 func (this *QPanGesture) Delta() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture5deltaEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture5deltaEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +126,7 @@ func (this *QPanGesture) Delta() {
 // qreal acceleration()
 func (this *QPanGesture) Acceleration() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture12accelerationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture12accelerationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,8 +134,8 @@ func (this *QPanGesture) Acceleration() {
 // index:0
 // void setLastOffset(const class QPointF &)
 func (this *QPanGesture) SetLastOffset(value unsafe.Pointer) {
-	// 0: (, const QPointF & value), (value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGesture13setLastOffsetERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, value)
+	// 0: (, value const QPointF &), (value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGesture13setLastOffsetERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,8 +143,8 @@ func (this *QPanGesture) SetLastOffset(value unsafe.Pointer) {
 // index:0
 // void setOffset(const class QPointF &)
 func (this *QPanGesture) SetOffset(value unsafe.Pointer) {
-	// 0: (, const QPointF & value), (value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGesture9setOffsetERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, value)
+	// 0: (, value const QPointF &), (value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGesture9setOffsetERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,8 +152,8 @@ func (this *QPanGesture) SetOffset(value unsafe.Pointer) {
 // index:0
 // void setAcceleration(qreal)
 func (this *QPanGesture) SetAcceleration(value float64) {
-	// 0: (, qreal value), (&value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGesture15setAccelerationEd", ffiqt.FFI_TYPE_VOID, this.cthis, &value)
+	// 0: (, value qreal), (&value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGesture15setAccelerationEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &value)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QJsonValuePtr struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QJsonValuePtr) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:226
@@ -56,7 +60,11 @@ func NewQJsonValuePtr(val unsafe.Pointer) *QJsonValuePtr {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValuePtrC2ERK10QJsonValue", ffiqt.FFI_TYPE_VOID, cthis, val)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValuePtr{cthis}
+	gothis := NewQJsonValuePtrFromPointer(cthis)
+	return gothis
+}
+func NewQJsonValuePtrFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
+	return &QJsonValuePtr{&qtrt.CObject{cthis}}
 }
 
 //  body block end

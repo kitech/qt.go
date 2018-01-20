@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QDirModel struct {
-	cthis unsafe.Pointer
+	*qtcore.QAbstractItemModel
+}
+
+func (this *QDirModel) GetCthis() unsafe.Pointer {
+	return this.QAbstractItemModel.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qdirmodel.h:56
@@ -62,18 +66,45 @@ type QDirModel struct {
 // const QMetaObject * metaObject()
 func (this *QDirModel) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:70
+// /usr/include/qt/QtWidgets/qdirmodel.h:68
 // index:0
+// void QDirModel(const class QStringList &, class QDir::Filters, class QDir::SortFlags, class QObject *)
+func NewQDirModel(nameFilters unsafe.Pointer, filters int, sort int, parent unsafe.Pointer) *QDirModel {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModelC2ERK11QStringList6QFlagsIN4QDir6FilterEES3_INS4_8SortFlagEEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, nameFilters, &filters, &sort, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDirModelFromPointer(cthis)
+	return gothis
+}
+func NewQDirModelFromPointer(cthis unsafe.Pointer) *QDirModel {
+	bcthis0 := qtcore.NewQAbstractItemModelFromPointer(cthis)
+	return &QDirModel{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qdirmodel.h:70
+// index:1
 // void QDirModel(class QObject *)
-func NewQDirModel(parent unsafe.Pointer) *QDirModel {
+func NewQDirModel_1(parent unsafe.Pointer) *QDirModel {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModelC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QDirModel{cthis}
+	gothis := NewQDirModelFromPointer(cthis)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qdirmodel.h:136
+// index:2
+// void QDirModel(class QDirModelPrivate &, class QObject *)
+func NewQDirModel_2(arg0 unsafe.Pointer, parent unsafe.Pointer) *QDirModel {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModelC2ER16QDirModelPrivateP7QObject", ffiqt.FFI_TYPE_VOID, cthis, arg0, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDirModelFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qdirmodel.h:71
@@ -90,8 +121,8 @@ func DeleteQDirModel(*QDirModel) {
 // virtual
 // QModelIndex index(int, int, const class QModelIndex &)
 func (this *QDirModel) Index(row int, column int, parent unsafe.Pointer) {
-	// 0: (, int row, int column, const QModelIndex & parent), (&row, &column, parent)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column, parent)
+	// 0: (, row int, column int, parent const QModelIndex &), (&row, &column, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column, parent)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,8 +130,8 @@ func (this *QDirModel) Index(row int, column int, parent unsafe.Pointer) {
 // index:1
 // QModelIndex index(const class QString &, int)
 func (this *QDirModel) Index_1(path unsafe.Pointer, column int) {
-	// 1: (, const QString & path, int column), (path, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5indexERK7QStringi", ffiqt.FFI_TYPE_VOID, this.cthis, path, &column)
+	// 1: (, path const QString &, column int), (path, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5indexERK7QStringi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), path, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,8 +140,8 @@ func (this *QDirModel) Index_1(path unsafe.Pointer, column int) {
 // virtual
 // QModelIndex parent(const class QModelIndex &)
 func (this *QDirModel) Parent(child unsafe.Pointer) {
-	// 0: (, const QModelIndex & child), (child)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel6parentERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, child)
+	// 0: (, child const QModelIndex &), (child)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel6parentERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), child)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -119,8 +150,8 @@ func (this *QDirModel) Parent(child unsafe.Pointer) {
 // virtual
 // int rowCount(const class QModelIndex &)
 func (this *QDirModel) RowCount(parent unsafe.Pointer) {
-	// 0: (, const QModelIndex & parent), (parent)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	// 0: (, parent const QModelIndex &), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), parent)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -129,8 +160,8 @@ func (this *QDirModel) RowCount(parent unsafe.Pointer) {
 // virtual
 // int columnCount(const class QModelIndex &)
 func (this *QDirModel) ColumnCount(parent unsafe.Pointer) {
-	// 0: (, const QModelIndex & parent), (parent)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel11columnCountERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	// 0: (, parent const QModelIndex &), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel11columnCountERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), parent)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -139,8 +170,8 @@ func (this *QDirModel) ColumnCount(parent unsafe.Pointer) {
 // virtual
 // QVariant data(const class QModelIndex &, int)
 func (this *QDirModel) Data(index unsafe.Pointer, role int) {
-	// 0: (, const QModelIndex & index, int role), (index, &role)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_VOID, this.cthis, index, &role)
+	// 0: (, index const QModelIndex &, role int), (index, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index, &role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,8 +180,8 @@ func (this *QDirModel) Data(index unsafe.Pointer, role int) {
 // virtual
 // bool setData(const class QModelIndex &, const class QVariant &, int)
 func (this *QDirModel) SetData(index unsafe.Pointer, value unsafe.Pointer, role int) {
-	// 0: (, const QModelIndex & index, const QVariant & value, int role), (index, value, &role)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti", ffiqt.FFI_TYPE_VOID, this.cthis, index, value, &role)
+	// 0: (, index const QModelIndex &, value const QVariant &, role int), (index, value, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index, value, &role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -159,8 +190,8 @@ func (this *QDirModel) SetData(index unsafe.Pointer, value unsafe.Pointer, role 
 // virtual
 // QVariant headerData(int, Qt::Orientation, int)
 func (this *QDirModel) HeaderData(section int, orientation int, role int) {
-	// 0: (, int section, Qt::Orientation orientation, int role), (&section, &orientation, &role)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel10headerDataEiN2Qt11OrientationEi", ffiqt.FFI_TYPE_VOID, this.cthis, &section, &orientation, &role)
+	// 0: (, section int, orientation Qt::Orientation, role int), (&section, &orientation, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel10headerDataEiN2Qt11OrientationEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &section, &orientation, &role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,8 +200,8 @@ func (this *QDirModel) HeaderData(section int, orientation int, role int) {
 // virtual
 // bool hasChildren(const class QModelIndex &)
 func (this *QDirModel) HasChildren(index unsafe.Pointer) {
-	// 0: (, const QModelIndex & index), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel11hasChildrenERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel11hasChildrenERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -179,8 +210,8 @@ func (this *QDirModel) HasChildren(index unsafe.Pointer) {
 // virtual
 // Qt::ItemFlags flags(const class QModelIndex &)
 func (this *QDirModel) Flags(index unsafe.Pointer) {
-	// 0: (, const QModelIndex & index), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -189,8 +220,8 @@ func (this *QDirModel) Flags(index unsafe.Pointer) {
 // virtual
 // void sort(int, Qt::SortOrder)
 func (this *QDirModel) Sort(column int, order int) {
-	// 0: (, int column, Qt::SortOrder order), (&column, &order)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel4sortEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_VOID, this.cthis, &column, &order)
+	// 0: (, column int, order Qt::SortOrder), (&column, &order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel4sortEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &column, &order)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -200,7 +231,7 @@ func (this *QDirModel) Sort(column int, order int) {
 // QStringList mimeTypes()
 func (this *QDirModel) MimeTypes() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel9mimeTypesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel9mimeTypesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -209,8 +240,8 @@ func (this *QDirModel) MimeTypes() {
 // virtual
 // bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
 func (this *QDirModel) DropMimeData(data unsafe.Pointer, action int, row int, column int, parent unsafe.Pointer) {
-	// 0: (, const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent), (data, &action, &row, &column, parent)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, data, &action, &row, &column, parent)
+	// 0: (, data const QMimeData *, action Qt::DropAction, row int, column int, parent const QModelIndex &), (data, &action, &row, &column, parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data, &action, &row, &column, parent)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -220,7 +251,7 @@ func (this *QDirModel) DropMimeData(data unsafe.Pointer, action int, row int, co
 // Qt::DropActions supportedDropActions()
 func (this *QDirModel) SupportedDropActions() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel20supportedDropActionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel20supportedDropActionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -228,8 +259,8 @@ func (this *QDirModel) SupportedDropActions() {
 // index:0
 // void setIconProvider(class QFileIconProvider *)
 func (this *QDirModel) SetIconProvider(provider unsafe.Pointer) {
-	// 0: (, QFileIconProvider * provider), (provider)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel15setIconProviderEP17QFileIconProvider", ffiqt.FFI_TYPE_VOID, this.cthis, provider)
+	// 0: (, provider QFileIconProvider *), (provider)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel15setIconProviderEP17QFileIconProvider", ffiqt.FFI_TYPE_VOID, this.GetCthis(), provider)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -238,7 +269,7 @@ func (this *QDirModel) SetIconProvider(provider unsafe.Pointer) {
 // QFileIconProvider * iconProvider()
 func (this *QDirModel) IconProvider() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel12iconProviderEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel12iconProviderEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -246,8 +277,8 @@ func (this *QDirModel) IconProvider() {
 // index:0
 // void setNameFilters(const class QStringList &)
 func (this *QDirModel) SetNameFilters(filters unsafe.Pointer) {
-	// 0: (, const QStringList & filters), (filters)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel14setNameFiltersERK11QStringList", ffiqt.FFI_TYPE_VOID, this.cthis, filters)
+	// 0: (, filters const QStringList &), (filters)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel14setNameFiltersERK11QStringList", ffiqt.FFI_TYPE_VOID, this.GetCthis(), filters)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -256,7 +287,16 @@ func (this *QDirModel) SetNameFilters(filters unsafe.Pointer) {
 // QStringList nameFilters()
 func (this *QDirModel) NameFilters() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel11nameFiltersEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel11nameFiltersEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdirmodel.h:103
+// index:0
+// void setFilter(class QDir::Filters)
+func (this *QDirModel) SetFilter(filters int) {
+	// 0: (, QFlags<QDir::Filter> filters), (&filters)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel9setFilterE6QFlagsIN4QDir6FilterEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &filters)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -265,7 +305,16 @@ func (this *QDirModel) NameFilters() {
 // QDir::Filters filter()
 func (this *QDirModel) Filter() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel6filterEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel6filterEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdirmodel.h:106
+// index:0
+// void setSorting(class QDir::SortFlags)
+func (this *QDirModel) SetSorting(sort int) {
+	// 0: (, QFlags<QDir::SortFlag> sort), (&sort)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel10setSortingE6QFlagsIN4QDir8SortFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &sort)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -274,7 +323,7 @@ func (this *QDirModel) Filter() {
 // QDir::SortFlags sorting()
 func (this *QDirModel) Sorting() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel7sortingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel7sortingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -282,8 +331,8 @@ func (this *QDirModel) Sorting() {
 // index:0
 // void setResolveSymlinks(_Bool)
 func (this *QDirModel) SetResolveSymlinks(enable bool) {
-	// 0: (, bool enable), (&enable)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel18setResolveSymlinksEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	// 0: (, enable bool), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel18setResolveSymlinksEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -292,7 +341,7 @@ func (this *QDirModel) SetResolveSymlinks(enable bool) {
 // bool resolveSymlinks()
 func (this *QDirModel) ResolveSymlinks() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel15resolveSymlinksEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel15resolveSymlinksEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -300,8 +349,8 @@ func (this *QDirModel) ResolveSymlinks() {
 // index:0
 // void setReadOnly(_Bool)
 func (this *QDirModel) SetReadOnly(enable bool) {
-	// 0: (, bool enable), (&enable)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel11setReadOnlyEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	// 0: (, enable bool), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel11setReadOnlyEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -310,7 +359,7 @@ func (this *QDirModel) SetReadOnly(enable bool) {
 // bool isReadOnly()
 func (this *QDirModel) IsReadOnly() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel10isReadOnlyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel10isReadOnlyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -318,8 +367,8 @@ func (this *QDirModel) IsReadOnly() {
 // index:0
 // void setLazyChildCount(_Bool)
 func (this *QDirModel) SetLazyChildCount(enable bool) {
-	// 0: (, bool enable), (&enable)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel17setLazyChildCountEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	// 0: (, enable bool), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel17setLazyChildCountEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -328,7 +377,7 @@ func (this *QDirModel) SetLazyChildCount(enable bool) {
 // bool lazyChildCount()
 func (this *QDirModel) LazyChildCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel14lazyChildCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel14lazyChildCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -336,8 +385,8 @@ func (this *QDirModel) LazyChildCount() {
 // index:0
 // bool isDir(const class QModelIndex &)
 func (this *QDirModel) IsDir(index unsafe.Pointer) {
-	// 0: (, const QModelIndex & index), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5isDirERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5isDirERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -345,8 +394,8 @@ func (this *QDirModel) IsDir(index unsafe.Pointer) {
 // index:0
 // QModelIndex mkdir(const class QModelIndex &, const class QString &)
 func (this *QDirModel) Mkdir(parent unsafe.Pointer, name unsafe.Pointer) {
-	// 0: (, const QModelIndex & parent, const QString & name), (parent, name)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel5mkdirERK11QModelIndexRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, parent, name)
+	// 0: (, parent const QModelIndex &, name const QString &), (parent, name)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel5mkdirERK11QModelIndexRK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), parent, name)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -354,8 +403,8 @@ func (this *QDirModel) Mkdir(parent unsafe.Pointer, name unsafe.Pointer) {
 // index:0
 // bool rmdir(const class QModelIndex &)
 func (this *QDirModel) Rmdir(index unsafe.Pointer) {
-	// 0: (, const QModelIndex & index), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel5rmdirERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel5rmdirERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -363,8 +412,8 @@ func (this *QDirModel) Rmdir(index unsafe.Pointer) {
 // index:0
 // bool remove(const class QModelIndex &)
 func (this *QDirModel) Remove(index unsafe.Pointer) {
-	// 0: (, const QModelIndex & index), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel6removeERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel6removeERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -372,8 +421,8 @@ func (this *QDirModel) Remove(index unsafe.Pointer) {
 // index:0
 // QString filePath(const class QModelIndex &)
 func (this *QDirModel) FilePath(index unsafe.Pointer) {
-	// 0: (, const QModelIndex & index), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8filePathERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8filePathERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -381,8 +430,8 @@ func (this *QDirModel) FilePath(index unsafe.Pointer) {
 // index:0
 // QString fileName(const class QModelIndex &)
 func (this *QDirModel) FileName(index unsafe.Pointer) {
-	// 0: (, const QModelIndex & index), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileNameERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileNameERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -390,8 +439,8 @@ func (this *QDirModel) FileName(index unsafe.Pointer) {
 // index:0
 // QIcon fileIcon(const class QModelIndex &)
 func (this *QDirModel) FileIcon(index unsafe.Pointer) {
-	// 0: (, const QModelIndex & index), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileIconERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileIconERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -399,8 +448,8 @@ func (this *QDirModel) FileIcon(index unsafe.Pointer) {
 // index:0
 // QFileInfo fileInfo(const class QModelIndex &)
 func (this *QDirModel) FileInfo(index unsafe.Pointer) {
-	// 0: (, const QModelIndex & index), (index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileInfoERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, index)
+	// 0: (, index const QModelIndex &), (index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileInfoERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -408,8 +457,8 @@ func (this *QDirModel) FileInfo(index unsafe.Pointer) {
 // index:0
 // void refresh(const class QModelIndex &)
 func (this *QDirModel) Refresh(parent unsafe.Pointer) {
-	// 0: (, const QModelIndex & parent), (parent)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel7refreshERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.cthis, parent)
+	// 0: (, parent const QModelIndex &), (parent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel7refreshERK11QModelIndex", ffiqt.FFI_TYPE_VOID, this.GetCthis(), parent)
 	gopp.ErrPrint(err, rv)
 }
 

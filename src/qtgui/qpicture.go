@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 16
+// extern C begin: 18
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QPicture struct {
-	cthis unsafe.Pointer
+	*QPaintDevice
+}
+
+func (this *QPicture) GetCthis() unsafe.Pointer {
+	return this.QPaintDevice.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qpicture.h:59
@@ -59,7 +63,23 @@ func NewQPicture(formatVersion int) *QPicture {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPictureC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &formatVersion)
 	gopp.ErrPrint(err, rv)
-	return &QPicture{cthis}
+	gothis := NewQPictureFromPointer(cthis)
+	return gothis
+}
+func NewQPictureFromPointer(cthis unsafe.Pointer) *QPicture {
+	bcthis0 := NewQPaintDeviceFromPointer(cthis)
+	return &QPicture{bcthis0}
+}
+
+// /usr/include/qt/QtGui/qpicture.h:104
+// index:1
+// void QPicture(class QPicturePrivate &)
+func NewQPicture_1(data unsafe.Pointer) *QPicture {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPictureC2ER15QPicturePrivate", ffiqt.FFI_TYPE_VOID, cthis, data)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQPictureFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qpicture.h:61
@@ -76,7 +96,7 @@ func DeleteQPicture(*QPicture) {
 // bool isNull()
 func (this *QPicture) IsNull() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture6isNullEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -86,7 +106,7 @@ func (this *QPicture) IsNull() {
 // int devType()
 func (this *QPicture) DevType() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture7devTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture7devTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -95,7 +115,7 @@ func (this *QPicture) DevType() {
 // uint size()
 func (this *QPicture) Size() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -104,7 +124,7 @@ func (this *QPicture) Size() {
 // const char * data()
 func (this *QPicture) Data() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture4dataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture4dataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -113,8 +133,8 @@ func (this *QPicture) Data() {
 // virtual
 // void setData(const char *, uint)
 func (this *QPicture) SetData(data unsafe.Pointer, size uint) {
-	// 0: (, const char * data, uint size), (data, &size)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture7setDataEPKcj", ffiqt.FFI_TYPE_VOID, this.cthis, data, &size)
+	// 0: (, data const char *, size uint), (data, &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture7setDataEPKcj", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data, &size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -122,8 +142,8 @@ func (this *QPicture) SetData(data unsafe.Pointer, size uint) {
 // index:0
 // bool play(class QPainter *)
 func (this *QPicture) Play(p unsafe.Pointer) {
-	// 0: (, QPainter * p), (p)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4playEP8QPainter", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	// 0: (, p QPainter *), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4playEP8QPainter", ffiqt.FFI_TYPE_VOID, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -131,8 +151,8 @@ func (this *QPicture) Play(p unsafe.Pointer) {
 // index:0
 // bool load(class QIODevice *, const char *)
 func (this *QPicture) Load(dev unsafe.Pointer, format unsafe.Pointer) {
-	// 0: (, QIODevice * dev, const char * format), (dev, format)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4loadEP9QIODevicePKc", ffiqt.FFI_TYPE_VOID, this.cthis, dev, format)
+	// 0: (, dev QIODevice *, format const char *), (dev, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4loadEP9QIODevicePKc", ffiqt.FFI_TYPE_VOID, this.GetCthis(), dev, format)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,8 +160,8 @@ func (this *QPicture) Load(dev unsafe.Pointer, format unsafe.Pointer) {
 // index:1
 // bool load(const class QString &, const char *)
 func (this *QPicture) Load_1(fileName unsafe.Pointer, format unsafe.Pointer) {
-	// 1: (, const QString & fileName, const char * format), (fileName, format)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4loadERK7QStringPKc", ffiqt.FFI_TYPE_VOID, this.cthis, fileName, format)
+	// 1: (, fileName const QString &, format const char *), (fileName, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4loadERK7QStringPKc", ffiqt.FFI_TYPE_VOID, this.GetCthis(), fileName, format)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,8 +169,8 @@ func (this *QPicture) Load_1(fileName unsafe.Pointer, format unsafe.Pointer) {
 // index:0
 // bool save(class QIODevice *, const char *)
 func (this *QPicture) Save(dev unsafe.Pointer, format unsafe.Pointer) {
-	// 0: (, QIODevice * dev, const char * format), (dev, format)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4saveEP9QIODevicePKc", ffiqt.FFI_TYPE_VOID, this.cthis, dev, format)
+	// 0: (, dev QIODevice *, format const char *), (dev, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4saveEP9QIODevicePKc", ffiqt.FFI_TYPE_VOID, this.GetCthis(), dev, format)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -158,8 +178,8 @@ func (this *QPicture) Save(dev unsafe.Pointer, format unsafe.Pointer) {
 // index:1
 // bool save(const class QString &, const char *)
 func (this *QPicture) Save_1(fileName unsafe.Pointer, format unsafe.Pointer) {
-	// 1: (, const QString & fileName, const char * format), (fileName, format)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4saveERK7QStringPKc", ffiqt.FFI_TYPE_VOID, this.cthis, fileName, format)
+	// 1: (, fileName const QString &, format const char *), (fileName, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4saveERK7QStringPKc", ffiqt.FFI_TYPE_VOID, this.GetCthis(), fileName, format)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -168,7 +188,7 @@ func (this *QPicture) Save_1(fileName unsafe.Pointer, format unsafe.Pointer) {
 // QRect boundingRect()
 func (this *QPicture) BoundingRect() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture12boundingRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture12boundingRectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -176,8 +196,8 @@ func (this *QPicture) BoundingRect() {
 // index:0
 // void setBoundingRect(const class QRect &)
 func (this *QPicture) SetBoundingRect(r unsafe.Pointer) {
-	// 0: (, const QRect & r), (r)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture15setBoundingRectERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	// 0: (, r const QRect &), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture15setBoundingRectERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), r)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -186,8 +206,8 @@ func (this *QPicture) SetBoundingRect(r unsafe.Pointer) {
 // inline
 // void swap(class QPicture &)
 func (this *QPicture) Swap(other unsafe.Pointer) {
-	// 0: (, QPicture & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QPicture &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -196,7 +216,7 @@ func (this *QPicture) Swap(other unsafe.Pointer) {
 // void detach()
 func (this *QPicture) Detach() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture6detachEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture6detachEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -205,7 +225,7 @@ func (this *QPicture) Detach() {
 // bool isDetached()
 func (this *QPicture) IsDetached() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture10isDetachedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture10isDetachedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -214,12 +234,12 @@ func (this *QPicture) IsDetached() {
 // static
 // const char * pictureFormat(const class QString &)
 func (this *QPicture) PictureFormat(fileName unsafe.Pointer) {
-	// 0: (const QString & fileName), (fileName)
+	// 0: (fileName const QString &), (fileName)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture13pictureFormatERK7QString", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QPicture_PictureFormat(fileName unsafe.Pointer) {
-	// 0: (const QString & fileName), (fileName)
+	// 0: (fileName const QString &), (fileName)
 	var nilthis *QPicture
 	nilthis.PictureFormat(fileName)
 }
@@ -290,7 +310,17 @@ func QPicture_OutputFormatList() {
 // QPaintEngine * paintEngine()
 func (this *QPicture) PaintEngine() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture11paintEngineEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture11paintEngineEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpicture.h:106
+// index:0
+// virtual
+// int metric(enum QPaintDevice::PaintDeviceMetric)
+func (this *QPicture) Metric(m int) {
+	// 0: (, m QPaintDevice::PaintDeviceMetric), (&m)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &m)
 	gopp.ErrPrint(err, rv)
 }
 

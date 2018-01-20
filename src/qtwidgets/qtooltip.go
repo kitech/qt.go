@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 19
+// extern C begin: 31
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QToolTip struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QToolTip) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtWidgets/qtooltip.h:56
@@ -61,12 +65,12 @@ type QToolTip struct {
 // static
 // void showText(const class QPoint &, const class QString &, class QWidget *)
 func (this *QToolTip) ShowText(pos unsafe.Pointer, text unsafe.Pointer, w unsafe.Pointer) {
-	// 0: (const QPoint & pos, const QString & text, QWidget * w), (pos, text, w)
+	// 0: (pos const QPoint &, text const QString &, w QWidget *), (pos, text, w)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QToolTip_ShowText(pos unsafe.Pointer, text unsafe.Pointer, w unsafe.Pointer) {
-	// 0: (const QPoint & pos, const QString & text, QWidget * w), (pos, text, w)
+	// 0: (pos const QPoint &, text const QString &, w QWidget *), (pos, text, w)
 	var nilthis *QToolTip
 	nilthis.ShowText(pos, text, w)
 }
@@ -76,12 +80,12 @@ func QToolTip_ShowText(pos unsafe.Pointer, text unsafe.Pointer, w unsafe.Pointer
 // static
 // void showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &)
 func (this *QToolTip) ShowText_1(pos unsafe.Pointer, text unsafe.Pointer, w unsafe.Pointer, rect unsafe.Pointer) {
-	// 1: (const QPoint & pos, const QString & text, QWidget * w, const QRect & rect), (pos, text, w, rect)
+	// 1: (pos const QPoint &, text const QString &, w QWidget *, rect const QRect &), (pos, text, w, rect)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QToolTip_ShowText_1(pos unsafe.Pointer, text unsafe.Pointer, w unsafe.Pointer, rect unsafe.Pointer) {
-	// 1: (const QPoint & pos, const QString & text, QWidget * w, const QRect & rect), (pos, text, w, rect)
+	// 1: (pos const QPoint &, text const QString &, w QWidget *, rect const QRect &), (pos, text, w, rect)
 	var nilthis *QToolTip
 	nilthis.ShowText_1(pos, text, w, rect)
 }
@@ -91,12 +95,12 @@ func QToolTip_ShowText_1(pos unsafe.Pointer, text unsafe.Pointer, w unsafe.Point
 // static
 // void showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &, int)
 func (this *QToolTip) ShowText_2(pos unsafe.Pointer, text unsafe.Pointer, w unsafe.Pointer, rect unsafe.Pointer, msecShowTime int) {
-	// 2: (const QPoint & pos, const QString & text, QWidget * w, const QRect & rect, int msecShowTime), (pos, text, w, rect, msecShowTime)
+	// 2: (pos const QPoint &, text const QString &, w QWidget *, rect const QRect &, msecShowTime int), (pos, text, w, rect, msecShowTime)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QToolTip_ShowText_2(pos unsafe.Pointer, text unsafe.Pointer, w unsafe.Pointer, rect unsafe.Pointer, msecShowTime int) {
-	// 2: (const QPoint & pos, const QString & text, QWidget * w, const QRect & rect, int msecShowTime), (pos, text, w, rect, msecShowTime)
+	// 2: (pos const QPoint &, text const QString &, w QWidget *, rect const QRect &, msecShowTime int), (pos, text, w, rect, msecShowTime)
 	var nilthis *QToolTip
 	nilthis.ShowText_2(pos, text, w, rect, msecShowTime)
 }

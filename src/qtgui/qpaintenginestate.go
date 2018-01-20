@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 39
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QPaintEngineState struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QPaintEngineState) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:268
@@ -58,7 +62,7 @@ type QPaintEngineState struct {
 // QPaintEngine::DirtyFlags state()
 func (this *QPaintEngineState) State() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState5stateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState5stateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -67,7 +71,7 @@ func (this *QPaintEngineState) State() {
 // QPen pen()
 func (this *QPaintEngineState) Pen() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState3penEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState3penEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -76,7 +80,7 @@ func (this *QPaintEngineState) Pen() {
 // QBrush brush()
 func (this *QPaintEngineState) Brush() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState5brushEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState5brushEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -85,7 +89,7 @@ func (this *QPaintEngineState) Brush() {
 // QPointF brushOrigin()
 func (this *QPaintEngineState) BrushOrigin() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState11brushOriginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState11brushOriginEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -94,7 +98,7 @@ func (this *QPaintEngineState) BrushOrigin() {
 // QBrush backgroundBrush()
 func (this *QPaintEngineState) BackgroundBrush() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState15backgroundBrushEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState15backgroundBrushEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -103,7 +107,7 @@ func (this *QPaintEngineState) BackgroundBrush() {
 // Qt::BGMode backgroundMode()
 func (this *QPaintEngineState) BackgroundMode() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState14backgroundModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState14backgroundModeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,7 +116,7 @@ func (this *QPaintEngineState) BackgroundMode() {
 // QFont font()
 func (this *QPaintEngineState) Font() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState4fontEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState4fontEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -121,7 +125,7 @@ func (this *QPaintEngineState) Font() {
 // QMatrix matrix()
 func (this *QPaintEngineState) Matrix() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState6matrixEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState6matrixEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +134,7 @@ func (this *QPaintEngineState) Matrix() {
 // QTransform transform()
 func (this *QPaintEngineState) Transform() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState9transformEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState9transformEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -139,7 +143,7 @@ func (this *QPaintEngineState) Transform() {
 // Qt::ClipOperation clipOperation()
 func (this *QPaintEngineState) ClipOperation() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState13clipOperationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState13clipOperationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -148,7 +152,7 @@ func (this *QPaintEngineState) ClipOperation() {
 // QRegion clipRegion()
 func (this *QPaintEngineState) ClipRegion() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState10clipRegionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState10clipRegionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -157,7 +161,7 @@ func (this *QPaintEngineState) ClipRegion() {
 // QPainterPath clipPath()
 func (this *QPaintEngineState) ClipPath() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState8clipPathEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState8clipPathEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -166,7 +170,7 @@ func (this *QPaintEngineState) ClipPath() {
 // bool isClipEnabled()
 func (this *QPaintEngineState) IsClipEnabled() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState13isClipEnabledEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState13isClipEnabledEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -175,7 +179,7 @@ func (this *QPaintEngineState) IsClipEnabled() {
 // QPainter::RenderHints renderHints()
 func (this *QPaintEngineState) RenderHints() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState11renderHintsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState11renderHintsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -184,7 +188,7 @@ func (this *QPaintEngineState) RenderHints() {
 // QPainter::CompositionMode compositionMode()
 func (this *QPaintEngineState) CompositionMode() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState15compositionModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState15compositionModeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,7 +197,7 @@ func (this *QPaintEngineState) CompositionMode() {
 // qreal opacity()
 func (this *QPaintEngineState) Opacity() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState7opacityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState7opacityEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -202,7 +206,7 @@ func (this *QPaintEngineState) Opacity() {
 // QPainter * painter()
 func (this *QPaintEngineState) Painter() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState7painterEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState7painterEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +215,7 @@ func (this *QPaintEngineState) Painter() {
 // bool brushNeedsResolving()
 func (this *QPaintEngineState) BrushNeedsResolving() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState19brushNeedsResolvingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState19brushNeedsResolvingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -220,7 +224,7 @@ func (this *QPaintEngineState) BrushNeedsResolving() {
 // bool penNeedsResolving()
 func (this *QPaintEngineState) PenNeedsResolving() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState17penNeedsResolvingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState17penNeedsResolvingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

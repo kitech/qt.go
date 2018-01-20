@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 7
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QEasingCurve struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QEasingCurve) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qeasingcurve.h:77
@@ -55,7 +59,11 @@ func NewQEasingCurve(type_ int) *QEasingCurve {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurveC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QEasingCurve{cthis}
+	gothis := NewQEasingCurveFromPointer(cthis)
+	return gothis
+}
+func NewQEasingCurveFromPointer(cthis unsafe.Pointer) *QEasingCurve {
+	return &QEasingCurve{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qeasingcurve.h:79
@@ -71,8 +79,8 @@ func DeleteQEasingCurve(*QEasingCurve) {
 // inline
 // void swap(class QEasingCurve &)
 func (this *QEasingCurve) Swap(other unsafe.Pointer) {
-	// 0: (, QEasingCurve & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QEasingCurve &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -81,7 +89,7 @@ func (this *QEasingCurve) Swap(other unsafe.Pointer) {
 // qreal amplitude()
 func (this *QEasingCurve) Amplitude() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve9amplitudeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve9amplitudeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -89,8 +97,8 @@ func (this *QEasingCurve) Amplitude() {
 // index:0
 // void setAmplitude(qreal)
 func (this *QEasingCurve) SetAmplitude(amplitude float64) {
-	// 0: (, qreal amplitude), (&amplitude)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve12setAmplitudeEd", ffiqt.FFI_TYPE_VOID, this.cthis, &amplitude)
+	// 0: (, amplitude qreal), (&amplitude)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve12setAmplitudeEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &amplitude)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +107,7 @@ func (this *QEasingCurve) SetAmplitude(amplitude float64) {
 // qreal period()
 func (this *QEasingCurve) Period() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve6periodEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve6periodEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,8 +115,8 @@ func (this *QEasingCurve) Period() {
 // index:0
 // void setPeriod(qreal)
 func (this *QEasingCurve) SetPeriod(period float64) {
-	// 0: (, qreal period), (&period)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve9setPeriodEd", ffiqt.FFI_TYPE_VOID, this.cthis, &period)
+	// 0: (, period qreal), (&period)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve9setPeriodEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &period)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +125,7 @@ func (this *QEasingCurve) SetPeriod(period float64) {
 // qreal overshoot()
 func (this *QEasingCurve) Overshoot() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve9overshootEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve9overshootEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,8 +133,8 @@ func (this *QEasingCurve) Overshoot() {
 // index:0
 // void setOvershoot(qreal)
 func (this *QEasingCurve) SetOvershoot(overshoot float64) {
-	// 0: (, qreal overshoot), (&overshoot)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve12setOvershootEd", ffiqt.FFI_TYPE_VOID, this.cthis, &overshoot)
+	// 0: (, overshoot qreal), (&overshoot)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve12setOvershootEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &overshoot)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,8 +142,8 @@ func (this *QEasingCurve) SetOvershoot(overshoot float64) {
 // index:0
 // void addCubicBezierSegment(const class QPointF &, const class QPointF &, const class QPointF &)
 func (this *QEasingCurve) AddCubicBezierSegment(c1 unsafe.Pointer, c2 unsafe.Pointer, endPoint unsafe.Pointer) {
-	// 0: (, const QPointF & c1, const QPointF & c2, const QPointF & endPoint), (c1, c2, endPoint)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_", ffiqt.FFI_TYPE_VOID, this.cthis, c1, c2, endPoint)
+	// 0: (, c1 const QPointF &, c2 const QPointF &, endPoint const QPointF &), (c1, c2, endPoint)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), c1, c2, endPoint)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,8 +151,8 @@ func (this *QEasingCurve) AddCubicBezierSegment(c1 unsafe.Pointer, c2 unsafe.Poi
 // index:0
 // void addTCBSegment(const class QPointF &, qreal, qreal, qreal)
 func (this *QEasingCurve) AddTCBSegment(nextPoint unsafe.Pointer, t float64, c float64, b float64) {
-	// 0: (, const QPointF & nextPoint, qreal t, qreal c, qreal b), (nextPoint, &t, &c, &b)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve13addTCBSegmentERK7QPointFddd", ffiqt.FFI_TYPE_VOID, this.cthis, nextPoint, &t, &c, &b)
+	// 0: (, nextPoint const QPointF &, t qreal, c qreal, b qreal), (nextPoint, &t, &c, &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve13addTCBSegmentERK7QPointFddd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), nextPoint, &t, &c, &b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,7 +161,7 @@ func (this *QEasingCurve) AddTCBSegment(nextPoint unsafe.Pointer, t float64, c f
 // QVector<QPointF> toCubicSpline()
 func (this *QEasingCurve) ToCubicSpline() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve13toCubicSplineEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve13toCubicSplineEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +170,7 @@ func (this *QEasingCurve) ToCubicSpline() {
 // QEasingCurve::Type type()
 func (this *QEasingCurve) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,8 +178,8 @@ func (this *QEasingCurve) Type() {
 // index:0
 // void setType(enum QEasingCurve::Type)
 func (this *QEasingCurve) SetType(type_ int) {
-	// 0: (, QEasingCurve::Type type), (&type_)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve7setTypeENS_4TypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &type_)
+	// 0: (, type QEasingCurve::Type), (&type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve7setTypeENS_4TypeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &type_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,7 +188,7 @@ func (this *QEasingCurve) SetType(type_ int) {
 // QEasingCurve::EasingFunction customType()
 func (this *QEasingCurve) CustomType() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve10customTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve10customTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -188,8 +196,8 @@ func (this *QEasingCurve) CustomType() {
 // index:0
 // qreal valueForProgress(qreal)
 func (this *QEasingCurve) ValueForProgress(progress float64) {
-	// 0: (, qreal progress), (&progress)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve16valueForProgressEd", ffiqt.FFI_TYPE_VOID, this.cthis, &progress)
+	// 0: (, progress qreal), (&progress)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve16valueForProgressEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &progress)
 	gopp.ErrPrint(err, rv)
 }
 

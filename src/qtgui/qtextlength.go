@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 16
+// extern C begin: 19
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextLength struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTextLength) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:89
@@ -60,7 +64,11 @@ func NewQTextLength() *QTextLength {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QTextLength{cthis}
+	gothis := NewQTextLengthFromPointer(cthis)
+	return gothis
+}
+func NewQTextLengthFromPointer(cthis unsafe.Pointer) *QTextLength {
+	return &QTextLength{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:91
@@ -71,7 +79,8 @@ func NewQTextLength_1(type_ int, value float64) *QTextLength {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthC2ENS_4TypeEd", ffiqt.FFI_TYPE_VOID, cthis, &type_, &value)
 	gopp.ErrPrint(err, rv)
-	return &QTextLength{cthis}
+	gothis := NewQTextLengthFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:93
@@ -80,7 +89,7 @@ func NewQTextLength_1(type_ int, value float64) *QTextLength {
 // QTextLength::Type type()
 func (this *QTextLength) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -89,8 +98,8 @@ func (this *QTextLength) Type() {
 // inline
 // qreal value(qreal)
 func (this *QTextLength) Value(maximumLength float64) {
-	// 0: (, qreal maximumLength), (&maximumLength)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength5valueEd", ffiqt.FFI_TYPE_VOID, this.cthis, &maximumLength)
+	// 0: (, maximumLength qreal), (&maximumLength)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength5valueEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &maximumLength)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,7 +109,7 @@ func (this *QTextLength) Value(maximumLength float64) {
 // qreal rawValue()
 func (this *QTextLength) RawValue() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength8rawValueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength8rawValueEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextFragment struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTextFragment) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:306
@@ -60,7 +64,11 @@ func NewQTextFragment(priv unsafe.Pointer, f int, fe int) *QTextFragment {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextFragmentC2EPK20QTextDocumentPrivateii", ffiqt.FFI_TYPE_VOID, cthis, priv, &f, &fe)
 	gopp.ErrPrint(err, rv)
-	return &QTextFragment{cthis}
+	gothis := NewQTextFragmentFromPointer(cthis)
+	return gothis
+}
+func NewQTextFragmentFromPointer(cthis unsafe.Pointer) *QTextFragment {
+	return &QTextFragment{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:307
@@ -71,7 +79,8 @@ func NewQTextFragment_1() *QTextFragment {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextFragmentC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QTextFragment{cthis}
+	gothis := NewQTextFragmentFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:311
@@ -80,7 +89,7 @@ func NewQTextFragment_1() *QTextFragment {
 // bool isValid()
 func (this *QTextFragment) IsValid() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -89,7 +98,7 @@ func (this *QTextFragment) IsValid() {
 // int position()
 func (this *QTextFragment) Position() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment8positionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment8positionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -98,7 +107,7 @@ func (this *QTextFragment) Position() {
 // int length()
 func (this *QTextFragment) Length() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment6lengthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment6lengthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,8 +115,8 @@ func (this *QTextFragment) Length() {
 // index:0
 // bool contains(int)
 func (this *QTextFragment) Contains(position int) {
-	// 0: (, int position), (&position)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment8containsEi", ffiqt.FFI_TYPE_VOID, this.cthis, &position)
+	// 0: (, position int), (&position)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment8containsEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &position)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +125,7 @@ func (this *QTextFragment) Contains(position int) {
 // QTextCharFormat charFormat()
 func (this *QTextFragment) CharFormat() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment10charFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment10charFormatEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,7 +134,7 @@ func (this *QTextFragment) CharFormat() {
 // int charFormatIndex()
 func (this *QTextFragment) CharFormatIndex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment15charFormatIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment15charFormatIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,7 +143,7 @@ func (this *QTextFragment) CharFormatIndex() {
 // QString text()
 func (this *QTextFragment) Text() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment4textEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment4textEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,8 +151,8 @@ func (this *QTextFragment) Text() {
 // index:0
 // QList<QGlyphRun> glyphRuns(int, int)
 func (this *QTextFragment) GlyphRuns(from int, length int) {
-	// 0: (, int from, int length), (&from, &length)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment9glyphRunsEii", ffiqt.FFI_TYPE_VOID, this.cthis, &from, &length)
+	// 0: (, from int, length int), (&from, &length)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment9glyphRunsEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &from, &length)
 	gopp.ErrPrint(err, rv)
 }
 

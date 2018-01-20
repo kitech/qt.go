@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionTabBarBase struct {
-	cthis unsafe.Pointer
+	*QStyleOption
+}
+
+func (this *QStyleOptionTabBarBase) GetCthis() unsafe.Pointer {
+	return this.QStyleOption.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:195
@@ -63,7 +67,23 @@ func NewQStyleOptionTabBarBase() *QStyleOptionTabBarBase {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionTabBarBase{cthis}
+	gothis := NewQStyleOptionTabBarBaseFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionTabBarBaseFromPointer(cthis unsafe.Pointer) *QStyleOptionTabBarBase {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionTabBarBase{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:199
+// index:1
+// void QStyleOptionTabBarBase(int)
+func NewQStyleOptionTabBarBase_1(version int) *QStyleOptionTabBarBase {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionTabBarBaseFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

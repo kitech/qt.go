@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QReadWriteLock struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QReadWriteLock) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:57
@@ -55,7 +59,11 @@ func NewQReadWriteLock(recursionMode int) *QReadWriteLock {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLockC2ENS_13RecursionModeE", ffiqt.FFI_TYPE_VOID, cthis, &recursionMode)
 	gopp.ErrPrint(err, rv)
-	return &QReadWriteLock{cthis}
+	gothis := NewQReadWriteLockFromPointer(cthis)
+	return gothis
+}
+func NewQReadWriteLockFromPointer(cthis unsafe.Pointer) *QReadWriteLock {
+	return &QReadWriteLock{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:58
@@ -71,7 +79,7 @@ func DeleteQReadWriteLock(*QReadWriteLock) {
 // void lockForRead()
 func (this *QReadWriteLock) LockForRead() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock11lockForReadEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock11lockForReadEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -80,7 +88,7 @@ func (this *QReadWriteLock) LockForRead() {
 // bool tryLockForRead()
 func (this *QReadWriteLock) TryLockForRead() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,8 +96,8 @@ func (this *QReadWriteLock) TryLockForRead() {
 // index:1
 // bool tryLockForRead(int)
 func (this *QReadWriteLock) TryLockForRead_1(timeout int) {
-	// 1: (, int timeout), (&timeout)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEi", ffiqt.FFI_TYPE_VOID, this.cthis, &timeout)
+	// 1: (, timeout int), (&timeout)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &timeout)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -98,7 +106,7 @@ func (this *QReadWriteLock) TryLockForRead_1(timeout int) {
 // void lockForWrite()
 func (this *QReadWriteLock) LockForWrite() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock12lockForWriteEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock12lockForWriteEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +115,7 @@ func (this *QReadWriteLock) LockForWrite() {
 // bool tryLockForWrite()
 func (this *QReadWriteLock) TryLockForWrite() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -115,8 +123,8 @@ func (this *QReadWriteLock) TryLockForWrite() {
 // index:1
 // bool tryLockForWrite(int)
 func (this *QReadWriteLock) TryLockForWrite_1(timeout int) {
-	// 1: (, int timeout), (&timeout)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEi", ffiqt.FFI_TYPE_VOID, this.cthis, &timeout)
+	// 1: (, timeout int), (&timeout)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &timeout)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,7 +133,7 @@ func (this *QReadWriteLock) TryLockForWrite_1(timeout int) {
 // void unlock()
 func (this *QReadWriteLock) Unlock() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock6unlockEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock6unlockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

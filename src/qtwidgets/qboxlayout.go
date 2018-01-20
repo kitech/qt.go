@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 39
+// extern C begin: 45
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QBoxLayout struct {
-	cthis unsafe.Pointer
+	*QLayout
+}
+
+func (this *QBoxLayout) GetCthis() unsafe.Pointer {
+	return this.QLayout.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:58
@@ -62,7 +66,7 @@ type QBoxLayout struct {
 // const QMetaObject * metaObject()
 func (this *QBoxLayout) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQBoxLayout(arg0 int, parent unsafe.Pointer) *QBoxLayout {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayoutC2ENS_9DirectionEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, &arg0, parent)
 	gopp.ErrPrint(err, rv)
-	return &QBoxLayout{cthis}
+	gothis := NewQBoxLayoutFromPointer(cthis)
+	return gothis
+}
+func NewQBoxLayoutFromPointer(cthis unsafe.Pointer) *QBoxLayout {
+	bcthis0 := NewQLayoutFromPointer(cthis)
+	return &QBoxLayout{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:66
@@ -90,7 +99,7 @@ func DeleteQBoxLayout(*QBoxLayout) {
 // QBoxLayout::Direction direction()
 func (this *QBoxLayout) Direction() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout9directionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout9directionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +108,7 @@ func (this *QBoxLayout) Direction() {
 // void setDirection(enum QBoxLayout::Direction)
 func (this *QBoxLayout) SetDirection(arg0 int) {
 	// 0: (, QBoxLayout::Direction arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout12setDirectionENS_9DirectionE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout12setDirectionENS_9DirectionE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,8 +116,8 @@ func (this *QBoxLayout) SetDirection(arg0 int) {
 // index:0
 // void addSpacing(int)
 func (this *QBoxLayout) AddSpacing(size int) {
-	// 0: (, int size), (&size)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10addSpacingEi", ffiqt.FFI_TYPE_VOID, this.cthis, &size)
+	// 0: (, size int), (&size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10addSpacingEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,8 +125,8 @@ func (this *QBoxLayout) AddSpacing(size int) {
 // index:0
 // void addStretch(int)
 func (this *QBoxLayout) AddStretch(stretch int) {
-	// 0: (, int stretch), (&stretch)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10addStretchEi", ffiqt.FFI_TYPE_VOID, this.cthis, &stretch)
+	// 0: (, stretch int), (&stretch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10addStretchEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &stretch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,8 +134,17 @@ func (this *QBoxLayout) AddStretch(stretch int) {
 // index:0
 // void addSpacerItem(class QSpacerItem *)
 func (this *QBoxLayout) AddSpacerItem(spacerItem unsafe.Pointer) {
-	// 0: (, QSpacerItem * spacerItem), (spacerItem)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout13addSpacerItemEP11QSpacerItem", ffiqt.FFI_TYPE_VOID, this.cthis, spacerItem)
+	// 0: (, spacerItem QSpacerItem *), (spacerItem)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout13addSpacerItemEP11QSpacerItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), spacerItem)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qboxlayout.h:74
+// index:0
+// void addWidget(class QWidget *, int, Qt::Alignment)
+func (this *QBoxLayout) AddWidget(arg0 unsafe.Pointer, stretch int, alignment int) {
+	// 0: (, QWidget * arg0, stretch int, QFlags<Qt::AlignmentFlag> alignment), (arg0, &stretch, &alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, &stretch, &alignment)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,8 +152,8 @@ func (this *QBoxLayout) AddSpacerItem(spacerItem unsafe.Pointer) {
 // index:0
 // void addLayout(class QLayout *, int)
 func (this *QBoxLayout) AddLayout(layout unsafe.Pointer, stretch int) {
-	// 0: (, QLayout * layout, int stretch), (layout, &stretch)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout9addLayoutEP7QLayouti", ffiqt.FFI_TYPE_VOID, this.cthis, layout, &stretch)
+	// 0: (, layout QLayout *, stretch int), (layout, &stretch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout9addLayoutEP7QLayouti", ffiqt.FFI_TYPE_VOID, this.GetCthis(), layout, &stretch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,7 +162,7 @@ func (this *QBoxLayout) AddLayout(layout unsafe.Pointer, stretch int) {
 // void addStrut(int)
 func (this *QBoxLayout) AddStrut(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout8addStrutEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout8addStrutEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -154,7 +172,7 @@ func (this *QBoxLayout) AddStrut(arg0 int) {
 // void addItem(class QLayoutItem *)
 func (this *QBoxLayout) AddItem(arg0 unsafe.Pointer) {
 	// 0: (, QLayoutItem * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,8 +180,8 @@ func (this *QBoxLayout) AddItem(arg0 unsafe.Pointer) {
 // index:0
 // void insertSpacing(int, int)
 func (this *QBoxLayout) InsertSpacing(index int, size int) {
-	// 0: (, int index, int size), (&index, &size)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout13insertSpacingEii", ffiqt.FFI_TYPE_VOID, this.cthis, &index, &size)
+	// 0: (, index int, size int), (&index, &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout13insertSpacingEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index, &size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -171,8 +189,8 @@ func (this *QBoxLayout) InsertSpacing(index int, size int) {
 // index:0
 // void insertStretch(int, int)
 func (this *QBoxLayout) InsertStretch(index int, stretch int) {
-	// 0: (, int index, int stretch), (&index, &stretch)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout13insertStretchEii", ffiqt.FFI_TYPE_VOID, this.cthis, &index, &stretch)
+	// 0: (, index int, stretch int), (&index, &stretch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout13insertStretchEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index, &stretch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,8 +198,17 @@ func (this *QBoxLayout) InsertStretch(index int, stretch int) {
 // index:0
 // void insertSpacerItem(int, class QSpacerItem *)
 func (this *QBoxLayout) InsertSpacerItem(index int, spacerItem unsafe.Pointer) {
-	// 0: (, int index, QSpacerItem * spacerItem), (&index, spacerItem)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem", ffiqt.FFI_TYPE_VOID, this.cthis, &index, spacerItem)
+	// 0: (, index int, spacerItem QSpacerItem *), (&index, spacerItem)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index, spacerItem)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qboxlayout.h:82
+// index:0
+// void insertWidget(int, class QWidget *, int, Qt::Alignment)
+func (this *QBoxLayout) InsertWidget(index int, widget unsafe.Pointer, stretch int, alignment int) {
+	// 0: (, index int, widget QWidget *, stretch int, QFlags<Qt::AlignmentFlag> alignment), (&index, widget, &stretch, &alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout12insertWidgetEiP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index, widget, &stretch, &alignment)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -189,8 +216,8 @@ func (this *QBoxLayout) InsertSpacerItem(index int, spacerItem unsafe.Pointer) {
 // index:0
 // void insertLayout(int, class QLayout *, int)
 func (this *QBoxLayout) InsertLayout(index int, layout unsafe.Pointer, stretch int) {
-	// 0: (, int index, QLayout * layout, int stretch), (&index, layout, &stretch)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout12insertLayoutEiP7QLayouti", ffiqt.FFI_TYPE_VOID, this.cthis, &index, layout, &stretch)
+	// 0: (, index int, layout QLayout *, stretch int), (&index, layout, &stretch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout12insertLayoutEiP7QLayouti", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index, layout, &stretch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -198,8 +225,8 @@ func (this *QBoxLayout) InsertLayout(index int, layout unsafe.Pointer, stretch i
 // index:0
 // void insertItem(int, class QLayoutItem *)
 func (this *QBoxLayout) InsertItem(index int, arg1 unsafe.Pointer) {
-	// 0: (, int index, QLayoutItem * arg1), (&index, arg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10insertItemEiP11QLayoutItem", ffiqt.FFI_TYPE_VOID, this.cthis, &index, arg1)
+	// 0: (, index int, QLayoutItem * arg1), (&index, arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10insertItemEiP11QLayoutItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index, arg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -208,7 +235,7 @@ func (this *QBoxLayout) InsertItem(index int, arg1 unsafe.Pointer) {
 // int spacing()
 func (this *QBoxLayout) Spacing() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout7spacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout7spacingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,8 +243,8 @@ func (this *QBoxLayout) Spacing() {
 // index:0
 // void setSpacing(int)
 func (this *QBoxLayout) SetSpacing(spacing int) {
-	// 0: (, int spacing), (&spacing)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10setSpacingEi", ffiqt.FFI_TYPE_VOID, this.cthis, &spacing)
+	// 0: (, spacing int), (&spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10setSpacingEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,8 +252,8 @@ func (this *QBoxLayout) SetSpacing(spacing int) {
 // index:0
 // bool setStretchFactor(class QWidget *, int)
 func (this *QBoxLayout) SetStretchFactor(w unsafe.Pointer, stretch int) {
-	// 0: (, QWidget * w, int stretch), (w, &stretch)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16setStretchFactorEP7QWidgeti", ffiqt.FFI_TYPE_VOID, this.cthis, w, &stretch)
+	// 0: (, w QWidget *, stretch int), (w, &stretch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16setStretchFactorEP7QWidgeti", ffiqt.FFI_TYPE_VOID, this.GetCthis(), w, &stretch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -234,8 +261,8 @@ func (this *QBoxLayout) SetStretchFactor(w unsafe.Pointer, stretch int) {
 // index:1
 // bool setStretchFactor(class QLayout *, int)
 func (this *QBoxLayout) SetStretchFactor_1(l unsafe.Pointer, stretch int) {
-	// 1: (, QLayout * l, int stretch), (l, &stretch)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16setStretchFactorEP7QLayouti", ffiqt.FFI_TYPE_VOID, this.cthis, l, &stretch)
+	// 1: (, l QLayout *, stretch int), (l, &stretch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16setStretchFactorEP7QLayouti", ffiqt.FFI_TYPE_VOID, this.GetCthis(), l, &stretch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -243,8 +270,8 @@ func (this *QBoxLayout) SetStretchFactor_1(l unsafe.Pointer, stretch int) {
 // index:0
 // void setStretch(int, int)
 func (this *QBoxLayout) SetStretch(index int, stretch int) {
-	// 0: (, int index, int stretch), (&index, &stretch)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10setStretchEii", ffiqt.FFI_TYPE_VOID, this.cthis, &index, &stretch)
+	// 0: (, index int, stretch int), (&index, &stretch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10setStretchEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index, &stretch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -252,8 +279,8 @@ func (this *QBoxLayout) SetStretch(index int, stretch int) {
 // index:0
 // int stretch(int)
 func (this *QBoxLayout) Stretch(index int) {
-	// 0: (, int index), (&index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout7stretchEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	// 0: (, index int), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout7stretchEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -263,7 +290,7 @@ func (this *QBoxLayout) Stretch(index int) {
 // QSize sizeHint()
 func (this *QBoxLayout) SizeHint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -273,7 +300,7 @@ func (this *QBoxLayout) SizeHint() {
 // QSize minimumSize()
 func (this *QBoxLayout) MinimumSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout11minimumSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout11minimumSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -283,7 +310,7 @@ func (this *QBoxLayout) MinimumSize() {
 // QSize maximumSize()
 func (this *QBoxLayout) MaximumSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout11maximumSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout11maximumSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -293,7 +320,7 @@ func (this *QBoxLayout) MaximumSize() {
 // bool hasHeightForWidth()
 func (this *QBoxLayout) HasHeightForWidth() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout17hasHeightForWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout17hasHeightForWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -303,7 +330,7 @@ func (this *QBoxLayout) HasHeightForWidth() {
 // int heightForWidth(int)
 func (this *QBoxLayout) HeightForWidth(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout14heightForWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout14heightForWidthEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -313,7 +340,7 @@ func (this *QBoxLayout) HeightForWidth(arg0 int) {
 // int minimumHeightForWidth(int)
 func (this *QBoxLayout) MinimumHeightForWidth(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout21minimumHeightForWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout21minimumHeightForWidthEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -323,7 +350,7 @@ func (this *QBoxLayout) MinimumHeightForWidth(arg0 int) {
 // Qt::Orientations expandingDirections()
 func (this *QBoxLayout) ExpandingDirections() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout19expandingDirectionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout19expandingDirectionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -333,7 +360,7 @@ func (this *QBoxLayout) ExpandingDirections() {
 // void invalidate()
 func (this *QBoxLayout) Invalidate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10invalidateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10invalidateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -343,7 +370,7 @@ func (this *QBoxLayout) Invalidate() {
 // QLayoutItem * itemAt(int)
 func (this *QBoxLayout) ItemAt(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout6itemAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout6itemAtEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -353,7 +380,7 @@ func (this *QBoxLayout) ItemAt(arg0 int) {
 // QLayoutItem * takeAt(int)
 func (this *QBoxLayout) TakeAt(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout6takeAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout6takeAtEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -363,7 +390,7 @@ func (this *QBoxLayout) TakeAt(arg0 int) {
 // int count()
 func (this *QBoxLayout) Count() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout5countEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout5countEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -373,7 +400,7 @@ func (this *QBoxLayout) Count() {
 // void setGeometry(const class QRect &)
 func (this *QBoxLayout) SetGeometry(arg0 unsafe.Pointer) {
 	// 0: (, const QRect & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout11setGeometryERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout11setGeometryERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 16
+// extern C begin: 23
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOption struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QStyleOption) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:102
@@ -63,7 +67,11 @@ func NewQStyleOption(version int, type_ int) *QStyleOption {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOptionC2Eii", ffiqt.FFI_TYPE_VOID, cthis, &version, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOption{cthis}
+	gothis := NewQStyleOptionFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionFromPointer(cthis unsafe.Pointer) *QStyleOption {
+	return &QStyleOption{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:104
@@ -78,8 +86,8 @@ func DeleteQStyleOption(*QStyleOption) {
 // index:0
 // void init(const class QWidget *)
 func (this *QStyleOption) Init(w unsafe.Pointer) {
-	// 0: (, const QWidget * w), (w)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption4initEPK7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, w)
+	// 0: (, w const QWidget *), (w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption4initEPK7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,8 +96,8 @@ func (this *QStyleOption) Init(w unsafe.Pointer) {
 // inline
 // void initFrom(const class QWidget *)
 func (this *QStyleOption) InitFrom(w unsafe.Pointer) {
-	// 0: (, const QWidget * w), (w)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption8initFromEPK7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, w)
+	// 0: (, w const QWidget *), (w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption8initFromEPK7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 }
 

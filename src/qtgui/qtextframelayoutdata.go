@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 8
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextFrameLayoutData struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTextFrameLayoutData) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:114

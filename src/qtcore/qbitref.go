@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QBitRef struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QBitRef) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 //  body block end

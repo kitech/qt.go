@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QTextStream struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTextStream) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:93
@@ -55,7 +59,11 @@ func NewQTextStream() *QTextStream {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QTextStream{cthis}
+	gothis := NewQTextStreamFromPointer(cthis)
+	return gothis
+}
+func NewQTextStreamFromPointer(cthis unsafe.Pointer) *QTextStream {
+	return &QTextStream{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:94
@@ -65,7 +73,52 @@ func NewQTextStream_1(device unsafe.Pointer) *QTextStream {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, device)
 	gopp.ErrPrint(err, rv)
-	return &QTextStream{cthis}
+	gothis := NewQTextStreamFromPointer(cthis)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qtextstream.h:95
+// index:2
+// void QTextStream(FILE *, class QIODevice::OpenMode)
+func NewQTextStream_2(fileHandle unsafe.Pointer, openMode int) *QTextStream {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2EP8_IO_FILE6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_VOID, cthis, fileHandle, &openMode)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextStreamFromPointer(cthis)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qtextstream.h:96
+// index:3
+// void QTextStream(class QString *, class QIODevice::OpenMode)
+func NewQTextStream_3(string unsafe.Pointer, openMode int) *QTextStream {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2EP7QString6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_VOID, cthis, string, &openMode)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextStreamFromPointer(cthis)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qtextstream.h:97
+// index:4
+// void QTextStream(class QByteArray *, class QIODevice::OpenMode)
+func NewQTextStream_4(array unsafe.Pointer, openMode int) *QTextStream {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2EP10QByteArray6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_VOID, cthis, array, &openMode)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextStreamFromPointer(cthis)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qtextstream.h:98
+// index:5
+// void QTextStream(const class QByteArray &, class QIODevice::OpenMode)
+func NewQTextStream_5(array unsafe.Pointer, openMode int) *QTextStream {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2ERK10QByteArray6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_VOID, cthis, array, &openMode)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextStreamFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:99
@@ -81,8 +134,8 @@ func DeleteQTextStream(*QTextStream) {
 // index:0
 // void setCodec(class QTextCodec *)
 func (this *QTextStream) SetCodec(codec unsafe.Pointer) {
-	// 0: (, QTextCodec * codec), (codec)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream8setCodecEP10QTextCodec", ffiqt.FFI_TYPE_VOID, this.cthis, codec)
+	// 0: (, codec QTextCodec *), (codec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream8setCodecEP10QTextCodec", ffiqt.FFI_TYPE_VOID, this.GetCthis(), codec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -90,8 +143,8 @@ func (this *QTextStream) SetCodec(codec unsafe.Pointer) {
 // index:1
 // void setCodec(const char *)
 func (this *QTextStream) SetCodec_1(codecName unsafe.Pointer) {
-	// 1: (, const char * codecName), (codecName)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream8setCodecEPKc", ffiqt.FFI_TYPE_VOID, this.cthis, codecName)
+	// 1: (, codecName const char *), (codecName)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream8setCodecEPKc", ffiqt.FFI_TYPE_VOID, this.GetCthis(), codecName)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,7 +153,7 @@ func (this *QTextStream) SetCodec_1(codecName unsafe.Pointer) {
 // QTextCodec * codec()
 func (this *QTextStream) Codec() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream5codecEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream5codecEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,8 +161,8 @@ func (this *QTextStream) Codec() {
 // index:0
 // void setAutoDetectUnicode(_Bool)
 func (this *QTextStream) SetAutoDetectUnicode(enabled bool) {
-	// 0: (, bool enabled), (&enabled)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream20setAutoDetectUnicodeEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enabled)
+	// 0: (, enabled bool), (&enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream20setAutoDetectUnicodeEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &enabled)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -118,7 +171,7 @@ func (this *QTextStream) SetAutoDetectUnicode(enabled bool) {
 // bool autoDetectUnicode()
 func (this *QTextStream) AutoDetectUnicode() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream17autoDetectUnicodeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream17autoDetectUnicodeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,8 +179,8 @@ func (this *QTextStream) AutoDetectUnicode() {
 // index:0
 // void setGenerateByteOrderMark(_Bool)
 func (this *QTextStream) SetGenerateByteOrderMark(generate bool) {
-	// 0: (, bool generate), (&generate)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream24setGenerateByteOrderMarkEb", ffiqt.FFI_TYPE_VOID, this.cthis, &generate)
+	// 0: (, generate bool), (&generate)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream24setGenerateByteOrderMarkEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &generate)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -136,7 +189,7 @@ func (this *QTextStream) SetGenerateByteOrderMark(generate bool) {
 // bool generateByteOrderMark()
 func (this *QTextStream) GenerateByteOrderMark() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream21generateByteOrderMarkEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream21generateByteOrderMarkEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,8 +197,8 @@ func (this *QTextStream) GenerateByteOrderMark() {
 // index:0
 // void setLocale(const class QLocale &)
 func (this *QTextStream) SetLocale(locale unsafe.Pointer) {
-	// 0: (, const QLocale & locale), (locale)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setLocaleERK7QLocale", ffiqt.FFI_TYPE_VOID, this.cthis, locale)
+	// 0: (, locale const QLocale &), (locale)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setLocaleERK7QLocale", ffiqt.FFI_TYPE_VOID, this.GetCthis(), locale)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -154,7 +207,7 @@ func (this *QTextStream) SetLocale(locale unsafe.Pointer) {
 // QLocale locale()
 func (this *QTextStream) Locale() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream6localeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream6localeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,8 +215,8 @@ func (this *QTextStream) Locale() {
 // index:0
 // void setDevice(class QIODevice *)
 func (this *QTextStream) SetDevice(device unsafe.Pointer) {
-	// 0: (, QIODevice * device), (device)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_VOID, this.cthis, device)
+	// 0: (, device QIODevice *), (device)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_VOID, this.GetCthis(), device)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +225,16 @@ func (this *QTextStream) SetDevice(device unsafe.Pointer) {
 // QIODevice * device()
 func (this *QTextStream) Device() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream6deviceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream6deviceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qtextstream.h:117
+// index:0
+// void setString(class QString *, class QIODevice::OpenMode)
+func (this *QTextStream) SetString(string unsafe.Pointer, openMode int) {
+	// 0: (, string QString *, QFlags<QIODevice::OpenModeFlag> openMode), (string, &openMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setStringEP7QString6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), string, &openMode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -181,7 +243,7 @@ func (this *QTextStream) Device() {
 // QString * string()
 func (this *QTextStream) String() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream6stringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream6stringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -190,7 +252,7 @@ func (this *QTextStream) String() {
 // QTextStream::Status status()
 func (this *QTextStream) Status() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream6statusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream6statusEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -198,8 +260,8 @@ func (this *QTextStream) Status() {
 // index:0
 // void setStatus(enum QTextStream::Status)
 func (this *QTextStream) SetStatus(status int) {
-	// 0: (, QTextStream::Status status), (&status)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setStatusENS_6StatusE", ffiqt.FFI_TYPE_VOID, this.cthis, &status)
+	// 0: (, status QTextStream::Status), (&status)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setStatusENS_6StatusE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &status)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -208,7 +270,7 @@ func (this *QTextStream) SetStatus(status int) {
 // void resetStatus()
 func (this *QTextStream) ResetStatus() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream11resetStatusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream11resetStatusEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -217,7 +279,7 @@ func (this *QTextStream) ResetStatus() {
 // bool atEnd()
 func (this *QTextStream) AtEnd() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream5atEndEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream5atEndEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -226,7 +288,7 @@ func (this *QTextStream) AtEnd() {
 // void reset()
 func (this *QTextStream) Reset() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream5resetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream5resetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -235,7 +297,7 @@ func (this *QTextStream) Reset() {
 // void flush()
 func (this *QTextStream) Flush() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream5flushEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream5flushEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -243,8 +305,8 @@ func (this *QTextStream) Flush() {
 // index:0
 // bool seek(qint64)
 func (this *QTextStream) Seek(pos int64) {
-	// 0: (, qint64 pos), (&pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream4seekEx", ffiqt.FFI_TYPE_VOID, this.cthis, &pos)
+	// 0: (, pos qint64), (&pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream4seekEx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &pos)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -253,7 +315,7 @@ func (this *QTextStream) Seek(pos int64) {
 // qint64 pos()
 func (this *QTextStream) Pos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream3posEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream3posEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -262,7 +324,7 @@ func (this *QTextStream) Pos() {
 // void skipWhiteSpace()
 func (this *QTextStream) SkipWhiteSpace() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream14skipWhiteSpaceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream14skipWhiteSpaceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -270,8 +332,8 @@ func (this *QTextStream) SkipWhiteSpace() {
 // index:0
 // QString readLine(qint64)
 func (this *QTextStream) ReadLine(maxlen int64) {
-	// 0: (, qint64 maxlen), (&maxlen)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream8readLineEx", ffiqt.FFI_TYPE_VOID, this.cthis, &maxlen)
+	// 0: (, maxlen qint64), (&maxlen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream8readLineEx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &maxlen)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -279,8 +341,8 @@ func (this *QTextStream) ReadLine(maxlen int64) {
 // index:0
 // bool readLineInto(class QString *, qint64)
 func (this *QTextStream) ReadLineInto(line unsafe.Pointer, maxlen int64) {
-	// 0: (, QString * line, qint64 maxlen), (line, &maxlen)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream12readLineIntoEP7QStringx", ffiqt.FFI_TYPE_VOID, this.cthis, line, &maxlen)
+	// 0: (, line QString *, maxlen qint64), (line, &maxlen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream12readLineIntoEP7QStringx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), line, &maxlen)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -289,7 +351,7 @@ func (this *QTextStream) ReadLineInto(line unsafe.Pointer, maxlen int64) {
 // QString readAll()
 func (this *QTextStream) ReadAll() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream7readAllEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream7readAllEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -297,8 +359,8 @@ func (this *QTextStream) ReadAll() {
 // index:0
 // QString read(qint64)
 func (this *QTextStream) Read(maxlen int64) {
-	// 0: (, qint64 maxlen), (&maxlen)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream4readEx", ffiqt.FFI_TYPE_VOID, this.cthis, &maxlen)
+	// 0: (, maxlen qint64), (&maxlen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream4readEx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &maxlen)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -306,8 +368,8 @@ func (this *QTextStream) Read(maxlen int64) {
 // index:0
 // void setFieldAlignment(enum QTextStream::FieldAlignment)
 func (this *QTextStream) SetFieldAlignment(alignment int) {
-	// 0: (, QTextStream::FieldAlignment alignment), (&alignment)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream17setFieldAlignmentENS_14FieldAlignmentE", ffiqt.FFI_TYPE_VOID, this.cthis, &alignment)
+	// 0: (, alignment QTextStream::FieldAlignment), (&alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream17setFieldAlignmentENS_14FieldAlignmentE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &alignment)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -316,7 +378,7 @@ func (this *QTextStream) SetFieldAlignment(alignment int) {
 // QTextStream::FieldAlignment fieldAlignment()
 func (this *QTextStream) FieldAlignment() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream14fieldAlignmentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream14fieldAlignmentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -324,8 +386,8 @@ func (this *QTextStream) FieldAlignment() {
 // index:0
 // void setPadChar(class QChar)
 func (this *QTextStream) SetPadChar(ch unsafe.Pointer) {
-	// 0: (, QChar ch), (ch)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream10setPadCharE5QChar", ffiqt.FFI_TYPE_VOID, this.cthis, ch)
+	// 0: (, ch QChar), (ch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream10setPadCharE5QChar", ffiqt.FFI_TYPE_VOID, this.GetCthis(), ch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -334,7 +396,7 @@ func (this *QTextStream) SetPadChar(ch unsafe.Pointer) {
 // QChar padChar()
 func (this *QTextStream) PadChar() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream7padCharEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream7padCharEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -342,8 +404,8 @@ func (this *QTextStream) PadChar() {
 // index:0
 // void setFieldWidth(int)
 func (this *QTextStream) SetFieldWidth(width int) {
-	// 0: (, int width), (&width)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream13setFieldWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &width)
+	// 0: (, width int), (&width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream13setFieldWidthEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -352,7 +414,16 @@ func (this *QTextStream) SetFieldWidth(width int) {
 // int fieldWidth()
 func (this *QTextStream) FieldWidth() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream10fieldWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream10fieldWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qtextstream.h:146
+// index:0
+// void setNumberFlags(QTextStream::NumberFlags)
+func (this *QTextStream) SetNumberFlags(flags int) {
+	// 0: (, QFlags<QTextStream::NumberFlag> flags), (flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream14setNumberFlagsE6QFlagsINS_10NumberFlagEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -361,7 +432,7 @@ func (this *QTextStream) FieldWidth() {
 // QTextStream::NumberFlags numberFlags()
 func (this *QTextStream) NumberFlags() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream11numberFlagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream11numberFlagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -369,8 +440,8 @@ func (this *QTextStream) NumberFlags() {
 // index:0
 // void setIntegerBase(int)
 func (this *QTextStream) SetIntegerBase(base int) {
-	// 0: (, int base), (&base)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream14setIntegerBaseEi", ffiqt.FFI_TYPE_VOID, this.cthis, &base)
+	// 0: (, base int), (&base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream14setIntegerBaseEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &base)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -379,7 +450,7 @@ func (this *QTextStream) SetIntegerBase(base int) {
 // int integerBase()
 func (this *QTextStream) IntegerBase() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream11integerBaseEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream11integerBaseEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -387,8 +458,8 @@ func (this *QTextStream) IntegerBase() {
 // index:0
 // void setRealNumberNotation(enum QTextStream::RealNumberNotation)
 func (this *QTextStream) SetRealNumberNotation(notation int) {
-	// 0: (, QTextStream::RealNumberNotation notation), (&notation)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream21setRealNumberNotationENS_18RealNumberNotationE", ffiqt.FFI_TYPE_VOID, this.cthis, &notation)
+	// 0: (, notation QTextStream::RealNumberNotation), (&notation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream21setRealNumberNotationENS_18RealNumberNotationE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &notation)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -397,7 +468,7 @@ func (this *QTextStream) SetRealNumberNotation(notation int) {
 // QTextStream::RealNumberNotation realNumberNotation()
 func (this *QTextStream) RealNumberNotation() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream18realNumberNotationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream18realNumberNotationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -405,8 +476,8 @@ func (this *QTextStream) RealNumberNotation() {
 // index:0
 // void setRealNumberPrecision(int)
 func (this *QTextStream) SetRealNumberPrecision(precision int) {
-	// 0: (, int precision), (&precision)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream22setRealNumberPrecisionEi", ffiqt.FFI_TYPE_VOID, this.cthis, &precision)
+	// 0: (, precision int), (&precision)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream22setRealNumberPrecisionEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &precision)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -415,7 +486,7 @@ func (this *QTextStream) SetRealNumberPrecision(precision int) {
 // int realNumberPrecision()
 func (this *QTextStream) RealNumberPrecision() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream19realNumberPrecisionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream19realNumberPrecisionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 5
+// extern C begin: 6
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QToolBarChangeEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QToolBarChangeEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:754
@@ -59,7 +63,12 @@ func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", ffiqt.FFI_TYPE_VOID, cthis, &t)
 	gopp.ErrPrint(err, rv)
-	return &QToolBarChangeEvent{cthis}
+	gothis := NewQToolBarChangeEventFromPointer(cthis)
+	return gothis
+}
+func NewQToolBarChangeEventFromPointer(cthis unsafe.Pointer) *QToolBarChangeEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QToolBarChangeEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:755
@@ -77,7 +86,7 @@ func DeleteQToolBarChangeEvent(*QToolBarChangeEvent) {
 // bool toggle()
 func (this *QToolBarChangeEvent) Toggle() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

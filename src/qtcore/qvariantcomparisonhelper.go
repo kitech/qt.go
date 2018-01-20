@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 100
+// extern C begin: 104
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QVariantComparisonHelper struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QVariantComparisonHelper) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:560
@@ -56,7 +60,11 @@ func NewQVariantComparisonHelper(var_ unsafe.Pointer) *QVariantComparisonHelper 
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QVariantComparisonHelperC2ERK8QVariant", ffiqt.FFI_TYPE_VOID, cthis, var_)
 	gopp.ErrPrint(err, rv)
-	return &QVariantComparisonHelper{cthis}
+	gothis := NewQVariantComparisonHelperFromPointer(cthis)
+	return gothis
+}
+func NewQVariantComparisonHelperFromPointer(cthis unsafe.Pointer) *QVariantComparisonHelper {
+	return &QVariantComparisonHelper{&qtrt.CObject{cthis}}
 }
 
 //  body block end

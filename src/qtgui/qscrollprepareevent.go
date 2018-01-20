@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 9
+// extern C begin: 10
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QScrollPrepareEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QScrollPrepareEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:990
@@ -59,7 +63,12 @@ func NewQScrollPrepareEvent(startPos unsafe.Pointer) *QScrollPrepareEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEventC2ERK7QPointF", ffiqt.FFI_TYPE_VOID, cthis, startPos)
 	gopp.ErrPrint(err, rv)
-	return &QScrollPrepareEvent{cthis}
+	gothis := NewQScrollPrepareEventFromPointer(cthis)
+	return gothis
+}
+func NewQScrollPrepareEventFromPointer(cthis unsafe.Pointer) *QScrollPrepareEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QScrollPrepareEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:991
@@ -76,7 +85,7 @@ func DeleteQScrollPrepareEvent(*QScrollPrepareEvent) {
 // QPointF startPos()
 func (this *QScrollPrepareEvent) StartPos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent8startPosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent8startPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -85,7 +94,7 @@ func (this *QScrollPrepareEvent) StartPos() {
 // QSizeF viewportSize()
 func (this *QScrollPrepareEvent) ViewportSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent12viewportSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent12viewportSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -94,7 +103,7 @@ func (this *QScrollPrepareEvent) ViewportSize() {
 // QRectF contentPosRange()
 func (this *QScrollPrepareEvent) ContentPosRange() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent15contentPosRangeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent15contentPosRangeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -103,7 +112,7 @@ func (this *QScrollPrepareEvent) ContentPosRange() {
 // QPointF contentPos()
 func (this *QScrollPrepareEvent) ContentPos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent10contentPosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent10contentPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -111,8 +120,8 @@ func (this *QScrollPrepareEvent) ContentPos() {
 // index:0
 // void setViewportSize(const class QSizeF &)
 func (this *QScrollPrepareEvent) SetViewportSize(size unsafe.Pointer) {
-	// 0: (, const QSizeF & size), (size)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF", ffiqt.FFI_TYPE_VOID, this.cthis, size)
+	// 0: (, size const QSizeF &), (size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -120,8 +129,8 @@ func (this *QScrollPrepareEvent) SetViewportSize(size unsafe.Pointer) {
 // index:0
 // void setContentPosRange(const class QRectF &)
 func (this *QScrollPrepareEvent) SetContentPosRange(rect unsafe.Pointer) {
-	// 0: (, const QRectF & rect), (rect)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, rect)
+	// 0: (, rect const QRectF &), (rect)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), rect)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -129,8 +138,8 @@ func (this *QScrollPrepareEvent) SetContentPosRange(rect unsafe.Pointer) {
 // index:0
 // void setContentPos(const class QPointF &)
 func (this *QScrollPrepareEvent) SetContentPos(pos unsafe.Pointer) {
-	// 0: (, const QPointF & pos), (pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEvent13setContentPosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, pos)
+	// 0: (, pos const QPointF &), (pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEvent13setContentPosERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 }
 

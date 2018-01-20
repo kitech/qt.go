@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QExposeEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QExposeEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:434
@@ -59,7 +63,12 @@ func NewQExposeEvent(rgn unsafe.Pointer) *QExposeEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QExposeEventC2ERK7QRegion", ffiqt.FFI_TYPE_VOID, cthis, rgn)
 	gopp.ErrPrint(err, rv)
-	return &QExposeEvent{cthis}
+	gothis := NewQExposeEventFromPointer(cthis)
+	return gothis
+}
+func NewQExposeEventFromPointer(cthis unsafe.Pointer) *QExposeEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QExposeEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:435
@@ -77,7 +86,7 @@ func DeleteQExposeEvent(*QExposeEvent) {
 // const QRegion & region()
 func (this *QExposeEvent) Region() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QExposeEvent6regionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QExposeEvent6regionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

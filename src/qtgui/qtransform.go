@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTransform struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTransform) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qtransform.h:69
@@ -60,7 +64,11 @@ func NewQTransform(arg0 int) *QTransform {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransformC2EN2Qt14InitializationE", ffiqt.FFI_TYPE_VOID, cthis, &arg0)
 	gopp.ErrPrint(err, rv)
-	return &QTransform{cthis}
+	gothis := NewQTransformFromPointer(cthis)
+	return gothis
+}
+func NewQTransformFromPointer(cthis unsafe.Pointer) *QTransform {
+	return &QTransform{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qtransform.h:70
@@ -70,7 +78,8 @@ func NewQTransform_1() *QTransform {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransformC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QTransform{cthis}
+	gothis := NewQTransformFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtransform.h:71
@@ -80,7 +89,8 @@ func NewQTransform_2(h11 float64, h12 float64, h13 float64, h21 float64, h22 flo
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransformC2Eddddddddd", ffiqt.FFI_TYPE_VOID, cthis, &h11, &h12, &h13, &h21, &h22, &h23, &h31, &h32, &h33)
 	gopp.ErrPrint(err, rv)
-	return &QTransform{cthis}
+	gothis := NewQTransformFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtransform.h:74
@@ -90,7 +100,8 @@ func NewQTransform_3(h11 float64, h12 float64, h21 float64, h22 float64, dx floa
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransformC2Edddddd", ffiqt.FFI_TYPE_VOID, cthis, &h11, &h12, &h21, &h22, &dx, &dy)
 	gopp.ErrPrint(err, rv)
-	return &QTransform{cthis}
+	gothis := NewQTransformFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtransform.h:76
@@ -100,7 +111,8 @@ func NewQTransform_4(mtx unsafe.Pointer) *QTransform {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransformC2ERK7QMatrix", ffiqt.FFI_TYPE_VOID, cthis, mtx)
 	gopp.ErrPrint(err, rv)
-	return &QTransform{cthis}
+	gothis := NewQTransformFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtransform.h:91
@@ -108,7 +120,7 @@ func NewQTransform_4(mtx unsafe.Pointer) *QTransform {
 // bool isAffine()
 func (this *QTransform) IsAffine() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform8isAffineEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform8isAffineEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +129,7 @@ func (this *QTransform) IsAffine() {
 // bool isIdentity()
 func (this *QTransform) IsIdentity() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform10isIdentityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform10isIdentityEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +138,7 @@ func (this *QTransform) IsIdentity() {
 // bool isInvertible()
 func (this *QTransform) IsInvertible() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform12isInvertibleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform12isInvertibleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,7 +147,7 @@ func (this *QTransform) IsInvertible() {
 // bool isScaling()
 func (this *QTransform) IsScaling() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform9isScalingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform9isScalingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,7 +156,7 @@ func (this *QTransform) IsScaling() {
 // bool isRotating()
 func (this *QTransform) IsRotating() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform10isRotatingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform10isRotatingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,7 +165,7 @@ func (this *QTransform) IsRotating() {
 // bool isTranslating()
 func (this *QTransform) IsTranslating() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform13isTranslatingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform13isTranslatingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +174,7 @@ func (this *QTransform) IsTranslating() {
 // QTransform::TransformationType type()
 func (this *QTransform) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +184,7 @@ func (this *QTransform) Type() {
 // qreal determinant()
 func (this *QTransform) Determinant() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform11determinantEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform11determinantEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -181,7 +193,7 @@ func (this *QTransform) Determinant() {
 // qreal det()
 func (this *QTransform) Det() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3detEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3detEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -190,7 +202,7 @@ func (this *QTransform) Det() {
 // qreal m11()
 func (this *QTransform) M11() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m11Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m11Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -199,7 +211,7 @@ func (this *QTransform) M11() {
 // qreal m12()
 func (this *QTransform) M12() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m12Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m12Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -208,7 +220,7 @@ func (this *QTransform) M12() {
 // qreal m13()
 func (this *QTransform) M13() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m13Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m13Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -217,7 +229,7 @@ func (this *QTransform) M13() {
 // qreal m21()
 func (this *QTransform) M21() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m21Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m21Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -226,7 +238,7 @@ func (this *QTransform) M21() {
 // qreal m22()
 func (this *QTransform) M22() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m22Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m22Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -235,7 +247,7 @@ func (this *QTransform) M22() {
 // qreal m23()
 func (this *QTransform) M23() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m23Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m23Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -244,7 +256,7 @@ func (this *QTransform) M23() {
 // qreal m31()
 func (this *QTransform) M31() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m31Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m31Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -253,7 +265,7 @@ func (this *QTransform) M31() {
 // qreal m32()
 func (this *QTransform) M32() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m32Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m32Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -262,7 +274,7 @@ func (this *QTransform) M32() {
 // qreal m33()
 func (this *QTransform) M33() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m33Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3m33Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -271,7 +283,7 @@ func (this *QTransform) M33() {
 // qreal dx()
 func (this *QTransform) Dx() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform2dxEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform2dxEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -280,7 +292,7 @@ func (this *QTransform) Dx() {
 // qreal dy()
 func (this *QTransform) Dy() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform2dyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform2dyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -288,8 +300,8 @@ func (this *QTransform) Dy() {
 // index:0
 // void setMatrix(qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal)
 func (this *QTransform) SetMatrix(m11 float64, m12 float64, m13 float64, m21 float64, m22 float64, m23 float64, m31 float64, m32 float64, m33 float64) {
-	// 0: (, qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33), (&m11, &m12, &m13, &m21, &m22, &m23, &m31, &m32, &m33)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform9setMatrixEddddddddd", ffiqt.FFI_TYPE_VOID, this.cthis, &m11, &m12, &m13, &m21, &m22, &m23, &m31, &m32, &m33)
+	// 0: (, m11 qreal, m12 qreal, m13 qreal, m21 qreal, m22 qreal, m23 qreal, m31 qreal, m32 qreal, m33 qreal), (&m11, &m12, &m13, &m21, &m22, &m23, &m31, &m32, &m33)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform9setMatrixEddddddddd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &m11, &m12, &m13, &m21, &m22, &m23, &m31, &m32, &m33)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -297,8 +309,8 @@ func (this *QTransform) SetMatrix(m11 float64, m12 float64, m13 float64, m21 flo
 // index:0
 // QTransform inverted(_Bool *)
 func (this *QTransform) Inverted(invertible unsafe.Pointer) {
-	// 0: (, bool * invertible), (invertible)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform8invertedEPb", ffiqt.FFI_TYPE_VOID, this.cthis, invertible)
+	// 0: (, invertible bool *), (invertible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform8invertedEPb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), invertible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -307,7 +319,7 @@ func (this *QTransform) Inverted(invertible unsafe.Pointer) {
 // QTransform adjoint()
 func (this *QTransform) Adjoint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform7adjointEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform7adjointEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -316,7 +328,7 @@ func (this *QTransform) Adjoint() {
 // QTransform transposed()
 func (this *QTransform) Transposed() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform10transposedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform10transposedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -324,8 +336,8 @@ func (this *QTransform) Transposed() {
 // index:0
 // QTransform & translate(qreal, qreal)
 func (this *QTransform) Translate(dx float64, dy float64) {
-	// 0: (, qreal dx, qreal dy), (&dx, &dy)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform9translateEdd", ffiqt.FFI_TYPE_VOID, this.cthis, &dx, &dy)
+	// 0: (, dx qreal, dy qreal), (&dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform9translateEdd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &dx, &dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -333,8 +345,8 @@ func (this *QTransform) Translate(dx float64, dy float64) {
 // index:0
 // QTransform & scale(qreal, qreal)
 func (this *QTransform) Scale(sx float64, sy float64) {
-	// 0: (, qreal sx, qreal sy), (&sx, &sy)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform5scaleEdd", ffiqt.FFI_TYPE_VOID, this.cthis, &sx, &sy)
+	// 0: (, sx qreal, sy qreal), (&sx, &sy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform5scaleEdd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &sx, &sy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -342,8 +354,8 @@ func (this *QTransform) Scale(sx float64, sy float64) {
 // index:0
 // QTransform & shear(qreal, qreal)
 func (this *QTransform) Shear(sh float64, sv float64) {
-	// 0: (, qreal sh, qreal sv), (&sh, &sv)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform5shearEdd", ffiqt.FFI_TYPE_VOID, this.cthis, &sh, &sv)
+	// 0: (, sh qreal, sv qreal), (&sh, &sv)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform5shearEdd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &sh, &sv)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -351,8 +363,8 @@ func (this *QTransform) Shear(sh float64, sv float64) {
 // index:0
 // QTransform & rotate(qreal, Qt::Axis)
 func (this *QTransform) Rotate(a float64, axis int) {
-	// 0: (, qreal a, Qt::Axis axis), (&a, &axis)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform6rotateEdN2Qt4AxisE", ffiqt.FFI_TYPE_VOID, this.cthis, &a, &axis)
+	// 0: (, a qreal, axis Qt::Axis), (&a, &axis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform6rotateEdN2Qt4AxisE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &a, &axis)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -360,8 +372,8 @@ func (this *QTransform) Rotate(a float64, axis int) {
 // index:0
 // QTransform & rotateRadians(qreal, Qt::Axis)
 func (this *QTransform) RotateRadians(a float64, axis int) {
-	// 0: (, qreal a, Qt::Axis axis), (&a, &axis)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform13rotateRadiansEdN2Qt4AxisE", ffiqt.FFI_TYPE_VOID, this.cthis, &a, &axis)
+	// 0: (, a qreal, axis Qt::Axis), (&a, &axis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform13rotateRadiansEdN2Qt4AxisE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &a, &axis)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -370,12 +382,12 @@ func (this *QTransform) RotateRadians(a float64, axis int) {
 // static
 // bool squareToQuad(const class QPolygonF &, class QTransform &)
 func (this *QTransform) SquareToQuad(square unsafe.Pointer, result unsafe.Pointer) {
-	// 0: (const QPolygonF & square, QTransform & result), (square, result)
+	// 0: (square const QPolygonF &, result QTransform &), (square, result)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform12squareToQuadERK9QPolygonFRS_", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QTransform_SquareToQuad(square unsafe.Pointer, result unsafe.Pointer) {
-	// 0: (const QPolygonF & square, QTransform & result), (square, result)
+	// 0: (square const QPolygonF &, result QTransform &), (square, result)
 	var nilthis *QTransform
 	nilthis.SquareToQuad(square, result)
 }
@@ -385,12 +397,12 @@ func QTransform_SquareToQuad(square unsafe.Pointer, result unsafe.Pointer) {
 // static
 // bool quadToSquare(const class QPolygonF &, class QTransform &)
 func (this *QTransform) QuadToSquare(quad unsafe.Pointer, result unsafe.Pointer) {
-	// 0: (const QPolygonF & quad, QTransform & result), (quad, result)
+	// 0: (quad const QPolygonF &, result QTransform &), (quad, result)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform12quadToSquareERK9QPolygonFRS_", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QTransform_QuadToSquare(quad unsafe.Pointer, result unsafe.Pointer) {
-	// 0: (const QPolygonF & quad, QTransform & result), (quad, result)
+	// 0: (quad const QPolygonF &, result QTransform &), (quad, result)
 	var nilthis *QTransform
 	nilthis.QuadToSquare(quad, result)
 }
@@ -400,12 +412,12 @@ func QTransform_QuadToSquare(quad unsafe.Pointer, result unsafe.Pointer) {
 // static
 // bool quadToQuad(const class QPolygonF &, const class QPolygonF &, class QTransform &)
 func (this *QTransform) QuadToQuad(one unsafe.Pointer, two unsafe.Pointer, result unsafe.Pointer) {
-	// 0: (const QPolygonF & one, const QPolygonF & two, QTransform & result), (one, two, result)
+	// 0: (one const QPolygonF &, two const QPolygonF &, result QTransform &), (one, two, result)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QTransform_QuadToQuad(one unsafe.Pointer, two unsafe.Pointer, result unsafe.Pointer) {
-	// 0: (const QPolygonF & one, const QPolygonF & two, QTransform & result), (one, two, result)
+	// 0: (one const QPolygonF &, two const QPolygonF &, result QTransform &), (one, two, result)
 	var nilthis *QTransform
 	nilthis.QuadToQuad(one, two, result)
 }
@@ -415,7 +427,7 @@ func QTransform_QuadToQuad(one unsafe.Pointer, two unsafe.Pointer, result unsafe
 // void reset()
 func (this *QTransform) Reset() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform5resetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform5resetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -423,8 +435,8 @@ func (this *QTransform) Reset() {
 // index:0
 // QPoint map(const class QPoint &)
 func (this *QTransform) Map(p unsafe.Pointer) {
-	// 0: (, const QPoint & p), (p)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK6QPoint", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	// 0: (, p const QPoint &), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK6QPoint", ffiqt.FFI_TYPE_VOID, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -432,8 +444,8 @@ func (this *QTransform) Map(p unsafe.Pointer) {
 // index:1
 // QPointF map(const class QPointF &)
 func (this *QTransform) Map_1(p unsafe.Pointer) {
-	// 1: (, const QPointF & p), (p)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	// 1: (, p const QPointF &), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -441,8 +453,8 @@ func (this *QTransform) Map_1(p unsafe.Pointer) {
 // index:2
 // QLine map(const class QLine &)
 func (this *QTransform) Map_2(l unsafe.Pointer) {
-	// 2: (, const QLine & l), (l)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK5QLine", ffiqt.FFI_TYPE_VOID, this.cthis, l)
+	// 2: (, l const QLine &), (l)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK5QLine", ffiqt.FFI_TYPE_VOID, this.GetCthis(), l)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -450,8 +462,8 @@ func (this *QTransform) Map_2(l unsafe.Pointer) {
 // index:3
 // QLineF map(const class QLineF &)
 func (this *QTransform) Map_3(l unsafe.Pointer) {
-	// 3: (, const QLineF & l), (l)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK6QLineF", ffiqt.FFI_TYPE_VOID, this.cthis, l)
+	// 3: (, l const QLineF &), (l)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK6QLineF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), l)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -459,8 +471,8 @@ func (this *QTransform) Map_3(l unsafe.Pointer) {
 // index:4
 // QPolygonF map(const class QPolygonF &)
 func (this *QTransform) Map_4(a unsafe.Pointer) {
-	// 4: (, const QPolygonF & a), (a)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK9QPolygonF", ffiqt.FFI_TYPE_VOID, this.cthis, a)
+	// 4: (, a const QPolygonF &), (a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK9QPolygonF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -468,8 +480,8 @@ func (this *QTransform) Map_4(a unsafe.Pointer) {
 // index:5
 // QPolygon map(const class QPolygon &)
 func (this *QTransform) Map_5(a unsafe.Pointer) {
-	// 5: (, const QPolygon & a), (a)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK8QPolygon", ffiqt.FFI_TYPE_VOID, this.cthis, a)
+	// 5: (, a const QPolygon &), (a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK8QPolygon", ffiqt.FFI_TYPE_VOID, this.GetCthis(), a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -477,8 +489,8 @@ func (this *QTransform) Map_5(a unsafe.Pointer) {
 // index:6
 // QRegion map(const class QRegion &)
 func (this *QTransform) Map_6(r unsafe.Pointer) {
-	// 6: (, const QRegion & r), (r)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK7QRegion", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	// 6: (, r const QRegion &), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK7QRegion", ffiqt.FFI_TYPE_VOID, this.GetCthis(), r)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -486,8 +498,8 @@ func (this *QTransform) Map_6(r unsafe.Pointer) {
 // index:7
 // QPainterPath map(const class QPainterPath &)
 func (this *QTransform) Map_7(p unsafe.Pointer) {
-	// 7: (, const QPainterPath & p), (p)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK12QPainterPath", ffiqt.FFI_TYPE_VOID, this.cthis, p)
+	// 7: (, p const QPainterPath &), (p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapERK12QPainterPath", ffiqt.FFI_TYPE_VOID, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -495,8 +507,8 @@ func (this *QTransform) Map_7(p unsafe.Pointer) {
 // index:8
 // void map(int, int, int *, int *)
 func (this *QTransform) Map_8(x int, y int, tx unsafe.Pointer, ty unsafe.Pointer) {
-	// 8: (, int x, int y, int * tx, int * ty), (&x, &y, tx, ty)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapEiiPiS0_", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, tx, ty)
+	// 8: (, x int, y int, tx int *, ty int *), (&x, &y, tx, ty)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapEiiPiS0_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &x, &y, tx, ty)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -504,8 +516,8 @@ func (this *QTransform) Map_8(x int, y int, tx unsafe.Pointer, ty unsafe.Pointer
 // index:9
 // void map(qreal, qreal, qreal *, qreal *)
 func (this *QTransform) Map_9(x float64, y float64, tx unsafe.Pointer, ty unsafe.Pointer) {
-	// 9: (, qreal x, qreal y, qreal * tx, qreal * ty), (&x, &y, tx, ty)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapEddPdS0_", ffiqt.FFI_TYPE_VOID, this.cthis, &x, &y, tx, ty)
+	// 9: (, x qreal, y qreal, tx qreal *, ty qreal *), (&x, &y, tx, ty)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform3mapEddPdS0_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &x, &y, tx, ty)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -513,8 +525,8 @@ func (this *QTransform) Map_9(x float64, y float64, tx unsafe.Pointer, ty unsafe
 // index:0
 // QPolygon mapToPolygon(const class QRect &)
 func (this *QTransform) MapToPolygon(r unsafe.Pointer) {
-	// 0: (, const QRect & r), (r)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform12mapToPolygonERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	// 0: (, r const QRect &), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform12mapToPolygonERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), r)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -523,7 +535,7 @@ func (this *QTransform) MapToPolygon(r unsafe.Pointer) {
 // QRect mapRect(const class QRect &)
 func (this *QTransform) MapRect(arg0 unsafe.Pointer) {
 	// 0: (, const QRect & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform7mapRectERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform7mapRectERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -532,7 +544,7 @@ func (this *QTransform) MapRect(arg0 unsafe.Pointer) {
 // QRectF mapRect(const class QRectF &)
 func (this *QTransform) MapRect_1(arg0 unsafe.Pointer) {
 	// 1: (, const QRectF & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform7mapRectERK6QRectF", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform7mapRectERK6QRectF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -541,7 +553,7 @@ func (this *QTransform) MapRect_1(arg0 unsafe.Pointer) {
 // const QMatrix & toAffine()
 func (this *QTransform) ToAffine() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform8toAffineEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform8toAffineEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -550,12 +562,12 @@ func (this *QTransform) ToAffine() {
 // static
 // QTransform fromTranslate(qreal, qreal)
 func (this *QTransform) FromTranslate(dx float64, dy float64) {
-	// 0: (qreal dx, qreal dy), (dx, dy)
+	// 0: (dx qreal, dy qreal), (dx, dy)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform13fromTranslateEdd", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QTransform_FromTranslate(dx float64, dy float64) {
-	// 0: (qreal dx, qreal dy), (dx, dy)
+	// 0: (dx qreal, dy qreal), (dx, dy)
 	var nilthis *QTransform
 	nilthis.FromTranslate(dx, dy)
 }
@@ -565,12 +577,12 @@ func QTransform_FromTranslate(dx float64, dy float64) {
 // static
 // QTransform fromScale(qreal, qreal)
 func (this *QTransform) FromScale(dx float64, dy float64) {
-	// 0: (qreal dx, qreal dy), (dx, dy)
+	// 0: (dx qreal, dy qreal), (dx, dy)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform9fromScaleEdd", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QTransform_FromScale(dx float64, dy float64) {
-	// 0: (qreal dx, qreal dy), (dx, dy)
+	// 0: (dx qreal, dy qreal), (dx, dy)
 	var nilthis *QTransform
 	nilthis.FromScale(dx, dy)
 }

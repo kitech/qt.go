@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextBlock struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTextBlock) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:205
@@ -60,7 +64,11 @@ func NewQTextBlock(priv unsafe.Pointer, b int) *QTextBlock {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlockC2EP20QTextDocumentPrivatei", ffiqt.FFI_TYPE_VOID, cthis, priv, &b)
 	gopp.ErrPrint(err, rv)
-	return &QTextBlock{cthis}
+	gothis := NewQTextBlockFromPointer(cthis)
+	return gothis
+}
+func NewQTextBlockFromPointer(cthis unsafe.Pointer) *QTextBlock {
+	return &QTextBlock{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:206
@@ -71,7 +79,8 @@ func NewQTextBlock_1() *QTextBlock {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlockC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QTextBlock{cthis}
+	gothis := NewQTextBlockFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:210
@@ -79,7 +88,7 @@ func NewQTextBlock_1() *QTextBlock {
 // bool isValid()
 func (this *QTextBlock) IsValid() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,7 +97,7 @@ func (this *QTextBlock) IsValid() {
 // int position()
 func (this *QTextBlock) Position() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8positionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8positionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,7 +106,7 @@ func (this *QTextBlock) Position() {
 // int length()
 func (this *QTextBlock) Length() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock6lengthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock6lengthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -105,8 +114,8 @@ func (this *QTextBlock) Length() {
 // index:0
 // bool contains(int)
 func (this *QTextBlock) Contains(position int) {
-	// 0: (, int position), (&position)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8containsEi", ffiqt.FFI_TYPE_VOID, this.cthis, &position)
+	// 0: (, position int), (&position)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8containsEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &position)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -115,7 +124,7 @@ func (this *QTextBlock) Contains(position int) {
 // QTextLayout * layout()
 func (this *QTextBlock) Layout() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock6layoutEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock6layoutEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -124,7 +133,7 @@ func (this *QTextBlock) Layout() {
 // void clearLayout()
 func (this *QTextBlock) ClearLayout() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock11clearLayoutEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock11clearLayoutEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,7 +142,7 @@ func (this *QTextBlock) ClearLayout() {
 // QTextBlockFormat blockFormat()
 func (this *QTextBlock) BlockFormat() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock11blockFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock11blockFormatEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,7 +151,7 @@ func (this *QTextBlock) BlockFormat() {
 // int blockFormatIndex()
 func (this *QTextBlock) BlockFormatIndex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock16blockFormatIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock16blockFormatIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,7 +160,7 @@ func (this *QTextBlock) BlockFormatIndex() {
 // QTextCharFormat charFormat()
 func (this *QTextBlock) CharFormat() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock10charFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock10charFormatEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -160,7 +169,7 @@ func (this *QTextBlock) CharFormat() {
 // int charFormatIndex()
 func (this *QTextBlock) CharFormatIndex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock15charFormatIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock15charFormatIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,7 +178,7 @@ func (this *QTextBlock) CharFormatIndex() {
 // Qt::LayoutDirection textDirection()
 func (this *QTextBlock) TextDirection() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock13textDirectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock13textDirectionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -178,7 +187,7 @@ func (this *QTextBlock) TextDirection() {
 // QString text()
 func (this *QTextBlock) Text() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock4textEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock4textEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -187,7 +196,7 @@ func (this *QTextBlock) Text() {
 // QVector<QTextLayout::FormatRange> textFormats()
 func (this *QTextBlock) TextFormats() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock11textFormatsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock11textFormatsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -196,7 +205,7 @@ func (this *QTextBlock) TextFormats() {
 // const QTextDocument * document()
 func (this *QTextBlock) Document() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8documentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8documentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -205,7 +214,7 @@ func (this *QTextBlock) Document() {
 // QTextList * textList()
 func (this *QTextBlock) TextList() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8textListEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8textListEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -214,7 +223,7 @@ func (this *QTextBlock) TextList() {
 // QTextBlockUserData * userData()
 func (this *QTextBlock) UserData() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8userDataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8userDataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -222,8 +231,8 @@ func (this *QTextBlock) UserData() {
 // index:0
 // void setUserData(class QTextBlockUserData *)
 func (this *QTextBlock) SetUserData(data unsafe.Pointer) {
-	// 0: (, QTextBlockUserData * data), (data)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock11setUserDataEP18QTextBlockUserData", ffiqt.FFI_TYPE_VOID, this.cthis, data)
+	// 0: (, data QTextBlockUserData *), (data)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock11setUserDataEP18QTextBlockUserData", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -232,7 +241,7 @@ func (this *QTextBlock) SetUserData(data unsafe.Pointer) {
 // int userState()
 func (this *QTextBlock) UserState() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock9userStateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock9userStateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -240,8 +249,8 @@ func (this *QTextBlock) UserState() {
 // index:0
 // void setUserState(int)
 func (this *QTextBlock) SetUserState(state int) {
-	// 0: (, int state), (&state)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock12setUserStateEi", ffiqt.FFI_TYPE_VOID, this.cthis, &state)
+	// 0: (, state int), (&state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock12setUserStateEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &state)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -250,7 +259,7 @@ func (this *QTextBlock) SetUserState(state int) {
 // int revision()
 func (this *QTextBlock) Revision() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8revisionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8revisionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -258,8 +267,8 @@ func (this *QTextBlock) Revision() {
 // index:0
 // void setRevision(int)
 func (this *QTextBlock) SetRevision(rev int) {
-	// 0: (, int rev), (&rev)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock11setRevisionEi", ffiqt.FFI_TYPE_VOID, this.cthis, &rev)
+	// 0: (, rev int), (&rev)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock11setRevisionEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &rev)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -268,7 +277,7 @@ func (this *QTextBlock) SetRevision(rev int) {
 // bool isVisible()
 func (this *QTextBlock) IsVisible() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock9isVisibleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock9isVisibleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -276,8 +285,8 @@ func (this *QTextBlock) IsVisible() {
 // index:0
 // void setVisible(_Bool)
 func (this *QTextBlock) SetVisible(visible bool) {
-	// 0: (, bool visible), (&visible)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock10setVisibleEb", ffiqt.FFI_TYPE_VOID, this.cthis, &visible)
+	// 0: (, visible bool), (&visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock10setVisibleEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &visible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -286,7 +295,7 @@ func (this *QTextBlock) SetVisible(visible bool) {
 // int blockNumber()
 func (this *QTextBlock) BlockNumber() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock11blockNumberEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock11blockNumberEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -295,7 +304,7 @@ func (this *QTextBlock) BlockNumber() {
 // int firstLineNumber()
 func (this *QTextBlock) FirstLineNumber() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock15firstLineNumberEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock15firstLineNumberEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -303,8 +312,8 @@ func (this *QTextBlock) FirstLineNumber() {
 // index:0
 // void setLineCount(int)
 func (this *QTextBlock) SetLineCount(count int) {
-	// 0: (, int count), (&count)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock12setLineCountEi", ffiqt.FFI_TYPE_VOID, this.cthis, &count)
+	// 0: (, count int), (&count)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock12setLineCountEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &count)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -313,7 +322,7 @@ func (this *QTextBlock) SetLineCount(count int) {
 // int lineCount()
 func (this *QTextBlock) LineCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock9lineCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock9lineCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -322,7 +331,7 @@ func (this *QTextBlock) LineCount() {
 // QTextBlock::iterator begin()
 func (this *QTextBlock) Begin() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock5beginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock5beginEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -331,7 +340,7 @@ func (this *QTextBlock) Begin() {
 // QTextBlock::iterator end()
 func (this *QTextBlock) End() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock3endEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock3endEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -340,7 +349,7 @@ func (this *QTextBlock) End() {
 // QTextBlock next()
 func (this *QTextBlock) Next() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock4nextEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock4nextEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -349,7 +358,7 @@ func (this *QTextBlock) Next() {
 // QTextBlock previous()
 func (this *QTextBlock) Previous() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8previousEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8previousEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -359,7 +368,7 @@ func (this *QTextBlock) Previous() {
 // QTextDocumentPrivate * docHandle()
 func (this *QTextBlock) DocHandle() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock9docHandleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock9docHandleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -369,7 +378,7 @@ func (this *QTextBlock) DocHandle() {
 // int fragmentIndex()
 func (this *QTextBlock) FragmentIndex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock13fragmentIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock13fragmentIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

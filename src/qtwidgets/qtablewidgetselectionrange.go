@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 52
+// extern C begin: 78
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QTableWidgetSelectionRange struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTableWidgetSelectionRange) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:55
@@ -63,7 +67,11 @@ func NewQTableWidgetSelectionRange() *QTableWidgetSelectionRange {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QTableWidgetSelectionRange{cthis}
+	gothis := NewQTableWidgetSelectionRangeFromPointer(cthis)
+	return gothis
+}
+func NewQTableWidgetSelectionRangeFromPointer(cthis unsafe.Pointer) *QTableWidgetSelectionRange {
+	return &QTableWidgetSelectionRange{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:56
@@ -73,7 +81,8 @@ func NewQTableWidgetSelectionRange_1(top int, left int, bottom int, right int) *
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, &top, &left, &bottom, &right)
 	gopp.ErrPrint(err, rv)
-	return &QTableWidgetSelectionRange{cthis}
+	gothis := NewQTableWidgetSelectionRangeFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:58
@@ -90,7 +99,7 @@ func DeleteQTableWidgetSelectionRange(*QTableWidgetSelectionRange) {
 // int topRow()
 func (this *QTableWidgetSelectionRange) TopRow() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange6topRowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange6topRowEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,7 +109,7 @@ func (this *QTableWidgetSelectionRange) TopRow() {
 // int bottomRow()
 func (this *QTableWidgetSelectionRange) BottomRow() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange9bottomRowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange9bottomRowEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -110,7 +119,7 @@ func (this *QTableWidgetSelectionRange) BottomRow() {
 // int leftColumn()
 func (this *QTableWidgetSelectionRange) LeftColumn() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange10leftColumnEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange10leftColumnEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -120,7 +129,7 @@ func (this *QTableWidgetSelectionRange) LeftColumn() {
 // int rightColumn()
 func (this *QTableWidgetSelectionRange) RightColumn() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11rightColumnEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11rightColumnEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +139,7 @@ func (this *QTableWidgetSelectionRange) RightColumn() {
 // int rowCount()
 func (this *QTableWidgetSelectionRange) RowCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange8rowCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange8rowCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,7 +149,7 @@ func (this *QTableWidgetSelectionRange) RowCount() {
 // int columnCount()
 func (this *QTableWidgetSelectionRange) ColumnCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11columnCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11columnCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

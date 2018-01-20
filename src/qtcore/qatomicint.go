@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QAtomicInt struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QAtomicInt) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qatomic.h:162
@@ -56,7 +60,11 @@ func NewQAtomicInt(value int) *QAtomicInt {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QAtomicIntC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &value)
 	gopp.ErrPrint(err, rv)
-	return &QAtomicInt{cthis}
+	gothis := NewQAtomicIntFromPointer(cthis)
+	return gothis
+}
+func NewQAtomicIntFromPointer(cthis unsafe.Pointer) *QAtomicInt {
+	return &QAtomicInt{&qtrt.CObject{cthis}}
 }
 
 //  body block end

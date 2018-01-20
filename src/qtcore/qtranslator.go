@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QTranslator struct {
-	cthis unsafe.Pointer
+	*QObject
+}
+
+func (this *QTranslator) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qtranslator.h:56
@@ -54,7 +58,7 @@ type QTranslator struct {
 // const QMetaObject * metaObject()
 func (this *QTranslator) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTranslator10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTranslator10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -65,7 +69,12 @@ func NewQTranslator(parent unsafe.Pointer) *QTranslator {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QTranslator{cthis}
+	gothis := NewQTranslatorFromPointer(cthis)
+	return gothis
+}
+func NewQTranslatorFromPointer(cthis unsafe.Pointer) *QTranslator {
+	bcthis0 := NewQObjectFromPointer(cthis)
+	return &QTranslator{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qtranslator.h:59
@@ -82,8 +91,8 @@ func DeleteQTranslator(*QTranslator) {
 // virtual
 // QString translate(const char *, const char *, const char *, int)
 func (this *QTranslator) Translate(context unsafe.Pointer, sourceText unsafe.Pointer, disambiguation unsafe.Pointer, n int) {
-	// 0: (, const char * context, const char * sourceText, const char * disambiguation, int n), (context, sourceText, disambiguation, &n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTranslator9translateEPKcS1_S1_i", ffiqt.FFI_TYPE_VOID, this.cthis, context, sourceText, disambiguation, &n)
+	// 0: (, context const char *, sourceText const char *, disambiguation const char *, n int), (context, sourceText, disambiguation, &n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTranslator9translateEPKcS1_S1_i", ffiqt.FFI_TYPE_VOID, this.GetCthis(), context, sourceText, disambiguation, &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -93,7 +102,7 @@ func (this *QTranslator) Translate(context unsafe.Pointer, sourceText unsafe.Poi
 // bool isEmpty()
 func (this *QTranslator) IsEmpty() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTranslator7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTranslator7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -101,8 +110,8 @@ func (this *QTranslator) IsEmpty() {
 // index:0
 // bool load(const class QString &, const class QString &, const class QString &, const class QString &)
 func (this *QTranslator) Load(filename unsafe.Pointer, directory unsafe.Pointer, search_delimiters unsafe.Pointer, suffix unsafe.Pointer) {
-	// 0: (, const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix), (filename, directory, search_delimiters, suffix)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QStringS2_S2_S2_", ffiqt.FFI_TYPE_VOID, this.cthis, filename, directory, search_delimiters, suffix)
+	// 0: (, filename const QString &, directory const QString &, search_delimiters const QString &, suffix const QString &), (filename, directory, search_delimiters, suffix)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QStringS2_S2_S2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), filename, directory, search_delimiters, suffix)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -110,8 +119,8 @@ func (this *QTranslator) Load(filename unsafe.Pointer, directory unsafe.Pointer,
 // index:1
 // bool load(const class QLocale &, const class QString &, const class QString &, const class QString &, const class QString &)
 func (this *QTranslator) Load_1(locale unsafe.Pointer, filename unsafe.Pointer, prefix unsafe.Pointer, directory unsafe.Pointer, suffix unsafe.Pointer) {
-	// 1: (, const QLocale & locale, const QString & filename, const QString & prefix, const QString & directory, const QString & suffix), (locale, filename, prefix, directory, suffix)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_", ffiqt.FFI_TYPE_VOID, this.cthis, locale, filename, prefix, directory, suffix)
+	// 1: (, locale const QLocale &, filename const QString &, prefix const QString &, directory const QString &, suffix const QString &), (locale, filename, prefix, directory, suffix)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), locale, filename, prefix, directory, suffix)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -119,8 +128,8 @@ func (this *QTranslator) Load_1(locale unsafe.Pointer, filename unsafe.Pointer, 
 // index:2
 // bool load(const uchar *, int, const class QString &)
 func (this *QTranslator) Load_2(data unsafe.Pointer, len int, directory unsafe.Pointer) {
-	// 2: (, const uchar * data, int len, const QString & directory), (data, &len, directory)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslator4loadEPKhiRK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, data, &len, directory)
+	// 2: (, data const uchar *, len int, directory const QString &), (data, &len, directory)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslator4loadEPKhiRK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data, &len, directory)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QShowEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QShowEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:493
@@ -59,7 +63,12 @@ func NewQShowEvent() *QShowEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QShowEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QShowEvent{cthis}
+	gothis := NewQShowEventFromPointer(cthis)
+	return gothis
+}
+func NewQShowEventFromPointer(cthis unsafe.Pointer) *QShowEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QShowEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:494

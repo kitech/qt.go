@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QMargins struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QMargins) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qmargins.h:54
@@ -56,7 +60,11 @@ func NewQMargins() *QMargins {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QMargins{cthis}
+	gothis := NewQMarginsFromPointer(cthis)
+	return gothis
+}
+func NewQMarginsFromPointer(cthis unsafe.Pointer) *QMargins {
+	return &QMargins{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qmargins.h:55
@@ -67,7 +75,8 @@ func NewQMargins_1(left int, top int, right int, bottom int) *QMargins {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, &left, &top, &right, &bottom)
 	gopp.ErrPrint(err, rv)
-	return &QMargins{cthis}
+	gothis := NewQMarginsFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qmargins.h:57
@@ -76,7 +85,7 @@ func NewQMargins_1(left int, top int, right int, bottom int) *QMargins {
 // bool isNull()
 func (this *QMargins) IsNull() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins6isNullEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -86,7 +95,7 @@ func (this *QMargins) IsNull() {
 // int left()
 func (this *QMargins) Left() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins4leftEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins4leftEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -96,7 +105,7 @@ func (this *QMargins) Left() {
 // int top()
 func (this *QMargins) Top() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins3topEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins3topEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,7 +115,7 @@ func (this *QMargins) Top() {
 // int right()
 func (this *QMargins) Right() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins5rightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins5rightEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +125,7 @@ func (this *QMargins) Right() {
 // int bottom()
 func (this *QMargins) Bottom() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins6bottomEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins6bottomEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -124,8 +133,8 @@ func (this *QMargins) Bottom() {
 // index:0
 // void setLeft(int)
 func (this *QMargins) SetLeft(left int) {
-	// 0: (, int left), (&left)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins7setLeftEi", ffiqt.FFI_TYPE_VOID, this.cthis, &left)
+	// 0: (, left int), (&left)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins7setLeftEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &left)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,8 +142,8 @@ func (this *QMargins) SetLeft(left int) {
 // index:0
 // void setTop(int)
 func (this *QMargins) SetTop(top int) {
-	// 0: (, int top), (&top)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins6setTopEi", ffiqt.FFI_TYPE_VOID, this.cthis, &top)
+	// 0: (, top int), (&top)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins6setTopEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &top)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,8 +151,8 @@ func (this *QMargins) SetTop(top int) {
 // index:0
 // void setRight(int)
 func (this *QMargins) SetRight(right int) {
-	// 0: (, int right), (&right)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins8setRightEi", ffiqt.FFI_TYPE_VOID, this.cthis, &right)
+	// 0: (, right int), (&right)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins8setRightEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &right)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,8 +160,8 @@ func (this *QMargins) SetRight(right int) {
 // index:0
 // void setBottom(int)
 func (this *QMargins) SetBottom(bottom int) {
-	// 0: (, int bottom), (&bottom)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins9setBottomEi", ffiqt.FFI_TYPE_VOID, this.cthis, &bottom)
+	// 0: (, bottom int), (&bottom)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins9setBottomEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &bottom)
 	gopp.ErrPrint(err, rv)
 }
 

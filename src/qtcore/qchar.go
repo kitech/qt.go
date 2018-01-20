@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QChar struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QChar) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qchar.h:81
@@ -56,7 +60,11 @@ func NewQChar() *QChar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QChar{cthis}
+	gothis := NewQCharFromPointer(cthis)
+	return gothis
+}
+func NewQCharFromPointer(cthis unsafe.Pointer) *QChar {
+	return &QChar{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qchar.h:82
@@ -67,7 +75,8 @@ func NewQChar_1(rc uint16) *QChar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2Et", ffiqt.FFI_TYPE_VOID, cthis, &rc)
 	gopp.ErrPrint(err, rv)
-	return &QChar{cthis}
+	gothis := NewQCharFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qchar.h:83
@@ -78,7 +87,8 @@ func NewQChar_2(c byte, r byte) *QChar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2Ehh", ffiqt.FFI_TYPE_VOID, cthis, &c, &r)
 	gopp.ErrPrint(err, rv)
-	return &QChar{cthis}
+	gothis := NewQCharFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qchar.h:84
@@ -89,7 +99,8 @@ func NewQChar_3(rc int16) *QChar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2Es", ffiqt.FFI_TYPE_VOID, cthis, &rc)
 	gopp.ErrPrint(err, rv)
-	return &QChar{cthis}
+	gothis := NewQCharFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qchar.h:85
@@ -100,7 +111,8 @@ func NewQChar_4(rc uint) *QChar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2Ej", ffiqt.FFI_TYPE_VOID, cthis, &rc)
 	gopp.ErrPrint(err, rv)
-	return &QChar{cthis}
+	gothis := NewQCharFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qchar.h:86
@@ -111,7 +123,8 @@ func NewQChar_5(rc int) *QChar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &rc)
 	gopp.ErrPrint(err, rv)
-	return &QChar{cthis}
+	gothis := NewQCharFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qchar.h:87
@@ -122,7 +135,8 @@ func NewQChar_6(s int) *QChar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2ENS_16SpecialCharacterE", ffiqt.FFI_TYPE_VOID, cthis, &s)
 	gopp.ErrPrint(err, rv)
-	return &QChar{cthis}
+	gothis := NewQCharFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qchar.h:88
@@ -133,7 +147,8 @@ func NewQChar_7(ch unsafe.Pointer) *QChar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2E11QLatin1Char", ffiqt.FFI_TYPE_VOID, cthis, ch)
 	gopp.ErrPrint(err, rv)
-	return &QChar{cthis}
+	gothis := NewQCharFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qchar.h:90
@@ -144,7 +159,8 @@ func NewQChar_8(ch int16) *QChar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2EDs", ffiqt.FFI_TYPE_VOID, cthis, &ch)
 	gopp.ErrPrint(err, rv)
-	return &QChar{cthis}
+	gothis := NewQCharFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qchar.h:98
@@ -155,7 +171,8 @@ func NewQChar_9(c byte) *QChar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2Ec", ffiqt.FFI_TYPE_VOID, cthis, &c)
 	gopp.ErrPrint(err, rv)
-	return &QChar{cthis}
+	gothis := NewQCharFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qchar.h:100
@@ -166,7 +183,8 @@ func NewQChar_10(c byte) *QChar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2Eh", ffiqt.FFI_TYPE_VOID, cthis, &c)
 	gopp.ErrPrint(err, rv)
-	return &QChar{cthis}
+	gothis := NewQCharFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qchar.h:394
@@ -175,7 +193,7 @@ func NewQChar_10(c byte) *QChar {
 // QChar::Category category()
 func (this *QChar) Category() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8categoryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8categoryEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -184,12 +202,12 @@ func (this *QChar) Category() {
 // static
 // QChar::Category category(uint)
 func (this *QChar) Category_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar8categoryEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_Category_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.Category_1(ucs4)
 }
@@ -200,7 +218,7 @@ func QChar_Category_1(ucs4 uint) {
 // QChar::Direction direction()
 func (this *QChar) Direction() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar9directionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar9directionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -209,12 +227,12 @@ func (this *QChar) Direction() {
 // static
 // QChar::Direction direction(uint)
 func (this *QChar) Direction_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar9directionEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_Direction_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.Direction_1(ucs4)
 }
@@ -225,7 +243,7 @@ func QChar_Direction_1(ucs4 uint) {
 // QChar::JoiningType joiningType()
 func (this *QChar) JoiningType() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11joiningTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11joiningTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -234,12 +252,12 @@ func (this *QChar) JoiningType() {
 // static
 // QChar::JoiningType joiningType(uint)
 func (this *QChar) JoiningType_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar11joiningTypeEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_JoiningType_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.JoiningType_1(ucs4)
 }
@@ -250,7 +268,7 @@ func QChar_JoiningType_1(ucs4 uint) {
 // QChar::Joining joining()
 func (this *QChar) Joining() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7joiningEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7joiningEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -259,12 +277,12 @@ func (this *QChar) Joining() {
 // static
 // QChar::Joining joining(uint)
 func (this *QChar) Joining_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7joiningEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_Joining_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.Joining_1(ucs4)
 }
@@ -275,7 +293,7 @@ func QChar_Joining_1(ucs4 uint) {
 // unsigned char combiningClass()
 func (this *QChar) CombiningClass() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14combiningClassEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14combiningClassEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -284,12 +302,12 @@ func (this *QChar) CombiningClass() {
 // static
 // unsigned char combiningClass(uint)
 func (this *QChar) CombiningClass_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar14combiningClassEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_CombiningClass_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.CombiningClass_1(ucs4)
 }
@@ -300,7 +318,7 @@ func QChar_CombiningClass_1(ucs4 uint) {
 // QChar mirroredChar()
 func (this *QChar) MirroredChar() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar12mirroredCharEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar12mirroredCharEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -309,12 +327,12 @@ func (this *QChar) MirroredChar() {
 // static
 // uint mirroredChar(uint)
 func (this *QChar) MirroredChar_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar12mirroredCharEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_MirroredChar_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.MirroredChar_1(ucs4)
 }
@@ -325,7 +343,7 @@ func QChar_MirroredChar_1(ucs4 uint) {
 // bool hasMirrored()
 func (this *QChar) HasMirrored() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11hasMirroredEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11hasMirroredEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -334,12 +352,12 @@ func (this *QChar) HasMirrored() {
 // static
 // bool hasMirrored(uint)
 func (this *QChar) HasMirrored_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar11hasMirroredEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_HasMirrored_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.HasMirrored_1(ucs4)
 }
@@ -349,7 +367,7 @@ func QChar_HasMirrored_1(ucs4 uint) {
 // QString decomposition()
 func (this *QChar) Decomposition() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar13decompositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar13decompositionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -358,12 +376,12 @@ func (this *QChar) Decomposition() {
 // static
 // QString decomposition(uint)
 func (this *QChar) Decomposition_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar13decompositionEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_Decomposition_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.Decomposition_1(ucs4)
 }
@@ -374,7 +392,7 @@ func QChar_Decomposition_1(ucs4 uint) {
 // QChar::Decomposition decompositionTag()
 func (this *QChar) DecompositionTag() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar16decompositionTagEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar16decompositionTagEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -383,12 +401,12 @@ func (this *QChar) DecompositionTag() {
 // static
 // QChar::Decomposition decompositionTag(uint)
 func (this *QChar) DecompositionTag_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar16decompositionTagEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_DecompositionTag_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.DecompositionTag_1(ucs4)
 }
@@ -399,7 +417,7 @@ func QChar_DecompositionTag_1(ucs4 uint) {
 // int digitValue()
 func (this *QChar) DigitValue() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar10digitValueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar10digitValueEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -408,12 +426,12 @@ func (this *QChar) DigitValue() {
 // static
 // int digitValue(uint)
 func (this *QChar) DigitValue_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar10digitValueEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_DigitValue_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.DigitValue_1(ucs4)
 }
@@ -424,7 +442,7 @@ func QChar_DigitValue_1(ucs4 uint) {
 // QChar toLower()
 func (this *QChar) ToLower() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7toLowerEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7toLowerEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -433,12 +451,12 @@ func (this *QChar) ToLower() {
 // static
 // uint toLower(uint)
 func (this *QChar) ToLower_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7toLowerEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_ToLower_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.ToLower_1(ucs4)
 }
@@ -449,7 +467,7 @@ func QChar_ToLower_1(ucs4 uint) {
 // QChar toUpper()
 func (this *QChar) ToUpper() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7toUpperEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7toUpperEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -458,12 +476,12 @@ func (this *QChar) ToUpper() {
 // static
 // uint toUpper(uint)
 func (this *QChar) ToUpper_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7toUpperEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_ToUpper_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.ToUpper_1(ucs4)
 }
@@ -474,7 +492,7 @@ func QChar_ToUpper_1(ucs4 uint) {
 // QChar toTitleCase()
 func (this *QChar) ToTitleCase() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11toTitleCaseEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11toTitleCaseEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -483,12 +501,12 @@ func (this *QChar) ToTitleCase() {
 // static
 // uint toTitleCase(uint)
 func (this *QChar) ToTitleCase_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar11toTitleCaseEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_ToTitleCase_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.ToTitleCase_1(ucs4)
 }
@@ -499,7 +517,7 @@ func QChar_ToTitleCase_1(ucs4 uint) {
 // QChar toCaseFolded()
 func (this *QChar) ToCaseFolded() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar12toCaseFoldedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar12toCaseFoldedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -508,12 +526,12 @@ func (this *QChar) ToCaseFolded() {
 // static
 // uint toCaseFolded(uint)
 func (this *QChar) ToCaseFolded_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar12toCaseFoldedEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_ToCaseFolded_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.ToCaseFolded_1(ucs4)
 }
@@ -524,7 +542,7 @@ func QChar_ToCaseFolded_1(ucs4 uint) {
 // QChar::Script script()
 func (this *QChar) Script() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar6scriptEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar6scriptEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -533,12 +551,12 @@ func (this *QChar) Script() {
 // static
 // QChar::Script script(uint)
 func (this *QChar) Script_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar6scriptEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_Script_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.Script_1(ucs4)
 }
@@ -549,7 +567,7 @@ func QChar_Script_1(ucs4 uint) {
 // QChar::UnicodeVersion unicodeVersion()
 func (this *QChar) UnicodeVersion() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14unicodeVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14unicodeVersionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -558,12 +576,12 @@ func (this *QChar) UnicodeVersion() {
 // static
 // QChar::UnicodeVersion unicodeVersion(uint)
 func (this *QChar) UnicodeVersion_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar14unicodeVersionEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_UnicodeVersion_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.UnicodeVersion_1(ucs4)
 }
@@ -574,7 +592,7 @@ func QChar_UnicodeVersion_1(ucs4 uint) {
 // char toLatin1()
 func (this *QChar) ToLatin1() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8toLatin1Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8toLatin1Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -584,7 +602,7 @@ func (this *QChar) ToLatin1() {
 // ushort unicode()
 func (this *QChar) Unicode() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7unicodeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7unicodeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -594,7 +612,7 @@ func (this *QChar) Unicode() {
 // ushort & unicode()
 func (this *QChar) Unicode_1() {
 	// 1: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7unicodeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7unicodeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -603,12 +621,12 @@ func (this *QChar) Unicode_1() {
 // static inline
 // QChar fromLatin1(char)
 func (this *QChar) FromLatin1(c byte) {
-	// 0: (char c), (c)
+	// 0: (c char), (c)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar10fromLatin1Ec", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_FromLatin1(c byte) {
-	// 0: (char c), (c)
+	// 0: (c char), (c)
 	var nilthis *QChar
 	nilthis.FromLatin1(c)
 }
@@ -619,7 +637,7 @@ func QChar_FromLatin1(c byte) {
 // bool isNull()
 func (this *QChar) IsNull() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar6isNullEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -629,7 +647,7 @@ func (this *QChar) IsNull() {
 // bool isPrint()
 func (this *QChar) IsPrint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isPrintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isPrintEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -638,12 +656,12 @@ func (this *QChar) IsPrint() {
 // static
 // bool isPrint(uint)
 func (this *QChar) IsPrint_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isPrintEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsPrint_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsPrint_1(ucs4)
 }
@@ -654,7 +672,7 @@ func QChar_IsPrint_1(ucs4 uint) {
 // bool isSpace()
 func (this *QChar) IsSpace() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isSpaceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isSpaceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -663,12 +681,12 @@ func (this *QChar) IsSpace() {
 // static inline
 // bool isSpace(uint)
 func (this *QChar) IsSpace_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isSpaceEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsSpace_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsSpace_1(ucs4)
 }
@@ -679,7 +697,7 @@ func QChar_IsSpace_1(ucs4 uint) {
 // bool isMark()
 func (this *QChar) IsMark() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar6isMarkEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar6isMarkEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -688,12 +706,12 @@ func (this *QChar) IsMark() {
 // static
 // bool isMark(uint)
 func (this *QChar) IsMark_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar6isMarkEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsMark_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsMark_1(ucs4)
 }
@@ -704,7 +722,7 @@ func QChar_IsMark_1(ucs4 uint) {
 // bool isPunct()
 func (this *QChar) IsPunct() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isPunctEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isPunctEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -713,12 +731,12 @@ func (this *QChar) IsPunct() {
 // static
 // bool isPunct(uint)
 func (this *QChar) IsPunct_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isPunctEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsPunct_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsPunct_1(ucs4)
 }
@@ -729,7 +747,7 @@ func QChar_IsPunct_1(ucs4 uint) {
 // bool isSymbol()
 func (this *QChar) IsSymbol() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8isSymbolEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8isSymbolEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -738,12 +756,12 @@ func (this *QChar) IsSymbol() {
 // static
 // bool isSymbol(uint)
 func (this *QChar) IsSymbol_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar8isSymbolEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsSymbol_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsSymbol_1(ucs4)
 }
@@ -754,7 +772,7 @@ func QChar_IsSymbol_1(ucs4 uint) {
 // bool isLetter()
 func (this *QChar) IsLetter() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8isLetterEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8isLetterEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -763,12 +781,12 @@ func (this *QChar) IsLetter() {
 // static inline
 // bool isLetter(uint)
 func (this *QChar) IsLetter_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar8isLetterEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsLetter_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsLetter_1(ucs4)
 }
@@ -779,7 +797,7 @@ func QChar_IsLetter_1(ucs4 uint) {
 // bool isNumber()
 func (this *QChar) IsNumber() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8isNumberEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8isNumberEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -788,12 +806,12 @@ func (this *QChar) IsNumber() {
 // static inline
 // bool isNumber(uint)
 func (this *QChar) IsNumber_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar8isNumberEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsNumber_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsNumber_1(ucs4)
 }
@@ -804,7 +822,7 @@ func QChar_IsNumber_1(ucs4 uint) {
 // bool isLetterOrNumber()
 func (this *QChar) IsLetterOrNumber() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar16isLetterOrNumberEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar16isLetterOrNumberEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -813,12 +831,12 @@ func (this *QChar) IsLetterOrNumber() {
 // static inline
 // bool isLetterOrNumber(uint)
 func (this *QChar) IsLetterOrNumber_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar16isLetterOrNumberEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsLetterOrNumber_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsLetterOrNumber_1(ucs4)
 }
@@ -829,7 +847,7 @@ func QChar_IsLetterOrNumber_1(ucs4 uint) {
 // bool isDigit()
 func (this *QChar) IsDigit() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isDigitEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isDigitEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -838,12 +856,12 @@ func (this *QChar) IsDigit() {
 // static inline
 // bool isDigit(uint)
 func (this *QChar) IsDigit_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isDigitEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsDigit_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsDigit_1(ucs4)
 }
@@ -854,7 +872,7 @@ func QChar_IsDigit_1(ucs4 uint) {
 // bool isLower()
 func (this *QChar) IsLower() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isLowerEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isLowerEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -863,12 +881,12 @@ func (this *QChar) IsLower() {
 // static inline
 // bool isLower(uint)
 func (this *QChar) IsLower_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isLowerEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsLower_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsLower_1(ucs4)
 }
@@ -879,7 +897,7 @@ func QChar_IsLower_1(ucs4 uint) {
 // bool isUpper()
 func (this *QChar) IsUpper() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isUpperEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isUpperEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -888,12 +906,12 @@ func (this *QChar) IsUpper() {
 // static inline
 // bool isUpper(uint)
 func (this *QChar) IsUpper_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isUpperEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsUpper_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsUpper_1(ucs4)
 }
@@ -904,7 +922,7 @@ func QChar_IsUpper_1(ucs4 uint) {
 // bool isTitleCase()
 func (this *QChar) IsTitleCase() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11isTitleCaseEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11isTitleCaseEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -913,12 +931,12 @@ func (this *QChar) IsTitleCase() {
 // static inline
 // bool isTitleCase(uint)
 func (this *QChar) IsTitleCase_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar11isTitleCaseEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsTitleCase_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsTitleCase_1(ucs4)
 }
@@ -929,7 +947,7 @@ func QChar_IsTitleCase_1(ucs4 uint) {
 // bool isNonCharacter()
 func (this *QChar) IsNonCharacter() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14isNonCharacterEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14isNonCharacterEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -938,12 +956,12 @@ func (this *QChar) IsNonCharacter() {
 // static inline
 // bool isNonCharacter(uint)
 func (this *QChar) IsNonCharacter_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar14isNonCharacterEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsNonCharacter_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsNonCharacter_1(ucs4)
 }
@@ -954,7 +972,7 @@ func QChar_IsNonCharacter_1(ucs4 uint) {
 // bool isHighSurrogate()
 func (this *QChar) IsHighSurrogate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar15isHighSurrogateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar15isHighSurrogateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -963,12 +981,12 @@ func (this *QChar) IsHighSurrogate() {
 // static inline
 // bool isHighSurrogate(uint)
 func (this *QChar) IsHighSurrogate_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar15isHighSurrogateEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsHighSurrogate_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsHighSurrogate_1(ucs4)
 }
@@ -979,7 +997,7 @@ func QChar_IsHighSurrogate_1(ucs4 uint) {
 // bool isLowSurrogate()
 func (this *QChar) IsLowSurrogate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14isLowSurrogateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14isLowSurrogateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -988,12 +1006,12 @@ func (this *QChar) IsLowSurrogate() {
 // static inline
 // bool isLowSurrogate(uint)
 func (this *QChar) IsLowSurrogate_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar14isLowSurrogateEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsLowSurrogate_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsLowSurrogate_1(ucs4)
 }
@@ -1004,7 +1022,7 @@ func QChar_IsLowSurrogate_1(ucs4 uint) {
 // bool isSurrogate()
 func (this *QChar) IsSurrogate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11isSurrogateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11isSurrogateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1013,12 +1031,12 @@ func (this *QChar) IsSurrogate() {
 // static inline
 // bool isSurrogate(uint)
 func (this *QChar) IsSurrogate_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar11isSurrogateEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_IsSurrogate_1(ucs4 uint) {
-	// 1: (uint ucs4), (ucs4)
+	// 1: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.IsSurrogate_1(ucs4)
 }
@@ -1029,7 +1047,7 @@ func QChar_IsSurrogate_1(ucs4 uint) {
 // uchar cell()
 func (this *QChar) Cell() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar4cellEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar4cellEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1039,7 +1057,7 @@ func (this *QChar) Cell() {
 // uchar row()
 func (this *QChar) Row() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar3rowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar3rowEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1048,8 +1066,8 @@ func (this *QChar) Row() {
 // inline
 // void setCell(uchar)
 func (this *QChar) SetCell(acell byte) {
-	// 0: (, uchar acell), (&acell)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7setCellEh", ffiqt.FFI_TYPE_VOID, this.cthis, &acell)
+	// 0: (, acell uchar), (&acell)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7setCellEh", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &acell)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1058,8 +1076,8 @@ func (this *QChar) SetCell(acell byte) {
 // inline
 // void setRow(uchar)
 func (this *QChar) SetRow(arow byte) {
-	// 0: (, uchar arow), (&arow)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar6setRowEh", ffiqt.FFI_TYPE_VOID, this.cthis, &arow)
+	// 0: (, arow uchar), (&arow)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar6setRowEh", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arow)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1068,12 +1086,12 @@ func (this *QChar) SetRow(arow byte) {
 // static inline
 // bool requiresSurrogates(uint)
 func (this *QChar) RequiresSurrogates(ucs4 uint) {
-	// 0: (uint ucs4), (ucs4)
+	// 0: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar18requiresSurrogatesEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_RequiresSurrogates(ucs4 uint) {
-	// 0: (uint ucs4), (ucs4)
+	// 0: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.RequiresSurrogates(ucs4)
 }
@@ -1083,12 +1101,12 @@ func QChar_RequiresSurrogates(ucs4 uint) {
 // static inline
 // uint surrogateToUcs4(ushort, ushort)
 func (this *QChar) SurrogateToUcs4(high uint16, low uint16) {
-	// 0: (ushort high, ushort low), (high, low)
+	// 0: (high ushort, low ushort), (high, low)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4Ett", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_SurrogateToUcs4(high uint16, low uint16) {
-	// 0: (ushort high, ushort low), (high, low)
+	// 0: (high ushort, low ushort), (high, low)
 	var nilthis *QChar
 	nilthis.SurrogateToUcs4(high, low)
 }
@@ -1098,12 +1116,12 @@ func QChar_SurrogateToUcs4(high uint16, low uint16) {
 // static inline
 // uint surrogateToUcs4(class QChar, class QChar)
 func (this *QChar) SurrogateToUcs4_1(high unsafe.Pointer, low unsafe.Pointer) {
-	// 1: (QChar high, QChar low), (high, low)
+	// 1: (high QChar, low QChar), (high, low)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4ES_S_", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_SurrogateToUcs4_1(high unsafe.Pointer, low unsafe.Pointer) {
-	// 1: (QChar high, QChar low), (high, low)
+	// 1: (high QChar, low QChar), (high, low)
 	var nilthis *QChar
 	nilthis.SurrogateToUcs4_1(high, low)
 }
@@ -1113,12 +1131,12 @@ func QChar_SurrogateToUcs4_1(high unsafe.Pointer, low unsafe.Pointer) {
 // static inline
 // ushort highSurrogate(uint)
 func (this *QChar) HighSurrogate(ucs4 uint) {
-	// 0: (uint ucs4), (ucs4)
+	// 0: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar13highSurrogateEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_HighSurrogate(ucs4 uint) {
-	// 0: (uint ucs4), (ucs4)
+	// 0: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.HighSurrogate(ucs4)
 }
@@ -1128,12 +1146,12 @@ func QChar_HighSurrogate(ucs4 uint) {
 // static inline
 // ushort lowSurrogate(uint)
 func (this *QChar) LowSurrogate(ucs4 uint) {
-	// 0: (uint ucs4), (ucs4)
+	// 0: (ucs4 uint), (ucs4)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar12lowSurrogateEj", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QChar_LowSurrogate(ucs4 uint) {
-	// 0: (uint ucs4), (ucs4)
+	// 0: (ucs4 uint), (ucs4)
 	var nilthis *QChar
 	nilthis.LowSurrogate(ucs4)
 }

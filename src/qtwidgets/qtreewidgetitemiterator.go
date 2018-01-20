@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 66
+// extern C begin: 102
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,36 @@ func init() {
 
 //  body block begin
 type QTreeWidgetItemIterator struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTreeWidgetItemIterator) GetCthis() unsafe.Pointer {
+	return this.Cthis
+}
+
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:85
+// index:0
+// void QTreeWidgetItemIterator(class QTreeWidget *, QTreeWidgetItemIterator::IteratorFlags)
+func NewQTreeWidgetItemIterator(widget unsafe.Pointer, flags int) *QTreeWidgetItemIterator {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorC2EP11QTreeWidget6QFlagsINS_12IteratorFlagEE", ffiqt.FFI_TYPE_VOID, cthis, widget, flags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTreeWidgetItemIteratorFromPointer(cthis)
+	return gothis
+}
+func NewQTreeWidgetItemIteratorFromPointer(cthis unsafe.Pointer) *QTreeWidgetItemIterator {
+	return &QTreeWidgetItemIterator{&qtrt.CObject{cthis}}
+}
+
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:86
+// index:1
+// void QTreeWidgetItemIterator(class QTreeWidgetItem *, QTreeWidgetItemIterator::IteratorFlags)
+func NewQTreeWidgetItemIterator_1(item unsafe.Pointer, flags int) *QTreeWidgetItemIterator {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorC2EP15QTreeWidgetItem6QFlagsINS_12IteratorFlagEE", ffiqt.FFI_TYPE_VOID, cthis, item, flags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTreeWidgetItemIteratorFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:87

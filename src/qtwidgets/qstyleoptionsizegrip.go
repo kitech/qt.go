@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionSizeGrip struct {
-	cthis unsafe.Pointer
+	*QStyleOptionComplex
+}
+
+func (this *QStyleOptionSizeGrip) GetCthis() unsafe.Pointer {
+	return this.QStyleOptionComplex.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:653
@@ -63,7 +67,23 @@ func NewQStyleOptionSizeGrip() *QStyleOptionSizeGrip {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionSizeGrip{cthis}
+	gothis := NewQStyleOptionSizeGripFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionSizeGripFromPointer(cthis unsafe.Pointer) *QStyleOptionSizeGrip {
+	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
+	return &QStyleOptionSizeGrip{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:656
+// index:1
+// void QStyleOptionSizeGrip(int)
+func NewQStyleOptionSizeGrip_1(version int) *QStyleOptionSizeGrip {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionSizeGripFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

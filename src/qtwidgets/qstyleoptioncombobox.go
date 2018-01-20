@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionComboBox struct {
-	cthis unsafe.Pointer
+	*QStyleOptionComplex
+}
+
+func (this *QStyleOptionComboBox) GetCthis() unsafe.Pointer {
+	return this.QStyleOptionComplex.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:601
@@ -63,7 +67,23 @@ func NewQStyleOptionComboBox() *QStyleOptionComboBox {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionComboBox{cthis}
+	gothis := NewQStyleOptionComboBoxFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionComboBoxFromPointer(cthis unsafe.Pointer) *QStyleOptionComboBox {
+	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
+	return &QStyleOptionComboBox{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:605
+// index:1
+// void QStyleOptionComboBox(int)
+func NewQStyleOptionComboBox_1(version int) *QStyleOptionComboBox {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionComboBoxFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

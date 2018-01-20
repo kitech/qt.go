@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QDragLeaveEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QDragLeaveEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:671
@@ -59,7 +63,12 @@ func NewQDragLeaveEvent() *QDragLeaveEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragLeaveEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QDragLeaveEvent{cthis}
+	gothis := NewQDragLeaveEventFromPointer(cthis)
+	return gothis
+}
+func NewQDragLeaveEventFromPointer(cthis unsafe.Pointer) *QDragLeaveEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QDragLeaveEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:672

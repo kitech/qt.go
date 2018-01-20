@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QMessageAuthenticationCode struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QMessageAuthenticationCode) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qmessageauthenticationcode.h:54
@@ -55,7 +59,11 @@ func NewQMessageAuthenticationCode(method int, key unsafe.Pointer) *QMessageAuth
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeC2EN18QCryptographicHash9AlgorithmERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, &method, key)
 	gopp.ErrPrint(err, rv)
-	return &QMessageAuthenticationCode{cthis}
+	gothis := NewQMessageAuthenticationCodeFromPointer(cthis)
+	return gothis
+}
+func NewQMessageAuthenticationCodeFromPointer(cthis unsafe.Pointer) *QMessageAuthenticationCode {
+	return &QMessageAuthenticationCode{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qmessageauthenticationcode.h:56
@@ -71,7 +79,7 @@ func DeleteQMessageAuthenticationCode(*QMessageAuthenticationCode) {
 // void reset()
 func (this *QMessageAuthenticationCode) Reset() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode5resetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode5resetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -79,8 +87,8 @@ func (this *QMessageAuthenticationCode) Reset() {
 // index:0
 // void setKey(const class QByteArray &)
 func (this *QMessageAuthenticationCode) SetKey(key unsafe.Pointer) {
-	// 0: (, const QByteArray & key), (key)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.cthis, key)
+	// 0: (, key const QByteArray &), (key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,8 +96,8 @@ func (this *QMessageAuthenticationCode) SetKey(key unsafe.Pointer) {
 // index:0
 // void addData(const char *, int)
 func (this *QMessageAuthenticationCode) AddData(data unsafe.Pointer, length int) {
-	// 0: (, const char * data, int length), (data, &length)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataEPKci", ffiqt.FFI_TYPE_VOID, this.cthis, data, &length)
+	// 0: (, data const char *, length int), (data, &length)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataEPKci", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data, &length)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,8 +105,8 @@ func (this *QMessageAuthenticationCode) AddData(data unsafe.Pointer, length int)
 // index:1
 // void addData(const class QByteArray &)
 func (this *QMessageAuthenticationCode) AddData_1(data unsafe.Pointer) {
-	// 1: (, const QByteArray & data), (data)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.cthis, data)
+	// 1: (, data const QByteArray &), (data)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataERK10QByteArray", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,8 +114,8 @@ func (this *QMessageAuthenticationCode) AddData_1(data unsafe.Pointer) {
 // index:2
 // bool addData(class QIODevice *)
 func (this *QMessageAuthenticationCode) AddData_2(device unsafe.Pointer) {
-	// 2: (, QIODevice * device), (device)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataEP9QIODevice", ffiqt.FFI_TYPE_VOID, this.cthis, device)
+	// 2: (, device QIODevice *), (device)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataEP9QIODevice", ffiqt.FFI_TYPE_VOID, this.GetCthis(), device)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +124,7 @@ func (this *QMessageAuthenticationCode) AddData_2(device unsafe.Pointer) {
 // QByteArray result()
 func (this *QMessageAuthenticationCode) Result() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QMessageAuthenticationCode6resultEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QMessageAuthenticationCode6resultEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,12 +133,12 @@ func (this *QMessageAuthenticationCode) Result() {
 // static
 // QByteArray hash(const class QByteArray &, const class QByteArray &, class QCryptographicHash::Algorithm)
 func (this *QMessageAuthenticationCode) Hash(message unsafe.Pointer, key unsafe.Pointer, method int) {
-	// 0: (const QByteArray & message, const QByteArray & key, QCryptographicHash::Algorithm method), (message, key, method)
+	// 0: (message const QByteArray &, key const QByteArray &, method QCryptographicHash::Algorithm), (message, key, method)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode4hashERK10QByteArrayS2_N18QCryptographicHash9AlgorithmE", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QMessageAuthenticationCode_Hash(message unsafe.Pointer, key unsafe.Pointer, method int) {
-	// 0: (const QByteArray & message, const QByteArray & key, QCryptographicHash::Algorithm method), (message, key, method)
+	// 0: (message const QByteArray &, key const QByteArray &, method QCryptographicHash::Algorithm), (message, key, method)
 	var nilthis *QMessageAuthenticationCode
 	nilthis.Hash(message, key, method)
 }

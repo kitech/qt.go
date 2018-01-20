@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QSocketNotifier struct {
-	cthis unsafe.Pointer
+	*QObject
+}
+
+func (this *QSocketNotifier) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:50
@@ -54,7 +58,7 @@ type QSocketNotifier struct {
 // const QMetaObject * metaObject()
 func (this *QSocketNotifier) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -65,7 +69,12 @@ func NewQSocketNotifier(socket int64, arg1 int, parent unsafe.Pointer) *QSocketN
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifierC2ExNS_4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &socket, &arg1, parent)
 	gopp.ErrPrint(err, rv)
-	return &QSocketNotifier{cthis}
+	gothis := NewQSocketNotifierFromPointer(cthis)
+	return gothis
+}
+func NewQSocketNotifierFromPointer(cthis unsafe.Pointer) *QSocketNotifier {
+	bcthis0 := NewQObjectFromPointer(cthis)
+	return &QSocketNotifier{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:57
@@ -82,7 +91,7 @@ func DeleteQSocketNotifier(*QSocketNotifier) {
 // qintptr socket()
 func (this *QSocketNotifier) Socket() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier6socketEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier6socketEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -91,7 +100,7 @@ func (this *QSocketNotifier) Socket() {
 // QSocketNotifier::Type type()
 func (this *QSocketNotifier) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,7 +109,7 @@ func (this *QSocketNotifier) Type() {
 // bool isEnabled()
 func (this *QSocketNotifier) IsEnabled() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier9isEnabledEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier9isEnabledEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,7 +118,17 @@ func (this *QSocketNotifier) IsEnabled() {
 // void setEnabled(_Bool)
 func (this *QSocketNotifier) SetEnabled(arg0 bool) {
 	// 0: (, bool arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifier10setEnabledEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifier10setEnabledEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qsocketnotifier.h:71
+// index:0
+// virtual
+// bool event(class QEvent *)
+func (this *QSocketNotifier) Event(arg0 unsafe.Pointer) {
+	// 0: (, QEvent * arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifier5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

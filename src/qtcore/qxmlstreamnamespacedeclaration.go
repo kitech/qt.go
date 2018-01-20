@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QXmlStreamNamespaceDeclaration struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QXmlStreamNamespaceDeclaration) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:199
@@ -55,7 +59,11 @@ func NewQXmlStreamNamespaceDeclaration() *QXmlStreamNamespaceDeclaration {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QXmlStreamNamespaceDeclaration{cthis}
+	gothis := NewQXmlStreamNamespaceDeclarationFromPointer(cthis)
+	return gothis
+}
+func NewQXmlStreamNamespaceDeclarationFromPointer(cthis unsafe.Pointer) *QXmlStreamNamespaceDeclaration {
+	return &QXmlStreamNamespaceDeclaration{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:216
@@ -65,7 +73,8 @@ func NewQXmlStreamNamespaceDeclaration_1(prefix unsafe.Pointer, namespaceUri uns
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationC2ERK7QStringS2_", ffiqt.FFI_TYPE_VOID, cthis, prefix, namespaceUri)
 	gopp.ErrPrint(err, rv)
-	return &QXmlStreamNamespaceDeclaration{cthis}
+	gothis := NewQXmlStreamNamespaceDeclarationFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:217
@@ -82,7 +91,7 @@ func DeleteQXmlStreamNamespaceDeclaration(*QXmlStreamNamespaceDeclaration) {
 // QStringRef prefix()
 func (this *QXmlStreamNamespaceDeclaration) Prefix() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration6prefixEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration6prefixEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -92,7 +101,7 @@ func (this *QXmlStreamNamespaceDeclaration) Prefix() {
 // QStringRef namespaceUri()
 func (this *QXmlStreamNamespaceDeclaration) NamespaceUri() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

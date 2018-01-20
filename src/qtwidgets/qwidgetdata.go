@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QWidgetData struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QWidgetData) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 //  body block end

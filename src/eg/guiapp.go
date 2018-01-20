@@ -13,7 +13,8 @@ func main() {
 	var p unsafe.Pointer
 	btn := qtwidgets.NewQPushButton(p)
 	log.Println(btn)
-	var w = (*qtwidgets.QWidget)(btn)
-	w.Show()
+	btn.Show()
+	// var w = (*qtwidgets.QWidget)(btn)
+	// w.Show()
 	app.Exec()
 }

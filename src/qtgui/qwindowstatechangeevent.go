@@ -49,7 +49,26 @@ func init() {
 
 //  body block begin
 type QWindowStateChangeEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QWindowStateChangeEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
+}
+
+// /usr/include/qt/QtGui/qevent.h:783
+// index:0
+// void QWindowStateChangeEvent(Qt::WindowStates, _Bool)
+func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateChangeEvent {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QWindowStateChangeEventC2E6QFlagsIN2Qt11WindowStateEEb", ffiqt.FFI_TYPE_VOID, cthis, &aOldState, &isOverride)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQWindowStateChangeEventFromPointer(cthis)
+	return gothis
+}
+func NewQWindowStateChangeEventFromPointer(cthis unsafe.Pointer) *QWindowStateChangeEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QWindowStateChangeEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:784
@@ -67,7 +86,7 @@ func DeleteQWindowStateChangeEvent(*QWindowStateChangeEvent) {
 // Qt::WindowStates oldState()
 func (this *QWindowStateChangeEvent) OldState() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent8oldStateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent8oldStateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -76,7 +95,7 @@ func (this *QWindowStateChangeEvent) OldState() {
 // bool isOverride()
 func (this *QWindowStateChangeEvent) IsOverride() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent10isOverrideEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent10isOverrideEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

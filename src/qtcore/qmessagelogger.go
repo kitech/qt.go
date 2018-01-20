@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QMessageLogger struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QMessageLogger) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qlogging.h:90
@@ -56,7 +60,11 @@ func NewQMessageLogger() *QMessageLogger {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QMessageLogger{cthis}
+	gothis := NewQMessageLoggerFromPointer(cthis)
+	return gothis
+}
+func NewQMessageLoggerFromPointer(cthis unsafe.Pointer) *QMessageLogger {
+	return &QMessageLogger{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qlogging.h:91
@@ -67,7 +75,8 @@ func NewQMessageLogger_1(file unsafe.Pointer, line int, function unsafe.Pointer)
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_", ffiqt.FFI_TYPE_VOID, cthis, file, &line, function)
 	gopp.ErrPrint(err, rv)
-	return &QMessageLogger{cthis}
+	gothis := NewQMessageLoggerFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qlogging.h:93
@@ -78,7 +87,8 @@ func NewQMessageLogger_2(file unsafe.Pointer, line int, function unsafe.Pointer,
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_S1_", ffiqt.FFI_TYPE_VOID, cthis, file, &line, function, category)
 	gopp.ErrPrint(err, rv)
-	return &QMessageLogger{cthis}
+	gothis := NewQMessageLoggerFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qlogging.h:120
@@ -86,7 +96,7 @@ func NewQMessageLogger_2(file unsafe.Pointer, line int, function unsafe.Pointer,
 // QDebug debug()
 func (this *QMessageLogger) Debug() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger5debugEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger5debugEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -94,8 +104,8 @@ func (this *QMessageLogger) Debug() {
 // index:1
 // QDebug debug(const class QLoggingCategory &)
 func (this *QMessageLogger) Debug_1(cat unsafe.Pointer) {
-	// 1: (, const QLoggingCategory & cat), (cat)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger5debugERK16QLoggingCategory", ffiqt.FFI_TYPE_VOID, this.cthis, cat)
+	// 1: (, cat const QLoggingCategory &), (cat)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger5debugERK16QLoggingCategory", ffiqt.FFI_TYPE_VOID, this.GetCthis(), cat)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -104,7 +114,7 @@ func (this *QMessageLogger) Debug_1(cat unsafe.Pointer) {
 // QDebug info()
 func (this *QMessageLogger) Info() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger4infoEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger4infoEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,8 +122,8 @@ func (this *QMessageLogger) Info() {
 // index:1
 // QDebug info(const class QLoggingCategory &)
 func (this *QMessageLogger) Info_1(cat unsafe.Pointer) {
-	// 1: (, const QLoggingCategory & cat), (cat)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger4infoERK16QLoggingCategory", ffiqt.FFI_TYPE_VOID, this.cthis, cat)
+	// 1: (, cat const QLoggingCategory &), (cat)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger4infoERK16QLoggingCategory", ffiqt.FFI_TYPE_VOID, this.GetCthis(), cat)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -122,7 +132,7 @@ func (this *QMessageLogger) Info_1(cat unsafe.Pointer) {
 // QDebug warning()
 func (this *QMessageLogger) Warning() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger7warningEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger7warningEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,8 +140,8 @@ func (this *QMessageLogger) Warning() {
 // index:1
 // QDebug warning(const class QLoggingCategory &)
 func (this *QMessageLogger) Warning_1(cat unsafe.Pointer) {
-	// 1: (, const QLoggingCategory & cat), (cat)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger7warningERK16QLoggingCategory", ffiqt.FFI_TYPE_VOID, this.cthis, cat)
+	// 1: (, cat const QLoggingCategory &), (cat)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger7warningERK16QLoggingCategory", ffiqt.FFI_TYPE_VOID, this.GetCthis(), cat)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,7 +150,7 @@ func (this *QMessageLogger) Warning_1(cat unsafe.Pointer) {
 // QDebug critical()
 func (this *QMessageLogger) Critical() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger8criticalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger8criticalEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -148,8 +158,8 @@ func (this *QMessageLogger) Critical() {
 // index:1
 // QDebug critical(const class QLoggingCategory &)
 func (this *QMessageLogger) Critical_1(cat unsafe.Pointer) {
-	// 1: (, const QLoggingCategory & cat), (cat)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger8criticalERK16QLoggingCategory", ffiqt.FFI_TYPE_VOID, this.cthis, cat)
+	// 1: (, cat const QLoggingCategory &), (cat)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger8criticalERK16QLoggingCategory", ffiqt.FFI_TYPE_VOID, this.GetCthis(), cat)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -158,7 +168,7 @@ func (this *QMessageLogger) Critical_1(cat unsafe.Pointer) {
 // QNoDebug noDebug()
 func (this *QMessageLogger) NoDebug() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger7noDebugEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMessageLogger7noDebugEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

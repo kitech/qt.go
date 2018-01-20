@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QKeySequence struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QKeySequence) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qkeysequence.h:156
@@ -59,7 +63,11 @@ func NewQKeySequence() *QKeySequence {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequenceC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QKeySequence{cthis}
+	gothis := NewQKeySequenceFromPointer(cthis)
+	return gothis
+}
+func NewQKeySequenceFromPointer(cthis unsafe.Pointer) *QKeySequence {
+	return &QKeySequence{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qkeysequence.h:157
@@ -69,7 +77,8 @@ func NewQKeySequence_1(key unsafe.Pointer, format int) *QKeySequence {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequenceC2ERK7QStringNS_14SequenceFormatE", ffiqt.FFI_TYPE_VOID, cthis, key, &format)
 	gopp.ErrPrint(err, rv)
-	return &QKeySequence{cthis}
+	gothis := NewQKeySequenceFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qkeysequence.h:158
@@ -79,7 +88,8 @@ func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, &k1, &k2, &k3, &k4)
 	gopp.ErrPrint(err, rv)
-	return &QKeySequence{cthis}
+	gothis := NewQKeySequenceFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qkeysequence.h:160
@@ -89,7 +99,8 @@ func NewQKeySequence_3(key int) *QKeySequence {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequenceC2ENS_11StandardKeyE", ffiqt.FFI_TYPE_VOID, cthis, &key)
 	gopp.ErrPrint(err, rv)
-	return &QKeySequence{cthis}
+	gothis := NewQKeySequenceFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qkeysequence.h:161
@@ -105,7 +116,7 @@ func DeleteQKeySequence(*QKeySequence) {
 // int count()
 func (this *QKeySequence) Count() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence5countEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence5countEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -114,7 +125,7 @@ func (this *QKeySequence) Count() {
 // bool isEmpty()
 func (this *QKeySequence) IsEmpty() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -122,8 +133,8 @@ func (this *QKeySequence) IsEmpty() {
 // index:0
 // QString toString(enum QKeySequence::SequenceFormat)
 func (this *QKeySequence) ToString(format int) {
-	// 0: (, QKeySequence::SequenceFormat format), (&format)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence8toStringENS_14SequenceFormatE", ffiqt.FFI_TYPE_VOID, this.cthis, &format)
+	// 0: (, format QKeySequence::SequenceFormat), (&format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence8toStringENS_14SequenceFormatE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &format)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -132,12 +143,12 @@ func (this *QKeySequence) ToString(format int) {
 // static
 // QKeySequence fromString(const class QString &, enum QKeySequence::SequenceFormat)
 func (this *QKeySequence) FromString(str unsafe.Pointer, format int) {
-	// 0: (const QString & str, QKeySequence::SequenceFormat format), (str, format)
+	// 0: (str const QString &, format QKeySequence::SequenceFormat), (str, format)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence10fromStringERK7QStringNS_14SequenceFormatE", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QKeySequence_FromString(str unsafe.Pointer, format int) {
-	// 0: (const QString & str, QKeySequence::SequenceFormat format), (str, format)
+	// 0: (str const QString &, format QKeySequence::SequenceFormat), (str, format)
 	var nilthis *QKeySequence
 	nilthis.FromString(str, format)
 }
@@ -147,12 +158,12 @@ func QKeySequence_FromString(str unsafe.Pointer, format int) {
 // static
 // QList<QKeySequence> listFromString(const class QString &, enum QKeySequence::SequenceFormat)
 func (this *QKeySequence) ListFromString(str unsafe.Pointer, format int) {
-	// 0: (const QString & str, QKeySequence::SequenceFormat format), (str, format)
+	// 0: (str const QString &, format QKeySequence::SequenceFormat), (str, format)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence14listFromStringERK7QStringNS_14SequenceFormatE", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QKeySequence_ListFromString(str unsafe.Pointer, format int) {
-	// 0: (const QString & str, QKeySequence::SequenceFormat format), (str, format)
+	// 0: (str const QString &, format QKeySequence::SequenceFormat), (str, format)
 	var nilthis *QKeySequence
 	nilthis.ListFromString(str, format)
 }
@@ -161,8 +172,8 @@ func QKeySequence_ListFromString(str unsafe.Pointer, format int) {
 // index:0
 // QKeySequence::SequenceMatch matches(const class QKeySequence &)
 func (this *QKeySequence) Matches(seq unsafe.Pointer) {
-	// 0: (, const QKeySequence & seq), (seq)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence7matchesERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, seq)
+	// 0: (, seq const QKeySequence &), (seq)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence7matchesERKS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), seq)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -171,12 +182,12 @@ func (this *QKeySequence) Matches(seq unsafe.Pointer) {
 // static
 // QKeySequence mnemonic(const class QString &)
 func (this *QKeySequence) Mnemonic(text unsafe.Pointer) {
-	// 0: (const QString & text), (text)
+	// 0: (text const QString &), (text)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence8mnemonicERK7QString", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QKeySequence_Mnemonic(text unsafe.Pointer) {
-	// 0: (const QString & text), (text)
+	// 0: (text const QString &), (text)
 	var nilthis *QKeySequence
 	nilthis.Mnemonic(text)
 }
@@ -186,12 +197,12 @@ func QKeySequence_Mnemonic(text unsafe.Pointer) {
 // static
 // QList<QKeySequence> keyBindings(enum QKeySequence::StandardKey)
 func (this *QKeySequence) KeyBindings(key int) {
-	// 0: (QKeySequence::StandardKey key), (key)
+	// 0: (key QKeySequence::StandardKey), (key)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence11keyBindingsENS_11StandardKeyE", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QKeySequence_KeyBindings(key int) {
-	// 0: (QKeySequence::StandardKey key), (key)
+	// 0: (key QKeySequence::StandardKey), (key)
 	var nilthis *QKeySequence
 	nilthis.KeyBindings(key)
 }
@@ -201,8 +212,8 @@ func QKeySequence_KeyBindings(key int) {
 // inline
 // void swap(class QKeySequence &)
 func (this *QKeySequence) Swap(other unsafe.Pointer) {
-	// 0: (, QKeySequence & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QKeySequence &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +222,7 @@ func (this *QKeySequence) Swap(other unsafe.Pointer) {
 // bool isDetached()
 func (this *QKeySequence) IsDetached() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence10isDetachedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence10isDetachedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

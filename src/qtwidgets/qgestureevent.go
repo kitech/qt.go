@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QGestureEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QGestureEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:278
@@ -70,7 +74,7 @@ func DeleteQGestureEvent(*QGestureEvent) {
 // QList<QGesture *> gestures()
 func (this *QGestureEvent) Gestures() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent8gesturesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent8gesturesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -78,8 +82,8 @@ func (this *QGestureEvent) Gestures() {
 // index:0
 // QGesture * gesture(Qt::GestureType)
 func (this *QGestureEvent) Gesture(type_ int) {
-	// 0: (, Qt::GestureType type), (&type_)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent7gestureEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &type_)
+	// 0: (, type Qt::GestureType), (&type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent7gestureEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &type_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,7 +92,7 @@ func (this *QGestureEvent) Gesture(type_ int) {
 // QList<QGesture *> activeGestures()
 func (this *QGestureEvent) ActiveGestures() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent14activeGesturesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent14activeGesturesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,7 +101,7 @@ func (this *QGestureEvent) ActiveGestures() {
 // QList<QGesture *> canceledGestures()
 func (this *QGestureEvent) CanceledGestures() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent16canceledGesturesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent16canceledGesturesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,7 +110,7 @@ func (this *QGestureEvent) CanceledGestures() {
 // void setAccepted(class QGesture *, _Bool)
 func (this *QGestureEvent) SetAccepted(arg0 unsafe.Pointer, arg1 bool) {
 	// 0: (, QGesture * arg0, bool arg1), (arg0, &arg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEP8QGestureb", ffiqt.FFI_TYPE_VOID, this.cthis, arg0, &arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEP8QGestureb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0, &arg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -115,7 +119,7 @@ func (this *QGestureEvent) SetAccepted(arg0 unsafe.Pointer, arg1 bool) {
 // void setAccepted(Qt::GestureType, _Bool)
 func (this *QGestureEvent) SetAccepted_1(arg0 int, arg1 bool) {
 	// 1: (, Qt::GestureType arg0, bool arg1), (&arg0, &arg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEN2Qt11GestureTypeEb", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0, &arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEN2Qt11GestureTypeEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0, &arg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -124,7 +128,7 @@ func (this *QGestureEvent) SetAccepted_1(arg0 int, arg1 bool) {
 // void accept(class QGesture *)
 func (this *QGestureEvent) Accept(arg0 unsafe.Pointer) {
 	// 0: (, QGesture * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6acceptEP8QGesture", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6acceptEP8QGesture", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,7 +137,7 @@ func (this *QGestureEvent) Accept(arg0 unsafe.Pointer) {
 // void accept(Qt::GestureType)
 func (this *QGestureEvent) Accept_1(arg0 int) {
 	// 1: (, Qt::GestureType arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6acceptEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6acceptEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,7 +146,7 @@ func (this *QGestureEvent) Accept_1(arg0 int) {
 // void ignore(class QGesture *)
 func (this *QGestureEvent) Ignore(arg0 unsafe.Pointer) {
 	// 0: (, QGesture * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6ignoreEP8QGesture", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6ignoreEP8QGesture", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,7 +155,7 @@ func (this *QGestureEvent) Ignore(arg0 unsafe.Pointer) {
 // void ignore(Qt::GestureType)
 func (this *QGestureEvent) Ignore_1(arg0 int) {
 	// 1: (, Qt::GestureType arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6ignoreEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6ignoreEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -160,7 +164,7 @@ func (this *QGestureEvent) Ignore_1(arg0 int) {
 // bool isAccepted(class QGesture *)
 func (this *QGestureEvent) IsAccepted(arg0 unsafe.Pointer) {
 	// 0: (, QGesture * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEP8QGesture", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEP8QGesture", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,7 +173,7 @@ func (this *QGestureEvent) IsAccepted(arg0 unsafe.Pointer) {
 // bool isAccepted(Qt::GestureType)
 func (this *QGestureEvent) IsAccepted_1(arg0 int) {
 	// 1: (, Qt::GestureType arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -177,8 +181,8 @@ func (this *QGestureEvent) IsAccepted_1(arg0 int) {
 // index:0
 // void setWidget(class QWidget *)
 func (this *QGestureEvent) SetWidget(widget unsafe.Pointer) {
-	// 0: (, QWidget * widget), (widget)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent9setWidgetEP7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, widget)
+	// 0: (, widget QWidget *), (widget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent9setWidgetEP7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), widget)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -187,7 +191,7 @@ func (this *QGestureEvent) SetWidget(widget unsafe.Pointer) {
 // QWidget * widget()
 func (this *QGestureEvent) Widget() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent6widgetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent6widgetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -195,8 +199,8 @@ func (this *QGestureEvent) Widget() {
 // index:0
 // QPointF mapToGraphicsScene(const class QPointF &)
 func (this *QGestureEvent) MapToGraphicsScene(gesturePoint unsafe.Pointer) {
-	// 0: (, const QPointF & gesturePoint), (gesturePoint)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, gesturePoint)
+	// 0: (, gesturePoint const QPointF &), (gesturePoint)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), gesturePoint)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 23
+// extern C begin: 24
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QMimeType struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QMimeType) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:78
@@ -55,7 +59,11 @@ func NewQMimeType() *QMimeType {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeTypeC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QMimeType{cthis}
+	gothis := NewQMimeTypeFromPointer(cthis)
+	return gothis
+}
+func NewQMimeTypeFromPointer(cthis unsafe.Pointer) *QMimeType {
+	return &QMimeType{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:88
@@ -65,7 +73,8 @@ func NewQMimeType_1(dd unsafe.Pointer) *QMimeType {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeTypeC2ERK16QMimeTypePrivate", ffiqt.FFI_TYPE_VOID, cthis, dd)
 	gopp.ErrPrint(err, rv)
-	return &QMimeType{cthis}
+	gothis := NewQMimeTypeFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:84
@@ -73,8 +82,8 @@ func NewQMimeType_1(dd unsafe.Pointer) *QMimeType {
 // inline
 // void swap(class QMimeType &)
 func (this *QMimeType) Swap(other unsafe.Pointer) {
-	// 0: (, QMimeType & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeType4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QMimeType &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeType4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -91,7 +100,7 @@ func DeleteQMimeType(*QMimeType) {
 // bool isValid()
 func (this *QMimeType) IsValid() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,7 +109,7 @@ func (this *QMimeType) IsValid() {
 // bool isDefault()
 func (this *QMimeType) IsDefault() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType9isDefaultEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType9isDefaultEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,7 +118,7 @@ func (this *QMimeType) IsDefault() {
 // QString name()
 func (this *QMimeType) Name() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -118,7 +127,7 @@ func (this *QMimeType) Name() {
 // QString comment()
 func (this *QMimeType) Comment() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7commentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7commentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,7 +136,7 @@ func (this *QMimeType) Comment() {
 // QString genericIconName()
 func (this *QMimeType) GenericIconName() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15genericIconNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15genericIconNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -136,7 +145,7 @@ func (this *QMimeType) GenericIconName() {
 // QString iconName()
 func (this *QMimeType) IconName() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8iconNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8iconNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,7 +154,7 @@ func (this *QMimeType) IconName() {
 // QStringList globPatterns()
 func (this *QMimeType) GlobPatterns() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12globPatternsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12globPatternsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -154,7 +163,7 @@ func (this *QMimeType) GlobPatterns() {
 // QStringList parentMimeTypes()
 func (this *QMimeType) ParentMimeTypes() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15parentMimeTypesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15parentMimeTypesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -163,7 +172,7 @@ func (this *QMimeType) ParentMimeTypes() {
 // QStringList allAncestors()
 func (this *QMimeType) AllAncestors() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12allAncestorsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12allAncestorsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +181,7 @@ func (this *QMimeType) AllAncestors() {
 // QStringList aliases()
 func (this *QMimeType) Aliases() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7aliasesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7aliasesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -181,7 +190,7 @@ func (this *QMimeType) Aliases() {
 // QStringList suffixes()
 func (this *QMimeType) Suffixes() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8suffixesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8suffixesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -190,7 +199,7 @@ func (this *QMimeType) Suffixes() {
 // QString preferredSuffix()
 func (this *QMimeType) PreferredSuffix() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15preferredSuffixEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15preferredSuffixEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -198,8 +207,8 @@ func (this *QMimeType) PreferredSuffix() {
 // index:0
 // bool inherits(const class QString &)
 func (this *QMimeType) Inherits(mimeTypeName unsafe.Pointer) {
-	// 0: (, const QString & mimeTypeName), (mimeTypeName)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8inheritsERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, mimeTypeName)
+	// 0: (, mimeTypeName const QString &), (mimeTypeName)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8inheritsERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), mimeTypeName)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -208,7 +217,7 @@ func (this *QMimeType) Inherits(mimeTypeName unsafe.Pointer) {
 // QString filterString()
 func (this *QMimeType) FilterString() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12filterStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12filterStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

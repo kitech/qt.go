@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QMutexLocker struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QMutexLocker) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qmutex.h:199
@@ -56,7 +60,11 @@ func NewQMutexLocker(m unsafe.Pointer) *QMutexLocker {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLockerC2EP11QBasicMutex", ffiqt.FFI_TYPE_VOID, cthis, m)
 	gopp.ErrPrint(err, rv)
-	return &QMutexLocker{cthis}
+	gothis := NewQMutexLockerFromPointer(cthis)
+	return gothis
+}
+func NewQMutexLockerFromPointer(cthis unsafe.Pointer) *QMutexLocker {
+	return &QMutexLocker{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qmutex.h:213
@@ -74,7 +82,7 @@ func DeleteQMutexLocker(*QMutexLocker) {
 // void unlock()
 func (this *QMutexLocker) Unlock() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLocker6unlockEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLocker6unlockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -84,7 +92,7 @@ func (this *QMutexLocker) Unlock() {
 // void relock()
 func (this *QMutexLocker) Relock() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLocker6relockEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLocker6relockEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -94,7 +102,7 @@ func (this *QMutexLocker) Relock() {
 // QMutex * mutex()
 func (this *QMutexLocker) Mutex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMutexLocker5mutexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMutexLocker5mutexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

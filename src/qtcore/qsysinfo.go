@@ -56,7 +56,11 @@ func init() {
 //  body block begin
 // block begin body
 type QSysInfo struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QSysInfo) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qsysinfo.h:220

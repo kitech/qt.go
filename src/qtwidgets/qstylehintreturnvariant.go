@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleHintReturnVariant struct {
-	cthis unsafe.Pointer
+	*QStyleHintReturn
+}
+
+func (this *QStyleHintReturnVariant) GetCthis() unsafe.Pointer {
+	return this.QStyleHintReturn.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:733
@@ -63,7 +67,12 @@ func NewQStyleHintReturnVariant() *QStyleHintReturnVariant {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleHintReturnVariantC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleHintReturnVariant{cthis}
+	gothis := NewQStyleHintReturnVariantFromPointer(cthis)
+	return gothis
+}
+func NewQStyleHintReturnVariantFromPointer(cthis unsafe.Pointer) *QStyleHintReturnVariant {
+	bcthis0 := NewQStyleHintReturnFromPointer(cthis)
+	return &QStyleHintReturnVariant{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:734

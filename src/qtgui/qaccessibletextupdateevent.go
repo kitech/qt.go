@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QAccessibleTextUpdateEvent struct {
-	cthis unsafe.Pointer
+	*QAccessibleTextCursorEvent
+}
+
+func (this *QAccessibleTextUpdateEvent) GetCthis() unsafe.Pointer {
+	return this.QAccessibleTextCursorEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:864
@@ -60,7 +64,12 @@ func NewQAccessibleTextUpdateEvent(obj unsafe.Pointer, position int, oldText uns
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_", ffiqt.FFI_TYPE_VOID, cthis, obj, &position, oldText, text)
 	gopp.ErrPrint(err, rv)
-	return &QAccessibleTextUpdateEvent{cthis}
+	gothis := NewQAccessibleTextUpdateEventFromPointer(cthis)
+	return gothis
+}
+func NewQAccessibleTextUpdateEventFromPointer(cthis unsafe.Pointer) *QAccessibleTextUpdateEvent {
+	bcthis0 := NewQAccessibleTextCursorEventFromPointer(cthis)
+	return &QAccessibleTextUpdateEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:870
@@ -71,7 +80,8 @@ func NewQAccessibleTextUpdateEvent_1(iface unsafe.Pointer, position int, oldText
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_", ffiqt.FFI_TYPE_VOID, cthis, iface, &position, oldText, text)
 	gopp.ErrPrint(err, rv)
-	return &QAccessibleTextUpdateEvent{cthis}
+	gothis := NewQAccessibleTextUpdateEventFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:877
@@ -89,7 +99,7 @@ func DeleteQAccessibleTextUpdateEvent(*QAccessibleTextUpdateEvent) {
 // QString textRemoved()
 func (this *QAccessibleTextUpdateEvent) TextRemoved() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent11textRemovedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent11textRemovedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +109,7 @@ func (this *QAccessibleTextUpdateEvent) TextRemoved() {
 // QString textInserted()
 func (this *QAccessibleTextUpdateEvent) TextInserted() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent12textInsertedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent12textInsertedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,7 +119,7 @@ func (this *QAccessibleTextUpdateEvent) TextInserted() {
 // int changePosition()
 func (this *QAccessibleTextUpdateEvent) ChangePosition() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent14changePositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent14changePositionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionFrame struct {
-	cthis unsafe.Pointer
+	*QStyleOption
+}
+
+func (this *QStyleOptionFrame) GetCthis() unsafe.Pointer {
+	return this.QStyleOption.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:143
@@ -63,7 +67,23 @@ func NewQStyleOptionFrame() *QStyleOptionFrame {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionFrame{cthis}
+	gothis := NewQStyleOptionFrameFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionFrameFromPointer(cthis unsafe.Pointer) *QStyleOptionFrame {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionFrame{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:147
+// index:1
+// void QStyleOptionFrame(int)
+func NewQStyleOptionFrame_1(version int) *QStyleOptionFrame {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionFrameFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

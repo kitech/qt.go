@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QMoveEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QMoveEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:421
@@ -59,7 +63,12 @@ func NewQMoveEvent(pos unsafe.Pointer, oldPos unsafe.Pointer) *QMoveEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMoveEventC2ERK6QPointS2_", ffiqt.FFI_TYPE_VOID, cthis, pos, oldPos)
 	gopp.ErrPrint(err, rv)
-	return &QMoveEvent{cthis}
+	gothis := NewQMoveEventFromPointer(cthis)
+	return gothis
+}
+func NewQMoveEventFromPointer(cthis unsafe.Pointer) *QMoveEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QMoveEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:422
@@ -77,7 +86,7 @@ func DeleteQMoveEvent(*QMoveEvent) {
 // const QPoint & pos()
 func (this *QMoveEvent) Pos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent3posEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent3posEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -87,7 +96,7 @@ func (this *QMoveEvent) Pos() {
 // const QPoint & oldPos()
 func (this *QMoveEvent) OldPos() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent6oldPosEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent6oldPosEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

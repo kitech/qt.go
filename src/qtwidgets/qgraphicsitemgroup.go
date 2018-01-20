@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 14
+// extern C begin: 17
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QGraphicsItemGroup struct {
-	cthis unsafe.Pointer
+	*QGraphicsItem
+}
+
+func (this *QGraphicsItemGroup) GetCthis() unsafe.Pointer {
+	return this.QGraphicsItem.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1004
@@ -63,7 +67,12 @@ func NewQGraphicsItemGroup(parent unsafe.Pointer) *QGraphicsItemGroup {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroupC2EP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QGraphicsItemGroup{cthis}
+	gothis := NewQGraphicsItemGroupFromPointer(cthis)
+	return gothis
+}
+func NewQGraphicsItemGroupFromPointer(cthis unsafe.Pointer) *QGraphicsItemGroup {
+	bcthis0 := NewQGraphicsItemFromPointer(cthis)
+	return &QGraphicsItemGroup{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1005
@@ -79,8 +88,8 @@ func DeleteQGraphicsItemGroup(*QGraphicsItemGroup) {
 // index:0
 // void addToGroup(class QGraphicsItem *)
 func (this *QGraphicsItemGroup) AddToGroup(item unsafe.Pointer) {
-	// 0: (, QGraphicsItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QGraphicsItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,8 +97,8 @@ func (this *QGraphicsItemGroup) AddToGroup(item unsafe.Pointer) {
 // index:0
 // void removeFromGroup(class QGraphicsItem *)
 func (this *QGraphicsItemGroup) RemoveFromGroup(item unsafe.Pointer) {
-	// 0: (, QGraphicsItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item QGraphicsItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +108,7 @@ func (this *QGraphicsItemGroup) RemoveFromGroup(item unsafe.Pointer) {
 // QRectF boundingRect()
 func (this *QGraphicsItemGroup) BoundingRect() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12boundingRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12boundingRectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,8 +117,8 @@ func (this *QGraphicsItemGroup) BoundingRect() {
 // virtual
 // void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
 func (this *QGraphicsItemGroup) Paint(painter unsafe.Pointer, option unsafe.Pointer, widget unsafe.Pointer) {
-	// 0: (, QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget), (painter, option, widget)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", ffiqt.FFI_TYPE_VOID, this.cthis, painter, option, widget)
+	// 0: (, painter QPainter *, option const QStyleOptionGraphicsItem *, widget QWidget *), (painter, option, widget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), painter, option, widget)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -118,8 +127,8 @@ func (this *QGraphicsItemGroup) Paint(painter unsafe.Pointer, option unsafe.Poin
 // virtual
 // bool isObscuredBy(const class QGraphicsItem *)
 func (this *QGraphicsItemGroup) IsObscuredBy(item unsafe.Pointer) {
-	// 0: (, const QGraphicsItem * item), (item)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_VOID, this.cthis, item)
+	// 0: (, item const QGraphicsItem *), (item)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_VOID, this.GetCthis(), item)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -129,7 +138,7 @@ func (this *QGraphicsItemGroup) IsObscuredBy(item unsafe.Pointer) {
 // QPainterPath opaqueArea()
 func (this *QGraphicsItemGroup) OpaqueArea() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup10opaqueAreaEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup10opaqueAreaEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -139,7 +148,7 @@ func (this *QGraphicsItemGroup) OpaqueArea() {
 // int type()
 func (this *QGraphicsItemGroup) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

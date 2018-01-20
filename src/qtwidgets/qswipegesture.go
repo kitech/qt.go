@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 23
+// extern C begin: 25
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QSwipeGesture struct {
-	cthis unsafe.Pointer
+	*QGesture
+}
+
+func (this *QSwipeGesture) GetCthis() unsafe.Pointer {
+	return this.QGesture.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:209
@@ -62,7 +66,7 @@ type QSwipeGesture struct {
 // const QMetaObject * metaObject()
 func (this *QSwipeGesture) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQSwipeGesture(parent unsafe.Pointer) *QSwipeGesture {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QSwipeGesture{cthis}
+	gothis := NewQSwipeGestureFromPointer(cthis)
+	return gothis
+}
+func NewQSwipeGestureFromPointer(cthis unsafe.Pointer) *QSwipeGesture {
+	bcthis0 := NewQGestureFromPointer(cthis)
+	return &QSwipeGesture{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:222
@@ -90,7 +99,7 @@ func DeleteQSwipeGesture(*QSwipeGesture) {
 // QSwipeGesture::SwipeDirection horizontalDirection()
 func (this *QSwipeGesture) HorizontalDirection() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture19horizontalDirectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture19horizontalDirectionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +108,7 @@ func (this *QSwipeGesture) HorizontalDirection() {
 // QSwipeGesture::SwipeDirection verticalDirection()
 func (this *QSwipeGesture) VerticalDirection() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture17verticalDirectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture17verticalDirectionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +117,7 @@ func (this *QSwipeGesture) VerticalDirection() {
 // qreal swipeAngle()
 func (this *QSwipeGesture) SwipeAngle() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10swipeAngleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10swipeAngleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,8 +125,8 @@ func (this *QSwipeGesture) SwipeAngle() {
 // index:0
 // void setSwipeAngle(qreal)
 func (this *QSwipeGesture) SetSwipeAngle(value float64) {
-	// 0: (, qreal value), (&value)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGesture13setSwipeAngleEd", ffiqt.FFI_TYPE_VOID, this.cthis, &value)
+	// 0: (, value qreal), (&value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGesture13setSwipeAngleEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &value)
 	gopp.ErrPrint(err, rv)
 }
 

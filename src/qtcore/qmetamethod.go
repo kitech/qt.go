@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QMetaMethod struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QMetaMethod) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:57
@@ -56,7 +60,11 @@ func NewQMetaMethod() *QMetaMethod {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaMethodC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QMetaMethod{cthis}
+	gothis := NewQMetaMethodFromPointer(cthis)
+	return gothis
+}
+func NewQMetaMethodFromPointer(cthis unsafe.Pointer) *QMetaMethod {
+	return &QMetaMethod{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:59
@@ -64,7 +72,7 @@ func NewQMetaMethod() *QMetaMethod {
 // QByteArray methodSignature()
 func (this *QMetaMethod) MethodSignature() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod15methodSignatureEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod15methodSignatureEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +81,7 @@ func (this *QMetaMethod) MethodSignature() {
 // QByteArray name()
 func (this *QMetaMethod) Name() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -82,7 +90,7 @@ func (this *QMetaMethod) Name() {
 // const char * typeName()
 func (this *QMetaMethod) TypeName() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod8typeNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod8typeNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -91,7 +99,7 @@ func (this *QMetaMethod) TypeName() {
 // int returnType()
 func (this *QMetaMethod) ReturnType() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod10returnTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod10returnTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,7 +108,7 @@ func (this *QMetaMethod) ReturnType() {
 // int parameterCount()
 func (this *QMetaMethod) ParameterCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14parameterCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14parameterCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,8 +116,8 @@ func (this *QMetaMethod) ParameterCount() {
 // index:0
 // int parameterType(int)
 func (this *QMetaMethod) ParameterType(index int) {
-	// 0: (, int index), (&index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod13parameterTypeEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	// 0: (, index int), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod13parameterTypeEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,8 +125,8 @@ func (this *QMetaMethod) ParameterType(index int) {
 // index:0
 // void getParameterTypes(int *)
 func (this *QMetaMethod) GetParameterTypes(types unsafe.Pointer) {
-	// 0: (, int * types), (types)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod17getParameterTypesEPi", ffiqt.FFI_TYPE_VOID, this.cthis, types)
+	// 0: (, types int *), (types)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod17getParameterTypesEPi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), types)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,7 +135,7 @@ func (this *QMetaMethod) GetParameterTypes(types unsafe.Pointer) {
 // QList<QByteArray> parameterTypes()
 func (this *QMetaMethod) ParameterTypes() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14parameterTypesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14parameterTypesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -136,7 +144,7 @@ func (this *QMetaMethod) ParameterTypes() {
 // QList<QByteArray> parameterNames()
 func (this *QMetaMethod) ParameterNames() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14parameterNamesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14parameterNamesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,7 +153,7 @@ func (this *QMetaMethod) ParameterNames() {
 // const char * tag()
 func (this *QMetaMethod) Tag() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod3tagEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod3tagEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -154,7 +162,7 @@ func (this *QMetaMethod) Tag() {
 // QMetaMethod::Access access()
 func (this *QMetaMethod) Access() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6accessEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6accessEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -163,7 +171,7 @@ func (this *QMetaMethod) Access() {
 // QMetaMethod::MethodType methodType()
 func (this *QMetaMethod) MethodType() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod10methodTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod10methodTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +180,7 @@ func (this *QMetaMethod) MethodType() {
 // int attributes()
 func (this *QMetaMethod) Attributes() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod10attributesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod10attributesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -181,7 +189,7 @@ func (this *QMetaMethod) Attributes() {
 // int methodIndex()
 func (this *QMetaMethod) MethodIndex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod11methodIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod11methodIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -190,7 +198,7 @@ func (this *QMetaMethod) MethodIndex() {
 // int revision()
 func (this *QMetaMethod) Revision() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod8revisionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod8revisionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -200,7 +208,7 @@ func (this *QMetaMethod) Revision() {
 // const QMetaObject * enclosingMetaObject()
 func (this *QMetaMethod) EnclosingMetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod19enclosingMetaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod19enclosingMetaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -208,8 +216,8 @@ func (this *QMetaMethod) EnclosingMetaObject() {
 // index:0
 // bool invoke(class QObject *, Qt::ConnectionType, class QGenericReturnArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
 func (this *QMetaMethod) Invoke(object unsafe.Pointer, connectionType int, returnValue unsafe.Pointer, val0 unsafe.Pointer, val1 unsafe.Pointer, val2 unsafe.Pointer, val3 unsafe.Pointer, val4 unsafe.Pointer, val5 unsafe.Pointer, val6 unsafe.Pointer, val7 unsafe.Pointer, val8 unsafe.Pointer, val9 unsafe.Pointer) {
-	// 0: (, QObject * object, Qt::ConnectionType connectionType, QGenericReturnArgument returnValue, QGenericArgument val0, QGenericArgument val1, QGenericArgument val2, QGenericArgument val3, QGenericArgument val4, QGenericArgument val5, QGenericArgument val6, QGenericArgument val7, QGenericArgument val8, QGenericArgument val9), (object, &connectionType, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", ffiqt.FFI_TYPE_VOID, this.cthis, object, &connectionType, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	// 0: (, object QObject *, connectionType Qt::ConnectionType, returnValue QGenericReturnArgument, val0 QGenericArgument, val1 QGenericArgument, val2 QGenericArgument, val3 QGenericArgument, val4 QGenericArgument, val5 QGenericArgument, val6 QGenericArgument, val7 QGenericArgument, val8 QGenericArgument, val9 QGenericArgument), (object, &connectionType, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), object, &connectionType, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -218,8 +226,8 @@ func (this *QMetaMethod) Invoke(object unsafe.Pointer, connectionType int, retur
 // inline
 // bool invoke(class QObject *, class QGenericReturnArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
 func (this *QMetaMethod) Invoke_1(object unsafe.Pointer, returnValue unsafe.Pointer, val0 unsafe.Pointer, val1 unsafe.Pointer, val2 unsafe.Pointer, val3 unsafe.Pointer, val4 unsafe.Pointer, val5 unsafe.Pointer, val6 unsafe.Pointer, val7 unsafe.Pointer, val8 unsafe.Pointer, val9 unsafe.Pointer) {
-	// 1: (, QObject * object, QGenericReturnArgument returnValue, QGenericArgument val0, QGenericArgument val1, QGenericArgument val2, QGenericArgument val3, QGenericArgument val4, QGenericArgument val5, QGenericArgument val6, QGenericArgument val7, QGenericArgument val8, QGenericArgument val9), (object, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObject22QGenericReturnArgument16QGenericArgumentS3_S3_S3_S3_S3_S3_S3_S3_S3_", ffiqt.FFI_TYPE_VOID, this.cthis, object, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	// 1: (, object QObject *, returnValue QGenericReturnArgument, val0 QGenericArgument, val1 QGenericArgument, val2 QGenericArgument, val3 QGenericArgument, val4 QGenericArgument, val5 QGenericArgument, val6 QGenericArgument, val7 QGenericArgument, val8 QGenericArgument, val9 QGenericArgument), (object, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObject22QGenericReturnArgument16QGenericArgumentS3_S3_S3_S3_S3_S3_S3_S3_S3_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), object, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -228,8 +236,8 @@ func (this *QMetaMethod) Invoke_1(object unsafe.Pointer, returnValue unsafe.Poin
 // inline
 // bool invoke(class QObject *, Qt::ConnectionType, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
 func (this *QMetaMethod) Invoke_2(object unsafe.Pointer, connectionType int, val0 unsafe.Pointer, val1 unsafe.Pointer, val2 unsafe.Pointer, val3 unsafe.Pointer, val4 unsafe.Pointer, val5 unsafe.Pointer, val6 unsafe.Pointer, val7 unsafe.Pointer, val8 unsafe.Pointer, val9 unsafe.Pointer) {
-	// 2: (, QObject * object, Qt::ConnectionType connectionType, QGenericArgument val0, QGenericArgument val1, QGenericArgument val2, QGenericArgument val3, QGenericArgument val4, QGenericArgument val5, QGenericArgument val6, QGenericArgument val7, QGenericArgument val8, QGenericArgument val9), (object, &connectionType, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", ffiqt.FFI_TYPE_VOID, this.cthis, object, &connectionType, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	// 2: (, object QObject *, connectionType Qt::ConnectionType, val0 QGenericArgument, val1 QGenericArgument, val2 QGenericArgument, val3 QGenericArgument, val4 QGenericArgument, val5 QGenericArgument, val6 QGenericArgument, val7 QGenericArgument, val8 QGenericArgument, val9 QGenericArgument), (object, &connectionType, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), object, &connectionType, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -238,8 +246,8 @@ func (this *QMetaMethod) Invoke_2(object unsafe.Pointer, connectionType int, val
 // inline
 // bool invoke(class QObject *, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
 func (this *QMetaMethod) Invoke_3(object unsafe.Pointer, val0 unsafe.Pointer, val1 unsafe.Pointer, val2 unsafe.Pointer, val3 unsafe.Pointer, val4 unsafe.Pointer, val5 unsafe.Pointer, val6 unsafe.Pointer, val7 unsafe.Pointer, val8 unsafe.Pointer, val9 unsafe.Pointer) {
-	// 3: (, QObject * object, QGenericArgument val0, QGenericArgument val1, QGenericArgument val2, QGenericArgument val3, QGenericArgument val4, QGenericArgument val5, QGenericArgument val6, QGenericArgument val7, QGenericArgument val8, QGenericArgument val9), (object, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObject16QGenericArgumentS2_S2_S2_S2_S2_S2_S2_S2_S2_", ffiqt.FFI_TYPE_VOID, this.cthis, object, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	// 3: (, object QObject *, val0 QGenericArgument, val1 QGenericArgument, val2 QGenericArgument, val3 QGenericArgument, val4 QGenericArgument, val5 QGenericArgument, val6 QGenericArgument, val7 QGenericArgument, val8 QGenericArgument, val9 QGenericArgument), (object, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObject16QGenericArgumentS2_S2_S2_S2_S2_S2_S2_S2_S2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), object, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -247,8 +255,8 @@ func (this *QMetaMethod) Invoke_3(object unsafe.Pointer, val0 unsafe.Pointer, va
 // index:0
 // bool invokeOnGadget(void *, class QGenericReturnArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
 func (this *QMetaMethod) InvokeOnGadget(gadget unsafe.Pointer, returnValue unsafe.Pointer, val0 unsafe.Pointer, val1 unsafe.Pointer, val2 unsafe.Pointer, val3 unsafe.Pointer, val4 unsafe.Pointer, val5 unsafe.Pointer, val6 unsafe.Pointer, val7 unsafe.Pointer, val8 unsafe.Pointer, val9 unsafe.Pointer) {
-	// 0: (, void * gadget, QGenericReturnArgument returnValue, QGenericArgument val0, QGenericArgument val1, QGenericArgument val2, QGenericArgument val3, QGenericArgument val4, QGenericArgument val5, QGenericArgument val6, QGenericArgument val7, QGenericArgument val8, QGenericArgument val9), (gadget, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14invokeOnGadgetEPv22QGenericReturnArgument16QGenericArgumentS2_S2_S2_S2_S2_S2_S2_S2_S2_", ffiqt.FFI_TYPE_VOID, this.cthis, gadget, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	// 0: (, gadget void *, returnValue QGenericReturnArgument, val0 QGenericArgument, val1 QGenericArgument, val2 QGenericArgument, val3 QGenericArgument, val4 QGenericArgument, val5 QGenericArgument, val6 QGenericArgument, val7 QGenericArgument, val8 QGenericArgument, val9 QGenericArgument), (gadget, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14invokeOnGadgetEPv22QGenericReturnArgument16QGenericArgumentS2_S2_S2_S2_S2_S2_S2_S2_S2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), gadget, returnValue, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -257,8 +265,8 @@ func (this *QMetaMethod) InvokeOnGadget(gadget unsafe.Pointer, returnValue unsaf
 // inline
 // bool invokeOnGadget(void *, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
 func (this *QMetaMethod) InvokeOnGadget_1(gadget unsafe.Pointer, val0 unsafe.Pointer, val1 unsafe.Pointer, val2 unsafe.Pointer, val3 unsafe.Pointer, val4 unsafe.Pointer, val5 unsafe.Pointer, val6 unsafe.Pointer, val7 unsafe.Pointer, val8 unsafe.Pointer, val9 unsafe.Pointer) {
-	// 1: (, void * gadget, QGenericArgument val0, QGenericArgument val1, QGenericArgument val2, QGenericArgument val3, QGenericArgument val4, QGenericArgument val5, QGenericArgument val6, QGenericArgument val7, QGenericArgument val8, QGenericArgument val9), (gadget, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14invokeOnGadgetEPv16QGenericArgumentS1_S1_S1_S1_S1_S1_S1_S1_S1_", ffiqt.FFI_TYPE_VOID, this.cthis, gadget, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	// 1: (, gadget void *, val0 QGenericArgument, val1 QGenericArgument, val2 QGenericArgument, val3 QGenericArgument, val4 QGenericArgument, val5 QGenericArgument, val6 QGenericArgument, val7 QGenericArgument, val8 QGenericArgument, val9 QGenericArgument), (gadget, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14invokeOnGadgetEPv16QGenericArgumentS1_S1_S1_S1_S1_S1_S1_S1_S1_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), gadget, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -268,7 +276,7 @@ func (this *QMetaMethod) InvokeOnGadget_1(gadget unsafe.Pointer, val0 unsafe.Poi
 // bool isValid()
 func (this *QMetaMethod) IsValid() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

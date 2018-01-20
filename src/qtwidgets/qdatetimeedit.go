@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QDateTimeEdit struct {
-	cthis unsafe.Pointer
+	*QAbstractSpinBox
+}
+
+func (this *QDateTimeEdit) GetCthis() unsafe.Pointer {
+	return this.QAbstractSpinBox.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:58
@@ -62,7 +66,7 @@ type QDateTimeEdit struct {
 // const QMetaObject * metaObject()
 func (this *QDateTimeEdit) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQDateTimeEdit(parent unsafe.Pointer) *QDateTimeEdit {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QDateTimeEdit{cthis}
+	gothis := NewQDateTimeEditFromPointer(cthis)
+	return gothis
+}
+func NewQDateTimeEditFromPointer(cthis unsafe.Pointer) *QDateTimeEdit {
+	bcthis0 := NewQAbstractSpinBoxFromPointer(cthis)
+	return &QDateTimeEdit{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:96
@@ -83,7 +92,8 @@ func NewQDateTimeEdit_1(dt unsafe.Pointer, parent unsafe.Pointer) *QDateTimeEdit
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, dt, parent)
 	gopp.ErrPrint(err, rv)
-	return &QDateTimeEdit{cthis}
+	gothis := NewQDateTimeEditFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:97
@@ -93,7 +103,8 @@ func NewQDateTimeEdit_2(d unsafe.Pointer, parent unsafe.Pointer) *QDateTimeEdit 
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK5QDateP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, d, parent)
 	gopp.ErrPrint(err, rv)
-	return &QDateTimeEdit{cthis}
+	gothis := NewQDateTimeEditFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:98
@@ -103,7 +114,19 @@ func NewQDateTimeEdit_3(t unsafe.Pointer, parent unsafe.Pointer) *QDateTimeEdit 
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK5QTimeP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, t, parent)
 	gopp.ErrPrint(err, rv)
-	return &QDateTimeEdit{cthis}
+	gothis := NewQDateTimeEditFromPointer(cthis)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:194
+// index:4
+// void QDateTimeEdit(const class QVariant &, class QVariant::Type, class QWidget *)
+func NewQDateTimeEdit_4(val unsafe.Pointer, parserType int, parent unsafe.Pointer) *QDateTimeEdit {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK8QVariantNS0_4TypeEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, val, &parserType, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDateTimeEditFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:99
@@ -120,7 +143,7 @@ func DeleteQDateTimeEdit(*QDateTimeEdit) {
 // QDateTime dateTime()
 func (this *QDateTimeEdit) DateTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8dateTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8dateTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -129,7 +152,7 @@ func (this *QDateTimeEdit) DateTime() {
 // QDate date()
 func (this *QDateTimeEdit) Date() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit4dateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit4dateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -138,7 +161,7 @@ func (this *QDateTimeEdit) Date() {
 // QTime time()
 func (this *QDateTimeEdit) Time() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit4timeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit4timeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -147,7 +170,7 @@ func (this *QDateTimeEdit) Time() {
 // QDateTime minimumDateTime()
 func (this *QDateTimeEdit) MinimumDateTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit15minimumDateTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit15minimumDateTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -156,7 +179,7 @@ func (this *QDateTimeEdit) MinimumDateTime() {
 // void clearMinimumDateTime()
 func (this *QDateTimeEdit) ClearMinimumDateTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit20clearMinimumDateTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit20clearMinimumDateTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -164,8 +187,8 @@ func (this *QDateTimeEdit) ClearMinimumDateTime() {
 // index:0
 // void setMinimumDateTime(const class QDateTime &)
 func (this *QDateTimeEdit) SetMinimumDateTime(dt unsafe.Pointer) {
-	// 0: (, const QDateTime & dt), (dt)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18setMinimumDateTimeERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, dt)
+	// 0: (, dt const QDateTime &), (dt)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18setMinimumDateTimeERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.GetCthis(), dt)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -174,7 +197,7 @@ func (this *QDateTimeEdit) SetMinimumDateTime(dt unsafe.Pointer) {
 // QDateTime maximumDateTime()
 func (this *QDateTimeEdit) MaximumDateTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit15maximumDateTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit15maximumDateTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -183,7 +206,7 @@ func (this *QDateTimeEdit) MaximumDateTime() {
 // void clearMaximumDateTime()
 func (this *QDateTimeEdit) ClearMaximumDateTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit20clearMaximumDateTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit20clearMaximumDateTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -191,8 +214,8 @@ func (this *QDateTimeEdit) ClearMaximumDateTime() {
 // index:0
 // void setMaximumDateTime(const class QDateTime &)
 func (this *QDateTimeEdit) SetMaximumDateTime(dt unsafe.Pointer) {
-	// 0: (, const QDateTime & dt), (dt)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, dt)
+	// 0: (, dt const QDateTime &), (dt)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.GetCthis(), dt)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -200,8 +223,8 @@ func (this *QDateTimeEdit) SetMaximumDateTime(dt unsafe.Pointer) {
 // index:0
 // void setDateTimeRange(const class QDateTime &, const class QDateTime &)
 func (this *QDateTimeEdit) SetDateTimeRange(min unsafe.Pointer, max unsafe.Pointer) {
-	// 0: (, const QDateTime & min, const QDateTime & max), (min, max)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16setDateTimeRangeERK9QDateTimeS2_", ffiqt.FFI_TYPE_VOID, this.cthis, min, max)
+	// 0: (, min const QDateTime &, max const QDateTime &), (min, max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16setDateTimeRangeERK9QDateTimeS2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), min, max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -210,7 +233,7 @@ func (this *QDateTimeEdit) SetDateTimeRange(min unsafe.Pointer, max unsafe.Point
 // QDate minimumDate()
 func (this *QDateTimeEdit) MinimumDate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11minimumDateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11minimumDateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -218,8 +241,8 @@ func (this *QDateTimeEdit) MinimumDate() {
 // index:0
 // void setMinimumDate(const class QDate &)
 func (this *QDateTimeEdit) SetMinimumDate(min unsafe.Pointer) {
-	// 0: (, const QDate & min), (min)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMinimumDateERK5QDate", ffiqt.FFI_TYPE_VOID, this.cthis, min)
+	// 0: (, min const QDate &), (min)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMinimumDateERK5QDate", ffiqt.FFI_TYPE_VOID, this.GetCthis(), min)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -228,7 +251,7 @@ func (this *QDateTimeEdit) SetMinimumDate(min unsafe.Pointer) {
 // void clearMinimumDate()
 func (this *QDateTimeEdit) ClearMinimumDate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16clearMinimumDateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16clearMinimumDateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -237,7 +260,7 @@ func (this *QDateTimeEdit) ClearMinimumDate() {
 // QDate maximumDate()
 func (this *QDateTimeEdit) MaximumDate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11maximumDateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11maximumDateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -245,8 +268,8 @@ func (this *QDateTimeEdit) MaximumDate() {
 // index:0
 // void setMaximumDate(const class QDate &)
 func (this *QDateTimeEdit) SetMaximumDate(max unsafe.Pointer) {
-	// 0: (, const QDate & max), (max)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMaximumDateERK5QDate", ffiqt.FFI_TYPE_VOID, this.cthis, max)
+	// 0: (, max const QDate &), (max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMaximumDateERK5QDate", ffiqt.FFI_TYPE_VOID, this.GetCthis(), max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -255,7 +278,7 @@ func (this *QDateTimeEdit) SetMaximumDate(max unsafe.Pointer) {
 // void clearMaximumDate()
 func (this *QDateTimeEdit) ClearMaximumDate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16clearMaximumDateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16clearMaximumDateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -263,8 +286,8 @@ func (this *QDateTimeEdit) ClearMaximumDate() {
 // index:0
 // void setDateRange(const class QDate &, const class QDate &)
 func (this *QDateTimeEdit) SetDateRange(min unsafe.Pointer, max unsafe.Pointer) {
-	// 0: (, const QDate & min, const QDate & max), (min, max)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit12setDateRangeERK5QDateS2_", ffiqt.FFI_TYPE_VOID, this.cthis, min, max)
+	// 0: (, min const QDate &, max const QDate &), (min, max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit12setDateRangeERK5QDateS2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), min, max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -273,7 +296,7 @@ func (this *QDateTimeEdit) SetDateRange(min unsafe.Pointer, max unsafe.Pointer) 
 // QTime minimumTime()
 func (this *QDateTimeEdit) MinimumTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11minimumTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11minimumTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -281,8 +304,8 @@ func (this *QDateTimeEdit) MinimumTime() {
 // index:0
 // void setMinimumTime(const class QTime &)
 func (this *QDateTimeEdit) SetMinimumTime(min unsafe.Pointer) {
-	// 0: (, const QTime & min), (min)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMinimumTimeERK5QTime", ffiqt.FFI_TYPE_VOID, this.cthis, min)
+	// 0: (, min const QTime &), (min)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMinimumTimeERK5QTime", ffiqt.FFI_TYPE_VOID, this.GetCthis(), min)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -291,7 +314,7 @@ func (this *QDateTimeEdit) SetMinimumTime(min unsafe.Pointer) {
 // void clearMinimumTime()
 func (this *QDateTimeEdit) ClearMinimumTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16clearMinimumTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16clearMinimumTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -300,7 +323,7 @@ func (this *QDateTimeEdit) ClearMinimumTime() {
 // QTime maximumTime()
 func (this *QDateTimeEdit) MaximumTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11maximumTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11maximumTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -308,8 +331,8 @@ func (this *QDateTimeEdit) MaximumTime() {
 // index:0
 // void setMaximumTime(const class QTime &)
 func (this *QDateTimeEdit) SetMaximumTime(max unsafe.Pointer) {
-	// 0: (, const QTime & max), (max)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMaximumTimeERK5QTime", ffiqt.FFI_TYPE_VOID, this.cthis, max)
+	// 0: (, max const QTime &), (max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMaximumTimeERK5QTime", ffiqt.FFI_TYPE_VOID, this.GetCthis(), max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -318,7 +341,7 @@ func (this *QDateTimeEdit) SetMaximumTime(max unsafe.Pointer) {
 // void clearMaximumTime()
 func (this *QDateTimeEdit) ClearMaximumTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16clearMaximumTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16clearMaximumTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -326,8 +349,8 @@ func (this *QDateTimeEdit) ClearMaximumTime() {
 // index:0
 // void setTimeRange(const class QTime &, const class QTime &)
 func (this *QDateTimeEdit) SetTimeRange(min unsafe.Pointer, max unsafe.Pointer) {
-	// 0: (, const QTime & min, const QTime & max), (min, max)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit12setTimeRangeERK5QTimeS2_", ffiqt.FFI_TYPE_VOID, this.cthis, min, max)
+	// 0: (, min const QTime &, max const QTime &), (min, max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit12setTimeRangeERK5QTimeS2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), min, max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -336,7 +359,7 @@ func (this *QDateTimeEdit) SetTimeRange(min unsafe.Pointer, max unsafe.Pointer) 
 // QDateTimeEdit::Sections displayedSections()
 func (this *QDateTimeEdit) DisplayedSections() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit17displayedSectionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit17displayedSectionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -345,7 +368,7 @@ func (this *QDateTimeEdit) DisplayedSections() {
 // QDateTimeEdit::Section currentSection()
 func (this *QDateTimeEdit) CurrentSection() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit14currentSectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit14currentSectionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -353,8 +376,8 @@ func (this *QDateTimeEdit) CurrentSection() {
 // index:0
 // QDateTimeEdit::Section sectionAt(int)
 func (this *QDateTimeEdit) SectionAt(index int) {
-	// 0: (, int index), (&index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit9sectionAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	// 0: (, index int), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit9sectionAtEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -362,8 +385,8 @@ func (this *QDateTimeEdit) SectionAt(index int) {
 // index:0
 // void setCurrentSection(enum QDateTimeEdit::Section)
 func (this *QDateTimeEdit) SetCurrentSection(section int) {
-	// 0: (, QDateTimeEdit::Section section), (&section)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit17setCurrentSectionENS_7SectionE", ffiqt.FFI_TYPE_VOID, this.cthis, &section)
+	// 0: (, section QDateTimeEdit::Section), (&section)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit17setCurrentSectionENS_7SectionE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &section)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -372,7 +395,7 @@ func (this *QDateTimeEdit) SetCurrentSection(section int) {
 // int currentSectionIndex()
 func (this *QDateTimeEdit) CurrentSectionIndex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit19currentSectionIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit19currentSectionIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -380,8 +403,8 @@ func (this *QDateTimeEdit) CurrentSectionIndex() {
 // index:0
 // void setCurrentSectionIndex(int)
 func (this *QDateTimeEdit) SetCurrentSectionIndex(index int) {
-	// 0: (, int index), (&index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit22setCurrentSectionIndexEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	// 0: (, index int), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit22setCurrentSectionIndexEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -390,7 +413,7 @@ func (this *QDateTimeEdit) SetCurrentSectionIndex(index int) {
 // QCalendarWidget * calendarWidget()
 func (this *QDateTimeEdit) CalendarWidget() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit14calendarWidgetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit14calendarWidgetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -398,8 +421,8 @@ func (this *QDateTimeEdit) CalendarWidget() {
 // index:0
 // void setCalendarWidget(class QCalendarWidget *)
 func (this *QDateTimeEdit) SetCalendarWidget(calendarWidget unsafe.Pointer) {
-	// 0: (, QCalendarWidget * calendarWidget), (calendarWidget)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget", ffiqt.FFI_TYPE_VOID, this.cthis, calendarWidget)
+	// 0: (, calendarWidget QCalendarWidget *), (calendarWidget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget", ffiqt.FFI_TYPE_VOID, this.GetCthis(), calendarWidget)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -408,7 +431,7 @@ func (this *QDateTimeEdit) SetCalendarWidget(calendarWidget unsafe.Pointer) {
 // int sectionCount()
 func (this *QDateTimeEdit) SectionCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit12sectionCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit12sectionCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -416,8 +439,8 @@ func (this *QDateTimeEdit) SectionCount() {
 // index:0
 // void setSelectedSection(enum QDateTimeEdit::Section)
 func (this *QDateTimeEdit) SetSelectedSection(section int) {
-	// 0: (, QDateTimeEdit::Section section), (&section)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18setSelectedSectionENS_7SectionE", ffiqt.FFI_TYPE_VOID, this.cthis, &section)
+	// 0: (, section QDateTimeEdit::Section), (&section)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18setSelectedSectionENS_7SectionE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &section)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -425,8 +448,8 @@ func (this *QDateTimeEdit) SetSelectedSection(section int) {
 // index:0
 // QString sectionText(enum QDateTimeEdit::Section)
 func (this *QDateTimeEdit) SectionText(section int) {
-	// 0: (, QDateTimeEdit::Section section), (&section)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11sectionTextENS_7SectionE", ffiqt.FFI_TYPE_VOID, this.cthis, &section)
+	// 0: (, section QDateTimeEdit::Section), (&section)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11sectionTextENS_7SectionE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &section)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -435,7 +458,7 @@ func (this *QDateTimeEdit) SectionText(section int) {
 // QString displayFormat()
 func (this *QDateTimeEdit) DisplayFormat() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit13displayFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit13displayFormatEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -443,8 +466,8 @@ func (this *QDateTimeEdit) DisplayFormat() {
 // index:0
 // void setDisplayFormat(const class QString &)
 func (this *QDateTimeEdit) SetDisplayFormat(format unsafe.Pointer) {
-	// 0: (, const QString & format), (format)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16setDisplayFormatERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, format)
+	// 0: (, format const QString &), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16setDisplayFormatERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -453,7 +476,7 @@ func (this *QDateTimeEdit) SetDisplayFormat(format unsafe.Pointer) {
 // bool calendarPopup()
 func (this *QDateTimeEdit) CalendarPopup() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit13calendarPopupEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit13calendarPopupEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -461,8 +484,8 @@ func (this *QDateTimeEdit) CalendarPopup() {
 // index:0
 // void setCalendarPopup(_Bool)
 func (this *QDateTimeEdit) SetCalendarPopup(enable bool) {
-	// 0: (, bool enable), (&enable)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16setCalendarPopupEb", ffiqt.FFI_TYPE_VOID, this.cthis, &enable)
+	// 0: (, enable bool), (&enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16setCalendarPopupEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -471,7 +494,7 @@ func (this *QDateTimeEdit) SetCalendarPopup(enable bool) {
 // Qt::TimeSpec timeSpec()
 func (this *QDateTimeEdit) TimeSpec() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8timeSpecEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8timeSpecEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -479,8 +502,8 @@ func (this *QDateTimeEdit) TimeSpec() {
 // index:0
 // void setTimeSpec(Qt::TimeSpec)
 func (this *QDateTimeEdit) SetTimeSpec(spec int) {
-	// 0: (, Qt::TimeSpec spec), (&spec)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit11setTimeSpecEN2Qt8TimeSpecE", ffiqt.FFI_TYPE_VOID, this.cthis, &spec)
+	// 0: (, spec Qt::TimeSpec), (&spec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit11setTimeSpecEN2Qt8TimeSpecE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &spec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -490,7 +513,7 @@ func (this *QDateTimeEdit) SetTimeSpec(spec int) {
 // QSize sizeHint()
 func (this *QDateTimeEdit) SizeHint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -500,7 +523,7 @@ func (this *QDateTimeEdit) SizeHint() {
 // void clear()
 func (this *QDateTimeEdit) Clear() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit5clearEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit5clearEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -509,8 +532,8 @@ func (this *QDateTimeEdit) Clear() {
 // virtual
 // void stepBy(int)
 func (this *QDateTimeEdit) StepBy(steps int) {
-	// 0: (, int steps), (&steps)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit6stepByEi", ffiqt.FFI_TYPE_VOID, this.cthis, &steps)
+	// 0: (, steps int), (&steps)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit6stepByEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &steps)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -519,8 +542,8 @@ func (this *QDateTimeEdit) StepBy(steps int) {
 // virtual
 // bool event(class QEvent *)
 func (this *QDateTimeEdit) Event(event unsafe.Pointer) {
-	// 0: (, QEvent * event), (event)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.cthis, event)
+	// 0: (, event QEvent *), (event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -528,8 +551,8 @@ func (this *QDateTimeEdit) Event(event unsafe.Pointer) {
 // index:0
 // void dateTimeChanged(const class QDateTime &)
 func (this *QDateTimeEdit) DateTimeChanged(dateTime unsafe.Pointer) {
-	// 0: (, const QDateTime & dateTime), (dateTime)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, dateTime)
+	// 0: (, dateTime const QDateTime &), (dateTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.GetCthis(), dateTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -537,8 +560,8 @@ func (this *QDateTimeEdit) DateTimeChanged(dateTime unsafe.Pointer) {
 // index:0
 // void timeChanged(const class QTime &)
 func (this *QDateTimeEdit) TimeChanged(time unsafe.Pointer) {
-	// 0: (, const QTime & time), (time)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit11timeChangedERK5QTime", ffiqt.FFI_TYPE_VOID, this.cthis, time)
+	// 0: (, time const QTime &), (time)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit11timeChangedERK5QTime", ffiqt.FFI_TYPE_VOID, this.GetCthis(), time)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -546,8 +569,8 @@ func (this *QDateTimeEdit) TimeChanged(time unsafe.Pointer) {
 // index:0
 // void dateChanged(const class QDate &)
 func (this *QDateTimeEdit) DateChanged(date unsafe.Pointer) {
-	// 0: (, const QDate & date), (date)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit11dateChangedERK5QDate", ffiqt.FFI_TYPE_VOID, this.cthis, date)
+	// 0: (, date const QDate &), (date)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit11dateChangedERK5QDate", ffiqt.FFI_TYPE_VOID, this.GetCthis(), date)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -555,8 +578,8 @@ func (this *QDateTimeEdit) DateChanged(date unsafe.Pointer) {
 // index:0
 // void setDateTime(const class QDateTime &)
 func (this *QDateTimeEdit) SetDateTime(dateTime unsafe.Pointer) {
-	// 0: (, const QDateTime & dateTime), (dateTime)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit11setDateTimeERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.cthis, dateTime)
+	// 0: (, dateTime const QDateTime &), (dateTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit11setDateTimeERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.GetCthis(), dateTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -564,8 +587,8 @@ func (this *QDateTimeEdit) SetDateTime(dateTime unsafe.Pointer) {
 // index:0
 // void setDate(const class QDate &)
 func (this *QDateTimeEdit) SetDate(date unsafe.Pointer) {
-	// 0: (, const QDate & date), (date)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit7setDateERK5QDate", ffiqt.FFI_TYPE_VOID, this.cthis, date)
+	// 0: (, date const QDate &), (date)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit7setDateERK5QDate", ffiqt.FFI_TYPE_VOID, this.GetCthis(), date)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -573,8 +596,127 @@ func (this *QDateTimeEdit) SetDate(date unsafe.Pointer) {
 // index:0
 // void setTime(const class QTime &)
 func (this *QDateTimeEdit) SetTime(time unsafe.Pointer) {
-	// 0: (, const QTime & time), (time)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit7setTimeERK5QTime", ffiqt.FFI_TYPE_VOID, this.cthis, time)
+	// 0: (, time const QTime &), (time)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit7setTimeERK5QTime", ffiqt.FFI_TYPE_VOID, this.GetCthis(), time)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:178
+// index:0
+// virtual
+// void keyPressEvent(class QKeyEvent *)
+func (this *QDateTimeEdit) KeyPressEvent(event unsafe.Pointer) {
+	// 0: (, event QKeyEvent *), (event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:180
+// index:0
+// virtual
+// void wheelEvent(class QWheelEvent *)
+func (this *QDateTimeEdit) WheelEvent(event unsafe.Pointer) {
+	// 0: (, event QWheelEvent *), (event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:182
+// index:0
+// virtual
+// void focusInEvent(class QFocusEvent *)
+func (this *QDateTimeEdit) FocusInEvent(event unsafe.Pointer) {
+	// 0: (, event QFocusEvent *), (event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:183
+// index:0
+// virtual
+// bool focusNextPrevChild(_Bool)
+func (this *QDateTimeEdit) FocusNextPrevChild(next bool) {
+	// 0: (, next bool), (&next)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18focusNextPrevChildEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &next)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:184
+// index:0
+// virtual
+// QValidator::State validate(class QString &, int &)
+func (this *QDateTimeEdit) Validate(input unsafe.Pointer, pos int) {
+	// 0: (, input QString &, pos int &), (input, &pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8validateER7QStringRi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), input, &pos)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:185
+// index:0
+// virtual
+// void fixup(class QString &)
+func (this *QDateTimeEdit) Fixup(input unsafe.Pointer) {
+	// 0: (, input QString &), (input)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit5fixupER7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), input)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:187
+// index:0
+// virtual
+// QDateTime dateTimeFromText(const class QString &)
+func (this *QDateTimeEdit) DateTimeFromText(text unsafe.Pointer) {
+	// 0: (, text const QString &), (text)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit16dateTimeFromTextERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), text)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:188
+// index:0
+// virtual
+// QString textFromDateTime(const class QDateTime &)
+func (this *QDateTimeEdit) TextFromDateTime(dt unsafe.Pointer) {
+	// 0: (, dt const QDateTime &), (dt)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit16textFromDateTimeERK9QDateTime", ffiqt.FFI_TYPE_VOID, this.GetCthis(), dt)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:189
+// index:0
+// virtual
+// QAbstractSpinBox::StepEnabled stepEnabled()
+func (this *QDateTimeEdit) StepEnabled() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11stepEnabledEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:190
+// index:0
+// virtual
+// void mousePressEvent(class QMouseEvent *)
+func (this *QDateTimeEdit) MousePressEvent(event unsafe.Pointer) {
+	// 0: (, event QMouseEvent *), (event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:191
+// index:0
+// virtual
+// void paintEvent(class QPaintEvent *)
+func (this *QDateTimeEdit) PaintEvent(event unsafe.Pointer) {
+	// 0: (, event QPaintEvent *), (event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:192
+// index:0
+// void initStyleOption(class QStyleOptionSpinBox *)
+func (this *QDateTimeEdit) InitStyleOption(option unsafe.Pointer) {
+	// 0: (, option QStyleOptionSpinBox *), (option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit15initStyleOptionEP19QStyleOptionSpinBox", ffiqt.FFI_TYPE_VOID, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
 }
 

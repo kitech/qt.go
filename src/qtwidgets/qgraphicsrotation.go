@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QGraphicsRotation struct {
-	cthis unsafe.Pointer
+	*QGraphicsTransform
+}
+
+func (this *QGraphicsRotation) GetCthis() unsafe.Pointer {
+	return this.QGraphicsTransform.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:120
@@ -62,7 +66,7 @@ type QGraphicsRotation struct {
 // const QMetaObject * metaObject()
 func (this *QGraphicsRotation) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQGraphicsRotation(parent unsafe.Pointer) *QGraphicsRotation {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QGraphicsRotation{cthis}
+	gothis := NewQGraphicsRotationFromPointer(cthis)
+	return gothis
+}
+func NewQGraphicsRotationFromPointer(cthis unsafe.Pointer) *QGraphicsRotation {
+	bcthis0 := NewQGraphicsTransformFromPointer(cthis)
+	return &QGraphicsRotation{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:127
@@ -90,7 +99,7 @@ func DeleteQGraphicsRotation(*QGraphicsRotation) {
 // QVector3D origin()
 func (this *QGraphicsRotation) Origin() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation6originEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation6originEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -98,8 +107,8 @@ func (this *QGraphicsRotation) Origin() {
 // index:0
 // void setOrigin(const class QVector3D &)
 func (this *QGraphicsRotation) SetOrigin(point unsafe.Pointer) {
-	// 0: (, const QVector3D & point), (point)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation9setOriginERK9QVector3D", ffiqt.FFI_TYPE_VOID, this.cthis, point)
+	// 0: (, point const QVector3D &), (point)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation9setOriginERK9QVector3D", ffiqt.FFI_TYPE_VOID, this.GetCthis(), point)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +117,7 @@ func (this *QGraphicsRotation) SetOrigin(point unsafe.Pointer) {
 // qreal angle()
 func (this *QGraphicsRotation) Angle() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation5angleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation5angleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +126,7 @@ func (this *QGraphicsRotation) Angle() {
 // void setAngle(qreal)
 func (this *QGraphicsRotation) SetAngle(arg0 float64) {
 	// 0: (, qreal arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation8setAngleEd", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation8setAngleEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +135,7 @@ func (this *QGraphicsRotation) SetAngle(arg0 float64) {
 // QVector3D axis()
 func (this *QGraphicsRotation) Axis() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation4axisEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation4axisEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,8 +143,8 @@ func (this *QGraphicsRotation) Axis() {
 // index:0
 // void setAxis(const class QVector3D &)
 func (this *QGraphicsRotation) SetAxis(axis unsafe.Pointer) {
-	// 0: (, const QVector3D & axis), (axis)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation7setAxisERK9QVector3D", ffiqt.FFI_TYPE_VOID, this.cthis, axis)
+	// 0: (, axis const QVector3D &), (axis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation7setAxisERK9QVector3D", ffiqt.FFI_TYPE_VOID, this.GetCthis(), axis)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,8 +152,8 @@ func (this *QGraphicsRotation) SetAxis(axis unsafe.Pointer) {
 // index:1
 // void setAxis(Qt::Axis)
 func (this *QGraphicsRotation) SetAxis_1(axis int) {
-	// 1: (, Qt::Axis axis), (&axis)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation7setAxisEN2Qt4AxisE", ffiqt.FFI_TYPE_VOID, this.cthis, &axis)
+	// 1: (, axis Qt::Axis), (&axis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation7setAxisEN2Qt4AxisE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &axis)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,8 +162,8 @@ func (this *QGraphicsRotation) SetAxis_1(axis int) {
 // virtual
 // void applyTo(class QMatrix4x4 *)
 func (this *QGraphicsRotation) ApplyTo(matrix unsafe.Pointer) {
-	// 0: (, QMatrix4x4 * matrix), (matrix)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_VOID, this.cthis, matrix)
+	// 0: (, matrix QMatrix4x4 *), (matrix)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_VOID, this.GetCthis(), matrix)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -163,7 +172,7 @@ func (this *QGraphicsRotation) ApplyTo(matrix unsafe.Pointer) {
 // void originChanged()
 func (this *QGraphicsRotation) OriginChanged() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation13originChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation13originChangedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +181,7 @@ func (this *QGraphicsRotation) OriginChanged() {
 // void angleChanged()
 func (this *QGraphicsRotation) AngleChanged() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation12angleChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation12angleChangedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -181,7 +190,7 @@ func (this *QGraphicsRotation) AngleChanged() {
 // void axisChanged()
 func (this *QGraphicsRotation) AxisChanged() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation11axisChangedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation11axisChangedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

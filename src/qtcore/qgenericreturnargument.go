@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QGenericReturnArgument struct {
-	cthis unsafe.Pointer
+	*QGenericArgument
+}
+
+func (this *QGenericReturnArgument) GetCthis() unsafe.Pointer {
+	return this.QGenericArgument.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qobjectdefs.h:310
@@ -56,7 +60,12 @@ func NewQGenericReturnArgument(aName unsafe.Pointer, aData unsafe.Pointer) *QGen
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGenericReturnArgumentC2EPKcPv", ffiqt.FFI_TYPE_VOID, cthis, aName, aData)
 	gopp.ErrPrint(err, rv)
-	return &QGenericReturnArgument{cthis}
+	gothis := NewQGenericReturnArgumentFromPointer(cthis)
+	return gothis
+}
+func NewQGenericReturnArgumentFromPointer(cthis unsafe.Pointer) *QGenericReturnArgument {
+	bcthis0 := NewQGenericArgumentFromPointer(cthis)
+	return &QGenericReturnArgument{bcthis0}
 }
 
 //  body block end

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 26
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QErrorMessage struct {
-	cthis unsafe.Pointer
+	*QDialog
+}
+
+func (this *QErrorMessage) GetCthis() unsafe.Pointer {
+	return this.QDialog.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:55
@@ -62,7 +66,7 @@ type QErrorMessage struct {
 // const QMetaObject * metaObject()
 func (this *QErrorMessage) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QErrorMessage10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QErrorMessage10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQErrorMessage(parent unsafe.Pointer) *QErrorMessage {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessageC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QErrorMessage{cthis}
+	gothis := NewQErrorMessageFromPointer(cthis)
+	return gothis
+}
+func NewQErrorMessageFromPointer(cthis unsafe.Pointer) *QErrorMessage {
+	bcthis0 := NewQDialogFromPointer(cthis)
+	return &QErrorMessage{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:59
@@ -104,8 +113,8 @@ func QErrorMessage_QtHandler() {
 // index:0
 // void showMessage(const class QString &)
 func (this *QErrorMessage) ShowMessage(message unsafe.Pointer) {
-	// 0: (, const QString & message), (message)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, message)
+	// 0: (, message const QString &), (message)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), message)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -113,8 +122,28 @@ func (this *QErrorMessage) ShowMessage(message unsafe.Pointer) {
 // index:1
 // void showMessage(const class QString &, const class QString &)
 func (this *QErrorMessage) ShowMessage_1(message unsafe.Pointer, type_ unsafe.Pointer) {
-	// 1: (, const QString & message, const QString & type), (message, type_)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, message, type_)
+	// 1: (, message const QString &, type const QString &), (message, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), message, type_)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qerrormessage.h:68
+// index:0
+// virtual
+// void done(int)
+func (this *QErrorMessage) Done(arg0 int) {
+	// 0: (, int arg0), (&arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage4doneEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qerrormessage.h:69
+// index:0
+// virtual
+// void changeEvent(class QEvent *)
+func (this *QErrorMessage) ChangeEvent(e unsafe.Pointer) {
+	// 0: (, e QEvent *), (e)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11changeEventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), e)
 	gopp.ErrPrint(err, rv)
 }
 

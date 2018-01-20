@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QWidgetItem struct {
-	cthis unsafe.Pointer
+	*QLayoutItem
+}
+
+func (this *QWidgetItem) GetCthis() unsafe.Pointer {
+	return this.QLayoutItem.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:126
@@ -64,7 +68,12 @@ func NewQWidgetItem(w unsafe.Pointer) *QWidgetItem {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWidgetItemC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, w)
 	gopp.ErrPrint(err, rv)
-	return &QWidgetItem{cthis}
+	gothis := NewQWidgetItemFromPointer(cthis)
+	return gothis
+}
+func NewQWidgetItemFromPointer(cthis unsafe.Pointer) *QWidgetItem {
+	bcthis0 := NewQLayoutItemFromPointer(cthis)
+	return &QWidgetItem{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:127
@@ -82,7 +91,7 @@ func DeleteQWidgetItem(*QWidgetItem) {
 // QSize sizeHint()
 func (this *QWidgetItem) SizeHint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -92,7 +101,7 @@ func (this *QWidgetItem) SizeHint() {
 // QSize minimumSize()
 func (this *QWidgetItem) MinimumSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem11minimumSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem11minimumSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -102,7 +111,7 @@ func (this *QWidgetItem) MinimumSize() {
 // QSize maximumSize()
 func (this *QWidgetItem) MaximumSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem11maximumSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem11maximumSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,7 +121,7 @@ func (this *QWidgetItem) MaximumSize() {
 // Qt::Orientations expandingDirections()
 func (this *QWidgetItem) ExpandingDirections() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem19expandingDirectionsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem19expandingDirectionsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -122,7 +131,7 @@ func (this *QWidgetItem) ExpandingDirections() {
 // bool isEmpty()
 func (this *QWidgetItem) IsEmpty() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -132,7 +141,7 @@ func (this *QWidgetItem) IsEmpty() {
 // void setGeometry(const class QRect &)
 func (this *QWidgetItem) SetGeometry(arg0 unsafe.Pointer) {
 	// 0: (, const QRect & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWidgetItem11setGeometryERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWidgetItem11setGeometryERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,7 +151,7 @@ func (this *QWidgetItem) SetGeometry(arg0 unsafe.Pointer) {
 // QRect geometry()
 func (this *QWidgetItem) Geometry() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem8geometryEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem8geometryEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,7 +161,7 @@ func (this *QWidgetItem) Geometry() {
 // QWidget * widget()
 func (this *QWidgetItem) Widget() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWidgetItem6widgetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWidgetItem6widgetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +171,7 @@ func (this *QWidgetItem) Widget() {
 // bool hasHeightForWidth()
 func (this *QWidgetItem) HasHeightForWidth() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem17hasHeightForWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem17hasHeightForWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +181,7 @@ func (this *QWidgetItem) HasHeightForWidth() {
 // int heightForWidth(int)
 func (this *QWidgetItem) HeightForWidth(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem14heightForWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem14heightForWidthEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -182,7 +191,7 @@ func (this *QWidgetItem) HeightForWidth(arg0 int) {
 // QSizePolicy::ControlTypes controlTypes()
 func (this *QWidgetItem) ControlTypes() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem12controlTypesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWidgetItem12controlTypesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

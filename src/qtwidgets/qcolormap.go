@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 20
+// extern C begin: 24
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QColormap struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QColormap) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtWidgets/qcolormap.h:60
@@ -91,12 +95,12 @@ func QColormap_Cleanup() {
 // static
 // QColormap instance(int)
 func (this *QColormap) Instance(screen int) {
-	// 0: (int screen), (screen)
+	// 0: (screen int), (screen)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QColormap8instanceEi", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QColormap_Instance(screen int) {
-	// 0: (int screen), (screen)
+	// 0: (screen int), (screen)
 	var nilthis *QColormap
 	nilthis.Instance(screen)
 }
@@ -114,7 +118,7 @@ func DeleteQColormap(*QColormap) {
 // QColormap::Mode mode()
 func (this *QColormap) Mode() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap4modeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap4modeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -123,7 +127,7 @@ func (this *QColormap) Mode() {
 // int depth()
 func (this *QColormap) Depth() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap5depthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap5depthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -132,7 +136,7 @@ func (this *QColormap) Depth() {
 // int size()
 func (this *QColormap) Size() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,8 +144,8 @@ func (this *QColormap) Size() {
 // index:0
 // uint pixel(const class QColor &)
 func (this *QColormap) Pixel(color unsafe.Pointer) {
-	// 0: (, const QColor & color), (color)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap5pixelERK6QColor", ffiqt.FFI_TYPE_VOID, this.cthis, color)
+	// 0: (, color const QColor &), (color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap5pixelERK6QColor", ffiqt.FFI_TYPE_VOID, this.GetCthis(), color)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,8 +153,8 @@ func (this *QColormap) Pixel(color unsafe.Pointer) {
 // index:0
 // const QColor colorAt(uint)
 func (this *QColormap) ColorAt(pixel uint) {
-	// 0: (, uint pixel), (&pixel)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap7colorAtEj", ffiqt.FFI_TYPE_VOID, this.cthis, &pixel)
+	// 0: (, pixel uint), (&pixel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap7colorAtEj", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &pixel)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -159,7 +163,7 @@ func (this *QColormap) ColorAt(pixel uint) {
 // const QVector<QColor> colormap()
 func (this *QColormap) Colormap() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap8colormapEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap8colormapEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

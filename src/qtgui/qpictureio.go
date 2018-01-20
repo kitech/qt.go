@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 23
+// extern C begin: 25
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QPictureIO struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QPictureIO) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qpicture.h:134
@@ -59,7 +63,11 @@ func NewQPictureIO() *QPictureIO {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIOC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QPictureIO{cthis}
+	gothis := NewQPictureIOFromPointer(cthis)
+	return gothis
+}
+func NewQPictureIOFromPointer(cthis unsafe.Pointer) *QPictureIO {
+	return &QPictureIO{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qpicture.h:135
@@ -69,7 +77,8 @@ func NewQPictureIO_1(ioDevice unsafe.Pointer, format unsafe.Pointer) *QPictureIO
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIOC2EP9QIODevicePKc", ffiqt.FFI_TYPE_VOID, cthis, ioDevice, format)
 	gopp.ErrPrint(err, rv)
-	return &QPictureIO{cthis}
+	gothis := NewQPictureIOFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qpicture.h:136
@@ -79,7 +88,8 @@ func NewQPictureIO_2(fileName unsafe.Pointer, format unsafe.Pointer) *QPictureIO
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIOC2ERK7QStringPKc", ffiqt.FFI_TYPE_VOID, cthis, fileName, format)
 	gopp.ErrPrint(err, rv)
-	return &QPictureIO{cthis}
+	gothis := NewQPictureIOFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qpicture.h:137
@@ -95,7 +105,7 @@ func DeleteQPictureIO(*QPictureIO) {
 // const QPicture & picture()
 func (this *QPictureIO) Picture() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO7pictureEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO7pictureEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -104,7 +114,7 @@ func (this *QPictureIO) Picture() {
 // int status()
 func (this *QPictureIO) Status() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO6statusEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO6statusEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -113,7 +123,7 @@ func (this *QPictureIO) Status() {
 // const char * format()
 func (this *QPictureIO) Format() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO6formatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO6formatEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -122,7 +132,7 @@ func (this *QPictureIO) Format() {
 // QIODevice * ioDevice()
 func (this *QPictureIO) IoDevice() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO8ioDeviceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO8ioDeviceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -131,7 +141,7 @@ func (this *QPictureIO) IoDevice() {
 // QString fileName()
 func (this *QPictureIO) FileName() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO8fileNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO8fileNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,7 +150,7 @@ func (this *QPictureIO) FileName() {
 // int quality()
 func (this *QPictureIO) Quality() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO7qualityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO7qualityEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,7 +159,7 @@ func (this *QPictureIO) Quality() {
 // QString description()
 func (this *QPictureIO) Description() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO11descriptionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO11descriptionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -158,7 +168,7 @@ func (this *QPictureIO) Description() {
 // const char * parameters()
 func (this *QPictureIO) Parameters() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO10parametersEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO10parametersEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -167,7 +177,7 @@ func (this *QPictureIO) Parameters() {
 // float gamma()
 func (this *QPictureIO) Gamma() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO5gammaEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO5gammaEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -176,7 +186,7 @@ func (this *QPictureIO) Gamma() {
 // void setPicture(const class QPicture &)
 func (this *QPictureIO) SetPicture(arg0 unsafe.Pointer) {
 	// 0: (, const QPicture & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO10setPictureERK8QPicture", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO10setPictureERK8QPicture", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -185,7 +195,7 @@ func (this *QPictureIO) SetPicture(arg0 unsafe.Pointer) {
 // void setStatus(int)
 func (this *QPictureIO) SetStatus(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO9setStatusEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO9setStatusEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -194,7 +204,7 @@ func (this *QPictureIO) SetStatus(arg0 int) {
 // void setFormat(const char *)
 func (this *QPictureIO) SetFormat(arg0 unsafe.Pointer) {
 	// 0: (, const char * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO9setFormatEPKc", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO9setFormatEPKc", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -203,7 +213,7 @@ func (this *QPictureIO) SetFormat(arg0 unsafe.Pointer) {
 // void setIODevice(class QIODevice *)
 func (this *QPictureIO) SetIODevice(arg0 unsafe.Pointer) {
 	// 0: (, QIODevice * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO11setIODeviceEP9QIODevice", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO11setIODeviceEP9QIODevice", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -212,7 +222,7 @@ func (this *QPictureIO) SetIODevice(arg0 unsafe.Pointer) {
 // void setFileName(const class QString &)
 func (this *QPictureIO) SetFileName(arg0 unsafe.Pointer) {
 	// 0: (, const QString & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO11setFileNameERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO11setFileNameERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -221,7 +231,7 @@ func (this *QPictureIO) SetFileName(arg0 unsafe.Pointer) {
 // void setQuality(int)
 func (this *QPictureIO) SetQuality(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO10setQualityEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO10setQualityEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -230,7 +240,7 @@ func (this *QPictureIO) SetQuality(arg0 int) {
 // void setDescription(const class QString &)
 func (this *QPictureIO) SetDescription(arg0 unsafe.Pointer) {
 	// 0: (, const QString & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO14setDescriptionERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO14setDescriptionERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -239,7 +249,7 @@ func (this *QPictureIO) SetDescription(arg0 unsafe.Pointer) {
 // void setParameters(const char *)
 func (this *QPictureIO) SetParameters(arg0 unsafe.Pointer) {
 	// 0: (, const char * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO13setParametersEPKc", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO13setParametersEPKc", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -248,7 +258,7 @@ func (this *QPictureIO) SetParameters(arg0 unsafe.Pointer) {
 // void setGamma(float)
 func (this *QPictureIO) SetGamma(arg0 float32) {
 	// 0: (, float arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO8setGammaEf", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO8setGammaEf", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -257,7 +267,7 @@ func (this *QPictureIO) SetGamma(arg0 float32) {
 // bool read()
 func (this *QPictureIO) Read() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO4readEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO4readEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -266,7 +276,7 @@ func (this *QPictureIO) Read() {
 // bool write()
 func (this *QPictureIO) Write() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO5writeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO5writeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -275,12 +285,12 @@ func (this *QPictureIO) Write() {
 // static
 // QByteArray pictureFormat(const class QString &)
 func (this *QPictureIO) PictureFormat(fileName unsafe.Pointer) {
-	// 0: (const QString & fileName), (fileName)
+	// 0: (fileName const QString &), (fileName)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO13pictureFormatERK7QString", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QPictureIO_PictureFormat(fileName unsafe.Pointer) {
-	// 0: (const QString & fileName), (fileName)
+	// 0: (fileName const QString &), (fileName)
 	var nilthis *QPictureIO
 	nilthis.PictureFormat(fileName)
 }
@@ -335,12 +345,12 @@ func QPictureIO_OutputFormats() {
 // static
 // void defineIOHandler(const char *, const char *, const char *, picture_io_handler, picture_io_handler)
 func (this *QPictureIO) DefineIOHandler(format unsafe.Pointer, header unsafe.Pointer, flags unsafe.Pointer, read_picture unsafe.Pointer, write_picture unsafe.Pointer) {
-	// 0: (const char * format, const char * header, const char * flags, picture_io_handler read_picture, picture_io_handler write_picture), (format, header, flags, read_picture, write_picture)
+	// 0: (format const char *, header const char *, flags const char *, read_picture picture_io_handler, write_picture picture_io_handler), (format, header, flags, read_picture, write_picture)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO15defineIOHandlerEPKcS1_S1_PFvPS_ES4_", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QPictureIO_DefineIOHandler(format unsafe.Pointer, header unsafe.Pointer, flags unsafe.Pointer, read_picture unsafe.Pointer, write_picture unsafe.Pointer) {
-	// 0: (const char * format, const char * header, const char * flags, picture_io_handler read_picture, picture_io_handler write_picture), (format, header, flags, read_picture, write_picture)
+	// 0: (format const char *, header const char *, flags const char *, read_picture picture_io_handler, write_picture picture_io_handler), (format, header, flags, read_picture, write_picture)
 	var nilthis *QPictureIO
 	nilthis.DefineIOHandler(format, header, flags, read_picture, write_picture)
 }

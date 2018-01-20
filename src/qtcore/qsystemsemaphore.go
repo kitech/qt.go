@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QSystemSemaphore struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QSystemSemaphore) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:74
@@ -55,7 +59,11 @@ func NewQSystemSemaphore(key unsafe.Pointer, initialValue int, mode int) *QSyste
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphoreC2ERK7QStringiNS_10AccessModeE", ffiqt.FFI_TYPE_VOID, cthis, key, &initialValue, &mode)
 	gopp.ErrPrint(err, rv)
-	return &QSystemSemaphore{cthis}
+	gothis := NewQSystemSemaphoreFromPointer(cthis)
+	return gothis
+}
+func NewQSystemSemaphoreFromPointer(cthis unsafe.Pointer) *QSystemSemaphore {
+	return &QSystemSemaphore{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:75
@@ -70,8 +78,8 @@ func DeleteQSystemSemaphore(*QSystemSemaphore) {
 // index:0
 // void setKey(const class QString &, int, enum QSystemSemaphore::AccessMode)
 func (this *QSystemSemaphore) SetKey(key unsafe.Pointer, initialValue int, mode int) {
-	// 0: (, const QString & key, int initialValue, QSystemSemaphore::AccessMode mode), (key, &initialValue, &mode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", ffiqt.FFI_TYPE_VOID, this.cthis, key, &initialValue, &mode)
+	// 0: (, key const QString &, initialValue int, mode QSystemSemaphore::AccessMode), (key, &initialValue, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), key, &initialValue, &mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -80,7 +88,7 @@ func (this *QSystemSemaphore) SetKey(key unsafe.Pointer, initialValue int, mode 
 // QString key()
 func (this *QSystemSemaphore) Key() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore3keyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore3keyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -89,7 +97,7 @@ func (this *QSystemSemaphore) Key() {
 // bool acquire()
 func (this *QSystemSemaphore) Acquire() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore7acquireEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore7acquireEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,8 +105,8 @@ func (this *QSystemSemaphore) Acquire() {
 // index:0
 // bool release(int)
 func (this *QSystemSemaphore) Release(n int) {
-	// 0: (, int n), (&n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore7releaseEi", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	// 0: (, n int), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore7releaseEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +115,7 @@ func (this *QSystemSemaphore) Release(n int) {
 // QSystemSemaphore::SystemSemaphoreError error()
 func (this *QSystemSemaphore) Error() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore5errorEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore5errorEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +124,7 @@ func (this *QSystemSemaphore) Error() {
 // QString errorString()
 func (this *QSystemSemaphore) ErrorString() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore11errorStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore11errorStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

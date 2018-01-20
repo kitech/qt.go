@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionProgressBar struct {
-	cthis unsafe.Pointer
+	*QStyleOption
+}
+
+func (this *QStyleOptionProgressBar) GetCthis() unsafe.Pointer {
+	return this.QStyleOption.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:342
@@ -63,7 +67,23 @@ func NewQStyleOptionProgressBar() *QStyleOptionProgressBar {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionProgressBar{cthis}
+	gothis := NewQStyleOptionProgressBarFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionProgressBarFromPointer(cthis unsafe.Pointer) *QStyleOptionProgressBar {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionProgressBar{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:346
+// index:1
+// void QStyleOptionProgressBar(int)
+func NewQStyleOptionProgressBar_1(version int) *QStyleOptionProgressBar {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionProgressBarFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

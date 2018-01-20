@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTouchEvent struct {
-	cthis unsafe.Pointer
+	*QInputEvent
+}
+
+func (this *QTouchEvent) GetCthis() unsafe.Pointer {
+	return this.QInputEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:947
@@ -67,7 +71,7 @@ func DeleteQTouchEvent(*QTouchEvent) {
 // QWindow * window()
 func (this *QTouchEvent) Window() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6windowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6windowEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -77,7 +81,7 @@ func (this *QTouchEvent) Window() {
 // QObject * target()
 func (this *QTouchEvent) Target() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6targetEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6targetEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -87,7 +91,7 @@ func (this *QTouchEvent) Target() {
 // Qt::TouchPointStates touchPointStates()
 func (this *QTouchEvent) TouchPointStates() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent16touchPointStatesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent16touchPointStatesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,7 +101,7 @@ func (this *QTouchEvent) TouchPointStates() {
 // const QList<QTouchEvent::TouchPoint> & touchPoints()
 func (this *QTouchEvent) TouchPoints() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent11touchPointsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent11touchPointsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +111,7 @@ func (this *QTouchEvent) TouchPoints() {
 // QTouchDevice * device()
 func (this *QTouchEvent) Device() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6deviceEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6deviceEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,8 +120,8 @@ func (this *QTouchEvent) Device() {
 // inline
 // void setWindow(class QWindow *)
 func (this *QTouchEvent) SetWindow(awindow unsafe.Pointer) {
-	// 0: (, QWindow * awindow), (awindow)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setWindowEP7QWindow", ffiqt.FFI_TYPE_VOID, this.cthis, awindow)
+	// 0: (, awindow QWindow *), (awindow)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setWindowEP7QWindow", ffiqt.FFI_TYPE_VOID, this.GetCthis(), awindow)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,8 +130,18 @@ func (this *QTouchEvent) SetWindow(awindow unsafe.Pointer) {
 // inline
 // void setTarget(class QObject *)
 func (this *QTouchEvent) SetTarget(atarget unsafe.Pointer) {
-	// 0: (, QObject * atarget), (atarget)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setTargetEP7QObject", ffiqt.FFI_TYPE_VOID, this.cthis, atarget)
+	// 0: (, atarget QObject *), (atarget)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setTargetEP7QObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), atarget)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qevent.h:961
+// index:0
+// inline
+// void setTouchPointStates(Qt::TouchPointStates)
+func (this *QTouchEvent) SetTouchPointStates(aTouchPointStates int) {
+	// 0: (, QFlags<Qt::TouchPointState> aTouchPointStates), (&aTouchPointStates)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent19setTouchPointStatesE6QFlagsIN2Qt15TouchPointStateEE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &aTouchPointStates)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -136,8 +150,8 @@ func (this *QTouchEvent) SetTarget(atarget unsafe.Pointer) {
 // inline
 // void setDevice(class QTouchDevice *)
 func (this *QTouchEvent) SetDevice(adevice unsafe.Pointer) {
-	// 0: (, QTouchDevice * adevice), (adevice)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setDeviceEP12QTouchDevice", ffiqt.FFI_TYPE_VOID, this.cthis, adevice)
+	// 0: (, adevice QTouchDevice *), (adevice)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setDeviceEP12QTouchDevice", ffiqt.FFI_TYPE_VOID, this.GetCthis(), adevice)
 	gopp.ErrPrint(err, rv)
 }
 

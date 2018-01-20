@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QJsonValueRef struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QJsonValueRef) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:174
@@ -56,7 +60,11 @@ func NewQJsonValueRef(array unsafe.Pointer, idx int) *QJsonValueRef {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValueRefC2EP10QJsonArrayi", ffiqt.FFI_TYPE_VOID, cthis, array, &idx)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValueRef{cthis}
+	gothis := NewQJsonValueRefFromPointer(cthis)
+	return gothis
+}
+func NewQJsonValueRefFromPointer(cthis unsafe.Pointer) *QJsonValueRef {
+	return &QJsonValueRef{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:176
@@ -67,7 +75,8 @@ func NewQJsonValueRef_1(object unsafe.Pointer, idx int) *QJsonValueRef {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValueRefC2EP11QJsonObjecti", ffiqt.FFI_TYPE_VOID, cthis, object, &idx)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValueRef{cthis}
+	gothis := NewQJsonValueRefFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:183
@@ -75,7 +84,7 @@ func NewQJsonValueRef_1(object unsafe.Pointer, idx int) *QJsonValueRef {
 // QVariant toVariant()
 func (this *QJsonValueRef) ToVariant() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef9toVariantEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef9toVariantEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -85,7 +94,7 @@ func (this *QJsonValueRef) ToVariant() {
 // QJsonValue::Type type()
 func (this *QJsonValueRef) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -95,7 +104,7 @@ func (this *QJsonValueRef) Type() {
 // bool isNull()
 func (this *QJsonValueRef) IsNull() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6isNullEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -105,7 +114,7 @@ func (this *QJsonValueRef) IsNull() {
 // bool isBool()
 func (this *QJsonValueRef) IsBool() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6isBoolEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6isBoolEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -115,7 +124,7 @@ func (this *QJsonValueRef) IsBool() {
 // bool isDouble()
 func (this *QJsonValueRef) IsDouble() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isDoubleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isDoubleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,7 +134,7 @@ func (this *QJsonValueRef) IsDouble() {
 // bool isString()
 func (this *QJsonValueRef) IsString() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,7 +144,7 @@ func (this *QJsonValueRef) IsString() {
 // bool isArray()
 func (this *QJsonValueRef) IsArray() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef7isArrayEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef7isArrayEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,7 +154,7 @@ func (this *QJsonValueRef) IsArray() {
 // bool isObject()
 func (this *QJsonValueRef) IsObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8isObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -155,7 +164,7 @@ func (this *QJsonValueRef) IsObject() {
 // bool isUndefined()
 func (this *QJsonValueRef) IsUndefined() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef11isUndefinedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef11isUndefinedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -165,7 +174,7 @@ func (this *QJsonValueRef) IsUndefined() {
 // bool toBool()
 func (this *QJsonValueRef) ToBool() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -174,8 +183,8 @@ func (this *QJsonValueRef) ToBool() {
 // inline
 // bool toBool(_Bool)
 func (this *QJsonValueRef) ToBool_1(defaultValue bool) {
-	// 1: (, bool defaultValue), (&defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEb", ffiqt.FFI_TYPE_VOID, this.cthis, &defaultValue)
+	// 1: (, defaultValue bool), (&defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &defaultValue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -185,7 +194,7 @@ func (this *QJsonValueRef) ToBool_1(defaultValue bool) {
 // int toInt()
 func (this *QJsonValueRef) ToInt() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -194,8 +203,8 @@ func (this *QJsonValueRef) ToInt() {
 // inline
 // int toInt(int)
 func (this *QJsonValueRef) ToInt_1(defaultValue int) {
-	// 1: (, int defaultValue), (&defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEi", ffiqt.FFI_TYPE_VOID, this.cthis, &defaultValue)
+	// 1: (, defaultValue int), (&defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &defaultValue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -205,7 +214,7 @@ func (this *QJsonValueRef) ToInt_1(defaultValue int) {
 // double toDouble()
 func (this *QJsonValueRef) ToDouble() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -214,8 +223,8 @@ func (this *QJsonValueRef) ToDouble() {
 // inline
 // double toDouble(double)
 func (this *QJsonValueRef) ToDouble_1(defaultValue float64) {
-	// 1: (, double defaultValue), (&defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEd", ffiqt.FFI_TYPE_VOID, this.cthis, &defaultValue)
+	// 1: (, defaultValue double), (&defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &defaultValue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,7 +234,7 @@ func (this *QJsonValueRef) ToDouble_1(defaultValue float64) {
 // QString toString()
 func (this *QJsonValueRef) ToString() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -234,8 +243,8 @@ func (this *QJsonValueRef) ToString() {
 // inline
 // QString toString(const class QString &)
 func (this *QJsonValueRef) ToString_1(defaultValue unsafe.Pointer) {
-	// 1: (, const QString & defaultValue), (defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, defaultValue)
+	// 1: (, defaultValue const QString &), (defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -244,7 +253,7 @@ func (this *QJsonValueRef) ToString_1(defaultValue unsafe.Pointer) {
 // QJsonArray toArray()
 func (this *QJsonValueRef) ToArray() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef7toArrayEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef7toArrayEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -253,7 +262,7 @@ func (this *QJsonValueRef) ToArray() {
 // QJsonObject toObject()
 func (this *QJsonValueRef) ToObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

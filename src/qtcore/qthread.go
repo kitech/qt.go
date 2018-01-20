@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QThread struct {
-	cthis unsafe.Pointer
+	*QObject
+}
+
+func (this *QThread) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qthread.h:72
@@ -54,7 +58,7 @@ type QThread struct {
 // const QMetaObject * metaObject()
 func (this *QThread) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,7 +129,23 @@ func NewQThread(parent unsafe.Pointer) *QThread {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThreadC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QThread{cthis}
+	gothis := NewQThreadFromPointer(cthis)
+	return gothis
+}
+func NewQThreadFromPointer(cthis unsafe.Pointer) *QThread {
+	bcthis0 := NewQObjectFromPointer(cthis)
+	return &QThread{bcthis0}
+}
+
+// /usr/include/qt/QtCore/qthread.h:157
+// index:1
+// void QThread(class QThreadPrivate &, class QObject *)
+func NewQThread_1(dd unsafe.Pointer, parent unsafe.Pointer) *QThread {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThreadC2ER14QThreadPrivateP7QObject", ffiqt.FFI_TYPE_VOID, cthis, dd, parent)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQThreadFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qthread.h:80
@@ -141,8 +161,8 @@ func DeleteQThread(*QThread) {
 // index:0
 // void setPriority(enum QThread::Priority)
 func (this *QThread) SetPriority(priority int) {
-	// 0: (, QThread::Priority priority), (&priority)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread11setPriorityENS_8PriorityE", ffiqt.FFI_TYPE_VOID, this.cthis, &priority)
+	// 0: (, priority QThread::Priority), (&priority)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread11setPriorityENS_8PriorityE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &priority)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,7 +171,7 @@ func (this *QThread) SetPriority(priority int) {
 // QThread::Priority priority()
 func (this *QThread) Priority() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread8priorityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread8priorityEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -160,7 +180,7 @@ func (this *QThread) Priority() {
 // bool isFinished()
 func (this *QThread) IsFinished() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread10isFinishedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread10isFinishedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,7 +189,7 @@ func (this *QThread) IsFinished() {
 // bool isRunning()
 func (this *QThread) IsRunning() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread9isRunningEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread9isRunningEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -178,7 +198,7 @@ func (this *QThread) IsRunning() {
 // void requestInterruption()
 func (this *QThread) RequestInterruption() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread19requestInterruptionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread19requestInterruptionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -187,7 +207,7 @@ func (this *QThread) RequestInterruption() {
 // bool isInterruptionRequested()
 func (this *QThread) IsInterruptionRequested() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread23isInterruptionRequestedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread23isInterruptionRequestedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -195,8 +215,8 @@ func (this *QThread) IsInterruptionRequested() {
 // index:0
 // void setStackSize(uint)
 func (this *QThread) SetStackSize(stackSize uint) {
-	// 0: (, uint stackSize), (&stackSize)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread12setStackSizeEj", ffiqt.FFI_TYPE_VOID, this.cthis, &stackSize)
+	// 0: (, stackSize uint), (&stackSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread12setStackSizeEj", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &stackSize)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -205,7 +225,7 @@ func (this *QThread) SetStackSize(stackSize uint) {
 // uint stackSize()
 func (this *QThread) StackSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread9stackSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread9stackSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -213,8 +233,8 @@ func (this *QThread) StackSize() {
 // index:0
 // void exit(int)
 func (this *QThread) Exit(retcode int) {
-	// 0: (, int retcode), (&retcode)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4exitEi", ffiqt.FFI_TYPE_VOID, this.cthis, &retcode)
+	// 0: (, retcode int), (&retcode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4exitEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &retcode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -223,7 +243,7 @@ func (this *QThread) Exit(retcode int) {
 // QAbstractEventDispatcher * eventDispatcher()
 func (this *QThread) EventDispatcher() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread15eventDispatcherEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread15eventDispatcherEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -231,8 +251,8 @@ func (this *QThread) EventDispatcher() {
 // index:0
 // void setEventDispatcher(class QAbstractEventDispatcher *)
 func (this *QThread) SetEventDispatcher(eventDispatcher unsafe.Pointer) {
-	// 0: (, QAbstractEventDispatcher * eventDispatcher), (eventDispatcher)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher", ffiqt.FFI_TYPE_VOID, this.cthis, eventDispatcher)
+	// 0: (, eventDispatcher QAbstractEventDispatcher *), (eventDispatcher)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher", ffiqt.FFI_TYPE_VOID, this.GetCthis(), eventDispatcher)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -241,8 +261,8 @@ func (this *QThread) SetEventDispatcher(eventDispatcher unsafe.Pointer) {
 // virtual
 // bool event(class QEvent *)
 func (this *QThread) Event(event unsafe.Pointer) {
-	// 0: (, QEvent * event), (event)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.cthis, event)
+	// 0: (, event QEvent *), (event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), event)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -251,7 +271,7 @@ func (this *QThread) Event(event unsafe.Pointer) {
 // int loopLevel()
 func (this *QThread) LoopLevel() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread9loopLevelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread9loopLevelEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -260,7 +280,7 @@ func (this *QThread) LoopLevel() {
 // void start(enum QThread::Priority)
 func (this *QThread) Start(arg0 int) {
 	// 0: (, QThread::Priority arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread5startENS_8PriorityE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread5startENS_8PriorityE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -269,7 +289,7 @@ func (this *QThread) Start(arg0 int) {
 // void terminate()
 func (this *QThread) Terminate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread9terminateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread9terminateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -278,7 +298,7 @@ func (this *QThread) Terminate() {
 // void quit()
 func (this *QThread) Quit() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4quitEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4quitEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -286,8 +306,8 @@ func (this *QThread) Quit() {
 // index:0
 // bool wait(unsigned long)
 func (this *QThread) Wait(time uint) {
-	// 0: (, unsigned long time), (&time)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4waitEm", ffiqt.FFI_TYPE_VOID, this.cthis, &time)
+	// 0: (, time unsigned long), (&time)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4waitEm", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &time)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -334,6 +354,40 @@ func QThread_Usleep(arg0 uint) {
 	// 0: (unsigned long arg0), (arg0)
 	var nilthis *QThread
 	nilthis.Usleep(arg0)
+}
+
+// /usr/include/qt/QtCore/qthread.h:151
+// index:0
+// virtual
+// void run()
+func (this *QThread) Run() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread3runEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qthread.h:152
+// index:0
+// int exec()
+func (this *QThread) Exec() {
+	// 0: (), ()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4execEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qthread.h:154
+// index:0
+// static
+// void setTerminationEnabled(_Bool)
+func (this *QThread) SetTerminationEnabled(enabled bool) {
+	// 0: (enabled bool), (enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread21setTerminationEnabledEb", ffiqt.FFI_TYPE_VOID)
+	gopp.ErrPrint(err, rv)
+}
+func QThread_SetTerminationEnabled(enabled bool) {
+	// 0: (enabled bool), (enabled)
+	var nilthis *QThread
+	nilthis.SetTerminationEnabled(enabled)
 }
 
 //  body block end

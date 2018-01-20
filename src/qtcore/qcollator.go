@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 3
+// extern C begin: 4
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QCollator struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QCollator) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qcollator.h:86
@@ -55,7 +59,11 @@ func NewQCollator(locale unsafe.Pointer) *QCollator {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollatorC2ERK7QLocale", ffiqt.FFI_TYPE_VOID, cthis, locale)
 	gopp.ErrPrint(err, rv)
-	return &QCollator{cthis}
+	gothis := NewQCollatorFromPointer(cthis)
+	return gothis
+}
+func NewQCollatorFromPointer(cthis unsafe.Pointer) *QCollator {
+	return &QCollator{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qcollator.h:88
@@ -71,8 +79,8 @@ func DeleteQCollator(*QCollator) {
 // inline
 // void swap(class QCollator &)
 func (this *QCollator) Swap(other unsafe.Pointer) {
-	// 0: (, QCollator & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QCollator &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -80,8 +88,8 @@ func (this *QCollator) Swap(other unsafe.Pointer) {
 // index:0
 // void setLocale(const class QLocale &)
 func (this *QCollator) SetLocale(locale unsafe.Pointer) {
-	// 0: (, const QLocale & locale), (locale)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator9setLocaleERK7QLocale", ffiqt.FFI_TYPE_VOID, this.cthis, locale)
+	// 0: (, locale const QLocale &), (locale)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator9setLocaleERK7QLocale", ffiqt.FFI_TYPE_VOID, this.GetCthis(), locale)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -90,7 +98,7 @@ func (this *QCollator) SetLocale(locale unsafe.Pointer) {
 // QLocale locale()
 func (this *QCollator) Locale() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator6localeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator6localeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +107,7 @@ func (this *QCollator) Locale() {
 // Qt::CaseSensitivity caseSensitivity()
 func (this *QCollator) CaseSensitivity() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator15caseSensitivityEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator15caseSensitivityEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,8 +115,8 @@ func (this *QCollator) CaseSensitivity() {
 // index:0
 // void setCaseSensitivity(Qt::CaseSensitivity)
 func (this *QCollator) SetCaseSensitivity(cs int) {
-	// 0: (, Qt::CaseSensitivity cs), (&cs)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator18setCaseSensitivityEN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.cthis, &cs)
+	// 0: (, cs Qt::CaseSensitivity), (&cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator18setCaseSensitivityEN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &cs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,8 +124,8 @@ func (this *QCollator) SetCaseSensitivity(cs int) {
 // index:0
 // void setNumericMode(_Bool)
 func (this *QCollator) SetNumericMode(on bool) {
-	// 0: (, bool on), (&on)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator14setNumericModeEb", ffiqt.FFI_TYPE_VOID, this.cthis, &on)
+	// 0: (, on bool), (&on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator14setNumericModeEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +134,7 @@ func (this *QCollator) SetNumericMode(on bool) {
 // bool numericMode()
 func (this *QCollator) NumericMode() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator11numericModeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator11numericModeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,8 +142,8 @@ func (this *QCollator) NumericMode() {
 // index:0
 // void setIgnorePunctuation(_Bool)
 func (this *QCollator) SetIgnorePunctuation(on bool) {
-	// 0: (, bool on), (&on)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator20setIgnorePunctuationEb", ffiqt.FFI_TYPE_VOID, this.cthis, &on)
+	// 0: (, on bool), (&on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator20setIgnorePunctuationEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,7 +152,7 @@ func (this *QCollator) SetIgnorePunctuation(on bool) {
 // bool ignorePunctuation()
 func (this *QCollator) IgnorePunctuation() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator17ignorePunctuationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator17ignorePunctuationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,8 +160,8 @@ func (this *QCollator) IgnorePunctuation() {
 // index:0
 // int compare(const class QString &, const class QString &)
 func (this *QCollator) Compare(s1 unsafe.Pointer, s2 unsafe.Pointer) {
-	// 0: (, const QString & s1, const QString & s2), (s1, s2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7compareERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.cthis, s1, s2)
+	// 0: (, s1 const QString &, s2 const QString &), (s1, s2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7compareERK7QStringS2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), s1, s2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -161,8 +169,8 @@ func (this *QCollator) Compare(s1 unsafe.Pointer, s2 unsafe.Pointer) {
 // index:1
 // int compare(const class QStringRef &, const class QStringRef &)
 func (this *QCollator) Compare_1(s1 unsafe.Pointer, s2 unsafe.Pointer) {
-	// 1: (, const QStringRef & s1, const QStringRef & s2), (s1, s2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7compareERK10QStringRefS2_", ffiqt.FFI_TYPE_VOID, this.cthis, s1, s2)
+	// 1: (, s1 const QStringRef &, s2 const QStringRef &), (s1, s2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7compareERK10QStringRefS2_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), s1, s2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,8 +178,8 @@ func (this *QCollator) Compare_1(s1 unsafe.Pointer, s2 unsafe.Pointer) {
 // index:2
 // int compare(const class QChar *, int, const class QChar *, int)
 func (this *QCollator) Compare_2(s1 unsafe.Pointer, len1 int, s2 unsafe.Pointer, len2 int) {
-	// 2: (, const QChar * s1, int len1, const QChar * s2, int len2), (s1, &len1, s2, &len2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7compareEPK5QChariS2_i", ffiqt.FFI_TYPE_VOID, this.cthis, s1, &len1, s2, &len2)
+	// 2: (, s1 const QChar *, len1 int, s2 const QChar *, len2 int), (s1, &len1, s2, &len2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7compareEPK5QChariS2_i", ffiqt.FFI_TYPE_VOID, this.GetCthis(), s1, &len1, s2, &len2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -179,8 +187,8 @@ func (this *QCollator) Compare_2(s1 unsafe.Pointer, len1 int, s2 unsafe.Pointer,
 // index:0
 // QCollatorSortKey sortKey(const class QString &)
 func (this *QCollator) SortKey(string unsafe.Pointer) {
-	// 0: (, const QString & string), (string)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7sortKeyERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, string)
+	// 0: (, string const QString &), (string)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7sortKeyERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), string)
 	gopp.ErrPrint(err, rv)
 }
 

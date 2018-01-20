@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionFocusRect struct {
-	cthis unsafe.Pointer
+	*QStyleOption
+}
+
+func (this *QStyleOptionFocusRect) GetCthis() unsafe.Pointer {
+	return this.QStyleOption.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:119
@@ -63,7 +67,23 @@ func NewQStyleOptionFocusRect() *QStyleOptionFocusRect {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionFocusRect{cthis}
+	gothis := NewQStyleOptionFocusRectFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionFocusRectFromPointer(cthis unsafe.Pointer) *QStyleOptionFocusRect {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionFocusRect{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:123
+// index:1
+// void QStyleOptionFocusRect(int)
+func NewQStyleOptionFocusRect_1(version int) *QStyleOptionFocusRect {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQStyleOptionFocusRectFromPointer(cthis)
+	return gothis
 }
 
 //  body block end

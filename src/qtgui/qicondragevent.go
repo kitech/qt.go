@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QIconDragEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QIconDragEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:485
@@ -59,7 +63,12 @@ func NewQIconDragEvent() *QIconDragEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QIconDragEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QIconDragEvent{cthis}
+	gothis := NewQIconDragEventFromPointer(cthis)
+	return gothis
+}
+func NewQIconDragEventFromPointer(cthis unsafe.Pointer) *QIconDragEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QIconDragEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:486

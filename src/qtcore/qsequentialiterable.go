@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QSequentialIterable struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QSequentialIterable) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:623
@@ -53,7 +57,7 @@ type QSequentialIterable struct {
 // QSequentialIterable::const_iterator begin()
 func (this *QSequentialIterable) Begin() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable5beginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable5beginEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -62,7 +66,7 @@ func (this *QSequentialIterable) Begin() {
 // QSequentialIterable::const_iterator end()
 func (this *QSequentialIterable) End() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable3endEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable3endEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -70,8 +74,8 @@ func (this *QSequentialIterable) End() {
 // index:0
 // QVariant at(int)
 func (this *QSequentialIterable) At(idx int) {
-	// 0: (, int idx), (&idx)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable2atEi", ffiqt.FFI_TYPE_VOID, this.cthis, &idx)
+	// 0: (, idx int), (&idx)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable2atEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &idx)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -80,7 +84,7 @@ func (this *QSequentialIterable) At(idx int) {
 // int size()
 func (this *QSequentialIterable) Size() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -89,7 +93,7 @@ func (this *QSequentialIterable) Size() {
 // bool canReverseIterate()
 func (this *QSequentialIterable) CanReverseIterate() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable17canReverseIterateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable17canReverseIterateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

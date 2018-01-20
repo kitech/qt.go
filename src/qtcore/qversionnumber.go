@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 20
+// extern C begin: 21
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QVersionNumber struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QVersionNumber) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qversionnumber.h:221
@@ -56,7 +60,11 @@ func NewQVersionNumber() *QVersionNumber {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QVersionNumber{cthis}
+	gothis := NewQVersionNumberFromPointer(cthis)
+	return gothis
+}
+func NewQVersionNumberFromPointer(cthis unsafe.Pointer) *QVersionNumber {
+	return &QVersionNumber{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qversionnumber.h:242
@@ -67,7 +75,8 @@ func NewQVersionNumber_1(maj int) *QVersionNumber {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &maj)
 	gopp.ErrPrint(err, rv)
-	return &QVersionNumber{cthis}
+	gothis := NewQVersionNumberFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qversionnumber.h:245
@@ -78,7 +87,8 @@ func NewQVersionNumber_2(maj int, min int) *QVersionNumber {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Eii", ffiqt.FFI_TYPE_VOID, cthis, &maj, &min)
 	gopp.ErrPrint(err, rv)
-	return &QVersionNumber{cthis}
+	gothis := NewQVersionNumberFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qversionnumber.h:248
@@ -89,7 +99,8 @@ func NewQVersionNumber_3(maj int, min int, mic int) *QVersionNumber {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Eiii", ffiqt.FFI_TYPE_VOID, cthis, &maj, &min, &mic)
 	gopp.ErrPrint(err, rv)
-	return &QVersionNumber{cthis}
+	gothis := NewQVersionNumberFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qversionnumber.h:251
@@ -98,7 +109,7 @@ func NewQVersionNumber_3(maj int, min int, mic int) *QVersionNumber {
 // bool isNull()
 func (this *QVersionNumber) IsNull() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber6isNullEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +119,7 @@ func (this *QVersionNumber) IsNull() {
 // bool isNormalized()
 func (this *QVersionNumber) IsNormalized() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12isNormalizedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12isNormalizedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -118,7 +129,7 @@ func (this *QVersionNumber) IsNormalized() {
 // int majorVersion()
 func (this *QVersionNumber) MajorVersion() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12majorVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12majorVersionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -128,7 +139,7 @@ func (this *QVersionNumber) MajorVersion() {
 // int minorVersion()
 func (this *QVersionNumber) MinorVersion() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12minorVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12minorVersionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -138,7 +149,7 @@ func (this *QVersionNumber) MinorVersion() {
 // int microVersion()
 func (this *QVersionNumber) MicroVersion() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12microVersionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12microVersionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -147,7 +158,7 @@ func (this *QVersionNumber) MicroVersion() {
 // QVersionNumber normalized()
 func (this *QVersionNumber) Normalized() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber10normalizedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber10normalizedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -156,7 +167,7 @@ func (this *QVersionNumber) Normalized() {
 // QVector<int> segments()
 func (this *QVersionNumber) Segments() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber8segmentsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber8segmentsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -165,8 +176,8 @@ func (this *QVersionNumber) Segments() {
 // inline
 // int segmentAt(int)
 func (this *QVersionNumber) SegmentAt(index int) {
-	// 0: (, int index), (&index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber9segmentAtEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	// 0: (, index int), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber9segmentAtEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -176,7 +187,7 @@ func (this *QVersionNumber) SegmentAt(index int) {
 // int segmentCount()
 func (this *QVersionNumber) SegmentCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12segmentCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber12segmentCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -184,8 +195,8 @@ func (this *QVersionNumber) SegmentCount() {
 // index:0
 // bool isPrefixOf(const class QVersionNumber &)
 func (this *QVersionNumber) IsPrefixOf(other unsafe.Pointer) {
-	// 0: (, const QVersionNumber & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber10isPrefixOfERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other const QVersionNumber &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber10isPrefixOfERKS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -194,12 +205,12 @@ func (this *QVersionNumber) IsPrefixOf(other unsafe.Pointer) {
 // static
 // int compare(const class QVersionNumber &, const class QVersionNumber &)
 func (this *QVersionNumber) Compare(v1 unsafe.Pointer, v2 unsafe.Pointer) {
-	// 0: (const QVersionNumber & v1, const QVersionNumber & v2), (v1, v2)
+	// 0: (v1 const QVersionNumber &, v2 const QVersionNumber &), (v1, v2)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber7compareERKS_S1_", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QVersionNumber_Compare(v1 unsafe.Pointer, v2 unsafe.Pointer) {
-	// 0: (const QVersionNumber & v1, const QVersionNumber & v2), (v1, v2)
+	// 0: (v1 const QVersionNumber &, v2 const QVersionNumber &), (v1, v2)
 	var nilthis *QVersionNumber
 	nilthis.Compare(v1, v2)
 }
@@ -209,12 +220,12 @@ func QVersionNumber_Compare(v1 unsafe.Pointer, v2 unsafe.Pointer) {
 // static
 // QVersionNumber commonPrefix(const class QVersionNumber &, const class QVersionNumber &)
 func (this *QVersionNumber) CommonPrefix(v1 unsafe.Pointer, v2 unsafe.Pointer) {
-	// 0: (const QVersionNumber & v1, const QVersionNumber & v2), (v1, v2)
+	// 0: (v1 const QVersionNumber &, v2 const QVersionNumber &), (v1, v2)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber12commonPrefixERKS_S1_", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QVersionNumber_CommonPrefix(v1 unsafe.Pointer, v2 unsafe.Pointer) {
-	// 0: (const QVersionNumber & v1, const QVersionNumber & v2), (v1, v2)
+	// 0: (v1 const QVersionNumber &, v2 const QVersionNumber &), (v1, v2)
 	var nilthis *QVersionNumber
 	nilthis.CommonPrefix(v1, v2)
 }
@@ -224,7 +235,7 @@ func QVersionNumber_CommonPrefix(v1 unsafe.Pointer, v2 unsafe.Pointer) {
 // QString toString()
 func (this *QVersionNumber) ToString() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber8toStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber8toStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -233,12 +244,12 @@ func (this *QVersionNumber) ToString() {
 // static
 // QVersionNumber fromString(const class QString &, int *)
 func (this *QVersionNumber) FromString(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
-	// 0: (const QString & string, int * suffixIndex), (string, suffixIndex)
+	// 0: (string const QString &, suffixIndex int *), (string, suffixIndex)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringERK7QStringPi", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QVersionNumber_FromString(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
-	// 0: (const QString & string, int * suffixIndex), (string, suffixIndex)
+	// 0: (string const QString &, suffixIndex int *), (string, suffixIndex)
 	var nilthis *QVersionNumber
 	nilthis.FromString(string, suffixIndex)
 }
@@ -248,12 +259,12 @@ func QVersionNumber_FromString(string unsafe.Pointer, suffixIndex unsafe.Pointer
 // static
 // QVersionNumber fromString(class QLatin1String, int *)
 func (this *QVersionNumber) FromString_1(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
-	// 1: (QLatin1String string, int * suffixIndex), (string, suffixIndex)
+	// 1: (string QLatin1String, suffixIndex int *), (string, suffixIndex)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE13QLatin1StringPi", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QVersionNumber_FromString_1(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
-	// 1: (QLatin1String string, int * suffixIndex), (string, suffixIndex)
+	// 1: (string QLatin1String, suffixIndex int *), (string, suffixIndex)
 	var nilthis *QVersionNumber
 	nilthis.FromString_1(string, suffixIndex)
 }
@@ -263,12 +274,12 @@ func QVersionNumber_FromString_1(string unsafe.Pointer, suffixIndex unsafe.Point
 // static
 // QVersionNumber fromString(class QStringView, int *)
 func (this *QVersionNumber) FromString_2(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
-	// 2: (QStringView string, int * suffixIndex), (string, suffixIndex)
+	// 2: (string QStringView, suffixIndex int *), (string, suffixIndex)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE11QStringViewPi", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QVersionNumber_FromString_2(string unsafe.Pointer, suffixIndex unsafe.Pointer) {
-	// 2: (QStringView string, int * suffixIndex), (string, suffixIndex)
+	// 2: (string QStringView, suffixIndex int *), (string, suffixIndex)
 	var nilthis *QVersionNumber
 	nilthis.FromString_2(string, suffixIndex)
 }

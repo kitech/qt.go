@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 17
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QFrame struct {
-	cthis unsafe.Pointer
+	*QWidget
+}
+
+func (this *QFrame) GetCthis() unsafe.Pointer {
+	return this.QWidget.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:54
@@ -62,8 +66,34 @@ type QFrame struct {
 // const QMetaObject * metaObject()
 func (this *QFrame) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qframe.h:64
+// index:0
+// void QFrame(class QWidget *, Qt::WindowFlags)
+func NewQFrame(parent unsafe.Pointer, f int) *QFrame {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrameC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, parent, &f)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQFrameFromPointer(cthis)
+	return gothis
+}
+func NewQFrameFromPointer(cthis unsafe.Pointer) *QFrame {
+	bcthis0 := NewQWidgetFromPointer(cthis)
+	return &QFrame{bcthis0}
+}
+
+// /usr/include/qt/QtWidgets/qframe.h:118
+// index:1
+// void QFrame(class QFramePrivate &, class QWidget *, Qt::WindowFlags)
+func NewQFrame_1(dd unsafe.Pointer, parent unsafe.Pointer, f int) *QFrame {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrameC2ER13QFramePrivateP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, dd, parent, &f)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQFrameFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:65
@@ -80,7 +110,7 @@ func DeleteQFrame(*QFrame) {
 // int frameStyle()
 func (this *QFrame) FrameStyle() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameStyleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameStyleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -89,7 +119,7 @@ func (this *QFrame) FrameStyle() {
 // void setFrameStyle(int)
 func (this *QFrame) SetFrameStyle(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameStyleEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameStyleEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -98,7 +128,7 @@ func (this *QFrame) SetFrameStyle(arg0 int) {
 // int frameWidth()
 func (this *QFrame) FrameWidth() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +138,7 @@ func (this *QFrame) FrameWidth() {
 // QSize sizeHint()
 func (this *QFrame) SizeHint() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame8sizeHintEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +147,7 @@ func (this *QFrame) SizeHint() {
 // QFrame::Shape frameShape()
 func (this *QFrame) FrameShape() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameShapeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameShapeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +156,7 @@ func (this *QFrame) FrameShape() {
 // void setFrameShape(enum QFrame::Shape)
 func (this *QFrame) SetFrameShape(arg0 int) {
 	// 0: (, QFrame::Shape arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameShapeENS_5ShapeE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameShapeENS_5ShapeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,7 +165,7 @@ func (this *QFrame) SetFrameShape(arg0 int) {
 // QFrame::Shadow frameShadow()
 func (this *QFrame) FrameShadow() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame11frameShadowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame11frameShadowEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,7 +174,7 @@ func (this *QFrame) FrameShadow() {
 // void setFrameShadow(enum QFrame::Shadow)
 func (this *QFrame) SetFrameShadow(arg0 int) {
 	// 0: (, QFrame::Shadow arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame14setFrameShadowENS_6ShadowE", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame14setFrameShadowENS_6ShadowE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,7 +183,7 @@ func (this *QFrame) SetFrameShadow(arg0 int) {
 // int lineWidth()
 func (this *QFrame) LineWidth() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9lineWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9lineWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +192,7 @@ func (this *QFrame) LineWidth() {
 // void setLineWidth(int)
 func (this *QFrame) SetLineWidth(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame12setLineWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame12setLineWidthEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -171,7 +201,7 @@ func (this *QFrame) SetLineWidth(arg0 int) {
 // int midLineWidth()
 func (this *QFrame) MidLineWidth() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame12midLineWidthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame12midLineWidthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,7 +210,7 @@ func (this *QFrame) MidLineWidth() {
 // void setMidLineWidth(int)
 func (this *QFrame) SetMidLineWidth(arg0 int) {
 	// 0: (, int arg0), (&arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame15setMidLineWidthEi", ffiqt.FFI_TYPE_VOID, this.cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame15setMidLineWidthEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -189,7 +219,7 @@ func (this *QFrame) SetMidLineWidth(arg0 int) {
 // QRect frameRect()
 func (this *QFrame) FrameRect() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9frameRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9frameRectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -198,7 +228,55 @@ func (this *QFrame) FrameRect() {
 // void setFrameRect(const class QRect &)
 func (this *QFrame) SetFrameRect(arg0 unsafe.Pointer) {
 	// 0: (, const QRect & arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame12setFrameRectERK5QRect", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame12setFrameRectERK5QRect", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qframe.h:111
+// index:0
+// virtual
+// bool event(class QEvent *)
+func (this *QFrame) Event(e unsafe.Pointer) {
+	// 0: (, e QEvent *), (e)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame5eventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), e)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qframe.h:112
+// index:0
+// virtual
+// void paintEvent(class QPaintEvent *)
+func (this *QFrame) PaintEvent(arg0 unsafe.Pointer) {
+	// 0: (, QPaintEvent * arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qframe.h:113
+// index:0
+// virtual
+// void changeEvent(class QEvent *)
+func (this *QFrame) ChangeEvent(arg0 unsafe.Pointer) {
+	// 0: (, QEvent * arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame11changeEventEP6QEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qframe.h:114
+// index:0
+// void drawFrame(class QPainter *)
+func (this *QFrame) DrawFrame(arg0 unsafe.Pointer) {
+	// 0: (, QPainter * arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame9drawFrameEP8QPainter", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qframe.h:119
+// index:0
+// void initStyleOption(class QStyleOptionFrame *)
+func (this *QFrame) InitStyleOption(option unsafe.Pointer) {
+	// 0: (, option QStyleOptionFrame *), (option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame15initStyleOptionEP17QStyleOptionFrame", ffiqt.FFI_TYPE_VOID, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextFrame struct {
-	cthis unsafe.Pointer
+	*QTextObject
+}
+
+func (this *QTextFrame) GetCthis() unsafe.Pointer {
+	return this.QTextObject.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:120
@@ -58,7 +62,7 @@ type QTextFrame struct {
 // const QMetaObject * metaObject()
 func (this *QTextFrame) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -69,7 +73,23 @@ func NewQTextFrame(doc unsafe.Pointer) *QTextFrame {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrameC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, doc)
 	gopp.ErrPrint(err, rv)
-	return &QTextFrame{cthis}
+	gothis := NewQTextFrameFromPointer(cthis)
+	return gothis
+}
+func NewQTextFrameFromPointer(cthis unsafe.Pointer) *QTextFrame {
+	bcthis0 := NewQTextObjectFromPointer(cthis)
+	return &QTextFrame{bcthis0}
+}
+
+// /usr/include/qt/QtGui/qtextobject.h:185
+// index:1
+// void QTextFrame(class QTextFramePrivate &, class QTextDocument *)
+func NewQTextFrame_1(p unsafe.Pointer, doc unsafe.Pointer) *QTextFrame {
+	cthis := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrameC2ER17QTextFramePrivateP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, p, doc)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextFrameFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:124
@@ -86,8 +106,8 @@ func DeleteQTextFrame(*QTextFrame) {
 // inline
 // void setFrameFormat(const class QTextFrameFormat &)
 func (this *QTextFrame) SetFrameFormat(format unsafe.Pointer) {
-	// 0: (, const QTextFrameFormat & format), (format)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat", ffiqt.FFI_TYPE_VOID, this.cthis, format)
+	// 0: (, format const QTextFrameFormat &), (format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat", ffiqt.FFI_TYPE_VOID, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,7 +117,7 @@ func (this *QTextFrame) SetFrameFormat(format unsafe.Pointer) {
 // QTextFrameFormat frameFormat()
 func (this *QTextFrame) FrameFormat() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame11frameFormatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame11frameFormatEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,7 +126,7 @@ func (this *QTextFrame) FrameFormat() {
 // QTextCursor firstCursorPosition()
 func (this *QTextFrame) FirstCursorPosition() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame19firstCursorPositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame19firstCursorPositionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -115,7 +135,7 @@ func (this *QTextFrame) FirstCursorPosition() {
 // QTextCursor lastCursorPosition()
 func (this *QTextFrame) LastCursorPosition() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame18lastCursorPositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame18lastCursorPositionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -124,7 +144,7 @@ func (this *QTextFrame) LastCursorPosition() {
 // int firstPosition()
 func (this *QTextFrame) FirstPosition() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame13firstPositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame13firstPositionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,7 +153,7 @@ func (this *QTextFrame) FirstPosition() {
 // int lastPosition()
 func (this *QTextFrame) LastPosition() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame12lastPositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame12lastPositionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,7 +162,7 @@ func (this *QTextFrame) LastPosition() {
 // QTextFrameLayoutData * layoutData()
 func (this *QTextFrame) LayoutData() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame10layoutDataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame10layoutDataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -150,8 +170,8 @@ func (this *QTextFrame) LayoutData() {
 // index:0
 // void setLayoutData(class QTextFrameLayoutData *)
 func (this *QTextFrame) SetLayoutData(data unsafe.Pointer) {
-	// 0: (, QTextFrameLayoutData * data), (data)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData", ffiqt.FFI_TYPE_VOID, this.cthis, data)
+	// 0: (, data QTextFrameLayoutData *), (data)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData", ffiqt.FFI_TYPE_VOID, this.GetCthis(), data)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -160,7 +180,7 @@ func (this *QTextFrame) SetLayoutData(data unsafe.Pointer) {
 // QList<QTextFrame *> childFrames()
 func (this *QTextFrame) ChildFrames() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame11childFramesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame11childFramesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,7 +189,7 @@ func (this *QTextFrame) ChildFrames() {
 // QTextFrame * parentFrame()
 func (this *QTextFrame) ParentFrame() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame11parentFrameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame11parentFrameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -178,7 +198,7 @@ func (this *QTextFrame) ParentFrame() {
 // QTextFrame::iterator begin()
 func (this *QTextFrame) Begin() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame5beginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame5beginEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -187,7 +207,7 @@ func (this *QTextFrame) Begin() {
 // QTextFrame::iterator end()
 func (this *QTextFrame) End() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame3endEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame3endEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 32
+// extern C begin: 4
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QGenericPluginFactory struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QGenericPluginFactory) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qgenericpluginfactory.h:55

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 12
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleFactory struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QStyleFactory) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtWidgets/qstylefactory.h:54

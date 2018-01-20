@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QModelIndex struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QModelIndex) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:58
@@ -56,7 +60,11 @@ func NewQModelIndex() *QModelIndex {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QModelIndexC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QModelIndex{cthis}
+	gothis := NewQModelIndexFromPointer(cthis)
+	return gothis
+}
+func NewQModelIndexFromPointer(cthis unsafe.Pointer) *QModelIndex {
+	return &QModelIndex{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:60
@@ -65,7 +73,7 @@ func NewQModelIndex() *QModelIndex {
 // int row()
 func (this *QModelIndex) Row() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex3rowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex3rowEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -75,7 +83,7 @@ func (this *QModelIndex) Row() {
 // int column()
 func (this *QModelIndex) Column() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6columnEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6columnEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -85,7 +93,7 @@ func (this *QModelIndex) Column() {
 // quintptr internalId()
 func (this *QModelIndex) InternalId() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex10internalIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex10internalIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -95,7 +103,7 @@ func (this *QModelIndex) InternalId() {
 // void * internalPointer()
 func (this *QModelIndex) InternalPointer() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex15internalPointerEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex15internalPointerEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -105,7 +113,7 @@ func (this *QModelIndex) InternalPointer() {
 // QModelIndex parent()
 func (this *QModelIndex) Parent() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6parentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6parentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -114,8 +122,8 @@ func (this *QModelIndex) Parent() {
 // inline
 // QModelIndex sibling(int, int)
 func (this *QModelIndex) Sibling(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7siblingEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7siblingEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -124,8 +132,8 @@ func (this *QModelIndex) Sibling(row int, column int) {
 // inline
 // QModelIndex child(int, int)
 func (this *QModelIndex) Child(row int, column int) {
-	// 0: (, int row, int column), (&row, &column)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5childEii", ffiqt.FFI_TYPE_VOID, this.cthis, &row, &column)
+	// 0: (, row int, column int), (&row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5childEii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,8 +142,8 @@ func (this *QModelIndex) Child(row int, column int) {
 // inline
 // QVariant data(int)
 func (this *QModelIndex) Data(role int) {
-	// 0: (, int role), (&role)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex4dataEi", ffiqt.FFI_TYPE_VOID, this.cthis, &role)
+	// 0: (, role int), (&role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex4dataEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,7 +153,7 @@ func (this *QModelIndex) Data(role int) {
 // Qt::ItemFlags flags()
 func (this *QModelIndex) Flags() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5flagsEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5flagsEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -155,7 +163,7 @@ func (this *QModelIndex) Flags() {
 // const QAbstractItemModel * model()
 func (this *QModelIndex) Model() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5modelEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5modelEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -165,7 +173,7 @@ func (this *QModelIndex) Model() {
 // bool isValid()
 func (this *QModelIndex) IsValid() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

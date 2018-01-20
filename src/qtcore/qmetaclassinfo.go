@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QMetaClassInfo struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QMetaClassInfo) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:303
@@ -56,7 +60,11 @@ func NewQMetaClassInfo() *QMetaClassInfo {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMetaClassInfoC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QMetaClassInfo{cthis}
+	gothis := NewQMetaClassInfoFromPointer(cthis)
+	return gothis
+}
+func NewQMetaClassInfoFromPointer(cthis unsafe.Pointer) *QMetaClassInfo {
+	return &QMetaClassInfo{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:304
@@ -64,7 +72,7 @@ func NewQMetaClassInfo() *QMetaClassInfo {
 // const char * name()
 func (this *QMetaClassInfo) Name() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo4nameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo4nameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +81,7 @@ func (this *QMetaClassInfo) Name() {
 // const char * value()
 func (this *QMetaClassInfo) Value() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo5valueEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo5valueEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -83,7 +91,7 @@ func (this *QMetaClassInfo) Value() {
 // const QMetaObject * enclosingMetaObject()
 func (this *QMetaClassInfo) EnclosingMetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo19enclosingMetaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo19enclosingMetaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

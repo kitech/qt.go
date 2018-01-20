@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QDynamicPropertyChangeEvent struct {
-	cthis unsafe.Pointer
+	*QEvent
+}
+
+func (this *QDynamicPropertyChangeEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:365
@@ -55,7 +59,12 @@ func NewQDynamicPropertyChangeEvent(name unsafe.Pointer) *QDynamicPropertyChange
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, name)
 	gopp.ErrPrint(err, rv)
-	return &QDynamicPropertyChangeEvent{cthis}
+	gothis := NewQDynamicPropertyChangeEventFromPointer(cthis)
+	return gothis
+}
+func NewQDynamicPropertyChangeEventFromPointer(cthis unsafe.Pointer) *QDynamicPropertyChangeEvent {
+	bcthis0 := NewQEventFromPointer(cthis)
+	return &QDynamicPropertyChangeEvent{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:366
@@ -73,7 +82,7 @@ func DeleteQDynamicPropertyChangeEvent(*QDynamicPropertyChangeEvent) {
 // QByteArray propertyName()
 func (this *QDynamicPropertyChangeEvent) PropertyName() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

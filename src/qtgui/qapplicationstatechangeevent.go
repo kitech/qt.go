@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QApplicationStateChangeEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QApplicationStateChangeEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:1052
@@ -59,7 +63,12 @@ func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventC2EN2Qt16ApplicationStateE", ffiqt.FFI_TYPE_VOID, cthis, &state)
 	gopp.ErrPrint(err, rv)
-	return &QApplicationStateChangeEvent{cthis}
+	gothis := NewQApplicationStateChangeEventFromPointer(cthis)
+	return gothis
+}
+func NewQApplicationStateChangeEventFromPointer(cthis unsafe.Pointer) *QApplicationStateChangeEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QApplicationStateChangeEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:1053
@@ -67,7 +76,7 @@ func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 // Qt::ApplicationState applicationState()
 func (this *QApplicationStateChangeEvent) ApplicationState() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK28QApplicationStateChangeEvent16applicationStateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK28QApplicationStateChangeEvent16applicationStateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

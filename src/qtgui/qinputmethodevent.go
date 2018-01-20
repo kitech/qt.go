@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QInputMethodEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QInputMethodEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:555
@@ -59,7 +63,12 @@ func NewQInputMethodEvent() *QInputMethodEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QInputMethodEvent{cthis}
+	gothis := NewQInputMethodEventFromPointer(cthis)
+	return gothis
+}
+func NewQInputMethodEventFromPointer(cthis unsafe.Pointer) *QInputMethodEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QInputMethodEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:557
@@ -75,8 +84,8 @@ func DeleteQInputMethodEvent(*QInputMethodEvent) {
 // index:0
 // void setCommitString(const class QString &, int, int)
 func (this *QInputMethodEvent) SetCommitString(commitString unsafe.Pointer, replaceFrom int, replaceLength int) {
-	// 0: (, const QString & commitString, int replaceFrom, int replaceLength), (commitString, &replaceFrom, &replaceLength)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEvent15setCommitStringERK7QStringii", ffiqt.FFI_TYPE_VOID, this.cthis, commitString, &replaceFrom, &replaceLength)
+	// 0: (, commitString const QString &, replaceFrom int, replaceLength int), (commitString, &replaceFrom, &replaceLength)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEvent15setCommitStringERK7QStringii", ffiqt.FFI_TYPE_VOID, this.GetCthis(), commitString, &replaceFrom, &replaceLength)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -86,7 +95,7 @@ func (this *QInputMethodEvent) SetCommitString(commitString unsafe.Pointer, repl
 // const QList<QInputMethodEvent::Attribute> & attributes()
 func (this *QInputMethodEvent) Attributes() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent10attributesEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent10attributesEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -96,7 +105,7 @@ func (this *QInputMethodEvent) Attributes() {
 // const QString & preeditString()
 func (this *QInputMethodEvent) PreeditString() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent13preeditStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent13preeditStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,7 +115,7 @@ func (this *QInputMethodEvent) PreeditString() {
 // const QString & commitString()
 func (this *QInputMethodEvent) CommitString() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent12commitStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent12commitStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +125,7 @@ func (this *QInputMethodEvent) CommitString() {
 // int replacementStart()
 func (this *QInputMethodEvent) ReplacementStart() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent16replacementStartEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent16replacementStartEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +135,7 @@ func (this *QInputMethodEvent) ReplacementStart() {
 // int replacementLength()
 func (this *QInputMethodEvent) ReplacementLength() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent17replacementLengthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent17replacementLengthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

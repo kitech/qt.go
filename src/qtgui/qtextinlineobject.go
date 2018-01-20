@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QTextInlineObject struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QTextInlineObject) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:71
@@ -60,7 +64,11 @@ func NewQTextInlineObject(i int, e unsafe.Pointer) *QTextInlineObject {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObjectC2EiP11QTextEngine", ffiqt.FFI_TYPE_VOID, cthis, &i, e)
 	gopp.ErrPrint(err, rv)
-	return &QTextInlineObject{cthis}
+	gothis := NewQTextInlineObjectFromPointer(cthis)
+	return gothis
+}
+func NewQTextInlineObjectFromPointer(cthis unsafe.Pointer) *QTextInlineObject {
+	return &QTextInlineObject{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:72
@@ -71,7 +79,8 @@ func NewQTextInlineObject_1() *QTextInlineObject {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObjectC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QTextInlineObject{cthis}
+	gothis := NewQTextInlineObjectFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:73
@@ -80,7 +89,7 @@ func NewQTextInlineObject_1() *QTextInlineObject {
 // bool isValid()
 func (this *QTextInlineObject) IsValid() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject7isValidEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject7isValidEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -89,7 +98,7 @@ func (this *QTextInlineObject) IsValid() {
 // QRectF rect()
 func (this *QTextInlineObject) Rect() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject4rectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject4rectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -98,7 +107,7 @@ func (this *QTextInlineObject) Rect() {
 // qreal width()
 func (this *QTextInlineObject) Width() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject5widthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject5widthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +116,7 @@ func (this *QTextInlineObject) Width() {
 // qreal ascent()
 func (this *QTextInlineObject) Ascent() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6ascentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6ascentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +125,7 @@ func (this *QTextInlineObject) Ascent() {
 // qreal descent()
 func (this *QTextInlineObject) Descent() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject7descentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject7descentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,7 +134,7 @@ func (this *QTextInlineObject) Descent() {
 // qreal height()
 func (this *QTextInlineObject) Height() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6heightEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6heightEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,7 +143,7 @@ func (this *QTextInlineObject) Height() {
 // Qt::LayoutDirection textDirection()
 func (this *QTextInlineObject) TextDirection() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject13textDirectionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject13textDirectionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,8 +151,8 @@ func (this *QTextInlineObject) TextDirection() {
 // index:0
 // void setWidth(qreal)
 func (this *QTextInlineObject) SetWidth(w float64) {
-	// 0: (, qreal w), (&w)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject8setWidthEd", ffiqt.FFI_TYPE_VOID, this.cthis, &w)
+	// 0: (, w qreal), (&w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject8setWidthEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &w)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,8 +160,8 @@ func (this *QTextInlineObject) SetWidth(w float64) {
 // index:0
 // void setAscent(qreal)
 func (this *QTextInlineObject) SetAscent(a float64) {
-	// 0: (, qreal a), (&a)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject9setAscentEd", ffiqt.FFI_TYPE_VOID, this.cthis, &a)
+	// 0: (, a qreal), (&a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject9setAscentEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -160,8 +169,8 @@ func (this *QTextInlineObject) SetAscent(a float64) {
 // index:0
 // void setDescent(qreal)
 func (this *QTextInlineObject) SetDescent(d float64) {
-	// 0: (, qreal d), (&d)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject10setDescentEd", ffiqt.FFI_TYPE_VOID, this.cthis, &d)
+	// 0: (, d qreal), (&d)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject10setDescentEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &d)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,7 +179,7 @@ func (this *QTextInlineObject) SetDescent(d float64) {
 // int textPosition()
 func (this *QTextInlineObject) TextPosition() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject12textPositionEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject12textPositionEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -179,7 +188,7 @@ func (this *QTextInlineObject) TextPosition() {
 // int formatIndex()
 func (this *QTextInlineObject) FormatIndex() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject11formatIndexEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject11formatIndexEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -188,7 +197,7 @@ func (this *QTextInlineObject) FormatIndex() {
 // QTextFormat format()
 func (this *QTextInlineObject) Format() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6formatEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6formatEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

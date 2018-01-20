@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QResizeEvent struct {
-	cthis unsafe.Pointer
+	*qtcore.QEvent
+}
+
+func (this *QResizeEvent) GetCthis() unsafe.Pointer {
+	return this.QEvent.GetCthis()
 }
 
 // /usr/include/qt/QtGui/qevent.h:463
@@ -59,7 +63,12 @@ func NewQResizeEvent(size unsafe.Pointer, oldSize unsafe.Pointer) *QResizeEvent 
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QResizeEventC2ERK5QSizeS2_", ffiqt.FFI_TYPE_VOID, cthis, size, oldSize)
 	gopp.ErrPrint(err, rv)
-	return &QResizeEvent{cthis}
+	gothis := NewQResizeEventFromPointer(cthis)
+	return gothis
+}
+func NewQResizeEventFromPointer(cthis unsafe.Pointer) *QResizeEvent {
+	bcthis0 := qtcore.NewQEventFromPointer(cthis)
+	return &QResizeEvent{bcthis0}
 }
 
 // /usr/include/qt/QtGui/qevent.h:464
@@ -77,7 +86,7 @@ func DeleteQResizeEvent(*QResizeEvent) {
 // const QSize & size()
 func (this *QResizeEvent) Size() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -87,7 +96,7 @@ func (this *QResizeEvent) Size() {
 // const QSize & oldSize()
 func (this *QResizeEvent) OldSize() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent7oldSizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent7oldSizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

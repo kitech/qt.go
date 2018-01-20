@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 17
+// extern C begin: 18
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QEvent struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QEvent) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:297
@@ -55,7 +59,11 @@ func NewQEvent(type_ int) *QEvent {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEventC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QEvent{cthis}
+	gothis := NewQEventFromPointer(cthis)
+	return gothis
+}
+func NewQEventFromPointer(cthis unsafe.Pointer) *QEvent {
+	return &QEvent{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:299
@@ -73,7 +81,7 @@ func DeleteQEvent(*QEvent) {
 // QEvent::Type type()
 func (this *QEvent) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -83,7 +91,7 @@ func (this *QEvent) Type() {
 // bool spontaneous()
 func (this *QEvent) Spontaneous() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent11spontaneousEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent11spontaneousEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -92,8 +100,8 @@ func (this *QEvent) Spontaneous() {
 // inline
 // void setAccepted(_Bool)
 func (this *QEvent) SetAccepted(accepted bool) {
-	// 0: (, bool accepted), (&accepted)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent11setAcceptedEb", ffiqt.FFI_TYPE_VOID, this.cthis, &accepted)
+	// 0: (, accepted bool), (&accepted)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent11setAcceptedEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &accepted)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -103,7 +111,7 @@ func (this *QEvent) SetAccepted(accepted bool) {
 // bool isAccepted()
 func (this *QEvent) IsAccepted() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent10isAcceptedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent10isAcceptedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -113,7 +121,7 @@ func (this *QEvent) IsAccepted() {
 // void accept()
 func (this *QEvent) Accept() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent6acceptEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent6acceptEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -123,7 +131,7 @@ func (this *QEvent) Accept() {
 // void ignore()
 func (this *QEvent) Ignore() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent6ignoreEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent6ignoreEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -132,12 +140,12 @@ func (this *QEvent) Ignore() {
 // static
 // int registerEventType(int)
 func (this *QEvent) RegisterEventType(hint int) {
-	// 0: (int hint), (hint)
+	// 0: (hint int), (hint)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QEvent_RegisterEventType(hint int) {
-	// 0: (int hint), (hint)
+	// 0: (hint int), (hint)
 	var nilthis *QEvent
 	nilthis.RegisterEventType(hint)
 }

@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QStringView struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QStringView) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qstringview.h:171
@@ -56,7 +60,11 @@ func NewQStringView() *QStringView {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringViewC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QStringView{cthis}
+	gothis := NewQStringViewFromPointer(cthis)
+	return gothis
+}
+func NewQStringViewFromPointer(cthis unsafe.Pointer) *QStringView {
+	return &QStringView{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qstringview.h:173
@@ -67,7 +75,8 @@ func NewQStringView_1(arg0 int) *QStringView {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringViewC2EDn", ffiqt.FFI_TYPE_VOID, cthis, &arg0)
 	gopp.ErrPrint(err, rv)
-	return &QStringView{cthis}
+	gothis := NewQStringViewFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qstringview.h:214
@@ -76,7 +85,7 @@ func NewQStringView_1(arg0 int) *QStringView {
 // QString toString()
 func (this *QStringView) ToString() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8toStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8toStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -86,7 +95,7 @@ func (this *QStringView) ToString() {
 // qsizetype size()
 func (this *QStringView) Size() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4sizeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4sizeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -96,7 +105,7 @@ func (this *QStringView) Size() {
 // QStringView::const_pointer data()
 func (this *QStringView) Data() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4dataEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4dataEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,7 +115,7 @@ func (this *QStringView) Data() {
 // const QStringView::storage_type * utf16()
 func (this *QStringView) Utf16() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5utf16Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5utf16Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +125,7 @@ func (this *QStringView) Utf16() {
 // QByteArray toLatin1()
 func (this *QStringView) ToLatin1() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8toLatin1Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8toLatin1Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +135,7 @@ func (this *QStringView) ToLatin1() {
 // QByteArray toUtf8()
 func (this *QStringView) ToUtf8() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6toUtf8Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6toUtf8Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -136,7 +145,7 @@ func (this *QStringView) ToUtf8() {
 // QByteArray toLocal8Bit()
 func (this *QStringView) ToLocal8Bit() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView11toLocal8BitEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView11toLocal8BitEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -146,7 +155,7 @@ func (this *QStringView) ToLocal8Bit() {
 // QVector<uint> toUcs4()
 func (this *QStringView) ToUcs4() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6toUcs4Ev", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6toUcs4Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -155,8 +164,8 @@ func (this *QStringView) ToUcs4() {
 // inline
 // QChar at(qsizetype)
 func (this *QStringView) At(n int64) {
-	// 0: (, qsizetype n), (&n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView2atEx", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	// 0: (, n qsizetype), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView2atEx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -165,8 +174,8 @@ func (this *QStringView) At(n int64) {
 // inline
 // QStringView mid(qsizetype)
 func (this *QStringView) Mid(pos int64) {
-	// 0: (, qsizetype pos), (&pos)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView3midEx", ffiqt.FFI_TYPE_VOID, this.cthis, &pos)
+	// 0: (, pos qsizetype), (&pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView3midEx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &pos)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -175,8 +184,8 @@ func (this *QStringView) Mid(pos int64) {
 // inline
 // QStringView mid(qsizetype, qsizetype)
 func (this *QStringView) Mid_1(pos int64, n int64) {
-	// 1: (, qsizetype pos, qsizetype n), (&pos, &n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView3midExx", ffiqt.FFI_TYPE_VOID, this.cthis, &pos, &n)
+	// 1: (, pos qsizetype, n qsizetype), (&pos, &n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView3midExx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &pos, &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -185,8 +194,8 @@ func (this *QStringView) Mid_1(pos int64, n int64) {
 // inline
 // QStringView left(qsizetype)
 func (this *QStringView) Left(n int64) {
-	// 0: (, qsizetype n), (&n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4leftEx", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	// 0: (, n qsizetype), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4leftEx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -195,8 +204,8 @@ func (this *QStringView) Left(n int64) {
 // inline
 // QStringView right(qsizetype)
 func (this *QStringView) Right(n int64) {
-	// 0: (, qsizetype n), (&n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5rightEx", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	// 0: (, n qsizetype), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5rightEx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -205,8 +214,8 @@ func (this *QStringView) Right(n int64) {
 // inline
 // QStringView chopped(qsizetype)
 func (this *QStringView) Chopped(n int64) {
-	// 0: (, qsizetype n), (&n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView7choppedEx", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	// 0: (, n qsizetype), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView7choppedEx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -215,8 +224,8 @@ func (this *QStringView) Chopped(n int64) {
 // inline
 // void truncate(qsizetype)
 func (this *QStringView) Truncate(n int64) {
-	// 0: (, qsizetype n), (&n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringView8truncateEx", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	// 0: (, n qsizetype), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringView8truncateEx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,8 +234,8 @@ func (this *QStringView) Truncate(n int64) {
 // inline
 // void chop(qsizetype)
 func (this *QStringView) Chop(n int64) {
-	// 0: (, qsizetype n), (&n)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringView4chopEx", ffiqt.FFI_TYPE_VOID, this.cthis, &n)
+	// 0: (, n qsizetype), (&n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringView4chopEx", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -236,7 +245,7 @@ func (this *QStringView) Chop(n int64) {
 // QStringView trimmed()
 func (this *QStringView) Trimmed() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView7trimmedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView7trimmedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -245,8 +254,8 @@ func (this *QStringView) Trimmed() {
 // inline
 // bool startsWith(class QStringView, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith(s unsafe.Pointer, cs int) {
-	// 0: (, QStringView s, Qt::CaseSensitivity cs), (s, &cs)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithES_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.cthis, s, &cs)
+	// 0: (, s QStringView, cs Qt::CaseSensitivity), (s, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithES_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), s, &cs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -255,8 +264,8 @@ func (this *QStringView) StartsWith(s unsafe.Pointer, cs int) {
 // inline
 // bool startsWith(class QLatin1String, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith_1(s unsafe.Pointer, cs int) {
-	// 1: (, QLatin1String s, Qt::CaseSensitivity cs), (s, &cs)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.cthis, s, &cs)
+	// 1: (, s QLatin1String, cs Qt::CaseSensitivity), (s, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), s, &cs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -265,8 +274,8 @@ func (this *QStringView) StartsWith_1(s unsafe.Pointer, cs int) {
 // inline
 // bool startsWith(class QChar)
 func (this *QStringView) StartsWith_2(c unsafe.Pointer) {
-	// 2: (, QChar c), (c)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QChar", ffiqt.FFI_TYPE_VOID, this.cthis, c)
+	// 2: (, c QChar), (c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QChar", ffiqt.FFI_TYPE_VOID, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -275,8 +284,8 @@ func (this *QStringView) StartsWith_2(c unsafe.Pointer) {
 // inline
 // bool startsWith(class QChar, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith_3(c unsafe.Pointer, cs int) {
-	// 3: (, QChar c, Qt::CaseSensitivity cs), (c, &cs)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.cthis, c, &cs)
+	// 3: (, c QChar, cs Qt::CaseSensitivity), (c, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), c, &cs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -285,8 +294,8 @@ func (this *QStringView) StartsWith_3(c unsafe.Pointer, cs int) {
 // inline
 // bool endsWith(class QStringView, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith(s unsafe.Pointer, cs int) {
-	// 0: (, QStringView s, Qt::CaseSensitivity cs), (s, &cs)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithES_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.cthis, s, &cs)
+	// 0: (, s QStringView, cs Qt::CaseSensitivity), (s, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithES_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), s, &cs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -295,8 +304,8 @@ func (this *QStringView) EndsWith(s unsafe.Pointer, cs int) {
 // inline
 // bool endsWith(class QLatin1String, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith_1(s unsafe.Pointer, cs int) {
-	// 1: (, QLatin1String s, Qt::CaseSensitivity cs), (s, &cs)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.cthis, s, &cs)
+	// 1: (, s QLatin1String, cs Qt::CaseSensitivity), (s, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), s, &cs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -305,8 +314,8 @@ func (this *QStringView) EndsWith_1(s unsafe.Pointer, cs int) {
 // inline
 // bool endsWith(class QChar)
 func (this *QStringView) EndsWith_2(c unsafe.Pointer) {
-	// 2: (, QChar c), (c)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QChar", ffiqt.FFI_TYPE_VOID, this.cthis, c)
+	// 2: (, c QChar), (c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QChar", ffiqt.FFI_TYPE_VOID, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -315,8 +324,8 @@ func (this *QStringView) EndsWith_2(c unsafe.Pointer) {
 // inline
 // bool endsWith(class QChar, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith_3(c unsafe.Pointer, cs int) {
-	// 3: (, QChar c, Qt::CaseSensitivity cs), (c, &cs)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.cthis, c, &cs)
+	// 3: (, c QChar, cs Qt::CaseSensitivity), (c, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), c, &cs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -326,7 +335,7 @@ func (this *QStringView) EndsWith_3(c unsafe.Pointer, cs int) {
 // QStringView::const_iterator begin()
 func (this *QStringView) Begin() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5beginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5beginEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -336,7 +345,7 @@ func (this *QStringView) Begin() {
 // QStringView::const_iterator end()
 func (this *QStringView) End() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView3endEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView3endEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -346,7 +355,7 @@ func (this *QStringView) End() {
 // QStringView::const_iterator cbegin()
 func (this *QStringView) Cbegin() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6cbeginEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6cbeginEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -356,7 +365,7 @@ func (this *QStringView) Cbegin() {
 // QStringView::const_iterator cend()
 func (this *QStringView) Cend() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4cendEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4cendEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -366,7 +375,7 @@ func (this *QStringView) Cend() {
 // bool empty()
 func (this *QStringView) Empty() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5emptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5emptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -376,7 +385,7 @@ func (this *QStringView) Empty() {
 // QChar front()
 func (this *QStringView) Front() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5frontEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5frontEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -386,7 +395,7 @@ func (this *QStringView) Front() {
 // QChar back()
 func (this *QStringView) Back() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4backEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4backEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -396,7 +405,7 @@ func (this *QStringView) Back() {
 // bool isNull()
 func (this *QStringView) IsNull() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6isNullEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -406,7 +415,7 @@ func (this *QStringView) IsNull() {
 // bool isEmpty()
 func (this *QStringView) IsEmpty() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView7isEmptyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -416,7 +425,7 @@ func (this *QStringView) IsEmpty() {
 // int length()
 func (this *QStringView) Length() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6lengthEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6lengthEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -426,7 +435,7 @@ func (this *QStringView) Length() {
 // QChar first()
 func (this *QStringView) First() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5firstEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5firstEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -436,7 +445,7 @@ func (this *QStringView) First() {
 // QChar last()
 func (this *QStringView) Last() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4lastEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4lastEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

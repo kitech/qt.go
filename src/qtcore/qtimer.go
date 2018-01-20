@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 32
+// extern C begin: 33
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QTimer struct {
-	cthis unsafe.Pointer
+	*QObject
+}
+
+func (this *QTimer) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtCore/qtimer.h:59
@@ -54,7 +58,7 @@ type QTimer struct {
 // const QMetaObject * metaObject()
 func (this *QTimer) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -65,7 +69,12 @@ func NewQTimer(parent unsafe.Pointer) *QTimer {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimerC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QTimer{cthis}
+	gothis := NewQTimerFromPointer(cthis)
+	return gothis
+}
+func NewQTimerFromPointer(cthis unsafe.Pointer) *QTimer {
+	bcthis0 := NewQObjectFromPointer(cthis)
+	return &QTimer{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qtimer.h:67
@@ -83,7 +92,7 @@ func DeleteQTimer(*QTimer) {
 // bool isActive()
 func (this *QTimer) IsActive() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer8isActiveEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer8isActiveEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -93,7 +102,7 @@ func (this *QTimer) IsActive() {
 // int timerId()
 func (this *QTimer) TimerId() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer7timerIdEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer7timerIdEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -101,8 +110,8 @@ func (this *QTimer) TimerId() {
 // index:0
 // void setInterval(int)
 func (this *QTimer) SetInterval(msec int) {
-	// 0: (, int msec), (&msec)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer11setIntervalEi", ffiqt.FFI_TYPE_VOID, this.cthis, &msec)
+	// 0: (, msec int), (&msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer11setIntervalEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &msec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,7 +121,7 @@ func (this *QTimer) SetInterval(msec int) {
 // int interval()
 func (this *QTimer) Interval() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer8intervalEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer8intervalEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -121,7 +130,7 @@ func (this *QTimer) Interval() {
 // int remainingTime()
 func (this *QTimer) RemainingTime() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer13remainingTimeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer13remainingTimeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,8 +139,8 @@ func (this *QTimer) RemainingTime() {
 // inline
 // void setTimerType(Qt::TimerType)
 func (this *QTimer) SetTimerType(atype int) {
-	// 0: (, Qt::TimerType atype), (&atype)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer12setTimerTypeEN2Qt9TimerTypeE", ffiqt.FFI_TYPE_VOID, this.cthis, &atype)
+	// 0: (, atype Qt::TimerType), (&atype)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer12setTimerTypeEN2Qt9TimerTypeE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &atype)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -141,7 +150,7 @@ func (this *QTimer) SetTimerType(atype int) {
 // Qt::TimerType timerType()
 func (this *QTimer) TimerType() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer9timerTypeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer9timerTypeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -150,8 +159,8 @@ func (this *QTimer) TimerType() {
 // inline
 // void setSingleShot(_Bool)
 func (this *QTimer) SetSingleShot(singleShot bool) {
-	// 0: (, bool singleShot), (&singleShot)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer13setSingleShotEb", ffiqt.FFI_TYPE_VOID, this.cthis, &singleShot)
+	// 0: (, singleShot bool), (&singleShot)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer13setSingleShotEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &singleShot)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -161,7 +170,7 @@ func (this *QTimer) SetSingleShot(singleShot bool) {
 // bool isSingleShot()
 func (this *QTimer) IsSingleShot() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer12isSingleShotEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer12isSingleShotEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,12 +179,12 @@ func (this *QTimer) IsSingleShot() {
 // static
 // void singleShot(int, const class QObject *, const char *)
 func (this *QTimer) SingleShot(msec int, receiver unsafe.Pointer, member unsafe.Pointer) {
-	// 0: (int msec, const QObject * receiver, const char * member), (msec, receiver, member)
+	// 0: (msec int, receiver const QObject *, member const char *), (msec, receiver, member)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10singleShotEiPK7QObjectPKc", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QTimer_SingleShot(msec int, receiver unsafe.Pointer, member unsafe.Pointer) {
-	// 0: (int msec, const QObject * receiver, const char * member), (msec, receiver, member)
+	// 0: (msec int, receiver const QObject *, member const char *), (msec, receiver, member)
 	var nilthis *QTimer
 	nilthis.SingleShot(msec, receiver, member)
 }
@@ -185,12 +194,12 @@ func QTimer_SingleShot(msec int, receiver unsafe.Pointer, member unsafe.Pointer)
 // static
 // void singleShot(int, Qt::TimerType, const class QObject *, const char *)
 func (this *QTimer) SingleShot_1(msec int, timerType int, receiver unsafe.Pointer, member unsafe.Pointer) {
-	// 1: (int msec, Qt::TimerType timerType, const QObject * receiver, const char * member), (msec, timerType, receiver, member)
+	// 1: (msec int, timerType Qt::TimerType, receiver const QObject *, member const char *), (msec, timerType, receiver, member)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10singleShotEiN2Qt9TimerTypeEPK7QObjectPKc", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QTimer_SingleShot_1(msec int, timerType int, receiver unsafe.Pointer, member unsafe.Pointer) {
-	// 1: (int msec, Qt::TimerType timerType, const QObject * receiver, const char * member), (msec, timerType, receiver, member)
+	// 1: (msec int, timerType Qt::TimerType, receiver const QObject *, member const char *), (msec, timerType, receiver, member)
 	var nilthis *QTimer
 	nilthis.SingleShot_1(msec, timerType, receiver, member)
 }
@@ -199,8 +208,8 @@ func QTimer_SingleShot_1(msec int, timerType int, receiver unsafe.Pointer, membe
 // index:0
 // void start(int)
 func (this *QTimer) Start(msec int) {
-	// 0: (, int msec), (&msec)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer5startEi", ffiqt.FFI_TYPE_VOID, this.cthis, &msec)
+	// 0: (, msec int), (&msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer5startEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &msec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -209,7 +218,7 @@ func (this *QTimer) Start(msec int) {
 // void start()
 func (this *QTimer) Start_1() {
 	// 1: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer5startEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer5startEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -218,7 +227,7 @@ func (this *QTimer) Start_1() {
 // void stop()
 func (this *QTimer) Stop() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer4stopEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer4stopEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -228,7 +237,7 @@ func (this *QTimer) Stop() {
 // std::chrono::milliseconds intervalAsDuration()
 func (this *QTimer) IntervalAsDuration() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer18intervalAsDurationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer18intervalAsDurationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -238,7 +247,17 @@ func (this *QTimer) IntervalAsDuration() {
 // std::chrono::milliseconds remainingTimeAsDuration()
 func (this *QTimer) RemainingTimeAsDuration() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer23remainingTimeAsDurationEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer23remainingTimeAsDurationEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qtimer.h:200
+// index:0
+// virtual
+// void timerEvent(class QTimerEvent *)
+func (this *QTimer) TimerEvent(arg0 unsafe.Pointer) {
+	// 0: (, QTimerEvent * arg0), (arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

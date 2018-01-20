@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 9
+// extern C begin: 16
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QGraphicsAnchor struct {
-	cthis unsafe.Pointer
+	*qtcore.QObject
+}
+
+func (this *QGraphicsAnchor) GetCthis() unsafe.Pointer {
+	return this.QObject.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:57
@@ -62,7 +66,7 @@ type QGraphicsAnchor struct {
 // const QMetaObject * metaObject()
 func (this *QGraphicsAnchor) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -70,8 +74,8 @@ func (this *QGraphicsAnchor) MetaObject() {
 // index:0
 // void setSpacing(qreal)
 func (this *QGraphicsAnchor) SetSpacing(spacing float64) {
-	// 0: (, qreal spacing), (&spacing)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor10setSpacingEd", ffiqt.FFI_TYPE_VOID, this.cthis, &spacing)
+	// 0: (, spacing qreal), (&spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor10setSpacingEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -80,7 +84,7 @@ func (this *QGraphicsAnchor) SetSpacing(spacing float64) {
 // void unsetSpacing()
 func (this *QGraphicsAnchor) UnsetSpacing() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor12unsetSpacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor12unsetSpacingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -89,7 +93,7 @@ func (this *QGraphicsAnchor) UnsetSpacing() {
 // qreal spacing()
 func (this *QGraphicsAnchor) Spacing() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor7spacingEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor7spacingEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,8 +101,8 @@ func (this *QGraphicsAnchor) Spacing() {
 // index:0
 // void setSizePolicy(class QSizePolicy::Policy)
 func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
-	// 0: (, QSizePolicy::Policy policy), (&policy)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor13setSizePolicyEN11QSizePolicy6PolicyE", ffiqt.FFI_TYPE_VOID, this.cthis, &policy)
+	// 0: (, policy QSizePolicy::Policy), (&policy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor13setSizePolicyEN11QSizePolicy6PolicyE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &policy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +111,7 @@ func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
 // QSizePolicy::Policy sizePolicy()
 func (this *QGraphicsAnchor) SizePolicy() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10sizePolicyEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10sizePolicyEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

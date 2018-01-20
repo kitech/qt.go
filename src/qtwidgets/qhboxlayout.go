@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 34
+// extern C begin: 36
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QHBoxLayout struct {
-	cthis unsafe.Pointer
+	*QBoxLayout
+}
+
+func (this *QHBoxLayout) GetCthis() unsafe.Pointer {
+	return this.QBoxLayout.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:115
@@ -62,7 +66,7 @@ type QHBoxLayout struct {
 // const QMetaObject * metaObject()
 func (this *QHBoxLayout) MetaObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHBoxLayout10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHBoxLayout10metaObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -73,7 +77,12 @@ func NewQHBoxLayout() *QHBoxLayout {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHBoxLayoutC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QHBoxLayout{cthis}
+	gothis := NewQHBoxLayoutFromPointer(cthis)
+	return gothis
+}
+func NewQHBoxLayoutFromPointer(cthis unsafe.Pointer) *QHBoxLayout {
+	bcthis0 := NewQBoxLayoutFromPointer(cthis)
+	return &QHBoxLayout{bcthis0}
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:118
@@ -83,7 +92,8 @@ func NewQHBoxLayout_1(parent unsafe.Pointer) *QHBoxLayout {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHBoxLayoutC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
 	gopp.ErrPrint(err, rv)
-	return &QHBoxLayout{cthis}
+	gothis := NewQHBoxLayoutFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:119

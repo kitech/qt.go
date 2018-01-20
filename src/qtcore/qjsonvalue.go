@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
@@ -45,7 +45,11 @@ func init() {
 
 //  body block begin
 type QJsonValue struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QJsonValue) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:76
@@ -55,7 +59,11 @@ func NewQJsonValue(arg0 int) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &arg0)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValue{cthis}
+	gothis := NewQJsonValueFromPointer(cthis)
+	return gothis
+}
+func NewQJsonValueFromPointer(cthis unsafe.Pointer) *QJsonValue {
+	return &QJsonValue{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:77
@@ -65,7 +73,8 @@ func NewQJsonValue_1(b bool) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2Eb", ffiqt.FFI_TYPE_VOID, cthis, &b)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValue{cthis}
+	gothis := NewQJsonValueFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:78
@@ -75,7 +84,8 @@ func NewQJsonValue_2(n float64) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2Ed", ffiqt.FFI_TYPE_VOID, cthis, &n)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValue{cthis}
+	gothis := NewQJsonValueFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:79
@@ -85,7 +95,8 @@ func NewQJsonValue_3(n int) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &n)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValue{cthis}
+	gothis := NewQJsonValueFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:80
@@ -95,7 +106,8 @@ func NewQJsonValue_4(n int64) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2Ex", ffiqt.FFI_TYPE_VOID, cthis, &n)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValue{cthis}
+	gothis := NewQJsonValueFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:81
@@ -105,7 +117,8 @@ func NewQJsonValue_5(s unsafe.Pointer) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, s)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValue{cthis}
+	gothis := NewQJsonValueFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:82
@@ -115,7 +128,8 @@ func NewQJsonValue_6(s unsafe.Pointer) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2E13QLatin1String", ffiqt.FFI_TYPE_VOID, cthis, s)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValue{cthis}
+	gothis := NewQJsonValueFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:84
@@ -126,7 +140,8 @@ func NewQJsonValue_7(s unsafe.Pointer) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2EPKc", ffiqt.FFI_TYPE_VOID, cthis, s)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValue{cthis}
+	gothis := NewQJsonValueFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:87
@@ -136,7 +151,8 @@ func NewQJsonValue_8(a unsafe.Pointer) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2ERK10QJsonArray", ffiqt.FFI_TYPE_VOID, cthis, a)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValue{cthis}
+	gothis := NewQJsonValueFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:88
@@ -146,7 +162,8 @@ func NewQJsonValue_9(o unsafe.Pointer) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2ERK11QJsonObject", ffiqt.FFI_TYPE_VOID, cthis, o)
 	gopp.ErrPrint(err, rv)
-	return &QJsonValue{cthis}
+	gothis := NewQJsonValueFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:90
@@ -162,8 +179,8 @@ func DeleteQJsonValue(*QJsonValue) {
 // inline
 // void swap(class QJsonValue &)
 func (this *QJsonValue) Swap(other unsafe.Pointer) {
-	// 0: (, QJsonValue & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValue4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QJsonValue &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValue4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,12 +189,12 @@ func (this *QJsonValue) Swap(other unsafe.Pointer) {
 // static
 // QJsonValue fromVariant(const class QVariant &)
 func (this *QJsonValue) FromVariant(variant unsafe.Pointer) {
-	// 0: (const QVariant & variant), (variant)
+	// 0: (variant const QVariant &), (variant)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValue11fromVariantERK8QVariant", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
 func QJsonValue_FromVariant(variant unsafe.Pointer) {
-	// 0: (const QVariant & variant), (variant)
+	// 0: (variant const QVariant &), (variant)
 	var nilthis *QJsonValue
 	nilthis.FromVariant(variant)
 }
@@ -187,7 +204,7 @@ func QJsonValue_FromVariant(variant unsafe.Pointer) {
 // QVariant toVariant()
 func (this *QJsonValue) ToVariant() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue9toVariantEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue9toVariantEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -196,7 +213,7 @@ func (this *QJsonValue) ToVariant() {
 // QJsonValue::Type type()
 func (this *QJsonValue) Type() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue4typeEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue4typeEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -206,7 +223,7 @@ func (this *QJsonValue) Type() {
 // bool isNull()
 func (this *QJsonValue) IsNull() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue6isNullEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue6isNullEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,7 +233,7 @@ func (this *QJsonValue) IsNull() {
 // bool isBool()
 func (this *QJsonValue) IsBool() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue6isBoolEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue6isBoolEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -226,7 +243,7 @@ func (this *QJsonValue) IsBool() {
 // bool isDouble()
 func (this *QJsonValue) IsDouble() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8isDoubleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8isDoubleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -236,7 +253,7 @@ func (this *QJsonValue) IsDouble() {
 // bool isString()
 func (this *QJsonValue) IsString() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8isStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8isStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -246,7 +263,7 @@ func (this *QJsonValue) IsString() {
 // bool isArray()
 func (this *QJsonValue) IsArray() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue7isArrayEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue7isArrayEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -256,7 +273,7 @@ func (this *QJsonValue) IsArray() {
 // bool isObject()
 func (this *QJsonValue) IsObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8isObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8isObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -266,7 +283,7 @@ func (this *QJsonValue) IsObject() {
 // bool isUndefined()
 func (this *QJsonValue) IsUndefined() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue11isUndefinedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue11isUndefinedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -274,8 +291,8 @@ func (this *QJsonValue) IsUndefined() {
 // index:0
 // bool toBool(_Bool)
 func (this *QJsonValue) ToBool(defaultValue bool) {
-	// 0: (, bool defaultValue), (&defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue6toBoolEb", ffiqt.FFI_TYPE_VOID, this.cthis, &defaultValue)
+	// 0: (, defaultValue bool), (&defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue6toBoolEb", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &defaultValue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -283,8 +300,8 @@ func (this *QJsonValue) ToBool(defaultValue bool) {
 // index:0
 // int toInt(int)
 func (this *QJsonValue) ToInt(defaultValue int) {
-	// 0: (, int defaultValue), (&defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue5toIntEi", ffiqt.FFI_TYPE_VOID, this.cthis, &defaultValue)
+	// 0: (, defaultValue int), (&defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue5toIntEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &defaultValue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -292,8 +309,8 @@ func (this *QJsonValue) ToInt(defaultValue int) {
 // index:0
 // double toDouble(double)
 func (this *QJsonValue) ToDouble(defaultValue float64) {
-	// 0: (, double defaultValue), (&defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toDoubleEd", ffiqt.FFI_TYPE_VOID, this.cthis, &defaultValue)
+	// 0: (, defaultValue double), (&defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toDoubleEd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &defaultValue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -302,7 +319,7 @@ func (this *QJsonValue) ToDouble(defaultValue float64) {
 // QString toString()
 func (this *QJsonValue) ToString() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toStringEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toStringEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -310,8 +327,8 @@ func (this *QJsonValue) ToString() {
 // index:1
 // QString toString(const class QString &)
 func (this *QJsonValue) ToString_1(defaultValue unsafe.Pointer) {
-	// 1: (, const QString & defaultValue), (defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toStringERK7QString", ffiqt.FFI_TYPE_VOID, this.cthis, defaultValue)
+	// 1: (, defaultValue const QString &), (defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toStringERK7QString", ffiqt.FFI_TYPE_VOID, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -320,7 +337,7 @@ func (this *QJsonValue) ToString_1(defaultValue unsafe.Pointer) {
 // QJsonArray toArray()
 func (this *QJsonValue) ToArray() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue7toArrayEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue7toArrayEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -328,8 +345,8 @@ func (this *QJsonValue) ToArray() {
 // index:1
 // QJsonArray toArray(const class QJsonArray &)
 func (this *QJsonValue) ToArray_1(defaultValue unsafe.Pointer) {
-	// 1: (, const QJsonArray & defaultValue), (defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue7toArrayERK10QJsonArray", ffiqt.FFI_TYPE_VOID, this.cthis, defaultValue)
+	// 1: (, defaultValue const QJsonArray &), (defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue7toArrayERK10QJsonArray", ffiqt.FFI_TYPE_VOID, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -338,7 +355,7 @@ func (this *QJsonValue) ToArray_1(defaultValue unsafe.Pointer) {
 // QJsonObject toObject()
 func (this *QJsonValue) ToObject() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toObjectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toObjectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -346,8 +363,8 @@ func (this *QJsonValue) ToObject() {
 // index:1
 // QJsonObject toObject(const class QJsonObject &)
 func (this *QJsonValue) ToObject_1(defaultValue unsafe.Pointer) {
-	// 1: (, const QJsonObject & defaultValue), (defaultValue)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toObjectERK11QJsonObject", ffiqt.FFI_TYPE_VOID, this.cthis, defaultValue)
+	// 1: (, defaultValue const QJsonObject &), (defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toObjectERK11QJsonObject", ffiqt.FFI_TYPE_VOID, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 13
+// extern C begin: 4
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QAccessibleApplication struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QAccessibleApplication) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:78
@@ -59,7 +63,11 @@ func NewQAccessibleApplication() *QAccessibleApplication {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QAccessibleApplicationC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QAccessibleApplication{cthis}
+	gothis := NewQAccessibleApplicationFromPointer(cthis)
+	return gothis
+}
+func NewQAccessibleApplicationFromPointer(cthis unsafe.Pointer) *QAccessibleApplication {
+	return &QAccessibleApplication{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:80
@@ -68,7 +76,7 @@ func NewQAccessibleApplication() *QAccessibleApplication {
 // QWindow * window()
 func (this *QAccessibleApplication) Window() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication6windowEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication6windowEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -78,7 +86,7 @@ func (this *QAccessibleApplication) Window() {
 // int childCount()
 func (this *QAccessibleApplication) ChildCount() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication10childCountEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication10childCountEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -88,7 +96,7 @@ func (this *QAccessibleApplication) ChildCount() {
 // int indexOfChild(const class QAccessibleInterface *)
 func (this *QAccessibleApplication) IndexOfChild(arg0 unsafe.Pointer) {
 	// 0: (, const QAccessibleInterface * arg0), (arg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface", ffiqt.FFI_TYPE_VOID, this.cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface", ffiqt.FFI_TYPE_VOID, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -98,7 +106,7 @@ func (this *QAccessibleApplication) IndexOfChild(arg0 unsafe.Pointer) {
 // QAccessibleInterface * focusChild()
 func (this *QAccessibleApplication) FocusChild() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication10focusChildEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication10focusChildEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +116,7 @@ func (this *QAccessibleApplication) FocusChild() {
 // QAccessibleInterface * parent()
 func (this *QAccessibleApplication) Parent() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication6parentEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication6parentEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,8 +125,8 @@ func (this *QAccessibleApplication) Parent() {
 // virtual
 // QAccessibleInterface * child(int)
 func (this *QAccessibleApplication) Child(index int) {
-	// 0: (, int index), (&index)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication5childEi", ffiqt.FFI_TYPE_VOID, this.cthis, &index)
+	// 0: (, index int), (&index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication5childEi", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,8 +135,8 @@ func (this *QAccessibleApplication) Child(index int) {
 // virtual
 // QString text(class QAccessible::Text)
 func (this *QAccessibleApplication) Text(t int) {
-	// 0: (, QAccessible::Text t), (&t)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_VOID, this.cthis, &t)
+	// 0: (, t QAccessible::Text), (&t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &t)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -138,7 +146,7 @@ func (this *QAccessibleApplication) Text(t int) {
 // QAccessible::Role role()
 func (this *QAccessibleApplication) Role() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication4roleEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication4roleEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -148,7 +156,7 @@ func (this *QAccessibleApplication) Role() {
 // QAccessible::State state()
 func (this *QAccessibleApplication) State() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication5stateEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication5stateEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

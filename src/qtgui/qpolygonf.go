@@ -49,7 +49,11 @@ func init() {
 
 //  body block begin
 type QPolygonF struct {
-	cthis unsafe.Pointer
+	*qtrt.CObject
+}
+
+func (this *QPolygonF) GetCthis() unsafe.Pointer {
+	return this.Cthis
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:144
@@ -60,7 +64,11 @@ func NewQPolygonF() *QPolygonF {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonFC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
-	return &QPolygonF{cthis}
+	gothis := NewQPolygonFFromPointer(cthis)
+	return gothis
+}
+func NewQPolygonFFromPointer(cthis unsafe.Pointer) *QPolygonF {
+	return &QPolygonF{&qtrt.CObject{cthis}}
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:146
@@ -71,7 +79,8 @@ func NewQPolygonF_1(size int) *QPolygonF {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonFC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &size)
 	gopp.ErrPrint(err, rv)
-	return &QPolygonF{cthis}
+	gothis := NewQPolygonFFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:151
@@ -81,7 +90,8 @@ func NewQPolygonF_2(r unsafe.Pointer) *QPolygonF {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonFC2ERK6QRectF", ffiqt.FFI_TYPE_VOID, cthis, r)
 	gopp.ErrPrint(err, rv)
-	return &QPolygonF{cthis}
+	gothis := NewQPolygonFFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:152
@@ -91,7 +101,8 @@ func NewQPolygonF_3(a unsafe.Pointer) *QPolygonF {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonFC2ERK8QPolygon", ffiqt.FFI_TYPE_VOID, cthis, a)
 	gopp.ErrPrint(err, rv)
-	return &QPolygonF{cthis}
+	gothis := NewQPolygonFFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:145
@@ -108,8 +119,8 @@ func DeleteQPolygonF(*QPolygonF) {
 // inline
 // void swap(class QPolygonF &)
 func (this *QPolygonF) Swap(other unsafe.Pointer) {
-	// 0: (, QPolygonF & other), (other)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonF4swapERS_", ffiqt.FFI_TYPE_VOID, this.cthis, other)
+	// 0: (, other QPolygonF &), (other)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonF4swapERS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), other)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -118,8 +129,8 @@ func (this *QPolygonF) Swap(other unsafe.Pointer) {
 // inline
 // void translate(qreal, qreal)
 func (this *QPolygonF) Translate(dx float64, dy float64) {
-	// 0: (, qreal dx, qreal dy), (&dx, &dy)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonF9translateEdd", ffiqt.FFI_TYPE_VOID, this.cthis, &dx, &dy)
+	// 0: (, dx qreal, dy qreal), (&dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonF9translateEdd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &dx, &dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,8 +138,8 @@ func (this *QPolygonF) Translate(dx float64, dy float64) {
 // index:1
 // void translate(const class QPointF &)
 func (this *QPolygonF) Translate_1(offset unsafe.Pointer) {
-	// 1: (, const QPointF & offset), (offset)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonF9translateERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, offset)
+	// 1: (, offset const QPointF &), (offset)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonF9translateERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), offset)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -137,8 +148,8 @@ func (this *QPolygonF) Translate_1(offset unsafe.Pointer) {
 // inline
 // QPolygonF translated(qreal, qreal)
 func (this *QPolygonF) Translated(dx float64, dy float64) {
-	// 0: (, qreal dx, qreal dy), (&dx, &dy)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10translatedEdd", ffiqt.FFI_TYPE_VOID, this.cthis, &dx, &dy)
+	// 0: (, dx qreal, dy qreal), (&dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10translatedEdd", ffiqt.FFI_TYPE_VOID, this.GetCthis(), &dx, &dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -146,8 +157,8 @@ func (this *QPolygonF) Translated(dx float64, dy float64) {
 // index:1
 // QPolygonF translated(const class QPointF &)
 func (this *QPolygonF) Translated_1(offset unsafe.Pointer) {
-	// 1: (, const QPointF & offset), (offset)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10translatedERK7QPointF", ffiqt.FFI_TYPE_VOID, this.cthis, offset)
+	// 1: (, offset const QPointF &), (offset)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10translatedERK7QPointF", ffiqt.FFI_TYPE_VOID, this.GetCthis(), offset)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -156,7 +167,7 @@ func (this *QPolygonF) Translated_1(offset unsafe.Pointer) {
 // QPolygon toPolygon()
 func (this *QPolygonF) ToPolygon() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF9toPolygonEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF9toPolygonEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -166,7 +177,7 @@ func (this *QPolygonF) ToPolygon() {
 // bool isClosed()
 func (this *QPolygonF) IsClosed() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF8isClosedEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF8isClosedEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -175,7 +186,7 @@ func (this *QPolygonF) IsClosed() {
 // QRectF boundingRect()
 func (this *QPolygonF) BoundingRect() {
 	// 0: (), ()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF12boundingRectEv", ffiqt.FFI_TYPE_VOID, this.cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF12boundingRectEv", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -183,8 +194,8 @@ func (this *QPolygonF) BoundingRect() {
 // index:0
 // bool containsPoint(const class QPointF &, Qt::FillRule)
 func (this *QPolygonF) ContainsPoint(pt unsafe.Pointer, fillRule int) {
-	// 0: (, const QPointF & pt, Qt::FillRule fillRule), (pt, &fillRule)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF13containsPointERK7QPointFN2Qt8FillRuleE", ffiqt.FFI_TYPE_VOID, this.cthis, pt, &fillRule)
+	// 0: (, pt const QPointF &, fillRule Qt::FillRule), (pt, &fillRule)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF13containsPointERK7QPointFN2Qt8FillRuleE", ffiqt.FFI_TYPE_VOID, this.GetCthis(), pt, &fillRule)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -192,8 +203,8 @@ func (this *QPolygonF) ContainsPoint(pt unsafe.Pointer, fillRule int) {
 // index:0
 // QPolygonF united(const class QPolygonF &)
 func (this *QPolygonF) United(r unsafe.Pointer) {
-	// 0: (, const QPolygonF & r), (r)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF6unitedERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	// 0: (, r const QPolygonF &), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF6unitedERKS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), r)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -201,8 +212,8 @@ func (this *QPolygonF) United(r unsafe.Pointer) {
 // index:0
 // QPolygonF intersected(const class QPolygonF &)
 func (this *QPolygonF) Intersected(r unsafe.Pointer) {
-	// 0: (, const QPolygonF & r), (r)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF11intersectedERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	// 0: (, r const QPolygonF &), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF11intersectedERKS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), r)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -210,8 +221,8 @@ func (this *QPolygonF) Intersected(r unsafe.Pointer) {
 // index:0
 // QPolygonF subtracted(const class QPolygonF &)
 func (this *QPolygonF) Subtracted(r unsafe.Pointer) {
-	// 0: (, const QPolygonF & r), (r)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10subtractedERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	// 0: (, r const QPolygonF &), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10subtractedERKS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), r)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -219,8 +230,8 @@ func (this *QPolygonF) Subtracted(r unsafe.Pointer) {
 // index:0
 // bool intersects(const class QPolygonF &)
 func (this *QPolygonF) Intersects(r unsafe.Pointer) {
-	// 0: (, const QPolygonF & r), (r)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10intersectsERKS_", ffiqt.FFI_TYPE_VOID, this.cthis, r)
+	// 0: (, r const QPolygonF &), (r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10intersectsERKS_", ffiqt.FFI_TYPE_VOID, this.GetCthis(), r)
 	gopp.ErrPrint(err, rv)
 }
 

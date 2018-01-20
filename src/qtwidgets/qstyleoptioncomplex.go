@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ func init() {
 
 //  body block begin
 type QStyleOptionComplex struct {
-	cthis unsafe.Pointer
+	*QStyleOption
+}
+
+func (this *QStyleOptionComplex) GetCthis() unsafe.Pointer {
+	return this.QStyleOption.GetCthis()
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:509
@@ -63,7 +67,12 @@ func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
 	cthis := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", ffiqt.FFI_TYPE_VOID, cthis, &version, &type_)
 	gopp.ErrPrint(err, rv)
-	return &QStyleOptionComplex{cthis}
+	gothis := NewQStyleOptionComplexFromPointer(cthis)
+	return gothis
+}
+func NewQStyleOptionComplexFromPointer(cthis unsafe.Pointer) *QStyleOptionComplex {
+	bcthis0 := NewQStyleOptionFromPointer(cthis)
+	return &QStyleOptionComplex{bcthis0}
 }
 
 //  body block end
