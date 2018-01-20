@@ -167,6 +167,18 @@ func NewQString5FromPointer(p unsafe.Pointer) *QString5 {
 	return &QString5{p}
 }
 
+func NewQString5FromStrPointer(t, p unsafe.Pointer) *QString5 {
+	o := &QString5{}
+	// t := C.calloc(1, 256)
+	// r := (unsafe.Pointer)(C.CString(s))
+	r := p
+	log.Println("p=", p, uint64(uintptr(p)))
+	InvokeQtFunc6("_ZN7QStringC2EPKc", FFI_TYPE_VOID, t, r)
+
+	o.cptr = t
+	return o
+}
+
 func (str *QString5) Length() int {
 	l, err := InvokeQtFunc6("_ZNK7QString6lengthEv", FFI_TYPE_INT, str.cptr)
 	gopp.ErrPrint(err)

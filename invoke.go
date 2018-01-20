@@ -176,7 +176,7 @@ func InvokeQtFunc5(symname string, retype byte, argc int, types []byte, args []u
 
 func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, error) {
 	addr := getSymAddr(symname)
-	log.Println("FFI Call:", symname, addr, len(args))
+	log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
 
 	argtys, argvals := convArgs(args...)
 	var retval C.uint64_t = 0
