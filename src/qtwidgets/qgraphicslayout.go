@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicslayout.h
 // #include <qgraphicslayout.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGraphicsLayout struct {
 }
 
 func (this *QGraphicsLayout) GetCthis() unsafe.Pointer {
-	return this.QGraphicsLayoutItem.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGraphicsLayoutItem.GetCthis()
+	}
 }
 func NewQGraphicsLayoutFromPointer(cthis unsafe.Pointer) *QGraphicsLayout {
 	bcthis0 := NewQGraphicsLayoutItemFromPointer(cthis)
@@ -68,9 +72,10 @@ func NewQGraphicsLayoutFromPointer(cthis unsafe.Pointer) *QGraphicsLayout {
 // index:0
 // Public
 // void QGraphicsLayout(class QGraphicsLayoutItem *)
-func NewQGraphicsLayout(parent unsafe.Pointer) *QGraphicsLayout {
+func NewQGraphicsLayout(parent *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) *QGraphicsLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsLayoutFromPointer(cthis)
 	return gothis
@@ -98,7 +103,7 @@ func (this *QGraphicsLayout) SetContentsMargins(left float64, top float64, right
 // index:0
 // Public virtual
 // void getContentsMargins(qreal *, qreal *, qreal *, qreal *)
-func (this *QGraphicsLayout) GetContentsMargins(left unsafe.Pointer, top unsafe.Pointer, right unsafe.Pointer, bottom unsafe.Pointer) {
+func (this *QGraphicsLayout) GetContentsMargins(left unsafe.Pointer /*666*/, top unsafe.Pointer /*666*/, right unsafe.Pointer /*666*/, bottom unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
 	gopp.ErrPrint(err, rv)
 }
@@ -116,10 +121,11 @@ func (this *QGraphicsLayout) Activate() {
 // index:0
 // Public
 // bool isActivated()
-func (this *QGraphicsLayout) IsActivated() interface{} {
+func (this *QGraphicsLayout) IsActivated() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout11isActivatedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:65
@@ -144,8 +150,9 @@ func (this *QGraphicsLayout) UpdateGeometry() {
 // index:0
 // Public virtual
 // void widgetEvent(class QEvent *)
-func (this *QGraphicsLayout) WidgetEvent(e unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout11widgetEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QGraphicsLayout) WidgetEvent(e *qtcore.QEvent /*444 QEvent **/) {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout11widgetEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,20 +160,23 @@ func (this *QGraphicsLayout) WidgetEvent(e unsafe.Pointer) {
 // index:0
 // Public pure virtual
 // int count()
-func (this *QGraphicsLayout) Count() interface{} {
+func (this *QGraphicsLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:71
 // index:0
 // Public pure virtual
 // QGraphicsLayoutItem * itemAt(int)
-func (this *QGraphicsLayout) ItemAt(i int) interface{} {
+func (this *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:72
@@ -195,22 +205,25 @@ func QGraphicsLayout_SetInstantInvalidatePropagation(enable bool) {
 // index:0
 // Public static
 // bool instantInvalidatePropagation()
-func (this *QGraphicsLayout) InstantInvalidatePropagation() interface{} {
+func (this *QGraphicsLayout) InstantInvalidatePropagation() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout28instantInvalidatePropagationEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QGraphicsLayout_InstantInvalidatePropagation() {
+func QGraphicsLayout_InstantInvalidatePropagation() bool {
 	var nilthis *QGraphicsLayout
-	nilthis.InstantInvalidatePropagation()
+	rv := nilthis.InstantInvalidatePropagation()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:78
 // index:0
 // Protected
 // void addChildLayoutItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsLayout) AddChildLayoutItem(layoutItem unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout18addChildLayoutItemEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), layoutItem)
+func (this *QGraphicsLayout) AddChildLayoutItem(layoutItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) {
+	var convArg0 = layoutItem.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout18addChildLayoutItemEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

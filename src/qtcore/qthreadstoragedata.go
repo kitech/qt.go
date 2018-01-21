@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qthreadstorage.h
 // #include <qthreadstorage.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QThreadStorageData struct {
 }
 
 func (this *QThreadStorageData) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQThreadStorageDataFromPointer(cthis unsafe.Pointer) *QThreadStorageData {
 	return &QThreadStorageData{&qtrt.CObject{cthis}}
@@ -68,31 +72,33 @@ func DeleteQThreadStorageData(*QThreadStorageData) {
 // index:0
 // Public
 // void ** get()
-func (this *QThreadStorageData) Get() interface{} {
+func (this *QThreadStorageData) Get() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QThreadStorageData3getEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtCore/qthreadstorage.h:57
 // index:0
 // Public
 // void ** set(void *)
-func (this *QThreadStorageData) Set(p unsafe.Pointer) interface{} {
+func (this *QThreadStorageData) Set(p unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageData3setEPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtCore/qthreadstorage.h:59
 // index:0
 // Public static
 // void finish(void **)
-func (this *QThreadStorageData) Finish(arg0 unsafe.Pointer) {
+func (this *QThreadStorageData) Finish(arg0 unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageData6finishEPPv", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 }
-func QThreadStorageData_Finish(arg0 unsafe.Pointer) {
+func QThreadStorageData_Finish(arg0 unsafe.Pointer /*666*/) {
 	var nilthis *QThreadStorageData
 	nilthis.Finish(arg0)
 }

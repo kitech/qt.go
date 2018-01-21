@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qpushbutton.h
 // #include <qpushbutton.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QPushButton struct {
 }
 
 func (this *QPushButton) GetCthis() unsafe.Pointer {
-	return this.QAbstractButton.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QAbstractButton.GetCthis()
+	}
 }
 func NewQPushButtonFromPointer(cthis unsafe.Pointer) *QPushButton {
 	bcthis0 := NewQAbstractButtonFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQPushButtonFromPointer(cthis unsafe.Pointer) *QPushButton {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QPushButton) MetaObject() interface{} {
+func (this *QPushButton) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:64
 // index:0
 // Public
 // void QPushButton(class QWidget *)
-func NewQPushButton(parent unsafe.Pointer) *QPushButton {
+func NewQPushButton(parent *QWidget /*444 QWidget **/) *QPushButton {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButtonC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButtonC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPushButtonFromPointer(cthis)
 	return gothis
@@ -90,10 +97,11 @@ func NewQPushButton(parent unsafe.Pointer) *QPushButton {
 // index:1
 // Public
 // void QPushButton(const class QString &, class QWidget *)
-func NewQPushButton_1(text *qtcore.QString, parent unsafe.Pointer) *QPushButton {
+func NewQPushButton_1(text *qtcore.QString, parent *QWidget /*444 QWidget **/) *QPushButton {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButtonC2ERK7QStringP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButtonC2ERK7QStringP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPushButtonFromPointer(cthis)
 	return gothis
@@ -103,11 +111,12 @@ func NewQPushButton_1(text *qtcore.QString, parent unsafe.Pointer) *QPushButton 
 // index:2
 // Public
 // void QPushButton(const class QIcon &, const class QString &, class QWidget *)
-func NewQPushButton_2(icon *qtgui.QIcon, text *qtcore.QString, parent unsafe.Pointer) *QPushButton {
+func NewQPushButton_2(icon *qtgui.QIcon, text *qtcore.QString, parent *QWidget /*444 QWidget **/) *QPushButton {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = icon.GetCthis()
 	var convArg1 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButtonC2ERK5QIconRK7QStringP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, parent)
+	var convArg2 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButtonC2ERK5QIconRK7QStringP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPushButtonFromPointer(cthis)
 	return gothis
@@ -126,30 +135,35 @@ func DeleteQPushButton(*QPushButton) {
 // index:0
 // Public virtual
 // QSize sizeHint()
-func (this *QPushButton) SizeHint() interface{} {
+func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:70
 // index:0
 // Public virtual
 // QSize minimumSizeHint()
-func (this *QPushButton) MinimumSizeHint() interface{} {
+func (this *QPushButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:72
 // index:0
 // Public
 // bool autoDefault()
-func (this *QPushButton) AutoDefault() interface{} {
+func (this *QPushButton) AutoDefault() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton11autoDefaultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:73
@@ -165,10 +179,11 @@ func (this *QPushButton) SetAutoDefault(arg0 bool) {
 // index:0
 // Public
 // bool isDefault()
-func (this *QPushButton) IsDefault() interface{} {
+func (this *QPushButton) IsDefault() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton9isDefaultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:75
@@ -184,8 +199,9 @@ func (this *QPushButton) SetDefault(arg0 bool) {
 // index:0
 // Public
 // void setMenu(class QMenu *)
-func (this *QPushButton) SetMenu(menu unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton7setMenuEP5QMenu", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), menu)
+func (this *QPushButton) SetMenu(menu *QMenu /*444 QMenu **/) {
+	var convArg0 = menu.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton7setMenuEP5QMenu", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,10 +209,12 @@ func (this *QPushButton) SetMenu(menu unsafe.Pointer) {
 // index:0
 // Public
 // QMenu * menu()
-func (this *QPushButton) Menu() interface{} {
+func (this *QPushButton) Menu() *QMenu /*444 QMenu **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton4menuEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:82
@@ -212,10 +230,11 @@ func (this *QPushButton) SetFlat(arg0 bool) {
 // index:0
 // Public
 // bool isFlat()
-func (this *QPushButton) IsFlat() interface{} {
+func (this *QPushButton) IsFlat() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton6isFlatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:87
@@ -231,18 +250,21 @@ func (this *QPushButton) ShowMenu() {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QPushButton) Event(e unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QPushButton) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:92
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QPushButton) PaintEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QPushButton) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -250,8 +272,9 @@ func (this *QPushButton) PaintEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QPushButton) KeyPressEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QPushButton) KeyPressEvent(arg0 *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -259,8 +282,9 @@ func (this *QPushButton) KeyPressEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void focusInEvent(class QFocusEvent *)
-func (this *QPushButton) FocusInEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QPushButton) FocusInEvent(arg0 *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -268,8 +292,9 @@ func (this *QPushButton) FocusInEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void focusOutEvent(class QFocusEvent *)
-func (this *QPushButton) FocusOutEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QPushButton) FocusOutEvent(arg0 *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -277,8 +302,9 @@ func (this *QPushButton) FocusOutEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionButton *)
-func (this *QPushButton) InitStyleOption(option unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton15initStyleOptionEP18QStyleOptionButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
+func (this *QPushButton) InitStyleOption(option *QStyleOptionButton /*444 QStyleOptionButton **/) {
+	var convArg0 = option.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton15initStyleOptionEP18QStyleOptionButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

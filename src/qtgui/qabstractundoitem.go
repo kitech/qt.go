@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtextdocument.h
 // #include <qtextdocument.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 26
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QAbstractUndoItem struct {
 }
 
 func (this *QAbstractUndoItem) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQAbstractUndoItemFromPointer(cthis unsafe.Pointer) *QAbstractUndoItem {
 	return &QAbstractUndoItem{&qtrt.CObject{cthis}}

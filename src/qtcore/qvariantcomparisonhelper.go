@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qvariant.h
 // #include <qvariant.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 104
+// extern C begin: 100
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QVariantComparisonHelper struct {
 }
 
 func (this *QVariantComparisonHelper) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQVariantComparisonHelperFromPointer(cthis unsafe.Pointer) *QVariantComparisonHelper {
 	return &QVariantComparisonHelper{&qtrt.CObject{cthis}}

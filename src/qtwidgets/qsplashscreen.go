@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qsplashscreen.h
 // #include <qsplashscreen.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QSplashScreen struct {
 }
 
 func (this *QSplashScreen) GetCthis() unsafe.Pointer {
-	return this.QWidget.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QWidget.GetCthis()
+	}
 }
 func NewQSplashScreenFromPointer(cthis unsafe.Pointer) *QSplashScreen {
 	bcthis0 := NewQWidgetFromPointer(cthis)
@@ -68,10 +72,12 @@ func NewQSplashScreenFromPointer(cthis unsafe.Pointer) *QSplashScreen {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSplashScreen) MetaObject() interface{} {
+func (this *QSplashScreen) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSplashScreen10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qsplashscreen.h:59
@@ -97,18 +103,21 @@ func (this *QSplashScreen) SetPixmap(pixmap *qtgui.QPixmap) {
 // index:0
 // Public
 // const QPixmap pixmap()
-func (this *QSplashScreen) Pixmap() interface{} {
+func (this *QSplashScreen) Pixmap() *qtgui.QPixmap /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSplashScreen6pixmapEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qsplashscreen.h:63
 // index:0
 // Public
 // void finish(class QWidget *)
-func (this *QSplashScreen) Finish(w unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreen6finishEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
+func (this *QSplashScreen) Finish(w *QWidget /*444 QWidget **/) {
+	var convArg0 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreen6finishEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,10 +134,12 @@ func (this *QSplashScreen) Repaint() {
 // index:0
 // Public
 // QString message()
-func (this *QSplashScreen) Message() interface{} {
+func (this *QSplashScreen) Message() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSplashScreen7messageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qsplashscreen.h:68
@@ -165,18 +176,21 @@ func (this *QSplashScreen) MessageChanged(message *qtcore.QString) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QSplashScreen) Event(e unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreen5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QSplashScreen) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreen5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qsplashscreen.h:77
 // index:0
 // Protected virtual
 // void drawContents(class QPainter *)
-func (this *QSplashScreen) DrawContents(painter unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreen12drawContentsEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), painter)
+func (this *QSplashScreen) DrawContents(painter *qtgui.QPainter /*444 QPainter **/) {
+	var convArg0 = painter.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreen12drawContentsEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -184,8 +198,9 @@ func (this *QSplashScreen) DrawContents(painter unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QSplashScreen) MousePressEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreen15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QSplashScreen) MousePressEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreen15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

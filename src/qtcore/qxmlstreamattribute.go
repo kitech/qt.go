@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qxmlstream.h
 // #include <qxmlstream.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QXmlStreamAttribute struct {
 }
 
 func (this *QXmlStreamAttribute) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQXmlStreamAttributeFromPointer(cthis unsafe.Pointer) *QXmlStreamAttribute {
 	return &QXmlStreamAttribute{&qtrt.CObject{cthis}}
@@ -109,60 +113,71 @@ func DeleteQXmlStreamAttribute(*QXmlStreamAttribute) {
 // index:0
 // Public inline
 // QStringRef namespaceUri()
-func (this *QXmlStreamAttribute) NamespaceUri() interface{} {
+func (this *QXmlStreamAttribute) NamespaceUri() *QStringRef /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute12namespaceUriEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:141
 // index:0
 // Public inline
 // QStringRef name()
-func (this *QXmlStreamAttribute) Name() interface{} {
+func (this *QXmlStreamAttribute) Name() *QStringRef /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:142
 // index:0
 // Public inline
 // QStringRef qualifiedName()
-func (this *QXmlStreamAttribute) QualifiedName() interface{} {
+func (this *QXmlStreamAttribute) QualifiedName() *QStringRef /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute13qualifiedNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:143
 // index:0
 // Public inline
 // QStringRef prefix()
-func (this *QXmlStreamAttribute) Prefix() interface{} {
+func (this *QXmlStreamAttribute) Prefix() *QStringRef /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute6prefixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:148
 // index:0
 // Public inline
 // QStringRef value()
-func (this *QXmlStreamAttribute) Value() interface{} {
+func (this *QXmlStreamAttribute) Value() *QStringRef /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:149
 // index:0
 // Public inline
 // bool isDefault()
-func (this *QXmlStreamAttribute) IsDefault() interface{} {
+func (this *QXmlStreamAttribute) IsDefault() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute9isDefaultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

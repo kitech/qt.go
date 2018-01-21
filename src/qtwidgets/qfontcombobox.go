@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qfontcombobox.h
 // #include <qfontcombobox.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QFontComboBox struct {
 }
 
 func (this *QFontComboBox) GetCthis() unsafe.Pointer {
-	return this.QComboBox.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QComboBox.GetCthis()
+	}
 }
 func NewQFontComboBoxFromPointer(cthis unsafe.Pointer) *QFontComboBox {
 	bcthis0 := NewQComboBoxFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQFontComboBoxFromPointer(cthis unsafe.Pointer) *QFontComboBox {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFontComboBox) MetaObject() interface{} {
+func (this *QFontComboBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontComboBox10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfontcombobox.h:61
 // index:0
 // Public
 // void QFontComboBox(class QWidget *)
-func NewQFontComboBox(parent unsafe.Pointer) *QFontComboBox {
+func NewQFontComboBox(parent *QWidget /*444 QWidget **/) *QFontComboBox {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFontComboBoxFromPointer(cthis)
 	return gothis
@@ -108,40 +115,46 @@ func (this *QFontComboBox) SetWritingSystem(arg0 int) {
 // index:0
 // Public
 // QFontDatabase::WritingSystem writingSystem()
-func (this *QFontComboBox) WritingSystem() interface{} {
+func (this *QFontComboBox) WritingSystem() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontComboBox13writingSystemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qfontcombobox.h:78
 // index:0
 // Public
 // QFontComboBox::FontFilters fontFilters()
-func (this *QFontComboBox) FontFilters() interface{} {
+func (this *QFontComboBox) FontFilters() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontComboBox11fontFiltersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qfontcombobox.h:80
 // index:0
 // Public
 // QFont currentFont()
-func (this *QFontComboBox) CurrentFont() interface{} {
+func (this *QFontComboBox) CurrentFont() *qtgui.QFont /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontComboBox11currentFontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfontcombobox.h:81
 // index:0
 // Public virtual
 // QSize sizeHint()
-func (this *QFontComboBox) SizeHint() interface{} {
+func (this *QFontComboBox) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontComboBox8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfontcombobox.h:84
@@ -168,10 +181,12 @@ func (this *QFontComboBox) CurrentFontChanged(f *qtgui.QFont) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QFontComboBox) Event(e unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QFontComboBox) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

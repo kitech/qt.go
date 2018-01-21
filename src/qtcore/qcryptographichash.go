@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qcryptographichash.h
 // #include <qcryptographichash.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 27
+// extern C begin: 1
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QCryptographicHash struct {
 }
 
 func (this *QCryptographicHash) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQCryptographicHashFromPointer(cthis unsafe.Pointer) *QCryptographicHash {
 	return &QCryptographicHash{&qtrt.CObject{cthis}}
@@ -110,34 +114,41 @@ func (this *QCryptographicHash) AddData_1(data *QByteArray) {
 // index:2
 // Public
 // bool addData(class QIODevice *)
-func (this *QCryptographicHash) AddData_2(device unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), device)
+func (this *QCryptographicHash) AddData_2(device *QIODevice /*444 QIODevice **/) bool {
+	var convArg0 = device.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qcryptographichash.h:101
 // index:0
 // Public
 // QByteArray result()
-func (this *QCryptographicHash) Result() interface{} {
+func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCryptographicHash6resultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qcryptographichash.h:103
 // index:0
 // Public static
 // QByteArray hash(const class QByteArray &, enum QCryptographicHash::Algorithm)
-func (this *QCryptographicHash) Hash(data *QByteArray, method int) interface{} {
+func (this *QCryptographicHash) Hash(data *QByteArray, method int) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash4hashERK10QByteArrayNS_9AlgorithmE", ffiqt.FFI_TYPE_POINTER, data, method)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QCryptographicHash_Hash(data *QByteArray, method int) {
+func QCryptographicHash_Hash(data *QByteArray, method int) *QByteArray /*123*/ {
 	var nilthis *QCryptographicHash
-	nilthis.Hash(data, method)
+	rv := nilthis.Hash(data, method)
+	return rv
 }
 
 //  body block end

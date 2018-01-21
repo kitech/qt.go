@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qline.h
 // #include <qline.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QLine struct {
 }
 
 func (this *QLine) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQLineFromPointer(cthis unsafe.Pointer) *QLine {
 	return &QLine{&qtrt.CObject{cthis}}
@@ -97,90 +101,101 @@ func NewQLine_2(x1 int, y1 int, x2 int, y2 int) *QLine {
 // index:0
 // Public inline
 // bool isNull()
-func (this *QLine) IsNull() interface{} {
+func (this *QLine) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qline.h:61
 // index:0
 // Public inline
 // QPoint p1()
-func (this *QLine) P1() interface{} {
+func (this *QLine) P1() *QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2p1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qline.h:62
 // index:0
 // Public inline
 // QPoint p2()
-func (this *QLine) P2() interface{} {
+func (this *QLine) P2() *QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2p2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qline.h:64
 // index:0
 // Public inline
 // int x1()
-func (this *QLine) X1() interface{} {
+func (this *QLine) X1() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2x1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qline.h:65
 // index:0
 // Public inline
 // int y1()
-func (this *QLine) Y1() interface{} {
+func (this *QLine) Y1() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2y1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qline.h:67
 // index:0
 // Public inline
 // int x2()
-func (this *QLine) X2() interface{} {
+func (this *QLine) X2() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2x2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qline.h:68
 // index:0
 // Public inline
 // int y2()
-func (this *QLine) Y2() interface{} {
+func (this *QLine) Y2() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2y2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qline.h:70
 // index:0
 // Public inline
 // int dx()
-func (this *QLine) Dx() interface{} {
+func (this *QLine) Dx() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2dxEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qline.h:71
 // index:0
 // Public inline
 // int dy()
-func (this *QLine) Dy() interface{} {
+func (this *QLine) Dy() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2dyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qline.h:73
@@ -206,31 +221,37 @@ func (this *QLine) Translate_1(dx int, dy int) {
 // index:0
 // Public inline
 // QLine translated(const class QPoint &)
-func (this *QLine) Translated(p *QPoint) interface{} {
+func (this *QLine) Translated(p *QPoint) *QLine /*123*/ {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qline.h:77
 // index:1
 // Public inline
 // QLine translated(int, int)
-func (this *QLine) Translated_1(dx int, dy int) interface{} {
+func (this *QLine) Translated_1(dx int, dy int) *QLine /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine10translatedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qline.h:79
 // index:0
 // Public inline
 // QPoint center()
-func (this *QLine) Center() interface{} {
+func (this *QLine) Center() *QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine6centerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qline.h:81

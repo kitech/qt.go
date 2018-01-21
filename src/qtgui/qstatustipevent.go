@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QStatusTipEvent struct {
 }
 
 func (this *QStatusTipEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQStatusTipEventFromPointer(cthis unsafe.Pointer) *QStatusTipEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -86,10 +90,12 @@ func DeleteQStatusTipEvent(*QStatusTipEvent) {
 // index:0
 // Public inline
 // QString tip()
-func (this *QStatusTipEvent) Tip() interface{} {
+func (this *QStatusTipEvent) Tip() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QStatusTipEvent3tipEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

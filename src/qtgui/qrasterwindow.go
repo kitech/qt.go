@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qrasterwindow.h
 // #include <qrasterwindow.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QRasterWindow struct {
 }
 
 func (this *QRasterWindow) GetCthis() unsafe.Pointer {
-	return this.QPaintDeviceWindow.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QPaintDeviceWindow.GetCthis()
+	}
 }
 func NewQRasterWindowFromPointer(cthis unsafe.Pointer) *QRasterWindow {
 	bcthis0 := NewQPaintDeviceWindowFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQRasterWindowFromPointer(cthis unsafe.Pointer) *QRasterWindow {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QRasterWindow) MetaObject() interface{} {
+func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qrasterwindow.h:56
 // index:0
 // Public
 // void QRasterWindow(class QWindow *)
-func NewQRasterWindow(parent unsafe.Pointer) *QRasterWindow {
+func NewQRasterWindow(parent *QWindow /*444 QWindow **/) *QRasterWindow {
 	cthis := qtrt.Calloc(1, 256) // 64
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QRasterWindowC2EP7QWindow", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QRasterWindowC2EP7QWindow", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRasterWindowFromPointer(cthis)
 	return gothis
@@ -95,20 +102,24 @@ func DeleteQRasterWindow(*QRasterWindow) {
 // index:0
 // Protected virtual
 // int metric(enum QPaintDevice::PaintDeviceMetric)
-func (this *QRasterWindow) Metric(metric int) interface{} {
+func (this *QRasterWindow) Metric(metric int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &metric)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qrasterwindow.h:61
 // index:0
 // Protected virtual
 // QPaintDevice * redirected(class QPoint *)
-func (this *QRasterWindow) Redirected(arg0 unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow10redirectedEP6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QRasterWindow) Redirected(arg0 *qtcore.QPoint /*444 QPoint **/) *QPaintDevice /*444 QPaintDevice **/ {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow10redirectedEP6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QTabletEvent struct {
 }
 
 func (this *QTabletEvent) GetCthis() unsafe.Pointer {
-	return this.QInputEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QInputEvent.GetCthis()
+	}
 }
 func NewQTabletEventFromPointer(cthis unsafe.Pointer) *QTabletEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
@@ -73,210 +77,235 @@ func DeleteQTabletEvent(*QTabletEvent) {
 // index:0
 // Public inline
 // QPoint pos()
-func (this *QTabletEvent) Pos() interface{} {
+func (this *QTabletEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:262
 // index:0
 // Public inline
 // QPoint globalPos()
-func (this *QTabletEvent) GlobalPos() interface{} {
+func (this *QTabletEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:267
 // index:0
 // Public inline
 // const QPointF & posF()
-func (this *QTabletEvent) PosF() interface{} {
+func (this *QTabletEvent) PosF() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent4posFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:268
 // index:0
 // Public inline
 // const QPointF & globalPosF()
-func (this *QTabletEvent) GlobalPosF() interface{} {
+func (this *QTabletEvent) GlobalPosF() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent10globalPosFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:270
 // index:0
 // Public inline
 // int x()
-func (this *QTabletEvent) X() interface{} {
+func (this *QTabletEvent) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:271
 // index:0
 // Public inline
 // int y()
-func (this *QTabletEvent) Y() interface{} {
+func (this *QTabletEvent) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:272
 // index:0
 // Public inline
 // int globalX()
-func (this *QTabletEvent) GlobalX() interface{} {
+func (this *QTabletEvent) GlobalX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:273
 // index:0
 // Public inline
 // int globalY()
-func (this *QTabletEvent) GlobalY() interface{} {
+func (this *QTabletEvent) GlobalY() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:274
 // index:0
 // Public inline
 // qreal hiResGlobalX()
-func (this *QTabletEvent) HiResGlobalX() interface{} {
+func (this *QTabletEvent) HiResGlobalX() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:275
 // index:0
 // Public inline
 // qreal hiResGlobalY()
-func (this *QTabletEvent) HiResGlobalY() interface{} {
+func (this *QTabletEvent) HiResGlobalY() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:276
 // index:0
 // Public inline
 // QTabletEvent::TabletDevice device()
-func (this *QTabletEvent) Device() interface{} {
+func (this *QTabletEvent) Device() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:277
 // index:0
 // Public inline
 // QTabletEvent::PointerType pointerType()
-func (this *QTabletEvent) PointerType() interface{} {
+func (this *QTabletEvent) PointerType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent11pointerTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:278
 // index:0
 // Public inline
 // qint64 uniqueId()
-func (this *QTabletEvent) UniqueId() interface{} {
+func (this *QTabletEvent) UniqueId() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8uniqueIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:279
 // index:0
 // Public inline
 // qreal pressure()
-func (this *QTabletEvent) Pressure() interface{} {
+func (this *QTabletEvent) Pressure() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8pressureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:280
 // index:0
 // Public inline
 // int z()
-func (this *QTabletEvent) Z() interface{} {
+func (this *QTabletEvent) Z() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1zEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:281
 // index:0
 // Public inline
 // qreal tangentialPressure()
-func (this *QTabletEvent) TangentialPressure() interface{} {
+func (this *QTabletEvent) TangentialPressure() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent18tangentialPressureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:282
 // index:0
 // Public inline
 // qreal rotation()
-func (this *QTabletEvent) Rotation() interface{} {
+func (this *QTabletEvent) Rotation() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8rotationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:283
 // index:0
 // Public inline
 // int xTilt()
-func (this *QTabletEvent) XTilt() interface{} {
+func (this *QTabletEvent) XTilt() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent5xTiltEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:284
 // index:0
 // Public inline
 // int yTilt()
-func (this *QTabletEvent) YTilt() interface{} {
+func (this *QTabletEvent) YTilt() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent5yTiltEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:285
 // index:0
 // Public
 // Qt::MouseButton button()
-func (this *QTabletEvent) Button() interface{} {
+func (this *QTabletEvent) Button() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent6buttonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:286
 // index:0
 // Public
 // Qt::MouseButtons buttons()
-func (this *QTabletEvent) Buttons() interface{} {
+func (this *QTabletEvent) Buttons() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent7buttonsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

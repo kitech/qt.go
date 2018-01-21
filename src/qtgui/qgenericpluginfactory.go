@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qgenericpluginfactory.h
 // #include <qgenericpluginfactory.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,38 +53,31 @@ type QGenericPluginFactory struct {
 }
 
 func (this *QGenericPluginFactory) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQGenericPluginFactoryFromPointer(cthis unsafe.Pointer) *QGenericPluginFactory {
 	return &QGenericPluginFactory{&qtrt.CObject{cthis}}
-}
-
-// /usr/include/qt/QtGui/qgenericpluginfactory.h:55
-// index:0
-// Public static
-// QStringList keys()
-func (this *QGenericPluginFactory) Keys() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGenericPluginFactory4keysEv", ffiqt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-func QGenericPluginFactory_Keys() {
-	var nilthis *QGenericPluginFactory
-	nilthis.Keys()
 }
 
 // /usr/include/qt/QtGui/qgenericpluginfactory.h:56
 // index:0
 // Public static
 // QObject * create(const class QString &, const class QString &)
-func (this *QGenericPluginFactory) Create(arg0 *qtcore.QString, arg1 *qtcore.QString) interface{} {
+func (this *QGenericPluginFactory) Create(arg0 *qtcore.QString, arg1 *qtcore.QString) *qtcore.QObject /*444 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGenericPluginFactory6createERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, arg0, arg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QGenericPluginFactory_Create(arg0 *qtcore.QString, arg1 *qtcore.QString) {
+func QGenericPluginFactory_Create(arg0 *qtcore.QString, arg1 *qtcore.QString) *qtcore.QObject /*444 QObject **/ {
 	var nilthis *QGenericPluginFactory
-	nilthis.Create(arg0, arg1)
+	rv := nilthis.Create(arg0, arg1)
+	return rv
 }
 
 //  body block end

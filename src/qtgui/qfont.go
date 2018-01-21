@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qfont.h
 // #include <qfont.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QFont struct {
 }
 
 func (this *QFont) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQFontFromPointer(cthis unsafe.Pointer) *QFont {
 	return &QFont{&qtrt.CObject{cthis}}
@@ -88,10 +92,11 @@ func NewQFont_1(family *qtcore.QString, pointSize int, weight int, italic bool) 
 // index:2
 // Public
 // void QFont(const class QFont &, class QPaintDevice *)
-func NewQFont_2(arg0 *QFont, pd unsafe.Pointer) *QFont {
+func NewQFont_2(arg0 *QFont, pd *QPaintDevice /*444 QPaintDevice **/) *QFont {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFontC2ERKS_P12QPaintDevice", ffiqt.FFI_TYPE_VOID, cthis, convArg0, pd)
+	var convArg1 = pd.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFontC2ERKS_P12QPaintDevice", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFontFromPointer(cthis)
 	return gothis
@@ -120,10 +125,12 @@ func (this *QFont) Swap(other *QFont) {
 // index:0
 // Public
 // QString family()
-func (this *QFont) Family() interface{} {
+func (this *QFont) Family() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont6familyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qfont.h:180
@@ -140,10 +147,12 @@ func (this *QFont) SetFamily(arg0 *qtcore.QString) {
 // index:0
 // Public
 // QString styleName()
-func (this *QFont) StyleName() interface{} {
+func (this *QFont) StyleName() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9styleNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qfont.h:183
@@ -160,10 +169,11 @@ func (this *QFont) SetStyleName(arg0 *qtcore.QString) {
 // index:0
 // Public
 // int pointSize()
-func (this *QFont) PointSize() interface{} {
+func (this *QFont) PointSize() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9pointSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qfont.h:186
@@ -179,10 +189,11 @@ func (this *QFont) SetPointSize(arg0 int) {
 // index:0
 // Public
 // qreal pointSizeF()
-func (this *QFont) PointSizeF() interface{} {
+func (this *QFont) PointSizeF() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont10pointSizeFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qfont.h:188
@@ -198,10 +209,11 @@ func (this *QFont) SetPointSizeF(arg0 float64) {
 // index:0
 // Public
 // int pixelSize()
-func (this *QFont) PixelSize() interface{} {
+func (this *QFont) PixelSize() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9pixelSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qfont.h:191
@@ -217,10 +229,11 @@ func (this *QFont) SetPixelSize(arg0 int) {
 // index:0
 // Public
 // int weight()
-func (this *QFont) Weight() interface{} {
+func (this *QFont) Weight() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont6weightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qfont.h:194
@@ -236,10 +249,11 @@ func (this *QFont) SetWeight(arg0 int) {
 // index:0
 // Public inline
 // bool bold()
-func (this *QFont) Bold() interface{} {
+func (this *QFont) Bold() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont4boldEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qfont.h:197
@@ -264,20 +278,22 @@ func (this *QFont) SetStyle(style int) {
 // index:0
 // Public
 // QFont::Style style()
-func (this *QFont) Style() interface{} {
+func (this *QFont) Style() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont5styleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qfont.h:202
 // index:0
 // Public inline
 // bool italic()
-func (this *QFont) Italic() interface{} {
+func (this *QFont) Italic() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont6italicEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qfont.h:203
@@ -293,10 +309,11 @@ func (this *QFont) SetItalic(b bool) {
 // index:0
 // Public
 // bool underline()
-func (this *QFont) Underline() interface{} {
+func (this *QFont) Underline() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9underlineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qfont.h:206
@@ -312,10 +329,11 @@ func (this *QFont) SetUnderline(arg0 bool) {
 // index:0
 // Public
 // bool overline()
-func (this *QFont) Overline() interface{} {
+func (this *QFont) Overline() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont8overlineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qfont.h:209
@@ -331,10 +349,11 @@ func (this *QFont) SetOverline(arg0 bool) {
 // index:0
 // Public
 // bool strikeOut()
-func (this *QFont) StrikeOut() interface{} {
+func (this *QFont) StrikeOut() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9strikeOutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qfont.h:212
@@ -350,10 +369,11 @@ func (this *QFont) SetStrikeOut(arg0 bool) {
 // index:0
 // Public
 // bool fixedPitch()
-func (this *QFont) FixedPitch() interface{} {
+func (this *QFont) FixedPitch() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont10fixedPitchEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qfont.h:215
@@ -369,10 +389,11 @@ func (this *QFont) SetFixedPitch(arg0 bool) {
 // index:0
 // Public
 // bool kerning()
-func (this *QFont) Kerning() interface{} {
+func (this *QFont) Kerning() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7kerningEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qfont.h:218
@@ -388,20 +409,22 @@ func (this *QFont) SetKerning(arg0 bool) {
 // index:0
 // Public
 // QFont::StyleHint styleHint()
-func (this *QFont) StyleHint() interface{} {
+func (this *QFont) StyleHint() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont9styleHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qfont.h:221
 // index:0
 // Public
 // QFont::StyleStrategy styleStrategy()
-func (this *QFont) StyleStrategy() interface{} {
+func (this *QFont) StyleStrategy() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont13styleStrategyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qfont.h:222
@@ -426,10 +449,11 @@ func (this *QFont) SetStyleStrategy(s int) {
 // index:0
 // Public
 // int stretch()
-func (this *QFont) Stretch() interface{} {
+func (this *QFont) Stretch() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7stretchEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qfont.h:226
@@ -445,20 +469,22 @@ func (this *QFont) SetStretch(arg0 int) {
 // index:0
 // Public
 // qreal letterSpacing()
-func (this *QFont) LetterSpacing() interface{} {
+func (this *QFont) LetterSpacing() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont13letterSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qfont.h:229
 // index:0
 // Public
 // QFont::SpacingType letterSpacingType()
-func (this *QFont) LetterSpacingType() interface{} {
+func (this *QFont) LetterSpacingType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont17letterSpacingTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qfont.h:230
@@ -474,10 +500,11 @@ func (this *QFont) SetLetterSpacing(type_ int, spacing float64) {
 // index:0
 // Public
 // qreal wordSpacing()
-func (this *QFont) WordSpacing() interface{} {
+func (this *QFont) WordSpacing() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont11wordSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qfont.h:233
@@ -502,10 +529,11 @@ func (this *QFont) SetCapitalization(arg0 int) {
 // index:0
 // Public
 // QFont::Capitalization capitalization()
-func (this *QFont) Capitalization() interface{} {
+func (this *QFont) Capitalization() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont14capitalizationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qfont.h:238
@@ -521,20 +549,22 @@ func (this *QFont) SetHintingPreference(hintingPreference int) {
 // index:0
 // Public
 // QFont::HintingPreference hintingPreference()
-func (this *QFont) HintingPreference() interface{} {
+func (this *QFont) HintingPreference() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont17hintingPreferenceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qfont.h:242
 // index:0
 // Public
 // bool rawMode()
-func (this *QFont) RawMode() interface{} {
+func (this *QFont) RawMode() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7rawModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qfont.h:243
@@ -550,21 +580,23 @@ func (this *QFont) SetRawMode(arg0 bool) {
 // index:0
 // Public
 // bool exactMatch()
-func (this *QFont) ExactMatch() interface{} {
+func (this *QFont) ExactMatch() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont10exactMatchEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qfont.h:254
 // index:0
 // Public
 // bool isCopyOf(const class QFont &)
-func (this *QFont) IsCopyOf(arg0 *QFont) interface{} {
+func (this *QFont) IsCopyOf(arg0 *QFont) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont8isCopyOfERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qfont.h:262
@@ -581,83 +613,65 @@ func (this *QFont) SetRawName(arg0 *qtcore.QString) {
 // index:0
 // Public
 // QString rawName()
-func (this *QFont) RawName() interface{} {
+func (this *QFont) RawName() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7rawNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qfont.h:266
 // index:0
 // Public
 // QString key()
-func (this *QFont) Key() interface{} {
+func (this *QFont) Key() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qfont.h:268
 // index:0
 // Public
 // QString toString()
-func (this *QFont) ToString() interface{} {
+func (this *QFont) ToString() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont8toStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qfont.h:269
 // index:0
 // Public
 // bool fromString(const class QString &)
-func (this *QFont) FromString(arg0 *qtcore.QString) interface{} {
+func (this *QFont) FromString(arg0 *qtcore.QString) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont10fromStringERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qfont.h:271
 // index:0
 // Public static
 // QString substitute(const class QString &)
-func (this *QFont) Substitute(arg0 *qtcore.QString) interface{} {
+func (this *QFont) Substitute(arg0 *qtcore.QString) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont10substituteERK7QString", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QFont_Substitute(arg0 *qtcore.QString) {
+func QFont_Substitute(arg0 *qtcore.QString) *qtcore.QString /*123*/ {
 	var nilthis *QFont
-	nilthis.Substitute(arg0)
-}
-
-// /usr/include/qt/QtGui/qfont.h:272
-// index:0
-// Public static
-// QStringList substitutes(const class QString &)
-func (this *QFont) Substitutes(arg0 *qtcore.QString) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont11substitutesERK7QString", ffiqt.FFI_TYPE_POINTER, arg0)
-	gopp.ErrPrint(err, rv)
+	rv := nilthis.Substitute(arg0)
 	return rv
-}
-func QFont_Substitutes(arg0 *qtcore.QString) {
-	var nilthis *QFont
-	nilthis.Substitutes(arg0)
-}
-
-// /usr/include/qt/QtGui/qfont.h:273
-// index:0
-// Public static
-// QStringList substitutions()
-func (this *QFont) Substitutions() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFont13substitutionsEv", ffiqt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-func QFont_Substitutions() {
-	var nilthis *QFont
-	nilthis.Substitutions()
 }
 
 // /usr/include/qt/QtGui/qfont.h:274
@@ -742,51 +756,60 @@ func QFont_CacheStatistics() {
 // index:0
 // Public
 // QString defaultFamily()
-func (this *QFont) DefaultFamily() interface{} {
+func (this *QFont) DefaultFamily() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont13defaultFamilyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qfont.h:285
 // index:0
 // Public
 // QString lastResortFamily()
-func (this *QFont) LastResortFamily() interface{} {
+func (this *QFont) LastResortFamily() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont16lastResortFamilyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qfont.h:286
 // index:0
 // Public
 // QString lastResortFont()
-func (this *QFont) LastResortFont() interface{} {
+func (this *QFont) LastResortFont() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont14lastResortFontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qfont.h:288
 // index:0
 // Public
 // QFont resolve(const class QFont &)
-func (this *QFont) Resolve(arg0 *QFont) interface{} {
+func (this *QFont) Resolve(arg0 *QFont) *QFont /*123*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7resolveERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qfont.h:289
 // index:1
 // Public inline
 // uint resolve()
-func (this *QFont) Resolve_1() interface{} {
+func (this *QFont) Resolve_1() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFont7resolveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qfont.h:290

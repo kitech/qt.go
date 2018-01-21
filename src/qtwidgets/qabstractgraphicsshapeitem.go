@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h
 // #include <qgraphicsitem.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 210
+// extern C begin: 204
 */
 // import "C"
 import "unsafe"
@@ -57,7 +57,11 @@ type QAbstractGraphicsShapeItem struct {
 }
 
 func (this *QAbstractGraphicsShapeItem) GetCthis() unsafe.Pointer {
-	return this.QGraphicsItem.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGraphicsItem.GetCthis()
+	}
 }
 func NewQAbstractGraphicsShapeItemFromPointer(cthis unsafe.Pointer) *QAbstractGraphicsShapeItem {
 	bcthis0 := NewQGraphicsItemFromPointer(cthis)
@@ -68,9 +72,10 @@ func NewQAbstractGraphicsShapeItemFromPointer(cthis unsafe.Pointer) *QAbstractGr
 // index:0
 // Public
 // void QAbstractGraphicsShapeItem(class QGraphicsItem *)
-func NewQAbstractGraphicsShapeItem(parent unsafe.Pointer) *QAbstractGraphicsShapeItem {
+func NewQAbstractGraphicsShapeItem(parent *QGraphicsItem /*444 QGraphicsItem **/) *QAbstractGraphicsShapeItem {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractGraphicsShapeItemFromPointer(cthis)
 	return gothis
@@ -89,10 +94,12 @@ func DeleteQAbstractGraphicsShapeItem(*QAbstractGraphicsShapeItem) {
 // index:0
 // Public
 // QPen pen()
-func (this *QAbstractGraphicsShapeItem) Pen() interface{} {
+func (this *QAbstractGraphicsShapeItem) Pen() *qtgui.QPen /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem3penEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQPenFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:607
@@ -109,10 +116,12 @@ func (this *QAbstractGraphicsShapeItem) SetPen(pen *qtgui.QPen) {
 // index:0
 // Public
 // QBrush brush()
-func (this *QAbstractGraphicsShapeItem) Brush() interface{} {
+func (this *QAbstractGraphicsShapeItem) Brush() *qtgui.QBrush /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem5brushEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:610
@@ -129,20 +138,24 @@ func (this *QAbstractGraphicsShapeItem) SetBrush(brush *qtgui.QBrush) {
 // index:0
 // Public virtual
 // bool isObscuredBy(const class QGraphicsItem *)
-func (this *QAbstractGraphicsShapeItem) IsObscuredBy(item unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), item)
+func (this *QAbstractGraphicsShapeItem) IsObscuredBy(item *QGraphicsItem /*444 const QGraphicsItem **/) bool {
+	var convArg0 = item.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:613
 // index:0
 // Public virtual
 // QPainterPath opaqueArea()
-func (this *QAbstractGraphicsShapeItem) OpaqueArea() interface{} {
+func (this *QAbstractGraphicsShapeItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

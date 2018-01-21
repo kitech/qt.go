@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qabstractanimation.h
 // #include <qabstractanimation.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QAbstractAnimation struct {
 }
 
 func (this *QAbstractAnimation) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQAbstractAnimationFromPointer(cthis unsafe.Pointer) *QAbstractAnimation {
 	bcthis0 := NewQObjectFromPointer(cthis)
@@ -60,19 +64,22 @@ func NewQAbstractAnimationFromPointer(cthis unsafe.Pointer) *QAbstractAnimation 
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractAnimation) MetaObject() interface{} {
+func (this *QAbstractAnimation) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:85
 // index:0
 // Public
 // void QAbstractAnimation(class QObject *)
-func NewQAbstractAnimation(parent unsafe.Pointer) *QAbstractAnimation {
+func NewQAbstractAnimation(parent *QObject /*444 QObject **/) *QAbstractAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimationC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimationC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractAnimationFromPointer(cthis)
 	return gothis
@@ -91,30 +98,34 @@ func DeleteQAbstractAnimation(*QAbstractAnimation) {
 // index:0
 // Public
 // QAbstractAnimation::State state()
-func (this *QAbstractAnimation) State() interface{} {
+func (this *QAbstractAnimation) State() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation5stateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:90
 // index:0
 // Public
 // QAnimationGroup * group()
-func (this *QAbstractAnimation) Group() interface{} {
+func (this *QAbstractAnimation) Group() *QAnimationGroup /*444 QAnimationGroup **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation5groupEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:92
 // index:0
 // Public
 // QAbstractAnimation::Direction direction()
-func (this *QAbstractAnimation) Direction() interface{} {
+func (this *QAbstractAnimation) Direction() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation9directionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:93
@@ -130,30 +141,33 @@ func (this *QAbstractAnimation) SetDirection(direction int) {
 // index:0
 // Public
 // int currentTime()
-func (this *QAbstractAnimation) CurrentTime() interface{} {
+func (this *QAbstractAnimation) CurrentTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation11currentTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:96
 // index:0
 // Public
 // int currentLoopTime()
-func (this *QAbstractAnimation) CurrentLoopTime() interface{} {
+func (this *QAbstractAnimation) CurrentLoopTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation15currentLoopTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:98
 // index:0
 // Public
 // int loopCount()
-func (this *QAbstractAnimation) LoopCount() interface{} {
+func (this *QAbstractAnimation) LoopCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation9loopCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:99
@@ -169,30 +183,33 @@ func (this *QAbstractAnimation) SetLoopCount(loopCount int) {
 // index:0
 // Public
 // int currentLoop()
-func (this *QAbstractAnimation) CurrentLoop() interface{} {
+func (this *QAbstractAnimation) CurrentLoop() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation11currentLoopEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:102
 // index:0
 // Public pure virtual
 // int duration()
-func (this *QAbstractAnimation) Duration() interface{} {
+func (this *QAbstractAnimation) Duration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:103
 // index:0
 // Public
 // int totalDuration()
-func (this *QAbstractAnimation) TotalDuration() interface{} {
+func (this *QAbstractAnimation) TotalDuration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation13totalDurationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:106
@@ -289,10 +306,12 @@ func (this *QAbstractAnimation) SetCurrentTime(msecs int) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QAbstractAnimation) Event(event unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractAnimation) Event(event *QEvent /*444 QEvent **/) bool {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:123

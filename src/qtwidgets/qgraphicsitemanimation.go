@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h
 // #include <qgraphicsitemanimation.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGraphicsItemAnimation struct {
 }
 
 func (this *QGraphicsItemAnimation) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQGraphicsItemAnimationFromPointer(cthis unsafe.Pointer) *QGraphicsItemAnimation {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQGraphicsItemAnimationFromPointer(cthis unsafe.Pointer) *QGraphicsItemAn
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGraphicsItemAnimation) MetaObject() interface{} {
+func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:61
 // index:0
 // Public
 // void QGraphicsItemAnimation(class QObject *)
-func NewQGraphicsItemAnimation(parent unsafe.Pointer) *QGraphicsItemAnimation {
+func NewQGraphicsItemAnimation(parent *qtcore.QObject /*444 QObject **/) *QGraphicsItemAnimation {
 	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsItemAnimationFromPointer(cthis)
 	return gothis
@@ -99,18 +106,21 @@ func DeleteQGraphicsItemAnimation(*QGraphicsItemAnimation) {
 // index:0
 // Public
 // QGraphicsItem * item()
-func (this *QGraphicsItemAnimation) Item() interface{} {
+func (this *QGraphicsItemAnimation) Item() *QGraphicsItem /*444 QGraphicsItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation4itemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:65
 // index:0
 // Public
 // void setItem(class QGraphicsItem *)
-func (this *QGraphicsItemAnimation) SetItem(item unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), item)
+func (this *QGraphicsItemAnimation) SetItem(item *QGraphicsItem /*444 QGraphicsItem **/) {
+	var convArg0 = item.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -118,18 +128,21 @@ func (this *QGraphicsItemAnimation) SetItem(item unsafe.Pointer) {
 // index:0
 // Public
 // QTimeLine * timeLine()
-func (this *QGraphicsItemAnimation) TimeLine() interface{} {
+func (this *QGraphicsItemAnimation) TimeLine() *qtcore.QTimeLine /*444 QTimeLine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation8timeLineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQTimeLineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:68
 // index:0
 // Public
 // void setTimeLine(class QTimeLine *)
-func (this *QGraphicsItemAnimation) SetTimeLine(timeLine unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timeLine)
+func (this *QGraphicsItemAnimation) SetTimeLine(timeLine *qtcore.QTimeLine /*444 QTimeLine **/) {
+	var convArg0 = timeLine.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -137,20 +150,12 @@ func (this *QGraphicsItemAnimation) SetTimeLine(timeLine unsafe.Pointer) {
 // index:0
 // Public
 // QPointF posAt(qreal)
-func (this *QGraphicsItemAnimation) PosAt(step float64) interface{} {
+func (this *QGraphicsItemAnimation) PosAt(step float64) *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation5posAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:71
-// index:0
-// Public
-// QList<QPair<qreal, QPointF> > posList()
-func (this *QGraphicsItemAnimation) PosList() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation7posListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:72
@@ -167,30 +172,23 @@ func (this *QGraphicsItemAnimation) SetPosAt(step float64, pos *qtcore.QPointF) 
 // index:0
 // Public
 // QMatrix matrixAt(qreal)
-func (this *QGraphicsItemAnimation) MatrixAt(step float64) interface{} {
+func (this *QGraphicsItemAnimation) MatrixAt(step float64) *qtgui.QMatrix /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation8matrixAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:76
 // index:0
 // Public
 // qreal rotationAt(qreal)
-func (this *QGraphicsItemAnimation) RotationAt(step float64) interface{} {
+func (this *QGraphicsItemAnimation) RotationAt(step float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation10rotationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:77
-// index:0
-// Public
-// QList<QPair<qreal, qreal> > rotationList()
-func (this *QGraphicsItemAnimation) RotationList() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation12rotationListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:78
@@ -206,30 +204,22 @@ func (this *QGraphicsItemAnimation) SetRotationAt(step float64, angle float64) {
 // index:0
 // Public
 // qreal xTranslationAt(qreal)
-func (this *QGraphicsItemAnimation) XTranslationAt(step float64) interface{} {
+func (this *QGraphicsItemAnimation) XTranslationAt(step float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14xTranslationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:81
 // index:0
 // Public
 // qreal yTranslationAt(qreal)
-func (this *QGraphicsItemAnimation) YTranslationAt(step float64) interface{} {
+func (this *QGraphicsItemAnimation) YTranslationAt(step float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14yTranslationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:82
-// index:0
-// Public
-// QList<QPair<qreal, QPointF> > translationList()
-func (this *QGraphicsItemAnimation) TranslationList() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15translationListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:83
@@ -245,30 +235,22 @@ func (this *QGraphicsItemAnimation) SetTranslationAt(step float64, dx float64, d
 // index:0
 // Public
 // qreal verticalScaleAt(qreal)
-func (this *QGraphicsItemAnimation) VerticalScaleAt(step float64) interface{} {
+func (this *QGraphicsItemAnimation) VerticalScaleAt(step float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalScaleAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:86
 // index:0
 // Public
 // qreal horizontalScaleAt(qreal)
-func (this *QGraphicsItemAnimation) HorizontalScaleAt(step float64) interface{} {
+func (this *QGraphicsItemAnimation) HorizontalScaleAt(step float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:87
-// index:0
-// Public
-// QList<QPair<qreal, QPointF> > scaleList()
-func (this *QGraphicsItemAnimation) ScaleList() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation9scaleListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:88
@@ -284,30 +266,22 @@ func (this *QGraphicsItemAnimation) SetScaleAt(step float64, sx float64, sy floa
 // index:0
 // Public
 // qreal verticalShearAt(qreal)
-func (this *QGraphicsItemAnimation) VerticalShearAt(step float64) interface{} {
+func (this *QGraphicsItemAnimation) VerticalShearAt(step float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalShearAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:91
 // index:0
 // Public
 // qreal horizontalShearAt(qreal)
-func (this *QGraphicsItemAnimation) HorizontalShearAt(step float64) interface{} {
+func (this *QGraphicsItemAnimation) HorizontalShearAt(step float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalShearAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:92
-// index:0
-// Public
-// QList<QPair<qreal, QPointF> > shearList()
-func (this *QGraphicsItemAnimation) ShearList() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation9shearListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:93

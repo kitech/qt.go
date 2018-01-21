@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qbytearraymatcher.h
 // #include <qbytearraymatcher.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QStaticByteArrayMatcherBase struct {
 }
 
 func (this *QStaticByteArrayMatcherBase) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQStaticByteArrayMatcherBaseFromPointer(cthis unsafe.Pointer) *QStaticByteArrayMatcherBase {
 	return &QStaticByteArrayMatcherBase{&qtrt.CObject{cthis}}
@@ -73,14 +77,15 @@ func NewQStaticByteArrayMatcherBase(pattern string, n uint) *QStaticByteArrayMat
 // index:0
 // Protected
 // int indexOfIn(const char *, uint, const char *, int, int)
-func (this *QStaticByteArrayMatcherBase) IndexOfIn(needle string, nlen uint, haystack string, hlen int, from int) interface{} {
+func (this *QStaticByteArrayMatcherBase) IndexOfIn(needle string, nlen uint, haystack string, hlen int, from int) int {
 	var convArg0 = qtrt.CString(needle)
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = qtrt.CString(haystack)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QStaticByteArrayMatcherBase9indexOfInEPKcjS1_ii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &nlen, convArg2, &hlen, &from)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

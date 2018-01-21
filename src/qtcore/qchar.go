@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qchar.h
 // #include <qchar.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 3
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QChar struct {
 }
 
 func (this *QChar) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQCharFromPointer(cthis unsafe.Pointer) *QChar {
 	return &QChar{&qtrt.CObject{cthis}}
@@ -179,842 +183,954 @@ func NewQChar_9(c byte) *QChar {
 // index:0
 // Public inline
 // QChar::Category category()
-func (this *QChar) Category() interface{} {
+func (this *QChar) Category() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8categoryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qchar.h:504
 // index:1
 // Public static
 // QChar::Category category(uint)
-func (this *QChar) Category_1(ucs4 uint) interface{} {
+func (this *QChar) Category_1(ucs4 uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar8categoryEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QChar_Category_1(ucs4 uint) {
+func QChar_Category_1(ucs4 uint) int {
 	var nilthis *QChar
-	nilthis.Category_1(ucs4)
+	rv := nilthis.Category_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:395
 // index:0
 // Public inline
 // QChar::Direction direction()
-func (this *QChar) Direction() interface{} {
+func (this *QChar) Direction() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar9directionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qchar.h:505
 // index:1
 // Public static
 // QChar::Direction direction(uint)
-func (this *QChar) Direction_1(ucs4 uint) interface{} {
+func (this *QChar) Direction_1(ucs4 uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar9directionEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QChar_Direction_1(ucs4 uint) {
+func QChar_Direction_1(ucs4 uint) int {
 	var nilthis *QChar
-	nilthis.Direction_1(ucs4)
+	rv := nilthis.Direction_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:396
 // index:0
 // Public inline
 // QChar::JoiningType joiningType()
-func (this *QChar) JoiningType() interface{} {
+func (this *QChar) JoiningType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11joiningTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qchar.h:506
 // index:1
 // Public static
 // QChar::JoiningType joiningType(uint)
-func (this *QChar) JoiningType_1(ucs4 uint) interface{} {
+func (this *QChar) JoiningType_1(ucs4 uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar11joiningTypeEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QChar_JoiningType_1(ucs4 uint) {
+func QChar_JoiningType_1(ucs4 uint) int {
 	var nilthis *QChar
-	nilthis.JoiningType_1(ucs4)
+	rv := nilthis.JoiningType_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:398
 // index:0
 // Public inline
 // QChar::Joining joining()
-func (this *QChar) Joining() interface{} {
+func (this *QChar) Joining() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7joiningEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qchar.h:508
 // index:1
 // Public static
 // QChar::Joining joining(uint)
-func (this *QChar) Joining_1(ucs4 uint) interface{} {
+func (this *QChar) Joining_1(ucs4 uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7joiningEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QChar_Joining_1(ucs4 uint) {
+func QChar_Joining_1(ucs4 uint) int {
 	var nilthis *QChar
-	nilthis.Joining_1(ucs4)
+	rv := nilthis.Joining_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:411
 // index:0
 // Public inline
 // unsigned char combiningClass()
-func (this *QChar) CombiningClass() interface{} {
+func (this *QChar) CombiningClass() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14combiningClassEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qchar.h:510
 // index:1
 // Public static
 // unsigned char combiningClass(uint)
-func (this *QChar) CombiningClass_1(ucs4 uint) interface{} {
+func (this *QChar) CombiningClass_1(ucs4 uint) byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar14combiningClassEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return byte(rv) // 111
 }
-func QChar_CombiningClass_1(ucs4 uint) {
+func QChar_CombiningClass_1(ucs4 uint) byte {
 	var nilthis *QChar
-	nilthis.CombiningClass_1(ucs4)
+	rv := nilthis.CombiningClass_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:413
 // index:0
 // Public inline
 // QChar mirroredChar()
-func (this *QChar) MirroredChar() interface{} {
+func (this *QChar) MirroredChar() *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar12mirroredCharEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qchar.h:512
 // index:1
 // Public static
 // uint mirroredChar(uint)
-func (this *QChar) MirroredChar_1(ucs4 uint) interface{} {
+func (this *QChar) MirroredChar_1(ucs4 uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar12mirroredCharEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return uint(rv) // 222
 }
-func QChar_MirroredChar_1(ucs4 uint) {
+func QChar_MirroredChar_1(ucs4 uint) uint {
 	var nilthis *QChar
-	nilthis.MirroredChar_1(ucs4)
+	rv := nilthis.MirroredChar_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:414
 // index:0
 // Public inline
 // bool hasMirrored()
-func (this *QChar) HasMirrored() interface{} {
+func (this *QChar) HasMirrored() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11hasMirroredEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:513
 // index:1
 // Public static
 // bool hasMirrored(uint)
-func (this *QChar) HasMirrored_1(ucs4 uint) interface{} {
+func (this *QChar) HasMirrored_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar11hasMirroredEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_HasMirrored_1(ucs4 uint) {
+func QChar_HasMirrored_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.HasMirrored_1(ucs4)
+	rv := nilthis.HasMirrored_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:416
 // index:0
 // Public
 // QString decomposition()
-func (this *QChar) Decomposition() interface{} {
+func (this *QChar) Decomposition() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar13decompositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qchar.h:515
 // index:1
 // Public static
 // QString decomposition(uint)
-func (this *QChar) Decomposition_1(ucs4 uint) interface{} {
+func (this *QChar) Decomposition_1(ucs4 uint) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar13decompositionEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QChar_Decomposition_1(ucs4 uint) {
+func QChar_Decomposition_1(ucs4 uint) *QString /*123*/ {
 	var nilthis *QChar
-	nilthis.Decomposition_1(ucs4)
+	rv := nilthis.Decomposition_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:417
 // index:0
 // Public inline
 // QChar::Decomposition decompositionTag()
-func (this *QChar) DecompositionTag() interface{} {
+func (this *QChar) DecompositionTag() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar16decompositionTagEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qchar.h:516
 // index:1
 // Public static
 // QChar::Decomposition decompositionTag(uint)
-func (this *QChar) DecompositionTag_1(ucs4 uint) interface{} {
+func (this *QChar) DecompositionTag_1(ucs4 uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar16decompositionTagEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QChar_DecompositionTag_1(ucs4 uint) {
+func QChar_DecompositionTag_1(ucs4 uint) int {
 	var nilthis *QChar
-	nilthis.DecompositionTag_1(ucs4)
+	rv := nilthis.DecompositionTag_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:419
 // index:0
 // Public inline
 // int digitValue()
-func (this *QChar) DigitValue() interface{} {
+func (this *QChar) DigitValue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar10digitValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qchar.h:518
 // index:1
 // Public static
 // int digitValue(uint)
-func (this *QChar) DigitValue_1(ucs4 uint) interface{} {
+func (this *QChar) DigitValue_1(ucs4 uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar10digitValueEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv) // 111
 }
-func QChar_DigitValue_1(ucs4 uint) {
+func QChar_DigitValue_1(ucs4 uint) int {
 	var nilthis *QChar
-	nilthis.DigitValue_1(ucs4)
+	rv := nilthis.DigitValue_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:420
 // index:0
 // Public inline
 // QChar toLower()
-func (this *QChar) ToLower() interface{} {
+func (this *QChar) ToLower() *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7toLowerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qchar.h:519
 // index:1
 // Public static
 // uint toLower(uint)
-func (this *QChar) ToLower_1(ucs4 uint) interface{} {
+func (this *QChar) ToLower_1(ucs4 uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7toLowerEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return uint(rv) // 222
 }
-func QChar_ToLower_1(ucs4 uint) {
+func QChar_ToLower_1(ucs4 uint) uint {
 	var nilthis *QChar
-	nilthis.ToLower_1(ucs4)
+	rv := nilthis.ToLower_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:421
 // index:0
 // Public inline
 // QChar toUpper()
-func (this *QChar) ToUpper() interface{} {
+func (this *QChar) ToUpper() *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7toUpperEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qchar.h:520
 // index:1
 // Public static
 // uint toUpper(uint)
-func (this *QChar) ToUpper_1(ucs4 uint) interface{} {
+func (this *QChar) ToUpper_1(ucs4 uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7toUpperEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return uint(rv) // 222
 }
-func QChar_ToUpper_1(ucs4 uint) {
+func QChar_ToUpper_1(ucs4 uint) uint {
 	var nilthis *QChar
-	nilthis.ToUpper_1(ucs4)
+	rv := nilthis.ToUpper_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:422
 // index:0
 // Public inline
 // QChar toTitleCase()
-func (this *QChar) ToTitleCase() interface{} {
+func (this *QChar) ToTitleCase() *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11toTitleCaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qchar.h:521
 // index:1
 // Public static
 // uint toTitleCase(uint)
-func (this *QChar) ToTitleCase_1(ucs4 uint) interface{} {
+func (this *QChar) ToTitleCase_1(ucs4 uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar11toTitleCaseEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return uint(rv) // 222
 }
-func QChar_ToTitleCase_1(ucs4 uint) {
+func QChar_ToTitleCase_1(ucs4 uint) uint {
 	var nilthis *QChar
-	nilthis.ToTitleCase_1(ucs4)
+	rv := nilthis.ToTitleCase_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:423
 // index:0
 // Public inline
 // QChar toCaseFolded()
-func (this *QChar) ToCaseFolded() interface{} {
+func (this *QChar) ToCaseFolded() *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar12toCaseFoldedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qchar.h:522
 // index:1
 // Public static
 // uint toCaseFolded(uint)
-func (this *QChar) ToCaseFolded_1(ucs4 uint) interface{} {
+func (this *QChar) ToCaseFolded_1(ucs4 uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar12toCaseFoldedEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return uint(rv) // 222
 }
-func QChar_ToCaseFolded_1(ucs4 uint) {
+func QChar_ToCaseFolded_1(ucs4 uint) uint {
 	var nilthis *QChar
-	nilthis.ToCaseFolded_1(ucs4)
+	rv := nilthis.ToCaseFolded_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:425
 // index:0
 // Public inline
 // QChar::Script script()
-func (this *QChar) Script() interface{} {
+func (this *QChar) Script() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar6scriptEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qchar.h:524
 // index:1
 // Public static
 // QChar::Script script(uint)
-func (this *QChar) Script_1(ucs4 uint) interface{} {
+func (this *QChar) Script_1(ucs4 uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar6scriptEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QChar_Script_1(ucs4 uint) {
+func QChar_Script_1(ucs4 uint) int {
 	var nilthis *QChar
-	nilthis.Script_1(ucs4)
+	rv := nilthis.Script_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:427
 // index:0
 // Public inline
 // QChar::UnicodeVersion unicodeVersion()
-func (this *QChar) UnicodeVersion() interface{} {
+func (this *QChar) UnicodeVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14unicodeVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qchar.h:526
 // index:1
 // Public static
 // QChar::UnicodeVersion unicodeVersion(uint)
-func (this *QChar) UnicodeVersion_1(ucs4 uint) interface{} {
+func (this *QChar) UnicodeVersion_1(ucs4 uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar14unicodeVersionEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QChar_UnicodeVersion_1(ucs4 uint) {
+func QChar_UnicodeVersion_1(ucs4 uint) int {
 	var nilthis *QChar
-	nilthis.UnicodeVersion_1(ucs4)
+	rv := nilthis.UnicodeVersion_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:432
 // index:0
 // Public inline
 // char toLatin1()
-func (this *QChar) ToLatin1() interface{} {
+func (this *QChar) ToLatin1() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8toLatin1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qchar.h:433
 // index:0
 // Public inline
 // ushort unicode()
-func (this *QChar) Unicode() interface{} {
+func (this *QChar) Unicode() uint16 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7unicodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint16(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qchar.h:434
 // index:1
 // Public inline
 // ushort & unicode()
-func (this *QChar) Unicode_1() interface{} {
+func (this *QChar) Unicode_1() uint16 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7unicodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint16(rv)
 }
 
 // /usr/include/qt/QtCore/qchar.h:440
 // index:0
 // Public static inline
 // QChar fromLatin1(char)
-func (this *QChar) FromLatin1(c byte) interface{} {
+func (this *QChar) FromLatin1(c byte) *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar10fromLatin1Ec", ffiqt.FFI_TYPE_POINTER, c)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QChar_FromLatin1(c byte) {
+func QChar_FromLatin1(c byte) *QChar /*123*/ {
 	var nilthis *QChar
-	nilthis.FromLatin1(c)
+	rv := nilthis.FromLatin1(c)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:442
 // index:0
 // Public inline
 // bool isNull()
-func (this *QChar) IsNull() interface{} {
+func (this *QChar) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:444
 // index:0
 // Public inline
 // bool isPrint()
-func (this *QChar) IsPrint() interface{} {
+func (this *QChar) IsPrint() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isPrintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:530
 // index:1
 // Public static
 // bool isPrint(uint)
-func (this *QChar) IsPrint_1(ucs4 uint) interface{} {
+func (this *QChar) IsPrint_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isPrintEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsPrint_1(ucs4 uint) {
+func QChar_IsPrint_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsPrint_1(ucs4)
+	rv := nilthis.IsPrint_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:445
 // index:0
 // Public inline
 // bool isSpace()
-func (this *QChar) IsSpace() interface{} {
+func (this *QChar) IsSpace() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isSpaceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:531
 // index:1
 // Public static inline
 // bool isSpace(uint)
-func (this *QChar) IsSpace_1(ucs4 uint) interface{} {
+func (this *QChar) IsSpace_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isSpaceEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsSpace_1(ucs4 uint) {
+func QChar_IsSpace_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsSpace_1(ucs4)
+	rv := nilthis.IsSpace_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:446
 // index:0
 // Public inline
 // bool isMark()
-func (this *QChar) IsMark() interface{} {
+func (this *QChar) IsMark() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar6isMarkEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:537
 // index:1
 // Public static
 // bool isMark(uint)
-func (this *QChar) IsMark_1(ucs4 uint) interface{} {
+func (this *QChar) IsMark_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar6isMarkEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsMark_1(ucs4 uint) {
+func QChar_IsMark_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsMark_1(ucs4)
+	rv := nilthis.IsMark_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:447
 // index:0
 // Public inline
 // bool isPunct()
-func (this *QChar) IsPunct() interface{} {
+func (this *QChar) IsPunct() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isPunctEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:538
 // index:1
 // Public static
 // bool isPunct(uint)
-func (this *QChar) IsPunct_1(ucs4 uint) interface{} {
+func (this *QChar) IsPunct_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isPunctEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsPunct_1(ucs4 uint) {
+func QChar_IsPunct_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsPunct_1(ucs4)
+	rv := nilthis.IsPunct_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:448
 // index:0
 // Public inline
 // bool isSymbol()
-func (this *QChar) IsSymbol() interface{} {
+func (this *QChar) IsSymbol() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8isSymbolEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:539
 // index:1
 // Public static
 // bool isSymbol(uint)
-func (this *QChar) IsSymbol_1(ucs4 uint) interface{} {
+func (this *QChar) IsSymbol_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar8isSymbolEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsSymbol_1(ucs4 uint) {
+func QChar_IsSymbol_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsSymbol_1(ucs4)
+	rv := nilthis.IsSymbol_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:449
 // index:0
 // Public inline
 // bool isLetter()
-func (this *QChar) IsLetter() interface{} {
+func (this *QChar) IsLetter() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8isLetterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:540
 // index:1
 // Public static inline
 // bool isLetter(uint)
-func (this *QChar) IsLetter_1(ucs4 uint) interface{} {
+func (this *QChar) IsLetter_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar8isLetterEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsLetter_1(ucs4 uint) {
+func QChar_IsLetter_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsLetter_1(ucs4)
+	rv := nilthis.IsLetter_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:450
 // index:0
 // Public inline
 // bool isNumber()
-func (this *QChar) IsNumber() interface{} {
+func (this *QChar) IsNumber() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8isNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:545
 // index:1
 // Public static inline
 // bool isNumber(uint)
-func (this *QChar) IsNumber_1(ucs4 uint) interface{} {
+func (this *QChar) IsNumber_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar8isNumberEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsNumber_1(ucs4 uint) {
+func QChar_IsNumber_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsNumber_1(ucs4)
+	rv := nilthis.IsNumber_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:451
 // index:0
 // Public inline
 // bool isLetterOrNumber()
-func (this *QChar) IsLetterOrNumber() interface{} {
+func (this *QChar) IsLetterOrNumber() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar16isLetterOrNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:547
 // index:1
 // Public static inline
 // bool isLetterOrNumber(uint)
-func (this *QChar) IsLetterOrNumber_1(ucs4 uint) interface{} {
+func (this *QChar) IsLetterOrNumber_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar16isLetterOrNumberEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsLetterOrNumber_1(ucs4 uint) {
+func QChar_IsLetterOrNumber_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsLetterOrNumber_1(ucs4)
+	rv := nilthis.IsLetterOrNumber_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:452
 // index:0
 // Public inline
 // bool isDigit()
-func (this *QChar) IsDigit() interface{} {
+func (this *QChar) IsDigit() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isDigitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:553
 // index:1
 // Public static inline
 // bool isDigit(uint)
-func (this *QChar) IsDigit_1(ucs4 uint) interface{} {
+func (this *QChar) IsDigit_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isDigitEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsDigit_1(ucs4 uint) {
+func QChar_IsDigit_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsDigit_1(ucs4)
+	rv := nilthis.IsDigit_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:453
 // index:0
 // Public inline
 // bool isLower()
-func (this *QChar) IsLower() interface{} {
+func (this *QChar) IsLower() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isLowerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:555
 // index:1
 // Public static inline
 // bool isLower(uint)
-func (this *QChar) IsLower_1(ucs4 uint) interface{} {
+func (this *QChar) IsLower_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isLowerEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsLower_1(ucs4 uint) {
+func QChar_IsLower_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsLower_1(ucs4)
+	rv := nilthis.IsLower_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:454
 // index:0
 // Public inline
 // bool isUpper()
-func (this *QChar) IsUpper() interface{} {
+func (this *QChar) IsUpper() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar7isUpperEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:557
 // index:1
 // Public static inline
 // bool isUpper(uint)
-func (this *QChar) IsUpper_1(ucs4 uint) interface{} {
+func (this *QChar) IsUpper_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar7isUpperEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsUpper_1(ucs4 uint) {
+func QChar_IsUpper_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsUpper_1(ucs4)
+	rv := nilthis.IsUpper_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:455
 // index:0
 // Public inline
 // bool isTitleCase()
-func (this *QChar) IsTitleCase() interface{} {
+func (this *QChar) IsTitleCase() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11isTitleCaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:559
 // index:1
 // Public static inline
 // bool isTitleCase(uint)
-func (this *QChar) IsTitleCase_1(ucs4 uint) interface{} {
+func (this *QChar) IsTitleCase_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar11isTitleCaseEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsTitleCase_1(ucs4 uint) {
+func QChar_IsTitleCase_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsTitleCase_1(ucs4)
+	rv := nilthis.IsTitleCase_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:457
 // index:0
 // Public inline
 // bool isNonCharacter()
-func (this *QChar) IsNonCharacter() interface{} {
+func (this *QChar) IsNonCharacter() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14isNonCharacterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:467
 // index:1
 // Public static inline
 // bool isNonCharacter(uint)
-func (this *QChar) IsNonCharacter_1(ucs4 uint) interface{} {
+func (this *QChar) IsNonCharacter_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar14isNonCharacterEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsNonCharacter_1(ucs4 uint) {
+func QChar_IsNonCharacter_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsNonCharacter_1(ucs4)
+	rv := nilthis.IsNonCharacter_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:458
 // index:0
 // Public inline
 // bool isHighSurrogate()
-func (this *QChar) IsHighSurrogate() interface{} {
+func (this *QChar) IsHighSurrogate() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar15isHighSurrogateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:471
 // index:1
 // Public static inline
 // bool isHighSurrogate(uint)
-func (this *QChar) IsHighSurrogate_1(ucs4 uint) interface{} {
+func (this *QChar) IsHighSurrogate_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar15isHighSurrogateEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsHighSurrogate_1(ucs4 uint) {
+func QChar_IsHighSurrogate_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsHighSurrogate_1(ucs4)
+	rv := nilthis.IsHighSurrogate_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:459
 // index:0
 // Public inline
 // bool isLowSurrogate()
-func (this *QChar) IsLowSurrogate() interface{} {
+func (this *QChar) IsLowSurrogate() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14isLowSurrogateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:475
 // index:1
 // Public static inline
 // bool isLowSurrogate(uint)
-func (this *QChar) IsLowSurrogate_1(ucs4 uint) interface{} {
+func (this *QChar) IsLowSurrogate_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar14isLowSurrogateEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsLowSurrogate_1(ucs4 uint) {
+func QChar_IsLowSurrogate_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsLowSurrogate_1(ucs4)
+	rv := nilthis.IsLowSurrogate_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:460
 // index:0
 // Public inline
 // bool isSurrogate()
-func (this *QChar) IsSurrogate() interface{} {
+func (this *QChar) IsSurrogate() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar11isSurrogateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qchar.h:479
 // index:1
 // Public static inline
 // bool isSurrogate(uint)
-func (this *QChar) IsSurrogate_1(ucs4 uint) interface{} {
+func (this *QChar) IsSurrogate_1(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar11isSurrogateEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_IsSurrogate_1(ucs4 uint) {
+func QChar_IsSurrogate_1(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.IsSurrogate_1(ucs4)
+	rv := nilthis.IsSurrogate_1(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:462
 // index:0
 // Public inline
 // uchar cell()
-func (this *QChar) Cell() interface{} {
+func (this *QChar) Cell() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar4cellEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qchar.h:463
 // index:0
 // Public inline
 // uchar row()
-func (this *QChar) Row() interface{} {
+func (this *QChar) Row() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar3rowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qchar.h:464
@@ -1039,84 +1155,96 @@ func (this *QChar) SetRow(arow byte) {
 // index:0
 // Public static inline
 // bool requiresSurrogates(uint)
-func (this *QChar) RequiresSurrogates(ucs4 uint) interface{} {
+func (this *QChar) RequiresSurrogates(ucs4 uint) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar18requiresSurrogatesEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QChar_RequiresSurrogates(ucs4 uint) {
+func QChar_RequiresSurrogates(ucs4 uint) bool {
 	var nilthis *QChar
-	nilthis.RequiresSurrogates(ucs4)
+	rv := nilthis.RequiresSurrogates(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:487
 // index:0
 // Public static inline
 // uint surrogateToUcs4(ushort, ushort)
-func (this *QChar) SurrogateToUcs4(high uint16, low uint16) interface{} {
+func (this *QChar) SurrogateToUcs4(high uint16, low uint16) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4Ett", ffiqt.FFI_TYPE_POINTER, high, low)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return uint(rv) // 222
 }
-func QChar_SurrogateToUcs4(high uint16, low uint16) {
+func QChar_SurrogateToUcs4(high uint16, low uint16) uint {
 	var nilthis *QChar
-	nilthis.SurrogateToUcs4(high, low)
+	rv := nilthis.SurrogateToUcs4(high, low)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:491
 // index:1
 // Public static inline
 // uint surrogateToUcs4(class QChar, class QChar)
-func (this *QChar) SurrogateToUcs4_1(high *QChar, low *QChar) interface{} {
+func (this *QChar) SurrogateToUcs4_1(high *QChar /*123*/, low *QChar /*123*/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4ES_S_", ffiqt.FFI_TYPE_POINTER, high, low)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return uint(rv) // 222
 }
-func QChar_SurrogateToUcs4_1(high *QChar, low *QChar) {
+func QChar_SurrogateToUcs4_1(high *QChar /*123*/, low *QChar /*123*/) uint {
 	var nilthis *QChar
-	nilthis.SurrogateToUcs4_1(high, low)
+	rv := nilthis.SurrogateToUcs4_1(high, low)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:495
 // index:0
 // Public static inline
 // ushort highSurrogate(uint)
-func (this *QChar) HighSurrogate(ucs4 uint) interface{} {
+func (this *QChar) HighSurrogate(ucs4 uint) uint16 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar13highSurrogateEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return uint16(rv) // 222
 }
-func QChar_HighSurrogate(ucs4 uint) {
+func QChar_HighSurrogate(ucs4 uint) uint16 {
 	var nilthis *QChar
-	nilthis.HighSurrogate(ucs4)
+	rv := nilthis.HighSurrogate(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:499
 // index:0
 // Public static inline
 // ushort lowSurrogate(uint)
-func (this *QChar) LowSurrogate(ucs4 uint) interface{} {
+func (this *QChar) LowSurrogate(ucs4 uint) uint16 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar12lowSurrogateEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return uint16(rv) // 222
 }
-func QChar_LowSurrogate(ucs4 uint) {
+func QChar_LowSurrogate(ucs4 uint) uint16 {
 	var nilthis *QChar
-	nilthis.LowSurrogate(ucs4)
+	rv := nilthis.LowSurrogate(ucs4)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qchar.h:528
 // index:0
 // Public static
 // QChar::UnicodeVersion currentUnicodeVersion()
-func (this *QChar) CurrentUnicodeVersion() interface{} {
+func (this *QChar) CurrentUnicodeVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar21currentUnicodeVersionEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QChar_CurrentUnicodeVersion() {
+func QChar_CurrentUnicodeVersion() int {
 	var nilthis *QChar
-	nilthis.CurrentUnicodeVersion()
+	rv := nilthis.CurrentUnicodeVersion()
+	return rv
 }
 
 //  body block end

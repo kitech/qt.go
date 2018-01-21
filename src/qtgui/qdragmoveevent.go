@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QDragMoveEvent struct {
 }
 
 func (this *QDragMoveEvent) GetCthis() unsafe.Pointer {
-	return this.QDropEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QDropEvent.GetCthis()
+	}
 }
 func NewQDragMoveEventFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 	bcthis0 := NewQDropEventFromPointer(cthis)
@@ -73,10 +77,12 @@ func DeleteQDragMoveEvent(*QDragMoveEvent) {
 // index:0
 // Public inline
 // QRect answerRect()
-func (this *QDragMoveEvent) AnswerRect() interface{} {
+func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:648

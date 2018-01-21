@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qpixelformat.h
 // #include <qpixelformat.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QPixelFormat struct {
 }
 
 func (this *QPixelFormat) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQPixelFormatFromPointer(cthis unsafe.Pointer) *QPixelFormat {
 	return &QPixelFormat{&qtrt.CObject{cthis}}
@@ -87,220 +91,242 @@ func NewQPixelFormat_1(colorModel int, firstSize byte, secondSize byte, thirdSiz
 // index:0
 // Public inline
 // QPixelFormat::ColorModel colorModel()
-func (this *QPixelFormat) ColorModel() interface{} {
+func (this *QPixelFormat) ColorModel() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10colorModelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:179
 // index:0
 // Public inline
 // uchar channelCount()
-func (this *QPixelFormat) ChannelCount() interface{} {
+func (this *QPixelFormat) ChannelCount() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat12channelCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:186
 // index:0
 // Public inline
 // uchar redSize()
-func (this *QPixelFormat) RedSize() interface{} {
+func (this *QPixelFormat) RedSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7redSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:187
 // index:0
 // Public inline
 // uchar greenSize()
-func (this *QPixelFormat) GreenSize() interface{} {
+func (this *QPixelFormat) GreenSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9greenSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:188
 // index:0
 // Public inline
 // uchar blueSize()
-func (this *QPixelFormat) BlueSize() interface{} {
+func (this *QPixelFormat) BlueSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat8blueSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:190
 // index:0
 // Public inline
 // uchar cyanSize()
-func (this *QPixelFormat) CyanSize() interface{} {
+func (this *QPixelFormat) CyanSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat8cyanSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:191
 // index:0
 // Public inline
 // uchar magentaSize()
-func (this *QPixelFormat) MagentaSize() interface{} {
+func (this *QPixelFormat) MagentaSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat11magentaSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:192
 // index:0
 // Public inline
 // uchar yellowSize()
-func (this *QPixelFormat) YellowSize() interface{} {
+func (this *QPixelFormat) YellowSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10yellowSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:193
 // index:0
 // Public inline
 // uchar blackSize()
-func (this *QPixelFormat) BlackSize() interface{} {
+func (this *QPixelFormat) BlackSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9blackSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:195
 // index:0
 // Public inline
 // uchar hueSize()
-func (this *QPixelFormat) HueSize() interface{} {
+func (this *QPixelFormat) HueSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7hueSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:196
 // index:0
 // Public inline
 // uchar saturationSize()
-func (this *QPixelFormat) SaturationSize() interface{} {
+func (this *QPixelFormat) SaturationSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat14saturationSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:197
 // index:0
 // Public inline
 // uchar lightnessSize()
-func (this *QPixelFormat) LightnessSize() interface{} {
+func (this *QPixelFormat) LightnessSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13lightnessSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:198
 // index:0
 // Public inline
 // uchar brightnessSize()
-func (this *QPixelFormat) BrightnessSize() interface{} {
+func (this *QPixelFormat) BrightnessSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat14brightnessSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:200
 // index:0
 // Public inline
 // uchar alphaSize()
-func (this *QPixelFormat) AlphaSize() interface{} {
+func (this *QPixelFormat) AlphaSize() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9alphaSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:202
 // index:0
 // Public inline
 // uchar bitsPerPixel()
-func (this *QPixelFormat) BitsPerPixel() interface{} {
+func (this *QPixelFormat) BitsPerPixel() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat12bitsPerPixelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:209
 // index:0
 // Public inline
 // QPixelFormat::AlphaUsage alphaUsage()
-func (this *QPixelFormat) AlphaUsage() interface{} {
+func (this *QPixelFormat) AlphaUsage() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat10alphaUsageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:210
 // index:0
 // Public inline
 // QPixelFormat::AlphaPosition alphaPosition()
-func (this *QPixelFormat) AlphaPosition() interface{} {
+func (this *QPixelFormat) AlphaPosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13alphaPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:211
 // index:0
 // Public inline
 // QPixelFormat::AlphaPremultiplied premultiplied()
-func (this *QPixelFormat) Premultiplied() interface{} {
+func (this *QPixelFormat) Premultiplied() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat13premultipliedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:212
 // index:0
 // Public inline
 // QPixelFormat::TypeInterpretation typeInterpretation()
-func (this *QPixelFormat) TypeInterpretation() interface{} {
+func (this *QPixelFormat) TypeInterpretation() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat18typeInterpretationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:213
 // index:0
 // Public inline
 // QPixelFormat::ByteOrder byteOrder()
-func (this *QPixelFormat) ByteOrder() interface{} {
+func (this *QPixelFormat) ByteOrder() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9byteOrderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:215
 // index:0
 // Public inline
 // QPixelFormat::YUVLayout yuvLayout()
-func (this *QPixelFormat) YuvLayout() interface{} {
+func (this *QPixelFormat) YuvLayout() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat9yuvLayoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:216
 // index:0
 // Public inline
 // uchar subEnum()
-func (this *QPixelFormat) SubEnum() interface{} {
+func (this *QPixelFormat) SubEnum() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPixelFormat7subEnumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return byte(rv) // 222
 }
 
 //  body block end

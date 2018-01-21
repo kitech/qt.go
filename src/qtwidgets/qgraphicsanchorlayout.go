@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h
 // #include <qgraphicsanchorlayout.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGraphicsAnchorLayout struct {
 }
 
 func (this *QGraphicsAnchorLayout) GetCthis() unsafe.Pointer {
-	return this.QGraphicsLayout.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGraphicsLayout.GetCthis()
+	}
 }
 func NewQGraphicsAnchorLayoutFromPointer(cthis unsafe.Pointer) *QGraphicsAnchorLayout {
 	bcthis0 := NewQGraphicsLayoutFromPointer(cthis)
@@ -68,9 +72,10 @@ func NewQGraphicsAnchorLayoutFromPointer(cthis unsafe.Pointer) *QGraphicsAnchorL
 // index:0
 // Public
 // void QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
-func NewQGraphicsAnchorLayout(parent unsafe.Pointer) *QGraphicsAnchorLayout {
+func NewQGraphicsAnchorLayout(parent *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) *QGraphicsAnchorLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsAnchorLayoutFromPointer(cthis)
 	return gothis
@@ -89,28 +94,38 @@ func DeleteQGraphicsAnchorLayout(*QGraphicsAnchorLayout) {
 // index:0
 // Public
 // QGraphicsAnchor * addAnchor(class QGraphicsLayoutItem *, Qt::AnchorPoint, class QGraphicsLayoutItem *, Qt::AnchorPoint)
-func (this *QGraphicsAnchorLayout) AddAnchor(firstItem unsafe.Pointer, firstEdge int, secondItem unsafe.Pointer, secondEdge int) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout9addAnchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), firstItem, &firstEdge, secondItem, &secondEdge)
+func (this *QGraphicsAnchorLayout) AddAnchor(firstItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, firstEdge int, secondItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*444 QGraphicsAnchor **/ {
+	var convArg0 = firstItem.GetCthis()
+	var convArg2 = secondItem.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout9addAnchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &firstEdge, convArg2, &secondEdge)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQGraphicsAnchorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:84
 // index:0
 // Public
 // QGraphicsAnchor * anchor(class QGraphicsLayoutItem *, Qt::AnchorPoint, class QGraphicsLayoutItem *, Qt::AnchorPoint)
-func (this *QGraphicsAnchorLayout) Anchor(firstItem unsafe.Pointer, firstEdge int, secondItem unsafe.Pointer, secondEdge int) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout6anchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), firstItem, &firstEdge, secondItem, &secondEdge)
+func (this *QGraphicsAnchorLayout) Anchor(firstItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, firstEdge int, secondItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*444 QGraphicsAnchor **/ {
+	var convArg0 = firstItem.GetCthis()
+	var convArg2 = secondItem.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout6anchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &firstEdge, convArg2, &secondEdge)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQGraphicsAnchorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:87
 // index:0
 // Public
 // void addCornerAnchors(class QGraphicsLayoutItem *, Qt::Corner, class QGraphicsLayoutItem *, Qt::Corner)
-func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem unsafe.Pointer, firstCorner int, secondItem unsafe.Pointer, secondCorner int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout16addCornerAnchorsEP19QGraphicsLayoutItemN2Qt6CornerES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), firstItem, &firstCorner, secondItem, &secondCorner)
+func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, firstCorner int, secondItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, secondCorner int) {
+	var convArg0 = firstItem.GetCthis()
+	var convArg2 = secondItem.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout16addCornerAnchorsEP19QGraphicsLayoutItemN2Qt6CornerES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &firstCorner, convArg2, &secondCorner)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,20 +160,22 @@ func (this *QGraphicsAnchorLayout) SetSpacing(spacing float64) {
 // index:0
 // Public
 // qreal horizontalSpacing()
-func (this *QGraphicsAnchorLayout) HorizontalSpacing() interface{} {
+func (this *QGraphicsAnchorLayout) HorizontalSpacing() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:98
 // index:0
 // Public
 // qreal verticalSpacing()
-func (this *QGraphicsAnchorLayout) VerticalSpacing() interface{} {
+func (this *QGraphicsAnchorLayout) VerticalSpacing() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout15verticalSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:100
@@ -184,20 +201,23 @@ func (this *QGraphicsAnchorLayout) SetGeometry(rect *qtcore.QRectF) {
 // index:0
 // Public virtual
 // int count()
-func (this *QGraphicsAnchorLayout) Count() interface{} {
+func (this *QGraphicsAnchorLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:103
 // index:0
 // Public virtual
 // QGraphicsLayoutItem * itemAt(int)
-func (this *QGraphicsAnchorLayout) ItemAt(index int) interface{} {
+func (this *QGraphicsAnchorLayout) ItemAt(index int) *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:105
@@ -213,11 +233,13 @@ func (this *QGraphicsAnchorLayout) Invalidate() {
 // index:0
 // Protected virtual
 // QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
-func (this *QGraphicsAnchorLayout) SizeHint(which int, constraint *qtcore.QSizeF) interface{} {
+func (this *QGraphicsAnchorLayout) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
 	var convArg1 = constraint.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &which, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QShortcutEvent struct {
 }
 
 func (this *QShortcutEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQShortcutEventFromPointer(cthis unsafe.Pointer) *QShortcutEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -86,30 +90,34 @@ func DeleteQShortcutEvent(*QShortcutEvent) {
 // index:0
 // Public inline
 // const QKeySequence & key()
-func (this *QShortcutEvent) Key() interface{} {
+func (this *QShortcutEvent) Key() *QKeySequence {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QShortcutEvent3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:771
 // index:0
 // Public inline
 // int shortcutId()
-func (this *QShortcutEvent) ShortcutId() interface{} {
+func (this *QShortcutEvent) ShortcutId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QShortcutEvent10shortcutIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:772
 // index:0
 // Public inline
 // bool isAmbiguous()
-func (this *QShortcutEvent) IsAmbiguous() interface{} {
+func (this *QShortcutEvent) IsAmbiguous() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QShortcutEvent11isAmbiguousEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

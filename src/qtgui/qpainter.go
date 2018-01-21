@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qpainter.h
 // #include <qpainter.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 18
+// extern C begin: 16
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QPainter struct {
 }
 
 func (this *QPainter) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQPainterFromPointer(cthis unsafe.Pointer) *QPainter {
 	return &QPainter{&qtrt.CObject{cthis}}
@@ -75,9 +79,10 @@ func NewQPainter() *QPainter {
 // index:1
 // Public
 // void QPainter(class QPaintDevice *)
-func NewQPainter_1(arg0 unsafe.Pointer) *QPainter {
+func NewQPainter_1(arg0 *QPaintDevice /*444 QPaintDevice **/) *QPainter {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainterC2EP12QPaintDevice", ffiqt.FFI_TYPE_VOID, cthis, arg0)
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainterC2EP12QPaintDevice", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPainterFromPointer(cthis)
 	return gothis
@@ -96,48 +101,55 @@ func DeleteQPainter(*QPainter) {
 // index:0
 // Public
 // QPaintDevice * device()
-func (this *QPainter) Device() interface{} {
+func (this *QPainter) Device() *QPaintDevice /*444 QPaintDevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:130
 // index:0
 // Public
 // bool begin(class QPaintDevice *)
-func (this *QPainter) Begin(arg0 unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter5beginEP12QPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QPainter) Begin(arg0 *QPaintDevice /*444 QPaintDevice **/) bool {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter5beginEP12QPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpainter.h:131
 // index:0
 // Public
 // bool end()
-func (this *QPainter) End() interface{} {
+func (this *QPainter) End() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpainter.h:132
 // index:0
 // Public
 // bool isActive()
-func (this *QPainter) IsActive() interface{} {
+func (this *QPainter) IsActive() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter8isActiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpainter.h:134
 // index:0
 // Public
 // void initFrom(const class QPaintDevice *)
-func (this *QPainter) InitFrom(device unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter8initFromEPK12QPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), device)
+func (this *QPainter) InitFrom(device *QPaintDevice /*444 const QPaintDevice **/) {
+	var convArg0 = device.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter8initFromEPK12QPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -154,20 +166,23 @@ func (this *QPainter) SetCompositionMode(mode int) {
 // index:0
 // Public
 // QPainter::CompositionMode compositionMode()
-func (this *QPainter) CompositionMode() interface{} {
+func (this *QPainter) CompositionMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter15compositionModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpainter.h:183
 // index:0
 // Public
 // const QFont & font()
-func (this *QPainter) Font() interface{} {
+func (this *QPainter) Font() *QFont {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter4fontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:184
@@ -184,20 +199,24 @@ func (this *QPainter) SetFont(f *QFont) {
 // index:0
 // Public
 // QFontMetrics fontMetrics()
-func (this *QPainter) FontMetrics() interface{} {
+func (this *QPainter) FontMetrics() *QFontMetrics /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter11fontMetricsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQFontMetricsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:187
 // index:0
 // Public
 // QFontInfo fontInfo()
-func (this *QPainter) FontInfo() interface{} {
+func (this *QPainter) FontInfo() *QFontInfo /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter8fontInfoEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQFontInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:189
@@ -233,10 +252,12 @@ func (this *QPainter) SetPen_2(style int) {
 // index:0
 // Public
 // const QPen & pen()
-func (this *QPainter) Pen() interface{} {
+func (this *QPainter) Pen() *QPen {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter3penEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPenFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:194
@@ -262,10 +283,12 @@ func (this *QPainter) SetBrush_1(style int) {
 // index:0
 // Public
 // const QBrush & brush()
-func (this *QPainter) Brush() interface{} {
+func (this *QPainter) Brush() *QBrush {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter5brushEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:199
@@ -281,20 +304,23 @@ func (this *QPainter) SetBackgroundMode(mode int) {
 // index:0
 // Public
 // Qt::BGMode backgroundMode()
-func (this *QPainter) BackgroundMode() interface{} {
+func (this *QPainter) BackgroundMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter14backgroundModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpainter.h:202
 // index:0
 // Public
 // QPoint brushOrigin()
-func (this *QPainter) BrushOrigin() interface{} {
+func (this *QPainter) BrushOrigin() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter11brushOriginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:203
@@ -340,20 +366,23 @@ func (this *QPainter) SetBackground(bg *QBrush) {
 // index:0
 // Public
 // const QBrush & background()
-func (this *QPainter) Background() interface{} {
+func (this *QPainter) Background() *QBrush {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter10backgroundEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:210
 // index:0
 // Public
 // qreal opacity()
-func (this *QPainter) Opacity() interface{} {
+func (this *QPainter) Opacity() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter7opacityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpainter.h:211
@@ -369,20 +398,24 @@ func (this *QPainter) SetOpacity(opacity float64) {
 // index:0
 // Public
 // QRegion clipRegion()
-func (this *QPainter) ClipRegion() interface{} {
+func (this *QPainter) ClipRegion() *QRegion /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter10clipRegionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:215
 // index:0
 // Public
 // QPainterPath clipPath()
-func (this *QPainter) ClipPath() interface{} {
+func (this *QPainter) ClipPath() *QPainterPath /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter8clipPathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:217
@@ -447,20 +480,23 @@ func (this *QPainter) SetClipping(enable bool) {
 // index:0
 // Public
 // bool hasClipping()
-func (this *QPainter) HasClipping() interface{} {
+func (this *QPainter) HasClipping() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter11hasClippingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpainter.h:228
 // index:0
 // Public
 // QRectF clipBoundingRect()
-func (this *QPainter) ClipBoundingRect() interface{} {
+func (this *QPainter) ClipBoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter16clipBoundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:230
@@ -495,20 +531,24 @@ func (this *QPainter) SetMatrix(matrix *QMatrix, combine bool) {
 // index:0
 // Public
 // const QMatrix & matrix()
-func (this *QPainter) Matrix() interface{} {
+func (this *QPainter) Matrix() *QMatrix {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter6matrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:236
 // index:0
 // Public
 // const QMatrix & deviceMatrix()
-func (this *QPainter) DeviceMatrix() interface{} {
+func (this *QPainter) DeviceMatrix() *QMatrix {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter12deviceMatrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:237
@@ -534,20 +574,24 @@ func (this *QPainter) SetTransform(transform *QTransform, combine bool) {
 // index:0
 // Public
 // const QTransform & transform()
-func (this *QPainter) Transform() interface{} {
+func (this *QPainter) Transform() *QTransform {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter9transformEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:241
 // index:0
 // Public
 // const QTransform & deviceTransform()
-func (this *QPainter) DeviceTransform() interface{} {
+func (this *QPainter) DeviceTransform() *QTransform {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter15deviceTransformEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:242
@@ -573,10 +617,12 @@ func (this *QPainter) SetWorldMatrix(matrix *QMatrix, combine bool) {
 // index:0
 // Public
 // const QMatrix & worldMatrix()
-func (this *QPainter) WorldMatrix() interface{} {
+func (this *QPainter) WorldMatrix() *QMatrix {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter11worldMatrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:247
@@ -593,30 +639,36 @@ func (this *QPainter) SetWorldTransform(matrix *QTransform, combine bool) {
 // index:0
 // Public
 // const QTransform & worldTransform()
-func (this *QPainter) WorldTransform() interface{} {
+func (this *QPainter) WorldTransform() *QTransform {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter14worldTransformEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:250
 // index:0
 // Public
 // QMatrix combinedMatrix()
-func (this *QPainter) CombinedMatrix() interface{} {
+func (this *QPainter) CombinedMatrix() *QMatrix /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter14combinedMatrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:251
 // index:0
 // Public
 // QTransform combinedTransform()
-func (this *QPainter) CombinedTransform() interface{} {
+func (this *QPainter) CombinedTransform() *QTransform /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter17combinedTransformEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:253
@@ -632,10 +684,11 @@ func (this *QPainter) SetMatrixEnabled(enabled bool) {
 // index:0
 // Public
 // bool matrixEnabled()
-func (this *QPainter) MatrixEnabled() interface{} {
+func (this *QPainter) MatrixEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter13matrixEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpainter.h:256
@@ -651,10 +704,11 @@ func (this *QPainter) SetWorldMatrixEnabled(enabled bool) {
 // index:0
 // Public
 // bool worldMatrixEnabled()
-func (this *QPainter) WorldMatrixEnabled() interface{} {
+func (this *QPainter) WorldMatrixEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter18worldMatrixEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpainter.h:259
@@ -717,10 +771,12 @@ func (this *QPainter) Translate_2(dx float64, dy float64) {
 // index:0
 // Public
 // QRect window()
-func (this *QPainter) Window() interface{} {
+func (this *QPainter) Window() *qtcore.QRect /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:268
@@ -746,10 +802,12 @@ func (this *QPainter) SetWindow_1(x int, y int, w int, h int) {
 // index:0
 // Public
 // QRect viewport()
-func (this *QPainter) Viewport() interface{} {
+func (this *QPainter) Viewport() *qtcore.QRect /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter8viewportEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:272
@@ -784,10 +842,11 @@ func (this *QPainter) SetViewTransformEnabled(enable bool) {
 // index:0
 // Public
 // bool viewTransformEnabled()
-func (this *QPainter) ViewTransformEnabled() interface{} {
+func (this *QPainter) ViewTransformEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter20viewTransformEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpainter.h:279
@@ -855,8 +914,9 @@ func (this *QPainter) DrawPoint_2(x int, y int) {
 // index:0
 // Public
 // void drawPoints(const class QPointF *, int)
-func (this *QPainter) DrawPoints(points unsafe.Pointer, pointCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter10drawPointsEPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), points, &pointCount)
+func (this *QPainter) DrawPoints(points *qtcore.QPointF /*444 const QPointF **/, pointCount int) {
+	var convArg0 = points.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter10drawPointsEPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -874,8 +934,9 @@ func (this *QPainter) DrawPoints_1(points *QPolygonF) {
 // index:2
 // Public
 // void drawPoints(const class QPoint *, int)
-func (this *QPainter) DrawPoints_2(points unsafe.Pointer, pointCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter10drawPointsEPK6QPointi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), points, &pointCount)
+func (this *QPainter) DrawPoints_2(points *qtcore.QPoint /*444 const QPoint **/, pointCount int) {
+	var convArg0 = points.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter10drawPointsEPK6QPointi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -944,8 +1005,9 @@ func (this *QPainter) DrawLine_4(p1 *qtcore.QPointF, p2 *qtcore.QPointF) {
 // index:0
 // Public
 // void drawLines(const class QLineF *, int)
-func (this *QPainter) DrawLines(lines unsafe.Pointer, lineCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawLinesEPK6QLineFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), lines, &lineCount)
+func (this *QPainter) DrawLines(lines *qtcore.QLineF /*444 const QLineF **/, lineCount int) {
+	var convArg0 = lines.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawLinesEPK6QLineFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &lineCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -953,8 +1015,9 @@ func (this *QPainter) DrawLines(lines unsafe.Pointer, lineCount int) {
 // index:1
 // Public
 // void drawLines(const class QPointF *, int)
-func (this *QPainter) DrawLines_1(pointPairs unsafe.Pointer, lineCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawLinesEPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pointPairs, &lineCount)
+func (this *QPainter) DrawLines_1(pointPairs *qtcore.QPointF /*444 const QPointF **/, lineCount int) {
+	var convArg0 = pointPairs.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawLinesEPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &lineCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -962,8 +1025,9 @@ func (this *QPainter) DrawLines_1(pointPairs unsafe.Pointer, lineCount int) {
 // index:2
 // Public
 // void drawLines(const class QLine *, int)
-func (this *QPainter) DrawLines_2(lines unsafe.Pointer, lineCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawLinesEPK5QLinei", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), lines, &lineCount)
+func (this *QPainter) DrawLines_2(lines *qtcore.QLine /*444 const QLine **/, lineCount int) {
+	var convArg0 = lines.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawLinesEPK5QLinei", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &lineCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -971,8 +1035,9 @@ func (this *QPainter) DrawLines_2(lines unsafe.Pointer, lineCount int) {
 // index:3
 // Public
 // void drawLines(const class QPoint *, int)
-func (this *QPainter) DrawLines_3(pointPairs unsafe.Pointer, lineCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawLinesEPK6QPointi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pointPairs, &lineCount)
+func (this *QPainter) DrawLines_3(pointPairs *qtcore.QPoint /*444 const QPoint **/, lineCount int) {
+	var convArg0 = pointPairs.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawLinesEPK6QPointi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &lineCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1009,8 +1074,9 @@ func (this *QPainter) DrawRect_2(rect *qtcore.QRect) {
 // index:0
 // Public
 // void drawRects(const class QRectF *, int)
-func (this *QPainter) DrawRects(rects unsafe.Pointer, rectCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawRectsEPK6QRectFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rects, &rectCount)
+func (this *QPainter) DrawRects(rects *qtcore.QRectF /*444 const QRectF **/, rectCount int) {
+	var convArg0 = rects.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawRectsEPK6QRectFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &rectCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1018,8 +1084,9 @@ func (this *QPainter) DrawRects(rects unsafe.Pointer, rectCount int) {
 // index:1
 // Public
 // void drawRects(const class QRect *, int)
-func (this *QPainter) DrawRects_1(rects unsafe.Pointer, rectCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawRectsEPK5QRecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rects, &rectCount)
+func (this *QPainter) DrawRects_1(rects *qtcore.QRect /*444 const QRect **/, rectCount int) {
+	var convArg0 = rects.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter9drawRectsEPK5QRecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &rectCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1076,8 +1143,9 @@ func (this *QPainter) DrawEllipse_4(center *qtcore.QPoint, rx int, ry int) {
 // index:0
 // Public
 // void drawPolyline(const class QPointF *, int)
-func (this *QPainter) DrawPolyline(points unsafe.Pointer, pointCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter12drawPolylineEPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), points, &pointCount)
+func (this *QPainter) DrawPolyline(points *qtcore.QPointF /*444 const QPointF **/, pointCount int) {
+	var convArg0 = points.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter12drawPolylineEPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1095,8 +1163,9 @@ func (this *QPainter) DrawPolyline_1(polyline *QPolygonF) {
 // index:2
 // Public
 // void drawPolyline(const class QPoint *, int)
-func (this *QPainter) DrawPolyline_2(points unsafe.Pointer, pointCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter12drawPolylineEPK6QPointi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), points, &pointCount)
+func (this *QPainter) DrawPolyline_2(points *qtcore.QPoint /*444 const QPoint **/, pointCount int) {
+	var convArg0 = points.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter12drawPolylineEPK6QPointi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1114,8 +1183,9 @@ func (this *QPainter) DrawPolyline_3(polygon *QPolygon) {
 // index:0
 // Public
 // void drawPolygon(const class QPointF *, int, Qt::FillRule)
-func (this *QPainter) DrawPolygon(points unsafe.Pointer, pointCount int, fillRule int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter11drawPolygonEPK7QPointFiN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), points, &pointCount, &fillRule)
+func (this *QPainter) DrawPolygon(points *qtcore.QPointF /*444 const QPointF **/, pointCount int, fillRule int) {
+	var convArg0 = points.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter11drawPolygonEPK7QPointFiN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount, &fillRule)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1133,8 +1203,9 @@ func (this *QPainter) DrawPolygon_1(polygon *QPolygonF, fillRule int) {
 // index:2
 // Public
 // void drawPolygon(const class QPoint *, int, Qt::FillRule)
-func (this *QPainter) DrawPolygon_2(points unsafe.Pointer, pointCount int, fillRule int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter11drawPolygonEPK6QPointiN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), points, &pointCount, &fillRule)
+func (this *QPainter) DrawPolygon_2(points *qtcore.QPoint /*444 const QPoint **/, pointCount int, fillRule int) {
+	var convArg0 = points.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter11drawPolygonEPK6QPointiN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount, &fillRule)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1152,8 +1223,9 @@ func (this *QPainter) DrawPolygon_3(polygon *QPolygon, fillRule int) {
 // index:0
 // Public
 // void drawConvexPolygon(const class QPointF *, int)
-func (this *QPainter) DrawConvexPolygon(points unsafe.Pointer, pointCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter17drawConvexPolygonEPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), points, &pointCount)
+func (this *QPainter) DrawConvexPolygon(points *qtcore.QPointF /*444 const QPointF **/, pointCount int) {
+	var convArg0 = points.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter17drawConvexPolygonEPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1171,8 +1243,9 @@ func (this *QPainter) DrawConvexPolygon_1(polygon *QPolygonF) {
 // index:2
 // Public
 // void drawConvexPolygon(const class QPoint *, int)
-func (this *QPainter) DrawConvexPolygon_2(points unsafe.Pointer, pointCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter17drawConvexPolygonEPK6QPointi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), points, &pointCount)
+func (this *QPainter) DrawConvexPolygon_2(points *qtcore.QPoint /*444 const QPoint **/, pointCount int) {
+	var convArg0 = points.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter17drawConvexPolygonEPK6QPointi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1575,10 +1648,11 @@ func (this *QPainter) SetLayoutDirection(direction int) {
 // index:0
 // Public
 // Qt::LayoutDirection layoutDirection()
-func (this *QPainter) LayoutDirection() interface{} {
+func (this *QPainter) LayoutDirection() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter15layoutDirectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpainter.h:406
@@ -1671,10 +1745,11 @@ func (this *QPainter) DrawText_3(p *qtcore.QPointF, str *qtcore.QString, tf int,
 // index:4
 // Public
 // void drawText(const class QRectF &, int, const class QString &, class QRectF *)
-func (this *QPainter) DrawText_4(r *qtcore.QRectF, flags int, text *qtcore.QString, br unsafe.Pointer) {
+func (this *QPainter) DrawText_4(r *qtcore.QRectF, flags int, text *qtcore.QString, br *qtcore.QRectF /*444 QRectF **/) {
 	var convArg0 = r.GetCthis()
 	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter8drawTextERK6QRectFiRK7QStringPS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &flags, convArg2, br)
+	var convArg3 = br.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter8drawTextERK6QRectFiRK7QStringPS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &flags, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1682,10 +1757,11 @@ func (this *QPainter) DrawText_4(r *qtcore.QRectF, flags int, text *qtcore.QStri
 // index:5
 // Public
 // void drawText(const class QRect &, int, const class QString &, class QRect *)
-func (this *QPainter) DrawText_5(r *qtcore.QRect, flags int, text *qtcore.QString, br unsafe.Pointer) {
+func (this *QPainter) DrawText_5(r *qtcore.QRect, flags int, text *qtcore.QString, br *qtcore.QRect /*444 QRect **/) {
 	var convArg0 = r.GetCthis()
 	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &flags, convArg2, br)
+	var convArg3 = br.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &flags, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1693,9 +1769,10 @@ func (this *QPainter) DrawText_5(r *qtcore.QRect, flags int, text *qtcore.QStrin
 // index:6
 // Public inline
 // void drawText(int, int, int, int, int, const class QString &, class QRect *)
-func (this *QPainter) DrawText_6(x int, y int, w int, h int, flags int, text *qtcore.QString, br unsafe.Pointer) {
+func (this *QPainter) DrawText_6(x int, y int, w int, h int, flags int, text *qtcore.QString, br *qtcore.QRect /*444 QRect **/) {
 	var convArg5 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h, &flags, convArg5, br)
+	var convArg6 = br.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h, &flags, convArg5, convArg6)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1715,48 +1792,56 @@ func (this *QPainter) DrawText_7(r *qtcore.QRectF, text *qtcore.QString, o *QTex
 // index:0
 // Public
 // QRectF boundingRect(const class QRectF &, int, const class QString &)
-func (this *QPainter) BoundingRect(rect *qtcore.QRectF, flags int, text *qtcore.QString) interface{} {
+func (this *QPainter) BoundingRect(rect *qtcore.QRectF, flags int, text *qtcore.QString) *qtcore.QRectF /*123*/ {
 	var convArg0 = rect.GetCthis()
 	var convArg2 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter12boundingRectERK6QRectFiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &flags, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:426
 // index:1
 // Public
 // QRect boundingRect(const class QRect &, int, const class QString &)
-func (this *QPainter) BoundingRect_1(rect *qtcore.QRect, flags int, text *qtcore.QString) interface{} {
+func (this *QPainter) BoundingRect_1(rect *qtcore.QRect, flags int, text *qtcore.QString) *qtcore.QRect /*123*/ {
 	var convArg0 = rect.GetCthis()
 	var convArg2 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter12boundingRectERK5QRectiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &flags, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:427
 // index:2
 // Public inline
 // QRect boundingRect(int, int, int, int, int, const class QString &)
-func (this *QPainter) BoundingRect_2(x int, y int, w int, h int, flags int, text *qtcore.QString) interface{} {
+func (this *QPainter) BoundingRect_2(x int, y int, w int, h int, flags int, text *qtcore.QString) *qtcore.QRect /*123*/ {
 	var convArg5 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter12boundingRectEiiiiiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h, &flags, convArg5)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:429
 // index:3
 // Public
 // QRectF boundingRect(const class QRectF &, const class QString &, const class QTextOption &)
-func (this *QPainter) BoundingRect_3(rect *qtcore.QRectF, text *qtcore.QString, o *QTextOption) interface{} {
+func (this *QPainter) BoundingRect_3(rect *qtcore.QRectF, text *qtcore.QString, o *QTextOption) *qtcore.QRectF /*123*/ {
 	var convArg0 = rect.GetCthis()
 	var convArg1 = text.GetCthis()
 	var convArg2 = o.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:431
@@ -1955,41 +2040,45 @@ func (this *QPainter) SetRenderHint(hint int, on bool) {
 // index:0
 // Public
 // QPainter::RenderHints renderHints()
-func (this *QPainter) RenderHints() interface{} {
+func (this *QPainter) RenderHints() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter11renderHintsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpainter.h:458
 // index:0
 // Public inline
 // bool testRenderHint(enum QPainter::RenderHint)
-func (this *QPainter) TestRenderHint(hint int) interface{} {
+func (this *QPainter) TestRenderHint(hint int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter14testRenderHintENS_10RenderHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &hint)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpainter.h:460
 // index:0
 // Public
 // QPaintEngine * paintEngine()
-func (this *QPainter) PaintEngine() interface{} {
+func (this *QPainter) PaintEngine() *QPaintEngine /*444 QPaintEngine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPainter11paintEngineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPaintEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpainter.h:462
 // index:0
 // Public static
 // void setRedirected(const class QPaintDevice *, class QPaintDevice *, const class QPoint &)
-func (this *QPainter) SetRedirected(device unsafe.Pointer, replacement unsafe.Pointer, offset *qtcore.QPoint) {
+func (this *QPainter) SetRedirected(device *QPaintDevice /*444 const QPaintDevice **/, replacement *QPaintDevice /*444 QPaintDevice **/, offset *qtcore.QPoint) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter13setRedirectedEPK12QPaintDevicePS0_RK6QPoint", ffiqt.FFI_TYPE_POINTER, device, replacement, offset)
 	gopp.ErrPrint(err, rv)
 }
-func QPainter_SetRedirected(device unsafe.Pointer, replacement unsafe.Pointer, offset *qtcore.QPoint) {
+func QPainter_SetRedirected(device *QPaintDevice /*444 const QPaintDevice **/, replacement *QPaintDevice /*444 QPaintDevice **/, offset *qtcore.QPoint) {
 	var nilthis *QPainter
 	nilthis.SetRedirected(device, replacement, offset)
 }
@@ -1998,25 +2087,28 @@ func QPainter_SetRedirected(device unsafe.Pointer, replacement unsafe.Pointer, o
 // index:0
 // Public static
 // QPaintDevice * redirected(const class QPaintDevice *, class QPoint *)
-func (this *QPainter) Redirected(device unsafe.Pointer, offset unsafe.Pointer) interface{} {
+func (this *QPainter) Redirected(device *QPaintDevice /*444 const QPaintDevice **/, offset *qtcore.QPoint /*444 QPoint **/) *QPaintDevice /*444 QPaintDevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint", ffiqt.FFI_TYPE_POINTER, device, offset)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QPainter_Redirected(device unsafe.Pointer, offset unsafe.Pointer) {
+func QPainter_Redirected(device *QPaintDevice /*444 const QPaintDevice **/, offset *qtcore.QPoint /*444 QPoint **/) *QPaintDevice /*444 QPaintDevice **/ {
 	var nilthis *QPainter
-	nilthis.Redirected(device, offset)
+	rv := nilthis.Redirected(device, offset)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpainter.h:465
 // index:0
 // Public static
 // void restoreRedirected(const class QPaintDevice *)
-func (this *QPainter) RestoreRedirected(device unsafe.Pointer) {
+func (this *QPainter) RestoreRedirected(device *QPaintDevice /*444 const QPaintDevice **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter17restoreRedirectedEPK12QPaintDevice", ffiqt.FFI_TYPE_POINTER, device)
 	gopp.ErrPrint(err, rv)
 }
-func QPainter_RestoreRedirected(device unsafe.Pointer) {
+func QPainter_RestoreRedirected(device *QPaintDevice /*444 const QPaintDevice **/) {
 	var nilthis *QPainter
 	nilthis.RestoreRedirected(device)
 }

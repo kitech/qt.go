@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qpoint.h
 // #include <qpoint.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QPointF struct {
 }
 
 func (this *QPointF) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQPointFFromPointer(cthis unsafe.Pointer) *QPointF {
 	return &QPointF{&qtrt.CObject{cthis}}
@@ -96,40 +100,44 @@ func NewQPointF_2(xpos float64, ypos float64) *QPointF {
 // index:0
 // Public inline
 // qreal manhattanLength()
-func (this *QPointF) ManhattanLength() interface{} {
+func (this *QPointF) ManhattanLength() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF15manhattanLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qpoint.h:228
 // index:0
 // Public inline
 // bool isNull()
-func (this *QPointF) IsNull() interface{} {
+func (this *QPointF) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qpoint.h:230
 // index:0
 // Public inline
 // qreal x()
-func (this *QPointF) X() interface{} {
+func (this *QPointF) X() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qpoint.h:231
 // index:0
 // Public inline
 // qreal y()
-func (this *QPointF) Y() interface{} {
+func (this *QPointF) Y() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qpoint.h:232
@@ -154,44 +162,50 @@ func (this *QPointF) SetY(y float64) {
 // index:0
 // Public inline
 // qreal & rx()
-func (this *QPointF) Rx() interface{} {
+func (this *QPointF) Rx() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF2rxEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 3331
 }
 
 // /usr/include/qt/QtCore/qpoint.h:236
 // index:0
 // Public inline
 // qreal & ry()
-func (this *QPointF) Ry() interface{} {
+func (this *QPointF) Ry() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF2ryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 3331
 }
 
 // /usr/include/qt/QtCore/qpoint.h:243
 // index:0
 // Public static inline
 // qreal dotProduct(const class QPointF &, const class QPointF &)
-func (this *QPointF) DotProduct(p1 *QPointF, p2 *QPointF) interface{} {
+func (this *QPointF) DotProduct(p1 *QPointF, p2 *QPointF) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, p1, p2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return float64(rv) // 222
 }
-func QPointF_DotProduct(p1 *QPointF, p2 *QPointF) {
+func QPointF_DotProduct(p1 *QPointF, p2 *QPointF) float64 {
 	var nilthis *QPointF
-	nilthis.DotProduct(p1, p2)
+	rv := nilthis.DotProduct(p1, p2)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qpoint.h:256
 // index:0
 // Public inline
 // QPoint toPoint()
-func (this *QPointF) ToPoint() interface{} {
+func (this *QPointF) ToPoint() *QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF7toPointEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

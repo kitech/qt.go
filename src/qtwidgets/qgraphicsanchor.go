@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h
 // #include <qgraphicsanchorlayout.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGraphicsAnchor struct {
 }
 
 func (this *QGraphicsAnchor) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQGraphicsAnchorFromPointer(cthis unsafe.Pointer) *QGraphicsAnchor {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -68,10 +72,12 @@ func NewQGraphicsAnchorFromPointer(cthis unsafe.Pointer) *QGraphicsAnchor {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGraphicsAnchor) MetaObject() interface{} {
+func (this *QGraphicsAnchor) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:61
@@ -96,10 +102,11 @@ func (this *QGraphicsAnchor) UnsetSpacing() {
 // index:0
 // Public
 // qreal spacing()
-func (this *QGraphicsAnchor) Spacing() interface{} {
+func (this *QGraphicsAnchor) Spacing() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor7spacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:64
@@ -115,10 +122,11 @@ func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
 // index:0
 // Public
 // QSizePolicy::Policy sizePolicy()
-func (this *QGraphicsAnchor) SizePolicy() interface{} {
+func (this *QGraphicsAnchor) SizePolicy() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10sizePolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:66

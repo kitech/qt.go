@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qvalidator.h
 // #include <qvalidator.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QRegularExpressionValidator struct {
 }
 
 func (this *QRegularExpressionValidator) GetCthis() unsafe.Pointer {
-	return this.QValidator.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QValidator.GetCthis()
+	}
 }
 func NewQRegularExpressionValidatorFromPointer(cthis unsafe.Pointer) *QRegularExpressionValidator {
 	bcthis0 := NewQValidatorFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQRegularExpressionValidatorFromPointer(cthis unsafe.Pointer) *QRegularEx
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QRegularExpressionValidator) MetaObject() interface{} {
+func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:207
 // index:0
 // Public
 // void QRegularExpressionValidator(class QObject *)
-func NewQRegularExpressionValidator(parent unsafe.Pointer) *QRegularExpressionValidator {
+func NewQRegularExpressionValidator(parent *qtcore.QObject /*444 QObject **/) *QRegularExpressionValidator {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegularExpressionValidatorFromPointer(cthis)
 	return gothis
@@ -86,10 +93,11 @@ func NewQRegularExpressionValidator(parent unsafe.Pointer) *QRegularExpressionVa
 // index:1
 // Public
 // void QRegularExpressionValidator(const class QRegularExpression &, class QObject *)
-func NewQRegularExpressionValidator_1(re *qtcore.QRegularExpression, parent unsafe.Pointer) *QRegularExpressionValidator {
+func NewQRegularExpressionValidator_1(re *qtcore.QRegularExpression, parent *qtcore.QObject /*444 QObject **/) *QRegularExpressionValidator {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = re.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2ERK18QRegularExpressionP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2ERK18QRegularExpressionP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegularExpressionValidatorFromPointer(cthis)
 	return gothis
@@ -108,21 +116,24 @@ func DeleteQRegularExpressionValidator(*QRegularExpressionValidator) {
 // index:0
 // Public virtual
 // QValidator::State validate(class QString &, int &)
-func (this *QRegularExpressionValidator) Validate(input *qtcore.QString, pos int) interface{} {
+func (this *QRegularExpressionValidator) Validate(input *qtcore.QString, pos int) int {
 	var convArg0 = input.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:213
 // index:0
 // Public
 // QRegularExpression regularExpression()
-func (this *QRegularExpressionValidator) RegularExpression() interface{} {
+func (this *QRegularExpressionValidator) RegularExpression() *qtcore.QRegularExpression /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator17regularExpressionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:216

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qmetaobject.h
 // #include <qmetaobject.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QMetaClassInfo struct {
 }
 
 func (this *QMetaClassInfo) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQMetaClassInfoFromPointer(cthis unsafe.Pointer) *QMetaClassInfo {
 	return &QMetaClassInfo{&qtrt.CObject{cthis}}
@@ -71,30 +75,34 @@ func NewQMetaClassInfo() *QMetaClassInfo {
 // index:0
 // Public
 // const char * name()
-func (this *QMetaClassInfo) Name() interface{} {
+func (this *QMetaClassInfo) Name() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return qtrt.GoStringI(rv)
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:305
 // index:0
 // Public
 // const char * value()
-func (this *QMetaClassInfo) Value() interface{} {
+func (this *QMetaClassInfo) Value() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return qtrt.GoStringI(rv)
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:306
 // index:0
 // Public inline
 // const QMetaObject * enclosingMetaObject()
-func (this *QMetaClassInfo) EnclosingMetaObject() interface{} {
+func (this *QMetaClassInfo) EnclosingMetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo19enclosingMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

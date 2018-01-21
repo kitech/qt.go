@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtextdocument.h
 // #include <qtextdocument.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QTextDocument struct {
 }
 
 func (this *QTextDocument) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQTextDocumentFromPointer(cthis unsafe.Pointer) *QTextDocument {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQTextDocumentFromPointer(cthis unsafe.Pointer) *QTextDocument {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTextDocument) MetaObject() interface{} {
+func (this *QTextDocument) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:119
 // index:0
 // Public
 // void QTextDocument(class QObject *)
-func NewQTextDocument(parent unsafe.Pointer) *QTextDocument {
+func NewQTextDocument(parent *qtcore.QObject /*444 QObject **/) *QTextDocument {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocumentC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocumentC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextDocumentFromPointer(cthis)
 	return gothis
@@ -86,10 +93,11 @@ func NewQTextDocument(parent unsafe.Pointer) *QTextDocument {
 // index:1
 // Public
 // void QTextDocument(const class QString &, class QObject *)
-func NewQTextDocument_1(text *qtcore.QString, parent unsafe.Pointer) *QTextDocument {
+func NewQTextDocument_1(text *qtcore.QString, parent *qtcore.QObject /*444 QObject **/) *QTextDocument {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocumentC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocumentC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextDocumentFromPointer(cthis)
 	return gothis
@@ -108,20 +116,24 @@ func DeleteQTextDocument(*QTextDocument) {
 // index:0
 // Public
 // QTextDocument * clone(class QObject *)
-func (this *QTextDocument) Clone(parent unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument5cloneEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), parent)
+func (this *QTextDocument) Clone(parent *qtcore.QObject /*444 QObject **/) *QTextDocument /*444 QTextDocument **/ {
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument5cloneEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:125
 // index:0
 // Public
 // bool isEmpty()
-func (this *QTextDocument) IsEmpty() interface{} {
+func (this *QTextDocument) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:126
@@ -146,68 +158,75 @@ func (this *QTextDocument) SetUndoRedoEnabled(enable bool) {
 // index:0
 // Public
 // bool isUndoRedoEnabled()
-func (this *QTextDocument) IsUndoRedoEnabled() interface{} {
+func (this *QTextDocument) IsUndoRedoEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument17isUndoRedoEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:131
 // index:0
 // Public
 // bool isUndoAvailable()
-func (this *QTextDocument) IsUndoAvailable() interface{} {
+func (this *QTextDocument) IsUndoAvailable() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument15isUndoAvailableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:132
 // index:0
 // Public
 // bool isRedoAvailable()
-func (this *QTextDocument) IsRedoAvailable() interface{} {
+func (this *QTextDocument) IsRedoAvailable() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument15isRedoAvailableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:134
 // index:0
 // Public
 // int availableUndoSteps()
-func (this *QTextDocument) AvailableUndoSteps() interface{} {
+func (this *QTextDocument) AvailableUndoSteps() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument18availableUndoStepsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:135
 // index:0
 // Public
 // int availableRedoSteps()
-func (this *QTextDocument) AvailableRedoSteps() interface{} {
+func (this *QTextDocument) AvailableRedoSteps() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument18availableRedoStepsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:137
 // index:0
 // Public
 // int revision()
-func (this *QTextDocument) Revision() interface{} {
+func (this *QTextDocument) Revision() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument8revisionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:139
 // index:0
 // Public
 // void setDocumentLayout(class QAbstractTextDocumentLayout *)
-func (this *QTextDocument) SetDocumentLayout(layout unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument17setDocumentLayoutEP27QAbstractTextDocumentLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), layout)
+func (this *QTextDocument) SetDocumentLayout(layout *QAbstractTextDocumentLayout /*444 QAbstractTextDocumentLayout **/) {
+	var convArg0 = layout.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument17setDocumentLayoutEP27QAbstractTextDocumentLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -215,10 +234,12 @@ func (this *QTextDocument) SetDocumentLayout(layout unsafe.Pointer) {
 // index:0
 // Public
 // QAbstractTextDocumentLayout * documentLayout()
-func (this *QTextDocument) DocumentLayout() interface{} {
+func (this *QTextDocument) DocumentLayout() *QAbstractTextDocumentLayout /*444 QAbstractTextDocumentLayout **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument14documentLayoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQAbstractTextDocumentLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:146
@@ -235,21 +256,25 @@ func (this *QTextDocument) SetMetaInformation(info int, arg1 *qtcore.QString) {
 // index:0
 // Public
 // QString metaInformation(enum QTextDocument::MetaInformation)
-func (this *QTextDocument) MetaInformation(info int) interface{} {
+func (this *QTextDocument) MetaInformation(info int) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument15metaInformationENS_15MetaInformationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &info)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:150
 // index:0
 // Public
 // QString toHtml(const class QByteArray &)
-func (this *QTextDocument) ToHtml(encoding *qtcore.QByteArray) interface{} {
+func (this *QTextDocument) ToHtml(encoding *qtcore.QByteArray) *qtcore.QString /*123*/ {
 	var convArg0 = encoding.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument6toHtmlERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:151
@@ -266,20 +291,24 @@ func (this *QTextDocument) SetHtml(html *qtcore.QString) {
 // index:0
 // Public
 // QString toRawText()
-func (this *QTextDocument) ToRawText() interface{} {
+func (this *QTextDocument) ToRawText() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument9toRawTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:155
 // index:0
 // Public
 // QString toPlainText()
-func (this *QTextDocument) ToPlainText() interface{} {
+func (this *QTextDocument) ToPlainText() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument11toPlainTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:156
@@ -296,121 +325,145 @@ func (this *QTextDocument) SetPlainText(text *qtcore.QString) {
 // index:0
 // Public
 // QChar characterAt(int)
-func (this *QTextDocument) CharacterAt(pos int) interface{} {
+func (this *QTextDocument) CharacterAt(pos int) *qtcore.QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument11characterAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pos)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:181
 // index:0
 // Public
 // QTextFrame * frameAt(int)
-func (this *QTextDocument) FrameAt(pos int) interface{} {
+func (this *QTextDocument) FrameAt(pos int) *QTextFrame /*444 QTextFrame **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument7frameAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pos)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextFrameFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:182
 // index:0
 // Public
 // QTextFrame * rootFrame()
-func (this *QTextDocument) RootFrame() interface{} {
+func (this *QTextDocument) RootFrame() *QTextFrame /*444 QTextFrame **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument9rootFrameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextFrameFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:184
 // index:0
 // Public
 // QTextObject * object(int)
-func (this *QTextDocument) Object(objectIndex int) interface{} {
+func (this *QTextDocument) Object(objectIndex int) *QTextObject /*444 QTextObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument6objectEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &objectIndex)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:185
 // index:0
 // Public
 // QTextObject * objectForFormat(const class QTextFormat &)
-func (this *QTextDocument) ObjectForFormat(arg0 *QTextFormat) interface{} {
+func (this *QTextDocument) ObjectForFormat(arg0 *QTextFormat) *QTextObject /*444 QTextObject **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument15objectForFormatERK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:187
 // index:0
 // Public
 // QTextBlock findBlock(int)
-func (this *QTextDocument) FindBlock(pos int) interface{} {
+func (this *QTextDocument) FindBlock(pos int) *QTextBlock /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument9findBlockEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pos)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:188
 // index:0
 // Public
 // QTextBlock findBlockByNumber(int)
-func (this *QTextDocument) FindBlockByNumber(blockNumber int) interface{} {
+func (this *QTextDocument) FindBlockByNumber(blockNumber int) *QTextBlock /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument17findBlockByNumberEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &blockNumber)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:189
 // index:0
 // Public
 // QTextBlock findBlockByLineNumber(int)
-func (this *QTextDocument) FindBlockByLineNumber(blockNumber int) interface{} {
+func (this *QTextDocument) FindBlockByLineNumber(blockNumber int) *QTextBlock /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument21findBlockByLineNumberEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &blockNumber)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:190
 // index:0
 // Public
 // QTextBlock begin()
-func (this *QTextDocument) Begin() interface{} {
+func (this *QTextDocument) Begin() *QTextBlock /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:191
 // index:0
 // Public
 // QTextBlock end()
-func (this *QTextDocument) End() interface{} {
+func (this *QTextDocument) End() *QTextBlock /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:193
 // index:0
 // Public
 // QTextBlock firstBlock()
-func (this *QTextDocument) FirstBlock() interface{} {
+func (this *QTextDocument) FirstBlock() *QTextBlock /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument10firstBlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:194
 // index:0
 // Public
 // QTextBlock lastBlock()
-func (this *QTextDocument) LastBlock() interface{} {
+func (this *QTextDocument) LastBlock() *QTextBlock /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument9lastBlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:196
@@ -427,10 +480,12 @@ func (this *QTextDocument) SetPageSize(size *qtcore.QSizeF) {
 // index:0
 // Public
 // QSizeF pageSize()
-func (this *QTextDocument) PageSize() interface{} {
+func (this *QTextDocument) PageSize() *qtcore.QSizeF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument8pageSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:199
@@ -447,38 +502,43 @@ func (this *QTextDocument) SetDefaultFont(font *QFont) {
 // index:0
 // Public
 // QFont defaultFont()
-func (this *QTextDocument) DefaultFont() interface{} {
+func (this *QTextDocument) DefaultFont() *QFont /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument11defaultFontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:202
 // index:0
 // Public
 // int pageCount()
-func (this *QTextDocument) PageCount() interface{} {
+func (this *QTextDocument) PageCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument9pageCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:204
 // index:0
 // Public
 // bool isModified()
-func (this *QTextDocument) IsModified() interface{} {
+func (this *QTextDocument) IsModified() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument10isModifiedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:206
 // index:0
 // Public
 // void print(class QPagedPaintDevice *)
-func (this *QTextDocument) Print(printer unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument5printEP17QPagedPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), printer)
+func (this *QTextDocument) Print(printer *QPagedPaintDevice /*444 QPagedPaintDevice **/) {
+	var convArg0 = printer.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument5printEP17QPagedPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -486,11 +546,13 @@ func (this *QTextDocument) Print(printer unsafe.Pointer) {
 // index:0
 // Public
 // QVariant resource(int, const class QUrl &)
-func (this *QTextDocument) Resource(type_ int, name *qtcore.QUrl) interface{} {
+func (this *QTextDocument) Resource(type_ int, name *qtcore.QUrl) *qtcore.QVariant /*123*/ {
 	var convArg1 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument8resourceEiRK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:217
@@ -502,16 +564,6 @@ func (this *QTextDocument) AddResource(type_ int, name *qtcore.QUrl, resource *q
 	var convArg2 = resource.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument11addResourceEiRK4QUrlRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qtextdocument.h:219
-// index:0
-// Public
-// QVector<QTextFormat> allFormats()
-func (this *QTextDocument) AllFormats() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument10allFormatsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:221
@@ -536,19 +588,21 @@ func (this *QTextDocument) SetUseDesignMetrics(b bool) {
 // index:0
 // Public
 // bool useDesignMetrics()
-func (this *QTextDocument) UseDesignMetrics() interface{} {
+func (this *QTextDocument) UseDesignMetrics() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument16useDesignMetricsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:226
 // index:0
 // Public
 // void drawContents(class QPainter *, const class QRectF &)
-func (this *QTextDocument) DrawContents(painter unsafe.Pointer, rect *qtcore.QRectF) {
+func (this *QTextDocument) DrawContents(painter *QPainter /*444 QPainter **/, rect *qtcore.QRectF) {
+	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), painter, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -565,30 +619,33 @@ func (this *QTextDocument) SetTextWidth(width float64) {
 // index:0
 // Public
 // qreal textWidth()
-func (this *QTextDocument) TextWidth() interface{} {
+func (this *QTextDocument) TextWidth() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument9textWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:231
 // index:0
 // Public
 // qreal idealWidth()
-func (this *QTextDocument) IdealWidth() interface{} {
+func (this *QTextDocument) IdealWidth() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument10idealWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:233
 // index:0
 // Public
 // qreal indentWidth()
-func (this *QTextDocument) IndentWidth() interface{} {
+func (this *QTextDocument) IndentWidth() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument11indentWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:234
@@ -604,10 +661,11 @@ func (this *QTextDocument) SetIndentWidth(width float64) {
 // index:0
 // Public
 // qreal documentMargin()
-func (this *QTextDocument) DocumentMargin() interface{} {
+func (this *QTextDocument) DocumentMargin() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument14documentMarginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:237
@@ -632,40 +690,45 @@ func (this *QTextDocument) AdjustSize() {
 // index:0
 // Public
 // QSizeF size()
-func (this *QTextDocument) Size() interface{} {
+func (this *QTextDocument) Size() *qtcore.QSizeF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:242
 // index:0
 // Public
 // int blockCount()
-func (this *QTextDocument) BlockCount() interface{} {
+func (this *QTextDocument) BlockCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument10blockCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:243
 // index:0
 // Public
 // int lineCount()
-func (this *QTextDocument) LineCount() interface{} {
+func (this *QTextDocument) LineCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument9lineCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:244
 // index:0
 // Public
 // int characterCount()
-func (this *QTextDocument) CharacterCount() interface{} {
+func (this *QTextDocument) CharacterCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument14characterCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:247
@@ -682,18 +745,21 @@ func (this *QTextDocument) SetDefaultStyleSheet(sheet *qtcore.QString) {
 // index:0
 // Public
 // QString defaultStyleSheet()
-func (this *QTextDocument) DefaultStyleSheet() interface{} {
+func (this *QTextDocument) DefaultStyleSheet() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument17defaultStyleSheetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:251
 // index:0
 // Public
 // void undo(class QTextCursor *)
-func (this *QTextDocument) Undo(cursor unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument4undoEP11QTextCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cursor)
+func (this *QTextDocument) Undo(cursor *QTextCursor /*444 QTextCursor **/) {
+	var convArg0 = cursor.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument4undoEP11QTextCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -710,8 +776,9 @@ func (this *QTextDocument) Undo_1() {
 // index:0
 // Public
 // void redo(class QTextCursor *)
-func (this *QTextDocument) Redo(cursor unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument4redoEP11QTextCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cursor)
+func (this *QTextDocument) Redo(cursor *QTextCursor /*444 QTextCursor **/) {
+	var convArg0 = cursor.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument4redoEP11QTextCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -737,10 +804,11 @@ func (this *QTextDocument) ClearUndoRedoStacks(historyToClear int) {
 // index:0
 // Public
 // int maximumBlockCount()
-func (this *QTextDocument) MaximumBlockCount() interface{} {
+func (this *QTextDocument) MaximumBlockCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument17maximumBlockCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:262
@@ -756,10 +824,12 @@ func (this *QTextDocument) SetMaximumBlockCount(maximum int) {
 // index:0
 // Public
 // QTextOption defaultTextOption()
-func (this *QTextDocument) DefaultTextOption() interface{} {
+func (this *QTextDocument) DefaultTextOption() *QTextOption /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument17defaultTextOptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:265
@@ -776,10 +846,12 @@ func (this *QTextDocument) SetDefaultTextOption(option *QTextOption) {
 // index:0
 // Public
 // QUrl baseUrl()
-func (this *QTextDocument) BaseUrl() interface{} {
+func (this *QTextDocument) BaseUrl() *qtcore.QUrl /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument7baseUrlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:268
@@ -796,10 +868,11 @@ func (this *QTextDocument) SetBaseUrl(url *qtcore.QUrl) {
 // index:0
 // Public
 // Qt::CursorMoveStyle defaultCursorMoveStyle()
-func (this *QTextDocument) DefaultCursorMoveStyle() interface{} {
+func (this *QTextDocument) DefaultCursorMoveStyle() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument22defaultCursorMoveStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:271
@@ -907,8 +980,9 @@ func (this *QTextDocument) DocumentLayoutChanged() {
 // index:0
 // Public
 // void appendUndoItem(class QAbstractUndoItem *)
-func (this *QTextDocument) AppendUndoItem(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument14appendUndoItemEP17QAbstractUndoItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QTextDocument) AppendUndoItem(arg0 *QAbstractUndoItem /*444 QAbstractUndoItem **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument14appendUndoItemEP17QAbstractUndoItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -925,32 +999,26 @@ func (this *QTextDocument) SetModified(m bool) {
 // index:0
 // Protected virtual
 // QTextObject * createObject(const class QTextFormat &)
-func (this *QTextDocument) CreateObject(f *QTextFormat) interface{} {
+func (this *QTextDocument) CreateObject(f *QTextFormat) *QTextObject /*444 QTextObject **/ {
 	var convArg0 = f.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument12createObjectERK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:293
 // index:0
 // Protected virtual
 // QVariant loadResource(int, const class QUrl &)
-func (this *QTextDocument) LoadResource(type_ int, name *qtcore.QUrl) interface{} {
+func (this *QTextDocument) LoadResource(type_ int, name *qtcore.QUrl) *qtcore.QVariant /*123*/ {
 	var convArg1 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument12loadResourceEiRK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qtextdocument.h:297
-// index:0
-// Public
-// QTextDocumentPrivate * docHandle()
-func (this *QTextDocument) DocHandle() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument9docHandleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

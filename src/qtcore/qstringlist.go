@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qstringlist.h
 // #include <qstringlist.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QStringList struct {
 }
 
 func (this *QStringList) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQStringListFromPointer(cthis unsafe.Pointer) *QStringList {
 	return &QStringList{&qtrt.CObject{cthis}}
@@ -84,88 +88,96 @@ func NewQStringList_1(i *QString) *QStringList {
 // index:0
 // Public inline
 // bool contains(const class QString &, Qt::CaseSensitivity)
-func (this *QStringList) Contains(str *QString, cs int) interface{} {
+func (this *QStringList) Contains(str *QString, cs int) bool {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList8containsERK7QStringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qstringlist.h:123
 // index:1
 // Public inline
 // bool contains(class QLatin1String, Qt::CaseSensitivity)
-func (this *QStringList) Contains_1(str *QLatin1String, cs int) interface{} {
+func (this *QStringList) Contains_1(str *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList8containsE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qstringlist.h:135
 // index:0
 // Public inline
 // int indexOf(const class QRegExp &, int)
-func (this *QStringList) IndexOf(rx *QRegExp, from int) interface{} {
+func (this *QStringList) IndexOf(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qstringlist.h:137
 // index:1
 // Public inline
 // int indexOf(class QRegExp &, int)
-func (this *QStringList) IndexOf_1(rx *QRegExp, from int) interface{} {
+func (this *QStringList) IndexOf_1(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList7indexOfER7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qstringlist.h:143
 // index:2
 // Public inline
 // int indexOf(const class QRegularExpression &, int)
-func (this *QStringList) IndexOf_2(re *QRegularExpression, from int) interface{} {
+func (this *QStringList) IndexOf_2(re *QRegularExpression, from int) int {
 	var convArg0 = re.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK18QRegularExpressioni", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qstringlist.h:136
 // index:0
 // Public inline
 // int lastIndexOf(const class QRegExp &, int)
-func (this *QStringList) LastIndexOf(rx *QRegExp, from int) interface{} {
+func (this *QStringList) LastIndexOf(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qstringlist.h:138
 // index:1
 // Public inline
 // int lastIndexOf(class QRegExp &, int)
-func (this *QStringList) LastIndexOf_1(rx *QRegExp, from int) interface{} {
+func (this *QStringList) LastIndexOf_1(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfER7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qstringlist.h:144
 // index:2
 // Public inline
 // int lastIndexOf(const class QRegularExpression &, int)
-func (this *QStringList) LastIndexOf_2(re *QRegularExpression, from int) interface{} {
+func (this *QStringList) LastIndexOf_2(re *QRegularExpression, from int) int {
 	var convArg0 = re.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

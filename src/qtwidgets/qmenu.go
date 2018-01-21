@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qmenu.h
 // #include <qmenu.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QMenu struct {
 }
 
 func (this *QMenu) GetCthis() unsafe.Pointer {
-	return this.QWidget.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QWidget.GetCthis()
+	}
 }
 func NewQMenuFromPointer(cthis unsafe.Pointer) *QMenu {
 	bcthis0 := NewQWidgetFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQMenuFromPointer(cthis unsafe.Pointer) *QMenu {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QMenu) MetaObject() interface{} {
+func (this *QMenu) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:74
 // index:0
 // Public
 // void QMenu(class QWidget *)
-func NewQMenu(parent unsafe.Pointer) *QMenu {
+func NewQMenu(parent *QWidget /*444 QWidget **/) *QMenu {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenuC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenuC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMenuFromPointer(cthis)
 	return gothis
@@ -90,10 +97,11 @@ func NewQMenu(parent unsafe.Pointer) *QMenu {
 // index:1
 // Public
 // void QMenu(const class QString &, class QWidget *)
-func NewQMenu_1(title *qtcore.QString, parent unsafe.Pointer) *QMenu {
+func NewQMenu_1(title *qtcore.QString, parent *QWidget /*444 QWidget **/) *QMenu {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = title.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenuC2ERK7QStringP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenuC2ERK7QStringP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMenuFromPointer(cthis)
 	return gothis
@@ -112,171 +120,208 @@ func DeleteQMenu(*QMenu) {
 // index:0
 // Public
 // QAction * addAction(const class QString &)
-func (this *QMenu) AddAction(text *qtcore.QString) interface{} {
+func (this *QMenu) AddAction(text *qtcore.QString) *QAction /*444 QAction **/ {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu9addActionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:80
 // index:1
 // Public
 // QAction * addAction(const class QIcon &, const class QString &)
-func (this *QMenu) AddAction_1(icon *qtgui.QIcon, text *qtcore.QString) interface{} {
+func (this *QMenu) AddAction_1(icon *qtgui.QIcon, text *qtcore.QString) *QAction /*444 QAction **/ {
 	var convArg0 = icon.GetCthis()
 	var convArg1 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu9addActionERK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:81
 // index:2
 // Public
 // QAction * addAction(const class QString &, const class QObject *, const char *, const class QKeySequence &)
-func (this *QMenu) AddAction_2(text *qtcore.QString, receiver unsafe.Pointer, member string, shortcut *qtgui.QKeySequence) interface{} {
+func (this *QMenu) AddAction_2(text *qtcore.QString, receiver *qtcore.QObject /*444 const QObject **/, member string, shortcut *qtgui.QKeySequence) *QAction /*444 QAction **/ {
 	var convArg0 = text.GetCthis()
+	var convArg1 = receiver.GetCthis()
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
 	var convArg3 = shortcut.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, receiver, convArg2, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:82
 // index:3
 // Public
 // QAction * addAction(const class QIcon &, const class QString &, const class QObject *, const char *, const class QKeySequence &)
-func (this *QMenu) AddAction_3(icon *qtgui.QIcon, text *qtcore.QString, receiver unsafe.Pointer, member string, shortcut *qtgui.QKeySequence) interface{} {
+func (this *QMenu) AddAction_3(icon *qtgui.QIcon, text *qtcore.QString, receiver *qtcore.QObject /*444 const QObject **/, member string, shortcut *qtgui.QKeySequence) *QAction /*444 QAction **/ {
 	var convArg0 = icon.GetCthis()
 	var convArg1 = text.GetCthis()
+	var convArg2 = receiver.GetCthis()
 	var convArg3 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg3)
 	var convArg4 = shortcut.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, receiver, convArg3, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:156
 // index:0
 // Public
 // QAction * addMenu(class QMenu *)
-func (this *QMenu) AddMenu(menu unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu7addMenuEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), menu)
+func (this *QMenu) AddMenu(menu *QMenu /*444 QMenu **/) *QAction /*444 QAction **/ {
+	var convArg0 = menu.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu7addMenuEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:157
 // index:1
 // Public
 // QMenu * addMenu(const class QString &)
-func (this *QMenu) AddMenu_1(title *qtcore.QString) interface{} {
+func (this *QMenu) AddMenu_1(title *qtcore.QString) *QMenu /*444 QMenu **/ {
 	var convArg0 = title.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu7addMenuERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:158
 // index:2
 // Public
 // QMenu * addMenu(const class QIcon &, const class QString &)
-func (this *QMenu) AddMenu_2(icon *qtgui.QIcon, title *qtcore.QString) interface{} {
+func (this *QMenu) AddMenu_2(icon *qtgui.QIcon, title *qtcore.QString) *QMenu /*444 QMenu **/ {
 	var convArg0 = icon.GetCthis()
 	var convArg1 = title.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu7addMenuERK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:160
 // index:0
 // Public
 // QAction * addSeparator()
-func (this *QMenu) AddSeparator() interface{} {
+func (this *QMenu) AddSeparator() *QAction /*444 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu12addSeparatorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:162
 // index:0
 // Public
 // QAction * addSection(const class QString &)
-func (this *QMenu) AddSection(text *qtcore.QString) interface{} {
+func (this *QMenu) AddSection(text *qtcore.QString) *QAction /*444 QAction **/ {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10addSectionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:163
 // index:1
 // Public
 // QAction * addSection(const class QIcon &, const class QString &)
-func (this *QMenu) AddSection_1(icon *qtgui.QIcon, text *qtcore.QString) interface{} {
+func (this *QMenu) AddSection_1(icon *qtgui.QIcon, text *qtcore.QString) *QAction /*444 QAction **/ {
 	var convArg0 = icon.GetCthis()
 	var convArg1 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10addSectionERK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:165
 // index:0
 // Public
 // QAction * insertMenu(class QAction *, class QMenu *)
-func (this *QMenu) InsertMenu(before unsafe.Pointer, menu unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10insertMenuEP7QActionPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), before, menu)
+func (this *QMenu) InsertMenu(before *QAction /*444 QAction **/, menu *QMenu /*444 QMenu **/) *QAction /*444 QAction **/ {
+	var convArg0 = before.GetCthis()
+	var convArg1 = menu.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10insertMenuEP7QActionPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:166
 // index:0
 // Public
 // QAction * insertSeparator(class QAction *)
-func (this *QMenu) InsertSeparator(before unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu15insertSeparatorEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), before)
+func (this *QMenu) InsertSeparator(before *QAction /*444 QAction **/) *QAction /*444 QAction **/ {
+	var convArg0 = before.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu15insertSeparatorEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:167
 // index:0
 // Public
 // QAction * insertSection(class QAction *, const class QString &)
-func (this *QMenu) InsertSection(before unsafe.Pointer, text *qtcore.QString) interface{} {
+func (this *QMenu) InsertSection(before *QAction /*444 QAction **/, text *qtcore.QString) *QAction /*444 QAction **/ {
+	var convArg0 = before.GetCthis()
 	var convArg1 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu13insertSectionEP7QActionRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), before, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu13insertSectionEP7QActionRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:168
 // index:1
 // Public
 // QAction * insertSection(class QAction *, const class QIcon &, const class QString &)
-func (this *QMenu) InsertSection_1(before unsafe.Pointer, icon *qtgui.QIcon, text *qtcore.QString) interface{} {
+func (this *QMenu) InsertSection_1(before *QAction /*444 QAction **/, icon *qtgui.QIcon, text *qtcore.QString) *QAction /*444 QAction **/ {
+	var convArg0 = before.GetCthis()
 	var convArg1 = icon.GetCthis()
 	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), before, convArg1, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:170
 // index:0
 // Public
 // bool isEmpty()
-func (this *QMenu) IsEmpty() interface{} {
+func (this *QMenu) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:171
@@ -301,20 +346,22 @@ func (this *QMenu) SetTearOffEnabled(arg0 bool) {
 // index:0
 // Public
 // bool isTearOffEnabled()
-func (this *QMenu) IsTearOffEnabled() interface{} {
+func (this *QMenu) IsTearOffEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu16isTearOffEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:176
 // index:0
 // Public
 // bool isTearOffMenuVisible()
-func (this *QMenu) IsTearOffMenuVisible() interface{} {
+func (this *QMenu) IsTearOffMenuVisible() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu20isTearOffMenuVisibleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:177
@@ -349,8 +396,9 @@ func (this *QMenu) HideTearOffMenu() {
 // index:0
 // Public
 // void setDefaultAction(class QAction *)
-func (this *QMenu) SetDefaultAction(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu16setDefaultActionEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) SetDefaultAction(arg0 *QAction /*444 QAction **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu16setDefaultActionEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -358,18 +406,21 @@ func (this *QMenu) SetDefaultAction(arg0 unsafe.Pointer) {
 // index:0
 // Public
 // QAction * defaultAction()
-func (this *QMenu) DefaultAction() interface{} {
+func (this *QMenu) DefaultAction() *QAction /*444 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu13defaultActionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:184
 // index:0
 // Public
 // void setActiveAction(class QAction *)
-func (this *QMenu) SetActiveAction(act unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu15setActiveActionEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), act)
+func (this *QMenu) SetActiveAction(act *QAction /*444 QAction **/) {
+	var convArg0 = act.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu15setActiveActionEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -377,19 +428,22 @@ func (this *QMenu) SetActiveAction(act unsafe.Pointer) {
 // index:0
 // Public
 // QAction * activeAction()
-func (this *QMenu) ActiveAction() interface{} {
+func (this *QMenu) ActiveAction() *QAction /*444 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu12activeActionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:187
 // index:0
 // Public
 // void popup(const class QPoint &, class QAction *)
-func (this *QMenu) Popup(pos *qtcore.QPoint, at unsafe.Pointer) {
+func (this *QMenu) Popup(pos *qtcore.QPoint, at *QAction /*444 QAction **/) {
 	var convArg0 = pos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu5popupERK6QPointP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, at)
+	var convArg1 = at.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu5popupERK6QPointP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -397,72 +451,88 @@ func (this *QMenu) Popup(pos *qtcore.QPoint, at unsafe.Pointer) {
 // index:0
 // Public
 // QAction * exec()
-func (this *QMenu) Exec() interface{} {
+func (this *QMenu) Exec() *QAction /*444 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu4execEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:189
 // index:1
 // Public
 // QAction * exec(const class QPoint &, class QAction *)
-func (this *QMenu) Exec_1(pos *qtcore.QPoint, at unsafe.Pointer) interface{} {
+func (this *QMenu) Exec_1(pos *qtcore.QPoint, at *QAction /*444 QAction **/) *QAction /*444 QAction **/ {
 	var convArg0 = pos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu4execERK6QPointP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, at)
+	var convArg1 = at.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu4execERK6QPointP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:197
 // index:0
 // Public virtual
 // QSize sizeHint()
-func (this *QMenu) SizeHint() interface{} {
+func (this *QMenu) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:199
 // index:0
 // Public
 // QRect actionGeometry(class QAction *)
-func (this *QMenu) ActionGeometry(arg0 unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu14actionGeometryEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) ActionGeometry(arg0 *QAction /*444 QAction **/) *qtcore.QRect /*123*/ {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu14actionGeometryEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:200
 // index:0
 // Public
 // QAction * actionAt(const class QPoint &)
-func (this *QMenu) ActionAt(arg0 *qtcore.QPoint) interface{} {
+func (this *QMenu) ActionAt(arg0 *qtcore.QPoint) *QAction /*444 QAction **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu8actionAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:202
 // index:0
 // Public
 // QAction * menuAction()
-func (this *QMenu) MenuAction() interface{} {
+func (this *QMenu) MenuAction() *QAction /*444 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu10menuActionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:204
 // index:0
 // Public
 // QString title()
-func (this *QMenu) Title() interface{} {
+func (this *QMenu) Title() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu5titleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:205
@@ -479,10 +549,12 @@ func (this *QMenu) SetTitle(title *qtcore.QString) {
 // index:0
 // Public
 // QIcon icon()
-func (this *QMenu) Icon() interface{} {
+func (this *QMenu) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu4iconEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:208
@@ -499,27 +571,9 @@ func (this *QMenu) SetIcon(icon *qtgui.QIcon) {
 // index:0
 // Public
 // void setNoReplayFor(class QWidget *)
-func (this *QMenu) SetNoReplayFor(widget unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu14setNoReplayForEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget)
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qmenu.h:211
-// index:0
-// Public
-// QPlatformMenu * platformMenu()
-func (this *QMenu) PlatformMenu() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu12platformMenuEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmenu.h:212
-// index:0
-// Public
-// void setPlatformMenu(class QPlatformMenu *)
-func (this *QMenu) SetPlatformMenu(platformMenu unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu15setPlatformMenuEP13QPlatformMenu", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), platformMenu)
+func (this *QMenu) SetNoReplayFor(widget *QWidget /*444 QWidget **/) {
+	var convArg0 = widget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu14setNoReplayForEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -527,10 +581,11 @@ func (this *QMenu) SetPlatformMenu(platformMenu unsafe.Pointer) {
 // index:0
 // Public
 // bool separatorsCollapsible()
-func (this *QMenu) SeparatorsCollapsible() interface{} {
+func (this *QMenu) SeparatorsCollapsible() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu21separatorsCollapsibleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:220
@@ -546,10 +601,11 @@ func (this *QMenu) SetSeparatorsCollapsible(collapse bool) {
 // index:0
 // Public
 // bool toolTipsVisible()
-func (this *QMenu) ToolTipsVisible() interface{} {
+func (this *QMenu) ToolTipsVisible() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu15toolTipsVisibleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:223
@@ -583,8 +639,9 @@ func (this *QMenu) AboutToHide() {
 // index:0
 // Public
 // void triggered(class QAction *)
-func (this *QMenu) Triggered(action unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu9triggeredEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), action)
+func (this *QMenu) Triggered(action *QAction /*444 QAction **/) {
+	var convArg0 = action.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu9triggeredEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -592,8 +649,9 @@ func (this *QMenu) Triggered(action unsafe.Pointer) {
 // index:0
 // Public
 // void hovered(class QAction *)
-func (this *QMenu) Hovered(action unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu7hoveredEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), action)
+func (this *QMenu) Hovered(action *QAction /*444 QAction **/) {
+	var convArg0 = action.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu7hoveredEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -601,18 +659,20 @@ func (this *QMenu) Hovered(action unsafe.Pointer) {
 // index:0
 // Protected
 // int columnCount()
-func (this *QMenu) ColumnCount() interface{} {
+func (this *QMenu) ColumnCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu11columnCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:234
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QMenu) ChangeEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) ChangeEvent(arg0 *qtcore.QEvent /*444 QEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -620,8 +680,9 @@ func (this *QMenu) ChangeEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QMenu) KeyPressEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) KeyPressEvent(arg0 *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -629,8 +690,9 @@ func (this *QMenu) KeyPressEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QMenu) MouseReleaseEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -638,8 +700,9 @@ func (this *QMenu) MouseReleaseEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QMenu) MousePressEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) MousePressEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -647,8 +710,9 @@ func (this *QMenu) MousePressEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QMenu) MouseMoveEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -656,8 +720,9 @@ func (this *QMenu) MouseMoveEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void wheelEvent(class QWheelEvent *)
-func (this *QMenu) WheelEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) WheelEvent(arg0 *qtgui.QWheelEvent /*444 QWheelEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -665,8 +730,9 @@ func (this *QMenu) WheelEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void enterEvent(class QEvent *)
-func (this *QMenu) EnterEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10enterEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) EnterEvent(arg0 *qtcore.QEvent /*444 QEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10enterEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -674,8 +740,9 @@ func (this *QMenu) EnterEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void leaveEvent(class QEvent *)
-func (this *QMenu) LeaveEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10leaveEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) LeaveEvent(arg0 *qtcore.QEvent /*444 QEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10leaveEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -683,8 +750,9 @@ func (this *QMenu) LeaveEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void hideEvent(class QHideEvent *)
-func (this *QMenu) HideEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu9hideEventEP10QHideEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) HideEvent(arg0 *qtgui.QHideEvent /*444 QHideEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu9hideEventEP10QHideEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -692,8 +760,9 @@ func (this *QMenu) HideEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QMenu) PaintEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -701,8 +770,9 @@ func (this *QMenu) PaintEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void actionEvent(class QActionEvent *)
-func (this *QMenu) ActionEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu11actionEventEP12QActionEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) ActionEvent(arg0 *qtgui.QActionEvent /*444 QActionEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu11actionEventEP12QActionEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -710,8 +780,9 @@ func (this *QMenu) ActionEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QMenu) TimerEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) TimerEvent(arg0 *qtcore.QTimerEvent /*444 QTimerEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -719,28 +790,33 @@ func (this *QMenu) TimerEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QMenu) Event(arg0 unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMenu) Event(arg0 *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:249
 // index:0
 // Protected virtual
 // bool focusNextPrevChild(_Bool)
-func (this *QMenu) FocusNextPrevChild(next bool) interface{} {
+func (this *QMenu) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &next)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:250
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionMenuItem *, const class QAction *)
-func (this *QMenu) InitStyleOption(option unsafe.Pointer, action unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu15initStyleOptionEP20QStyleOptionMenuItemPK7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, action)
+func (this *QMenu) InitStyleOption(option *QStyleOptionMenuItem /*444 QStyleOptionMenuItem **/, action *QAction /*444 const QAction **/) {
+	var convArg0 = option.GetCthis()
+	var convArg1 = action.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu15initStyleOptionEP20QStyleOptionMenuItemPK7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 

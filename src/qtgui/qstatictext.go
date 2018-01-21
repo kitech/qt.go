@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qstatictext.h
 // #include <qstatictext.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 53
+// extern C begin: 49
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QStaticText struct {
 }
 
 func (this *QStaticText) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQStaticTextFromPointer(cthis unsafe.Pointer) *QStaticText {
 	return &QStaticText{&qtrt.CObject{cthis}}
@@ -117,10 +121,12 @@ func (this *QStaticText) SetText(text *qtcore.QString) {
 // index:0
 // Public
 // QString text()
-func (this *QStaticText) Text() interface{} {
+func (this *QStaticText) Text() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:78
@@ -136,10 +142,11 @@ func (this *QStaticText) SetTextFormat(textFormat int) {
 // index:0
 // Public
 // Qt::TextFormat textFormat()
-func (this *QStaticText) TextFormat() interface{} {
+func (this *QStaticText) TextFormat() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText10textFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:81
@@ -155,10 +162,11 @@ func (this *QStaticText) SetTextWidth(textWidth float64) {
 // index:0
 // Public
 // qreal textWidth()
-func (this *QStaticText) TextWidth() interface{} {
+func (this *QStaticText) TextWidth() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText9textWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:84
@@ -175,20 +183,24 @@ func (this *QStaticText) SetTextOption(textOption *QTextOption) {
 // index:0
 // Public
 // QTextOption textOption()
-func (this *QStaticText) TextOption() interface{} {
+func (this *QStaticText) TextOption() *QTextOption /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText10textOptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:87
 // index:0
 // Public
 // QSizeF size()
-func (this *QStaticText) Size() interface{} {
+func (this *QStaticText) Size() *qtcore.QSizeF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:89
@@ -215,10 +227,11 @@ func (this *QStaticText) SetPerformanceHint(performanceHint int) {
 // index:0
 // Public
 // QStaticText::PerformanceHint performanceHint()
-func (this *QStaticText) PerformanceHint() interface{} {
+func (this *QStaticText) PerformanceHint() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText15performanceHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

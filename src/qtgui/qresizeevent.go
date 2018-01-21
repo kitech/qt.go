@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QResizeEvent struct {
 }
 
 func (this *QResizeEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQResizeEventFromPointer(cthis unsafe.Pointer) *QResizeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -87,20 +91,24 @@ func DeleteQResizeEvent(*QResizeEvent) {
 // index:0
 // Public inline
 // const QSize & size()
-func (this *QResizeEvent) Size() interface{} {
+func (this *QResizeEvent) Size() *qtcore.QSize {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:467
 // index:0
 // Public inline
 // const QSize & oldSize()
-func (this *QResizeEvent) OldSize() interface{} {
+func (this *QResizeEvent) OldSize() *qtcore.QSize {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent7oldSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 //  body block end

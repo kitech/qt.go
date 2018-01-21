@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qstylepainter.h
 // #include <qstylepainter.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 2
+// extern C begin: 1
 */
 // import "C"
 import "unsafe"
@@ -57,7 +57,11 @@ type QStylePainter struct {
 }
 
 func (this *QStylePainter) GetCthis() unsafe.Pointer {
-	return this.QPainter.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QPainter.GetCthis()
+	}
 }
 func NewQStylePainterFromPointer(cthis unsafe.Pointer) *QStylePainter {
 	bcthis0 := qtgui.NewQPainterFromPointer(cthis)
@@ -80,9 +84,10 @@ func NewQStylePainter() *QStylePainter {
 // index:1
 // Public inline
 // void QStylePainter(class QWidget *)
-func NewQStylePainter_1(w unsafe.Pointer) *QStylePainter {
+func NewQStylePainter_1(w *QWidget /*444 QWidget **/) *QStylePainter {
 	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, w)
+	var convArg0 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStylePainterFromPointer(cthis)
 	return gothis
@@ -92,9 +97,11 @@ func NewQStylePainter_1(w unsafe.Pointer) *QStylePainter {
 // index:2
 // Public inline
 // void QStylePainter(class QPaintDevice *, class QWidget *)
-func NewQStylePainter_2(pd unsafe.Pointer, w unsafe.Pointer) *QStylePainter {
+func NewQStylePainter_2(pd *qtgui.QPaintDevice /*444 QPaintDevice **/, w *QWidget /*444 QWidget **/) *QStylePainter {
 	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2EP12QPaintDeviceP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, pd, w)
+	var convArg0 = pd.GetCthis()
+	var convArg1 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2EP12QPaintDeviceP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStylePainterFromPointer(cthis)
 	return gothis
@@ -104,20 +111,25 @@ func NewQStylePainter_2(pd unsafe.Pointer, w unsafe.Pointer) *QStylePainter {
 // index:0
 // Public inline
 // bool begin(class QWidget *)
-func (this *QStylePainter) Begin(w unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter5beginEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
+func (this *QStylePainter) Begin(w *QWidget /*444 QWidget **/) bool {
+	var convArg0 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter5beginEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:58
 // index:1
 // Public inline
 // bool begin(class QPaintDevice *, class QWidget *)
-func (this *QStylePainter) Begin_1(pd unsafe.Pointer, w unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pd, w)
+func (this *QStylePainter) Begin_1(pd *qtgui.QPaintDevice /*444 QPaintDevice **/, w *QWidget /*444 QWidget **/) bool {
+	var convArg0 = pd.GetCthis()
+	var convArg1 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:64
@@ -177,10 +189,12 @@ func (this *QStylePainter) DrawItemPixmap(r *qtcore.QRect, flags int, pixmap *qt
 // index:0
 // Public inline
 // QStyle * style()
-func (this *QStylePainter) Style() interface{} {
+func (this *QStylePainter) Style() *QStyle /*444 QStyle **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStylePainter5styleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStyleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

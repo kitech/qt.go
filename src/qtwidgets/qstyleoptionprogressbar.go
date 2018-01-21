@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qstyleoption.h
 // #include <qstyleoption.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QStyleOptionProgressBar struct {
 }
 
 func (this *QStyleOptionProgressBar) GetCthis() unsafe.Pointer {
-	return this.QStyleOption.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QStyleOption.GetCthis()
+	}
 }
 func NewQStyleOptionProgressBarFromPointer(cthis unsafe.Pointer) *QStyleOptionProgressBar {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)

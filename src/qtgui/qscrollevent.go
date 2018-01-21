@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QScrollEvent struct {
 }
 
 func (this *QScrollEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQScrollEventFromPointer(cthis unsafe.Pointer) *QScrollEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -87,30 +91,35 @@ func DeleteQScrollEvent(*QScrollEvent) {
 // index:0
 // Public
 // QPointF contentPos()
-func (this *QScrollEvent) ContentPos() interface{} {
+func (this *QScrollEvent) ContentPos() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent10contentPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:1026
 // index:0
 // Public
 // QPointF overshootDistance()
-func (this *QScrollEvent) OvershootDistance() interface{} {
+func (this *QScrollEvent) OvershootDistance() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent17overshootDistanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:1027
 // index:0
 // Public
 // QScrollEvent::ScrollState scrollState()
-func (this *QScrollEvent) ScrollState() interface{} {
+func (this *QScrollEvent) ScrollState() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent11scrollStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

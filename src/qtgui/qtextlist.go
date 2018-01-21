@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtextlist.h
 // #include <qtextlist.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 14
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QTextList struct {
 }
 
 func (this *QTextList) GetCthis() unsafe.Pointer {
-	return this.QTextBlockGroup.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QTextBlockGroup.GetCthis()
+	}
 }
 func NewQTextListFromPointer(cthis unsafe.Pointer) *QTextList {
 	bcthis0 := NewQTextBlockGroupFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQTextListFromPointer(cthis unsafe.Pointer) *QTextList {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTextList) MetaObject() interface{} {
+func (this *QTextList) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:57
 // index:0
 // Public
 // void QTextList(class QTextDocument *)
-func NewQTextList(doc unsafe.Pointer) *QTextList {
+func NewQTextList(doc *QTextDocument /*444 QTextDocument **/) *QTextList {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextListC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, doc)
+	var convArg0 = doc.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextListC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextListFromPointer(cthis)
 	return gothis
@@ -95,52 +102,59 @@ func DeleteQTextList(*QTextList) {
 // index:0
 // Public
 // int count()
-func (this *QTextList) Count() interface{} {
+func (this *QTextList) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:62
 // index:0
 // Public inline
 // bool isEmpty()
-func (this *QTextList) IsEmpty() interface{} {
+func (this *QTextList) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:65
 // index:0
 // Public
 // QTextBlock item(int)
-func (this *QTextList) Item(i int) interface{} {
+func (this *QTextList) Item(i int) *QTextBlock /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList4itemEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:67
 // index:0
 // Public
 // int itemNumber(const class QTextBlock &)
-func (this *QTextList) ItemNumber(arg0 *QTextBlock) interface{} {
+func (this *QTextList) ItemNumber(arg0 *QTextBlock) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList10itemNumberERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:68
 // index:0
 // Public
 // QString itemText(const class QTextBlock &)
-func (this *QTextList) ItemText(arg0 *QTextBlock) interface{} {
+func (this *QTextList) ItemText(arg0 *QTextBlock) *qtcore.QString /*123*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList8itemTextERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:70
@@ -186,10 +200,12 @@ func (this *QTextList) SetFormat(format *QTextListFormat) {
 // index:0
 // Public inline
 // QTextListFormat format()
-func (this *QTextList) Format() interface{} {
+func (this *QTextList) Format() *QTextListFormat /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextListFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

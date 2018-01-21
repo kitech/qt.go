@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h
 // #include <qobjectcleanuphandler.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 13
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QObjectCleanupHandler struct {
 }
 
 func (this *QObjectCleanupHandler) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQObjectCleanupHandlerFromPointer(cthis unsafe.Pointer) *QObjectCleanupHandler {
 	bcthis0 := NewQObjectFromPointer(cthis)
@@ -60,10 +64,12 @@ func NewQObjectCleanupHandlerFromPointer(cthis unsafe.Pointer) *QObjectCleanupHa
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QObjectCleanupHandler) MetaObject() interface{} {
+func (this *QObjectCleanupHandler) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:53
@@ -91,18 +97,22 @@ func DeleteQObjectCleanupHandler(*QObjectCleanupHandler) {
 // index:0
 // Public
 // QObject * add(class QObject *)
-func (this *QObjectCleanupHandler) Add(object unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), object)
+func (this *QObjectCleanupHandler) Add(object *QObject /*444 QObject **/) *QObject /*444 QObject **/ {
+	var convArg0 = object.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:57
 // index:0
 // Public
 // void remove(class QObject *)
-func (this *QObjectCleanupHandler) Remove(object unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), object)
+func (this *QObjectCleanupHandler) Remove(object *QObject /*444 QObject **/) {
+	var convArg0 = object.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -110,10 +120,11 @@ func (this *QObjectCleanupHandler) Remove(object unsafe.Pointer) {
 // index:0
 // Public
 // bool isEmpty()
-func (this *QObjectCleanupHandler) IsEmpty() interface{} {
+func (this *QObjectCleanupHandler) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:59

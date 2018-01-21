@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qopenglversionfunctions.h
 // #include <qopenglversionfunctions.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 18
+// extern C begin: 17
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QAbstractOpenGLFunctions struct {
 }
 
 func (this *QAbstractOpenGLFunctions) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQAbstractOpenGLFunctionsFromPointer(cthis unsafe.Pointer) *QAbstractOpenGLFunctions {
 	return &QAbstractOpenGLFunctions{&qtrt.CObject{cthis}}
@@ -72,30 +76,11 @@ func DeleteQAbstractOpenGLFunctions(*QAbstractOpenGLFunctions) {
 // index:0
 // Public virtual
 // bool initializeOpenGLFunctions()
-func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() interface{} {
+func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qopenglversionfunctions.h:217
-// index:0
-// Public inline
-// QAbstractOpenGLFunctionsPrivate * d_func()
-func (this *QAbstractOpenGLFunctions) D_func() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions6d_funcEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qopenglversionfunctions.h:217
-// index:1
-// Public inline
-// const QAbstractOpenGLFunctionsPrivate * d_func()
-func (this *QAbstractOpenGLFunctions) D_func_1() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions6d_funcEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:220
@@ -114,29 +99,11 @@ func NewQAbstractOpenGLFunctions() *QAbstractOpenGLFunctions {
 // index:0
 // Protected
 // bool isInitialized()
-func (this *QAbstractOpenGLFunctions) IsInitialized() interface{} {
+func (this *QAbstractOpenGLFunctions) IsInitialized() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions13isInitializedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qopenglversionfunctions.h:225
-// index:0
-// Protected
-// void setOwningContext(const class QOpenGLContext *)
-func (this *QAbstractOpenGLFunctions) SetOwningContext(context unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions16setOwningContextEPK14QOpenGLContext", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), context)
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qopenglversionfunctions.h:226
-// index:0
-// Protected
-// QOpenGLContext * owningContext()
-func (this *QAbstractOpenGLFunctions) OwningContext() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions13owningContextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qpictureformatplugin.h
 // #include <qpictureformatplugin.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 26
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QPictureFormatPlugin struct {
 }
 
 func (this *QPictureFormatPlugin) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQPictureFormatPluginFromPointer(cthis unsafe.Pointer) *QPictureFormatPlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQPictureFormatPluginFromPointer(cthis unsafe.Pointer) *QPictureFormatPlu
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QPictureFormatPlugin) MetaObject() interface{} {
+func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QPictureFormatPlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpictureformatplugin.h:63
 // index:0
 // Public
 // void QPictureFormatPlugin(class QObject *)
-func NewQPictureFormatPlugin(parent unsafe.Pointer) *QPictureFormatPlugin {
+func NewQPictureFormatPlugin(parent *qtcore.QObject /*444 QObject **/) *QPictureFormatPlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QPictureFormatPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QPictureFormatPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPictureFormatPluginFromPointer(cthis)
 	return gothis
@@ -95,36 +102,40 @@ func DeleteQPictureFormatPlugin(*QPictureFormatPlugin) {
 // index:0
 // Public virtual
 // bool loadPicture(const class QString &, const class QString &, class QPicture *)
-func (this *QPictureFormatPlugin) LoadPicture(format *qtcore.QString, filename *qtcore.QString, pic unsafe.Pointer) interface{} {
+func (this *QPictureFormatPlugin) LoadPicture(format *qtcore.QString, filename *qtcore.QString, pic *QPicture /*444 QPicture **/) bool {
 	var convArg0 = format.GetCthis()
 	var convArg1 = filename.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, pic)
+	var convArg2 = pic.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpictureformatplugin.h:67
 // index:0
 // Public virtual
 // bool savePicture(const class QString &, const class QString &, const class QPicture &)
-func (this *QPictureFormatPlugin) SavePicture(format *qtcore.QString, filename *qtcore.QString, pic *QPicture) interface{} {
+func (this *QPictureFormatPlugin) SavePicture(format *qtcore.QString, filename *qtcore.QString, pic *QPicture) bool {
 	var convArg0 = format.GetCthis()
 	var convArg1 = filename.GetCthis()
 	var convArg2 = pic.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpictureformatplugin.h:68
 // index:0
 // Public pure virtual
 // bool installIOHandler(const class QString &)
-func (this *QPictureFormatPlugin) InstallIOHandler(format *qtcore.QString) interface{} {
+func (this *QPictureFormatPlugin) InstallIOHandler(format *qtcore.QString) bool {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QPictureFormatPlugin16installIOHandlerERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qprocess.h
 // #include <qprocess.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 13
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QProcessEnvironment struct {
 }
 
 func (this *QProcessEnvironment) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQProcessEnvironmentFromPointer(cthis unsafe.Pointer) *QProcessEnvironment {
 	return &QProcessEnvironment{&qtrt.CObject{cthis}}
@@ -90,10 +94,11 @@ func (this *QProcessEnvironment) Swap(other *QProcessEnvironment) {
 // index:0
 // Public
 // bool isEmpty()
-func (this *QProcessEnvironment) IsEmpty() interface{} {
+func (this *QProcessEnvironment) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qprocess.h:85
@@ -109,11 +114,12 @@ func (this *QProcessEnvironment) Clear() {
 // index:0
 // Public
 // bool contains(const class QString &)
-func (this *QProcessEnvironment) Contains(name *QString) interface{} {
+func (this *QProcessEnvironment) Contains(name *QString) bool {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment8containsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qprocess.h:89
@@ -130,46 +136,31 @@ func (this *QProcessEnvironment) Remove(name *QString) {
 // index:0
 // Public
 // QString value(const class QString &, const class QString &)
-func (this *QProcessEnvironment) Value(name *QString, defaultValue *QString) interface{} {
+func (this *QProcessEnvironment) Value(name *QString, defaultValue *QString) *QString /*123*/ {
 	var convArg0 = name.GetCthis()
 	var convArg1 = defaultValue.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment5valueERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qprocess.h:92
-// index:0
-// Public
-// QStringList toStringList()
-func (this *QProcessEnvironment) ToStringList() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment12toStringListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qprocess.h:94
-// index:0
-// Public
-// QStringList keys()
-func (this *QProcessEnvironment) Keys() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment4keysEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qprocess.h:98
 // index:0
 // Public static
 // QProcessEnvironment systemEnvironment()
-func (this *QProcessEnvironment) SystemEnvironment() interface{} {
+func (this *QProcessEnvironment) SystemEnvironment() *QProcessEnvironment /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironment17systemEnvironmentEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQProcessEnvironmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QProcessEnvironment_SystemEnvironment() {
+func QProcessEnvironment_SystemEnvironment() *QProcessEnvironment /*123*/ {
 	var nilthis *QProcessEnvironment
-	nilthis.SystemEnvironment()
+	rv := nilthis.SystemEnvironment()
+	return rv
 }
 
 //  body block end

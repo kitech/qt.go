@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qreadwritelock.h
 // #include <qreadwritelock.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QWriteLocker struct {
 }
 
 func (this *QWriteLocker) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQWriteLockerFromPointer(cthis unsafe.Pointer) *QWriteLocker {
 	return &QWriteLocker{&qtrt.CObject{cthis}}
@@ -59,9 +63,10 @@ func NewQWriteLockerFromPointer(cthis unsafe.Pointer) *QWriteLocker {
 // index:0
 // Public inline
 // void QWriteLocker(class QReadWriteLock *)
-func NewQWriteLocker(readWriteLock unsafe.Pointer) *QWriteLocker {
+func NewQWriteLocker(readWriteLock *QReadWriteLock /*444 QReadWriteLock **/) *QWriteLocker {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLockerC2EP14QReadWriteLock", ffiqt.FFI_TYPE_VOID, cthis, readWriteLock)
+	var convArg0 = readWriteLock.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLockerC2EP14QReadWriteLock", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQWriteLockerFromPointer(cthis)
 	return gothis
@@ -98,10 +103,12 @@ func (this *QWriteLocker) Relock() {
 // index:0
 // Public inline
 // QReadWriteLock * readWriteLock()
-func (this *QWriteLocker) ReadWriteLock() interface{} {
+func (this *QWriteLocker) ReadWriteLock() *QReadWriteLock /*444 QReadWriteLock **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QWriteLocker13readWriteLockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQReadWriteLockFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

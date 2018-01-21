@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qbytearray.h
 // #include <qbytearray.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 129
+// extern C begin: 128
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QByteRef struct {
 }
 
 func (this *QByteRef) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQByteRefFromPointer(cthis unsafe.Pointer) *QByteRef {
 	return &QByteRef{&qtrt.CObject{cthis}}

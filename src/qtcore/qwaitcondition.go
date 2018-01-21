@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qwaitcondition.h
 // #include <qwaitcondition.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QWaitCondition struct {
 }
 
 func (this *QWaitCondition) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQWaitConditionFromPointer(cthis unsafe.Pointer) *QWaitCondition {
 	return &QWaitCondition{&qtrt.CObject{cthis}}
@@ -80,20 +84,24 @@ func DeleteQWaitCondition(*QWaitCondition) {
 // index:0
 // Public
 // bool wait(class QMutex *, unsigned long)
-func (this *QWaitCondition) Wait(lockedMutex unsafe.Pointer, time uint) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), lockedMutex, &time)
+func (this *QWaitCondition) Wait(lockedMutex *QMutex /*444 QMutex **/, time uint) bool {
+	var convArg0 = lockedMutex.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &time)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qwaitcondition.h:63
 // index:1
 // Public
 // bool wait(class QReadWriteLock *, unsigned long)
-func (this *QWaitCondition) Wait_1(lockedReadWriteLock unsafe.Pointer, time uint) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), lockedReadWriteLock, &time)
+func (this *QWaitCondition) Wait_1(lockedReadWriteLock *QReadWriteLock /*444 QReadWriteLock **/, time uint) bool {
+	var convArg0 = lockedReadWriteLock.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &time)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qwaitcondition.h:65

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qpixmapcache.h
 // #include <qpixmapcache.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QPixmapCache struct {
 }
 
 func (this *QPixmapCache) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQPixmapCacheFromPointer(cthis unsafe.Pointer) *QPixmapCache {
 	return &QPixmapCache{&qtrt.CObject{cthis}}
@@ -63,14 +67,16 @@ func NewQPixmapCacheFromPointer(cthis unsafe.Pointer) *QPixmapCache {
 // index:0
 // Public static
 // int cacheLimit()
-func (this *QPixmapCache) CacheLimit() interface{} {
+func (this *QPixmapCache) CacheLimit() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache10cacheLimitEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv) // 111
 }
-func QPixmapCache_CacheLimit() {
+func QPixmapCache_CacheLimit() int {
 	var nilthis *QPixmapCache
-	nilthis.CacheLimit()
+	rv := nilthis.CacheLimit()
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpixmapcache.h:78
@@ -90,42 +96,49 @@ func QPixmapCache_SetCacheLimit(arg0 int) {
 // index:0
 // Public static
 // QPixmap * find(const class QString &)
-func (this *QPixmapCache) Find(key *qtcore.QString) interface{} {
+func (this *QPixmapCache) Find(key *qtcore.QString) *QPixmap /*444 QPixmap **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QString", ffiqt.FFI_TYPE_POINTER, key)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QPixmapCache_Find(key *qtcore.QString) {
+func QPixmapCache_Find(key *qtcore.QString) *QPixmap /*444 QPixmap **/ {
 	var nilthis *QPixmapCache
-	nilthis.Find(key)
+	rv := nilthis.Find(key)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpixmapcache.h:80
 // index:1
 // Public static
 // bool find(const class QString &, class QPixmap &)
-func (this *QPixmapCache) Find_1(key *qtcore.QString, pixmap *QPixmap) interface{} {
+func (this *QPixmapCache) Find_1(key *qtcore.QString, pixmap *QPixmap) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringR7QPixmap", ffiqt.FFI_TYPE_POINTER, key, pixmap)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QPixmapCache_Find_1(key *qtcore.QString, pixmap *QPixmap) {
+func QPixmapCache_Find_1(key *qtcore.QString, pixmap *QPixmap) bool {
 	var nilthis *QPixmapCache
-	nilthis.Find_1(key, pixmap)
+	rv := nilthis.Find_1(key, pixmap)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpixmapcache.h:81
 // index:2
 // Public static
 // bool find(const class QString &, class QPixmap *)
-func (this *QPixmapCache) Find_2(key *qtcore.QString, pixmap unsafe.Pointer) interface{} {
+func (this *QPixmapCache) Find_2(key *qtcore.QString, pixmap *QPixmap /*444 QPixmap **/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringP7QPixmap", ffiqt.FFI_TYPE_POINTER, key, pixmap)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QPixmapCache_Find_2(key *qtcore.QString, pixmap unsafe.Pointer) {
+func QPixmapCache_Find_2(key *qtcore.QString, pixmap *QPixmap /*444 QPixmap **/) bool {
 	var nilthis *QPixmapCache
-	nilthis.Find_2(key, pixmap)
+	rv := nilthis.Find_2(key, pixmap)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qpixmapcache.h:86

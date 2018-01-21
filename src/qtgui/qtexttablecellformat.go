@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtextformat.h
 // #include <qtextformat.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 14
+// extern C begin: 13
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QTextTableCellFormat struct {
 }
 
 func (this *QTextTableCellFormat) GetCthis() unsafe.Pointer {
-	return this.QTextCharFormat.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QTextCharFormat.GetCthis()
+	}
 }
 func NewQTextTableCellFormatFromPointer(cthis unsafe.Pointer) *QTextTableCellFormat {
 	bcthis0 := NewQTextCharFormatFromPointer(cthis)
@@ -89,10 +93,11 @@ func NewQTextTableCellFormat_1(fmt *QTextFormat) *QTextTableCellFormat {
 // index:0
 // Public inline
 // bool isValid()
-func (this *QTextTableCellFormat) IsValid() interface{} {
+func (this *QTextTableCellFormat) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:949
@@ -108,10 +113,11 @@ func (this *QTextTableCellFormat) SetTopPadding(padding float64) {
 // index:0
 // Public inline
 // qreal topPadding()
-func (this *QTextTableCellFormat) TopPadding() interface{} {
+func (this *QTextTableCellFormat) TopPadding() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat10topPaddingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:952
@@ -127,10 +133,11 @@ func (this *QTextTableCellFormat) SetBottomPadding(padding float64) {
 // index:0
 // Public inline
 // qreal bottomPadding()
-func (this *QTextTableCellFormat) BottomPadding() interface{} {
+func (this *QTextTableCellFormat) BottomPadding() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat13bottomPaddingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:955
@@ -146,10 +153,11 @@ func (this *QTextTableCellFormat) SetLeftPadding(padding float64) {
 // index:0
 // Public inline
 // qreal leftPadding()
-func (this *QTextTableCellFormat) LeftPadding() interface{} {
+func (this *QTextTableCellFormat) LeftPadding() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat11leftPaddingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:958
@@ -165,10 +173,11 @@ func (this *QTextTableCellFormat) SetRightPadding(padding float64) {
 // index:0
 // Public inline
 // qreal rightPadding()
-func (this *QTextTableCellFormat) RightPadding() interface{} {
+func (this *QTextTableCellFormat) RightPadding() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat12rightPaddingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:961

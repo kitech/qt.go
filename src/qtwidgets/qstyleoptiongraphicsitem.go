@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qstyleoption.h
 // #include <qstyleoption.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QStyleOptionGraphicsItem struct {
 }
 
 func (this *QStyleOptionGraphicsItem) GetCthis() unsafe.Pointer {
-	return this.QStyleOption.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QStyleOption.GetCthis()
+	}
 }
 func NewQStyleOptionGraphicsItemFromPointer(cthis unsafe.Pointer) *QStyleOptionGraphicsItem {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
@@ -92,14 +96,16 @@ func NewQStyleOptionGraphicsItem_1(version int) *QStyleOptionGraphicsItem {
 // index:0
 // Public static
 // qreal levelOfDetailFromTransform(const class QTransform &)
-func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) interface{} {
+func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform", ffiqt.FFI_TYPE_POINTER, worldTransform)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return float64(rv) // 222
 }
-func QStyleOptionGraphicsItem_LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) {
+func QStyleOptionGraphicsItem_LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) float64 {
 	var nilthis *QStyleOptionGraphicsItem
-	nilthis.LevelOfDetailFromTransform(worldTransform)
+	rv := nilthis.LevelOfDetailFromTransform(worldTransform)
+	return rv
 }
 
 //  body block end

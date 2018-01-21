@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h
 // #include <qgraphicssceneevent.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGraphicsSceneWheelEvent struct {
 }
 
 func (this *QGraphicsSceneWheelEvent) GetCthis() unsafe.Pointer {
-	return this.QGraphicsSceneEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGraphicsSceneEvent.GetCthis()
+	}
 }
 func NewQGraphicsSceneWheelEventFromPointer(cthis unsafe.Pointer) *QGraphicsSceneWheelEvent {
 	bcthis0 := NewQGraphicsSceneEventFromPointer(cthis)
@@ -89,10 +93,12 @@ func DeleteQGraphicsSceneWheelEvent(*QGraphicsSceneWheelEvent) {
 // index:0
 // Public
 // QPointF pos()
-func (this *QGraphicsSceneWheelEvent) Pos() interface{} {
+func (this *QGraphicsSceneWheelEvent) Pos() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:143
@@ -109,10 +115,12 @@ func (this *QGraphicsSceneWheelEvent) SetPos(pos *qtcore.QPointF) {
 // index:0
 // Public
 // QPointF scenePos()
-func (this *QGraphicsSceneWheelEvent) ScenePos() interface{} {
+func (this *QGraphicsSceneWheelEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent8scenePosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:146
@@ -129,10 +137,12 @@ func (this *QGraphicsSceneWheelEvent) SetScenePos(pos *qtcore.QPointF) {
 // index:0
 // Public
 // QPoint screenPos()
-func (this *QGraphicsSceneWheelEvent) ScreenPos() interface{} {
+func (this *QGraphicsSceneWheelEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent9screenPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:149
@@ -149,30 +159,33 @@ func (this *QGraphicsSceneWheelEvent) SetScreenPos(pos *qtcore.QPoint) {
 // index:0
 // Public
 // Qt::MouseButtons buttons()
-func (this *QGraphicsSceneWheelEvent) Buttons() interface{} {
+func (this *QGraphicsSceneWheelEvent) Buttons() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent7buttonsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:154
 // index:0
 // Public
 // Qt::KeyboardModifiers modifiers()
-func (this *QGraphicsSceneWheelEvent) Modifiers() interface{} {
+func (this *QGraphicsSceneWheelEvent) Modifiers() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent9modifiersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:157
 // index:0
 // Public
 // int delta()
-func (this *QGraphicsSceneWheelEvent) Delta() interface{} {
+func (this *QGraphicsSceneWheelEvent) Delta() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent5deltaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:158
@@ -188,10 +201,11 @@ func (this *QGraphicsSceneWheelEvent) SetDelta(delta int) {
 // index:0
 // Public
 // Qt::Orientation orientation()
-func (this *QGraphicsSceneWheelEvent) Orientation() interface{} {
+func (this *QGraphicsSceneWheelEvent) Orientation() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent11orientationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:161

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qglyphrun.h
 // #include <qglyphrun.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 36
+// extern C begin: 34
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QGlyphRun struct {
 }
 
 func (this *QGlyphRun) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQGlyphRunFromPointer(cthis unsafe.Pointer) *QGlyphRun {
 	return &QGlyphRun{&qtrt.CObject{cthis}}
@@ -94,10 +98,12 @@ func (this *QGlyphRun) Swap(other *QGlyphRun) {
 // index:0
 // Public
 // QRawFont rawFont()
-func (this *QGlyphRun) RawFont() interface{} {
+func (this *QGlyphRun) RawFont() *QRawFont /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun7rawFontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qglyphrun.h:78
@@ -114,29 +120,10 @@ func (this *QGlyphRun) SetRawFont(rawFont *QRawFont) {
 // index:0
 // Public
 // void setRawData(const quint32 *, const class QPointF *, int)
-func (this *QGlyphRun) SetRawData(glyphIndexArray unsafe.Pointer, glyphPositionArray unsafe.Pointer, size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun10setRawDataEPKjPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), glyphIndexArray, glyphPositionArray, &size)
+func (this *QGlyphRun) SetRawData(glyphIndexArray unsafe.Pointer /*666*/, glyphPositionArray *qtcore.QPointF /*444 const QPointF **/, size int) {
+	var convArg1 = glyphPositionArray.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun10setRawDataEPKjPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), glyphIndexArray, convArg1, &size)
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qglyphrun.h:84
-// index:0
-// Public
-// QVector<quint32> glyphIndexes()
-func (this *QGlyphRun) GlyphIndexes() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun12glyphIndexesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qglyphrun.h:87
-// index:0
-// Public
-// QVector<QPointF> positions()
-func (this *QGlyphRun) Positions() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun9positionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
 }
 
 // /usr/include/qt/QtGui/qglyphrun.h:90
@@ -161,10 +148,11 @@ func (this *QGlyphRun) SetOverline(overline bool) {
 // index:0
 // Public
 // bool overline()
-func (this *QGlyphRun) Overline() interface{} {
+func (this *QGlyphRun) Overline() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun8overlineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qglyphrun.h:99
@@ -180,10 +168,11 @@ func (this *QGlyphRun) SetUnderline(underline bool) {
 // index:0
 // Public
 // bool underline()
-func (this *QGlyphRun) Underline() interface{} {
+func (this *QGlyphRun) Underline() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun9underlineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qglyphrun.h:102
@@ -199,10 +188,11 @@ func (this *QGlyphRun) SetStrikeOut(strikeOut bool) {
 // index:0
 // Public
 // bool strikeOut()
-func (this *QGlyphRun) StrikeOut() interface{} {
+func (this *QGlyphRun) StrikeOut() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun9strikeOutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qglyphrun.h:105
@@ -218,10 +208,11 @@ func (this *QGlyphRun) SetRightToLeft(on bool) {
 // index:0
 // Public
 // bool isRightToLeft()
-func (this *QGlyphRun) IsRightToLeft() interface{} {
+func (this *QGlyphRun) IsRightToLeft() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun13isRightToLeftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qglyphrun.h:108
@@ -237,10 +228,11 @@ func (this *QGlyphRun) SetFlag(flag int, enabled bool) {
 // index:0
 // Public
 // QGlyphRun::GlyphRunFlags flags()
-func (this *QGlyphRun) Flags() interface{} {
+func (this *QGlyphRun) Flags() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qglyphrun.h:112
@@ -257,20 +249,23 @@ func (this *QGlyphRun) SetBoundingRect(boundingRect *qtcore.QRectF) {
 // index:0
 // Public
 // QRectF boundingRect()
-func (this *QGlyphRun) BoundingRect() interface{} {
+func (this *QGlyphRun) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qglyphrun.h:115
 // index:0
 // Public
 // bool isEmpty()
-func (this *QGlyphRun) IsEmpty() interface{} {
+func (this *QGlyphRun) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

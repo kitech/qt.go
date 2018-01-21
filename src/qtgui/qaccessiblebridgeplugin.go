@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qaccessiblebridge.h
 // #include <qaccessiblebridge.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QAccessibleBridgePlugin struct {
 }
 
 func (this *QAccessibleBridgePlugin) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQAccessibleBridgePluginFromPointer(cthis unsafe.Pointer) *QAccessibleBridgePlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQAccessibleBridgePluginFromPointer(cthis unsafe.Pointer) *QAccessibleBri
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAccessibleBridgePlugin) MetaObject() interface{} {
+func (this *QAccessibleBridgePlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QAccessibleBridgePlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:69
 // index:0
 // Public
 // void QAccessibleBridgePlugin(class QObject *)
-func NewQAccessibleBridgePlugin(parent unsafe.Pointer) *QAccessibleBridgePlugin {
+func NewQAccessibleBridgePlugin(parent *qtcore.QObject /*444 QObject **/) *QAccessibleBridgePlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleBridgePluginFromPointer(cthis)
 	return gothis
@@ -95,11 +102,13 @@ func DeleteQAccessibleBridgePlugin(*QAccessibleBridgePlugin) {
 // index:0
 // Public pure virtual
 // QAccessibleBridge * create(const class QString &)
-func (this *QAccessibleBridgePlugin) Create(key *qtcore.QString) interface{} {
+func (this *QAccessibleBridgePlugin) Create(key *qtcore.QString) *QAccessibleBridge /*444 QAccessibleBridge **/ {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QAccessibleBridgePlugin6createERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQAccessibleBridgeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

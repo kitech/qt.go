@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h
 // #include <qabstracttextdocumentlayout.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QTextObjectInterface struct {
 }
 
 func (this *QTextObjectInterface) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQTextObjectInterfaceFromPointer(cthis unsafe.Pointer) *QTextObjectInterface {
 	return &QTextObjectInterface{&qtrt.CObject{cthis}}
@@ -72,21 +76,26 @@ func DeleteQTextObjectInterface(*QTextObjectInterface) {
 // index:0
 // Public pure virtual
 // QSizeF intrinsicSize(class QTextDocument *, int, const class QTextFormat &)
-func (this *QTextObjectInterface) IntrinsicSize(doc unsafe.Pointer, posInDocument int, format *QTextFormat) interface{} {
+func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*444 QTextDocument **/, posInDocument int, format *QTextFormat) *qtcore.QSizeF /*123*/ {
+	var convArg0 = doc.GetCthis()
 	var convArg2 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), doc, &posInDocument, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &posInDocument, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:143
 // index:0
 // Public pure virtual
 // void drawObject(class QPainter *, const class QRectF &, class QTextDocument *, int, const class QTextFormat &)
-func (this *QTextObjectInterface) DrawObject(painter unsafe.Pointer, rect *qtcore.QRectF, doc unsafe.Pointer, posInDocument int, format *QTextFormat) {
+func (this *QTextObjectInterface) DrawObject(painter *QPainter /*444 QPainter **/, rect *qtcore.QRectF, doc *QTextDocument /*444 QTextDocument **/, posInDocument int, format *QTextFormat) {
+	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
+	var convArg2 = doc.GetCthis()
 	var convArg4 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), painter, convArg1, doc, &posInDocument, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, &posInDocument, convArg4)
 	gopp.ErrPrint(err, rv)
 }
 

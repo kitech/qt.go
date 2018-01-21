@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qobject.h
 // #include <qobject.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 1
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QObjectData struct {
 }
 
 func (this *QObjectData) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQObjectDataFromPointer(cthis unsafe.Pointer) *QObjectData {
 	return &QObjectData{&qtrt.CObject{cthis}}
@@ -68,10 +72,12 @@ func DeleteQObjectData(*QObjectData) {
 // index:0
 // Public
 // QMetaObject * dynamicMetaObject()
-func (this *QObjectData) DynamicMetaObject() interface{} {
+func (this *QObjectData) DynamicMetaObject() *QMetaObject /*444 QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QObjectData17dynamicMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

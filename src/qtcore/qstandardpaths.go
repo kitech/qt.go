@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qstandardpaths.h
 // #include <qstandardpaths.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 61
+// extern C begin: 60
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QStandardPaths struct {
 }
 
 func (this *QStandardPaths) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQStandardPathsFromPointer(cthis unsafe.Pointer) *QStandardPaths {
 	return &QStandardPaths{&qtrt.CObject{cthis}}
@@ -59,56 +63,51 @@ func NewQStandardPathsFromPointer(cthis unsafe.Pointer) *QStandardPaths {
 // index:0
 // Public static
 // QString writableLocation(enum QStandardPaths::StandardLocation)
-func (this *QStandardPaths) WritableLocation(type_ int) interface{} {
+func (this *QStandardPaths) WritableLocation(type_ int) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths16writableLocationENS_16StandardLocationE", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QStandardPaths_WritableLocation(type_ int) {
+func QStandardPaths_WritableLocation(type_ int) *QString /*123*/ {
 	var nilthis *QStandardPaths
-	nilthis.WritableLocation(type_)
-}
-
-// /usr/include/qt/QtCore/qstandardpaths.h:82
-// index:0
-// Public static
-// QStringList standardLocations(enum QStandardPaths::StandardLocation)
-func (this *QStandardPaths) StandardLocations(type_ int) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths17standardLocationsENS_16StandardLocationE", ffiqt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	rv := nilthis.WritableLocation(type_)
 	return rv
-}
-func QStandardPaths_StandardLocations(type_ int) {
-	var nilthis *QStandardPaths
-	nilthis.StandardLocations(type_)
 }
 
 // /usr/include/qt/QtCore/qstandardpaths.h:94
 // index:0
 // Public static
 // QString displayName(enum QStandardPaths::StandardLocation)
-func (this *QStandardPaths) DisplayName(type_ int) interface{} {
+func (this *QStandardPaths) DisplayName(type_ int) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths11displayNameENS_16StandardLocationE", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QStandardPaths_DisplayName(type_ int) {
+func QStandardPaths_DisplayName(type_ int) *QString /*123*/ {
 	var nilthis *QStandardPaths
-	nilthis.DisplayName(type_)
+	rv := nilthis.DisplayName(type_)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qstandardpaths.h:97
 // index:0
 // Public static
 // QString findExecutable(const class QString &, const class QStringList &)
-func (this *QStandardPaths) FindExecutable(executableName *QString, paths *QStringList) interface{} {
+func (this *QStandardPaths) FindExecutable(executableName *QString, paths *QStringList) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList", ffiqt.FFI_TYPE_POINTER, executableName, paths)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QStandardPaths_FindExecutable(executableName *QString, paths *QStringList) {
+func QStandardPaths_FindExecutable(executableName *QString, paths *QStringList) *QString /*123*/ {
 	var nilthis *QStandardPaths
-	nilthis.FindExecutable(executableName, paths)
+	rv := nilthis.FindExecutable(executableName, paths)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qstandardpaths.h:100
@@ -141,14 +140,16 @@ func QStandardPaths_SetTestModeEnabled(testMode bool) {
 // index:0
 // Public static
 // bool isTestModeEnabled()
-func (this *QStandardPaths) IsTestModeEnabled() interface{} {
+func (this *QStandardPaths) IsTestModeEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths17isTestModeEnabledEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QStandardPaths_IsTestModeEnabled() {
+func QStandardPaths_IsTestModeEnabled() bool {
 	var nilthis *QStandardPaths
-	nilthis.IsTestModeEnabled()
+	rv := nilthis.IsTestModeEnabled()
+	return rv
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qscroller.h
 // #include <qscroller.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QScroller struct {
 }
 
 func (this *QScroller) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQScrollerFromPointer(cthis unsafe.Pointer) *QScroller {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -68,138 +72,142 @@ func NewQScrollerFromPointer(cthis unsafe.Pointer) *QScroller {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QScroller) MetaObject() interface{} {
+func (this *QScroller) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QScroller10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:92
 // index:0
 // Public static
 // bool hasScroller(class QObject *)
-func (this *QScroller) HasScroller(target unsafe.Pointer) interface{} {
+func (this *QScroller) HasScroller(target *qtcore.QObject /*444 QObject **/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11hasScrollerEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QScroller_HasScroller(target unsafe.Pointer) {
+func QScroller_HasScroller(target *qtcore.QObject /*444 QObject **/) bool {
 	var nilthis *QScroller
-	nilthis.HasScroller(target)
+	rv := nilthis.HasScroller(target)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:94
 // index:0
 // Public static
 // QScroller * scroller(class QObject *)
-func (this *QScroller) Scroller(target unsafe.Pointer) interface{} {
+func (this *QScroller) Scroller(target *qtcore.QObject /*444 QObject **/) *QScroller /*444 QScroller **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollerEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQScrollerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QScroller_Scroller(target unsafe.Pointer) {
+func QScroller_Scroller(target *qtcore.QObject /*444 QObject **/) *QScroller /*444 QScroller **/ {
 	var nilthis *QScroller
-	nilthis.Scroller(target)
+	rv := nilthis.Scroller(target)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:95
 // index:1
 // Public static
 // const QScroller * scroller(const class QObject *)
-func (this *QScroller) Scroller_1(target unsafe.Pointer) interface{} {
+func (this *QScroller) Scroller_1(target *qtcore.QObject /*444 const QObject **/) *QScroller /*444 const QScroller **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollerEPK7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQScrollerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QScroller_Scroller_1(target unsafe.Pointer) {
+func QScroller_Scroller_1(target *qtcore.QObject /*444 const QObject **/) *QScroller /*444 const QScroller **/ {
 	var nilthis *QScroller
-	nilthis.Scroller_1(target)
+	rv := nilthis.Scroller_1(target)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:98
 // index:0
 // Public static
 // Qt::GestureType grabGesture(class QObject *, enum QScroller::ScrollerGestureType)
-func (this *QScroller) GrabGesture(target unsafe.Pointer, gestureType int) interface{} {
+func (this *QScroller) GrabGesture(target *qtcore.QObject /*444 QObject **/, gestureType int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11grabGestureEP7QObjectNS_19ScrollerGestureTypeE", ffiqt.FFI_TYPE_POINTER, target, gestureType)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QScroller_GrabGesture(target unsafe.Pointer, gestureType int) {
+func QScroller_GrabGesture(target *qtcore.QObject /*444 QObject **/, gestureType int) int {
 	var nilthis *QScroller
-	nilthis.GrabGesture(target, gestureType)
+	rv := nilthis.GrabGesture(target, gestureType)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:99
 // index:0
 // Public static
 // Qt::GestureType grabbedGesture(class QObject *)
-func (this *QScroller) GrabbedGesture(target unsafe.Pointer) interface{} {
+func (this *QScroller) GrabbedGesture(target *qtcore.QObject /*444 QObject **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller14grabbedGestureEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QScroller_GrabbedGesture(target unsafe.Pointer) {
+func QScroller_GrabbedGesture(target *qtcore.QObject /*444 QObject **/) int {
 	var nilthis *QScroller
-	nilthis.GrabbedGesture(target)
+	rv := nilthis.GrabbedGesture(target)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:100
 // index:0
 // Public static
 // void ungrabGesture(class QObject *)
-func (this *QScroller) UngrabGesture(target unsafe.Pointer) {
+func (this *QScroller) UngrabGesture(target *qtcore.QObject /*444 QObject **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller13ungrabGestureEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
 }
-func QScroller_UngrabGesture(target unsafe.Pointer) {
+func QScroller_UngrabGesture(target *qtcore.QObject /*444 QObject **/) {
 	var nilthis *QScroller
 	nilthis.UngrabGesture(target)
-}
-
-// /usr/include/qt/QtWidgets/qscroller.h:103
-// index:0
-// Public static
-// QList<QScroller *> activeScrollers()
-func (this *QScroller) ActiveScrollers() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller15activeScrollersEv", ffiqt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-func QScroller_ActiveScrollers() {
-	var nilthis *QScroller
-	nilthis.ActiveScrollers()
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:105
 // index:0
 // Public
 // QObject * target()
-func (this *QScroller) Target() interface{} {
+func (this *QScroller) Target() *qtcore.QObject /*444 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QScroller6targetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:107
 // index:0
 // Public
 // QScroller::State state()
-func (this *QScroller) State() interface{} {
+func (this *QScroller) State() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QScroller5stateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:109
 // index:0
 // Public
 // bool handleInput(enum QScroller::Input, const class QPointF &, qint64)
-func (this *QScroller) HandleInput(input int, position *qtcore.QPointF, timestamp int64) interface{} {
+func (this *QScroller) HandleInput(input int, position *qtcore.QPointF, timestamp int64) bool {
 	var convArg1 = position.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11handleInputENS_5InputERK7QPointFx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &input, convArg1, &timestamp)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:111
@@ -215,40 +223,48 @@ func (this *QScroller) Stop() {
 // index:0
 // Public
 // QPointF velocity()
-func (this *QScroller) Velocity() interface{} {
+func (this *QScroller) Velocity() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QScroller8velocityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:113
 // index:0
 // Public
 // QPointF finalPosition()
-func (this *QScroller) FinalPosition() interface{} {
+func (this *QScroller) FinalPosition() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QScroller13finalPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:114
 // index:0
 // Public
 // QPointF pixelPerMeter()
-func (this *QScroller) PixelPerMeter() interface{} {
+func (this *QScroller) PixelPerMeter() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QScroller13pixelPerMeterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:116
 // index:0
 // Public
 // QScrollerProperties scrollerProperties()
-func (this *QScroller) ScrollerProperties() interface{} {
+func (this *QScroller) ScrollerProperties() *QScrollerProperties /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QScroller18scrollerPropertiesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQScrollerPropertiesFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qscroller.h:119

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qrandom.h
 // #include <qrandom.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QRandomGenerator struct {
 }
 
 func (this *QRandomGenerator) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQRandomGeneratorFromPointer(cthis unsafe.Pointer) *QRandomGenerator {
 	return &QRandomGenerator{&qtrt.CObject{cthis}}
@@ -71,7 +75,7 @@ func NewQRandomGenerator(seedValue uint) *QRandomGenerator {
 // index:1
 // Public inline
 // void QRandomGenerator(const quint32 *, qsizetype)
-func NewQRandomGenerator_1(seedBuffer unsafe.Pointer, len int64) *QRandomGenerator {
+func NewQRandomGenerator_1(seedBuffer unsafe.Pointer /*666*/, len int64) *QRandomGenerator {
 	cthis := qtrt.Calloc(1, 256) // 2512
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjx", ffiqt.FFI_TYPE_VOID, cthis, seedBuffer, &len)
 	gopp.ErrPrint(err, rv)
@@ -83,7 +87,7 @@ func NewQRandomGenerator_1(seedBuffer unsafe.Pointer, len int64) *QRandomGenerat
 // index:2
 // Public
 // void QRandomGenerator(const quint32 *, const quint32 *)
-func NewQRandomGenerator_2(begin unsafe.Pointer, end unsafe.Pointer) *QRandomGenerator {
+func NewQRandomGenerator_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator {
 	cthis := qtrt.Calloc(1, 256) // 2512
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjS1_", ffiqt.FFI_TYPE_VOID, cthis, begin, end)
 	gopp.ErrPrint(err, rv)
@@ -107,17 +111,18 @@ func NewQRandomGenerator_3(arg0 int) *QRandomGenerator {
 // index:0
 // Public inline
 // quint32 generate()
-func (this *QRandomGenerator) Generate() interface{} {
+func (this *QRandomGenerator) Generate() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator8generateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:152
 // index:1
 // Public inline
 // void generate(quint32 *, quint32 *)
-func (this *QRandomGenerator) Generate_1(begin unsafe.Pointer, end unsafe.Pointer) {
+func (this *QRandomGenerator) Generate_1(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator8generateEPjS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), begin, end)
 	gopp.ErrPrint(err, rv)
 }
@@ -126,70 +131,77 @@ func (this *QRandomGenerator) Generate_1(begin unsafe.Pointer, end unsafe.Pointe
 // index:0
 // Public inline
 // quint64 generate64()
-func (this *QRandomGenerator) Generate64() interface{} {
+func (this *QRandomGenerator) Generate64() uint64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator10generate64Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:91
 // index:0
 // Public inline
 // double generateDouble()
-func (this *QRandomGenerator) GenerateDouble() interface{} {
+func (this *QRandomGenerator) GenerateDouble() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator14generateDoubleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrandom.h:105
 // index:0
 // Public inline
 // double bounded(double)
-func (this *QRandomGenerator) Bounded(highest float64) interface{} {
+func (this *QRandomGenerator) Bounded(highest float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &highest)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrandom.h:110
 // index:1
 // Public inline
 // quint32 bounded(quint32)
-func (this *QRandomGenerator) Bounded_1(highest uint) interface{} {
+func (this *QRandomGenerator) Bounded_1(highest uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &highest)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:118
 // index:2
 // Public inline
 // int bounded(int)
-func (this *QRandomGenerator) Bounded_2(highest int) interface{} {
+func (this *QRandomGenerator) Bounded_2(highest int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &highest)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrandom.h:123
 // index:3
 // Public inline
 // quint32 bounded(quint32, quint32)
-func (this *QRandomGenerator) Bounded_3(lowest uint, highest uint) interface{} {
+func (this *QRandomGenerator) Bounded_3(lowest uint, highest uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEjj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &lowest, &highest)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:128
 // index:4
 // Public inline
 // int bounded(int, int)
-func (this *QRandomGenerator) Bounded_4(lowest int, highest int) interface{} {
+func (this *QRandomGenerator) Bounded_4(lowest int, highest int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &lowest, &highest)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrandom.h:160
@@ -214,70 +226,83 @@ func (this *QRandomGenerator) Discard(z uint64) {
 // index:0
 // Public static inline
 // QRandomGenerator::result_type min()
-func (this *QRandomGenerator) Min() interface{} {
+func (this *QRandomGenerator) Min() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator3minEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return uint(rv) // 222
 }
-func QRandomGenerator_Min() {
+func QRandomGenerator_Min() uint {
 	var nilthis *QRandomGenerator
-	nilthis.Min()
+	rv := nilthis.Min()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qrandom.h:164
 // index:0
 // Public static inline
 // QRandomGenerator::result_type max()
-func (this *QRandomGenerator) Max() interface{} {
+func (this *QRandomGenerator) Max() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator3maxEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return uint(rv) // 222
 }
-func QRandomGenerator_Max() {
+func QRandomGenerator_Max() uint {
 	var nilthis *QRandomGenerator
-	nilthis.Max()
+	rv := nilthis.Max()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qrandom.h:166
 // index:0
 // Public static inline
 // QRandomGenerator * system()
-func (this *QRandomGenerator) System() interface{} {
+func (this *QRandomGenerator) System() *QRandomGenerator /*444 QRandomGenerator **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator6systemEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQRandomGeneratorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QRandomGenerator_System() {
+func QRandomGenerator_System() *QRandomGenerator /*444 QRandomGenerator **/ {
 	var nilthis *QRandomGenerator
-	nilthis.System()
+	rv := nilthis.System()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qrandom.h:167
 // index:0
 // Public static inline
 // QRandomGenerator * global()
-func (this *QRandomGenerator) Global() interface{} {
+func (this *QRandomGenerator) Global() *QRandomGenerator /*444 QRandomGenerator **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator6globalEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQRandomGeneratorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QRandomGenerator_Global() {
+func QRandomGenerator_Global() *QRandomGenerator /*444 QRandomGenerator **/ {
 	var nilthis *QRandomGenerator
-	nilthis.Global()
+	rv := nilthis.Global()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qrandom.h:168
 // index:0
 // Public static inline
 // QRandomGenerator securelySeeded()
-func (this *QRandomGenerator) SecurelySeeded() interface{} {
+func (this *QRandomGenerator) SecurelySeeded() *QRandomGenerator /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator14securelySeededEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQRandomGeneratorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QRandomGenerator_SecurelySeeded() {
+func QRandomGenerator_SecurelySeeded() *QRandomGenerator /*123*/ {
 	var nilthis *QRandomGenerator
-	nilthis.SecurelySeeded()
+	rv := nilthis.SecurelySeeded()
+	return rv
 }
 
 //  body block end

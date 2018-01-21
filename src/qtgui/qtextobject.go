@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtextobject.h
 // #include <qtextobject.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QTextObject struct {
 }
 
 func (this *QTextObject) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQTextObjectFromPointer(cthis unsafe.Pointer) *QTextObject {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQTextObjectFromPointer(cthis unsafe.Pointer) *QTextObject {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTextObject) MetaObject() interface{} {
+func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:65
 // index:0
 // Protected
 // void QTextObject(class QTextDocument *)
-func NewQTextObject(doc unsafe.Pointer) *QTextObject {
+func NewQTextObject(doc *QTextDocument /*444 QTextDocument **/) *QTextObject {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, doc)
+	var convArg0 = doc.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextObjectFromPointer(cthis)
 	return gothis
@@ -105,50 +112,46 @@ func (this *QTextObject) SetFormat(format *QTextFormat) {
 // index:0
 // Public
 // QTextFormat format()
-func (this *QTextObject) Format() interface{} {
+func (this *QTextObject) Format() *QTextFormat /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:72
 // index:0
 // Public
 // int formatIndex()
-func (this *QTextObject) FormatIndex() interface{} {
+func (this *QTextObject) FormatIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject11formatIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:74
 // index:0
 // Public
 // QTextDocument * document()
-func (this *QTextObject) Document() interface{} {
+func (this *QTextObject) Document() *QTextDocument /*444 QTextDocument **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject8documentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:76
 // index:0
 // Public
 // int objectIndex()
-func (this *QTextObject) ObjectIndex() interface{} {
+func (this *QTextObject) ObjectIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject11objectIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qtextobject.h:78
-// index:0
-// Public
-// QTextDocumentPrivate * docHandle()
-func (this *QTextObject) DocHandle() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject9docHandleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

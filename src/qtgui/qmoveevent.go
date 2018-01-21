@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QMoveEvent struct {
 }
 
 func (this *QMoveEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQMoveEventFromPointer(cthis unsafe.Pointer) *QMoveEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -87,20 +91,24 @@ func DeleteQMoveEvent(*QMoveEvent) {
 // index:0
 // Public inline
 // const QPoint & pos()
-func (this *QMoveEvent) Pos() interface{} {
+func (this *QMoveEvent) Pos() *qtcore.QPoint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:425
 // index:0
 // Public inline
 // const QPoint & oldPos()
-func (this *QMoveEvent) OldPos() interface{} {
+func (this *QMoveEvent) OldPos() *qtcore.QPoint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 //  body block end

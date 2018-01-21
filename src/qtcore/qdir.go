@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qdir.h
 // #include <qdir.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 56
+// extern C begin: 55
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QDir struct {
 }
 
 func (this *QDir) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQDirFromPointer(cthis unsafe.Pointer) *QDir {
 	return &QDir{&qtrt.CObject{cthis}}
@@ -101,30 +105,36 @@ func (this *QDir) SetPath(path *QString) {
 // index:0
 // Public
 // QString path()
-func (this *QDir) Path() interface{} {
+func (this *QDir) Path() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir4pathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdir.h:118
 // index:0
 // Public
 // QString absolutePath()
-func (this *QDir) AbsolutePath() interface{} {
+func (this *QDir) AbsolutePath() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir12absolutePathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdir.h:119
 // index:0
 // Public
 // QString canonicalPath()
-func (this *QDir) CanonicalPath() interface{} {
+func (this *QDir) CanonicalPath() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir13canonicalPathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdir.h:121
@@ -166,120 +176,112 @@ func QDir_AddSearchPath(prefix *QString, path *QString) {
 	nilthis.AddSearchPath(prefix, path)
 }
 
-// /usr/include/qt/QtCore/qdir.h:125
-// index:0
-// Public static
-// QStringList searchPaths(const class QString &)
-func (this *QDir) SearchPaths(prefix *QString) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir11searchPathsERK7QString", ffiqt.FFI_TYPE_POINTER, prefix)
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-func QDir_SearchPaths(prefix *QString) {
-	var nilthis *QDir
-	nilthis.SearchPaths(prefix)
-}
-
 // /usr/include/qt/QtCore/qdir.h:127
 // index:0
 // Public
 // QString dirName()
-func (this *QDir) DirName() interface{} {
+func (this *QDir) DirName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir7dirNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdir.h:128
 // index:0
 // Public
 // QString filePath(const class QString &)
-func (this *QDir) FilePath(fileName *QString) interface{} {
+func (this *QDir) FilePath(fileName *QString) *QString /*123*/ {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir8filePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdir.h:129
 // index:0
 // Public
 // QString absoluteFilePath(const class QString &)
-func (this *QDir) AbsoluteFilePath(fileName *QString) interface{} {
+func (this *QDir) AbsoluteFilePath(fileName *QString) *QString /*123*/ {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir16absoluteFilePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdir.h:130
 // index:0
 // Public
 // QString relativeFilePath(const class QString &)
-func (this *QDir) RelativeFilePath(fileName *QString) interface{} {
+func (this *QDir) RelativeFilePath(fileName *QString) *QString /*123*/ {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir16relativeFilePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdir.h:132
 // index:0
 // Public static
 // QString toNativeSeparators(const class QString &)
-func (this *QDir) ToNativeSeparators(pathName *QString) interface{} {
+func (this *QDir) ToNativeSeparators(pathName *QString) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir18toNativeSeparatorsERK7QString", ffiqt.FFI_TYPE_POINTER, pathName)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_ToNativeSeparators(pathName *QString) {
+func QDir_ToNativeSeparators(pathName *QString) *QString /*123*/ {
 	var nilthis *QDir
-	nilthis.ToNativeSeparators(pathName)
+	rv := nilthis.ToNativeSeparators(pathName)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:133
 // index:0
 // Public static
 // QString fromNativeSeparators(const class QString &)
-func (this *QDir) FromNativeSeparators(pathName *QString) interface{} {
+func (this *QDir) FromNativeSeparators(pathName *QString) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir20fromNativeSeparatorsERK7QString", ffiqt.FFI_TYPE_POINTER, pathName)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_FromNativeSeparators(pathName *QString) {
+func QDir_FromNativeSeparators(pathName *QString) *QString /*123*/ {
 	var nilthis *QDir
-	nilthis.FromNativeSeparators(pathName)
+	rv := nilthis.FromNativeSeparators(pathName)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:135
 // index:0
 // Public
 // bool cd(const class QString &)
-func (this *QDir) Cd(dirName *QString) interface{} {
+func (this *QDir) Cd(dirName *QString) bool {
 	var convArg0 = dirName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir2cdERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:136
 // index:0
 // Public
 // bool cdUp()
-func (this *QDir) CdUp() interface{} {
+func (this *QDir) CdUp() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir4cdUpEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qdir.h:138
-// index:0
-// Public
-// QStringList nameFilters()
-func (this *QDir) NameFilters() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir11nameFiltersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:139
@@ -296,430 +298,462 @@ func (this *QDir) SetNameFilters(nameFilters *QStringList) {
 // index:0
 // Public
 // QDir::Filters filter()
-func (this *QDir) Filter() interface{} {
+func (this *QDir) Filter() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir6filterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qdir.h:143
 // index:0
 // Public
 // QDir::SortFlags sorting()
-func (this *QDir) Sorting() interface{} {
+func (this *QDir) Sorting() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir7sortingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qdir.h:146
 // index:0
 // Public
 // uint count()
-func (this *QDir) Count() interface{} {
+func (this *QDir) Count() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qdir.h:151
-// index:0
-// Public static
-// QStringList nameFiltersFromString(const class QString &)
-func (this *QDir) NameFiltersFromString(nameFilter *QString) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir21nameFiltersFromStringERK7QString", ffiqt.FFI_TYPE_POINTER, nameFilter)
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-func QDir_NameFiltersFromString(nameFilter *QString) {
-	var nilthis *QDir
-	nilthis.NameFiltersFromString(nameFilter)
+	//  return rv
+	return uint(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qdir.h:161
 // index:0
 // Public
 // bool mkdir(const class QString &)
-func (this *QDir) Mkdir(dirName *QString) interface{} {
+func (this *QDir) Mkdir(dirName *QString) bool {
 	var convArg0 = dirName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir5mkdirERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:162
 // index:0
 // Public
 // bool rmdir(const class QString &)
-func (this *QDir) Rmdir(dirName *QString) interface{} {
+func (this *QDir) Rmdir(dirName *QString) bool {
 	var convArg0 = dirName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir5rmdirERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:163
 // index:0
 // Public
 // bool mkpath(const class QString &)
-func (this *QDir) Mkpath(dirPath *QString) interface{} {
+func (this *QDir) Mkpath(dirPath *QString) bool {
 	var convArg0 = dirPath.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir6mkpathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:164
 // index:0
 // Public
 // bool rmpath(const class QString &)
-func (this *QDir) Rmpath(dirPath *QString) interface{} {
+func (this *QDir) Rmpath(dirPath *QString) bool {
 	var convArg0 = dirPath.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir6rmpathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:166
 // index:0
 // Public
 // bool removeRecursively()
-func (this *QDir) RemoveRecursively() interface{} {
+func (this *QDir) RemoveRecursively() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir17removeRecursivelyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:168
 // index:0
 // Public
 // bool isReadable()
-func (this *QDir) IsReadable() interface{} {
+func (this *QDir) IsReadable() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir10isReadableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:169
 // index:0
 // Public
 // bool exists()
-func (this *QDir) Exists() interface{} {
+func (this *QDir) Exists() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir6existsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:183
 // index:1
 // Public
 // bool exists(const class QString &)
-func (this *QDir) Exists_1(name *QString) interface{} {
+func (this *QDir) Exists_1(name *QString) bool {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir6existsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:170
 // index:0
 // Public
 // bool isRoot()
-func (this *QDir) IsRoot() interface{} {
+func (this *QDir) IsRoot() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir6isRootEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:172
 // index:0
 // Public static
 // bool isRelativePath(const class QString &)
-func (this *QDir) IsRelativePath(path *QString) interface{} {
+func (this *QDir) IsRelativePath(path *QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir14isRelativePathERK7QString", ffiqt.FFI_TYPE_POINTER, path)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QDir_IsRelativePath(path *QString) {
+func QDir_IsRelativePath(path *QString) bool {
 	var nilthis *QDir
-	nilthis.IsRelativePath(path)
+	rv := nilthis.IsRelativePath(path)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:173
 // index:0
 // Public static inline
 // bool isAbsolutePath(const class QString &)
-func (this *QDir) IsAbsolutePath(path *QString) interface{} {
+func (this *QDir) IsAbsolutePath(path *QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir14isAbsolutePathERK7QString", ffiqt.FFI_TYPE_POINTER, path)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QDir_IsAbsolutePath(path *QString) {
+func QDir_IsAbsolutePath(path *QString) bool {
 	var nilthis *QDir
-	nilthis.IsAbsolutePath(path)
+	rv := nilthis.IsAbsolutePath(path)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:174
 // index:0
 // Public
 // bool isRelative()
-func (this *QDir) IsRelative() interface{} {
+func (this *QDir) IsRelative() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir10isRelativeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:175
 // index:0
 // Public inline
 // bool isAbsolute()
-func (this *QDir) IsAbsolute() interface{} {
+func (this *QDir) IsAbsolute() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir10isAbsoluteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:176
 // index:0
 // Public
 // bool makeAbsolute()
-func (this *QDir) MakeAbsolute() interface{} {
+func (this *QDir) MakeAbsolute() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir12makeAbsoluteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:181
 // index:0
 // Public
 // bool remove(const class QString &)
-func (this *QDir) Remove(fileName *QString) interface{} {
+func (this *QDir) Remove(fileName *QString) bool {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir6removeERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:182
 // index:0
 // Public
 // bool rename(const class QString &, const class QString &)
-func (this *QDir) Rename(oldName *QString, newName *QString) interface{} {
+func (this *QDir) Rename(oldName *QString, newName *QString) bool {
 	var convArg0 = oldName.GetCthis()
 	var convArg1 = newName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir6renameERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qdir.h:185
-// index:0
-// Public static
-// QFileInfoList drives()
-func (this *QDir) Drives() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir6drivesEv", ffiqt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-func QDir_Drives() {
-	var nilthis *QDir
-	nilthis.Drives()
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:187
 // index:0
 // Public static inline
 // QChar listSeparator()
-func (this *QDir) ListSeparator() interface{} {
+func (this *QDir) ListSeparator() *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir13listSeparatorEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_ListSeparator() {
+func QDir_ListSeparator() *QChar /*123*/ {
 	var nilthis *QDir
-	nilthis.ListSeparator()
+	rv := nilthis.ListSeparator()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:196
 // index:0
 // Public static
 // QChar separator()
-func (this *QDir) Separator() interface{} {
+func (this *QDir) Separator() *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir9separatorEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_Separator() {
+func QDir_Separator() *QChar /*123*/ {
 	var nilthis *QDir
-	nilthis.Separator()
+	rv := nilthis.Separator()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:198
 // index:0
 // Public static
 // bool setCurrent(const class QString &)
-func (this *QDir) SetCurrent(path *QString) interface{} {
+func (this *QDir) SetCurrent(path *QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir10setCurrentERK7QString", ffiqt.FFI_TYPE_POINTER, path)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QDir_SetCurrent(path *QString) {
+func QDir_SetCurrent(path *QString) bool {
 	var nilthis *QDir
-	nilthis.SetCurrent(path)
+	rv := nilthis.SetCurrent(path)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:199
 // index:0
 // Public static inline
 // QDir current()
-func (this *QDir) Current() interface{} {
+func (this *QDir) Current() *QDir /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir7currentEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_Current() {
+func QDir_Current() *QDir /*123*/ {
 	var nilthis *QDir
-	nilthis.Current()
+	rv := nilthis.Current()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:200
 // index:0
 // Public static
 // QString currentPath()
-func (this *QDir) CurrentPath() interface{} {
+func (this *QDir) CurrentPath() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir11currentPathEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_CurrentPath() {
+func QDir_CurrentPath() *QString /*123*/ {
 	var nilthis *QDir
-	nilthis.CurrentPath()
+	rv := nilthis.CurrentPath()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:202
 // index:0
 // Public static inline
 // QDir home()
-func (this *QDir) Home() interface{} {
+func (this *QDir) Home() *QDir /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir4homeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_Home() {
+func QDir_Home() *QDir /*123*/ {
 	var nilthis *QDir
-	nilthis.Home()
+	rv := nilthis.Home()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:203
 // index:0
 // Public static
 // QString homePath()
-func (this *QDir) HomePath() interface{} {
+func (this *QDir) HomePath() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir8homePathEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_HomePath() {
+func QDir_HomePath() *QString /*123*/ {
 	var nilthis *QDir
-	nilthis.HomePath()
+	rv := nilthis.HomePath()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:204
 // index:0
 // Public static inline
 // QDir root()
-func (this *QDir) Root() interface{} {
+func (this *QDir) Root() *QDir /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir4rootEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_Root() {
+func QDir_Root() *QDir /*123*/ {
 	var nilthis *QDir
-	nilthis.Root()
+	rv := nilthis.Root()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:205
 // index:0
 // Public static
 // QString rootPath()
-func (this *QDir) RootPath() interface{} {
+func (this *QDir) RootPath() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir8rootPathEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_RootPath() {
+func QDir_RootPath() *QString /*123*/ {
 	var nilthis *QDir
-	nilthis.RootPath()
+	rv := nilthis.RootPath()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:206
 // index:0
 // Public static inline
 // QDir temp()
-func (this *QDir) Temp() interface{} {
+func (this *QDir) Temp() *QDir /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir4tempEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_Temp() {
+func QDir_Temp() *QDir /*123*/ {
 	var nilthis *QDir
-	nilthis.Temp()
+	rv := nilthis.Temp()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:207
 // index:0
 // Public static
 // QString tempPath()
-func (this *QDir) TempPath() interface{} {
+func (this *QDir) TempPath() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir8tempPathEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_TempPath() {
+func QDir_TempPath() *QString /*123*/ {
 	var nilthis *QDir
-	nilthis.TempPath()
+	rv := nilthis.TempPath()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:210
 // index:0
 // Public static
 // bool match(const class QStringList &, const class QString &)
-func (this *QDir) Match(filters *QStringList, fileName *QString) interface{} {
+func (this *QDir) Match(filters *QStringList, fileName *QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir5matchERK11QStringListRK7QString", ffiqt.FFI_TYPE_POINTER, filters, fileName)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QDir_Match(filters *QStringList, fileName *QString) {
+func QDir_Match(filters *QStringList, fileName *QString) bool {
 	var nilthis *QDir
-	nilthis.Match(filters, fileName)
+	rv := nilthis.Match(filters, fileName)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:211
 // index:1
 // Public static
 // bool match(const class QString &, const class QString &)
-func (this *QDir) Match_1(filter *QString, fileName *QString) interface{} {
+func (this *QDir) Match_1(filter *QString, fileName *QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir5matchERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, filter, fileName)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QDir_Match_1(filter *QString, fileName *QString) {
+func QDir_Match_1(filter *QString, fileName *QString) bool {
 	var nilthis *QDir
-	nilthis.Match_1(filter, fileName)
+	rv := nilthis.Match_1(filter, fileName)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:214
 // index:0
 // Public static
 // QString cleanPath(const class QString &)
-func (this *QDir) CleanPath(path *QString) interface{} {
+func (this *QDir) CleanPath(path *QString) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir9cleanPathERK7QString", ffiqt.FFI_TYPE_POINTER, path)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDir_CleanPath(path *QString) {
+func QDir_CleanPath(path *QString) *QString /*123*/ {
 	var nilthis *QDir
-	nilthis.CleanPath(path)
+	rv := nilthis.CleanPath(path)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdir.h:215

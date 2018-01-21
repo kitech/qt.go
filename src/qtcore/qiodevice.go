@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qiodevice.h
 // #include <qiodevice.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QIODevice struct {
 }
 
 func (this *QIODevice) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQIODeviceFromPointer(cthis unsafe.Pointer) *QIODevice {
 	bcthis0 := NewQObjectFromPointer(cthis)
@@ -60,10 +64,12 @@ func NewQIODeviceFromPointer(cthis unsafe.Pointer) *QIODevice {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QIODevice) MetaObject() interface{} {
+func (this *QIODevice) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:83
@@ -82,9 +88,10 @@ func NewQIODevice() *QIODevice {
 // index:1
 // Public
 // void QIODevice(class QObject *)
-func NewQIODevice_1(parent unsafe.Pointer) *QIODevice {
+func NewQIODevice_1(parent *QObject /*444 QObject **/) *QIODevice {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODeviceC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODeviceC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIODeviceFromPointer(cthis)
 	return gothis
@@ -103,10 +110,11 @@ func DeleteQIODevice(*QIODevice) {
 // index:0
 // Public
 // QIODevice::OpenMode openMode()
-func (this *QIODevice) OpenMode() interface{} {
+func (this *QIODevice) OpenMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice8openModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:91
@@ -122,80 +130,88 @@ func (this *QIODevice) SetTextModeEnabled(enabled bool) {
 // index:0
 // Public
 // bool isTextModeEnabled()
-func (this *QIODevice) IsTextModeEnabled() interface{} {
+func (this *QIODevice) IsTextModeEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice17isTextModeEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:94
 // index:0
 // Public
 // bool isOpen()
-func (this *QIODevice) IsOpen() interface{} {
+func (this *QIODevice) IsOpen() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice6isOpenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:95
 // index:0
 // Public
 // bool isReadable()
-func (this *QIODevice) IsReadable() interface{} {
+func (this *QIODevice) IsReadable() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice10isReadableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:96
 // index:0
 // Public
 // bool isWritable()
-func (this *QIODevice) IsWritable() interface{} {
+func (this *QIODevice) IsWritable() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice10isWritableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:97
 // index:0
 // Public virtual
 // bool isSequential()
-func (this *QIODevice) IsSequential() interface{} {
+func (this *QIODevice) IsSequential() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice12isSequentialEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:99
 // index:0
 // Public
 // int readChannelCount()
-func (this *QIODevice) ReadChannelCount() interface{} {
+func (this *QIODevice) ReadChannelCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice16readChannelCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:100
 // index:0
 // Public
 // int writeChannelCount()
-func (this *QIODevice) WriteChannelCount() interface{} {
+func (this *QIODevice) WriteChannelCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice17writeChannelCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:101
 // index:0
 // Public
 // int currentReadChannel()
-func (this *QIODevice) CurrentReadChannel() interface{} {
+func (this *QIODevice) CurrentReadChannel() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice18currentReadChannelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:102
@@ -211,10 +227,11 @@ func (this *QIODevice) SetCurrentReadChannel(channel int) {
 // index:0
 // Public
 // int currentWriteChannel()
-func (this *QIODevice) CurrentWriteChannel() interface{} {
+func (this *QIODevice) CurrentWriteChannel() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice19currentWriteChannelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:104
@@ -239,134 +256,150 @@ func (this *QIODevice) Close() {
 // index:0
 // Public virtual
 // qint64 pos()
-func (this *QIODevice) Pos() interface{} {
+func (this *QIODevice) Pos() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:112
 // index:0
 // Public virtual
 // qint64 size()
-func (this *QIODevice) Size() interface{} {
+func (this *QIODevice) Size() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:113
 // index:0
 // Public virtual
 // bool seek(qint64)
-func (this *QIODevice) Seek(pos int64) interface{} {
+func (this *QIODevice) Seek(pos int64) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4seekEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pos)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:114
 // index:0
 // Public virtual
 // bool atEnd()
-func (this *QIODevice) AtEnd() interface{} {
+func (this *QIODevice) AtEnd() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice5atEndEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:115
 // index:0
 // Public virtual
 // bool reset()
-func (this *QIODevice) Reset() interface{} {
+func (this *QIODevice) Reset() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice5resetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:117
 // index:0
 // Public virtual
 // qint64 bytesAvailable()
-func (this *QIODevice) BytesAvailable() interface{} {
+func (this *QIODevice) BytesAvailable() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice14bytesAvailableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:118
 // index:0
 // Public virtual
 // qint64 bytesToWrite()
-func (this *QIODevice) BytesToWrite() interface{} {
+func (this *QIODevice) BytesToWrite() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice12bytesToWriteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:120
 // index:0
 // Public
 // qint64 read(char *, qint64)
-func (this *QIODevice) Read(data string, maxlen int64) interface{} {
+func (this *QIODevice) Read(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4readEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &maxlen)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:121
 // index:1
 // Public
 // QByteArray read(qint64)
-func (this *QIODevice) Read_1(maxlen int64) interface{} {
+func (this *QIODevice) Read_1(maxlen int64) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4readEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &maxlen)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:122
 // index:0
 // Public
 // QByteArray readAll()
-func (this *QIODevice) ReadAll() interface{} {
+func (this *QIODevice) ReadAll() *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice7readAllEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:123
 // index:0
 // Public
 // qint64 readLine(char *, qint64)
-func (this *QIODevice) ReadLine(data string, maxlen int64) interface{} {
+func (this *QIODevice) ReadLine(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice8readLineEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &maxlen)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:124
 // index:1
 // Public
 // QByteArray readLine(qint64)
-func (this *QIODevice) ReadLine_1(maxlen int64) interface{} {
+func (this *QIODevice) ReadLine_1(maxlen int64) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice8readLineEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &maxlen)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:125
 // index:0
 // Public virtual
 // bool canReadLine()
-func (this *QIODevice) CanReadLine() interface{} {
+func (this *QIODevice) CanReadLine() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice11canReadLineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:127
@@ -400,97 +433,107 @@ func (this *QIODevice) RollbackTransaction() {
 // index:0
 // Public
 // bool isTransactionStarted()
-func (this *QIODevice) IsTransactionStarted() interface{} {
+func (this *QIODevice) IsTransactionStarted() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice20isTransactionStartedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:132
 // index:0
 // Public
 // qint64 write(const char *, qint64)
-func (this *QIODevice) Write(data string, len int64) interface{} {
+func (this *QIODevice) Write(data string, len int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice5writeEPKcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:133
 // index:1
 // Public
 // qint64 write(const char *)
-func (this *QIODevice) Write_1(data string) interface{} {
+func (this *QIODevice) Write_1(data string) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice5writeEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:134
 // index:2
 // Public inline
 // qint64 write(const class QByteArray &)
-func (this *QIODevice) Write_2(data *QByteArray) interface{} {
+func (this *QIODevice) Write_2(data *QByteArray) int64 {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice5writeERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:137
 // index:0
 // Public
 // qint64 peek(char *, qint64)
-func (this *QIODevice) Peek(data string, maxlen int64) interface{} {
+func (this *QIODevice) Peek(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4peekEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &maxlen)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:138
 // index:1
 // Public
 // QByteArray peek(qint64)
-func (this *QIODevice) Peek_1(maxlen int64) interface{} {
+func (this *QIODevice) Peek_1(maxlen int64) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4peekEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &maxlen)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:139
 // index:0
 // Public
 // qint64 skip(qint64)
-func (this *QIODevice) Skip(maxSize int64) interface{} {
+func (this *QIODevice) Skip(maxSize int64) int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4skipEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &maxSize)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:141
 // index:0
 // Public virtual
 // bool waitForReadyRead(int)
-func (this *QIODevice) WaitForReadyRead(msecs int) interface{} {
+func (this *QIODevice) WaitForReadyRead(msecs int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice16waitForReadyReadEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msecs)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:142
 // index:0
 // Public virtual
 // bool waitForBytesWritten(int)
-func (this *QIODevice) WaitForBytesWritten(msecs int) interface{} {
+func (this *QIODevice) WaitForBytesWritten(msecs int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice19waitForBytesWrittenEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msecs)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:144
@@ -506,32 +549,36 @@ func (this *QIODevice) UngetChar(c byte) {
 // index:0
 // Public
 // bool putChar(char)
-func (this *QIODevice) PutChar(c byte) interface{} {
+func (this *QIODevice) PutChar(c byte) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice7putCharEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &c)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:146
 // index:0
 // Public
 // bool getChar(char *)
-func (this *QIODevice) GetChar(c string) interface{} {
+func (this *QIODevice) GetChar(c string) bool {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice7getCharEPc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:148
 // index:0
 // Public
 // QString errorString()
-func (this *QIODevice) ErrorString() interface{} {
+func (this *QIODevice) ErrorString() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:152
@@ -592,36 +639,39 @@ func (this *QIODevice) ReadChannelFinished() {
 // index:0
 // Protected pure virtual
 // qint64 readData(char *, qint64)
-func (this *QIODevice) ReadData(data string, maxlen int64) interface{} {
+func (this *QIODevice) ReadData(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice8readDataEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &maxlen)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:167
 // index:0
 // Protected virtual
 // qint64 readLineData(char *, qint64)
-func (this *QIODevice) ReadLineData(data string, maxlen int64) interface{} {
+func (this *QIODevice) ReadLineData(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice12readLineDataEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &maxlen)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:168
 // index:0
 // Protected pure virtual
 // qint64 writeData(const char *, qint64)
-func (this *QIODevice) WriteData(data string, len int64) interface{} {
+func (this *QIODevice) WriteData(data string, len int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice9writeDataEPKcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:172

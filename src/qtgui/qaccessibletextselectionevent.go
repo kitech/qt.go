@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qaccessible.h
 // #include <qaccessible.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QAccessibleTextSelectionEvent struct {
 }
 
 func (this *QAccessibleTextSelectionEvent) GetCthis() unsafe.Pointer {
-	return this.QAccessibleTextCursorEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QAccessibleTextCursorEvent.GetCthis()
+	}
 }
 func NewQAccessibleTextSelectionEventFromPointer(cthis unsafe.Pointer) *QAccessibleTextSelectionEvent {
 	bcthis0 := NewQAccessibleTextCursorEventFromPointer(cthis)
@@ -64,9 +68,10 @@ func NewQAccessibleTextSelectionEventFromPointer(cthis unsafe.Pointer) *QAccessi
 // index:0
 // Public inline
 // void QAccessibleTextSelectionEvent(class QObject *, int, int)
-func NewQAccessibleTextSelectionEvent(obj unsafe.Pointer, start int, end int) *QAccessibleTextSelectionEvent {
+func NewQAccessibleTextSelectionEvent(obj *qtcore.QObject /*444 QObject **/, start int, end int) *QAccessibleTextSelectionEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP7QObjectii", ffiqt.FFI_TYPE_VOID, cthis, obj, &start, &end)
+	var convArg0 = obj.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP7QObjectii", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &start, &end)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextSelectionEventFromPointer(cthis)
 	return gothis
@@ -76,9 +81,10 @@ func NewQAccessibleTextSelectionEvent(obj unsafe.Pointer, start int, end int) *Q
 // index:1
 // Public inline
 // void QAccessibleTextSelectionEvent(class QAccessibleInterface *, int, int)
-func NewQAccessibleTextSelectionEvent_1(iface unsafe.Pointer, start int, end int) *QAccessibleTextSelectionEvent {
+func NewQAccessibleTextSelectionEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, start int, end int) *QAccessibleTextSelectionEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii", ffiqt.FFI_TYPE_VOID, cthis, iface, &start, &end)
+	var convArg0 = iface.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &start, &end)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextSelectionEventFromPointer(cthis)
 	return gothis
@@ -106,20 +112,22 @@ func (this *QAccessibleTextSelectionEvent) SetSelection(start int, end int) {
 // index:0
 // Public inline
 // int selectionStart()
-func (this *QAccessibleTextSelectionEvent) SelectionStart() interface{} {
+func (this *QAccessibleTextSelectionEvent) SelectionStart() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTextSelectionEvent14selectionStartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:794
 // index:0
 // Public inline
 // int selectionEnd()
-func (this *QAccessibleTextSelectionEvent) SelectionEnd() interface{} {
+func (this *QAccessibleTextSelectionEvent) SelectionEnd() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTextSelectionEvent12selectionEndEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

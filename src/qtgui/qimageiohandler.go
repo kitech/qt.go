@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qimageiohandler.h
 // #include <qimageiohandler.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QImageIOHandler struct {
 }
 
 func (this *QImageIOHandler) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQImageIOHandlerFromPointer(cthis unsafe.Pointer) *QImageIOHandler {
 	return &QImageIOHandler{&qtrt.CObject{cthis}}
@@ -84,8 +88,9 @@ func DeleteQImageIOHandler(*QImageIOHandler) {
 // index:0
 // Public
 // void setDevice(class QIODevice *)
-func (this *QImageIOHandler) SetDevice(device unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), device)
+func (this *QImageIOHandler) SetDevice(device *qtcore.QIODevice /*444 QIODevice **/) {
+	var convArg0 = device.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -93,10 +98,12 @@ func (this *QImageIOHandler) SetDevice(device unsafe.Pointer) {
 // index:0
 // Public
 // QIODevice * device()
-func (this *QImageIOHandler) Device() interface{} {
+func (this *QImageIOHandler) Device() *qtcore.QIODevice /*444 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:68
@@ -123,61 +130,71 @@ func (this *QImageIOHandler) SetFormat_1(format *qtcore.QByteArray) {
 // index:0
 // Public
 // QByteArray format()
-func (this *QImageIOHandler) Format() interface{} {
+func (this *QImageIOHandler) Format() *qtcore.QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:72
 // index:0
 // Public virtual
 // QByteArray name()
-func (this *QImageIOHandler) Name() interface{} {
+func (this *QImageIOHandler) Name() *qtcore.QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:74
 // index:0
 // Public pure virtual
 // bool canRead()
-func (this *QImageIOHandler) CanRead() interface{} {
+func (this *QImageIOHandler) CanRead() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler7canReadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:75
 // index:0
 // Public pure virtual
 // bool read(class QImage *)
-func (this *QImageIOHandler) Read(image unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler4readEP6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), image)
+func (this *QImageIOHandler) Read(image *QImage /*444 QImage **/) bool {
+	var convArg0 = image.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler4readEP6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:76
 // index:0
 // Public virtual
 // bool write(const class QImage &)
-func (this *QImageIOHandler) Write(image *QImage) interface{} {
+func (this *QImageIOHandler) Write(image *QImage) bool {
 	var convArg0 = image.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler5writeERK6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:115
 // index:0
 // Public virtual
 // QVariant option(enum QImageIOHandler::ImageOption)
-func (this *QImageIOHandler) Option(option int) interface{} {
+func (this *QImageIOHandler) Option(option int) *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler6optionENS_11ImageOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &option)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:116
@@ -194,80 +211,89 @@ func (this *QImageIOHandler) SetOption(option int, value *qtcore.QVariant) {
 // index:0
 // Public virtual
 // bool supportsOption(enum QImageIOHandler::ImageOption)
-func (this *QImageIOHandler) SupportsOption(option int) interface{} {
+func (this *QImageIOHandler) SupportsOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler14supportsOptionENS_11ImageOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &option)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:120
 // index:0
 // Public virtual
 // bool jumpToNextImage()
-func (this *QImageIOHandler) JumpToNextImage() interface{} {
+func (this *QImageIOHandler) JumpToNextImage() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler15jumpToNextImageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:121
 // index:0
 // Public virtual
 // bool jumpToImage(int)
-func (this *QImageIOHandler) JumpToImage(imageNumber int) interface{} {
+func (this *QImageIOHandler) JumpToImage(imageNumber int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler11jumpToImageEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &imageNumber)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:122
 // index:0
 // Public virtual
 // int loopCount()
-func (this *QImageIOHandler) LoopCount() interface{} {
+func (this *QImageIOHandler) LoopCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler9loopCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:123
 // index:0
 // Public virtual
 // int imageCount()
-func (this *QImageIOHandler) ImageCount() interface{} {
+func (this *QImageIOHandler) ImageCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler10imageCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:124
 // index:0
 // Public virtual
 // int nextImageDelay()
-func (this *QImageIOHandler) NextImageDelay() interface{} {
+func (this *QImageIOHandler) NextImageDelay() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler14nextImageDelayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:125
 // index:0
 // Public virtual
 // int currentImageNumber()
-func (this *QImageIOHandler) CurrentImageNumber() interface{} {
+func (this *QImageIOHandler) CurrentImageNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler18currentImageNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:126
 // index:0
 // Public virtual
 // QRect currentImageRect()
-func (this *QImageIOHandler) CurrentImageRect() interface{} {
+func (this *QImageIOHandler) CurrentImageRect() *qtcore.QRect /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler16currentImageRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

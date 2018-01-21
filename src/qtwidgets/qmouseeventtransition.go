@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h
 // #include <qmouseeventtransition.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 61
+// extern C begin: 60
 */
 // import "C"
 import "unsafe"
@@ -57,7 +57,11 @@ type QMouseEventTransition struct {
 }
 
 func (this *QMouseEventTransition) GetCthis() unsafe.Pointer {
-	return this.QEventTransition.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEventTransition.GetCthis()
+	}
 }
 func NewQMouseEventTransitionFromPointer(cthis unsafe.Pointer) *QMouseEventTransition {
 	bcthis0 := qtcore.NewQEventTransitionFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQMouseEventTransitionFromPointer(cthis unsafe.Pointer) *QMouseEventTrans
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QMouseEventTransition) MetaObject() interface{} {
+func (this *QMouseEventTransition) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QMouseEventTransition10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:58
 // index:0
 // Public
 // void QMouseEventTransition(class QState *)
-func NewQMouseEventTransition(sourceState unsafe.Pointer) *QMouseEventTransition {
+func NewQMouseEventTransition(sourceState *qtcore.QState /*444 QState **/) *QMouseEventTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP6QState", ffiqt.FFI_TYPE_VOID, cthis, sourceState)
+	var convArg0 = sourceState.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMouseEventTransitionFromPointer(cthis)
 	return gothis
@@ -90,9 +97,11 @@ func NewQMouseEventTransition(sourceState unsafe.Pointer) *QMouseEventTransition
 // index:1
 // Public
 // void QMouseEventTransition(class QObject *, class QEvent::Type, Qt::MouseButton, class QState *)
-func NewQMouseEventTransition_1(object unsafe.Pointer, type_ int, button int, sourceState unsafe.Pointer) *QMouseEventTransition {
+func NewQMouseEventTransition_1(object *qtcore.QObject /*444 QObject **/, type_ int, button int, sourceState *qtcore.QState /*444 QState **/) *QMouseEventTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP7QObjectN6QEvent4TypeEN2Qt11MouseButtonEP6QState", ffiqt.FFI_TYPE_VOID, cthis, object, &type_, &button, sourceState)
+	var convArg0 = object.GetCthis()
+	var convArg3 = sourceState.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP7QObjectN6QEvent4TypeEN2Qt11MouseButtonEP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &type_, &button, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMouseEventTransitionFromPointer(cthis)
 	return gothis
@@ -111,10 +120,11 @@ func DeleteQMouseEventTransition(*QMouseEventTransition) {
 // index:0
 // Public
 // Qt::MouseButton button()
-func (this *QMouseEventTransition) Button() interface{} {
+func (this *QMouseEventTransition) Button() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QMouseEventTransition6buttonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:64
@@ -130,20 +140,23 @@ func (this *QMouseEventTransition) SetButton(button int) {
 // index:0
 // Public
 // Qt::KeyboardModifiers modifierMask()
-func (this *QMouseEventTransition) ModifierMask() interface{} {
+func (this *QMouseEventTransition) ModifierMask() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QMouseEventTransition12modifierMaskEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:69
 // index:0
 // Public
 // QPainterPath hitTestPath()
-func (this *QMouseEventTransition) HitTestPath() interface{} {
+func (this *QMouseEventTransition) HitTestPath() *qtgui.QPainterPath /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QMouseEventTransition11hitTestPathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:70
@@ -160,8 +173,9 @@ func (this *QMouseEventTransition) SetHitTestPath(path *qtgui.QPainterPath) {
 // index:0
 // Protected virtual
 // void onTransition(class QEvent *)
-func (this *QMouseEventTransition) OnTransition(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransition12onTransitionEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QMouseEventTransition) OnTransition(event *qtcore.QEvent /*444 QEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransition12onTransitionEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,10 +183,12 @@ func (this *QMouseEventTransition) OnTransition(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // bool eventTest(class QEvent *)
-func (this *QMouseEventTransition) EventTest(event unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransition9eventTestEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QMouseEventTransition) EventTest(event *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransition9eventTestEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

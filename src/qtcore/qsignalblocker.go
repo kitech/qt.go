@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qobject.h
 // #include <qobject.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QSignalBlocker struct {
 }
 
 func (this *QSignalBlocker) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQSignalBlockerFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
 	return &QSignalBlocker{&qtrt.CObject{cthis}}
@@ -59,9 +63,10 @@ func NewQSignalBlockerFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
 // index:0
 // Public inline
 // void QSignalBlocker(class QObject *)
-func NewQSignalBlocker(o unsafe.Pointer) *QSignalBlocker {
+func NewQSignalBlocker(o *QObject /*444 QObject **/) *QSignalBlocker {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, o)
+	var convArg0 = o.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSignalBlockerFromPointer(cthis)
 	return gothis

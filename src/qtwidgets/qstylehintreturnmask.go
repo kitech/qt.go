@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qstyleoption.h
 // #include <qstyleoption.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QStyleHintReturnMask struct {
 }
 
 func (this *QStyleHintReturnMask) GetCthis() unsafe.Pointer {
-	return this.QStyleHintReturn.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QStyleHintReturn.GetCthis()
+	}
 }
 func NewQStyleHintReturnMaskFromPointer(cthis unsafe.Pointer) *QStyleHintReturnMask {
 	bcthis0 := NewQStyleHintReturnFromPointer(cthis)

@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qcompleter.h
 // #include <qcompleter.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QCompleter struct {
 }
 
 func (this *QCompleter) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQCompleterFromPointer(cthis unsafe.Pointer) *QCompleter {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQCompleterFromPointer(cthis unsafe.Pointer) *QCompleter {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QCompleter) MetaObject() interface{} {
+func (this *QCompleter) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:85
 // index:0
 // Public
 // void QCompleter(class QObject *)
-func NewQCompleter(parent unsafe.Pointer) *QCompleter {
+func NewQCompleter(parent *qtcore.QObject /*444 QObject **/) *QCompleter {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleterC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleterC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCompleterFromPointer(cthis)
 	return gothis
@@ -90,9 +97,11 @@ func NewQCompleter(parent unsafe.Pointer) *QCompleter {
 // index:1
 // Public
 // void QCompleter(class QAbstractItemModel *, class QObject *)
-func NewQCompleter_1(model unsafe.Pointer, parent unsafe.Pointer) *QCompleter {
+func NewQCompleter_1(model *qtcore.QAbstractItemModel /*444 QAbstractItemModel **/, parent *qtcore.QObject /*444 QObject **/) *QCompleter {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleterC2EP18QAbstractItemModelP7QObject", ffiqt.FFI_TYPE_VOID, cthis, model, parent)
+	var convArg0 = model.GetCthis()
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleterC2EP18QAbstractItemModelP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCompleterFromPointer(cthis)
 	return gothis
@@ -102,10 +111,11 @@ func NewQCompleter_1(model unsafe.Pointer, parent unsafe.Pointer) *QCompleter {
 // index:2
 // Public
 // void QCompleter(const class QStringList &, class QObject *)
-func NewQCompleter_2(completions *qtcore.QStringList, parent unsafe.Pointer) *QCompleter {
+func NewQCompleter_2(completions *qtcore.QStringList, parent *qtcore.QObject /*444 QObject **/) *QCompleter {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = completions.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleterC2ERK11QStringListP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleterC2ERK11QStringListP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCompleterFromPointer(cthis)
 	return gothis
@@ -124,8 +134,9 @@ func DeleteQCompleter(*QCompleter) {
 // index:0
 // Public
 // void setWidget(class QWidget *)
-func (this *QCompleter) SetWidget(widget unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget)
+func (this *QCompleter) SetWidget(widget *QWidget /*444 QWidget **/) {
+	var convArg0 = widget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,18 +144,21 @@ func (this *QCompleter) SetWidget(widget unsafe.Pointer) {
 // index:0
 // Public
 // QWidget * widget()
-func (this *QCompleter) Widget() interface{} {
+func (this *QCompleter) Widget() *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:95
 // index:0
 // Public
 // void setModel(class QAbstractItemModel *)
-func (this *QCompleter) SetModel(c unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
+func (this *QCompleter) SetModel(c *qtcore.QAbstractItemModel /*444 QAbstractItemModel **/) {
+	var convArg0 = c.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,10 +166,12 @@ func (this *QCompleter) SetModel(c unsafe.Pointer) {
 // index:0
 // Public
 // QAbstractItemModel * model()
-func (this *QCompleter) Model() interface{} {
+func (this *QCompleter) Model() *qtcore.QAbstractItemModel /*444 QAbstractItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:98
@@ -171,38 +187,43 @@ func (this *QCompleter) SetCompletionMode(mode int) {
 // index:0
 // Public
 // QCompleter::CompletionMode completionMode()
-func (this *QCompleter) CompletionMode() interface{} {
+func (this *QCompleter) CompletionMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter14completionModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:102
 // index:0
 // Public
 // Qt::MatchFlags filterMode()
-func (this *QCompleter) FilterMode() interface{} {
+func (this *QCompleter) FilterMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter10filterModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:104
 // index:0
 // Public
 // QAbstractItemView * popup()
-func (this *QCompleter) Popup() interface{} {
+func (this *QCompleter) Popup() *QAbstractItemView /*444 QAbstractItemView **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter5popupEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQAbstractItemViewFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:105
 // index:0
 // Public
 // void setPopup(class QAbstractItemView *)
-func (this *QCompleter) SetPopup(popup unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter8setPopupEP17QAbstractItemView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), popup)
+func (this *QCompleter) SetPopup(popup *QAbstractItemView /*444 QAbstractItemView **/) {
+	var convArg0 = popup.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter8setPopupEP17QAbstractItemView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -219,10 +240,11 @@ func (this *QCompleter) SetCaseSensitivity(caseSensitivity int) {
 // index:0
 // Public
 // Qt::CaseSensitivity caseSensitivity()
-func (this *QCompleter) CaseSensitivity() interface{} {
+func (this *QCompleter) CaseSensitivity() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter15caseSensitivityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:110
@@ -238,10 +260,11 @@ func (this *QCompleter) SetModelSorting(sorting int) {
 // index:0
 // Public
 // QCompleter::ModelSorting modelSorting()
-func (this *QCompleter) ModelSorting() interface{} {
+func (this *QCompleter) ModelSorting() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter12modelSortingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:113
@@ -257,10 +280,11 @@ func (this *QCompleter) SetCompletionColumn(column int) {
 // index:0
 // Public
 // int completionColumn()
-func (this *QCompleter) CompletionColumn() interface{} {
+func (this *QCompleter) CompletionColumn() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter16completionColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:116
@@ -276,30 +300,33 @@ func (this *QCompleter) SetCompletionRole(role int) {
 // index:0
 // Public
 // int completionRole()
-func (this *QCompleter) CompletionRole() interface{} {
+func (this *QCompleter) CompletionRole() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter14completionRoleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:119
 // index:0
 // Public
 // bool wrapAround()
-func (this *QCompleter) WrapAround() interface{} {
+func (this *QCompleter) WrapAround() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter10wrapAroundEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:121
 // index:0
 // Public
 // int maxVisibleItems()
-func (this *QCompleter) MaxVisibleItems() interface{} {
+func (this *QCompleter) MaxVisibleItems() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter15maxVisibleItemsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:122
@@ -315,70 +342,81 @@ func (this *QCompleter) SetMaxVisibleItems(maxItems int) {
 // index:0
 // Public
 // int completionCount()
-func (this *QCompleter) CompletionCount() interface{} {
+func (this *QCompleter) CompletionCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter15completionCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:125
 // index:0
 // Public
 // bool setCurrentRow(int)
-func (this *QCompleter) SetCurrentRow(row int) interface{} {
+func (this *QCompleter) SetCurrentRow(row int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter13setCurrentRowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:126
 // index:0
 // Public
 // int currentRow()
-func (this *QCompleter) CurrentRow() interface{} {
+func (this *QCompleter) CurrentRow() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter10currentRowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:128
 // index:0
 // Public
 // QModelIndex currentIndex()
-func (this *QCompleter) CurrentIndex() interface{} {
+func (this *QCompleter) CurrentIndex() *qtcore.QModelIndex /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:129
 // index:0
 // Public
 // QString currentCompletion()
-func (this *QCompleter) CurrentCompletion() interface{} {
+func (this *QCompleter) CurrentCompletion() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter17currentCompletionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:131
 // index:0
 // Public
 // QAbstractItemModel * completionModel()
-func (this *QCompleter) CompletionModel() interface{} {
+func (this *QCompleter) CompletionModel() *qtcore.QAbstractItemModel /*444 QAbstractItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter15completionModelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:133
 // index:0
 // Public
 // QString completionPrefix()
-func (this *QCompleter) CompletionPrefix() interface{} {
+func (this *QCompleter) CompletionPrefix() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter16completionPrefixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:136
@@ -414,42 +452,38 @@ func (this *QCompleter) SetWrapAround(wrap bool) {
 // index:0
 // Public virtual
 // QString pathFromIndex(const class QModelIndex &)
-func (this *QCompleter) PathFromIndex(index *qtcore.QModelIndex) interface{} {
+func (this *QCompleter) PathFromIndex(index *qtcore.QModelIndex) *qtcore.QString /*123*/ {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter13pathFromIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qcompleter.h:142
-// index:0
-// Public virtual
-// QStringList splitPath(const class QString &)
-func (this *QCompleter) SplitPath(path *qtcore.QString) interface{} {
-	var convArg0 = path.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter9splitPathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:145
 // index:0
 // Protected virtual
 // bool eventFilter(class QObject *, class QEvent *)
-func (this *QCompleter) EventFilter(o unsafe.Pointer, e unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter11eventFilterEP7QObjectP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), o, e)
+func (this *QCompleter) EventFilter(o *qtcore.QObject /*444 QObject **/, e *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = o.GetCthis()
+	var convArg1 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter11eventFilterEP7QObjectP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:146
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QCompleter) Event(arg0 unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QCompleter) Event(arg0 *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:149

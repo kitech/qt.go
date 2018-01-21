@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QFileOpenEvent struct {
 }
 
 func (this *QFileOpenEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQFileOpenEventFromPointer(cthis unsafe.Pointer) *QFileOpenEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -99,20 +103,24 @@ func DeleteQFileOpenEvent(*QFileOpenEvent) {
 // index:0
 // Public inline
 // QString file()
-func (this *QFileOpenEvent) File() interface{} {
+func (this *QFileOpenEvent) File() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent4fileEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:743
 // index:0
 // Public inline
 // QUrl url()
-func (this *QFileOpenEvent) Url() interface{} {
+func (this *QFileOpenEvent) Url() *qtcore.QUrl /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent3urlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qdockwidget.h
 // #include <qdockwidget.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 38
+// extern C begin: 36
 */
 // import "C"
 import "unsafe"
@@ -57,7 +57,11 @@ type QDockWidget struct {
 }
 
 func (this *QDockWidget) GetCthis() unsafe.Pointer {
-	return this.QWidget.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QWidget.GetCthis()
+	}
 }
 func NewQDockWidgetFromPointer(cthis unsafe.Pointer) *QDockWidget {
 	bcthis0 := NewQWidgetFromPointer(cthis)
@@ -68,10 +72,12 @@ func NewQDockWidgetFromPointer(cthis unsafe.Pointer) *QDockWidget {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDockWidget) MetaObject() interface{} {
+func (this *QDockWidget) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:69
@@ -87,18 +93,21 @@ func DeleteQDockWidget(*QDockWidget) {
 // index:0
 // Public
 // QWidget * widget()
-func (this *QDockWidget) Widget() interface{} {
+func (this *QDockWidget) Widget() *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:72
 // index:0
 // Public
 // void setWidget(class QWidget *)
-func (this *QDockWidget) SetWidget(widget unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget)
+func (this *QDockWidget) SetWidget(widget *QWidget /*444 QWidget **/) {
+	var convArg0 = widget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,10 +115,11 @@ func (this *QDockWidget) SetWidget(widget unsafe.Pointer) {
 // index:0
 // Public
 // QDockWidget::DockWidgetFeatures features()
-func (this *QDockWidget) Features() interface{} {
+func (this *QDockWidget) Features() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget8featuresEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:92
@@ -125,28 +135,31 @@ func (this *QDockWidget) SetFloating(floating bool) {
 // index:0
 // Public inline
 // bool isFloating()
-func (this *QDockWidget) IsFloating() interface{} {
+func (this *QDockWidget) IsFloating() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget10isFloatingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:96
 // index:0
 // Public
 // Qt::DockWidgetAreas allowedAreas()
-func (this *QDockWidget) AllowedAreas() interface{} {
+func (this *QDockWidget) AllowedAreas() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget12allowedAreasEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:98
 // index:0
 // Public
 // void setTitleBarWidget(class QWidget *)
-func (this *QDockWidget) SetTitleBarWidget(widget unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget17setTitleBarWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget)
+func (this *QDockWidget) SetTitleBarWidget(widget *QWidget /*444 QWidget **/) {
+	var convArg0 = widget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget17setTitleBarWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -154,30 +167,35 @@ func (this *QDockWidget) SetTitleBarWidget(widget unsafe.Pointer) {
 // index:0
 // Public
 // QWidget * titleBarWidget()
-func (this *QDockWidget) TitleBarWidget() interface{} {
+func (this *QDockWidget) TitleBarWidget() *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget14titleBarWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:101
 // index:0
 // Public inline
 // bool isAreaAllowed(Qt::DockWidgetArea)
-func (this *QDockWidget) IsAreaAllowed(area int) interface{} {
+func (this *QDockWidget) IsAreaAllowed(area int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget13isAreaAllowedEN2Qt14DockWidgetAreaE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &area)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:105
 // index:0
 // Public
 // QAction * toggleViewAction()
-func (this *QDockWidget) ToggleViewAction() interface{} {
+func (this *QDockWidget) ToggleViewAction() *QAction /*444 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget16toggleViewActionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:110
@@ -211,8 +229,9 @@ func (this *QDockWidget) DockLocationChanged(area int) {
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QDockWidget) ChangeEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QDockWidget) ChangeEvent(event *qtcore.QEvent /*444 QEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -220,8 +239,9 @@ func (this *QDockWidget) ChangeEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void closeEvent(class QCloseEvent *)
-func (this *QDockWidget) CloseEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget10closeEventEP11QCloseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QDockWidget) CloseEvent(event *qtgui.QCloseEvent /*444 QCloseEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget10closeEventEP11QCloseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -229,8 +249,9 @@ func (this *QDockWidget) CloseEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QDockWidget) PaintEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QDockWidget) PaintEvent(event *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -238,18 +259,21 @@ func (this *QDockWidget) PaintEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QDockWidget) Event(event unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QDockWidget) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:120
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionDockWidget *)
-func (this *QDockWidget) InitStyleOption(option unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget15initStyleOptionEP22QStyleOptionDockWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
+func (this *QDockWidget) InitStyleOption(option *QStyleOptionDockWidget /*444 QStyleOptionDockWidget **/) {
+	var convArg0 = option.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget15initStyleOptionEP22QStyleOptionDockWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

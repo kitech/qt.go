@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qelapsedtimer.h
 // #include <qelapsedtimer.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QElapsedTimer struct {
 }
 
 func (this *QElapsedTimer) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQElapsedTimerFromPointer(cthis unsafe.Pointer) *QElapsedTimer {
 	return &QElapsedTimer{&qtrt.CObject{cthis}}
@@ -71,28 +75,32 @@ func NewQElapsedTimer() *QElapsedTimer {
 // index:0
 // Public static
 // QElapsedTimer::ClockType clockType()
-func (this *QElapsedTimer) ClockType() interface{} {
+func (this *QElapsedTimer) ClockType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimer9clockTypeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QElapsedTimer_ClockType() {
+func QElapsedTimer_ClockType() int {
 	var nilthis *QElapsedTimer
-	nilthis.ClockType()
+	rv := nilthis.ClockType()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:66
 // index:0
 // Public static
 // bool isMonotonic()
-func (this *QElapsedTimer) IsMonotonic() interface{} {
+func (this *QElapsedTimer) IsMonotonic() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimer11isMonotonicEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QElapsedTimer_IsMonotonic() {
+func QElapsedTimer_IsMonotonic() bool {
 	var nilthis *QElapsedTimer
-	nilthis.IsMonotonic()
+	rv := nilthis.IsMonotonic()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:68
@@ -108,10 +116,11 @@ func (this *QElapsedTimer) Start() {
 // index:0
 // Public
 // qint64 restart()
-func (this *QElapsedTimer) Restart() interface{} {
+func (this *QElapsedTimer) Restart() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimer7restartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:70
@@ -127,72 +136,79 @@ func (this *QElapsedTimer) Invalidate() {
 // index:0
 // Public
 // bool isValid()
-func (this *QElapsedTimer) IsValid() interface{} {
+func (this *QElapsedTimer) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:73
 // index:0
 // Public
 // qint64 nsecsElapsed()
-func (this *QElapsedTimer) NsecsElapsed() interface{} {
+func (this *QElapsedTimer) NsecsElapsed() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer12nsecsElapsedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:74
 // index:0
 // Public
 // qint64 elapsed()
-func (this *QElapsedTimer) Elapsed() interface{} {
+func (this *QElapsedTimer) Elapsed() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer7elapsedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:75
 // index:0
 // Public
 // bool hasExpired(qint64)
-func (this *QElapsedTimer) HasExpired(timeout int64) interface{} {
+func (this *QElapsedTimer) HasExpired(timeout int64) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer10hasExpiredEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timeout)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:77
 // index:0
 // Public
 // qint64 msecsSinceReference()
-func (this *QElapsedTimer) MsecsSinceReference() interface{} {
+func (this *QElapsedTimer) MsecsSinceReference() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer19msecsSinceReferenceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:78
 // index:0
 // Public
 // qint64 msecsTo(const class QElapsedTimer &)
-func (this *QElapsedTimer) MsecsTo(other *QElapsedTimer) interface{} {
+func (this *QElapsedTimer) MsecsTo(other *QElapsedTimer) int64 {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer7msecsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:79
 // index:0
 // Public
 // qint64 secsTo(const class QElapsedTimer &)
-func (this *QElapsedTimer) SecsTo(other *QElapsedTimer) interface{} {
+func (this *QElapsedTimer) SecsTo(other *QElapsedTimer) int64 {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer6secsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 //  body block end

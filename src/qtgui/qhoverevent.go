@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QHoverEvent struct {
 }
 
 func (this *QHoverEvent) GetCthis() unsafe.Pointer {
-	return this.QInputEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QInputEvent.GetCthis()
+	}
 }
 func NewQHoverEventFromPointer(cthis unsafe.Pointer) *QHoverEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
@@ -73,40 +77,48 @@ func DeleteQHoverEvent(*QHoverEvent) {
 // index:0
 // Public inline
 // QPoint pos()
-func (this *QHoverEvent) Pos() interface{} {
+func (this *QHoverEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:162
 // index:0
 // Public inline
 // QPoint oldPos()
-func (this *QHoverEvent) OldPos() interface{} {
+func (this *QHoverEvent) OldPos() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:165
 // index:0
 // Public inline
 // const QPointF & posF()
-func (this *QHoverEvent) PosF() interface{} {
+func (this *QHoverEvent) PosF() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent4posFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:166
 // index:0
 // Public inline
 // const QPointF & oldPosF()
-func (this *QHoverEvent) OldPosF() interface{} {
+func (this *QHoverEvent) OldPosF() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent7oldPosFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 //  body block end

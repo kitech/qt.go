@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QEnterEvent struct {
 }
 
 func (this *QEnterEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQEnterEventFromPointer(cthis unsafe.Pointer) *QEnterEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -88,90 +92,104 @@ func DeleteQEnterEvent(*QEnterEvent) {
 // index:0
 // Public inline
 // QPoint pos()
-func (this *QEnterEvent) Pos() interface{} {
+func (this *QEnterEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:90
 // index:0
 // Public inline
 // QPoint globalPos()
-func (this *QEnterEvent) GlobalPos() interface{} {
+func (this *QEnterEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:91
 // index:0
 // Public inline
 // int x()
-func (this *QEnterEvent) X() interface{} {
+func (this *QEnterEvent) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:92
 // index:0
 // Public inline
 // int y()
-func (this *QEnterEvent) Y() interface{} {
+func (this *QEnterEvent) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:93
 // index:0
 // Public inline
 // int globalX()
-func (this *QEnterEvent) GlobalX() interface{} {
+func (this *QEnterEvent) GlobalX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:94
 // index:0
 // Public inline
 // int globalY()
-func (this *QEnterEvent) GlobalY() interface{} {
+func (this *QEnterEvent) GlobalY() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:96
 // index:0
 // Public inline
 // const QPointF & localPos()
-func (this *QEnterEvent) LocalPos() interface{} {
+func (this *QEnterEvent) LocalPos() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent8localPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:97
 // index:0
 // Public inline
 // const QPointF & windowPos()
-func (this *QEnterEvent) WindowPos() interface{} {
+func (this *QEnterEvent) WindowPos() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent9windowPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:98
 // index:0
 // Public inline
 // const QPointF & screenPos()
-func (this *QEnterEvent) ScreenPos() interface{} {
+func (this *QEnterEvent) ScreenPos() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent9screenPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QPlatformSurfaceEvent struct {
 }
 
 func (this *QPlatformSurfaceEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQPlatformSurfaceEventFromPointer(cthis unsafe.Pointer) *QPlatformSurfaceEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -85,10 +89,11 @@ func DeleteQPlatformSurfaceEvent(*QPlatformSurfaceEvent) {
 // index:0
 // Public inline
 // QPlatformSurfaceEvent::SurfaceEventType surfaceEventType()
-func (this *QPlatformSurfaceEvent) SurfaceEventType() interface{} {
+func (this *QPlatformSurfaceEvent) SurfaceEventType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

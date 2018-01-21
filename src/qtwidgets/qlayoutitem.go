@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qlayoutitem.h
 // #include <qlayoutitem.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 59
+// extern C begin: 56
 */
 // import "C"
 import "unsafe"
@@ -57,7 +57,11 @@ type QLayoutItem struct {
 }
 
 func (this *QLayoutItem) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQLayoutItemFromPointer(cthis unsafe.Pointer) *QLayoutItem {
 	return &QLayoutItem{&qtrt.CObject{cthis}}
@@ -76,40 +80,47 @@ func DeleteQLayoutItem(*QLayoutItem) {
 // index:0
 // Public pure virtual
 // QSize sizeHint()
-func (this *QLayoutItem) SizeHint() interface{} {
+func (this *QLayoutItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:66
 // index:0
 // Public pure virtual
 // QSize minimumSize()
-func (this *QLayoutItem) MinimumSize() interface{} {
+func (this *QLayoutItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:67
 // index:0
 // Public pure virtual
 // QSize maximumSize()
-func (this *QLayoutItem) MaximumSize() interface{} {
+func (this *QLayoutItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:68
 // index:0
 // Public pure virtual
 // Qt::Orientations expandingDirections()
-func (this *QLayoutItem) ExpandingDirections() interface{} {
+func (this *QLayoutItem) ExpandingDirections() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem19expandingDirectionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:69
@@ -126,50 +137,56 @@ func (this *QLayoutItem) SetGeometry(arg0 *qtcore.QRect) {
 // index:0
 // Public pure virtual
 // QRect geometry()
-func (this *QLayoutItem) Geometry() interface{} {
+func (this *QLayoutItem) Geometry() *qtcore.QRect /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem8geometryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:71
 // index:0
 // Public pure virtual
 // bool isEmpty()
-func (this *QLayoutItem) IsEmpty() interface{} {
+func (this *QLayoutItem) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:72
 // index:0
 // Public virtual
 // bool hasHeightForWidth()
-func (this *QLayoutItem) HasHeightForWidth() interface{} {
+func (this *QLayoutItem) HasHeightForWidth() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem17hasHeightForWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:73
 // index:0
 // Public virtual
 // int heightForWidth(int)
-func (this *QLayoutItem) HeightForWidth(arg0 int) interface{} {
+func (this *QLayoutItem) HeightForWidth(arg0 int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:74
 // index:0
 // Public virtual
 // int minimumHeightForWidth(int)
-func (this *QLayoutItem) MinimumHeightForWidth(arg0 int) interface{} {
+func (this *QLayoutItem) MinimumHeightForWidth(arg0 int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem21minimumHeightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:75
@@ -185,50 +202,58 @@ func (this *QLayoutItem) Invalidate() {
 // index:0
 // Public virtual
 // QWidget * widget()
-func (this *QLayoutItem) Widget() interface{} {
+func (this *QLayoutItem) Widget() *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItem6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:78
 // index:0
 // Public virtual
 // QLayout * layout()
-func (this *QLayoutItem) Layout() interface{} {
+func (this *QLayoutItem) Layout() *QLayout /*444 QLayout **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItem6layoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:79
 // index:0
 // Public virtual
 // QSpacerItem * spacerItem()
-func (this *QLayoutItem) SpacerItem() interface{} {
+func (this *QLayoutItem) SpacerItem() *QSpacerItem /*444 QSpacerItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItem10spacerItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQSpacerItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:81
 // index:0
 // Public inline
 // Qt::Alignment alignment()
-func (this *QLayoutItem) Alignment() interface{} {
+func (this *QLayoutItem) Alignment() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem9alignmentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:83
 // index:0
 // Public virtual
 // QSizePolicy::ControlTypes controlTypes()
-func (this *QLayoutItem) ControlTypes() interface{} {
+func (this *QLayoutItem) ControlTypes() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem12controlTypesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

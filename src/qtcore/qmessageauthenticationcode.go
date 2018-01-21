@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qmessageauthenticationcode.h
 // #include <qmessageauthenticationcode.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QMessageAuthenticationCode struct {
 }
 
 func (this *QMessageAuthenticationCode) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQMessageAuthenticationCodeFromPointer(cthis unsafe.Pointer) *QMessageAuthenticationCode {
 	return &QMessageAuthenticationCode{&qtrt.CObject{cthis}}
@@ -121,34 +125,41 @@ func (this *QMessageAuthenticationCode) AddData_1(data *QByteArray) {
 // index:2
 // Public
 // bool addData(class QIODevice *)
-func (this *QMessageAuthenticationCode) AddData_2(device unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), device)
+func (this *QMessageAuthenticationCode) AddData_2(device *QIODevice /*444 QIODevice **/) bool {
+	var convArg0 = device.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmessageauthenticationcode.h:66
 // index:0
 // Public
 // QByteArray result()
-func (this *QMessageAuthenticationCode) Result() interface{} {
+func (this *QMessageAuthenticationCode) Result() *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QMessageAuthenticationCode6resultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmessageauthenticationcode.h:68
 // index:0
 // Public static
 // QByteArray hash(const class QByteArray &, const class QByteArray &, class QCryptographicHash::Algorithm)
-func (this *QMessageAuthenticationCode) Hash(message *QByteArray, key *QByteArray, method int) interface{} {
+func (this *QMessageAuthenticationCode) Hash(message *QByteArray, key *QByteArray, method int) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode4hashERK10QByteArrayS2_N18QCryptographicHash9AlgorithmE", ffiqt.FFI_TYPE_POINTER, message, key, method)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QMessageAuthenticationCode_Hash(message *QByteArray, key *QByteArray, method int) {
+func QMessageAuthenticationCode_Hash(message *QByteArray, key *QByteArray, method int) *QByteArray /*123*/ {
 	var nilthis *QMessageAuthenticationCode
-	nilthis.Hash(message, key, method)
+	rv := nilthis.Hash(message, key, method)
+	return rv
 }
 
 //  body block end

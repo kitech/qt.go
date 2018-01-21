@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qstackedlayout.h
 // #include <qstackedlayout.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QStackedLayout struct {
 }
 
 func (this *QStackedLayout) GetCthis() unsafe.Pointer {
-	return this.QLayout.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QLayout.GetCthis()
+	}
 }
 func NewQStackedLayoutFromPointer(cthis unsafe.Pointer) *QStackedLayout {
 	bcthis0 := NewQLayoutFromPointer(cthis)
@@ -68,10 +72,12 @@ func NewQStackedLayoutFromPointer(cthis unsafe.Pointer) *QStackedLayout {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QStackedLayout) MetaObject() interface{} {
+func (this *QStackedLayout) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:66
@@ -90,9 +96,10 @@ func NewQStackedLayout() *QStackedLayout {
 // index:1
 // Public
 // void QStackedLayout(class QWidget *)
-func NewQStackedLayout_1(parent unsafe.Pointer) *QStackedLayout {
+func NewQStackedLayout_1(parent *QWidget /*444 QWidget **/) *QStackedLayout {
 	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStackedLayoutFromPointer(cthis)
 	return gothis
@@ -102,9 +109,10 @@ func NewQStackedLayout_1(parent unsafe.Pointer) *QStackedLayout {
 // index:2
 // Public
 // void QStackedLayout(class QLayout *)
-func NewQStackedLayout_2(parentLayout unsafe.Pointer) *QStackedLayout {
+func NewQStackedLayout_2(parentLayout *QLayout /*444 QLayout **/) *QStackedLayout {
 	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QLayout", ffiqt.FFI_TYPE_VOID, cthis, parentLayout)
+	var convArg0 = parentLayout.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QLayout", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStackedLayoutFromPointer(cthis)
 	return gothis
@@ -123,70 +131,81 @@ func DeleteQStackedLayout(*QStackedLayout) {
 // index:0
 // Public
 // int addWidget(class QWidget *)
-func (this *QStackedLayout) AddWidget(w unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
+func (this *QStackedLayout) AddWidget(w *QWidget /*444 QWidget **/) int {
+	var convArg0 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:72
 // index:0
 // Public
 // int insertWidget(int, class QWidget *)
-func (this *QStackedLayout) InsertWidget(index int, w unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, w)
+func (this *QStackedLayout) InsertWidget(index int, w *QWidget /*444 QWidget **/) int {
+	var convArg1 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:74
 // index:0
 // Public
 // QWidget * currentWidget()
-func (this *QStackedLayout) CurrentWidget() interface{} {
+func (this *QStackedLayout) CurrentWidget() *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout13currentWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:75
 // index:0
 // Public
 // int currentIndex()
-func (this *QStackedLayout) CurrentIndex() interface{} {
+func (this *QStackedLayout) CurrentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:77
 // index:0
 // Public
 // QWidget * widget(int)
-func (this *QStackedLayout) Widget(arg0 int) interface{} {
+func (this *QStackedLayout) Widget(arg0 int) *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout6widgetEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:78
 // index:0
 // Public virtual
 // int count()
-func (this *QStackedLayout) Count() interface{} {
+func (this *QStackedLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:80
 // index:0
 // Public
 // QStackedLayout::StackingMode stackingMode()
-func (this *QStackedLayout) StackingMode() interface{} {
+func (this *QStackedLayout) StackingMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout12stackingModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:81
@@ -202,8 +221,9 @@ func (this *QStackedLayout) SetStackingMode(stackingMode int) {
 // index:0
 // Public virtual
 // void addItem(class QLayoutItem *)
-func (this *QStackedLayout) AddItem(item unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), item)
+func (this *QStackedLayout) AddItem(item *QLayoutItem /*444 QLayoutItem **/) {
+	var convArg0 = item.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,40 +231,48 @@ func (this *QStackedLayout) AddItem(item unsafe.Pointer) {
 // index:0
 // Public virtual
 // QSize sizeHint()
-func (this *QStackedLayout) SizeHint() interface{} {
+func (this *QStackedLayout) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:86
 // index:0
 // Public virtual
 // QSize minimumSize()
-func (this *QStackedLayout) MinimumSize() interface{} {
+func (this *QStackedLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:87
 // index:0
 // Public virtual
 // QLayoutItem * itemAt(int)
-func (this *QStackedLayout) ItemAt(arg0 int) interface{} {
+func (this *QStackedLayout) ItemAt(arg0 int) *QLayoutItem /*444 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:88
 // index:0
 // Public virtual
 // QLayoutItem * takeAt(int)
-func (this *QStackedLayout) TakeAt(arg0 int) interface{} {
+func (this *QStackedLayout) TakeAt(arg0 int) *QLayoutItem /*444 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout6takeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:89
@@ -261,20 +289,22 @@ func (this *QStackedLayout) SetGeometry(rect *qtcore.QRect) {
 // index:0
 // Public virtual
 // bool hasHeightForWidth()
-func (this *QStackedLayout) HasHeightForWidth() interface{} {
+func (this *QStackedLayout) HasHeightForWidth() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout17hasHeightForWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:91
 // index:0
 // Public virtual
 // int heightForWidth(int)
-func (this *QStackedLayout) HeightForWidth(width int) interface{} {
+func (this *QStackedLayout) HeightForWidth(width int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:94
@@ -308,8 +338,9 @@ func (this *QStackedLayout) SetCurrentIndex(index int) {
 // index:0
 // Public
 // void setCurrentWidget(class QWidget *)
-func (this *QStackedLayout) SetCurrentWidget(w unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout16setCurrentWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
+func (this *QStackedLayout) SetCurrentWidget(w *QWidget /*444 QWidget **/) {
+	var convArg0 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout16setCurrentWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

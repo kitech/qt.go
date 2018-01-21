@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qdesktopservices.h
 // #include <qdesktopservices.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QDesktopServices struct {
 }
 
 func (this *QDesktopServices) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQDesktopServicesFromPointer(cthis unsafe.Pointer) *QDesktopServices {
 	return &QDesktopServices{&qtrt.CObject{cthis}}
@@ -63,25 +67,27 @@ func NewQDesktopServicesFromPointer(cthis unsafe.Pointer) *QDesktopServices {
 // index:0
 // Public static
 // bool openUrl(const class QUrl &)
-func (this *QDesktopServices) OpenUrl(url *qtcore.QUrl) interface{} {
+func (this *QDesktopServices) OpenUrl(url *qtcore.QUrl) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices7openUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, url)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QDesktopServices_OpenUrl(url *qtcore.QUrl) {
+func QDesktopServices_OpenUrl(url *qtcore.QUrl) bool {
 	var nilthis *QDesktopServices
-	nilthis.OpenUrl(url)
+	rv := nilthis.OpenUrl(url)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qdesktopservices.h:60
 // index:0
 // Public static
 // void setUrlHandler(const class QString &, class QObject *, const char *)
-func (this *QDesktopServices) SetUrlHandler(scheme *qtcore.QString, receiver unsafe.Pointer, method string) {
+func (this *QDesktopServices) SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QObject /*444 QObject **/, method string) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, scheme, receiver, method)
 	gopp.ErrPrint(err, rv)
 }
-func QDesktopServices_SetUrlHandler(scheme *qtcore.QString, receiver unsafe.Pointer, method string) {
+func QDesktopServices_SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QObject /*444 QObject **/, method string) {
 	var nilthis *QDesktopServices
 	nilthis.SetUrlHandler(scheme, receiver, method)
 }

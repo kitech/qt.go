@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qbytearraymatcher.h
 // #include <qbytearraymatcher.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QByteArrayMatcher struct {
 }
 
 func (this *QByteArrayMatcher) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQByteArrayMatcherFromPointer(cthis unsafe.Pointer) *QByteArrayMatcher {
 	return &QByteArrayMatcher{&qtrt.CObject{cthis}}
@@ -117,33 +121,37 @@ func (this *QByteArrayMatcher) SetPattern(pattern *QByteArray) {
 // index:0
 // Public
 // int indexIn(const class QByteArray &, int)
-func (this *QByteArrayMatcher) IndexIn(ba *QByteArray, from int) interface{} {
+func (this *QByteArrayMatcher) IndexIn(ba *QByteArray, from int) int {
 	var convArg0 = ba.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:64
 // index:1
 // Public
 // int indexIn(const char *, int, int)
-func (this *QByteArrayMatcher) IndexIn_1(str string, len int, from int) interface{} {
+func (this *QByteArrayMatcher) IndexIn_1(str string, len int, from int) int {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInEPKcii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len, &from)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:65
 // index:0
 // Public inline
 // QByteArray pattern()
-func (this *QByteArrayMatcher) Pattern() interface{} {
+func (this *QByteArrayMatcher) Pattern() *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7patternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

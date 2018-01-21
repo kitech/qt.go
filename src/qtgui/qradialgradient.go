@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qbrush.h
 // #include <qbrush.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QRadialGradient struct {
 }
 
 func (this *QRadialGradient) GetCthis() unsafe.Pointer {
-	return this.QGradient.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGradient.GetCthis()
+	}
 }
 func NewQRadialGradientFromPointer(cthis unsafe.Pointer) *QRadialGradient {
 	bcthis0 := NewQGradientFromPointer(cthis)
@@ -153,10 +157,12 @@ func NewQRadialGradient_6(cx float64, cy float64, centerRadius float64, fx float
 // index:0
 // Public
 // QPointF center()
-func (this *QRadialGradient) Center() interface{} {
+func (this *QRadialGradient) Center() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QRadialGradient6centerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qbrush.h:285
@@ -182,10 +188,12 @@ func (this *QRadialGradient) SetCenter_1(x float64, y float64) {
 // index:0
 // Public
 // QPointF focalPoint()
-func (this *QRadialGradient) FocalPoint() interface{} {
+func (this *QRadialGradient) FocalPoint() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QRadialGradient10focalPointEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qbrush.h:289
@@ -211,10 +219,11 @@ func (this *QRadialGradient) SetFocalPoint_1(x float64, y float64) {
 // index:0
 // Public
 // qreal radius()
-func (this *QRadialGradient) Radius() interface{} {
+func (this *QRadialGradient) Radius() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QRadialGradient6radiusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qbrush.h:293
@@ -230,10 +239,11 @@ func (this *QRadialGradient) SetRadius(radius float64) {
 // index:0
 // Public
 // qreal centerRadius()
-func (this *QRadialGradient) CenterRadius() interface{} {
+func (this *QRadialGradient) CenterRadius() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QRadialGradient12centerRadiusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qbrush.h:296
@@ -249,10 +259,11 @@ func (this *QRadialGradient) SetCenterRadius(radius float64) {
 // index:0
 // Public
 // qreal focalRadius()
-func (this *QRadialGradient) FocalRadius() interface{} {
+func (this *QRadialGradient) FocalRadius() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QRadialGradient11focalRadiusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qbrush.h:299

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QKeyEvent struct {
 }
 
 func (this *QKeyEvent) GetCthis() unsafe.Pointer {
-	return this.QInputEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QInputEvent.GetCthis()
+	}
 }
 func NewQKeyEventFromPointer(cthis unsafe.Pointer) *QKeyEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
@@ -73,90 +77,100 @@ func DeleteQKeyEvent(*QKeyEvent) {
 // index:0
 // Public inline
 // int key()
-func (this *QKeyEvent) Key() interface{} {
+func (this *QKeyEvent) Key() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:347
 // index:0
 // Public
 // bool matches(class QKeySequence::StandardKey)
-func (this *QKeyEvent) Matches(key int) interface{} {
+func (this *QKeyEvent) Matches(key int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent7matchesEN12QKeySequence11StandardKeyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &key)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qevent.h:349
 // index:0
 // Public
 // Qt::KeyboardModifiers modifiers()
-func (this *QKeyEvent) Modifiers() interface{} {
+func (this *QKeyEvent) Modifiers() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent9modifiersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:350
 // index:0
 // Public inline
 // QString text()
-func (this *QKeyEvent) Text() interface{} {
+func (this *QKeyEvent) Text() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:351
 // index:0
 // Public inline
 // bool isAutoRepeat()
-func (this *QKeyEvent) IsAutoRepeat() interface{} {
+func (this *QKeyEvent) IsAutoRepeat() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent12isAutoRepeatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qevent.h:352
 // index:0
 // Public inline
 // int count()
-func (this *QKeyEvent) Count() interface{} {
+func (this *QKeyEvent) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:354
 // index:0
 // Public inline
 // quint32 nativeScanCode()
-func (this *QKeyEvent) NativeScanCode() interface{} {
+func (this *QKeyEvent) NativeScanCode() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent14nativeScanCodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:355
 // index:0
 // Public inline
 // quint32 nativeVirtualKey()
-func (this *QKeyEvent) NativeVirtualKey() interface{} {
+func (this *QKeyEvent) NativeVirtualKey() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent16nativeVirtualKeyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:356
 // index:0
 // Public inline
 // quint32 nativeModifiers()
-func (this *QKeyEvent) NativeModifiers() interface{} {
+func (this *QKeyEvent) NativeModifiers() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent15nativeModifiersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint(rv) // 222
 }
 
 //  body block end

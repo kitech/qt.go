@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QPaintEvent struct {
 }
 
 func (this *QPaintEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQPaintEventFromPointer(cthis unsafe.Pointer) *QPaintEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -99,20 +103,24 @@ func DeleteQPaintEvent(*QPaintEvent) {
 // index:0
 // Public inline
 // const QRect & rect()
-func (this *QPaintEvent) Rect() interface{} {
+func (this *QPaintEvent) Rect() *qtcore.QRect {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPaintEvent4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:410
 // index:0
 // Public inline
 // const QRegion & region()
-func (this *QPaintEvent) Region() interface{} {
+func (this *QPaintEvent) Region() *QRegion {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPaintEvent6regionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 //  body block end

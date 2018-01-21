@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qdatastream.h
 // #include <qdatastream.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QDataStream struct {
 }
 
 func (this *QDataStream) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQDataStreamFromPointer(cthis unsafe.Pointer) *QDataStream {
 	return &QDataStream{&qtrt.CObject{cthis}}
@@ -71,9 +75,10 @@ func NewQDataStream() *QDataStream {
 // index:1
 // Public
 // void QDataStream(class QIODevice *)
-func NewQDataStream_1(arg0 unsafe.Pointer) *QDataStream {
+func NewQDataStream_1(arg0 *QIODevice /*444 QIODevice **/) *QDataStream {
 	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, arg0)
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDataStreamFromPointer(cthis)
 	return gothis
@@ -105,18 +110,21 @@ func DeleteQDataStream(*QDataStream) {
 // index:0
 // Public
 // QIODevice * device()
-func (this *QDataStream) Device() interface{} {
+func (this *QDataStream) Device() *QIODevice /*444 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:130
 // index:0
 // Public
 // void setDevice(class QIODevice *)
-func (this *QDataStream) SetDevice(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QDataStream) SetDevice(arg0 *QIODevice /*444 QIODevice **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,20 +141,22 @@ func (this *QDataStream) UnsetDevice() {
 // index:0
 // Public
 // bool atEnd()
-func (this *QDataStream) AtEnd() interface{} {
+func (this *QDataStream) AtEnd() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream5atEndEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:135
 // index:0
 // Public
 // QDataStream::Status status()
-func (this *QDataStream) Status() interface{} {
+func (this *QDataStream) Status() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream6statusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:136
@@ -171,10 +181,11 @@ func (this *QDataStream) ResetStatus() {
 // index:0
 // Public
 // QDataStream::FloatingPointPrecision floatingPointPrecision()
-func (this *QDataStream) FloatingPointPrecision() interface{} {
+func (this *QDataStream) FloatingPointPrecision() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream22floatingPointPrecisionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:140
@@ -190,10 +201,11 @@ func (this *QDataStream) SetFloatingPointPrecision(precision int) {
 // index:0
 // Public
 // QDataStream::ByteOrder byteOrder()
-func (this *QDataStream) ByteOrder() interface{} {
+func (this *QDataStream) ByteOrder() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream9byteOrderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:143
@@ -209,10 +221,11 @@ func (this *QDataStream) SetByteOrder(arg0 int) {
 // index:0
 // Public
 // int version()
-func (this *QDataStream) Version() interface{} {
+func (this *QDataStream) Version() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream7versionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:146
@@ -228,56 +241,63 @@ func (this *QDataStream) SetVersion(arg0 int) {
 // index:0
 // Public
 // QDataStream & readBytes(char *&, uint &)
-func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer, len uint) interface{} {
+func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len uint) *QDataStream {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9readBytesERPcRj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, &len)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:180
 // index:0
 // Public
 // int readRawData(char *, int)
-func (this *QDataStream) ReadRawData(arg0 string, len int) interface{} {
+func (this *QDataStream) ReadRawData(arg0 string, len int) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11readRawDataEPci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:182
 // index:0
 // Public
 // QDataStream & writeBytes(const char *, uint)
-func (this *QDataStream) WriteBytes(arg0 string, len uint) interface{} {
+func (this *QDataStream) WriteBytes(arg0 string, len uint) *QDataStream {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream10writeBytesEPKcj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:183
 // index:0
 // Public
 // int writeRawData(const char *, int)
-func (this *QDataStream) WriteRawData(arg0 string, len int) interface{} {
+func (this *QDataStream) WriteRawData(arg0 string, len int) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream12writeRawDataEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:185
 // index:0
 // Public
 // int skipRawData(int)
-func (this *QDataStream) SkipRawData(len int) interface{} {
+func (this *QDataStream) SkipRawData(len int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11skipRawDataEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &len)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:187
@@ -293,10 +313,11 @@ func (this *QDataStream) StartTransaction() {
 // index:0
 // Public
 // bool commitTransaction()
-func (this *QDataStream) CommitTransaction() interface{} {
+func (this *QDataStream) CommitTransaction() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream17commitTransactionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:189

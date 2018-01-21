@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QInputMethodEvent struct {
 }
 
 func (this *QInputMethodEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQInputMethodEventFromPointer(cthis unsafe.Pointer) *QInputMethodEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -95,50 +99,57 @@ func (this *QInputMethodEvent) SetCommitString(commitString *qtcore.QString, rep
 // index:0
 // Public inline
 // const QList<QInputMethodEvent::Attribute> & attributes()
-func (this *QInputMethodEvent) Attributes() interface{} {
+func (this *QInputMethodEvent) Attributes() unsafe.Pointer /*555*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent10attributesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtGui/qevent.h:561
 // index:0
 // Public inline
 // const QString & preeditString()
-func (this *QInputMethodEvent) PreeditString() interface{} {
+func (this *QInputMethodEvent) PreeditString() *qtcore.QString {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent13preeditStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:563
 // index:0
 // Public inline
 // const QString & commitString()
-func (this *QInputMethodEvent) CommitString() interface{} {
+func (this *QInputMethodEvent) CommitString() *qtcore.QString {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent12commitStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:564
 // index:0
 // Public inline
 // int replacementStart()
-func (this *QInputMethodEvent) ReplacementStart() interface{} {
+func (this *QInputMethodEvent) ReplacementStart() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent16replacementStartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:565
 // index:0
 // Public inline
 // int replacementLength()
-func (this *QInputMethodEvent) ReplacementLength() interface{} {
+func (this *QInputMethodEvent) ReplacementLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent17replacementLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

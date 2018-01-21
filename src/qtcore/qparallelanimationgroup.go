@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qparallelanimationgroup.h
 // #include <qparallelanimationgroup.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -45,33 +45,41 @@ func init() {
 
 //  body block begin
 type QParallelAnimationGroup struct {
-	*qtrt.CObject
+	*QAnimationGroup
 }
 
 func (this *QParallelAnimationGroup) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.QAnimationGroup.GetCthis()
+	}
 }
 func NewQParallelAnimationGroupFromPointer(cthis unsafe.Pointer) *QParallelAnimationGroup {
-	return &QParallelAnimationGroup{&qtrt.CObject{cthis}}
+	bcthis0 := NewQAnimationGroupFromPointer(cthis)
+	return &QParallelAnimationGroup{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:53
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QParallelAnimationGroup) MetaObject() interface{} {
+func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:56
 // index:0
 // Public
 // void QParallelAnimationGroup(class QObject *)
-func NewQParallelAnimationGroup(parent unsafe.Pointer) *QParallelAnimationGroup {
+func NewQParallelAnimationGroup(parent *QObject /*444 QObject **/) *QParallelAnimationGroup {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQParallelAnimationGroupFromPointer(cthis)
 	return gothis
@@ -90,20 +98,23 @@ func DeleteQParallelAnimationGroup(*QParallelAnimationGroup) {
 // index:0
 // Public virtual
 // int duration()
-func (this *QParallelAnimationGroup) Duration() interface{} {
+func (this *QParallelAnimationGroup) Duration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:63
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QParallelAnimationGroup) Event(event unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QParallelAnimationGroup) Event(event *QEvent /*444 QEvent **/) bool {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:65

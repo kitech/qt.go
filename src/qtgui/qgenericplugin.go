@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qgenericplugin.h
 // #include <qgenericplugin.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QGenericPlugin struct {
 }
 
 func (this *QGenericPlugin) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQGenericPluginFromPointer(cthis unsafe.Pointer) *QGenericPlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQGenericPluginFromPointer(cthis unsafe.Pointer) *QGenericPlugin {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGenericPlugin) MetaObject() interface{} {
+func (this *QGenericPlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGenericPlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qgenericplugin.h:55
 // index:0
 // Public
 // void QGenericPlugin(class QObject *)
-func NewQGenericPlugin(parent unsafe.Pointer) *QGenericPlugin {
+func NewQGenericPlugin(parent *qtcore.QObject /*444 QObject **/) *QGenericPlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGenericPluginFromPointer(cthis)
 	return gothis
@@ -95,12 +102,14 @@ func DeleteQGenericPlugin(*QGenericPlugin) {
 // index:0
 // Public pure virtual
 // QObject * create(const class QString &, const class QString &)
-func (this *QGenericPlugin) Create(name *qtcore.QString, spec *qtcore.QString) interface{} {
+func (this *QGenericPlugin) Create(name *qtcore.QString, spec *qtcore.QString) *qtcore.QObject /*444 QObject **/ {
 	var convArg0 = name.GetCthis()
 	var convArg1 = spec.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPlugin6createERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QToolBarChangeEvent struct {
 }
 
 func (this *QToolBarChangeEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQToolBarChangeEventFromPointer(cthis unsafe.Pointer) *QToolBarChangeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -85,10 +89,11 @@ func DeleteQToolBarChangeEvent(*QToolBarChangeEvent) {
 // index:0
 // Public inline
 // bool toggle()
-func (this *QToolBarChangeEvent) Toggle() interface{} {
+func (this *QToolBarChangeEvent) Toggle() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

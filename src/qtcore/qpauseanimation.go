@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qpauseanimation.h
 // #include <qpauseanimation.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QPauseAnimation struct {
 }
 
 func (this *QPauseAnimation) GetCthis() unsafe.Pointer {
-	return this.QAbstractAnimation.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QAbstractAnimation.GetCthis()
+	}
 }
 func NewQPauseAnimationFromPointer(cthis unsafe.Pointer) *QPauseAnimation {
 	bcthis0 := NewQAbstractAnimationFromPointer(cthis)
@@ -60,19 +64,22 @@ func NewQPauseAnimationFromPointer(cthis unsafe.Pointer) *QPauseAnimation {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QPauseAnimation) MetaObject() interface{} {
+func (this *QPauseAnimation) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QPauseAnimation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qpauseanimation.h:57
 // index:0
 // Public
 // void QPauseAnimation(class QObject *)
-func NewQPauseAnimation(parent unsafe.Pointer) *QPauseAnimation {
+func NewQPauseAnimation(parent *QObject /*444 QObject **/) *QPauseAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPauseAnimationFromPointer(cthis)
 	return gothis
@@ -82,9 +89,10 @@ func NewQPauseAnimation(parent unsafe.Pointer) *QPauseAnimation {
 // index:1
 // Public
 // void QPauseAnimation(int, class QObject *)
-func NewQPauseAnimation_1(msecs int, parent unsafe.Pointer) *QPauseAnimation {
+func NewQPauseAnimation_1(msecs int, parent *QObject /*444 QObject **/) *QPauseAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &msecs, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &msecs, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPauseAnimationFromPointer(cthis)
 	return gothis
@@ -103,10 +111,11 @@ func DeleteQPauseAnimation(*QPauseAnimation) {
 // index:0
 // Public virtual
 // int duration()
-func (this *QPauseAnimation) Duration() interface{} {
+func (this *QPauseAnimation) Duration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QPauseAnimation8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qpauseanimation.h:62
@@ -122,10 +131,12 @@ func (this *QPauseAnimation) SetDuration(msecs int) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QPauseAnimation) Event(e unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QPauseAnimation) Event(e *QEvent /*444 QEvent **/) bool {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qpauseanimation.h:66

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qobjectdefs.h
 // #include <qobjectdefs.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QGenericReturnArgument struct {
 }
 
 func (this *QGenericReturnArgument) GetCthis() unsafe.Pointer {
-	return this.QGenericArgument.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGenericArgument.GetCthis()
+	}
 }
 func NewQGenericReturnArgumentFromPointer(cthis unsafe.Pointer) *QGenericReturnArgument {
 	bcthis0 := NewQGenericArgumentFromPointer(cthis)
@@ -60,7 +64,7 @@ func NewQGenericReturnArgumentFromPointer(cthis unsafe.Pointer) *QGenericReturnA
 // index:0
 // Public inline
 // void QGenericReturnArgument(const char *, void *)
-func NewQGenericReturnArgument(aName string, aData unsafe.Pointer) *QGenericReturnArgument {
+func NewQGenericReturnArgument(aName string, aData unsafe.Pointer /*666*/) *QGenericReturnArgument {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = qtrt.CString(aName)
 	defer qtrt.FreeMem(convArg0)

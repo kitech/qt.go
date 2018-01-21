@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QApplicationStateChangeEvent struct {
 }
 
 func (this *QApplicationStateChangeEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQApplicationStateChangeEventFromPointer(cthis unsafe.Pointer) *QApplicationStateChangeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -76,10 +80,11 @@ func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 // index:0
 // Public
 // Qt::ApplicationState applicationState()
-func (this *QApplicationStateChangeEvent) ApplicationState() interface{} {
+func (this *QApplicationStateChangeEvent) ApplicationState() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK28QApplicationStateChangeEvent16applicationStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

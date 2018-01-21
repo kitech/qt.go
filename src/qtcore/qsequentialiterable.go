@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qvariant.h
 // #include <qvariant.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QSequentialIterable struct {
 }
 
 func (this *QSequentialIterable) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQSequentialIterableFromPointer(cthis unsafe.Pointer) *QSequentialIterable {
 	return &QSequentialIterable{&qtrt.CObject{cthis}}
@@ -59,50 +63,56 @@ func NewQSequentialIterableFromPointer(cthis unsafe.Pointer) *QSequentialIterabl
 // index:0
 // Public
 // QSequentialIterable::const_iterator begin()
-func (this *QSequentialIterable) Begin() interface{} {
+func (this *QSequentialIterable) Begin() unsafe.Pointer /*444*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtCore/qvariant.h:624
 // index:0
 // Public
 // QSequentialIterable::const_iterator end()
-func (this *QSequentialIterable) End() interface{} {
+func (this *QSequentialIterable) End() unsafe.Pointer /*444*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtCore/qvariant.h:626
 // index:0
 // Public
 // QVariant at(int)
-func (this *QSequentialIterable) At(idx int) interface{} {
+func (this *QSequentialIterable) At(idx int) *QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable2atEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &idx)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:627
 // index:0
 // Public
 // int size()
-func (this *QSequentialIterable) Size() interface{} {
+func (this *QSequentialIterable) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qvariant.h:629
 // index:0
 // Public
 // bool canReverseIterate()
-func (this *QSequentialIterable) CanReverseIterate() interface{} {
+func (this *QSequentialIterable) CanReverseIterate() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable17canReverseIterateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

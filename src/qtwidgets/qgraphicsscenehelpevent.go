@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h
 // #include <qgraphicssceneevent.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGraphicsSceneHelpEvent struct {
 }
 
 func (this *QGraphicsSceneHelpEvent) GetCthis() unsafe.Pointer {
-	return this.QGraphicsSceneEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGraphicsSceneEvent.GetCthis()
+	}
 }
 func NewQGraphicsSceneHelpEventFromPointer(cthis unsafe.Pointer) *QGraphicsSceneHelpEvent {
 	bcthis0 := NewQGraphicsSceneEventFromPointer(cthis)
@@ -89,10 +93,12 @@ func DeleteQGraphicsSceneHelpEvent(*QGraphicsSceneHelpEvent) {
 // index:0
 // Public
 // QPointF scenePos()
-func (this *QGraphicsSceneHelpEvent) ScenePos() interface{} {
+func (this *QGraphicsSceneHelpEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsSceneHelpEvent8scenePosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:238
@@ -109,10 +115,12 @@ func (this *QGraphicsSceneHelpEvent) SetScenePos(pos *qtcore.QPointF) {
 // index:0
 // Public
 // QPoint screenPos()
-func (this *QGraphicsSceneHelpEvent) ScreenPos() interface{} {
+func (this *QGraphicsSceneHelpEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsSceneHelpEvent9screenPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:241

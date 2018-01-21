@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qtooltip.h
 // #include <qtooltip.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QToolTip struct {
 }
 
 func (this *QToolTip) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQToolTipFromPointer(cthis unsafe.Pointer) *QToolTip {
 	return &QToolTip{&qtrt.CObject{cthis}}
@@ -67,11 +71,11 @@ func NewQToolTipFromPointer(cthis unsafe.Pointer) *QToolTip {
 // index:0
 // Public static
 // void showText(const class QPoint &, const class QString &, class QWidget *)
-func (this *QToolTip) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w unsafe.Pointer) {
+func (this *QToolTip) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, pos, text, w)
 	gopp.ErrPrint(err, rv)
 }
-func QToolTip_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w unsafe.Pointer) {
+func QToolTip_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/) {
 	var nilthis *QToolTip
 	nilthis.ShowText(pos, text, w)
 }
@@ -80,11 +84,11 @@ func QToolTip_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w unsafe.Pointe
 // index:1
 // Public static
 // void showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &)
-func (this *QToolTip) ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w unsafe.Pointer, rect *qtcore.QRect) {
+func (this *QToolTip) ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/, rect *qtcore.QRect) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect", ffiqt.FFI_TYPE_POINTER, pos, text, w, rect)
 	gopp.ErrPrint(err, rv)
 }
-func QToolTip_ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w unsafe.Pointer, rect *qtcore.QRect) {
+func QToolTip_ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/, rect *qtcore.QRect) {
 	var nilthis *QToolTip
 	nilthis.ShowText_1(pos, text, w, rect)
 }
@@ -93,11 +97,11 @@ func QToolTip_ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w unsafe.Poin
 // index:2
 // Public static
 // void showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &, int)
-func (this *QToolTip) ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w unsafe.Pointer, rect *qtcore.QRect, msecShowTime int) {
+func (this *QToolTip) ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/, rect *qtcore.QRect, msecShowTime int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti", ffiqt.FFI_TYPE_POINTER, pos, text, w, rect, msecShowTime)
 	gopp.ErrPrint(err, rv)
 }
-func QToolTip_ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w unsafe.Pointer, rect *qtcore.QRect, msecShowTime int) {
+func QToolTip_ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/, rect *qtcore.QRect, msecShowTime int) {
 	var nilthis *QToolTip
 	nilthis.ShowText_2(pos, text, w, rect, msecShowTime)
 }
@@ -119,42 +123,50 @@ func QToolTip_HideText() {
 // index:0
 // Public static
 // bool isVisible()
-func (this *QToolTip) IsVisible() interface{} {
+func (this *QToolTip) IsVisible() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip9isVisibleEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QToolTip_IsVisible() {
+func QToolTip_IsVisible() bool {
 	var nilthis *QToolTip
-	nilthis.IsVisible()
+	rv := nilthis.IsVisible()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qtooltip.h:62
 // index:0
 // Public static
 // QString text()
-func (this *QToolTip) Text() interface{} {
+func (this *QToolTip) Text() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip4textEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QToolTip_Text() {
+func QToolTip_Text() *qtcore.QString /*123*/ {
 	var nilthis *QToolTip
-	nilthis.Text()
+	rv := nilthis.Text()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qtooltip.h:64
 // index:0
 // Public static
 // QPalette palette()
-func (this *QToolTip) Palette() interface{} {
+func (this *QToolTip) Palette() *qtgui.QPalette /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip7paletteEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QToolTip_Palette() {
+func QToolTip_Palette() *qtgui.QPalette /*123*/ {
 	var nilthis *QToolTip
-	nilthis.Palette()
+	rv := nilthis.Palette()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qtooltip.h:65
@@ -174,14 +186,17 @@ func QToolTip_SetPalette(arg0 *qtgui.QPalette) {
 // index:0
 // Public static
 // QFont font()
-func (this *QToolTip) Font() interface{} {
+func (this *QToolTip) Font() *qtgui.QFont /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip4fontEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QToolTip_Font() {
+func QToolTip_Font() *qtgui.QFont /*123*/ {
 	var nilthis *QToolTip
-	nilthis.Font()
+	rv := nilthis.Font()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qtooltip.h:67

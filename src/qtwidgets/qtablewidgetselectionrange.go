@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qtablewidget.h
 // #include <qtablewidget.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 75
+// extern C begin: 74
 */
 // import "C"
 import "unsafe"
@@ -57,7 +57,11 @@ type QTableWidgetSelectionRange struct {
 }
 
 func (this *QTableWidgetSelectionRange) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQTableWidgetSelectionRangeFromPointer(cthis unsafe.Pointer) *QTableWidgetSelectionRange {
 	return &QTableWidgetSelectionRange{&qtrt.CObject{cthis}}
@@ -100,60 +104,66 @@ func DeleteQTableWidgetSelectionRange(*QTableWidgetSelectionRange) {
 // index:0
 // Public inline
 // int topRow()
-func (this *QTableWidgetSelectionRange) TopRow() interface{} {
+func (this *QTableWidgetSelectionRange) TopRow() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange6topRowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:61
 // index:0
 // Public inline
 // int bottomRow()
-func (this *QTableWidgetSelectionRange) BottomRow() interface{} {
+func (this *QTableWidgetSelectionRange) BottomRow() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange9bottomRowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:62
 // index:0
 // Public inline
 // int leftColumn()
-func (this *QTableWidgetSelectionRange) LeftColumn() interface{} {
+func (this *QTableWidgetSelectionRange) LeftColumn() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange10leftColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:63
 // index:0
 // Public inline
 // int rightColumn()
-func (this *QTableWidgetSelectionRange) RightColumn() interface{} {
+func (this *QTableWidgetSelectionRange) RightColumn() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11rightColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:64
 // index:0
 // Public inline
 // int rowCount()
-func (this *QTableWidgetSelectionRange) RowCount() interface{} {
+func (this *QTableWidgetSelectionRange) RowCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange8rowCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:65
 // index:0
 // Public inline
 // int columnCount()
-func (this *QTableWidgetSelectionRange) ColumnCount() interface{} {
+func (this *QTableWidgetSelectionRange) ColumnCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11columnCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

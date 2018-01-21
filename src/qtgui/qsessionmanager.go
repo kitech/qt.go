@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qsessionmanager.h
 // #include <qsessionmanager.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 45
+// extern C begin: 43
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QSessionManager struct {
 }
 
 func (this *QSessionManager) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQSessionManagerFromPointer(cthis unsafe.Pointer) *QSessionManager {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -64,50 +68,58 @@ func NewQSessionManagerFromPointer(cthis unsafe.Pointer) *QSessionManager {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSessionManager) MetaObject() interface{} {
+func (this *QSessionManager) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:65
 // index:0
 // Public
 // QString sessionId()
-func (this *QSessionManager) SessionId() interface{} {
+func (this *QSessionManager) SessionId() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager9sessionIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:66
 // index:0
 // Public
 // QString sessionKey()
-func (this *QSessionManager) SessionKey() interface{} {
+func (this *QSessionManager) SessionKey() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager10sessionKeyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:68
 // index:0
 // Public
 // bool allowsInteraction()
-func (this *QSessionManager) AllowsInteraction() interface{} {
+func (this *QSessionManager) AllowsInteraction() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager17allowsInteractionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:69
 // index:0
 // Public
 // bool allowsErrorInteraction()
-func (this *QSessionManager) AllowsErrorInteraction() interface{} {
+func (this *QSessionManager) AllowsErrorInteraction() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager22allowsErrorInteractionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:70
@@ -141,10 +153,11 @@ func (this *QSessionManager) SetRestartHint(arg0 int) {
 // index:0
 // Public
 // QSessionManager::RestartHint restartHint()
-func (this *QSessionManager) RestartHint() interface{} {
+func (this *QSessionManager) RestartHint() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager11restartHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:83
@@ -157,16 +170,6 @@ func (this *QSessionManager) SetRestartCommand(arg0 *qtcore.QStringList) {
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsessionmanager.h:84
-// index:0
-// Public
-// QStringList restartCommand()
-func (this *QSessionManager) RestartCommand() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager14restartCommandEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
 // /usr/include/qt/QtGui/qsessionmanager.h:85
 // index:0
 // Public
@@ -175,16 +178,6 @@ func (this *QSessionManager) SetDiscardCommand(arg0 *qtcore.QStringList) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager17setDiscardCommandERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qsessionmanager.h:86
-// index:0
-// Public
-// QStringList discardCommand()
-func (this *QSessionManager) DiscardCommand() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager14discardCommandEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:88
@@ -213,10 +206,11 @@ func (this *QSessionManager) SetManagerProperty_1(name *qtcore.QString, value *q
 // index:0
 // Public
 // bool isPhase2()
-func (this *QSessionManager) IsPhase2() interface{} {
+func (this *QSessionManager) IsPhase2() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager8isPhase2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:92

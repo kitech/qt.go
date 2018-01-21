@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qrunnable.h
 // #include <qrunnable.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QRunnable struct {
 }
 
 func (this *QRunnable) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQRunnableFromPointer(cthis unsafe.Pointer) *QRunnable {
 	return &QRunnable{&qtrt.CObject{cthis}}
@@ -89,10 +93,11 @@ func DeleteQRunnable(*QRunnable) {
 // index:0
 // Public inline
 // bool autoDelete()
-func (this *QRunnable) AutoDelete() interface{} {
+func (this *QRunnable) AutoDelete() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QRunnable10autoDeleteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qrunnable.h:64

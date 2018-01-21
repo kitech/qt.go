@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qxmlstream.h
 // #include <qxmlstream.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QXmlStreamNotationDeclaration struct {
 }
 
 func (this *QXmlStreamNotationDeclaration) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQXmlStreamNotationDeclarationFromPointer(cthis unsafe.Pointer) *QXmlStreamNotationDeclaration {
 	return &QXmlStreamNotationDeclaration{&qtrt.CObject{cthis}}
@@ -80,30 +84,36 @@ func DeleteQXmlStreamNotationDeclaration(*QXmlStreamNotationDeclaration) {
 // index:0
 // Public inline
 // QStringRef name()
-func (this *QXmlStreamNotationDeclaration) Name() interface{} {
+func (this *QXmlStreamNotationDeclaration) Name() *QStringRef /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:265
 // index:0
 // Public inline
 // QStringRef systemId()
-func (this *QXmlStreamNotationDeclaration) SystemId() interface{} {
+func (this *QXmlStreamNotationDeclaration) SystemId() *QStringRef /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:266
 // index:0
 // Public inline
 // QStringRef publicId()
-func (this *QXmlStreamNotationDeclaration) PublicId() interface{} {
+func (this *QXmlStreamNotationDeclaration) PublicId() *QStringRef /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

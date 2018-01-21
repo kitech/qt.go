@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qiconengineplugin.h
 // #include <qiconengineplugin.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 16
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QIconEnginePlugin struct {
 }
 
 func (this *QIconEnginePlugin) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQIconEnginePluginFromPointer(cthis unsafe.Pointer) *QIconEnginePlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQIconEnginePluginFromPointer(cthis unsafe.Pointer) *QIconEnginePlugin {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QIconEnginePlugin) MetaObject() interface{} {
+func (this *QIconEnginePlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QIconEnginePlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qiconengineplugin.h:58
 // index:0
 // Public
 // void QIconEnginePlugin(class QObject *)
-func NewQIconEnginePlugin(parent unsafe.Pointer) *QIconEnginePlugin {
+func NewQIconEnginePlugin(parent *qtcore.QObject /*444 QObject **/) *QIconEnginePlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIconEnginePluginFromPointer(cthis)
 	return gothis
@@ -95,11 +102,13 @@ func DeleteQIconEnginePlugin(*QIconEnginePlugin) {
 // index:0
 // Public pure virtual
 // QIconEngine * create(const class QString &)
-func (this *QIconEnginePlugin) Create(filename *qtcore.QString) interface{} {
+func (this *QIconEnginePlugin) Create(filename *qtcore.QString) *QIconEngine /*444 QIconEngine **/ {
 	var convArg0 = filename.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePlugin6createERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQIconEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QIconDragEvent struct {
 }
 
 func (this *QIconDragEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQIconDragEventFromPointer(cthis unsafe.Pointer) *QIconDragEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtextobject.h
 // #include <qtextobject.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 35
+// extern C begin: 32
 */
 // import "C"
 import "unsafe"
@@ -53,29 +53,21 @@ type QTextFragment struct {
 }
 
 func (this *QTextFragment) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQTextFragmentFromPointer(cthis unsafe.Pointer) *QTextFragment {
 	return &QTextFragment{&qtrt.CObject{cthis}}
 }
 
-// /usr/include/qt/QtGui/qtextobject.h:306
+// /usr/include/qt/QtGui/qtextobject.h:307
 // index:0
 // Public inline
-// void QTextFragment(const class QTextDocumentPrivate *, int, int)
-func NewQTextFragment(priv unsafe.Pointer, f int, fe int) *QTextFragment {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextFragmentC2EPK20QTextDocumentPrivateii", ffiqt.FFI_TYPE_VOID, cthis, priv, &f, &fe)
-	gopp.ErrPrint(err, rv)
-	gothis := NewQTextFragmentFromPointer(cthis)
-	return gothis
-}
-
-// /usr/include/qt/QtGui/qtextobject.h:307
-// index:1
-// Public inline
 // void QTextFragment()
-func NewQTextFragment_1() *QTextFragment {
+func NewQTextFragment() *QTextFragment {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextFragmentC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
 	gopp.ErrPrint(err, rv)
@@ -87,80 +79,79 @@ func NewQTextFragment_1() *QTextFragment {
 // index:0
 // Public inline
 // bool isValid()
-func (this *QTextFragment) IsValid() interface{} {
+func (this *QTextFragment) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:317
 // index:0
 // Public
 // int position()
-func (this *QTextFragment) Position() interface{} {
+func (this *QTextFragment) Position() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:318
 // index:0
 // Public
 // int length()
-func (this *QTextFragment) Length() interface{} {
+func (this *QTextFragment) Length() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:319
 // index:0
 // Public
 // bool contains(int)
-func (this *QTextFragment) Contains(position int) interface{} {
+func (this *QTextFragment) Contains(position int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment8containsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &position)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:321
 // index:0
 // Public
 // QTextCharFormat charFormat()
-func (this *QTextFragment) CharFormat() interface{} {
+func (this *QTextFragment) CharFormat() *QTextCharFormat /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment10charFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:322
 // index:0
 // Public
 // int charFormatIndex()
-func (this *QTextFragment) CharFormatIndex() interface{} {
+func (this *QTextFragment) CharFormatIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment15charFormatIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:323
 // index:0
 // Public
 // QString text()
-func (this *QTextFragment) Text() interface{} {
+func (this *QTextFragment) Text() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qtextobject.h:326
-// index:0
-// Public
-// QList<QGlyphRun> glyphRuns(int, int)
-func (this *QTextFragment) GlyphRuns(from int, length int) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment9glyphRunsEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &from, &length)
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qxmlstream.h
 // #include <qxmlstream.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 59
+// extern C begin: 56
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QXmlStreamWriter struct {
 }
 
 func (this *QXmlStreamWriter) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQXmlStreamWriterFromPointer(cthis unsafe.Pointer) *QXmlStreamWriter {
 	return &QXmlStreamWriter{&qtrt.CObject{cthis}}
@@ -71,9 +75,10 @@ func NewQXmlStreamWriter() *QXmlStreamWriter {
 // index:1
 // Public
 // void QXmlStreamWriter(class QIODevice *)
-func NewQXmlStreamWriter_1(device unsafe.Pointer) *QXmlStreamWriter {
+func NewQXmlStreamWriter_1(device *QIODevice /*444 QIODevice **/) *QXmlStreamWriter {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, device)
+	var convArg0 = device.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(cthis)
 	return gothis
@@ -83,9 +88,10 @@ func NewQXmlStreamWriter_1(device unsafe.Pointer) *QXmlStreamWriter {
 // index:2
 // Public
 // void QXmlStreamWriter(class QByteArray *)
-func NewQXmlStreamWriter_2(array unsafe.Pointer) *QXmlStreamWriter {
+func NewQXmlStreamWriter_2(array *QByteArray /*444 QByteArray **/) *QXmlStreamWriter {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, array)
+	var convArg0 = array.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(cthis)
 	return gothis
@@ -95,9 +101,10 @@ func NewQXmlStreamWriter_2(array unsafe.Pointer) *QXmlStreamWriter {
 // index:3
 // Public
 // void QXmlStreamWriter(class QString *)
-func NewQXmlStreamWriter_3(string unsafe.Pointer) *QXmlStreamWriter {
+func NewQXmlStreamWriter_3(string *QString /*444 QString **/) *QXmlStreamWriter {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP7QString", ffiqt.FFI_TYPE_VOID, cthis, string)
+	var convArg0 = string.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(cthis)
 	return gothis
@@ -116,8 +123,9 @@ func DeleteQXmlStreamWriter(*QXmlStreamWriter) {
 // index:0
 // Public
 // void setDevice(class QIODevice *)
-func (this *QXmlStreamWriter) SetDevice(device unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), device)
+func (this *QXmlStreamWriter) SetDevice(device *QIODevice /*444 QIODevice **/) {
+	var convArg0 = device.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,18 +133,21 @@ func (this *QXmlStreamWriter) SetDevice(device unsafe.Pointer) {
 // index:0
 // Public
 // QIODevice * device()
-func (this *QXmlStreamWriter) Device() interface{} {
+func (this *QXmlStreamWriter) Device() *QIODevice /*444 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamWriter6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:482
 // index:0
 // Public
 // void setCodec(class QTextCodec *)
-func (this *QXmlStreamWriter) SetCodec(codec unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter8setCodecEP10QTextCodec", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), codec)
+func (this *QXmlStreamWriter) SetCodec(codec *QTextCodec /*444 QTextCodec **/) {
+	var convArg0 = codec.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter8setCodecEP10QTextCodec", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -155,10 +166,12 @@ func (this *QXmlStreamWriter) SetCodec_1(codecName string) {
 // index:0
 // Public
 // QTextCodec * codec()
-func (this *QXmlStreamWriter) Codec() interface{} {
+func (this *QXmlStreamWriter) Codec() *QTextCodec /*444 QTextCodec **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamWriter5codecEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:487
@@ -174,10 +187,11 @@ func (this *QXmlStreamWriter) SetAutoFormatting(arg0 bool) {
 // index:0
 // Public
 // bool autoFormatting()
-func (this *QXmlStreamWriter) AutoFormatting() interface{} {
+func (this *QXmlStreamWriter) AutoFormatting() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamWriter14autoFormattingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:490
@@ -193,10 +207,11 @@ func (this *QXmlStreamWriter) SetAutoFormattingIndent(spacesOrTabs int) {
 // index:0
 // Public
 // int autoFormattingIndent()
-func (this *QXmlStreamWriter) AutoFormattingIndent() interface{} {
+func (this *QXmlStreamWriter) AutoFormattingIndent() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamWriter20autoFormattingIndentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:493
@@ -450,10 +465,11 @@ func (this *QXmlStreamWriter) WriteCurrentToken(reader *QXmlStreamReader) {
 // index:0
 // Public
 // bool hasError()
-func (this *QXmlStreamWriter) HasError() interface{} {
+func (this *QXmlStreamWriter) HasError() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamWriter8hasErrorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgesture.h
 // #include <qgesture.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QTapGesture struct {
 }
 
 func (this *QTapGesture) GetCthis() unsafe.Pointer {
-	return this.QGesture.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGesture.GetCthis()
+	}
 }
 func NewQTapGestureFromPointer(cthis unsafe.Pointer) *QTapGesture {
 	bcthis0 := NewQGestureFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQTapGestureFromPointer(cthis unsafe.Pointer) *QTapGesture {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTapGesture) MetaObject() interface{} {
+func (this *QTapGesture) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTapGesture10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:242
 // index:0
 // Public
 // void QTapGesture(class QObject *)
-func NewQTapGesture(parent unsafe.Pointer) *QTapGesture {
+func NewQTapGesture(parent *qtcore.QObject /*444 QObject **/) *QTapGesture {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTapGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTapGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTapGestureFromPointer(cthis)
 	return gothis
@@ -99,10 +106,12 @@ func DeleteQTapGesture(*QTapGesture) {
 // index:0
 // Public
 // QPointF position()
-func (this *QTapGesture) Position() interface{} {
+func (this *QTapGesture) Position() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTapGesture8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:246

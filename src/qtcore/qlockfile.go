@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qlockfile.h
 // #include <qlockfile.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 34
+// extern C begin: 0
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QLockFile struct {
 }
 
 func (this *QLockFile) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQLockFileFromPointer(cthis unsafe.Pointer) *QLockFile {
 	return &QLockFile{&qtrt.CObject{cthis}}
@@ -81,20 +85,22 @@ func DeleteQLockFile(*QLockFile) {
 // index:0
 // Public
 // bool lock()
-func (this *QLockFile) Lock() interface{} {
+func (this *QLockFile) Lock() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile4lockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qlockfile.h:57
 // index:0
 // Public
 // bool tryLock(int)
-func (this *QLockFile) TryLock(timeout int) interface{} {
+func (this *QLockFile) TryLock(timeout int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile7tryLockEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timeout)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qlockfile.h:58
@@ -119,50 +125,57 @@ func (this *QLockFile) SetStaleLockTime(arg0 int) {
 // index:0
 // Public
 // int staleLockTime()
-func (this *QLockFile) StaleLockTime() interface{} {
+func (this *QLockFile) StaleLockTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile13staleLockTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qlockfile.h:63
 // index:0
 // Public
 // bool isLocked()
-func (this *QLockFile) IsLocked() interface{} {
+func (this *QLockFile) IsLocked() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile8isLockedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qlockfile.h:64
 // index:0
 // Public
 // bool getLockInfo(qint64 *, class QString *, class QString *)
-func (this *QLockFile) GetLockInfo(pid unsafe.Pointer, hostname unsafe.Pointer, appname unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile11getLockInfoEPxP7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pid, hostname, appname)
+func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname *QString /*444 QString **/, appname *QString /*444 QString **/) bool {
+	var convArg1 = hostname.GetCthis()
+	var convArg2 = appname.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile11getLockInfoEPxP7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pid, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qlockfile.h:65
 // index:0
 // Public
 // bool removeStaleLockFile()
-func (this *QLockFile) RemoveStaleLockFile() interface{} {
+func (this *QLockFile) RemoveStaleLockFile() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile19removeStaleLockFileEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qlockfile.h:73
 // index:0
 // Public
 // QLockFile::LockError error()
-func (this *QLockFile) Error() interface{} {
+func (this *QLockFile) Error() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile5errorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QDragEnterEvent struct {
 }
 
 func (this *QDragEnterEvent) GetCthis() unsafe.Pointer {
-	return this.QDragMoveEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QDragMoveEvent.GetCthis()
+	}
 }
 func NewQDragEnterEventFromPointer(cthis unsafe.Pointer) *QDragEnterEvent {
 	bcthis0 := NewQDragMoveEventFromPointer(cthis)

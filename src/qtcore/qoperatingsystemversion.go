@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qoperatingsystemversion.h
 // #include <qoperatingsystemversion.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QOperatingSystemVersion struct {
 }
 
 func (this *QOperatingSystemVersion) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQOperatingSystemVersionFromPointer(cthis unsafe.Pointer) *QOperatingSystemVersion {
 	return &QOperatingSystemVersion{&qtrt.CObject{cthis}}
@@ -71,88 +75,100 @@ func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) 
 // index:0
 // Public static
 // QOperatingSystemVersion current()
-func (this *QOperatingSystemVersion) Current() interface{} {
+func (this *QOperatingSystemVersion) Current() *QOperatingSystemVersion /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QOperatingSystemVersion7currentEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQOperatingSystemVersionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QOperatingSystemVersion_Current() {
+func QOperatingSystemVersion_Current() *QOperatingSystemVersion /*123*/ {
 	var nilthis *QOperatingSystemVersion
-	nilthis.Current()
+	rv := nilthis.Current()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:95
 // index:0
 // Public static inline
 // QOperatingSystemVersion::OSType currentType()
-func (this *QOperatingSystemVersion) CurrentType() interface{} {
+func (this *QOperatingSystemVersion) CurrentType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QOperatingSystemVersion11currentTypeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QOperatingSystemVersion_CurrentType() {
+func QOperatingSystemVersion_CurrentType() int {
 	var nilthis *QOperatingSystemVersion
-	nilthis.CurrentType()
+	rv := nilthis.CurrentType()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:114
 // index:0
 // Public inline
 // int majorVersion()
-func (this *QOperatingSystemVersion) MajorVersion() interface{} {
+func (this *QOperatingSystemVersion) MajorVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12majorVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:115
 // index:0
 // Public inline
 // int minorVersion()
-func (this *QOperatingSystemVersion) MinorVersion() interface{} {
+func (this *QOperatingSystemVersion) MinorVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12minorVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:116
 // index:0
 // Public inline
 // int microVersion()
-func (this *QOperatingSystemVersion) MicroVersion() interface{} {
+func (this *QOperatingSystemVersion) MicroVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12microVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:118
 // index:0
 // Public inline
 // int segmentCount()
-func (this *QOperatingSystemVersion) SegmentCount() interface{} {
+func (this *QOperatingSystemVersion) SegmentCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12segmentCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:124
 // index:0
 // Public inline
 // QOperatingSystemVersion::OSType type()
-func (this *QOperatingSystemVersion) Type() interface{} {
+func (this *QOperatingSystemVersion) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:125
 // index:0
 // Public
 // QString name()
-func (this *QOperatingSystemVersion) Name() interface{} {
+func (this *QOperatingSystemVersion) Name() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

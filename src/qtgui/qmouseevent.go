@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QMouseEvent struct {
 }
 
 func (this *QMouseEvent) GetCthis() unsafe.Pointer {
-	return this.QInputEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QInputEvent.GetCthis()
+	}
 }
 func NewQMouseEventFromPointer(cthis unsafe.Pointer) *QMouseEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
@@ -73,110 +77,126 @@ func DeleteQMouseEvent(*QMouseEvent) {
 // index:0
 // Public inline
 // QPoint pos()
-func (this *QMouseEvent) Pos() interface{} {
+func (this *QMouseEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:122
 // index:0
 // Public inline
 // QPoint globalPos()
-func (this *QMouseEvent) GlobalPos() interface{} {
+func (this *QMouseEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:123
 // index:0
 // Public inline
 // int x()
-func (this *QMouseEvent) X() interface{} {
+func (this *QMouseEvent) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:124
 // index:0
 // Public inline
 // int y()
-func (this *QMouseEvent) Y() interface{} {
+func (this *QMouseEvent) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:125
 // index:0
 // Public inline
 // int globalX()
-func (this *QMouseEvent) GlobalX() interface{} {
+func (this *QMouseEvent) GlobalX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:126
 // index:0
 // Public inline
 // int globalY()
-func (this *QMouseEvent) GlobalY() interface{} {
+func (this *QMouseEvent) GlobalY() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:128
 // index:0
 // Public inline
 // const QPointF & localPos()
-func (this *QMouseEvent) LocalPos() interface{} {
+func (this *QMouseEvent) LocalPos() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent8localPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:129
 // index:0
 // Public inline
 // const QPointF & windowPos()
-func (this *QMouseEvent) WindowPos() interface{} {
+func (this *QMouseEvent) WindowPos() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent9windowPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:130
 // index:0
 // Public inline
 // const QPointF & screenPos()
-func (this *QMouseEvent) ScreenPos() interface{} {
+func (this *QMouseEvent) ScreenPos() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent9screenPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:132
 // index:0
 // Public inline
 // Qt::MouseButton button()
-func (this *QMouseEvent) Button() interface{} {
+func (this *QMouseEvent) Button() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent6buttonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:133
 // index:0
 // Public inline
 // Qt::MouseButtons buttons()
-func (this *QMouseEvent) Buttons() interface{} {
+func (this *QMouseEvent) Buttons() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent7buttonsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:135
@@ -193,20 +213,22 @@ func (this *QMouseEvent) SetLocalPos(localPosition *qtcore.QPointF) {
 // index:0
 // Public
 // Qt::MouseEventSource source()
-func (this *QMouseEvent) Source() interface{} {
+func (this *QMouseEvent) Source() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent6sourceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:142
 // index:0
 // Public
 // Qt::MouseEventFlags flags()
-func (this *QMouseEvent) Flags() interface{} {
+func (this *QMouseEvent) Flags() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

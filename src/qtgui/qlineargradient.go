@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qbrush.h
 // #include <qbrush.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 9
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QLinearGradient struct {
 }
 
 func (this *QLinearGradient) GetCthis() unsafe.Pointer {
-	return this.QGradient.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGradient.GetCthis()
+	}
 }
 func NewQLinearGradientFromPointer(cthis unsafe.Pointer) *QLinearGradient {
 	bcthis0 := NewQGradientFromPointer(cthis)
@@ -102,10 +106,12 @@ func NewQLinearGradient_2(xStart float64, yStart float64, xFinalStop float64, yF
 // index:0
 // Public
 // QPointF start()
-func (this *QLinearGradient) Start() interface{} {
+func (this *QLinearGradient) Start() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QLinearGradient5startEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qbrush.h:262
@@ -131,10 +137,12 @@ func (this *QLinearGradient) SetStart_1(x float64, y float64) {
 // index:0
 // Public
 // QPointF finalStop()
-func (this *QLinearGradient) FinalStop() interface{} {
+func (this *QLinearGradient) FinalStop() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QLinearGradient9finalStopEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qbrush.h:266

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qstringmatcher.h
 // #include <qstringmatcher.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 26
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QStringMatcher struct {
 }
 
 func (this *QStringMatcher) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQStringMatcherFromPointer(cthis unsafe.Pointer) *QStringMatcher {
 	return &QStringMatcher{&qtrt.CObject{cthis}}
@@ -84,9 +88,10 @@ func NewQStringMatcher_1(pattern *QString, cs int) *QStringMatcher {
 // index:2
 // Public
 // void QStringMatcher(const class QChar *, int, Qt::CaseSensitivity)
-func NewQStringMatcher_2(uc unsafe.Pointer, len int, cs int) *QStringMatcher {
+func NewQStringMatcher_2(uc *QChar /*444 const QChar **/, len int, cs int) *QStringMatcher {
 	cthis := qtrt.Calloc(1, 256) // 1048
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherC2EPK5QChariN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, cthis, uc, &len, &cs)
+	var convArg0 = uc.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherC2EPK5QChariN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &len, &cs)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringMatcherFromPointer(cthis)
 	return gothis
@@ -124,41 +129,47 @@ func (this *QStringMatcher) SetCaseSensitivity(cs int) {
 // index:0
 // Public
 // int indexIn(const class QString &, int)
-func (this *QStringMatcher) IndexIn(str *QString, from int) interface{} {
+func (this *QStringMatcher) IndexIn(str *QString, from int) int {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qstringmatcher.h:67
 // index:1
 // Public
 // int indexIn(const class QChar *, int, int)
-func (this *QStringMatcher) IndexIn_1(str unsafe.Pointer, length int, from int) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInEPK5QCharii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), str, &length, &from)
+func (this *QStringMatcher) IndexIn_1(str *QChar /*444 const QChar **/, length int, from int) int {
+	var convArg0 = str.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInEPK5QCharii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &length, &from)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qstringmatcher.h:68
 // index:0
 // Public
 // QString pattern()
-func (this *QStringMatcher) Pattern() interface{} {
+func (this *QStringMatcher) Pattern() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7patternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qstringmatcher.h:69
 // index:0
 // Public inline
 // Qt::CaseSensitivity caseSensitivity()
-func (this *QStringMatcher) CaseSensitivity() interface{} {
+func (this *QStringMatcher) CaseSensitivity() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher15caseSensitivityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qcoreevent.h
 // #include <qcoreevent.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QChildEvent struct {
 }
 
 func (this *QChildEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQChildEventFromPointer(cthis unsafe.Pointer) *QChildEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
@@ -60,9 +64,10 @@ func NewQChildEventFromPointer(cthis unsafe.Pointer) *QChildEvent {
 // index:0
 // Public
 // void QChildEvent(enum QEvent::Type, class QObject *)
-func NewQChildEvent(type_ int, child unsafe.Pointer) *QChildEvent {
+func NewQChildEvent(type_ int, child *QObject /*444 QObject **/) *QChildEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &type_, child)
+	var convArg1 = child.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &type_, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQChildEventFromPointer(cthis)
 	return gothis
@@ -81,40 +86,45 @@ func DeleteQChildEvent(*QChildEvent) {
 // index:0
 // Public inline
 // QObject * child()
-func (this *QChildEvent) Child() interface{} {
+func (this *QChildEvent) Child() *QObject /*444 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5childEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:355
 // index:0
 // Public inline
 // bool added()
-func (this *QChildEvent) Added() interface{} {
+func (this *QChildEvent) Added() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5addedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:356
 // index:0
 // Public inline
 // bool polished()
-func (this *QChildEvent) Polished() interface{} {
+func (this *QChildEvent) Polished() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent8polishedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:357
 // index:0
 // Public inline
 // bool removed()
-func (this *QChildEvent) Removed() interface{} {
+func (this *QChildEvent) Removed() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent7removedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

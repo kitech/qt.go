@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QFocusEvent struct {
 }
 
 func (this *QFocusEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQFocusEventFromPointer(cthis unsafe.Pointer) *QFocusEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -85,30 +89,33 @@ func DeleteQFocusEvent(*QFocusEvent) {
 // index:0
 // Public inline
 // bool gotFocus()
-func (this *QFocusEvent) GotFocus() interface{} {
+func (this *QFocusEvent) GotFocus() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent8gotFocusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qevent.h:393
 // index:0
 // Public inline
 // bool lostFocus()
-func (this *QFocusEvent) LostFocus() interface{} {
+func (this *QFocusEvent) LostFocus() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent9lostFocusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qevent.h:395
 // index:0
 // Public
 // Qt::FocusReason reason()
-func (this *QFocusEvent) Reason() interface{} {
+func (this *QFocusEvent) Reason() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent6reasonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

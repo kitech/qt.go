@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qaccessible.h
 // #include <qaccessible.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QAccessibleTableCellInterface struct {
 }
 
 func (this *QAccessibleTableCellInterface) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQAccessibleTableCellInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleTableCellInterface {
 	return &QAccessibleTableCellInterface{&qtrt.CObject{cthis}}
@@ -72,80 +76,67 @@ func DeleteQAccessibleTableCellInterface(*QAccessibleTableCellInterface) {
 // index:0
 // Public pure virtual
 // bool isSelected()
-func (this *QAccessibleTableCellInterface) IsSelected() interface{} {
+func (this *QAccessibleTableCellInterface) IsSelected() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface10isSelectedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qaccessible.h:582
-// index:0
-// Public pure virtual
-// QList<QAccessibleInterface *> columnHeaderCells()
-func (this *QAccessibleTableCellInterface) ColumnHeaderCells() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface17columnHeaderCellsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qaccessible.h:583
-// index:0
-// Public pure virtual
-// QList<QAccessibleInterface *> rowHeaderCells()
-func (this *QAccessibleTableCellInterface) RowHeaderCells() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface14rowHeaderCellsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:584
 // index:0
 // Public pure virtual
 // int columnIndex()
-func (this *QAccessibleTableCellInterface) ColumnIndex() interface{} {
+func (this *QAccessibleTableCellInterface) ColumnIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface11columnIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:585
 // index:0
 // Public pure virtual
 // int rowIndex()
-func (this *QAccessibleTableCellInterface) RowIndex() interface{} {
+func (this *QAccessibleTableCellInterface) RowIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface8rowIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:586
 // index:0
 // Public pure virtual
 // int columnExtent()
-func (this *QAccessibleTableCellInterface) ColumnExtent() interface{} {
+func (this *QAccessibleTableCellInterface) ColumnExtent() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface12columnExtentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:587
 // index:0
 // Public pure virtual
 // int rowExtent()
-func (this *QAccessibleTableCellInterface) RowExtent() interface{} {
+func (this *QAccessibleTableCellInterface) RowExtent() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface9rowExtentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:589
 // index:0
 // Public pure virtual
 // QAccessibleInterface * table()
-func (this *QAccessibleTableCellInterface) Table() interface{} {
+func (this *QAccessibleTableCellInterface) Table() *QAccessibleInterface /*444 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface5tableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qatomic.h
 // #include <qatomic.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QAtomicInt struct {
 }
 
 func (this *QAtomicInt) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQAtomicIntFromPointer(cthis unsafe.Pointer) *QAtomicInt {
 	return &QAtomicInt{&qtrt.CObject{cthis}}

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtextoption.h
 // #include <qtextoption.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 29
+// extern C begin: 28
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QTextOption struct {
 }
 
 func (this *QTextOption) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQTextOptionFromPointer(cthis unsafe.Pointer) *QTextOption {
 	return &QTextOption{&qtrt.CObject{cthis}}
@@ -84,10 +88,11 @@ func DeleteQTextOption(*QTextOption) {
 // index:0
 // Public inline
 // Qt::Alignment alignment()
-func (this *QTextOption) Alignment() interface{} {
+func (this *QTextOption) Alignment() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption9alignmentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:95
@@ -103,10 +108,11 @@ func (this *QTextOption) SetTextDirection(aDirection int) {
 // index:0
 // Public inline
 // Qt::LayoutDirection textDirection()
-func (this *QTextOption) TextDirection() interface{} {
+func (this *QTextOption) TextDirection() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption13textDirectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:105
@@ -122,20 +128,22 @@ func (this *QTextOption) SetWrapMode(wrap int) {
 // index:0
 // Public inline
 // QTextOption::WrapMode wrapMode()
-func (this *QTextOption) WrapMode() interface{} {
+func (this *QTextOption) WrapMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption8wrapModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:118
 // index:0
 // Public inline
 // QTextOption::Flags flags()
-func (this *QTextOption) Flags() interface{} {
+func (this *QTextOption) Flags() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:121
@@ -151,10 +159,11 @@ func (this *QTextOption) SetTabStop(tabStop float64) {
 // index:0
 // Public inline
 // qreal tabStop()
-func (this *QTextOption) TabStop() interface{} {
+func (this *QTextOption) TabStop() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption7tabStopEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:125
@@ -170,30 +179,11 @@ func (this *QTextOption) SetTabStopDistance(tabStopDistance float64) {
 // index:0
 // Public inline
 // qreal tabStopDistance()
-func (this *QTextOption) TabStopDistance() interface{} {
+func (this *QTextOption) TabStopDistance() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption15tabStopDistanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qtextoption.h:129
-// index:0
-// Public
-// QList<qreal> tabArray()
-func (this *QTextOption) TabArray() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption8tabArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qtextoption.h:132
-// index:0
-// Public
-// QList<QTextOption::Tab> tabs()
-func (this *QTextOption) Tabs() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption4tabsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:134
@@ -209,10 +199,11 @@ func (this *QTextOption) SetUseDesignMetrics(b bool) {
 // index:0
 // Public inline
 // bool useDesignMetrics()
-func (this *QTextOption) UseDesignMetrics() interface{} {
+func (this *QTextOption) UseDesignMetrics() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption16useDesignMetricsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

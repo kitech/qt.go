@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qabstractproxymodel.h
 // #include <qabstractproxymodel.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QAbstractProxyModel struct {
 }
 
 func (this *QAbstractProxyModel) GetCthis() unsafe.Pointer {
-	return this.QAbstractItemModel.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QAbstractItemModel.GetCthis()
+	}
 }
 func NewQAbstractProxyModelFromPointer(cthis unsafe.Pointer) *QAbstractProxyModel {
 	bcthis0 := NewQAbstractItemModelFromPointer(cthis)
@@ -60,19 +64,22 @@ func NewQAbstractProxyModelFromPointer(cthis unsafe.Pointer) *QAbstractProxyMode
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractProxyModel) MetaObject() interface{} {
+func (this *QAbstractProxyModel) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:59
 // index:0
 // Public
 // void QAbstractProxyModel(class QObject *)
-func NewQAbstractProxyModel(parent unsafe.Pointer) *QAbstractProxyModel {
+func NewQAbstractProxyModel(parent *QObject /*444 QObject **/) *QAbstractProxyModel {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModelC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModelC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractProxyModelFromPointer(cthis)
 	return gothis
@@ -91,8 +98,9 @@ func DeleteQAbstractProxyModel(*QAbstractProxyModel) {
 // index:0
 // Public virtual
 // void setSourceModel(class QAbstractItemModel *)
-func (this *QAbstractProxyModel) SetSourceModel(sourceModel unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), sourceModel)
+func (this *QAbstractProxyModel) SetSourceModel(sourceModel *QAbstractItemModel /*444 QAbstractItemModel **/) {
+	var convArg0 = sourceModel.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,64 +108,75 @@ func (this *QAbstractProxyModel) SetSourceModel(sourceModel unsafe.Pointer) {
 // index:0
 // Public
 // QAbstractItemModel * sourceModel()
-func (this *QAbstractProxyModel) SourceModel() interface{} {
+func (this *QAbstractProxyModel) SourceModel() *QAbstractItemModel /*444 QAbstractItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel11sourceModelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:65
 // index:0
 // Public pure virtual
 // QModelIndex mapToSource(const class QModelIndex &)
-func (this *QAbstractProxyModel) MapToSource(proxyIndex *QModelIndex) interface{} {
+func (this *QAbstractProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelIndex /*123*/ {
 	var convArg0 = proxyIndex.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel11mapToSourceERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:66
 // index:0
 // Public pure virtual
 // QModelIndex mapFromSource(const class QModelIndex &)
-func (this *QAbstractProxyModel) MapFromSource(sourceIndex *QModelIndex) interface{} {
+func (this *QAbstractProxyModel) MapFromSource(sourceIndex *QModelIndex) *QModelIndex /*123*/ {
 	var convArg0 = sourceIndex.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel13mapFromSourceERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:68
 // index:0
 // Public virtual
 // QItemSelection mapSelectionToSource(const class QItemSelection &)
-func (this *QAbstractProxyModel) MapSelectionToSource(selection *QItemSelection) interface{} {
+func (this *QAbstractProxyModel) MapSelectionToSource(selection *QItemSelection) *QItemSelection /*123*/ {
 	var convArg0 = selection.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:69
 // index:0
 // Public virtual
 // QItemSelection mapSelectionFromSource(const class QItemSelection &)
-func (this *QAbstractProxyModel) MapSelectionFromSource(selection *QItemSelection) interface{} {
+func (this *QAbstractProxyModel) MapSelectionFromSource(selection *QItemSelection) *QItemSelection /*123*/ {
 	var convArg0 = selection.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:71
 // index:0
 // Public virtual
 // bool submit()
-func (this *QAbstractProxyModel) Submit() interface{} {
+func (this *QAbstractProxyModel) Submit() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModel6submitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:72
@@ -173,88 +192,87 @@ func (this *QAbstractProxyModel) Revert() {
 // index:0
 // Public virtual
 // QVariant data(const class QModelIndex &, int)
-func (this *QAbstractProxyModel) Data(proxyIndex *QModelIndex, role int) interface{} {
+func (this *QAbstractProxyModel) Data(proxyIndex *QModelIndex, role int) *QVariant /*123*/ {
 	var convArg0 = proxyIndex.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &role)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:75
 // index:0
 // Public virtual
 // QVariant headerData(int, Qt::Orientation, int)
-func (this *QAbstractProxyModel) HeaderData(section int, orientation int, role int) interface{} {
+func (this *QAbstractProxyModel) HeaderData(section int, orientation int, role int) *QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel10headerDataEiN2Qt11OrientationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &section, &orientation, &role)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qabstractproxymodel.h:76
-// index:0
-// Public virtual
-// QMap<int, QVariant> itemData(const class QModelIndex &)
-func (this *QAbstractProxyModel) ItemData(index *QModelIndex) interface{} {
-	var convArg0 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel8itemDataERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:77
 // index:0
 // Public virtual
 // Qt::ItemFlags flags(const class QModelIndex &)
-func (this *QAbstractProxyModel) Flags(index *QModelIndex) interface{} {
+func (this *QAbstractProxyModel) Flags(index *QModelIndex) int {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:79
 // index:0
 // Public virtual
 // bool setData(const class QModelIndex &, const class QVariant &, int)
-func (this *QAbstractProxyModel) SetData(index *QModelIndex, value *QVariant, role int) interface{} {
+func (this *QAbstractProxyModel) SetData(index *QModelIndex, value *QVariant, role int) bool {
 	var convArg0 = index.GetCthis()
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &role)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:81
 // index:0
 // Public virtual
 // bool setHeaderData(int, Qt::Orientation, const class QVariant &, int)
-func (this *QAbstractProxyModel) SetHeaderData(section int, orientation int, value *QVariant, role int) interface{} {
+func (this *QAbstractProxyModel) SetHeaderData(section int, orientation int, value *QVariant, role int) bool {
 	var convArg2 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &section, &orientation, convArg2, &role)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:83
 // index:0
 // Public virtual
 // QModelIndex buddy(const class QModelIndex &)
-func (this *QAbstractProxyModel) Buddy(index *QModelIndex) interface{} {
+func (this *QAbstractProxyModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel5buddyERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:84
 // index:0
 // Public virtual
 // bool canFetchMore(const class QModelIndex &)
-func (this *QAbstractProxyModel) CanFetchMore(parent *QModelIndex) interface{} {
+func (this *QAbstractProxyModel) CanFetchMore(parent *QModelIndex) bool {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:85
@@ -280,85 +298,86 @@ func (this *QAbstractProxyModel) Sort(column int, order int) {
 // index:0
 // Public virtual
 // QSize span(const class QModelIndex &)
-func (this *QAbstractProxyModel) Span(index *QModelIndex) interface{} {
+func (this *QAbstractProxyModel) Span(index *QModelIndex) *QSize /*123*/ {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel4spanERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:88
 // index:0
 // Public virtual
 // bool hasChildren(const class QModelIndex &)
-func (this *QAbstractProxyModel) HasChildren(parent *QModelIndex) interface{} {
+func (this *QAbstractProxyModel) HasChildren(parent *QModelIndex) bool {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:89
 // index:0
 // Public virtual
 // QModelIndex sibling(int, int, const class QModelIndex &)
-func (this *QAbstractProxyModel) Sibling(row int, column int, idx *QModelIndex) interface{} {
+func (this *QAbstractProxyModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
 	var convArg2 = idx.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:92
 // index:0
 // Public virtual
 // bool canDropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
-func (this *QAbstractProxyModel) CanDropMimeData(data unsafe.Pointer, action int, row int, column int, parent *QModelIndex) interface{} {
+func (this *QAbstractProxyModel) CanDropMimeData(data *QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
+	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel15canDropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), data, &action, &row, &column, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel15canDropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &action, &row, &column, convArg4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:94
 // index:0
 // Public virtual
 // bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
-func (this *QAbstractProxyModel) DropMimeData(data unsafe.Pointer, action int, row int, column int, parent *QModelIndex) interface{} {
+func (this *QAbstractProxyModel) DropMimeData(data *QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
+	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), data, &action, &row, &column, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &action, &row, &column, convArg4)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qabstractproxymodel.h:96
-// index:0
-// Public virtual
-// QStringList mimeTypes()
-func (this *QAbstractProxyModel) MimeTypes() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel9mimeTypesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:97
 // index:0
 // Public virtual
 // Qt::DropActions supportedDragActions()
-func (this *QAbstractProxyModel) SupportedDragActions() interface{} {
+func (this *QAbstractProxyModel) SupportedDragActions() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel20supportedDragActionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:98
 // index:0
 // Public virtual
 // Qt::DropActions supportedDropActions()
-func (this *QAbstractProxyModel) SupportedDropActions() interface{} {
+func (this *QAbstractProxyModel) SupportedDropActions() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel20supportedDropActionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:104

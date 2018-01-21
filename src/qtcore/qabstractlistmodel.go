@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qabstractitemmodel.h
 // #include <qabstractitemmodel.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QAbstractListModel struct {
 }
 
 func (this *QAbstractListModel) GetCthis() unsafe.Pointer {
-	return this.QAbstractItemModel.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QAbstractItemModel.GetCthis()
+	}
 }
 func NewQAbstractListModelFromPointer(cthis unsafe.Pointer) *QAbstractListModel {
 	bcthis0 := NewQAbstractItemModelFromPointer(cthis)
@@ -60,19 +64,22 @@ func NewQAbstractListModelFromPointer(cthis unsafe.Pointer) *QAbstractListModel 
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractListModel) MetaObject() interface{} {
+func (this *QAbstractListModel) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:396
 // index:0
 // Public
 // void QAbstractListModel(class QObject *)
-func NewQAbstractListModel(parent unsafe.Pointer) *QAbstractListModel {
+func NewQAbstractListModel(parent *QObject /*444 QObject **/) *QAbstractListModel {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractListModelC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractListModelC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractListModelFromPointer(cthis)
 	return gothis
@@ -91,44 +98,51 @@ func DeleteQAbstractListModel(*QAbstractListModel) {
 // index:0
 // Public virtual
 // QModelIndex index(int, int, const class QModelIndex &)
-func (this *QAbstractListModel) Index(row int, column int, parent *QModelIndex) interface{} {
+func (this *QAbstractListModel) Index(row int, column int, parent *QModelIndex) *QModelIndex /*123*/ {
 	var convArg2 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:400
 // index:0
 // Public virtual
 // QModelIndex sibling(int, int, const class QModelIndex &)
-func (this *QAbstractListModel) Sibling(row int, column int, idx *QModelIndex) interface{} {
+func (this *QAbstractListModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
 	var convArg2 = idx.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:401
 // index:0
 // Public virtual
 // bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
-func (this *QAbstractListModel) DropMimeData(data unsafe.Pointer, action int, row int, column int, parent *QModelIndex) interface{} {
+func (this *QAbstractListModel) DropMimeData(data *QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
+	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractListModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), data, &action, &row, &column, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractListModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &action, &row, &column, convArg4)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:404
 // index:0
 // Public virtual
 // Qt::ItemFlags flags(const class QModelIndex &)
-func (this *QAbstractListModel) Flags(index *QModelIndex) interface{} {
+func (this *QAbstractListModel) Flags(index *QModelIndex) int {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

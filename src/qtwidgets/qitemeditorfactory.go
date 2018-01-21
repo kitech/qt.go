@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h
 // #include <qitemeditorfactory.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QItemEditorFactory struct {
 }
 
 func (this *QItemEditorFactory) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQItemEditorFactoryFromPointer(cthis unsafe.Pointer) *QItemEditorFactory {
 	return &QItemEditorFactory{&qtrt.CObject{cthis}}
@@ -88,28 +92,34 @@ func DeleteQItemEditorFactory(*QItemEditorFactory) {
 // index:0
 // Public virtual
 // QWidget * createEditor(int, class QWidget *)
-func (this *QItemEditorFactory) CreateEditor(userType int, parent unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory12createEditorEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &userType, parent)
+func (this *QItemEditorFactory) CreateEditor(userType int, parent *QWidget /*444 QWidget **/) *QWidget /*444 QWidget **/ {
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory12createEditorEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &userType, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:102
 // index:0
 // Public virtual
 // QByteArray valuePropertyName(int)
-func (this *QItemEditorFactory) ValuePropertyName(userType int) interface{} {
+func (this *QItemEditorFactory) ValuePropertyName(userType int) *qtcore.QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory17valuePropertyNameEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &userType)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:104
 // index:0
 // Public
 // void registerEditor(int, class QItemEditorCreatorBase *)
-func (this *QItemEditorFactory) RegisterEditor(userType int, creator unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &userType, creator)
+func (this *QItemEditorFactory) RegisterEditor(userType int, creator *QItemEditorCreatorBase /*444 QItemEditorCreatorBase **/) {
+	var convArg1 = creator.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &userType, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,25 +127,28 @@ func (this *QItemEditorFactory) RegisterEditor(userType int, creator unsafe.Poin
 // index:0
 // Public static
 // const QItemEditorFactory * defaultFactory()
-func (this *QItemEditorFactory) DefaultFactory() interface{} {
+func (this *QItemEditorFactory) DefaultFactory() *QItemEditorFactory /*444 const QItemEditorFactory **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory14defaultFactoryEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQItemEditorFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QItemEditorFactory_DefaultFactory() {
+func QItemEditorFactory_DefaultFactory() *QItemEditorFactory /*444 const QItemEditorFactory **/ {
 	var nilthis *QItemEditorFactory
-	nilthis.DefaultFactory()
+	rv := nilthis.DefaultFactory()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:107
 // index:0
 // Public static
 // void setDefaultFactory(class QItemEditorFactory *)
-func (this *QItemEditorFactory) SetDefaultFactory(factory unsafe.Pointer) {
+func (this *QItemEditorFactory) SetDefaultFactory(factory *QItemEditorFactory /*444 QItemEditorFactory **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory17setDefaultFactoryEPS_", ffiqt.FFI_TYPE_POINTER, factory)
 	gopp.ErrPrint(err, rv)
 }
-func QItemEditorFactory_SetDefaultFactory(factory unsafe.Pointer) {
+func QItemEditorFactory_SetDefaultFactory(factory *QItemEditorFactory /*444 QItemEditorFactory **/) {
 	var nilthis *QItemEditorFactory
 	nilthis.SetDefaultFactory(factory)
 }

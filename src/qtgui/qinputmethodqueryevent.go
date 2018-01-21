@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QInputMethodQueryEvent struct {
 }
 
 func (this *QInputMethodQueryEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQInputMethodQueryEventFromPointer(cthis unsafe.Pointer) *QInputMethodQueryEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -73,10 +77,11 @@ func DeleteQInputMethodQueryEvent(*QInputMethodQueryEvent) {
 // index:0
 // Public inline
 // Qt::InputMethodQueries queries()
-func (this *QInputMethodQueryEvent) Queries() interface{} {
+func (this *QInputMethodQueryEvent) Queries() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent7queriesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:586
@@ -93,10 +98,12 @@ func (this *QInputMethodQueryEvent) SetValue(query int, value *qtcore.QVariant) 
 // index:0
 // Public
 // QVariant value(Qt::InputMethodQuery)
-func (this *QInputMethodQueryEvent) Value(query int) interface{} {
+func (this *QInputMethodQueryEvent) Value(query int) *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent5valueEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &query)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

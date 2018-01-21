@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qimageiohandler.h
 // #include <qimageiohandler.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QImageIOPlugin struct {
 }
 
 func (this *QImageIOPlugin) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQImageIOPluginFromPointer(cthis unsafe.Pointer) *QImageIOPlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQImageIOPluginFromPointer(cthis unsafe.Pointer) *QImageIOPlugin {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QImageIOPlugin) MetaObject() interface{} {
+func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QImageIOPlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:143
 // index:0
 // Public
 // void QImageIOPlugin(class QObject *)
-func NewQImageIOPlugin(parent unsafe.Pointer) *QImageIOPlugin {
+func NewQImageIOPlugin(parent *qtcore.QObject /*444 QObject **/) *QImageIOPlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QImageIOPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QImageIOPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQImageIOPluginFromPointer(cthis)
 	return gothis
@@ -95,22 +102,27 @@ func DeleteQImageIOPlugin(*QImageIOPlugin) {
 // index:0
 // Public pure virtual
 // QImageIOPlugin::Capabilities capabilities(class QIODevice *, const class QByteArray &)
-func (this *QImageIOPlugin) Capabilities(device unsafe.Pointer, format *qtcore.QByteArray) interface{} {
+func (this *QImageIOPlugin) Capabilities(device *qtcore.QIODevice /*444 QIODevice **/, format *qtcore.QByteArray) int {
+	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QImageIOPlugin12capabilitiesEP9QIODeviceRK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), device, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QImageIOPlugin12capabilitiesEP9QIODeviceRK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:154
 // index:0
 // Public pure virtual
 // QImageIOHandler * create(class QIODevice *, const class QByteArray &)
-func (this *QImageIOPlugin) Create(device unsafe.Pointer, format *qtcore.QByteArray) interface{} {
+func (this *QImageIOPlugin) Create(device *qtcore.QIODevice /*444 QIODevice **/, format *qtcore.QByteArray) *QImageIOHandler /*444 QImageIOHandler **/ {
+	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), device, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQImageIOHandlerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

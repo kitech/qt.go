@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qcoreevent.h
 // #include <qcoreevent.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QTimerEvent struct {
 }
 
 func (this *QTimerEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQTimerEventFromPointer(cthis unsafe.Pointer) *QTimerEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
@@ -81,10 +85,11 @@ func DeleteQTimerEvent(*QTimerEvent) {
 // index:0
 // Public inline
 // int timerId()
-func (this *QTimerEvent) TimerId() interface{} {
+func (this *QTimerEvent) TimerId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTimerEvent7timerIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

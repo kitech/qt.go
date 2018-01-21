@@ -1,22 +1,12 @@
-//  header block begin
-// block begin header
+package qtcore
+
 // /usr/include/qt/QtCore/qsysinfo.h
 // #include <qsysinfo.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
-//  main block begin
-// block begin main
-//  main block end
-
-//  use block begin
-// block begin use
-//  use block end
-
 //  ext block begin
-// block begin ext
 
 /*
 #include <stdlib.h>
@@ -54,13 +44,16 @@ func init() {
 //  ext block end
 
 //  body block begin
-// block begin body
 type QSysInfo struct {
 	*qtrt.CObject
 }
 
 func (this *QSysInfo) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQSysInfoFromPointer(cthis unsafe.Pointer) *QSysInfo {
 	return &QSysInfo{&qtrt.CObject{cthis}}
@@ -70,154 +63,185 @@ func NewQSysInfoFromPointer(cthis unsafe.Pointer) *QSysInfo {
 // index:0
 // Public static inline
 // QSysInfo::WinVersion windowsVersion()
-func (this *QSysInfo) WindowsVersion() interface{} {
+func (this *QSysInfo) WindowsVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo14windowsVersionEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QSysInfo_WindowsVersion() {
+func QSysInfo_WindowsVersion() int {
 	var nilthis *QSysInfo
-	nilthis.WindowsVersion()
+	rv := nilthis.WindowsVersion()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsysinfo.h:227
 // index:0
 // Public static inline
 // QSysInfo::MacVersion macVersion()
-func (this *QSysInfo) MacVersion() interface{} {
+func (this *QSysInfo) MacVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo10macVersionEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QSysInfo_MacVersion() {
+func QSysInfo_MacVersion() int {
 	var nilthis *QSysInfo
-	nilthis.MacVersion()
+	rv := nilthis.MacVersion()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsysinfo.h:232
 // index:0
 // Public static
 // QString buildCpuArchitecture()
-func (this *QSysInfo) BuildCpuArchitecture() interface{} {
+func (this *QSysInfo) BuildCpuArchitecture() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo20buildCpuArchitectureEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QSysInfo_BuildCpuArchitecture() {
+func QSysInfo_BuildCpuArchitecture() *QString /*123*/ {
 	var nilthis *QSysInfo
-	nilthis.BuildCpuArchitecture()
+	rv := nilthis.BuildCpuArchitecture()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsysinfo.h:233
 // index:0
 // Public static
 // QString currentCpuArchitecture()
-func (this *QSysInfo) CurrentCpuArchitecture() interface{} {
+func (this *QSysInfo) CurrentCpuArchitecture() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo22currentCpuArchitectureEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QSysInfo_CurrentCpuArchitecture() {
+func QSysInfo_CurrentCpuArchitecture() *QString /*123*/ {
 	var nilthis *QSysInfo
-	nilthis.CurrentCpuArchitecture()
+	rv := nilthis.CurrentCpuArchitecture()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsysinfo.h:234
 // index:0
 // Public static
 // QString buildAbi()
-func (this *QSysInfo) BuildAbi() interface{} {
+func (this *QSysInfo) BuildAbi() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo8buildAbiEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QSysInfo_BuildAbi() {
+func QSysInfo_BuildAbi() *QString /*123*/ {
 	var nilthis *QSysInfo
-	nilthis.BuildAbi()
+	rv := nilthis.BuildAbi()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsysinfo.h:236
 // index:0
 // Public static
 // QString kernelType()
-func (this *QSysInfo) KernelType() interface{} {
+func (this *QSysInfo) KernelType() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo10kernelTypeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QSysInfo_KernelType() {
+func QSysInfo_KernelType() *QString /*123*/ {
 	var nilthis *QSysInfo
-	nilthis.KernelType()
+	rv := nilthis.KernelType()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsysinfo.h:237
 // index:0
 // Public static
 // QString kernelVersion()
-func (this *QSysInfo) KernelVersion() interface{} {
+func (this *QSysInfo) KernelVersion() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo13kernelVersionEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QSysInfo_KernelVersion() {
+func QSysInfo_KernelVersion() *QString /*123*/ {
 	var nilthis *QSysInfo
-	nilthis.KernelVersion()
+	rv := nilthis.KernelVersion()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsysinfo.h:238
 // index:0
 // Public static
 // QString productType()
-func (this *QSysInfo) ProductType() interface{} {
+func (this *QSysInfo) ProductType() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo11productTypeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QSysInfo_ProductType() {
+func QSysInfo_ProductType() *QString /*123*/ {
 	var nilthis *QSysInfo
-	nilthis.ProductType()
+	rv := nilthis.ProductType()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsysinfo.h:239
 // index:0
 // Public static
 // QString productVersion()
-func (this *QSysInfo) ProductVersion() interface{} {
+func (this *QSysInfo) ProductVersion() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo14productVersionEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QSysInfo_ProductVersion() {
+func QSysInfo_ProductVersion() *QString /*123*/ {
 	var nilthis *QSysInfo
-	nilthis.ProductVersion()
+	rv := nilthis.ProductVersion()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsysinfo.h:240
 // index:0
 // Public static
 // QString prettyProductName()
-func (this *QSysInfo) PrettyProductName() interface{} {
+func (this *QSysInfo) PrettyProductName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo17prettyProductNameEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QSysInfo_PrettyProductName() {
+func QSysInfo_PrettyProductName() *QString /*123*/ {
 	var nilthis *QSysInfo
-	nilthis.PrettyProductName()
+	rv := nilthis.PrettyProductName()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsysinfo.h:242
 // index:0
 // Public static
 // QString machineHostName()
-func (this *QSysInfo) MachineHostName() interface{} {
+func (this *QSysInfo) MachineHostName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo15machineHostNameEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QSysInfo_MachineHostName() {
+func QSysInfo_MachineHostName() *QString /*123*/ {
 	var nilthis *QSysInfo
-	nilthis.MachineHostName()
+	rv := nilthis.MachineHostName()
+	return rv
 }
 
 //  body block end

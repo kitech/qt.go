@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qsystemsemaphore.h
 // #include <qsystemsemaphore.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 14
+// extern C begin: 13
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QSystemSemaphore struct {
 }
 
 func (this *QSystemSemaphore) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQSystemSemaphoreFromPointer(cthis unsafe.Pointer) *QSystemSemaphore {
 	return &QSystemSemaphore{&qtrt.CObject{cthis}}
@@ -91,50 +95,57 @@ func (this *QSystemSemaphore) SetKey(key *QString, initialValue int, mode int) {
 // index:0
 // Public
 // QString key()
-func (this *QSystemSemaphore) Key() interface{} {
+func (this *QSystemSemaphore) Key() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:80
 // index:0
 // Public
 // bool acquire()
-func (this *QSystemSemaphore) Acquire() interface{} {
+func (this *QSystemSemaphore) Acquire() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore7acquireEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:81
 // index:0
 // Public
 // bool release(int)
-func (this *QSystemSemaphore) Release(n int) interface{} {
+func (this *QSystemSemaphore) Release(n int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore7releaseEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:83
 // index:0
 // Public
 // QSystemSemaphore::SystemSemaphoreError error()
-func (this *QSystemSemaphore) Error() interface{} {
+func (this *QSystemSemaphore) Error() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore5errorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:84
 // index:0
 // Public
 // QString errorString()
-func (this *QSystemSemaphore) ErrorString() interface{} {
+func (this *QSystemSemaphore) ErrorString() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

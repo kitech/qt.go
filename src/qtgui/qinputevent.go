@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 9
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QInputEvent struct {
 }
 
 func (this *QInputEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQInputEventFromPointer(cthis unsafe.Pointer) *QInputEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -73,20 +77,22 @@ func DeleteQInputEvent(*QInputEvent) {
 // index:0
 // Public inline
 // Qt::KeyboardModifiers modifiers()
-func (this *QInputEvent) Modifiers() interface{} {
+func (this *QInputEvent) Modifiers() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QInputEvent9modifiersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:75
 // index:0
 // Public inline
 // ulong timestamp()
-func (this *QInputEvent) Timestamp() interface{} {
+func (this *QInputEvent) Timestamp() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QInputEvent9timestampEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:76

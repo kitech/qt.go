@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qvalidator.h
 // #include <qvalidator.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QValidator struct {
 }
 
 func (this *QValidator) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQValidatorFromPointer(cthis unsafe.Pointer) *QValidator {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQValidatorFromPointer(cthis unsafe.Pointer) *QValidator {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QValidator) MetaObject() interface{} {
+func (this *QValidator) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:62
 // index:0
 // Public
 // void QValidator(class QObject *)
-func NewQValidator(parent unsafe.Pointer) *QValidator {
+func NewQValidator(parent *qtcore.QObject /*444 QObject **/) *QValidator {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QValidatorC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QValidatorC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQValidatorFromPointer(cthis)
 	return gothis
@@ -105,21 +112,24 @@ func (this *QValidator) SetLocale(locale *qtcore.QLocale) {
 // index:0
 // Public
 // QLocale locale()
-func (this *QValidator) Locale() interface{} {
+func (this *QValidator) Locale() *qtcore.QLocale /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator6localeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:74
 // index:0
 // Public pure virtual
 // QValidator::State validate(class QString &, int &)
-func (this *QValidator) Validate(arg0 *qtcore.QString, arg1 int) interface{} {
+func (this *QValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:75

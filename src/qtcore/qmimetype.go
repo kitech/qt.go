@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qmimetype.h
 // #include <qmimetype.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 24
+// extern C begin: 22
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QMimeType struct {
 }
 
 func (this *QMimeType) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQMimeTypeFromPointer(cthis unsafe.Pointer) *QMimeType {
 	return &QMimeType{&qtrt.CObject{cthis}}
@@ -90,141 +94,106 @@ func DeleteQMimeType(*QMimeType) {
 // index:0
 // Public
 // bool isValid()
-func (this *QMimeType) IsValid() interface{} {
+func (this *QMimeType) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:100
 // index:0
 // Public
 // bool isDefault()
-func (this *QMimeType) IsDefault() interface{} {
+func (this *QMimeType) IsDefault() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType9isDefaultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:102
 // index:0
 // Public
 // QString name()
-func (this *QMimeType) Name() interface{} {
+func (this *QMimeType) Name() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:103
 // index:0
 // Public
 // QString comment()
-func (this *QMimeType) Comment() interface{} {
+func (this *QMimeType) Comment() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7commentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:104
 // index:0
 // Public
 // QString genericIconName()
-func (this *QMimeType) GenericIconName() interface{} {
+func (this *QMimeType) GenericIconName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15genericIconNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:105
 // index:0
 // Public
 // QString iconName()
-func (this *QMimeType) IconName() interface{} {
+func (this *QMimeType) IconName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8iconNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qmimetype.h:106
-// index:0
-// Public
-// QStringList globPatterns()
-func (this *QMimeType) GlobPatterns() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12globPatternsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qmimetype.h:107
-// index:0
-// Public
-// QStringList parentMimeTypes()
-func (this *QMimeType) ParentMimeTypes() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15parentMimeTypesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qmimetype.h:108
-// index:0
-// Public
-// QStringList allAncestors()
-func (this *QMimeType) AllAncestors() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12allAncestorsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qmimetype.h:109
-// index:0
-// Public
-// QStringList aliases()
-func (this *QMimeType) Aliases() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7aliasesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qmimetype.h:110
-// index:0
-// Public
-// QStringList suffixes()
-func (this *QMimeType) Suffixes() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8suffixesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:111
 // index:0
 // Public
 // QString preferredSuffix()
-func (this *QMimeType) PreferredSuffix() interface{} {
+func (this *QMimeType) PreferredSuffix() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15preferredSuffixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:113
 // index:0
 // Public
 // bool inherits(const class QString &)
-func (this *QMimeType) Inherits(mimeTypeName *QString) interface{} {
+func (this *QMimeType) Inherits(mimeTypeName *QString) bool {
 	var convArg0 = mimeTypeName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8inheritsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:115
 // index:0
 // Public
 // QString filterString()
-func (this *QMimeType) FilterString() interface{} {
+func (this *QMimeType) FilterString() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12filterStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

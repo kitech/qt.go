@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qsurface.h
 // #include <qsurface.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 40
+// extern C begin: 39
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QSurface struct {
 }
 
 func (this *QSurface) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQSurfaceFromPointer(cthis unsafe.Pointer) *QSurface {
 	return &QSurface{&qtrt.CObject{cthis}}
@@ -72,60 +76,57 @@ func DeleteQSurface(*QSurface) {
 // index:0
 // Public
 // QSurface::SurfaceClass surfaceClass()
-func (this *QSurface) SurfaceClass() interface{} {
+func (this *QSurface) SurfaceClass() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface12surfaceClassEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qsurface.h:76
 // index:0
 // Public pure virtual
 // QSurfaceFormat format()
-func (this *QSurface) Format() interface{} {
+func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qsurface.h:77
-// index:0
-// Public pure virtual
-// QPlatformSurface * surfaceHandle()
-func (this *QSurface) SurfaceHandle() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface13surfaceHandleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qsurface.h:79
 // index:0
 // Public pure virtual
 // QSurface::SurfaceType surfaceType()
-func (this *QSurface) SurfaceType() interface{} {
+func (this *QSurface) SurfaceType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface11surfaceTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qsurface.h:80
 // index:0
 // Public
 // bool supportsOpenGL()
-func (this *QSurface) SupportsOpenGL() interface{} {
+func (this *QSurface) SupportsOpenGL() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface14supportsOpenGLEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qsurface.h:82
 // index:0
 // Public pure virtual
 // QSize size()
-func (this *QSurface) Size() interface{} {
+func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qsurface.h:85

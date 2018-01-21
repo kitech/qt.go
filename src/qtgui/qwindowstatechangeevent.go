@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QWindowStateChangeEvent struct {
 }
 
 func (this *QWindowStateChangeEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQWindowStateChangeEventFromPointer(cthis unsafe.Pointer) *QWindowStateChangeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -73,20 +77,22 @@ func DeleteQWindowStateChangeEvent(*QWindowStateChangeEvent) {
 // index:0
 // Public inline
 // Qt::WindowStates oldState()
-func (this *QWindowStateChangeEvent) OldState() interface{} {
+func (this *QWindowStateChangeEvent) OldState() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent8oldStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:787
 // index:0
 // Public
 // bool isOverride()
-func (this *QWindowStateChangeEvent) IsOverride() interface{} {
+func (this *QWindowStateChangeEvent) IsOverride() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent10isOverrideEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

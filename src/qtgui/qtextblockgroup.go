@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtextobject.h
 // #include <qtextobject.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 9
+// extern C begin: 8
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QTextBlockGroup struct {
 }
 
 func (this *QTextBlockGroup) GetCthis() unsafe.Pointer {
-	return this.QTextObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QTextObject.GetCthis()
+	}
 }
 func NewQTextBlockGroupFromPointer(cthis unsafe.Pointer) *QTextBlockGroup {
 	bcthis0 := NewQTextObjectFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQTextBlockGroupFromPointer(cthis unsafe.Pointer) *QTextBlockGroup {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTextBlockGroup) MetaObject() interface{} {
+func (this *QTextBlockGroup) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextBlockGroup10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:95
 // index:0
 // Protected
 // void QTextBlockGroup(class QTextDocument *)
-func NewQTextBlockGroup(doc unsafe.Pointer) *QTextBlockGroup {
+func NewQTextBlockGroup(doc *QTextDocument /*444 QTextDocument **/) *QTextBlockGroup {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroupC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, doc)
+	var convArg0 = doc.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroupC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextBlockGroupFromPointer(cthis)
 	return gothis
@@ -119,16 +126,6 @@ func (this *QTextBlockGroup) BlockFormatChanged(block *QTextBlock) {
 	var convArg0 = block.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroup18blockFormatChangedERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qtextobject.h:102
-// index:0
-// Protected
-// QList<QTextBlock> blockList()
-func (this *QTextBlockGroup) BlockList() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextBlockGroup9blockListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
 }
 
 //  body block end

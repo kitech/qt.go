@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qsemaphore.h
 // #include <qsemaphore.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QSemaphore struct {
 }
 
 func (this *QSemaphore) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQSemaphoreFromPointer(cthis unsafe.Pointer) *QSemaphore {
 	return &QSemaphore{&qtrt.CObject{cthis}}
@@ -89,20 +93,22 @@ func (this *QSemaphore) Acquire(n int) {
 // index:0
 // Public
 // bool tryAcquire(int)
-func (this *QSemaphore) TryAcquire(n int) interface{} {
+func (this *QSemaphore) TryAcquire(n int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &n)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:60
 // index:1
 // Public
 // bool tryAcquire(int, int)
-func (this *QSemaphore) TryAcquire_1(n int, timeout int) interface{} {
+func (this *QSemaphore) TryAcquire_1(n int, timeout int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &n, &timeout)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:62
@@ -118,10 +124,11 @@ func (this *QSemaphore) Release(n int) {
 // index:0
 // Public
 // int available()
-func (this *QSemaphore) Available() interface{} {
+func (this *QSemaphore) Available() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSemaphore9availableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

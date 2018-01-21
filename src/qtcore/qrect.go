@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qrect.h
 // #include <qrect.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QRect struct {
 }
 
 func (this *QRect) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQRectFromPointer(cthis unsafe.Pointer) *QRect {
 	return &QRect{&qtrt.CObject{cthis}}
@@ -111,100 +115,111 @@ func NewQRect_3(left int, top int, width int, height int) *QRect {
 // index:0
 // Public inline
 // bool isNull()
-func (this *QRect) IsNull() interface{} {
+func (this *QRect) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qrect.h:66
 // index:0
 // Public inline
 // bool isEmpty()
-func (this *QRect) IsEmpty() interface{} {
+func (this *QRect) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qrect.h:67
 // index:0
 // Public inline
 // bool isValid()
-func (this *QRect) IsValid() interface{} {
+func (this *QRect) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qrect.h:69
 // index:0
 // Public inline
 // int left()
-func (this *QRect) Left() interface{} {
+func (this *QRect) Left() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect4leftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrect.h:70
 // index:0
 // Public inline
 // int top()
-func (this *QRect) Top() interface{} {
+func (this *QRect) Top() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrect.h:71
 // index:0
 // Public inline
 // int right()
-func (this *QRect) Right() interface{} {
+func (this *QRect) Right() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect5rightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrect.h:72
 // index:0
 // Public inline
 // int bottom()
-func (this *QRect) Bottom() interface{} {
+func (this *QRect) Bottom() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrect.h:73
 // index:0
 // Public
 // QRect normalized()
-func (this *QRect) Normalized() interface{} {
+func (this *QRect) Normalized() *QRect /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10normalizedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:75
 // index:0
 // Public inline
 // int x()
-func (this *QRect) X() interface{} {
+func (this *QRect) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrect.h:76
 // index:0
 // Public inline
 // int y()
-func (this *QRect) Y() interface{} {
+func (this *QRect) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrect.h:77
@@ -305,50 +320,60 @@ func (this *QRect) SetBottomLeft(p *QPoint) {
 // index:0
 // Public inline
 // QPoint topLeft()
-func (this *QRect) TopLeft() interface{} {
+func (this *QRect) TopLeft() *QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect7topLeftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:90
 // index:0
 // Public inline
 // QPoint bottomRight()
-func (this *QRect) BottomRight() interface{} {
+func (this *QRect) BottomRight() *QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect11bottomRightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:91
 // index:0
 // Public inline
 // QPoint topRight()
-func (this *QRect) TopRight() interface{} {
+func (this *QRect) TopRight() *QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8topRightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:92
 // index:0
 // Public inline
 // QPoint bottomLeft()
-func (this *QRect) BottomLeft() interface{} {
+func (this *QRect) BottomLeft() *QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10bottomLeftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:93
 // index:0
 // Public inline
 // QPoint center()
-func (this *QRect) Center() interface{} {
+func (this *QRect) Center() *QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect6centerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:95
@@ -460,31 +485,37 @@ func (this *QRect) Translate_1(p *QPoint) {
 // index:0
 // Public inline
 // QRect translated(int, int)
-func (this *QRect) Translated(dx int, dy int) interface{} {
+func (this *QRect) Translated(dx int, dy int) *QRect /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10translatedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:108
 // index:1
 // Public inline
 // QRect translated(const class QPoint &)
-func (this *QRect) Translated_1(p *QPoint) interface{} {
+func (this *QRect) Translated_1(p *QPoint) *QRect /*123*/ {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:109
 // index:0
 // Public inline
 // QRect transposed()
-func (this *QRect) Transposed() interface{} {
+func (this *QRect) Transposed() *QRect /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10transposedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:111
@@ -519,7 +550,7 @@ func (this *QRect) SetRect(x int, y int, w int, h int) {
 // index:0
 // Public inline
 // void getRect(int *, int *, int *, int *)
-func (this *QRect) GetRect(x unsafe.Pointer, y unsafe.Pointer, w unsafe.Pointer, h unsafe.Pointer) {
+func (this *QRect) GetRect(x unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, w unsafe.Pointer /*666*/, h unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect7getRectEPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
 }
@@ -537,7 +568,7 @@ func (this *QRect) SetCoords(x1 int, y1 int, x2 int, y2 int) {
 // index:0
 // Public inline
 // void getCoords(int *, int *, int *, int *)
-func (this *QRect) GetCoords(x1 unsafe.Pointer, y1 unsafe.Pointer, x2 unsafe.Pointer, y2 unsafe.Pointer) {
+func (this *QRect) GetCoords(x1 unsafe.Pointer /*666*/, y1 unsafe.Pointer /*666*/, x2 unsafe.Pointer /*666*/, y2 unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect9getCoordsEPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	gopp.ErrPrint(err, rv)
 }
@@ -555,40 +586,46 @@ func (this *QRect) Adjust(x1 int, y1 int, x2 int, y2 int) {
 // index:0
 // Public inline
 // QRect adjusted(int, int, int, int)
-func (this *QRect) Adjusted(x1 int, y1 int, x2 int, y2 int) interface{} {
+func (this *QRect) Adjusted(x1 int, y1 int, x2 int, y2 int) *QRect /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8adjustedEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x1, &y1, &x2, &y2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:123
 // index:0
 // Public inline
 // QSize size()
-func (this *QRect) Size() interface{} {
+func (this *QRect) Size() *QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:124
 // index:0
 // Public inline
 // int width()
-func (this *QRect) Width() interface{} {
+func (this *QRect) Width() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrect.h:125
 // index:0
 // Public inline
 // int height()
-func (this *QRect) Height() interface{} {
+func (this *QRect) Height() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qrect.h:126
@@ -623,97 +660,110 @@ func (this *QRect) SetSize(s *QSize) {
 // index:0
 // Public
 // bool contains(const class QRect &, _Bool)
-func (this *QRect) Contains(r *QRect, proper bool) interface{} {
+func (this *QRect) Contains(r *QRect, proper bool) bool {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8containsERKS_b", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &proper)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qrect.h:136
 // index:1
 // Public
 // bool contains(const class QPoint &, _Bool)
-func (this *QRect) Contains_1(p *QPoint, proper bool) interface{} {
+func (this *QRect) Contains_1(p *QPoint, proper bool) bool {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8containsERK6QPointb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &proper)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qrect.h:137
 // index:2
 // Public inline
 // bool contains(int, int)
-func (this *QRect) Contains_2(x int, y int) interface{} {
+func (this *QRect) Contains_2(x int, y int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8containsEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qrect.h:138
 // index:3
 // Public inline
 // bool contains(int, int, _Bool)
-func (this *QRect) Contains_3(x int, y int, proper bool) interface{} {
+func (this *QRect) Contains_3(x int, y int, proper bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect8containsEiib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &proper)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qrect.h:139
 // index:0
 // Public inline
 // QRect united(const class QRect &)
-func (this *QRect) United(other *QRect) interface{} {
+func (this *QRect) United(other *QRect) *QRect /*123*/ {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect6unitedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:140
 // index:0
 // Public inline
 // QRect intersected(const class QRect &)
-func (this *QRect) Intersected(other *QRect) interface{} {
+func (this *QRect) Intersected(other *QRect) *QRect /*123*/ {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:141
 // index:0
 // Public
 // bool intersects(const class QRect &)
-func (this *QRect) Intersects(r *QRect) interface{} {
+func (this *QRect) Intersects(r *QRect) bool {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect10intersectsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qrect.h:143
 // index:0
 // Public inline
 // QRect marginsAdded(const class QMargins &)
-func (this *QRect) MarginsAdded(margins *QMargins) interface{} {
+func (this *QRect) MarginsAdded(margins *QMargins) *QRect /*123*/ {
 	var convArg0 = margins.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect12marginsAddedERK8QMargins", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qrect.h:144
 // index:0
 // Public inline
 // QRect marginsRemoved(const class QMargins &)
-func (this *QRect) MarginsRemoved(margins *QMargins) interface{} {
+func (this *QRect) MarginsRemoved(margins *QMargins) *QRect /*123*/ {
 	var convArg0 = margins.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QRect14marginsRemovedERK8QMargins", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

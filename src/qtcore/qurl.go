@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qurl.h
 // #include <qurl.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QUrl struct {
 }
 
 func (this *QUrl) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQUrlFromPointer(cthis unsafe.Pointer) *QUrl {
 	return &QUrl{&qtrt.CObject{cthis}}
@@ -113,58 +117,68 @@ func (this *QUrl) SetUrl(url *QString, mode int) {
 // index:0
 // Public static
 // QUrl fromEncoded(const class QByteArray &, enum QUrl::ParsingMode)
-func (this *QUrl) FromEncoded(url *QByteArray, mode int) interface{} {
+func (this *QUrl) FromEncoded(url *QByteArray, mode int) *QUrl /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl11fromEncodedERK10QByteArrayNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, url, mode)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QUrl_FromEncoded(url *QByteArray, mode int) {
+func QUrl_FromEncoded(url *QByteArray, mode int) *QUrl /*123*/ {
 	var nilthis *QUrl
-	nilthis.FromEncoded(url, mode)
+	rv := nilthis.FromEncoded(url, mode)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qurl.h:210
 // index:0
 // Public static
 // QUrl fromUserInput(const class QString &)
-func (this *QUrl) FromUserInput(userInput *QString) interface{} {
+func (this *QUrl) FromUserInput(userInput *QString) *QUrl /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl13fromUserInputERK7QString", ffiqt.FFI_TYPE_POINTER, userInput)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QUrl_FromUserInput(userInput *QString) {
+func QUrl_FromUserInput(userInput *QString) *QUrl /*123*/ {
 	var nilthis *QUrl
-	nilthis.FromUserInput(userInput)
+	rv := nilthis.FromUserInput(userInput)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qurl.h:215
 // index:0
 // Public
 // bool isValid()
-func (this *QUrl) IsValid() interface{} {
+func (this *QUrl) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qurl.h:216
 // index:0
 // Public
 // QString errorString()
-func (this *QUrl) ErrorString() interface{} {
+func (this *QUrl) ErrorString() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qurl.h:218
 // index:0
 // Public
 // bool isEmpty()
-func (this *QUrl) IsEmpty() interface{} {
+func (this *QUrl) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qurl.h:219
@@ -190,10 +204,12 @@ func (this *QUrl) SetScheme(scheme *QString) {
 // index:0
 // Public
 // QString scheme()
-func (this *QUrl) Scheme() interface{} {
+func (this *QUrl) Scheme() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl6schemeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qurl.h:224
@@ -259,10 +275,11 @@ func (this *QUrl) SetPort(port int) {
 // index:0
 // Public
 // int port(int)
-func (this *QUrl) Port(defaultPort int) interface{} {
+func (this *QUrl) Port(defaultPort int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl4portEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &defaultPort)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qurl.h:245
@@ -279,10 +296,11 @@ func (this *QUrl) SetPath(path *QString, mode int) {
 // index:0
 // Public
 // bool hasQuery()
-func (this *QUrl) HasQuery() interface{} {
+func (this *QUrl) HasQuery() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl8hasQueryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qurl.h:250
@@ -309,10 +327,11 @@ func (this *QUrl) SetQuery_1(query *QUrlQuery) {
 // index:0
 // Public
 // bool hasFragment()
-func (this *QUrl) HasFragment() interface{} {
+func (this *QUrl) HasFragment() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl11hasFragmentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qurl.h:256
@@ -329,66 +348,76 @@ func (this *QUrl) SetFragment(fragment *QString, mode int) {
 // index:0
 // Public
 // QUrl resolved(const class QUrl &)
-func (this *QUrl) Resolved(relative *QUrl) interface{} {
+func (this *QUrl) Resolved(relative *QUrl) *QUrl /*123*/ {
 	var convArg0 = relative.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl8resolvedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qurl.h:260
 // index:0
 // Public
 // bool isRelative()
-func (this *QUrl) IsRelative() interface{} {
+func (this *QUrl) IsRelative() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl10isRelativeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qurl.h:261
 // index:0
 // Public
 // bool isParentOf(const class QUrl &)
-func (this *QUrl) IsParentOf(url *QUrl) interface{} {
+func (this *QUrl) IsParentOf(url *QUrl) bool {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl10isParentOfERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qurl.h:263
 // index:0
 // Public
 // bool isLocalFile()
-func (this *QUrl) IsLocalFile() interface{} {
+func (this *QUrl) IsLocalFile() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl11isLocalFileEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qurl.h:264
 // index:0
 // Public static
 // QUrl fromLocalFile(const class QString &)
-func (this *QUrl) FromLocalFile(localfile *QString) interface{} {
+func (this *QUrl) FromLocalFile(localfile *QString) *QUrl /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl13fromLocalFileERK7QString", ffiqt.FFI_TYPE_POINTER, localfile)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QUrl_FromLocalFile(localfile *QString) {
+func QUrl_FromLocalFile(localfile *QString) *QUrl /*123*/ {
 	var nilthis *QUrl
-	nilthis.FromLocalFile(localfile)
+	rv := nilthis.FromLocalFile(localfile)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qurl.h:265
 // index:0
 // Public
 // QString toLocalFile()
-func (this *QUrl) ToLocalFile() interface{} {
+func (this *QUrl) ToLocalFile() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl11toLocalFileEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qurl.h:267
@@ -404,94 +433,79 @@ func (this *QUrl) Detach() {
 // index:0
 // Public
 // bool isDetached()
-func (this *QUrl) IsDetached() interface{} {
+func (this *QUrl) IsDetached() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl10isDetachedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qurl.h:276
 // index:0
 // Public static
 // QString fromPercentEncoding(const class QByteArray &)
-func (this *QUrl) FromPercentEncoding(arg0 *QByteArray) interface{} {
+func (this *QUrl) FromPercentEncoding(arg0 *QByteArray) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl19fromPercentEncodingERK10QByteArray", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QUrl_FromPercentEncoding(arg0 *QByteArray) {
+func QUrl_FromPercentEncoding(arg0 *QByteArray) *QString /*123*/ {
 	var nilthis *QUrl
-	nilthis.FromPercentEncoding(arg0)
+	rv := nilthis.FromPercentEncoding(arg0)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qurl.h:277
 // index:0
 // Public static
 // QByteArray toPercentEncoding(const class QString &, const class QByteArray &, const class QByteArray &)
-func (this *QUrl) ToPercentEncoding(arg0 *QString, exclude *QByteArray, include *QByteArray) interface{} {
+func (this *QUrl) ToPercentEncoding(arg0 *QString, exclude *QByteArray, include *QByteArray) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_", ffiqt.FFI_TYPE_POINTER, arg0, exclude, include)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QUrl_ToPercentEncoding(arg0 *QString, exclude *QByteArray, include *QByteArray) {
+func QUrl_ToPercentEncoding(arg0 *QString, exclude *QByteArray, include *QByteArray) *QByteArray /*123*/ {
 	var nilthis *QUrl
-	nilthis.ToPercentEncoding(arg0, exclude, include)
+	rv := nilthis.ToPercentEncoding(arg0, exclude, include)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qurl.h:357
 // index:0
 // Public static
 // QString fromAce(const class QByteArray &)
-func (this *QUrl) FromAce(arg0 *QByteArray) interface{} {
+func (this *QUrl) FromAce(arg0 *QByteArray) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl7fromAceERK10QByteArray", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QUrl_FromAce(arg0 *QByteArray) {
+func QUrl_FromAce(arg0 *QByteArray) *QString /*123*/ {
 	var nilthis *QUrl
-	nilthis.FromAce(arg0)
+	rv := nilthis.FromAce(arg0)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qurl.h:358
 // index:0
 // Public static
 // QByteArray toAce(const class QString &)
-func (this *QUrl) ToAce(arg0 *QString) interface{} {
+func (this *QUrl) ToAce(arg0 *QString) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl5toAceERK7QString", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QUrl_ToAce(arg0 *QString) {
+func QUrl_ToAce(arg0 *QString) *QByteArray /*123*/ {
 	var nilthis *QUrl
-	nilthis.ToAce(arg0)
-}
-
-// /usr/include/qt/QtCore/qurl.h:359
-// index:0
-// Public static
-// QStringList idnWhitelist()
-func (this *QUrl) IdnWhitelist() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl12idnWhitelistEv", ffiqt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	rv := nilthis.ToAce(arg0)
 	return rv
-}
-func QUrl_IdnWhitelist() {
-	var nilthis *QUrl
-	nilthis.IdnWhitelist()
-}
-
-// /usr/include/qt/QtCore/qurl.h:361
-// index:0
-// Public static
-// QList<QUrl> fromStringList(const class QStringList &, enum QUrl::ParsingMode)
-func (this *QUrl) FromStringList(uris *QStringList, mode int) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl14fromStringListERK11QStringListNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, uris, mode)
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-func QUrl_FromStringList(uris *QStringList, mode int) {
-	var nilthis *QUrl
-	nilthis.FromStringList(uris, mode)
 }
 
 // /usr/include/qt/QtCore/qurl.h:363

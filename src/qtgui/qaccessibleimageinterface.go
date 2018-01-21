@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qaccessible.h
 // #include <qaccessible.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 21
+// extern C begin: 18
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QAccessibleImageInterface struct {
 }
 
 func (this *QAccessibleImageInterface) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQAccessibleImageInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleImageInterface {
 	return &QAccessibleImageInterface{&qtrt.CObject{cthis}}
@@ -72,30 +76,36 @@ func DeleteQAccessibleImageInterface(*QAccessibleImageInterface) {
 // index:0
 // Public pure virtual
 // QString imageDescription()
-func (this *QAccessibleImageInterface) ImageDescription() interface{} {
+func (this *QAccessibleImageInterface) ImageDescription() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface16imageDescriptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:658
 // index:0
 // Public pure virtual
 // QSize imageSize()
-func (this *QAccessibleImageInterface) ImageSize() interface{} {
+func (this *QAccessibleImageInterface) ImageSize() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface9imageSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:659
 // index:0
 // Public pure virtual
 // QPoint imagePosition()
-func (this *QAccessibleImageInterface) ImagePosition() interface{} {
+func (this *QAccessibleImageInterface) ImagePosition() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface13imagePositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

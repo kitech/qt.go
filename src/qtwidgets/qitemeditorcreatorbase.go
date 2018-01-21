@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h
 // #include <qitemeditorfactory.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QItemEditorCreatorBase struct {
 }
 
 func (this *QItemEditorCreatorBase) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQItemEditorCreatorBaseFromPointer(cthis unsafe.Pointer) *QItemEditorCreatorBase {
 	return &QItemEditorCreatorBase{&qtrt.CObject{cthis}}
@@ -76,20 +80,25 @@ func DeleteQItemEditorCreatorBase(*QItemEditorCreatorBase) {
 // index:0
 // Public pure virtual
 // QWidget * createWidget(class QWidget *)
-func (this *QItemEditorCreatorBase) CreateWidget(parent unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), parent)
+func (this *QItemEditorCreatorBase) CreateWidget(parent *QWidget /*444 QWidget **/) *QWidget /*444 QWidget **/ {
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:61
 // index:0
 // Public pure virtual
 // QByteArray valuePropertyName()
-func (this *QItemEditorCreatorBase) ValuePropertyName() interface{} {
+func (this *QItemEditorCreatorBase) ValuePropertyName() *qtcore.QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase17valuePropertyNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

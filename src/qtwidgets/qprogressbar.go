@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qprogressbar.h
 // #include <qprogressbar.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QProgressBar struct {
 }
 
 func (this *QProgressBar) GetCthis() unsafe.Pointer {
-	return this.QWidget.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QWidget.GetCthis()
+	}
 }
 func NewQProgressBarFromPointer(cthis unsafe.Pointer) *QProgressBar {
 	bcthis0 := NewQWidgetFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQProgressBarFromPointer(cthis unsafe.Pointer) *QProgressBar {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QProgressBar) MetaObject() interface{} {
+func (this *QProgressBar) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:71
 // index:0
 // Public
 // void QProgressBar(class QWidget *)
-func NewQProgressBar(parent unsafe.Pointer) *QProgressBar {
+func NewQProgressBar(parent *QWidget /*444 QWidget **/) *QProgressBar {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBarC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBarC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQProgressBarFromPointer(cthis)
 	return gothis
@@ -99,40 +106,45 @@ func DeleteQProgressBar(*QProgressBar) {
 // index:0
 // Public
 // int minimum()
-func (this *QProgressBar) Minimum() interface{} {
+func (this *QProgressBar) Minimum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar7minimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:75
 // index:0
 // Public
 // int maximum()
-func (this *QProgressBar) Maximum() interface{} {
+func (this *QProgressBar) Maximum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar7maximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:77
 // index:0
 // Public
 // int value()
-func (this *QProgressBar) Value() interface{} {
+func (this *QProgressBar) Value() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:79
 // index:0
 // Public virtual
 // QString text()
-func (this *QProgressBar) Text() interface{} {
+func (this *QProgressBar) Text() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:80
@@ -148,50 +160,57 @@ func (this *QProgressBar) SetTextVisible(visible bool) {
 // index:0
 // Public
 // bool isTextVisible()
-func (this *QProgressBar) IsTextVisible() interface{} {
+func (this *QProgressBar) IsTextVisible() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar13isTextVisibleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:83
 // index:0
 // Public
 // Qt::Alignment alignment()
-func (this *QProgressBar) Alignment() interface{} {
+func (this *QProgressBar) Alignment() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar9alignmentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:86
 // index:0
 // Public virtual
 // QSize sizeHint()
-func (this *QProgressBar) SizeHint() interface{} {
+func (this *QProgressBar) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:87
 // index:0
 // Public virtual
 // QSize minimumSizeHint()
-func (this *QProgressBar) MinimumSizeHint() interface{} {
+func (this *QProgressBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:89
 // index:0
 // Public
 // Qt::Orientation orientation()
-func (this *QProgressBar) Orientation() interface{} {
+func (this *QProgressBar) Orientation() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar11orientationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:91
@@ -207,10 +226,11 @@ func (this *QProgressBar) SetInvertedAppearance(invert bool) {
 // index:0
 // Public
 // bool invertedAppearance()
-func (this *QProgressBar) InvertedAppearance() interface{} {
+func (this *QProgressBar) InvertedAppearance() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar18invertedAppearanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:93
@@ -226,10 +246,11 @@ func (this *QProgressBar) SetTextDirection(textDirection int) {
 // index:0
 // Public
 // QProgressBar::Direction textDirection()
-func (this *QProgressBar) TextDirection() interface{} {
+func (this *QProgressBar) TextDirection() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar13textDirectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:96
@@ -255,10 +276,12 @@ func (this *QProgressBar) ResetFormat() {
 // index:0
 // Public
 // QString format()
-func (this *QProgressBar) Format() interface{} {
+func (this *QProgressBar) Format() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:101
@@ -328,18 +351,21 @@ func (this *QProgressBar) ValueChanged(value int) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QProgressBar) Event(e unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QProgressBar) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:113
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QProgressBar) PaintEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QProgressBar) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -347,8 +373,9 @@ func (this *QProgressBar) PaintEvent(arg0 unsafe.Pointer) {
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionProgressBar *)
-func (this *QProgressBar) InitStyleOption(option unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar15initStyleOptionEP23QStyleOptionProgressBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
+func (this *QProgressBar) InitStyleOption(option *QStyleOptionProgressBar /*444 QStyleOptionProgressBar **/) {
+	var convArg0 = option.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar15initStyleOptionEP23QStyleOptionProgressBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

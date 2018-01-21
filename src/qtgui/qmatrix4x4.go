@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qmatrix4x4.h
 // #include <qmatrix4x4.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 43
+// extern C begin: 42
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QMatrix4x4 struct {
 }
 
 func (this *QMatrix4x4) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQMatrix4x4FromPointer(cthis unsafe.Pointer) *QMatrix4x4 {
 	return &QMatrix4x4{&qtrt.CObject{cthis}}
@@ -87,7 +91,7 @@ func NewQMatrix4x4_1(arg0 int) *QMatrix4x4 {
 // index:2
 // Public
 // void QMatrix4x4(const float *)
-func NewQMatrix4x4_2(values unsafe.Pointer) *QMatrix4x4 {
+func NewQMatrix4x4_2(values unsafe.Pointer /*666*/) *QMatrix4x4 {
 	cthis := qtrt.Calloc(1, 256) // 68
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x4C2EPKf", ffiqt.FFI_TYPE_VOID, cthis, values)
 	gopp.ErrPrint(err, rv)
@@ -111,7 +115,7 @@ func NewQMatrix4x4_3(m11 float32, m12 float32, m13 float32, m14 float32, m21 flo
 // index:4
 // Public
 // void QMatrix4x4(const float *, int, int)
-func NewQMatrix4x4_4(values unsafe.Pointer, cols int, rows int) *QMatrix4x4 {
+func NewQMatrix4x4_4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix4x4 {
 	cthis := qtrt.Calloc(1, 256) // 68
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x4C2EPKfii", ffiqt.FFI_TYPE_VOID, cthis, values, &cols, &rows)
 	gopp.ErrPrint(err, rv)
@@ -149,10 +153,12 @@ func NewQMatrix4x4_6(matrix *QMatrix) *QMatrix4x4 {
 // index:0
 // Public inline
 // QVector4D column(int)
-func (this *QMatrix4x4) Column(index int) interface{} {
+func (this *QMatrix4x4) Column(index int) *QVector4D /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x46columnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:82
@@ -169,10 +175,12 @@ func (this *QMatrix4x4) SetColumn(index int, value *QVector4D) {
 // index:0
 // Public inline
 // QVector4D row(int)
-func (this *QMatrix4x4) Row(index int) interface{} {
+func (this *QMatrix4x4) Row(index int) *QVector4D /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43rowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:85
@@ -189,20 +197,22 @@ func (this *QMatrix4x4) SetRow(index int, value *QVector4D) {
 // index:0
 // Public inline
 // bool isAffine()
-func (this *QMatrix4x4) IsAffine() interface{} {
+func (this *QMatrix4x4) IsAffine() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x48isAffineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:90
 // index:0
 // Public inline
 // bool isIdentity()
-func (this *QMatrix4x4) IsIdentity() interface{} {
+func (this *QMatrix4x4) IsIdentity() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x410isIdentityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:91
@@ -227,40 +237,35 @@ func (this *QMatrix4x4) Fill(value float32) {
 // index:0
 // Public
 // double determinant()
-func (this *QMatrix4x4) Determinant() interface{} {
+func (this *QMatrix4x4) Determinant() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x411determinantEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:96
 // index:0
 // Public
 // QMatrix4x4 inverted(_Bool *)
-func (this *QMatrix4x4) Inverted(invertible unsafe.Pointer) interface{} {
+func (this *QMatrix4x4) Inverted(invertible unsafe.Pointer /*666*/) *QMatrix4x4 /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x48invertedEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:97
 // index:0
 // Public
 // QMatrix4x4 transposed()
-func (this *QMatrix4x4) Transposed() interface{} {
+func (this *QMatrix4x4) Transposed() *QMatrix4x4 /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x410transposedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qmatrix4x4.h:98
-// index:0
-// Public
-// QMatrix3x3 normalMatrix()
-func (this *QMatrix4x4) NormalMatrix() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x412normalMatrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:131
@@ -448,7 +453,7 @@ func (this *QMatrix4x4) FlipCoordinates() {
 // index:0
 // Public
 // void copyDataTo(float *)
-func (this *QMatrix4x4) CopyDataTo(values unsafe.Pointer) {
+func (this *QMatrix4x4) CopyDataTo(values unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x410copyDataToEPf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), values)
 	gopp.ErrPrint(err, rv)
 }
@@ -457,137 +462,160 @@ func (this *QMatrix4x4) CopyDataTo(values unsafe.Pointer) {
 // index:0
 // Public
 // QMatrix toAffine()
-func (this *QMatrix4x4) ToAffine() interface{} {
+func (this *QMatrix4x4) ToAffine() *QMatrix /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x48toAffineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:160
 // index:0
 // Public
 // QTransform toTransform()
-func (this *QMatrix4x4) ToTransform() interface{} {
+func (this *QMatrix4x4) ToTransform() *QTransform /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x411toTransformEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:161
 // index:1
 // Public
 // QTransform toTransform(float)
-func (this *QMatrix4x4) ToTransform_1(distanceToPlane float32) interface{} {
+func (this *QMatrix4x4) ToTransform_1(distanceToPlane float32) *QTransform /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x411toTransformEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &distanceToPlane)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:163
 // index:0
 // Public
 // QPoint map(const class QPoint &)
-func (this *QMatrix4x4) Map(point *qtcore.QPoint) interface{} {
+func (this *QMatrix4x4) Map(point *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:164
 // index:1
 // Public
 // QPointF map(const class QPointF &)
-func (this *QMatrix4x4) Map_1(point *qtcore.QPointF) interface{} {
+func (this *QMatrix4x4) Map_1(point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:166
 // index:2
 // Public
 // QVector3D map(const class QVector3D &)
-func (this *QMatrix4x4) Map_2(point *QVector3D) interface{} {
+func (this *QMatrix4x4) Map_2(point *QVector3D) *QVector3D /*123*/ {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK9QVector3D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:170
 // index:3
 // Public
 // QVector4D map(const class QVector4D &)
-func (this *QMatrix4x4) Map_3(point *QVector4D) interface{} {
+func (this *QMatrix4x4) Map_3(point *QVector4D) *QVector4D /*123*/ {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK9QVector4D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:167
 // index:0
 // Public
 // QVector3D mapVector(const class QVector3D &)
-func (this *QMatrix4x4) MapVector(vector *QVector3D) interface{} {
+func (this *QMatrix4x4) MapVector(vector *QVector3D) *QVector3D /*123*/ {
 	var convArg0 = vector.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x49mapVectorERK9QVector3D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:172
 // index:0
 // Public
 // QRect mapRect(const class QRect &)
-func (this *QMatrix4x4) MapRect(rect *qtcore.QRect) interface{} {
+func (this *QMatrix4x4) MapRect(rect *qtcore.QRect) *qtcore.QRect /*123*/ {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x47mapRectERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:173
 // index:1
 // Public
 // QRectF mapRect(const class QRectF &)
-func (this *QMatrix4x4) MapRect_1(rect *qtcore.QRectF) interface{} {
+func (this *QMatrix4x4) MapRect_1(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x47mapRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:178
 // index:0
 // Public inline
 // float * data()
-func (this *QMatrix4x4) Data() interface{} {
+func (this *QMatrix4x4) Data() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x44dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:179
 // index:1
 // Public inline
 // const float * data()
-func (this *QMatrix4x4) Data_1() interface{} {
+func (this *QMatrix4x4) Data_1() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x44dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:180
 // index:0
 // Public inline
 // const float * constData()
-func (this *QMatrix4x4) ConstData() interface{} {
+func (this *QMatrix4x4) ConstData() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x49constDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:182

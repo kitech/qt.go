@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qflags.h
 // #include <qflags.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 12
+// extern C begin: 3
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QFlag struct {
 }
 
 func (this *QFlag) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQFlagFromPointer(cthis unsafe.Pointer) *QFlag {
 	return &QFlag{&qtrt.CObject{cthis}}

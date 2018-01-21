@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qbasictimer.h
 // #include <qbasictimer.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 16
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QBasicTimer struct {
 }
 
 func (this *QBasicTimer) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQBasicTimerFromPointer(cthis unsafe.Pointer) *QBasicTimer {
 	return &QBasicTimer{&qtrt.CObject{cthis}}
@@ -80,28 +84,31 @@ func DeleteQBasicTimer(*QBasicTimer) {
 // index:0
 // Public inline
 // bool isActive()
-func (this *QBasicTimer) IsActive() interface{} {
+func (this *QBasicTimer) IsActive() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QBasicTimer8isActiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qbasictimer.h:59
 // index:0
 // Public inline
 // int timerId()
-func (this *QBasicTimer) TimerId() interface{} {
+func (this *QBasicTimer) TimerId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QBasicTimer7timerIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qbasictimer.h:61
 // index:0
 // Public
 // void start(int, class QObject *)
-func (this *QBasicTimer) Start(msec int, obj unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimer5startEiP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec, obj)
+func (this *QBasicTimer) Start(msec int, obj *QObject /*444 QObject **/) {
+	var convArg1 = obj.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimer5startEiP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,8 +116,9 @@ func (this *QBasicTimer) Start(msec int, obj unsafe.Pointer) {
 // index:1
 // Public
 // void start(int, Qt::TimerType, class QObject *)
-func (this *QBasicTimer) Start_1(msec int, timerType int, obj unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimer5startEiN2Qt9TimerTypeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec, &timerType, obj)
+func (this *QBasicTimer) Start_1(msec int, timerType int, obj *QObject /*444 QObject **/) {
+	var convArg2 = obj.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimer5startEiN2Qt9TimerTypeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec, &timerType, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 

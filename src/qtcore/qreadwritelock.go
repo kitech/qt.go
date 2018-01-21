@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qreadwritelock.h
 // #include <qreadwritelock.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QReadWriteLock struct {
 }
 
 func (this *QReadWriteLock) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQReadWriteLockFromPointer(cthis unsafe.Pointer) *QReadWriteLock {
 	return &QReadWriteLock{&qtrt.CObject{cthis}}
@@ -89,20 +93,22 @@ func (this *QReadWriteLock) LockForRead() {
 // index:0
 // Public
 // bool tryLockForRead()
-func (this *QReadWriteLock) TryLockForRead() interface{} {
+func (this *QReadWriteLock) TryLockForRead() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:62
 // index:1
 // Public
 // bool tryLockForRead(int)
-func (this *QReadWriteLock) TryLockForRead_1(timeout int) interface{} {
+func (this *QReadWriteLock) TryLockForRead_1(timeout int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timeout)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:64
@@ -118,20 +124,22 @@ func (this *QReadWriteLock) LockForWrite() {
 // index:0
 // Public
 // bool tryLockForWrite()
-func (this *QReadWriteLock) TryLockForWrite() interface{} {
+func (this *QReadWriteLock) TryLockForWrite() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:66
 // index:1
 // Public
 // bool tryLockForWrite(int)
-func (this *QReadWriteLock) TryLockForWrite_1(timeout int) interface{} {
+func (this *QReadWriteLock) TryLockForWrite_1(timeout int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timeout)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:68

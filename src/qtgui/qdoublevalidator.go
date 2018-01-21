@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qvalidator.h
 // #include <qvalidator.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QDoubleValidator struct {
 }
 
 func (this *QDoubleValidator) GetCthis() unsafe.Pointer {
-	return this.QValidator.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QValidator.GetCthis()
+	}
 }
 func NewQDoubleValidatorFromPointer(cthis unsafe.Pointer) *QDoubleValidator {
 	bcthis0 := NewQValidatorFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQDoubleValidatorFromPointer(cthis unsafe.Pointer) *QDoubleValidator {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDoubleValidator) MetaObject() interface{} {
+func (this *QDoubleValidator) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:133
 // index:0
 // Public
 // void QDoubleValidator(class QObject *)
-func NewQDoubleValidator(parent unsafe.Pointer) *QDoubleValidator {
+func NewQDoubleValidator(parent *qtcore.QObject /*444 QObject **/) *QDoubleValidator {
 	cthis := qtrt.Calloc(1, 256) // 40
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDoubleValidatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDoubleValidatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDoubleValidatorFromPointer(cthis)
 	return gothis
@@ -86,9 +93,10 @@ func NewQDoubleValidator(parent unsafe.Pointer) *QDoubleValidator {
 // index:1
 // Public
 // void QDoubleValidator(double, double, int, class QObject *)
-func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent unsafe.Pointer) *QDoubleValidator {
+func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent *qtcore.QObject /*444 QObject **/) *QDoubleValidator {
 	cthis := qtrt.Calloc(1, 256) // 40
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDoubleValidatorC2EddiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &bottom, &top, &decimals, parent)
+	var convArg3 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDoubleValidatorC2EddiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &bottom, &top, &decimals, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDoubleValidatorFromPointer(cthis)
 	return gothis
@@ -107,11 +115,12 @@ func DeleteQDoubleValidator(*QDoubleValidator) {
 // index:0
 // Public virtual
 // QValidator::State validate(class QString &, int &)
-func (this *QDoubleValidator) Validate(arg0 *qtcore.QString, arg1 int) interface{} {
+func (this *QDoubleValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:144
@@ -163,40 +172,44 @@ func (this *QDoubleValidator) SetNotation(arg0 int) {
 // index:0
 // Public inline
 // double bottom()
-func (this *QDoubleValidator) Bottom() interface{} {
+func (this *QDoubleValidator) Bottom() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:151
 // index:0
 // Public inline
 // double top()
-func (this *QDoubleValidator) Top() interface{} {
+func (this *QDoubleValidator) Top() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:152
 // index:0
 // Public inline
 // int decimals()
-func (this *QDoubleValidator) Decimals() interface{} {
+func (this *QDoubleValidator) Decimals() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator8decimalsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:153
 // index:0
 // Public
 // QDoubleValidator::Notation notation()
-func (this *QDoubleValidator) Notation() interface{} {
+func (this *QDoubleValidator) Notation() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator8notationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:156

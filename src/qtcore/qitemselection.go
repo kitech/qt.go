@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qitemselectionmodel.h
 // #include <qitemselectionmodel.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 25
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QItemSelection struct {
 }
 
 func (this *QItemSelection) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQItemSelectionFromPointer(cthis unsafe.Pointer) *QItemSelection {
 	return &QItemSelection{&qtrt.CObject{cthis}}
@@ -96,32 +100,23 @@ func (this *QItemSelection) Select(topLeft *QModelIndex, bottomRight *QModelInde
 // index:0
 // Public
 // bool contains(const class QModelIndex &)
-func (this *QItemSelection) Contains(index *QModelIndex) interface{} {
+func (this *QItemSelection) Contains(index *QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QItemSelection8containsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qitemselectionmodel.h:257
-// index:0
-// Public
-// QModelIndexList indexes()
-func (this *QItemSelection) Indexes() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QItemSelection7indexesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:259
 // index:0
 // Public static
 // void split(const class QItemSelectionRange &, const class QItemSelectionRange &, class QItemSelection *)
-func (this *QItemSelection) Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result unsafe.Pointer) {
+func (this *QItemSelection) Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result *QItemSelection /*444 QItemSelection **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_", ffiqt.FFI_TYPE_POINTER, range_, other, result)
 	gopp.ErrPrint(err, rv)
 }
-func QItemSelection_Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result unsafe.Pointer) {
+func QItemSelection_Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result *QItemSelection /*444 QItemSelection **/) {
 	var nilthis *QItemSelection
 	nilthis.Split(range_, other, result)
 }

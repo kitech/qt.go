@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qwhatsthis.h
 // #include <qwhatsthis.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QWhatsThis struct {
 }
 
 func (this *QWhatsThis) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQWhatsThisFromPointer(cthis unsafe.Pointer) *QWhatsThis {
 	return &QWhatsThis{&qtrt.CObject{cthis}}
@@ -80,14 +84,16 @@ func QWhatsThis_EnterWhatsThisMode() {
 // index:0
 // Public static
 // bool inWhatsThisMode()
-func (this *QWhatsThis) InWhatsThisMode() interface{} {
+func (this *QWhatsThis) InWhatsThisMode() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis15inWhatsThisModeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QWhatsThis_InWhatsThisMode() {
+func QWhatsThis_InWhatsThisMode() bool {
 	var nilthis *QWhatsThis
-	nilthis.InWhatsThisMode()
+	rv := nilthis.InWhatsThisMode()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qwhatsthis.h:60
@@ -107,11 +113,11 @@ func QWhatsThis_LeaveWhatsThisMode() {
 // index:0
 // Public static
 // void showText(const class QPoint &, const class QString &, class QWidget *)
-func (this *QWhatsThis) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w unsafe.Pointer) {
+func (this *QWhatsThis) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, pos, text, w)
 	gopp.ErrPrint(err, rv)
 }
-func QWhatsThis_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w unsafe.Pointer) {
+func QWhatsThis_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/) {
 	var nilthis *QWhatsThis
 	nilthis.ShowText(pos, text, w)
 }
@@ -133,14 +139,17 @@ func QWhatsThis_HideText() {
 // index:0
 // Public static
 // QAction * createAction(class QObject *)
-func (this *QWhatsThis) CreateAction(parent unsafe.Pointer) interface{} {
+func (this *QWhatsThis) CreateAction(parent *qtcore.QObject /*444 QObject **/) *QAction /*444 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", ffiqt.FFI_TYPE_POINTER, parent)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QWhatsThis_CreateAction(parent unsafe.Pointer) {
+func QWhatsThis_CreateAction(parent *qtcore.QObject /*444 QObject **/) *QAction /*444 QAction **/ {
 	var nilthis *QWhatsThis
-	nilthis.CreateAction(parent)
+	rv := nilthis.CreateAction(parent)
+	return rv
 }
 
 //  body block end

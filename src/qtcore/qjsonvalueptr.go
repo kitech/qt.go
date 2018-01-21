@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qjsonvalue.h
 // #include <qjsonvalue.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QJsonValuePtr struct {
 }
 
 func (this *QJsonValuePtr) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQJsonValuePtrFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
 	return &QJsonValuePtr{&qtrt.CObject{cthis}}

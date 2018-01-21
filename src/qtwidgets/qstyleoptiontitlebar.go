@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qstyleoption.h
 // #include <qstyleoption.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QStyleOptionTitleBar struct {
 }
 
 func (this *QStyleOptionTitleBar) GetCthis() unsafe.Pointer {
-	return this.QStyleOptionComplex.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QStyleOptionComplex.GetCthis()
+	}
 }
 func NewQStyleOptionTitleBarFromPointer(cthis unsafe.Pointer) *QStyleOptionTitleBar {
 	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)

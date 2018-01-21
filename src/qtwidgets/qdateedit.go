@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qdatetimeedit.h
 // #include <qdatetimeedit.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QDateEdit struct {
 }
 
 func (this *QDateEdit) GetCthis() unsafe.Pointer {
-	return this.QDateTimeEdit.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QDateTimeEdit.GetCthis()
+	}
 }
 func NewQDateEditFromPointer(cthis unsafe.Pointer) *QDateEdit {
 	bcthis0 := NewQDateTimeEditFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQDateEditFromPointer(cthis unsafe.Pointer) *QDateEdit {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDateEdit) MetaObject() interface{} {
+func (this *QDateEdit) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDateEdit10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:220
 // index:0
 // Public
 // void QDateEdit(class QWidget *)
-func NewQDateEdit(parent unsafe.Pointer) *QDateEdit {
+func NewQDateEdit(parent *QWidget /*444 QWidget **/) *QDateEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEditC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEditC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDateEditFromPointer(cthis)
 	return gothis
@@ -90,10 +97,11 @@ func NewQDateEdit(parent unsafe.Pointer) *QDateEdit {
 // index:1
 // Public
 // void QDateEdit(const class QDate &, class QWidget *)
-func NewQDateEdit_1(date *qtcore.QDate, parent unsafe.Pointer) *QDateEdit {
+func NewQDateEdit_1(date *qtcore.QDate, parent *QWidget /*444 QWidget **/) *QDateEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = date.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEditC2ERK5QDateP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEditC2ERK5QDateP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDateEditFromPointer(cthis)
 	return gothis

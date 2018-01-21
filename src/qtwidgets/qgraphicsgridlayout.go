@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h
 // #include <qgraphicsgridlayout.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGraphicsGridLayout struct {
 }
 
 func (this *QGraphicsGridLayout) GetCthis() unsafe.Pointer {
-	return this.QGraphicsLayout.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGraphicsLayout.GetCthis()
+	}
 }
 func NewQGraphicsGridLayoutFromPointer(cthis unsafe.Pointer) *QGraphicsGridLayout {
 	bcthis0 := NewQGraphicsLayoutFromPointer(cthis)
@@ -68,9 +72,10 @@ func NewQGraphicsGridLayoutFromPointer(cthis unsafe.Pointer) *QGraphicsGridLayou
 // index:0
 // Public
 // void QGraphicsGridLayout(class QGraphicsLayoutItem *)
-func NewQGraphicsGridLayout(parent unsafe.Pointer) *QGraphicsGridLayout {
+func NewQGraphicsGridLayout(parent *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) *QGraphicsGridLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayoutC2EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayoutC2EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsGridLayoutFromPointer(cthis)
 	return gothis
@@ -98,10 +103,11 @@ func (this *QGraphicsGridLayout) SetHorizontalSpacing(spacing float64) {
 // index:0
 // Public
 // qreal horizontalSpacing()
-func (this *QGraphicsGridLayout) HorizontalSpacing() interface{} {
+func (this *QGraphicsGridLayout) HorizontalSpacing() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout17horizontalSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:65
@@ -117,10 +123,11 @@ func (this *QGraphicsGridLayout) SetVerticalSpacing(spacing float64) {
 // index:0
 // Public
 // qreal verticalSpacing()
-func (this *QGraphicsGridLayout) VerticalSpacing() interface{} {
+func (this *QGraphicsGridLayout) VerticalSpacing() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout15verticalSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:67
@@ -145,10 +152,11 @@ func (this *QGraphicsGridLayout) SetRowSpacing(row int, spacing float64) {
 // index:0
 // Public
 // qreal rowSpacing(int)
-func (this *QGraphicsGridLayout) RowSpacing(row int) interface{} {
+func (this *QGraphicsGridLayout) RowSpacing(row int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout10rowSpacingEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:71
@@ -164,10 +172,11 @@ func (this *QGraphicsGridLayout) SetColumnSpacing(column int, spacing float64) {
 // index:0
 // Public
 // qreal columnSpacing(int)
-func (this *QGraphicsGridLayout) ColumnSpacing(column int) interface{} {
+func (this *QGraphicsGridLayout) ColumnSpacing(column int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout13columnSpacingEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:74
@@ -183,10 +192,11 @@ func (this *QGraphicsGridLayout) SetRowStretchFactor(row int, stretch int) {
 // index:0
 // Public
 // int rowStretchFactor(int)
-func (this *QGraphicsGridLayout) RowStretchFactor(row int) interface{} {
+func (this *QGraphicsGridLayout) RowStretchFactor(row int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout16rowStretchFactorEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:76
@@ -202,10 +212,11 @@ func (this *QGraphicsGridLayout) SetColumnStretchFactor(column int, stretch int)
 // index:0
 // Public
 // int columnStretchFactor(int)
-func (this *QGraphicsGridLayout) ColumnStretchFactor(column int) interface{} {
+func (this *QGraphicsGridLayout) ColumnStretchFactor(column int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout19columnStretchFactorEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:79
@@ -221,10 +232,11 @@ func (this *QGraphicsGridLayout) SetRowMinimumHeight(row int, height float64) {
 // index:0
 // Public
 // qreal rowMinimumHeight(int)
-func (this *QGraphicsGridLayout) RowMinimumHeight(row int) interface{} {
+func (this *QGraphicsGridLayout) RowMinimumHeight(row int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout16rowMinimumHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:81
@@ -240,10 +252,11 @@ func (this *QGraphicsGridLayout) SetRowPreferredHeight(row int, height float64) 
 // index:0
 // Public
 // qreal rowPreferredHeight(int)
-func (this *QGraphicsGridLayout) RowPreferredHeight(row int) interface{} {
+func (this *QGraphicsGridLayout) RowPreferredHeight(row int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout18rowPreferredHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:83
@@ -259,10 +272,11 @@ func (this *QGraphicsGridLayout) SetRowMaximumHeight(row int, height float64) {
 // index:0
 // Public
 // qreal rowMaximumHeight(int)
-func (this *QGraphicsGridLayout) RowMaximumHeight(row int) interface{} {
+func (this *QGraphicsGridLayout) RowMaximumHeight(row int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout16rowMaximumHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:85
@@ -287,10 +301,11 @@ func (this *QGraphicsGridLayout) SetColumnMinimumWidth(column int, width float64
 // index:0
 // Public
 // qreal columnMinimumWidth(int)
-func (this *QGraphicsGridLayout) ColumnMinimumWidth(column int) interface{} {
+func (this *QGraphicsGridLayout) ColumnMinimumWidth(column int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout18columnMinimumWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:89
@@ -306,10 +321,11 @@ func (this *QGraphicsGridLayout) SetColumnPreferredWidth(column int, width float
 // index:0
 // Public
 // qreal columnPreferredWidth(int)
-func (this *QGraphicsGridLayout) ColumnPreferredWidth(column int) interface{} {
+func (this *QGraphicsGridLayout) ColumnPreferredWidth(column int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout20columnPreferredWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:91
@@ -325,10 +341,11 @@ func (this *QGraphicsGridLayout) SetColumnMaximumWidth(column int, width float64
 // index:0
 // Public
 // qreal columnMaximumWidth(int)
-func (this *QGraphicsGridLayout) ColumnMaximumWidth(column int) interface{} {
+func (this *QGraphicsGridLayout) ColumnMaximumWidth(column int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout18columnMaximumWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:93
@@ -344,80 +361,91 @@ func (this *QGraphicsGridLayout) SetColumnFixedWidth(column int, width float64) 
 // index:0
 // Public
 // Qt::Alignment rowAlignment(int)
-func (this *QGraphicsGridLayout) RowAlignment(row int) interface{} {
+func (this *QGraphicsGridLayout) RowAlignment(row int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout12rowAlignmentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:98
 // index:0
 // Public
 // Qt::Alignment columnAlignment(int)
-func (this *QGraphicsGridLayout) ColumnAlignment(column int) interface{} {
+func (this *QGraphicsGridLayout) ColumnAlignment(column int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout15columnAlignmentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:101
 // index:0
 // Public
 // Qt::Alignment alignment(class QGraphicsLayoutItem *)
-func (this *QGraphicsGridLayout) Alignment(item unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout9alignmentEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), item)
+func (this *QGraphicsGridLayout) Alignment(item *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) int {
+	var convArg0 = item.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout9alignmentEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:103
 // index:0
 // Public
 // int rowCount()
-func (this *QGraphicsGridLayout) RowCount() interface{} {
+func (this *QGraphicsGridLayout) RowCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout8rowCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:104
 // index:0
 // Public
 // int columnCount()
-func (this *QGraphicsGridLayout) ColumnCount() interface{} {
+func (this *QGraphicsGridLayout) ColumnCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout11columnCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:106
 // index:0
 // Public
 // QGraphicsLayoutItem * itemAt(int, int)
-func (this *QGraphicsGridLayout) ItemAt(row int, column int) interface{} {
+func (this *QGraphicsGridLayout) ItemAt(row int, column int) *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout6itemAtEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:110
 // index:1
 // Public virtual
 // QGraphicsLayoutItem * itemAt(int)
-func (this *QGraphicsGridLayout) ItemAt_1(index int) interface{} {
+func (this *QGraphicsGridLayout) ItemAt_1(index int) *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:109
 // index:0
 // Public virtual
 // int count()
-func (this *QGraphicsGridLayout) Count() interface{} {
+func (this *QGraphicsGridLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:111
@@ -433,8 +461,9 @@ func (this *QGraphicsGridLayout) RemoveAt(index int) {
 // index:0
 // Public
 // void removeItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsGridLayout) RemoveItem(item unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayout10removeItemEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), item)
+func (this *QGraphicsGridLayout) RemoveItem(item *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) {
+	var convArg0 = item.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayout10removeItemEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -461,11 +490,13 @@ func (this *QGraphicsGridLayout) SetGeometry(rect *qtcore.QRectF) {
 // index:0
 // Public virtual
 // QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
-func (this *QGraphicsGridLayout) SizeHint(which int, constraint *qtcore.QSizeF) interface{} {
+func (this *QGraphicsGridLayout) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
 	var convArg1 = constraint.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &which, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

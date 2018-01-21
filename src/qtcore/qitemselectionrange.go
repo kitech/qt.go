@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qitemselectionmodel.h
 // #include <qitemselectionmodel.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QItemSelectionRange struct {
 }
 
 func (this *QItemSelectionRange) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQItemSelectionRangeFromPointer(cthis unsafe.Pointer) *QItemSelectionRange {
 	return &QItemSelectionRange{&qtrt.CObject{cthis}}
@@ -108,174 +112,185 @@ func (this *QItemSelectionRange) Swap(other *QItemSelectionRange) {
 // index:0
 // Public inline
 // int top()
-func (this *QItemSelectionRange) Top() interface{} {
+func (this *QItemSelectionRange) Top() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:80
 // index:0
 // Public inline
 // int left()
-func (this *QItemSelectionRange) Left() interface{} {
+func (this *QItemSelectionRange) Left() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange4leftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:81
 // index:0
 // Public inline
 // int bottom()
-func (this *QItemSelectionRange) Bottom() interface{} {
+func (this *QItemSelectionRange) Bottom() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:82
 // index:0
 // Public inline
 // int right()
-func (this *QItemSelectionRange) Right() interface{} {
+func (this *QItemSelectionRange) Right() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange5rightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:83
 // index:0
 // Public inline
 // int width()
-func (this *QItemSelectionRange) Width() interface{} {
+func (this *QItemSelectionRange) Width() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:84
 // index:0
 // Public inline
 // int height()
-func (this *QItemSelectionRange) Height() interface{} {
+func (this *QItemSelectionRange) Height() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:86
 // index:0
 // Public inline
 // const QPersistentModelIndex & topLeft()
-func (this *QItemSelectionRange) TopLeft() interface{} {
+func (this *QItemSelectionRange) TopLeft() *QPersistentModelIndex {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange7topLeftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:87
 // index:0
 // Public inline
 // const QPersistentModelIndex & bottomRight()
-func (this *QItemSelectionRange) BottomRight() interface{} {
+func (this *QItemSelectionRange) BottomRight() *QPersistentModelIndex {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange11bottomRightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:88
 // index:0
 // Public inline
 // QModelIndex parent()
-func (this *QItemSelectionRange) Parent() interface{} {
+func (this *QItemSelectionRange) Parent() *QModelIndex /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:89
 // index:0
 // Public inline
 // const QAbstractItemModel * model()
-func (this *QItemSelectionRange) Model() interface{} {
+func (this *QItemSelectionRange) Model() *QAbstractItemModel /*444 const QAbstractItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:91
 // index:0
 // Public inline
 // bool contains(const class QModelIndex &)
-func (this *QItemSelectionRange) Contains(index *QModelIndex) interface{} {
+func (this *QItemSelectionRange) Contains(index *QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange8containsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:98
 // index:1
 // Public inline
 // bool contains(int, int, const class QModelIndex &)
-func (this *QItemSelectionRange) Contains_1(row int, column int, parentIndex *QModelIndex) interface{} {
+func (this *QItemSelectionRange) Contains_1(row int, column int, parentIndex *QModelIndex) bool {
 	var convArg2 = parentIndex.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:105
 // index:0
 // Public
 // bool intersects(const class QItemSelectionRange &)
-func (this *QItemSelectionRange) Intersects(other *QItemSelectionRange) interface{} {
+func (this *QItemSelectionRange) Intersects(other *QItemSelectionRange) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange10intersectsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:110
 // index:0
 // Public
 // QItemSelectionRange intersected(const class QItemSelectionRange &)
-func (this *QItemSelectionRange) Intersected(other *QItemSelectionRange) interface{} {
+func (this *QItemSelectionRange) Intersected(other *QItemSelectionRange) *QItemSelectionRange /*123*/ {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQItemSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:119
 // index:0
 // Public inline
 // bool isValid()
-func (this *QItemSelectionRange) IsValid() interface{} {
+func (this *QItemSelectionRange) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:125
 // index:0
 // Public
 // bool isEmpty()
-func (this *QItemSelectionRange) IsEmpty() interface{} {
+func (this *QItemSelectionRange) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qitemselectionmodel.h:127
-// index:0
-// Public
-// QModelIndexList indexes()
-func (this *QItemSelectionRange) Indexes() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange7indexesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

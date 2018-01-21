@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qcursor.h
 // #include <qcursor.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 29
+// extern C begin: 27
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QCursor struct {
 }
 
 func (this *QCursor) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQCursorFromPointer(cthis unsafe.Pointer) *QCursor {
 	return &QCursor{&qtrt.CObject{cthis}}
@@ -133,10 +137,11 @@ func (this *QCursor) Swap(other *QCursor) {
 // index:0
 // Public
 // Qt::CursorShape shape()
-func (this *QCursor) Shape() interface{} {
+func (this *QCursor) Shape() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QCursor5shapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qcursor.h:100
@@ -152,68 +157,82 @@ func (this *QCursor) SetShape(newShape int) {
 // index:0
 // Public
 // const QBitmap * bitmap()
-func (this *QCursor) Bitmap() interface{} {
+func (this *QCursor) Bitmap() *QBitmap /*444 const QBitmap **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QCursor6bitmapEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qcursor.h:103
 // index:0
 // Public
 // const QBitmap * mask()
-func (this *QCursor) Mask() interface{} {
+func (this *QCursor) Mask() *QBitmap /*444 const QBitmap **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QCursor4maskEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qcursor.h:104
 // index:0
 // Public
 // QPixmap pixmap()
-func (this *QCursor) Pixmap() interface{} {
+func (this *QCursor) Pixmap() *QPixmap /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QCursor6pixmapEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qcursor.h:105
 // index:0
 // Public
 // QPoint hotSpot()
-func (this *QCursor) HotSpot() interface{} {
+func (this *QCursor) HotSpot() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QCursor7hotSpotEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qcursor.h:107
 // index:0
 // Public static
 // QPoint pos()
-func (this *QCursor) Pos() interface{} {
+func (this *QCursor) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor3posEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QCursor_Pos() {
+func QCursor_Pos() *qtcore.QPoint /*123*/ {
 	var nilthis *QCursor
-	nilthis.Pos()
+	rv := nilthis.Pos()
+	return rv
 }
 
 // /usr/include/qt/QtGui/qcursor.h:108
 // index:1
 // Public static
 // QPoint pos(const class QScreen *)
-func (this *QCursor) Pos_1(screen unsafe.Pointer) interface{} {
+func (this *QCursor) Pos_1(screen *QScreen /*444 const QScreen **/) *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor3posEPK7QScreen", ffiqt.FFI_TYPE_POINTER, screen)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QCursor_Pos_1(screen unsafe.Pointer) {
+func QCursor_Pos_1(screen *QScreen /*444 const QScreen **/) *qtcore.QPoint /*123*/ {
 	var nilthis *QCursor
-	nilthis.Pos_1(screen)
+	rv := nilthis.Pos_1(screen)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qcursor.h:109
@@ -233,11 +252,11 @@ func QCursor_SetPos(x int, y int) {
 // index:1
 // Public static
 // void setPos(class QScreen *, int, int)
-func (this *QCursor) SetPos_1(screen unsafe.Pointer, x int, y int) {
+func (this *QCursor) SetPos_1(screen *QScreen /*444 QScreen **/, x int, y int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor6setPosEP7QScreenii", ffiqt.FFI_TYPE_POINTER, screen, x, y)
 	gopp.ErrPrint(err, rv)
 }
-func QCursor_SetPos_1(screen unsafe.Pointer, x int, y int) {
+func QCursor_SetPos_1(screen *QScreen /*444 QScreen **/, x int, y int) {
 	var nilthis *QCursor
 	nilthis.SetPos_1(screen, x, y)
 }
@@ -259,11 +278,11 @@ func QCursor_SetPos_2(p *qtcore.QPoint) {
 // index:3
 // Public static inline
 // void setPos(class QScreen *, const class QPoint &)
-func (this *QCursor) SetPos_3(screen unsafe.Pointer, p *qtcore.QPoint) {
+func (this *QCursor) SetPos_3(screen *QScreen /*444 QScreen **/, p *qtcore.QPoint) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor6setPosEP7QScreenRK6QPoint", ffiqt.FFI_TYPE_POINTER, screen, p)
 	gopp.ErrPrint(err, rv)
 }
-func QCursor_SetPos_3(screen unsafe.Pointer, p *qtcore.QPoint) {
+func QCursor_SetPos_3(screen *QScreen /*444 QScreen **/, p *qtcore.QPoint) {
 	var nilthis *QCursor
 	nilthis.SetPos_3(screen, p)
 }

@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h
 // #include <qtreewidgetitemiterator.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 99
+// extern C begin: 98
 */
 // import "C"
 import "unsafe"
@@ -57,7 +57,11 @@ type QTreeWidgetItemIterator struct {
 }
 
 func (this *QTreeWidgetItemIterator) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQTreeWidgetItemIteratorFromPointer(cthis unsafe.Pointer) *QTreeWidgetItemIterator {
 	return &QTreeWidgetItemIterator{&qtrt.CObject{cthis}}

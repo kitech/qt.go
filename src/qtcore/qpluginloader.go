@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qpluginloader.h
 // #include <qpluginloader.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 1
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QPluginLoader struct {
 }
 
 func (this *QPluginLoader) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQPluginLoaderFromPointer(cthis unsafe.Pointer) *QPluginLoader {
 	bcthis0 := NewQObjectFromPointer(cthis)
@@ -60,19 +64,22 @@ func NewQPluginLoaderFromPointer(cthis unsafe.Pointer) *QPluginLoader {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QPluginLoader) MetaObject() interface{} {
+func (this *QPluginLoader) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qpluginloader.h:62
 // index:0
 // Public
 // void QPluginLoader(class QObject *)
-func NewQPluginLoader(parent unsafe.Pointer) *QPluginLoader {
+func NewQPluginLoader(parent *QObject /*444 QObject **/) *QPluginLoader {
 	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoaderC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoaderC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPluginLoaderFromPointer(cthis)
 	return gothis
@@ -82,10 +89,11 @@ func NewQPluginLoader(parent unsafe.Pointer) *QPluginLoader {
 // index:1
 // Public
 // void QPluginLoader(const class QString &, class QObject *)
-func NewQPluginLoader_1(fileName *QString, parent unsafe.Pointer) *QPluginLoader {
+func NewQPluginLoader_1(fileName *QString, parent *QObject /*444 QObject **/) *QPluginLoader {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoaderC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoaderC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPluginLoaderFromPointer(cthis)
 	return gothis
@@ -104,78 +112,57 @@ func DeleteQPluginLoader(*QPluginLoader) {
 // index:0
 // Public
 // QObject * instance()
-func (this *QPluginLoader) Instance() interface{} {
+func (this *QPluginLoader) Instance() *QObject /*444 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader8instanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qpluginloader.h:67
 // index:0
 // Public
 // QJsonObject metaData()
-func (this *QPluginLoader) MetaData() interface{} {
+func (this *QPluginLoader) MetaData() *QJsonObject /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader8metaDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qpluginloader.h:69
-// index:0
-// Public static
-// QObjectList staticInstances()
-func (this *QPluginLoader) StaticInstances() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader15staticInstancesEv", ffiqt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-func QPluginLoader_StaticInstances() {
-	var nilthis *QPluginLoader
-	nilthis.StaticInstances()
-}
-
-// /usr/include/qt/QtCore/qpluginloader.h:70
-// index:0
-// Public static
-// QVector<QStaticPlugin> staticPlugins()
-func (this *QPluginLoader) StaticPlugins() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader13staticPluginsEv", ffiqt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-func QPluginLoader_StaticPlugins() {
-	var nilthis *QPluginLoader
-	nilthis.StaticPlugins()
+	//  return rv
+	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qpluginloader.h:72
 // index:0
 // Public
 // bool load()
-func (this *QPluginLoader) Load() interface{} {
+func (this *QPluginLoader) Load() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader4loadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qpluginloader.h:73
 // index:0
 // Public
 // bool unload()
-func (this *QPluginLoader) Unload() interface{} {
+func (this *QPluginLoader) Unload() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader6unloadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qpluginloader.h:74
 // index:0
 // Public
 // bool isLoaded()
-func (this *QPluginLoader) IsLoaded() interface{} {
+func (this *QPluginLoader) IsLoaded() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader8isLoadedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qpluginloader.h:76
@@ -192,30 +179,35 @@ func (this *QPluginLoader) SetFileName(fileName *QString) {
 // index:0
 // Public
 // QString fileName()
-func (this *QPluginLoader) FileName() interface{} {
+func (this *QPluginLoader) FileName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader8fileNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qpluginloader.h:79
 // index:0
 // Public
 // QString errorString()
-func (this *QPluginLoader) ErrorString() interface{} {
+func (this *QPluginLoader) ErrorString() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qpluginloader.h:82
 // index:0
 // Public
 // QLibrary::LoadHints loadHints()
-func (this *QPluginLoader) LoadHints() interface{} {
+func (this *QPluginLoader) LoadHints() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader9loadHintsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qfiledialog.h
 // #include <qfiledialog.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QFileDialog struct {
 }
 
 func (this *QFileDialog) GetCthis() unsafe.Pointer {
-	return this.QDialog.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QDialog.GetCthis()
+	}
 }
 func NewQFileDialogFromPointer(cthis unsafe.Pointer) *QFileDialog {
 	bcthis0 := NewQDialogFromPointer(cthis)
@@ -68,22 +72,25 @@ func NewQFileDialogFromPointer(cthis unsafe.Pointer) *QFileDialog {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFileDialog) MetaObject() interface{} {
+func (this *QFileDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:101
 // index:0
 // Public
 // void QFileDialog(class QWidget *, const class QString &, const class QString &, const class QString &)
-func NewQFileDialog(parent unsafe.Pointer, caption *qtcore.QString, directory *qtcore.QString, filter *qtcore.QString) *QFileDialog {
+func NewQFileDialog(parent *QWidget /*444 QWidget **/, caption *qtcore.QString, directory *qtcore.QString, filter *qtcore.QString) *QFileDialog {
 	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = parent.GetCthis()
 	var convArg1 = caption.GetCthis()
 	var convArg2 = directory.GetCthis()
 	var convArg3 = filter.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialogC2EP7QWidgetRK7QStringS4_S4_", ffiqt.FFI_TYPE_VOID, cthis, parent, convArg1, convArg2, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialogC2EP7QWidgetRK7QStringS4_S4_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFileDialogFromPointer(cthis)
 	return gothis
@@ -122,10 +129,12 @@ func (this *QFileDialog) SetDirectory_1(directory *qtcore.QDir) {
 // index:0
 // Public
 // QDir directory()
-func (this *QFileDialog) Directory() interface{} {
+func (this *QFileDialog) Directory() *qtcore.QDir /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog9directoryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:111
@@ -142,10 +151,12 @@ func (this *QFileDialog) SetDirectoryUrl(directory *qtcore.QUrl) {
 // index:0
 // Public
 // QUrl directoryUrl()
-func (this *QFileDialog) DirectoryUrl() interface{} {
+func (this *QFileDialog) DirectoryUrl() *qtcore.QUrl /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog12directoryUrlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:114
@@ -158,16 +169,6 @@ func (this *QFileDialog) SelectFile(filename *qtcore.QString) {
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:115
-// index:0
-// Public
-// QStringList selectedFiles()
-func (this *QFileDialog) SelectedFiles() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog13selectedFilesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
 // /usr/include/qt/QtWidgets/qfiledialog.h:117
 // index:0
 // Public
@@ -176,16 +177,6 @@ func (this *QFileDialog) SelectUrl(url *qtcore.QUrl) {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog9selectUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qfiledialog.h:118
-// index:0
-// Public
-// QList<QUrl> selectedUrls()
-func (this *QFileDialog) SelectedUrls() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog12selectedUrlsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:120
@@ -201,10 +192,11 @@ func (this *QFileDialog) SetNameFilterDetailsVisible(enabled bool) {
 // index:0
 // Public
 // bool isNameFilterDetailsVisible()
-func (this *QFileDialog) IsNameFilterDetailsVisible() interface{} {
+func (this *QFileDialog) IsNameFilterDetailsVisible() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog26isNameFilterDetailsVisibleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:123
@@ -227,16 +219,6 @@ func (this *QFileDialog) SetNameFilters(filters *qtcore.QStringList) {
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:125
-// index:0
-// Public
-// QStringList nameFilters()
-func (this *QFileDialog) NameFilters() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog11nameFiltersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
 // /usr/include/qt/QtWidgets/qfiledialog.h:126
 // index:0
 // Public
@@ -251,20 +233,24 @@ func (this *QFileDialog) SelectNameFilter(filter *qtcore.QString) {
 // index:0
 // Public
 // QString selectedMimeTypeFilter()
-func (this *QFileDialog) SelectedMimeTypeFilter() interface{} {
+func (this *QFileDialog) SelectedMimeTypeFilter() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog22selectedMimeTypeFilterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:128
 // index:0
 // Public
 // QString selectedNameFilter()
-func (this *QFileDialog) SelectedNameFilter() interface{} {
+func (this *QFileDialog) SelectedNameFilter() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog18selectedNameFilterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:131
@@ -275,16 +261,6 @@ func (this *QFileDialog) SetMimeTypeFilters(filters *qtcore.QStringList) {
 	var convArg0 = filters.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog18setMimeTypeFiltersERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qfiledialog.h:132
-// index:0
-// Public
-// QStringList mimeTypeFilters()
-func (this *QFileDialog) MimeTypeFilters() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog15mimeTypeFiltersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:133
@@ -301,10 +277,11 @@ func (this *QFileDialog) SelectMimeTypeFilter(filter *qtcore.QString) {
 // index:0
 // Public
 // QDir::Filters filter()
-func (this *QFileDialog) Filter() interface{} {
+func (this *QFileDialog) Filter() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog6filterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:139
@@ -320,10 +297,11 @@ func (this *QFileDialog) SetViewMode(mode int) {
 // index:0
 // Public
 // QFileDialog::ViewMode viewMode()
-func (this *QFileDialog) ViewMode() interface{} {
+func (this *QFileDialog) ViewMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog8viewModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:142
@@ -339,10 +317,11 @@ func (this *QFileDialog) SetFileMode(mode int) {
 // index:0
 // Public
 // QFileDialog::FileMode fileMode()
-func (this *QFileDialog) FileMode() interface{} {
+func (this *QFileDialog) FileMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog8fileModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:145
@@ -358,10 +337,11 @@ func (this *QFileDialog) SetAcceptMode(mode int) {
 // index:0
 // Public
 // QFileDialog::AcceptMode acceptMode()
-func (this *QFileDialog) AcceptMode() interface{} {
+func (this *QFileDialog) AcceptMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog10acceptModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:148
@@ -377,10 +357,11 @@ func (this *QFileDialog) SetReadOnly(enabled bool) {
 // index:0
 // Public
 // bool isReadOnly()
-func (this *QFileDialog) IsReadOnly() interface{} {
+func (this *QFileDialog) IsReadOnly() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog10isReadOnlyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:151
@@ -396,41 +377,35 @@ func (this *QFileDialog) SetResolveSymlinks(enabled bool) {
 // index:0
 // Public
 // bool resolveSymlinks()
-func (this *QFileDialog) ResolveSymlinks() interface{} {
+func (this *QFileDialog) ResolveSymlinks() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog15resolveSymlinksEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qfiledialog.h:155
-// index:0
-// Public
-// QList<QUrl> sidebarUrls()
-func (this *QFileDialog) SidebarUrls() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog11sidebarUrlsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:157
 // index:0
 // Public
 // QByteArray saveState()
-func (this *QFileDialog) SaveState() interface{} {
+func (this *QFileDialog) SaveState() *qtcore.QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog9saveStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:158
 // index:0
 // Public
 // bool restoreState(const class QByteArray &)
-func (this *QFileDialog) RestoreState(state *qtcore.QByteArray) interface{} {
+func (this *QFileDialog) RestoreState(state *qtcore.QByteArray) bool {
 	var convArg0 = state.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog12restoreStateERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:160
@@ -446,10 +421,11 @@ func (this *QFileDialog) SetConfirmOverwrite(enabled bool) {
 // index:0
 // Public
 // bool confirmOverwrite()
-func (this *QFileDialog) ConfirmOverwrite() interface{} {
+func (this *QFileDialog) ConfirmOverwrite() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog16confirmOverwriteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:163
@@ -466,10 +442,12 @@ func (this *QFileDialog) SetDefaultSuffix(suffix *qtcore.QString) {
 // index:0
 // Public
 // QString defaultSuffix()
-func (this *QFileDialog) DefaultSuffix() interface{} {
+func (this *QFileDialog) DefaultSuffix() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog13defaultSuffixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:166
@@ -482,22 +460,13 @@ func (this *QFileDialog) SetHistory(paths *qtcore.QStringList) {
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:167
-// index:0
-// Public
-// QStringList history()
-func (this *QFileDialog) History() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog7historyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
 // /usr/include/qt/QtWidgets/qfiledialog.h:169
 // index:0
 // Public
 // void setItemDelegate(class QAbstractItemDelegate *)
-func (this *QFileDialog) SetItemDelegate(delegate unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), delegate)
+func (this *QFileDialog) SetItemDelegate(delegate *QAbstractItemDelegate /*444 QAbstractItemDelegate **/) {
+	var convArg0 = delegate.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -505,18 +474,21 @@ func (this *QFileDialog) SetItemDelegate(delegate unsafe.Pointer) {
 // index:0
 // Public
 // QAbstractItemDelegate * itemDelegate()
-func (this *QFileDialog) ItemDelegate() interface{} {
+func (this *QFileDialog) ItemDelegate() *QAbstractItemDelegate /*444 QAbstractItemDelegate **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog12itemDelegateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQAbstractItemDelegateFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:172
 // index:0
 // Public
 // void setIconProvider(class QFileIconProvider *)
-func (this *QFileDialog) SetIconProvider(provider unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog15setIconProviderEP17QFileIconProvider", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), provider)
+func (this *QFileDialog) SetIconProvider(provider *QFileIconProvider /*444 QFileIconProvider **/) {
+	var convArg0 = provider.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog15setIconProviderEP17QFileIconProvider", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -524,10 +496,12 @@ func (this *QFileDialog) SetIconProvider(provider unsafe.Pointer) {
 // index:0
 // Public
 // QFileIconProvider * iconProvider()
-func (this *QFileDialog) IconProvider() interface{} {
+func (this *QFileDialog) IconProvider() *QFileIconProvider /*444 QFileIconProvider **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog12iconProviderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQFileIconProviderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:175
@@ -544,10 +518,12 @@ func (this *QFileDialog) SetLabelText(label int, text *qtcore.QString) {
 // index:0
 // Public
 // QString labelText(enum QFileDialog::DialogLabel)
-func (this *QFileDialog) LabelText(label int) interface{} {
+func (this *QFileDialog) LabelText(label int) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog9labelTextENS_11DialogLabelE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &label)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:178
@@ -560,22 +536,13 @@ func (this *QFileDialog) SetSupportedSchemes(schemes *qtcore.QStringList) {
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:179
-// index:0
-// Public
-// QStringList supportedSchemes()
-func (this *QFileDialog) SupportedSchemes() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog16supportedSchemesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
 // /usr/include/qt/QtWidgets/qfiledialog.h:182
 // index:0
 // Public
 // void setProxyModel(class QAbstractProxyModel *)
-func (this *QFileDialog) SetProxyModel(model unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), model)
+func (this *QFileDialog) SetProxyModel(model *qtcore.QAbstractProxyModel /*444 QAbstractProxyModel **/) {
+	var convArg0 = model.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -583,10 +550,12 @@ func (this *QFileDialog) SetProxyModel(model unsafe.Pointer) {
 // index:0
 // Public
 // QAbstractProxyModel * proxyModel()
-func (this *QFileDialog) ProxyModel() interface{} {
+func (this *QFileDialog) ProxyModel() *qtcore.QAbstractProxyModel /*444 QAbstractProxyModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog10proxyModelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQAbstractProxyModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:186
@@ -602,30 +571,33 @@ func (this *QFileDialog) SetOption(option int, on bool) {
 // index:0
 // Public
 // bool testOption(enum QFileDialog::Option)
-func (this *QFileDialog) TestOption(option int) interface{} {
+func (this *QFileDialog) TestOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog10testOptionENS_6OptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &option)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:189
 // index:0
 // Public
 // QFileDialog::Options options()
-func (this *QFileDialog) Options() interface{} {
+func (this *QFileDialog) Options() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog7optionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:192
 // index:0
 // Public
 // void open(class QObject *, const char *)
-func (this *QFileDialog) Open(receiver unsafe.Pointer, member string) {
+func (this *QFileDialog) Open(receiver *qtcore.QObject /*444 QObject **/, member string) {
+	var convArg0 = receiver.GetCthis()
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog4openEP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), receiver, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog4openEP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -740,8 +712,9 @@ func (this *QFileDialog) Accept() {
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QFileDialog) ChangeEvent(e unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QFileDialog) ChangeEvent(e *qtcore.QEvent /*444 QEvent **/) {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

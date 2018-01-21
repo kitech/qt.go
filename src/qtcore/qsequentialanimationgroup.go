@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h
 // #include <qsequentialanimationgroup.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -45,33 +45,41 @@ func init() {
 
 //  body block begin
 type QSequentialAnimationGroup struct {
-	*qtrt.CObject
+	*QAnimationGroup
 }
 
 func (this *QSequentialAnimationGroup) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.QAnimationGroup.GetCthis()
+	}
 }
 func NewQSequentialAnimationGroupFromPointer(cthis unsafe.Pointer) *QSequentialAnimationGroup {
-	return &QSequentialAnimationGroup{&qtrt.CObject{cthis}}
+	bcthis0 := NewQAnimationGroupFromPointer(cthis)
+	return &QSequentialAnimationGroup{bcthis0}
 }
 
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:55
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSequentialAnimationGroup) MetaObject() interface{} {
+func (this *QSequentialAnimationGroup) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QSequentialAnimationGroup10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:59
 // index:0
 // Public
 // void QSequentialAnimationGroup(class QObject *)
-func NewQSequentialAnimationGroup(parent unsafe.Pointer) *QSequentialAnimationGroup {
+func NewQSequentialAnimationGroup(parent *QObject /*444 QObject **/) *QSequentialAnimationGroup {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSequentialAnimationGroupFromPointer(cthis)
 	return gothis
@@ -90,48 +98,56 @@ func DeleteQSequentialAnimationGroup(*QSequentialAnimationGroup) {
 // index:0
 // Public
 // QPauseAnimation * addPause(int)
-func (this *QSequentialAnimationGroup) AddPause(msecs int) interface{} {
+func (this *QSequentialAnimationGroup) AddPause(msecs int) *QPauseAnimation /*444 QPauseAnimation **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup8addPauseEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msecs)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:63
 // index:0
 // Public
 // QPauseAnimation * insertPause(int, int)
-func (this *QSequentialAnimationGroup) InsertPause(index int, msecs int) interface{} {
+func (this *QSequentialAnimationGroup) InsertPause(index int, msecs int) *QPauseAnimation /*444 QPauseAnimation **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup11insertPauseEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, &msecs)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:65
 // index:0
 // Public
 // QAbstractAnimation * currentAnimation()
-func (this *QSequentialAnimationGroup) CurrentAnimation() interface{} {
+func (this *QSequentialAnimationGroup) CurrentAnimation() *QAbstractAnimation /*444 QAbstractAnimation **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QSequentialAnimationGroup16currentAnimationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:66
 // index:0
 // Public virtual
 // int duration()
-func (this *QSequentialAnimationGroup) Duration() interface{} {
+func (this *QSequentialAnimationGroup) Duration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QSequentialAnimationGroup8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:69
 // index:0
 // Public
 // void currentAnimationChanged(class QAbstractAnimation *)
-func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), current)
+func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current *QAbstractAnimation /*444 QAbstractAnimation **/) {
+	var convArg0 = current.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -139,10 +155,12 @@ func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current unsafe.Po
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QSequentialAnimationGroup) Event(event unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QSequentialAnimationGroup) Event(event *QEvent /*444 QEvent **/) bool {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:75

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qmimedata.h
 // #include <qmimedata.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QMimeData struct {
 }
 
 func (this *QMimeData) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQMimeDataFromPointer(cthis unsafe.Pointer) *QMimeData {
 	bcthis0 := NewQObjectFromPointer(cthis)
@@ -60,10 +64,12 @@ func NewQMimeDataFromPointer(cthis unsafe.Pointer) *QMimeData {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QMimeData) MetaObject() interface{} {
+func (this *QMimeData) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:56
@@ -87,34 +93,27 @@ func DeleteQMimeData(*QMimeData) {
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qmimedata.h:59
-// index:0
-// Public
-// QList<QUrl> urls()
-func (this *QMimeData) Urls() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4urlsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
 // /usr/include/qt/QtCore/qmimedata.h:61
 // index:0
 // Public
 // bool hasUrls()
-func (this *QMimeData) HasUrls() interface{} {
+func (this *QMimeData) HasUrls() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7hasUrlsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:63
 // index:0
 // Public
 // QString text()
-func (this *QMimeData) Text() interface{} {
+func (this *QMimeData) Text() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:64
@@ -131,20 +130,23 @@ func (this *QMimeData) SetText(text *QString) {
 // index:0
 // Public
 // bool hasText()
-func (this *QMimeData) HasText() interface{} {
+func (this *QMimeData) HasText() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7hasTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:67
 // index:0
 // Public
 // QString html()
-func (this *QMimeData) Html() interface{} {
+func (this *QMimeData) Html() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4htmlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:68
@@ -161,20 +163,23 @@ func (this *QMimeData) SetHtml(html *QString) {
 // index:0
 // Public
 // bool hasHtml()
-func (this *QMimeData) HasHtml() interface{} {
+func (this *QMimeData) HasHtml() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7hasHtmlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:71
 // index:0
 // Public
 // QVariant imageData()
-func (this *QMimeData) ImageData() interface{} {
+func (this *QMimeData) ImageData() *QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9imageDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:72
@@ -191,20 +196,23 @@ func (this *QMimeData) SetImageData(image *QVariant) {
 // index:0
 // Public
 // bool hasImage()
-func (this *QMimeData) HasImage() interface{} {
+func (this *QMimeData) HasImage() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData8hasImageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:75
 // index:0
 // Public
 // QVariant colorData()
-func (this *QMimeData) ColorData() interface{} {
+func (this *QMimeData) ColorData() *QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9colorDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:76
@@ -221,21 +229,24 @@ func (this *QMimeData) SetColorData(color *QVariant) {
 // index:0
 // Public
 // bool hasColor()
-func (this *QMimeData) HasColor() interface{} {
+func (this *QMimeData) HasColor() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData8hasColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:79
 // index:0
 // Public
 // QByteArray data(const class QString &)
-func (this *QMimeData) Data(mimetype *QString) interface{} {
+func (this *QMimeData) Data(mimetype *QString) *QByteArray /*123*/ {
 	var convArg0 = mimetype.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4dataERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:80
@@ -263,21 +274,12 @@ func (this *QMimeData) RemoveFormat(mimetype *QString) {
 // index:0
 // Public virtual
 // bool hasFormat(const class QString &)
-func (this *QMimeData) HasFormat(mimetype *QString) interface{} {
+func (this *QMimeData) HasFormat(mimetype *QString) bool {
 	var convArg0 = mimetype.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9hasFormatERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qmimedata.h:84
-// index:0
-// Public virtual
-// QStringList formats()
-func (this *QMimeData) Formats() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData7formatsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:86
@@ -293,11 +295,13 @@ func (this *QMimeData) Clear() {
 // index:0
 // Protected virtual
 // QVariant retrieveData(const class QString &, class QVariant::Type)
-func (this *QMimeData) RetrieveData(mimetype *QString, preferredType int) interface{} {
+func (this *QMimeData) RetrieveData(mimetype *QString, preferredType int) *QVariant /*123*/ {
 	var convArg0 = mimetype.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData12retrieveDataERK7QStringN8QVariant4TypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &preferredType)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qbitarray.h
 // #include <qbitarray.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QBitRef struct {
 }
 
 func (this *QBitRef) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQBitRefFromPointer(cthis unsafe.Pointer) *QBitRef {
 	return &QBitRef{&qtrt.CObject{cthis}}

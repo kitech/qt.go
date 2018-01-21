@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qaccessible.h
 // #include <qaccessible.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QAccessibleStateChangeEvent struct {
 }
 
 func (this *QAccessibleStateChangeEvent) GetCthis() unsafe.Pointer {
-	return this.QAccessibleEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QAccessibleEvent.GetCthis()
+	}
 }
 func NewQAccessibleStateChangeEventFromPointer(cthis unsafe.Pointer) *QAccessibleStateChangeEvent {
 	bcthis0 := NewQAccessibleEventFromPointer(cthis)
@@ -73,10 +77,11 @@ func DeleteQAccessibleStateChangeEvent(*QAccessibleStateChangeEvent) {
 // index:0
 // Public inline
 // QAccessible::State changedStates()
-func (this *QAccessibleStateChangeEvent) ChangedStates() interface{} {
+func (this *QAccessibleStateChangeEvent) ChangedStates() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAccessibleStateChangeEvent13changedStatesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

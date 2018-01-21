@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtextobject.h
 // #include <qtextobject.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 14
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QTextBlockUserData struct {
 }
 
 func (this *QTextBlockUserData) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQTextBlockUserDataFromPointer(cthis unsafe.Pointer) *QTextBlockUserData {
 	return &QTextBlockUserData{&qtrt.CObject{cthis}}

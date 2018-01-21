@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qvalidator.h
 // #include <qvalidator.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QIntValidator struct {
 }
 
 func (this *QIntValidator) GetCthis() unsafe.Pointer {
-	return this.QValidator.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QValidator.GetCthis()
+	}
 }
 func NewQIntValidatorFromPointer(cthis unsafe.Pointer) *QIntValidator {
 	bcthis0 := NewQValidatorFromPointer(cthis)
@@ -64,19 +68,22 @@ func NewQIntValidatorFromPointer(cthis unsafe.Pointer) *QIntValidator {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QIntValidator) MetaObject() interface{} {
+func (this *QIntValidator) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QIntValidator10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:96
 // index:0
 // Public
 // void QIntValidator(class QObject *)
-func NewQIntValidator(parent unsafe.Pointer) *QIntValidator {
+func NewQIntValidator(parent *qtcore.QObject /*444 QObject **/) *QIntValidator {
 	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIntValidatorFromPointer(cthis)
 	return gothis
@@ -86,9 +93,10 @@ func NewQIntValidator(parent unsafe.Pointer) *QIntValidator {
 // index:1
 // Public
 // void QIntValidator(int, int, class QObject *)
-func NewQIntValidator_1(bottom int, top int, parent unsafe.Pointer) *QIntValidator {
+func NewQIntValidator_1(bottom int, top int, parent *qtcore.QObject /*444 QObject **/) *QIntValidator {
 	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidatorC2EiiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &bottom, &top, parent)
+	var convArg2 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidatorC2EiiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &bottom, &top, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIntValidatorFromPointer(cthis)
 	return gothis
@@ -107,11 +115,12 @@ func DeleteQIntValidator(*QIntValidator) {
 // index:0
 // Public virtual
 // QValidator::State validate(class QString &, int &)
-func (this *QIntValidator) Validate(arg0 *qtcore.QString, arg1 int) interface{} {
+func (this *QIntValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QIntValidator8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:101
@@ -155,20 +164,22 @@ func (this *QIntValidator) SetRange(bottom int, top int) {
 // index:0
 // Public inline
 // int bottom()
-func (this *QIntValidator) Bottom() interface{} {
+func (this *QIntValidator) Bottom() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QIntValidator6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:108
 // index:0
 // Public inline
 // int top()
-func (this *QIntValidator) Top() interface{} {
+func (this *QIntValidator) Top() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QIntValidator3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:110

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qregularexpression.h
 // #include <qregularexpression.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QRegularExpression struct {
 }
 
 func (this *QRegularExpression) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQRegularExpressionFromPointer(cthis unsafe.Pointer) *QRegularExpression {
 	return &QRegularExpression{&qtrt.CObject{cthis}}
@@ -59,10 +63,11 @@ func NewQRegularExpressionFromPointer(cthis unsafe.Pointer) *QRegularExpression 
 // index:0
 // Public
 // QRegularExpression::PatternOptions patternOptions()
-func (this *QRegularExpression) PatternOptions() interface{} {
+func (this *QRegularExpression) PatternOptions() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QRegularExpression14patternOptionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:84
@@ -100,10 +105,12 @@ func (this *QRegularExpression) Swap(other *QRegularExpression) {
 // index:0
 // Public
 // QString pattern()
-func (this *QRegularExpression) Pattern() interface{} {
+func (this *QRegularExpression) Pattern() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QRegularExpression7patternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:98
@@ -120,50 +127,45 @@ func (this *QRegularExpression) SetPattern(pattern *QString) {
 // index:0
 // Public
 // bool isValid()
-func (this *QRegularExpression) IsValid() interface{} {
+func (this *QRegularExpression) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QRegularExpression7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:101
 // index:0
 // Public
 // int patternErrorOffset()
-func (this *QRegularExpression) PatternErrorOffset() interface{} {
+func (this *QRegularExpression) PatternErrorOffset() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QRegularExpression18patternErrorOffsetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:102
 // index:0
 // Public
 // QString errorString()
-func (this *QRegularExpression) ErrorString() interface{} {
+func (this *QRegularExpression) ErrorString() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QRegularExpression11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:104
 // index:0
 // Public
 // int captureCount()
-func (this *QRegularExpression) CaptureCount() interface{} {
+func (this *QRegularExpression) CaptureCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QRegularExpression12captureCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qregularexpression.h:105
-// index:0
-// Public
-// QStringList namedCaptureGroups()
-func (this *QRegularExpression) NamedCaptureGroups() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QRegularExpression18namedCaptureGroupsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:141
@@ -179,14 +181,17 @@ func (this *QRegularExpression) Optimize() {
 // index:0
 // Public static
 // QString escape(const class QString &)
-func (this *QRegularExpression) Escape(str *QString) interface{} {
+func (this *QRegularExpression) Escape(str *QString) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRegularExpression6escapeERK7QString", ffiqt.FFI_TYPE_POINTER, str)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QRegularExpression_Escape(str *QString) {
+func QRegularExpression_Escape(str *QString) *QString /*123*/ {
 	var nilthis *QRegularExpression
-	nilthis.Escape(str)
+	rv := nilthis.Escape(str)
+	return rv
 }
 
 //  body block end

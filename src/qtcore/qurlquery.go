@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qurlquery.h
 // #include <qurlquery.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 41
+// extern C begin: 39
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QUrlQuery struct {
 }
 
 func (this *QUrlQuery) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQUrlQueryFromPointer(cthis unsafe.Pointer) *QUrlQuery {
 	return &QUrlQuery{&qtrt.CObject{cthis}}
@@ -116,20 +120,22 @@ func (this *QUrlQuery) Swap(other *QUrlQuery) {
 // index:0
 // Public
 // bool isEmpty()
-func (this *QUrlQuery) IsEmpty() interface{} {
+func (this *QUrlQuery) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:76
 // index:0
 // Public
 // bool isDetached()
-func (this *QUrlQuery) IsDetached() interface{} {
+func (this *QUrlQuery) IsDetached() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery10isDetachedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:77
@@ -155,7 +161,7 @@ func (this *QUrlQuery) SetQuery(queryString *QString) {
 // index:0
 // Public
 // void setQueryDelimiters(class QChar, class QChar)
-func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter *QChar, pairDelimiter *QChar) {
+func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter *QChar /*123*/, pairDelimiter *QChar /*123*/) {
 	var convArg0 = valueDelimiter.GetCthis()
 	var convArg1 = pairDelimiter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -166,31 +172,36 @@ func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter *QChar, pairDelimiter *
 // index:0
 // Public
 // QChar queryValueDelimiter()
-func (this *QUrlQuery) QueryValueDelimiter() interface{} {
+func (this *QUrlQuery) QueryValueDelimiter() *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery19queryValueDelimiterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:86
 // index:0
 // Public
 // QChar queryPairDelimiter()
-func (this *QUrlQuery) QueryPairDelimiter() interface{} {
+func (this *QUrlQuery) QueryPairDelimiter() *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery18queryPairDelimiterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:91
 // index:0
 // Public
 // bool hasQueryItem(const class QString &)
-func (this *QUrlQuery) HasQueryItem(key *QString) interface{} {
+func (this *QUrlQuery) HasQueryItem(key *QString) bool {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery12hasQueryItemERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:92
@@ -228,28 +239,34 @@ func (this *QUrlQuery) RemoveAllQueryItems(key *QString) {
 // index:0
 // Public static inline
 // QChar defaultQueryValueDelimiter()
-func (this *QUrlQuery) DefaultQueryValueDelimiter() interface{} {
+func (this *QUrlQuery) DefaultQueryValueDelimiter() *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery26defaultQueryValueDelimiterEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QUrlQuery_DefaultQueryValueDelimiter() {
+func QUrlQuery_DefaultQueryValueDelimiter() *QChar /*123*/ {
 	var nilthis *QUrlQuery
-	nilthis.DefaultQueryValueDelimiter()
+	rv := nilthis.DefaultQueryValueDelimiter()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:100
 // index:0
 // Public static inline
 // QChar defaultQueryPairDelimiter()
-func (this *QUrlQuery) DefaultQueryPairDelimiter() interface{} {
+func (this *QUrlQuery) DefaultQueryPairDelimiter() *QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery25defaultQueryPairDelimiterEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QUrlQuery_DefaultQueryPairDelimiter() {
+func QUrlQuery_DefaultQueryPairDelimiter() *QChar /*123*/ {
 	var nilthis *QUrlQuery
-	nilthis.DefaultQueryPairDelimiter()
+	rv := nilthis.DefaultQueryPairDelimiter()
+	return rv
 }
 
 //  body block end

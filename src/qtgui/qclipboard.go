@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qclipboard.h
 // #include <qclipboard.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QClipboard struct {
 }
 
 func (this *QClipboard) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQClipboardFromPointer(cthis unsafe.Pointer) *QClipboard {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -64,10 +68,12 @@ func NewQClipboardFromPointer(cthis unsafe.Pointer) *QClipboard {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QClipboard) MetaObject() interface{} {
+func (this *QClipboard) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:65
@@ -83,71 +89,80 @@ func (this *QClipboard) Clear(mode int) {
 // index:0
 // Public
 // bool supportsSelection()
-func (this *QClipboard) SupportsSelection() interface{} {
+func (this *QClipboard) SupportsSelection() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard17supportsSelectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:68
 // index:0
 // Public
 // bool supportsFindBuffer()
-func (this *QClipboard) SupportsFindBuffer() interface{} {
+func (this *QClipboard) SupportsFindBuffer() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard18supportsFindBufferEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:70
 // index:0
 // Public
 // bool ownsSelection()
-func (this *QClipboard) OwnsSelection() interface{} {
+func (this *QClipboard) OwnsSelection() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard13ownsSelectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:71
 // index:0
 // Public
 // bool ownsClipboard()
-func (this *QClipboard) OwnsClipboard() interface{} {
+func (this *QClipboard) OwnsClipboard() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard13ownsClipboardEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:72
 // index:0
 // Public
 // bool ownsFindBuffer()
-func (this *QClipboard) OwnsFindBuffer() interface{} {
+func (this *QClipboard) OwnsFindBuffer() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard14ownsFindBufferEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:74
 // index:0
 // Public
 // QString text(enum QClipboard::Mode)
-func (this *QClipboard) Text(mode int) interface{} {
+func (this *QClipboard) Text(mode int) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard4textENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:75
 // index:1
 // Public
 // QString text(class QString &, enum QClipboard::Mode)
-func (this *QClipboard) Text_1(subtype *qtcore.QString, mode int) interface{} {
+func (this *QClipboard) Text_1(subtype *qtcore.QString, mode int) *qtcore.QString /*123*/ {
 	var convArg0 = subtype.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard4textER7QStringNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &mode)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:76
@@ -164,18 +179,21 @@ func (this *QClipboard) SetText(arg0 *qtcore.QString, mode int) {
 // index:0
 // Public
 // const QMimeData * mimeData(enum QClipboard::Mode)
-func (this *QClipboard) MimeData(mode int) interface{} {
+func (this *QClipboard) MimeData(mode int) *qtcore.QMimeData /*444 const QMimeData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard8mimeDataENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMimeDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:79
 // index:0
 // Public
 // void setMimeData(class QMimeData *, enum QClipboard::Mode)
-func (this *QClipboard) SetMimeData(data unsafe.Pointer, mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard11setMimeDataEP9QMimeDataNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), data, &mode)
+func (this *QClipboard) SetMimeData(data *qtcore.QMimeData /*444 QMimeData **/, mode int) {
+	var convArg0 = data.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard11setMimeDataEP9QMimeDataNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -183,20 +201,24 @@ func (this *QClipboard) SetMimeData(data unsafe.Pointer, mode int) {
 // index:0
 // Public
 // QImage image(enum QClipboard::Mode)
-func (this *QClipboard) Image(mode int) interface{} {
+func (this *QClipboard) Image(mode int) *QImage /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard5imageENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:82
 // index:0
 // Public
 // QPixmap pixmap(enum QClipboard::Mode)
-func (this *QClipboard) Pixmap(mode int) interface{} {
+func (this *QClipboard) Pixmap(mode int) *QPixmap /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard6pixmapENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:83

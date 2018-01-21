@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qlcdnumber.h
 // #include <qlcdnumber.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QLCDNumber struct {
 }
 
 func (this *QLCDNumber) GetCthis() unsafe.Pointer {
-	return this.QFrame.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QFrame.GetCthis()
+	}
 }
 func NewQLCDNumberFromPointer(cthis unsafe.Pointer) *QLCDNumber {
 	bcthis0 := NewQFrameFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQLCDNumberFromPointer(cthis unsafe.Pointer) *QLCDNumber {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QLCDNumber) MetaObject() interface{} {
+func (this *QLCDNumber) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:62
 // index:0
 // Public
 // void QLCDNumber(class QWidget *)
-func NewQLCDNumber(parent unsafe.Pointer) *QLCDNumber {
+func NewQLCDNumber(parent *QWidget /*444 QWidget **/) *QLCDNumber {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumberC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumberC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLCDNumberFromPointer(cthis)
 	return gothis
@@ -90,9 +97,10 @@ func NewQLCDNumber(parent unsafe.Pointer) *QLCDNumber {
 // index:1
 // Public
 // void QLCDNumber(uint, class QWidget *)
-func NewQLCDNumber_1(numDigits uint, parent unsafe.Pointer) *QLCDNumber {
+func NewQLCDNumber_1(numDigits uint, parent *QWidget /*444 QWidget **/) *QLCDNumber {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumberC2EjP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, &numDigits, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumberC2EjP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, &numDigits, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLCDNumberFromPointer(cthis)
 	return gothis
@@ -111,20 +119,22 @@ func DeleteQLCDNumber(*QLCDNumber) {
 // index:0
 // Public
 // bool smallDecimalPoint()
-func (this *QLCDNumber) SmallDecimalPoint() interface{} {
+func (this *QLCDNumber) SmallDecimalPoint() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber17smallDecimalPointEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:76
 // index:0
 // Public
 // int digitCount()
-func (this *QLCDNumber) DigitCount() interface{} {
+func (this *QLCDNumber) DigitCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber10digitCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:77
@@ -140,30 +150,33 @@ func (this *QLCDNumber) SetDigitCount(nDigits int) {
 // index:0
 // Public
 // bool checkOverflow(double)
-func (this *QLCDNumber) CheckOverflow(num float64) interface{} {
+func (this *QLCDNumber) CheckOverflow(num float64) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber13checkOverflowEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &num)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:80
 // index:1
 // Public
 // bool checkOverflow(int)
-func (this *QLCDNumber) CheckOverflow_1(num int) interface{} {
+func (this *QLCDNumber) CheckOverflow_1(num int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber13checkOverflowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &num)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:82
 // index:0
 // Public
 // QLCDNumber::Mode mode()
-func (this *QLCDNumber) Mode() interface{} {
+func (this *QLCDNumber) Mode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber4modeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:83
@@ -179,10 +192,11 @@ func (this *QLCDNumber) SetMode(arg0 int) {
 // index:0
 // Public
 // QLCDNumber::SegmentStyle segmentStyle()
-func (this *QLCDNumber) SegmentStyle() interface{} {
+func (this *QLCDNumber) SegmentStyle() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber12segmentStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:86
@@ -198,30 +212,34 @@ func (this *QLCDNumber) SetSegmentStyle(arg0 int) {
 // index:0
 // Public
 // double value()
-func (this *QLCDNumber) Value() interface{} {
+func (this *QLCDNumber) Value() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:89
 // index:0
 // Public
 // int intValue()
-func (this *QLCDNumber) IntValue() interface{} {
+func (this *QLCDNumber) IntValue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber8intValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:91
 // index:0
 // Public virtual
 // QSize sizeHint()
-func (this *QLCDNumber) SizeHint() interface{} {
+func (this *QLCDNumber) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:94
@@ -310,18 +328,21 @@ func (this *QLCDNumber) Overflow() {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QLCDNumber) Event(e unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QLCDNumber) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:108
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QLCDNumber) PaintEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QLCDNumber) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

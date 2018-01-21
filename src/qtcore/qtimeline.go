@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qtimeline.h
 // #include <qtimeline.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QTimeLine struct {
 }
 
 func (this *QTimeLine) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQTimeLineFromPointer(cthis unsafe.Pointer) *QTimeLine {
 	bcthis0 := NewQObjectFromPointer(cthis)
@@ -60,19 +64,22 @@ func NewQTimeLineFromPointer(cthis unsafe.Pointer) *QTimeLine {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTimeLine) MetaObject() interface{} {
+func (this *QTimeLine) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:79
 // index:0
 // Public
 // void QTimeLine(int, class QObject *)
-func NewQTimeLine(duration int, parent unsafe.Pointer) *QTimeLine {
+func NewQTimeLine(duration int, parent *QObject /*444 QObject **/) *QTimeLine {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &duration, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &duration, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimeLineFromPointer(cthis)
 	return gothis
@@ -91,20 +98,22 @@ func DeleteQTimeLine(*QTimeLine) {
 // index:0
 // Public
 // QTimeLine::State state()
-func (this *QTimeLine) State() interface{} {
+func (this *QTimeLine) State() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine5stateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:84
 // index:0
 // Public
 // int loopCount()
-func (this *QTimeLine) LoopCount() interface{} {
+func (this *QTimeLine) LoopCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine9loopCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:85
@@ -120,10 +129,11 @@ func (this *QTimeLine) SetLoopCount(count int) {
 // index:0
 // Public
 // QTimeLine::Direction direction()
-func (this *QTimeLine) Direction() interface{} {
+func (this *QTimeLine) Direction() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine9directionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:88
@@ -139,10 +149,11 @@ func (this *QTimeLine) SetDirection(direction int) {
 // index:0
 // Public
 // int duration()
-func (this *QTimeLine) Duration() interface{} {
+func (this *QTimeLine) Duration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:91
@@ -158,10 +169,11 @@ func (this *QTimeLine) SetDuration(duration int) {
 // index:0
 // Public
 // int startFrame()
-func (this *QTimeLine) StartFrame() interface{} {
+func (this *QTimeLine) StartFrame() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine10startFrameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:94
@@ -177,10 +189,11 @@ func (this *QTimeLine) SetStartFrame(frame int) {
 // index:0
 // Public
 // int endFrame()
-func (this *QTimeLine) EndFrame() interface{} {
+func (this *QTimeLine) EndFrame() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine8endFrameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:96
@@ -205,10 +218,11 @@ func (this *QTimeLine) SetFrameRange(startFrame int, endFrame int) {
 // index:0
 // Public
 // int updateInterval()
-func (this *QTimeLine) UpdateInterval() interface{} {
+func (this *QTimeLine) UpdateInterval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine14updateIntervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:100
@@ -224,10 +238,11 @@ func (this *QTimeLine) SetUpdateInterval(interval int) {
 // index:0
 // Public
 // QTimeLine::CurveShape curveShape()
-func (this *QTimeLine) CurveShape() interface{} {
+func (this *QTimeLine) CurveShape() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine10curveShapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:103
@@ -243,10 +258,12 @@ func (this *QTimeLine) SetCurveShape(shape int) {
 // index:0
 // Public
 // QEasingCurve easingCurve()
-func (this *QTimeLine) EasingCurve() interface{} {
+func (this *QTimeLine) EasingCurve() *QEasingCurve /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine11easingCurveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:106
@@ -263,50 +280,55 @@ func (this *QTimeLine) SetEasingCurve(curve *QEasingCurve) {
 // index:0
 // Public
 // int currentTime()
-func (this *QTimeLine) CurrentTime() interface{} {
+func (this *QTimeLine) CurrentTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine11currentTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:109
 // index:0
 // Public
 // int currentFrame()
-func (this *QTimeLine) CurrentFrame() interface{} {
+func (this *QTimeLine) CurrentFrame() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12currentFrameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:110
 // index:0
 // Public
 // qreal currentValue()
-func (this *QTimeLine) CurrentValue() interface{} {
+func (this *QTimeLine) CurrentValue() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12currentValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:112
 // index:0
 // Public
 // int frameForTime(int)
-func (this *QTimeLine) FrameForTime(msec int) interface{} {
+func (this *QTimeLine) FrameForTime(msec int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12frameForTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:113
 // index:0
 // Public virtual
 // qreal valueForTime(int)
-func (this *QTimeLine) ValueForTime(msec int) interface{} {
+func (this *QTimeLine) ValueForTime(msec int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12valueForTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:116
@@ -367,8 +389,9 @@ func (this *QTimeLine) ToggleDirection() {
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QTimeLine) TimerEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QTimeLine) TimerEvent(event *QTimerEvent /*444 QTimerEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

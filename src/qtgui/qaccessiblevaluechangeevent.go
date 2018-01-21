@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qaccessible.h
 // #include <qaccessible.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QAccessibleValueChangeEvent struct {
 }
 
 func (this *QAccessibleValueChangeEvent) GetCthis() unsafe.Pointer {
-	return this.QAccessibleEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QAccessibleEvent.GetCthis()
+	}
 }
 func NewQAccessibleValueChangeEventFromPointer(cthis unsafe.Pointer) *QAccessibleValueChangeEvent {
 	bcthis0 := NewQAccessibleEventFromPointer(cthis)
@@ -64,10 +68,11 @@ func NewQAccessibleValueChangeEventFromPointer(cthis unsafe.Pointer) *QAccessibl
 // index:0
 // Public inline
 // void QAccessibleValueChangeEvent(class QObject *, const class QVariant &)
-func NewQAccessibleValueChangeEvent(obj unsafe.Pointer, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
+func NewQAccessibleValueChangeEvent(obj *qtcore.QObject /*444 QObject **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = obj.GetCthis()
 	var convArg1 = val.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant", ffiqt.FFI_TYPE_VOID, cthis, obj, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleValueChangeEventFromPointer(cthis)
 	return gothis
@@ -77,10 +82,11 @@ func NewQAccessibleValueChangeEvent(obj unsafe.Pointer, val *qtcore.QVariant) *Q
 // index:1
 // Public inline
 // void QAccessibleValueChangeEvent(class QAccessibleInterface *, const class QVariant &)
-func NewQAccessibleValueChangeEvent_1(iface unsafe.Pointer, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
+func NewQAccessibleValueChangeEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = iface.GetCthis()
 	var convArg1 = val.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant", ffiqt.FFI_TYPE_VOID, cthis, iface, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleValueChangeEventFromPointer(cthis)
 	return gothis
@@ -109,10 +115,12 @@ func (this *QAccessibleValueChangeEvent) SetValue(val *qtcore.QVariant) {
 // index:0
 // Public inline
 // QVariant value()
-func (this *QAccessibleValueChangeEvent) Value() interface{} {
+func (this *QAccessibleValueChangeEvent) Value() *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAccessibleValueChangeEvent5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

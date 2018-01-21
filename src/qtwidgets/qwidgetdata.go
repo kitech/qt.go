@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qwidget.h
 // #include <qwidget.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QWidgetData struct {
 }
 
 func (this *QWidgetData) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQWidgetDataFromPointer(cthis unsafe.Pointer) *QWidgetData {
 	return &QWidgetData{&qtrt.CObject{cthis}}

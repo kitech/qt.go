@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qcoreevent.h
 // #include <qcoreevent.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QDeferredDeleteEvent struct {
 }
 
 func (this *QDeferredDeleteEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQDeferredDeleteEventFromPointer(cthis unsafe.Pointer) *QDeferredDeleteEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
@@ -81,10 +85,11 @@ func DeleteQDeferredDeleteEvent(*QDeferredDeleteEvent) {
 // index:0
 // Public inline
 // int loopLevel()
-func (this *QDeferredDeleteEvent) LoopLevel() interface{} {
+func (this *QDeferredDeleteEvent) LoopLevel() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QDeferredDeleteEvent9loopLevelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

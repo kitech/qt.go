@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qsemaphore.h
 // #include <qsemaphore.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QSemaphoreReleaser struct {
 }
 
 func (this *QSemaphoreReleaser) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQSemaphoreReleaserFromPointer(cthis unsafe.Pointer) *QSemaphoreReleaser {
 	return &QSemaphoreReleaser{&qtrt.CObject{cthis}}
@@ -84,9 +88,10 @@ func NewQSemaphoreReleaser_1(sem *QSemaphore, n int) *QSemaphoreReleaser {
 // index:2
 // Public inline
 // void QSemaphoreReleaser(class QSemaphore *, int)
-func NewQSemaphoreReleaser_2(sem unsafe.Pointer, n int) *QSemaphoreReleaser {
+func NewQSemaphoreReleaser_2(sem *QSemaphore /*444 QSemaphore **/, n int) *QSemaphoreReleaser {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, sem, &n)
+	var convArg0 = sem.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &n)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSemaphoreReleaserFromPointer(cthis)
 	return gothis
@@ -115,20 +120,24 @@ func (this *QSemaphoreReleaser) Swap(other *QSemaphoreReleaser) {
 // index:0
 // Public inline
 // QSemaphore * semaphore()
-func (this *QSemaphoreReleaser) Semaphore() interface{} {
+func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*444 QSemaphore **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQSemaphoreFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:101
 // index:0
 // Public inline
 // QSemaphore * cancel()
-func (this *QSemaphoreReleaser) Cancel() interface{} {
+func (this *QSemaphoreReleaser) Cancel() *QSemaphore /*444 QSemaphore **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser6cancelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQSemaphoreFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

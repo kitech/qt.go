@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qaccessible.h
 // #include <qaccessible.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QAccessibleValueInterface struct {
 }
 
 func (this *QAccessibleValueInterface) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQAccessibleValueInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleValueInterface {
 	return &QAccessibleValueInterface{&qtrt.CObject{cthis}}
@@ -72,10 +76,12 @@ func DeleteQAccessibleValueInterface(*QAccessibleValueInterface) {
 // index:0
 // Public pure virtual
 // QVariant currentValue()
-func (this *QAccessibleValueInterface) CurrentValue() interface{} {
+func (this *QAccessibleValueInterface) CurrentValue() *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface12currentValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:569
@@ -92,30 +98,36 @@ func (this *QAccessibleValueInterface) SetCurrentValue(value *qtcore.QVariant) {
 // index:0
 // Public pure virtual
 // QVariant maximumValue()
-func (this *QAccessibleValueInterface) MaximumValue() interface{} {
+func (this *QAccessibleValueInterface) MaximumValue() *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface12maximumValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:571
 // index:0
 // Public pure virtual
 // QVariant minimumValue()
-func (this *QAccessibleValueInterface) MinimumValue() interface{} {
+func (this *QAccessibleValueInterface) MinimumValue() *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface12minimumValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:572
 // index:0
 // Public pure virtual
 // QVariant minimumStepSize()
-func (this *QAccessibleValueInterface) MinimumStepSize() interface{} {
+func (this *QAccessibleValueInterface) MinimumStepSize() *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface15minimumStepSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

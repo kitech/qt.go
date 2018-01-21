@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qdeadlinetimer.h
 // #include <qdeadlinetimer.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QDeadlineTimer struct {
 }
 
 func (this *QDeadlineTimer) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQDeadlineTimerFromPointer(cthis unsafe.Pointer) *QDeadlineTimer {
 	return &QDeadlineTimer{&qtrt.CObject{cthis}}
@@ -105,30 +109,33 @@ func (this *QDeadlineTimer) Swap(other *QDeadlineTimer) {
 // index:0
 // Public inline
 // bool isForever()
-func (this *QDeadlineTimer) IsForever() interface{} {
+func (this *QDeadlineTimer) IsForever() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer9isForeverEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:76
 // index:0
 // Public
 // bool hasExpired()
-func (this *QDeadlineTimer) HasExpired() interface{} {
+func (this *QDeadlineTimer) HasExpired() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer10hasExpiredEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:78
 // index:0
 // Public inline
 // Qt::TimerType timerType()
-func (this *QDeadlineTimer) TimerType() interface{} {
+func (this *QDeadlineTimer) TimerType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer9timerTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:80
@@ -144,20 +151,22 @@ func (this *QDeadlineTimer) SetTimerType(type_ int) {
 // index:0
 // Public
 // qint64 remainingTime()
-func (this *QDeadlineTimer) RemainingTime() interface{} {
+func (this *QDeadlineTimer) RemainingTime() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer13remainingTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:83
 // index:0
 // Public
 // qint64 remainingTimeNSecs()
-func (this *QDeadlineTimer) RemainingTimeNSecs() interface{} {
+func (this *QDeadlineTimer) RemainingTimeNSecs() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer18remainingTimeNSecsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:84
@@ -182,20 +191,22 @@ func (this *QDeadlineTimer) SetPreciseRemainingTime(secs int64, nsecs int64, typ
 // index:0
 // Public
 // qint64 deadline()
-func (this *QDeadlineTimer) Deadline() interface{} {
+func (this *QDeadlineTimer) Deadline() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer8deadlineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:89
 // index:0
 // Public
 // qint64 deadlineNSecs()
-func (this *QDeadlineTimer) DeadlineNSecs() interface{} {
+func (this *QDeadlineTimer) DeadlineNSecs() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer13deadlineNSecsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:90
@@ -220,38 +231,45 @@ func (this *QDeadlineTimer) SetPreciseDeadline(secs int64, nsecs int64, type_ in
 // index:0
 // Public static
 // QDeadlineTimer addNSecs(class QDeadlineTimer, qint64)
-func (this *QDeadlineTimer) AddNSecs(dt *QDeadlineTimer, nsecs int64) interface{} {
+func (this *QDeadlineTimer) AddNSecs(dt *QDeadlineTimer /*123*/, nsecs int64) *QDeadlineTimer /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer8addNSecsES_x", ffiqt.FFI_TYPE_POINTER, dt, nsecs)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQDeadlineTimerFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDeadlineTimer_AddNSecs(dt *QDeadlineTimer, nsecs int64) {
+func QDeadlineTimer_AddNSecs(dt *QDeadlineTimer /*123*/, nsecs int64) *QDeadlineTimer /*123*/ {
 	var nilthis *QDeadlineTimer
-	nilthis.AddNSecs(dt, nsecs)
+	rv := nilthis.AddNSecs(dt, nsecs)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:95
 // index:0
 // Public static
 // QDeadlineTimer current(Qt::TimerType)
-func (this *QDeadlineTimer) Current(timerType int) interface{} {
+func (this *QDeadlineTimer) Current(timerType int) *QDeadlineTimer /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer7currentEN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, timerType)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQDeadlineTimerFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QDeadlineTimer_Current(timerType int) {
+func QDeadlineTimer_Current(timerType int) *QDeadlineTimer /*123*/ {
 	var nilthis *QDeadlineTimer
-	nilthis.Current(timerType)
+	rv := nilthis.Current(timerType)
+	return rv
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:162
 // index:0
 // Public inline
 // std::chrono::nanoseconds remainingTimeAsDuration()
-func (this *QDeadlineTimer) RemainingTimeAsDuration() interface{} {
+func (this *QDeadlineTimer) RemainingTimeAsDuration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer23remainingTimeAsDurationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

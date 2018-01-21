@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qapplication.h
 // #include <qapplication.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 18
+// extern C begin: 17
 */
 // import "C"
 import "unsafe"
@@ -57,7 +57,11 @@ type QApplication struct {
 }
 
 func (this *QApplication) GetCthis() unsafe.Pointer {
-	return this.QGuiApplication.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGuiApplication.GetCthis()
+	}
 }
 func NewQApplicationFromPointer(cthis unsafe.Pointer) *QApplication {
 	bcthis0 := qtgui.NewQGuiApplicationFromPointer(cthis)
@@ -68,10 +72,12 @@ func NewQApplicationFromPointer(cthis unsafe.Pointer) *QApplication {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QApplication) MetaObject() interface{} {
+func (this *QApplication) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QApplication10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:94
@@ -100,25 +106,28 @@ func DeleteQApplication(*QApplication) {
 // index:0
 // Public static
 // QStyle * style()
-func (this *QApplication) Style() interface{} {
+func (this *QApplication) Style() *QStyle /*444 QStyle **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication5styleEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStyleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QApplication_Style() {
+func QApplication_Style() *QStyle /*444 QStyle **/ {
 	var nilthis *QApplication
-	nilthis.Style()
+	rv := nilthis.Style()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:99
 // index:0
 // Public static
 // void setStyle(class QStyle *)
-func (this *QApplication) SetStyle(arg0 unsafe.Pointer) {
+func (this *QApplication) SetStyle(arg0 *QStyle /*444 QStyle **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication8setStyleEP6QStyle", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 }
-func QApplication_SetStyle(arg0 unsafe.Pointer) {
+func QApplication_SetStyle(arg0 *QStyle /*444 QStyle **/) {
 	var nilthis *QApplication
 	nilthis.SetStyle(arg0)
 }
@@ -127,28 +136,33 @@ func QApplication_SetStyle(arg0 unsafe.Pointer) {
 // index:1
 // Public static
 // QStyle * setStyle(const class QString &)
-func (this *QApplication) SetStyle_1(arg0 *qtcore.QString) interface{} {
+func (this *QApplication) SetStyle_1(arg0 *qtcore.QString) *QStyle /*444 QStyle **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication8setStyleERK7QString", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQStyleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QApplication_SetStyle_1(arg0 *qtcore.QString) {
+func QApplication_SetStyle_1(arg0 *qtcore.QString) *QStyle /*444 QStyle **/ {
 	var nilthis *QApplication
-	nilthis.SetStyle_1(arg0)
+	rv := nilthis.SetStyle_1(arg0)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:103
 // index:0
 // Public static
 // int colorSpec()
-func (this *QApplication) ColorSpec() interface{} {
+func (this *QApplication) ColorSpec() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication9colorSpecEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv) // 111
 }
-func QApplication_ColorSpec() {
+func QApplication_ColorSpec() int {
 	var nilthis *QApplication
-	nilthis.ColorSpec()
+	rv := nilthis.ColorSpec()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:104
@@ -168,28 +182,34 @@ func QApplication_SetColorSpec(arg0 int) {
 // index:0
 // Public static
 // QPalette palette(const class QWidget *)
-func (this *QApplication) Palette(arg0 unsafe.Pointer) interface{} {
+func (this *QApplication) Palette(arg0 *QWidget /*444 const QWidget **/) *qtgui.QPalette /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication7paletteEPK7QWidget", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QApplication_Palette(arg0 unsafe.Pointer) {
+func QApplication_Palette(arg0 *QWidget /*444 const QWidget **/) *qtgui.QPalette /*123*/ {
 	var nilthis *QApplication
-	nilthis.Palette(arg0)
+	rv := nilthis.Palette(arg0)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:112
 // index:1
 // Public static
 // QPalette palette(const char *)
-func (this *QApplication) Palette_1(className string) interface{} {
+func (this *QApplication) Palette_1(className string) *qtgui.QPalette /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication7paletteEPKc", ffiqt.FFI_TYPE_POINTER, className)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QApplication_Palette_1(className string) {
+func QApplication_Palette_1(className string) *qtgui.QPalette /*123*/ {
 	var nilthis *QApplication
-	nilthis.Palette_1(className)
+	rv := nilthis.Palette_1(className)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:113
@@ -209,42 +229,51 @@ func QApplication_SetPalette(arg0 *qtgui.QPalette, className string) {
 // index:0
 // Public static
 // QFont font()
-func (this *QApplication) Font() interface{} {
+func (this *QApplication) Font() *qtgui.QFont /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication4fontEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QApplication_Font() {
+func QApplication_Font() *qtgui.QFont /*123*/ {
 	var nilthis *QApplication
-	nilthis.Font()
+	rv := nilthis.Font()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:115
 // index:1
 // Public static
 // QFont font(const class QWidget *)
-func (this *QApplication) Font_1(arg0 unsafe.Pointer) interface{} {
+func (this *QApplication) Font_1(arg0 *QWidget /*444 const QWidget **/) *qtgui.QFont /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication4fontEPK7QWidget", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QApplication_Font_1(arg0 unsafe.Pointer) {
+func QApplication_Font_1(arg0 *QWidget /*444 const QWidget **/) *qtgui.QFont /*123*/ {
 	var nilthis *QApplication
-	nilthis.Font_1(arg0)
+	rv := nilthis.Font_1(arg0)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:116
 // index:2
 // Public static
 // QFont font(const char *)
-func (this *QApplication) Font_2(className string) interface{} {
+func (this *QApplication) Font_2(className string) *qtgui.QFont /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication4fontEPKc", ffiqt.FFI_TYPE_POINTER, className)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QApplication_Font_2(className string) {
+func QApplication_Font_2(className string) *qtgui.QFont /*123*/ {
 	var nilthis *QApplication
-	nilthis.Font_2(className)
+	rv := nilthis.Font_2(className)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:117
@@ -264,14 +293,17 @@ func QApplication_SetFont(arg0 *qtgui.QFont, className string) {
 // index:0
 // Public static
 // QFontMetrics fontMetrics()
-func (this *QApplication) FontMetrics() interface{} {
+func (this *QApplication) FontMetrics() *qtgui.QFontMetrics /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication11fontMetricsEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtgui.NewQFontMetricsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QApplication_FontMetrics() {
+func QApplication_FontMetrics() *qtgui.QFontMetrics /*123*/ {
 	var nilthis *QApplication
-	nilthis.FontMetrics()
+	rv := nilthis.FontMetrics()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:121
@@ -291,123 +323,113 @@ func QApplication_SetWindowIcon(icon *qtgui.QIcon) {
 // index:0
 // Public static
 // QIcon windowIcon()
-func (this *QApplication) WindowIcon() interface{} {
+func (this *QApplication) WindowIcon() *qtgui.QIcon /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication10windowIconEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QApplication_WindowIcon() {
+func QApplication_WindowIcon() *qtgui.QIcon /*123*/ {
 	var nilthis *QApplication
-	nilthis.WindowIcon()
-}
-
-// /usr/include/qt/QtWidgets/qapplication.h:125
-// index:0
-// Public static
-// QWidgetList allWidgets()
-func (this *QApplication) AllWidgets() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication10allWidgetsEv", ffiqt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	rv := nilthis.WindowIcon()
 	return rv
-}
-func QApplication_AllWidgets() {
-	var nilthis *QApplication
-	nilthis.AllWidgets()
-}
-
-// /usr/include/qt/QtWidgets/qapplication.h:126
-// index:0
-// Public static
-// QWidgetList topLevelWidgets()
-func (this *QApplication) TopLevelWidgets() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication15topLevelWidgetsEv", ffiqt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-func QApplication_TopLevelWidgets() {
-	var nilthis *QApplication
-	nilthis.TopLevelWidgets()
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:128
 // index:0
 // Public static
 // QDesktopWidget * desktop()
-func (this *QApplication) Desktop() interface{} {
+func (this *QApplication) Desktop() *QDesktopWidget /*444 QDesktopWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication7desktopEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQDesktopWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QApplication_Desktop() {
+func QApplication_Desktop() *QDesktopWidget /*444 QDesktopWidget **/ {
 	var nilthis *QApplication
-	nilthis.Desktop()
+	rv := nilthis.Desktop()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:130
 // index:0
 // Public static
 // QWidget * activePopupWidget()
-func (this *QApplication) ActivePopupWidget() interface{} {
+func (this *QApplication) ActivePopupWidget() *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication17activePopupWidgetEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QApplication_ActivePopupWidget() {
+func QApplication_ActivePopupWidget() *QWidget /*444 QWidget **/ {
 	var nilthis *QApplication
-	nilthis.ActivePopupWidget()
+	rv := nilthis.ActivePopupWidget()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:131
 // index:0
 // Public static
 // QWidget * activeModalWidget()
-func (this *QApplication) ActiveModalWidget() interface{} {
+func (this *QApplication) ActiveModalWidget() *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication17activeModalWidgetEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QApplication_ActiveModalWidget() {
+func QApplication_ActiveModalWidget() *QWidget /*444 QWidget **/ {
 	var nilthis *QApplication
-	nilthis.ActiveModalWidget()
+	rv := nilthis.ActiveModalWidget()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:132
 // index:0
 // Public static
 // QWidget * focusWidget()
-func (this *QApplication) FocusWidget() interface{} {
+func (this *QApplication) FocusWidget() *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication11focusWidgetEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QApplication_FocusWidget() {
+func QApplication_FocusWidget() *QWidget /*444 QWidget **/ {
 	var nilthis *QApplication
-	nilthis.FocusWidget()
+	rv := nilthis.FocusWidget()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:134
 // index:0
 // Public static
 // QWidget * activeWindow()
-func (this *QApplication) ActiveWindow() interface{} {
+func (this *QApplication) ActiveWindow() *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication12activeWindowEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QApplication_ActiveWindow() {
+func QApplication_ActiveWindow() *QWidget /*444 QWidget **/ {
 	var nilthis *QApplication
-	nilthis.ActiveWindow()
+	rv := nilthis.ActiveWindow()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:135
 // index:0
 // Public static
 // void setActiveWindow(class QWidget *)
-func (this *QApplication) SetActiveWindow(act unsafe.Pointer) {
+func (this *QApplication) SetActiveWindow(act *QWidget /*444 QWidget **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication15setActiveWindowEP7QWidget", ffiqt.FFI_TYPE_POINTER, act)
 	gopp.ErrPrint(err, rv)
 }
-func QApplication_SetActiveWindow(act unsafe.Pointer) {
+func QApplication_SetActiveWindow(act *QWidget /*444 QWidget **/) {
 	var nilthis *QApplication
 	nilthis.SetActiveWindow(act)
 }
@@ -416,56 +438,68 @@ func QApplication_SetActiveWindow(act unsafe.Pointer) {
 // index:0
 // Public static
 // QWidget * widgetAt(const class QPoint &)
-func (this *QApplication) WidgetAt(p *qtcore.QPoint) interface{} {
+func (this *QApplication) WidgetAt(p *qtcore.QPoint) *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication8widgetAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, p)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QApplication_WidgetAt(p *qtcore.QPoint) {
+func QApplication_WidgetAt(p *qtcore.QPoint) *QWidget /*444 QWidget **/ {
 	var nilthis *QApplication
-	nilthis.WidgetAt(p)
+	rv := nilthis.WidgetAt(p)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:138
 // index:1
 // Public static inline
 // QWidget * widgetAt(int, int)
-func (this *QApplication) WidgetAt_1(x int, y int) interface{} {
+func (this *QApplication) WidgetAt_1(x int, y int) *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication8widgetAtEii", ffiqt.FFI_TYPE_POINTER, x, y)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QApplication_WidgetAt_1(x int, y int) {
+func QApplication_WidgetAt_1(x int, y int) *QWidget /*444 QWidget **/ {
 	var nilthis *QApplication
-	nilthis.WidgetAt_1(x, y)
+	rv := nilthis.WidgetAt_1(x, y)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:139
 // index:0
 // Public static
 // QWidget * topLevelAt(const class QPoint &)
-func (this *QApplication) TopLevelAt(p *qtcore.QPoint) interface{} {
+func (this *QApplication) TopLevelAt(p *qtcore.QPoint) *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication10topLevelAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, p)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QApplication_TopLevelAt(p *qtcore.QPoint) {
+func QApplication_TopLevelAt(p *qtcore.QPoint) *QWidget /*444 QWidget **/ {
 	var nilthis *QApplication
-	nilthis.TopLevelAt(p)
+	rv := nilthis.TopLevelAt(p)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:140
 // index:1
 // Public static inline
 // QWidget * topLevelAt(int, int)
-func (this *QApplication) TopLevelAt_1(x int, y int) interface{} {
+func (this *QApplication) TopLevelAt_1(x int, y int) *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication10topLevelAtEii", ffiqt.FFI_TYPE_POINTER, x, y)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
-func QApplication_TopLevelAt_1(x int, y int) {
+func QApplication_TopLevelAt_1(x int, y int) *QWidget /*444 QWidget **/ {
 	var nilthis *QApplication
-	nilthis.TopLevelAt_1(x, y)
+	rv := nilthis.TopLevelAt_1(x, y)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:145
@@ -485,11 +519,11 @@ func QApplication_Beep() {
 // index:0
 // Public static
 // void alert(class QWidget *, int)
-func (this *QApplication) Alert(widget unsafe.Pointer, duration int) {
+func (this *QApplication) Alert(widget *QWidget /*444 QWidget **/, duration int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication5alertEP7QWidgeti", ffiqt.FFI_TYPE_POINTER, widget, duration)
 	gopp.ErrPrint(err, rv)
 }
-func QApplication_Alert(widget unsafe.Pointer, duration int) {
+func QApplication_Alert(widget *QWidget /*444 QWidget **/, duration int) {
 	var nilthis *QApplication
 	nilthis.Alert(widget, duration)
 }
@@ -511,14 +545,16 @@ func QApplication_SetCursorFlashTime(arg0 int) {
 // index:0
 // Public static
 // int cursorFlashTime()
-func (this *QApplication) CursorFlashTime() interface{} {
+func (this *QApplication) CursorFlashTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication15cursorFlashTimeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv) // 111
 }
-func QApplication_CursorFlashTime() {
+func QApplication_CursorFlashTime() int {
 	var nilthis *QApplication
-	nilthis.CursorFlashTime()
+	rv := nilthis.CursorFlashTime()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:151
@@ -538,14 +574,16 @@ func QApplication_SetDoubleClickInterval(arg0 int) {
 // index:0
 // Public static
 // int doubleClickInterval()
-func (this *QApplication) DoubleClickInterval() interface{} {
+func (this *QApplication) DoubleClickInterval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication19doubleClickIntervalEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv) // 111
 }
-func QApplication_DoubleClickInterval() {
+func QApplication_DoubleClickInterval() int {
 	var nilthis *QApplication
-	nilthis.DoubleClickInterval()
+	rv := nilthis.DoubleClickInterval()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:154
@@ -565,14 +603,16 @@ func QApplication_SetKeyboardInputInterval(arg0 int) {
 // index:0
 // Public static
 // int keyboardInputInterval()
-func (this *QApplication) KeyboardInputInterval() interface{} {
+func (this *QApplication) KeyboardInputInterval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication21keyboardInputIntervalEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv) // 111
 }
-func QApplication_KeyboardInputInterval() {
+func QApplication_KeyboardInputInterval() int {
 	var nilthis *QApplication
-	nilthis.KeyboardInputInterval()
+	rv := nilthis.KeyboardInputInterval()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:158
@@ -592,14 +632,16 @@ func QApplication_SetWheelScrollLines(arg0 int) {
 // index:0
 // Public static
 // int wheelScrollLines()
-func (this *QApplication) WheelScrollLines() interface{} {
+func (this *QApplication) WheelScrollLines() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication16wheelScrollLinesEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv) // 111
 }
-func QApplication_WheelScrollLines() {
+func QApplication_WheelScrollLines() int {
 	var nilthis *QApplication
-	nilthis.WheelScrollLines()
+	rv := nilthis.WheelScrollLines()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:161
@@ -619,14 +661,17 @@ func QApplication_SetGlobalStrut(arg0 *qtcore.QSize) {
 // index:0
 // Public static
 // QSize globalStrut()
-func (this *QApplication) GlobalStrut() interface{} {
+func (this *QApplication) GlobalStrut() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication11globalStrutEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QApplication_GlobalStrut() {
+func QApplication_GlobalStrut() *qtcore.QSize /*123*/ {
 	var nilthis *QApplication
-	nilthis.GlobalStrut()
+	rv := nilthis.GlobalStrut()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:164
@@ -646,14 +691,16 @@ func QApplication_SetStartDragTime(ms int) {
 // index:0
 // Public static
 // int startDragTime()
-func (this *QApplication) StartDragTime() interface{} {
+func (this *QApplication) StartDragTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication13startDragTimeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv) // 111
 }
-func QApplication_StartDragTime() {
+func QApplication_StartDragTime() int {
 	var nilthis *QApplication
-	nilthis.StartDragTime()
+	rv := nilthis.StartDragTime()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:166
@@ -673,28 +720,32 @@ func QApplication_SetStartDragDistance(l int) {
 // index:0
 // Public static
 // int startDragDistance()
-func (this *QApplication) StartDragDistance() interface{} {
+func (this *QApplication) StartDragDistance() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication17startDragDistanceEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv) // 111
 }
-func QApplication_StartDragDistance() {
+func QApplication_StartDragDistance() int {
 	var nilthis *QApplication
-	nilthis.StartDragDistance()
+	rv := nilthis.StartDragDistance()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:169
 // index:0
 // Public static
 // bool isEffectEnabled(Qt::UIEffect)
-func (this *QApplication) IsEffectEnabled(arg0 int) interface{} {
+func (this *QApplication) IsEffectEnabled(arg0 int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication15isEffectEnabledEN2Qt8UIEffectE", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return rv != 0
 }
-func QApplication_IsEffectEnabled(arg0 int) {
+func QApplication_IsEffectEnabled(arg0 int) bool {
 	var nilthis *QApplication
-	nilthis.IsEffectEnabled(arg0)
+	rv := nilthis.IsEffectEnabled(arg0)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:170
@@ -714,32 +765,39 @@ func QApplication_SetEffectEnabled(arg0 int, enable bool) {
 // index:0
 // Public static
 // int exec()
-func (this *QApplication) Exec() interface{} {
+func (this *QApplication) Exec() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication4execEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv) // 111
 }
-func QApplication_Exec() {
+func QApplication_Exec() int {
 	var nilthis *QApplication
-	nilthis.Exec()
+	rv := nilthis.Exec()
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:180
 // index:0
 // Public virtual
 // bool notify(class QObject *, class QEvent *)
-func (this *QApplication) Notify(arg0 unsafe.Pointer, arg1 unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication6notifyEP7QObjectP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
+func (this *QApplication) Notify(arg0 *qtcore.QObject /*444 QObject **/, arg1 *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = arg0.GetCthis()
+	var convArg1 = arg1.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication6notifyEP7QObjectP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:190
 // index:0
 // Public
 // void focusChanged(class QWidget *, class QWidget *)
-func (this *QApplication) FocusChanged(old unsafe.Pointer, now unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication12focusChangedEP7QWidgetS1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), old, now)
+func (this *QApplication) FocusChanged(old *QWidget /*444 QWidget **/, now *QWidget /*444 QWidget **/) {
+	var convArg0 = old.GetCthis()
+	var convArg1 = now.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication12focusChangedEP7QWidgetS1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -747,10 +805,12 @@ func (this *QApplication) FocusChanged(old unsafe.Pointer, now unsafe.Pointer) {
 // index:0
 // Public
 // QString styleSheet()
-func (this *QApplication) StyleSheet() interface{} {
+func (this *QApplication) StyleSheet() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QApplication10styleSheetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:196
@@ -776,10 +836,11 @@ func (this *QApplication) SetAutoSipEnabled(enabled bool) {
 // index:0
 // Public
 // bool autoSipEnabled()
-func (this *QApplication) AutoSipEnabled() interface{} {
+func (this *QApplication) AutoSipEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QApplication14autoSipEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:200
@@ -812,20 +873,12 @@ func QApplication_AboutQt() {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QApplication) Event(arg0 unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QApplication) Event(arg0 *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qapplication.h:205
-// index:0
-// Protected virtual
-// bool compressEvent(class QEvent *, class QObject *, class QPostEventList *)
-func (this *QApplication) CompressEvent(arg0 unsafe.Pointer, receiver unsafe.Pointer, arg2 unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication13compressEventEP6QEventP7QObjectP14QPostEventList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, receiver, arg2)
-	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

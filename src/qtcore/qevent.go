@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qcoreevent.h
 // #include <qcoreevent.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 17
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QEvent struct {
 }
 
 func (this *QEvent) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQEventFromPointer(cthis unsafe.Pointer) *QEvent {
 	return &QEvent{&qtrt.CObject{cthis}}
@@ -80,20 +84,22 @@ func DeleteQEvent(*QEvent) {
 // index:0
 // Public inline
 // QEvent::Type type()
-func (this *QEvent) Type() interface{} {
+func (this *QEvent) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:302
 // index:0
 // Public inline
 // bool spontaneous()
-func (this *QEvent) Spontaneous() interface{} {
+func (this *QEvent) Spontaneous() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent11spontaneousEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:304
@@ -109,10 +115,11 @@ func (this *QEvent) SetAccepted(accepted bool) {
 // index:0
 // Public inline
 // bool isAccepted()
-func (this *QEvent) IsAccepted() interface{} {
+func (this *QEvent) IsAccepted() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent10isAcceptedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:307
@@ -137,14 +144,16 @@ func (this *QEvent) Ignore() {
 // index:0
 // Public static
 // int registerEventType(int)
-func (this *QEvent) RegisterEventType(hint int) interface{} {
+func (this *QEvent) RegisterEventType(hint int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", ffiqt.FFI_TYPE_POINTER, hint)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv) // 111
 }
-func QEvent_RegisterEventType(hint int) {
+func QEvent_RegisterEventType(hint int) int {
 	var nilthis *QEvent
-	nilthis.RegisterEventType(hint)
+	rv := nilthis.RegisterEventType(hint)
+	return rv
 }
 
 //  body block end

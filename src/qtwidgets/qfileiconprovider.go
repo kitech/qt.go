@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qfileiconprovider.h
 // #include <qfileiconprovider.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 24
+// extern C begin: 23
 */
 // import "C"
 import "unsafe"
@@ -57,7 +57,11 @@ type QFileIconProvider struct {
 }
 
 func (this *QFileIconProvider) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQFileIconProviderFromPointer(cthis unsafe.Pointer) *QFileIconProvider {
 	return &QFileIconProvider{&qtrt.CObject{cthis}}
@@ -88,42 +92,49 @@ func DeleteQFileIconProvider(*QFileIconProvider) {
 // index:0
 // Public virtual
 // QIcon icon(enum QFileIconProvider::IconType)
-func (this *QFileIconProvider) Icon(type_ int) interface{} {
+func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconENS_8IconTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:66
 // index:1
 // Public virtual
 // QIcon icon(const class QFileInfo &)
-func (this *QFileIconProvider) Icon_1(info *qtcore.QFileInfo) interface{} {
+func (this *QFileIconProvider) Icon_1(info *qtcore.QFileInfo) *qtgui.QIcon /*123*/ {
 	var convArg0 = info.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconERK9QFileInfo", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:67
 // index:0
 // Public virtual
 // QString type(const class QFileInfo &)
-func (this *QFileIconProvider) Type(info *qtcore.QFileInfo) interface{} {
+func (this *QFileIconProvider) Type(info *qtcore.QFileInfo) *qtcore.QString /*123*/ {
 	var convArg0 = info.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4typeERK9QFileInfo", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:70
 // index:0
 // Public
 // QFileIconProvider::Options options()
-func (this *QFileIconProvider) Options() interface{} {
+func (this *QFileIconProvider) Options() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider7optionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

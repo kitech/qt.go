@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qvector2d.h
 // #include <qvector2d.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 13
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QVector2D struct {
 }
 
 func (this *QVector2D) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQVector2DFromPointer(cthis unsafe.Pointer) *QVector2D {
 	return &QVector2D{&qtrt.CObject{cthis}}
@@ -151,30 +155,33 @@ func NewQVector2D_6(vector *QVector4D) *QVector2D {
 // index:0
 // Public
 // bool isNull()
-func (this *QVector2D) IsNull() interface{} {
+func (this *QVector2D) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:73
 // index:0
 // Public inline
 // float x()
-func (this *QVector2D) X() interface{} {
+func (this *QVector2D) X() float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float32(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:74
 // index:0
 // Public inline
 // float y()
-func (this *QVector2D) Y() interface{} {
+func (this *QVector2D) Y() float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float32(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:76
@@ -199,30 +206,34 @@ func (this *QVector2D) SetY(y float32) {
 // index:0
 // Public
 // float length()
-func (this *QVector2D) Length() interface{} {
+func (this *QVector2D) Length() float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float32(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:83
 // index:0
 // Public
 // float lengthSquared()
-func (this *QVector2D) LengthSquared() interface{} {
+func (this *QVector2D) LengthSquared() float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D13lengthSquaredEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float32(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:85
 // index:0
 // Public
 // QVector2D normalized()
-func (this *QVector2D) Normalized() interface{} {
+func (this *QVector2D) Normalized() *QVector2D /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D10normalizedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:86
@@ -238,77 +249,89 @@ func (this *QVector2D) Normalize() {
 // index:0
 // Public
 // float distanceToPoint(const class QVector2D &)
-func (this *QVector2D) DistanceToPoint(point *QVector2D) interface{} {
+func (this *QVector2D) DistanceToPoint(point *QVector2D) float32 {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D15distanceToPointERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float32(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:89
 // index:0
 // Public
 // float distanceToLine(const class QVector2D &, const class QVector2D &)
-func (this *QVector2D) DistanceToLine(point *QVector2D, direction *QVector2D) interface{} {
+func (this *QVector2D) DistanceToLine(point *QVector2D, direction *QVector2D) float32 {
 	var convArg0 = point.GetCthis()
 	var convArg1 = direction.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D14distanceToLineERKS_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float32(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:98
 // index:0
 // Public static
 // float dotProduct(const class QVector2D &, const class QVector2D &)
-func (this *QVector2D) DotProduct(v1 *QVector2D, v2 *QVector2D) interface{} {
+func (this *QVector2D) DotProduct(v1 *QVector2D, v2 *QVector2D) float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2D10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, v1, v2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return float32(rv) // 111
 }
-func QVector2D_DotProduct(v1 *QVector2D, v2 *QVector2D) {
+func QVector2D_DotProduct(v1 *QVector2D, v2 *QVector2D) float32 {
 	var nilthis *QVector2D
-	nilthis.DotProduct(v1, v2)
+	rv := nilthis.DotProduct(v1, v2)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:114
 // index:0
 // Public
 // QVector3D toVector3D()
-func (this *QVector2D) ToVector3D() interface{} {
+func (this *QVector2D) ToVector3D() *QVector3D /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D10toVector3DEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:117
 // index:0
 // Public
 // QVector4D toVector4D()
-func (this *QVector2D) ToVector4D() interface{} {
+func (this *QVector2D) ToVector4D() *QVector4D /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D10toVector4DEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:120
 // index:0
 // Public inline
 // QPoint toPoint()
-func (this *QVector2D) ToPoint() interface{} {
+func (this *QVector2D) ToPoint() *qtcore.QPoint /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D7toPointEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:121
 // index:0
 // Public inline
 // QPointF toPointF()
-func (this *QVector2D) ToPointF() interface{} {
+func (this *QVector2D) ToPointF() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D8toPointFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

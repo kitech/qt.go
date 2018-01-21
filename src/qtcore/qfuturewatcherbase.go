@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qfuturewatcher.h
 // #include <qfuturewatcher.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QFutureWatcherBase struct {
 }
 
 func (this *QFutureWatcherBase) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQFutureWatcherBaseFromPointer(cthis unsafe.Pointer) *QFutureWatcherBase {
 	bcthis0 := NewQObjectFromPointer(cthis)
@@ -60,19 +64,22 @@ func NewQFutureWatcherBaseFromPointer(cthis unsafe.Pointer) *QFutureWatcherBase 
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFutureWatcherBase) MetaObject() interface{} {
+func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:61
 // index:0
 // Public
 // void QFutureWatcherBase(class QObject *)
-func NewQFutureWatcherBase(parent unsafe.Pointer) *QFutureWatcherBase {
+func NewQFutureWatcherBase(parent *QObject /*444 QObject **/) *QFutureWatcherBase {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBaseC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBaseC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFutureWatcherBaseFromPointer(cthis)
 	return gothis
@@ -82,90 +89,100 @@ func NewQFutureWatcherBase(parent unsafe.Pointer) *QFutureWatcherBase {
 // index:0
 // Public
 // int progressValue()
-func (this *QFutureWatcherBase) ProgressValue() interface{} {
+func (this *QFutureWatcherBase) ProgressValue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase13progressValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:65
 // index:0
 // Public
 // int progressMinimum()
-func (this *QFutureWatcherBase) ProgressMinimum() interface{} {
+func (this *QFutureWatcherBase) ProgressMinimum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMinimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:66
 // index:0
 // Public
 // int progressMaximum()
-func (this *QFutureWatcherBase) ProgressMaximum() interface{} {
+func (this *QFutureWatcherBase) ProgressMaximum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMaximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:67
 // index:0
 // Public
 // QString progressText()
-func (this *QFutureWatcherBase) ProgressText() interface{} {
+func (this *QFutureWatcherBase) ProgressText() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase12progressTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:69
 // index:0
 // Public
 // bool isStarted()
-func (this *QFutureWatcherBase) IsStarted() interface{} {
+func (this *QFutureWatcherBase) IsStarted() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase9isStartedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:70
 // index:0
 // Public
 // bool isFinished()
-func (this *QFutureWatcherBase) IsFinished() interface{} {
+func (this *QFutureWatcherBase) IsFinished() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10isFinishedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:71
 // index:0
 // Public
 // bool isRunning()
-func (this *QFutureWatcherBase) IsRunning() interface{} {
+func (this *QFutureWatcherBase) IsRunning() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase9isRunningEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:72
 // index:0
 // Public
 // bool isCanceled()
-func (this *QFutureWatcherBase) IsCanceled() interface{} {
+func (this *QFutureWatcherBase) IsCanceled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10isCanceledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:73
 // index:0
 // Public
 // bool isPaused()
-func (this *QFutureWatcherBase) IsPaused() interface{} {
+func (this *QFutureWatcherBase) IsPaused() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase8isPausedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:75
@@ -190,10 +207,12 @@ func (this *QFutureWatcherBase) SetPendingResultsLimit(limit int) {
 // index:0
 // Public virtual
 // bool event(class QEvent *)
-func (this *QFutureWatcherBase) Event(event unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QFutureWatcherBase) Event(event *QEvent /*444 QEvent **/) bool {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:82

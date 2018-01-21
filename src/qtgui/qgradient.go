@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qbrush.h
 // #include <qbrush.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 27
+// extern C begin: 0
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QGradient struct {
 }
 
 func (this *QGradient) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQGradientFromPointer(cthis unsafe.Pointer) *QGradient {
 	return &QGradient{&qtrt.CObject{cthis}}
@@ -75,10 +79,11 @@ func NewQGradient() *QGradient {
 // index:0
 // Public inline
 // QGradient::Type type()
-func (this *QGradient) Type() interface{} {
+func (this *QGradient) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qbrush.h:210
@@ -94,10 +99,11 @@ func (this *QGradient) SetSpread(spread int) {
 // index:0
 // Public inline
 // QGradient::Spread spread()
-func (this *QGradient) Spread() interface{} {
+func (this *QGradient) Spread() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient6spreadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qbrush.h:213
@@ -110,24 +116,15 @@ func (this *QGradient) SetColorAt(pos float64, color *QColor) {
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:216
-// index:0
-// Public
-// QGradientStops stops()
-func (this *QGradient) Stops() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient5stopsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
 // /usr/include/qt/QtGui/qbrush.h:218
 // index:0
 // Public
 // QGradient::CoordinateMode coordinateMode()
-func (this *QGradient) CoordinateMode() interface{} {
+func (this *QGradient) CoordinateMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient14coordinateModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qbrush.h:219
@@ -143,10 +140,11 @@ func (this *QGradient) SetCoordinateMode(mode int) {
 // index:0
 // Public
 // QGradient::InterpolationMode interpolationMode()
-func (this *QGradient) InterpolationMode() interface{} {
+func (this *QGradient) InterpolationMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient17interpolationModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qbrush.h:222

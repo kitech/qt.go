@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicseffect.h
 // #include <qgraphicseffect.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGraphicsBlurEffect struct {
 }
 
 func (this *QGraphicsBlurEffect) GetCthis() unsafe.Pointer {
-	return this.QGraphicsEffect.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGraphicsEffect.GetCthis()
+	}
 }
 func NewQGraphicsBlurEffectFromPointer(cthis unsafe.Pointer) *QGraphicsBlurEffect {
 	bcthis0 := NewQGraphicsEffectFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQGraphicsBlurEffectFromPointer(cthis unsafe.Pointer) *QGraphicsBlurEffec
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGraphicsBlurEffect) MetaObject() interface{} {
+func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:170
 // index:0
 // Public
 // void QGraphicsBlurEffect(class QObject *)
-func NewQGraphicsBlurEffect(parent unsafe.Pointer) *QGraphicsBlurEffect {
+func NewQGraphicsBlurEffect(parent *qtcore.QObject /*444 QObject **/) *QGraphicsBlurEffect {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsBlurEffectFromPointer(cthis)
 	return gothis
@@ -99,31 +106,35 @@ func DeleteQGraphicsBlurEffect(*QGraphicsBlurEffect) {
 // index:0
 // Public virtual
 // QRectF boundingRectFor(const class QRectF &)
-func (this *QGraphicsBlurEffect) BoundingRectFor(rect *qtcore.QRectF) interface{} {
+func (this *QGraphicsBlurEffect) BoundingRectFor(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:174
 // index:0
 // Public
 // qreal blurRadius()
-func (this *QGraphicsBlurEffect) BlurRadius() interface{} {
+func (this *QGraphicsBlurEffect) BlurRadius() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10blurRadiusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:175
 // index:0
 // Public
 // QGraphicsBlurEffect::BlurHints blurHints()
-func (this *QGraphicsBlurEffect) BlurHints() interface{} {
+func (this *QGraphicsBlurEffect) BlurHints() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect9blurHintsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:178
@@ -148,8 +159,9 @@ func (this *QGraphicsBlurEffect) BlurRadiusChanged(blurRadius float64) {
 // index:0
 // Protected virtual
 // void draw(class QPainter *)
-func (this *QGraphicsBlurEffect) Draw(painter unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), painter)
+func (this *QGraphicsBlurEffect) Draw(painter *qtgui.QPainter /*444 QPainter **/) {
+	var convArg0 = painter.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

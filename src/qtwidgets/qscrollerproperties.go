@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qscrollerproperties.h
 // #include <qscrollerproperties.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QScrollerProperties struct {
 }
 
 func (this *QScrollerProperties) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQScrollerPropertiesFromPointer(cthis unsafe.Pointer) *QScrollerProperties {
 	return &QScrollerProperties{&qtrt.CObject{cthis}}
@@ -114,10 +118,12 @@ func QScrollerProperties_UnsetDefaultScrollerProperties() {
 // index:0
 // Public
 // QVariant scrollMetric(enum QScrollerProperties::ScrollMetric)
-func (this *QScrollerProperties) ScrollMetric(metric int) interface{} {
+func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollerProperties12scrollMetricENS_12ScrollMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &metric)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:118

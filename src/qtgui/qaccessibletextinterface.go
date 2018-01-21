@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qaccessible.h
 // #include <qaccessible.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 26
+// extern C begin: 25
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QAccessibleTextInterface struct {
 }
 
 func (this *QAccessibleTextInterface) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQAccessibleTextInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleTextInterface {
 	return &QAccessibleTextInterface{&qtrt.CObject{cthis}}
@@ -72,7 +76,7 @@ func DeleteQAccessibleTextInterface(*QAccessibleTextInterface) {
 // index:0
 // Public pure virtual
 // void selection(int, int *, int *)
-func (this *QAccessibleTextInterface) Selection(selectionIndex int, startOffset unsafe.Pointer, endOffset unsafe.Pointer) {
+func (this *QAccessibleTextInterface) Selection(selectionIndex int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface9selectionEiPiS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &selectionIndex, startOffset, endOffset)
 	gopp.ErrPrint(err, rv)
 }
@@ -81,10 +85,11 @@ func (this *QAccessibleTextInterface) Selection(selectionIndex int, startOffset 
 // index:0
 // Public pure virtual
 // int selectionCount()
-func (this *QAccessibleTextInterface) SelectionCount() interface{} {
+func (this *QAccessibleTextInterface) SelectionCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface14selectionCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:527
@@ -118,10 +123,11 @@ func (this *QAccessibleTextInterface) SetSelection(selectionIndex int, startOffs
 // index:0
 // Public pure virtual
 // int cursorPosition()
-func (this *QAccessibleTextInterface) CursorPosition() interface{} {
+func (this *QAccessibleTextInterface) CursorPosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface14cursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:533
@@ -137,71 +143,83 @@ func (this *QAccessibleTextInterface) SetCursorPosition(position int) {
 // index:0
 // Public pure virtual
 // QString text(int, int)
-func (this *QAccessibleTextInterface) Text(startOffset int, endOffset int) interface{} {
+func (this *QAccessibleTextInterface) Text(startOffset int, endOffset int) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface4textEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &startOffset, &endOffset)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:537
 // index:0
 // Public virtual
 // QString textBeforeOffset(int, class QAccessible::TextBoundaryType, int *, int *)
-func (this *QAccessibleTextInterface) TextBeforeOffset(offset int, boundaryType int, startOffset unsafe.Pointer, endOffset unsafe.Pointer) interface{} {
+func (this *QAccessibleTextInterface) TextBeforeOffset(offset int, boundaryType int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface16textBeforeOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &offset, &boundaryType, startOffset, endOffset)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:539
 // index:0
 // Public virtual
 // QString textAfterOffset(int, class QAccessible::TextBoundaryType, int *, int *)
-func (this *QAccessibleTextInterface) TextAfterOffset(offset int, boundaryType int, startOffset unsafe.Pointer, endOffset unsafe.Pointer) interface{} {
+func (this *QAccessibleTextInterface) TextAfterOffset(offset int, boundaryType int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface15textAfterOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &offset, &boundaryType, startOffset, endOffset)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:541
 // index:0
 // Public virtual
 // QString textAtOffset(int, class QAccessible::TextBoundaryType, int *, int *)
-func (this *QAccessibleTextInterface) TextAtOffset(offset int, boundaryType int, startOffset unsafe.Pointer, endOffset unsafe.Pointer) interface{} {
+func (this *QAccessibleTextInterface) TextAtOffset(offset int, boundaryType int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface12textAtOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &offset, &boundaryType, startOffset, endOffset)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:543
 // index:0
 // Public pure virtual
 // int characterCount()
-func (this *QAccessibleTextInterface) CharacterCount() interface{} {
+func (this *QAccessibleTextInterface) CharacterCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface14characterCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:546
 // index:0
 // Public pure virtual
 // QRect characterRect(int)
-func (this *QAccessibleTextInterface) CharacterRect(offset int) interface{} {
+func (this *QAccessibleTextInterface) CharacterRect(offset int) *qtcore.QRect /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface13characterRectEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &offset)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:547
 // index:0
 // Public pure virtual
 // int offsetAtPoint(const class QPoint &)
-func (this *QAccessibleTextInterface) OffsetAtPoint(point *qtcore.QPoint) interface{} {
+func (this *QAccessibleTextInterface) OffsetAtPoint(point *qtcore.QPoint) int {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface13offsetAtPointERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:549
@@ -217,10 +235,12 @@ func (this *QAccessibleTextInterface) ScrollToSubstring(startIndex int, endIndex
 // index:0
 // Public pure virtual
 // QString attributes(int, int *, int *)
-func (this *QAccessibleTextInterface) Attributes(offset int, startOffset unsafe.Pointer, endOffset unsafe.Pointer) interface{} {
+func (this *QAccessibleTextInterface) Attributes(offset int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface10attributesEiPiS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &offset, startOffset, endOffset)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

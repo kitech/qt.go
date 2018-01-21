@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicstransform.h
 // #include <qgraphicstransform.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGraphicsScale struct {
 }
 
 func (this *QGraphicsScale) GetCthis() unsafe.Pointer {
-	return this.QGraphicsTransform.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QGraphicsTransform.GetCthis()
+	}
 }
 func NewQGraphicsScaleFromPointer(cthis unsafe.Pointer) *QGraphicsScale {
 	bcthis0 := NewQGraphicsTransformFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQGraphicsScaleFromPointer(cthis unsafe.Pointer) *QGraphicsScale {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGraphicsScale) MetaObject() interface{} {
+func (this *QGraphicsScale) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:88
 // index:0
 // Public
 // void QGraphicsScale(class QObject *)
-func NewQGraphicsScale(parent unsafe.Pointer) *QGraphicsScale {
+func NewQGraphicsScale(parent *qtcore.QObject /*444 QObject **/) *QGraphicsScale {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScaleC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScaleC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsScaleFromPointer(cthis)
 	return gothis
@@ -99,10 +106,12 @@ func DeleteQGraphicsScale(*QGraphicsScale) {
 // index:0
 // Public
 // QVector3D origin()
-func (this *QGraphicsScale) Origin() interface{} {
+func (this *QGraphicsScale) Origin() *qtgui.QVector3D /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6originEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:92
@@ -119,10 +128,11 @@ func (this *QGraphicsScale) SetOrigin(point *qtgui.QVector3D) {
 // index:0
 // Public
 // qreal xScale()
-func (this *QGraphicsScale) XScale() interface{} {
+func (this *QGraphicsScale) XScale() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6xScaleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:95
@@ -138,10 +148,11 @@ func (this *QGraphicsScale) SetXScale(arg0 float64) {
 // index:0
 // Public
 // qreal yScale()
-func (this *QGraphicsScale) YScale() interface{} {
+func (this *QGraphicsScale) YScale() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6yScaleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:98
@@ -157,10 +168,11 @@ func (this *QGraphicsScale) SetYScale(arg0 float64) {
 // index:0
 // Public
 // qreal zScale()
-func (this *QGraphicsScale) ZScale() interface{} {
+func (this *QGraphicsScale) ZScale() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6zScaleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:101
@@ -176,8 +188,9 @@ func (this *QGraphicsScale) SetZScale(arg0 float64) {
 // index:0
 // Public virtual
 // void applyTo(class QMatrix4x4 *)
-func (this *QGraphicsScale) ApplyTo(matrix unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), matrix)
+func (this *QGraphicsScale) ApplyTo(matrix *qtgui.QMatrix4x4 /*444 QMatrix4x4 **/) {
+	var convArg0 = matrix.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

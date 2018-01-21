@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qpolygon.h
 // #include <qpolygon.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QPolygonF struct {
 }
 
 func (this *QPolygonF) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQPolygonFFromPointer(cthis unsafe.Pointer) *QPolygonF {
 	return &QPolygonF{&qtrt.CObject{cthis}}
@@ -151,106 +155,123 @@ func (this *QPolygonF) Translate_1(offset *qtcore.QPointF) {
 // index:0
 // Public inline
 // QPolygonF translated(qreal, qreal)
-func (this *QPolygonF) Translated(dx float64, dy float64) interface{} {
+func (this *QPolygonF) Translated(dx float64, dy float64) *QPolygonF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10translatedEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:167
 // index:1
 // Public
 // QPolygonF translated(const class QPointF &)
-func (this *QPolygonF) Translated_1(offset *qtcore.QPointF) interface{} {
+func (this *QPolygonF) Translated_1(offset *qtcore.QPointF) *QPolygonF /*123*/ {
 	var convArg0 = offset.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10translatedERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:169
 // index:0
 // Public
 // QPolygon toPolygon()
-func (this *QPolygonF) ToPolygon() interface{} {
+func (this *QPolygonF) ToPolygon() *QPolygon /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF9toPolygonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:171
 // index:0
 // Public inline
 // bool isClosed()
-func (this *QPolygonF) IsClosed() interface{} {
+func (this *QPolygonF) IsClosed() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF8isClosedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:173
 // index:0
 // Public
 // QRectF boundingRect()
-func (this *QPolygonF) BoundingRect() interface{} {
+func (this *QPolygonF) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:175
 // index:0
 // Public
 // bool containsPoint(const class QPointF &, Qt::FillRule)
-func (this *QPolygonF) ContainsPoint(pt *qtcore.QPointF, fillRule int) interface{} {
+func (this *QPolygonF) ContainsPoint(pt *qtcore.QPointF, fillRule int) bool {
 	var convArg0 = pt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF13containsPointERK7QPointFN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &fillRule)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:177
 // index:0
 // Public
 // QPolygonF united(const class QPolygonF &)
-func (this *QPolygonF) United(r *QPolygonF) interface{} {
+func (this *QPolygonF) United(r *QPolygonF) *QPolygonF /*123*/ {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF6unitedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:178
 // index:0
 // Public
 // QPolygonF intersected(const class QPolygonF &)
-func (this *QPolygonF) Intersected(r *QPolygonF) interface{} {
+func (this *QPolygonF) Intersected(r *QPolygonF) *QPolygonF /*123*/ {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:179
 // index:0
 // Public
 // QPolygonF subtracted(const class QPolygonF &)
-func (this *QPolygonF) Subtracted(r *QPolygonF) interface{} {
+func (this *QPolygonF) Subtracted(r *QPolygonF) *QPolygonF /*123*/ {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:181
 // index:0
 // Public
 // bool intersects(const class QPolygonF &)
-func (this *QPolygonF) Intersects(r *QPolygonF) interface{} {
+func (this *QPolygonF) Intersects(r *QPolygonF) bool {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10intersectsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

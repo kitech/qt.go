@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qaccessible.h
 // #include <qaccessible.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QAccessibleTableModelChangeEvent struct {
 }
 
 func (this *QAccessibleTableModelChangeEvent) GetCthis() unsafe.Pointer {
-	return this.QAccessibleEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QAccessibleEvent.GetCthis()
+	}
 }
 func NewQAccessibleTableModelChangeEventFromPointer(cthis unsafe.Pointer) *QAccessibleTableModelChangeEvent {
 	bcthis0 := NewQAccessibleEventFromPointer(cthis)
@@ -64,9 +68,10 @@ func NewQAccessibleTableModelChangeEventFromPointer(cthis unsafe.Pointer) *QAcce
 // index:0
 // Public inline
 // void QAccessibleTableModelChangeEvent(class QObject *, enum QAccessibleTableModelChangeEvent::ModelChangeType)
-func NewQAccessibleTableModelChangeEvent(obj unsafe.Pointer, changeType int) *QAccessibleTableModelChangeEvent {
+func NewQAccessibleTableModelChangeEvent(obj *qtcore.QObject /*444 QObject **/, changeType int) *QAccessibleTableModelChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP7QObjectNS_15ModelChangeTypeE", ffiqt.FFI_TYPE_VOID, cthis, obj, &changeType)
+	var convArg0 = obj.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP7QObjectNS_15ModelChangeTypeE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &changeType)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTableModelChangeEventFromPointer(cthis)
 	return gothis
@@ -76,9 +81,10 @@ func NewQAccessibleTableModelChangeEvent(obj unsafe.Pointer, changeType int) *QA
 // index:1
 // Public inline
 // void QAccessibleTableModelChangeEvent(class QAccessibleInterface *, enum QAccessibleTableModelChangeEvent::ModelChangeType)
-func NewQAccessibleTableModelChangeEvent_1(iface unsafe.Pointer, changeType int) *QAccessibleTableModelChangeEvent {
+func NewQAccessibleTableModelChangeEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP20QAccessibleInterfaceNS_15ModelChangeTypeE", ffiqt.FFI_TYPE_VOID, cthis, iface, &changeType)
+	var convArg0 = iface.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP20QAccessibleInterfaceNS_15ModelChangeTypeE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &changeType)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTableModelChangeEventFromPointer(cthis)
 	return gothis
@@ -106,10 +112,11 @@ func (this *QAccessibleTableModelChangeEvent) SetModelChangeType(changeType int)
 // index:0
 // Public inline
 // QAccessibleTableModelChangeEvent::ModelChangeType modelChangeType()
-func (this *QAccessibleTableModelChangeEvent) ModelChangeType() interface{} {
+func (this *QAccessibleTableModelChangeEvent) ModelChangeType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK32QAccessibleTableModelChangeEvent15modelChangeTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:952
@@ -152,40 +159,44 @@ func (this *QAccessibleTableModelChangeEvent) SetLastColumn(col int) {
 // index:0
 // Public inline
 // int firstRow()
-func (this *QAccessibleTableModelChangeEvent) FirstRow() interface{} {
+func (this *QAccessibleTableModelChangeEvent) FirstRow() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK32QAccessibleTableModelChangeEvent8firstRowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:957
 // index:0
 // Public inline
 // int firstColumn()
-func (this *QAccessibleTableModelChangeEvent) FirstColumn() interface{} {
+func (this *QAccessibleTableModelChangeEvent) FirstColumn() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK32QAccessibleTableModelChangeEvent11firstColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:958
 // index:0
 // Public inline
 // int lastRow()
-func (this *QAccessibleTableModelChangeEvent) LastRow() interface{} {
+func (this *QAccessibleTableModelChangeEvent) LastRow() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK32QAccessibleTableModelChangeEvent7lastRowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:959
 // index:0
 // Public inline
 // int lastColumn()
-func (this *QAccessibleTableModelChangeEvent) LastColumn() interface{} {
+func (this *QAccessibleTableModelChangeEvent) LastColumn() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK32QAccessibleTableModelChangeEvent10lastColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

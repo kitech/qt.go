@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qtoolbox.h
 // #include <qtoolbox.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QToolBox struct {
 }
 
 func (this *QToolBox) GetCthis() unsafe.Pointer {
-	return this.QFrame.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QFrame.GetCthis()
+	}
 }
 func NewQToolBoxFromPointer(cthis unsafe.Pointer) *QToolBox {
 	bcthis0 := NewQFrameFromPointer(cthis)
@@ -68,10 +72,12 @@ func NewQToolBoxFromPointer(cthis unsafe.Pointer) *QToolBox {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QToolBox) MetaObject() interface{} {
+func (this *QToolBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:61
@@ -87,46 +93,54 @@ func DeleteQToolBox(*QToolBox) {
 // index:0
 // Public
 // int addItem(class QWidget *, const class QString &)
-func (this *QToolBox) AddItem(widget unsafe.Pointer, text *qtcore.QString) interface{} {
+func (this *QToolBox) AddItem(widget *QWidget /*444 QWidget **/, text *qtcore.QString) int {
+	var convArg0 = widget.GetCthis()
 	var convArg1 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox7addItemEP7QWidgetRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox7addItemEP7QWidgetRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:64
 // index:1
 // Public
 // int addItem(class QWidget *, const class QIcon &, const class QString &)
-func (this *QToolBox) AddItem_1(widget unsafe.Pointer, icon *qtgui.QIcon, text *qtcore.QString) interface{} {
+func (this *QToolBox) AddItem_1(widget *QWidget /*444 QWidget **/, icon *qtgui.QIcon, text *qtcore.QString) int {
+	var convArg0 = widget.GetCthis()
 	var convArg1 = icon.GetCthis()
 	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget, convArg1, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:65
 // index:0
 // Public
 // int insertItem(int, class QWidget *, const class QString &)
-func (this *QToolBox) InsertItem(index int, widget unsafe.Pointer, text *qtcore.QString) interface{} {
+func (this *QToolBox) InsertItem(index int, widget *QWidget /*444 QWidget **/, text *qtcore.QString) int {
+	var convArg1 = widget.GetCthis()
 	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox10insertItemEiP7QWidgetRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, widget, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox10insertItemEiP7QWidgetRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:66
 // index:1
 // Public
 // int insertItem(int, class QWidget *, const class QIcon &, const class QString &)
-func (this *QToolBox) InsertItem_1(index int, widget unsafe.Pointer, icon *qtgui.QIcon, text *qtcore.QString) interface{} {
+func (this *QToolBox) InsertItem_1(index int, widget *QWidget /*444 QWidget **/, icon *qtgui.QIcon, text *qtcore.QString) int {
+	var convArg1 = widget.GetCthis()
 	var convArg2 = icon.GetCthis()
 	var convArg3 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, widget, convArg2, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:68
@@ -151,10 +165,11 @@ func (this *QToolBox) SetItemEnabled(index int, enabled bool) {
 // index:0
 // Public
 // bool isItemEnabled(int)
-func (this *QToolBox) IsItemEnabled(index int) interface{} {
+func (this *QToolBox) IsItemEnabled(index int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox13isItemEnabledEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:73
@@ -171,10 +186,12 @@ func (this *QToolBox) SetItemText(index int, text *qtcore.QString) {
 // index:0
 // Public
 // QString itemText(int)
-func (this *QToolBox) ItemText(index int) interface{} {
+func (this *QToolBox) ItemText(index int) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox8itemTextEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:76
@@ -191,10 +208,12 @@ func (this *QToolBox) SetItemIcon(index int, icon *qtgui.QIcon) {
 // index:0
 // Public
 // QIcon itemIcon(int)
-func (this *QToolBox) ItemIcon(index int) interface{} {
+func (this *QToolBox) ItemIcon(index int) *qtgui.QIcon /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox8itemIconEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:80
@@ -211,60 +230,70 @@ func (this *QToolBox) SetItemToolTip(index int, toolTip *qtcore.QString) {
 // index:0
 // Public
 // QString itemToolTip(int)
-func (this *QToolBox) ItemToolTip(index int) interface{} {
+func (this *QToolBox) ItemToolTip(index int) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox11itemToolTipEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:84
 // index:0
 // Public
 // int currentIndex()
-func (this *QToolBox) CurrentIndex() interface{} {
+func (this *QToolBox) CurrentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:85
 // index:0
 // Public
 // QWidget * currentWidget()
-func (this *QToolBox) CurrentWidget() interface{} {
+func (this *QToolBox) CurrentWidget() *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox13currentWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:86
 // index:0
 // Public
 // QWidget * widget(int)
-func (this *QToolBox) Widget(index int) interface{} {
+func (this *QToolBox) Widget(index int) *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox6widgetEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:87
 // index:0
 // Public
 // int indexOf(class QWidget *)
-func (this *QToolBox) IndexOf(widget unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget)
+func (this *QToolBox) IndexOf(widget *QWidget /*444 QWidget **/) int {
+	var convArg0 = widget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:88
 // index:0
 // Public
 // int count()
-func (this *QToolBox) Count() interface{} {
+func (this *QToolBox) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:91
@@ -280,8 +309,9 @@ func (this *QToolBox) SetCurrentIndex(index int) {
 // index:0
 // Public
 // void setCurrentWidget(class QWidget *)
-func (this *QToolBox) SetCurrentWidget(widget unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox16setCurrentWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget)
+func (this *QToolBox) SetCurrentWidget(widget *QWidget /*444 QWidget **/) {
+	var convArg0 = widget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox16setCurrentWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -298,10 +328,12 @@ func (this *QToolBox) CurrentChanged(index int) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QToolBox) Event(e unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QToolBox) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:99
@@ -326,8 +358,9 @@ func (this *QToolBox) ItemRemoved(index int) {
 // index:0
 // Protected virtual
 // void showEvent(class QShowEvent *)
-func (this *QToolBox) ShowEvent(e unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QToolBox) ShowEvent(e *qtgui.QShowEvent /*444 QShowEvent **/) {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -335,8 +368,9 @@ func (this *QToolBox) ShowEvent(e unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QToolBox) ChangeEvent(arg0 unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QToolBox) ChangeEvent(arg0 *qtcore.QEvent /*444 QEvent **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

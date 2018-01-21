@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qcoreevent.h
 // #include <qcoreevent.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QDynamicPropertyChangeEvent struct {
 }
 
 func (this *QDynamicPropertyChangeEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQDynamicPropertyChangeEventFromPointer(cthis unsafe.Pointer) *QDynamicPropertyChangeEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
@@ -82,10 +86,12 @@ func DeleteQDynamicPropertyChangeEvent(*QDynamicPropertyChangeEvent) {
 // index:0
 // Public inline
 // QByteArray propertyName()
-func (this *QDynamicPropertyChangeEvent) PropertyName() interface{} {
+func (this *QDynamicPropertyChangeEvent) PropertyName() *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

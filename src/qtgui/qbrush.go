@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qbrush.h
 // #include <qbrush.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 51
+// extern C begin: 49
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QBrush struct {
 }
 
 func (this *QBrush) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQBrushFromPointer(cthis unsafe.Pointer) *QBrush {
 	return &QBrush{&qtrt.CObject{cthis}}
@@ -197,10 +201,11 @@ func (this *QBrush) Swap(other *QBrush) {
 // index:0
 // Public inline
 // Qt::BrushStyle style()
-func (this *QBrush) Style() interface{} {
+func (this *QBrush) Style() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush5styleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qbrush.h:92
@@ -216,10 +221,12 @@ func (this *QBrush) SetStyle(arg0 int) {
 // index:0
 // Public inline
 // const QMatrix & matrix()
-func (this *QBrush) Matrix() interface{} {
+func (this *QBrush) Matrix() *QMatrix {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush6matrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qbrush.h:95
@@ -236,10 +243,12 @@ func (this *QBrush) SetMatrix(mat *QMatrix) {
 // index:0
 // Public inline
 // QTransform transform()
-func (this *QBrush) Transform() interface{} {
+func (this *QBrush) Transform() *QTransform /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush9transformEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qbrush.h:98
@@ -256,10 +265,12 @@ func (this *QBrush) SetTransform(arg0 *QTransform) {
 // index:0
 // Public
 // QPixmap texture()
-func (this *QBrush) Texture() interface{} {
+func (this *QBrush) Texture() *QPixmap /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush7textureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qbrush.h:101
@@ -276,10 +287,12 @@ func (this *QBrush) SetTexture(pixmap *QPixmap) {
 // index:0
 // Public
 // QImage textureImage()
-func (this *QBrush) TextureImage() interface{} {
+func (this *QBrush) TextureImage() *QImage /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush12textureImageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qbrush.h:104
@@ -296,10 +309,12 @@ func (this *QBrush) SetTextureImage(image *QImage) {
 // index:0
 // Public inline
 // const QColor & color()
-func (this *QBrush) Color() interface{} {
+func (this *QBrush) Color() *QColor {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush5colorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qbrush.h:107
@@ -325,30 +340,34 @@ func (this *QBrush) SetColor_1(color int) {
 // index:0
 // Public
 // const QGradient * gradient()
-func (this *QBrush) Gradient() interface{} {
+func (this *QBrush) Gradient() *QGradient /*444 const QGradient **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush8gradientEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQGradientFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qbrush.h:112
 // index:0
 // Public
 // bool isOpaque()
-func (this *QBrush) IsOpaque() interface{} {
+func (this *QBrush) IsOpaque() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush8isOpaqueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qbrush.h:129
 // index:0
 // Public inline
 // bool isDetached()
-func (this *QBrush) IsDetached() interface{} {
+func (this *QBrush) IsDetached() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush10isDetachedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QHelpEvent struct {
 }
 
 func (this *QHelpEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQHelpEventFromPointer(cthis unsafe.Pointer) *QHelpEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -87,60 +91,68 @@ func DeleteQHelpEvent(*QHelpEvent) {
 // index:0
 // Public inline
 // int x()
-func (this *QHelpEvent) X() interface{} {
+func (this *QHelpEvent) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:684
 // index:0
 // Public inline
 // int y()
-func (this *QHelpEvent) Y() interface{} {
+func (this *QHelpEvent) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:685
 // index:0
 // Public inline
 // int globalX()
-func (this *QHelpEvent) GlobalX() interface{} {
+func (this *QHelpEvent) GlobalX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:686
 // index:0
 // Public inline
 // int globalY()
-func (this *QHelpEvent) GlobalY() interface{} {
+func (this *QHelpEvent) GlobalY() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qevent.h:688
 // index:0
 // Public inline
 // const QPoint & pos()
-func (this *QHelpEvent) Pos() interface{} {
+func (this *QHelpEvent) Pos() *qtcore.QPoint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:689
 // index:0
 // Public inline
 // const QPoint & globalPos()
-func (this *QHelpEvent) GlobalPos() interface{} {
+func (this *QHelpEvent) GlobalPos() *qtcore.QPoint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 //  body block end

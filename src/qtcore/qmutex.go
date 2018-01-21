@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qmutex.h
 // #include <qmutex.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QMutex struct {
 }
 
 func (this *QMutex) GetCthis() unsafe.Pointer {
-	return this.QBasicMutex.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QBasicMutex.GetCthis()
+	}
 }
 func NewQMutexFromPointer(cthis unsafe.Pointer) *QMutex {
 	bcthis0 := NewQBasicMutexFromPointer(cthis)
@@ -90,10 +94,11 @@ func (this *QMutex) Lock() {
 // index:0
 // Public
 // bool tryLock(int)
-func (this *QMutex) TryLock(timeout int) interface{} {
+func (this *QMutex) TryLock(timeout int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex7tryLockEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timeout)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmutex.h:137
@@ -109,20 +114,22 @@ func (this *QMutex) Unlock() {
 // index:0
 // Public inline
 // bool try_lock()
-func (this *QMutex) Try_lock() interface{} {
+func (this *QMutex) Try_lock() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex8try_lockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmutex.h:161
 // index:0
 // Public inline
 // bool isRecursive()
-func (this *QMutex) IsRecursive() interface{} {
+func (this *QMutex) IsRecursive() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QMutex11isRecursiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

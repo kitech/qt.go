@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtouchdevice.h
 // #include <qtouchdevice.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QTouchDevice struct {
 }
 
 func (this *QTouchDevice) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQTouchDeviceFromPointer(cthis unsafe.Pointer) *QTouchDevice {
 	return &QTouchDevice{&qtrt.CObject{cthis}}
@@ -80,58 +84,49 @@ func DeleteQTouchDevice(*QTouchDevice) {
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtouchdevice.h:76
-// index:0
-// Public static
-// QList<const QTouchDevice *> devices()
-func (this *QTouchDevice) Devices() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7devicesEv", ffiqt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-func QTouchDevice_Devices() {
-	var nilthis *QTouchDevice
-	nilthis.Devices()
-}
-
 // /usr/include/qt/QtGui/qtouchdevice.h:78
 // index:0
 // Public
 // QString name()
-func (this *QTouchDevice) Name() interface{} {
+func (this *QTouchDevice) Name() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:79
 // index:0
 // Public
 // QTouchDevice::DeviceType type()
-func (this *QTouchDevice) Type() interface{} {
+func (this *QTouchDevice) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:80
 // index:0
 // Public
 // QTouchDevice::Capabilities capabilities()
-func (this *QTouchDevice) Capabilities() interface{} {
+func (this *QTouchDevice) Capabilities() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice12capabilitiesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:81
 // index:0
 // Public
 // int maximumTouchPoints()
-func (this *QTouchDevice) MaximumTouchPoints() interface{} {
+func (this *QTouchDevice) MaximumTouchPoints() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice18maximumTouchPointsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:83

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtextformat.h
 // #include <qtextformat.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QTextImageFormat struct {
 }
 
 func (this *QTextImageFormat) GetCthis() unsafe.Pointer {
-	return this.QTextCharFormat.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QTextCharFormat.GetCthis()
+	}
 }
 func NewQTextImageFormatFromPointer(cthis unsafe.Pointer) *QTextImageFormat {
 	bcthis0 := NewQTextCharFormatFromPointer(cthis)
@@ -89,10 +93,11 @@ func NewQTextImageFormat_1(format *QTextFormat) *QTextImageFormat {
 // index:0
 // Public inline
 // bool isValid()
-func (this *QTextImageFormat) IsValid() interface{} {
+func (this *QTextImageFormat) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:739
@@ -109,10 +114,12 @@ func (this *QTextImageFormat) SetName(name *qtcore.QString) {
 // index:0
 // Public inline
 // QString name()
-func (this *QTextImageFormat) Name() interface{} {
+func (this *QTextImageFormat) Name() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:743
@@ -128,10 +135,11 @@ func (this *QTextImageFormat) SetWidth(width float64) {
 // index:0
 // Public inline
 // qreal width()
-func (this *QTextImageFormat) Width() interface{} {
+func (this *QTextImageFormat) Width() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:747
@@ -147,10 +155,11 @@ func (this *QTextImageFormat) SetHeight(height float64) {
 // index:0
 // Public inline
 // qreal height()
-func (this *QTextImageFormat) Height() interface{} {
+func (this *QTextImageFormat) Height() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 //  body block end

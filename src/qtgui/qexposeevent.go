@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QExposeEvent struct {
 }
 
 func (this *QExposeEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQExposeEventFromPointer(cthis unsafe.Pointer) *QExposeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -86,10 +90,12 @@ func DeleteQExposeEvent(*QExposeEvent) {
 // index:0
 // Public inline
 // const QRegion & region()
-func (this *QExposeEvent) Region() interface{} {
+func (this *QExposeEvent) Region() *QRegion {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QExposeEvent6regionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	return rv2
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicstransform.h
 // #include <qgraphicstransform.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGraphicsTransform struct {
 }
 
 func (this *QGraphicsTransform) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQGraphicsTransformFromPointer(cthis unsafe.Pointer) *QGraphicsTransform {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQGraphicsTransformFromPointer(cthis unsafe.Pointer) *QGraphicsTransform 
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGraphicsTransform) MetaObject() interface{} {
+func (this *QGraphicsTransform) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsTransform10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:60
 // index:0
 // Public
 // void QGraphicsTransform(class QObject *)
-func NewQGraphicsTransform(parent unsafe.Pointer) *QGraphicsTransform {
+func NewQGraphicsTransform(parent *qtcore.QObject /*444 QObject **/) *QGraphicsTransform {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransformC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransformC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsTransformFromPointer(cthis)
 	return gothis
@@ -99,8 +106,9 @@ func DeleteQGraphicsTransform(*QGraphicsTransform) {
 // index:0
 // Public pure virtual
 // void applyTo(class QMatrix4x4 *)
-func (this *QGraphicsTransform) ApplyTo(matrix unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsTransform7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), matrix)
+func (this *QGraphicsTransform) ApplyTo(matrix *qtgui.QMatrix4x4 /*444 QMatrix4x4 **/) {
+	var convArg0 = matrix.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsTransform7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qxmlstream.h
 // #include <qxmlstream.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QXmlStreamStringRef struct {
 }
 
 func (this *QXmlStreamStringRef) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQXmlStreamStringRefFromPointer(cthis unsafe.Pointer) *QXmlStreamStringRef {
 	return &QXmlStreamStringRef{&qtrt.CObject{cthis}}
@@ -97,7 +101,7 @@ func NewQXmlStreamStringRef_2(aString *QString) *QXmlStreamStringRef {
 // index:3
 // Public inline
 // void QXmlStreamStringRef(class QString &&)
-func NewQXmlStreamStringRef_3(aString unsafe.Pointer) *QXmlStreamStringRef {
+func NewQXmlStreamStringRef_3(aString unsafe.Pointer /*333*/) *QXmlStreamStringRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2EO7QString", ffiqt.FFI_TYPE_VOID, cthis, aString)
 	gopp.ErrPrint(err, rv)
@@ -137,30 +141,34 @@ func (this *QXmlStreamStringRef) Clear() {
 // index:0
 // Public inline
 // const QString * string()
-func (this *QXmlStreamStringRef) String() interface{} {
+func (this *QXmlStreamStringRef) String() *QString /*444 const QString **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef6stringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:92
 // index:0
 // Public inline
 // int position()
-func (this *QXmlStreamStringRef) Position() interface{} {
+func (this *QXmlStreamStringRef) Position() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:93
 // index:0
 // Public inline
 // int size()
-func (this *QXmlStreamStringRef) Size() interface{} {
+func (this *QXmlStreamStringRef) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

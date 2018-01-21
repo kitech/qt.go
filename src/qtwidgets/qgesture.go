@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgesture.h
 // #include <qgesture.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGesture struct {
 }
 
 func (this *QGesture) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQGestureFromPointer(cthis unsafe.Pointer) *QGesture {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQGestureFromPointer(cthis unsafe.Pointer) *QGesture {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGesture) MetaObject() interface{} {
+func (this *QGesture) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:73
 // index:0
 // Public
 // void QGesture(class QObject *)
-func NewQGesture(parent unsafe.Pointer) *QGesture {
+func NewQGesture(parent *qtcore.QObject /*444 QObject **/) *QGesture {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGestureFromPointer(cthis)
 	return gothis
@@ -99,30 +106,34 @@ func DeleteQGesture(*QGesture) {
 // index:0
 // Public
 // Qt::GestureType gestureType()
-func (this *QGesture) GestureType() interface{} {
+func (this *QGesture) GestureType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture11gestureTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:78
 // index:0
 // Public
 // Qt::GestureState state()
-func (this *QGesture) State() interface{} {
+func (this *QGesture) State() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture5stateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:80
 // index:0
 // Public
 // QPointF hotSpot()
-func (this *QGesture) HotSpot() interface{} {
+func (this *QGesture) HotSpot() *qtcore.QPointF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture7hotSpotEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:81
@@ -139,10 +150,11 @@ func (this *QGesture) SetHotSpot(value *qtcore.QPointF) {
 // index:0
 // Public
 // bool hasHotSpot()
-func (this *QGesture) HasHotSpot() interface{} {
+func (this *QGesture) HasHotSpot() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture10hasHotSpotEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:83
@@ -167,10 +179,11 @@ func (this *QGesture) SetGestureCancelPolicy(policy int) {
 // index:0
 // Public
 // QGesture::GestureCancelPolicy gestureCancelPolicy()
-func (this *QGesture) GestureCancelPolicy() interface{} {
+func (this *QGesture) GestureCancelPolicy() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture19gestureCancelPolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 //  body block end

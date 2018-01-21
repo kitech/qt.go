@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qtexttable.h
 // #include <qtexttable.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QTextTableCell struct {
 }
 
 func (this *QTextTableCell) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQTextTableCellFromPointer(cthis unsafe.Pointer) *QTextTableCell {
 	return &QTextTableCell{&qtrt.CObject{cthis}}
@@ -94,130 +98,146 @@ func (this *QTextTableCell) SetFormat(format *QTextCharFormat) {
 // index:0
 // Public
 // QTextCharFormat format()
-func (this *QTextTableCell) Format() interface{} {
+func (this *QTextTableCell) Format() *QTextCharFormat /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:66
 // index:0
 // Public
 // int row()
-func (this *QTextTableCell) Row() interface{} {
+func (this *QTextTableCell) Row() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell3rowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:67
 // index:0
 // Public
 // int column()
-func (this *QTextTableCell) Column() interface{} {
+func (this *QTextTableCell) Column() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell6columnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:69
 // index:0
 // Public
 // int rowSpan()
-func (this *QTextTableCell) RowSpan() interface{} {
+func (this *QTextTableCell) RowSpan() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell7rowSpanEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:70
 // index:0
 // Public
 // int columnSpan()
-func (this *QTextTableCell) ColumnSpan() interface{} {
+func (this *QTextTableCell) ColumnSpan() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell10columnSpanEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:72
 // index:0
 // Public inline
 // bool isValid()
-func (this *QTextTableCell) IsValid() interface{} {
+func (this *QTextTableCell) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:74
 // index:0
 // Public
 // QTextCursor firstCursorPosition()
-func (this *QTextTableCell) FirstCursorPosition() interface{} {
+func (this *QTextTableCell) FirstCursorPosition() *QTextCursor /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell19firstCursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:75
 // index:0
 // Public
 // QTextCursor lastCursorPosition()
-func (this *QTextTableCell) LastCursorPosition() interface{} {
+func (this *QTextTableCell) LastCursorPosition() *QTextCursor /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell18lastCursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:76
 // index:0
 // Public
 // int firstPosition()
-func (this *QTextTableCell) FirstPosition() interface{} {
+func (this *QTextTableCell) FirstPosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell13firstPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:77
 // index:0
 // Public
 // int lastPosition()
-func (this *QTextTableCell) LastPosition() interface{} {
+func (this *QTextTableCell) LastPosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell12lastPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:84
 // index:0
 // Public
 // QTextFrame::iterator begin()
-func (this *QTextTableCell) Begin() interface{} {
+func (this *QTextTableCell) Begin() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:85
 // index:0
 // Public
 // QTextFrame::iterator end()
-func (this *QTextTableCell) End() interface{} {
+func (this *QTextTableCell) End() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:87
 // index:0
 // Public
 // int tableCellFormatIndex()
-func (this *QTextTableCell) TableCellFormatIndex() interface{} {
+func (this *QTextTableCell) TableCellFormatIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell20tableCellFormatIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 //  body block end

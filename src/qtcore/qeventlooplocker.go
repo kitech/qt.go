@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qeventloop.h
 // #include <qeventloop.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QEventLoopLocker struct {
 }
 
 func (this *QEventLoopLocker) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQEventLoopLockerFromPointer(cthis unsafe.Pointer) *QEventLoopLocker {
 	return &QEventLoopLocker{&qtrt.CObject{cthis}}
@@ -71,9 +75,10 @@ func NewQEventLoopLocker() *QEventLoopLocker {
 // index:1
 // Public
 // void QEventLoopLocker(class QEventLoop *)
-func NewQEventLoopLocker_1(loop unsafe.Pointer) *QEventLoopLocker {
+func NewQEventLoopLocker_1(loop *QEventLoop /*444 QEventLoop **/) *QEventLoopLocker {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", ffiqt.FFI_TYPE_VOID, cthis, loop)
+	var convArg0 = loop.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(cthis)
 	return gothis
@@ -83,9 +88,10 @@ func NewQEventLoopLocker_1(loop unsafe.Pointer) *QEventLoopLocker {
 // index:2
 // Public
 // void QEventLoopLocker(class QThread *)
-func NewQEventLoopLocker_2(thread unsafe.Pointer) *QEventLoopLocker {
+func NewQEventLoopLocker_2(thread *QThread /*444 QThread **/) *QEventLoopLocker {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", ffiqt.FFI_TYPE_VOID, cthis, thread)
+	var convArg0 = thread.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(cthis)
 	return gothis

@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qlogging.h
 // #include <qlogging.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QMessageLogContext struct {
 }
 
 func (this *QMessageLogContext) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQMessageLogContextFromPointer(cthis unsafe.Pointer) *QMessageLogContext {
 	return &QMessageLogContext{&qtrt.CObject{cthis}}

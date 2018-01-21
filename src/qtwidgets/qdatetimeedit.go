@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qdatetimeedit.h
 // #include <qdatetimeedit.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QDateTimeEdit struct {
 }
 
 func (this *QDateTimeEdit) GetCthis() unsafe.Pointer {
-	return this.QAbstractSpinBox.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QAbstractSpinBox.GetCthis()
+	}
 }
 func NewQDateTimeEditFromPointer(cthis unsafe.Pointer) *QDateTimeEdit {
 	bcthis0 := NewQAbstractSpinBoxFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQDateTimeEditFromPointer(cthis unsafe.Pointer) *QDateTimeEdit {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDateTimeEdit) MetaObject() interface{} {
+func (this *QDateTimeEdit) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:95
 // index:0
 // Public
 // void QDateTimeEdit(class QWidget *)
-func NewQDateTimeEdit(parent unsafe.Pointer) *QDateTimeEdit {
+func NewQDateTimeEdit(parent *QWidget /*444 QWidget **/) *QDateTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDateTimeEditFromPointer(cthis)
 	return gothis
@@ -90,10 +97,11 @@ func NewQDateTimeEdit(parent unsafe.Pointer) *QDateTimeEdit {
 // index:1
 // Public
 // void QDateTimeEdit(const class QDateTime &, class QWidget *)
-func NewQDateTimeEdit_1(dt *qtcore.QDateTime, parent unsafe.Pointer) *QDateTimeEdit {
+func NewQDateTimeEdit_1(dt *qtcore.QDateTime, parent *QWidget /*444 QWidget **/) *QDateTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = dt.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDateTimeEditFromPointer(cthis)
 	return gothis
@@ -103,10 +111,11 @@ func NewQDateTimeEdit_1(dt *qtcore.QDateTime, parent unsafe.Pointer) *QDateTimeE
 // index:2
 // Public
 // void QDateTimeEdit(const class QDate &, class QWidget *)
-func NewQDateTimeEdit_2(d *qtcore.QDate, parent unsafe.Pointer) *QDateTimeEdit {
+func NewQDateTimeEdit_2(d *qtcore.QDate, parent *QWidget /*444 QWidget **/) *QDateTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = d.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK5QDateP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK5QDateP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDateTimeEditFromPointer(cthis)
 	return gothis
@@ -116,10 +125,11 @@ func NewQDateTimeEdit_2(d *qtcore.QDate, parent unsafe.Pointer) *QDateTimeEdit {
 // index:3
 // Public
 // void QDateTimeEdit(const class QTime &, class QWidget *)
-func NewQDateTimeEdit_3(t *qtcore.QTime, parent unsafe.Pointer) *QDateTimeEdit {
+func NewQDateTimeEdit_3(t *qtcore.QTime, parent *QWidget /*444 QWidget **/) *QDateTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = t.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK5QTimeP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK5QTimeP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDateTimeEditFromPointer(cthis)
 	return gothis
@@ -129,10 +139,11 @@ func NewQDateTimeEdit_3(t *qtcore.QTime, parent unsafe.Pointer) *QDateTimeEdit {
 // index:4
 // Protected
 // void QDateTimeEdit(const class QVariant &, class QVariant::Type, class QWidget *)
-func NewQDateTimeEdit_4(val *qtcore.QVariant, parserType int, parent unsafe.Pointer) *QDateTimeEdit {
+func NewQDateTimeEdit_4(val *qtcore.QVariant, parserType int, parent *QWidget /*444 QWidget **/) *QDateTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = val.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK8QVariantNS0_4TypeEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &parserType, parent)
+	var convArg2 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK8QVariantNS0_4TypeEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &parserType, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDateTimeEditFromPointer(cthis)
 	return gothis
@@ -151,40 +162,48 @@ func DeleteQDateTimeEdit(*QDateTimeEdit) {
 // index:0
 // Public
 // QDateTime dateTime()
-func (this *QDateTimeEdit) DateTime() interface{} {
+func (this *QDateTimeEdit) DateTime() *qtcore.QDateTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8dateTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:102
 // index:0
 // Public
 // QDate date()
-func (this *QDateTimeEdit) Date() interface{} {
+func (this *QDateTimeEdit) Date() *qtcore.QDate /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit4dateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:103
 // index:0
 // Public
 // QTime time()
-func (this *QDateTimeEdit) Time() interface{} {
+func (this *QDateTimeEdit) Time() *qtcore.QTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit4timeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:105
 // index:0
 // Public
 // QDateTime minimumDateTime()
-func (this *QDateTimeEdit) MinimumDateTime() interface{} {
+func (this *QDateTimeEdit) MinimumDateTime() *qtcore.QDateTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit15minimumDateTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:106
@@ -210,10 +229,12 @@ func (this *QDateTimeEdit) SetMinimumDateTime(dt *qtcore.QDateTime) {
 // index:0
 // Public
 // QDateTime maximumDateTime()
-func (this *QDateTimeEdit) MaximumDateTime() interface{} {
+func (this *QDateTimeEdit) MaximumDateTime() *qtcore.QDateTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit15maximumDateTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:110
@@ -250,10 +271,12 @@ func (this *QDateTimeEdit) SetDateTimeRange(min *qtcore.QDateTime, max *qtcore.Q
 // index:0
 // Public
 // QDate minimumDate()
-func (this *QDateTimeEdit) MinimumDate() interface{} {
+func (this *QDateTimeEdit) MinimumDate() *qtcore.QDate /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11minimumDateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:116
@@ -279,10 +302,12 @@ func (this *QDateTimeEdit) ClearMinimumDate() {
 // index:0
 // Public
 // QDate maximumDate()
-func (this *QDateTimeEdit) MaximumDate() interface{} {
+func (this *QDateTimeEdit) MaximumDate() *qtcore.QDate /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11maximumDateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:120
@@ -319,10 +344,12 @@ func (this *QDateTimeEdit) SetDateRange(min *qtcore.QDate, max *qtcore.QDate) {
 // index:0
 // Public
 // QTime minimumTime()
-func (this *QDateTimeEdit) MinimumTime() interface{} {
+func (this *QDateTimeEdit) MinimumTime() *qtcore.QTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11minimumTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:126
@@ -348,10 +375,12 @@ func (this *QDateTimeEdit) ClearMinimumTime() {
 // index:0
 // Public
 // QTime maximumTime()
-func (this *QDateTimeEdit) MaximumTime() interface{} {
+func (this *QDateTimeEdit) MaximumTime() *qtcore.QTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11maximumTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:130
@@ -388,30 +417,33 @@ func (this *QDateTimeEdit) SetTimeRange(min *qtcore.QTime, max *qtcore.QTime) {
 // index:0
 // Public
 // QDateTimeEdit::Sections displayedSections()
-func (this *QDateTimeEdit) DisplayedSections() interface{} {
+func (this *QDateTimeEdit) DisplayedSections() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit17displayedSectionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:136
 // index:0
 // Public
 // QDateTimeEdit::Section currentSection()
-func (this *QDateTimeEdit) CurrentSection() interface{} {
+func (this *QDateTimeEdit) CurrentSection() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit14currentSectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:137
 // index:0
 // Public
 // QDateTimeEdit::Section sectionAt(int)
-func (this *QDateTimeEdit) SectionAt(index int) interface{} {
+func (this *QDateTimeEdit) SectionAt(index int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit9sectionAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:138
@@ -427,10 +459,11 @@ func (this *QDateTimeEdit) SetCurrentSection(section int) {
 // index:0
 // Public
 // int currentSectionIndex()
-func (this *QDateTimeEdit) CurrentSectionIndex() interface{} {
+func (this *QDateTimeEdit) CurrentSectionIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit19currentSectionIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:141
@@ -446,18 +479,21 @@ func (this *QDateTimeEdit) SetCurrentSectionIndex(index int) {
 // index:0
 // Public
 // QCalendarWidget * calendarWidget()
-func (this *QDateTimeEdit) CalendarWidget() interface{} {
+func (this *QDateTimeEdit) CalendarWidget() *QCalendarWidget /*444 QCalendarWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit14calendarWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQCalendarWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:144
 // index:0
 // Public
 // void setCalendarWidget(class QCalendarWidget *)
-func (this *QDateTimeEdit) SetCalendarWidget(calendarWidget unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), calendarWidget)
+func (this *QDateTimeEdit) SetCalendarWidget(calendarWidget *QCalendarWidget /*444 QCalendarWidget **/) {
+	var convArg0 = calendarWidget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -465,10 +501,11 @@ func (this *QDateTimeEdit) SetCalendarWidget(calendarWidget unsafe.Pointer) {
 // index:0
 // Public
 // int sectionCount()
-func (this *QDateTimeEdit) SectionCount() interface{} {
+func (this *QDateTimeEdit) SectionCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit12sectionCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:148
@@ -484,20 +521,24 @@ func (this *QDateTimeEdit) SetSelectedSection(section int) {
 // index:0
 // Public
 // QString sectionText(enum QDateTimeEdit::Section)
-func (this *QDateTimeEdit) SectionText(section int) interface{} {
+func (this *QDateTimeEdit) SectionText(section int) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11sectionTextENS_7SectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &section)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:152
 // index:0
 // Public
 // QString displayFormat()
-func (this *QDateTimeEdit) DisplayFormat() interface{} {
+func (this *QDateTimeEdit) DisplayFormat() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit13displayFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:153
@@ -514,10 +555,11 @@ func (this *QDateTimeEdit) SetDisplayFormat(format *qtcore.QString) {
 // index:0
 // Public
 // bool calendarPopup()
-func (this *QDateTimeEdit) CalendarPopup() interface{} {
+func (this *QDateTimeEdit) CalendarPopup() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit13calendarPopupEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:156
@@ -533,10 +575,11 @@ func (this *QDateTimeEdit) SetCalendarPopup(enable bool) {
 // index:0
 // Public
 // Qt::TimeSpec timeSpec()
-func (this *QDateTimeEdit) TimeSpec() interface{} {
+func (this *QDateTimeEdit) TimeSpec() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8timeSpecEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:159
@@ -552,10 +595,12 @@ func (this *QDateTimeEdit) SetTimeSpec(spec int) {
 // index:0
 // Public virtual
 // QSize sizeHint()
-func (this *QDateTimeEdit) SizeHint() interface{} {
+func (this *QDateTimeEdit) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:163
@@ -580,10 +625,12 @@ func (this *QDateTimeEdit) StepBy(steps int) {
 // index:0
 // Public virtual
 // bool event(class QEvent *)
-func (this *QDateTimeEdit) Event(event unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QDateTimeEdit) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:168
@@ -650,8 +697,9 @@ func (this *QDateTimeEdit) SetTime(time *qtcore.QTime) {
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QDateTimeEdit) KeyPressEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QDateTimeEdit) KeyPressEvent(event *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -659,8 +707,9 @@ func (this *QDateTimeEdit) KeyPressEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void wheelEvent(class QWheelEvent *)
-func (this *QDateTimeEdit) WheelEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QDateTimeEdit) WheelEvent(event *qtgui.QWheelEvent /*444 QWheelEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -668,8 +717,9 @@ func (this *QDateTimeEdit) WheelEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void focusInEvent(class QFocusEvent *)
-func (this *QDateTimeEdit) FocusInEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QDateTimeEdit) FocusInEvent(event *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -677,21 +727,23 @@ func (this *QDateTimeEdit) FocusInEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // bool focusNextPrevChild(_Bool)
-func (this *QDateTimeEdit) FocusNextPrevChild(next bool) interface{} {
+func (this *QDateTimeEdit) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &next)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:184
 // index:0
 // Protected virtual
 // QValidator::State validate(class QString &, int &)
-func (this *QDateTimeEdit) Validate(input *qtcore.QString, pos int) interface{} {
+func (this *QDateTimeEdit) Validate(input *qtcore.QString, pos int) int {
 	var convArg0 = input.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:185
@@ -708,40 +760,46 @@ func (this *QDateTimeEdit) Fixup(input *qtcore.QString) {
 // index:0
 // Protected virtual
 // QDateTime dateTimeFromText(const class QString &)
-func (this *QDateTimeEdit) DateTimeFromText(text *qtcore.QString) interface{} {
+func (this *QDateTimeEdit) DateTimeFromText(text *qtcore.QString) *qtcore.QDateTime /*123*/ {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit16dateTimeFromTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:188
 // index:0
 // Protected virtual
 // QString textFromDateTime(const class QDateTime &)
-func (this *QDateTimeEdit) TextFromDateTime(dt *qtcore.QDateTime) interface{} {
+func (this *QDateTimeEdit) TextFromDateTime(dt *qtcore.QDateTime) *qtcore.QString /*123*/ {
 	var convArg0 = dt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit16textFromDateTimeERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:189
 // index:0
 // Protected virtual
 // QAbstractSpinBox::StepEnabled stepEnabled()
-func (this *QDateTimeEdit) StepEnabled() interface{} {
+func (this *QDateTimeEdit) StepEnabled() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11stepEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:190
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QDateTimeEdit) MousePressEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QDateTimeEdit) MousePressEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -749,8 +807,9 @@ func (this *QDateTimeEdit) MousePressEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QDateTimeEdit) PaintEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QDateTimeEdit) PaintEvent(event *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -758,8 +817,9 @@ func (this *QDateTimeEdit) PaintEvent(event unsafe.Pointer) {
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionSpinBox *)
-func (this *QDateTimeEdit) InitStyleOption(option unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit15initStyleOptionEP19QStyleOptionSpinBox", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
+func (this *QDateTimeEdit) InitStyleOption(option *QStyleOptionSpinBox /*444 QStyleOptionSpinBox **/) {
+	var convArg0 = option.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit15initStyleOptionEP19QStyleOptionSpinBox", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

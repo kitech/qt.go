@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qsharedmemory.h
 // #include <qsharedmemory.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 43
+// extern C begin: 40
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QSharedMemory struct {
 }
 
 func (this *QSharedMemory) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQSharedMemoryFromPointer(cthis unsafe.Pointer) *QSharedMemory {
 	bcthis0 := NewQObjectFromPointer(cthis)
@@ -60,19 +64,22 @@ func NewQSharedMemoryFromPointer(cthis unsafe.Pointer) *QSharedMemory {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSharedMemory) MetaObject() interface{} {
+func (this *QSharedMemory) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:77
 // index:0
 // Public
 // void QSharedMemory(class QObject *)
-func NewQSharedMemory(parent unsafe.Pointer) *QSharedMemory {
+func NewQSharedMemory(parent *QObject /*444 QObject **/) *QSharedMemory {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemoryC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemoryC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSharedMemoryFromPointer(cthis)
 	return gothis
@@ -82,10 +89,11 @@ func NewQSharedMemory(parent unsafe.Pointer) *QSharedMemory {
 // index:1
 // Public
 // void QSharedMemory(const class QString &, class QObject *)
-func NewQSharedMemory_1(key *QString, parent unsafe.Pointer) *QSharedMemory {
+func NewQSharedMemory_1(key *QString, parent *QObject /*444 QObject **/) *QSharedMemory {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = key.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemoryC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemoryC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSharedMemoryFromPointer(cthis)
 	return gothis
@@ -114,10 +122,12 @@ func (this *QSharedMemory) SetKey(key *QString) {
 // index:0
 // Public
 // QString key()
-func (this *QSharedMemory) Key() interface{} {
+func (this *QSharedMemory) Key() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:83
@@ -134,130 +144,145 @@ func (this *QSharedMemory) SetNativeKey(key *QString) {
 // index:0
 // Public
 // QString nativeKey()
-func (this *QSharedMemory) NativeKey() interface{} {
+func (this *QSharedMemory) NativeKey() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory9nativeKeyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:86
 // index:0
 // Public
 // bool create(int, enum QSharedMemory::AccessMode)
-func (this *QSharedMemory) Create(size int, mode int) interface{} {
+func (this *QSharedMemory) Create(size int, mode int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6createEiNS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &size, &mode)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:87
 // index:0
 // Public
 // int size()
-func (this *QSharedMemory) Size() interface{} {
+func (this *QSharedMemory) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:89
 // index:0
 // Public
 // bool attach(enum QSharedMemory::AccessMode)
-func (this *QSharedMemory) Attach(mode int) interface{} {
+func (this *QSharedMemory) Attach(mode int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6attachENS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:90
 // index:0
 // Public
 // bool isAttached()
-func (this *QSharedMemory) IsAttached() interface{} {
+func (this *QSharedMemory) IsAttached() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory10isAttachedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:91
 // index:0
 // Public
 // bool detach()
-func (this *QSharedMemory) Detach() interface{} {
+func (this *QSharedMemory) Detach() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6detachEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:93
 // index:0
 // Public
 // void * data()
-func (this *QSharedMemory) Data() interface{} {
+func (this *QSharedMemory) Data() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:95
 // index:1
 // Public
 // const void * data()
-func (this *QSharedMemory) Data_1() interface{} {
+func (this *QSharedMemory) Data_1() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:94
 // index:0
 // Public
 // const void * constData()
-func (this *QSharedMemory) ConstData() interface{} {
+func (this *QSharedMemory) ConstData() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory9constDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:98
 // index:0
 // Public
 // bool lock()
-func (this *QSharedMemory) Lock() interface{} {
+func (this *QSharedMemory) Lock() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory4lockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:99
 // index:0
 // Public
 // bool unlock()
-func (this *QSharedMemory) Unlock() interface{} {
+func (this *QSharedMemory) Unlock() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6unlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:102
 // index:0
 // Public
 // QSharedMemory::SharedMemoryError error()
-func (this *QSharedMemory) Error() interface{} {
+func (this *QSharedMemory) Error() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory5errorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:103
 // index:0
 // Public
 // QString errorString()
-func (this *QSharedMemory) ErrorString() interface{} {
+func (this *QSharedMemory) ErrorString() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

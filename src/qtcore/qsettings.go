@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qsettings.h
 // #include <qsettings.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QSettings struct {
 }
 
 func (this *QSettings) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQSettingsFromPointer(cthis unsafe.Pointer) *QSettings {
 	bcthis0 := NewQObjectFromPointer(cthis)
@@ -60,21 +64,24 @@ func NewQSettingsFromPointer(cthis unsafe.Pointer) *QSettings {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSettings) MetaObject() interface{} {
+func (this *QSettings) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsettings.h:127
 // index:0
 // Public
 // void QSettings(const class QString &, const class QString &, class QObject *)
-func NewQSettings(organization *QString, application *QString, parent unsafe.Pointer) *QSettings {
+func NewQSettings(organization *QString, application *QString, parent *QObject /*444 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = organization.GetCthis()
 	var convArg1 = application.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsC2ERK7QStringS2_P7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, parent)
+	var convArg2 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsC2ERK7QStringS2_P7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSettingsFromPointer(cthis)
 	return gothis
@@ -84,11 +91,12 @@ func NewQSettings(organization *QString, application *QString, parent unsafe.Poi
 // index:1
 // Public
 // void QSettings(enum QSettings::Scope, const class QString &, const class QString &, class QObject *)
-func NewQSettings_1(scope int, organization *QString, application *QString, parent unsafe.Pointer) *QSettings {
+func NewQSettings_1(scope int, organization *QString, application *QString, parent *QObject /*444 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = organization.GetCthis()
 	var convArg2 = application.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsC2ENS_5ScopeERK7QStringS3_P7QObject", ffiqt.FFI_TYPE_VOID, cthis, &scope, convArg1, convArg2, parent)
+	var convArg3 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsC2ENS_5ScopeERK7QStringS3_P7QObject", ffiqt.FFI_TYPE_VOID, cthis, &scope, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSettingsFromPointer(cthis)
 	return gothis
@@ -98,11 +106,12 @@ func NewQSettings_1(scope int, organization *QString, application *QString, pare
 // index:2
 // Public
 // void QSettings(enum QSettings::Format, enum QSettings::Scope, const class QString &, const class QString &, class QObject *)
-func NewQSettings_2(format int, scope int, organization *QString, application *QString, parent unsafe.Pointer) *QSettings {
+func NewQSettings_2(format int, scope int, organization *QString, application *QString, parent *QObject /*444 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg2 = organization.GetCthis()
 	var convArg3 = application.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsC2ENS_6FormatENS_5ScopeERK7QStringS4_P7QObject", ffiqt.FFI_TYPE_VOID, cthis, &format, &scope, convArg2, convArg3, parent)
+	var convArg4 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsC2ENS_6FormatENS_5ScopeERK7QStringS4_P7QObject", ffiqt.FFI_TYPE_VOID, cthis, &format, &scope, convArg2, convArg3, convArg4)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSettingsFromPointer(cthis)
 	return gothis
@@ -112,10 +121,11 @@ func NewQSettings_2(format int, scope int, organization *QString, application *Q
 // index:3
 // Public
 // void QSettings(const class QString &, enum QSettings::Format, class QObject *)
-func NewQSettings_3(fileName *QString, format int, parent unsafe.Pointer) *QSettings {
+func NewQSettings_3(fileName *QString, format int, parent *QObject /*444 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsC2ERK7QStringNS_6FormatEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &format, parent)
+	var convArg2 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsC2ERK7QStringNS_6FormatEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &format, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSettingsFromPointer(cthis)
 	return gothis
@@ -125,9 +135,10 @@ func NewQSettings_3(fileName *QString, format int, parent unsafe.Pointer) *QSett
 // index:4
 // Public
 // void QSettings(class QObject *)
-func NewQSettings_4(parent unsafe.Pointer) *QSettings {
+func NewQSettings_4(parent *QObject /*444 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSettingsFromPointer(cthis)
 	return gothis
@@ -164,20 +175,22 @@ func (this *QSettings) Sync() {
 // index:0
 // Public
 // QSettings::Status status()
-func (this *QSettings) Status() interface{} {
+func (this *QSettings) Status() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings6statusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qsettings.h:149
 // index:0
 // Public
 // bool isAtomicSyncRequired()
-func (this *QSettings) IsAtomicSyncRequired() interface{} {
+func (this *QSettings) IsAtomicSyncRequired() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings20isAtomicSyncRequiredEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsettings.h:150
@@ -212,21 +225,24 @@ func (this *QSettings) EndGroup() {
 // index:0
 // Public
 // QString group()
-func (this *QSettings) Group() interface{} {
+func (this *QSettings) Group() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings5groupEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsettings.h:156
 // index:0
 // Public
 // int beginReadArray(const class QString &)
-func (this *QSettings) BeginReadArray(prefix *QString) interface{} {
+func (this *QSettings) BeginReadArray(prefix *QString) int {
 	var convArg0 = prefix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings14beginReadArrayERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qsettings.h:157
@@ -257,44 +273,15 @@ func (this *QSettings) SetArrayIndex(i int) {
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:161
-// index:0
-// Public
-// QStringList allKeys()
-func (this *QSettings) AllKeys() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings7allKeysEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qsettings.h:162
-// index:0
-// Public
-// QStringList childKeys()
-func (this *QSettings) ChildKeys() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings9childKeysEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qsettings.h:163
-// index:0
-// Public
-// QStringList childGroups()
-func (this *QSettings) ChildGroups() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings11childGroupsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
 // /usr/include/qt/QtCore/qsettings.h:164
 // index:0
 // Public
 // bool isWritable()
-func (this *QSettings) IsWritable() interface{} {
+func (this *QSettings) IsWritable() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings10isWritableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsettings.h:166
@@ -312,12 +299,14 @@ func (this *QSettings) SetValue(key *QString, value *QVariant) {
 // index:0
 // Public
 // QVariant value(const class QString &, const class QVariant &)
-func (this *QSettings) Value(key *QString, defaultValue *QVariant) interface{} {
+func (this *QSettings) Value(key *QString, defaultValue *QVariant) *QVariant /*123*/ {
 	var convArg0 = key.GetCthis()
 	var convArg1 = defaultValue.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings5valueERK7QStringRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsettings.h:169
@@ -334,11 +323,12 @@ func (this *QSettings) Remove(key *QString) {
 // index:0
 // Public
 // bool contains(const class QString &)
-func (this *QSettings) Contains(key *QString) interface{} {
+func (this *QSettings) Contains(key *QString) bool {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings8containsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsettings.h:172
@@ -354,68 +344,78 @@ func (this *QSettings) SetFallbacksEnabled(b bool) {
 // index:0
 // Public
 // bool fallbacksEnabled()
-func (this *QSettings) FallbacksEnabled() interface{} {
+func (this *QSettings) FallbacksEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings16fallbacksEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qsettings.h:175
 // index:0
 // Public
 // QString fileName()
-func (this *QSettings) FileName() interface{} {
+func (this *QSettings) FileName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings8fileNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsettings.h:176
 // index:0
 // Public
 // QSettings::Format format()
-func (this *QSettings) Format() interface{} {
+func (this *QSettings) Format() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qsettings.h:177
 // index:0
 // Public
 // QSettings::Scope scope()
-func (this *QSettings) Scope() interface{} {
+func (this *QSettings) Scope() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings5scopeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qsettings.h:178
 // index:0
 // Public
 // QString organizationName()
-func (this *QSettings) OrganizationName() interface{} {
+func (this *QSettings) OrganizationName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings16organizationNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsettings.h:179
 // index:0
 // Public
 // QString applicationName()
-func (this *QSettings) ApplicationName() interface{} {
+func (this *QSettings) ApplicationName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings15applicationNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsettings.h:182
 // index:0
 // Public
 // void setIniCodec(class QTextCodec *)
-func (this *QSettings) SetIniCodec(codec unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings11setIniCodecEP10QTextCodec", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), codec)
+func (this *QSettings) SetIniCodec(codec *QTextCodec /*444 QTextCodec **/) {
+	var convArg0 = codec.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings11setIniCodecEP10QTextCodec", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -434,10 +434,12 @@ func (this *QSettings) SetIniCodec_1(codecName string) {
 // index:0
 // Public
 // QTextCodec * iniCodec()
-func (this *QSettings) IniCodec() interface{} {
+func (this *QSettings) IniCodec() *QTextCodec /*444 QTextCodec **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings8iniCodecEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsettings.h:187
@@ -457,14 +459,16 @@ func QSettings_SetDefaultFormat(format int) {
 // index:0
 // Public static
 // QSettings::Format defaultFormat()
-func (this *QSettings) DefaultFormat() interface{} {
+func (this *QSettings) DefaultFormat() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings13defaultFormatEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	return int(rv)
 }
-func QSettings_DefaultFormat() {
+func QSettings_DefaultFormat() int {
 	var nilthis *QSettings
-	nilthis.DefaultFormat()
+	rv := nilthis.DefaultFormat()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qsettings.h:189
@@ -510,10 +514,12 @@ func QSettings_SetPath(format int, scope int, path *QString) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QSettings) Event(event unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QSettings) Event(event *QEvent /*444 QEvent **/) bool {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

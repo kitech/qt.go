@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QPointingDeviceUniqueId struct {
 }
 
 func (this *QPointingDeviceUniqueId) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQPointingDeviceUniqueIdFromPointer(cthis unsafe.Pointer) *QPointingDeviceUniqueId {
 	return &QPointingDeviceUniqueId{&qtrt.CObject{cthis}}
@@ -75,34 +79,39 @@ func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
 // index:0
 // Public static
 // QPointingDeviceUniqueId fromNumericId(qint64)
-func (this *QPointingDeviceUniqueId) FromNumericId(id int64) interface{} {
+func (this *QPointingDeviceUniqueId) FromNumericId(id int64) *QPointingDeviceUniqueId /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueId13fromNumericIdEx", ffiqt.FFI_TYPE_POINTER, id)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQPointingDeviceUniqueIdFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QPointingDeviceUniqueId_FromNumericId(id int64) {
+func QPointingDeviceUniqueId_FromNumericId(id int64) *QPointingDeviceUniqueId /*123*/ {
 	var nilthis *QPointingDeviceUniqueId
-	nilthis.FromNumericId(id)
+	rv := nilthis.FromNumericId(id)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qevent.h:815
 // index:0
 // Public inline
 // bool isValid()
-func (this *QPointingDeviceUniqueId) IsValid() interface{} {
+func (this *QPointingDeviceUniqueId) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qevent.h:816
 // index:0
 // Public
 // qint64 numericId()
-func (this *QPointingDeviceUniqueId) NumericId() interface{} {
+func (this *QPointingDeviceUniqueId) NumericId() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId9numericIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int64(rv) // 222
 }
 
 //  body block end

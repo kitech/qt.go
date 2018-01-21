@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qobjectdefs.h
 // #include <qobjectdefs.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QGenericArgument struct {
 }
 
 func (this *QGenericArgument) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQGenericArgumentFromPointer(cthis unsafe.Pointer) *QGenericArgument {
 	return &QGenericArgument{&qtrt.CObject{cthis}}
@@ -59,7 +63,7 @@ func NewQGenericArgumentFromPointer(cthis unsafe.Pointer) *QGenericArgument {
 // index:0
 // Public inline
 // void QGenericArgument(const char *, const void *)
-func NewQGenericArgument(aName string, aData unsafe.Pointer) *QGenericArgument {
+func NewQGenericArgument(aName string, aData unsafe.Pointer /*666*/) *QGenericArgument {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = qtrt.CString(aName)
 	defer qtrt.FreeMem(convArg0)
@@ -73,20 +77,22 @@ func NewQGenericArgument(aName string, aData unsafe.Pointer) *QGenericArgument {
 // index:0
 // Public inline
 // void * data()
-func (this *QGenericArgument) Data() interface{} {
+func (this *QGenericArgument) Data() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QGenericArgument4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtCore/qobjectdefs.h:300
 // index:0
 // Public inline
 // const char * name()
-func (this *QGenericArgument) Name() interface{} {
+func (this *QGenericArgument) Name() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QGenericArgument4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return qtrt.GoStringI(rv)
 }
 
 //  body block end

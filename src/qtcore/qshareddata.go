@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qshareddata.h
 // #include <qshareddata.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QSharedData struct {
 }
 
 func (this *QSharedData) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQSharedDataFromPointer(cthis unsafe.Pointer) *QSharedData {
 	return &QSharedData{&qtrt.CObject{cthis}}

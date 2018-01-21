@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qpen.h
 // #include <qpen.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QPen struct {
 }
 
 func (this *QPen) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQPenFromPointer(cthis unsafe.Pointer) *QPen {
 	return &QPen{&qtrt.CObject{cthis}}
@@ -132,10 +136,11 @@ func (this *QPen) Swap(other *QPen) {
 // index:0
 // Public
 // Qt::PenStyle style()
-func (this *QPen) Style() interface{} {
+func (this *QPen) Style() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen5styleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpen.h:82
@@ -147,24 +152,15 @@ func (this *QPen) SetStyle(arg0 int) {
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpen.h:84
-// index:0
-// Public
-// QVector<qreal> dashPattern()
-func (this *QPen) DashPattern() interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen11dashPatternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
-	return rv
-}
-
 // /usr/include/qt/QtGui/qpen.h:87
 // index:0
 // Public
 // qreal dashOffset()
-func (this *QPen) DashOffset() interface{} {
+func (this *QPen) DashOffset() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen10dashOffsetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpen.h:88
@@ -180,10 +176,11 @@ func (this *QPen) SetDashOffset(doffset float64) {
 // index:0
 // Public
 // qreal miterLimit()
-func (this *QPen) MiterLimit() interface{} {
+func (this *QPen) MiterLimit() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen10miterLimitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpen.h:91
@@ -199,10 +196,11 @@ func (this *QPen) SetMiterLimit(limit float64) {
 // index:0
 // Public
 // qreal widthF()
-func (this *QPen) WidthF() interface{} {
+func (this *QPen) WidthF() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen6widthFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qpen.h:94
@@ -218,10 +216,11 @@ func (this *QPen) SetWidthF(width float64) {
 // index:0
 // Public
 // int width()
-func (this *QPen) Width() interface{} {
+func (this *QPen) Width() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qpen.h:97
@@ -237,10 +236,12 @@ func (this *QPen) SetWidth(width int) {
 // index:0
 // Public
 // QColor color()
-func (this *QPen) Color() interface{} {
+func (this *QPen) Color() *QColor /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen5colorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpen.h:100
@@ -257,10 +258,12 @@ func (this *QPen) SetColor(color *QColor) {
 // index:0
 // Public
 // QBrush brush()
-func (this *QPen) Brush() interface{} {
+func (this *QPen) Brush() *QBrush /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen5brushEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpen.h:103
@@ -277,20 +280,22 @@ func (this *QPen) SetBrush(brush *QBrush) {
 // index:0
 // Public
 // bool isSolid()
-func (this *QPen) IsSolid() interface{} {
+func (this *QPen) IsSolid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen7isSolidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpen.h:107
 // index:0
 // Public
 // Qt::PenCapStyle capStyle()
-func (this *QPen) CapStyle() interface{} {
+func (this *QPen) CapStyle() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen8capStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpen.h:108
@@ -306,10 +311,11 @@ func (this *QPen) SetCapStyle(pcs int) {
 // index:0
 // Public
 // Qt::PenJoinStyle joinStyle()
-func (this *QPen) JoinStyle() interface{} {
+func (this *QPen) JoinStyle() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen9joinStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpen.h:111
@@ -325,10 +331,11 @@ func (this *QPen) SetJoinStyle(pcs int) {
 // index:0
 // Public
 // bool isCosmetic()
-func (this *QPen) IsCosmetic() interface{} {
+func (this *QPen) IsCosmetic() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen10isCosmeticEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpen.h:114
@@ -344,10 +351,11 @@ func (this *QPen) SetCosmetic(cosmetic bool) {
 // index:0
 // Public
 // bool isDetached()
-func (this *QPen) IsDetached() interface{} {
+func (this *QPen) IsDetached() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen10isDetachedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

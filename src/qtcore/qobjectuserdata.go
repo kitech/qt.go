@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qobject.h
 // #include <qobject.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 49
+// extern C begin: 47
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QObjectUserData struct {
 }
 
 func (this *QObjectUserData) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQObjectUserDataFromPointer(cthis unsafe.Pointer) *QObjectUserData {
 	return &QObjectUserData{&qtrt.CObject{cthis}}

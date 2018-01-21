@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qevent.h
 // #include <qevent.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QActionEvent struct {
 }
 
 func (this *QActionEvent) GetCthis() unsafe.Pointer {
-	return this.QEvent.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QEvent.GetCthis()
+	}
 }
 func NewQActionEventFromPointer(cthis unsafe.Pointer) *QActionEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
@@ -64,7 +68,7 @@ func NewQActionEventFromPointer(cthis unsafe.Pointer) *QActionEvent {
 // index:0
 // Public
 // void QActionEvent(int, class QAction *, class QAction *)
-func NewQActionEvent(type_ int, action unsafe.Pointer, before unsafe.Pointer) *QActionEvent {
+func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Pointer /*666*/) *QActionEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", ffiqt.FFI_TYPE_VOID, cthis, &type_, action, before)
 	gopp.ErrPrint(err, rv)
@@ -85,20 +89,22 @@ func DeleteQActionEvent(*QActionEvent) {
 // index:0
 // Public inline
 // QAction * action()
-func (this *QActionEvent) Action() interface{} {
+func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6actionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtGui/qevent.h:731
 // index:0
 // Public inline
 // QAction * before()
-func (this *QActionEvent) Before() interface{} {
+func (this *QActionEvent) Before() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6beforeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 //  body block end

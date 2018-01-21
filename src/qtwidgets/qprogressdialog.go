@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qprogressdialog.h
 // #include <qprogressdialog.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QProgressDialog struct {
 }
 
 func (this *QProgressDialog) GetCthis() unsafe.Pointer {
-	return this.QDialog.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QDialog.GetCthis()
+	}
 }
 func NewQProgressDialogFromPointer(cthis unsafe.Pointer) *QProgressDialog {
 	bcthis0 := NewQDialogFromPointer(cthis)
@@ -68,10 +72,12 @@ func NewQProgressDialogFromPointer(cthis unsafe.Pointer) *QProgressDialog {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QProgressDialog) MetaObject() interface{} {
+func (this *QProgressDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:75
@@ -87,8 +93,9 @@ func DeleteQProgressDialog(*QProgressDialog) {
 // index:0
 // Public
 // void setLabel(class QLabel *)
-func (this *QProgressDialog) SetLabel(label unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog8setLabelEP6QLabel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), label)
+func (this *QProgressDialog) SetLabel(label *QLabel /*444 QLabel **/) {
+	var convArg0 = label.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog8setLabelEP6QLabel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -96,8 +103,9 @@ func (this *QProgressDialog) SetLabel(label unsafe.Pointer) {
 // index:0
 // Public
 // void setCancelButton(class QPushButton *)
-func (this *QProgressDialog) SetCancelButton(button unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog15setCancelButtonEP11QPushButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), button)
+func (this *QProgressDialog) SetCancelButton(button *QPushButton /*444 QPushButton **/) {
+	var convArg0 = button.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog15setCancelButtonEP11QPushButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -105,8 +113,9 @@ func (this *QProgressDialog) SetCancelButton(button unsafe.Pointer) {
 // index:0
 // Public
 // void setBar(class QProgressBar *)
-func (this *QProgressDialog) SetBar(bar unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog6setBarEP12QProgressBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), bar)
+func (this *QProgressDialog) SetBar(bar *QProgressBar /*444 QProgressBar **/) {
+	var convArg0 = bar.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog6setBarEP12QProgressBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -114,70 +123,79 @@ func (this *QProgressDialog) SetBar(bar unsafe.Pointer) {
 // index:0
 // Public
 // bool wasCanceled()
-func (this *QProgressDialog) WasCanceled() interface{} {
+func (this *QProgressDialog) WasCanceled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog11wasCanceledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:83
 // index:0
 // Public
 // int minimum()
-func (this *QProgressDialog) Minimum() interface{} {
+func (this *QProgressDialog) Minimum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog7minimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:84
 // index:0
 // Public
 // int maximum()
-func (this *QProgressDialog) Maximum() interface{} {
+func (this *QProgressDialog) Maximum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog7maximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:86
 // index:0
 // Public
 // int value()
-func (this *QProgressDialog) Value() interface{} {
+func (this *QProgressDialog) Value() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:88
 // index:0
 // Public virtual
 // QSize sizeHint()
-func (this *QProgressDialog) SizeHint() interface{} {
+func (this *QProgressDialog) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:90
 // index:0
 // Public
 // QString labelText()
-func (this *QProgressDialog) LabelText() interface{} {
+func (this *QProgressDialog) LabelText() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog9labelTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:91
 // index:0
 // Public
 // int minimumDuration()
-func (this *QProgressDialog) MinimumDuration() interface{} {
+func (this *QProgressDialog) MinimumDuration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog15minimumDurationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:93
@@ -193,10 +211,11 @@ func (this *QProgressDialog) SetAutoReset(reset bool) {
 // index:0
 // Public
 // bool autoReset()
-func (this *QProgressDialog) AutoReset() interface{} {
+func (this *QProgressDialog) AutoReset() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog9autoResetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:95
@@ -212,20 +231,22 @@ func (this *QProgressDialog) SetAutoClose(close bool) {
 // index:0
 // Public
 // bool autoClose()
-func (this *QProgressDialog) AutoClose() interface{} {
+func (this *QProgressDialog) AutoClose() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog9autoCloseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:99
 // index:0
 // Public
 // void open(class QObject *, const char *)
-func (this *QProgressDialog) Open(receiver unsafe.Pointer, member string) {
+func (this *QProgressDialog) Open(receiver *qtcore.QObject /*444 QObject **/, member string) {
+	var convArg0 = receiver.GetCthis()
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog4openEP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), receiver, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog4openEP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -325,8 +346,9 @@ func (this *QProgressDialog) Canceled() {
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QProgressDialog) ResizeEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QProgressDialog) ResizeEvent(event *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -334,8 +356,9 @@ func (this *QProgressDialog) ResizeEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void closeEvent(class QCloseEvent *)
-func (this *QProgressDialog) CloseEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog10closeEventEP11QCloseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QProgressDialog) CloseEvent(event *qtgui.QCloseEvent /*444 QCloseEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog10closeEventEP11QCloseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -343,8 +366,9 @@ func (this *QProgressDialog) CloseEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QProgressDialog) ChangeEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QProgressDialog) ChangeEvent(event *qtcore.QEvent /*444 QEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -352,8 +376,9 @@ func (this *QProgressDialog) ChangeEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void showEvent(class QShowEvent *)
-func (this *QProgressDialog) ShowEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QProgressDialog) ShowEvent(event *qtgui.QShowEvent /*444 QShowEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h
 // #include <qgraphicslayoutitem.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QGraphicsLayoutItem struct {
 }
 
 func (this *QGraphicsLayoutItem) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQGraphicsLayoutItemFromPointer(cthis unsafe.Pointer) *QGraphicsLayoutItem {
 	return &QGraphicsLayoutItem{&qtrt.CObject{cthis}}
@@ -67,9 +71,10 @@ func NewQGraphicsLayoutItemFromPointer(cthis unsafe.Pointer) *QGraphicsLayoutIte
 // index:0
 // Public
 // void QGraphicsLayoutItem(class QGraphicsLayoutItem *, _Bool)
-func NewQGraphicsLayoutItem(parent unsafe.Pointer, isLayout bool) *QGraphicsLayoutItem {
+func NewQGraphicsLayoutItem(parent *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, isLayout bool) *QGraphicsLayoutItem {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItemC1EPS_b", ffiqt.FFI_TYPE_VOID, cthis, parent, &isLayout)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItemC1EPS_b", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &isLayout)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsLayoutItemFromPointer(cthis)
 	return gothis
@@ -107,10 +112,12 @@ func (this *QGraphicsLayoutItem) SetSizePolicy_1(hPolicy int, vPolicy int, contr
 // index:0
 // Public
 // QSizePolicy sizePolicy()
-func (this *QGraphicsLayoutItem) SizePolicy() interface{} {
+func (this *QGraphicsLayoutItem) SizePolicy() *QSizePolicy /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem10sizePolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQSizePolicyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:64
@@ -136,10 +143,12 @@ func (this *QGraphicsLayoutItem) SetMinimumSize_1(w float64, h float64) {
 // index:0
 // Public
 // QSizeF minimumSize()
-func (this *QGraphicsLayoutItem) MinimumSize() interface{} {
+func (this *QGraphicsLayoutItem) MinimumSize() *qtcore.QSizeF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:67
@@ -155,10 +164,11 @@ func (this *QGraphicsLayoutItem) SetMinimumWidth(width float64) {
 // index:0
 // Public inline
 // qreal minimumWidth()
-func (this *QGraphicsLayoutItem) MinimumWidth() interface{} {
+func (this *QGraphicsLayoutItem) MinimumWidth() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem12minimumWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:69
@@ -174,10 +184,11 @@ func (this *QGraphicsLayoutItem) SetMinimumHeight(height float64) {
 // index:0
 // Public inline
 // qreal minimumHeight()
-func (this *QGraphicsLayoutItem) MinimumHeight() interface{} {
+func (this *QGraphicsLayoutItem) MinimumHeight() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem13minimumHeightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:72
@@ -203,10 +214,12 @@ func (this *QGraphicsLayoutItem) SetPreferredSize_1(w float64, h float64) {
 // index:0
 // Public
 // QSizeF preferredSize()
-func (this *QGraphicsLayoutItem) PreferredSize() interface{} {
+func (this *QGraphicsLayoutItem) PreferredSize() *qtcore.QSizeF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem13preferredSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:75
@@ -222,10 +235,11 @@ func (this *QGraphicsLayoutItem) SetPreferredWidth(width float64) {
 // index:0
 // Public inline
 // qreal preferredWidth()
-func (this *QGraphicsLayoutItem) PreferredWidth() interface{} {
+func (this *QGraphicsLayoutItem) PreferredWidth() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem14preferredWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:77
@@ -241,10 +255,11 @@ func (this *QGraphicsLayoutItem) SetPreferredHeight(height float64) {
 // index:0
 // Public inline
 // qreal preferredHeight()
-func (this *QGraphicsLayoutItem) PreferredHeight() interface{} {
+func (this *QGraphicsLayoutItem) PreferredHeight() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem15preferredHeightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:80
@@ -270,10 +285,12 @@ func (this *QGraphicsLayoutItem) SetMaximumSize_1(w float64, h float64) {
 // index:0
 // Public
 // QSizeF maximumSize()
-func (this *QGraphicsLayoutItem) MaximumSize() interface{} {
+func (this *QGraphicsLayoutItem) MaximumSize() *qtcore.QSizeF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:83
@@ -289,10 +306,11 @@ func (this *QGraphicsLayoutItem) SetMaximumWidth(width float64) {
 // index:0
 // Public inline
 // qreal maximumWidth()
-func (this *QGraphicsLayoutItem) MaximumWidth() interface{} {
+func (this *QGraphicsLayoutItem) MaximumWidth() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem12maximumWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:85
@@ -308,10 +326,11 @@ func (this *QGraphicsLayoutItem) SetMaximumHeight(height float64) {
 // index:0
 // Public inline
 // qreal maximumHeight()
-func (this *QGraphicsLayoutItem) MaximumHeight() interface{} {
+func (this *QGraphicsLayoutItem) MaximumHeight() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem13maximumHeightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:88
@@ -328,17 +347,19 @@ func (this *QGraphicsLayoutItem) SetGeometry(rect *qtcore.QRectF) {
 // index:0
 // Public
 // QRectF geometry()
-func (this *QGraphicsLayoutItem) Geometry() interface{} {
+func (this *QGraphicsLayoutItem) Geometry() *qtcore.QRectF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem8geometryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:90
 // index:0
 // Public virtual
 // void getContentsMargins(qreal *, qreal *, qreal *, qreal *)
-func (this *QGraphicsLayoutItem) GetContentsMargins(left unsafe.Pointer, top unsafe.Pointer, right unsafe.Pointer, bottom unsafe.Pointer) {
+func (this *QGraphicsLayoutItem) GetContentsMargins(left unsafe.Pointer /*666*/, top unsafe.Pointer /*666*/, right unsafe.Pointer /*666*/, bottom unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
 	gopp.ErrPrint(err, rv)
 }
@@ -347,21 +368,25 @@ func (this *QGraphicsLayoutItem) GetContentsMargins(left unsafe.Pointer, top uns
 // index:0
 // Public
 // QRectF contentsRect()
-func (this *QGraphicsLayoutItem) ContentsRect() interface{} {
+func (this *QGraphicsLayoutItem) ContentsRect() *qtcore.QRectF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem12contentsRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:93
 // index:0
 // Public
 // QSizeF effectiveSizeHint(Qt::SizeHint, const class QSizeF &)
-func (this *QGraphicsLayoutItem) EffectiveSizeHint(which int, constraint *qtcore.QSizeF) interface{} {
+func (this *QGraphicsLayoutItem) EffectiveSizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
 	var convArg1 = constraint.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem17effectiveSizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &which, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:95
@@ -377,18 +402,21 @@ func (this *QGraphicsLayoutItem) UpdateGeometry() {
 // index:0
 // Public
 // QGraphicsLayoutItem * parentLayoutItem()
-func (this *QGraphicsLayoutItem) ParentLayoutItem() interface{} {
+func (this *QGraphicsLayoutItem) ParentLayoutItem() *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem16parentLayoutItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:98
 // index:0
 // Public
 // void setParentLayoutItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsLayoutItem) SetParentLayoutItem(parent unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), parent)
+func (this *QGraphicsLayoutItem) SetParentLayoutItem(parent *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) {
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -396,38 +424,43 @@ func (this *QGraphicsLayoutItem) SetParentLayoutItem(parent unsafe.Pointer) {
 // index:0
 // Public
 // bool isLayout()
-func (this *QGraphicsLayoutItem) IsLayout() interface{} {
+func (this *QGraphicsLayoutItem) IsLayout() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem8isLayoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:101
 // index:0
 // Public
 // QGraphicsItem * graphicsItem()
-func (this *QGraphicsLayoutItem) GraphicsItem() interface{} {
+func (this *QGraphicsLayoutItem) GraphicsItem() *QGraphicsItem /*444 QGraphicsItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem12graphicsItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:102
 // index:0
 // Public
 // bool ownedByLayout()
-func (this *QGraphicsLayoutItem) OwnedByLayout() interface{} {
+func (this *QGraphicsLayoutItem) OwnedByLayout() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem13ownedByLayoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:105
 // index:0
 // Protected
 // void setGraphicsItem(class QGraphicsItem *)
-func (this *QGraphicsLayoutItem) SetGraphicsItem(item unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem15setGraphicsItemEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), item)
+func (this *QGraphicsLayoutItem) SetGraphicsItem(item *QGraphicsItem /*444 QGraphicsItem **/) {
+	var convArg0 = item.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem15setGraphicsItemEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -444,11 +477,13 @@ func (this *QGraphicsLayoutItem) SetOwnedByLayout(ownedByLayout bool) {
 // index:0
 // Protected pure virtual
 // QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
-func (this *QGraphicsLayoutItem) SizeHint(which int, constraint *qtcore.QSizeF) interface{} {
+func (this *QGraphicsLayoutItem) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
 	var convArg1 = constraint.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &which, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

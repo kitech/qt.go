@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qstylehints.h
 // #include <qstylehints.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -53,7 +53,11 @@ type QStyleHints struct {
 }
 
 func (this *QStyleHints) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQStyleHintsFromPointer(cthis unsafe.Pointer) *QStyleHints {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -64,10 +68,12 @@ func NewQStyleHintsFromPointer(cthis unsafe.Pointer) *QStyleHints {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QStyleHints) MetaObject() interface{} {
+func (this *QStyleHints) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:78
@@ -83,10 +89,11 @@ func (this *QStyleHints) SetMouseDoubleClickInterval(mouseDoubleClickInterval in
 // index:0
 // Public
 // int mouseDoubleClickInterval()
-func (this *QStyleHints) MouseDoubleClickInterval() interface{} {
+func (this *QStyleHints) MouseDoubleClickInterval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints24mouseDoubleClickIntervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:80
@@ -102,10 +109,11 @@ func (this *QStyleHints) SetMousePressAndHoldInterval(mousePressAndHoldInterval 
 // index:0
 // Public
 // int mousePressAndHoldInterval()
-func (this *QStyleHints) MousePressAndHoldInterval() interface{} {
+func (this *QStyleHints) MousePressAndHoldInterval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints25mousePressAndHoldIntervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:82
@@ -121,10 +129,11 @@ func (this *QStyleHints) SetStartDragDistance(startDragDistance int) {
 // index:0
 // Public
 // int startDragDistance()
-func (this *QStyleHints) StartDragDistance() interface{} {
+func (this *QStyleHints) StartDragDistance() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17startDragDistanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:84
@@ -140,20 +149,22 @@ func (this *QStyleHints) SetStartDragTime(startDragTime int) {
 // index:0
 // Public
 // int startDragTime()
-func (this *QStyleHints) StartDragTime() interface{} {
+func (this *QStyleHints) StartDragTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints13startDragTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:86
 // index:0
 // Public
 // int startDragVelocity()
-func (this *QStyleHints) StartDragVelocity() interface{} {
+func (this *QStyleHints) StartDragVelocity() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17startDragVelocityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:87
@@ -169,20 +180,22 @@ func (this *QStyleHints) SetKeyboardInputInterval(keyboardInputInterval int) {
 // index:0
 // Public
 // int keyboardInputInterval()
-func (this *QStyleHints) KeyboardInputInterval() interface{} {
+func (this *QStyleHints) KeyboardInputInterval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21keyboardInputIntervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:89
 // index:0
 // Public
 // int keyboardAutoRepeatRate()
-func (this *QStyleHints) KeyboardAutoRepeatRate() interface{} {
+func (this *QStyleHints) KeyboardAutoRepeatRate() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints22keyboardAutoRepeatRateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:90
@@ -198,100 +211,111 @@ func (this *QStyleHints) SetCursorFlashTime(cursorFlashTime int) {
 // index:0
 // Public
 // int cursorFlashTime()
-func (this *QStyleHints) CursorFlashTime() interface{} {
+func (this *QStyleHints) CursorFlashTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15cursorFlashTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:92
 // index:0
 // Public
 // bool showIsFullScreen()
-func (this *QStyleHints) ShowIsFullScreen() interface{} {
+func (this *QStyleHints) ShowIsFullScreen() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16showIsFullScreenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:93
 // index:0
 // Public
 // bool showIsMaximized()
-func (this *QStyleHints) ShowIsMaximized() interface{} {
+func (this *QStyleHints) ShowIsMaximized() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15showIsMaximizedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:94
 // index:0
 // Public
 // bool showShortcutsInContextMenus()
-func (this *QStyleHints) ShowShortcutsInContextMenus() interface{} {
+func (this *QStyleHints) ShowShortcutsInContextMenus() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints27showShortcutsInContextMenusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:95
 // index:0
 // Public
 // int passwordMaskDelay()
-func (this *QStyleHints) PasswordMaskDelay() interface{} {
+func (this *QStyleHints) PasswordMaskDelay() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17passwordMaskDelayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:96
 // index:0
 // Public
 // QChar passwordMaskCharacter()
-func (this *QStyleHints) PasswordMaskCharacter() interface{} {
+func (this *QStyleHints) PasswordMaskCharacter() *qtcore.QChar /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21passwordMaskCharacterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:97
 // index:0
 // Public
 // qreal fontSmoothingGamma()
-func (this *QStyleHints) FontSmoothingGamma() interface{} {
+func (this *QStyleHints) FontSmoothingGamma() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints18fontSmoothingGammaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:98
 // index:0
 // Public
 // bool useRtlExtensions()
-func (this *QStyleHints) UseRtlExtensions() interface{} {
+func (this *QStyleHints) UseRtlExtensions() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16useRtlExtensionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:99
 // index:0
 // Public
 // bool setFocusOnTouchRelease()
-func (this *QStyleHints) SetFocusOnTouchRelease() interface{} {
+func (this *QStyleHints) SetFocusOnTouchRelease() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints22setFocusOnTouchReleaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:100
 // index:0
 // Public
 // Qt::TabFocusBehavior tabFocusBehavior()
-func (this *QStyleHints) TabFocusBehavior() interface{} {
+func (this *QStyleHints) TabFocusBehavior() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16tabFocusBehaviorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:101
@@ -307,20 +331,22 @@ func (this *QStyleHints) SetTabFocusBehavior(tabFocusBehavior int) {
 // index:0
 // Public
 // bool singleClickActivation()
-func (this *QStyleHints) SingleClickActivation() interface{} {
+func (this *QStyleHints) SingleClickActivation() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21singleClickActivationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:103
 // index:0
 // Public
 // bool useHoverEffects()
-func (this *QStyleHints) UseHoverEffects() interface{} {
+func (this *QStyleHints) UseHoverEffects() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15useHoverEffectsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:104
@@ -336,10 +362,11 @@ func (this *QStyleHints) SetUseHoverEffects(useHoverEffects bool) {
 // index:0
 // Public
 // int wheelScrollLines()
-func (this *QStyleHints) WheelScrollLines() interface{} {
+func (this *QStyleHints) WheelScrollLines() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16wheelScrollLinesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:106

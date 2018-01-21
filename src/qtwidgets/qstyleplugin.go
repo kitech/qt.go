@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qstyleplugin.h
 // #include <qstyleplugin.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QStylePlugin struct {
 }
 
 func (this *QStylePlugin) GetCthis() unsafe.Pointer {
-	return this.QObject.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.GetCthis()
+	}
 }
 func NewQStylePluginFromPointer(cthis unsafe.Pointer) *QStylePlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQStylePluginFromPointer(cthis unsafe.Pointer) *QStylePlugin {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QStylePlugin) MetaObject() interface{} {
+func (this *QStylePlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStylePlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstyleplugin.h:58
 // index:0
 // Public
 // void QStylePlugin(class QObject *)
-func NewQStylePlugin(parent unsafe.Pointer) *QStylePlugin {
+func NewQStylePlugin(parent *qtcore.QObject /*444 QObject **/) *QStylePlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStylePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStylePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStylePluginFromPointer(cthis)
 	return gothis
@@ -99,11 +106,13 @@ func DeleteQStylePlugin(*QStylePlugin) {
 // index:0
 // Public pure virtual
 // QStyle * create(const class QString &)
-func (this *QStylePlugin) Create(key *qtcore.QString) interface{} {
+func (this *QStylePlugin) Create(key *qtcore.QString) *QStyle /*444 QStyle **/ {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStylePlugin6createERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQStyleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 //  body block end

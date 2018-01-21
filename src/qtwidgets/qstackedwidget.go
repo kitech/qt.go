@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qstackedwidget.h
 // #include <qstackedwidget.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QStackedWidget struct {
 }
 
 func (this *QStackedWidget) GetCthis() unsafe.Pointer {
-	return this.QFrame.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QFrame.GetCthis()
+	}
 }
 func NewQStackedWidgetFromPointer(cthis unsafe.Pointer) *QStackedWidget {
 	bcthis0 := NewQFrameFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQStackedWidgetFromPointer(cthis unsafe.Pointer) *QStackedWidget {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QStackedWidget) MetaObject() interface{} {
+func (this *QStackedWidget) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:59
 // index:0
 // Public
 // void QStackedWidget(class QWidget *)
-func NewQStackedWidget(parent unsafe.Pointer) *QStackedWidget {
+func NewQStackedWidget(parent *QWidget /*444 QWidget **/) *QStackedWidget {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidgetC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidgetC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStackedWidgetFromPointer(cthis)
 	return gothis
@@ -99,28 +106,33 @@ func DeleteQStackedWidget(*QStackedWidget) {
 // index:0
 // Public
 // int addWidget(class QWidget *)
-func (this *QStackedWidget) AddWidget(w unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
+func (this *QStackedWidget) AddWidget(w *QWidget /*444 QWidget **/) int {
+	var convArg0 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:63
 // index:0
 // Public
 // int insertWidget(int, class QWidget *)
-func (this *QStackedWidget) InsertWidget(index int, w unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, w)
+func (this *QStackedWidget) InsertWidget(index int, w *QWidget /*444 QWidget **/) int {
+	var convArg1 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:64
 // index:0
 // Public
 // void removeWidget(class QWidget *)
-func (this *QStackedWidget) RemoveWidget(w unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget12removeWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
+func (this *QStackedWidget) RemoveWidget(w *QWidget /*444 QWidget **/) {
+	var convArg0 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget12removeWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -128,50 +140,58 @@ func (this *QStackedWidget) RemoveWidget(w unsafe.Pointer) {
 // index:0
 // Public
 // QWidget * currentWidget()
-func (this *QStackedWidget) CurrentWidget() interface{} {
+func (this *QStackedWidget) CurrentWidget() *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget13currentWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:67
 // index:0
 // Public
 // int currentIndex()
-func (this *QStackedWidget) CurrentIndex() interface{} {
+func (this *QStackedWidget) CurrentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:69
 // index:0
 // Public
 // int indexOf(class QWidget *)
-func (this *QStackedWidget) IndexOf(arg0 unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QStackedWidget) IndexOf(arg0 *QWidget /*444 QWidget **/) int {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:70
 // index:0
 // Public
 // QWidget * widget(int)
-func (this *QStackedWidget) Widget(arg0 int) interface{} {
+func (this *QStackedWidget) Widget(arg0 int) *QWidget /*444 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget6widgetEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:71
 // index:0
 // Public
 // int count()
-func (this *QStackedWidget) Count() interface{} {
+func (this *QStackedWidget) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:74
@@ -187,8 +207,9 @@ func (this *QStackedWidget) SetCurrentIndex(index int) {
 // index:0
 // Public
 // void setCurrentWidget(class QWidget *)
-func (this *QStackedWidget) SetCurrentWidget(w unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget16setCurrentWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
+func (this *QStackedWidget) SetCurrentWidget(w *QWidget /*444 QWidget **/) {
+	var convArg0 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget16setCurrentWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -214,10 +235,12 @@ func (this *QStackedWidget) WidgetRemoved(index int) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QStackedWidget) Event(e unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QStackedWidget) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

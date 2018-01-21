@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qfinalstate.h
 // #include <qfinalstate.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 6
 */
 // import "C"
 import "unsafe"
@@ -49,7 +49,11 @@ type QFinalState struct {
 }
 
 func (this *QFinalState) GetCthis() unsafe.Pointer {
-	return this.QAbstractState.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QAbstractState.GetCthis()
+	}
 }
 func NewQFinalStateFromPointer(cthis unsafe.Pointer) *QFinalState {
 	bcthis0 := NewQAbstractStateFromPointer(cthis)
@@ -60,19 +64,22 @@ func NewQFinalStateFromPointer(cthis unsafe.Pointer) *QFinalState {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFinalState) MetaObject() interface{} {
+func (this *QFinalState) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFinalState10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qfinalstate.h:54
 // index:0
 // Public
 // void QFinalState(class QState *)
-func NewQFinalState(parent unsafe.Pointer) *QFinalState {
+func NewQFinalState(parent *QState /*444 QState **/) *QFinalState {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFinalStateFromPointer(cthis)
 	return gothis
@@ -91,8 +98,9 @@ func DeleteQFinalState(*QFinalState) {
 // index:0
 // Protected virtual
 // void onEntry(class QEvent *)
-func (this *QFinalState) OnEntry(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState7onEntryEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QFinalState) OnEntry(event *QEvent /*444 QEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState7onEntryEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -100,8 +108,9 @@ func (this *QFinalState) OnEntry(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void onExit(class QEvent *)
-func (this *QFinalState) OnExit(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState6onExitEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QFinalState) OnExit(event *QEvent /*444 QEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState6onExitEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -109,10 +118,12 @@ func (this *QFinalState) OnExit(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QFinalState) Event(e unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), e)
+func (this *QFinalState) Event(e *QEvent /*444 QEvent **/) bool {
+	var convArg0 = e.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

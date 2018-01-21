@@ -1,8 +1,8 @@
-//  header block begin
+package qtwidgets
+
 // /usr/include/qt/QtWidgets/qabstractspinbox.h
 // #include <qabstractspinbox.h>
 // #include <QtWidgets>
-package qtwidgets
 
 //  header block end
 
@@ -57,7 +57,11 @@ type QAbstractSpinBox struct {
 }
 
 func (this *QAbstractSpinBox) GetCthis() unsafe.Pointer {
-	return this.QWidget.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QWidget.GetCthis()
+	}
 }
 func NewQAbstractSpinBoxFromPointer(cthis unsafe.Pointer) *QAbstractSpinBox {
 	bcthis0 := NewQWidgetFromPointer(cthis)
@@ -68,19 +72,22 @@ func NewQAbstractSpinBoxFromPointer(cthis unsafe.Pointer) *QAbstractSpinBox {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractSpinBox) MetaObject() interface{} {
+func (this *QAbstractSpinBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:73
 // index:0
 // Public
 // void QAbstractSpinBox(class QWidget *)
-func NewQAbstractSpinBox(parent unsafe.Pointer) *QAbstractSpinBox {
+func NewQAbstractSpinBox(parent *QWidget /*444 QWidget **/) *QAbstractSpinBox {
 	cthis := qtrt.Calloc(1, 256) // 48
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractSpinBoxFromPointer(cthis)
 	return gothis
@@ -99,10 +106,11 @@ func DeleteQAbstractSpinBox(*QAbstractSpinBox) {
 // index:0
 // Public
 // QAbstractSpinBox::ButtonSymbols buttonSymbols()
-func (this *QAbstractSpinBox) ButtonSymbols() interface{} {
+func (this *QAbstractSpinBox) ButtonSymbols() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox13buttonSymbolsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:84
@@ -127,40 +135,46 @@ func (this *QAbstractSpinBox) SetCorrectionMode(cm int) {
 // index:0
 // Public
 // QAbstractSpinBox::CorrectionMode correctionMode()
-func (this *QAbstractSpinBox) CorrectionMode() interface{} {
+func (this *QAbstractSpinBox) CorrectionMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox14correctionModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:92
 // index:0
 // Public
 // bool hasAcceptableInput()
-func (this *QAbstractSpinBox) HasAcceptableInput() interface{} {
+func (this *QAbstractSpinBox) HasAcceptableInput() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox18hasAcceptableInputEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:93
 // index:0
 // Public
 // QString text()
-func (this *QAbstractSpinBox) Text() interface{} {
+func (this *QAbstractSpinBox) Text() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:95
 // index:0
 // Public
 // QString specialValueText()
-func (this *QAbstractSpinBox) SpecialValueText() interface{} {
+func (this *QAbstractSpinBox) SpecialValueText() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox16specialValueTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:96
@@ -177,10 +191,11 @@ func (this *QAbstractSpinBox) SetSpecialValueText(txt *qtcore.QString) {
 // index:0
 // Public
 // bool wrapping()
-func (this *QAbstractSpinBox) Wrapping() interface{} {
+func (this *QAbstractSpinBox) Wrapping() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox8wrappingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:99
@@ -205,10 +220,11 @@ func (this *QAbstractSpinBox) SetReadOnly(r bool) {
 // index:0
 // Public
 // bool isReadOnly()
-func (this *QAbstractSpinBox) IsReadOnly() interface{} {
+func (this *QAbstractSpinBox) IsReadOnly() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox10isReadOnlyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:104
@@ -224,20 +240,22 @@ func (this *QAbstractSpinBox) SetKeyboardTracking(kt bool) {
 // index:0
 // Public
 // bool keyboardTracking()
-func (this *QAbstractSpinBox) KeyboardTracking() interface{} {
+func (this *QAbstractSpinBox) KeyboardTracking() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox16keyboardTrackingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:108
 // index:0
 // Public
 // Qt::Alignment alignment()
-func (this *QAbstractSpinBox) Alignment() interface{} {
+func (this *QAbstractSpinBox) Alignment() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox9alignmentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:110
@@ -253,10 +271,11 @@ func (this *QAbstractSpinBox) SetFrame(arg0 bool) {
 // index:0
 // Public
 // bool hasFrame()
-func (this *QAbstractSpinBox) HasFrame() interface{} {
+func (this *QAbstractSpinBox) HasFrame() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox8hasFrameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:113
@@ -272,10 +291,11 @@ func (this *QAbstractSpinBox) SetAccelerated(on bool) {
 // index:0
 // Public
 // bool isAccelerated()
-func (this *QAbstractSpinBox) IsAccelerated() interface{} {
+func (this *QAbstractSpinBox) IsAccelerated() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox13isAcceleratedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:116
@@ -291,30 +311,35 @@ func (this *QAbstractSpinBox) SetGroupSeparatorShown(shown bool) {
 // index:0
 // Public
 // bool isGroupSeparatorShown()
-func (this *QAbstractSpinBox) IsGroupSeparatorShown() interface{} {
+func (this *QAbstractSpinBox) IsGroupSeparatorShown() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:119
 // index:0
 // Public virtual
 // QSize sizeHint()
-func (this *QAbstractSpinBox) SizeHint() interface{} {
+func (this *QAbstractSpinBox) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:120
 // index:0
 // Public virtual
 // QSize minimumSizeHint()
-func (this *QAbstractSpinBox) MinimumSizeHint() interface{} {
+func (this *QAbstractSpinBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:121
@@ -330,31 +355,36 @@ func (this *QAbstractSpinBox) InterpretText() {
 // index:0
 // Public virtual
 // bool event(class QEvent *)
-func (this *QAbstractSpinBox) Event(event unsafe.Pointer) interface{} {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:124
 // index:0
 // Public virtual
 // QVariant inputMethodQuery(Qt::InputMethodQuery)
-func (this *QAbstractSpinBox) InputMethodQuery(arg0 int) interface{} {
+func (this *QAbstractSpinBox) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox16inputMethodQueryEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:126
 // index:0
 // Public virtual
 // QValidator::State validate(class QString &, int &)
-func (this *QAbstractSpinBox) Validate(input *qtcore.QString, pos int) interface{} {
+func (this *QAbstractSpinBox) Validate(input *qtcore.QString, pos int) int {
 	var convArg0 = input.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:127
@@ -416,8 +446,9 @@ func (this *QAbstractSpinBox) Clear() {
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QAbstractSpinBox) ResizeEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) ResizeEvent(event *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -425,8 +456,9 @@ func (this *QAbstractSpinBox) ResizeEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QAbstractSpinBox) KeyPressEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) KeyPressEvent(event *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -434,8 +466,9 @@ func (this *QAbstractSpinBox) KeyPressEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void keyReleaseEvent(class QKeyEvent *)
-func (this *QAbstractSpinBox) KeyReleaseEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) KeyReleaseEvent(event *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -443,8 +476,9 @@ func (this *QAbstractSpinBox) KeyReleaseEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void wheelEvent(class QWheelEvent *)
-func (this *QAbstractSpinBox) WheelEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) WheelEvent(event *qtgui.QWheelEvent /*444 QWheelEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -452,8 +486,9 @@ func (this *QAbstractSpinBox) WheelEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void focusInEvent(class QFocusEvent *)
-func (this *QAbstractSpinBox) FocusInEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) FocusInEvent(event *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -461,8 +496,9 @@ func (this *QAbstractSpinBox) FocusInEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void focusOutEvent(class QFocusEvent *)
-func (this *QAbstractSpinBox) FocusOutEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) FocusOutEvent(event *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -470,8 +506,9 @@ func (this *QAbstractSpinBox) FocusOutEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void contextMenuEvent(class QContextMenuEvent *)
-func (this *QAbstractSpinBox) ContextMenuEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox16contextMenuEventEP17QContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) ContextMenuEvent(event *qtgui.QContextMenuEvent /*444 QContextMenuEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox16contextMenuEventEP17QContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -479,8 +516,9 @@ func (this *QAbstractSpinBox) ContextMenuEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QAbstractSpinBox) ChangeEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) ChangeEvent(event *qtcore.QEvent /*444 QEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -488,8 +526,9 @@ func (this *QAbstractSpinBox) ChangeEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void closeEvent(class QCloseEvent *)
-func (this *QAbstractSpinBox) CloseEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox10closeEventEP11QCloseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) CloseEvent(event *qtgui.QCloseEvent /*444 QCloseEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox10closeEventEP11QCloseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -497,8 +536,9 @@ func (this *QAbstractSpinBox) CloseEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void hideEvent(class QHideEvent *)
-func (this *QAbstractSpinBox) HideEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox9hideEventEP10QHideEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) HideEvent(event *qtgui.QHideEvent /*444 QHideEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox9hideEventEP10QHideEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -506,8 +546,9 @@ func (this *QAbstractSpinBox) HideEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QAbstractSpinBox) MousePressEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) MousePressEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -515,8 +556,9 @@ func (this *QAbstractSpinBox) MousePressEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QAbstractSpinBox) MouseReleaseEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) MouseReleaseEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -524,8 +566,9 @@ func (this *QAbstractSpinBox) MouseReleaseEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QAbstractSpinBox) MouseMoveEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) MouseMoveEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -533,8 +576,9 @@ func (this *QAbstractSpinBox) MouseMoveEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QAbstractSpinBox) TimerEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) TimerEvent(event *qtcore.QTimerEvent /*444 QTimerEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -542,8 +586,9 @@ func (this *QAbstractSpinBox) TimerEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QAbstractSpinBox) PaintEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) PaintEvent(event *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -551,8 +596,9 @@ func (this *QAbstractSpinBox) PaintEvent(event unsafe.Pointer) {
 // index:0
 // Protected virtual
 // void showEvent(class QShowEvent *)
-func (this *QAbstractSpinBox) ShowEvent(event unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
+func (this *QAbstractSpinBox) ShowEvent(event *qtgui.QShowEvent /*444 QShowEvent **/) {
+	var convArg0 = event.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -560,8 +606,9 @@ func (this *QAbstractSpinBox) ShowEvent(event unsafe.Pointer) {
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionSpinBox *)
-func (this *QAbstractSpinBox) InitStyleOption(option unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox15initStyleOptionEP19QStyleOptionSpinBox", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
+func (this *QAbstractSpinBox) InitStyleOption(option *QStyleOptionSpinBox /*444 QStyleOptionSpinBox **/) {
+	var convArg0 = option.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox15initStyleOptionEP19QStyleOptionSpinBox", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -569,18 +616,21 @@ func (this *QAbstractSpinBox) InitStyleOption(option unsafe.Pointer) {
 // index:0
 // Protected
 // QLineEdit * lineEdit()
-func (this *QAbstractSpinBox) LineEdit() interface{} {
+func (this *QAbstractSpinBox) LineEdit() *QLineEdit /*444 QLineEdit **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox8lineEditEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQLineEditFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:159
 // index:0
 // Protected
 // void setLineEdit(class QLineEdit *)
-func (this *QAbstractSpinBox) SetLineEdit(edit unsafe.Pointer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox11setLineEditEP9QLineEdit", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), edit)
+func (this *QAbstractSpinBox) SetLineEdit(edit *QLineEdit /*444 QLineEdit **/) {
+	var convArg0 = edit.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox11setLineEditEP9QLineEdit", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -588,10 +638,11 @@ func (this *QAbstractSpinBox) SetLineEdit(edit unsafe.Pointer) {
 // index:0
 // Protected virtual
 // QAbstractSpinBox::StepEnabled stepEnabled()
-func (this *QAbstractSpinBox) StepEnabled() interface{} {
+func (this *QAbstractSpinBox) StepEnabled() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox11stepEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:163

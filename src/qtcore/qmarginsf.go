@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qmargins.h
 // #include <qmargins.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QMarginsF struct {
 }
 
 func (this *QMarginsF) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQMarginsFFromPointer(cthis unsafe.Pointer) *QMarginsF {
 	return &QMarginsF{&qtrt.CObject{cthis}}
@@ -96,50 +100,55 @@ func NewQMarginsF_2(margins *QMargins) *QMarginsF {
 // index:0
 // Public inline
 // bool isNull()
-func (this *QMarginsF) IsNull() interface{} {
+func (this *QMarginsF) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmargins.h:294
 // index:0
 // Public inline
 // qreal left()
-func (this *QMarginsF) Left() interface{} {
+func (this *QMarginsF) Left() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF4leftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qmargins.h:295
 // index:0
 // Public inline
 // qreal top()
-func (this *QMarginsF) Top() interface{} {
+func (this *QMarginsF) Top() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qmargins.h:296
 // index:0
 // Public inline
 // qreal right()
-func (this *QMarginsF) Right() interface{} {
+func (this *QMarginsF) Right() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF5rightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qmargins.h:297
 // index:0
 // Public inline
 // qreal bottom()
-func (this *QMarginsF) Bottom() interface{} {
+func (this *QMarginsF) Bottom() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return float64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qmargins.h:299
@@ -182,10 +191,12 @@ func (this *QMarginsF) SetBottom(bottom float64) {
 // index:0
 // Public inline
 // QMargins toMargins()
-func (this *QMarginsF) ToMargins() interface{} {
+func (this *QMarginsF) ToMargins() *QMargins /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF9toMarginsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end

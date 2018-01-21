@@ -1,8 +1,8 @@
-//  header block begin
+package qtcore
+
 // /usr/include/qt/QtCore/qabstractitemmodel.h
 // #include <qabstractitemmodel.h>
 // #include <QtCore>
-package qtcore
 
 //  header block end
 
@@ -49,7 +49,11 @@ type QPersistentModelIndex struct {
 }
 
 func (this *QPersistentModelIndex) GetCthis() unsafe.Pointer {
-	return this.Cthis
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
 }
 func NewQPersistentModelIndexFromPointer(cthis unsafe.Pointer) *QPersistentModelIndex {
 	return &QPersistentModelIndex{&qtrt.CObject{cthis}}
@@ -103,110 +107,126 @@ func (this *QPersistentModelIndex) Swap(other *QPersistentModelIndex) {
 // index:0
 // Public
 // int row()
-func (this *QPersistentModelIndex) Row() interface{} {
+func (this *QPersistentModelIndex) Row() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex3rowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:128
 // index:0
 // Public
 // int column()
-func (this *QPersistentModelIndex) Column() interface{} {
+func (this *QPersistentModelIndex) Column() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex6columnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv) // 111
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:129
 // index:0
 // Public
 // void * internalPointer()
-func (this *QPersistentModelIndex) InternalPointer() interface{} {
+func (this *QPersistentModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex15internalPointerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return unsafe.Pointer(uintptr(rv))
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:130
 // index:0
 // Public
 // quintptr internalId()
-func (this *QPersistentModelIndex) InternalId() interface{} {
+func (this *QPersistentModelIndex) InternalId() uint64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex10internalIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return uint64(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:131
 // index:0
 // Public
 // QModelIndex parent()
-func (this *QPersistentModelIndex) Parent() interface{} {
+func (this *QPersistentModelIndex) Parent() *QModelIndex /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:132
 // index:0
 // Public
 // QModelIndex sibling(int, int)
-func (this *QPersistentModelIndex) Sibling(row int, column int) interface{} {
+func (this *QPersistentModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex7siblingEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:134
 // index:0
 // Public
 // QModelIndex child(int, int)
-func (this *QPersistentModelIndex) Child(row int, column int) interface{} {
+func (this *QPersistentModelIndex) Child(row int, column int) *QModelIndex /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5childEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:136
 // index:0
 // Public
 // QVariant data(int)
-func (this *QPersistentModelIndex) Data(role int) interface{} {
+func (this *QPersistentModelIndex) Data(role int) *QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex4dataEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &role)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:137
 // index:0
 // Public
 // Qt::ItemFlags flags()
-func (this *QPersistentModelIndex) Flags() interface{} {
+func (this *QPersistentModelIndex) Flags() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:138
 // index:0
 // Public
 // const QAbstractItemModel * model()
-func (this *QPersistentModelIndex) Model() interface{} {
+func (this *QPersistentModelIndex) Model() *QAbstractItemModel /*444 const QAbstractItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:139
 // index:0
 // Public
 // bool isValid()
-func (this *QPersistentModelIndex) IsValid() interface{} {
+func (this *QPersistentModelIndex) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	return rv != 0
 }
 
 //  body block end

@@ -1,8 +1,8 @@
-//  header block begin
+package qtgui
+
 // /usr/include/qt/QtGui/qbitmap.h
 // #include <qbitmap.h>
 // #include <QtGui>
-package qtgui
 
 //  header block end
 
@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 14
+// extern C begin: 13
 */
 // import "C"
 import "unsafe"
@@ -53,7 +53,11 @@ type QBitmap struct {
 }
 
 func (this *QBitmap) GetCthis() unsafe.Pointer {
-	return this.QPixmap.GetCthis()
+	if this == nil {
+		return nil
+	} else {
+		return this.QPixmap.GetCthis()
+	}
 }
 func NewQBitmapFromPointer(cthis unsafe.Pointer) *QBitmap {
 	bcthis0 := NewQPixmapFromPointer(cthis)
@@ -157,36 +161,43 @@ func (this *QBitmap) Clear() {
 // index:0
 // Public static
 // QBitmap fromData(const class QSize &, const uchar *, class QImage::Format)
-func (this *QBitmap) FromData(size *qtcore.QSize, bits unsafe.Pointer, monoFormat int) interface{} {
+func (this *QBitmap) FromData(size *qtcore.QSize, bits unsafe.Pointer /*666*/, monoFormat int) *QBitmap /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap8fromDataERK5QSizePKhN6QImage6FormatE", ffiqt.FFI_TYPE_POINTER, size, bits, monoFormat)
 	gopp.ErrPrint(err, rv)
-	return rv
+	// return rv
+	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
-func QBitmap_FromData(size *qtcore.QSize, bits unsafe.Pointer, monoFormat int) {
+func QBitmap_FromData(size *qtcore.QSize, bits unsafe.Pointer /*666*/, monoFormat int) *QBitmap /*123*/ {
 	var nilthis *QBitmap
-	nilthis.FromData(size, bits, monoFormat)
+	rv := nilthis.FromData(size, bits, monoFormat)
+	return rv
 }
 
 // /usr/include/qt/QtGui/qbitmap.h:78
 // index:0
 // Public
 // QBitmap transformed(const class QMatrix &)
-func (this *QBitmap) Transformed(arg0 *QMatrix) interface{} {
+func (this *QBitmap) Transformed(arg0 *QMatrix) *QBitmap /*123*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBitmap11transformedERK7QMatrix", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qbitmap.h:79
 // index:1
 // Public
 // QBitmap transformed(const class QTransform &)
-func (this *QBitmap) Transformed_1(matrix *QTransform) interface{} {
+func (this *QBitmap) Transformed_1(matrix *QTransform) *QBitmap /*123*/ {
 	var convArg0 = matrix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBitmap11transformedERK10QTransform", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	return rv
+	//  return rv
+	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
 }
 
 //  body block end
